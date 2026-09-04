@@ -8,82 +8,82 @@ status: active
 
 ## Purpose
 
-This register records the lexical status of important terms and flags terms that may deserve independent concept investigation in 001-D.
+This register records the current lexical status of important SYNGAN terms after Phase 001 consolidation.
 
-A **concept-candidate signal is not an accepted concept**. It means only that the term appears to carry enough purpose, state, lifecycle, authority, or synchronization significance to investigate.
+Accepted concept names are canonical terms whose concept meaning is owned by [docs/concepts](../concepts/index.md). Other terms remain ordinary domain, subordinate, compatibility, representation, umbrella, deferred, or external vocabulary.
 
 ## Status meanings
 
-- **preferred** — preferred SYNGAN domain wording with a canonical definition.
-- **qualified** — valid only when qualified or when context makes its intended meaning unambiguous.
-- **compatibility** — retained primarily because external ecosystems or common practice use it.
-- **umbrella** — intentionally broad grouping word; use a more specific term when design meaning matters.
-- **representation** — implementation/framework vocabulary, not a domain concept by default.
-- **deferred** — recognized vocabulary whose canonical boundary requires later discovery.
+- **accepted concept** — canonical concept name with authority under `docs/concepts/`.
+- **preferred** — preferred domain vocabulary but not an independent concept by that fact alone.
+- **subordinate** — semantically important state/structure owned by an accepted concept.
+- **umbrella** — broad grouping word; use narrower authority when design meaning matters.
+- **compatibility** — retained primarily for external ecosystem familiarity.
+- **representation** — implementation/framework vocabulary, not concept authority.
+- **deferred** — recognized domain area intentionally left for later discovery.
+- **external** — meaningful authority outside the current SYNGAN concept boundary.
 
-## Inventory
+## Accepted concept names
 
-| Term | Lexical status | 001-D concept-candidate signal | Notes |
-|---|---|---:|---|
-| source data | preferred | medium | Carries input/evidence role; physical representation is separate. |
-| source dataset | preferred | high | Logical boundary may have lifecycle and semantic ownership. |
-| synthetic data | preferred | medium | Output domain object; does not imply privacy. |
-| synthetic dataset | preferred | high | Logical output boundary may carry provenance, purpose, and governance. |
-| structured data | preferred | low | Domain category more likely than independent functionality. |
-| tabular data | preferred | low | Domain shape/category. |
-| relational data | preferred | medium | Cross-collection meaning may motivate later concepts. |
-| record | preferred | low | Foundational vocabulary. |
-| field | preferred | low | Foundational vocabulary. |
-| structural schema | preferred | medium | Structural description may have independent lifecycle from semantics. |
-| data semantics | preferred | high | Declared/inferred meaning affects synthesis behavior and authority. |
-| metadata | umbrella | low as one concept | Too broad for a monolithic concept without further decomposition. |
-| identifier | preferred | medium | Identity/referential behavior may need separate reasoning. |
-| relationship | preferred | high | Cross-record/table coordination may have independent purpose. |
-| synthesis | preferred | high | Central purpose area but boundary must be discovered rather than assumed. |
-| synthesis strategy | preferred | high | Strategy selection/configuration may vary independently from execution. |
-| synthesizer | compatibility | low as canonical name | External-library term; risks merging strategy, state, learning, and generation. |
-| synthesis implementation | representation | none | Concrete software implementation. |
-| learning | preferred | high | Distinct lifecycle from generation; not universal to all strategies. |
-| training | preferred/qualified | medium | Specific form of learning, especially optimization-based. |
-| fit | compatibility | none | API verb candidate, not domain boundary. |
-| learned state | preferred | high | Reusable source-derived state with lifecycle/provenance implications. |
-| model family | preferred | medium | Taxonomy/strategy vocabulary. |
-| model | qualified | low as canonical name | Too overloaded to carry unqualified design authority. |
-| generate | preferred | high | Distinct user-visible purpose from learning. |
-| sample | qualified/compatibility | none | Must distinguish source subset selection from synthetic production. |
-| generation intent | preferred/deferred | high | Request-specific generation behavior may have independent state/purpose. |
-| condition | preferred | high | Directed generation semantics differ from validity rules. |
-| constraint | preferred | high | Required validity behavior may be independently managed/evaluated. |
-| filter | preferred | low | Selection operation; useful as distinction from conditioning. |
-| evaluation | preferred | high | Produces evidence against explicit criteria. |
-| criterion | preferred | high | Separates questions/standards from measurement procedures. |
-| metric | preferred | medium | Measurement definition may be extensible independently. |
-| score | preferred | low | Measurement result, not decision authority. |
-| quality | umbrella | low as one concept | Must be decomposed by criterion/dimension. |
-| fidelity | preferred | high | Distinct evidence dimension. |
-| utility | preferred | high | Purpose-relative evidence dimension. |
-| validity | preferred | high | Constraint/semantic evidence dimension. |
-| privacy | preferred | high | Distinct objective/guarantee domain; synthetic alone is insufficient. |
-| disclosure risk | preferred | high | Distinct evaluative/risk responsibility. |
-| anonymization | preferred/qualified | medium | Must be tied to explicit definition/policy. |
-| evidence | preferred | high | Supports claims and decisions; may have provenance/lifecycle. |
-| execution | preferred | high | Long-running lifecycle and operational identity matter at scale. |
-| attempt | preferred | high | Retry/recovery distinction may be independently observable. |
-| run | compatibility/qualified | low | Too ambiguous until execution concepts are discovered. |
-| checkpoint | preferred | medium | Recovery state, not automatically final artifact. |
-| artifact | umbrella/preferred | high | Durable outputs share governance/provenance concerns but may decompose. |
-| provenance | preferred | high | Cross-cutting derivation/context responsibility. |
-| lineage | preferred | medium | Derivational subset of provenance. |
-| reproducibility | preferred | high | Explicit guarantee/expectation with possible scopes. |
-| determinism | preferred | medium | Stronger/narrower property than reproducibility. |
-| distributed execution | preferred | medium | Operational property; may be representation rather than concept. |
-| scalable | preferred/claim-qualified | none | Claim requiring an explicit scale scope. |
-| Spark-native | compatibility/project-level | none | Architectural constraint, not concept name. |
-| driver-local | representation/operational | none | Physical placement term requiring scale justification when corpus-growing. |
+| Term | Status | Canonical authority |
+|---|---|---|
+| Data Meaning | accepted concept | [Data Meaning](../concepts/data-meaning.md) |
+| Synthesis Strategy | accepted concept | [Synthesis Strategy](../concepts/synthesis-strategy.md) |
+| Learning | accepted concept | [Learning](../concepts/learning.md) |
+| Learned State | accepted concept | [Learned State](../concepts/learned-state.md) |
+| Generation | accepted concept | [Generation](../concepts/generation.md) |
+| Constraint | accepted concept | [Constraint](../concepts/constraint.md) |
+| Evaluation Criterion | accepted concept | [Evaluation Criterion](../concepts/evaluation-criterion.md) |
+| Evaluation | accepted concept | [Evaluation](../concepts/evaluation.md) |
+| Evidence | accepted concept | [Evidence](../concepts/evidence.md) |
+| Execution | accepted concept | [Execution](../concepts/execution.md) |
+| Provenance | accepted concept | [Provenance](../concepts/provenance.md) |
+
+## Important non-concept vocabulary
+
+| Term | Status | Current meaning/boundary |
+|---|---|---|
+| source data / source dataset | preferred | input domain vocabulary; stable references are representation/integration obligations |
+| synthetic data / synthetic dataset | preferred | generated output; synthetic origin does not imply privacy |
+| metadata | umbrella/compatibility | MUST NOT replace Data Meaning, Constraint, Provenance, schema, or artifact-specific description |
+| structural schema | preferred | structural fact/description; not automatically semantic authority |
+| identifier | preferred | semantic/data-role vocabulary; may participate in Data Meaning |
+| Relationship | deferred | future relational/multi-table discovery edge |
+| synthesizer | compatibility | MAY be future API convenience; MUST NOT redefine Strategy + Learning + Learned State + Generation as one concept |
+| synthesis implementation | representation | concrete algorithm/software realization |
+| training | preferred/qualified | optimization-oriented form of Learning |
+| fit | compatibility | potential API verb; not concept authority |
+| model family | preferred | strategy/taxonomy vocabulary |
+| model | qualified/compatibility | overloaded; MUST NOT replace Learned State without explicit qualification |
+| generation request | subordinate | requested/pre-fulfillment state owned by Generation |
+| Condition | subordinate | directed-output state owned by Generation; distinct from Constraint |
+| sample | qualified/compatibility | distinguish source subset sampling from Generation |
+| metric | preferred | Evaluation method/measurement vocabulary |
+| score | preferred | measurement result; not decision authority |
+| quality | umbrella | MUST NOT collapse Criterion + Evaluation + Evidence + decision |
+| fidelity | preferred | evaluative dimension/question vocabulary |
+| utility | preferred | use-relative evaluative dimension |
+| validity | preferred | rule/semantic satisfaction dimension |
+| privacy | umbrella/domain | synthetic origin alone provides no privacy guarantee; mechanism-specific concepts may be discovered later |
+| disclosure risk | preferred | valid Evaluation Criterion/evidence domain; distinct from formal privacy guarantee |
+| anonymization | qualified | requires explicit definition/policy |
+| Attempt | subordinate | one concrete try in Execution history |
+| run | compatibility/qualified | MUST distinguish logical Execution, Attempt, and platform job/run |
+| checkpoint | preferred/operational | recovery state; not Learned State or final output by default |
+| artifact | umbrella/representation | durable material; no generic Artifact concept accepted |
+| lineage | preferred | derivational subset of Provenance |
+| reproducibility | cross-cutting contract | inspectable scope assembled from concept-owned facts; not an accepted concept |
+| determinism | preferred | narrower/stronger property than reproducibility |
+| distributed execution | preferred/operational | execution property; distribution alone does not prove scalability |
+| scalable | claim-qualified | requires workload envelope and behavioral scope |
+| Spark-native | project constraint | natural Spark workflow participation; does not mean Spark-only implementation |
+| driver-local | representation/operational | physical placement term; full-corpus driver-local materialization is not ordinary enterprise architecture |
+| Use / Release Decision | external | organizational authority outside current SYNGAN concept ownership |
+| Source Characterization / Profile | supporting method/state | observations must be attributable to the concept purpose they serve |
 
 ## High-risk overloaded words
 
-The following words MUST receive special scrutiny in 001-D and later design because they tend to merge distinct responsibilities:
+The following remain prohibited as unexamined concept shortcuts:
 
 - metadata;
 - synthesizer;
@@ -91,24 +91,11 @@ The following words MUST receive special scrutiny in 001-D and later design beca
 - sample;
 - quality;
 - run;
-- artifact.
+- artifact;
+- privacy.
 
-A concept proposal using one of these names SHOULD explain why the name is sufficiently precise or choose a narrower name.
+A future API MAY use familiar ecosystem terms, but its specification MUST map them to the accepted SYNGAN semantics and document any narrowing or composition.
 
-## Candidate-cluster warnings
+## Phase 001 authority result
 
-The register reveals several tempting clusters that MUST NOT be accepted without independence analysis:
-
-1. **metadata cluster** — schema, semantics, identifiers, relationships, constraints;
-2. **synthesizer cluster** — strategy, learning, learned state, generation;
-3. **quality cluster** — criteria, metrics, fidelity, utility, validity, privacy/disclosure risk;
-4. **execution cluster** — logical work, attempts, checkpoints, artifacts, provenance;
-5. **privacy cluster** — privacy objectives/guarantees, disclosure-risk evaluation, anonymization claims.
-
-These clusters are discovery prompts, not recommended concepts.
-
-## 001-D handoff rule
-
-001-D SHOULD begin from problem purposes and actor needs, then use this register as a semantic cross-check.
-
-It MUST NOT simply convert every `high` signal into a concept. The signal exists to ensure an apparently independent responsibility is examined rather than silently lost.
+The concept-candidate signals used during 001-C/001-D are historical discovery aids only. Current concept status is determined by [the accepted catalog](../concepts/index.md), not by earlier candidate scores.
