@@ -21,8 +21,8 @@ The phase remains downstream of concept specification and upstream of representa
 | **003-E** | [**Evaluation, Evidence & Review Experience**](003-E-evaluation-evidence-review-experience.md) | **complete** |
 | **003-F** | [**Execution Monitoring, Failure, Recovery & Cancellation Experience**](003-F-execution-monitoring-failure-recovery-cancellation-experience.md) | **complete** |
 | **003-G** | [**Provenance, Reproducibility & Historical Inspection Experience**](003-G-provenance-reproducibility-historical-inspection-experience.md) | **complete** |
-| **003-H** | **Enterprise Dependency, Offline/No-Egress & Safety Experience** | **next** |
-| 003-I | Cross-Workflow Consistency & Phase 003 Consolidation Review | planned |
+| **003-H** | [**Enterprise Dependency, Offline/No-Egress & Safety Experience**](003-H-enterprise-dependency-offline-no-egress-safety-experience.md) | **complete** |
+| **003-I** | **Cross-Workflow Consistency & Phase 003 Consolidation Review** | **next** |
 
 ## Completed experience refinement
 
@@ -52,26 +52,31 @@ The phase remains downstream of concept specification and upstream of representa
 
 ### 003-G
 
-003-G established [Provenance, Reproducibility & Historical Inspection](../../experience/provenance-reproducibility-historical-inspection.md).
+003-G established [Provenance, Reproducibility & Historical Inspection](../../experience/provenance-reproducibility-historical-inspection.md), including result explanation, derivation comparison, qualified reproducibility assessment, historical/current-state separation, stable-identity limitations, provenance corrections/gaps, and bounded historical traversal.
+
+### 003-H
+
+003-H established [Enterprise Dependency, Offline/No-Egress & Safety](../../experience/enterprise-dependency-offline-no-egress-safety.md).
 
 Key established experience semantics include:
 
-- historical inspection supports three primary goals: explain one result, compare two historical paths, and assess current reproducibility for an explicit target;
-- Provenance remains typed stable-reference history rather than a copy of canonical concept state;
-- historical bindings are shown separately from current aliases, revisions, lifecycle status, dependency availability, or policy posture;
-- mutable aliases/URLs/service names are not presented as sufficient historical identity when underlying state may differ;
-- weak/missing historical identity, dependency, runtime, or recovery context remains explicit rather than being repaired with current state;
-- typed provenance relationships remain distinguishable, including bound/governed-by, produced-by, used/depended-on, evaluated/referenced, operationally-realized-by, recovered-from, and lifecycle context;
-- provenance corrections preserve auditability without mutating another concept's canonical history;
-- accepted reproduction classes remain exact deterministic, semantic, statistical, bounded/approximate, comparative, and not-reproducible/insufficient-context;
-- reproduction assessments expose target, preserved conditions, dependencies, nondeterminism/approximation, limiting context, supported class, and reasons stronger classes are unsupported;
-- seeds do not imply exact deterministic reproduction;
-- reproduction readiness/re-execution remain distinct from a new reproduction activity actually satisfying an explicit equivalence Criterion;
-- current reproducibility may weaken when historical dependencies disappear without rewriting the historical provenance of the original work;
-- historical comparison categorizes material differences but does not infer causality, superiority, or quality without Evaluation/Evidence;
-- Evidence historical context/current applicability and material Execution/Attempt history remain traversable without copying full payloads or platform telemetry;
-- restricted historical detail must be shown as withheld rather than replaced with fabricated/current substitute history;
-- enterprise historical inspection remains bounded around stable references, relationships, summaries, dependency identities, and Evidence rather than requiring driver-local full payload/log materialization.
+- self-contained, local-artifact, acquisition-network, and runtime-network dependency profiles remain actor-visible where material;
+- dependency availability, identity, compatibility, and permission remain separate determinations;
+- missing dependencies cannot trigger hidden automatic acquisition, model-hub access, remote fallback, or telemetry/network behavior;
+- provisioning/acquisition network requirements remain distinct from runtime network requirements;
+- local/base/pretrained artifact substitution cannot occur silently when identity/behavior changes materially;
+- semantic Strategy/method compatibility can coexist with deployment/no-egress incompatibility, and the blocker remains explainable;
+- network access remains distinct from data egress, with disclosure distinguishing no-content access, metadata/config transfer, source-derived information, source records, and generated records where material;
+- egress disclosure does not itself grant authorization;
+- Learned State, candidate/completed synthetic output, Evidence, diagnostics, and Provenance are not presumed non-sensitive merely because they are derived rather than raw source records;
+- retry/recovery must preserve committed dependency/network/egress semantics and cannot become a backdoor for remote fallback;
+- policy/authorization uncertainty remains explicit and blocks optimistic continuation;
+- sensitive Evidence/diagnostics may expose bounded summaries while detailed protected material remains restricted;
+- restricted Provenance/detail is shown as withheld/redacted rather than absent, unknown, or fabricated;
+- historical dependency/network behavior remains historical truth even when current policy would prohibit it;
+- current access/network/egress policy may weaken present reproducibility without rewriting historical Provenance;
+- enterprise safety review remains bounded/control-plane oriented rather than requiring full source/output/Learned State/diagnostic/log materialization;
+- no generic Security, Policy, Trust, Artifact, Egress, Access Control, Deployment, or Approval concept was introduced.
 
 ## Phase 003 objectives
 
@@ -96,7 +101,7 @@ Phase 003 MUST NOT:
 - make hidden network acquisition or egress part of a normal workflow;
 - weaken required Constraint/Condition/Evidence semantics to simplify UX;
 - convert Evidence into approval authority;
-- select final package/module/storage/distributed-runtime architecture prematurely;
+- select final package/module/storage/distributed-runtime/security architecture prematurely;
 - introduce full-corpus driver collection as a user-experience shortcut.
 
 ## Entry authority
@@ -106,9 +111,10 @@ Phase 003 MUST NOT:
 - [Accepted Concepts](../../concepts/index.md)
 - [Accepted Synchronizations](../../synchronizations/index.md)
 - [Design Authority](../../authority/index.md)
+- [Network and External Dependency Policy](../../authority/network-external-dependency-policy.md)
 - [Reproducibility Contract](../../authority/reproducibility-contract.md)
 - [Problem Knowledge](../../problem/index.md)
 
 ## Current next phase
 
-**003-H — Enterprise Dependency, Offline/No-Egress & Safety Experience**
+**003-I — Cross-Workflow Consistency & Phase 003 Consolidation Review**
