@@ -43,8 +43,8 @@ See [Phase 003 index](003/index.md).
 - [003-C — Learning & Learned State Lifecycle Experience](003/003-C-learning-learned-state-lifecycle-experience.md) — complete
 - [003-D — Generation Request, Condition, Validation & Output Promotion Experience](003/003-D-generation-request-condition-validation-output-promotion-experience.md) — complete
 - [003-E — Evaluation, Evidence & Review Experience](003/003-E-evaluation-evidence-review-experience.md) — complete
-- **003-F — Execution Monitoring, Failure, Recovery & Cancellation Experience — next**
-- 003-G — Provenance, Reproducibility & Historical Inspection Experience
+- [003-F — Execution Monitoring, Failure, Recovery & Cancellation Experience](003/003-F-execution-monitoring-failure-recovery-cancellation-experience.md) — complete
+- **003-G — Provenance, Reproducibility & Historical Inspection Experience — next**
 - 003-H — Enterprise Dependency, Offline/No-Egress & Safety Experience
 - 003-I — Cross-Workflow Consistency & Phase 003 Consolidation Review
 
