@@ -19,8 +19,9 @@ Experience documents define how actors discover, prepare, commit, observe, inspe
 - [Evaluation, Evidence & Review](evaluation-evidence-review.md) — how actors begin from evaluative questions, select compatible methods, understand coverage/uncertainty/claim strength, interpret and compare Evidence, review multidimensional fitness, and preserve the boundary between findings and external decisions.
 - [Execution Monitoring, Failure, Recovery & Cancellation](execution-monitoring-failure-recovery-cancellation.md) — how actors monitor one logical Execution across Attempts/platform jobs, distinguish recoverable/terminal/unknown outcomes, qualify retry/resume, reconcile side effects, handle cancellation races, and preserve domain semantic authority during operational intervention.
 - [Provenance, Reproducibility & Historical Inspection](provenance-reproducibility-historical-inspection.md) — how actors explain and compare historical derivations, distinguish historical truth from current state, inspect identity/provenance gaps, and assess exact/semantic/statistical/bounded/comparative/insufficient reproduction capability without duplicating canonical state.
+- [Enterprise Dependency, Offline/No-Egress & Safety](enterprise-dependency-offline-no-egress-safety.md) — how actors understand dependency profiles, local/provisioning/runtime network behavior, egress categories, sensitive source-derived state, restricted Evidence/Provenance, policy incompatibilities, and safe blocked/fallback behavior without hidden acquisition or generic safety authority.
 
-Additional experience authorities will be added by later Phase 003 groups.
+Additional experience authorities may be added by later phases where genuinely new actor-visible semantics require them.
 
 ## Authority boundary
 
@@ -85,7 +86,19 @@ Phase 003 experience authority MUST preserve these rules:
 - re-execution/reproduction-readiness remain distinct from successful reproduction;
 - current reproducibility may degrade without rewriting historical truth;
 - historical difference does not imply causality or superiority without Evaluation/Evidence;
-- network/external dependencies remain visible before commitment and throughout Learning/Generation/Evaluation/Learned State reuse;
+- dependency profiles preserve self-contained, local-artifact, acquisition-network, and runtime-network distinctions where material;
+- dependency availability remains distinct from identity, compatibility, and permission;
+- missing dependencies never trigger hidden automatic acquisition or remote fallback;
+- provisioning/acquisition network requirements remain distinguishable from runtime network requirements;
+- network access remains distinguishable from source/source-derived/generated-data egress;
+- egress disclosure does not itself authorize transmission;
+- material dependency substitution is explicit rather than silently treated as equivalent;
+- committed no-network/no-egress behavior remains binding through retry/recovery;
+- Learned State, synthetic/candidate output, Evidence, diagnostics, and Provenance are not presumed non-sensitive merely because they are derived state;
+- synthetic origin does not imply privacy, anonymity, export permission, or release approval;
+- withheld/redacted, unknown, absent, and unavailable states remain distinguishable;
+- restricted disclosure never rewrites historical Provenance or canonical state;
+- current network/access policy may limit reproduction without rewriting historical truth;
 - Evidence remains observation authority, not release/use approval;
 - large-data workflows remain understandable without mandatory full driver-local materialization;
 - programmatic and human-facing experiences preserve equivalent semantic distinctions even when their presentation differs.
