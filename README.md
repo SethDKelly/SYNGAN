@@ -24,6 +24,7 @@ Completed:
 - **002-D — Generation Specification, Request/Condition Semantics & Output Completion**
 - **002-E — Evaluation Criterion, Evaluation & Evidence Specification**
 - **002-F — Execution, Attempt History, Failure & Recovery Semantics**
+- **002-G — Provenance, Reproducibility Contract & Historical Binding Specification**
 
 Current design includes:
 
@@ -33,17 +34,15 @@ Current design includes:
 - Generation Request/Condition semantics, direct and Learned-State generation paths, and a semantic output-promotion barrier;
 - Criterion/Evaluation/Evidence separation with explicit coverage, uncertainty, and claim-strength limits;
 - one logical Execution independent of Spark/Databricks/Kubernetes/PyTorch physical jobs;
-- Attempt as subordinate operational history rather than a platform-run synonym;
-- retry/resume that preserves committed domain semantics;
-- checkpoint/intermediate state that cannot become Learned State, completed output, or Evidence merely by being durable;
-- explicit partial operational success and unknown/indeterminate platform state;
-- contextual retryability, recovery reconciliation, and cancellation-race semantics;
-- single semantic promotion instead of an unrealistic exactly-once physical-computation guarantee;
-- duplicate physical work permitted only when canonical Learned State/output/Evidence effects remain unambiguous;
-- operational history that remains enterprise-scale control-plane state rather than a copy of every task/log/telemetry event.
+- retry/resume/checkpoint recovery that preserves committed semantics and uses single semantic promotion rather than exactly-once physical computation;
+- Provenance as typed stable-reference history rather than a copy of all domain state or platform telemetry;
+- historical bindings that remain tied to the exact source/meaning/Strategy/Constraint/Learned State/Condition/Criterion/method/dependency state actually used;
+- a cross-cutting Reproducibility Contract that distinguishes exact deterministic, semantic, statistical, bounded/approximate, comparative, and explicitly insufficient/not-reproducible outcomes;
+- explicit recognition that seeds, mutable aliases, URLs, or rerunnable jobs alone do not establish reproducibility;
+- enterprise-scale provenance/reproducibility that does not require full source/output/model/log collection to driver-local memory.
 
 Next:
 
-- **002-G — Provenance, Reproducibility Contract & Historical Binding Specification**
+- **002-H — Cross-Concept Invariant, Synchronization & Phase 002 Consolidation Review**
 
-No Python package, model runtime, Spark ML mapping, persistence format, plugin architecture, scheduler/orchestrator, checkpoint technology, output storage/publication mechanism, evidence/reporting technology, or model-hub/network integration should be treated as settled until the relevant downstream design phases establish it.
+No Python package, model runtime, Spark ML mapping, persistence format, plugin architecture, scheduler/orchestrator, checkpoint technology, provenance store, identity/fingerprint mechanism, output publication mechanism, evidence/reporting technology, or model-hub/network integration should be treated as settled until the relevant downstream design phases establish it.
