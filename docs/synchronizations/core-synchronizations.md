@@ -34,14 +34,16 @@ Where required by traceability, Provenance records the exact meaning revision bo
 
 **Type:** bind + contextual validation + provenance.
 
-Learning or Generation validates the chosen [Synthesis Strategy](../concepts/synthesis-strategy.md) against bound Data Meaning, applicable [Constraints](../concepts/constraint.md), and requested capabilities.
+Learning or Generation validates the chosen [Synthesis Strategy](../concepts/synthesis-strategy.md) against bound Data Meaning, applicable [Constraints](../concepts/constraint.md), requested capabilities, and the committed deployment/dependency profile where material.
 
 Strategy owns:
 
 - declared capabilities;
 - requirements;
 - synthesis-relevant configuration;
-- declared limitations.
+- declared limitations;
+- external artifact/network dependency profile;
+- Strategy-specific reproducibility and material resource characteristics.
 
 The activity owns the contextual validation result for its exact intended use.
 
@@ -49,7 +51,9 @@ Compatibility MUST NOT become globally mutable state on Strategy, Data Meaning, 
 
 Constraint support and Constraint satisfaction are different claims. Strategy capability may state that a class of rules can be enforced or processed; it does not by itself establish that a particular generated output satisfied a particular Constraint.
 
-Where the activity commits, Provenance records the exact Strategy/configuration revision used.
+Network/dependency compatibility is similarly contextual. A Strategy declared `runtime-network dependent` is incompatible with an activity committed under a no-network profile. A missing local artifact MUST NOT be resolved by an undeclared automatic network call.
+
+Where the activity commits, Provenance records the exact Strategy/configuration revision used and material dependency profile/artifact identity needed to explain or reproduce the activity.
 
 ## SYNC-03 — Constraint binding and handling disposition
 
@@ -98,13 +102,15 @@ Successful semantic Learning establishes a new [Learned State](../concepts/learn
 
 **Type:** bind + validation + provenance.
 
-At semantic commitment, [Generation](../concepts/generation.md) binds its requested intent/Conditions, relevant Data Meaning, applicable Constraint revisions, Strategy/configuration, Learned State when required, and reproducibility-relevant request state.
+At semantic commitment, [Generation](../concepts/generation.md) binds its requested intent/Conditions, relevant Data Meaning, applicable Constraint revisions, Strategy/configuration, Learned State when required, reproducibility-relevant request state, and material Strategy dependency/network requirements.
 
 Constraint applicability and handling MUST be explicit enough that required unsupported or unresolved rules cannot disappear from Generation merely because a Strategy cannot process them.
 
 Condition remains Generation-owned request direction. Constraint remains independent prescriptive authority even if implementation later uses shared predicate/expression machinery.
 
 Strategies requiring no reusable Learned State MAY generate directly without fabricated Learning or Learned State occurrences.
+
+A Generation committed under a no-network/no-egress deployment profile MUST NOT silently invoke a runtime-network-dependent Strategy, fetch an undeclared artifact, or switch to a remote fallback. Any fallback that changes synthesis behavior is an explicit Strategy/configuration choice and must be bound as such.
 
 Phase 002-D will refine how Constraint handling/satisfaction participates in Generation semantic completion while preserving these ownership rules.
 
@@ -162,13 +168,17 @@ Where a transition requires provenance, the committed transition and required pr
 
 For Data Meaning inference or Constraint applicability/handling, provenance SHOULD preserve the stable references and material context needed to explain the decision without copying row-level source data or full concept payloads.
 
+For Synthesis Strategy, provenance SHOULD preserve the bound Strategy/configuration and material local-artifact/network dependency facts where they affect behavior, reproducibility, or enterprise review. Remote locations alone are not sufficient historical identity when external content may change.
+
 ## SYNC-15 — Reproducibility-relevant commitment snapshot
 
 **Type:** cross-cutting bind + provenance; not a concept.
 
-At reproducibility-relevant commitment, activities MUST preserve or reference enough stable facts to state the supported reproduction/comparison scope. Depending on the activity this may include source/output identity, Data Meaning revision, Strategy/configuration, Constraint/Criterion revisions, Learned State identity, seeds/randomness policy, implementation/software identity, runtime/environment facts, and sampling/approximation semantics.
+At reproducibility-relevant commitment, activities MUST preserve or reference enough stable facts to state the supported reproduction/comparison scope. Depending on the activity this may include source/output identity, Data Meaning revision, Strategy/configuration, Constraint/Criterion revisions, Learned State identity, seeds/randomness policy, implementation/software identity, runtime/environment facts, sampling/approximation semantics, external dependency profile, and material local/pretrained artifact identity.
 
 No concept should duplicate these under a generic `reproducibility` state object merely for convenience.
+
+A URL or remote service name alone MUST NOT be treated as sufficient artifact identity for a reproducibility claim when the referenced content/behavior can change.
 
 ## Non-synchronizations
 
@@ -186,6 +196,12 @@ Additional 002-A clarification:
 - new inferred Data Meaning MUST NOT overwrite an authoritative declaration automatically;
 - a new Data Meaning revision MUST NOT rewrite the semantic prerequisites of historical Constraint bindings;
 - a newer Constraint revision MAY be evaluated against historical output as a new Evaluation question, but MUST NOT be represented as having governed the original Generation.
+
+Additional 002-B clarification:
+
+- changed Strategy dependency/network requirements MUST NOT rewrite historical activities;
+- a deployment policy change MAY reject future use of an otherwise historical-valid Strategy without changing what earlier work used;
+- locally replacing an external artifact with a materially different artifact is a new compatibility/reproducibility context, not silent equivalence.
 
 ## Cardinality guidance
 
@@ -213,4 +229,4 @@ The retained set avoids pathological all-to-all synchronization because most rel
 - a narrow activity↔Execution lifecycle pair;
 - append/traverse Provenance.
 
-Data Meaning and Constraint remain control-plane authorities. Contextual inference, applicability, compatibility, enforcement, and satisfaction results MUST remain with the concepts/activities that produce them instead of creating global mutable coordination hubs.
+Data Meaning, Constraint, and Synthesis Strategy remain control-plane authorities. Contextual inference, applicability, compatibility, deployment-profile compatibility, enforcement, and satisfaction results MUST remain with the concepts/activities that produce them instead of creating global mutable coordination hubs.
