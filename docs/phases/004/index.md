@@ -6,7 +6,7 @@ status: active
 
 # Phase 004 — Representation & Architecture Design
 
-Phase 004 translates SYNGAN's accepted concept, synchronization, and experience contracts into coherent implementation-facing architecture without allowing representation convenience to redefine semantic ownership.
+Phase 004 translates SYNGAN's accepted concept, synchronization, and experience contracts into implementation-facing architecture without allowing representation convenience to redefine semantic ownership.
 
 ## Entry authority
 
@@ -21,6 +21,7 @@ Phase 004 translates SYNGAN's accepted concept, synchronization, and experience 
 - [004-C Control-Plane Identity/State Architecture](../../architecture/control-plane-identity-revision-state-persistence-historical-reference.md)
 - [004-D Spark Data Boundary/Manifest/Promotion Architecture](../../architecture/spark-data-boundary-source-output-reference-distributed-materialization-manifest-promotion.md)
 - [004-E Strategy Extension/Runtime Adapter Architecture](../../architecture/strategy-extension-learning-generation-evaluation-runtime-adapter.md)
+- [004-F Execution/Recovery Architecture](../../architecture/execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation.md)
 
 ## Groups
 
@@ -31,8 +32,8 @@ Phase 004 translates SYNGAN's accepted concept, synchronization, and experience 
 | **004-C** | [**Control-Plane Identity, Revision, State, Persistence & Historical Reference Architecture**](004-C-control-plane-identity-revision-state-persistence-historical-reference-architecture.md) | **complete** |
 | **004-D** | [**Spark Data Boundary, Source/Output Reference, Distributed Materialization, Manifest & Promotion Architecture**](004-D-spark-data-boundary-source-output-reference-distributed-materialization-manifest-promotion-architecture.md) | **complete** |
 | **004-E** | [**Strategy Extension, Learning/Generation/Evaluation Runtime & Adapter Architecture**](004-E-strategy-extension-learning-generation-evaluation-runtime-adapter-architecture.md) | **complete** |
-| **004-F** | **Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Architecture** | **next** |
-| 004-G | Evaluation/Evidence, Provenance, Reproducibility & Historical Query Architecture | planned |
+| **004-F** | [**Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Architecture**](004-F-execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation-architecture.md) | **complete** |
+| **004-G** | **Evaluation/Evidence, Provenance, Reproducibility & Historical Query Architecture** | **next** |
 | 004-H | Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Architecture | planned |
 | 004-I | Deployment, Scalability, Observability, Portability, Compatibility & Platform Integration Architecture | planned |
 | 004-J | Cross-Architecture Invariant Audit, Decision Consolidation & Phase 004 Exit | planned |
@@ -51,66 +52,70 @@ Decision: [ADR-0001 — Typed Resource/Handle Public API](../../decisions/ADR-00
 
 ### 004-C — Control-plane identity/state/persistence
 
-Established stable resource identity, immutable semantic revisions/commitment snapshots, conflict-versioned mutable lifecycle state, representation schema versioning, exact historical reference resolution, logical persistence ownership, and recoverable coupled-transition consistency without mandating one storage technology or universal event sourcing.
+Established stable resource identity, immutable semantic revisions/commitment snapshots, conflict-versioned mutable lifecycle state, representation schema versioning, exact historical reference resolution, logical persistence ownership, and recoverable coupled-transition consistency.
 
 Decision: [ADR-0002 — Immutable Semantic Snapshots & Versioned Lifecycle State](../../decisions/ADR-0002-immutable-semantic-snapshots-versioned-lifecycle-state.md).
 
 ### 004-D — Spark data boundary/materialization/promotion
 
-Established exact source-state/read binding, Spark DataFrame access-versus-identity separation, distributed/bounded manifest architecture, open-to-sealed candidate materialization, exact completion-Evaluation subject binding, stale-writer fencing obligations, and one idempotently promoted logical output without mandatory row copying or exactly-once physical execution.
+Established exact source-state/read binding, distributed/bounded manifest architecture, open-to-sealed candidate materialization, exact completion-Evaluation subject binding, stale-writer fencing obligations, and one idempotently promoted logical output without mandatory row copying or exactly-once physical execution.
 
 Decision: [ADR-0003 — Sealed Manifest-Gated Distributed Output Promotion](../../decisions/ADR-0003-sealed-manifest-gated-output-promotion.md).
 
 ### 004-E — Strategy extension/runtime adapters
 
-Established [Strategy Extension, Learning/Generation/Evaluation Runtime & Adapter Architecture](../../architecture/strategy-extension-learning-generation-evaluation-runtime-adapter.md).
+Established semantic Strategy/method authority separate from executable bindings; immutable Attempt-scoped runtime invocation; typed Learning/Generation/Evaluation runtime boundaries; distributed Learned State loading; framework-owned candidate sinks; Evaluation method result envelopes; and no hidden dependency/network fallback.
+
+Decision: [ADR-0004 — Semantic Extension & Runtime Binding Separation](../../decisions/ADR-0004-semantic-extension-runtime-binding-separation.md).
+
+### 004-F — Execution/recovery/fencing
+
+Established [Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Architecture](../../architecture/execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation.md).
 
 Key accepted rules include:
 
-- semantic Strategy/method authority is separate from executable implementation binding and Attempt-scoped runtime realization;
-- bindings identify exact supported semantic revisions plus package/runtime/SPI/state-codec/dependency/resource constraints;
-- implementation bindings may narrow but cannot silently broaden Strategy capabilities;
-- exact material implementation/runtime identity remains historically attributable when behavior/reproducibility depends on it;
-- extension discovery/registration remains infrastructure rather than semantic authority and cannot trigger hidden runtime acquisition;
-- runtime invocation is a bounded immutable representation of one committed activity/Attempt context;
-- runtime adapters report facts and write non-final material through approved ports rather than mutating canonical semantic state directly;
-- Learning adapters produce/seal candidate learned-state representation before Learning establishes the logical Learned State;
-- Learned State identity remains separate from loaded PyTorch/Spark/statistical runtime objects and may remain distributed;
-- direct Generation remains valid without fabricated Learning/Learned State;
-- Generation adapters write only through 004-D candidate sinks and cannot promote output directly;
-- Evaluation adapters bind exact subject/reference and return measurements/coverage/uncertainty/diagnostic facts rather than Evidence authority or generic pass/fail;
-- platform jobs/processes remain subordinate to SYNGAN Execution/Attempt identity;
-- Spark-native data semantics remain compatible with non-Spark model runtimes and prohibit ordinary full-corpus driver collection as a generic bridge;
-- dependency/network/egress behavior remains explicit and missing resources cannot cause silent fallback/download;
-- no Spark ML, PyTorch, CTGAN, Databricks, HuggingFace, LLM, plugin loader, or runtime family is made universal semantics.
+- one stable logical Execution spans many valid Attempts/platform submissions;
+- each write-capable Attempt receives a supersedable ordered epoch/fencing generation;
+- only the current epoch may mutate framework-owned current candidate/checkpoint/control state;
+- leases support liveness but do not replace fencing;
+- duplicate physical work and overlapping stale processes may exist while stale canonical writes are rejected/isolated;
+- Attempt runtime invocation remains immutable and same-semantics;
+- platform submission is correlation/idempotency/reconciliation aware across crash windows;
+- idempotency is scoped to Attempt launch, checkpoint commit, candidate mutation/seal, Evaluation aggregation, semantic promotion, cancellation, and other material operations rather than one global key;
+- committed checkpoints are immutable recovery snapshots with exact activity/runtime/dependency context;
+- resume eligibility is contextual and distinct from checkpoint existence;
+- recovery explicitly chooses retry-from-start, resume, reconcile-first, or cannot-continue;
+- unknown platform/side-effect state remains durable until safely reconciled/fenced;
+- external effects that cannot be fenced/query/deduplicated may block automatic retry;
+- candidate sealing requires resolved writer authority and is idempotent for an exact manifest generation;
+- semantic promotion remains owner-side and at-most-once in authority;
+- Evaluation retries cannot accidentally double-count logical work units;
+- cancellation is durable intent followed by reconciled outcome and cannot erase prior authority;
+- automatic retry obeys the same semantic/dependency/no-egress/cancellation safety checks as manual retry;
+- canonical Execution state remains bounded rather than duplicating all platform telemetry.
 
-Decision: [ADR-0004 — Semantic Extension & Runtime Binding Separation](../../decisions/ADR-0004-semantic-extension-runtime-binding-separation.md).
+Decision: [ADR-0005 — Attempt-Epoch Fencing & Recoverable At-Least-Once Execution](../../decisions/ADR-0005-attempt-epoch-fencing-recoverable-at-least-once-execution.md).
 
 ## Phase 004 guardrails
 
 Phase 004 MUST NOT:
 
-- redesign accepted concept semantics merely to simplify package/runtime structure;
-- erase experience distinctions behind generic API/session/result/plugin objects;
-- make one runtime/platform mandatory unless the semantic contract requires it;
-- force ordinary enterprise source/output/Learned-State materialization to driver-local memory;
-- make network/resource/package/model acquisition implicit;
-- treat runtime/process success, physical storage existence, manifest sealing, or plugin output as semantic promotion;
-- equate platform exactly-once claims with SYNGAN semantic promotion;
-- turn Provenance into a shadow copy of all domain/runtime data;
-- make security redaction falsify historical existence;
-- create package dependency cycles merely because semantic synchronizations are bidirectional;
-- make process-local object/Future/DataFrame/model identity the durable identity of work/results;
-- collapse semantic revision, implementation version, lifecycle state version, SPI version, state-codec version, and storage schema version into one ambiguous field;
-- use silent last-writer-wins for material authority;
-- permit runtime adapters to rewrite committed semantics, create Evidence, establish Learned State, or publish completed output directly;
-- allow completion Evaluation to bind mutable/open candidate state;
-- require exactly-once computation or data copying merely to express finality;
+- redesign accepted concept semantics for package/runtime convenience;
+- erase typed semantic/operational distinctions behind generic status/session/plugin/result objects;
+- make one runtime/platform mandatory unless semantics require it;
+- require ordinary full driver-local source/output/Learned-State/diagnostic materialization;
+- make dependency/network/resource acquisition implicit;
+- treat runtime success, file existence, manifest sealing, checkpoint durability, or plugin output as semantic promotion;
+- equate platform retry/exactly-once claims with SYNGAN semantic authority;
+- allow stale Attempts to mutate current framework-owned state after supersession;
+- use lease expiry or last-writer-wins as the sole protection for material authority;
+- assume unknown external effects failed merely to permit retry;
+- permit runtime/platform adapters to rewrite committed semantics or create semantic results directly;
 - jump into implementation task breakdown before Phase 004 architecture is complete.
 
 ## Phase 004 exit target
 
-Phase 004 should leave SYNGAN with enough accepted representation/architecture authority that Phase 005 can map:
+Phase 004 should leave enough architecture authority that Phase 005 can map:
 
 ```text
 concept / experience contract
@@ -126,4 +131,4 @@ without reopening core semantics.
 
 ## Current next phase
 
-**004-F — Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Architecture**
+**004-G — Evaluation/Evidence, Provenance, Reproducibility & Historical Query Architecture**
