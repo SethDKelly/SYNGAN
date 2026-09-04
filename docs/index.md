@@ -65,11 +65,17 @@ Completed in Phase 004:
 
 - [004-A — Architecture Authority, Representation Principles, Layering & Dependency Direction](phases/004/004-A-architecture-authority-representation-layering-dependency-direction.md)
 - [004-B — Public API, Resource/Handle Model, Workflow Composition & Semantic Mapping](phases/004/004-B-public-api-resource-handle-workflow-semantic-mapping.md)
+- [004-C — Control-Plane Identity, Revision, State, Persistence & Historical Reference Architecture](phases/004/004-C-control-plane-identity-revision-state-persistence-historical-reference-architecture.md)
 
-004-A establishes the [architecture constitution](architecture/architecture-authority-representation-layering.md): semantic-preserving representation, stable logical identity, bounded control-plane versus distributed data-plane separation, inward dependency direction, semantic/control versus coordination versus port/adapter/composition boundaries, platform authority isolation, Spark-native/model-neutral semantics, optional integration isolation, anti-god-module rules, ADR governance, and architecture validation obligations.
+004-A establishes the [architecture constitution](architecture/architecture-authority-representation-layering.md): semantic-preserving representation, bounded control/data-plane separation, inward dependencies, adapter isolation, Spark-native/model-neutral semantics, anti-god-module rules, and architecture decision discipline.
 
-004-B establishes the [typed public resource/handle architecture](architecture/public-api-resource-handle-workflow-semantic-mapping.md): editable specifications and contextual readiness remain distinct from committed Learning/Generation/Evaluation handles; promoted Learned State/output/Evidence resources remain distinct from raw model/DataFrame/metric payloads; Execution/Attempt inspection remains operationally separate; long-running work is re-resolvable rather than process-Future identity; convenience façades may compose workflows without owning canonical state; and payload access remains explicit and distributed-scale safe.
+004-B establishes the [typed public resource/handle architecture](architecture/public-api-resource-handle-workflow-semantic-mapping.md): editable specifications and contextual readiness remain distinct from committed activities; promoted Learned State/output/Evidence resources remain distinct from raw payloads; Execution remains operationally separate; handles are durable re-resolvable identities; and convenience façades cannot own canonical state.
 
-Decision rationale: [ADR-0001 — Typed Resource/Handle Public API](decisions/ADR-0001-typed-resource-handle-public-api.md).
+004-C establishes the [control-plane identity/state architecture](architecture/control-plane-identity-revision-state-persistence-historical-reference.md): stable resource identity, immutable semantic revisions/commitment snapshots, mutable conflict-versioned lifecycle state, representation schema versioning, exact historical references, bounded logical persistence ownership, recoverable coupled-transition consistency, and non-authoritative derived indexes.
 
-Next: **004-C — Control-Plane Identity, Revision, State, Persistence & Historical Reference Architecture**.
+Decision rationale:
+
+- [ADR-0001 — Typed Resource/Handle Public API](decisions/ADR-0001-typed-resource-handle-public-api.md)
+- [ADR-0002 — Immutable Semantic Snapshots & Versioned Lifecycle State](decisions/ADR-0002-immutable-semantic-snapshots-versioned-lifecycle-state.md)
+
+Next: **004-D — Spark Data Boundary, Source/Output Reference, Distributed Materialization, Manifest & Promotion Architecture**.
