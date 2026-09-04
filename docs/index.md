@@ -53,6 +53,7 @@ Completed in Phase 003:
 - [003-E — Evaluation, Evidence & Review Experience](phases/003/003-E-evaluation-evidence-review-experience.md)
 - [003-F — Execution Monitoring, Failure, Recovery & Cancellation Experience](phases/003/003-F-execution-monitoring-failure-recovery-cancellation-experience.md)
 - [003-G — Provenance, Reproducibility & Historical Inspection Experience](phases/003/003-G-provenance-reproducibility-historical-inspection-experience.md)
+- [003-H — Enterprise Dependency, Offline/No-Egress & Safety Experience](phases/003/003-H-enterprise-dependency-offline-no-egress-safety-experience.md)
 
 003-A establishes canonical workflow entry/orientation, source-history visibility, commitment orientation, semantic-versus-operational status separation, and programmatic/human parity.
 
@@ -68,4 +69,6 @@ Completed in Phase 003:
 
 003-G establishes historical inspection/reproducibility experience: actors can explain one result, compare historical derivations, distinguish exact past bindings from current state, expose provenance/identity gaps, and assess exact/semantic/statistical/bounded/comparative/insufficient reproduction capability without turning Provenance into a copied metadata warehouse or treating re-execution/readiness as successful reproduction.
 
-Next: **003-H — Enterprise Dependency, Offline/No-Egress & Safety Experience**.
+003-H establishes enterprise dependency/offline/no-egress/safety experience: dependency profiles, availability/identity/permission, provisioning versus runtime network, and egress categories remain distinct; hidden acquisition/fallback and silent artifact substitution are prohibited; source-derived state is not presumed safe; restricted Evidence/Provenance remains truthfully withheld rather than falsified; and current access/network policy can constrain reproduction without rewriting historical truth.
+
+Next: **003-I — Cross-Workflow Consistency & Phase 003 Consolidation Review**.
