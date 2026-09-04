@@ -8,7 +8,7 @@ status: accepted
 
 These rules are the canonical cross-concept coordination authority accepted at the end of Phase 001 and refined by later concept-specification phases.
 
-A synchronization coordinates concept-owned state; it does not transfer ownership merely because another concept reads, validates, or records that state.
+A synchronization coordinates concept-owned state; it does not transfer ownership merely because another concept reads, validates, records, or operationally realizes that state.
 
 ## SYNC-01 — Data Meaning revision binding
 
@@ -62,13 +62,49 @@ For Generation:
 
 [Learning](../concepts/learning.md) may use [Execution](../concepts/execution.md) for long-running/distributed work.
 
-Learning owns semantic commitment/outcome and association with Learned State. Execution owns operational state, Attempts, progress, retry/resume, and operational failures.
+### Ownership
 
-One committed Learning MAY span multiple Attempts. Retry/resume MUST NOT alter committed Learning semantics.
+Learning owns:
+
+- semantic commitment and bound Learning specification;
+- whether reusable state was validly derived;
+- Learning-level completion/failure/cancellation;
+- association with Learned State.
+
+Execution owns:
+
+- one stable logical operational identity for the realization;
+- Attempt history;
+- operational progress/health;
+- retry/resume/cancellation realization;
+- checkpoint/recovery associations;
+- operational failure/unknown-state facts.
+
+### Attempt and retry rule
+
+One committed Learning MAY span multiple Attempts. A new Attempt remains part of the same Execution only when it preserves the committed Learning semantics.
+
+Retry/resume MUST NOT silently change source identity, Data Meaning, Strategy/configuration, Constraints/handling, learning scope, sampling/approximation, dependency profile, base/pretrained artifact identity, or materially behavior-changing reproducibility state.
+
+A failed Attempt does not automatically fail Learning while a valid retry/recovery path remains.
+
+### Checkpoint rule
+
+Checkpoint/intermediate material MUST NOT become Learned State merely because it is durable or reusable for recovery.
+
+Resume may use checkpoint state only after establishing that the state belongs to the same committed Learning/Execution context, remains sufficiently intact, and preserves required Strategy/runtime/dependency semantics.
+
+### Completion rule
 
 `Execution.completed` MUST NOT by itself establish `Learning.completed`.
 
-Checkpoint/intermediate material MUST NOT become Learned State unless Learning semantically validates/promotes it as the successful result.
+Learning may establish Learned State only through its semantic completion contract under SYNC-05.
+
+### Cancellation/unknown rule
+
+Execution cancellation or unknown platform state does not erase the committed Learning. Learning resolves its own terminal state from Execution facts plus its semantic contract.
+
+If operational state is indeterminate, SYNGAN MUST NOT assume Learning success merely because partial/checkpoint material exists.
 
 ## SYNC-05 — Learning produces Learned State
 
@@ -80,7 +116,9 @@ Failed, cancelled, or incomplete Learning MUST NOT establish usable Learned Stat
 
 Under the current model one Learning produces zero or one primary logical Learned State even when its physical representation contains many components.
 
-Learned State retains stable references sufficient to trace producing Learning, source context, Data Meaning, Strategy/configuration, applicable Constraint context, material sampling/approximation, and dependency/artifact facts without duplicating all upstream state.
+Learned State retains stable references sufficient to trace producing Learning, source context, Data Meaning, Strategy/configuration, applicable Constraint context, material sampling/approximation, dependency/artifact facts, and operational history required to explain derivation without duplicating all upstream state.
+
+Repeated Attempts/recomputation MUST NOT create multiple ambiguous primary Learned States for the same committed Learning. Later representation must enforce single semantic promotion even when physical computation is repeated.
 
 ## SYNC-06 — Generation commitment and compatibility
 
@@ -102,17 +140,55 @@ Material post-commitment request changes require a new Generation.
 
 **Type:** operational realization + provenance.
 
-Generation may use Execution for long-running/distributed work.
+Generation may use [Execution](../concepts/execution.md) for long-running/distributed work.
 
-Generation owns committed request semantics, semantic progress/result, fulfillment of mandatory Conditions/Constraints, promotion of candidate data, terminal domain outcome, and completed output association.
+### Ownership
 
-Execution owns operational state, Attempts, progress, retry/resume/cancellation realization, and operational failures.
+Generation owns:
 
-One committed Generation MAY span multiple Attempts; retries MUST NOT alter committed semantics.
+- committed request semantics;
+- semantic progress/result state;
+- fulfillment of mandatory Conditions/Constraints;
+- promotion of candidate data;
+- Generation-level completion/failure/cancellation;
+- completed output association.
+
+Execution owns:
+
+- logical operational state;
+- Attempt history;
+- operational progress/health;
+- retry/resume/cancellation realization;
+- checkpoint/partial-output recovery associations;
+- operational failure/unknown-state facts.
+
+### Retry/resume rule
+
+One committed Generation MAY span multiple Attempts. Retry/resume MUST preserve Data Meaning, Strategy/configuration, Learned State/direct-generation basis, Conditions, Constraints, quantity/scope, deployment/dependency profile, and other material request semantics.
+
+Recovery may reuse partial materialization only when identity, scope, integrity, and committed-context compatibility can be established sufficiently. Recomputing or duplicating physical partitions is allowed; duplicate physical work MUST NOT create multiple authoritative completed outputs.
+
+### Candidate-output rule
+
+Generation may have partial materialization, complete candidate materialization awaiting semantic validation, completed output, or abandoned/quarantined materialization.
+
+Execution/Attempt success or complete physical materialization is insufficient to promote candidate data.
+
+Single semantic promotion is required: one committed Generation produces zero or one successful logical completed-output result even if Attempts generate overlapping/repeated physical data.
+
+### Cancellation/unknown rule
+
+Cancellation is a request first. Execution may report cancellation accepted, operational completion before cancellation took effect, failure while cancelling, or indeterminate state requiring reconciliation.
+
+Generation determines its terminal semantic state. Cancellation MUST NOT erase committed history or retroactively cancel a Generation already semantically completed.
+
+Unknown operational state MUST NOT result in candidate output being treated as completed until side-effect/output state is reconciled or safely fenced.
+
+### Completion rule
 
 `Execution.completed` MUST NOT by itself establish `Generation.completed`.
 
-Partial materialization, complete candidate materialization, completed output, and abandoned/quarantined materialization remain distinct.
+Generation applies its completion barrier under SYNC-08, including required validation/Evidence where applicable.
 
 ## SYNC-08 — Generation produces synthetic output reference
 
@@ -126,66 +202,79 @@ Successful completion requires, where applicable, committed-specification consis
 
 `completed with limitations` may cover only explicitly permitted best-effort/approximate limitations and MUST NOT override mandatory failures.
 
+Retry/recovery MUST NOT permit multiple completed-output references to be promoted ambiguously for the same committed Generation.
+
 ## SYNC-09 — Evaluation Criterion binding
 
 **Type:** bind + provenance.
 
 [Evaluation](../concepts/evaluation.md) MUST bind the exact [Evaluation Criterion](../concepts/evaluation-criterion.md) revision it answers.
 
-The binding includes the Criterion's material question, subject/scope, reference context, and answer-sufficiency/claim-strength semantics where those affect interpretation.
+The binding includes material question, subject/scope, reference context, and answer-sufficiency/claim-strength semantics where those affect interpretation.
 
 Later Criterion revisions MUST NOT reinterpret historical Evidence.
 
-When a Criterion is derived from a Constraint or Generation Condition, the Evaluation also binds the exact originating rule/request semantics needed to preserve what was actually tested. Criterion does not take ownership of the Constraint or Condition.
+When a Criterion derives from a Constraint or Generation Condition, Evaluation also binds the exact originating rule/request semantics needed to preserve what was tested. Criterion does not take ownership of Constraint or Condition.
 
 ## SYNC-10 — Evaluation method compatibility
 
 **Type:** contextual validation + provenance.
 
-Evaluation validates that its selected method can legitimately address the bound Criterion under the declared inputs, logical scope, coverage, sampling/approximation model, assumptions, and uncertainty semantics.
+Evaluation validates that its selected method can legitimately address the bound Criterion under declared inputs, logical scope, coverage, sampling/approximation model, assumptions, and uncertainty semantics.
 
-The Criterion owns the question and required answer strength. Evaluation owns the method and contextual compatibility assessment.
+Criterion owns the question/required answer strength. Evaluation owns method and contextual compatibility.
 
-Method compatibility MUST account for claim strength. In particular:
+Evidence strength MUST NOT exceed method/scope/coverage/assumption/uncertainty support.
 
-- exhaustive/universal Criteria require a method capable of supporting that scope unless the Criterion itself permits bounded/statistical assurance;
-- sample-based methods MUST NOT silently answer a universal Criterion as though the full population was proven;
-- approximation/sketch methods may support only claims within their preserved bounds;
-- task-specific utility methods support the stated task/use context, not universal utility;
-- disclosure-risk methods support the stated threat model/attacker assumptions, not universal privacy.
+Sample-based methods MUST NOT silently answer universal Criteria as though full population were proven. Approximate/sketch methods support only claims within preserved bounds. Utility remains task-scoped and disclosure-risk evidence remains threat-model scoped.
 
-Sampling, approximation, coverage, and methodological limitations MUST remain visible in resulting Evidence.
-
-For Generation-required validation, method strength must be sufficient for the exact committed Condition/Constraint completion requirement. A method that can only produce weaker or indeterminate Evidence does not satisfy that completion requirement merely because it executed successfully.
+For Generation-required validation, method strength must be sufficient for the exact completion requirement.
 
 ## SYNC-11 — Evaluation operational realization
 
 **Type:** operational realization + provenance.
 
-Evaluation may use Execution for long-running/distributed work.
+Evaluation may use [Execution](../concepts/execution.md) for long-running/distributed work.
 
-### Evaluation owns
+### Ownership
+
+Evaluation owns:
 
 - committed Criterion/method/input/scope semantics;
 - methodological validity;
-- whether assumptions/coverage remained sufficient;
-- whether result is interpretable;
+- coverage/assumption sufficiency;
+- interpretability;
 - Evaluation-level completion/failure/cancellation;
 - association with Evidence.
 
-### Execution owns
+Execution owns:
 
-- operational state;
+- logical operational state;
 - Attempt history;
-- progress/health;
+- operational progress/health;
 - retry/resume/cancellation realization;
-- operational failure facts.
+- partial examination/recovery associations;
+- operational failure/unknown-state facts.
 
-One committed Evaluation MAY span multiple Attempts. Retry/resume MUST NOT silently alter Criterion, subject/reference inputs, method/configuration, sampling design, coverage, uncertainty semantics, or other material Evaluation commitments.
+### Retry/resume rule
+
+One committed Evaluation MAY span multiple Attempts. Retry/resume MUST NOT silently alter Criterion, subject/reference identity, method/configuration, sampling design, coverage, uncertainty semantics, or other material commitments.
+
+For exhaustive/distributed validation, completed partitions or summaries may be reused only when the recovery contract can establish their identity, integrity, coverage, and compatibility with the same Evaluation.
+
+A retried partition or repeated method execution MUST NOT cause duplicate observations to be counted twice unless the Evaluation method explicitly defines that behavior.
+
+### Completion rule
 
 `Execution.completed` MUST NOT automatically establish successful Evaluation.
 
-A valid Evaluation that establishes an unfavorable result is still a successful Evaluation. A computationally completed method with invalid scope, broken assumptions, wrong references, or uninterpretable output is not successful Evaluation merely because it produced numbers.
+A valid Evaluation that establishes an unfavorable result is successful Evaluation. Computational completion with invalid scope, broken assumptions, wrong reference, missing coverage, or uninterpretable output is not successful Evaluation merely because it produced numbers.
+
+### Cancellation/unknown rule
+
+Cancellation or unknown operational state may leave partial diagnostics but MUST NOT create Evidence answering the Criterion unless Evaluation can still establish a semantically valid result at the represented claim strength.
+
+When Evaluation is required by a pending Generation completion barrier, unresolved Execution/Evaluation state leaves Generation pending rather than converting uncertainty to success.
 
 ## SYNC-12 — Evaluation produces Evidence
 
@@ -193,104 +282,84 @@ A valid Evaluation that establishes an unfavorable result is still a successful 
 
 A semantically valid Evaluation establishes one or more [Evidence](../concepts/evidence.md) records when independently interpretable findings exist.
 
-Evidence MUST preserve/reference enough information to identify:
+Evidence MUST preserve/reference exact Criterion revision, producing Evaluation, evaluated subject/reference identity, finding, logical scope, method/configuration, coverage, sampling/approximation, uncertainty/error/confidence, assumptions/limitations, claim-strength/applicability boundary, and relevant provenance.
 
-- exact Criterion revision;
-- producing Evaluation;
-- evaluated subject/candidate output/Learned State identity;
-- reference/baseline identity where applicable;
-- observed finding/result;
-- logical scope/population;
-- method/configuration;
-- coverage model;
-- sampling/approximation semantics;
-- uncertainty/error/confidence where applicable;
-- assumptions and limitations;
-- claim-strength/applicability boundary;
-- relevant provenance.
-
-Diagnostic output from a failed Evaluation MUST NOT masquerade as Evidence answering the Criterion.
+Diagnostic output from failed/incomplete Evaluation MUST NOT masquerade as Evidence answering the Criterion.
 
 ### Claim-strength rule
 
-Evidence strength MUST NOT exceed what the Evaluation's method, scope, coverage, assumptions, and uncertainty support.
-
-Relevant forms include exhaustive/universal, deterministic bounded/certificate, statistical, approximate/sketch, and diagnostic/partial Evidence. These are conceptual distinctions rather than a required API enum.
+Evidence strength MUST NOT exceed what the Evaluation method, scope, coverage, assumptions, and uncertainty support.
 
 ### Constraint/Condition completion use
 
-Constraint-satisfaction Evidence records an observation about a specific bound Constraint revision, exact candidate output, and method. It does not become Constraint authority or global satisfaction state.
-
-Condition-fulfillment Evidence similarly remains tied to the exact committed Generation Condition.
-
 When Generation completion depends on post-production validation:
 
-- Evidence must refer to the exact candidate output being promoted;
+- Evidence must refer to the exact candidate output;
 - Evidence must answer the exact committed completion requirement;
-- its claim strength must be sufficient for that requirement;
+- its claim strength must be sufficient;
 - negative Evidence blocks completion when satisfaction is mandatory;
 - indeterminate Evidence blocks completion when determination is mandatory;
 - sample-only Evidence cannot support universal satisfaction unless the committed Criterion/rule explicitly defines statistical assurance as sufficient.
 
-Generation, not Evidence, owns the final completion-state transition.
+Generation, not Evidence, owns the completion-state transition.
+
+Repeated Attempts/recovery MUST NOT create ambiguous duplicate authoritative Evidence for one semantic finding; physical recomputation may occur, but durable finding identity/history must remain coherent.
 
 ## SYNC-13 — Evidence external and Generation handoff
 
 **Type:** controlled handoff.
 
-Evidence may be consumed by Generation completion logic or by external actors/systems making claims, restrictions, approvals, release/use decisions, or remediation decisions.
+Evidence may be consumed by Generation completion logic or external actors/systems making claims, restrictions, approvals, release/use decisions, or remediation decisions.
 
-Evidence remains observation authority only.
-
-It MUST NOT be interpreted by itself as:
-
-- release/use authorization;
-- formal privacy guarantee;
-- anonymization certification;
-- universal downstream fitness;
-- automatic Generation completion independent of Generation's contract.
-
-The same Evidence may legitimately produce different external decisions under different policies.
+Evidence remains observation authority only and MUST NOT by itself become release/use authorization, formal privacy guarantee, anonymization certification, universal downstream fitness, or automatic Generation completion.
 
 ## SYNC-14 — Provenance recording at material transitions
 
 **Type:** historical/provenance.
 
-Material committed transitions MUST record typed derivation/context relationships when required by SYNGAN traceability guarantees. [Provenance](../concepts/provenance.md) references canonical state and MUST NOT duplicate full payloads into a shadow source of truth.
+Material committed transitions MUST record typed derivation/context relationships when required by SYNGAN traceability guarantees. [Provenance](../concepts/provenance.md) references canonical state and MUST NOT duplicate full payloads or platform logs into a shadow source of truth.
 
-For Evaluation/Evidence, provenance SHOULD preserve stable references sufficient to explain:
+For Execution/Attempt history, provenance SHOULD preserve stable references sufficient to explain, where material:
 
-- Criterion revision and authority;
-- evaluated subject and reference/baseline identities;
-- method/configuration/version;
-- logical scope/coverage;
-- sampling/approximation/randomness semantics;
-- material Data Meaning/Constraint/Condition context;
-- dependency/network/software/runtime facts where behaviorally material;
-- Execution/Attempt facts required for failure/reproducibility explanation;
-- Evaluation → Evidence production;
-- Evidence supersession/staleness/invalidation where material;
-- Generation completion use where Evidence formed part of the promotion basis.
+- associated domain activity identity;
+- Execution identity and terminal operational outcome;
+- Attempt identities/order/outcomes;
+- platform job/run references without making them logical authority;
+- retry/resume/checkpoint/recovery relationships;
+- material resource/runtime/dependency context;
+- cancellation request/outcome;
+- indeterminate/lost-state reconciliation;
+- operational failures material to domain outcome or reproducibility;
+- promotion/use of recovered partial state where relevant.
 
-Provenance MUST NOT copy source/synthetic rows, complete detailed validation output, or full model/state payloads merely to satisfy traceability.
+Provenance should retain summarized typed facts/references rather than copying all task-level telemetry, logs, checkpoints, source rows, generated rows, or model payloads.
 
-## SYNC-15 — Reproducibility-relevant commitment snapshot
+Domain-specific provenance requirements from prior phases remain in force, including Learning → Learned State derivation, Generation completion/promotion basis, Evaluation → Evidence production, and Evidence applicability history.
+
+## SYNC-15 — Reproducibility-relevant commitment and operational history
 
 **Type:** cross-cutting bind + provenance; not a concept.
 
 At reproducibility-relevant commitment, activities MUST preserve/reference enough stable facts to state supported reproduction/comparison scope.
 
-For Learning this includes source/semantic/Strategy/Constraint/sampling/randomness/dependency facts where material.
+Learning, Generation, and Evaluation retain their previously specified source/semantic/Strategy/Constraint/Condition/Criterion/method/randomness/dependency facts where material.
 
-For Generation this includes Data Meaning, Strategy/configuration, Learned State or direct input/source identity, Constraints, Conditions, quantity/scope, randomness, software/runtime/dependencies, partition/distribution semantics, retry/recovery facts, and approximation/tolerance semantics where material.
+002-F adds that operational history MAY also be reproduction-relevant when behavior can depend on:
 
-For Evaluation this may include Criterion revision, subject/reference identity, method/version/configuration, logical scope/coverage, sampling design, randomness, approximation/error semantics, software/runtime/dependency identity, and uncertainty calculation.
+- Attempt/retry count or ordering;
+- checkpoint/resume point;
+- partial recomputation;
+- worker/partition topology;
+- runtime/resource substitution;
+- nondeterministic failure/recovery timing;
+- external dependency/service behavior;
+- duplicate physical execution and fencing/promotion decisions.
 
-For Evidence, the effective reproduction story MUST preserve enough producing context to state whether the finding is exactly reproducible, statistically reproducible, approximately recomputable within bounds, only qualitatively comparable, or not meaningfully reproducible.
+Execution MUST preserve/refer to those operational facts when they materially affect the supported reproduction/comparison claim, without turning every platform log into canonical reproducibility state.
 
-No concept should duplicate all such facts under a generic `reproducibility` object merely for convenience.
+Exactly-once physical execution is not assumed. Reproducibility claims must distinguish semantic equivalence from identical operational history where relevant.
 
-Mutable table names, aliases, URLs, or service names alone MUST NOT be treated as sufficient identity when underlying content/behavior can change materially.
+No concept should duplicate all such facts under a generic `reproducibility` object solely for convenience.
 
 ## Non-synchronizations
 
@@ -305,17 +374,20 @@ The following MUST NOT mutate historical work automatically:
 - Learned State restriction/retirement/invalidation → historical Generation;
 - Evidence supersession/staleness → external historical decision;
 - later Condition/request changes → committed Generation;
-- newer validation policy → historical Generation unless explicitly evaluated as a new question.
+- newer validation policy → historical Generation unless explicitly evaluated as a new question;
+- new Attempt → committed domain semantics;
+- platform-native retry/run numbering → SYNGAN logical Execution/Attempt identity;
+- checkpoint existence → domain result existence;
+- Execution completion → Learning/Generation/Evaluation completion;
+- cancellation request → automatic domain cancellation;
+- unknown platform state → assumed success or failure.
 
 Further accepted refinements:
 
-- new inferred Data Meaning MUST NOT overwrite an authoritative declaration automatically;
-- newer Constraint revisions MAY be evaluated against old output but MUST NOT be represented as governing original production;
-- changed Strategy dependency/network requirements MUST NOT rewrite historical activities;
-- deployment-policy changes MAY reject future use without changing prior history;
-- materially different pretrained/base artifacts create new compatibility/reproducibility context;
 - retrying Learning, Generation, or Evaluation is not permission to change committed semantic specifications;
-- physical relocation/reserialization of Learned State/completed output may preserve logical identity only when later representation contracts guarantee semantic equivalence;
+- materially different recovery inputs/artifacts/runtime behavior create a new semantic/compatibility question when they affect domain meaning;
+- physical relocation/reserialization may preserve logical identity only when later representation contracts guarantee semantic equivalence;
+- duplicate physical work is acceptable only when canonical promotion/side effects remain unambiguous;
 - new Evidence may supersede an older finding for current use but MUST NOT rewrite what the older Evaluation observed.
 
 ## Cardinality guidance
@@ -325,20 +397,18 @@ These are conceptual expectations, not storage schemas:
 - one Data Meaning revision may serve many activities;
 - one Strategy configuration may serve many activities;
 - one Constraint revision may be bound by many activities;
-- one activity may bind many applicable Constraints;
 - one Learning produces zero or one primary logical Learned State;
 - one Learned State may contain many physical components and support many Generations;
 - one Generation produces zero or one successful logical completed output result;
-- one completed output may have many physical partitions/components;
 - one Criterion may serve many Evaluations;
-- one Evaluation may bind one or more compatible Criteria where method semantics support that grouping;
 - one Evaluation may produce zero or more independently interpretable Evidence records;
 - one Evidence record represents one durable interpretable finding;
-- one Execution contains one or more Attempts;
+- one domain activity requiring operational realization has one primary logical Execution under the current model;
+- one Execution contains one or more Attempts over its active history;
+- one Attempt may map to one or many physical platform jobs/tasks/processes;
+- one platform job is not assumed to equal one Attempt;
 - Provenance contains many typed relationships.
 
 ## Synchronization economy assessment
 
-The retained model continues to avoid pathological all-to-all synchronization. Most relationships are stable reference binding, contextual validation, one-way result production, a narrow activity↔Execution pair, or append/traverse Provenance.
-
-Data Meaning, Constraint, Synthesis Strategy, and Evaluation Criterion remain declarative authorities. Learning owns derivation semantics. Learned State owns reusable state. Generation owns request/Condition semantics and output completion. Evaluation owns examination method/lifecycle. Evidence owns durable findings and claim-strength limits. Execution owns operational realization. Provenance explains history without becoming duplicate authority.
+The model continues to avoid pathological all-to-all coordination. Domain concepts own semantic commitment and completion. Execution owns operational realization. Attempt remains subordinate history. Retry/resume preserve semantics rather than creating new compatibility authority. Provenance records typed history without becoming duplicate platform telemetry. Exactly-once physical work is not required; single semantic promotion prevents duplicate authoritative domain results.
