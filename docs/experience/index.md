@@ -17,6 +17,7 @@ Experience documents define how actors discover, prepare, commit, observe, inspe
 - [Learning & Learned State Lifecycle](learning-learned-state-lifecycle.md) — how actors commit/observe/recover Learning, distinguish checkpoints from semantic results, establish/inspect Learned State, and manage reuse/restriction/retirement/invalidation without conflating logical state with model artifacts.
 - [Generation Request, Condition, Validation & Output Promotion](generation-request-condition-validation-output-promotion.md) — how actors define/commit Generation intent, distinguish mandatory and best-effort Conditions, observe partial/candidate output, inspect requirement-specific validation Evidence, and promote exactly one authoritative completed logical output only at semantic completion.
 - [Evaluation, Evidence & Review](evaluation-evidence-review.md) — how actors begin from evaluative questions, select compatible methods, understand coverage/uncertainty/claim strength, interpret and compare Evidence, review multidimensional fitness, and preserve the boundary between findings and external decisions.
+- [Execution Monitoring, Failure, Recovery & Cancellation](execution-monitoring-failure-recovery-cancellation.md) — how actors monitor one logical Execution across Attempts/platform jobs, distinguish recoverable/terminal/unknown outcomes, qualify retry/resume, reconcile side effects, handle cancellation races, and preserve domain semantic authority during operational intervention.
 
 Additional experience authorities will be added by later Phase 003 groups.
 
@@ -65,6 +66,15 @@ Phase 003 experience authority MUST preserve these rules:
 - fidelity, utility, validity, privacy/disclosure risk, and other explicit Criteria remain distinct unless an explicit decision rule combines them;
 - missing, conflicting, stale, superseded, inapplicable, and invalidated Evidence remain distinguishable;
 - privacy/disclosure-risk Evidence remains threat-model scoped and does not imply approval or universal privacy;
+- one logical Execution remains stable across valid retries/resumes while Attempt history stays inspectable;
+- platform job/run identity remains a reference rather than SYNGAN Execution authority;
+- retry/resume must preserve committed domain semantics and require contextual safety/compatibility validation;
+- checkpoint existence does not imply resume safety or domain-result authority;
+- unknown/indeterminate operational state remains explicit until reconciled or safely fenced;
+- duplicate physical work may occur but must not create ambiguous duplicate authoritative semantic results;
+- cancellation request remains distinct from terminal cancellation and its race outcome;
+- operator intervention may repair operational realization but must not silently mutate committed semantic authority;
+- canonical Execution monitoring references rather than copies complete platform telemetry;
 - network/external dependencies remain visible before commitment and throughout Learning/Generation/Evaluation/Learned State reuse;
 - Evidence remains observation authority, not release/use approval;
 - large-data workflows remain understandable without mandatory full driver-local materialization;
