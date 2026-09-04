@@ -42,11 +42,14 @@ Completed in Phase 002:
 - [002-A — Data Meaning & Constraint Specification](phases/002/002-A-data-meaning-constraint-specification.md)
 - [002-B — Synthesis Strategy Specification & Capability Semantics](phases/002/002-B-synthesis-strategy-capability-semantics.md)
 - [002-C — Learning & Learned State Specification](phases/002/002-C-learning-learned-state-specification.md)
+- [002-D — Generation Specification, Request/Condition Semantics & Output Completion](phases/002/002-D-generation-request-condition-output-completion.md)
 
-002-B also established the [Network and External Dependency Policy](authority/network-external-dependency-policy.md), including an offline/no-outbound-network design profile for supported core structured/tabular synthesis and explicit declaration of optional external dependencies.
+002-B established the [Network and External Dependency Policy](authority/network-external-dependency-policy.md), including an offline/no-outbound-network design profile for supported core structured/tabular synthesis and explicit declaration of optional external dependencies.
 
 002-C established stable Learning commitment/source history, checkpoint-versus-Learned-State separation, distributed reusable Learned State semantics, non-mutating reuse, and explicit sensitivity/dependency boundaries.
 
-Next: **002-D — Generation Specification, Request/Condition Semantics & Output Completion**.
+002-D established Generation commitment/request semantics, mandatory versus best-effort Conditions, direct-generation and Learned-State paths, required-Constraint completion rules, candidate-versus-completed output, and a semantic completion barrier distinct from physical materialization and Execution completion.
+
+Next: **002-E — Evaluation Criterion, Evaluation & Evidence Specification**.
 
 See [Phase 002 index](phases/002/index.md).
