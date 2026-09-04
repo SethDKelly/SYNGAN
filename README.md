@@ -28,27 +28,35 @@ Completed:
 
 - **004-A — Architecture Authority, Representation Principles, Layering & Dependency Direction**
 - **004-B — Public API, Resource/Handle Model, Workflow Composition & Semantic Mapping**
+- **004-C — Control-Plane Identity, Revision, State, Persistence & Historical Reference Architecture**
 
 004-A establishes the canonical [`architecture constitution`](docs/architecture/architecture-authority-representation-layering.md): architecture remains downstream of semantic/experience authority; logical identity stays separate from physical/platform locators; bounded control-plane state references distributed data-plane payloads; dependencies point inward; runtime/platform integrations remain adapters; Spark-native means distributed Spark-scale data behavior rather than universal Spark ML; and model/runtime convenience cannot create god-state ownership.
 
-004-B establishes the canonical [`typed public resource/handle architecture`](docs/architecture/public-api-resource-handle-workflow-semantic-mapping.md):
+004-B establishes the canonical [`typed public resource/handle architecture`](docs/architecture/public-api-resource-handle-workflow-semantic-mapping.md): editable specifications remain distinct from committed activities; readiness is contextual; committed Learning/Generation/Evaluation and promoted Learned State/output/Evidence expose durable typed identities; Execution remains operationally separate; long-running work is re-resolvable rather than process-Future identity; and payload access remains explicit.
 
-- editable Learning/Generation/Evaluation specifications remain distinct from committed activity identities;
-- readiness/compatibility is contextual and inspectable rather than global mutable state;
-- committed activities expose durable typed handles that survive client/process turnover;
-- Learned State, completed synthetic output, and Evidence are promoted result resources distinct from model/DataFrame/metric payloads;
-- checkpoint/candidate/diagnostic material remains explicitly non-final;
-- Execution and ordered Attempt history remain operationally distinct from domain semantic state;
-- semantic commitment and operational submission remain separate transitions even when a convenience call combines them;
-- blocking/future-style helpers may exist, but process-local Future identity is not the canonical identity of long-running work;
-- payload access is explicit and Spark/distributed-scale safe rather than requiring driver collection;
-- `fit`/`generate`-style conveniences may exist without making runtime models/DataFrames the sole public contract;
-- one universal Session/Context/Result/Registry/Model/status object is rejected as canonical ownership.
+004-C establishes the canonical [`control-plane identity/state architecture`](docs/architecture/control-plane-identity-revision-state-persistence-historical-reference.md):
 
-Decision rationale: [`ADR-0001 — Typed Resource/Handle Public API`](docs/decisions/ADR-0001-typed-resource-handle-public-api.md).
+- stable resource identity is independent of mutable aliases, client objects, physical locations and platform run IDs;
+- semantic revision/commitment snapshot, lifecycle state version and representation schema version are separate axes;
+- bindable semantic revisions and committed activity snapshots are immutable in material meaning;
+- persisted drafts remain distinct from committed Learning/Generation/Evaluation occurrence identity;
+- Learned State/output/Evidence identity remains stable while current lifecycle/applicability changes independently;
+- material lifecycle writes require stale-write/conflict detection rather than silent last-writer-wins;
+- significant transition/audit history is retained without mandating universal event sourcing;
+- logical mutation authority remains distinct across semantic revisions, activities, results, Execution/Attempts, Provenance and derived indexes even if one physical database technology is shared;
+- coupled semantic transitions require detectable/recoverable consistency across failures;
+- exact historical references never silently substitute current/latest state;
+- withheld/redacted, unavailable, unknown/indeterminate, invalid-reference and absent states remain distinguishable;
+- representation-schema migration does not create new semantic history;
+- canonical control-plane persistence remains bounded rather than scaling with every row, task, tensor, diagnostic or log line.
+
+Architecture decision rationale:
+
+- [`ADR-0001 — Typed Resource/Handle Public API`](docs/decisions/ADR-0001-typed-resource-handle-public-api.md)
+- [`ADR-0002 — Immutable Semantic Snapshots & Versioned Lifecycle State`](docs/decisions/ADR-0002-immutable-semantic-snapshots-versioned-lifecycle-state.md)
 
 Next:
 
-- **004-C — Control-Plane Identity, Revision, State, Persistence & Historical Reference Architecture**
+- **004-D — Spark Data Boundary, Source/Output Reference, Distributed Materialization, Manifest & Promotion Architecture**
 
-No final Python package/module tree or exact public class names, persistence engine, identifier/version format, handle serialization, Spark output-manifest/promotion mechanism, strategy plugin loader, scheduler/orchestrator, checkpoint/fencing mechanism, provenance store, authorization engine, egress-control technology, model registry, or deployment topology should be treated as settled until the relevant later Phase 004 group accepts it.
+No final Python package/module tree or exact public class names, database engine, ID encoding, physical persistence schema, source fingerprint/manifest format, Spark output-promotion mechanism, strategy plugin loader, scheduler/orchestrator, checkpoint/fencing mechanism, provenance physical store, authorization engine, egress-control technology, model registry, or deployment topology should be treated as settled until the relevant later Phase 004 group accepts it.
