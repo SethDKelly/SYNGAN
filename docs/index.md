@@ -17,10 +17,10 @@ This directory is the canonical design knowledge bundle for SYNGAN.
 - [Accepted Concepts](concepts/index.md) — canonical concept purpose, ownership, actions, lifecycle, invariants and boundaries.
 - [Accepted Synchronizations](synchronizations/index.md) — canonical cross-concept coordination rules.
 - [Experience & Workflow Design](experience/index.md) — canonical actor-visible and programmatic workflow semantics, including the [Phase 003 Consolidated Experience Contract](experience/phase-003-consolidated-experience-contract.md).
-- [Representation & Architecture Design](architecture/index.md) — current representation/module/interface/runtime/persistence architecture authority, downstream of concepts and experience.
+- [Representation & Architecture Design](architecture/index.md) — current implementation-facing architecture authority, downstream of concepts/synchronizations/experience.
+- [Architecture Decision Records](decisions/index.md) — durable architecture decision rationale, alternatives and supersession history; current normative architecture remains under `docs/architecture/`.
 - [Concept Discovery](discovery/index.md) — historical hypotheses, falsification evidence, alternatives and design provenance.
 - [Phases](phases/index.md) — phase plans, outcomes and exit reviews.
-- `decisions/` — architecture and governance decisions requiring durable provenance.
 - `references/` — external references used by the design.
 - `backlog/` — unresolved or deferred work that is not canonical design authority.
 
@@ -28,7 +28,18 @@ This directory is the canonical design knowledge bundle for SYNGAN.
 
 A durable fact, definition, requirement, invariant, policy, or design decision has one canonical home. Other documents SHOULD reference that authority rather than restating it as a competing source of truth.
 
-For accepted concept meaning, `docs/concepts/` supersedes provisional discovery statements. For accepted cross-concept coordination, `docs/synchronizations/` supersedes discovery hypotheses. `docs/experience/` defines how actors encounter those semantics. `docs/architecture/` may choose representation and implementation-facing boundaries but MUST NOT override authority/concept/synchronization/experience contracts.
+The active downstream order is:
+
+```text
+authority
+  > concepts / synchronizations
+  > experience
+  > architecture
+  > ADR rationale / phase records
+  > summaries / examples / backlog
+```
+
+Architecture may choose representation and implementation-facing boundaries but MUST NOT override upstream semantic/experience contracts. An architectural infeasibility must be surfaced explicitly for upstream revision.
 
 ## Phase status
 
@@ -46,10 +57,14 @@ Phase 002 closed with eleven accepted concepts and fifteen synchronization rules
 
 Exit: [003-I — Cross-Workflow Consistency & Phase 003 Consolidation Review](phases/003/003-I-cross-workflow-consistency-phase-003-consolidation-review.md).
 
-Phase 003 closed with eight detailed experience authorities and the [Phase 003 Consolidated Experience Contract](experience/phase-003-consolidated-experience-contract.md). The exit audit found no concept/synchronization redesign required and preserved readiness/commitment, semantic/operational, promotion, Evidence, historical/current, reproducibility, offline/no-egress, disclosure, and enterprise-scale consistency.
+Phase 003 closed with eight detailed experience authorities and the [Phase 003 Consolidated Experience Contract](experience/phase-003-consolidated-experience-contract.md), preserving readiness/commitment, semantic/operational, promotion, Evidence, historical/current, reproducibility, offline/no-egress, disclosure, and enterprise-scale distinctions.
 
 **Current phase: [Phase 004 — Representation & Architecture Design](phases/004/index.md).**
 
-Phase 004 translates the frozen semantic/experience model into public API/resource boundaries, control-plane identity/persistence, Spark-scale data/reference architecture, strategy/runtime adapters, Execution/recovery mechanics, Evidence/Provenance/reproducibility representation, enterprise dependency/security controls, and deployment/platform integration.
+Completed in Phase 004:
 
-Next: **004-A — Architecture Authority, Representation Principles, Layering & Dependency Direction**.
+- [004-A — Architecture Authority, Representation Principles, Layering & Dependency Direction](phases/004/004-A-architecture-authority-representation-layering-dependency-direction.md)
+
+004-A establishes the [architecture constitution](architecture/architecture-authority-representation-layering.md): semantic-preserving representation, stable logical identity, bounded control-plane versus distributed data-plane separation, inward dependency direction, semantic/control versus coordination versus port/adapter/composition boundaries, platform authority isolation, Spark-native/model-neutral semantics, optional integration isolation, anti-god-module rules, ADR governance, and architecture validation obligations.
+
+Next: **004-B — Public API, Resource/Handle Model, Workflow Composition & Semantic Mapping**.
