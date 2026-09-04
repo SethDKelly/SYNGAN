@@ -20,23 +20,23 @@ The phase remains downstream of concept specification and upstream of representa
 | **003-D** | [**Generation Request, Condition, Validation & Output Promotion Experience**](003-D-generation-request-condition-validation-output-promotion-experience.md) | **complete** |
 | **003-E** | [**Evaluation, Evidence & Review Experience**](003-E-evaluation-evidence-review-experience.md) | **complete** |
 | **003-F** | [**Execution Monitoring, Failure, Recovery & Cancellation Experience**](003-F-execution-monitoring-failure-recovery-cancellation-experience.md) | **complete** |
-| **003-G** | **Provenance, Reproducibility & Historical Inspection Experience** | **next** |
-| 003-H | Enterprise Dependency, Offline/No-Egress & Safety Experience | planned |
+| **003-G** | [**Provenance, Reproducibility & Historical Inspection Experience**](003-G-provenance-reproducibility-historical-inspection-experience.md) | **complete** |
+| **003-H** | **Enterprise Dependency, Offline/No-Egress & Safety Experience** | **next** |
 | 003-I | Cross-Workflow Consistency & Phase 003 Consolidation Review | planned |
 
 ## Completed experience refinement
 
 ### 003-A
 
-003-A established [Workflow Entry, Source Context & Lifecycle Orientation](../../experience/workflow-entry-source-context-lifecycle-orientation.md), including intent-oriented entry, composed source context, mutable-alias versus historical-identity visibility, explicit semantic commitment orientation, semantic-versus-operational state separation, candidate/result distinction, actor-sensitive orientation, programmatic parity, and dependency/no-egress visibility.
+003-A established [Workflow Entry, Source Context & Lifecycle Orientation](../../experience/workflow-entry-source-context-lifecycle-orientation.md), including intent-oriented entry, source/history orientation, semantic commitment visibility, semantic-versus-operational state separation, candidate/result distinction, actor-sensitive orientation, and programmatic parity.
 
 ### 003-B
 
-003-B established [Data Meaning, Constraint & Strategy Preparation](../../experience/data-meaning-constraint-strategy-preparation.md), including separate Data Meaning/Constraint/Strategy authority, declared-versus-inferred semantic review, contextual Constraint applicability/handling, multidimensional Strategy comparison, explainable compatibility, derived readiness, review-before-commit, and explicit dependency/no-egress posture.
+003-B established [Data Meaning, Constraint & Strategy Preparation](../../experience/data-meaning-constraint-strategy-preparation.md), including declared/inferred/unresolved meaning review, contextual Constraint applicability/handling, multidimensional Strategy comparison, explainable compatibility, derived readiness, review-before-commit, and dependency/no-egress visibility.
 
 ### 003-C
 
-003-C established [Learning & Learned State Lifecycle](../../experience/learning-learned-state-lifecycle.md), including explicit Learning commitment, Strategy-meaningful progress, semantic/Execution separation, checkpoint non-finality, semantic Learned State promotion, logical-state inspection independent of physical layout, contextual reuse, distinct usable/restricted/retired/invalidated status, non-mutating reuse, sensitivity, and dependency visibility.
+003-C established [Learning & Learned State Lifecycle](../../experience/learning-learned-state-lifecycle.md), including explicit Learning commitment, Strategy-meaningful progress, semantic/Execution separation, checkpoint non-finality, semantic Learned State promotion, logical-state inspection independent of physical layout, contextual/non-mutating reuse, lifecycle restrictions, sensitivity, and dependency visibility.
 
 ### 003-D
 
@@ -48,25 +48,30 @@ The phase remains downstream of concept specification and upstream of representa
 
 ### 003-F
 
-003-F established [Execution Monitoring, Failure, Recovery & Cancellation](../../experience/execution-monitoring-failure-recovery-cancellation.md).
+003-F established [Execution Monitoring, Failure, Recovery & Cancellation](../../experience/execution-monitoring-failure-recovery-cancellation.md), including one logical Execution across Attempts/platform jobs, contextual retry/resume safety, explicit unknown state, reconciliation, cancellation races, single semantic promotion, operator semantic-authority boundaries, and bounded platform observability.
+
+### 003-G
+
+003-G established [Provenance, Reproducibility & Historical Inspection](../../experience/provenance-reproducibility-historical-inspection.md).
 
 Key established experience semantics include:
 
-- one stable logical Execution remains the primary operational identity across valid retries, resumes, platform resubmissions, worker replacement, and compatible cluster changes;
-- Attempt remains subordinate ordered history and is not equated with one Spark/Databricks/Kubernetes/PyTorch job;
-- parent Learning/Generation/Evaluation semantic state remains visible alongside operational state;
-- progress/health signals must be operationally meaningful rather than fabricated universal completion percentages;
-- recoverable Attempt failure, terminal Execution failure, cancellation-related termination, unknown state, and domain-semantic failure remain distinct;
-- retry is offered as same-Execution continuation only when committed domain semantics remain unchanged;
-- scheduler resubmission capability does not establish retry safety;
-- resume requires validated checkpoint/recovery identity, integrity, scope, and committed-context compatibility;
-- recovery material remains non-final relative to Learned State, completed output, and Evidence;
-- duplicate physical work is allowed while ambiguous duplicate authoritative semantic results remain prohibited;
-- unknown/indeterminate operational state blocks unsafe optimistic retry/success and requires reconciliation/fencing where necessary;
-- cancellation request remains distinct from terminal outcome and may race with operational/domain completion;
-- operators may repair operational realization but cannot silently change committed Data Meaning, Strategy, Constraints, Conditions, Learned State, Evaluation method, or dependency policy;
-- platform-native observability remains drill-down/reference information rather than copied canonical state;
-- enterprise monitoring remains bounded around Execution/Attempt/material operational summaries instead of ingesting all platform telemetry.
+- historical inspection supports three primary goals: explain one result, compare two historical paths, and assess current reproducibility for an explicit target;
+- Provenance remains typed stable-reference history rather than a copy of canonical concept state;
+- historical bindings are shown separately from current aliases, revisions, lifecycle status, dependency availability, or policy posture;
+- mutable aliases/URLs/service names are not presented as sufficient historical identity when underlying state may differ;
+- weak/missing historical identity, dependency, runtime, or recovery context remains explicit rather than being repaired with current state;
+- typed provenance relationships remain distinguishable, including bound/governed-by, produced-by, used/depended-on, evaluated/referenced, operationally-realized-by, recovered-from, and lifecycle context;
+- provenance corrections preserve auditability without mutating another concept's canonical history;
+- accepted reproduction classes remain exact deterministic, semantic, statistical, bounded/approximate, comparative, and not-reproducible/insufficient-context;
+- reproduction assessments expose target, preserved conditions, dependencies, nondeterminism/approximation, limiting context, supported class, and reasons stronger classes are unsupported;
+- seeds do not imply exact deterministic reproduction;
+- reproduction readiness/re-execution remain distinct from a new reproduction activity actually satisfying an explicit equivalence Criterion;
+- current reproducibility may weaken when historical dependencies disappear without rewriting the historical provenance of the original work;
+- historical comparison categorizes material differences but does not infer causality, superiority, or quality without Evaluation/Evidence;
+- Evidence historical context/current applicability and material Execution/Attempt history remain traversable without copying full payloads or platform telemetry;
+- restricted historical detail must be shown as withheld rather than replaced with fabricated/current substitute history;
+- enterprise historical inspection remains bounded around stable references, relationships, summaries, dependency identities, and Evidence rather than requiring driver-local full payload/log materialization.
 
 ## Phase 003 objectives
 
@@ -106,4 +111,4 @@ Phase 003 MUST NOT:
 
 ## Current next phase
 
-**003-G — Provenance, Reproducibility & Historical Inspection Experience**
+**003-H — Enterprise Dependency, Offline/No-Egress & Safety Experience**
