@@ -22,6 +22,7 @@ Phase 004 translates SYNGAN's accepted concept, synchronization, and experience 
 - [004-D Spark Data Boundary/Manifest/Promotion Architecture](../../architecture/spark-data-boundary-source-output-reference-distributed-materialization-manifest-promotion.md)
 - [004-E Strategy Extension/Runtime Adapter Architecture](../../architecture/strategy-extension-learning-generation-evaluation-runtime-adapter.md)
 - [004-F Execution/Recovery Architecture](../../architecture/execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation.md)
+- [004-G Evaluation/Evidence/Provenance/Reproducibility Architecture](../../architecture/evaluation-evidence-provenance-reproducibility-historical-query.md)
 
 ## Groups
 
@@ -33,8 +34,8 @@ Phase 004 translates SYNGAN's accepted concept, synchronization, and experience 
 | **004-D** | [**Spark Data Boundary, Source/Output Reference, Distributed Materialization, Manifest & Promotion Architecture**](004-D-spark-data-boundary-source-output-reference-distributed-materialization-manifest-promotion-architecture.md) | **complete** |
 | **004-E** | [**Strategy Extension, Learning/Generation/Evaluation Runtime & Adapter Architecture**](004-E-strategy-extension-learning-generation-evaluation-runtime-adapter-architecture.md) | **complete** |
 | **004-F** | [**Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Architecture**](004-F-execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation-architecture.md) | **complete** |
-| **004-G** | **Evaluation/Evidence, Provenance, Reproducibility & Historical Query Architecture** | **next** |
-| 004-H | Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Architecture | planned |
+| **004-G** | [**Evaluation/Evidence, Provenance, Reproducibility & Historical Query Architecture**](004-G-evaluation-evidence-provenance-reproducibility-historical-query-architecture.md) | **complete** |
+| **004-H** | **Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Architecture** | **next** |
 | 004-I | Deployment, Scalability, Observability, Portability, Compatibility & Platform Integration Architecture | planned |
 | 004-J | Cross-Architecture Invariant Audit, Decision Consolidation & Phase 004 Exit | planned |
 
@@ -70,47 +71,55 @@ Decision: [ADR-0004 — Semantic Extension & Runtime Binding Separation](../../d
 
 ### 004-F — Execution/recovery/fencing
 
-Established [Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Architecture](../../architecture/execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation.md).
+Established one stable logical Execution across valid Attempts; ordered Attempt epochs/fencing generations; lease-versus-fence separation; scoped idempotency; immutable checkpoint snapshots and contextual resume qualification; explicit retry/restart/reconcile decisions; durable unknown-state semantics; safe candidate sealing/promotion preconditions; Evaluation double-count protection; and cancellation as durable intent followed by reconciled outcome.
+
+Decision: [ADR-0005 — Attempt-Epoch Fencing & Recoverable At-Least-Once Execution](../../decisions/ADR-0005-attempt-epoch-fencing-recoverable-at-least-once-execution.md).
+
+### 004-G — Evaluation/Evidence, Provenance, reproducibility and historical query
+
+Established [Evaluation/Evidence, Provenance, Reproducibility & Historical Query Architecture](../../architecture/evaluation-evidence-provenance-reproducibility-historical-query.md).
 
 Key accepted rules include:
 
-- one stable logical Execution spans many valid Attempts/platform submissions;
-- each write-capable Attempt receives a supersedable ordered epoch/fencing generation;
-- only the current epoch may mutate framework-owned current candidate/checkpoint/control state;
-- leases support liveness but do not replace fencing;
-- duplicate physical work and overlapping stale processes may exist while stale canonical writes are rejected/isolated;
-- Attempt runtime invocation remains immutable and same-semantics;
-- platform submission is correlation/idempotency/reconciliation aware across crash windows;
-- idempotency is scoped to Attempt launch, checkpoint commit, candidate mutation/seal, Evaluation aggregation, semantic promotion, cancellation, and other material operations rather than one global key;
-- committed checkpoints are immutable recovery snapshots with exact activity/runtime/dependency context;
-- resume eligibility is contextual and distinct from checkpoint existence;
-- recovery explicitly chooses retry-from-start, resume, reconcile-first, or cannot-continue;
-- unknown platform/side-effect state remains durable until safely reconciled/fenced;
-- external effects that cannot be fenced/query/deduplicated may block automatic retry;
-- candidate sealing requires resolved writer authority and is idempotent for an exact manifest generation;
-- semantic promotion remains owner-side and at-most-once in authority;
-- Evaluation retries cannot accidentally double-count logical work units;
-- cancellation is durable intent followed by reconciled outcome and cannot erase prior authority;
-- automatic retry obeys the same semantic/dependency/no-egress/cancellation safety checks as manual retry;
-- canonical Execution state remains bounded rather than duplicating all platform telemetry.
+- Evaluation runtime results remain non-final until owner-side semantic validation establishes interpretable Evidence;
+- one Evaluation may establish multiple independently interpretable Evidence resources through idempotent logical finding slots;
+- Evidence finding semantics are immutable while current applicability is separately conflict-versioned;
+- Evidence preserves typed findings, claim support, uncertainty/limitations, and stable diagnostic references rather than a universal scalar Quality/Pass value;
+- Generation promotion retains the exact candidate/requirement/Criterion/Evidence completion basis used historically;
+- canonical Provenance is a typed stable-reference assertion layer and does not duplicate canonical concept/result payloads;
+- Provenance recording is idempotent and recoverably coupled to material transitions that require traceability;
+- Provenance corrections are append/supersede and cannot mutate another concept's historical authority;
+- historical explain/traverse/compare capabilities are read-composition services over canonical resources/Provenance plus rebuildable derived indexes;
+- derived query projections may be eventually consistent but remain non-authoritative;
+- historical comparison reports structural differences without inventing causality, quality, or superiority;
+- reproducibility is assembled as a current qualified assessment over exact historical facts, dependencies, implementation/runtime identities, randomness/approximation, representation equivalence, and material recovery facts;
+- the strongest supportable reproduction class cannot exceed the weakest unresolved material boundary;
+- reproduction readiness remains distinct from actual reproduction success through new domain work;
+- historical facts, current lifecycle/applicability, current availability, disclosure state, and current reproducibility remain distinct;
+- `absent`, `unknown`, `unavailable`, `withheld`, `invalid`, and corrected/superseded states remain distinguishable;
+- external lineage/catalog systems remain integrations rather than canonical semantic authority;
+- Evidence/Provenance/history/query state remains bounded and does not require full row/model/diagnostic/task/log collection.
 
-Decision: [ADR-0005 — Attempt-Epoch Fencing & Recoverable At-Least-Once Execution](../../decisions/ADR-0005-attempt-epoch-fencing-recoverable-at-least-once-execution.md).
+Decision: [ADR-0006 — Typed Canonical Provenance & Derived Historical Projections](../../decisions/ADR-0006-typed-provenance-canonical-derived-history-projections.md).
 
 ## Phase 004 guardrails
 
 Phase 004 MUST NOT:
 
 - redesign accepted concept semantics for package/runtime convenience;
-- erase typed semantic/operational distinctions behind generic status/session/plugin/result objects;
-- make one runtime/platform mandatory unless semantics require it;
-- require ordinary full driver-local source/output/Learned-State/diagnostic materialization;
+- erase typed semantic/operational distinctions behind generic status/session/plugin/result/metadata objects;
+- make one runtime/platform/database/graph technology mandatory unless semantics require it;
+- require ordinary full driver-local source/output/Learned-State/diagnostic/telemetry materialization;
 - make dependency/network/resource acquisition implicit;
-- treat runtime success, file existence, manifest sealing, checkpoint durability, or plugin output as semantic promotion;
+- treat runtime success, file existence, manifest sealing, checkpoint durability, plugin output, or query-index state as semantic promotion;
 - equate platform retry/exactly-once claims with SYNGAN semantic authority;
 - allow stale Attempts to mutate current framework-owned state after supersession;
-- use lease expiry or last-writer-wins as the sole protection for material authority;
+- use lease expiry or last-writer-wins as sole protection for material authority;
 - assume unknown external effects failed merely to permit retry;
-- permit runtime/platform adapters to rewrite committed semantics or create semantic results directly;
+- permit runtime/platform/lineage adapters to rewrite committed semantics or canonical Provenance/results directly;
+- duplicate canonical concept payloads into a master metadata graph;
+- store reproducibility as unqualified global Boolean truth;
+- infer causal/quality conclusions from historical differences without Evidence;
 - jump into implementation task breakdown before Phase 004 architecture is complete.
 
 ## Phase 004 exit target
@@ -131,4 +140,4 @@ without reopening core semantics.
 
 ## Current next phase
 
-**004-G — Evaluation/Evidence, Provenance, Reproducibility & Historical Query Architecture**
+**004-H — Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Architecture**
