@@ -20,8 +20,8 @@ The grouping follows accepted concept responsibilities rather than implementatio
 | **002-D** | [**Generation Specification, Request/Condition Semantics & Output Completion**](002-D-generation-request-condition-output-completion.md) | **complete** |
 | **002-E** | [**Evaluation Criterion, Evaluation & Evidence Specification**](002-E-evaluation-criterion-evaluation-evidence-specification.md) | **complete** |
 | **002-F** | [**Execution, Attempt History, Failure & Recovery Semantics**](002-F-execution-attempt-failure-recovery-semantics.md) | **complete** |
-| **002-G** | **Provenance, Reproducibility Contract & Historical Binding Specification** | **next** |
-| 002-H | Cross-Concept Invariant, Synchronization & Phase 002 Consolidation Review | planned |
+| **002-G** | [**Provenance, Reproducibility Contract & Historical Binding Specification**](002-G-provenance-reproducibility-historical-binding-specification.md) | **complete** |
+| **002-H** | **Cross-Concept Invariant, Synchronization & Phase 002 Consolidation Review** | **next** |
 
 ## Completed refinement
 
@@ -47,22 +47,28 @@ The grouping follows accepted concept responsibilities rather than implementatio
 
 ### 002-F
 
-002-F deepened [Execution](../../concepts/execution.md) and refined the [core synchronizations](../../synchronizations/core-synchronizations.md).
+002-F deepened [Execution](../../concepts/execution.md), establishing logical Execution/Attempt identity, retry/resume/checkpoint safety, partial/unknown operational state, cancellation races, contextual retryability, and single semantic promotion rather than exactly-once physical computation.
+
+### 002-G
+
+002-G deepened [Provenance](../../concepts/provenance.md), refined the [core synchronizations](../../synchronizations/core-synchronizations.md), clarified documentation-source provenance, and established the canonical [Reproducibility Contract](../../authority/reproducibility-contract.md).
 
 Key established semantics include:
 
-- one stable logical Execution independent of platform jobs/processes;
-- Attempt as subordinate operational history rather than a standalone concept or platform-run synonym;
-- retry/resume that preserves committed domain semantics;
-- checkpoint/recovery material that remains non-domain-result state until explicit semantic promotion;
-- explicit partial operational success and unknown/indeterminate operational state;
-- contextual retryability and reconciliation/fencing of ambiguous side effects;
-- cancellation request separated from terminal cancellation and domain completion;
-- operational failure separated from Learning/Generation/Evaluation semantic failure;
-- single semantic promotion rather than an unrealistic exactly-once physical-computation requirement;
-- duplicate physical work permitted only when canonical Learned State/output/Evidence effects remain unambiguous;
-- platform-native telemetry retained by reference rather than copied into canonical Execution state;
-- enterprise-scale operational history that does not require every task/log to become driver-local SYNGAN state.
+- Provenance owns typed historical relationships and stable references rather than duplicate concept payloads;
+- mutable aliases such as table names, model aliases, URLs, service names, or platform run IDs are insufficient identity by themselves when underlying state can change materially;
+- committed historical bindings remain tied to the exact source/meaning/Strategy/Constraint/Learned State/Condition/Criterion/method/dependency state actually used;
+- lineage remains the derivational subset of broader Provenance;
+- canonical Provenance remains materiality-bounded and does not become a copy of rows, model state, task telemetry, or complete logs;
+- provenance correction preserves auditability and cannot silently rewrite another concept's authority;
+- reproducibility remains a cross-cutting contract rather than a standalone concept;
+- substantive reproducibility claims must identify target, preserved conditions, and acceptable equivalence;
+- exact deterministic, semantic, statistical, bounded/approximate, comparative, and explicitly insufficient/not-reproducible outcomes remain distinguishable;
+- seeds alone do not imply deterministic reproduction;
+- retry/recovery facts enter the reproduction context only when materially behavior-affecting;
+- external artifact/service mutability constrains claim strength and must remain explicit;
+- loss of historical dependencies may weaken present reproducibility without rewriting historical provenance;
+- enterprise-scale provenance/reproduction does not require full corpus/output/model/log collection to driver-local memory.
 
 ## Phase 002 boundary
 
@@ -85,8 +91,9 @@ Those remain downstream unless concept feasibility requires an explicit earlier 
 - [Accepted Concepts](../../concepts/index.md)
 - [Accepted Synchronizations](../../synchronizations/index.md)
 - [Design Authority](../../authority/index.md)
+- [Reproducibility Contract](../../authority/reproducibility-contract.md)
 - [Phase 001 Exit](../001/001-H-phase-001-consolidation-initial-concept-catalog.md)
 
 ## Current next phase
 
-**002-G — Provenance, Reproducibility Contract & Historical Binding Specification**
+**002-H — Cross-Concept Invariant, Synchronization & Phase 002 Consolidation Review**
