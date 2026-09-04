@@ -19,8 +19,8 @@ The phase remains downstream of concept specification and upstream of representa
 | **003-C** | [**Learning & Learned State Lifecycle Experience**](003-C-learning-learned-state-lifecycle-experience.md) | **complete** |
 | **003-D** | [**Generation Request, Condition, Validation & Output Promotion Experience**](003-D-generation-request-condition-validation-output-promotion-experience.md) | **complete** |
 | **003-E** | [**Evaluation, Evidence & Review Experience**](003-E-evaluation-evidence-review-experience.md) | **complete** |
-| **003-F** | **Execution Monitoring, Failure, Recovery & Cancellation Experience** | **next** |
-| 003-G | Provenance, Reproducibility & Historical Inspection Experience | planned |
+| **003-F** | [**Execution Monitoring, Failure, Recovery & Cancellation Experience**](003-F-execution-monitoring-failure-recovery-cancellation-experience.md) | **complete** |
+| **003-G** | **Provenance, Reproducibility & Historical Inspection Experience** | **next** |
 | 003-H | Enterprise Dependency, Offline/No-Egress & Safety Experience | planned |
 | 003-I | Cross-Workflow Consistency & Phase 003 Consolidation Review | planned |
 
@@ -44,28 +44,29 @@ The phase remains downstream of concept specification and upstream of representa
 
 ### 003-E
 
-003-E established [Evaluation, Evidence & Review](../../experience/evaluation-evidence-review.md).
+003-E established [Evaluation, Evidence & Review](../../experience/evaluation-evidence-review.md), including Criterion-first evaluation, claim-strength-aware method compatibility, semantic/Execution separation, Evidence strength/uncertainty/applicability, multidimensional review, explicit missing/conflicting/stale findings, threat-model-scoped privacy Evidence, and separation from external approval.
+
+### 003-F
+
+003-F established [Execution Monitoring, Failure, Recovery & Cancellation](../../experience/execution-monitoring-failure-recovery-cancellation.md).
 
 Key established experience semantics include:
 
-- Evaluation begins from the Criterion question rather than whichever metric is easiest to run;
-- Criterion, Evaluation, Evidence, and external decision authority remain distinct;
-- fidelity, utility, validity, privacy/disclosure risk, reproducibility/stability, and later Criteria remain separate dimensions unless an explicit decision rule combines them;
-- method compatibility is assessed against the Criterion's required claim strength;
-- exhaustive, bounded/certificate, statistical/sampled, approximate/sketch, and diagnostic/partial coverage remain distinguishable;
-- scale limitations cannot silently weaken the Criterion;
-- Evaluation commitment freezes Criterion/subject/reference/method/scope/coverage/uncertainty/dependency semantics historically;
-- Evaluation semantic lifecycle remains distinct from Execution/Attempt/platform state;
-- progress must be method-meaningful rather than a fabricated universal percentage;
-- Evidence exposes finding, scope, method, coverage, uncertainty, limitations, and claim-strength/applicability boundaries rather than only a scalar/boolean;
-- successful Evaluation may produce favorable, unfavorable, or indeterminate Evidence;
-- Evidence used for Generation completion remains requirement-specific while Generation retains promotion authority;
-- missing Evidence remains distinct from negative or favorable Evidence;
-- Evidence comparability checks precede direct comparison and conflicting findings remain visible;
-- historical Evidence remains distinct from current applicable/superseded/stale/inapplicable/invalidated status;
-- privacy/disclosure-risk Evidence remains threat-model scoped and does not imply universal privacy or release approval;
-- review remains multidimensional rather than a generic Quality score;
-- enterprise-scale review uses bounded summaries/references rather than mandatory full driver-local subject/violation/telemetry collection.
+- one stable logical Execution remains the primary operational identity across valid retries, resumes, platform resubmissions, worker replacement, and compatible cluster changes;
+- Attempt remains subordinate ordered history and is not equated with one Spark/Databricks/Kubernetes/PyTorch job;
+- parent Learning/Generation/Evaluation semantic state remains visible alongside operational state;
+- progress/health signals must be operationally meaningful rather than fabricated universal completion percentages;
+- recoverable Attempt failure, terminal Execution failure, cancellation-related termination, unknown state, and domain-semantic failure remain distinct;
+- retry is offered as same-Execution continuation only when committed domain semantics remain unchanged;
+- scheduler resubmission capability does not establish retry safety;
+- resume requires validated checkpoint/recovery identity, integrity, scope, and committed-context compatibility;
+- recovery material remains non-final relative to Learned State, completed output, and Evidence;
+- duplicate physical work is allowed while ambiguous duplicate authoritative semantic results remain prohibited;
+- unknown/indeterminate operational state blocks unsafe optimistic retry/success and requires reconciliation/fencing where necessary;
+- cancellation request remains distinct from terminal outcome and may race with operational/domain completion;
+- operators may repair operational realization but cannot silently change committed Data Meaning, Strategy, Constraints, Conditions, Learned State, Evaluation method, or dependency policy;
+- platform-native observability remains drill-down/reference information rather than copied canonical state;
+- enterprise monitoring remains bounded around Execution/Attempt/material operational summaries instead of ingesting all platform telemetry.
 
 ## Phase 003 objectives
 
@@ -105,4 +106,4 @@ Phase 003 MUST NOT:
 
 ## Current next phase
 
-**003-F — Execution Monitoring, Failure, Recovery & Cancellation Experience**
+**003-G — Provenance, Reproducibility & Historical Inspection Experience**
