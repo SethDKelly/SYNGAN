@@ -50,6 +50,7 @@ Completed in Phase 003:
 - [003-B — Data Meaning, Constraint & Strategy Preparation Experience](phases/003/003-B-data-meaning-constraint-strategy-preparation-experience.md)
 - [003-C — Learning & Learned State Lifecycle Experience](phases/003/003-C-learning-learned-state-lifecycle-experience.md)
 - [003-D — Generation Request, Condition, Validation & Output Promotion Experience](phases/003/003-D-generation-request-condition-validation-output-promotion-experience.md)
+- [003-E — Evaluation, Evidence & Review Experience](phases/003/003-E-evaluation-evidence-review-experience.md)
 
 003-A establishes canonical workflow entry/orientation, source-history visibility, commitment orientation, semantic-versus-operational status separation, and programmatic/human parity.
 
@@ -59,4 +60,6 @@ Completed in Phase 003:
 
 003-D establishes Generation request/Condition and output-promotion experience: mandatory/best-effort Conditions and completion obligations are visible before commitment; physical output completion remains distinct from semantic Generation completion; partial/candidate/quarantined/completed output are distinct; requirement-specific Evidence strength determines completion sufficiency; and exactly one authoritative logical output is promoted only after all mandatory obligations are satisfied.
 
-Next: **003-E — Evaluation, Evidence & Review Experience**.
+003-E establishes Evaluation/Evidence/review experience: actors begin from explicit Criteria rather than available metrics; method compatibility is claim-strength aware; Evaluation success remains distinct from favorable Evidence; fidelity/utility/validity/privacy findings remain multidimensional; missing/conflicting/stale Evidence stays explicit; privacy findings remain threat-model scoped; and Evidence remains distinct from release/use decision authority.
+
+Next: **003-F — Execution Monitoring, Failure, Recovery & Cancellation Experience**.
