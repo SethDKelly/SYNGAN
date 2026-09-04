@@ -18,60 +18,54 @@ Architecture is downstream of:
 4. [Experience & Workflow Design](../experience/index.md)
 5. [Phase 003 Consolidated Experience Contract](../experience/phase-003-consolidated-experience-contract.md)
 
-Architecture MUST preserve those authorities. It may choose representations and boundaries; it may not redefine the semantic owner merely because one class, module, table, API, service, or platform primitive is convenient.
+Architecture may choose representations and technical composition. It MUST NOT redefine an upstream semantic/experience contract merely because one class, module, table, API, service, or platform primitive is convenient.
 
-## Current phase
+If architecture discovers upstream infeasibility, it must surface the conflict explicitly for upstream revision.
+
+## Current canonical architecture authority
+
+- [Architecture Authority, Representation Principles, Layering & Dependency Direction](architecture-authority-representation-layering.md) — Phase 004-A architecture constitution covering semantic-preserving representation, stable logical identity, control-plane/data-plane separation, inward dependency direction, ports/adapters/composition responsibilities, Spark-native/model-neutral boundaries, portability, anti-bloat rules, ADR discipline, and validation obligations.
+
+Decision rationale/history is preserved under [Architecture Decision Records](../decisions/index.md) when a material choice warrants an ADR. Current normative architecture remains here under `docs/architecture/`.
+
+## 004-A baseline
+
+Later architecture MUST preserve these baseline rules:
+
+- authority flows from design authority -> concepts -> synchronizations -> experience -> architecture;
+- representation convenience never redefines semantic ownership;
+- logical identity remains distinct from physical location/platform identity;
+- bounded control-plane state references rather than absorbs large distributed payloads;
+- physical data/checkpoint/diagnostic existence does not imply semantic promotion;
+- dependency direction points toward stable semantic/control contracts;
+- concrete platform/runtime adapters do not become dependencies of the semantic/control core;
+- bidirectional semantic synchronization does not justify circular package dependencies;
+- optional/runtime-network integrations remain isolatable from supported offline/no-egress paths;
+- Spark-native means distributed Spark-scale data semantics, not universal Spark ML;
+- model-neutral means no universal CTGAN/GAN/PyTorch/HuggingFace/LLM/runtime assumption;
+- convenience facades may compose workflows but do not own unrelated canonical state;
+- universal status/metadata/session/god objects must not erase typed ownership;
+- platform-specific adapters may add capability but cannot silently weaken common guarantees;
+- enterprise-scale workflows cannot require ordinary full driver-local source/output/model/diagnostic/log materialization.
+
+For the full normative rules, use the 004-A authority document rather than this index.
+
+## Phase 004 status
 
 **Phase 004 — Representation & Architecture Design** is current.
 
 See [Phase 004 index](../phases/004/index.md).
 
+Completed:
+
+- [004-A — Architecture Authority, Representation Principles, Layering & Dependency Direction](../phases/004/004-A-architecture-authority-representation-layering-dependency-direction.md)
+
 Next:
 
-**004-A — Architecture Authority, Representation Principles, Layering & Dependency Direction**
+**004-B — Public API, Resource/Handle Model, Workflow Composition & Semantic Mapping**
 
-## Architecture authority rules
+## Representation boundary
 
-Phase 004 architecture SHOULD:
+No final package layout, persistence technology, public API model, provenance store, manifest/fingerprint mechanism, scheduler/orchestrator, strategy plugin loader, model registry, security engine, or deployment topology is accepted merely because Phase 004 is active.
 
-- make concept and experience contracts implementable without one-class-per-concept dogma;
-- define clear package/module/service boundaries and dependency direction;
-- distinguish control-plane state from distributed data/model/output payloads;
-- preserve stable logical identity independently of mutable physical location;
-- preserve semantic commitment separately from operational Execution;
-- preserve non-final/candidate/checkpoint state separately from semantic promotion;
-- support one logical Execution across multiple Attempts/platform jobs;
-- support typed Evidence/Provenance/reproducibility without copying every payload/log;
-- support core offline/no-egress operation and explicit optional network integrations;
-- support local artifact resolution without hidden model/resource acquisition;
-- preserve withheld/redacted/unknown/absent/unavailable distinctions where security architecture permits disclosure;
-- remain viable for Spark-scale source/output workloads without mandatory driver-local materialization;
-- remain model-neutral and platform-portable where the semantic contract permits it.
-
-## Prohibited architecture shortcuts
-
-Architecture MUST NOT assume by default that:
-
-- one concept equals one Python class or database table;
-- one workflow equals one state-owning `Session` object;
-- one Spark/Databricks job equals one Execution;
-- one physical model file equals Learned State;
-- one DataFrame equals a completed Generation result;
-- one metric/Boolean equals Evidence;
-- one graph/database becomes the master copy of all Provenance and domain state;
-- a seed proves deterministic reproduction;
-- a network-capable integration may acquire artifacts or transmit data silently;
-- a mutable table/model/URL alias is sufficient historical identity;
-- CTGAN, GANs, Spark ML, PyTorch, HuggingFace, LLMs, Databricks, or any one framework defines universal SYNGAN semantics.
-
-## Decision recording
-
-Material architecture decisions should be stated canonically under `docs/architecture/` and, where a durable decision record is useful, accompanied by a focused record under `docs/decisions/` once that layer is established.
-
-Phase records under `docs/phases/004/` preserve design execution/rationale and should link to canonical architecture authority rather than become competing architecture truth.
-
-## Current architecture status
-
-No final package layout, persistence technology, public API model, provenance store, manifest/fingerprint mechanism, scheduler/orchestrator, plugin architecture, model registry, security engine, or deployment topology is yet accepted merely by creation of this index.
-
-Those decisions begin with Phase 004.
+Those choices are resolved incrementally by later Phase 004 groups under the 004-A architecture constitution.
