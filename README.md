@@ -22,6 +22,7 @@ Completed:
 - **002-B — Synthesis Strategy Specification & Capability Semantics**
 - **002-C — Learning & Learned State Specification**
 - **002-D — Generation Specification, Request/Condition Semantics & Output Completion**
+- **002-E — Evaluation Criterion, Evaluation & Evidence Specification**
 
 Current design includes:
 
@@ -35,11 +36,16 @@ Current design includes:
 - mandatory versus best-effort Condition semantics;
 - required Constraint handling that cannot be silently weakened;
 - candidate/partial materialization kept distinct from completed synthetic output;
-- a Generation completion barrier that requires mandatory request/Condition/Constraint/dependency/provenance obligations before one logical output result is promoted as complete;
-- completion that remains distinct from Execution success, privacy guarantees, or external release/use approval.
+- a Generation completion barrier requiring mandatory request/Condition/Constraint/dependency/provenance obligations before output promotion;
+- Evaluation Criteria that define questions and required answer strength independently of metrics;
+- Evaluation semantics that preserve scope, coverage, sampling/approximation, uncertainty, and method limitations;
+- durable Evidence whose claim strength cannot exceed what the method actually established;
+- explicit distinction between successful Evaluation and favorable subject outcome;
+- Generation-completion validation that can use distributed exhaustive, bounded, statistical, or approximate methods only when their evidentiary strength matches the committed requirement;
+- privacy/disclosure-risk Evidence that remains threat-model scoped and distinct from privacy guarantees or release approval.
 
 Next:
 
-- **002-E — Evaluation Criterion, Evaluation & Evidence Specification**
+- **002-F — Execution, Attempt History, Failure & Recovery Semantics**
 
-No Python package, model runtime, Spark ML mapping, persistence format, plugin architecture, output storage/publication mechanism, or model-hub/network integration should be treated as settled until the relevant downstream design phases establish it.
+No Python package, model runtime, Spark ML mapping, persistence format, plugin architecture, output storage/publication mechanism, evidence/reporting technology, or model-hub/network integration should be treated as settled until the relevant downstream design phases establish it.
