@@ -49,11 +49,14 @@ Completed in Phase 003:
 - [003-A — Workflow Entry, Source Context & Lifecycle Orientation](phases/003/003-A-workflow-entry-source-context-lifecycle-orientation.md)
 - [003-B — Data Meaning, Constraint & Strategy Preparation Experience](phases/003/003-B-data-meaning-constraint-strategy-preparation-experience.md)
 - [003-C — Learning & Learned State Lifecycle Experience](phases/003/003-C-learning-learned-state-lifecycle-experience.md)
+- [003-D — Generation Request, Condition, Validation & Output Promotion Experience](phases/003/003-D-generation-request-condition-validation-output-promotion-experience.md)
 
-003-A established the canonical experience layer and defined intent-oriented workflow entry, source/history orientation, semantic commitment visibility, semantic-versus-operational status separation, candidate-versus-authoritative-result distinction, and programmatic/human parity.
+003-A establishes canonical workflow entry/orientation, source-history visibility, commitment orientation, semantic-versus-operational status separation, and programmatic/human parity.
 
-003-B defines preparation as a composition over Data Meaning, Constraint, and Synthesis Strategy; preserves declared/inferred/unresolved semantic distinctions, contextual rule applicability/handling, explainable Strategy compatibility, derived readiness, review-before-commit, and explicit offline/dependency posture without creating Metadata/Validation/Readiness god-concepts.
+003-B establishes pre-commit Data Meaning/Constraint/Strategy preparation with declared/inferred semantic review, contextual rule handling, explainable Strategy compatibility, derived readiness, and explicit dependency/no-egress posture.
 
-003-C defines Learning/Learned State lifecycle experience: direct-generation Strategies bypass fake Learning, commitment freezes semantic context, progress remains Strategy-meaningful, Execution/Attempts remain operational, checkpoints stay non-final, semantic completion explicitly promotes one logical Learned State, reuse is non-mutating/contextual, restricted/retired/invalidated statuses remain distinct, and source-derived sensitivity/dependency posture stays visible.
+003-C establishes Learning/Learned State lifecycle experience: commitment freezes learning context, progress remains Strategy-meaningful, checkpoints remain non-final, semantic completion promotes one logical Learned State, reuse is contextual/non-mutating, and restriction/retirement/invalidation/sensitivity remain visible.
 
-Next: **003-D — Generation Request, Condition, Validation & Output Promotion Experience**.
+003-D establishes Generation request/Condition and output-promotion experience: mandatory/best-effort Conditions and completion obligations are visible before commitment; physical output completion remains distinct from semantic Generation completion; partial/candidate/quarantined/completed output are distinct; requirement-specific Evidence strength determines completion sufficiency; and exactly one authoritative logical output is promoted only after all mandatory obligations are satisfied.
+
+Next: **003-E — Evaluation, Evidence & Review Experience**.
