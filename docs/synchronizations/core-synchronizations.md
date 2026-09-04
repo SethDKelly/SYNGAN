@@ -18,15 +18,9 @@ When Learning, Generation, or Evaluation crosses its semantic commitment boundar
 
 The binding freezes historical meaning for that activity without freezing future Data Meaning evolution.
 
-A later meaning revision:
+Later meaning revisions affect future validation/new work only and MUST NOT retroactively reinterpret historical Learning, Learned State, Generation, Evaluation, or Evidence.
 
-- affects future validation and new work only;
-- MUST NOT retroactively reinterpret historical Learning, Generation, Learned State, Evaluation, or Evidence;
-- MAY cause future reuse of historical Learned State/output to require new compatibility assessment, without rewriting original history.
-
-Material inferred meaning relied upon by committed work MUST already be inspectable/attributable Data Meaning. An implementation MUST NOT satisfy this synchronization by retaining material semantics solely inside model-private preprocessing state.
-
-If required Data Meaning is unresolved, conflicting, invalidated, or otherwise unavailable, the consuming activity MUST preserve that condition rather than silently inventing an implementation default.
+Material inferred meaning relied upon by committed work MUST already be inspectable/attributable Data Meaning. Required unresolved/conflicting/invalidated meaning MUST remain explicit rather than being replaced by an implementation default.
 
 Where required by traceability, Provenance records the exact meaning revision bound.
 
@@ -34,97 +28,129 @@ Where required by traceability, Provenance records the exact meaning revision bo
 
 **Type:** bind + contextual validation + provenance.
 
-Learning or Generation validates the chosen [Synthesis Strategy](../concepts/synthesis-strategy.md) against bound Data Meaning, applicable [Constraints](../concepts/constraint.md), requested capabilities, and the committed deployment/dependency profile where material.
+Learning or Generation validates the chosen [Synthesis Strategy](../concepts/synthesis-strategy.md) against bound Data Meaning, applicable [Constraints](../concepts/constraint.md), requested capabilities, Learned State when applicable, and the committed deployment/dependency profile.
 
-Strategy owns:
+Strategy owns declared capabilities, requirements, synthesis-relevant configuration, limitations, external artifact/network dependency profile, Strategy-specific reproducibility facts, and material resource characteristics.
 
-- declared capabilities;
-- requirements;
-- synthesis-relevant configuration;
-- declared limitations;
-- external artifact/network dependency profile;
-- Strategy-specific reproducibility and material resource characteristics.
+The activity owns the contextual compatibility result for its exact intended use.
 
-The activity owns the contextual validation result for its exact intended use.
+Compatibility MUST NOT become globally mutable state on Strategy, Data Meaning, Constraint, or Learned State. Prior compatibility MAY be reused only when the relevant context/revisions are materially equivalent.
 
-Compatibility MUST NOT become globally mutable state on Strategy, Data Meaning, Constraint, or Learned State. A prior compatibility result MAY be reused only when the relevant bound revisions/context are demonstrably equivalent under the later specification.
+Constraint support is not proof of Constraint satisfaction. Network/dependency compatibility is likewise contextual: a runtime-network-dependent Strategy is incompatible with a no-network committed activity, and a missing local artifact MUST NOT trigger undeclared network acquisition.
 
-Constraint support and Constraint satisfaction are different claims. Strategy capability may state that a class of rules can be enforced or processed; it does not by itself establish that a particular generated output satisfied a particular Constraint.
-
-Network/dependency compatibility is similarly contextual. A Strategy declared `runtime-network dependent` is incompatible with an activity committed under a no-network profile. A missing local artifact MUST NOT be resolved by an undeclared automatic network call.
-
-Where the activity commits, Provenance records the exact Strategy/configuration revision used and material dependency profile/artifact identity needed to explain or reproduce the activity.
+Where the activity commits, Provenance records the exact Strategy/configuration and material dependency/artifact identity needed to explain the activity.
 
 ## SYNC-03 — Constraint binding and handling disposition
 
 **Type:** bind + contextual validation + provenance.
 
-An activity determines applicability of [Constraint](../concepts/constraint.md) revisions using the activity scope, bound Data Meaning, and other explicit prerequisites. The Constraint owns its rule, scope, semantic dependencies, and authority; the activity owns the contextual applicability result.
+An activity determines applicability of [Constraint](../concepts/constraint.md) revisions using its scope, bound Data Meaning, and explicit prerequisites. Constraint owns rule/scope/semantic dependencies/authority; the activity owns contextual applicability and handling.
 
-When an applicable Constraint is committed, the activity MUST bind the exact revision and preserve how the rule will be handled where relevant.
+When an applicable Constraint is committed, the activity MUST bind the exact revision and preserve handling where relevant. Canonical dispositions include:
 
-Canonical handling dispositions include:
+- **enforced**;
+- **validated later**;
+- **unsupported**;
+- **not applicable**.
 
-- **enforced** — the activity/method intends to enforce the rule during operation;
-- **validated later** — satisfaction is intended to be established in a later validation path;
-- **unsupported** — the selected method cannot honor/assess the rule as required;
-- **not applicable** — contextual validation establishes that the rule does not apply to the activity scope.
+Unsupported required Constraints MUST remain visible. Handling MUST NOT be confused with satisfaction; unknown/indeterminate applicability or satisfiability MUST NOT be converted to success.
 
-A later phase MAY refine this vocabulary without changing the ownership rule.
+If required Data Meaning is insufficient to interpret a Constraint, the unresolved dependency remains explicit. Known conflicts or indeterminate satisfiability remain contextual facts and do not mutate Constraint authority.
 
-Unsupported required Constraints MUST remain visible. They MUST NOT be silently omitted because an implementation lacks support.
-
-Handling disposition MUST NOT be confused with actual satisfaction. In particular:
-
-- `enforced` is not automatically Evidence that every relevant output satisfied the rule;
-- `validated later` does not mean satisfied until the required validation has occurred;
-- unknown/indeterminate applicability or satisfiability MUST NOT be converted to success.
-
-If required Data Meaning is insufficient to interpret a Constraint, the activity MUST preserve that unresolved dependency rather than fabricate semantics.
-
-Known Constraint conflicts or indeterminate satisfiability remain contextual validation facts and MUST NOT mutate the canonical Constraint definitions.
-
-Where required by traceability, Provenance records the bound rule revisions and material handling disposition.
+Where required by traceability, Provenance records the bound revisions and material handling disposition.
 
 ## SYNC-04 — Learning operational realization
 
 **Type:** operational realization + provenance.
 
-[Learning](../concepts/learning.md) may use [Execution](../concepts/execution.md) for operational work. Execution owns attempts/progress/retry/failure; Learning owns semantic completion. `Execution.completed` MUST NOT by itself establish `Learning.completed`.
+[Learning](../concepts/learning.md) may use [Execution](../concepts/execution.md) for long-running/distributed work.
+
+### Learning owns
+
+- semantic commitment and bound Learning specification;
+- whether the intended reusable state was validly derived;
+- Learning-level completion/failure/cancellation;
+- association with the resulting Learned State.
+
+### Execution owns
+
+- logical operational state;
+- Attempt history;
+- progress/health;
+- retry/resume/cancellation realization;
+- operational failure facts.
+
+One committed Learning MAY span multiple Attempts. Retry/resume MUST NOT silently alter committed source, Data Meaning, Strategy/configuration, Constraint handling, sampling/approximation, dependency profile, or other material Learning semantics.
+
+A failed Attempt does not automatically fail Learning if valid retry/resume remains possible.
+
+`Execution.completed` MUST NOT by itself establish `Learning.completed`.
+
+Checkpoint/intermediate material produced by Execution/Attempts MUST NOT be interpreted as Learned State unless Learning later semantically validates/promotes it as the successful reusable result.
 
 ## SYNC-05 — Learning produces Learned State
 
 **Type:** production + provenance.
 
-Successful semantic Learning establishes a new [Learned State](../concepts/learned-state.md) identity/version. Failed, cancelled, or incomplete Learning MUST NOT establish usable Learned State.
+Successful semantic Learning establishes a new [Learned State](../concepts/learned-state.md) identity/version.
+
+Learning may establish Learned State only when:
+
+- the committed Learning specification was realized sufficiently under Strategy semantics;
+- the result is distinguishable from partial/checkpoint/recovery state;
+- no unresolved terminal defect invalidates the reusable result;
+- a stable logical Learned State identity can be created;
+- intrinsic reuse requirements/limitations/dependencies are available enough for later validation;
+- required provenance can be recorded consistently.
+
+Failed, cancelled, or incomplete Learning MUST NOT establish usable Learned State.
+
+Under the current model one Learning produces zero or one **primary logical Learned State**, even if the physical representation contains many files, partitions, tensors, tables, statistics, encoders, or other components.
+
+Learned State MUST retain stable references sufficient to trace its producing Learning, source context, Data Meaning, Strategy/configuration, applicable Constraint context, material sampling/approximation, and dependency/artifact facts without duplicating every upstream authority payload.
+
+Later retirement/restriction/invalidation affects future use and MUST NOT rewrite the historical Learning or Generations that legitimately used the state.
 
 ## SYNC-06 — Generation commitment and compatibility
 
 **Type:** bind + validation + provenance.
 
-At semantic commitment, [Generation](../concepts/generation.md) binds its requested intent/Conditions, relevant Data Meaning, applicable Constraint revisions, Strategy/configuration, Learned State when required, reproducibility-relevant request state, and material Strategy dependency/network requirements.
+At semantic commitment, [Generation](../concepts/generation.md) binds requested intent/Conditions, relevant Data Meaning, applicable Constraints, Strategy/configuration, Learned State when required, reproducibility-relevant request state, and material Strategy dependency/network requirements.
 
-Constraint applicability and handling MUST be explicit enough that required unsupported or unresolved rules cannot disappear from Generation merely because a Strategy cannot process them.
+When Learned State is used, Generation performs contextual reuse validation against the requested context. Learned State owns intrinsic requirements/limitations/status; Generation owns the compatibility result.
 
-Condition remains Generation-owned request direction. Constraint remains independent prescriptive authority even if implementation later uses shared predicate/expression machinery.
+Validation may consider:
 
-Strategies requiring no reusable Learned State MAY generate directly without fabricated Learning or Learned State occurrences.
+- Strategy/configuration compatibility;
+- semantic/Data Meaning requirements;
+- Conditions/request semantics;
+- applicable Constraints;
+- Learned State restriction/retirement/invalidation status;
+- required base/pretrained artifact identity;
+- runtime/software compatibility where material;
+- deployment/network policy.
 
-A Generation committed under a no-network/no-egress deployment profile MUST NOT silently invoke a runtime-network-dependent Strategy, fetch an undeclared artifact, or switch to a remote fallback. Any fallback that changes synthesis behavior is an explicit Strategy/configuration choice and must be bound as such.
+A later Data Meaning/Constraint/Strategy revision MUST NOT mutate Learned State history. It creates a new future-use compatibility question.
 
-Phase 002-D will refine how Constraint handling/satisfaction participates in Generation semantic completion while preserving these ownership rules.
+Ordinary Generation reuse MUST NOT silently mutate/adapt Learned State. Material adaptation must produce an explicitly distinguishable new result/activity rather than altering the historical Learned State identity.
+
+Strategies requiring no reusable Learned State MAY generate directly without fabricated Learning/Learned State occurrences.
+
+A no-network/no-egress Generation MUST NOT silently fetch missing Learned State dependencies, invoke a remote fallback, or replace a required base artifact with materially different content.
+
+Phase 002-D refines Generation completion and Constraint satisfaction while preserving these ownership rules.
 
 ## SYNC-07 — Generation operational realization
 
 **Type:** operational realization + provenance.
 
-Generation may use Execution for operational work. Execution owns operational status; Generation owns whether valid requested output was fulfilled. Partial/incomplete output MUST remain distinguishable from completed output.
+Generation may use Execution for operational work. Execution owns operational state; Generation owns whether the requested synthetic output was semantically fulfilled. Partial/incomplete output MUST remain distinguishable from completed output.
 
 ## SYNC-08 — Generation produces synthetic output reference
 
 **Type:** production + provenance.
 
-Successful Generation associates a stable logical reference to completed synthetic output. Stable physical identity/location/version mechanics are representation/integration obligations and MUST NOT create a generic Artifact/Dataset concept by implication.
+Successful Generation associates a stable logical reference to completed synthetic output. Stable physical location/version mechanics are representation/integration obligations and MUST NOT imply a generic Artifact/Dataset concept.
 
 ## SYNC-09 — Evaluation Criterion binding
 
@@ -136,21 +162,23 @@ Successful Generation associates a stable logical reference to completed synthet
 
 **Type:** validation + provenance.
 
-Evaluation validates that its method can address the bound Criterion under the declared scope. Sampling, approximation, bounded analysis, or other material methodological limits MUST remain visible in resulting Evidence.
+Evaluation validates that its method can address the bound Criterion under the declared scope. Sampling, approximation, bounded analysis, or other material methodological limitations MUST remain visible in Evidence.
 
 ## SYNC-11 — Evaluation operational realization
 
 **Type:** operational realization + provenance.
 
-Evaluation may use Execution for operational work. Execution completion MUST NOT automatically establish a successful Evaluation; Evaluation owns methodological/domain validity.
+Evaluation may use Execution for operational work. Execution completion MUST NOT automatically establish successful Evaluation; Evaluation owns methodological/domain validity.
 
 ## SYNC-12 — Evaluation produces Evidence
 
 **Type:** production + provenance.
 
-A semantically valid Evaluation result establishes [Evidence](../concepts/evidence.md) containing/referencing the Criterion, method, inputs, scope, result, limitations/uncertainty, and relevant provenance. Diagnostic output from a failed Evaluation MUST NOT masquerade as Evidence answering the Criterion.
+A semantically valid Evaluation result establishes [Evidence](../concepts/evidence.md) containing/referencing Criterion, method, inputs, scope, result, limitations/uncertainty, and relevant provenance.
 
-Constraint-satisfaction Evidence, when produced, records an observation about a specific bound Constraint revision/output/method. It does not become authority for the Constraint definition itself.
+Diagnostic output from failed Evaluation MUST NOT masquerade as Evidence answering the Criterion.
+
+Constraint-satisfaction Evidence records an observation about a specific bound Constraint revision/output/method and does not become Constraint authority.
 
 ## SYNC-13 — Evidence external handoff
 
@@ -162,46 +190,59 @@ Evidence may inform claims, restrictions, approvals, or release/use decisions ou
 
 **Type:** historical/provenance.
 
-Material committed transitions MUST record typed derivation/context relationships when required by SYNGAN traceability guarantees. [Provenance](../concepts/provenance.md) references canonical concept state and MUST NOT duplicate whole state payloads into a shadow source of truth.
+Material committed transitions MUST record typed derivation/context relationships when required by SYNGAN traceability guarantees. [Provenance](../concepts/provenance.md) references canonical concept state and MUST NOT duplicate full state payloads into a shadow source of truth.
 
-Where a transition requires provenance, the committed transition and required provenance fact MUST NOT silently diverge. The representation mechanism remains deferred.
+Where a transition requires provenance, the committed transition and required provenance fact MUST NOT silently diverge.
 
-For Data Meaning inference or Constraint applicability/handling, provenance SHOULD preserve the stable references and material context needed to explain the decision without copying row-level source data or full concept payloads.
+Material Learning/Learned State provenance SHOULD preserve stable references sufficient to explain:
 
-For Synthesis Strategy, provenance SHOULD preserve the bound Strategy/configuration and material local-artifact/network dependency facts where they affect behavior, reproducibility, or enterprise review. Remote locations alone are not sufficient historical identity when external content may change.
+- source state/version/fingerprint context;
+- Data Meaning revision;
+- Strategy/configuration;
+- applicable Constraint revisions/handling;
+- material sampling/approximation choices;
+- dependency/network profile and base/pretrained artifact identity;
+- Learning → Learned State production;
+- material Execution/Attempt facts required for failure explanation or reproducibility;
+- Learned State restriction/retirement/invalidation history where material.
+
+Provenance MUST NOT copy source rows or entire model/state payloads merely to satisfy traceability.
 
 ## SYNC-15 — Reproducibility-relevant commitment snapshot
 
 **Type:** cross-cutting bind + provenance; not a concept.
 
-At reproducibility-relevant commitment, activities MUST preserve or reference enough stable facts to state the supported reproduction/comparison scope. Depending on the activity this may include source/output identity, Data Meaning revision, Strategy/configuration, Constraint/Criterion revisions, Learned State identity, seeds/randomness policy, implementation/software identity, runtime/environment facts, sampling/approximation semantics, external dependency profile, and material local/pretrained artifact identity.
+At reproducibility-relevant commitment, activities MUST preserve/reference enough stable facts to state the supported reproduction/comparison scope.
 
-No concept should duplicate these under a generic `reproducibility` state object merely for convenience.
+For Learning this may include source identity/version/fingerprint semantics, Data Meaning, Strategy/configuration, Constraints, sampling/approximation, seeds/randomness policy, implementation/software identity, runtime/environment facts, dependency profile, and local/pretrained artifact identity.
 
-A URL or remote service name alone MUST NOT be treated as sufficient artifact identity for a reproducibility claim when the referenced content/behavior can change.
+For Learned State, the effective reproducibility story MUST preserve how the state was derived and any base/runtime artifacts required for reuse.
+
+No concept should duplicate these facts under a generic `reproducibility` object solely for convenience.
+
+A mutable table name, URL, or remote service name alone MUST NOT be treated as sufficient historical identity when underlying data/content/behavior can change materially.
 
 ## Non-synchronizations
 
 The following MUST NOT mutate historical work automatically:
 
 - new Data Meaning → historical Learned State;
-- new Constraint → historical Generation;
+- new Constraint → historical Learning or Generation;
 - new Strategy version → existing Learned State provenance;
+- source mutation → existing Learning/Learned State source history;
 - new Criterion revision → historical Evidence;
-- Learned State retirement → historical Generation;
+- Learned State retirement/restriction/invalidation → historical Generation;
 - Evidence supersession → external historical decision.
 
-Additional 002-A clarification:
+Additional refinements:
 
 - new inferred Data Meaning MUST NOT overwrite an authoritative declaration automatically;
-- a new Data Meaning revision MUST NOT rewrite the semantic prerequisites of historical Constraint bindings;
-- a newer Constraint revision MAY be evaluated against historical output as a new Evaluation question, but MUST NOT be represented as having governed the original Generation.
-
-Additional 002-B clarification:
-
+- newer Constraint revisions MAY be evaluated against old output but MUST NOT be represented as governing original production;
 - changed Strategy dependency/network requirements MUST NOT rewrite historical activities;
-- a deployment policy change MAY reject future use of an otherwise historical-valid Strategy without changing what earlier work used;
-- locally replacing an external artifact with a materially different artifact is a new compatibility/reproducibility context, not silent equivalence.
+- deployment policy changes MAY reject future Strategy/Learned State use without changing prior history;
+- replacing a required pretrained/base artifact with materially different content is a new compatibility/reproducibility context, not silent equivalence;
+- retrying Learning via a new Attempt is not permission to change committed Learning semantics;
+- physical relocation/reserialization of Learned State is not a semantic state change when logical identity/behavior are preserved by the later representation contract.
 
 ## Cardinality guidance
 
@@ -211,9 +252,11 @@ These are conceptual expectations, not storage schemas:
 - one Strategy configuration may serve many activities;
 - one Constraint revision may be bound by many activities;
 - one activity may bind many applicable Constraints;
-- one Learning produces zero or one primary Learned State under the current model;
+- one committed Learning binds one material source/semantic/Strategy context;
+- one Learning produces zero or one primary logical Learned State under the current model;
+- one Learned State may contain many physical components;
 - one Learned State may support many Generations;
-- one Generation has one logical completed synthetic-output result, even when physically partitioned;
+- one Generation has one logical completed synthetic-output result even when physically partitioned;
 - one Criterion may serve many Evaluations;
 - one Evaluation may produce multiple independently interpretable Evidence records;
 - one Execution contains one or more Attempts;
@@ -221,12 +264,6 @@ These are conceptual expectations, not storage schemas:
 
 ## Synchronization economy assessment
 
-The retained set avoids pathological all-to-all synchronization because most relationships are one of:
+The retained set avoids pathological all-to-all synchronization because most relationships remain stable revision/reference binding, contextual validation, one-way result production, a narrow activity↔Execution lifecycle pair, or append/traverse Provenance.
 
-- stable revision/reference binding;
-- local contextual validation;
-- one-way result production;
-- a narrow activity↔Execution lifecycle pair;
-- append/traverse Provenance.
-
-Data Meaning, Constraint, and Synthesis Strategy remain control-plane authorities. Contextual inference, applicability, compatibility, deployment-profile compatibility, enforcement, and satisfaction results MUST remain with the concepts/activities that produce them instead of creating global mutable coordination hubs.
+Data Meaning, Constraint, and Synthesis Strategy remain declarative control-plane authorities. Learning owns its committed derivation context and semantic outcome. Learned State owns the durable logical result and intrinsic reuse requirements. Generation owns contextual reuse compatibility. Execution owns operational realization. Provenance explains relationships without becoming duplicate authority.
