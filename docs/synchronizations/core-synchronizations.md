@@ -386,9 +386,11 @@ If a remote service cannot provide stable model/behavior version identity, that 
 
 If a provenance assertion is later found incorrect or incomplete, correction/supersession MUST preserve auditability where required and MUST NOT silently rewrite the canonical historical state owned by another concept.
 
-## SYNC-15 — Reproducibility-relevant commitment snapshot and reproduction contract
+## SYNC-15 — Reproducibility-relevant commitment snapshot
 
 **Type:** cross-cutting bind + provenance; not a concept.
+
+002-G extends this synchronization with the reproduction contract while preserving the stable SYNC-15 identifier and heading used by existing documentation links.
 
 At reproducibility-relevant commitment, activities MUST preserve/reference enough stable facts to state a supported reproduction/comparison contract according to the [Reproducibility Contract](../authority/reproducibility-contract.md).
 
