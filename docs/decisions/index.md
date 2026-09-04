@@ -25,6 +25,10 @@ Interpret architecture knowledge using this order:
 
 If an ADR summary conflicts with newer canonical architecture authority, the canonical architecture document governs current implementation and the ADR SHOULD be marked superseded or linked to the replacing decision.
 
+## Active decisions
+
+- [ADR-0001 — Typed Resource/Handle Public API](ADR-0001-typed-resource-handle-public-api.md) — adopts typed specification/activity/result/Execution/history resource roles rather than a universal mutable Session, payload-only API, universal Spark ML model, generic Result object, or process-local Future as canonical identity.
+
 ## When to create an ADR
 
 Use an ADR when a decision is materially consequential and benefits from preserved rationale, for example when it:
@@ -78,7 +82,3 @@ A replaced ADR SHOULD retain historical rationale and link to the replacing deci
 An ADR SHOULD summarize the accepted decision sufficiently to explain its rationale but SHOULD link to the canonical architecture document for the full current normative rule.
 
 Large architecture specifications MUST NOT be copied wholesale into ADRs.
-
-## Current status
-
-Phase 004-A establishes this decision-recording convention. No technology-selection ADR is implied merely by creation of this index.
