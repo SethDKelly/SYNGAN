@@ -18,8 +18,8 @@ The phase remains downstream of concept specification and upstream of representa
 | **003-B** | [**Data Meaning, Constraint & Strategy Preparation Experience**](003-B-data-meaning-constraint-strategy-preparation-experience.md) | **complete** |
 | **003-C** | [**Learning & Learned State Lifecycle Experience**](003-C-learning-learned-state-lifecycle-experience.md) | **complete** |
 | **003-D** | [**Generation Request, Condition, Validation & Output Promotion Experience**](003-D-generation-request-condition-validation-output-promotion-experience.md) | **complete** |
-| **003-E** | **Evaluation, Evidence & Review Experience** | **next** |
-| 003-F | Execution Monitoring, Failure, Recovery & Cancellation Experience | planned |
+| **003-E** | [**Evaluation, Evidence & Review Experience**](003-E-evaluation-evidence-review-experience.md) | **complete** |
+| **003-F** | **Execution Monitoring, Failure, Recovery & Cancellation Experience** | **next** |
 | 003-G | Provenance, Reproducibility & Historical Inspection Experience | planned |
 | 003-H | Enterprise Dependency, Offline/No-Egress & Safety Experience | planned |
 | 003-I | Cross-Workflow Consistency & Phase 003 Consolidation Review | planned |
@@ -40,27 +40,32 @@ The phase remains downstream of concept specification and upstream of representa
 
 ### 003-D
 
-003-D established [Generation Request, Condition, Validation & Output Promotion](../../experience/generation-request-condition-validation-output-promotion.md).
+003-D established [Generation Request, Condition, Validation & Output Promotion](../../experience/generation-request-condition-validation-output-promotion.md), including inspectable request/Condition semantics, completion-obligation preview, candidate/non-final output states, requirement-specific validation, Evidence-strength visibility, and one semantic output-promotion barrier after mandatory obligations are satisfied.
+
+### 003-E
+
+003-E established [Evaluation, Evidence & Review](../../experience/evaluation-evidence-review.md).
 
 Key established experience semantics include:
 
-- Generation request intent is inspectable/editable before commitment and not reduced to a sampler invocation;
-- Condition remains Generation-owned and distinct from reusable Constraint authority;
-- mandatory versus best-effort Conditions and material target/tolerance semantics are visible before commitment;
-- Learned-State and direct-generation paths remain first-class without fabricated lifecycle state;
-- pre-commit review exposes the completion obligations that must later be established;
-- Generation commitment freezes quantity/scope, Conditions, synthesis basis, Constraint handling, dependencies, and reproducibility-relevant semantics;
-- physical/materialization progress remains distinct from semantic Generation completion;
-- partial, complete candidate, abandoned/quarantined, and completed output are visibly/programmatically distinct;
-- requirement-specific validation and Evidence strength explain why completion is pending, satisfied, violated, or indeterminate;
-- Evaluation success does not automatically mean a mandatory Condition/Constraint passed;
-- candidate-to-completed output promotion occurs only after all mandatory completion obligations are satisfied;
-- one successful Generation exposes one authoritative logical completed output despite distributed/retried physical realization;
-- `completed with limitations` cannot excuse failed mandatory requirements;
-- completed-output inspection centers logical identity and semantic/Evidence/Provenance context rather than file layout;
-- offline/no-egress requirements remain binding throughout fulfillment;
-- a returned DataFrame alone is not sufficient to communicate Generation lifecycle/result authority;
-- enterprise-scale Generation/validation avoids mandatory full driver-local output materialization.
+- Evaluation begins from the Criterion question rather than whichever metric is easiest to run;
+- Criterion, Evaluation, Evidence, and external decision authority remain distinct;
+- fidelity, utility, validity, privacy/disclosure risk, reproducibility/stability, and later Criteria remain separate dimensions unless an explicit decision rule combines them;
+- method compatibility is assessed against the Criterion's required claim strength;
+- exhaustive, bounded/certificate, statistical/sampled, approximate/sketch, and diagnostic/partial coverage remain distinguishable;
+- scale limitations cannot silently weaken the Criterion;
+- Evaluation commitment freezes Criterion/subject/reference/method/scope/coverage/uncertainty/dependency semantics historically;
+- Evaluation semantic lifecycle remains distinct from Execution/Attempt/platform state;
+- progress must be method-meaningful rather than a fabricated universal percentage;
+- Evidence exposes finding, scope, method, coverage, uncertainty, limitations, and claim-strength/applicability boundaries rather than only a scalar/boolean;
+- successful Evaluation may produce favorable, unfavorable, or indeterminate Evidence;
+- Evidence used for Generation completion remains requirement-specific while Generation retains promotion authority;
+- missing Evidence remains distinct from negative or favorable Evidence;
+- Evidence comparability checks precede direct comparison and conflicting findings remain visible;
+- historical Evidence remains distinct from current applicable/superseded/stale/inapplicable/invalidated status;
+- privacy/disclosure-risk Evidence remains threat-model scoped and does not imply universal privacy or release approval;
+- review remains multidimensional rather than a generic Quality score;
+- enterprise-scale review uses bounded summaries/references rather than mandatory full driver-local subject/violation/telemetry collection.
 
 ## Phase 003 objectives
 
@@ -100,4 +105,4 @@ Phase 003 MUST NOT:
 
 ## Current next phase
 
-**003-E — Evaluation, Evidence & Review Experience**
+**003-F — Execution Monitoring, Failure, Recovery & Cancellation Experience**
