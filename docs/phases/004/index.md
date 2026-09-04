@@ -18,6 +18,7 @@ Phase 004 translates SYNGAN's accepted concept, synchronization, and experience 
 - [Architecture Authority](../../architecture/index.md)
 - [004-A Architecture Constitution](../../architecture/architecture-authority-representation-layering.md)
 - [004-B Public API/Resource Architecture](../../architecture/public-api-resource-handle-workflow-semantic-mapping.md)
+- [004-C Control-Plane Identity/State Architecture](../../architecture/control-plane-identity-revision-state-persistence-historical-reference.md)
 
 ## Groups
 
@@ -25,8 +26,8 @@ Phase 004 translates SYNGAN's accepted concept, synchronization, and experience 
 |---|---|---|
 | **004-A** | [**Architecture Authority, Representation Principles, Layering & Dependency Direction**](004-A-architecture-authority-representation-layering-dependency-direction.md) | **complete** |
 | **004-B** | [**Public API, Resource/Handle Model, Workflow Composition & Semantic Mapping**](004-B-public-api-resource-handle-workflow-semantic-mapping.md) | **complete** |
-| **004-C** | **Control-Plane Identity, Revision, State, Persistence & Historical Reference Architecture** | **next** |
-| 004-D | Spark Data Boundary, Source/Output Reference, Distributed Materialization, Manifest & Promotion Architecture | planned |
+| **004-C** | [**Control-Plane Identity, Revision, State, Persistence & Historical Reference Architecture**](004-C-control-plane-identity-revision-state-persistence-historical-reference-architecture.md) | **complete** |
+| **004-D** | **Spark Data Boundary, Source/Output Reference, Distributed Materialization, Manifest & Promotion Architecture** | **next** |
 | 004-E | Strategy Extension, Learning/Generation/Evaluation Runtime & Adapter Architecture | planned |
 | 004-F | Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Architecture | planned |
 | 004-G | Evaluation/Evidence, Provenance, Reproducibility & Historical Query Architecture | planned |
@@ -38,56 +39,39 @@ Phase 004 translates SYNGAN's accepted concept, synchronization, and experience 
 
 ### 004-A
 
-004-A established the canonical [Architecture Authority, Representation Principles, Layering & Dependency Direction](../../architecture/architecture-authority-representation-layering.md).
-
-Key accepted architecture rules include:
-
-- architecture is downstream of authority, concepts, synchronizations, and experience;
-- documentation-governance precedence was corrected so architecture cannot override experience silently;
-- representation must preserve material semantic/experience distinctions;
-- stable logical identity remains independent of mutable physical/platform locators;
-- cross-boundary architecture prefers typed stable references over copied authority;
-- universal status/state/session/metadata representations cannot erase owner/context;
-- semantic promotion remains distinct from physical durability;
-- a bounded control plane is distinct from the distributed data plane;
-- large source/output/Learned State/checkpoint/diagnostic payloads remain outside canonical control-plane storage by default;
-- architecture follows an inward dependency principle without mandating one named framework;
-- semantic/control, application coordination, ports/extension contracts, adapters/integrations, and composition/bootstrap responsibilities remain distinguishable;
-- concrete platform/runtime adapters do not become dependencies of the semantic/control core;
-- bidirectional semantic synchronization does not justify cyclic package dependencies;
-- optional network/runtime integrations should remain isolatable from supported offline/no-egress paths;
-- Spark-native means distributed Spark-scale data behavior, not universal Spark ML;
-- model-neutral architecture does not universally depend on CTGAN/GAN/PyTorch/HuggingFace/LLM/runtime families;
-- platform specialization may add capability but cannot silently weaken common guarantees;
-- catch-all Context/Session/Manager/Metadata/Registry/Service/Repository/Engine objects cannot gain broad authority by naming alone;
-- convenience facades may compose workflows but cannot become alternate canonical state owners;
-- ADR governance is established under [`docs/decisions/`](../../decisions/index.md) for durable rationale/supersession history;
-- enterprise-scale architecture must avoid ordinary full driver-local source/output/model/diagnostic/log materialization.
+004-A established the canonical [Architecture Authority, Representation Principles, Layering & Dependency Direction](../../architecture/architecture-authority-representation-layering.md), including downstream architecture authority, bounded control/data-plane separation, inward dependencies, adapter isolation, Spark-native/model-neutral boundaries, anti-god-module rules, and ADR discipline.
 
 ### 004-B
 
 004-B established [Public API, Resource/Handle Model, Workflow Composition & Semantic Mapping](../../architecture/public-api-resource-handle-workflow-semantic-mapping.md) and [ADR-0001 — Typed Resource/Handle Public API](../../decisions/ADR-0001-typed-resource-handle-public-api.md).
 
+It accepts typed editable specifications, contextual readiness results, durable committed activity handles, promoted result handles, subordinate non-final descriptors, logical Execution/Attempt inspection, long-running re-resolution, explicit payload access, and convenience façades that do not own canonical state.
+
+### 004-C
+
+004-C established [Control-Plane Identity, Revision, State, Persistence & Historical Reference Architecture](../../architecture/control-plane-identity-revision-state-persistence-historical-reference.md) and [ADR-0002 — Immutable Semantic Snapshots & Versioned Lifecycle State](../../decisions/ADR-0002-immutable-semantic-snapshots-versioned-lifecycle-state.md).
+
 Key accepted architecture rules include:
 
-- editable Learning/Generation/Evaluation specifications remain distinct from committed activity identity;
-- pre-commit readiness/compatibility is an inspectable contextual result, not global semantic state;
-- committed Learning/Generation/Evaluation expose durable typed activity-handle roles;
-- Learned State, completed synthetic output, and Evidence expose durable promoted result roles distinct from physical/runtime payloads;
-- checkpoint/recovery, partial/candidate output, and diagnostic material remain explicitly non-final subordinate representations;
-- one logical Execution handle exposes ordered Attempt history independently of platform jobs;
-- handles represent stable logical identity and resolve canonical state rather than becoming mutable client-side authority;
-- semantic commitment and operational submission remain distinct transitions even when combined by convenience APIs;
-- long-running work is re-resolvable and does not use process-local Future/promise identity as the canonical lifecycle;
-- completed output payload access is explicit and Spark/distributed rather than payload identity replacing output authority;
-- Learned State loading is runtime-specific and cannot replace logical Learned State identity;
-- convenience `fit`/`generate`-style façades may exist but must expose the durable underlying activity/result resources;
-- public status/issues remain typed by semantic/operational/policy/disclosure context rather than one global enum;
-- typed resource navigation follows stable references without copying authority into a mutable object graph;
-- human/programmatic surfaces map to equivalent semantic roles;
-- universal mutable Session/Context/Result/Registry/Model/DataFrame abstractions are rejected as canonical state ownership.
+- resource identity, semantic revision/commitment snapshot, lifecycle state version, and representation schema version remain separate;
+- stable logical IDs are typed, durable, namespace-capable where required, independent of mutable locators/platform IDs, and never reused for materially different resources;
+- bindable Data Meaning/Constraint/Strategy/Criterion revisions become immutable in material meaning;
+- persisted draft/specification identity remains distinct from committed Learning/Generation/Evaluation occurrence identity;
+- each committed activity has an immutable commitment snapshot and mutable owner-specific current lifecycle state;
+- Learned State/output/Evidence historical identity remains stable while future-use/applicability lifecycle changes separately;
+- material lifecycle writes require conflict/stale-write detection rather than silent last-writer-wins;
+- material transition history is retained without requiring universal event sourcing;
+- logical persistence ownership remains separated among semantic authorities, committed activities, promoted results, Execution/Attempts, Provenance, and derived indexes even when one physical database is shared;
+- derived read/search indexes do not gain canonical write authority;
+- coupled semantic transitions require detectable/recoverable consistency across crashes/retries without mandating one global distributed transaction technology;
+- exact historical reference resolution never silently substitutes current/latest state;
+- withheld/redacted, unavailable, unknown/indeterminate, invalid-reference and absent states remain distinguishable;
+- retained identity/tombstone semantics prevent payload expiration from erasing historical existence or enabling ID reuse;
+- correction/supersession preserves authority boundaries and auditability;
+- representation schema migration remains separate from semantic revision;
+- canonical control-plane state remains bounded by resources/revisions/material transitions rather than row/task/log/tensor volume.
 
-004-B intentionally does not yet choose exact class/method spellings, identifier format, persistence technology, handle serialization, REST schema, async primitives, or payload-resolution mechanisms.
+004-C intentionally does not choose ID encoding, database technology, physical schemas, event-sourcing strategy, transaction/outbox implementation, retention periods, source fingerprints, output manifests, provenance store, authorization implementation, or serialized handle format.
 
 ## Phase 004 guardrails
 
@@ -104,6 +88,9 @@ Phase 004 MUST NOT:
 - make security redaction falsify historical existence;
 - create package dependency cycles merely because semantic synchronizations are bidirectional;
 - make process-local object/Future identity the durable identity of distributed work;
+- collapse semantic revision, lifecycle state version, and storage schema version into one ambiguous field;
+- allow derived indexes or mutable aliases to become canonical historical truth;
+- use silent last-writer-wins for material semantic/lifecycle authority;
 - jump prematurely into implementation task breakdown before architecture boundaries are accepted.
 
 ## Phase 004 exit target
@@ -124,4 +111,4 @@ without reopening core semantics.
 
 ## Current next phase
 
-**004-C — Control-Plane Identity, Revision, State, Persistence & Historical Reference Architecture**
+**004-D — Spark Data Boundary, Source/Output Reference, Distributed Materialization, Manifest & Promotion Architecture**
