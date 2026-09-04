@@ -317,7 +317,49 @@ Evidence remains observation authority only and MUST NOT by itself become releas
 
 **Type:** historical/provenance.
 
-Material committed transitions MUST record typed derivation/context relationships when required by SYNGAN traceability guarantees. [Provenance](../concepts/provenance.md) references canonical state and MUST NOT duplicate full payloads or platform logs into a shadow source of truth.
+Material committed transitions MUST record typed derivation/context relationships when required by SYNGAN traceability guarantees. [Provenance](../concepts/provenance.md) references canonical state and MUST NOT duplicate full payloads, source/synthetic rows, model state, detailed validation output, or complete platform logs into a shadow source of truth.
+
+### Stable-reference rule
+
+A provenance relationship MUST reference historical state strongly enough to distinguish the state that actually participated when a mutable alias/location can later resolve differently.
+
+Where material this includes source snapshot/version/fingerprint state, Data Meaning/Constraint/Strategy/Criterion revisions, Learned State/output/Evidence identities, dependency/base-artifact identity, and software/runtime/service behavior identity.
+
+A table name, model alias, URL, endpoint name, or platform run ID alone is insufficient when the underlying state/behavior can change materially.
+
+The representation mechanism remains deferred.
+
+### Typed-relationship rule
+
+Provenance MUST preserve materially different relationship meanings rather than reducing every edge to an untyped association.
+
+Relevant meanings include, where applicable:
+
+- bound/governed by;
+- derived from/produced by;
+- used/depended on;
+- evaluated/referenced;
+- operationally realized by;
+- recovered/resumed from;
+- superseded/restricted/retired/invalidated context.
+
+These are relationship semantics, not new concepts.
+
+### Commitment and production rule
+
+Required provenance facts for a committed transition MUST NOT silently diverge from the transition they explain.
+
+In particular:
+
+- semantic commitments preserve the exact authority/input revisions they bind;
+- Learning → Learned State production preserves the material derivation path;
+- Generation promotion preserves its committed synthesis basis and output identity;
+- Evaluation → Evidence production preserves subject/reference/Criterion/method context;
+- Evidence used in Generation completion preserves the exact candidate-output and completion-requirement relationship.
+
+The consistency mechanism is representation design; 002-G does not require a distributed transaction or one database.
+
+### Execution/Attempt rule
 
 For Execution/Attempt history, provenance SHOULD preserve stable references sufficient to explain, where material:
 
@@ -332,19 +374,64 @@ For Execution/Attempt history, provenance SHOULD preserve stable references suff
 - operational failures material to domain outcome or reproducibility;
 - promotion/use of recovered partial state where relevant.
 
-Provenance should retain summarized typed facts/references rather than copying all task-level telemetry, logs, checkpoints, source rows, generated rows, or model payloads.
+Attempt/task facts that do not materially contribute to derivation, diagnosis, policy review, or reproducibility SHOULD remain in platform-native telemetry rather than canonical Provenance.
 
-Domain-specific provenance requirements from prior phases remain in force, including Learning → Learned State derivation, Generation completion/promotion basis, Evaluation → Evidence production, and Evidence applicability history.
+### External-dependency rule
 
-## SYNC-15 — Reproducibility-relevant commitment and operational history
+When local/pretrained artifacts or remote services materially affect behavior, provenance MUST preserve/reference enough identity to expose what was actually used and any mutability limitation relevant to explanation/reproduction.
+
+If a remote service cannot provide stable model/behavior version identity, that limitation remains explicit and constrains the Reproducibility Contract rather than being hidden.
+
+### Correction rule
+
+If a provenance assertion is later found incorrect or incomplete, correction/supersession MUST preserve auditability where required and MUST NOT silently rewrite the canonical historical state owned by another concept.
+
+## SYNC-15 — Reproducibility-relevant commitment snapshot and reproduction contract
 
 **Type:** cross-cutting bind + provenance; not a concept.
 
-At reproducibility-relevant commitment, activities MUST preserve/reference enough stable facts to state supported reproduction/comparison scope.
+At reproducibility-relevant commitment, activities MUST preserve/reference enough stable facts to state a supported reproduction/comparison contract according to the [Reproducibility Contract](../authority/reproducibility-contract.md).
 
-Learning, Generation, and Evaluation retain their previously specified source/semantic/Strategy/Constraint/Condition/Criterion/method/randomness/dependency facts where material.
+A substantive claim MUST identify:
 
-002-F adds that operational history MAY also be reproduction-relevant when behavior can depend on:
+- the reproduction target;
+- the material preserved conditions/identities;
+- the equivalence or comparison rule considered success;
+- known nondeterminism/approximation/dependency limitations.
+
+Accepted conceptual reproduction classes include:
+
+- exact deterministic;
+- semantic;
+- statistical;
+- bounded/approximate;
+- comparative;
+- explicitly not reproducible / insufficient context.
+
+A representation MAY use different names but MUST preserve those distinctions where material.
+
+### Commitment snapshot
+
+Depending on activity and target, the material historical snapshot may include:
+
+- source state identity;
+- Data Meaning revision;
+- Strategy/configuration revision;
+- Constraint revisions/handling;
+- Learning scope and sampling/approximation;
+- Learned State identity and base/pretrained dependencies;
+- Generation Conditions, quantity/scope, direct inputs, and output identity;
+- Evaluation Criterion, subject/reference, method/configuration, coverage, uncertainty, and Evidence identity;
+- dependency/network/no-egress profile;
+- software/runtime/package versions;
+- randomness/seed/seed-derivation semantics;
+- approximation/tolerance/error semantics.
+
+Facts remain owned by their canonical concepts/dependencies and are referenced rather than copied into a generic reproducibility object.
+
+### Operational augmentation
+
+Execution/Attempt history becomes reproduction-relevant only when behavior can materially depend on facts such as:
 
 - Attempt/retry count or ordering;
 - checkpoint/resume point;
@@ -355,11 +442,19 @@ Learning, Generation, and Evaluation retain their previously specified source/se
 - external dependency/service behavior;
 - duplicate physical execution and fencing/promotion decisions.
 
-Execution MUST preserve/refer to those operational facts when they materially affect the supported reproduction/comparison claim, without turning every platform log into canonical reproducibility state.
+Execution MUST preserve/reference those facts when they materially constrain the supported reproduction/comparison claim, without turning every platform log into canonical reproducibility state.
 
-Exactly-once physical execution is not assumed. Reproducibility claims must distinguish semantic equivalence from identical operational history where relevant.
+### Claim-strength rules
 
-No concept should duplicate all such facts under a generic `reproducibility` object solely for convenience.
+Exactly-once physical execution is not assumed.
+
+A seed alone MUST NOT establish exact deterministic reproduction.
+
+If material external behavior cannot be pinned, source state cannot be distinguished, required artifacts are unavailable, or nondeterminism cannot be bounded, the supported reproduction class MUST be weakened accordingly or explicitly marked insufficient.
+
+Retry/resume may preserve semantic/statistical/bounded reproduction even when physical job history differs.
+
+Re-execution is not automatically reproduction; the resulting target must satisfy the declared equivalence/comparison rule.
 
 ## Non-synchronizations
 
@@ -380,7 +475,10 @@ The following MUST NOT mutate historical work automatically:
 - checkpoint existence → domain result existence;
 - Execution completion → Learning/Generation/Evaluation completion;
 - cancellation request → automatic domain cancellation;
-- unknown platform state → assumed success or failure.
+- unknown platform state → assumed success or failure;
+- later source/artifact/service alias contents → historical bound identity;
+- later reproducibility assessment → historical committed semantics;
+- provenance correction → silent mutation of another concept's historical authority.
 
 Further accepted refinements:
 
@@ -388,7 +486,8 @@ Further accepted refinements:
 - materially different recovery inputs/artifacts/runtime behavior create a new semantic/compatibility question when they affect domain meaning;
 - physical relocation/reserialization may preserve logical identity only when later representation contracts guarantee semantic equivalence;
 - duplicate physical work is acceptable only when canonical promotion/side effects remain unambiguous;
-- new Evidence may supersede an older finding for current use but MUST NOT rewrite what the older Evaluation observed.
+- new Evidence may supersede an older finding for current use but MUST NOT rewrite what the older Evaluation observed;
+- loss of a historical dependency may weaken current reproducibility without changing what the historical activity actually used.
 
 ## Cardinality guidance
 
@@ -407,8 +506,9 @@ These are conceptual expectations, not storage schemas:
 - one Execution contains one or more Attempts over its active history;
 - one Attempt may map to one or many physical platform jobs/tasks/processes;
 - one platform job is not assumed to equal one Attempt;
-- Provenance contains many typed relationships.
+- Provenance contains many typed relationships across stable references;
+- one historical result may support different reproducibility assessments for different targets/equivalence classes without creating a standalone Reproducibility concept.
 
 ## Synchronization economy assessment
 
-The model continues to avoid pathological all-to-all coordination. Domain concepts own semantic commitment and completion. Execution owns operational realization. Attempt remains subordinate history. Retry/resume preserve semantics rather than creating new compatibility authority. Provenance records typed history without becoming duplicate platform telemetry. Exactly-once physical work is not required; single semantic promotion prevents duplicate authoritative domain results.
+The model continues to avoid pathological all-to-all coordination. Domain concepts own semantic commitment and completion. Execution owns operational realization. Attempt remains subordinate history. Provenance records typed stable-reference history without becoming duplicate domain state or platform telemetry. Reproducibility is assembled as a cross-cutting contract from canonical bindings rather than centralized duplicate state. Exactly-once physical work is not required; single semantic promotion prevents duplicate authoritative domain results.
