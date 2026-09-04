@@ -13,6 +13,7 @@ Experience documents define how actors discover, prepare, commit, observe, inspe
 ## Current experience authority
 
 - [Workflow Entry, Source Context & Lifecycle Orientation](workflow-entry-source-context-lifecycle-orientation.md) — how actors enter new or existing work, orient around source/history, distinguish editable from committed state, and understand semantic versus operational lifecycle.
+- [Data Meaning, Constraint & Strategy Preparation](data-meaning-constraint-strategy-preparation.md) — how actors review declared/inferred/unresolved meaning, determine Constraint applicability/handling, compare Strategy capabilities/dependencies, understand contextual compatibility, and reach a reviewable commitment-ready state.
 
 Additional experience authorities will be added by later Phase 003 groups.
 
@@ -37,6 +38,10 @@ Phase 003 experience authority MUST preserve these rules:
 - semantic lifecycle remains distinguishable from Execution/Attempt/platform state;
 - candidate/partial/checkpoint material remains distinguishable from promoted domain results;
 - warnings/limitations/indeterminacy remain visible rather than coerced to success;
+- Data Meaning, Constraint, and Synthesis Strategy remain distinct authorities even when preparation composes them;
+- inferred meaning remains distinguishable from declared meaning and cannot silently overwrite it;
+- Constraint handling remains distinguishable from output satisfaction;
+- compatibility/readiness remain contextual derived assessments rather than global mutable concept state;
 - network/external dependencies remain visible before commitment;
 - Evidence remains observation authority, not release/use approval;
 - large-data workflows remain understandable without mandatory full driver-local materialization;
