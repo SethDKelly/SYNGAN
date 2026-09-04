@@ -31,21 +31,30 @@ Completed:
 - **004-C — Control-Plane Identity, Revision, State, Persistence & Historical Reference Architecture**
 - **004-D — Spark Data Boundary, Source/Output Reference, Distributed Materialization, Manifest & Promotion Architecture**
 - **004-E — Strategy Extension, Learning/Generation/Evaluation Runtime & Adapter Architecture**
+- **004-F — Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Architecture**
 
 Phase 004 architecture now establishes:
 
-- downstream architecture authority with bounded control-plane/distributed-data-plane separation;
-- durable typed public specifications, activity handles, result handles, Execution/Attempt inspection, and explicit payload access;
+- bounded control-plane/distributed-data-plane separation and inward dependency direction;
+- durable typed specifications, committed activity/result handles, Execution/Attempt inspection, and explicit payload access;
 - stable resource identity, immutable semantic revisions/commitment snapshots, conflict-versioned lifecycle state, exact historical resolution, and bounded persistence ownership;
 - exact Spark-scale source-state/read binding, distributed manifests, sealed Generation candidates, and one idempotently promoted output without mandatory row copying;
-- semantic Strategy/Evaluation-method authority separated from executable implementation bindings and Attempt-scoped runtime realization;
-- runtime adapters that consume immutable resolved activity specifications, read exact source/state references, write non-final learned/output/diagnostic material through framework-owned ports, and report runtime facts without domain-completion authority;
-- Learned State identity distinct from loaded PyTorch/Spark/statistical objects and compatible with distributed state representations;
+- Strategy/Evaluation-method semantic authority separated from executable implementation binding and Attempt-scoped runtime realization;
+- runtime adapters that read exact resolved inputs and write only non-final learned/output/diagnostic material through framework-owned ports;
+- Learned State identity distinct from checkpoints and loaded PyTorch/Spark/statistical runtime objects;
 - first-class direct Generation without fabricated Learning;
-- Evaluation method adapters that preserve coverage/uncertainty/diagnostics and leave Evidence establishment to Evaluation;
-- Spark-native structured-data boundaries compatible with non-Spark model runtimes while rejecting ordinary full-corpus driver collection as a generic bridge;
+- one stable logical Execution spanning many Attempts/platform runs;
+- ordered Attempt epochs/fencing generations that revoke stale framework mutation authority;
+- lease/liveness coordination separated from stale-writer fencing;
+- operation-scoped idempotency for launches, checkpoint commits, candidate seals, Evaluation aggregation, semantic promotion, and cancellation;
+- immutable checkpoint snapshots with contextual resume qualification rather than file-existence semantics;
+- retry-from-start, resume, reconcile-first, and cannot-continue as distinct recovery outcomes;
+- durable unknown-state handling when platform/external side effects cannot yet be classified safely;
+- Evaluation retry protection against accidental double counting;
+- cancellation as durable intent followed by reconciled operational outcome;
+- duplicate physical computation permitted while duplicate/stale canonical authority remains prohibited;
 - explicit dependency/network/egress behavior with no hidden runtime acquisition or fallback;
-- no universal CTGAN, GAN, PyTorch, Spark ML, Databricks, HuggingFace, LLM, plugin loader, or runtime family assumption.
+- no universal CTGAN, GAN, PyTorch, Spark ML, Databricks, HuggingFace, LLM, scheduler, or runtime-family assumption.
 
 Architecture decision rationale:
 
@@ -53,9 +62,10 @@ Architecture decision rationale:
 - [`ADR-0002 — Immutable Semantic Snapshots & Versioned Lifecycle State`](docs/decisions/ADR-0002-immutable-semantic-snapshots-versioned-lifecycle-state.md)
 - [`ADR-0003 — Sealed Manifest-Gated Distributed Output Promotion`](docs/decisions/ADR-0003-sealed-manifest-gated-output-promotion.md)
 - [`ADR-0004 — Semantic Extension & Runtime Binding Separation`](docs/decisions/ADR-0004-semantic-extension-runtime-binding-separation.md)
+- [`ADR-0005 — Attempt-Epoch Fencing & Recoverable At-Least-Once Execution`](docs/decisions/ADR-0005-attempt-epoch-fencing-recoverable-at-least-once-execution.md)
 
 Next:
 
-- **004-F — Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Architecture**
+- **004-G — Evaluation/Evidence, Provenance, Reproducibility & Historical Query Architecture**
 
-No final Python package/module tree or exact public class names, database engine, ID encoding, physical persistence schema, Spark table/file provider, source fingerprint/hash algorithm, manifest serialization, plugin discovery mechanism, distributed ML runtime choice, scheduler/orchestrator, checkpoint/fencing implementation, provenance physical store, authorization engine, egress-control technology, model registry, or deployment topology should be treated as settled until the relevant later Phase 004 group accepts it.
+No final Python package/module tree or exact public class names, database engine, ID encoding, physical persistence schema, Spark table/file provider, source fingerprint/hash algorithm, manifest serialization, plugin discovery mechanism, distributed ML runtime choice, scheduler/orchestrator, concrete checkpoint/fencing implementation, provenance physical store, authorization engine, egress-control technology, model registry, or deployment topology should be treated as settled until the relevant later Phase 004 group accepts it.
