@@ -13,36 +13,30 @@ This directory is the canonical design knowledge bundle for SYNGAN.
 
 - [Authority](authority/index.md) — methodology, documentation governance, terminology and source rules.
 - [Problem Knowledge](problem/index.md) — problem, purpose, actors, outcomes and enterprise scale envelope.
-- [Domain Terminology](terminology/index.md) — canonical domain vocabulary, semantic distinctions, compatibility mappings and term status.
-- [Concept Discovery](discovery/index.md) — provisional candidate concepts, operational principles, composition/dependency analysis, synchronization specification, review decisions and risk checks.
+- [Domain Terminology](terminology/index.md) — canonical vocabulary and compatibility mappings.
+- [Accepted Concepts](concepts/index.md) — canonical concept purpose, ownership, actions, invariants and boundaries.
+- [Accepted Synchronizations](synchronizations/index.md) — canonical cross-concept coordination rules.
+- [Concept Discovery](discovery/index.md) — historical hypotheses, falsification evidence, alternatives and design provenance.
 - [Phases](phases/index.md) — phase plans, outcomes and exit reviews.
-- `concepts/` — canonical concept specifications, created only after Phase 001-H consolidates the accepted initial catalog.
-- `synchronizations/` — accepted cross-concept coordination knowledge, created only after Phase 001-H promotion from the provisional 001-G synchronization specification.
-- `architecture/` — representation and implementation architecture, intentionally downstream of concept design.
-- `decisions/` — architecture and governance decisions that need durable provenance.
+- `architecture/` — representation and implementation architecture, intentionally downstream of concept specification.
+- `decisions/` — architecture and governance decisions requiring durable provenance.
 - `references/` — external references used by the design.
 - `backlog/` — unresolved or deferred work that is not canonical design authority.
 
 ## Authority rule
 
-A fact, definition, requirement, invariant, or design decision has one canonical home. Other documents SHOULD link to that authority rather than restating it. Repetition is allowed only when required for local comprehension, independent auditability, or an explicit derived summary; repeated text MUST NOT silently become a competing authority.
+A durable fact, definition, requirement, invariant, policy, or design decision has one canonical home. Other documents SHOULD reference that authority rather than restating it as a competing source of truth.
 
-## Current phase
+For accepted concept meaning, `docs/concepts/` supersedes earlier provisional discovery statements. For accepted cross-concept coordination, `docs/synchronizations/` supersedes provisional synchronization hypotheses/specifications under discovery.
 
-Phase 001 — Design Foundation & Concept Discovery.
+## Phase status
 
-Completed:
+**Phase 001 — Design Foundation & Concept Discovery: complete.**
 
-- [001-A — Design Authority, Methodology, OKF 0.2 & Documentation Governance](phases/001/001-A-design-authority-methodology-okf-documentation-governance.md)
-- [001-B — Problem, Purpose, Actors, Outcomes & Enterprise Scale Envelope](phases/001/001-B-problem-purpose-actors-outcomes-enterprise-scale-envelope.md)
-- [001-C — Domain Terminology & Synthetic-Data Semantic Inventory](phases/001/001-C-domain-terminology-synthetic-data-semantic-inventory.md)
-- [001-D — Candidate Concept Discovery & Boundary Hypotheses](phases/001/001-D-candidate-concept-discovery-boundary-hypotheses.md)
-- [001-E — Concept Criteria, Independence, Genericity & Completeness Review](phases/001/001-E-concept-criteria-independence-genericity-completeness-review.md)
-- [001-F — Operational Principle Development](phases/001/001-F-operational-principle-development.md)
-- [001-G — Concept Composition, Synchronization & Dependency Analysis](phases/001/001-G-concept-composition-synchronization-dependency-analysis.md)
+Exit record: [001-H — Phase 001 Consolidation & Initial Concept Catalog](phases/001/001-H-phase-001-consolidation-initial-concept-catalog.md).
 
-Next: **001-H — Phase 001 Consolidation & Initial Concept Catalog**.
+**Current phase: Phase 002 — Concept Specification & Invariant Refinement.**
 
-The current provisional handoff to 001-H is the [Concept Discovery index](discovery/index.md), especially the [Composition & Dependency Model](discovery/composition-dependency-model.md), [Candidate Synchronization Specification](discovery/synchronization-specification.md), and [Composition Risk Review](discovery/composition-risk-review.md).
+Next: **002-A — Data Meaning & Constraint Specification**.
 
-All eleven candidates are purpose-, independence-, operational-principle-, and composition-validated, but remain provisional until 001-H promotes accepted concept and synchronization authority.
+See [Phase 002 index](phases/002/index.md).
