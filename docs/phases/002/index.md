@@ -1,14 +1,14 @@
 ---
 type: Phase Index
 title: Phase 002 — Concept Specification & Invariant Refinement
-status: active
+status: complete
 ---
 
 # Phase 002 — Concept Specification & Invariant Refinement
 
-Phase 002 deepens the accepted Phase 001 concept model before experience/API/representation architecture is selected.
+Phase 002 deepened the accepted Phase 001 concept model before experience/API/representation architecture is selected.
 
-The grouping follows accepted concept responsibilities rather than implementation technology.
+The grouping followed accepted concept responsibilities rather than implementation technology.
 
 ## Groups
 
@@ -21,72 +21,43 @@ The grouping follows accepted concept responsibilities rather than implementatio
 | **002-E** | [**Evaluation Criterion, Evaluation & Evidence Specification**](002-E-evaluation-criterion-evaluation-evidence-specification.md) | **complete** |
 | **002-F** | [**Execution, Attempt History, Failure & Recovery Semantics**](002-F-execution-attempt-failure-recovery-semantics.md) | **complete** |
 | **002-G** | [**Provenance, Reproducibility Contract & Historical Binding Specification**](002-G-provenance-reproducibility-historical-binding-specification.md) | **complete** |
-| **002-H** | **Cross-Concept Invariant, Synchronization & Phase 002 Consolidation Review** | **next** |
+| **002-H** | [**Cross-Concept Invariant, Synchronization & Phase 002 Consolidation Review**](002-H-cross-concept-invariant-synchronization-consolidation-review.md) | **complete** |
 
-## Completed refinement
+## Phase 002 consolidated result
 
-### 002-A
+Phase 002 exits with:
 
-002-A deepened [Data Meaning](../../concepts/data-meaning.md) and [Constraint](../../concepts/constraint.md), establishing revisioned semantic/rule authority, explicit unresolved state, contextual applicability, handling-versus-satisfaction, and control-plane scale semantics.
+- eleven accepted concepts unchanged in count and ownership;
+- fifteen accepted synchronization rules unchanged in ID set;
+- explicit semantic commitment and historical-binding rules;
+- offline/no-egress capable core semantics with explicit optional dependency profiles;
+- distinct Learning/Learned State and Generation candidate/completed-output boundaries;
+- Criterion/Evaluation/Evidence claim-strength discipline;
+- logical Execution/Attempt/retry/recovery semantics with single semantic promotion;
+- typed Provenance with stable historical references;
+- a cross-cutting Reproducibility Contract;
+- enterprise-scale control-plane semantics without mandatory full-corpus/output/model/telemetry driver collection;
+- no concept, synchronization, cardinality, god-concept, or representation-leakage issue requiring redesign.
 
-### 002-B
+See [002-H](002-H-cross-concept-invariant-synchronization-consolidation-review.md) for the integrated invariant and contradiction audit.
 
-002-B deepened [Synthesis Strategy](../../concepts/synthesis-strategy.md) and established the [Network and External Dependency Policy](../../authority/network-external-dependency-policy.md), including explicit capability/requirement/limitation semantics and an offline/no-egress core operating profile.
+## Phase 002 boundary preserved
 
-### 002-C
-
-002-C deepened [Learning](../../concepts/learning.md) and [Learned State](../../concepts/learned-state.md), establishing semantic commitment/source-history binding, retry invariance, checkpoint-versus-Learned-State separation, distributed/composite learned-state semantics, non-mutating reuse, and sensitivity/dependency boundaries.
-
-### 002-D
-
-002-D deepened [Generation](../../concepts/generation.md), establishing request/Condition commitment, direct and Learned-State paths, required Constraint completion rules, candidate-versus-completed output, and a semantic completion barrier distinct from physical materialization or Execution completion.
-
-### 002-E
-
-002-E deepened [Evaluation Criterion](../../concepts/evaluation-criterion.md), [Evaluation](../../concepts/evaluation.md), and [Evidence](../../concepts/evidence.md), establishing question/method/finding separation, explicit evidence strength, uncertainty-aware evaluation, and Generation-completion validation semantics.
-
-### 002-F
-
-002-F deepened [Execution](../../concepts/execution.md), establishing logical Execution/Attempt identity, retry/resume/checkpoint safety, partial/unknown operational state, cancellation races, contextual retryability, and single semantic promotion rather than exactly-once physical computation.
-
-### 002-G
-
-002-G deepened [Provenance](../../concepts/provenance.md), refined the [core synchronizations](../../synchronizations/core-synchronizations.md), clarified documentation-source provenance, and established the canonical [Reproducibility Contract](../../authority/reproducibility-contract.md).
-
-Key established semantics include:
-
-- Provenance owns typed historical relationships and stable references rather than duplicate concept payloads;
-- mutable aliases such as table names, model aliases, URLs, service names, or platform run IDs are insufficient identity by themselves when underlying state can change materially;
-- committed historical bindings remain tied to the exact source/meaning/Strategy/Constraint/Learned State/Condition/Criterion/method/dependency state actually used;
-- lineage remains the derivational subset of broader Provenance;
-- canonical Provenance remains materiality-bounded and does not become a copy of rows, model state, task telemetry, or complete logs;
-- provenance correction preserves auditability and cannot silently rewrite another concept's authority;
-- reproducibility remains a cross-cutting contract rather than a standalone concept;
-- substantive reproducibility claims must identify target, preserved conditions, and acceptable equivalence;
-- exact deterministic, semantic, statistical, bounded/approximate, comparative, and explicitly insufficient/not-reproducible outcomes remain distinguishable;
-- seeds alone do not imply deterministic reproduction;
-- retry/recovery facts enter the reproduction context only when materially behavior-affecting;
-- external artifact/service mutability constrains claim strength and must remain explicit;
-- loss of historical dependencies may weaken present reproducibility without rewriting historical provenance;
-- enterprise-scale provenance/reproduction does not require full corpus/output/model/log collection to driver-local memory.
-
-## Phase 002 boundary
-
-Phase 002 SHOULD specify concept state, actions, invariants, lifecycle semantics, authority, revision/history rules, failure behavior, and accepted synchronization refinements.
-
-It MUST NOT prematurely select:
+Phase 002 did not select a mandatory:
 
 - Python class/module hierarchy;
-- Spark ML Estimator/Model mappings;
+- Spark ML Estimator/Model mapping;
 - PyTorch/TorchDistributor architecture;
-- storage/serialization formats;
+- storage/serialization format;
 - plugin architecture;
-- managed-platform requirements;
+- scheduler/orchestrator;
+- checkpoint/promotion/fencing technology;
+- provenance database;
+- model hub;
+- managed-platform requirement;
 - final public API ergonomics.
 
-Those remain downstream unless concept feasibility requires an explicit earlier design revision.
-
-## Entry authority
+## Entry authority retained
 
 - [Accepted Concepts](../../concepts/index.md)
 - [Accepted Synchronizations](../../synchronizations/index.md)
@@ -94,6 +65,8 @@ Those remain downstream unless concept feasibility requires an explicit earlier 
 - [Reproducibility Contract](../../authority/reproducibility-contract.md)
 - [Phase 001 Exit](../001/001-H-phase-001-consolidation-initial-concept-catalog.md)
 
-## Current next phase
+## Exit / next phase
 
-**002-H — Cross-Concept Invariant, Synchronization & Phase 002 Consolidation Review**
+**Phase 002 is complete.**
+
+Next: [**Phase 003 — Experience & Workflow Design**](../003/index.md), beginning with **003-A — Workflow Entry, Source Context & Lifecycle Orientation**.
