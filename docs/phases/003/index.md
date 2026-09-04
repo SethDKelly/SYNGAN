@@ -14,8 +14,8 @@ The phase remains downstream of concept specification and upstream of representa
 
 | Group | Scope | Status |
 |---|---|---|
-| **003-A** | **Workflow Entry, Source Context & Lifecycle Orientation** | **next** |
-| 003-B | Data Meaning, Constraint & Strategy Preparation Experience | planned |
+| **003-A** | [**Workflow Entry, Source Context & Lifecycle Orientation**](003-A-workflow-entry-source-context-lifecycle-orientation.md) | **complete** |
+| **003-B** | **Data Meaning, Constraint & Strategy Preparation Experience** | **next** |
 | 003-C | Learning & Learned State Lifecycle Experience | planned |
 | 003-D | Generation Request, Condition, Validation & Output Promotion Experience | planned |
 | 003-E | Evaluation, Evidence & Review Experience | planned |
@@ -23,6 +23,27 @@ The phase remains downstream of concept specification and upstream of representa
 | 003-G | Provenance, Reproducibility & Historical Inspection Experience | planned |
 | 003-H | Enterprise Dependency, Offline/No-Egress & Safety Experience | planned |
 | 003-I | Cross-Workflow Consistency & Phase 003 Consolidation Review | planned |
+
+## Completed experience refinement
+
+### 003-A
+
+003-A established the canonical [Experience & Workflow Design](../../experience/index.md) area and [Workflow Entry, Source Context & Lifecycle Orientation](../../experience/workflow-entry-source-context-lifecycle-orientation.md).
+
+Key established experience semantics include:
+
+- intent-oriented entry rather than one mandatory linear wizard;
+- source context as a composed experience rather than a new Dataset/Workflow concept;
+- visible distinction between mutable source locators and stable historical identities;
+- explicit editable/validated/committed orientation around semantic commitment;
+- semantic activity state kept distinct from Execution/Attempt/platform state;
+- candidate/checkpoint/diagnostic material kept distinct from authoritative domain results;
+- indeterminate/unresolved state preserved rather than flattened to pass/fail;
+- blocker, permitted limitation, warning, and operational-incident distinctions;
+- role-sensitive orientation for practitioners, stewards, operators, reviewers, and consumers without changing canonical ownership;
+- human/programmatic semantic parity;
+- dependency/network/no-egress visibility before commitment;
+- enterprise-scale entry/orientation without mandatory full driver-local materialization.
 
 ## Phase 003 objectives
 
@@ -53,6 +74,7 @@ Phase 003 MUST NOT:
 ## Entry authority
 
 - [Phase 002 Exit](../002/002-H-cross-concept-invariant-synchronization-consolidation-review.md)
+- [Experience & Workflow Design](../../experience/index.md)
 - [Accepted Concepts](../../concepts/index.md)
 - [Accepted Synchronizations](../../synchronizations/index.md)
 - [Design Authority](../../authority/index.md)
@@ -61,4 +83,4 @@ Phase 003 MUST NOT:
 
 ## Current next phase
 
-**003-A — Workflow Entry, Source Context & Lifecycle Orientation**
+**003-B — Data Meaning, Constraint & Strategy Preparation Experience**
