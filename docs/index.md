@@ -66,6 +66,7 @@ Completed in Phase 004:
 - [004-A — Architecture Authority, Representation Principles, Layering & Dependency Direction](phases/004/004-A-architecture-authority-representation-layering-dependency-direction.md)
 - [004-B — Public API, Resource/Handle Model, Workflow Composition & Semantic Mapping](phases/004/004-B-public-api-resource-handle-workflow-semantic-mapping.md)
 - [004-C — Control-Plane Identity, Revision, State, Persistence & Historical Reference Architecture](phases/004/004-C-control-plane-identity-revision-state-persistence-historical-reference-architecture.md)
+- [004-D — Spark Data Boundary, Source/Output Reference, Distributed Materialization, Manifest & Promotion Architecture](phases/004/004-D-spark-data-boundary-source-output-reference-distributed-materialization-manifest-promotion-architecture.md)
 
 004-A establishes the [architecture constitution](architecture/architecture-authority-representation-layering.md): semantic-preserving representation, bounded control/data-plane separation, inward dependencies, adapter isolation, Spark-native/model-neutral semantics, anti-god-module rules, and architecture decision discipline.
 
@@ -73,9 +74,12 @@ Completed in Phase 004:
 
 004-C establishes the [control-plane identity/state architecture](architecture/control-plane-identity-revision-state-persistence-historical-reference.md): stable resource identity, immutable semantic revisions/commitment snapshots, mutable conflict-versioned lifecycle state, representation schema versioning, exact historical references, bounded logical persistence ownership, recoverable coupled-transition consistency, and non-authoritative derived indexes.
 
+004-D establishes the [Spark data boundary and distributed materialization architecture](architecture/spark-data-boundary-source-output-reference-distributed-materialization-manifest-promotion.md): DataFrames/table/path aliases remain access/locator forms rather than durable identity; committed source use binds stable exact source-state/read references; manifests use bounded roots and distributed/provider detail; Generation candidates become immutable sealed snapshots before completion Evaluation; sealing remains distinct from semantic promotion; required Evidence binds exact candidate identity; stale writers must be fenceable; and one idempotently promoted output may reuse candidate bytes without mandatory row copying.
+
 Decision rationale:
 
 - [ADR-0001 — Typed Resource/Handle Public API](decisions/ADR-0001-typed-resource-handle-public-api.md)
 - [ADR-0002 — Immutable Semantic Snapshots & Versioned Lifecycle State](decisions/ADR-0002-immutable-semantic-snapshots-versioned-lifecycle-state.md)
+- [ADR-0003 — Sealed Manifest-Gated Distributed Output Promotion](decisions/ADR-0003-sealed-manifest-gated-output-promotion.md)
 
-Next: **004-D — Spark Data Boundary, Source/Output Reference, Distributed Materialization, Manifest & Promotion Architecture**.
+Next: **004-E — Strategy Extension, Learning/Generation/Evaluation Runtime & Adapter Architecture**.
