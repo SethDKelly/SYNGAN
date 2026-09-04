@@ -29,7 +29,7 @@ See [Phase 002 index](002/index.md).
 - [002-D — Generation Specification, Request/Condition Semantics & Output Completion](002/002-D-generation-request-condition-output-completion.md) — complete
 - [002-E — Evaluation Criterion, Evaluation & Evidence Specification](002/002-E-evaluation-criterion-evaluation-evidence-specification.md) — complete
 - [002-F — Execution, Attempt History, Failure & Recovery Semantics](002/002-F-execution-attempt-failure-recovery-semantics.md) — complete
-- **002-G — Provenance, Reproducibility Contract & Historical Binding Specification — next**
-- 002-H — Cross-Concept Invariant, Synchronization & Phase 002 Consolidation Review
+- [002-G — Provenance, Reproducibility Contract & Historical Binding Specification](002/002-G-provenance-reproducibility-historical-binding-specification.md) — complete
+- **002-H — Cross-Concept Invariant, Synchronization & Phase 002 Consolidation Review — next**
 
 Later representation/architecture phases remain intentionally downstream of Phase 002 concept specification.
