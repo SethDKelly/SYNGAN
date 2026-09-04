@@ -23,8 +23,8 @@ Phase 001 accepted the initial [concept catalog](../concepts/index.md) and [core
 
 See [Phase 002 index](002/index.md).
 
-- **002-A — Data Meaning & Constraint Specification — next**
-- 002-B — Synthesis Strategy Specification & Capability Semantics
+- [002-A — Data Meaning & Constraint Specification](002/002-A-data-meaning-constraint-specification.md) — complete
+- **002-B — Synthesis Strategy Specification & Capability Semantics — next**
 - 002-C — Learning & Learned State Specification
 - 002-D — Generation Specification, Request/Condition Semantics & Output Completion
 - 002-E — Evaluation Criterion, Evaluation & Evidence Specification
