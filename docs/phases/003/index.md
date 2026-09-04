@@ -15,8 +15,8 @@ The phase remains downstream of concept specification and upstream of representa
 | Group | Scope | Status |
 |---|---|---|
 | **003-A** | [**Workflow Entry, Source Context & Lifecycle Orientation**](003-A-workflow-entry-source-context-lifecycle-orientation.md) | **complete** |
-| **003-B** | **Data Meaning, Constraint & Strategy Preparation Experience** | **next** |
-| 003-C | Learning & Learned State Lifecycle Experience | planned |
+| **003-B** | [**Data Meaning, Constraint & Strategy Preparation Experience**](003-B-data-meaning-constraint-strategy-preparation-experience.md) | **complete** |
+| **003-C** | **Learning & Learned State Lifecycle Experience** | **next** |
 | 003-D | Generation Request, Condition, Validation & Output Promotion Experience | planned |
 | 003-E | Evaluation, Evidence & Review Experience | planned |
 | 003-F | Execution Monitoring, Failure, Recovery & Cancellation Experience | planned |
@@ -30,20 +30,29 @@ The phase remains downstream of concept specification and upstream of representa
 
 003-A established the canonical [Experience & Workflow Design](../../experience/index.md) area and [Workflow Entry, Source Context & Lifecycle Orientation](../../experience/workflow-entry-source-context-lifecycle-orientation.md).
 
+Key established experience semantics include intent-oriented entry, composed source context, mutable-alias versus historical-identity visibility, explicit semantic commitment orientation, semantic-versus-operational state separation, candidate/result distinction, actor-sensitive orientation, programmatic parity, and dependency/no-egress visibility before commitment.
+
+### 003-B
+
+003-B established [Data Meaning, Constraint & Strategy Preparation](../../experience/data-meaning-constraint-strategy-preparation.md).
+
 Key established experience semantics include:
 
-- intent-oriented entry rather than one mandatory linear wizard;
-- source context as a composed experience rather than a new Dataset/Workflow concept;
-- visible distinction between mutable source locators and stable historical identities;
-- explicit editable/validated/committed orientation around semantic commitment;
-- semantic activity state kept distinct from Execution/Attempt/platform state;
-- candidate/checkpoint/diagnostic material kept distinct from authoritative domain results;
-- indeterminate/unresolved state preserved rather than flattened to pass/fail;
-- blocker, permitted limitation, warning, and operational-incident distinctions;
-- role-sensitive orientation for practitioners, stewards, operators, reviewers, and consumers without changing canonical ownership;
-- human/programmatic semantic parity;
-- dependency/network/no-egress visibility before commitment;
-- enterprise-scale entry/orientation without mandatory full driver-local materialization.
+- preparation composes but does not merge Data Meaning, Constraint, and Synthesis Strategy;
+- physical observations remain distinct from semantic authority;
+- declared, inferred, unresolved, conflicting, superseded, and invalidated meaning remain visible where material;
+- only unresolved meaning material to the proposed activity must block readiness;
+- Constraint applicability, conflict/satisfiability, and expected handling remain contextual;
+- handling remains distinct from actual output satisfaction;
+- unsupported applicable required Constraints block normal commitment;
+- Strategy comparison remains multidimensional rather than a universal ranking;
+- material Strategy defaults/configuration remain inspectable;
+- compatibility is explainable and preserves compatible/limited/incompatible/indeterminate distinctions;
+- readiness is derived per proposed activity rather than a new global concept;
+- material preparation changes invalidate stale readiness;
+- review-before-commit exposes the exact semantic/rule/Strategy/dependency posture expected to govern the activity;
+- network/external dependencies remain explicit and hidden artifact acquisition/fallback remains prohibited;
+- preparation remains enterprise-scale without mandatory full driver-local source collection.
 
 ## Phase 003 objectives
 
@@ -83,4 +92,4 @@ Phase 003 MUST NOT:
 
 ## Current next phase
 
-**003-B — Data Meaning, Constraint & Strategy Preparation Experience**
+**003-C — Learning & Learned State Lifecycle Experience**
