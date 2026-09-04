@@ -28,6 +28,7 @@ If an ADR summary conflicts with newer canonical architecture authority, the can
 ## Active decisions
 
 - [ADR-0001 — Typed Resource/Handle Public API](ADR-0001-typed-resource-handle-public-api.md) — adopts typed specification/activity/result/Execution/history resource roles rather than a universal mutable Session, payload-only API, universal Spark ML model, generic Result object, or process-local Future as canonical identity.
+- [ADR-0002 — Immutable Semantic Snapshots & Versioned Lifecycle State](ADR-0002-immutable-semantic-snapshots-versioned-lifecycle-state.md) — separates stable resource identity, immutable semantic revision/commitment snapshots, mutable lifecycle state versions, and representation schema versions while requiring stale-write detection without mandating universal event sourcing.
 
 ## When to create an ADR
 
