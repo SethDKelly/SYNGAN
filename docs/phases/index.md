@@ -26,8 +26,8 @@ See [Phase 002 index](002/index.md).
 - [002-A — Data Meaning & Constraint Specification](002/002-A-data-meaning-constraint-specification.md) — complete
 - [002-B — Synthesis Strategy Specification & Capability Semantics](002/002-B-synthesis-strategy-capability-semantics.md) — complete
 - [002-C — Learning & Learned State Specification](002/002-C-learning-learned-state-specification.md) — complete
-- **002-D — Generation Specification, Request/Condition Semantics & Output Completion — next**
-- 002-E — Evaluation Criterion, Evaluation & Evidence Specification
+- [002-D — Generation Specification, Request/Condition Semantics & Output Completion](002/002-D-generation-request-condition-output-completion.md) — complete
+- **002-E — Evaluation Criterion, Evaluation & Evidence Specification — next**
 - 002-F — Execution, Attempt History, Failure & Recovery Semantics
 - 002-G — Provenance, Reproducibility Contract & Historical Binding Specification
 - 002-H — Cross-Concept Invariant, Synchronization & Phase 002 Consolidation Review
