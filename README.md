@@ -14,56 +14,39 @@ Start with [`docs/index.md`](docs/index.md).
 
 **Phase 002 — Concept Specification & Invariant Refinement is complete.**
 
-Phase 002 closed with:
-
-- eleven accepted concepts with clear ownership/lifecycle boundaries;
-- fifteen accepted synchronization rules;
-- core structured/tabular operation without required outbound network access;
-- explicit Strategy dependency/network profiles and no hidden artifact acquisition;
-- stable semantic commitment and historical binding;
-- distributed/composite Learned State with non-mutating reuse;
-- direct and Learned-State Generation paths plus a semantic output-promotion barrier;
-- Criterion/Evaluation/Evidence separation with explicit claim-strength limits;
-- one logical Execution independent of physical platform jobs;
-- retry/resume/checkpoint recovery using single semantic promotion rather than exactly-once physical computation;
-- typed Provenance and a qualified Reproducibility Contract;
-- enterprise-scale semantics that avoid mandatory full driver-local source/output/model/log materialization;
-- explicit separation of synthetic origin, privacy evidence/guarantees, and external release/use authority.
+Phase 002 closed with eleven accepted concepts, fifteen synchronization rules, offline/no-outbound-network-capable core semantics, stable commitment/historical binding, semantic result promotion, typed Provenance, qualified reproducibility, and enterprise-scale no-full-driver-materialization requirements.
 
 **Phase 003 — Experience & Workflow Design is complete.**
 
-Phase 003 established canonical actor-visible/programmatic experiences for:
-
-- workflow/source/lifecycle entry;
-- Data Meaning/Constraint/Strategy preparation;
-- Learning and Learned State lifecycle;
-- Generation request/Condition/validation/output promotion;
-- Evaluation/Evidence/review;
-- Execution monitoring/failure/recovery/cancellation;
-- Provenance/reproducibility/historical inspection;
-- enterprise dependency/offline/no-egress/safety.
-
-The [Phase 003 Consolidated Experience Contract](docs/experience/phase-003-consolidated-experience-contract.md) freezes the cross-workflow rules for readiness versus commitment, semantic versus operational state, checkpoint/candidate/result promotion, Evidence claim strength, historical versus current state, qualified reproducibility, dependency/network/egress posture, truthful restricted disclosure, human/programmatic parity, and enterprise-scale bounded control-plane behavior.
-
-The 003-I exit audit found no concept or synchronization redesign required before architecture work.
+The [Phase 003 Consolidated Experience Contract](docs/experience/phase-003-consolidated-experience-contract.md) freezes readiness/commitment, semantic/operational, promotion, Evidence, historical/current, reproducibility, dependency/network/egress, disclosure, programmatic-parity, and enterprise-scale experience obligations.
 
 **Current phase: Phase 004 — Representation & Architecture Design.**
 
 See [`docs/architecture/index.md`](docs/architecture/index.md) and [`docs/phases/004/index.md`](docs/phases/004/index.md).
 
-Phase 004 will decide implementation-facing architecture for:
-
-- public API/resource/handle mapping;
-- control-plane identity, revisions and persistence;
-- Spark-scale source/output references, manifests and semantic promotion;
-- Strategy extension and Learning/Generation/Evaluation runtime adapters;
-- Execution/Attempt/checkpoint/recovery/fencing/idempotency/cancellation;
-- Evaluation/Evidence/Provenance/reproducibility representation and historical queries;
-- dependency resolution, offline/no-egress, authorization/redaction and enterprise security;
-- deployment, scalability, observability, portability and platform integration.
-
-Next:
+Completed:
 
 - **004-A — Architecture Authority, Representation Principles, Layering & Dependency Direction**
 
-No Python package/module layout, public class hierarchy, persistence technology, plugin system, scheduler/orchestrator, checkpoint format, provenance store, source/output manifest/fingerprint mechanism, model registry, authentication/authorization engine, egress-control technology, or deployment topology should be treated as settled until Phase 004 establishes it.
+004-A establishes the canonical [`architecture constitution`](docs/architecture/architecture-authority-representation-layering.md):
+
+- architecture remains downstream of authority, concepts, synchronizations, and experience;
+- representation convenience cannot redefine semantic ownership;
+- stable logical identity remains distinct from mutable physical/platform locators;
+- bounded control-plane state references large distributed data-plane payloads;
+- physical durability does not establish Learned State/output/Evidence promotion;
+- dependencies point inward toward stable semantic/control contracts;
+- platform/runtime integrations remain adapters rather than universal authority;
+- bidirectional semantic synchronization does not justify cyclic package dependencies;
+- supported offline/no-egress paths remain isolatable from optional network integrations;
+- Spark-native means distributed Spark-scale data semantics rather than universal Spark ML;
+- model-neutral semantics do not depend universally on CTGAN/GAN/PyTorch/HuggingFace/LLM/runtime families;
+- convenience Session/Context/Manager/Metadata/Engine-style facades cannot become god-state owners;
+- platform specialization may add capability but cannot silently weaken common guarantees;
+- architecture decisions use [`docs/decisions/`](docs/decisions/index.md) for durable rationale/supersession while current normative rules remain under `docs/architecture/`.
+
+Next:
+
+- **004-B — Public API, Resource/Handle Model, Workflow Composition & Semantic Mapping**
+
+No final Python package/module tree, public class hierarchy, persistence engine, Spark output-manifest/promotion mechanism, strategy plugin loader, scheduler/orchestrator, checkpoint/fencing mechanism, provenance store, authorization engine, egress-control technology, model registry, or deployment topology should be treated as settled until the relevant later Phase 004 group accepts it.
