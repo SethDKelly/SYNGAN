@@ -64,7 +64,12 @@ Phase 003 closed with eight detailed experience authorities and the [Phase 003 C
 Completed in Phase 004:
 
 - [004-A — Architecture Authority, Representation Principles, Layering & Dependency Direction](phases/004/004-A-architecture-authority-representation-layering-dependency-direction.md)
+- [004-B — Public API, Resource/Handle Model, Workflow Composition & Semantic Mapping](phases/004/004-B-public-api-resource-handle-workflow-semantic-mapping.md)
 
 004-A establishes the [architecture constitution](architecture/architecture-authority-representation-layering.md): semantic-preserving representation, stable logical identity, bounded control-plane versus distributed data-plane separation, inward dependency direction, semantic/control versus coordination versus port/adapter/composition boundaries, platform authority isolation, Spark-native/model-neutral semantics, optional integration isolation, anti-god-module rules, ADR governance, and architecture validation obligations.
 
-Next: **004-B — Public API, Resource/Handle Model, Workflow Composition & Semantic Mapping**.
+004-B establishes the [typed public resource/handle architecture](architecture/public-api-resource-handle-workflow-semantic-mapping.md): editable specifications and contextual readiness remain distinct from committed Learning/Generation/Evaluation handles; promoted Learned State/output/Evidence resources remain distinct from raw model/DataFrame/metric payloads; Execution/Attempt inspection remains operationally separate; long-running work is re-resolvable rather than process-Future identity; convenience façades may compose workflows without owning canonical state; and payload access remains explicit and distributed-scale safe.
+
+Decision rationale: [ADR-0001 — Typed Resource/Handle Public API](decisions/ADR-0001-typed-resource-handle-public-api.md).
+
+Next: **004-C — Control-Plane Identity, Revision, State, Persistence & Historical Reference Architecture**.
