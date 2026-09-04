@@ -17,8 +17,8 @@ The phase remains downstream of concept specification and upstream of representa
 | **003-A** | [**Workflow Entry, Source Context & Lifecycle Orientation**](003-A-workflow-entry-source-context-lifecycle-orientation.md) | **complete** |
 | **003-B** | [**Data Meaning, Constraint & Strategy Preparation Experience**](003-B-data-meaning-constraint-strategy-preparation-experience.md) | **complete** |
 | **003-C** | [**Learning & Learned State Lifecycle Experience**](003-C-learning-learned-state-lifecycle-experience.md) | **complete** |
-| **003-D** | **Generation Request, Condition, Validation & Output Promotion Experience** | **next** |
-| 003-E | Evaluation, Evidence & Review Experience | planned |
+| **003-D** | [**Generation Request, Condition, Validation & Output Promotion Experience**](003-D-generation-request-condition-validation-output-promotion-experience.md) | **complete** |
+| **003-E** | **Evaluation, Evidence & Review Experience** | **next** |
 | 003-F | Execution Monitoring, Failure, Recovery & Cancellation Experience | planned |
 | 003-G | Provenance, Reproducibility & Historical Inspection Experience | planned |
 | 003-H | Enterprise Dependency, Offline/No-Egress & Safety Experience | planned |
@@ -28,37 +28,39 @@ The phase remains downstream of concept specification and upstream of representa
 
 ### 003-A
 
-003-A established the canonical [Experience & Workflow Design](../../experience/index.md) area and [Workflow Entry, Source Context & Lifecycle Orientation](../../experience/workflow-entry-source-context-lifecycle-orientation.md).
-
-Key established experience semantics include intent-oriented entry, composed source context, mutable-alias versus historical-identity visibility, explicit semantic commitment orientation, semantic-versus-operational state separation, candidate/result distinction, actor-sensitive orientation, programmatic parity, and dependency/no-egress visibility before commitment.
+003-A established [Workflow Entry, Source Context & Lifecycle Orientation](../../experience/workflow-entry-source-context-lifecycle-orientation.md), including intent-oriented entry, composed source context, mutable-alias versus historical-identity visibility, explicit semantic commitment orientation, semantic-versus-operational state separation, candidate/result distinction, actor-sensitive orientation, programmatic parity, and dependency/no-egress visibility.
 
 ### 003-B
 
-003-B established [Data Meaning, Constraint & Strategy Preparation](../../experience/data-meaning-constraint-strategy-preparation.md).
-
-Key established experience semantics include separate Data Meaning/Constraint/Strategy authority, declared-versus-inferred semantic review, contextual Constraint applicability/handling, multidimensional Strategy comparison, explainable compatibility, derived readiness, stale-readiness invalidation, review-before-commit, explicit dependency/no-egress posture, and enterprise-scale preparation.
+003-B established [Data Meaning, Constraint & Strategy Preparation](../../experience/data-meaning-constraint-strategy-preparation.md), including separate Data Meaning/Constraint/Strategy authority, declared-versus-inferred semantic review, contextual Constraint applicability/handling, multidimensional Strategy comparison, explainable compatibility, derived readiness, review-before-commit, and explicit dependency/no-egress posture.
 
 ### 003-C
 
-003-C established [Learning & Learned State Lifecycle](../../experience/learning-learned-state-lifecycle.md).
+003-C established [Learning & Learned State Lifecycle](../../experience/learning-learned-state-lifecycle.md), including explicit Learning commitment, Strategy-meaningful progress, semantic/Execution separation, checkpoint non-finality, semantic Learned State promotion, logical-state inspection independent of physical layout, contextual reuse, distinct usable/restricted/retired/invalidated status, non-mutating reuse, sensitivity, and dependency visibility.
+
+### 003-D
+
+003-D established [Generation Request, Condition, Validation & Output Promotion](../../experience/generation-request-condition-validation-output-promotion.md).
 
 Key established experience semantics include:
 
-- Learning is shown only when the Strategy semantically requires/supports reusable source-derived state; direct-generation Strategies bypass it;
-- Learning commitment visibly freezes source/meaning/Strategy/Constraint/sampling/dependency/reproducibility context;
-- Learning semantic state remains separate from Execution/Attempt/platform state;
-- progress signals must be Strategy-meaningful and must not invent a universal percentage-complete semantic;
-- checkpoints/intermediate material remain visibly non-final and unavailable as ordinary Learned State;
-- resume/recovery material requires same-commitment compatibility rather than file existence alone;
-- Learning-to-Learned-State promotion occurs only after semantic completion, even when Execution already succeeded;
-- Learned State is inspected as one logical result independently of physical component/file layout;
-- `usable` means eligible for contextual Generation validation, not globally compatible;
-- restricted, retired, and invalidated statuses remain distinct and affect future use without rewriting history;
-- ordinary Learned State reuse is non-mutating;
-- dependency/base-artifact/no-egress requirements remain visible across reuse;
-- Learned State is treated as potentially sensitive rather than presumed private or safe to export;
-- comparison remains multidimensional rather than a universal `best model` ranking;
-- enterprise-scale lifecycle/inspection uses bounded control-plane state and references rather than full source/state/telemetry collection.
+- Generation request intent is inspectable/editable before commitment and not reduced to a sampler invocation;
+- Condition remains Generation-owned and distinct from reusable Constraint authority;
+- mandatory versus best-effort Conditions and material target/tolerance semantics are visible before commitment;
+- Learned-State and direct-generation paths remain first-class without fabricated lifecycle state;
+- pre-commit review exposes the completion obligations that must later be established;
+- Generation commitment freezes quantity/scope, Conditions, synthesis basis, Constraint handling, dependencies, and reproducibility-relevant semantics;
+- physical/materialization progress remains distinct from semantic Generation completion;
+- partial, complete candidate, abandoned/quarantined, and completed output are visibly/programmatically distinct;
+- requirement-specific validation and Evidence strength explain why completion is pending, satisfied, violated, or indeterminate;
+- Evaluation success does not automatically mean a mandatory Condition/Constraint passed;
+- candidate-to-completed output promotion occurs only after all mandatory completion obligations are satisfied;
+- one successful Generation exposes one authoritative logical completed output despite distributed/retried physical realization;
+- `completed with limitations` cannot excuse failed mandatory requirements;
+- completed-output inspection centers logical identity and semantic/Evidence/Provenance context rather than file layout;
+- offline/no-egress requirements remain binding throughout fulfillment;
+- a returned DataFrame alone is not sufficient to communicate Generation lifecycle/result authority;
+- enterprise-scale Generation/validation avoids mandatory full driver-local output materialization.
 
 ## Phase 003 objectives
 
@@ -98,4 +100,4 @@ Phase 003 MUST NOT:
 
 ## Current next phase
 
-**003-D — Generation Request, Condition, Validation & Output Promotion Experience**
+**003-E — Evaluation, Evidence & Review Experience**
