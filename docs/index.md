@@ -47,7 +47,10 @@ Phase 002 exits with eleven accepted concepts and fifteen synchronization rules 
 Completed in Phase 003:
 
 - [003-A — Workflow Entry, Source Context & Lifecycle Orientation](phases/003/003-A-workflow-entry-source-context-lifecycle-orientation.md)
+- [003-B — Data Meaning, Constraint & Strategy Preparation Experience](phases/003/003-B-data-meaning-constraint-strategy-preparation-experience.md)
 
-003-A established [Experience & Workflow Design](experience/index.md) as a canonical layer and defined intent-oriented workflow entry, composed source context, mutable-alias versus historical-identity visibility, explicit semantic commitment orientation, semantic-versus-operational status separation, candidate-versus-authoritative-result visibility, actor-sensitive orientation, programmatic parity, and dependency/no-egress visibility before commitment.
+003-A established the canonical experience layer and defined intent-oriented workflow entry, source/history orientation, semantic commitment visibility, semantic-versus-operational status separation, candidate-versus-authoritative-result distinction, and programmatic/human parity.
 
-Next: **003-B — Data Meaning, Constraint & Strategy Preparation Experience**.
+003-B defines preparation as a composition over Data Meaning, Constraint, and Synthesis Strategy; preserves declared/inferred/unresolved semantic distinctions, contextual rule applicability/handling, explainable Strategy compatibility, derived readiness, review-before-commit, and explicit offline/dependency posture without creating Metadata/Validation/Readiness god-concepts.
+
+Next: **003-C — Learning & Learned State Lifecycle Experience**.
