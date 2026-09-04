@@ -40,15 +40,16 @@ Completed:
 - **003-A — Workflow Entry, Source Context & Lifecycle Orientation**
 - **003-B — Data Meaning, Constraint & Strategy Preparation Experience**
 - **003-C — Learning & Learned State Lifecycle Experience**
+- **003-D — Generation Request, Condition, Validation & Output Promotion Experience**
 
-Phase 003 now includes a canonical [`docs/experience/`](docs/experience/index.md) layer. 003-A established intent-oriented entry and lifecycle orientation. 003-B established pre-commit preparation that keeps Data Meaning, Constraint, and Synthesis Strategy distinct while making semantic/rule/Strategy readiness explainable. 003-C establishes Learning/Learned State lifecycle experience: commitment is explicit, semantic progress is kept separate from Execution/Attempt state, checkpoints remain non-final, semantic completion promotes one logical Learned State, `usable` does not mean globally compatible, restricted/retired/invalidated statuses remain distinct, and reuse remains non-mutating.
+Phase 003 now includes a canonical [`docs/experience/`](docs/experience/index.md) layer. 003-A established intent-oriented entry and lifecycle orientation. 003-B established pre-commit Data Meaning/Constraint/Strategy preparation. 003-C established Learning/Learned State lifecycle, checkpoint non-finality, semantic Learned State promotion, and contextual/non-mutating reuse. 003-D establishes Generation request/Condition and output-promotion experience: mandatory versus best-effort request semantics are explicit, production completion stays distinct from Generation completion, partial/candidate/quarantined/completed output are different states, requirement-specific Evidence explains completion sufficiency, and one authoritative logical output is promoted only after all mandatory obligations are satisfied.
 
-The experience design continues to preserve the enterprise-safe direction: no hidden network acquisition/fallback, no mandatory full driver-local source/model collection, no model artifact equated automatically with Learned State, and no implication that source-derived learned state is private or safe to export by default.
+The experience design continues to preserve the enterprise-safe direction: no hidden network acquisition/fallback, no mandatory full driver-local source/model/output collection, no physical model artifact equated automatically with Learned State, no physically complete output equated automatically with completed Generation, and no implication that source-derived state or synthetic output is private/release-approved by default.
 
 Next:
 
-- **003-D — Generation Request, Condition, Validation & Output Promotion Experience**
+- **003-E — Evaluation, Evidence & Review Experience**
 
 See [`docs/phases/003/index.md`](docs/phases/003/index.md).
 
-No Python package, model runtime, Spark ML mapping, persistence format, plugin architecture, scheduler/orchestrator, checkpoint technology, model registry technology, provenance store, identity/fingerprint mechanism, output publication mechanism, evidence/reporting technology, final workflow/session/readiness object, compatibility engine, or model-hub/network integration should be treated as settled until the relevant downstream design phases establish it.
+No Python package, model runtime, Spark ML mapping, persistence format, plugin architecture, scheduler/orchestrator, checkpoint technology, model registry technology, provenance store, identity/fingerprint mechanism, output publication mechanism, Evidence/reporting technology, final workflow/session/readiness object, compatibility engine, or model-hub/network integration should be treated as settled until the relevant downstream design phases establish it.
