@@ -69,6 +69,7 @@ Completed in Phase 004:
 - [004-D — Spark Data Boundary, Source/Output Reference, Distributed Materialization, Manifest & Promotion Architecture](phases/004/004-D-spark-data-boundary-source-output-reference-distributed-materialization-manifest-promotion-architecture.md)
 - [004-E — Strategy Extension, Learning/Generation/Evaluation Runtime & Adapter Architecture](phases/004/004-E-strategy-extension-learning-generation-evaluation-runtime-adapter-architecture.md)
 - [004-F — Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Architecture](phases/004/004-F-execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation-architecture.md)
+- [004-G — Evaluation/Evidence, Provenance, Reproducibility & Historical Query Architecture](phases/004/004-G-evaluation-evidence-provenance-reproducibility-historical-query-architecture.md)
 
 Canonical architecture now includes:
 
@@ -77,9 +78,10 @@ Canonical architecture now includes:
 - the [control-plane identity/state architecture](architecture/control-plane-identity-revision-state-persistence-historical-reference.md);
 - the [Spark data boundary/materialization architecture](architecture/spark-data-boundary-source-output-reference-distributed-materialization-manifest-promotion.md);
 - the [Strategy extension/runtime adapter architecture](architecture/strategy-extension-learning-generation-evaluation-runtime-adapter.md);
-- the [Execution/recovery/fencing architecture](architecture/execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation.md).
+- the [Execution/recovery/fencing architecture](architecture/execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation.md);
+- the [Evaluation/Evidence, Provenance, Reproducibility & Historical Query architecture](architecture/evaluation-evidence-provenance-reproducibility-historical-query.md).
 
-004-F establishes one stable Execution across many Attempts; ordered Attempt epochs/fencing generations; lease-versus-fence separation; operation-scoped idempotency; immutable checkpoint snapshots and contextual resume qualification; explicit retry/restart/reconcile decisions; durable unknown-state semantics; safe candidate sealing and semantic-promotion preconditions; Evaluation double-count protection; and cancellation as durable intent followed by reconciled outcome. Duplicate physical work is allowed while stale or duplicate canonical authority is not.
+004-G establishes semantic Evidence only after Evaluation validation; idempotent independently interpretable findings; immutable finding/current-applicability separation; exact Generation completion-Evidence basis; canonical typed Provenance over stable references; append/supersede provenance correction; recoverable transition/provenance consistency; derived historical query projections; bounded explain/compare traversal; difference-versus-causality separation; and current qualified reproducibility assessment rather than global Boolean state.
 
 Decision rationale:
 
@@ -88,5 +90,6 @@ Decision rationale:
 - [ADR-0003 — Sealed Manifest-Gated Distributed Output Promotion](decisions/ADR-0003-sealed-manifest-gated-output-promotion.md)
 - [ADR-0004 — Semantic Extension & Runtime Binding Separation](decisions/ADR-0004-semantic-extension-runtime-binding-separation.md)
 - [ADR-0005 — Attempt-Epoch Fencing & Recoverable At-Least-Once Execution](decisions/ADR-0005-attempt-epoch-fencing-recoverable-at-least-once-execution.md)
+- [ADR-0006 — Typed Canonical Provenance & Derived Historical Projections](decisions/ADR-0006-typed-provenance-canonical-derived-history-projections.md)
 
-Next: **004-G — Evaluation/Evidence, Provenance, Reproducibility & Historical Query Architecture**.
+Next: **004-H — Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Architecture**.
