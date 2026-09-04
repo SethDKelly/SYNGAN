@@ -32,6 +32,7 @@ Completed:
 - **004-D — Spark Data Boundary, Source/Output Reference, Distributed Materialization, Manifest & Promotion Architecture**
 - **004-E — Strategy Extension, Learning/Generation/Evaluation Runtime & Adapter Architecture**
 - **004-F — Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Architecture**
+- **004-G — Evaluation/Evidence, Provenance, Reproducibility & Historical Query Architecture**
 
 Phase 004 architecture now establishes:
 
@@ -50,11 +51,16 @@ Phase 004 architecture now establishes:
 - immutable checkpoint snapshots with contextual resume qualification rather than file-existence semantics;
 - retry-from-start, resume, reconcile-first, and cannot-continue as distinct recovery outcomes;
 - durable unknown-state handling when platform/external side effects cannot yet be classified safely;
-- Evaluation retry protection against accidental double counting;
-- cancellation as durable intent followed by reconciled operational outcome;
-- duplicate physical computation permitted while duplicate/stale canonical authority remains prohibited;
+- Evidence established only after Evaluation semantic validation, with idempotent independent finding identities and immutable historical finding semantics;
+- exact Generation promotion history retaining the candidate/requirement/Criterion/Evidence basis actually used;
+- canonical typed Provenance assertions over stable references without copying canonical resource payloads;
+- append/supersede Provenance correction and recoverable consistency with material transitions;
+- historical explain/compare query services using rebuildable derived indexes rather than a master metadata graph;
+- structural historical differences kept separate from causal/quality claims;
+- qualified current reproducibility assessment assembled from historical identity, dependencies, runtime, randomness, approximation, representation-equivalence, and material recovery facts;
+- reproduction readiness separated from actual reproduction success;
 - explicit dependency/network/egress behavior with no hidden runtime acquisition or fallback;
-- no universal CTGAN, GAN, PyTorch, Spark ML, Databricks, HuggingFace, LLM, scheduler, or runtime-family assumption.
+- no universal CTGAN, GAN, PyTorch, Spark ML, Databricks, HuggingFace, LLM, scheduler, graph database, or runtime-family assumption.
 
 Architecture decision rationale:
 
@@ -63,9 +69,10 @@ Architecture decision rationale:
 - [`ADR-0003 — Sealed Manifest-Gated Distributed Output Promotion`](docs/decisions/ADR-0003-sealed-manifest-gated-output-promotion.md)
 - [`ADR-0004 — Semantic Extension & Runtime Binding Separation`](docs/decisions/ADR-0004-semantic-extension-runtime-binding-separation.md)
 - [`ADR-0005 — Attempt-Epoch Fencing & Recoverable At-Least-Once Execution`](docs/decisions/ADR-0005-attempt-epoch-fencing-recoverable-at-least-once-execution.md)
+- [`ADR-0006 — Typed Canonical Provenance & Derived Historical Projections`](docs/decisions/ADR-0006-typed-provenance-canonical-derived-history-projections.md)
 
 Next:
 
-- **004-G — Evaluation/Evidence, Provenance, Reproducibility & Historical Query Architecture**
+- **004-H — Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Architecture**
 
-No final Python package/module tree or exact public class names, database engine, ID encoding, physical persistence schema, Spark table/file provider, source fingerprint/hash algorithm, manifest serialization, plugin discovery mechanism, distributed ML runtime choice, scheduler/orchestrator, concrete checkpoint/fencing implementation, provenance physical store, authorization engine, egress-control technology, model registry, or deployment topology should be treated as settled until the relevant later Phase 004 group accepts it.
+No final Python package/module tree or exact public class names, database engine, ID encoding, physical persistence schema, Spark table/file provider, source fingerprint/hash algorithm, manifest serialization, plugin discovery mechanism, distributed ML runtime choice, scheduler/orchestrator, concrete checkpoint/fencing implementation, provenance physical store/query engine, authorization engine, egress-control technology, model registry, or deployment topology should be treated as settled until the relevant later Phase 004 group accepts it.
