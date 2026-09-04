@@ -14,7 +14,7 @@ status: active
 - [001-D — Candidate Concept Discovery & Boundary Hypotheses](001/001-D-candidate-concept-discovery-boundary-hypotheses.md) — complete
 - [001-E — Concept Criteria, Independence, Genericity & Completeness Review](001/001-E-concept-criteria-independence-genericity-completeness-review.md) — complete
 - [001-F — Operational Principle Development](001/001-F-operational-principle-development.md) — complete
-- **001-G — Concept Composition, Synchronization & Dependency Analysis — next**
-- 001-H — Phase 001 Consolidation & Initial Concept Catalog
+- [001-G — Concept Composition, Synchronization & Dependency Analysis](001/001-G-concept-composition-synchronization-dependency-analysis.md) — complete
+- **001-H — Phase 001 Consolidation & Initial Concept Catalog — next**
 
-Later phases remain provisional until Phase 001 establishes the concept catalog and dependencies needed to subdivide them responsibly.
+Later phases remain provisional until Phase 001-H consolidates the accepted concept catalog and uses that catalog to subdivide subsequent design work responsibly.
