@@ -15,8 +15,8 @@ The grouping follows accepted concept responsibilities rather than implementatio
 | Group | Scope | Status |
 |---|---|---|
 | **002-A** | [**Data Meaning & Constraint Specification**](002-A-data-meaning-constraint-specification.md) | **complete** |
-| **002-B** | **Synthesis Strategy Specification & Capability Semantics** | **next** |
-| 002-C | Learning & Learned State Specification | planned |
+| **002-B** | [**Synthesis Strategy Specification & Capability Semantics**](002-B-synthesis-strategy-capability-semantics.md) | **complete** |
+| **002-C** | **Learning & Learned State Specification** | **next** |
 | 002-D | Generation Specification, Request/Condition Semantics & Output Completion | planned |
 | 002-E | Evaluation Criterion, Evaluation & Evidence Specification | planned |
 | 002-F | Execution, Attempt History, Failure & Recovery Semantics | planned |
@@ -41,6 +41,24 @@ Key established semantics include:
 - conflict/satisfiability uncertainty;
 - control-plane state that does not scale with row count by default.
 
+### 002-B
+
+002-B deepened the canonical [Synthesis Strategy](../../concepts/synthesis-strategy.md) specification, refined core synchronization rules, and added the [Network and External Dependency Policy](../../authority/network-external-dependency-policy.md).
+
+Key established semantics include:
+
+- Strategy/configuration identity and historical revision binding;
+- scoped capabilities, requirements, and limitations;
+- Data Meaning and Constraint capability boundaries;
+- Learning-required versus direct-generation Strategies;
+- material scale/resource and reproducibility declarations;
+- explicit external dependency/network profiles;
+- a supported no-outbound-network enterprise operating profile for core structured/tabular synthesis;
+- local provision of pretrained artifacts where appropriate;
+- no silent artifact download, remote fallback, or network-policy bypass;
+- contextual compatibility states including limited, incompatible, and indeterminate outcomes;
+- extension-author responsibility to declare material Strategy semantics/dependencies.
+
 ## Phase 002 boundary
 
 Phase 002 SHOULD specify concept state, actions, invariants, lifecycle semantics, authority, revision/history rules, failure behavior, and accepted synchronization refinements.
@@ -61,8 +79,9 @@ Those remain downstream unless concept feasibility requires an explicit earlier 
 
 - [Accepted Concepts](../../concepts/index.md)
 - [Accepted Synchronizations](../../synchronizations/index.md)
+- [Design Authority](../../authority/index.md)
 - [Phase 001 Exit](../001/001-H-phase-001-consolidation-initial-concept-catalog.md)
 
 ## Current next phase
 
-**002-B — Synthesis Strategy Specification & Capability Semantics**
+**002-C — Learning & Learned State Specification**
