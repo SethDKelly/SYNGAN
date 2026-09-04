@@ -13,5 +13,6 @@ These documents define how SYNGAN design knowledge is created, interpreted, chan
 - [Terminology policy](terminology-policy.md)
 - [Source and provenance policy](source-provenance-policy.md)
 - [Network and external dependency policy](network-external-dependency-policy.md)
+- [Reproducibility contract](reproducibility-contract.md)
 
 Later documents MUST conform to these authorities unless an explicit superseding decision changes them.
