@@ -11,7 +11,7 @@ This directory is the canonical design knowledge bundle for SYNGAN.
 
 ## Progressive disclosure
 
-- [Authority](authority/index.md) — methodology, documentation governance, terminology and source rules.
+- [Authority](authority/index.md) — methodology, documentation governance, terminology, provenance, and network/external-dependency rules.
 - [Problem Knowledge](problem/index.md) — problem, purpose, actors, outcomes and enterprise scale envelope.
 - [Domain Terminology](terminology/index.md) — canonical vocabulary and compatibility mappings.
 - [Accepted Concepts](concepts/index.md) — canonical concept purpose, ownership, actions, invariants and boundaries.
@@ -40,7 +40,10 @@ Exit record: [001-H — Phase 001 Consolidation & Initial Concept Catalog](phase
 Completed in Phase 002:
 
 - [002-A — Data Meaning & Constraint Specification](phases/002/002-A-data-meaning-constraint-specification.md)
+- [002-B — Synthesis Strategy Specification & Capability Semantics](phases/002/002-B-synthesis-strategy-capability-semantics.md)
 
-Next: **002-B — Synthesis Strategy Specification & Capability Semantics**.
+002-B also established the [Network and External Dependency Policy](authority/network-external-dependency-policy.md), including an offline/no-outbound-network design profile for supported core structured/tabular synthesis and explicit declaration of optional external dependencies.
+
+Next: **002-C — Learning & Learned State Specification**.
 
 See [Phase 002 index](phases/002/index.md).
