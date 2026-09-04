@@ -21,6 +21,19 @@ SYNGAN terminology is part of the design contract. Terms MUST be stable enough f
 7. New terms SHOULD be introduced only when they distinguish a materially different purpose, state, relationship, guarantee, or responsibility.
 8. A change to an established term that changes meaning MUST be treated as a design change, not an editorial cleanup.
 
+## Lexical layers
+
+SYNGAN distinguishes:
+
+- **domain terms** — implementation-neutral names for ideas in the problem space;
+- **candidate concept names** — hypotheses about independent functional boundaries;
+- **representation terms** — names tied to APIs, frameworks, runtimes, storage, classes, or other implementation mechanisms;
+- **compatibility terms** — terms retained because external ecosystems or users commonly use them.
+
+A term MAY appear in multiple layers, but documentation MUST make the intended meaning clear when ambiguity could affect design.
+
+A canonical domain definition does not imply that the term is an accepted software concept.
+
 ## Concept naming
 
 Candidate concept names are hypotheses until the concept boundary and purpose are accepted.
@@ -38,9 +51,19 @@ Concept names SHOULD:
 
 CTGAN, GANs, VAEs, diffusion models, statistical generators, and future approaches MAY become synthesis strategies or implementations if later concept and architecture work supports them.
 
-## Provisional terms
+## Canonical terminology
 
-Until Phase 001-C and later concept discovery resolve them, terms such as `dataset`, `metadata`, `synthesizer`, `model`, `training`, `generation`, `constraint`, `evaluation`, `privacy`, and `artifact` MUST be treated as provisional domain vocabulary rather than accepted concept names.
+Phase 001-C establishes the current domain vocabulary and semantic distinctions under [Domain Terminology](../terminology/index.md).
+
+Terms defined there are authoritative for domain meaning but remain subject to concept discovery. A term being canonically defined MUST NOT be interpreted as evidence that it deserves its own concept, class, persisted object, or API type.
+
+High-risk overloaded terms such as `metadata`, `synthesizer`, `model`, `sample`, `quality`, `run`, and `artifact` require qualification or explicit boundary justification where ambiguity could affect design.
+
+## External ecosystem compatibility
+
+External vocabulary MAY influence API ergonomics and compatibility, but it does not outrank the SYNGAN domain lexicon.
+
+If a later API intentionally uses an overloaded external term, its specification MUST map that term to canonical SYNGAN semantics and document any narrowing, expansion, or collision.
 
 ## Definition changes
 
