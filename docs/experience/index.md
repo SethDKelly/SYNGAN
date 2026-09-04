@@ -18,6 +18,7 @@ Experience documents define how actors discover, prepare, commit, observe, inspe
 - [Generation Request, Condition, Validation & Output Promotion](generation-request-condition-validation-output-promotion.md) — how actors define/commit Generation intent, distinguish mandatory and best-effort Conditions, observe partial/candidate output, inspect requirement-specific validation Evidence, and promote exactly one authoritative completed logical output only at semantic completion.
 - [Evaluation, Evidence & Review](evaluation-evidence-review.md) — how actors begin from evaluative questions, select compatible methods, understand coverage/uncertainty/claim strength, interpret and compare Evidence, review multidimensional fitness, and preserve the boundary between findings and external decisions.
 - [Execution Monitoring, Failure, Recovery & Cancellation](execution-monitoring-failure-recovery-cancellation.md) — how actors monitor one logical Execution across Attempts/platform jobs, distinguish recoverable/terminal/unknown outcomes, qualify retry/resume, reconcile side effects, handle cancellation races, and preserve domain semantic authority during operational intervention.
+- [Provenance, Reproducibility & Historical Inspection](provenance-reproducibility-historical-inspection.md) — how actors explain and compare historical derivations, distinguish historical truth from current state, inspect identity/provenance gaps, and assess exact/semantic/statistical/bounded/comparative/insufficient reproduction capability without duplicating canonical state.
 
 Additional experience authorities will be added by later Phase 003 groups.
 
@@ -75,6 +76,15 @@ Phase 003 experience authority MUST preserve these rules:
 - cancellation request remains distinct from terminal cancellation and its race outcome;
 - operator intervention may repair operational realization but must not silently mutate committed semantic authority;
 - canonical Execution monitoring references rather than copies complete platform telemetry;
+- Provenance remains typed historical relationship authority and references rather than duplicates canonical state;
+- historical inspection shows exact past bindings separately from current aliases/revisions/status;
+- mutable aliases, URLs, or service names do not masquerade as sufficient historical identity when underlying state can change;
+- provenance gaps/corrections remain inspectable and current-state substitution does not repair missing history silently;
+- Reproducibility remains a target/conditions/equivalence contract with exact, semantic, statistical, bounded/approximate, comparative, and insufficient-context outcomes;
+- seed presence alone does not imply exact deterministic reproduction;
+- re-execution/reproduction-readiness remain distinct from successful reproduction;
+- current reproducibility may degrade without rewriting historical truth;
+- historical difference does not imply causality or superiority without Evaluation/Evidence;
 - network/external dependencies remain visible before commitment and throughout Learning/Generation/Evaluation/Learned State reuse;
 - Evidence remains observation authority, not release/use approval;
 - large-data workflows remain understandable without mandatory full driver-local materialization;
