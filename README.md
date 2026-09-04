@@ -2,18 +2,27 @@
 
 SYNGAN is a design-first synthetic data generation framework intended for Spark-scale workloads.
 
-The project is deliberately in conceptual design before implementation. Daniel Jackson's concept-design methodology governs discovery, and the design knowledge is maintained as an OKF 0.2 bundle.
+The project is deliberately completing conceptual design before implementation. Daniel Jackson's concept-design methodology governs discovery, and canonical design knowledge is maintained as an OKF 0.2 bundle.
 
 ## Design documentation
 
 Start with [`docs/index.md`](docs/index.md).
 
-Current completed work:
+## Current status
 
-- **001-A — Design Authority, Methodology, OKF 0.2 & Documentation Governance**
+**Phase 001 — Design Foundation & Concept Discovery is complete.**
+
+Phase 001 established:
+
+- design/documentation authority and OKF governance;
+- problem, actors, outcomes, and enterprise scale envelope;
+- canonical domain terminology;
+- an accepted initial catalog of eleven concepts;
+- accepted cross-concept synchronization rules;
+- explicit deferred boundaries for relational synthesis, mechanism-specific privacy, representation architecture, and public API design.
 
 Next:
 
-- **001-B — Problem, Purpose, Actors, Outcomes & Enterprise Scale Envelope**
+- **002-A — Data Meaning & Constraint Specification**
 
-No package or model architecture should be treated as settled until the relevant design phases establish it.
+No Python package, model runtime, Spark ML mapping, persistence format, or plugin architecture should be treated as settled until the relevant downstream design phases establish it.
