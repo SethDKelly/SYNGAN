@@ -40,8 +40,8 @@ See [Phase 003 index](003/index.md).
 
 - [003-A — Workflow Entry, Source Context & Lifecycle Orientation](003/003-A-workflow-entry-source-context-lifecycle-orientation.md) — complete
 - [003-B — Data Meaning, Constraint & Strategy Preparation Experience](003/003-B-data-meaning-constraint-strategy-preparation-experience.md) — complete
-- **003-C — Learning & Learned State Lifecycle Experience — next**
-- 003-D — Generation Request, Condition, Validation & Output Promotion Experience
+- [003-C — Learning & Learned State Lifecycle Experience](003/003-C-learning-learned-state-lifecycle-experience.md) — complete
+- **003-D — Generation Request, Condition, Validation & Output Promotion Experience — next**
 - 003-E — Evaluation, Evidence & Review Experience
 - 003-F — Execution Monitoring, Failure, Recovery & Cancellation Experience
 - 003-G — Provenance, Reproducibility & Historical Inspection Experience
