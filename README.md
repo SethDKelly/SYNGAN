@@ -14,46 +14,56 @@ Start with [`docs/index.md`](docs/index.md).
 
 **Phase 002 — Concept Specification & Invariant Refinement is complete.**
 
-Phase 002 refined the accepted semantic model and closed with no concept/synchronization redesign required.
+Phase 002 closed with:
 
-The current semantic design includes:
-
-- eleven accepted concepts with clear ownership and lifecycle boundaries;
+- eleven accepted concepts with clear ownership/lifecycle boundaries;
 - fifteen accepted synchronization rules;
-- supported core structured/tabular synthesis without required outbound network access;
-- explicit Strategy dependency/network profiles and no hidden model/artifact acquisition;
-- stable semantic commitment and historical binding across Learning, Generation and Evaluation;
+- core structured/tabular operation without required outbound network access;
+- explicit Strategy dependency/network profiles and no hidden artifact acquisition;
+- stable semantic commitment and historical binding;
 - distributed/composite Learned State with non-mutating reuse;
-- Generation Request/Condition semantics, direct and Learned-State generation paths, and a semantic output-promotion barrier;
-- Criterion/Evaluation/Evidence separation with explicit coverage, uncertainty, and claim-strength limits;
-- one logical Execution independent of Spark/Databricks/Kubernetes/PyTorch physical jobs;
-- retry/resume/checkpoint recovery that preserves committed semantics and uses single semantic promotion rather than exactly-once physical computation;
-- Provenance as typed stable-reference history rather than a copy of domain state or platform telemetry;
-- a cross-cutting Reproducibility Contract distinguishing exact deterministic, semantic, statistical, bounded/approximate, comparative, and explicitly insufficient/not-reproducible outcomes;
-- enterprise-scale semantics that do not require full source/output/model/log collection to driver-local memory;
+- direct and Learned-State Generation paths plus a semantic output-promotion barrier;
+- Criterion/Evaluation/Evidence separation with explicit claim-strength limits;
+- one logical Execution independent of physical platform jobs;
+- retry/resume/checkpoint recovery using single semantic promotion rather than exactly-once physical computation;
+- typed Provenance and a qualified Reproducibility Contract;
+- enterprise-scale semantics that avoid mandatory full driver-local source/output/model/log materialization;
 - explicit separation of synthetic origin, privacy evidence/guarantees, and external release/use authority.
 
-**Current phase: Phase 003 — Experience & Workflow Design.**
+**Phase 003 — Experience & Workflow Design is complete.**
 
-Completed:
+Phase 003 established canonical actor-visible/programmatic experiences for:
 
-- **003-A — Workflow Entry, Source Context & Lifecycle Orientation**
-- **003-B — Data Meaning, Constraint & Strategy Preparation Experience**
-- **003-C — Learning & Learned State Lifecycle Experience**
-- **003-D — Generation Request, Condition, Validation & Output Promotion Experience**
-- **003-E — Evaluation, Evidence & Review Experience**
-- **003-F — Execution Monitoring, Failure, Recovery & Cancellation Experience**
-- **003-G — Provenance, Reproducibility & Historical Inspection Experience**
-- **003-H — Enterprise Dependency, Offline/No-Egress & Safety Experience**
+- workflow/source/lifecycle entry;
+- Data Meaning/Constraint/Strategy preparation;
+- Learning and Learned State lifecycle;
+- Generation request/Condition/validation/output promotion;
+- Evaluation/Evidence/review;
+- Execution monitoring/failure/recovery/cancellation;
+- Provenance/reproducibility/historical inspection;
+- enterprise dependency/offline/no-egress/safety.
 
-Phase 003 now includes a canonical [`docs/experience/`](docs/experience/index.md) layer. 003-A established intent-oriented entry and lifecycle orientation. 003-B established pre-commit Data Meaning/Constraint/Strategy preparation. 003-C established Learning/Learned State lifecycle and semantic Learned State promotion. 003-D established Generation request/Condition and candidate-to-completed output promotion. 003-E established Criterion-first Evaluation/Evidence review. 003-F established one-logical-Execution monitoring, same-semantics retry/resume qualification, explicit unknown-state reconciliation, cancellation races, and operator authority boundaries. 003-G established historical inspection that can explain and compare derivations, distinguish historical bindings from current state, expose provenance/identity gaps, and assess qualified reproduction capability. 003-H establishes enterprise dependency/offline/no-egress/safety experience: dependency profile/availability/identity/permission remain distinct, provisioning-time and runtime network needs differ, network access does not imply egress authorization, hidden acquisition/fallback and silent artifact substitution are prohibited, source-derived state remains potentially sensitive, and restricted Evidence/Provenance is represented truthfully as withheld rather than absent or unknown.
+The [Phase 003 Consolidated Experience Contract](docs/experience/phase-003-consolidated-experience-contract.md) freezes the cross-workflow rules for readiness versus commitment, semantic versus operational state, checkpoint/candidate/result promotion, Evidence claim strength, historical versus current state, qualified reproducibility, dependency/network/egress posture, truthful restricted disclosure, human/programmatic parity, and enterprise-scale bounded control-plane behavior.
 
-The experience design continues to preserve the enterprise-safe direction: no hidden network acquisition/fallback, no mandatory full driver-local source/model/output/evaluation/telemetry/provenance collection, no physical model artifact equated automatically with Learned State, no physically complete output equated automatically with completed Generation, no bare metric equated automatically with Evidence strength, no platform job state equated automatically with domain completion, no mutable alias treated automatically as historical identity, no source-derived state presumed safe for egress merely because it is derived, and no implication that synthetic output is private/release-approved by default.
+The 003-I exit audit found no concept or synchronization redesign required before architecture work.
+
+**Current phase: Phase 004 — Representation & Architecture Design.**
+
+See [`docs/architecture/index.md`](docs/architecture/index.md) and [`docs/phases/004/index.md`](docs/phases/004/index.md).
+
+Phase 004 will decide implementation-facing architecture for:
+
+- public API/resource/handle mapping;
+- control-plane identity, revisions and persistence;
+- Spark-scale source/output references, manifests and semantic promotion;
+- Strategy extension and Learning/Generation/Evaluation runtime adapters;
+- Execution/Attempt/checkpoint/recovery/fencing/idempotency/cancellation;
+- Evaluation/Evidence/Provenance/reproducibility representation and historical queries;
+- dependency resolution, offline/no-egress, authorization/redaction and enterprise security;
+- deployment, scalability, observability, portability and platform integration.
 
 Next:
 
-- **003-I — Cross-Workflow Consistency & Phase 003 Consolidation Review**
+- **004-A — Architecture Authority, Representation Principles, Layering & Dependency Direction**
 
-See [`docs/phases/003/index.md`](docs/phases/003/index.md).
-
-No Python package, model runtime, Spark ML mapping, persistence format, plugin architecture, scheduler/orchestrator, checkpoint technology, model registry technology, provenance store, identity/fingerprint mechanism, output publication mechanism, Evidence/reporting technology, final workflow/session/readiness object, compatibility engine, aggregate quality-score policy, retry/backoff policy, fencing/transaction mechanism, observability backend, provenance graph/query implementation, reproduction orchestrator, authentication/authorization model, artifact trust/signing system, data-classification taxonomy, redaction implementation, egress-control technology, deployment topology, or model-hub/network integration should be treated as settled until the relevant downstream design phases establish it.
+No Python package/module layout, public class hierarchy, persistence technology, plugin system, scheduler/orchestrator, checkpoint format, provenance store, source/output manifest/fingerprint mechanism, model registry, authentication/authorization engine, egress-control technology, or deployment topology should be treated as settled until Phase 004 establishes it.
