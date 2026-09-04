@@ -22,15 +22,7 @@ Phase 002 refined the eleven accepted concepts and fifteen synchronizations with
 
 See [Phase 003 index](003/index.md).
 
-- [003-A — Workflow Entry, Source Context & Lifecycle Orientation](003/003-A-workflow-entry-source-context-lifecycle-orientation.md) — complete
-- [003-B — Data Meaning, Constraint & Strategy Preparation Experience](003/003-B-data-meaning-constraint-strategy-preparation-experience.md) — complete
-- [003-C — Learning & Learned State Lifecycle Experience](003/003-C-learning-learned-state-lifecycle-experience.md) — complete
-- [003-D — Generation Request, Condition, Validation & Output Promotion Experience](003/003-D-generation-request-condition-validation-output-promotion-experience.md) — complete
-- [003-E — Evaluation, Evidence & Review Experience](003/003-E-evaluation-evidence-review-experience.md) — complete
-- [003-F — Execution Monitoring, Failure, Recovery & Cancellation Experience](003/003-F-execution-monitoring-failure-recovery-cancellation-experience.md) — complete
-- [003-G — Provenance, Reproducibility & Historical Inspection Experience](003/003-G-provenance-reproducibility-historical-inspection-experience.md) — complete
-- [003-H — Enterprise Dependency, Offline/No-Egress & Safety Experience](003/003-H-enterprise-dependency-offline-no-egress-safety-experience.md) — complete
-- [003-I — Cross-Workflow Consistency & Phase 003 Consolidation Review](003/003-I-cross-workflow-consistency-phase-003-consolidation-review.md) — complete
+Phase 003 closed through [003-I — Cross-Workflow Consistency & Phase 003 Consolidation Review](003/003-I-cross-workflow-consistency-phase-003-consolidation-review.md).
 
 Phase 003 exit authority: [Phase 003 Consolidated Experience Contract](../experience/phase-003-consolidated-experience-contract.md).
 
@@ -38,8 +30,8 @@ Phase 003 exit authority: [Phase 003 Consolidated Experience Contract](../experi
 
 See [Phase 004 index](004/index.md).
 
-- **004-A — Architecture Authority, Representation Principles, Layering & Dependency Direction — next**
-- 004-B — Public API, Resource/Handle Model, Workflow Composition & Semantic Mapping
+- [004-A — Architecture Authority, Representation Principles, Layering & Dependency Direction](004/004-A-architecture-authority-representation-layering-dependency-direction.md) — complete
+- **004-B — Public API, Resource/Handle Model, Workflow Composition & Semantic Mapping — next**
 - 004-C — Control-Plane Identity, Revision, State, Persistence & Historical Reference Architecture
 - 004-D — Spark Data Boundary, Source/Output Reference, Distributed Materialization, Manifest & Promotion Architecture
 - 004-E — Strategy Extension, Learning/Generation/Evaluation Runtime & Adapter Architecture
@@ -49,4 +41,6 @@ See [Phase 004 index](004/index.md).
 - 004-I — Deployment, Scalability, Observability, Portability, Compatibility & Platform Integration Architecture
 - 004-J — Cross-Architecture Invariant Audit, Decision Consolidation & Phase 004 Exit
 
-Representation/architecture is now the active design layer. Implementation task breakdown remains downstream until Phase 004 establishes the necessary boundaries.
+004-A establishes the canonical [Architecture Authority, Representation Principles, Layering & Dependency Direction](../architecture/architecture-authority-representation-layering.md) and [ADR governance](../decisions/index.md).
+
+Representation/architecture is the active design layer. Implementation task breakdown remains downstream until Phase 004 establishes the necessary boundaries.
