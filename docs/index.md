@@ -37,6 +37,10 @@ Exit record: [001-H — Phase 001 Consolidation & Initial Concept Catalog](phase
 
 **Current phase: Phase 002 — Concept Specification & Invariant Refinement.**
 
-Next: **002-A — Data Meaning & Constraint Specification**.
+Completed in Phase 002:
+
+- [002-A — Data Meaning & Constraint Specification](phases/002/002-A-data-meaning-constraint-specification.md)
+
+Next: **002-B — Synthesis Strategy Specification & Capability Semantics**.
 
 See [Phase 002 index](phases/002/index.md).
