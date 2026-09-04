@@ -26,9 +26,12 @@ Phase 001 established:
 Completed:
 
 - **002-A — Data Meaning & Constraint Specification**
+- **002-B — Synthesis Strategy Specification & Capability Semantics**
+
+002-B also established a design requirement that supported core structured/tabular synthesis remain usable without outbound network access, while optional Strategies may explicitly declare local-artifact, acquisition-network, or runtime-network dependencies.
 
 Next:
 
-- **002-B — Synthesis Strategy Specification & Capability Semantics**
+- **002-C — Learning & Learned State Specification**
 
-No Python package, model runtime, Spark ML mapping, persistence format, or plugin architecture should be treated as settled until the relevant downstream design phases establish it.
+No Python package, model runtime, Spark ML mapping, persistence format, plugin architecture, or model-hub/network integration should be treated as settled until the relevant downstream design phases establish it.
