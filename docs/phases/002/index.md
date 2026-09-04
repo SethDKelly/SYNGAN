@@ -19,8 +19,8 @@ The grouping follows accepted concept responsibilities rather than implementatio
 | **002-C** | [**Learning & Learned State Specification**](002-C-learning-learned-state-specification.md) | **complete** |
 | **002-D** | [**Generation Specification, Request/Condition Semantics & Output Completion**](002-D-generation-request-condition-output-completion.md) | **complete** |
 | **002-E** | [**Evaluation Criterion, Evaluation & Evidence Specification**](002-E-evaluation-criterion-evaluation-evidence-specification.md) | **complete** |
-| **002-F** | **Execution, Attempt History, Failure & Recovery Semantics** | **next** |
-| 002-G | Provenance, Reproducibility Contract & Historical Binding Specification | planned |
+| **002-F** | [**Execution, Attempt History, Failure & Recovery Semantics**](002-F-execution-attempt-failure-recovery-semantics.md) | **complete** |
+| **002-G** | **Provenance, Reproducibility Contract & Historical Binding Specification** | **next** |
 | 002-H | Cross-Concept Invariant, Synchronization & Phase 002 Consolidation Review | planned |
 
 ## Completed refinement
@@ -43,21 +43,26 @@ The grouping follows accepted concept responsibilities rather than implementatio
 
 ### 002-E
 
-002-E deepened [Evaluation Criterion](../../concepts/evaluation-criterion.md), [Evaluation](../../concepts/evaluation.md), and [Evidence](../../concepts/evidence.md) and refined the [core synchronizations](../../synchronizations/core-synchronizations.md).
+002-E deepened [Evaluation Criterion](../../concepts/evaluation-criterion.md), [Evaluation](../../concepts/evaluation.md), and [Evidence](../../concepts/evidence.md), establishing question/method/finding separation, explicit evidence strength, uncertainty-aware evaluation, and Generation-completion validation semantics.
+
+### 002-F
+
+002-F deepened [Execution](../../concepts/execution.md) and refined the [core synchronizations](../../synchronizations/core-synchronizations.md).
 
 Key established semantics include:
 
-- Criterion owns the evaluative question and answer-strength requirements rather than available metrics;
-- fidelity, utility, validity, and privacy/disclosure risk remain distinct dimensions;
-- Evaluation binds Criterion, subject/reference, method, scope, coverage, sampling/approximation, and uncertainty semantics;
-- exhaustive, deterministic bounded/certificate, statistical, approximate/sketch, and diagnostic/partial evidence bases remain distinguishable;
-- Evidence claim strength cannot exceed method/scope/coverage/uncertainty support;
-- Evaluation success is distinct from favorable subject outcome;
-- negative and indeterminate findings remain legitimate durable Evidence;
-- sample-only evidence cannot prove a universal required rule merely for scale convenience;
-- Generation may consume sufficiently strong Evidence for its completion barrier without transferring completion authority to Evidence;
-- privacy/disclosure-risk Evidence remains threat-model/method scoped and is not release authorization or a formal privacy guarantee;
-- enterprise-scale Evaluation remains viable without mandatory full-output driver collection.
+- one stable logical Execution independent of platform jobs/processes;
+- Attempt as subordinate operational history rather than a standalone concept or platform-run synonym;
+- retry/resume that preserves committed domain semantics;
+- checkpoint/recovery material that remains non-domain-result state until explicit semantic promotion;
+- explicit partial operational success and unknown/indeterminate operational state;
+- contextual retryability and reconciliation/fencing of ambiguous side effects;
+- cancellation request separated from terminal cancellation and domain completion;
+- operational failure separated from Learning/Generation/Evaluation semantic failure;
+- single semantic promotion rather than an unrealistic exactly-once physical-computation requirement;
+- duplicate physical work permitted only when canonical Learned State/output/Evidence effects remain unambiguous;
+- platform-native telemetry retained by reference rather than copied into canonical Execution state;
+- enterprise-scale operational history that does not require every task/log to become driver-local SYNGAN state.
 
 ## Phase 002 boundary
 
@@ -84,4 +89,4 @@ Those remain downstream unless concept feasibility requires an explicit earlier 
 
 ## Current next phase
 
-**002-F — Execution, Attempt History, Failure & Recovery Semantics**
+**002-G — Provenance, Reproducibility Contract & Historical Binding Specification**
