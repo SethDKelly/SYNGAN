@@ -20,6 +20,7 @@ Architecture remains downstream of design authority, accepted concepts/synchroni
 - [Spark Data Boundary, Source/Output Reference, Distributed Materialization, Manifest & Promotion Architecture](spark-data-boundary-source-output-reference-distributed-materialization-manifest-promotion.md) — Phase 004-D distributed source/candidate/output architecture.
 - [Strategy Extension, Learning/Generation/Evaluation Runtime & Adapter Architecture](strategy-extension-learning-generation-evaluation-runtime-adapter.md) — Phase 004-E extension/runtime architecture.
 - [Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Architecture](execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation.md) — Phase 004-F operational continuation architecture.
+- [Evaluation/Evidence, Provenance, Reproducibility & Historical Query Architecture](evaluation-evidence-provenance-reproducibility-historical-query.md) — Phase 004-G durable Evidence, typed Provenance, historical query, and reproducibility-assessment architecture.
 
 Decision rationale/history is preserved under [Architecture Decision Records](../decisions/index.md). Current normative architecture remains here under `docs/architecture/`.
 
@@ -52,9 +53,24 @@ Later architecture MUST preserve at least:
 - external unfenceable/undeduplicable ambiguity may block automatic retry;
 - Evaluation retries must not accidentally double-count logical work units;
 - cancellation is durable intent followed by reconciled operational outcome, not instantaneous domain-state rewrite;
+- Evaluation runtime results require semantic validation before Evidence establishment;
+- Evidence finding semantics are immutable while current applicability is separately conflict-versioned;
+- Evidence establishment is idempotent per logical Evaluation finding and may yield multiple independently interpretable Evidence resources;
+- Generation promotion preserves the exact Evidence/candidate/requirement basis used at completion;
+- Provenance is canonical typed relationship authority over stable references and does not duplicate canonical payloads;
+- required Provenance recording is idempotent, auditable, and recoverably consistent with the transition it explains;
+- Provenance correction preserves auditability and cannot mutate another concept's authority;
+- historical explain/compare/search indexes are derived projections, not canonical write state;
+- exact historical queries do not substitute current aliases/latest revisions;
+- historical comparison does not infer causality or quality from structural differences;
+- reproducibility is a qualified current assessment assembled from canonical historical facts, not a universal Boolean state;
+- reproduction strength cannot exceed unresolved identity/dependency/nondeterminism/equivalence boundaries;
+- reproduction readiness is distinct from successful new reproduction work;
+- absent, unknown, unavailable, withheld, invalid, and corrected historical states remain distinguishable;
+- external lineage/catalog systems remain integrations rather than canonical SYNGAN semantic authority;
 - automatic retry has no authority shortcut around semantic/dependency/no-egress/cancellation checks;
 - platform specialization may add capability but cannot silently weaken common guarantees;
-- enterprise-scale workflows cannot require ordinary full driver-local source/output/Learned-State/diagnostic/telemetry materialization.
+- enterprise-scale workflows and history queries cannot require ordinary full driver-local source/output/Learned-State/diagnostic/telemetry materialization.
 
 ## Active ADR rationale
 
@@ -63,6 +79,7 @@ Later architecture MUST preserve at least:
 - [ADR-0003 — Sealed Manifest-Gated Distributed Output Promotion](../decisions/ADR-0003-sealed-manifest-gated-output-promotion.md)
 - [ADR-0004 — Semantic Extension & Runtime Binding Separation](../decisions/ADR-0004-semantic-extension-runtime-binding-separation.md)
 - [ADR-0005 — Attempt-Epoch Fencing & Recoverable At-Least-Once Execution](../decisions/ADR-0005-attempt-epoch-fencing-recoverable-at-least-once-execution.md)
+- [ADR-0006 — Typed Canonical Provenance & Derived Historical Projections](../decisions/ADR-0006-typed-provenance-canonical-derived-history-projections.md)
 
 ## Phase 004 status
 
@@ -76,11 +93,12 @@ Completed:
 - [004-D — Spark Data Boundary, Source/Output Reference, Distributed Materialization, Manifest & Promotion Architecture](../phases/004/004-D-spark-data-boundary-source-output-reference-distributed-materialization-manifest-promotion-architecture.md)
 - [004-E — Strategy Extension, Learning/Generation/Evaluation Runtime & Adapter Architecture](../phases/004/004-E-strategy-extension-learning-generation-evaluation-runtime-adapter-architecture.md)
 - [004-F — Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Architecture](../phases/004/004-F-execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation-architecture.md)
+- [004-G — Evaluation/Evidence, Provenance, Reproducibility & Historical Query Architecture](../phases/004/004-G-evaluation-evidence-provenance-reproducibility-historical-query-architecture.md)
 
 Next:
 
-**004-G — Evaluation/Evidence, Provenance, Reproducibility & Historical Query Architecture**
+**004-H — Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Architecture**
 
 ## Representation boundary
 
-No final Python package layout/class spelling, database technology, Spark table/file provider, manifest/hash technology, plugin discovery mechanism, distributed-ML runtime choice, scheduler/orchestrator, concrete checkpoint/fencing implementation, provenance physical store, authorization engine, or deployment topology is accepted merely because Phase 004 is active.
+No final Python package layout/class spelling, database technology, Spark table/file provider, manifest/hash technology, plugin discovery mechanism, distributed-ML runtime choice, scheduler/orchestrator, concrete checkpoint/fencing implementation, provenance physical store/query engine, authorization engine, or deployment topology is accepted merely because Phase 004 is active.
