@@ -35,8 +35,8 @@ See [Phase 004 index](004/index.md).
 - [004-C — Control-Plane Identity, Revision, State, Persistence & Historical Reference Architecture](004/004-C-control-plane-identity-revision-state-persistence-historical-reference-architecture.md) — complete
 - [004-D — Spark Data Boundary, Source/Output Reference, Distributed Materialization, Manifest & Promotion Architecture](004/004-D-spark-data-boundary-source-output-reference-distributed-materialization-manifest-promotion-architecture.md) — complete
 - [004-E — Strategy Extension, Learning/Generation/Evaluation Runtime & Adapter Architecture](004/004-E-strategy-extension-learning-generation-evaluation-runtime-adapter-architecture.md) — complete
-- **004-F — Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Architecture — next**
-- 004-G — Evaluation/Evidence, Provenance, Reproducibility & Historical Query Architecture
+- [004-F — Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Architecture](004/004-F-execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation-architecture.md) — complete
+- **004-G — Evaluation/Evidence, Provenance, Reproducibility & Historical Query Architecture — next**
 - 004-H — Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Architecture
 - 004-I — Deployment, Scalability, Observability, Portability, Compatibility & Platform Integration Architecture
 - 004-J — Cross-Architecture Invariant Audit, Decision Consolidation & Phase 004 Exit
@@ -48,12 +48,8 @@ Current architecture authority includes:
 - [Control-Plane Identity, Revision, State, Persistence & Historical Reference Architecture](../architecture/control-plane-identity-revision-state-persistence-historical-reference.md)
 - [Spark Data Boundary, Source/Output Reference, Distributed Materialization, Manifest & Promotion Architecture](../architecture/spark-data-boundary-source-output-reference-distributed-materialization-manifest-promotion.md)
 - [Strategy Extension, Learning/Generation/Evaluation Runtime & Adapter Architecture](../architecture/strategy-extension-learning-generation-evaluation-runtime-adapter.md)
+- [Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Architecture](../architecture/execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation.md)
 
-Active ADR rationale includes:
-
-- [ADR-0001 — Typed Resource/Handle Public API](../decisions/ADR-0001-typed-resource-handle-public-api.md)
-- [ADR-0002 — Immutable Semantic Snapshots & Versioned Lifecycle State](../decisions/ADR-0002-immutable-semantic-snapshots-versioned-lifecycle-state.md)
-- [ADR-0003 — Sealed Manifest-Gated Distributed Output Promotion](../decisions/ADR-0003-sealed-manifest-gated-output-promotion.md)
-- [ADR-0004 — Semantic Extension & Runtime Binding Separation](../decisions/ADR-0004-semantic-extension-runtime-binding-separation.md)
+Active ADR rationale includes ADR-0001 through [ADR-0005 — Attempt-Epoch Fencing & Recoverable At-Least-Once Execution](../decisions/ADR-0005-attempt-epoch-fencing-recoverable-at-least-once-execution.md).
 
 Representation/architecture is the active design layer. Implementation task breakdown remains downstream until Phase 004 establishes the necessary boundaries.
