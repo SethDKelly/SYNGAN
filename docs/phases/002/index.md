@@ -17,8 +17,8 @@ The grouping follows accepted concept responsibilities rather than implementatio
 | **002-A** | [**Data Meaning & Constraint Specification**](002-A-data-meaning-constraint-specification.md) | **complete** |
 | **002-B** | [**Synthesis Strategy Specification & Capability Semantics**](002-B-synthesis-strategy-capability-semantics.md) | **complete** |
 | **002-C** | [**Learning & Learned State Specification**](002-C-learning-learned-state-specification.md) | **complete** |
-| **002-D** | **Generation Specification, Request/Condition Semantics & Output Completion** | **next** |
-| 002-E | Evaluation Criterion, Evaluation & Evidence Specification | planned |
+| **002-D** | [**Generation Specification, Request/Condition Semantics & Output Completion**](002-D-generation-request-condition-output-completion.md) | **complete** |
+| **002-E** | **Evaluation Criterion, Evaluation & Evidence Specification** | **next** |
 | 002-F | Execution, Attempt History, Failure & Recovery Semantics | planned |
 | 002-G | Provenance, Reproducibility Contract & Historical Binding Specification | planned |
 | 002-H | Cross-Concept Invariant, Synchronization & Phase 002 Consolidation Review | planned |
@@ -35,21 +35,26 @@ The grouping follows accepted concept responsibilities rather than implementatio
 
 ### 002-C
 
-002-C deepened [Learning](../../concepts/learning.md) and [Learned State](../../concepts/learned-state.md) and refined the [core synchronizations](../../synchronizations/core-synchronizations.md).
+002-C deepened [Learning](../../concepts/learning.md) and [Learned State](../../concepts/learned-state.md), establishing semantic commitment/source-history binding, retry invariance, checkpoint-versus-Learned-State separation, distributed/composite learned-state semantics, non-mutating reuse, and sensitivity/dependency boundaries.
+
+### 002-D
+
+002-D deepened [Generation](../../concepts/generation.md) and refined the [core synchronizations](../../synchronizations/core-synchronizations.md).
 
 Key established semantics include:
 
-- Learning exists only when reusable source-derived state is actually part of Strategy intent;
-- explicit Learning semantic commitment and stable source-history binding;
-- retries/Attempts preserve committed Learning semantics;
-- Execution completion is not Learning completion;
-- checkpoints/intermediates are not Learned State by durability alone;
-- one Learning produces zero or one primary logical Learned State under the current model;
-- Learned State is a logical durable result that may be physically composite/distributed;
-- Learned State compatibility is contextual to Generation rather than global mutable state;
-- ordinary reuse is non-mutating;
-- base/pretrained artifact dependencies remain explicit;
-- Learned State is potentially sensitive and is not presumed private or release-safe.
+- Generation Request and Condition remain Generation-owned subordinate state;
+- explicit Generation semantic commitment and historical immutability;
+- mandatory versus best-effort Condition semantics;
+- direct-generation and Learned-State generation paths;
+- non-mutating contextual Learned State reuse;
+- required Constraint handling with explicit completion consequences;
+- `validated later` means validation before Generation semantic completion;
+- partial materialization, complete candidate output, completed output, and abandoned/quarantined output are distinct;
+- one successful Generation produces one logical completed output result independent of physical partitioning;
+- `completed with limitations` cannot weaken mandatory Conditions or required Constraints;
+- Generation completion remains distinct from Execution completion, privacy guarantees, and external release/use authority;
+- completion must remain viable without full-output driver collection.
 
 ## Phase 002 boundary
 
@@ -76,4 +81,4 @@ Those remain downstream unless concept feasibility requires an explicit earlier 
 
 ## Current next phase
 
-**002-D — Generation Specification, Request/Condition Semantics & Output Completion**
+**002-E — Evaluation Criterion, Evaluation & Evidence Specification**
