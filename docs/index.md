@@ -68,6 +68,7 @@ Completed in Phase 004:
 - [004-C — Control-Plane Identity, Revision, State, Persistence & Historical Reference Architecture](phases/004/004-C-control-plane-identity-revision-state-persistence-historical-reference-architecture.md)
 - [004-D — Spark Data Boundary, Source/Output Reference, Distributed Materialization, Manifest & Promotion Architecture](phases/004/004-D-spark-data-boundary-source-output-reference-distributed-materialization-manifest-promotion-architecture.md)
 - [004-E — Strategy Extension, Learning/Generation/Evaluation Runtime & Adapter Architecture](phases/004/004-E-strategy-extension-learning-generation-evaluation-runtime-adapter-architecture.md)
+- [004-F — Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Architecture](phases/004/004-F-execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation-architecture.md)
 
 Canonical architecture now includes:
 
@@ -75,9 +76,10 @@ Canonical architecture now includes:
 - the [typed public resource/handle architecture](architecture/public-api-resource-handle-workflow-semantic-mapping.md);
 - the [control-plane identity/state architecture](architecture/control-plane-identity-revision-state-persistence-historical-reference.md);
 - the [Spark data boundary/materialization architecture](architecture/spark-data-boundary-source-output-reference-distributed-materialization-manifest-promotion.md);
-- the [Strategy extension/runtime adapter architecture](architecture/strategy-extension-learning-generation-evaluation-runtime-adapter.md).
+- the [Strategy extension/runtime adapter architecture](architecture/strategy-extension-learning-generation-evaluation-runtime-adapter.md);
+- the [Execution/recovery/fencing architecture](architecture/execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation.md).
 
-004-E establishes that Strategy/method semantic authority remains distinct from executable implementation binding; runtime invocation is immutable and Attempt-scoped; runtime adapters write/report through framework-owned ports without semantic completion authority; Learning candidate state remains non-final until Learned State establishment; Generation adapters write only through candidate sinks; Evaluation adapters return measurements/coverage/uncertainty rather than Evidence authority; Spark-scale source/output semantics remain compatible with non-Spark model runtimes; and hidden dependency/network fallback remains prohibited.
+004-F establishes one stable Execution across many Attempts; ordered Attempt epochs/fencing generations; lease-versus-fence separation; operation-scoped idempotency; immutable checkpoint snapshots and contextual resume qualification; explicit retry/restart/reconcile decisions; durable unknown-state semantics; safe candidate sealing and semantic-promotion preconditions; Evaluation double-count protection; and cancellation as durable intent followed by reconciled outcome. Duplicate physical work is allowed while stale or duplicate canonical authority is not.
 
 Decision rationale:
 
@@ -85,5 +87,6 @@ Decision rationale:
 - [ADR-0002 — Immutable Semantic Snapshots & Versioned Lifecycle State](decisions/ADR-0002-immutable-semantic-snapshots-versioned-lifecycle-state.md)
 - [ADR-0003 — Sealed Manifest-Gated Distributed Output Promotion](decisions/ADR-0003-sealed-manifest-gated-output-promotion.md)
 - [ADR-0004 — Semantic Extension & Runtime Binding Separation](decisions/ADR-0004-semantic-extension-runtime-binding-separation.md)
+- [ADR-0005 — Attempt-Epoch Fencing & Recoverable At-Least-Once Execution](decisions/ADR-0005-attempt-epoch-fencing-recoverable-at-least-once-execution.md)
 
-Next: **004-F — Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Architecture**.
+Next: **004-G — Evaluation/Evidence, Provenance, Reproducibility & Historical Query Architecture**.
