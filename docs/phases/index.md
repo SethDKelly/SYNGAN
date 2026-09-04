@@ -45,7 +45,7 @@ See [Phase 003 index](003/index.md).
 - [003-E — Evaluation, Evidence & Review Experience](003/003-E-evaluation-evidence-review-experience.md) — complete
 - [003-F — Execution Monitoring, Failure, Recovery & Cancellation Experience](003/003-F-execution-monitoring-failure-recovery-cancellation-experience.md) — complete
 - [003-G — Provenance, Reproducibility & Historical Inspection Experience](003/003-G-provenance-reproducibility-historical-inspection-experience.md) — complete
-- **003-H — Enterprise Dependency, Offline/No-Egress & Safety Experience — next**
-- 003-I — Cross-Workflow Consistency & Phase 003 Consolidation Review
+- [003-H — Enterprise Dependency, Offline/No-Egress & Safety Experience](003/003-H-enterprise-dependency-offline-no-egress-safety-experience.md) — complete
+- **003-I — Cross-Workflow Consistency & Phase 003 Consolidation Review — next**
 
 Representation/implementation architecture remains intentionally downstream of experience/workflow design.
