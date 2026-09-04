@@ -33,22 +33,21 @@ The current semantic design includes:
 - enterprise-scale semantics that do not require full source/output/model/log collection to driver-local memory;
 - explicit separation of synthetic origin, privacy evidence/guarantees, and external release/use authority.
 
-Phase 002 exit review:
-
-- [`002-H — Cross-Concept Invariant, Synchronization & Phase 002 Consolidation Review`](docs/phases/002/002-H-cross-concept-invariant-synchronization-consolidation-review.md)
-
 **Current phase: Phase 003 — Experience & Workflow Design.**
 
 Completed:
 
 - **003-A — Workflow Entry, Source Context & Lifecycle Orientation**
+- **003-B — Data Meaning, Constraint & Strategy Preparation Experience**
 
-003-A established the canonical [`docs/experience/`](docs/experience/index.md) layer. The experience model now supports multiple legitimate entry intents, composes source context without creating a Dataset/Workflow god-concept, distinguishes mutable locators from historical identity, makes semantic commitment explicit, separates semantic status from Execution/Attempt state, keeps candidate/intermediate material distinct from authoritative results, preserves indeterminacy, and exposes network/dependency posture before commitment.
+Phase 003 now includes a canonical [`docs/experience/`](docs/experience/index.md) layer. 003-A established intent-oriented entry and lifecycle orientation. 003-B establishes a pre-commit preparation experience that keeps Data Meaning, Constraint, and Synthesis Strategy distinct while making inferred/declarative semantics, rule applicability/handling, Strategy capability/dependency compatibility, blockers/limitations, derived readiness, and review-before-commit inspectable.
+
+The preparation experience preserves the enterprise-safe direction: no hidden network acquisition/fallback, no mandatory full driver-local source collection, and no conversion of unsupported required Constraints or semantic indeterminacy into warnings merely to let a workflow proceed.
 
 Next:
 
-- **003-B — Data Meaning, Constraint & Strategy Preparation Experience**
+- **003-C — Learning & Learned State Lifecycle Experience**
 
 See [`docs/phases/003/index.md`](docs/phases/003/index.md).
 
-No Python package, model runtime, Spark ML mapping, persistence format, plugin architecture, scheduler/orchestrator, checkpoint technology, provenance store, identity/fingerprint mechanism, output publication mechanism, evidence/reporting technology, final workflow/session object, or model-hub/network integration should be treated as settled until the relevant downstream design phases establish it.
+No Python package, model runtime, Spark ML mapping, persistence format, plugin architecture, scheduler/orchestrator, checkpoint technology, provenance store, identity/fingerprint mechanism, output publication mechanism, evidence/reporting technology, final workflow/session/readiness object, compatibility engine, or model-hub/network integration should be treated as settled until the relevant downstream design phases establish it.
