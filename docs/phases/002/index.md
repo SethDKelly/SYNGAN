@@ -18,8 +18,8 @@ The grouping follows accepted concept responsibilities rather than implementatio
 | **002-B** | [**Synthesis Strategy Specification & Capability Semantics**](002-B-synthesis-strategy-capability-semantics.md) | **complete** |
 | **002-C** | [**Learning & Learned State Specification**](002-C-learning-learned-state-specification.md) | **complete** |
 | **002-D** | [**Generation Specification, Request/Condition Semantics & Output Completion**](002-D-generation-request-condition-output-completion.md) | **complete** |
-| **002-E** | **Evaluation Criterion, Evaluation & Evidence Specification** | **next** |
-| 002-F | Execution, Attempt History, Failure & Recovery Semantics | planned |
+| **002-E** | [**Evaluation Criterion, Evaluation & Evidence Specification**](002-E-evaluation-criterion-evaluation-evidence-specification.md) | **complete** |
+| **002-F** | **Execution, Attempt History, Failure & Recovery Semantics** | **next** |
 | 002-G | Provenance, Reproducibility Contract & Historical Binding Specification | planned |
 | 002-H | Cross-Concept Invariant, Synchronization & Phase 002 Consolidation Review | planned |
 
@@ -39,22 +39,25 @@ The grouping follows accepted concept responsibilities rather than implementatio
 
 ### 002-D
 
-002-D deepened [Generation](../../concepts/generation.md) and refined the [core synchronizations](../../synchronizations/core-synchronizations.md).
+002-D deepened [Generation](../../concepts/generation.md), establishing request/Condition commitment, direct and Learned-State paths, required Constraint completion rules, candidate-versus-completed output, and a semantic completion barrier distinct from physical materialization or Execution completion.
+
+### 002-E
+
+002-E deepened [Evaluation Criterion](../../concepts/evaluation-criterion.md), [Evaluation](../../concepts/evaluation.md), and [Evidence](../../concepts/evidence.md) and refined the [core synchronizations](../../synchronizations/core-synchronizations.md).
 
 Key established semantics include:
 
-- Generation Request and Condition remain Generation-owned subordinate state;
-- explicit Generation semantic commitment and historical immutability;
-- mandatory versus best-effort Condition semantics;
-- direct-generation and Learned-State generation paths;
-- non-mutating contextual Learned State reuse;
-- required Constraint handling with explicit completion consequences;
-- `validated later` means validation before Generation semantic completion;
-- partial materialization, complete candidate output, completed output, and abandoned/quarantined output are distinct;
-- one successful Generation produces one logical completed output result independent of physical partitioning;
-- `completed with limitations` cannot weaken mandatory Conditions or required Constraints;
-- Generation completion remains distinct from Execution completion, privacy guarantees, and external release/use authority;
-- completion must remain viable without full-output driver collection.
+- Criterion owns the evaluative question and answer-strength requirements rather than available metrics;
+- fidelity, utility, validity, and privacy/disclosure risk remain distinct dimensions;
+- Evaluation binds Criterion, subject/reference, method, scope, coverage, sampling/approximation, and uncertainty semantics;
+- exhaustive, deterministic bounded/certificate, statistical, approximate/sketch, and diagnostic/partial evidence bases remain distinguishable;
+- Evidence claim strength cannot exceed method/scope/coverage/uncertainty support;
+- Evaluation success is distinct from favorable subject outcome;
+- negative and indeterminate findings remain legitimate durable Evidence;
+- sample-only evidence cannot prove a universal required rule merely for scale convenience;
+- Generation may consume sufficiently strong Evidence for its completion barrier without transferring completion authority to Evidence;
+- privacy/disclosure-risk Evidence remains threat-model/method scoped and is not release authorization or a formal privacy guarantee;
+- enterprise-scale Evaluation remains viable without mandatory full-output driver collection.
 
 ## Phase 002 boundary
 
@@ -81,4 +84,4 @@ Those remain downstream unless concept feasibility requires an explicit earlier 
 
 ## Current next phase
 
-**002-E — Evaluation Criterion, Evaluation & Evidence Specification**
+**002-F — Execution, Attempt History, Failure & Recovery Semantics**
