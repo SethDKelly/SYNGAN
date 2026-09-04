@@ -29,15 +29,17 @@ Repeated text MUST NOT create a competing source of truth. Where duplicated mate
 
 Unless a later explicit decision overrides this order, interpret conflicting material using the following precedence:
 
-1. `docs/authority/` — methodology, terminology, documentation and provenance rules.
-2. Canonical concept specifications and synchronization documents.
-3. Accepted architecture and decision records.
-4. Current phase deliverables and exit reviews.
-5. Experience/workflow documents.
+1. `docs/authority/` — methodology, terminology, documentation, provenance, network/dependency, and cross-cutting policy/contract rules.
+2. `docs/concepts/` and `docs/synchronizations/` — accepted semantic ownership and cross-concept coordination.
+3. `docs/experience/` — accepted actor-visible/programmatic workflow and experience contracts downstream of semantics.
+4. `docs/architecture/` — accepted representation and architecture rules downstream of experience; accepted ADRs under `docs/decisions/` preserve decision rationale/supersession history but MUST NOT override upstream authority or newer canonical architecture.
+5. Current phase deliverables and exit reviews — execution history and consolidation evidence, not a substitute for promoted canonical authority.
 6. Derived summaries, examples, tutorials and agent-oriented navigation aids.
 7. Backlog and exploratory notes.
 
 A lower-authority document MUST NOT silently override a higher-authority one.
+
+Architecture that discovers an upstream infeasibility or contradiction MUST surface the conflict explicitly and request an upstream design revision rather than redefining the upstream contract inside `docs/architecture/`.
 
 ## OKF 0.2 profile
 
