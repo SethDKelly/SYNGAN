@@ -39,15 +39,16 @@ Completed:
 
 - **003-A — Workflow Entry, Source Context & Lifecycle Orientation**
 - **003-B — Data Meaning, Constraint & Strategy Preparation Experience**
+- **003-C — Learning & Learned State Lifecycle Experience**
 
-Phase 003 now includes a canonical [`docs/experience/`](docs/experience/index.md) layer. 003-A established intent-oriented entry and lifecycle orientation. 003-B establishes a pre-commit preparation experience that keeps Data Meaning, Constraint, and Synthesis Strategy distinct while making inferred/declarative semantics, rule applicability/handling, Strategy capability/dependency compatibility, blockers/limitations, derived readiness, and review-before-commit inspectable.
+Phase 003 now includes a canonical [`docs/experience/`](docs/experience/index.md) layer. 003-A established intent-oriented entry and lifecycle orientation. 003-B established pre-commit preparation that keeps Data Meaning, Constraint, and Synthesis Strategy distinct while making semantic/rule/Strategy readiness explainable. 003-C establishes Learning/Learned State lifecycle experience: commitment is explicit, semantic progress is kept separate from Execution/Attempt state, checkpoints remain non-final, semantic completion promotes one logical Learned State, `usable` does not mean globally compatible, restricted/retired/invalidated statuses remain distinct, and reuse remains non-mutating.
 
-The preparation experience preserves the enterprise-safe direction: no hidden network acquisition/fallback, no mandatory full driver-local source collection, and no conversion of unsupported required Constraints or semantic indeterminacy into warnings merely to let a workflow proceed.
+The experience design continues to preserve the enterprise-safe direction: no hidden network acquisition/fallback, no mandatory full driver-local source/model collection, no model artifact equated automatically with Learned State, and no implication that source-derived learned state is private or safe to export by default.
 
 Next:
 
-- **003-C — Learning & Learned State Lifecycle Experience**
+- **003-D — Generation Request, Condition, Validation & Output Promotion Experience**
 
 See [`docs/phases/003/index.md`](docs/phases/003/index.md).
 
-No Python package, model runtime, Spark ML mapping, persistence format, plugin architecture, scheduler/orchestrator, checkpoint technology, provenance store, identity/fingerprint mechanism, output publication mechanism, evidence/reporting technology, final workflow/session/readiness object, compatibility engine, or model-hub/network integration should be treated as settled until the relevant downstream design phases establish it.
+No Python package, model runtime, Spark ML mapping, persistence format, plugin architecture, scheduler/orchestrator, checkpoint technology, model registry technology, provenance store, identity/fingerprint mechanism, output publication mechanism, evidence/reporting technology, final workflow/session/readiness object, compatibility engine, or model-hub/network integration should be treated as settled until the relevant downstream design phases establish it.
