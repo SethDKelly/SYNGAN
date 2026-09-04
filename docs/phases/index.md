@@ -31,8 +31,8 @@ Phase 003 exit authority: [Phase 003 Consolidated Experience Contract](../experi
 See [Phase 004 index](004/index.md).
 
 - [004-A — Architecture Authority, Representation Principles, Layering & Dependency Direction](004/004-A-architecture-authority-representation-layering-dependency-direction.md) — complete
-- **004-B — Public API, Resource/Handle Model, Workflow Composition & Semantic Mapping — next**
-- 004-C — Control-Plane Identity, Revision, State, Persistence & Historical Reference Architecture
+- [004-B — Public API, Resource/Handle Model, Workflow Composition & Semantic Mapping](004/004-B-public-api-resource-handle-workflow-semantic-mapping.md) — complete
+- **004-C — Control-Plane Identity, Revision, State, Persistence & Historical Reference Architecture — next**
 - 004-D — Spark Data Boundary, Source/Output Reference, Distributed Materialization, Manifest & Promotion Architecture
 - 004-E — Strategy Extension, Learning/Generation/Evaluation Runtime & Adapter Architecture
 - 004-F — Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Architecture
@@ -41,6 +41,8 @@ See [Phase 004 index](004/index.md).
 - 004-I — Deployment, Scalability, Observability, Portability, Compatibility & Platform Integration Architecture
 - 004-J — Cross-Architecture Invariant Audit, Decision Consolidation & Phase 004 Exit
 
-004-A establishes the canonical [Architecture Authority, Representation Principles, Layering & Dependency Direction](../architecture/architecture-authority-representation-layering.md) and [ADR governance](../decisions/index.md).
+004-A establishes the canonical [Architecture Authority, Representation Principles, Layering & Dependency Direction](../architecture/architecture-authority-representation-layering.md).
+
+004-B establishes the canonical [Public API, Resource/Handle Model, Workflow Composition & Semantic Mapping](../architecture/public-api-resource-handle-workflow-semantic-mapping.md) and [ADR-0001 — Typed Resource/Handle Public API](../decisions/ADR-0001-typed-resource-handle-public-api.md).
 
 Representation/architecture is the active design layer. Implementation task breakdown remains downstream until Phase 004 establishes the necessary boundaries.
