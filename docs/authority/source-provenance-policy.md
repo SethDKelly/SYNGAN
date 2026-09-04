@@ -10,6 +10,8 @@ status: active
 
 SYNGAN design decisions should remain explainable: readers must be able to distinguish external facts, local requirements, hypotheses, decisions, and implementation evidence.
 
+This document governs **design-knowledge source provenance** inside the documentation bundle. The runtime/domain [Provenance](../concepts/provenance.md) concept separately governs historical relationships among SYNGAN data/synthesis concepts and results. The two share traceability principles but MUST NOT be treated as the same authority.
+
 ## Source classes
 
 Use the following source classes when provenance matters:
@@ -45,6 +47,8 @@ Where a local rule is derived from an external source, record both:
 
 - the local normative conclusion; and
 - the external source or rationale that supports it.
+
+The same anti-duplication discipline applies conceptually to runtime Provenance: traceability SHOULD reference canonical state rather than create a competing source of truth.
 
 ## Time sensitivity
 
