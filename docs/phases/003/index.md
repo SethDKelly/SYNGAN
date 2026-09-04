@@ -16,8 +16,8 @@ The phase remains downstream of concept specification and upstream of representa
 |---|---|---|
 | **003-A** | [**Workflow Entry, Source Context & Lifecycle Orientation**](003-A-workflow-entry-source-context-lifecycle-orientation.md) | **complete** |
 | **003-B** | [**Data Meaning, Constraint & Strategy Preparation Experience**](003-B-data-meaning-constraint-strategy-preparation-experience.md) | **complete** |
-| **003-C** | **Learning & Learned State Lifecycle Experience** | **next** |
-| 003-D | Generation Request, Condition, Validation & Output Promotion Experience | planned |
+| **003-C** | [**Learning & Learned State Lifecycle Experience**](003-C-learning-learned-state-lifecycle-experience.md) | **complete** |
+| **003-D** | **Generation Request, Condition, Validation & Output Promotion Experience** | **next** |
 | 003-E | Evaluation, Evidence & Review Experience | planned |
 | 003-F | Execution Monitoring, Failure, Recovery & Cancellation Experience | planned |
 | 003-G | Provenance, Reproducibility & Historical Inspection Experience | planned |
@@ -36,23 +36,29 @@ Key established experience semantics include intent-oriented entry, composed sou
 
 003-B established [Data Meaning, Constraint & Strategy Preparation](../../experience/data-meaning-constraint-strategy-preparation.md).
 
+Key established experience semantics include separate Data Meaning/Constraint/Strategy authority, declared-versus-inferred semantic review, contextual Constraint applicability/handling, multidimensional Strategy comparison, explainable compatibility, derived readiness, stale-readiness invalidation, review-before-commit, explicit dependency/no-egress posture, and enterprise-scale preparation.
+
+### 003-C
+
+003-C established [Learning & Learned State Lifecycle](../../experience/learning-learned-state-lifecycle.md).
+
 Key established experience semantics include:
 
-- preparation composes but does not merge Data Meaning, Constraint, and Synthesis Strategy;
-- physical observations remain distinct from semantic authority;
-- declared, inferred, unresolved, conflicting, superseded, and invalidated meaning remain visible where material;
-- only unresolved meaning material to the proposed activity must block readiness;
-- Constraint applicability, conflict/satisfiability, and expected handling remain contextual;
-- handling remains distinct from actual output satisfaction;
-- unsupported applicable required Constraints block normal commitment;
-- Strategy comparison remains multidimensional rather than a universal ranking;
-- material Strategy defaults/configuration remain inspectable;
-- compatibility is explainable and preserves compatible/limited/incompatible/indeterminate distinctions;
-- readiness is derived per proposed activity rather than a new global concept;
-- material preparation changes invalidate stale readiness;
-- review-before-commit exposes the exact semantic/rule/Strategy/dependency posture expected to govern the activity;
-- network/external dependencies remain explicit and hidden artifact acquisition/fallback remains prohibited;
-- preparation remains enterprise-scale without mandatory full driver-local source collection.
+- Learning is shown only when the Strategy semantically requires/supports reusable source-derived state; direct-generation Strategies bypass it;
+- Learning commitment visibly freezes source/meaning/Strategy/Constraint/sampling/dependency/reproducibility context;
+- Learning semantic state remains separate from Execution/Attempt/platform state;
+- progress signals must be Strategy-meaningful and must not invent a universal percentage-complete semantic;
+- checkpoints/intermediate material remain visibly non-final and unavailable as ordinary Learned State;
+- resume/recovery material requires same-commitment compatibility rather than file existence alone;
+- Learning-to-Learned-State promotion occurs only after semantic completion, even when Execution already succeeded;
+- Learned State is inspected as one logical result independently of physical component/file layout;
+- `usable` means eligible for contextual Generation validation, not globally compatible;
+- restricted, retired, and invalidated statuses remain distinct and affect future use without rewriting history;
+- ordinary Learned State reuse is non-mutating;
+- dependency/base-artifact/no-egress requirements remain visible across reuse;
+- Learned State is treated as potentially sensitive rather than presumed private or safe to export;
+- comparison remains multidimensional rather than a universal `best model` ranking;
+- enterprise-scale lifecycle/inspection uses bounded control-plane state and references rather than full source/state/telemetry collection.
 
 ## Phase 003 objectives
 
@@ -92,4 +98,4 @@ Phase 003 MUST NOT:
 
 ## Current next phase
 
-**003-C — Learning & Learned State Lifecycle Experience**
+**003-D — Generation Request, Condition, Validation & Output Promotion Experience**
