@@ -13,6 +13,7 @@ This directory is the canonical design knowledge bundle for SYNGAN.
 
 - [Authority](authority/index.md) — methodology, documentation governance, terminology and source rules.
 - [Problem Knowledge](problem/index.md) — problem, purpose, actors, outcomes and enterprise scale envelope.
+- [Domain Terminology](terminology/index.md) — canonical domain vocabulary, semantic distinctions, compatibility mappings and term status.
 - [Phases](phases/index.md) — phase plans, outcomes and exit reviews.
 - `concepts/` — canonical concept specifications, created after concept discovery.
 - `synchronizations/` — cross-concept coordination knowledge.
@@ -33,5 +34,6 @@ Completed:
 
 - [001-A — Design Authority, Methodology, OKF 0.2 & Documentation Governance](phases/001/001-A-design-authority-methodology-okf-documentation-governance.md)
 - [001-B — Problem, Purpose, Actors, Outcomes & Enterprise Scale Envelope](phases/001/001-B-problem-purpose-actors-outcomes-enterprise-scale-envelope.md)
+- [001-C — Domain Terminology & Synthetic-Data Semantic Inventory](phases/001/001-C-domain-terminology-synthetic-data-semantic-inventory.md)
 
-Next: **001-C — Domain Terminology & Synthetic-Data Semantic Inventory**.
+Next: **001-D — Candidate Concept Discovery & Boundary Hypotheses**.
