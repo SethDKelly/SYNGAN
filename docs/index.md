@@ -14,10 +14,10 @@ This directory is the canonical design knowledge bundle for SYNGAN.
 - [Authority](authority/index.md) — methodology, documentation governance, terminology and source rules.
 - [Problem Knowledge](problem/index.md) — problem, purpose, actors, outcomes and enterprise scale envelope.
 - [Domain Terminology](terminology/index.md) — canonical domain vocabulary, semantic distinctions, compatibility mappings and term status.
-- [Concept Discovery](discovery/index.md) — provisional candidate concepts, operational principles, review decisions, ownership guardrails, boundary/synchronization hypotheses and coverage checks.
+- [Concept Discovery](discovery/index.md) — provisional candidate concepts, operational principles, composition/dependency analysis, synchronization specification, review decisions and risk checks.
 - [Phases](phases/index.md) — phase plans, outcomes and exit reviews.
-- `concepts/` — canonical concept specifications, created only after Phase 001 has completed the required concept tests and consolidation.
-- `synchronizations/` — accepted cross-concept coordination knowledge, created after composition/synchronization review.
+- `concepts/` — canonical concept specifications, created only after Phase 001-H consolidates the accepted initial catalog.
+- `synchronizations/` — accepted cross-concept coordination knowledge, created only after Phase 001-H promotion from the provisional 001-G synchronization specification.
 - `architecture/` — representation and implementation architecture, intentionally downstream of concept design.
 - `decisions/` — architecture and governance decisions that need durable provenance.
 - `references/` — external references used by the design.
@@ -39,7 +39,10 @@ Completed:
 - [001-D — Candidate Concept Discovery & Boundary Hypotheses](phases/001/001-D-candidate-concept-discovery-boundary-hypotheses.md)
 - [001-E — Concept Criteria, Independence, Genericity & Completeness Review](phases/001/001-E-concept-criteria-independence-genericity-completeness-review.md)
 - [001-F — Operational Principle Development](phases/001/001-F-operational-principle-development.md)
+- [001-G — Concept Composition, Synchronization & Dependency Analysis](phases/001/001-G-concept-composition-synchronization-dependency-analysis.md)
 
-Next: **001-G — Concept Composition, Synchronization & Dependency Analysis**.
+Next: **001-H — Phase 001 Consolidation & Initial Concept Catalog**.
 
-The current provisional handoff to 001-G is the [Operational Principle Falsification Review](discovery/operational-principle-review.md) together with the full [Candidate Operational Principles](discovery/operational-principles.md). All eleven candidates remain provisional until composition/synchronization analysis and Phase 001 consolidation are complete.
+The current provisional handoff to 001-H is the [Concept Discovery index](discovery/index.md), especially the [Composition & Dependency Model](discovery/composition-dependency-model.md), [Candidate Synchronization Specification](discovery/synchronization-specification.md), and [Composition Risk Review](discovery/composition-risk-review.md).
+
+All eleven candidates are purpose-, independence-, operational-principle-, and composition-validated, but remain provisional until 001-H promotes accepted concept and synchronization authority.
