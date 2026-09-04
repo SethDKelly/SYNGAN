@@ -11,7 +11,7 @@ This directory is the canonical design knowledge bundle for SYNGAN.
 
 ## Progressive disclosure
 
-- [Authority](authority/index.md) — methodology, documentation governance, terminology, provenance, and network/external-dependency rules.
+- [Authority](authority/index.md) — methodology, documentation governance, terminology, source/provenance, network/external-dependency, and reproducibility rules.
 - [Problem Knowledge](problem/index.md) — problem, purpose, actors, outcomes and enterprise scale envelope.
 - [Domain Terminology](terminology/index.md) — canonical vocabulary and compatibility mappings.
 - [Accepted Concepts](concepts/index.md) — canonical concept purpose, ownership, actions, invariants and boundaries.
@@ -45,17 +45,14 @@ Completed in Phase 002:
 - [002-D — Generation Specification, Request/Condition Semantics & Output Completion](phases/002/002-D-generation-request-condition-output-completion.md)
 - [002-E — Evaluation Criterion, Evaluation & Evidence Specification](phases/002/002-E-evaluation-criterion-evaluation-evidence-specification.md)
 - [002-F — Execution, Attempt History, Failure & Recovery Semantics](phases/002/002-F-execution-attempt-failure-recovery-semantics.md)
+- [002-G — Provenance, Reproducibility Contract & Historical Binding Specification](phases/002/002-G-provenance-reproducibility-historical-binding-specification.md)
 
 002-B established the [Network and External Dependency Policy](authority/network-external-dependency-policy.md), including an offline/no-outbound-network design profile for supported core structured/tabular synthesis and explicit declaration of optional external dependencies.
 
-002-C established stable Learning commitment/source history, checkpoint-versus-Learned-State separation, distributed reusable Learned State semantics, non-mutating reuse, and explicit sensitivity/dependency boundaries.
-
-002-D established Generation commitment/request semantics, mandatory versus best-effort Conditions, direct-generation and Learned-State paths, required-Constraint completion rules, candidate-versus-completed output, and a semantic completion barrier distinct from physical materialization and Execution completion.
-
-002-E established Criterion question/answer-strength authority, method/coverage/uncertainty-aware Evaluation semantics, durable non-overstated Evidence, and the evidentiary contract used by Generation completion without conflating Evidence with authorization.
-
 002-F established logical Execution/Attempt identity, retry/resume/checkpoint safety, unknown-state and cancellation semantics, single semantic promotion, and platform-neutral operational history without equating physical job completion with domain completion.
 
-Next: **002-G — Provenance, Reproducibility Contract & Historical Binding Specification**.
+002-G deepened [Provenance](concepts/provenance.md) and established the [Reproducibility Contract](authority/reproducibility-contract.md), including stable historical identity, typed relationship semantics, exact/semantic/statistical/bounded/comparative reproduction classes, explicit insufficient-context outcomes, and materiality-bounded history that avoids copying complete data/model/telemetry payloads.
+
+Next: **002-H — Cross-Concept Invariant, Synchronization & Phase 002 Consolidation Review**.
 
 See [Phase 002 index](phases/002/index.md).
