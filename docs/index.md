@@ -12,8 +12,8 @@ This directory is the canonical design knowledge bundle for SYNGAN.
 ## Progressive disclosure
 
 - [Authority](authority/index.md) — methodology, documentation governance, terminology and source rules.
+- [Problem Knowledge](problem/index.md) — problem, purpose, actors, outcomes and enterprise scale envelope.
 - [Phases](phases/index.md) — phase plans, outcomes and exit reviews.
-- `problem/` — problem and actor knowledge, created as discovery proceeds.
 - `concepts/` — canonical concept specifications, created after concept discovery.
 - `synchronizations/` — cross-concept coordination knowledge.
 - `architecture/` — representation and implementation architecture, intentionally downstream of concept design.
@@ -29,4 +29,9 @@ A fact, definition, requirement, invariant, or design decision has one canonical
 
 Phase 001 — Design Foundation & Concept Discovery.
 
-Current work: [001-A — Design Authority, Methodology, OKF 0.2 & Documentation Governance](phases/001/001-A-design-authority-methodology-okf-documentation-governance.md).
+Completed:
+
+- [001-A — Design Authority, Methodology, OKF 0.2 & Documentation Governance](phases/001/001-A-design-authority-methodology-okf-documentation-governance.md)
+- [001-B — Problem, Purpose, Actors, Outcomes & Enterprise Scale Envelope](phases/001/001-B-problem-purpose-actors-outcomes-enterprise-scale-envelope.md)
+
+Next: **001-C — Domain Terminology & Synthetic-Data Semantic Inventory**.
