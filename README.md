@@ -27,26 +27,28 @@ See [`docs/architecture/index.md`](docs/architecture/index.md) and [`docs/phases
 Completed:
 
 - **004-A — Architecture Authority, Representation Principles, Layering & Dependency Direction**
+- **004-B — Public API, Resource/Handle Model, Workflow Composition & Semantic Mapping**
 
-004-A establishes the canonical [`architecture constitution`](docs/architecture/architecture-authority-representation-layering.md):
+004-A establishes the canonical [`architecture constitution`](docs/architecture/architecture-authority-representation-layering.md): architecture remains downstream of semantic/experience authority; logical identity stays separate from physical/platform locators; bounded control-plane state references distributed data-plane payloads; dependencies point inward; runtime/platform integrations remain adapters; Spark-native means distributed Spark-scale data behavior rather than universal Spark ML; and model/runtime convenience cannot create god-state ownership.
 
-- architecture remains downstream of authority, concepts, synchronizations, and experience;
-- representation convenience cannot redefine semantic ownership;
-- stable logical identity remains distinct from mutable physical/platform locators;
-- bounded control-plane state references large distributed data-plane payloads;
-- physical durability does not establish Learned State/output/Evidence promotion;
-- dependencies point inward toward stable semantic/control contracts;
-- platform/runtime integrations remain adapters rather than universal authority;
-- bidirectional semantic synchronization does not justify cyclic package dependencies;
-- supported offline/no-egress paths remain isolatable from optional network integrations;
-- Spark-native means distributed Spark-scale data semantics rather than universal Spark ML;
-- model-neutral semantics do not depend universally on CTGAN/GAN/PyTorch/HuggingFace/LLM/runtime families;
-- convenience Session/Context/Manager/Metadata/Engine-style facades cannot become god-state owners;
-- platform specialization may add capability but cannot silently weaken common guarantees;
-- architecture decisions use [`docs/decisions/`](docs/decisions/index.md) for durable rationale/supersession while current normative rules remain under `docs/architecture/`.
+004-B establishes the canonical [`typed public resource/handle architecture`](docs/architecture/public-api-resource-handle-workflow-semantic-mapping.md):
+
+- editable Learning/Generation/Evaluation specifications remain distinct from committed activity identities;
+- readiness/compatibility is contextual and inspectable rather than global mutable state;
+- committed activities expose durable typed handles that survive client/process turnover;
+- Learned State, completed synthetic output, and Evidence are promoted result resources distinct from model/DataFrame/metric payloads;
+- checkpoint/candidate/diagnostic material remains explicitly non-final;
+- Execution and ordered Attempt history remain operationally distinct from domain semantic state;
+- semantic commitment and operational submission remain separate transitions even when a convenience call combines them;
+- blocking/future-style helpers may exist, but process-local Future identity is not the canonical identity of long-running work;
+- payload access is explicit and Spark/distributed-scale safe rather than requiring driver collection;
+- `fit`/`generate`-style conveniences may exist without making runtime models/DataFrames the sole public contract;
+- one universal Session/Context/Result/Registry/Model/status object is rejected as canonical ownership.
+
+Decision rationale: [`ADR-0001 — Typed Resource/Handle Public API`](docs/decisions/ADR-0001-typed-resource-handle-public-api.md).
 
 Next:
 
-- **004-B — Public API, Resource/Handle Model, Workflow Composition & Semantic Mapping**
+- **004-C — Control-Plane Identity, Revision, State, Persistence & Historical Reference Architecture**
 
-No final Python package/module tree, public class hierarchy, persistence engine, Spark output-manifest/promotion mechanism, strategy plugin loader, scheduler/orchestrator, checkpoint/fencing mechanism, provenance store, authorization engine, egress-control technology, model registry, or deployment topology should be treated as settled until the relevant later Phase 004 group accepts it.
+No final Python package/module tree or exact public class names, persistence engine, identifier/version format, handle serialization, Spark output-manifest/promotion mechanism, strategy plugin loader, scheduler/orchestrator, checkpoint/fencing mechanism, provenance store, authorization engine, egress-control technology, model registry, or deployment topology should be treated as settled until the relevant later Phase 004 group accepts it.
