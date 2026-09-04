@@ -44,6 +44,7 @@ Completed in Phase 002:
 - [002-C — Learning & Learned State Specification](phases/002/002-C-learning-learned-state-specification.md)
 - [002-D — Generation Specification, Request/Condition Semantics & Output Completion](phases/002/002-D-generation-request-condition-output-completion.md)
 - [002-E — Evaluation Criterion, Evaluation & Evidence Specification](phases/002/002-E-evaluation-criterion-evaluation-evidence-specification.md)
+- [002-F — Execution, Attempt History, Failure & Recovery Semantics](phases/002/002-F-execution-attempt-failure-recovery-semantics.md)
 
 002-B established the [Network and External Dependency Policy](authority/network-external-dependency-policy.md), including an offline/no-outbound-network design profile for supported core structured/tabular synthesis and explicit declaration of optional external dependencies.
 
@@ -53,6 +54,8 @@ Completed in Phase 002:
 
 002-E established Criterion question/answer-strength authority, method/coverage/uncertainty-aware Evaluation semantics, durable non-overstated Evidence, and the evidentiary contract used by Generation completion without conflating Evidence with authorization.
 
-Next: **002-F — Execution, Attempt History, Failure & Recovery Semantics**.
+002-F established logical Execution/Attempt identity, retry/resume/checkpoint safety, unknown-state and cancellation semantics, single semantic promotion, and platform-neutral operational history without equating physical job completion with domain completion.
+
+Next: **002-G — Provenance, Reproducibility Contract & Historical Binding Specification**.
 
 See [Phase 002 index](phases/002/index.md).
