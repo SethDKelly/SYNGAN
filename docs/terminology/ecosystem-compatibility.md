@@ -1,6 +1,6 @@
 ---
 type: Compatibility Vocabulary
- title: SYNGAN Ecosystem Compatibility Vocabulary
+title: SYNGAN Ecosystem Compatibility Vocabulary
 status: active
 ---
 
