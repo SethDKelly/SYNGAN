@@ -10,9 +10,7 @@ status: active
 
 This directory preserves durable decision rationale, considered alternatives, compatibility consequences, and supersession history for material architecture/governance decisions.
 
-Decision records support canonical authority; they do not replace it.
-
-Current accepted architecture rules belong under [`docs/architecture/`](../architecture/index.md). An ADR explains **why** a material choice was made, which alternatives were considered, and what later record supersedes it when the decision changes.
+Decision records support canonical authority; they do not replace it. Current accepted architecture rules belong under [`docs/architecture/`](../architecture/index.md).
 
 ## Authority relationship
 
@@ -23,13 +21,14 @@ Interpret architecture knowledge using this order:
 3. accepted ADR rationale/history under `docs/decisions/`;
 4. phase records preserving design execution history.
 
-If an ADR summary conflicts with newer canonical architecture authority, the canonical architecture document governs current implementation and the ADR SHOULD be marked superseded or linked to the replacing decision.
+If an ADR conflicts with newer canonical architecture authority, the canonical architecture document governs current implementation and the ADR SHOULD be marked superseded or linked to its replacement.
 
 ## Active decisions
 
 - [ADR-0001 — Typed Resource/Handle Public API](ADR-0001-typed-resource-handle-public-api.md) — adopts typed specification/activity/result/Execution/history resource roles rather than a universal mutable Session, payload-only API, universal Spark ML model, generic Result object, or process-local Future as canonical identity.
 - [ADR-0002 — Immutable Semantic Snapshots & Versioned Lifecycle State](ADR-0002-immutable-semantic-snapshots-versioned-lifecycle-state.md) — separates stable resource identity, immutable semantic revision/commitment snapshots, mutable lifecycle state versions, and representation schema versions while requiring stale-write detection without mandating universal event sourcing.
 - [ADR-0003 — Sealed Manifest-Gated Distributed Output Promotion](ADR-0003-sealed-manifest-gated-output-promotion.md) — separates mutable distributed candidate materialization, immutable sealed candidate identity, and Generation semantic promotion so Evaluation binds the exact candidate while at most one completed output is established without requiring copy-on-promotion or exactly-once physical writes.
+- [ADR-0004 — Semantic Extension & Runtime Binding Separation](ADR-0004-semantic-extension-runtime-binding-separation.md) — separates Strategy/Evaluation method semantic authority from executable implementation bindings and Attempt-scoped runtime realization so multiple runtimes can preserve one semantic contract while exact implementation identity remains attributable.
 
 ## When to create an ADR
 
@@ -65,19 +64,11 @@ Canonical architecture documents affected
 Supersedes / superseded by
 ```
 
-Exact filenames/ID formatting may be refined later, but stable identifiers SHOULD be used once ADRs are referenced externally.
-
 ## Lifecycle
 
-Decision records SHOULD use documentation lifecycle states such as:
+Decision records SHOULD use documentation lifecycle states such as `proposed`, `active`, `deprecated`, `superseded`, or `archived`.
 
-- `proposed`;
-- `active`;
-- `deprecated`;
-- `superseded`;
-- `archived`.
-
-A replaced ADR SHOULD retain historical rationale and link to the replacing decision rather than being silently rewritten to make the past appear different.
+A replaced ADR SHOULD retain historical rationale and link to the replacing decision rather than being silently rewritten.
 
 ## Anti-duplication rule
 
