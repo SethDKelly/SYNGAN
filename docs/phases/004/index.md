@@ -19,6 +19,7 @@ Phase 004 translates SYNGAN's accepted concept, synchronization, and experience 
 - [004-A Architecture Constitution](../../architecture/architecture-authority-representation-layering.md)
 - [004-B Public API/Resource Architecture](../../architecture/public-api-resource-handle-workflow-semantic-mapping.md)
 - [004-C Control-Plane Identity/State Architecture](../../architecture/control-plane-identity-revision-state-persistence-historical-reference.md)
+- [004-D Spark Data Boundary/Manifest/Promotion Architecture](../../architecture/spark-data-boundary-source-output-reference-distributed-materialization-manifest-promotion.md)
 
 ## Groups
 
@@ -27,8 +28,8 @@ Phase 004 translates SYNGAN's accepted concept, synchronization, and experience 
 | **004-A** | [**Architecture Authority, Representation Principles, Layering & Dependency Direction**](004-A-architecture-authority-representation-layering-dependency-direction.md) | **complete** |
 | **004-B** | [**Public API, Resource/Handle Model, Workflow Composition & Semantic Mapping**](004-B-public-api-resource-handle-workflow-semantic-mapping.md) | **complete** |
 | **004-C** | [**Control-Plane Identity, Revision, State, Persistence & Historical Reference Architecture**](004-C-control-plane-identity-revision-state-persistence-historical-reference-architecture.md) | **complete** |
-| **004-D** | **Spark Data Boundary, Source/Output Reference, Distributed Materialization, Manifest & Promotion Architecture** | **next** |
-| 004-E | Strategy Extension, Learning/Generation/Evaluation Runtime & Adapter Architecture | planned |
+| **004-D** | [**Spark Data Boundary, Source/Output Reference, Distributed Materialization, Manifest & Promotion Architecture**](004-D-spark-data-boundary-source-output-reference-distributed-materialization-manifest-promotion-architecture.md) | **complete** |
+| **004-E** | **Strategy Extension, Learning/Generation/Evaluation Runtime & Adapter Architecture** | **next** |
 | 004-F | Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Architecture | planned |
 | 004-G | Evaluation/Evidence, Provenance, Reproducibility & Historical Query Architecture | planned |
 | 004-H | Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Architecture | planned |
@@ -51,27 +52,35 @@ It accepts typed editable specifications, contextual readiness results, durable 
 
 004-C established [Control-Plane Identity, Revision, State, Persistence & Historical Reference Architecture](../../architecture/control-plane-identity-revision-state-persistence-historical-reference.md) and [ADR-0002 — Immutable Semantic Snapshots & Versioned Lifecycle State](../../decisions/ADR-0002-immutable-semantic-snapshots-versioned-lifecycle-state.md).
 
+It separates resource identity, immutable semantic revisions/commitment snapshots, mutable conflict-versioned lifecycle state, and representation schema versions; establishes logical persistence ownership; requires exact historical resolution and stale-write detection; and preserves bounded control-plane history without mandating one persistence technology or universal event sourcing.
+
+### 004-D
+
+004-D established [Spark Data Boundary, Source/Output Reference, Distributed Materialization, Manifest & Promotion Architecture](../../architecture/spark-data-boundary-source-output-reference-distributed-materialization-manifest-promotion.md) and [ADR-0003 — Sealed Manifest-Gated Distributed Output Promotion](../../decisions/ADR-0003-sealed-manifest-gated-output-promotion.md).
+
 Key accepted architecture rules include:
 
-- resource identity, semantic revision/commitment snapshot, lifecycle state version, and representation schema version remain separate;
-- stable logical IDs are typed, durable, namespace-capable where required, independent of mutable locators/platform IDs, and never reused for materially different resources;
-- bindable Data Meaning/Constraint/Strategy/Criterion revisions become immutable in material meaning;
-- persisted draft/specification identity remains distinct from committed Learning/Generation/Evaluation occurrence identity;
-- each committed activity has an immutable commitment snapshot and mutable owner-specific current lifecycle state;
-- Learned State/output/Evidence historical identity remains stable while future-use/applicability lifecycle changes separately;
-- material lifecycle writes require conflict/stale-write detection rather than silent last-writer-wins;
-- material transition history is retained without requiring universal event sourcing;
-- logical persistence ownership remains separated among semantic authorities, committed activities, promoted results, Execution/Attempts, Provenance, and derived indexes even when one physical database is shared;
-- derived read/search indexes do not gain canonical write authority;
-- coupled semantic transitions require detectable/recoverable consistency across crashes/retries without mandating one global distributed transaction technology;
-- exact historical reference resolution never silently substitutes current/latest state;
-- withheld/redacted, unavailable, unknown/indeterminate, invalid-reference and absent states remain distinguishable;
-- retained identity/tombstone semantics prevent payload expiration from erasing historical existence or enabling ID reuse;
-- correction/supersession preserves authority boundaries and auditability;
-- representation schema migration remains separate from semantic revision;
-- canonical control-plane state remains bounded by resources/revisions/material transitions rather than row/task/log/tensor volume.
-
-004-C intentionally does not choose ID encoding, database technology, physical schemas, event-sourcing strategy, transaction/outbox implementation, retention periods, source fingerprints, output manifests, provenance store, authorization implementation, or serialized handle format.
+- Spark DataFrames are distributed access objects, not durable source/output identity;
+- mutable source selectors such as table names, paths, queries, aliases, or DataFrames must resolve to stable source-state identity/read boundaries before committed work relies on them;
+- provider-native immutable snapshots, materialized snapshots, immutable manifests, fingerprints with explicit strength, or external authoritative snapshot identities may satisfy source identity without requiring one universal full-corpus hash;
+- stable source identity must also provide a read binding sufficient to prevent execution from silently reading a later/mixed mutable source state;
+- source snapshotting/manifesting remains distributed preparation rather than fabricated Learning;
+- physical Spark/storage schema stays distinct from Data Meaning;
+- typed source/candidate/completed-output reference roles remain distinguishable even if resolver infrastructure is shared;
+- manifests are representation mechanisms and use bounded control-plane roots with distributed component indexes/provider snapshots where scale requires;
+- candidate materialization is mutable/open while writers are active, then establishes an immutable sealed candidate snapshot before required Evaluation or promotion relies on it;
+- sealing establishes physical extent/integrity/immutability to a declared strength but does not establish Generation completion;
+- Evidence used for Generation completion must bind the exact sealed candidate evaluated;
+- open, sealed-unpromoted, failed, abandoned, and quarantined candidates remain outside ordinary completed-output discovery;
+- stale writers must be fenceable, while duplicate physical computation remains permissible when candidate membership and semantic authority remain unambiguous;
+- Generation promotion is a separate idempotent/fenced control-plane transition that may create at most one completed logical output;
+- promotion may reuse the sealed candidate bytes in place and does not universally require copying distributed rows to a new final location;
+- completed-output identity remains distinct from its Spark DataFrame/table/file/component representation;
+- arbitrary downstream Spark transformations do not inherit completed-output identity or canonical Provenance automatically;
+- relocation/replication/compaction/reserialization may preserve output identity only under explicit equivalence/integrity semantics;
+- physical row/partition/file order does not define logical identity unless ordering is semantically material;
+- reference resolution and snapshot/promotion data movement remain authorization/no-egress aware;
+- no concrete Spark table/file provider, manifest serialization, hash algorithm, or fencing technology is selected yet.
 
 ## Phase 004 guardrails
 
@@ -82,15 +91,17 @@ Phase 004 MUST NOT:
 - make one runtime/platform mandatory unless the semantic contract requires it;
 - force ordinary enterprise source/output materialization to driver-local memory;
 - make network/resource acquisition implicit;
-- treat physical storage existence as semantic promotion;
+- treat physical storage existence or manifest sealing as semantic promotion;
 - equate platform exactly-once claims with SYNGAN semantic promotion;
 - turn Provenance into a shadow copy of all domain/runtime data;
 - make security redaction falsify historical existence;
 - create package dependency cycles merely because semantic synchronizations are bidirectional;
-- make process-local object/Future identity the durable identity of distributed work;
+- make process-local object/Future/DataFrame identity the durable identity of distributed work or output;
 - collapse semantic revision, lifecycle state version, and storage schema version into one ambiguous field;
 - allow derived indexes or mutable aliases to become canonical historical truth;
 - use silent last-writer-wins for material semantic/lifecycle authority;
+- allow Evaluation completion Evidence to bind an open/mutable candidate when exact candidate identity is required;
+- require row-copying or exactly-once physical writes merely to express semantic finality;
 - jump prematurely into implementation task breakdown before architecture boundaries are accepted.
 
 ## Phase 004 exit target
@@ -111,4 +122,4 @@ without reopening core semantics.
 
 ## Current next phase
 
-**004-D — Spark Data Boundary, Source/Output Reference, Distributed Materialization, Manifest & Promotion Architecture**
+**004-E — Strategy Extension, Learning/Generation/Evaluation Runtime & Adapter Architecture**
