@@ -16,6 +16,7 @@ Experience documents define how actors discover, prepare, commit, observe, inspe
 - [Data Meaning, Constraint & Strategy Preparation](data-meaning-constraint-strategy-preparation.md) — how actors review declared/inferred/unresolved meaning, determine Constraint applicability/handling, compare Strategy capabilities/dependencies, understand contextual compatibility, and reach a reviewable commitment-ready state.
 - [Learning & Learned State Lifecycle](learning-learned-state-lifecycle.md) — how actors commit/observe/recover Learning, distinguish checkpoints from semantic results, establish/inspect Learned State, and manage reuse/restriction/retirement/invalidation without conflating logical state with model artifacts.
 - [Generation Request, Condition, Validation & Output Promotion](generation-request-condition-validation-output-promotion.md) — how actors define/commit Generation intent, distinguish mandatory and best-effort Conditions, observe partial/candidate output, inspect requirement-specific validation Evidence, and promote exactly one authoritative completed logical output only at semantic completion.
+- [Evaluation, Evidence & Review](evaluation-evidence-review.md) — how actors begin from evaluative questions, select compatible methods, understand coverage/uncertainty/claim strength, interpret and compare Evidence, review multidimensional fitness, and preserve the boundary between findings and external decisions.
 
 Additional experience authorities will be added by later Phase 003 groups.
 
@@ -55,10 +56,16 @@ Phase 003 experience authority MUST preserve these rules:
 - physical output/materialization completion remains distinct from Generation semantic completion;
 - partial, complete candidate, abandoned/quarantined, and completed output remain distinguishable;
 - requirement-specific Evidence strength remains visible when it participates in Generation completion;
-- Evaluation success does not automatically mean a Condition/Constraint passed;
 - final output promotion occurs only after all mandatory Generation completion obligations are satisfied;
 - one successful Generation exposes one authoritative logical completed output even when physical realization is distributed/retried;
-- network/external dependencies remain visible before commitment and throughout Learning/Generation/Learned State reuse;
+- Evaluation Criterion, Evaluation, Evidence, and external decision authority remain distinct;
+- available metrics do not silently define the evaluative question;
+- Evaluation success remains distinct from favorable subject Evidence;
+- sampling/approximation/coverage/uncertainty and claim-strength limits remain inspectable;
+- fidelity, utility, validity, privacy/disclosure risk, and other explicit Criteria remain distinct unless an explicit decision rule combines them;
+- missing, conflicting, stale, superseded, inapplicable, and invalidated Evidence remain distinguishable;
+- privacy/disclosure-risk Evidence remains threat-model scoped and does not imply approval or universal privacy;
+- network/external dependencies remain visible before commitment and throughout Learning/Generation/Evaluation/Learned State reuse;
 - Evidence remains observation authority, not release/use approval;
 - large-data workflows remain understandable without mandatory full driver-local materialization;
 - programmatic and human-facing experiences preserve equivalent semantic distinctions even when their presentation differs.
