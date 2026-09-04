@@ -23,29 +23,27 @@ Completed:
 - **002-C — Learning & Learned State Specification**
 - **002-D — Generation Specification, Request/Condition Semantics & Output Completion**
 - **002-E — Evaluation Criterion, Evaluation & Evidence Specification**
+- **002-F — Execution, Attempt History, Failure & Recovery Semantics**
 
 Current design includes:
 
 - supported core structured/tabular synthesis without required outbound network access;
 - explicit Strategy dependency/network profiles;
-- Learning commitment with stable source/semantic/Strategy/Constraint context;
-- checkpoint/intermediate state separated from completed Learned State;
-- Learned State that may be distributed/composite, reused non-mutatively, and is not presumed private or release-safe;
-- Generation Request and Condition as Generation-owned semantics rather than separate concepts;
-- direct-generation and Learned-State generation paths;
-- mandatory versus best-effort Condition semantics;
-- required Constraint handling that cannot be silently weakened;
-- candidate/partial materialization kept distinct from completed synthetic output;
-- a Generation completion barrier requiring mandatory request/Condition/Constraint/dependency/provenance obligations before output promotion;
-- Evaluation Criteria that define questions and required answer strength independently of metrics;
-- Evaluation semantics that preserve scope, coverage, sampling/approximation, uncertainty, and method limitations;
-- durable Evidence whose claim strength cannot exceed what the method actually established;
-- explicit distinction between successful Evaluation and favorable subject outcome;
-- Generation-completion validation that can use distributed exhaustive, bounded, statistical, or approximate methods only when their evidentiary strength matches the committed requirement;
-- privacy/disclosure-risk Evidence that remains threat-model scoped and distinct from privacy guarantees or release approval.
+- stable Learning commitment and distributed/composite Learned State;
+- Generation Request/Condition semantics, direct and Learned-State generation paths, and a semantic output-promotion barrier;
+- Criterion/Evaluation/Evidence separation with explicit coverage, uncertainty, and claim-strength limits;
+- one logical Execution independent of Spark/Databricks/Kubernetes/PyTorch physical jobs;
+- Attempt as subordinate operational history rather than a platform-run synonym;
+- retry/resume that preserves committed domain semantics;
+- checkpoint/intermediate state that cannot become Learned State, completed output, or Evidence merely by being durable;
+- explicit partial operational success and unknown/indeterminate platform state;
+- contextual retryability, recovery reconciliation, and cancellation-race semantics;
+- single semantic promotion instead of an unrealistic exactly-once physical-computation guarantee;
+- duplicate physical work permitted only when canonical Learned State/output/Evidence effects remain unambiguous;
+- operational history that remains enterprise-scale control-plane state rather than a copy of every task/log/telemetry event.
 
 Next:
 
-- **002-F — Execution, Attempt History, Failure & Recovery Semantics**
+- **002-G — Provenance, Reproducibility Contract & Historical Binding Specification**
 
-No Python package, model runtime, Spark ML mapping, persistence format, plugin architecture, output storage/publication mechanism, evidence/reporting technology, or model-hub/network integration should be treated as settled until the relevant downstream design phases establish it.
+No Python package, model runtime, Spark ML mapping, persistence format, plugin architecture, scheduler/orchestrator, checkpoint technology, output storage/publication mechanism, evidence/reporting technology, or model-hub/network integration should be treated as settled until the relevant downstream design phases establish it.
