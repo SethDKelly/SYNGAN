@@ -24,6 +24,7 @@ Phase 004 translates SYNGAN's accepted concept, synchronization, and experience 
 - [004-F Execution/Recovery Architecture](../../architecture/execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation.md)
 - [004-G Evaluation/Evidence/Provenance/Reproducibility Architecture](../../architecture/evaluation-evidence-provenance-reproducibility-historical-query.md)
 - [004-H Dependency/Security Architecture](../../architecture/dependency-resolution-offline-no-egress-authorization-redaction-enterprise-security.md)
+- [004-I Deployment/Platform Architecture](../../architecture/deployment-scalability-observability-portability-compatibility-platform-integration.md)
 
 ## Groups
 
@@ -37,8 +38,8 @@ Phase 004 translates SYNGAN's accepted concept, synchronization, and experience 
 | **004-F** | [**Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Architecture**](004-F-execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation-architecture.md) | **complete** |
 | **004-G** | [**Evaluation/Evidence, Provenance, Reproducibility & Historical Query Architecture**](004-G-evaluation-evidence-provenance-reproducibility-historical-query-architecture.md) | **complete** |
 | **004-H** | [**Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Architecture**](004-H-dependency-resolution-offline-no-egress-authorization-redaction-enterprise-security-architecture.md) | **complete** |
-| **004-I** | **Deployment, Scalability, Observability, Portability, Compatibility & Platform Integration Architecture** | **next** |
-| 004-J | Cross-Architecture Invariant Audit, Decision Consolidation & Phase 004 Exit | planned |
+| **004-I** | [**Deployment, Scalability, Observability, Portability, Compatibility & Platform Integration Architecture**](004-I-deployment-scalability-observability-portability-compatibility-platform-integration-architecture.md) | **complete** |
+| **004-J** | **Cross-Architecture Invariant Audit, Decision Consolidation & Phase 004 Exit** | **next** |
 
 ## Completed architecture refinement
 
@@ -84,53 +85,60 @@ Decision: [ADR-0006 — Typed Canonical Provenance & Derived Historical Projecti
 
 ### 004-H — Dependency resolution, offline/no-egress and enterprise security
 
-Established [Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Architecture](../../architecture/dependency-resolution-offline-no-egress-authorization-redaction-enterprise-security.md).
+Established explicit dependency requirement/resolution/integrity/trust/authorization distinctions; local/offline provisioning without hidden acquisition; typed network/egress behavior; action-oriented current authorization; non-bearing handles; scoped Attempt capabilities; secret isolation; truthful withholding/redaction; protected query projections; retry security revalidation; multi-security-domain isolation; and security-audit separation.
+
+Decision: [ADR-0007 — Explicit Dependency Resolution & Scoped Capability Security](../../decisions/ADR-0007-explicit-dependency-resolution-scoped-capability-security.md).
+
+### 004-I — Deployment, scalability, observability, portability, compatibility and platform integration
+
+Established [Deployment, Scalability, Observability, Portability, Compatibility & Platform Integration Architecture](../../architecture/deployment-scalability-observability-portability-compatibility-platform-integration.md).
 
 Key accepted rules include:
 
-- dependency requirement, availability, integrity, compatibility, trust/approval, authorization, network and egress remain distinct;
-- mutable dependency locators do not substitute for exact historical identity;
-- package/artifact acquisition is explicit provisioning and never hidden runtime fallback;
-- supported offline/no-egress workflows can operate without outbound network after approved local provisioning;
-- egress categories/destinations remain explicit and separate from generic network capability;
-- current authorization is action/resource/context specific and does not redefine semantic compatibility;
-- commit-time authorization does not become permanent permission, while revocation does not rewrite history;
-- durable resource handles are identifiers rather than bearer credentials;
-- Attempt runtimes receive scoped capabilities bounded by committed semantics, current authorization and deployment capability;
-- source, Learned State, candidate/output, diagnostic and control-plane/history access can be independently authorized;
-- secret values are excluded from canonical semantic/history state and injected through bounded secret-resolution capabilities;
-- redaction/withholding is view-time and preserves `absent`/`unknown`/`unavailable`/`withheld` distinctions where disclosure permits;
-- derived historical/search/query/reproducibility projections inherit the same disclosure/security requirements as canonical resources;
-- relationship/count/graph-shape leakage must be considered when existence itself is sensitive;
-- retry/resume revalidates current dependency/security permissions without changing committed semantics;
-- revocation and Attempt fencing are complementary controls;
-- semantic completion does not imply read/export/release authorization;
-- multi-tenant/security-domain isolation persists across shared physical stores, caches and indexes;
-- security audit remains distinct from Provenance and cannot override canonical semantic state;
-- no specific IAM, policy engine, secret manager, KMS, network, DLP or artifact-repository technology is made universal.
+- portable semantic/application/control contracts with capability-negotiated platform adapters;
+- platform brand does not imply required guarantees and missing capability requires explicit fallback/limitation/incompatibility/indeterminacy;
+- logical deployment roles can be colocated for development or separated/scaled in enterprise deployment without semantic changes;
+- coordinators recover from durable canonical state and platform correlations rather than process-local sessions;
+- canonical control state remains bounded while bulk source/output/Learned-State/checkpoint/diagnostic payloads remain distributed;
+- scalability is Strategy/workload and multi-dimensional rather than a generic row-count promise;
+- client, coordinator, persistence, projection, runtime, storage, dependency, security and observability failures remain distinguishable;
+- canonical semantic/operational history, platform telemetry and security audit are distinct information lanes;
+- logs/metrics/traces provide correlation/diagnosis and never become semantic completion authority;
+- supported offline/no-egress profiles do not depend on public package/model lookup or optional external telemetry;
+- platform-native identities remain external references rather than SYNGAN resource identity;
+- Databricks is an important managed target but not package/semantic identity;
+- Databricks/native retries, versioning, lineage, ML metadata, jobs, catalog/security and observability map through adapters and remain subordinate to SYNGAN authority;
+- generic/self-managed Spark remains a legitimate target where required guarantees are supplied;
+- non-Spark model runtimes remain valid behind scale-compatible distributed bridges;
+- compatibility is multi-axis across API/schema, semantic revision, implementation binding, SPI, codecs, manifests/checkpoints, Spark/runtime/platform versions and dependencies;
+- rolling/mixed component versions require explicit protocol/schema compatibility;
+- private/offline package/plugin/dependency provisioning remains supported;
+- deployment must be able to enforce required 004-H workload identity, storage, secret, network/egress, tenant and query/index security guarantees or report the limitation;
+- retention/cleanup cannot silently destroy still-authoritative or historically required state.
 
-Decision: [ADR-0007 — Explicit Dependency Resolution & Scoped Capability Security](../../decisions/ADR-0007-explicit-dependency-resolution-scoped-capability-security.md).
+Decision: [ADR-0008 — Portable Core & Capability-Negotiated Platform Adapters](../../decisions/ADR-0008-portable-core-capability-negotiated-platform-adapters.md).
 
 ## Phase 004 guardrails
 
 Phase 004 MUST NOT:
 
-- redesign accepted concept semantics for package/runtime/security convenience;
-- erase typed semantic/operational/security distinctions behind generic status/session/plugin/result/metadata/security objects;
-- make one runtime/platform/database/graph/security technology mandatory unless semantics require it;
+- redesign accepted concept semantics for package/runtime/security/platform convenience;
+- erase typed semantic/operational/security distinctions behind generic status/session/plugin/result/metadata/security/platform objects;
+- make one runtime/platform/database/graph/security/observability technology mandatory unless semantics require it;
 - require ordinary full driver-local source/output/Learned-State/diagnostic/telemetry materialization;
 - make dependency/network/resource acquisition implicit;
-- treat runtime success, file existence, manifest sealing, checkpoint durability, plugin output, authorization grant, or query-index state as semantic promotion;
+- treat runtime success, file existence, manifest sealing, checkpoint durability, plugin output, authorization grant, platform job state, telemetry or query-index state as semantic promotion;
 - equate platform retry/exactly-once claims with SYNGAN semantic authority;
 - allow stale Attempts to mutate current framework-owned state after supersession;
-- use lease expiry, bearer-handle possession, or last-writer-wins as sole protection for material authority;
-- assume unknown external effects or authorization states are safe merely to permit retry;
-- permit runtime/platform/lineage/security adapters to rewrite committed semantics or canonical Provenance/results directly;
-- duplicate canonical concept payloads into a master metadata/security graph;
-- store reproducibility or security as unqualified global Boolean truth;
+- use lease expiry, bearer-handle possession or last-writer-wins as sole protection for material authority;
+- assume unknown external effects, authorization or platform capability states are safe merely to permit retry;
+- permit runtime/platform/lineage/security/observability adapters to rewrite committed semantics or canonical Provenance/results directly;
+- duplicate canonical concept payloads into a master metadata/security/platform graph;
+- store reproducibility, security or compatibility as unqualified global Boolean truth;
 - infer causal/quality conclusions from historical differences without Evidence;
 - expose restricted historical facts through derived query/index paths;
-- jump into implementation task breakdown before Phase 004 architecture is complete.
+- make managed-platform convenience a requirement for the portable semantic/core contract;
+- jump into implementation task breakdown before 004-J completes the cross-architecture exit audit.
 
 ## Phase 004 exit target
 
@@ -150,4 +158,4 @@ without reopening core semantics.
 
 ## Current next phase
 
-**004-I — Deployment, Scalability, Observability, Portability, Compatibility & Platform Integration Architecture**
+**004-J — Cross-Architecture Invariant Audit, Decision Consolidation & Phase 004 Exit**
