@@ -32,6 +32,7 @@ If an ADR conflicts with newer canonical architecture authority, the canonical a
 - [ADR-0005 — Attempt-Epoch Fencing & Recoverable At-Least-Once Execution](ADR-0005-attempt-epoch-fencing-recoverable-at-least-once-execution.md) — adopts at-least-once physical realization with ordered Attempt epochs, stale-writer fencing, operation-scoped idempotency, immutable checkpoints, explicit reconciliation, and cancellation races resolved as operational facts rather than guessed terminal state.
 - [ADR-0006 — Typed Canonical Provenance & Derived Historical Projections](ADR-0006-typed-provenance-canonical-derived-history-projections.md) — keeps canonical Provenance as typed stable-reference relationship assertions while historical navigation/search/comparison and reproducibility views remain rebuildable derived projections over canonical resource owners.
 - [ADR-0007 — Explicit Dependency Resolution & Scoped Capability Security](ADR-0007-explicit-dependency-resolution-scoped-capability-security.md) — separates committed dependency/network/egress semantics, environmental resolution, current action-oriented authorization, and scoped runtime capabilities while keeping durable handles non-bearing, secrets out of canonical history, and derived query projections subject to the same disclosure controls as source records.
+- [ADR-0008 — Portable Core & Capability-Negotiated Platform Adapters](ADR-0008-portable-core-capability-negotiated-platform-adapters.md) — keeps semantic/application/control contracts platform-neutral while managed/generic/private deployments advertise guarantees and bind through explicit capability negotiation, semantics-preserving fallback or declared incompatibility rather than platform-name assumptions or silent degradation.
 
 ## When to create an ADR
 
@@ -44,7 +45,7 @@ Use an ADR when a decision is materially consequential and benefits from preserv
 - commits to a distributed materialization/promotion mechanism;
 - chooses an extension/runtime/plugin boundary;
 - selects execution/recovery/fencing semantics;
-- selects provenance/history/security integration architecture;
+- selects provenance/history/security/platform integration architecture;
 - introduces significant migration or portability consequences;
 - supersedes a previously accepted architecture decision.
 
