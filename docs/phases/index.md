@@ -37,8 +37,8 @@ See [Phase 004 index](004/index.md).
 - [004-E — Strategy Extension, Learning/Generation/Evaluation Runtime & Adapter Architecture](004/004-E-strategy-extension-learning-generation-evaluation-runtime-adapter-architecture.md) — complete
 - [004-F — Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Architecture](004/004-F-execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation-architecture.md) — complete
 - [004-G — Evaluation/Evidence, Provenance, Reproducibility & Historical Query Architecture](004/004-G-evaluation-evidence-provenance-reproducibility-historical-query-architecture.md) — complete
-- **004-H — Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Architecture — next**
-- 004-I — Deployment, Scalability, Observability, Portability, Compatibility & Platform Integration Architecture
+- [004-H — Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Architecture](004/004-H-dependency-resolution-offline-no-egress-authorization-redaction-enterprise-security-architecture.md) — complete
+- **004-I — Deployment, Scalability, Observability, Portability, Compatibility & Platform Integration Architecture — next**
 - 004-J — Cross-Architecture Invariant Audit, Decision Consolidation & Phase 004 Exit
 
 Current architecture authority includes:
@@ -50,7 +50,8 @@ Current architecture authority includes:
 - [Strategy Extension, Learning/Generation/Evaluation Runtime & Adapter Architecture](../architecture/strategy-extension-learning-generation-evaluation-runtime-adapter.md)
 - [Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Architecture](../architecture/execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation.md)
 - [Evaluation/Evidence, Provenance, Reproducibility & Historical Query Architecture](../architecture/evaluation-evidence-provenance-reproducibility-historical-query.md)
+- [Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Architecture](../architecture/dependency-resolution-offline-no-egress-authorization-redaction-enterprise-security.md)
 
-Active ADR rationale includes ADR-0001 through [ADR-0006 — Typed Canonical Provenance & Derived Historical Projections](../decisions/ADR-0006-typed-provenance-canonical-derived-history-projections.md).
+Active ADR rationale includes ADR-0001 through [ADR-0007 — Explicit Dependency Resolution & Scoped Capability Security](../decisions/ADR-0007-explicit-dependency-resolution-scoped-capability-security.md).
 
 Representation/architecture is the active design layer. Implementation task breakdown remains downstream until Phase 004 establishes the necessary boundaries.
