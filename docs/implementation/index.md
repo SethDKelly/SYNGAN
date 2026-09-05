@@ -22,6 +22,7 @@ Implementation authority is downstream of the [Phase 004 Consolidated Architectu
 - [Public Resource API, Control-Plane Identity, State, Persistence, Transactions & Migration Implementation Plan](public-resource-control-plane-identity-state-persistence-transactions-migration-plan.md) — 005-D future public reference/handle model, identity/version primitives, SQL control persistence, CAS/transactions/outbox and migration contract.
 - [Spark Data Boundary, Source/Output References, Manifest, Materialization & Promotion Implementation Plan](spark-data-boundary-source-output-reference-manifest-materialization-promotion-plan.md) — 005-E future Spark selector/access, exact source-state, manifest/candidate/sealed-snapshot and output-promotion plan.
 - [Strategy/Method Extension SPI, Learning/Generation/Evaluation Runtime & Learned-State Implementation Plan](strategy-method-extension-spi-learning-generation-evaluation-runtime-learned-state-plan.md) — 005-F future binding/SPI/discovery/runtime invocation and Learned-State representation/codec plan.
+- [Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Implementation Plan](execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation-plan.md) — 005-G future Execution/Attempt epochs, writer fencing, launch reconciliation, checkpoint/recovery, cancellation and operational-completion plan.
 - [Phase 005 navigator](../phases/005/index.md) — current planning sequence.
 
 ## Authority relationship
@@ -56,8 +57,9 @@ For a material planning or later implementation task, begin with:
 6. [005-D control-plane authority](public-resource-control-plane-identity-state-persistence-transactions-migration-plan.md) whenever durable identity, public handles, canonical state, persistence, transactions, historical resolution, or migration are involved;
 7. [005-E Spark/data boundary plan](spark-data-boundary-source-output-reference-manifest-materialization-promotion-plan.md) whenever Spark selectors, exact source state, manifests, candidates, sealed snapshots, output representations or Generation promotion are involved;
 8. [005-F runtime/SPI/Learned-State plan](strategy-method-extension-spi-learning-generation-evaluation-runtime-learned-state-plan.md) whenever executable bindings, extension discovery, runtime invocation, Learned-State physical representation/loading or Evaluation-method runtime are involved;
-9. only the detailed architecture/concept/experience documents directly linked by the active slice;
-10. ADRs only when rationale/supersession history is needed.
+9. [005-G Execution/recovery plan](execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation-plan.md) whenever Attempt lifecycle, writer fencing, launch reconciliation, checkpoints, recovery, cancellation or operational completion are involved;
+10. only the detailed architecture/concept/experience documents directly linked by the active slice;
+11. ADRs only when rationale/supersession history is needed.
 
 Do not load the whole design corpus by default.
 
@@ -85,19 +87,7 @@ Phase record: [005-C](../phases/005/005-C-source-topology-module-package-boundar
 
 ### 005-D — Public/control-plane identity, persistence and migration
 
-Established the future shared durable control-plane substrate for all later slices:
-
-- `AuthorityId`, UUIDv4 `ResourceId`, typed `ResourceRef`, scoped `RevisionNumber`/`RevisionRef`, `SnapshotId`, `StateVersion` and `SchemaVersion` as distinct axes;
-- frozen standard-library value/domain/public types rather than ORM objects as canonical resources;
-- planned `LearningSpec`, `GenerationSpec`, `EvaluationSpec`, typed handles/views and `SynGANClient` facade roles;
-- typed historical resolution including absent/unavailable/unknown/invalid/withheld distinctions;
-- explicit versioned JSON codecs and no pickle for canonical control/wire state;
-- owner-specific persistence ports rather than a universal MetadataStore/CRUD registry;
-- SQLAlchemy Core 2.x + Alembic 1.x planned built-in SQL adapter, PostgreSQL reference production backend, SQLite local/test backend and Psycopg 3 driver family;
-- optional SQL/PostgreSQL persistence capability isolation from base `syngan`;
-- expected-version CAS, bounded transactions/locks, operation-scoped idempotency support and transactional outbox/durable intent;
-- migration policy preserving immutable history;
-- V1/V2/V4 and AF-03/05/06/16/17 verification mapping.
+Established the future shared durable control-plane substrate: distinct AuthorityId/ResourceId/ResourceRef/revision/SnapshotId/StateVersion/SchemaVersion axes, frozen value/public types, typed historical resolution, owner-specific persistence ports, SQLAlchemy Core/Alembic/PostgreSQL/SQLite/Psycopg persistence plan, CAS/transactions/idempotency/outbox, and migration rules preserving immutable history.
 
 No SQL schema, migration or persistence implementation was created by 005-D.
 
@@ -105,19 +95,7 @@ Phase record: [005-D](../phases/005/005-D-public-resource-api-control-plane-iden
 
 ### 005-E — Spark data boundary, manifests and promotion
 
-Established the future distributed-data implementation plan:
-
-- optional `spark` capability isolation from base `syngan`;
-- Spark DataFrame/table/path/query selectors remain access instructions rather than durable identity;
-- exact committed source state uses 005-D `ResourceRef`-based `SourceStateRef` values;
-- arbitrary DataFrame/query/mutable-locator inputs default to distributed snapshot preparation before commitment unless an adapter proves an exact stable native read binding;
-- bounded manifest roots with distributed/provider-native component indexes;
-- portable manifested-Parquet profile as the first generic file representation plan;
-- candidate materialization, sealed data snapshot and logical Generation output remain distinct;
-- exact sealed snapshot is the subject for required completion Evaluation;
-- future write/seal APIs reserve the writer-fence seam owned by 005-G;
-- Generation promotion reuses 005-D CAS/transactions/idempotency/outbox and may be metadata-only;
-- V5 and AF-03/04/08/13/17 plus future AF-07 integration are mapped.
+Established the future exact-source and distributed-data plan: optional Spark isolation, SourceStateRef binding, snapshot preparation for mutable selectors, bounded manifests/distributed indexes, manifested-Parquet generic profile, candidate/sealed-snapshot/output separation, writer-fence seam, and metadata-only idempotent Generation promotion.
 
 No PySpark package, Spark adapter, manifest, migration, test or storage materialization was created by 005-E.
 
@@ -125,24 +103,35 @@ Phase record: [005-E](../phases/005/005-E-spark-data-boundary-source-output-refe
 
 ### 005-F — Runtime extension, SPI and Learned-State planning
 
-Established the future runtime implementation plan:
+Established revisioned Strategy/Evaluation-method implementation bindings, RuntimeSpiVersion, Protocol-based activity-specific adapters, explicit composition plus optional lazy entry-point discovery, immutable Attempt invocation, narrow runtime ports, Learned-State candidate/representation/codec separation, distributed loading, direct Generation and optional Spark/PyTorch runtime families.
 
-- stable revisioned Strategy/Evaluation-method implementation bindings separate from semantic authority;
-- explicit `RuntimeSpiVersion` separate from binding/package/codec/schema versions;
-- standard-library structural Protocols with separate Learning, Generation and Evaluation adapter/result contracts;
-- explicit deployment composition plus optional lazy Python entry-point discovery through `syngan.runtime_extensions`;
-- discovery does not authorize/select/trust code, and no global mutable registry or runtime auto-install/download path is accepted;
-- immutable Attempt-scoped activity invocation snapshots using exact commitment, binding, data/state and dependency identities;
-- narrow runtime port bundles rather than arbitrary canonical repositories/clients;
-- Learned-State candidate and representation resources with explicit state-codec identity/version and distributed component support;
-- no universal model/state byte format and no universal driver-local Learned-State deserialization;
-- direct Generation without fabricated Learning/Learned State;
-- optional `spark`/`torch` runtime families with launcher choice deferred to 005-G/005-J;
-- V6 plus AF-02/04/09/12/13/14/20 conformance obligations.
-
-No extension provider, runtime adapter, entry point, StateCodec, PyTorch/Spark runtime implementation or launcher was created by 005-F.
+No extension provider, runtime adapter, StateCodec, PyTorch/Spark runtime implementation or launcher was created by 005-F.
 
 Phase record: [005-F](../phases/005/005-F-strategy-method-extension-spi-learning-generation-evaluation-runtime-learned-state-implementation-plan.md).
+
+### 005-G — Execution, recovery, fencing and cancellation planning
+
+Established the future durable operational substrate:
+
+- one stable Execution with many durable Attempts and positive monotonic AttemptEpoch values;
+- observed Attempt/runtime state separated from current framework mutation authority;
+- Execution current-authority projection plus WriterFence and cancellation-generation barrier;
+- isolation-first fence enforcement at registration/adoption/seal/completion boundaries, with real provider fencing required for shared mutable targets;
+- leases/heartbeats retained as liveness evidence rather than mutation authority;
+- immutable Attempt-owned RuntimeInvocationRef;
+- durable launch intent, provider correlation and reconciliation for ambiguous submission outcomes;
+- operation-scoped idempotency using exact target/request fingerprint rather than one global key;
+- immutable CheckpointRef commitment, resume qualification and explicit restart/resume/reconcile/cannot-continue modes;
+- current-authority adoption of verified immutable prior effects without automatic acceptance of fenced late writes;
+- Evaluation logical-work-unit deduplication/restart requirement for retry safety;
+- durable unknown/indeterminate operational state and coordinator restart from persisted state;
+- cancellation/completion linearization where cancellation revokes old writer/promotion authority before physical termination is proven;
+- one authoritative operational-completion basis distinct from Learning/Generation/Evaluation semantic completion;
+- V7 and AF-04/06/07/08/09/18/19/20 failure-injection obligations.
+
+No Execution classes, SQL schema, migration, scheduler adapter, checkpoint implementation, test suite or runtime infrastructure was created by 005-G.
+
+Phase record: [005-G](../phases/005/005-G-execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation-implementation-plan.md).
 
 ## Current state
 
@@ -150,6 +139,6 @@ Phase record: [005-F](../phases/005/005-F-strategy-method-extension-spi-learning
 
 Next:
 
-**005-G — Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Implementation Plan**.
+**005-H — Evaluation/Evidence, Provenance, Historical Query & Reproducibility Implementation Plan**.
 
-005-G must now bind 004-F's at-least-once/fenced operational model to 005-D control persistence, 005-E candidate-writer fence seams and 005-F immutable Attempt invocation/checkpoint/cancellation-facing runtime ports—without beginning production implementation.
+005-H must now bind Evidence establishment and typed Provenance/history to the exact activity/result/Attempt/checkpoint/runtime facts planned in 005-D through 005-G, while keeping query projections non-authoritative and reproducibility a qualified derived assessment rather than beginning production implementation.
