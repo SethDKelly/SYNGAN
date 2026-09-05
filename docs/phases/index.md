@@ -10,13 +10,11 @@ status: active
 
 See [Phase 001 index](001/index.md).
 
-Phase 001 accepted the initial [concept catalog](../concepts/index.md) and [core synchronization set](../synchronizations/index.md).
-
 ## Phase 002 — Concept Specification & Invariant Refinement — complete
 
 See [Phase 002 index](002/index.md).
 
-Phase 002 refined the eleven accepted concepts and fifteen synchronizations without requiring concept/synchronization redesign.
+Phase 002 closed with eleven accepted concepts and fifteen synchronization rules.
 
 ## Phase 003 — Experience & Workflow Design — complete
 
@@ -28,11 +26,7 @@ Phase 003 exit authority: [Phase 003 Consolidated Experience Contract](../experi
 
 See [Phase 004 index](004/index.md).
 
-Phase 004 closed through [004-J — Cross-Architecture Invariant Audit, Decision Consolidation & Phase 004 Exit](004/004-J-cross-architecture-invariant-audit-decision-consolidation-phase-004-exit.md).
-
 Phase 004 exit authority: [Phase 004 Consolidated Architecture Contract](../architecture/phase-004-consolidated-architecture-contract.md).
-
-The exit audit preserved the eleven accepted concepts and fifteen synchronization rules without requiring redesign, and consolidated ADR-0001 through ADR-0008 as the active implementation-facing architecture rationale.
 
 ## Phase 005 — Implementation Planning & Delivery Decomposition — current
 
@@ -41,8 +35,8 @@ See [Phase 005 index](005/index.md).
 - [005-A — Implementation Authority, Delivery Governance, Toolchain & Repository Enforcement](005/005-A-implementation-authority-delivery-governance-toolchain-repository-enforcement.md) — complete
 - [005-B — Verification Strategy, Test Harness, Architecture Fitness Functions, Evidence Fixtures & Quality Gates](005/005-B-verification-strategy-test-harness-architecture-fitness-evidence-fixtures-quality-gates.md) — complete
 - [005-C — Source Topology, Module/Package Boundaries, Shared Foundation & Dependency Enforcement](005/005-C-source-topology-module-package-boundaries-shared-foundation-dependency-enforcement.md) — complete
-- **005-D — Public Resource API, Control-Plane Identity, State, Persistence, Transactions & Migration Implementation Plan — next**
-- 005-E — Spark Data Boundary, Source/Output References, Manifest, Materialization & Promotion Implementation Plan
+- [005-D — Public Resource API, Control-Plane Identity, State, Persistence, Transactions & Migration Implementation Plan](005/005-D-public-resource-api-control-plane-identity-state-persistence-transactions-migration-implementation.md) — complete
+- **005-E — Spark Data Boundary, Source/Output References, Manifest, Materialization & Promotion Implementation Plan — next**
 - 005-F — Strategy/Method Extension SPI, Learning/Generation/Evaluation Runtime & Learned-State Implementation Plan
 - 005-G — Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Implementation Plan
 - 005-H — Evaluation/Evidence, Provenance, Historical Query & Reproducibility Implementation Plan
@@ -52,6 +46,6 @@ See [Phase 005 index](005/index.md).
 
 Canonical implementation-planning authority is under [Implementation Planning & Delivery Authority](../implementation/index.md).
 
-005-A established implementation governance. 005-B froze executable verification/fitness requirements. 005-C now freezes the initial `src/syngan` package boundaries, Python/toolchain baseline, test topology, optional dependency isolation and GitHub Actions/Q0-Q4 delivery structure.
+005-A established implementation governance. 005-B froze executable verification/fitness requirements. 005-C froze source/package/toolchain boundaries. 005-D now defines the shared public/control-plane substrate: typed identity/reference/version primitives, public specs/handles/views, exact historical resolution, SQLAlchemy Core/Alembic relational persistence, PostgreSQL/SQLite profiles, CAS/transaction/outbox/tombstone and migration rules.
 
-005-D is next because public resource/control-plane identity and persistence need to be planned before distributed Spark/runtime/recovery/history/security/platform slices can safely depend on them.
+005-E is next because Spark/distributed source/output implementation must reuse this substrate rather than inventing parallel identity, state, or persistence conventions.
