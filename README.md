@@ -2,67 +2,68 @@
 
 SYNGAN is a design-first synthetic data generation framework intended for Spark-scale workloads.
 
-The project is deliberately completing conceptual design before implementation. Daniel Jackson's concept-design methodology governs discovery and specification, and canonical design knowledge is maintained as an OKF 0.2 bundle.
+The project is deliberately completing conceptual and architectural design before implementation. Daniel Jackson's concept-design methodology governs discovery/specification, and canonical design knowledge is maintained as an OKF-oriented bundle.
 
 ## Design documentation
 
 Start with [`docs/index.md`](docs/index.md).
 
+For implementation planning, the primary exit contracts are:
+
+- [`Phase 003 Consolidated Experience Contract`](docs/experience/phase-003-consolidated-experience-contract.md)
+- [`Phase 004 Consolidated Architecture Contract`](docs/architecture/phase-004-consolidated-architecture-contract.md)
+
 ## Current status
 
-**Phase 001 — Design Foundation & Concept Discovery is complete.**
+**Phase 001 — Design Foundation & Concept Discovery: complete.**
 
-**Phase 002 — Concept Specification & Invariant Refinement is complete.**
+**Phase 002 — Concept Specification & Invariant Refinement: complete.**
 
-Phase 002 closed with eleven accepted concepts, fifteen synchronization rules, offline/no-outbound-network-capable core semantics, stable commitment/historical binding, semantic result promotion, typed Provenance, qualified reproducibility, and enterprise-scale no-full-driver-materialization requirements.
+Phase 002 closed with eleven accepted concepts and fifteen synchronization rules.
 
-**Phase 003 — Experience & Workflow Design is complete.**
+**Phase 003 — Experience & Workflow Design: complete.**
 
-The [Phase 003 Consolidated Experience Contract](docs/experience/phase-003-consolidated-experience-contract.md) freezes readiness/commitment, semantic/operational, promotion, Evidence, historical/current, reproducibility, dependency/network/egress, disclosure, programmatic-parity, and enterprise-scale experience obligations.
+Phase 003 froze readiness/commitment, semantic/operational, promotion, Evidence, historical/current, reproducibility, dependency/network/egress, disclosure, programmatic-parity, and enterprise-scale experience obligations.
 
-**Current phase: Phase 004 — Representation & Architecture Design.**
+**Phase 004 — Representation & Architecture Design: complete.**
 
-See [`docs/architecture/index.md`](docs/architecture/index.md) and [`docs/phases/004/index.md`](docs/phases/004/index.md).
+Phase 004 closed through [`004-J — Cross-Architecture Invariant Audit, Decision Consolidation & Phase 004 Exit`](docs/phases/004/004-J-cross-architecture-invariant-audit-decision-consolidation-phase-004-exit.md) with no blocking redesign required.
 
-Completed:
+The [`Phase 004 Consolidated Architecture Contract`](docs/architecture/phase-004-consolidated-architecture-contract.md) now freezes, among other guarantees:
 
-- **004-A — Architecture Authority, Representation Principles, Layering & Dependency Direction**
-- **004-B — Public API, Resource/Handle Model, Workflow Composition & Semantic Mapping**
-- **004-C — Control-Plane Identity, Revision, State, Persistence & Historical Reference Architecture**
-- **004-D — Spark Data Boundary, Source/Output Reference, Distributed Materialization, Manifest & Promotion Architecture**
-- **004-E — Strategy Extension, Learning/Generation/Evaluation Runtime & Adapter Architecture**
-- **004-F — Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Architecture**
-- **004-G — Evaluation/Evidence, Provenance, Reproducibility & Historical Query Architecture**
-- **004-H — Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Architecture**
-- **004-I — Deployment, Scalability, Observability, Portability, Compatibility & Platform Integration Architecture**
-
-Phase 004 architecture now establishes, among other guarantees:
-
-- bounded control-plane/distributed-data-plane separation and inward dependency direction;
-- durable typed resource handles with stable identity independent of client/runtime lifetime;
-- immutable commitments plus conflict-versioned lifecycle state;
-- exact Spark-scale source-state binding, sealed candidates and idempotent semantic promotion;
-- model-neutral Strategy/runtime adapters, including first-class direct Generation;
-- one stable Execution across many fenced/reconcilable Attempts with immutable checkpoint recovery state;
-- semantic Evidence, typed canonical Provenance and qualified reproducibility rather than generic quality/lineage/status shortcuts;
-- explicit dependency identity/trust/authorization and offline/no-egress operation without hidden acquisition or fallback;
-- non-bearing handles, scoped runtime capabilities, secret isolation and security-aware historical/query projections;
+- stable typed resource identity and immutable semantic commitments;
+- bounded control-plane/distributed-data-plane separation;
+- exact Spark-scale source-state binding and sealed candidate/output promotion;
+- model-neutral Strategy/method implementation bindings;
+- direct Generation without fabricated Learning;
+- one logical Execution across fenced/reconcilable Attempts;
+- at-least-once physical work with one authoritative semantic result;
+- checkpoint/candidate/runtime-result boundaries distinct from Learned State/completed output/Evidence;
+- Evaluation semantic validation before immutable Evidence establishment;
+- typed canonical Provenance with derived non-authoritative query projections;
+- qualified target-specific reproducibility rather than global Boolean state;
+- explicit dependency identity/integrity/trust/authorization/network/egress distinctions;
+- no hidden package/model acquisition, dependency substitution, remote fallback, telemetry, or egress;
+- non-bearing durable handles and scoped Attempt data/dependency/network/secret capabilities;
+- truthful withholding/redaction and security-aware history/query projections;
 - portable semantic/application/control contracts with capability-negotiated platform adapters;
-- restartable durable-state-first coordinators rather than process-local session authority;
-- multi-dimensional enterprise-scale disclosure without unsupported generic row-count promises;
-- canonical semantic/operational history separated from detailed runtime telemetry and security audit;
-- Databricks as an important managed integration target rather than package/semantic identity;
-- generic/self-managed Spark as a legitimate target when required guarantees are supplied;
+- Databricks as an important managed target rather than package/semantic identity;
+- generic/self-managed Spark and private/offline deployment when required guarantees are supplied;
 - non-Spark model runtimes behind scale-compatible distributed bridges;
-- multi-axis compatibility across schemas, Strategy/binding/SPI/codec/runtime/platform/dependency versions;
-- local/private package/plugin/dependency provisioning for supported offline environments;
-- deployment-level enforcement requirements for workload identity, storage scope, secrets, network/egress and tenant/query isolation;
-- no universal CTGAN, GAN, PyTorch, Spark ML, Databricks, scheduler, graph database, IAM/policy engine, secret manager, observability vendor, or runtime-family assumption.
+- multi-axis compatibility, restartable durable coordination, and enterprise-scale no-full-driver-materialization requirements.
 
-Architecture decision rationale is preserved in [`docs/decisions/`](docs/decisions/index.md), currently ADR-0001 through **ADR-0008 — Portable Core & Capability-Negotiated Platform Adapters**.
+Architecture decision rationale is preserved in [`docs/decisions/`](docs/decisions/index.md), ADR-0001 through **ADR-0008 — Portable Core & Capability-Negotiated Platform Adapters**.
+
+## Current phase
+
+**Phase 005 — Implementation Planning & Delivery Decomposition is current.**
+
+See [`docs/phases/005/index.md`](docs/phases/005/index.md).
 
 Next:
 
-- **004-J — Cross-Architecture Invariant Audit, Decision Consolidation & Phase 004 Exit**
+- **005-A — Implementation Authority, Delivery Governance, Toolchain & Repository Enforcement**
 
-No final Python package/module tree or exact public class names, database/storage/catalog technology, plugin discovery mechanism, concrete scheduler/orchestrator, provenance query engine, IAM/policy/secret/network stack, observability vendor, exact Databricks API topology, CI/CD design, SLO/SLA values, or benchmark/support-matrix claims should be treated as settled before Phase 004 exits and implementation planning explicitly chooses them.
+Phase 005 will translate the accepted architecture into dependency-safe package/module boundaries, persisted/wire representations, implementation slices, verification/architecture fitness tests, migrations, platform adapters, delivery sequencing, and acceptance evidence before coding is treated as implementation-complete.
+
+Concrete choices such as final Python package/class spelling, persistence technology, Spark storage/catalog implementation, manifest/checkpoint format, scheduler/fencing mechanism, plugin/runtime technology, Provenance query store, IAM/policy/secret/network stack, observability vendor, exact Databricks API topology, CI/CD/deployment topology, and benchmark/support matrices remain downstream implementation-planning work constrained by the Phase 004 contract.
