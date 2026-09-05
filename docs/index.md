@@ -18,7 +18,7 @@ This directory is the canonical design and implementation-planning knowledge bun
 - [Accepted Synchronizations](synchronizations/index.md) — canonical cross-concept coordination rules.
 - [Experience & Workflow Design](experience/index.md) — actor-visible/programmatic workflow semantics; start implementation-facing experience review with the [Phase 003 Consolidated Experience Contract](experience/phase-003-consolidated-experience-contract.md).
 - [Representation & Architecture Design](architecture/index.md) — accepted implementation-facing architecture; start with the [Phase 004 Consolidated Architecture Contract](architecture/phase-004-consolidated-architecture-contract.md).
-- [Implementation Planning & Delivery Authority](implementation/index.md) — current implementation governance, verification authority and accepted Phase 005 implementation plans.
+- [Implementation Planning & Delivery Authority](implementation/index.md) — current implementation governance, verification authority, source/package/toolchain authority and accepted Phase 005 implementation plans.
 - [Architecture Decision Records](decisions/index.md) — architecture rationale/alternatives/supersession; current normative architecture remains under `docs/architecture/`.
 - [Concept Discovery](discovery/index.md) — historical hypotheses, alternatives and design provenance.
 - [Phases](phases/index.md) — phase plans, outcomes and exit reviews.
@@ -77,18 +77,21 @@ Completed:
 
 - [005-A — Implementation Authority, Delivery Governance, Toolchain & Repository Enforcement](phases/005/005-A-implementation-authority-delivery-governance-toolchain-repository-enforcement.md)
 - [005-B — Verification Strategy, Test Harness, Architecture Fitness Functions, Evidence Fixtures & Quality Gates](phases/005/005-B-verification-strategy-test-harness-architecture-fitness-evidence-fixtures-quality-gates.md)
+- [005-C — Source Topology, Module/Package Boundaries, Shared Foundation & Dependency Enforcement](phases/005/005-C-source-topology-module-package-boundaries-shared-foundation-dependency-enforcement.md)
 
-Canonical implementation authority now begins at [Implementation Planning & Delivery Authority](implementation/index.md).
+Canonical implementation authority now includes:
 
-005-A establishes implementation precedence/conflict escalation, delivery/change classification, acceptance evidence, reproducible toolchain/dependency governance, migration/compatibility discipline, repository-wide agent rules and PR review enforcement.
+- [implementation/delivery governance](implementation/implementation-authority-delivery-governance-toolchain-repository-enforcement.md);
+- [verification layers, fitness functions, fixtures and quality gates](implementation/verification-strategy-test-harness-architecture-fitness-evidence-quality-gates.md);
+- [source/package topology, foundational toolchain and dependency enforcement](implementation/source-topology-module-package-boundaries-shared-foundation-dependency-enforcement.md).
 
-005-B establishes verification layers V0-V11, architecture-fitness IDs AF-01 through AF-20, synthetic/non-sensitive fixture policy, deterministic/statistical/failure/security/platform verification requirements, default-deny portable-core network testing, and Q0-Q4 quality gates.
+005-C establishes the initial `src/syngan` topology with `foundation`, `domain`, `ports`, `application`, `api`, `adapters` and `bootstrap` boundaries; Python >=3.11; uv/Hatchling/pytest/Hypothesis/pytest-socket/Ruff/mypy/Import Linter/coverage/GitHub Actions as the foundational tooling; platform-neutral base dependencies; and explicit Q0-Q4 developer/CI command/check architecture.
 
 Next:
 
-**005-C — Source Topology, Module/Package Boundaries, Shared Foundation & Dependency Enforcement**
+**005-D — Public Resource API, Control-Plane Identity, State, Persistence, Transactions & Migration Implementation Plan**
 
-005-C must choose the physical Python/source/test topology and foundational concrete build/test/static-analysis toolchain so the accepted architecture and verification contracts can be enforced mechanically rather than only documented.
+005-D now defines the first behavioral implementation slice on top of the accepted source/toolchain/verification foundation.
 
 ## Documentation governance note
 
