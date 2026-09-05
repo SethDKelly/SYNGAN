@@ -16,10 +16,10 @@ This directory is the canonical design and implementation-planning knowledge bun
 - [Domain Terminology](terminology/index.md) — canonical vocabulary and compatibility mappings.
 - [Accepted Concepts](concepts/index.md) — canonical concept purpose, ownership, actions, lifecycle, invariants and boundaries.
 - [Accepted Synchronizations](synchronizations/index.md) — canonical cross-concept coordination rules.
-- [Experience & Workflow Design](experience/index.md) — start implementation-facing experience review with the [Phase 003 Consolidated Experience Contract](experience/phase-003-consolidated-experience-contract.md).
+- [Experience & Workflow Design](experience/index.md) — start implementation-facing review with the [Phase 003 Consolidated Experience Contract](experience/phase-003-consolidated-experience-contract.md).
 - [Representation & Architecture Design](architecture/index.md) — start with the [Phase 004 Consolidated Architecture Contract](architecture/phase-004-consolidated-architecture-contract.md).
-- [Implementation Planning & Delivery Authority](implementation/index.md) — current implementation governance, verification, source/toolchain, control/data/runtime/recovery/history plans and later slice plans.
-- [Architecture Decision Records](decisions/index.md) — architecture rationale/alternatives/supersession; normative architecture remains under `docs/architecture/`.
+- [Implementation Planning & Delivery Authority](implementation/index.md) — current planning authority through control/data/runtime/recovery/history/security.
+- [Architecture Decision Records](decisions/index.md) — rationale/alternatives/supersession; normative architecture remains under `docs/architecture/`.
 - [Concept Discovery](discovery/index.md) — historical hypotheses, alternatives and design provenance.
 - [Phases](phases/index.md) — phase plans, outcomes and exit reviews.
 - `references/` — external references used by the design.
@@ -43,68 +43,47 @@ Implementation planning and later code MUST NOT override upstream semantic, expe
 
 ## Completed design layers
 
-### Phase 001 — Design Foundation & Concept Discovery — complete
-
-Exit: [001-H — Phase 001 Consolidation & Initial Concept Catalog](phases/001/001-H-phase-001-consolidation-initial-concept-catalog.md).
-
-### Phase 002 — Concept Specification & Invariant Refinement — complete
-
-Exit: [002-H — Cross-Concept Invariant, Synchronization & Phase 002 Consolidation Review](phases/002/002-H-cross-concept-invariant-synchronization-consolidation-review.md).
-
-Phase 002 closed with eleven accepted concepts and fifteen synchronization rules.
-
-### Phase 003 — Experience & Workflow Design — complete
-
-Exit: [003-I — Cross-Workflow Consistency & Phase 003 Consolidation Review](phases/003/003-I-cross-workflow-consistency-phase-003-consolidation-review.md).
-
-Exit authority: [Phase 003 Consolidated Experience Contract](experience/phase-003-consolidated-experience-contract.md).
-
-### Phase 004 — Representation & Architecture Design — complete
-
-Exit: [004-J — Cross-Architecture Invariant Audit, Decision Consolidation & Phase 004 Exit](phases/004/004-J-cross-architecture-invariant-audit-decision-consolidation-phase-004-exit.md).
-
-Exit authority: [Phase 004 Consolidated Architecture Contract](architecture/phase-004-consolidated-architecture-contract.md).
+- **Phase 001 — Design Foundation & Concept Discovery — complete**
+- **Phase 002 — Concept Specification & Invariant Refinement — complete** — eleven accepted concepts and fifteen synchronizations.
+- **Phase 003 — Experience & Workflow Design — complete** — [consolidated experience contract](experience/phase-003-consolidated-experience-contract.md).
+- **Phase 004 — Representation & Architecture Design — complete** — [consolidated architecture contract](architecture/phase-004-consolidated-architecture-contract.md).
 
 ## Current phase
 
 **[Phase 005 — Implementation Planning & Delivery Decomposition](phases/005/index.md) is current and planning-only.**
 
-Completed implementation plans:
+Completed planning groups:
 
-- [005-A — Implementation Authority, Delivery Governance, Toolchain & Repository Enforcement](phases/005/005-A-implementation-authority-delivery-governance-toolchain-repository-enforcement.md)
-- [005-B — Verification Strategy, Test Harness, Architecture Fitness Functions, Evidence Fixtures & Quality Gates](phases/005/005-B-verification-strategy-test-harness-architecture-fitness-evidence-fixtures-quality-gates.md)
-- [005-C — Source Topology, Module/Package Boundaries, Shared Foundation & Dependency Enforcement](phases/005/005-C-source-topology-module-package-boundaries-shared-foundation-dependency-enforcement.md)
-- [005-D — Public Resource API, Control-Plane Identity, State, Persistence, Transactions & Migration Implementation Plan](phases/005/005-D-public-resource-api-control-plane-identity-state-persistence-transactions-migration-implementation.md)
-- [005-E — Spark Data Boundary, Source/Output References, Manifest, Materialization & Promotion Implementation Plan](phases/005/005-E-spark-data-boundary-source-output-references-manifest-materialization-promotion-implementation-plan.md)
-- [005-F — Strategy/Method Extension SPI, Learning/Generation/Evaluation Runtime & Learned-State Implementation Plan](phases/005/005-F-strategy-method-extension-spi-learning-generation-evaluation-runtime-learned-state-implementation-plan.md)
-- [005-G — Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Implementation Plan](phases/005/005-G-execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation-implementation-plan.md)
-- [005-H — Evaluation/Evidence, Provenance, Historical Query & Reproducibility Implementation Plan](phases/005/005-H-evaluation-evidence-provenance-historical-query-reproducibility-implementation-plan.md)
+- [005-A](phases/005/005-A-implementation-authority-delivery-governance-toolchain-repository-enforcement.md) — implementation governance
+- [005-B](phases/005/005-B-verification-strategy-test-harness-architecture-fitness-evidence-fixtures-quality-gates.md) — verification/fitness/gates
+- [005-C](phases/005/005-C-source-topology-module-package-boundaries-shared-foundation-dependency-enforcement.md) — source/package/toolchain topology
+- [005-D](phases/005/005-D-public-resource-api-control-plane-identity-state-persistence-transactions-migration-implementation.md) — control identity/state/persistence
+- [005-E](phases/005/005-E-spark-data-boundary-source-output-references-manifest-materialization-promotion-implementation-plan.md) — Spark/data/materialization/promotion
+- [005-F](phases/005/005-F-strategy-method-extension-spi-learning-generation-evaluation-runtime-learned-state-implementation-plan.md) — runtime SPI/Learned State
+- [005-G](phases/005/005-G-execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation-implementation-plan.md) — Execution/recovery/fencing
+- [005-H](phases/005/005-H-evaluation-evidence-provenance-historical-query-reproducibility-implementation-plan.md) — Evidence/Provenance/history/reproducibility
+- [005-I](phases/005/005-I-dependency-resolution-offline-no-egress-authorization-redaction-enterprise-security-implementation-plan.md) — dependency/offline/security/disclosure
 
-Canonical implementation-planning authority now includes:
+Canonical implementation-planning authority is indexed under [`docs/implementation/`](implementation/index.md).
 
-- [implementation/delivery governance](implementation/implementation-authority-delivery-governance-toolchain-repository-enforcement.md);
-- [verification layers, fitness functions, fixtures and quality gates](implementation/verification-strategy-test-harness-architecture-fitness-evidence-quality-gates.md);
-- [source/package topology, foundational toolchain and dependency enforcement](implementation/source-topology-module-package-boundaries-shared-foundation-dependency-enforcement.md);
-- [public resource/control-plane identity, persistence, transaction and migration plan](implementation/public-resource-control-plane-identity-state-persistence-transactions-migration-plan.md);
-- [Spark data boundary, exact source/snapshot/candidate/promotion plan](implementation/spark-data-boundary-source-output-reference-manifest-materialization-promotion-plan.md);
-- [runtime extension SPI, runtime invocation and Learned-State plan](implementation/strategy-method-extension-spi-learning-generation-evaluation-runtime-learned-state-plan.md);
-- [Execution/Attempt, recovery, fencing and cancellation plan](implementation/execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation-plan.md);
-- [Evidence, Provenance, historical query and reproducibility plan](implementation/evaluation-evidence-provenance-historical-query-reproducibility-plan.md).
+The plan through 005-I preserves:
 
-The current implementation plan preserves:
-
-- one future `src/syngan` package with enforced inward boundaries and optional runtime/platform isolation;
-- one durable ResourceRef/revision/state/schema model shared by downstream slices;
-- exact distributed source-state/candidate/sealed-snapshot/output separation;
-- explicit Strategy/method implementation-binding and SPI version axes;
-- activity-specific immutable runtime invocations and runtime-result boundaries;
-- Learned-State logical identity separate from candidate representation, state codec and loaded runtime object;
+- one future `src/syngan` package with enforced inward boundaries and optional runtime/platform/security adapters;
+- one durable ResourceRef/revision/state/schema model across all slices;
+- exact distributed source/candidate/snapshot/output identity;
+- model-neutral Strategy/method binding and activity-specific runtime contracts;
+- Learned-State logical identity separate from representation/codec/loaded object;
 - stable Execution/multiple Attempt history with epoch fencing, checkpoint/recovery and cancellation linearization;
-- Evidence immutable finding/applicability separation and exact Generation completion basis;
-- canonical typed Provenance distinct from derived graph/search projections;
-- reproducibility historical class distinct from current feasibility;
-- optional Spark/PyTorch runtime families without making either universal semantics;
-- Phase 005 as documentation/planning only—no production package, schema, adapter, test suite or infrastructure has been implemented.
+- owner-established Evidence, typed canonical Provenance and derived bounded historical query/reproducibility views;
+- dependency availability/identity/integrity/trust/compatibility/authorization kept distinct;
+- no hidden runtime acquisition, remote fallback, telemetry or egress;
+- first-class offline/no-egress support after approved local/private provisioning;
+- action-specific authorization and Attempt-scoped capabilities rather than handle-as-credential authority;
+- non-secret SecretRef plus ephemeral bearer credential handling;
+- truthful redaction/withholding across canonical records and derived indexes/counts/history/reproducibility;
+- security audit separate from Provenance and telemetry;
+- explicit tenant/security-domain isolation across control/data/history/cache/runtime surfaces;
+- Phase 005 as documentation/planning only—no production package, schema, security/runtime adapter, test suite or deployment infrastructure has been implemented.
 
 ## Jackson/design completeness gate
 
@@ -114,9 +93,9 @@ A positive readiness conclusion still does not itself authorize coding; a later 
 
 Next:
 
-**005-I — Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Implementation Plan**
+**005-J — Deployment/Platform Adapters, Observability, Compatibility, Scale & Performance Implementation Plan**
 
-005-I will plan security enforcement over the concrete control/data/runtime/Execution/Evidence/Provenance/query surfaces now defined without beginning production implementation.
+005-J will map the accepted portable architecture, security and scale guarantees onto concrete deployment/platform capability profiles and expose limitations rather than weakening common guarantees.
 
 ## Documentation governance note
 
