@@ -38,20 +38,11 @@ See [Phase 004 index](004/index.md).
 - [004-F — Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Architecture](004/004-F-execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation-architecture.md) — complete
 - [004-G — Evaluation/Evidence, Provenance, Reproducibility & Historical Query Architecture](004/004-G-evaluation-evidence-provenance-reproducibility-historical-query-architecture.md) — complete
 - [004-H — Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Architecture](004/004-H-dependency-resolution-offline-no-egress-authorization-redaction-enterprise-security-architecture.md) — complete
-- **004-I — Deployment, Scalability, Observability, Portability, Compatibility & Platform Integration Architecture — next**
-- 004-J — Cross-Architecture Invariant Audit, Decision Consolidation & Phase 004 Exit
+- [004-I — Deployment, Scalability, Observability, Portability, Compatibility & Platform Integration Architecture](004/004-I-deployment-scalability-observability-portability-compatibility-platform-integration-architecture.md) — complete
+- **004-J — Cross-Architecture Invariant Audit, Decision Consolidation & Phase 004 Exit — next**
 
-Current architecture authority includes:
+Current architecture authority includes the canonical 004-A through 004-I documents under [Representation & Architecture Design](../architecture/index.md).
 
-- [Architecture Authority, Representation Principles, Layering & Dependency Direction](../architecture/architecture-authority-representation-layering.md)
-- [Public API, Resource/Handle Model, Workflow Composition & Semantic Mapping](../architecture/public-api-resource-handle-workflow-semantic-mapping.md)
-- [Control-Plane Identity, Revision, State, Persistence & Historical Reference Architecture](../architecture/control-plane-identity-revision-state-persistence-historical-reference.md)
-- [Spark Data Boundary, Source/Output Reference, Distributed Materialization, Manifest & Promotion Architecture](../architecture/spark-data-boundary-source-output-reference-distributed-materialization-manifest-promotion.md)
-- [Strategy Extension, Learning/Generation/Evaluation Runtime & Adapter Architecture](../architecture/strategy-extension-learning-generation-evaluation-runtime-adapter.md)
-- [Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Architecture](../architecture/execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation.md)
-- [Evaluation/Evidence, Provenance, Reproducibility & Historical Query Architecture](../architecture/evaluation-evidence-provenance-reproducibility-historical-query.md)
-- [Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Architecture](../architecture/dependency-resolution-offline-no-egress-authorization-redaction-enterprise-security.md)
+Active ADR rationale includes ADR-0001 through [ADR-0008 — Portable Core & Capability-Negotiated Platform Adapters](../decisions/ADR-0008-portable-core-capability-negotiated-platform-adapters.md).
 
-Active ADR rationale includes ADR-0001 through [ADR-0007 — Explicit Dependency Resolution & Scoped Capability Security](../decisions/ADR-0007-explicit-dependency-resolution-scoped-capability-security.md).
-
-Representation/architecture is the active design layer. Implementation task breakdown remains downstream until Phase 004 establishes the necessary boundaries.
+Representation/architecture remains the active design layer until 004-J confirms the architecture composes cleanly and closes Phase 004 for implementation planning.
