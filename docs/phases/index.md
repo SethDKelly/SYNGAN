@@ -40,14 +40,14 @@ See [Phase 005 index](005/index.md).
 - [005-D — Public Resource API, Control-Plane Identity, State, Persistence, Transactions & Migration Implementation Plan](005/005-D-public-resource-api-control-plane-identity-state-persistence-transactions-migration-implementation.md) — complete
 - [005-E — Spark Data Boundary, Source/Output References, Manifest, Materialization & Promotion Implementation Plan](005/005-E-spark-data-boundary-source-output-references-manifest-materialization-promotion-implementation-plan.md) — complete
 - [005-F — Strategy/Method Extension SPI, Learning/Generation/Evaluation Runtime & Learned-State Implementation Plan](005/005-F-strategy-method-extension-spi-learning-generation-evaluation-runtime-learned-state-implementation-plan.md) — complete
-- **005-G — Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Implementation Plan — next**
-- 005-H — Evaluation/Evidence, Provenance, Historical Query & Reproducibility Implementation Plan
+- [005-G — Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Implementation Plan](005/005-G-execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation-implementation-plan.md) — complete
+- **005-H — Evaluation/Evidence, Provenance, Historical Query & Reproducibility Implementation Plan — next**
 - 005-I — Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Implementation Plan
 - 005-J — Deployment/Platform Adapters, Observability, Compatibility, Scale & Performance Implementation Plan
 - 005-K — Cross-Slice Integration, Delivery Sequencing, Backlog Closure & Implementation-Readiness Exit
 
 Canonical implementation-planning authority is under [Implementation Planning & Delivery Authority](../implementation/index.md).
 
-005-D froze the durable public/control substrate; 005-E mapped exact distributed source/candidate/snapshot/output behavior; 005-F now freezes the future executable binding/SPI/runtime/Learned-State boundary while preserving semantic ownership and optional runtime isolation.
+005-D froze the durable public/control substrate; 005-E mapped exact distributed source/candidate/snapshot/output behavior; 005-F froze the executable binding/SPI/runtime/Learned-State boundary; 005-G now freezes durable Execution/Attempt epochs, stale-writer fencing, checkpoint/recovery, launch reconciliation, idempotency and cancellation/completion linearization.
 
-005-G is next because the runtime/data ports now expose the exact seams needed for durable Execution/Attempt identity, writer fencing, checkpoint recovery, ambiguous launch reconciliation, idempotent commands and cancellation linearization.
+005-H is next because Evidence/Provenance/history can now bind to exact committed semantic resources, sealed subjects, runtime bindings/invocations and durable operational recovery facts rather than inferring history from platform telemetry.
