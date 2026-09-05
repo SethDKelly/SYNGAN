@@ -23,6 +23,7 @@ Phase 004 translates SYNGAN's accepted concept, synchronization, and experience 
 - [004-E Strategy Extension/Runtime Adapter Architecture](../../architecture/strategy-extension-learning-generation-evaluation-runtime-adapter.md)
 - [004-F Execution/Recovery Architecture](../../architecture/execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation.md)
 - [004-G Evaluation/Evidence/Provenance/Reproducibility Architecture](../../architecture/evaluation-evidence-provenance-reproducibility-historical-query.md)
+- [004-H Dependency/Security Architecture](../../architecture/dependency-resolution-offline-no-egress-authorization-redaction-enterprise-security.md)
 
 ## Groups
 
@@ -35,8 +36,8 @@ Phase 004 translates SYNGAN's accepted concept, synchronization, and experience 
 | **004-E** | [**Strategy Extension, Learning/Generation/Evaluation Runtime & Adapter Architecture**](004-E-strategy-extension-learning-generation-evaluation-runtime-adapter-architecture.md) | **complete** |
 | **004-F** | [**Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Architecture**](004-F-execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation-architecture.md) | **complete** |
 | **004-G** | [**Evaluation/Evidence, Provenance, Reproducibility & Historical Query Architecture**](004-G-evaluation-evidence-provenance-reproducibility-historical-query-architecture.md) | **complete** |
-| **004-H** | **Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Architecture** | **next** |
-| 004-I | Deployment, Scalability, Observability, Portability, Compatibility & Platform Integration Architecture | planned |
+| **004-H** | [**Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Architecture**](004-H-dependency-resolution-offline-no-egress-authorization-redaction-enterprise-security-architecture.md) | **complete** |
+| **004-I** | **Deployment, Scalability, Observability, Portability, Compatibility & Platform Integration Architecture** | **next** |
 | 004-J | Cross-Architecture Invariant Audit, Decision Consolidation & Phase 004 Exit | planned |
 
 ## Completed architecture refinement
@@ -77,49 +78,58 @@ Decision: [ADR-0005 — Attempt-Epoch Fencing & Recoverable At-Least-Once Execut
 
 ### 004-G — Evaluation/Evidence, Provenance, reproducibility and historical query
 
-Established [Evaluation/Evidence, Provenance, Reproducibility & Historical Query Architecture](../../architecture/evaluation-evidence-provenance-reproducibility-historical-query.md).
+Established semantic Evidence only after Evaluation validation; idempotent independently interpretable finding identities; immutable finding/current-applicability separation; exact Generation completion-Evidence basis; canonical typed Provenance over stable references; append/supersede correction; recoverable transition/provenance consistency; rebuildable historical query projections; bounded explain/compare traversal; difference-versus-causality separation; and qualified current reproducibility assessment.
+
+Decision: [ADR-0006 — Typed Canonical Provenance & Derived Historical Projections](../../decisions/ADR-0006-typed-provenance-canonical-derived-history-projections.md).
+
+### 004-H — Dependency resolution, offline/no-egress and enterprise security
+
+Established [Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Architecture](../../architecture/dependency-resolution-offline-no-egress-authorization-redaction-enterprise-security.md).
 
 Key accepted rules include:
 
-- Evaluation runtime results remain non-final until owner-side semantic validation establishes interpretable Evidence;
-- one Evaluation may establish multiple independently interpretable Evidence resources through idempotent logical finding slots;
-- Evidence finding semantics are immutable while current applicability is separately conflict-versioned;
-- Evidence preserves typed findings, claim support, uncertainty/limitations, and stable diagnostic references rather than a universal scalar Quality/Pass value;
-- Generation promotion retains the exact candidate/requirement/Criterion/Evidence completion basis used historically;
-- canonical Provenance is a typed stable-reference assertion layer and does not duplicate canonical concept/result payloads;
-- Provenance recording is idempotent and recoverably coupled to material transitions that require traceability;
-- Provenance corrections are append/supersede and cannot mutate another concept's historical authority;
-- historical explain/traverse/compare capabilities are read-composition services over canonical resources/Provenance plus rebuildable derived indexes;
-- derived query projections may be eventually consistent but remain non-authoritative;
-- historical comparison reports structural differences without inventing causality, quality, or superiority;
-- reproducibility is assembled as a current qualified assessment over exact historical facts, dependencies, implementation/runtime identities, randomness/approximation, representation equivalence, and material recovery facts;
-- the strongest supportable reproduction class cannot exceed the weakest unresolved material boundary;
-- reproduction readiness remains distinct from actual reproduction success through new domain work;
-- historical facts, current lifecycle/applicability, current availability, disclosure state, and current reproducibility remain distinct;
-- `absent`, `unknown`, `unavailable`, `withheld`, `invalid`, and corrected/superseded states remain distinguishable;
-- external lineage/catalog systems remain integrations rather than canonical semantic authority;
-- Evidence/Provenance/history/query state remains bounded and does not require full row/model/diagnostic/task/log collection.
+- dependency requirement, availability, integrity, compatibility, trust/approval, authorization, network and egress remain distinct;
+- mutable dependency locators do not substitute for exact historical identity;
+- package/artifact acquisition is explicit provisioning and never hidden runtime fallback;
+- supported offline/no-egress workflows can operate without outbound network after approved local provisioning;
+- egress categories/destinations remain explicit and separate from generic network capability;
+- current authorization is action/resource/context specific and does not redefine semantic compatibility;
+- commit-time authorization does not become permanent permission, while revocation does not rewrite history;
+- durable resource handles are identifiers rather than bearer credentials;
+- Attempt runtimes receive scoped capabilities bounded by committed semantics, current authorization and deployment capability;
+- source, Learned State, candidate/output, diagnostic and control-plane/history access can be independently authorized;
+- secret values are excluded from canonical semantic/history state and injected through bounded secret-resolution capabilities;
+- redaction/withholding is view-time and preserves `absent`/`unknown`/`unavailable`/`withheld` distinctions where disclosure permits;
+- derived historical/search/query/reproducibility projections inherit the same disclosure/security requirements as canonical resources;
+- relationship/count/graph-shape leakage must be considered when existence itself is sensitive;
+- retry/resume revalidates current dependency/security permissions without changing committed semantics;
+- revocation and Attempt fencing are complementary controls;
+- semantic completion does not imply read/export/release authorization;
+- multi-tenant/security-domain isolation persists across shared physical stores, caches and indexes;
+- security audit remains distinct from Provenance and cannot override canonical semantic state;
+- no specific IAM, policy engine, secret manager, KMS, network, DLP or artifact-repository technology is made universal.
 
-Decision: [ADR-0006 — Typed Canonical Provenance & Derived Historical Projections](../../decisions/ADR-0006-typed-provenance-canonical-derived-history-projections.md).
+Decision: [ADR-0007 — Explicit Dependency Resolution & Scoped Capability Security](../../decisions/ADR-0007-explicit-dependency-resolution-scoped-capability-security.md).
 
 ## Phase 004 guardrails
 
 Phase 004 MUST NOT:
 
-- redesign accepted concept semantics for package/runtime convenience;
-- erase typed semantic/operational distinctions behind generic status/session/plugin/result/metadata objects;
-- make one runtime/platform/database/graph technology mandatory unless semantics require it;
+- redesign accepted concept semantics for package/runtime/security convenience;
+- erase typed semantic/operational/security distinctions behind generic status/session/plugin/result/metadata/security objects;
+- make one runtime/platform/database/graph/security technology mandatory unless semantics require it;
 - require ordinary full driver-local source/output/Learned-State/diagnostic/telemetry materialization;
 - make dependency/network/resource acquisition implicit;
-- treat runtime success, file existence, manifest sealing, checkpoint durability, plugin output, or query-index state as semantic promotion;
+- treat runtime success, file existence, manifest sealing, checkpoint durability, plugin output, authorization grant, or query-index state as semantic promotion;
 - equate platform retry/exactly-once claims with SYNGAN semantic authority;
 - allow stale Attempts to mutate current framework-owned state after supersession;
-- use lease expiry or last-writer-wins as sole protection for material authority;
-- assume unknown external effects failed merely to permit retry;
-- permit runtime/platform/lineage adapters to rewrite committed semantics or canonical Provenance/results directly;
-- duplicate canonical concept payloads into a master metadata graph;
-- store reproducibility as unqualified global Boolean truth;
+- use lease expiry, bearer-handle possession, or last-writer-wins as sole protection for material authority;
+- assume unknown external effects or authorization states are safe merely to permit retry;
+- permit runtime/platform/lineage/security adapters to rewrite committed semantics or canonical Provenance/results directly;
+- duplicate canonical concept payloads into a master metadata/security graph;
+- store reproducibility or security as unqualified global Boolean truth;
 - infer causal/quality conclusions from historical differences without Evidence;
+- expose restricted historical facts through derived query/index paths;
 - jump into implementation task breakdown before Phase 004 architecture is complete.
 
 ## Phase 004 exit target
@@ -140,4 +150,4 @@ without reopening core semantics.
 
 ## Current next phase
 
-**004-H — Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Architecture**
+**004-I — Deployment, Scalability, Observability, Portability, Compatibility & Platform Integration Architecture**
