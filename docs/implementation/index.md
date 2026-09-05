@@ -8,7 +8,9 @@ status: active
 
 ## Purpose
 
-This directory is the canonical home for implementation-planning and delivery-governance decisions that translate accepted architecture into source/module boundaries, toolchain expectations, persisted/wire representations, implementation slices, migrations, verification obligations, platform integration plans, delivery sequencing, and acceptance evidence.
+This directory is the canonical home for **implementation planning** decisions that translate accepted architecture into future source/module boundaries, toolchain expectations, persisted/wire representations, implementation slices, migrations, verification obligations, platform integration plans, delivery sequencing, and acceptance evidence.
+
+**Phase 005 is planning-only.** Documents under this directory may select concrete future implementation technologies/interfaces and define dependency-safe coding sequences, but they do not authorize production source, schema, migration, workflow, infrastructure, or runtime implementation during Phase 005.
 
 Implementation authority is downstream of the [Phase 004 Consolidated Architecture Contract](../architecture/phase-004-consolidated-architecture-contract.md) and MUST NOT redefine accepted semantic, experience, or architecture authority for implementation convenience.
 
@@ -16,8 +18,9 @@ Implementation authority is downstream of the [Phase 004 Consolidated Architectu
 
 - [Implementation Authority, Delivery Governance, Toolchain & Repository Enforcement](implementation-authority-delivery-governance-toolchain-repository-enforcement.md) — 005-A implementation precedence, change/dependency/toolchain governance and repository enforcement.
 - [Verification Strategy, Test Harness, Architecture Fitness Functions, Evidence Fixtures & Quality Gates](verification-strategy-test-harness-architecture-fitness-evidence-quality-gates.md) — 005-B V0-V11 verification, AF-01 through AF-20 and Q0-Q4 quality gates.
-- [Source Topology, Module/Package Boundaries, Shared Foundation & Dependency Enforcement](source-topology-module-package-boundaries-shared-foundation-dependency-enforcement.md) — 005-C package/test topology, Python/toolchain baseline, import direction and optional-dependency isolation.
-- [Public Resource API, Control-Plane Identity, State, Persistence, Transactions & Migration Implementation Plan](public-resource-control-plane-identity-state-persistence-transactions-migration-plan.md) — 005-D public reference/handle model, identity/version primitives, SQL control persistence, CAS/transactions/outbox and migration contract.
+- [Source Topology, Module/Package Boundaries, Shared Foundation & Dependency Enforcement](source-topology-module-package-boundaries-shared-foundation-dependency-enforcement.md) — 005-C future package/test topology, Python/toolchain baseline, import direction and optional-dependency isolation.
+- [Public Resource API, Control-Plane Identity, State, Persistence, Transactions & Migration Implementation Plan](public-resource-control-plane-identity-state-persistence-transactions-migration-plan.md) — 005-D future public reference/handle model, identity/version primitives, SQL control persistence, CAS/transactions/outbox and migration contract.
+- [Spark Data Boundary, Source/Output References, Manifest, Materialization & Promotion Implementation Plan](spark-data-boundary-source-output-reference-manifest-materialization-promotion-plan.md) — 005-E future Spark selector/access, exact source-state, manifest/candidate/sealed-snapshot and output-promotion plan.
 - [Phase 005 navigator](../phases/005/index.md) — current planning sequence.
 
 ## Authority relationship
@@ -31,27 +34,28 @@ experience contracts
         ↓
 architecture contracts
         ↓
-implementation authority / plans
+implementation planning authority
         ↓
-source code + deployment configuration
+future source code + deployment configuration
         ↓
 runtime/platform realization
 ```
 
-Code and configuration are executable realizations of accepted authority. They do not acquire permission to contradict upstream contracts because a dependency/platform makes another implementation easier.
+Code and configuration, once implementation is explicitly authorized in a later phase, are executable realizations of accepted authority. They do not acquire permission to contradict upstream contracts because a dependency/platform makes another implementation easier.
 
 ## Progressive disclosure for implementers and agents
 
-For a material task, begin with:
+For a material planning or later implementation task, begin with:
 
 1. [`docs/index.md`](../index.md);
 2. [Phase 004 Consolidated Architecture Contract](../architecture/phase-004-consolidated-architecture-contract.md);
-3. this index and the relevant implementation authority;
+3. this index and the relevant implementation-plan authority;
 4. [005-B verification authority](verification-strategy-test-harness-architecture-fitness-evidence-quality-gates.md);
 5. [005-C package/source authority](source-topology-module-package-boundaries-shared-foundation-dependency-enforcement.md);
 6. [005-D control-plane authority](public-resource-control-plane-identity-state-persistence-transactions-migration-plan.md) whenever durable identity, public handles, canonical state, persistence, transactions, historical resolution, or migration are involved;
-7. only the detailed architecture/concept/experience documents directly linked by the active slice;
-8. ADRs only when rationale/supersession history is needed.
+7. [005-E Spark/data boundary plan](spark-data-boundary-source-output-reference-manifest-materialization-promotion-plan.md) whenever Spark selectors, exact source state, manifests, candidates, sealed snapshots, output representations or Generation promotion are involved;
+8. only the detailed architecture/concept/experience documents directly linked by the active slice;
+9. ADRs only when rationale/supersession history is needed.
 
 Do not load the whole design corpus by default.
 
@@ -71,35 +75,59 @@ Phase record: [005-B](../phases/005/005-B-verification-strategy-test-harness-arc
 
 ### 005-C — Source/package topology and dependency enforcement
 
-Established one `syngan` distribution/import package using `src/` layout, Python >=3.11, the `foundation/domain/ports/application/api/adapters/bootstrap` dependency direction, uv/Hatchling/pytest/Hypothesis/pytest-socket/Ruff/mypy/Import Linter/GitHub Actions toolchain, optional runtime/platform isolation, test topology and stable Q0-Q4 developer commands.
+Established one future `syngan` distribution/import package using `src/` layout, Python >=3.11, the `foundation/domain/ports/application/api/adapters/bootstrap` dependency direction, uv/Hatchling/pytest/Hypothesis/pytest-socket/Ruff/mypy/Import Linter/GitHub Actions toolchain, optional runtime/platform isolation, test topology and stable Q0-Q4 developer commands.
+
+No package scaffold or production code was created by 005-C.
 
 Phase record: [005-C](../phases/005/005-C-source-topology-module-package-boundaries-shared-foundation-dependency-enforcement.md).
 
 ### 005-D — Public/control-plane identity, persistence and migration
 
-Established one shared durable control-plane substrate for all later slices:
+Established the future shared durable control-plane substrate for all later slices:
 
 - `AuthorityId`, UUIDv4 `ResourceId`, typed `ResourceRef`, scoped `RevisionNumber`/`RevisionRef`, `SnapshotId`, `StateVersion` and `SchemaVersion` as distinct axes;
 - frozen standard-library value/domain/public types rather than ORM objects as canonical resources;
-- concrete `LearningSpec`, `GenerationSpec`, `EvaluationSpec`, typed handles/views and `SynGANClient` facade roles;
+- concrete planned `LearningSpec`, `GenerationSpec`, `EvaluationSpec`, typed handles/views and `SynGANClient` facade roles;
 - typed historical resolution including absent/unavailable/unknown/invalid/withheld distinctions;
 - explicit versioned JSON codecs and no pickle for canonical control/wire state;
 - owner-specific persistence ports rather than a universal MetadataStore/CRUD registry;
-- SQLAlchemy Core 2.x + Alembic 1.x built-in SQL adapter, PostgreSQL reference production backend, SQLite local/test backend and Psycopg 3 driver family;
-- optional `sql`/`postgres` persistence capability isolation from base `syngan`;
-- technical identity anchor plus owner-specific immutable revision/commitment records, mutable state projections, transition journal, tombstones and derived indexes;
+- SQLAlchemy Core 2.x + Alembic 1.x planned built-in SQL adapter, PostgreSQL reference production backend, SQLite local/test backend and Psycopg 3 driver family;
+- optional SQL/PostgreSQL persistence capability isolation from base `syngan`;
 - expected-version CAS, bounded transactions/locks, operation-scoped idempotency support and transactional outbox/durable intent;
-- migration/autogenerate/offline-SQL/expand-migrate-contract policy preserving immutable history;
+- migration policy preserving immutable history;
 - V1/V2/V4 and AF-03/05/06/16/17 verification mapping.
+
+No SQL schema, migration or persistence implementation was created by 005-D.
 
 Phase record: [005-D](../phases/005/005-D-public-resource-api-control-plane-identity-state-persistence-transactions-migration-implementation.md).
 
+### 005-E — Spark data boundary, manifests and promotion
+
+Established the future distributed-data implementation plan:
+
+- optional `spark` capability isolation from base `syngan`;
+- Spark DataFrame/table/path/query selectors remain access instructions rather than durable identity;
+- exact committed source state uses 005-D `ResourceRef`-based `SourceStateRef` values;
+- arbitrary DataFrame/query/mutable-locator inputs default to distributed snapshot preparation before commitment unless an adapter proves an exact stable native read binding;
+- bounded manifest roots with distributed/provider-native component indexes;
+- portable manifested-Parquet profile as the first generic file representation plan;
+- no Delta/Iceberg/Hudi/Databricks format becomes universal semantics;
+- candidate materialization, sealed data snapshot and logical Generation output remain distinct;
+- exact sealed snapshot is the subject for required completion Evaluation;
+- future write/seal APIs reserve the writer-fence seam owned by 005-G;
+- Generation promotion reuses 005-D CAS/transactions/idempotency/outbox and may be metadata-only;
+- V5 and AF-03/04/08/13/17 plus future AF-07 integration are mapped.
+
+No PySpark package, Spark adapter, manifest, migration, test or storage materialization was created by 005-E.
+
+Phase record: [005-E](../phases/005/005-E-spark-data-boundary-source-output-references-manifest-materialization-promotion-implementation-plan.md).
+
 ## Current state
 
-**Phase 005 — Implementation Planning & Delivery Decomposition is current.**
+**Phase 005 — Implementation Planning & Delivery Decomposition is current and remains planning-only.**
 
 Next:
 
-**005-E — Spark Data Boundary, Source/Output References, Manifest, Materialization & Promotion Implementation Plan**.
+**005-F — Strategy/Method Extension SPI, Learning/Generation/Evaluation Runtime & Learned-State Implementation Plan**.
 
-005-E must use 005-D's ResourceRef/history/state/transaction model for exact source-state binding and Generation output control authority while keeping distributed rows/components/manifests in the data plane and preserving the sealed-candidate/evaluation/promotion boundary.
+005-F must consume 005-D durable identity/control contracts and 005-E distributed source/candidate/snapshot boundaries while defining future model-neutral provider/SPIs and Learned-State representation/loading without beginning production implementation.
