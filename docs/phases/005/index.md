@@ -50,8 +50,8 @@ Implementation planning MUST NOT begin with a preferred framework/package tree a
 | Group | Scope | Status |
 |---|---|---|
 | **005-A** | [**Implementation Authority, Delivery Governance, Toolchain & Repository Enforcement**](005-A-implementation-authority-delivery-governance-toolchain-repository-enforcement.md) | **complete** |
-| **005-B** | **Verification Strategy, Test Harness, Architecture Fitness Functions, Evidence Fixtures & Quality Gates** | **next** |
-| 005-C | Source Topology, Module/Package Boundaries, Shared Foundation & Dependency Enforcement | planned |
+| **005-B** | [**Verification Strategy, Test Harness, Architecture Fitness Functions, Evidence Fixtures & Quality Gates**](005-B-verification-strategy-test-harness-architecture-fitness-evidence-fixtures-quality-gates.md) | **complete** |
+| **005-C** | **Source Topology, Module/Package Boundaries, Shared Foundation & Dependency Enforcement** | **next** |
 | 005-D | Public Resource API, Control-Plane Identity, State, Persistence, Transactions & Migration Implementation Plan | planned |
 | 005-E | Spark Data Boundary, Source/Output References, Manifest, Materialization & Promotion Implementation Plan | planned |
 | 005-F | Strategy/Method Extension SPI, Learning/Generation/Evaluation Runtime & Learned-State Implementation Plan | planned |
@@ -73,44 +73,57 @@ Key accepted rules include:
 - existing code does not outrank canonical authority;
 - material changes are classified from local maintenance through semantic/experience-affecting changes so conflicts escalate to the correct layer;
 - delivery slices remain traceable from upstream authority through modules/ports/adapters to verification and acceptance evidence;
-- code compiling or succeeding once is not sufficient completion evidence;
 - build/test/development behavior must be repository-declared and reproducible rather than workstation-defined;
-- concrete tool selection remains deferred until verification/topology requirements are known;
 - direct dependencies require explicit purpose/classification and compatibility/offline/network/security consideration;
 - runtime package/model acquisition and hidden fallback remain prohibited;
 - optional integrations remain isolatable from the portable/offline core;
-- source/package topology is not created before 005-B defines verification obligations;
 - persisted/public/SPI changes require compatibility/migration analysis on their actual version axis;
-- real secrets and sensitive payloads remain out of source/fixtures/logs;
-- humans and agents follow the same authority/change/evidence rules;
-- architecture fitness checks are product-correctness controls, not optional style preferences;
-- required-check waivers must be explicit/bounded and cannot override semantic authority.
+- humans and agents follow the same authority/change/evidence rules.
 
 Immediate repository governance created:
 
 - root [`AGENTS.md`](../../../AGENTS.md);
 - [`.github/pull_request_template.md`](../../../.github/pull_request_template.md).
 
-005-A deliberately does not claim that branch protection/CI checks already exist. 005-B owns the verification gates that later repository enforcement must execute.
+### 005-B — verification strategy, fitness functions and quality gates
+
+Established [Verification Strategy, Test Harness, Architecture Fitness Functions, Evidence Fixtures & Quality Gates](../../implementation/verification-strategy-test-harness-architecture-fitness-evidence-quality-gates.md).
+
+Key accepted rules include:
+
+- test oracles derive from accepted authority rather than current code/platform output;
+- logical verification layers V0-V11 separate repository, deterministic, component, fitness, persistence, distributed, runtime, recovery, Evidence/history, security/offline, platform and scale/compatibility concerns;
+- architecture-fitness catalog AF-01 through AF-20 gives stable identifiers to cross-cutting Phase 004 properties;
+- core deterministic rules should remain hermetic and fast enough for continuous gating;
+- production adapters inherit reusable common conformance suites rather than provider-specific weaker contracts;
+- failure/recovery tests deliberately inject faults around durable mutation, provider submission, checkpoint closure, candidate seal, Evidence establishment and promotion;
+- portable/core verification defaults to no outbound network and treats unexpected network access as failure;
+- fixtures are synthetic/non-sensitive and split into micro, reproducibly generated medium, ephemeral scale and fault/control classes;
+- golden snapshots are compatibility evidence, not self-authorizing truth;
+- stochastic/statistical tests predeclare acceptance/confidence behavior and never use retry-until-green;
+- Q0-Q4 distinguish local, PR, integration, scheduled and release/support certification gates by cadence/cost rather than semantic importance;
+- flaky/quarantined tests and gate waivers remain explicit, owned and time-bounded;
+- acceptance evidence records verification profiles, fitness results, fixture versions and material compatibility/security/scale context without confusing delivery evidence with the domain `Evidence` concept.
+
+005-B deliberately leaves concrete test/build/static-analysis tools and physical source/test topology to 005-C.
 
 ## Why the remaining order is dependency-safe
 
-### 005-B — verification before detailed implementation decomposition
-
-Define the verification model before choosing concrete module boundaries so architecture invariants become executable quality gates rather than retrospective documentation.
-
-This includes test layers, fixtures, architecture fitness functions, CI quality gates, failure/recovery testing, and acceptance-evidence conventions.
-
 ### 005-C — source/package topology after governance and verification
 
-Only after 005-B defines enforceable obligations should 005-C select:
+005-C can now select:
 
-- package/source topology;
-- shared primitives;
-- application/port/adapter boundaries;
+- Python package/source/test topology;
+- shared primitives and application/port/adapter boundaries;
 - import/dependency rules;
-- optional-dependency isolation;
-- foundational concrete Python/build/static-analysis toolchain needed to enforce those boundaries.
+- optional dependency/extras isolation;
+- foundational concrete Python/build/test/static-analysis tooling;
+- architecture fitness enforcement mechanism;
+- stable Q0/Q1 developer/CI commands and entry points for Q2-Q4 profiles;
+- fixture/conformance-suite physical organization;
+- initial CI workflow/check mapping.
+
+The topology must make V0-V11, AF-01 through AF-20, and Q0-Q4 enforceable rather than weaken them for package convenience.
 
 ### 005-D through 005-J — implementation slices follow architectural dependency order
 
@@ -135,8 +148,9 @@ Phase 005 MUST NOT:
 - design enterprise-scale workflows around mandatory full driver-local materialization;
 - introduce hidden package/model downloads, remote fallback, telemetry, or egress;
 - equate scheduler retry/exactly-once claims with SYNGAN semantic authority;
-- treat implementation planning as permission to skip fencing, idempotency, exact historical binding, Evidence strength, Provenance, or authorization requirements;
+- treat implementation planning as permission to skip fencing, idempotency, exact historical binding, Evidence strength, Provenance, authorization, or required architecture-fitness checks;
 - allow derived indexes/telemetry/security audit to become canonical semantic state;
+- treat snapshot refresh, platform success, line coverage, or retry-until-green as sufficient correctness evidence;
 - claim strict OKF 0.2 normalization is complete unless separately verified against external authority.
 
 ## Phase 005 exit target
@@ -158,4 +172,4 @@ The exit should be strong enough that subsequent coding phases can execute the p
 
 ## Current next phase
 
-**005-B — Verification Strategy, Test Harness, Architecture Fitness Functions, Evidence Fixtures & Quality Gates**
+**005-C — Source Topology, Module/Package Boundaries, Shared Foundation & Dependency Enforcement**
