@@ -18,15 +18,10 @@ Repository-wide automated-agent rules are in [`AGENTS.md`](AGENTS.md).
 
 ## Current status
 
-**Phase 001 — Design Foundation & Concept Discovery: complete.**
-
-**Phase 002 — Concept Specification & Invariant Refinement: complete.**
-
-**Phase 003 — Experience & Workflow Design: complete.**
-
-**Phase 004 — Representation & Architecture Design: complete.**
-
-Phase 004 closed through [`004-J — Cross-Architecture Invariant Audit, Decision Consolidation & Phase 004 Exit`](docs/phases/004/004-J-cross-architecture-invariant-audit-decision-consolidation-phase-004-exit.md) with no blocking redesign required.
+- **Phase 001 — Design Foundation & Concept Discovery: complete**
+- **Phase 002 — Concept Specification & Invariant Refinement: complete**
+- **Phase 003 — Experience & Workflow Design: complete**
+- **Phase 004 — Representation & Architecture Design: complete**
 
 ## Current phase
 
@@ -34,7 +29,7 @@ Phase 004 closed through [`004-J — Cross-Architecture Invariant Audit, Decisio
 
 See [`docs/phases/005/index.md`](docs/phases/005/index.md).
 
-Completing a Phase 005 group means its future implementation plan is complete. No production package, schema, migration, runtime adapter, Evidence/Provenance store, test suite, CI workflow, or deployment infrastructure is created merely by completing these planning groups.
+Completing a Phase 005 group means its future implementation plan is complete. No production package, schema, migration, runtime/security/platform adapter, Evidence/Provenance store, test suite, CI workflow, or deployment infrastructure is created merely by completing these planning groups.
 
 Completed:
 
@@ -46,28 +41,31 @@ Completed:
 - **005-F — Strategy/Method Extension SPI, Learning/Generation/Evaluation Runtime & Learned-State Implementation Plan**
 - **005-G — Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Implementation Plan**
 - **005-H — Evaluation/Evidence, Provenance, Historical Query & Reproducibility Implementation Plan**
+- **005-I — Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Implementation Plan**
 
 Canonical implementation-planning authority is under [`docs/implementation/`](docs/implementation/index.md).
 
-### Implementation-planning baseline through 005-H
+### Implementation-planning baseline through 005-I
 
 The future implementation is planned around:
 
-- one `src/syngan` package with `foundation`, `domain`, `ports`, `application`, `api`, `adapters`, and `bootstrap` boundaries;
-- Python >=3.11 with the accepted uv/Hatchling/pytest/Hypothesis/pytest-socket/Ruff/mypy/Import Linter/GitHub Actions toolchain plan;
-- one durable `AuthorityId`/`ResourceId`/`ResourceRef`/revision/state/schema model shared across downstream slices;
-- SQLAlchemy Core/Alembic with PostgreSQL as the reference production control-store family and SQLite as a local/test profile;
-- exact distributed `SourceStateRef` binding, bounded manifests, candidate/sealed-snapshot/output separation and a portable manifested-Parquet profile;
-- separate Strategy/Evaluation-method implementation-binding identity and `RuntimeSpiVersion` axes;
-- Protocol-based, activity-specific Learning/Generation/Evaluation runtime contracts;
-- immutable Attempt-scoped runtime invocations and Learned-State candidate/representation/codec boundaries;
-- one stable Execution with multiple Attempts, monotonic AttemptEpoch fencing, checkpoint/recovery, launch reconciliation and cancellation/completion linearization;
-- owner-established Evidence with immutable finding content and separate current applicability state;
-- exact Generation completion basis retaining the Evidence used at promotion time;
-- canonical typed Provenance planned as indexed relational assertions rather than a graph-first metadata authority;
-- derived bounded history/provenance/explain/compare projections that cannot overwrite canonical history;
-- reproducibility as a qualified derived assessment separating historical support class from current feasibility;
-- optional Spark/PyTorch runtime capability families without making either framework the semantic model.
+- one `src/syngan` package with inward `foundation`, `domain`, `ports`, `application`, `api`, `adapters`, and `bootstrap` boundaries;
+- one durable ResourceRef/revision/state/schema model shared across downstream slices;
+- exact distributed source-state/candidate/sealed-snapshot/output identity;
+- model-neutral Strategy/method binding and activity-specific runtime contracts;
+- Learned-State logical identity separated from representation, codec and loaded runtime object;
+- one stable Execution with multiple Attempts, epoch fencing, launch reconciliation, checkpoint/recovery and cancellation/completion linearization;
+- owner-established Evidence, typed canonical Provenance and bounded derived historical/reproducibility views;
+- dependency availability, exact identity, integrity/authenticity, trust/approval, compatibility and current authorization kept distinct;
+- no hidden runtime package/model acquisition, remote fallback, public-registry lookup, telemetry or egress;
+- a first-class offline/no-egress profile after approved local/private provisioning;
+- action-oriented authorization and Attempt-scoped capabilities rather than handle-as-credential authority;
+- non-secret SecretRef values with ephemeral bearer credentials resolved at use time;
+- separate permissions for source, Learned-State use/raw-read/export, candidate/output, diagnostics and history/query actions;
+- truthful redaction/withholding across canonical records, reverse indexes, counts, comparison and reproducibility reasons;
+- security audit kept separate from Provenance and telemetry;
+- tenant/security-domain isolation across control/data/history/cache/runtime surfaces;
+- optional Spark/PyTorch/runtime/platform capability families without making any framework or platform semantic authority.
 
 No production implementation has begun.
 
@@ -81,8 +79,6 @@ Even a positive 005-K readiness result still requires a later explicit implement
 
 Next:
 
-- **005-I — Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Implementation Plan**
+- **005-J — Deployment/Platform Adapters, Observability, Compatibility, Scale & Performance Implementation Plan**
 
-005-I will plan dependency trust/resolution, offline/no-egress enforcement, current action authorization, runtime capabilities, secret handling, redaction/withholding and security-aware history/query behavior against the concrete surfaces defined through 005-H.
-
-Deployment/platform integration, compatibility/scale and the final Jackson/design-completeness audit remain downstream Phase 005 planning work.
+005-J will plan concrete deployment/platform capability profiles for runtime launch, storage, workload identity, secrets, network isolation, private dependency distribution, observability/audit, compatibility, HA, backup/restore, scale and performance—while surfacing unsupported guarantees rather than weakening the common architecture contract.
