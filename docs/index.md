@@ -71,6 +71,7 @@ Completed in Phase 004:
 - [004-F — Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Architecture](phases/004/004-F-execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation-architecture.md)
 - [004-G — Evaluation/Evidence, Provenance, Reproducibility & Historical Query Architecture](phases/004/004-G-evaluation-evidence-provenance-reproducibility-historical-query-architecture.md)
 - [004-H — Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Architecture](phases/004/004-H-dependency-resolution-offline-no-egress-authorization-redaction-enterprise-security-architecture.md)
+- [004-I — Deployment, Scalability, Observability, Portability, Compatibility & Platform Integration Architecture](phases/004/004-I-deployment-scalability-observability-portability-compatibility-platform-integration-architecture.md)
 
 Canonical architecture now includes:
 
@@ -81,18 +82,11 @@ Canonical architecture now includes:
 - the [Strategy extension/runtime adapter architecture](architecture/strategy-extension-learning-generation-evaluation-runtime-adapter.md);
 - the [Execution/recovery/fencing architecture](architecture/execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation.md);
 - the [Evaluation/Evidence, Provenance, Reproducibility & Historical Query architecture](architecture/evaluation-evidence-provenance-reproducibility-historical-query.md);
-- the [Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security architecture](architecture/dependency-resolution-offline-no-egress-authorization-redaction-enterprise-security.md).
+- the [Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security architecture](architecture/dependency-resolution-offline-no-egress-authorization-redaction-enterprise-security.md);
+- the [Deployment, Scalability, Observability, Portability, Compatibility & Platform Integration architecture](architecture/deployment-scalability-observability-portability-compatibility-platform-integration.md).
 
-004-H establishes explicit dependency identity/resolution/trust separation; local/offline provisioning without hidden acquisition; network-versus-egress separation; action-oriented current authorization; non-bearing durable handles; scoped Attempt data/dependency/network/secret capabilities; independently protected Learned State/output/diagnostic/control-plane access; view-time truthful withholding/redaction; security-aware historical/query projections; secret references rather than persisted bearer values; retry/recovery security revalidation; revocation plus Attempt fencing; multi-security-domain isolation; and separation of security audit from Provenance.
+004-I establishes deployable logical roles, restartable durable-state-first coordination, capability-negotiated platform adapters, multi-dimensional scale disclosure, distinct semantic/runtime/security observability lanes, generic/self-managed Spark portability, Databricks as a managed adapter target rather than package identity, multi-axis compatibility and rolling-version contracts, private/offline package/dependency distribution, and deployment enforcement obligations for the 004-H security model.
 
-Decision rationale:
+Decision rationale is preserved in ADR-0001 through [ADR-0008 — Portable Core & Capability-Negotiated Platform Adapters](decisions/ADR-0008-portable-core-capability-negotiated-platform-adapters.md).
 
-- [ADR-0001 — Typed Resource/Handle Public API](decisions/ADR-0001-typed-resource-handle-public-api.md)
-- [ADR-0002 — Immutable Semantic Snapshots & Versioned Lifecycle State](decisions/ADR-0002-immutable-semantic-snapshots-versioned-lifecycle-state.md)
-- [ADR-0003 — Sealed Manifest-Gated Distributed Output Promotion](decisions/ADR-0003-sealed-manifest-gated-output-promotion.md)
-- [ADR-0004 — Semantic Extension & Runtime Binding Separation](decisions/ADR-0004-semantic-extension-runtime-binding-separation.md)
-- [ADR-0005 — Attempt-Epoch Fencing & Recoverable At-Least-Once Execution](decisions/ADR-0005-attempt-epoch-fencing-recoverable-at-least-once-execution.md)
-- [ADR-0006 — Typed Canonical Provenance & Derived Historical Projections](decisions/ADR-0006-typed-provenance-canonical-derived-history-projections.md)
-- [ADR-0007 — Explicit Dependency Resolution & Scoped Capability Security](decisions/ADR-0007-explicit-dependency-resolution-scoped-capability-security.md)
-
-Next: **004-I — Deployment, Scalability, Observability, Portability, Compatibility & Platform Integration Architecture**.
+Next: **004-J — Cross-Architecture Invariant Audit, Decision Consolidation & Phase 004 Exit**.
