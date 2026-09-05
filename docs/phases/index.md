@@ -41,13 +41,15 @@ See [Phase 005 index](005/index.md).
 - [005-E — Spark Data Boundary, Source/Output References, Manifest, Materialization & Promotion Implementation Plan](005/005-E-spark-data-boundary-source-output-references-manifest-materialization-promotion-implementation-plan.md) — complete
 - [005-F — Strategy/Method Extension SPI, Learning/Generation/Evaluation Runtime & Learned-State Implementation Plan](005/005-F-strategy-method-extension-spi-learning-generation-evaluation-runtime-learned-state-implementation-plan.md) — complete
 - [005-G — Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Implementation Plan](005/005-G-execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation-implementation-plan.md) — complete
-- **005-H — Evaluation/Evidence, Provenance, Historical Query & Reproducibility Implementation Plan — next**
-- 005-I — Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Implementation Plan
+- [005-H — Evaluation/Evidence, Provenance, Historical Query & Reproducibility Implementation Plan](005/005-H-evaluation-evidence-provenance-historical-query-reproducibility-implementation-plan.md) — complete
+- **005-I — Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Implementation Plan — next**
 - 005-J — Deployment/Platform Adapters, Observability, Compatibility, Scale & Performance Implementation Plan
-- 005-K — Cross-Slice Integration, Delivery Sequencing, Backlog Closure & Implementation-Readiness Exit
+- 005-K — Cross-Slice Integration, Delivery Sequencing, Backlog Closure, Jackson-Methodology Completeness & Implementation-Readiness Exit
 
 Canonical implementation-planning authority is under [Implementation Planning & Delivery Authority](../implementation/index.md).
 
-005-D froze the durable public/control substrate; 005-E mapped exact distributed source/candidate/snapshot/output behavior; 005-F froze the executable binding/SPI/runtime/Learned-State boundary; 005-G now freezes durable Execution/Attempt epochs, stale-writer fencing, checkpoint/recovery, launch reconciliation, idempotency and cancellation/completion linearization.
+005-H now fixes the future Evidence/Provenance/history/reproducibility boundary: owner-established Evidence, relational canonical typed Provenance, derived bounded query projections and qualified reproducibility assessments over exact historical facts.
 
-005-H is next because Evidence/Provenance/history can now bind to exact committed semantic resources, sealed subjects, runtime bindings/invocations and durable operational recovery facts rather than inferring history from platform telemetry.
+005-I is next so dependency trust, offline/no-egress, action authorization and redaction can be planned against canonical resources as well as history/query projections.
+
+Phase 005-K is an explicit Jackson/design-completeness gate. It may require another design-refinement phase rather than implementation; even a positive readiness result does not itself authorize coding.
