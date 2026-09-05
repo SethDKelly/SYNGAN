@@ -69,8 +69,8 @@ Planning MUST NOT begin with a preferred framework/package tree and then reinter
 | **005-C** | [**Source Topology, Module/Package Boundaries, Shared Foundation & Dependency Enforcement**](005-C-source-topology-module-package-boundaries-shared-foundation-dependency-enforcement.md) | **complete** |
 | **005-D** | [**Public Resource API, Control-Plane Identity, State, Persistence, Transactions & Migration Implementation Plan**](005-D-public-resource-api-control-plane-identity-state-persistence-transactions-migration-implementation.md) | **complete** |
 | **005-E** | [**Spark Data Boundary, Source/Output References, Manifest, Materialization & Promotion Implementation Plan**](005-E-spark-data-boundary-source-output-references-manifest-materialization-promotion-implementation-plan.md) | **complete** |
-| **005-F** | **Strategy/Method Extension SPI, Learning/Generation/Evaluation Runtime & Learned-State Implementation Plan** | **next** |
-| 005-G | Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Implementation Plan | planned |
+| **005-F** | [**Strategy/Method Extension SPI, Learning/Generation/Evaluation Runtime & Learned-State Implementation Plan**](005-F-strategy-method-extension-spi-learning-generation-evaluation-runtime-learned-state-implementation-plan.md) | **complete** |
+| **005-G** | **Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Implementation Plan** | **next** |
 | 005-H | Evaluation/Evidence, Provenance, Historical Query & Reproducibility Implementation Plan | planned |
 | 005-I | Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Implementation Plan | planned |
 | 005-J | Deployment/Platform Adapters, Observability, Compatibility, Scale & Performance Implementation Plan | planned |
@@ -100,46 +100,52 @@ No database schema, migration or persistence code was created.
 
 ### 005-E — Spark data boundary plan
 
-Established [Spark Data Boundary, Source/Output References, Manifest, Materialization & Promotion Implementation Plan](../../implementation/spark-data-boundary-source-output-reference-manifest-materialization-promotion-plan.md).
+Established [Spark Data Boundary, Source/Output References, Manifest, Materialization & Promotion Implementation Plan](../../implementation/spark-data-boundary-source-output-reference-manifest-materialization-promotion-plan.md): exact `SourceStateRef` binding, distributed snapshot preparation, bounded manifest roots, provider-native or manifested-Parquet physical profiles, candidate/sealed-snapshot/output separation, writer-fence seam and metadata-only idempotent promotion.
+
+No Spark/runtime/storage implementation was created.
+
+### 005-F — runtime extension and Learned-State plan
+
+Established [Strategy/Method Extension SPI, Learning/Generation/Evaluation Runtime & Learned-State Implementation Plan](../../implementation/strategy-method-extension-spi-learning-generation-evaluation-runtime-learned-state-plan.md).
 
 Key future implementation rules include:
 
-- PySpark stays optional behind the `spark` capability extra;
-- DataFrame/table/path/query remain selectors/access mechanisms rather than canonical identity;
-- committed source work binds exact `SourceStateRef` state;
-- arbitrary DataFrame/query/mutable-locator inputs default to distributed snapshot preparation unless a provider proves exact stable native binding;
-- bounded manifest roots point to distributed/provider-native component indexes;
-- a manifested-Parquet profile is the first planned provider-neutral file representation;
-- no Delta/Iceberg/Hudi/Databricks format becomes universal SYNGAN semantics;
-- candidate materialization, sealed snapshot and completed output remain separate roles;
-- required completion Evaluation binds the exact sealed candidate snapshot;
-- sealing/promotion are idempotent physical/control transitions, not semantic shortcuts;
-- Generation promotion may reuse sealed bytes without a second full copy;
-- 005-G writer-fence and 005-I security/no-egress seams are reserved explicitly;
-- V5 and AF-03/04/08/13/17 obligations are mapped.
+- executable implementation binding remains separate from Strategy/method semantic authority;
+- binding identity/revision, `RuntimeSpiVersion`, package/build version and state-codec version remain separate axes;
+- standard-library `typing.Protocol` is the preferred structural SPI mechanism;
+- Learning/Generation/Evaluation keep separate typed runtime adapter/result contracts;
+- explicit deployment composition is primary, with optional lazy Python entry-point discovery through `syngan.runtime_extensions`;
+- discovery does not authorize/select/trust an implementation and never auto-installs/downloads missing code/artifacts;
+- no global mutable plugin registry becomes authority;
+- every Attempt consumes an immutable activity-specific invocation snapshot;
+- runtime ports expose bounded data/state/diagnostic/dependency/progress capabilities rather than arbitrary canonical repositories;
+- Learning runtime produces candidate Learned-State representation, Generation runtime produces candidate data, Evaluation runtime produces method-result facts—none directly establish semantic results;
+- Learned-State physical representation uses explicit codec/manifest identity and supports distributed loading without a universal full-driver deserialization requirement;
+- direct Generation remains first-class;
+- Spark/PyTorch remain optional capability families and concrete launchers are deferred to 005-G/005-J;
+- V6 and AF-02/04/09/12/13/14/20 obligations are mapped.
 
-No PySpark dependency, Spark adapter, storage materialization, manifest, migration, test or CI implementation was created.
+No runtime plugin, entry point, state codec, PyTorch/Spark adapter, test or launcher was implemented.
 
 ## Why the remaining order is dependency-safe
 
-### 005-F — runtime/SPI planning next
+### 005-G — Execution/recovery planning next
 
-005-F can now define future model-neutral Strategy/method provider contracts using:
+005-G can now bind the 004-F operational architecture to concrete future representations using:
 
-- 005-D durable resource/commitment identities;
-- 005-E exact source-state, candidate-write, sealed-snapshot and output-representation boundaries;
-- 005-B conformance/verification requirements;
-- 005-C optional-dependency isolation.
+- 005-D durable ResourceRef/StateVersion/CAS/transaction/outbox primitives;
+- 005-E candidate-write/seal fence seam;
+- 005-F immutable Attempt-scoped runtime invocation and checkpoint/cancellation-facing runtime ports.
 
-It can therefore plan PyTorch/Spark-native/future runtime coexistence without making any runtime object, plugin or framework the semantic owner.
+It can therefore define stable Execution/Attempt records, monotonic Attempt epochs/fence tokens, checkpoint identity/eligibility, recovery modes, launch-intent reconciliation, idempotent commands and cancellation/completion linearization without changing runtime or semantic ownership.
 
-### 005-G through 005-J
+### 005-H through 005-J
 
-Execution/recovery, Evidence/history, security and platform/deployment planning follow in architecture dependency order.
+Evidence/history, enterprise security, and deployment/platform planning follow in architecture dependency order.
 
 ### 005-K
 
-The final group audits that the plans compose into one implementation-ready program without circular dependencies, hidden prerequisites, conflicting migrations, or unowned acceptance criteria.
+The final group audits that all plans compose into one implementation-ready program without circular dependencies, hidden prerequisites, conflicting migrations, or unowned acceptance criteria.
 
 ## Phase 005 guardrails
 
@@ -151,7 +157,7 @@ Phase 005 MUST NOT:
 - weaken Phase 004 architecture to fit a preferred library/platform;
 - reverse the 005-C inward dependency direction;
 - invent parallel ResourceId/StateVersion/schema-version conventions downstream of 005-D;
-- turn foundation/persistence/data manifests into generic utilities/config/metadata/context/result owners;
+- turn foundation/persistence/data/runtime infrastructure into generic utilities/config/metadata/context/result owners;
 - place Spark/PyTorch/Databricks/cloud/remote dependencies into base core merely for one adapter;
 - make raw DataFrame/model/platform objects canonical identity;
 - design enterprise workflows around mandatory full driver-local materialization;
@@ -179,4 +185,4 @@ Only after this planning program exits should a later phase authorize actual cod
 
 ## Current next phase
 
-**005-F — Strategy/Method Extension SPI, Learning/Generation/Evaluation Runtime & Learned-State Implementation Plan**
+**005-G — Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Implementation Plan**
