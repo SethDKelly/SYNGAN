@@ -9,8 +9,9 @@ For any material task:
 1. read `docs/index.md`;
 2. read `docs/architecture/phase-004-consolidated-architecture-contract.md` for implementation-facing architecture;
 3. read `docs/implementation/index.md` and the implementation authority relevant to the task;
-4. follow only the detailed concept/experience/architecture links needed for the active slice;
-5. use ADRs for rationale when necessary, not as a replacement for current canonical authority.
+4. for material implementation behavior, read `docs/implementation/verification-strategy-test-harness-architecture-fitness-evidence-quality-gates.md` and identify the affected verification/fitness obligations;
+5. follow only the detailed concept/experience/architecture links needed for the active slice;
+6. use ADRs for rationale when necessary, not as a replacement for current canonical authority.
 
 Do not load or copy the entire documentation corpus by default.
 
@@ -38,7 +39,8 @@ Before material implementation work, identify:
 
 - the Phase 005 implementation slice;
 - upstream architecture/implementation authority;
-- whether the change is local, implementation-realization, public/persisted-contract, architecture-affecting, or semantic/experience-affecting.
+- whether the change is local, implementation-realization, public/persisted-contract, architecture-affecting, or semantic/experience-affecting;
+- affected verification layer(s), architecture-fitness IDs, and quality gate(s) where already defined.
 
 Keep changes bounded to the requested slice. Avoid opportunistic refactors, dependency additions, package moves, terminology changes, or API/schema changes outside scope.
 
@@ -70,7 +72,17 @@ Committed runtime execution must never install missing packages or download miss
 
 Material behavior changes require verification appropriate to the implementation slice.
 
-Never weaken or delete a required architecture-fitness check merely to make a change pass without explicitly documenting the conflict and rationale.
+Canonical verification authority: `docs/implementation/verification-strategy-test-harness-architecture-fitness-evidence-quality-gates.md`.
+
+Tests must derive their oracle from accepted authority rather than merely capture current implementation behavior. Do not refresh snapshots/goldens blindly to bless a contract change.
+
+Do not mock away the distributed, concurrency, security, persistence, or recovery property actually under test. Production adapters must ultimately satisfy their reusable conformance contract.
+
+Portable/core verification should not depend on outbound network. Networked/platform tests must be explicitly profiled rather than silently activated.
+
+Never use unbounded retry-until-pass for stochastic/statistical tests. A passing retry does not erase a prior assertion failure.
+
+Never weaken, delete, quarantine, or waive a required architecture-fitness check merely to make a change pass without the explicit governance required by 005-B.
 
 A successful local run is not sufficient completion evidence for a material slice.
 
@@ -88,6 +100,6 @@ If the architecture itself changes, update `docs/architecture/` and relevant ADR
 
 ## Completion
 
-Do not claim an implementation slice complete unless its required authority mapping, tests/fitness checks, dependency/migration/security/network implications, and acceptance evidence are accounted for.
+Do not claim an implementation slice complete unless its required authority mapping, verification layers/fitness checks, dependency/migration/security/network implications, and acceptance evidence are accounted for.
 
 Canonical governance: `docs/implementation/implementation-authority-delivery-governance-toolchain-repository-enforcement.md`.
