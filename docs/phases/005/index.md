@@ -21,8 +21,6 @@ Across 005-A through 005-K:
 - CI/deployment infrastructure is not created;
 - tests are not implemented as production verification suites.
 
-The purpose is to make later coding dependency-safe and implementation-ready without letting code/framework convenience reopen Jackson-style conceptual, experience, or architecture decisions.
-
 Where a Phase 005 document says `implementation sequence`, `package path`, `class`, `port`, `adapter`, `table`, `migration`, or `quality gate`, it describes a **future implementation contract/sequence** unless a later phase explicitly authorizes coding.
 
 ## Entry authority
@@ -70,8 +68,8 @@ Planning MUST NOT begin with a preferred framework/package tree and then reinter
 | **005-D** | [**Public Resource API, Control-Plane Identity, State, Persistence, Transactions & Migration Implementation Plan**](005-D-public-resource-api-control-plane-identity-state-persistence-transactions-migration-implementation.md) | **complete** |
 | **005-E** | [**Spark Data Boundary, Source/Output References, Manifest, Materialization & Promotion Implementation Plan**](005-E-spark-data-boundary-source-output-references-manifest-materialization-promotion-implementation-plan.md) | **complete** |
 | **005-F** | [**Strategy/Method Extension SPI, Learning/Generation/Evaluation Runtime & Learned-State Implementation Plan**](005-F-strategy-method-extension-spi-learning-generation-evaluation-runtime-learned-state-implementation-plan.md) | **complete** |
-| **005-G** | **Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Implementation Plan** | **next** |
-| 005-H | Evaluation/Evidence, Provenance, Historical Query & Reproducibility Implementation Plan | planned |
+| **005-G** | [**Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Implementation Plan**](005-G-execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation-implementation-plan.md) | **complete** |
+| **005-H** | **Evaluation/Evidence, Provenance, Historical Query & Reproducibility Implementation Plan** | **next** |
 | 005-I | Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Implementation Plan | planned |
 | 005-J | Deployment/Platform Adapters, Observability, Compatibility, Scale & Performance Implementation Plan | planned |
 | 005-K | Cross-Slice Integration, Delivery Sequencing, Backlog Closure & Implementation-Readiness Exit | planned |
@@ -88,7 +86,7 @@ Established V0-V11 verification layers, AF-01 through AF-20 architecture-fitness
 
 ### 005-C — source/package/toolchain plan
 
-Established the future single `syngan` package using `src/`, Python >=3.11, inward `foundation/domain/ports/application/api/adapters/bootstrap` dependency direction, uv/Hatchling/pytest/Hypothesis/pytest-socket/Ruff/mypy/Import Linter/GitHub Actions toolchain plan, optional-dependency isolation, test topology and stable Q0-Q4 command architecture.
+Established the future single `syngan` package using `src/`, Python >=3.11, inward `foundation/domain/ports/application/api/adapters/bootstrap` dependency direction, accepted foundational toolchain, optional-dependency isolation, test topology and stable Q0-Q4 command architecture.
 
 No production scaffold or code was created.
 
@@ -100,52 +98,63 @@ No database schema, migration or persistence code was created.
 
 ### 005-E — Spark data boundary plan
 
-Established [Spark Data Boundary, Source/Output References, Manifest, Materialization & Promotion Implementation Plan](../../implementation/spark-data-boundary-source-output-reference-manifest-materialization-promotion-plan.md): exact `SourceStateRef` binding, distributed snapshot preparation, bounded manifest roots, provider-native or manifested-Parquet physical profiles, candidate/sealed-snapshot/output separation, writer-fence seam and metadata-only idempotent promotion.
+Established exact `SourceStateRef` binding, distributed snapshot preparation, bounded manifest roots, provider-native or manifested-Parquet physical profiles, candidate/sealed-snapshot/output separation, writer-fence seam and metadata-only idempotent promotion.
 
 No Spark/runtime/storage implementation was created.
 
 ### 005-F — runtime extension and Learned-State plan
 
-Established [Strategy/Method Extension SPI, Learning/Generation/Evaluation Runtime & Learned-State Implementation Plan](../../implementation/strategy-method-extension-spi-learning-generation-evaluation-runtime-learned-state-plan.md).
-
-Key future implementation rules include:
-
-- executable implementation binding remains separate from Strategy/method semantic authority;
-- binding identity/revision, `RuntimeSpiVersion`, package/build version and state-codec version remain separate axes;
-- standard-library `typing.Protocol` is the preferred structural SPI mechanism;
-- Learning/Generation/Evaluation keep separate typed runtime adapter/result contracts;
-- explicit deployment composition is primary, with optional lazy Python entry-point discovery through `syngan.runtime_extensions`;
-- discovery does not authorize/select/trust an implementation and never auto-installs/downloads missing code/artifacts;
-- no global mutable plugin registry becomes authority;
-- every Attempt consumes an immutable activity-specific invocation snapshot;
-- runtime ports expose bounded data/state/diagnostic/dependency/progress capabilities rather than arbitrary canonical repositories;
-- Learning runtime produces candidate Learned-State representation, Generation runtime produces candidate data, Evaluation runtime produces method-result facts—none directly establish semantic results;
-- Learned-State physical representation uses explicit codec/manifest identity and supports distributed loading without a universal full-driver deserialization requirement;
-- direct Generation remains first-class;
-- Spark/PyTorch remain optional capability families and concrete launchers are deferred to 005-G/005-J;
-- V6 and AF-02/04/09/12/13/14/20 obligations are mapped.
+Established executable binding/SPI/version separation, Protocol-based activity-specific runtime adapters, explicit extension composition plus optional lazy entry-point discovery, immutable Attempt invocation, narrow runtime ports, Learned-State candidate/representation/codec boundaries, direct Generation and optional Spark/PyTorch runtime families.
 
 No runtime plugin, entry point, state codec, PyTorch/Spark adapter, test or launcher was implemented.
 
+### 005-G — Execution/recovery/fencing/cancellation plan
+
+Established [Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Implementation Plan](../../implementation/execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation-plan.md).
+
+Key future implementation rules include:
+
+- one stable Execution with many durable Attempts;
+- monotonic AttemptEpoch values allocated under Execution CAS;
+- Attempt observed state separate from mutation authority;
+- WriterFence using exact Execution/Attempt/epoch plus cancellation-generation barrier;
+- isolation-first stale-writer containment with provider fencing required for shared mutable targets;
+- leases/heartbeats as liveness evidence only;
+- immutable Attempt-owned runtime invocation;
+- durable launch intent/correlation and reconciliation after ambiguous provider outcomes;
+- operation-scoped idempotency keyed to exact target/request fingerprint;
+- immutable checkpoint commitment and contextual resume qualification;
+- explicit restart/resume/reconcile/cannot-continue recovery modes;
+- current-authority verification before adopting immutable prior effects;
+- Evaluation logical-work-unit deduplication or clean restart;
+- durable unknown/indeterminate operational state and coordinator restart from persisted state;
+- cancellation/completion linearization that revokes stale authority before physical termination is proven;
+- operational completion kept separate from semantic completion;
+- V7 and AF-04/06/07/08/09/18/19/20 obligations mapped.
+
+No Execution classes, SQL tables, scheduler/checkpoint adapter, migration, test suite or runtime infrastructure was created.
+
 ## Why the remaining order is dependency-safe
 
-### 005-G — Execution/recovery planning next
+### 005-H — Evidence/history planning next
 
-005-G can now bind the 004-F operational architecture to concrete future representations using:
+005-H can now bind the 004-G Evidence/Provenance/history architecture to exact persisted facts from 005-D through 005-G:
 
-- 005-D durable ResourceRef/StateVersion/CAS/transaction/outbox primitives;
-- 005-E candidate-write/seal fence seam;
-- 005-F immutable Attempt-scoped runtime invocation and checkpoint/cancellation-facing runtime ports.
+- immutable commitments and result identities;
+- exact sealed Evaluation subjects;
+- runtime binding/invocation identities;
+- Execution/Attempt/checkpoint/recovery history;
+- operation/promotion basis and historical resolution.
 
-It can therefore define stable Execution/Attempt records, monotonic Attempt epochs/fence tokens, checkpoint identity/eligibility, recovery modes, launch-intent reconciliation, idempotent commands and cancellation/completion linearization without changing runtime or semantic ownership.
+It can therefore plan idempotent Evidence establishment, typed Provenance assertions, derived historical projections and qualified reproducibility assessments without inventing a competing metadata/history store.
 
-### 005-H through 005-J
+### 005-I through 005-J
 
-Evidence/history, enterprise security, and deployment/platform planning follow in architecture dependency order.
+Enterprise security and deployment/platform planning follow after Evidence/history representation is fixed, so authorization/redaction can apply to canonical history and derived query paths consistently.
 
 ### 005-K
 
-The final group audits that all plans compose into one implementation-ready program without circular dependencies, hidden prerequisites, conflicting migrations, or unowned acceptance criteria.
+The final group audits that all plans compose into one implementation-ready program without circular dependencies, hidden prerequisites, conflicting migrations or unowned acceptance criteria.
 
 ## Phase 005 guardrails
 
@@ -157,12 +166,15 @@ Phase 005 MUST NOT:
 - weaken Phase 004 architecture to fit a preferred library/platform;
 - reverse the 005-C inward dependency direction;
 - invent parallel ResourceId/StateVersion/schema-version conventions downstream of 005-D;
-- turn foundation/persistence/data/runtime infrastructure into generic utilities/config/metadata/context/result owners;
+- turn foundation/persistence/data/runtime/execution infrastructure into generic utilities/config/metadata/context/result owners;
 - place Spark/PyTorch/Databricks/cloud/remote dependencies into base core merely for one adapter;
 - make raw DataFrame/model/platform objects canonical identity;
 - design enterprise workflows around mandatory full driver-local materialization;
 - introduce hidden package/model downloads, remote fallback, telemetry or egress;
-- skip fencing, idempotency, exact historical binding, Evidence strength, Provenance, authorization or required architecture-fitness checks;
+- replace fencing with lease expiry, scheduler retries or last-writer-wins;
+- coerce unknown operational state into success/failure merely to retry;
+- treat checkpoint existence as resume proof;
+- skip exact historical binding, Evidence strength, Provenance, authorization or required architecture-fitness checks;
 - allow derived indexes/telemetry/security audit to become canonical semantic state;
 - claim strict OKF 0.2 normalization is complete unless separately verified.
 
@@ -185,4 +197,4 @@ Only after this planning program exits should a later phase authorize actual cod
 
 ## Current next phase
 
-**005-G — Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Implementation Plan**
+**005-H — Evaluation/Evidence, Provenance, Historical Query & Reproducibility Implementation Plan**
