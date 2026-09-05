@@ -16,8 +16,8 @@ This directory is the canonical design knowledge bundle for SYNGAN.
 - [Domain Terminology](terminology/index.md) — canonical vocabulary and compatibility mappings.
 - [Accepted Concepts](concepts/index.md) — canonical concept purpose, ownership, actions, lifecycle, invariants and boundaries.
 - [Accepted Synchronizations](synchronizations/index.md) — canonical cross-concept coordination rules.
-- [Experience & Workflow Design](experience/index.md) — actor-visible/programmatic workflow semantics and the [Phase 003 Consolidated Experience Contract](experience/phase-003-consolidated-experience-contract.md).
-- [Representation & Architecture Design](architecture/index.md) — current implementation-facing architecture authority.
+- [Experience & Workflow Design](experience/index.md) — actor-visible/programmatic workflow semantics; start implementation-facing experience review with the [Phase 003 Consolidated Experience Contract](experience/phase-003-consolidated-experience-contract.md).
+- [Representation & Architecture Design](architecture/index.md) — accepted implementation-facing architecture; start with the [Phase 004 Consolidated Architecture Contract](architecture/phase-004-consolidated-architecture-contract.md).
 - [Architecture Decision Records](decisions/index.md) — architecture rationale/alternatives/supersession; current normative architecture remains under `docs/architecture/`.
 - [Concept Discovery](discovery/index.md) — historical hypotheses, alternatives and design provenance.
 - [Phases](phases/index.md) — phase plans, outcomes and exit reviews.
@@ -35,58 +35,66 @@ authority
   > concepts / synchronizations
   > experience
   > architecture
-  > ADR rationale / phase records
-  > summaries / examples / backlog
+  > implementation planning
+  > code / deployment
+  > ADR rationale / phase history / summaries / backlog where applicable
 ```
 
-Architecture may choose representation and implementation-facing boundaries but MUST NOT override upstream semantic/experience contracts.
+Implementation planning and code MUST NOT override upstream semantic, experience, or architecture contracts for convenience.
 
-## Phase status
+## Completed design layers
 
-**Phase 001 — Design Foundation & Concept Discovery: complete.**
+### Phase 001 — Design Foundation & Concept Discovery — complete
 
 Exit: [001-H — Phase 001 Consolidation & Initial Concept Catalog](phases/001/001-H-phase-001-consolidation-initial-concept-catalog.md).
 
-**Phase 002 — Concept Specification & Invariant Refinement: complete.**
+### Phase 002 — Concept Specification & Invariant Refinement — complete
 
 Exit: [002-H — Cross-Concept Invariant, Synchronization & Phase 002 Consolidation Review](phases/002/002-H-cross-concept-invariant-synchronization-consolidation-review.md).
 
-Phase 002 closed with eleven accepted concepts and fifteen synchronization rules, offline/no-outbound-network capable core semantics, explicit commitment/historical binding, single semantic promotion, typed Provenance, and qualified reproducibility.
+Phase 002 closed with eleven accepted concepts and fifteen synchronization rules.
 
-**Phase 003 — Experience & Workflow Design: complete.**
+### Phase 003 — Experience & Workflow Design — complete
 
 Exit: [003-I — Cross-Workflow Consistency & Phase 003 Consolidation Review](phases/003/003-I-cross-workflow-consistency-phase-003-consolidation-review.md).
 
-Phase 003 closed with eight detailed experience authorities and the [Phase 003 Consolidated Experience Contract](experience/phase-003-consolidated-experience-contract.md).
+Exit authority: [Phase 003 Consolidated Experience Contract](experience/phase-003-consolidated-experience-contract.md).
 
-**Current phase: [Phase 004 — Representation & Architecture Design](phases/004/index.md).**
+### Phase 004 — Representation & Architecture Design — complete
 
-Completed in Phase 004:
+Exit: [004-J — Cross-Architecture Invariant Audit, Decision Consolidation & Phase 004 Exit](phases/004/004-J-cross-architecture-invariant-audit-decision-consolidation-phase-004-exit.md).
 
-- [004-A — Architecture Authority, Representation Principles, Layering & Dependency Direction](phases/004/004-A-architecture-authority-representation-layering-dependency-direction.md)
-- [004-B — Public API, Resource/Handle Model, Workflow Composition & Semantic Mapping](phases/004/004-B-public-api-resource-handle-workflow-semantic-mapping.md)
-- [004-C — Control-Plane Identity, Revision, State, Persistence & Historical Reference Architecture](phases/004/004-C-control-plane-identity-revision-state-persistence-historical-reference-architecture.md)
-- [004-D — Spark Data Boundary, Source/Output Reference, Distributed Materialization, Manifest & Promotion Architecture](phases/004/004-D-spark-data-boundary-source-output-reference-distributed-materialization-manifest-promotion-architecture.md)
-- [004-E — Strategy Extension, Learning/Generation/Evaluation Runtime & Adapter Architecture](phases/004/004-E-strategy-extension-learning-generation-evaluation-runtime-adapter-architecture.md)
-- [004-F — Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Architecture](phases/004/004-F-execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation-architecture.md)
-- [004-G — Evaluation/Evidence, Provenance, Reproducibility & Historical Query Architecture](phases/004/004-G-evaluation-evidence-provenance-reproducibility-historical-query-architecture.md)
-- [004-H — Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Architecture](phases/004/004-H-dependency-resolution-offline-no-egress-authorization-redaction-enterprise-security-architecture.md)
-- [004-I — Deployment, Scalability, Observability, Portability, Compatibility & Platform Integration Architecture](phases/004/004-I-deployment-scalability-observability-portability-compatibility-platform-integration-architecture.md)
+Exit authority: [Phase 004 Consolidated Architecture Contract](architecture/phase-004-consolidated-architecture-contract.md).
 
-Canonical architecture now includes:
+Phase 004 closed with no concept/synchronization redesign, nine detailed architecture authorities, and active ADR-0001 through ADR-0008.
 
-- the [architecture constitution](architecture/architecture-authority-representation-layering.md);
-- the [typed public resource/handle architecture](architecture/public-api-resource-handle-workflow-semantic-mapping.md);
-- the [control-plane identity/state architecture](architecture/control-plane-identity-revision-state-persistence-historical-reference.md);
-- the [Spark data boundary/materialization architecture](architecture/spark-data-boundary-source-output-reference-distributed-materialization-manifest-promotion.md);
-- the [Strategy extension/runtime adapter architecture](architecture/strategy-extension-learning-generation-evaluation-runtime-adapter.md);
-- the [Execution/recovery/fencing architecture](architecture/execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation.md);
-- the [Evaluation/Evidence, Provenance, Reproducibility & Historical Query architecture](architecture/evaluation-evidence-provenance-reproducibility-historical-query.md);
-- the [Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security architecture](architecture/dependency-resolution-offline-no-egress-authorization-redaction-enterprise-security.md);
-- the [Deployment, Scalability, Observability, Portability, Compatibility & Platform Integration architecture](architecture/deployment-scalability-observability-portability-compatibility-platform-integration.md).
+The architecture baseline now preserves:
 
-004-I establishes deployable logical roles, restartable durable-state-first coordination, capability-negotiated platform adapters, multi-dimensional scale disclosure, distinct semantic/runtime/security observability lanes, generic/self-managed Spark portability, Databricks as a managed adapter target rather than package identity, multi-axis compatibility and rolling-version contracts, private/offline package/dependency distribution, and deployment enforcement obligations for the 004-H security model.
+- typed durable resource identity and immutable commitments;
+- bounded control-plane versus distributed data-plane separation;
+- exact Spark-scale source-state binding and sealed candidate/output promotion;
+- model-neutral Strategy/runtime extension contracts;
+- one logical Execution across fenced/reconcilable Attempts;
+- strict checkpoint/candidate/runtime-result versus semantic-result boundaries;
+- Evaluation validation before Evidence establishment;
+- typed canonical Provenance and qualified reproducibility;
+- explicit dependency/trust/authorization/network/egress distinctions;
+- scoped runtime capabilities, secret isolation, truthful redaction and protected query projections;
+- portable core contracts with capability-negotiated platform adapters;
+- Databricks specialization without platform semantic ownership;
+- generic/self-managed Spark/private-offline viability when required guarantees are supplied;
+- multi-axis compatibility, restartable coordination, and enterprise-scale no-full-driver-materialization requirements.
 
-Decision rationale is preserved in ADR-0001 through [ADR-0008 — Portable Core & Capability-Negotiated Platform Adapters](decisions/ADR-0008-portable-core-capability-negotiated-platform-adapters.md).
+## Current phase
 
-Next: **004-J — Cross-Architecture Invariant Audit, Decision Consolidation & Phase 004 Exit**.
+**[Phase 005 — Implementation Planning & Delivery Decomposition](phases/005/index.md) is current.**
+
+Next:
+
+**005-A — Implementation Authority, Delivery Governance, Toolchain & Repository Enforcement**
+
+Phase 005 must map upstream authority through architecture into modules/ports/adapters/persisted representations, dependency-safe implementation slices, verification/fitness tests, and acceptance evidence before coding is treated as implementation-complete.
+
+## Documentation governance note
+
+The repository continues to use its project-specific OKF profile. The separate question of strict external OKF 0.2 metadata/frontmatter normalization has not been falsely declared resolved by the Phase 004 exit and remains documentation-governance debt until explicitly audited against current external authority.
