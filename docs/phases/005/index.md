@@ -23,6 +23,8 @@ Across 005-A through 005-K:
 
 Where a Phase 005 document says `implementation sequence`, `package path`, `class`, `port`, `adapter`, `table`, `migration`, or `quality gate`, it describes a **future implementation contract/sequence** unless a later phase explicitly authorizes coding.
 
+Completion of Phase 005 does not automatically authorize coding. 005-K must explicitly determine whether Jackson-style concept, synchronization, experience, architecture, and implementation-planning work is sufficiently complete. If not, the correct next step is another design/refinement phase rather than implementation.
+
 ## Entry authority
 
 Implementation planning is downstream of:
@@ -69,10 +71,10 @@ Planning MUST NOT begin with a preferred framework/package tree and then reinter
 | **005-E** | [**Spark Data Boundary, Source/Output References, Manifest, Materialization & Promotion Implementation Plan**](005-E-spark-data-boundary-source-output-references-manifest-materialization-promotion-implementation-plan.md) | **complete** |
 | **005-F** | [**Strategy/Method Extension SPI, Learning/Generation/Evaluation Runtime & Learned-State Implementation Plan**](005-F-strategy-method-extension-spi-learning-generation-evaluation-runtime-learned-state-implementation-plan.md) | **complete** |
 | **005-G** | [**Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Implementation Plan**](005-G-execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation-implementation-plan.md) | **complete** |
-| **005-H** | **Evaluation/Evidence, Provenance, Historical Query & Reproducibility Implementation Plan** | **next** |
-| 005-I | Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Implementation Plan | planned |
+| **005-H** | [**Evaluation/Evidence, Provenance, Historical Query & Reproducibility Implementation Plan**](005-H-evaluation-evidence-provenance-historical-query-reproducibility-implementation-plan.md) | **complete** |
+| **005-I** | **Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Implementation Plan** | **next** |
 | 005-J | Deployment/Platform Adapters, Observability, Compatibility, Scale & Performance Implementation Plan | planned |
-| 005-K | Cross-Slice Integration, Delivery Sequencing, Backlog Closure & Implementation-Readiness Exit | planned |
+| 005-K | Cross-Slice Integration, Delivery Sequencing, Backlog Closure, Jackson-Methodology Completeness & Implementation-Readiness Exit | planned |
 
 ## Completed planning refinement
 
@@ -110,51 +112,68 @@ No runtime plugin, entry point, state codec, PyTorch/Spark adapter, test or laun
 
 ### 005-G — Execution/recovery/fencing/cancellation plan
 
-Established [Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Implementation Plan](../../implementation/execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation-plan.md).
-
-Key future implementation rules include:
-
-- one stable Execution with many durable Attempts;
-- monotonic AttemptEpoch values allocated under Execution CAS;
-- Attempt observed state separate from mutation authority;
-- WriterFence using exact Execution/Attempt/epoch plus cancellation-generation barrier;
-- isolation-first stale-writer containment with provider fencing required for shared mutable targets;
-- leases/heartbeats as liveness evidence only;
-- immutable Attempt-owned runtime invocation;
-- durable launch intent/correlation and reconciliation after ambiguous provider outcomes;
-- operation-scoped idempotency keyed to exact target/request fingerprint;
-- immutable checkpoint commitment and contextual resume qualification;
-- explicit restart/resume/reconcile/cannot-continue recovery modes;
-- current-authority verification before adopting immutable prior effects;
-- Evaluation logical-work-unit deduplication or clean restart;
-- durable unknown/indeterminate operational state and coordinator restart from persisted state;
-- cancellation/completion linearization that revokes stale authority before physical termination is proven;
-- operational completion kept separate from semantic completion;
-- V7 and AF-04/06/07/08/09/18/19/20 obligations mapped.
+Established [Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Implementation Plan](../../implementation/execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation-plan.md): stable Execution/multiple Attempts, AttemptEpoch fencing, liveness-versus-authority separation, launch reconciliation, checkpoint/resume qualification, scoped idempotency, recovery modes, cancellation/completion linearization and operational-completion handoff.
 
 No Execution classes, SQL tables, scheduler/checkpoint adapter, migration, test suite or runtime infrastructure was created.
 
+### 005-H — Evidence, Provenance, historical query and reproducibility plan
+
+Established [Evaluation/Evidence, Provenance, Historical Query & Reproducibility Implementation Plan](../../implementation/evaluation-evidence-provenance-historical-query-reproducibility-plan.md).
+
+Key future implementation rules include:
+
+- Evaluation runtime output remains non-final until Evaluation-owner semantic validation;
+- Evidence uses stable ResourceRef identity plus idempotent Evaluation/finding-slot establishment;
+- immutable Evidence finding content remains separate from StateVersion-guarded current applicability;
+- claim strength cannot exceed achieved method/coverage/uncertainty support;
+- exact distributed diagnostic refs remain outside bounded Evidence payloads;
+- Generation promotion retains an immutable exact Evidence completion basis;
+- the first canonical Provenance implementation is planned as typed indexed relational assertions in the existing control-store family rather than a graph-first authority;
+- canonical assertions use exact HistoricalRef endpoints, stable predicate/relationship slots and append/supersede correction;
+- built-in same-store owner transitions and required Evidence/Provenance may use one relational transaction, with outbox/reconciliation for external projections/integrations;
+- historical traversal/explain/compare remains bounded, paginated and non-causal;
+- derived graph/search projections remain rebuildable/non-authoritative;
+- reproducibility reports strongest historically supportable class separately from current feasibility;
+- query/security seams preserve withheld/redacted versus absent/unknown/unavailable distinctions;
+- V8 and AF-08/09/10/11/16/17/18/19 obligations are mapped.
+
+No Evidence store, Provenance graph/table, query index, reproducibility engine, migration, test suite or external lineage integration was created.
+
 ## Why the remaining order is dependency-safe
 
-### 005-H — Evidence/history planning next
+### 005-I — enterprise security planning next
 
-005-H can now bind the 004-G Evidence/Provenance/history architecture to exact persisted facts from 005-D through 005-G:
+005-I can now apply authorization/redaction and dependency/no-egress policy to concrete planned surfaces across 005-D through 005-H:
 
-- immutable commitments and result identities;
-- exact sealed Evaluation subjects;
-- runtime binding/invocation identities;
-- Execution/Attempt/checkpoint/recovery history;
-- operation/promotion basis and historical resolution.
+- durable handles/current control state;
+- exact data/state/runtime/dependency refs;
+- Execution/Attempt/checkpoint recovery actions;
+- Evidence findings/applicability;
+- canonical Provenance assertions;
+- reverse indexes/explain/compare paths;
+- reproducibility prerequisites and reason text.
 
-It can therefore plan idempotent Evidence establishment, typed Provenance assertions, derived historical projections and qualified reproducibility assessments without inventing a competing metadata/history store.
+This lets security be planned against both canonical state and derived query surfaces without inventing a separate history model.
 
-### 005-I through 005-J
+### 005-J
 
-Enterprise security and deployment/platform planning follow after Evidence/history representation is fixed, so authorization/redaction can apply to canonical history and derived query paths consistently.
+Deployment/platform/observability/compatibility/scale planning follows once the security enforcement contract is fixed.
 
-### 005-K
+### 005-K — Jackson/design completeness gate
 
-The final group audits that all plans compose into one implementation-ready program without circular dependencies, hidden prerequisites, conflicting migrations or unowned acceptance criteria.
+005-K must do more than sequence coding work. It must audit the complete Jackson/design program and choose one of two outcomes:
+
+```text
+DESIGN COMPLETE ENOUGH FOR A LATER EXPLICIT IMPLEMENTATION-AUTHORITY PHASE
+```
+
+or:
+
+```text
+FURTHER CONCEPT / SYNCHRONIZATION / EXPERIENCE / ARCHITECTURE / PLANNING REFINEMENT REQUIRED
+```
+
+A positive 005-K readiness result still does not itself create production code. Coding begins only in a later explicitly authorized phase.
 
 ## Phase 005 guardrails
 
@@ -166,7 +185,7 @@ Phase 005 MUST NOT:
 - weaken Phase 004 architecture to fit a preferred library/platform;
 - reverse the 005-C inward dependency direction;
 - invent parallel ResourceId/StateVersion/schema-version conventions downstream of 005-D;
-- turn foundation/persistence/data/runtime/execution infrastructure into generic utilities/config/metadata/context/result owners;
+- turn foundation/persistence/data/runtime/execution/history infrastructure into generic utilities/config/metadata/context/result owners;
 - place Spark/PyTorch/Databricks/cloud/remote dependencies into base core merely for one adapter;
 - make raw DataFrame/model/platform objects canonical identity;
 - design enterprise workflows around mandatory full driver-local materialization;
@@ -174,13 +193,16 @@ Phase 005 MUST NOT:
 - replace fencing with lease expiry, scheduler retries or last-writer-wins;
 - coerce unknown operational state into success/failure merely to retry;
 - treat checkpoint existence as resume proof;
+- let runtime output become Evidence directly;
+- let graph/search projections become canonical Provenance;
+- reduce reproducibility to a seed or Boolean flag;
 - skip exact historical binding, Evidence strength, Provenance, authorization or required architecture-fitness checks;
 - allow derived indexes/telemetry/security audit to become canonical semantic state;
 - claim strict OKF 0.2 normalization is complete unless separately verified.
 
 ## Phase 005 exit target
 
-Phase 005 should leave an implementation-ready program where each planned slice has:
+Phase 005 should leave a design-complete-or-explicitly-not-complete implementation program where each planned slice has:
 
 ```text
 upstream authority
@@ -193,8 +215,8 @@ migration/deployment consequences
 acceptance evidence requirements
 ```
 
-Only after this planning program exits should a later phase authorize actual coding.
+005-K then decides whether the Jackson/design methodology has progressed far enough for a later explicit implementation-authority phase. It must not assume that outcome in advance.
 
 ## Current next phase
 
-**005-H — Evaluation/Evidence, Provenance, Historical Query & Reproducibility Implementation Plan**
+**005-I — Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Implementation Plan**
