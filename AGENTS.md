@@ -6,9 +6,11 @@ These instructions apply repository-wide to automated coding/documentation agent
 
 Phase 005 does **not** authorize production implementation.
 
-During 005-A through 005-K, agents may update planning/governance/documentation artifacts requested by the active group, but MUST NOT create production source, package scaffolds, database schemas/migrations, runtime/Spark/platform adapters, verification suites, CI workflows, or deployment infrastructure merely because the future implementation plan describes them.
+During 005-A through 005-K, agents may update planning/governance/documentation artifacts requested by the active group, but MUST NOT create production source, package scaffolds, database schemas/migrations, runtime/Spark/platform adapters, Evidence/Provenance stores, verification suites, CI workflows, or deployment infrastructure merely because the future implementation plan describes them.
 
 A Phase 005 group marked `complete` means its plan is complete, not that the planned code exists.
+
+005-K is an explicit Jackson/design-completeness gate. It may require another concept/synchronization/experience/architecture/planning phase. Even a positive 005-K result does not authorize coding; implementation requires a later explicit implementation-authority phase.
 
 ## Start with authority, not repository-wide scanning
 
@@ -23,8 +25,9 @@ For any material task:
 7. for Spark/data references, exact source state, manifests, candidates, sealed snapshots or output promotion, read `docs/implementation/spark-data-boundary-source-output-reference-manifest-materialization-promotion-plan.md`;
 8. for executable bindings, extension discovery, runtime invocation, Learning/Generation/Evaluation adapters or Learned-State physical representation/loading, read `docs/implementation/strategy-method-extension-spi-learning-generation-evaluation-runtime-learned-state-plan.md`;
 9. for Execution/Attempt lifecycle, writer authority, launch reconciliation, checkpoints, retry/resume/recovery, cancellation or operational completion, read `docs/implementation/execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation-plan.md`;
-10. follow only the detailed concept/experience/architecture links needed for the active slice;
-11. use ADRs for rationale when necessary, not as a replacement for current canonical authority.
+10. for Evidence establishment, Generation completion basis, Provenance, explain/compare/history query or reproducibility assessment, read `docs/implementation/evaluation-evidence-provenance-historical-query-reproducibility-plan.md`;
+11. follow only the detailed concept/experience/architecture links needed for the active slice;
+12. use ADRs for rationale when necessary, not as a replacement for current canonical authority.
 
 Do not load or copy the entire documentation corpus by default.
 
@@ -152,11 +155,38 @@ Agents MUST NOT:
 
 The preferred stale-writer pattern is Attempt-isolated physical work plus `WriterFence` validation at bounded registration/adoption/seal/completion boundaries. A cancellation-generation change revokes old write/promotion authority without pretending the physical process has terminated.
 
+## Evidence, Provenance, history and reproducibility rules
+
+005-H establishes the future Evidence/history plan.
+
+Agents MUST NOT:
+
+- let `EvaluationRuntimeResult`, scheduler success, diagnostics, or a metric row become Evidence directly;
+- identify Evidence by metric name, display text, array position, Criterion ID, or runtime result ID instead of stable ResourceRef + Evaluation/finding-slot identity;
+- overwrite immutable Evidence finding content because a later Evaluation disagrees or policy changes;
+- inflate claim strength beyond method, achieved coverage, uncertainty, assumptions or approximation semantics;
+- collapse all findings into one generic `score`/`passed` result;
+- copy large diagnostic datasets into bounded Evidence/control rows instead of exact distributed references;
+- let Evidence from a later Evaluation enter an already-established Generation completion basis retroactively;
+- make a graph/search/lineage store the canonical owner of Provenance or canonical resource payloads;
+- use mutable aliases/latest resolution inside exact historical Provenance assertions;
+- destructively rewrite incorrect Provenance assertions instead of append/supersede correction;
+- record one canonical Provenance edge per Spark task/row/heartbeat/log event by default;
+- treat a projection/index miss as proof that a historical relationship was absent;
+- let derived adjacency/search/materialized projections overwrite canonical Provenance;
+- infer causality, quality, or superiority merely from structural history differences;
+- reduce reproducibility to `true/false` or treat presence of a seed as exact determinism;
+- conflate historical reproducibility support with whether reproduction is currently feasible;
+- let a cached reproducibility assessment become canonical history or semantic promotion authority;
+- hide withheld/redacted history as ordinary absence when security policy applies.
+
+The first built-in Provenance plan is indexed relational canonical assertions in the bounded SQL control-store family. Graph/search/lineage systems remain derived/integration surfaces. Evidence establishment and required same-store Provenance may share one control transaction without collapsing their concept ownership.
+
 ## Dependencies and optional integrations
 
 The base/core distribution remains model/platform neutral.
 
-Do not add PySpark, PyTorch, Databricks/cloud SDKs, MLflow, remote-model/service clients, CUDA/GPU runtimes, SQLAlchemy/Psycopg, scheduler SDKs or similar adapter dependencies to base runtime dependencies merely for one implementation slice.
+Do not add PySpark, PyTorch, Databricks/cloud SDKs, MLflow, OpenLineage clients, graph databases, remote-model/service clients, CUDA/GPU runtimes, SQLAlchemy/Psycopg, scheduler SDKs or similar adapter dependencies to base runtime dependencies merely for one implementation slice.
 
 Any new direct dependency requires explicit purpose/classification and compatibility/offline/network/security review. Committed runtime execution must never install missing packages or download missing models/artifacts as an undocumented fallback.
 
@@ -172,19 +202,21 @@ Do not make runtime/platform/payload objects canonical identity; collapse typed 
 
 ## Verification
 
-Once coding is authorized, tests derive their oracle from accepted authority and must not mock away the distributed, concurrency, security, persistence, runtime, or recovery property under test.
+Once coding is authorized, tests derive their oracle from accepted authority and must not mock away the distributed, concurrency, security, persistence, runtime, recovery, Evidence or history property under test.
 
 Portable/core tests use default network denial where applicable. Never retry stochastic tests until green or weaken required fitness checks without 005-B governance.
 
-005-G future work directly contributes to V7 and AF-04/06/07/08/09/18/19/20. Critical evidence includes concurrent Attempt creation, stale-writer wake-up, ambiguous launch reconciliation, checkpoint compatibility, cancellation/completion races, Evaluation deduplication, coordinator restart and real PostgreSQL concurrency.
+005-H future work directly contributes to V8 and AF-08/09/10/11/16/17/18/19. Critical evidence includes idempotent/conflicting Evidence replay, atomic multi-finding establishment, claim-strength rejection, Evidence correction/applicability separation, exact diagnostic support, Provenance retry/correction, canonical-vs-projection disagreement, bounded traversal, non-causal comparison, distinct gap states and reproducibility feasibility degradation without historical rewrite.
 
 ## Package/import behavior
 
-The root `syngan` import remains side-effect free and must not automatically import optional platform/runtime/persistence/scheduler SDKs, scan plugins, open network connections, create sessions, inspect credentials, initialize telemetry, or create a global mutable Session/Context.
+The root `syngan` import remains side-effect free and must not automatically import optional platform/runtime/persistence/scheduler/lineage/graph SDKs, scan plugins, open network connections, create sessions, inspect credentials, initialize telemetry, or create a global mutable Session/Context.
 
 ## Secrets and sensitive data
 
 Never commit real credentials, tokens, passwords, private keys, bearer secrets, sensitive source rows, protected Learned-State payloads or protected diagnostics in ordinary fixtures/logs/examples.
+
+Evidence, Provenance and historical-query results may themselves be sensitive; 005-I owns the future authorization/redaction rules and derived-index side-channel protections.
 
 ## Documentation synchronization
 
@@ -194,4 +226,4 @@ When a durable implementation decision changes, update canonical `docs/implement
 
 Do not claim an implementation-planning slice complete unless its authority mapping, future source-boundary compliance, verification/fitness obligations, dependency/migration/security/network implications, and acceptance-evidence requirements are accounted for.
 
-Do not claim production implementation exists merely because a Phase 005 plan is complete.
+Do not claim production implementation exists merely because a Phase 005 plan is complete. Do not assume Phase 005-K must authorize coding; it may require further Jackson/design refinement.
