@@ -22,27 +22,32 @@ Phase 002 refined the eleven accepted concepts and fifteen synchronizations with
 
 See [Phase 003 index](003/index.md).
 
-Phase 003 closed through [003-I — Cross-Workflow Consistency & Phase 003 Consolidation Review](003/003-I-cross-workflow-consistency-phase-003-consolidation-review.md).
-
 Phase 003 exit authority: [Phase 003 Consolidated Experience Contract](../experience/phase-003-consolidated-experience-contract.md).
 
-## Phase 004 — Representation & Architecture Design — current
+## Phase 004 — Representation & Architecture Design — complete
 
 See [Phase 004 index](004/index.md).
 
-- [004-A — Architecture Authority, Representation Principles, Layering & Dependency Direction](004/004-A-architecture-authority-representation-layering-dependency-direction.md) — complete
-- [004-B — Public API, Resource/Handle Model, Workflow Composition & Semantic Mapping](004/004-B-public-api-resource-handle-workflow-semantic-mapping.md) — complete
-- [004-C — Control-Plane Identity, Revision, State, Persistence & Historical Reference Architecture](004/004-C-control-plane-identity-revision-state-persistence-historical-reference-architecture.md) — complete
-- [004-D — Spark Data Boundary, Source/Output Reference, Distributed Materialization, Manifest & Promotion Architecture](004/004-D-spark-data-boundary-source-output-reference-distributed-materialization-manifest-promotion-architecture.md) — complete
-- [004-E — Strategy Extension, Learning/Generation/Evaluation Runtime & Adapter Architecture](004/004-E-strategy-extension-learning-generation-evaluation-runtime-adapter-architecture.md) — complete
-- [004-F — Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Architecture](004/004-F-execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation-architecture.md) — complete
-- [004-G — Evaluation/Evidence, Provenance, Reproducibility & Historical Query Architecture](004/004-G-evaluation-evidence-provenance-reproducibility-historical-query-architecture.md) — complete
-- [004-H — Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Architecture](004/004-H-dependency-resolution-offline-no-egress-authorization-redaction-enterprise-security-architecture.md) — complete
-- [004-I — Deployment, Scalability, Observability, Portability, Compatibility & Platform Integration Architecture](004/004-I-deployment-scalability-observability-portability-compatibility-platform-integration-architecture.md) — complete
-- **004-J — Cross-Architecture Invariant Audit, Decision Consolidation & Phase 004 Exit — next**
+Phase 004 closed through [004-J — Cross-Architecture Invariant Audit, Decision Consolidation & Phase 004 Exit](004/004-J-cross-architecture-invariant-audit-decision-consolidation-phase-004-exit.md).
 
-Current architecture authority includes the canonical 004-A through 004-I documents under [Representation & Architecture Design](../architecture/index.md).
+Phase 004 exit authority: [Phase 004 Consolidated Architecture Contract](../architecture/phase-004-consolidated-architecture-contract.md).
 
-Active ADR rationale includes ADR-0001 through [ADR-0008 — Portable Core & Capability-Negotiated Platform Adapters](../decisions/ADR-0008-portable-core-capability-negotiated-platform-adapters.md).
+The exit audit preserved the eleven accepted concepts and fifteen synchronization rules without requiring redesign, and consolidated ADR-0001 through ADR-0008 as the active implementation-facing architecture rationale.
 
-Representation/architecture remains the active design layer until 004-J confirms the architecture composes cleanly and closes Phase 004 for implementation planning.
+## Phase 005 — Implementation Planning & Delivery Decomposition — current
+
+See [Phase 005 index](005/index.md).
+
+- **005-A — Implementation Authority, Delivery Governance, Toolchain & Repository Enforcement — next**
+- 005-B — Verification Strategy, Test Harness, Architecture Fitness Functions, Evidence Fixtures & Quality Gates
+- 005-C — Source Topology, Module/Package Boundaries, Shared Foundation & Dependency Enforcement
+- 005-D — Public Resource API, Control-Plane Identity, State, Persistence, Transactions & Migration Implementation Plan
+- 005-E — Spark Data Boundary, Source/Output References, Manifest, Materialization & Promotion Implementation Plan
+- 005-F — Strategy/Method Extension SPI, Learning/Generation/Evaluation Runtime & Learned-State Implementation Plan
+- 005-G — Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Implementation Plan
+- 005-H — Evaluation/Evidence, Provenance, Historical Query & Reproducibility Implementation Plan
+- 005-I — Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Implementation Plan
+- 005-J — Deployment/Platform Adapters, Observability, Compatibility, Scale & Performance Implementation Plan
+- 005-K — Cross-Slice Integration, Delivery Sequencing, Backlog Closure & Implementation-Readiness Exit
+
+Implementation planning is downstream of the [Phase 004 Consolidated Architecture Contract](../architecture/phase-004-consolidated-architecture-contract.md) and must map each slice to verification/acceptance evidence rather than reopening semantic authority for convenience.
