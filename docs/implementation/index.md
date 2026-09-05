@@ -56,8 +56,25 @@ For an implementation task, begin with:
 
 Do not load the whole design corpus by default.
 
+## Completed implementation-planning authority
+
+### 005-A — Implementation governance
+
+Established implementation precedence/conflict escalation, five-class change governance, delivery-slice traceability, completion-evidence requirements, toolchain/dependency governance, migration/compatibility discipline, repository agent instructions, and PR review enforcement without prematurely selecting source topology or concrete verification tools.
+
+Phase record: [005-A — Implementation Authority, Delivery Governance, Toolchain & Repository Enforcement](../phases/005/005-A-implementation-authority-delivery-governance-toolchain-repository-enforcement.md).
+
+Immediate repository enforcement includes:
+
+- root [`AGENTS.md`](../../AGENTS.md);
+- [`.github/pull_request_template.md`](../../.github/pull_request_template.md).
+
+These are enforcement/navigation aids below canonical implementation authority.
+
 ## Current state
 
 **Phase 005 — Implementation Planning & Delivery Decomposition is current.**
 
-005-A establishes implementation governance before verification/toolchain/package topology is selected in later dependency-safe groups.
+Next:
+
+**005-B — Verification Strategy, Test Harness, Architecture Fitness Functions, Evidence Fixtures & Quality Gates**.
