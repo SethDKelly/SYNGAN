@@ -34,8 +34,6 @@ Phase 004 closed through [`004-J — Cross-Architecture Invariant Audit, Decisio
 
 The [`Phase 004 Consolidated Architecture Contract`](docs/architecture/phase-004-consolidated-architecture-contract.md) freezes stable typed identity/commitments, bounded control/data-plane separation, exact Spark-scale source binding, sealed candidate/promotion semantics, model-neutral runtime adapters, fenced/reconcilable Execution, semantic Evidence/typed Provenance/qualified reproducibility, explicit dependency/security/no-egress semantics, and capability-negotiated portable platform adapters.
 
-Architecture decision rationale is preserved in [`docs/decisions/`](docs/decisions/index.md), ADR-0001 through **ADR-0008 — Portable Core & Capability-Negotiated Platform Adapters**.
-
 ## Current phase
 
 **Phase 005 — Implementation Planning & Delivery Decomposition is current.**
@@ -46,28 +44,46 @@ Completed:
 
 - **005-A — Implementation Authority, Delivery Governance, Toolchain & Repository Enforcement**
 - **005-B — Verification Strategy, Test Harness, Architecture Fitness Functions, Evidence Fixtures & Quality Gates**
+- **005-C — Source Topology, Module/Package Boundaries, Shared Foundation & Dependency Enforcement**
 
-005-A establishes implementation/code as downstream realization, explicit change classification, traceable delivery slices, dependency/toolchain/migration governance, mandatory acceptance evidence, repository-wide [`AGENTS.md`](AGENTS.md), and PR review discipline.
+Canonical implementation authority is under [`docs/implementation/`](docs/implementation/index.md).
 
-005-B establishes the executable verification baseline:
+005-C now freezes the initial implementation scaffold **as a plan, not as production code**:
 
-- logical verification layers V0-V11 from repository/unit checks through distributed, recovery, Evidence/history, security/offline, platform and scale/compatibility verification;
-- stable architecture-fitness properties AF-01 through AF-20;
-- synthetic/non-sensitive micro, generated-medium, ephemeral-scale and fault/control fixture classes;
-- authority-derived test oracles and controlled golden-fixture updates;
-- deterministic and statistical/stochastic test lanes without retry-until-green;
-- explicit failure injection around durable mutation, launch, checkpoint, candidate seal, Evidence establishment and promotion;
-- reusable common adapter conformance suites;
-- default-deny portable/core outbound-network testing;
-- Q0-Q4 local, PR, integration, scheduled and release/support quality gates;
-- explicit flakiness, quarantine, waiver and acceptance-evidence governance.
+```text
+src/syngan/
+├── foundation/
+├── domain/
+├── ports/
+├── application/
+├── api/
+├── adapters/
+└── bootstrap/
+```
 
-Canonical verification authority: [`docs/implementation/verification-strategy-test-harness-architecture-fitness-evidence-quality-gates.md`](docs/implementation/verification-strategy-test-harness-architecture-fitness-evidence-quality-gates.md).
+The selected foundational implementation posture includes:
+
+- one initial `syngan` import package/distribution using `src/` layout;
+- Python >=3.11 portable-core floor;
+- uv + committed `uv.lock` for reproducible project environments;
+- Hatchling build backend;
+- pytest, Hypothesis and pytest-socket for verification;
+- Ruff for lint/format;
+- mypy for static typing;
+- Import Linter for enforced inward package dependency contracts;
+- coverage reporting as diagnostic evidence rather than a correctness substitute;
+- GitHub Actions as repository CI;
+- stable Q0-Q4 developer/CI command meanings through a repository-only `tools/verify.py` orchestrator;
+- model/platform-neutral base dependencies with Spark/Torch/Databricks isolated as optional capability extras when their later slices define exact dependencies;
+- a test topology separating unit, contract, fitness, reusable conformance, integration, scale, scenario and compatibility-golden concerns;
+- clean built-wheel/base-install/no-hidden-network/optional-import verification.
+
+No production resource/persistence/Spark/runtime/recovery/Evidence/security/platform implementation has been started by 005-C.
 
 Next:
 
-- **005-C — Source Topology, Module/Package Boundaries, Shared Foundation & Dependency Enforcement**
+- **005-D — Public Resource API, Control-Plane Identity, State, Persistence, Transactions & Migration Implementation Plan**
 
-005-C will now select the physical Python/source/test topology and foundational concrete build/test/static-analysis toolchain so the accepted architecture and verification contracts can be enforced mechanically.
+005-D will define the durable public/control-plane substrate that all downstream implementation slices depend upon: typed specifications/handles/resources, IDs/revisions/state versions, persistence/transaction/CAS boundaries, historical resolution and migrations.
 
-The repository intentionally does not yet claim final Python/package layout, supported Python versions, dependency manager, build backend, test/lint/type tooling, database, Spark storage/catalog technology, scheduler/fencing mechanism, plugin/runtime implementation, IAM/network/security stack, observability vendor, Databricks API topology, CI/CD topology, or benchmark/support matrices. Those remain dependency-safe implementation-planning decisions constrained by the accepted architecture and verification authority.
+Concrete persistence technology, Spark table/catalog implementation, runtime/plugin implementation, scheduler/fencing backend, Provenance query store, IAM/network/security stack, observability/platform adapters, public release policy and support/scale matrices remain downstream Phase 005 decisions constrained by the accepted architecture and verification authority.
