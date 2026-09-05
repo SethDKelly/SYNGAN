@@ -70,6 +70,7 @@ Completed in Phase 004:
 - [004-E — Strategy Extension, Learning/Generation/Evaluation Runtime & Adapter Architecture](phases/004/004-E-strategy-extension-learning-generation-evaluation-runtime-adapter-architecture.md)
 - [004-F — Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Architecture](phases/004/004-F-execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation-architecture.md)
 - [004-G — Evaluation/Evidence, Provenance, Reproducibility & Historical Query Architecture](phases/004/004-G-evaluation-evidence-provenance-reproducibility-historical-query-architecture.md)
+- [004-H — Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Architecture](phases/004/004-H-dependency-resolution-offline-no-egress-authorization-redaction-enterprise-security-architecture.md)
 
 Canonical architecture now includes:
 
@@ -79,9 +80,10 @@ Canonical architecture now includes:
 - the [Spark data boundary/materialization architecture](architecture/spark-data-boundary-source-output-reference-distributed-materialization-manifest-promotion.md);
 - the [Strategy extension/runtime adapter architecture](architecture/strategy-extension-learning-generation-evaluation-runtime-adapter.md);
 - the [Execution/recovery/fencing architecture](architecture/execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation.md);
-- the [Evaluation/Evidence, Provenance, Reproducibility & Historical Query architecture](architecture/evaluation-evidence-provenance-reproducibility-historical-query.md).
+- the [Evaluation/Evidence, Provenance, Reproducibility & Historical Query architecture](architecture/evaluation-evidence-provenance-reproducibility-historical-query.md);
+- the [Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security architecture](architecture/dependency-resolution-offline-no-egress-authorization-redaction-enterprise-security.md).
 
-004-G establishes semantic Evidence only after Evaluation validation; idempotent independently interpretable findings; immutable finding/current-applicability separation; exact Generation completion-Evidence basis; canonical typed Provenance over stable references; append/supersede provenance correction; recoverable transition/provenance consistency; derived historical query projections; bounded explain/compare traversal; difference-versus-causality separation; and current qualified reproducibility assessment rather than global Boolean state.
+004-H establishes explicit dependency identity/resolution/trust separation; local/offline provisioning without hidden acquisition; network-versus-egress separation; action-oriented current authorization; non-bearing durable handles; scoped Attempt data/dependency/network/secret capabilities; independently protected Learned State/output/diagnostic/control-plane access; view-time truthful withholding/redaction; security-aware historical/query projections; secret references rather than persisted bearer values; retry/recovery security revalidation; revocation plus Attempt fencing; multi-security-domain isolation; and separation of security audit from Provenance.
 
 Decision rationale:
 
@@ -91,5 +93,6 @@ Decision rationale:
 - [ADR-0004 — Semantic Extension & Runtime Binding Separation](decisions/ADR-0004-semantic-extension-runtime-binding-separation.md)
 - [ADR-0005 — Attempt-Epoch Fencing & Recoverable At-Least-Once Execution](decisions/ADR-0005-attempt-epoch-fencing-recoverable-at-least-once-execution.md)
 - [ADR-0006 — Typed Canonical Provenance & Derived Historical Projections](decisions/ADR-0006-typed-provenance-canonical-derived-history-projections.md)
+- [ADR-0007 — Explicit Dependency Resolution & Scoped Capability Security](decisions/ADR-0007-explicit-dependency-resolution-scoped-capability-security.md)
 
-Next: **004-H — Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Architecture**.
+Next: **004-I — Deployment, Scalability, Observability, Portability, Compatibility & Platform Integration Architecture**.
