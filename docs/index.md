@@ -18,8 +18,8 @@ This directory is the canonical design and implementation-planning knowledge bun
 - [Accepted Synchronizations](synchronizations/index.md) — canonical cross-concept coordination rules.
 - [Experience & Workflow Design](experience/index.md) — start implementation-facing experience review with the [Phase 003 Consolidated Experience Contract](experience/phase-003-consolidated-experience-contract.md).
 - [Representation & Architecture Design](architecture/index.md) — start with the [Phase 004 Consolidated Architecture Contract](architecture/phase-004-consolidated-architecture-contract.md).
-- [Implementation Planning & Delivery Authority](implementation/index.md) — current implementation-planning governance, verification, source/toolchain, control-plane and distributed-data plans.
-- [Architecture Decision Records](decisions/index.md) — architecture rationale/alternatives/supersession; current normative architecture remains under `docs/architecture/`.
+- [Implementation Planning & Delivery Authority](implementation/index.md) — current implementation governance, verification, source/toolchain, control/data/runtime plans and later slice plans.
+- [Architecture Decision Records](decisions/index.md) — architecture rationale/alternatives/supersession; normative architecture remains under `docs/architecture/`.
 - [Concept Discovery](discovery/index.md) — historical hypotheses, alternatives and design provenance.
 - [Phases](phases/index.md) — phase plans, outcomes and exit reviews.
 - `references/` — external references used by the design.
@@ -34,8 +34,8 @@ authority
   > concepts / synchronizations
   > experience
   > architecture
-  > implementation planning authority
-  > future code / deployment
+  > implementation authority / planning
+  > code / deployment
   > ADR rationale / phase history / summaries / backlog where applicable
 ```
 
@@ -67,17 +67,16 @@ Exit authority: [Phase 004 Consolidated Architecture Contract](architecture/phas
 
 ## Current phase
 
-**[Phase 005 — Implementation Planning & Delivery Decomposition](phases/005/index.md) is current and remains planning-only.**
+**[Phase 005 — Implementation Planning & Delivery Decomposition](phases/005/index.md) is current and planning-only.**
 
-No production source, package scaffold, database schema/migration, Spark/runtime adapter, test suite, CI workflow, or deployment infrastructure is implemented during Phase 005. Concrete package paths, technologies and sequences are future implementation plans only until a later phase explicitly authorizes coding.
-
-Completed:
+Completed implementation plans:
 
 - [005-A — Implementation Authority, Delivery Governance, Toolchain & Repository Enforcement](phases/005/005-A-implementation-authority-delivery-governance-toolchain-repository-enforcement.md)
 - [005-B — Verification Strategy, Test Harness, Architecture Fitness Functions, Evidence Fixtures & Quality Gates](phases/005/005-B-verification-strategy-test-harness-architecture-fitness-evidence-fixtures-quality-gates.md)
 - [005-C — Source Topology, Module/Package Boundaries, Shared Foundation & Dependency Enforcement](phases/005/005-C-source-topology-module-package-boundaries-shared-foundation-dependency-enforcement.md)
 - [005-D — Public Resource API, Control-Plane Identity, State, Persistence, Transactions & Migration Implementation Plan](phases/005/005-D-public-resource-api-control-plane-identity-state-persistence-transactions-migration-implementation.md)
 - [005-E — Spark Data Boundary, Source/Output References, Manifest, Materialization & Promotion Implementation Plan](phases/005/005-E-spark-data-boundary-source-output-references-manifest-materialization-promotion-implementation-plan.md)
+- [005-F — Strategy/Method Extension SPI, Learning/Generation/Evaluation Runtime & Learned-State Implementation Plan](phases/005/005-F-strategy-method-extension-spi-learning-generation-evaluation-runtime-learned-state-implementation-plan.md)
 
 Canonical implementation-planning authority now includes:
 
@@ -85,30 +84,26 @@ Canonical implementation-planning authority now includes:
 - [verification layers, fitness functions, fixtures and quality gates](implementation/verification-strategy-test-harness-architecture-fitness-evidence-quality-gates.md);
 - [source/package topology, foundational toolchain and dependency enforcement](implementation/source-topology-module-package-boundaries-shared-foundation-dependency-enforcement.md);
 - [public resource/control-plane identity, persistence, transaction and migration plan](implementation/public-resource-control-plane-identity-state-persistence-transactions-migration-plan.md);
-- [Spark data boundary, exact source-state, manifest/candidate/sealed-snapshot and promotion plan](implementation/spark-data-boundary-source-output-reference-manifest-materialization-promotion-plan.md).
+- [Spark data boundary, exact source/snapshot/candidate/promotion plan](implementation/spark-data-boundary-source-output-reference-manifest-materialization-promotion-plan.md);
+- [runtime extension SPI, runtime invocation and Learned-State plan](implementation/strategy-method-extension-spi-learning-generation-evaluation-runtime-learned-state-plan.md).
 
-The planning baseline now includes:
+The current implementation plan preserves:
 
 - one future `src/syngan` package with enforced inward boundaries and optional runtime/platform isolation;
-- Python >=3.11 and the accepted uv/Hatchling/pytest/Hypothesis/pytest-socket/Ruff/mypy/Import Linter/GitHub Actions toolchain plan;
-- typed AuthorityId/ResourceId/ResourceRef/RevisionRef/SnapshotId/StateVersion/SchemaVersion conventions;
-- immutable public specs/handles/views plus a non-authoritative `SynGANClient` facade;
-- exact typed historical resolution and explicit versioned JSON codecs;
-- SQLAlchemy Core/Alembic/PostgreSQL/SQLite/Psycopg control-persistence plan with CAS/transactions/outbox;
-- optional Spark capability isolation from the base package;
-- DataFrame/table/path/query selectors separated from exact `SourceStateRef` history;
-- conservative snapshot-before-commit behavior for unresolved mutable/ephemeral Spark sources;
-- bounded manifest roots with distributed/provider-native component indexes;
-- a portable manifested-Parquet file profile without making Parquet or a table format semantic authority;
-- distinct Generation candidate, sealed snapshot and logical output roles;
-- idempotent metadata-only promotion using the 005-D control substrate.
+- one durable ResourceRef/revision/state/schema model shared by downstream slices;
+- exact distributed source-state/candidate/sealed-snapshot/output separation;
+- explicit Strategy/method implementation-binding and SPI version axes;
+- activity-specific immutable runtime invocations and runtime-result boundaries;
+- Learned-State logical identity separate from candidate representation, state codec and loaded runtime object;
+- optional Spark/PyTorch runtime families without making either universal semantics;
+- Phase 005 as documentation/planning only—no production package, schema, adapter, test suite or infrastructure has been implemented.
 
 Next:
 
-**005-F — Strategy/Method Extension SPI, Learning/Generation/Evaluation Runtime & Learned-State Implementation Plan**
+**005-G — Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Implementation Plan**
 
-005-F must remain planning-only while defining the future model-neutral runtime/provider boundary over the durable control and distributed-data plans already accepted.
+005-G will define the future durable operational substrate using 005-D CAS/outbox state, 005-E candidate writer-fence seams and 005-F immutable Attempt invocation/runtime checkpoint/cancellation boundaries.
 
 ## Documentation governance note
 
-The repository continues to use its project-specific OKF profile. The separate question of strict external OKF 0.2 reserved-file/frontmatter normalization has not been falsely declared resolved and remains documentation-governance debt until explicitly audited against current external authority.
+The repository continues to use its project-specific OKF profile. Strict external OKF 0.2 reserved-file/frontmatter normalization has not been falsely declared resolved and remains documentation-governance debt until explicitly audited against current external authority.
