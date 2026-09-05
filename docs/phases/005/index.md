@@ -6,7 +6,7 @@ status: active
 
 # Phase 005 — Implementation Planning & Delivery Decomposition
 
-Phase 005 translates the accepted Phase 004 architecture into dependency-safe **implementation plans**: source/module boundaries, technology choices, persisted/wire representations, verification obligations, migration/deployment sequencing, and acceptance evidence.
+Phase 005 translates accepted Phase 004 architecture into dependency-safe **implementation plans**: source/module boundaries, technology choices, persisted/wire representations, verification obligations, migration/deployment sequencing, and acceptance evidence.
 
 ## Critical planning-only boundary
 
@@ -17,7 +17,7 @@ Across 005-A through 005-K:
 - production source code is not implemented;
 - package scaffolds/tool configuration are not created merely because their future form is planned;
 - database schemas/migrations are not executed;
-- Spark/runtime/platform adapters are not built;
+- Spark/runtime/platform/security adapters are not built;
 - CI/deployment infrastructure is not created;
 - tests are not implemented as production verification suites.
 
@@ -34,9 +34,9 @@ Implementation planning is downstream of:
 - [Accepted Synchronizations](../../synchronizations/index.md);
 - [Phase 003 Consolidated Experience Contract](../../experience/phase-003-consolidated-experience-contract.md);
 - [Phase 004 Consolidated Architecture Contract](../../architecture/phase-004-consolidated-architecture-contract.md);
-- [Implementation Planning & Delivery Authority](../../implementation/index.md);
-- relevant detailed architecture under [`docs/architecture/`](../../architecture/index.md);
-- ADR rationale under [`docs/decisions/`](../../decisions/index.md) only when needed.
+- [Implementation Planning & Delivery Authority](../../implementation/index.md).
+
+Detailed architecture and ADR rationale should be loaded only when required by the active slice.
 
 ## Implementation-planning rule
 
@@ -72,96 +72,82 @@ Planning MUST NOT begin with a preferred framework/package tree and then reinter
 | **005-F** | [**Strategy/Method Extension SPI, Learning/Generation/Evaluation Runtime & Learned-State Implementation Plan**](005-F-strategy-method-extension-spi-learning-generation-evaluation-runtime-learned-state-implementation-plan.md) | **complete** |
 | **005-G** | [**Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Implementation Plan**](005-G-execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation-implementation-plan.md) | **complete** |
 | **005-H** | [**Evaluation/Evidence, Provenance, Historical Query & Reproducibility Implementation Plan**](005-H-evaluation-evidence-provenance-historical-query-reproducibility-implementation-plan.md) | **complete** |
-| **005-I** | **Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Implementation Plan** | **next** |
-| 005-J | Deployment/Platform Adapters, Observability, Compatibility, Scale & Performance Implementation Plan | planned |
+| **005-I** | [**Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Implementation Plan**](005-I-dependency-resolution-offline-no-egress-authorization-redaction-enterprise-security-implementation-plan.md) | **complete** |
+| **005-J** | **Deployment/Platform Adapters, Observability, Compatibility, Scale & Performance Implementation Plan** | **next** |
 | 005-K | Cross-Slice Integration, Delivery Sequencing, Backlog Closure, Jackson-Methodology Completeness & Implementation-Readiness Exit | planned |
 
 ## Completed planning refinement
 
-### 005-A — implementation governance
+### 005-A through 005-C — governance, verification and topology
 
-Established implementation precedence/conflict escalation, change classification, dependency/toolchain/migration governance, agent/PR discipline and acceptance-evidence requirements.
-
-### 005-B — verification architecture
-
-Established V0-V11 verification layers, AF-01 through AF-20 architecture-fitness properties, conformance suites, synthetic fixture policy, failure/security/offline/statistical/platform verification and Q0-Q4 gates.
-
-### 005-C — source/package/toolchain plan
-
-Established the future single `syngan` package using `src/`, Python >=3.11, inward `foundation/domain/ports/application/api/adapters/bootstrap` dependency direction, accepted foundational toolchain, optional-dependency isolation, test topology and stable Q0-Q4 command architecture.
-
-No production scaffold or code was created.
+Established implementation precedence/governance; V0-V11 verification, AF-01 through AF-20 and Q0-Q4; and the future `src/syngan` package/toolchain/dependency-boundary plan. No production scaffold or verification suite was created.
 
 ### 005-D — public/control-plane plan
 
-Established future durable identity/version/reference types, public specs/handles/views, typed historical resolution, SQLAlchemy Core/Alembic/PostgreSQL/SQLite/Psycopg persistence plan, CAS/transaction/outbox rules and migration strategy.
+Established the future shared ResourceRef/revision/SnapshotId/StateVersion/SchemaVersion substrate, public handles/views, typed historical resolution, SQL control-store plan, CAS/transactions/outbox and migration rules. No schema, migration or persistence code was created.
 
-No database schema, migration or persistence code was created.
+### 005-E — Spark/data plan
 
-### 005-E — Spark data boundary plan
+Established exact `SourceStateRef` binding, distributed snapshot preparation, bounded manifest roots, portable manifested-Parquet profile, candidate/sealed-snapshot/output separation, writer-fence seam and metadata-only idempotent promotion. No Spark/storage implementation was created.
 
-Established exact `SourceStateRef` binding, distributed snapshot preparation, bounded manifest roots, provider-native or manifested-Parquet physical profiles, candidate/sealed-snapshot/output separation, writer-fence seam and metadata-only idempotent promotion.
+### 005-F — runtime/Learned-State plan
 
-No Spark/runtime/storage implementation was created.
+Established implementation-binding/SPI/version separation, Protocol-based activity-specific runtime adapters, explicit extension composition, immutable Attempt invocation, narrow runtime ports, Learned-State candidate/representation/codec boundaries, direct Generation and optional Spark/PyTorch runtime families. No runtime implementation was created.
 
-### 005-F — runtime extension and Learned-State plan
+### 005-G — Execution/recovery plan
 
-Established executable binding/SPI/version separation, Protocol-based activity-specific runtime adapters, explicit extension composition plus optional lazy entry-point discovery, immutable Attempt invocation, narrow runtime ports, Learned-State candidate/representation/codec boundaries, direct Generation and optional Spark/PyTorch runtime families.
+Established stable Execution/multiple Attempts, AttemptEpoch fencing, liveness-versus-authority separation, launch reconciliation, immutable checkpoints and resume qualification, scoped idempotency, recovery modes, cancellation/completion linearization and operational-completion handoff. No execution/scheduler/checkpoint implementation was created.
 
-No runtime plugin, entry point, state codec, PyTorch/Spark adapter, test or launcher was implemented.
+### 005-H — Evidence/history plan
 
-### 005-G — Execution/recovery/fencing/cancellation plan
+Established owner-side Evidence establishment, immutable finding versus applicability separation, exact Generation completion basis, relational canonical Provenance assertions, bounded historical explain/compare projections and derived reproducibility assessment. No Evidence/Provenance/query implementation was created.
 
-Established [Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Implementation Plan](../../implementation/execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation-plan.md): stable Execution/multiple Attempts, AttemptEpoch fencing, liveness-versus-authority separation, launch reconciliation, checkpoint/resume qualification, scoped idempotency, recovery modes, cancellation/completion linearization and operational-completion handoff.
+### 005-I — dependency/security plan
 
-No Execution classes, SQL tables, scheduler/checkpoint adapter, migration, test suite or runtime infrastructure was created.
+Established [Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Implementation Plan](../../implementation/dependency-resolution-offline-no-egress-authorization-redaction-enterprise-security-plan.md).
 
-### 005-H — Evidence, Provenance, historical query and reproducibility plan
+Key future rules include:
 
-Established [Evaluation/Evidence, Provenance, Historical Query & Reproducibility Implementation Plan](../../implementation/evaluation-evidence-provenance-historical-query-reproducibility-plan.md).
+- semantic dependency/network/egress declaration, environmental resolution/integrity/trust, current authorization and Attempt capability issuance remain separate;
+- exact dependency identity is distinct from mutable locators;
+- no hidden package/model acquisition, public-registry lookup, telemetry or remote fallback during committed runtime;
+- supported core workflows retain a first-class offline/no-egress profile after approved local/private provisioning;
+- `EgressPlan` declares behavior but never authorizes transmission;
+- authorization is action/context specific and sensitive use/retry/resume/export/history operations re-authorize;
+- runtime capability is no broader than semantic requirement ∩ current authorization ∩ deployment capability;
+- durable handles remain non-bearer identifiers;
+- bearer secrets/credentials remain outside canonical history, runtime invocation persistence, manifests, checkpoints and ordinary logs;
+- extension loading and unsafe state deserialization are trust/authorization-sensitive actions;
+- source/Learned-State/candidate/output/diagnostic access rights remain distinct;
+- canonical history, graph traversal, reverse indexes, counts, comparison and reproducibility reasons are all inside the disclosure boundary;
+- redaction/withholding is view-time and preserves absent/unknown/unavailable/withheld/redacted distinctions;
+- revocation and Attempt fencing remain complementary controls;
+- security audit remains separate from Provenance and telemetry;
+- tenant/security-domain isolation applies across control/data/history/cache/runtime boundaries;
+- V9 and AF-02/11/12/14/15/16/17/18 obligations are mapped.
 
-Key future implementation rules include:
-
-- Evaluation runtime output remains non-final until Evaluation-owner semantic validation;
-- Evidence uses stable ResourceRef identity plus idempotent Evaluation/finding-slot establishment;
-- immutable Evidence finding content remains separate from StateVersion-guarded current applicability;
-- claim strength cannot exceed achieved method/coverage/uncertainty support;
-- exact distributed diagnostic refs remain outside bounded Evidence payloads;
-- Generation promotion retains an immutable exact Evidence completion basis;
-- the first canonical Provenance implementation is planned as typed indexed relational assertions in the existing control-store family rather than a graph-first authority;
-- canonical assertions use exact HistoricalRef endpoints, stable predicate/relationship slots and append/supersede correction;
-- built-in same-store owner transitions and required Evidence/Provenance may use one relational transaction, with outbox/reconciliation for external projections/integrations;
-- historical traversal/explain/compare remains bounded, paginated and non-causal;
-- derived graph/search projections remain rebuildable/non-authoritative;
-- reproducibility reports strongest historically supportable class separately from current feasibility;
-- query/security seams preserve withheld/redacted versus absent/unknown/unavailable distinctions;
-- V8 and AF-08/09/10/11/16/17/18/19 obligations are mapped.
-
-No Evidence store, Provenance graph/table, query index, reproducibility engine, migration, test suite or external lineage integration was created.
+No authorization code, dependency resolver, secret adapter, network enforcement, security schema/migration, test suite or platform security configuration was created.
 
 ## Why the remaining order is dependency-safe
 
-### 005-I — enterprise security planning next
+### 005-J — deployment/platform planning next
 
-005-I can now apply authorization/redaction and dependency/no-egress policy to concrete planned surfaces across 005-D through 005-H:
+005-J can now map all accepted future contracts onto concrete deployment/platform capability profiles without allowing a platform to become semantic authority. It can select reference deployment topologies and adapter families for:
 
-- durable handles/current control state;
-- exact data/state/runtime/dependency refs;
-- Execution/Attempt/checkpoint recovery actions;
-- Evidence findings/applicability;
-- canonical Provenance assertions;
-- reverse indexes/explain/compare paths;
-- reproducibility prerequisites and reason text.
+- control-store/runtime deployment;
+- Spark/distributed launchers and storage providers;
+- workload identity/IAM/policy/secret integrations;
+- private dependency/package distribution;
+- network/no-egress containment;
+- observability/security-audit sinks;
+- compatibility/support matrices;
+- scale, backpressure, HA, backup/restore and performance evidence.
 
-This lets security be planned against both canonical state and derived query surfaces without inventing a separate history model.
-
-### 005-J
-
-Deployment/platform/observability/compatibility/scale planning follows once the security enforcement contract is fixed.
+Because 005-I is complete, platform security limitations can be surfaced as explicit capability/support constraints rather than silently weakening the security contract.
 
 ### 005-K — Jackson/design completeness gate
 
-005-K must do more than sequence coding work. It must audit the complete Jackson/design program and choose one of two outcomes:
+005-K must audit the entire Jackson/design program and choose one of two outcomes:
 
 ```text
 DESIGN COMPLETE ENOUGH FOR A LATER EXPLICIT IMPLEMENTATION-AUTHORITY PHASE
@@ -173,31 +159,25 @@ or:
 FURTHER CONCEPT / SYNCHRONIZATION / EXPERIENCE / ARCHITECTURE / PLANNING REFINEMENT REQUIRED
 ```
 
-A positive 005-K readiness result still does not itself create production code. Coding begins only in a later explicitly authorized phase.
+A positive result still does not itself create production code or authorize coding in Phase 005.
 
 ## Phase 005 guardrails
 
 Phase 005 MUST NOT:
 
 - begin production implementation;
-- redefine accepted concept meaning or ownership;
-- weaken Phase 003 experience contracts for API convenience;
-- weaken Phase 004 architecture to fit a preferred library/platform;
-- reverse the 005-C inward dependency direction;
-- invent parallel ResourceId/StateVersion/schema-version conventions downstream of 005-D;
-- turn foundation/persistence/data/runtime/execution/history infrastructure into generic utilities/config/metadata/context/result owners;
-- place Spark/PyTorch/Databricks/cloud/remote dependencies into base core merely for one adapter;
-- make raw DataFrame/model/platform objects canonical identity;
-- design enterprise workflows around mandatory full driver-local materialization;
-- introduce hidden package/model downloads, remote fallback, telemetry or egress;
-- replace fencing with lease expiry, scheduler retries or last-writer-wins;
-- coerce unknown operational state into success/failure merely to retry;
-- treat checkpoint existence as resume proof;
-- let runtime output become Evidence directly;
-- let graph/search projections become canonical Provenance;
-- reduce reproducibility to a seed or Boolean flag;
-- skip exact historical binding, Evidence strength, Provenance, authorization or required architecture-fitness checks;
-- allow derived indexes/telemetry/security audit to become canonical semantic state;
+- redefine accepted concept meaning/ownership or weaken Phase 003/004 authority for convenience;
+- reverse the 005-C inward dependency direction or invent parallel identity/version systems downstream of 005-D;
+- make payload/runtime/platform/security/history mechanisms universal semantic owners;
+- introduce hidden package/model acquisition, remote fallback, telemetry or egress;
+- replace fencing with lease expiry/scheduler retry/last-writer-wins;
+- coerce unknown operational/security state into success/failure merely to continue;
+- let runtime output become Evidence or graph/search/security-audit projections become canonical Provenance;
+- reduce reproducibility to seed/Boolean;
+- treat resource handles as credentials;
+- persist bearer secrets in canonical state/history;
+- treat authorization as semantic compatibility or let a broad permission widen a committed no-egress/network contract;
+- leak protected resource/edge existence through indexes/counts/errors merely because primary records are filtered;
 - claim strict OKF 0.2 normalization is complete unless separately verified.
 
 ## Phase 005 exit target
@@ -219,4 +199,4 @@ acceptance evidence requirements
 
 ## Current next phase
 
-**005-I — Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Implementation Plan**
+**005-J — Deployment/Platform Adapters, Observability, Compatibility, Scale & Performance Implementation Plan**
