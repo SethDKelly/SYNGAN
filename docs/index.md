@@ -18,7 +18,7 @@ This directory is the canonical design and implementation-planning knowledge bun
 - [Accepted Synchronizations](synchronizations/index.md) — canonical cross-concept coordination rules.
 - [Experience & Workflow Design](experience/index.md) — start implementation-facing experience review with the [Phase 003 Consolidated Experience Contract](experience/phase-003-consolidated-experience-contract.md).
 - [Representation & Architecture Design](architecture/index.md) — start with the [Phase 004 Consolidated Architecture Contract](architecture/phase-004-consolidated-architecture-contract.md).
-- [Implementation Planning & Delivery Authority](implementation/index.md) — current implementation governance, verification, source/toolchain, control/data/runtime/execution plans and later slice plans.
+- [Implementation Planning & Delivery Authority](implementation/index.md) — current implementation governance, verification, source/toolchain, control/data/runtime/recovery/history plans and later slice plans.
 - [Architecture Decision Records](decisions/index.md) — architecture rationale/alternatives/supersession; normative architecture remains under `docs/architecture/`.
 - [Concept Discovery](discovery/index.md) — historical hypotheses, alternatives and design provenance.
 - [Phases](phases/index.md) — phase plans, outcomes and exit reviews.
@@ -78,6 +78,7 @@ Completed implementation plans:
 - [005-E — Spark Data Boundary, Source/Output References, Manifest, Materialization & Promotion Implementation Plan](phases/005/005-E-spark-data-boundary-source-output-references-manifest-materialization-promotion-implementation-plan.md)
 - [005-F — Strategy/Method Extension SPI, Learning/Generation/Evaluation Runtime & Learned-State Implementation Plan](phases/005/005-F-strategy-method-extension-spi-learning-generation-evaluation-runtime-learned-state-implementation-plan.md)
 - [005-G — Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Implementation Plan](phases/005/005-G-execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation-implementation-plan.md)
+- [005-H — Evaluation/Evidence, Provenance, Historical Query & Reproducibility Implementation Plan](phases/005/005-H-evaluation-evidence-provenance-historical-query-reproducibility-implementation-plan.md)
 
 Canonical implementation-planning authority now includes:
 
@@ -87,7 +88,8 @@ Canonical implementation-planning authority now includes:
 - [public resource/control-plane identity, persistence, transaction and migration plan](implementation/public-resource-control-plane-identity-state-persistence-transactions-migration-plan.md);
 - [Spark data boundary, exact source/snapshot/candidate/promotion plan](implementation/spark-data-boundary-source-output-reference-manifest-materialization-promotion-plan.md);
 - [runtime extension SPI, runtime invocation and Learned-State plan](implementation/strategy-method-extension-spi-learning-generation-evaluation-runtime-learned-state-plan.md);
-- [Execution/Attempt, checkpoint, recovery, fencing, idempotency and cancellation plan](implementation/execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation-plan.md).
+- [Execution/Attempt, recovery, fencing and cancellation plan](implementation/execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation-plan.md);
+- [Evidence, Provenance, historical query and reproducibility plan](implementation/evaluation-evidence-provenance-historical-query-reproducibility-plan.md).
 
 The current implementation plan preserves:
 
@@ -97,16 +99,24 @@ The current implementation plan preserves:
 - explicit Strategy/method implementation-binding and SPI version axes;
 - activity-specific immutable runtime invocations and runtime-result boundaries;
 - Learned-State logical identity separate from candidate representation, state codec and loaded runtime object;
-- one stable Execution with monotonic Attempt epochs, stale-writer fencing, durable checkpoints and explicit recovery/cancellation semantics;
-- durable unknown state and launch reconciliation instead of assuming timeout means failure;
-- optional Spark/PyTorch/runtime/platform families without transferring semantic authority;
+- stable Execution/multiple Attempt history with epoch fencing, checkpoint/recovery and cancellation linearization;
+- Evidence immutable finding/applicability separation and exact Generation completion basis;
+- canonical typed Provenance distinct from derived graph/search projections;
+- reproducibility historical class distinct from current feasibility;
+- optional Spark/PyTorch runtime families without making either universal semantics;
 - Phase 005 as documentation/planning only—no production package, schema, adapter, test suite or infrastructure has been implemented.
+
+## Jackson/design completeness gate
+
+Phase 005-K must explicitly assess whether the Jackson-style design program has progressed far enough for later implementation. It may conclude that another concept/synchronization/experience/architecture/planning refinement phase is required.
+
+A positive readiness conclusion still does not itself authorize coding; a later explicit implementation-authority phase is required.
 
 Next:
 
-**005-H — Evaluation/Evidence, Provenance, Historical Query & Reproducibility Implementation Plan**
+**005-I — Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Implementation Plan**
 
-005-H will define the future semantic finding/history substrate using the exact activity/result/runtime/Execution/Attempt/checkpoint facts now planned through 005-G, while preserving typed Evidence authority, append/correctable Provenance, derived historical projections and qualified reproducibility assessments.
+005-I will plan security enforcement over the concrete control/data/runtime/Execution/Evidence/Provenance/query surfaces now defined without beginning production implementation.
 
 ## Documentation governance note
 
