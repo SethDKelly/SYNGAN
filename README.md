@@ -2,7 +2,7 @@
 
 SYNGAN is a design-first synthetic data generation framework intended for Spark-scale workloads.
 
-The project deliberately completes conceptual, experience, architecture, and implementation planning **before production coding begins**. Daniel Jackson's concept-design methodology governs discovery/specification, and canonical knowledge is maintained as an OKF-oriented bundle.
+The project is deliberately completing conceptual, architectural, and implementation planning before coding is treated as implementation-complete. Daniel Jackson's concept-design methodology governs discovery/specification, and canonical knowledge is maintained as an OKF-oriented bundle.
 
 ## Documentation
 
@@ -30,11 +30,11 @@ Phase 004 closed through [`004-J — Cross-Architecture Invariant Audit, Decisio
 
 ## Current phase
 
-**Phase 005 — Implementation Planning & Delivery Decomposition is current and remains planning-only.**
+**Phase 005 — Implementation Planning & Delivery Decomposition is current and planning-only.**
 
 See [`docs/phases/005/index.md`](docs/phases/005/index.md).
 
-During Phase 005, SYNGAN may select concrete future package paths, technologies, interfaces, persistence patterns, runtime boundaries, verification profiles and delivery sequences, but it does **not** create production source code, database schemas/migrations, Spark/runtime adapters, verification suites, CI workflows or deployment infrastructure. Actual coding begins only when a later phase explicitly authorizes implementation.
+Completing a Phase 005 group means its future implementation plan is complete. No production package, schema, migration, runtime adapter, test suite, CI workflow, or deployment infrastructure is created merely by completing these planning groups.
 
 Completed:
 
@@ -43,51 +43,33 @@ Completed:
 - **005-C — Source Topology, Module/Package Boundaries, Shared Foundation & Dependency Enforcement**
 - **005-D — Public Resource API, Control-Plane Identity, State, Persistence, Transactions & Migration Implementation Plan**
 - **005-E — Spark Data Boundary, Source/Output References, Manifest, Materialization & Promotion Implementation Plan**
+- **005-F — Strategy/Method Extension SPI, Learning/Generation/Evaluation Runtime & Learned-State Implementation Plan**
 
 Canonical implementation-planning authority is under [`docs/implementation/`](docs/implementation/index.md).
 
-### Planned source/toolchain foundation
+### Implementation-planning baseline through 005-F
 
-The accepted future scaffold remains a plan rather than production code:
+The future implementation is planned around:
 
-```text
-src/syngan/
-├── foundation/
-├── domain/
-├── ports/
-├── application/
-├── api/
-├── adapters/
-└── bootstrap/
-```
+- one `src/syngan` package with `foundation`, `domain`, `ports`, `application`, `api`, `adapters`, and `bootstrap` boundaries;
+- Python >=3.11 with uv/Hatchling/pytest/Hypothesis/pytest-socket/Ruff/mypy/Import Linter/GitHub Actions as the planned foundational toolchain;
+- one durable `AuthorityId`/`ResourceId`/`ResourceRef`/revision/state/schema model shared across downstream slices;
+- SQLAlchemy Core/Alembic with PostgreSQL as the reference production control store and SQLite as a local/test profile;
+- exact distributed `SourceStateRef` binding, bounded manifests, candidate/sealed-snapshot/output separation, and a portable manifested-Parquet data profile;
+- separate Strategy/Evaluation-method implementation-binding identity and `RuntimeSpiVersion` axes;
+- Protocol-based, activity-specific Learning/Generation/Evaluation runtime contracts rather than one generic plugin `run()` boundary;
+- explicit deployment composition plus optional lazy Python entry-point discovery, with no global mutable registry or implicit runtime installation/download;
+- immutable Attempt-scoped runtime invocation plans using exact commitment/data/state/dependency identities;
+- Learned-State candidate and representation/codec boundaries distinct from the logical Learned State and from loaded runtime objects;
+- distributed Learned-State loading support without a universal full-driver deserialization requirement;
+- optional Spark/PyTorch runtime capability families without making either framework the semantic model.
 
-Foundational tooling is planned around Python >=3.11, uv/`uv.lock`, Hatchling, pytest/Hypothesis/pytest-socket, Ruff, mypy, Import Linter, coverage diagnostics and GitHub Actions with Q0-Q4 verification semantics.
-
-### Planned durable public/control-plane substrate
-
-005-D fixes future AuthorityId/ResourceId/ResourceRef/RevisionRef/SnapshotId/StateVersion/SchemaVersion conventions, immutable public specs/handles/views, typed historical resolution, SQLAlchemy Core/Alembic/PostgreSQL/SQLite/Psycopg persistence, expected-version CAS, bounded transactions, idempotency/outbox and migration rules preserving immutable history.
-
-No resource/persistence code or migration has been created.
-
-### Planned Spark/distributed-data substrate
-
-005-E now fixes the future distributed-data boundary:
-
-- PySpark remains optional behind the `spark` capability extra;
-- Spark DataFrame/table/path/query values are selectors/access objects rather than canonical history;
-- committed work binds exact `SourceStateRef` state;
-- arbitrary DataFrame/query/mutable-locator input defaults to explicit distributed snapshot preparation unless a provider proves exact stable native binding;
-- manifest identity uses bounded roots plus distributed/provider-native component indexes;
-- a manifested-Parquet profile is the first generic file representation plan, without making Parquet or any table format semantic authority;
-- Generation candidate, sealed data snapshot and logical completed output remain distinct roles;
-- required completion Evaluation binds the exact sealed snapshot;
-- Generation promotion is idempotent, may be metadata-only, and reuses the 005-D control-plane transaction/CAS/outbox model;
-- 005-G and 005-I retain ownership of writer fencing/recovery and security/no-egress enforcement.
-
-No PySpark dependency, Spark adapter, manifest, storage layout, migration or Spark test suite has been created.
+No production implementation has begun.
 
 Next:
 
-- **005-F — Strategy/Method Extension SPI, Learning/Generation/Evaluation Runtime & Learned-State Implementation Plan**
+- **005-G — Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Implementation Plan**
 
-005-F will remain planning-only while defining future model-neutral runtime/provider contracts over the durable control and distributed-data plans already accepted.
+005-G will plan the durable operational realization layer: stable Execution/Attempt identity, Attempt epochs/fences, checkpoint identity and resume eligibility, unknown/ambiguous external side-effect reconciliation, command idempotency, writer authority transfer, retry/restart/resume semantics, and cancellation/completion races using the control/data/runtime seams already established.
+
+Evidence/Provenance/history, security/authorization, platform/deployment integration, compatibility/scale, and final cross-slice implementation-readiness remain downstream Phase 005 planning work.
