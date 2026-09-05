@@ -7,7 +7,7 @@ status: active
 
 # SYNGAN Design Knowledge
 
-This directory is the canonical design knowledge bundle for SYNGAN.
+This directory is the canonical design and implementation-planning knowledge bundle for SYNGAN.
 
 ## Progressive disclosure
 
@@ -18,6 +18,7 @@ This directory is the canonical design knowledge bundle for SYNGAN.
 - [Accepted Synchronizations](synchronizations/index.md) — canonical cross-concept coordination rules.
 - [Experience & Workflow Design](experience/index.md) — actor-visible/programmatic workflow semantics; start implementation-facing experience review with the [Phase 003 Consolidated Experience Contract](experience/phase-003-consolidated-experience-contract.md).
 - [Representation & Architecture Design](architecture/index.md) — accepted implementation-facing architecture; start with the [Phase 004 Consolidated Architecture Contract](architecture/phase-004-consolidated-architecture-contract.md).
+- [Implementation Planning & Delivery Authority](implementation/index.md) — current implementation governance and accepted Phase 005 implementation plans.
 - [Architecture Decision Records](decisions/index.md) — architecture rationale/alternatives/supersession; current normative architecture remains under `docs/architecture/`.
 - [Concept Discovery](discovery/index.md) — historical hypotheses, alternatives and design provenance.
 - [Phases](phases/index.md) — phase plans, outcomes and exit reviews.
@@ -26,7 +27,7 @@ This directory is the canonical design knowledge bundle for SYNGAN.
 
 ## Authority rule
 
-A durable fact, definition, requirement, invariant, policy, or design decision has one canonical home. Other documents SHOULD reference that authority rather than restating it as a competing source of truth.
+A durable fact, definition, requirement, invariant, policy, design decision, or implementation rule has one canonical home. Other documents SHOULD reference that authority rather than restating it as a competing source of truth.
 
 The active downstream order is:
 
@@ -35,7 +36,7 @@ authority
   > concepts / synchronizations
   > experience
   > architecture
-  > implementation planning
+  > implementation authority / planning
   > code / deployment
   > ADR rationale / phase history / summaries / backlog where applicable
 ```
@@ -68,33 +69,24 @@ Exit authority: [Phase 004 Consolidated Architecture Contract](architecture/phas
 
 Phase 004 closed with no concept/synchronization redesign, nine detailed architecture authorities, and active ADR-0001 through ADR-0008.
 
-The architecture baseline now preserves:
-
-- typed durable resource identity and immutable commitments;
-- bounded control-plane versus distributed data-plane separation;
-- exact Spark-scale source-state binding and sealed candidate/output promotion;
-- model-neutral Strategy/runtime extension contracts;
-- one logical Execution across fenced/reconcilable Attempts;
-- strict checkpoint/candidate/runtime-result versus semantic-result boundaries;
-- Evaluation validation before Evidence establishment;
-- typed canonical Provenance and qualified reproducibility;
-- explicit dependency/trust/authorization/network/egress distinctions;
-- scoped runtime capabilities, secret isolation, truthful redaction and protected query projections;
-- portable core contracts with capability-negotiated platform adapters;
-- Databricks specialization without platform semantic ownership;
-- generic/self-managed Spark/private-offline viability when required guarantees are supplied;
-- multi-axis compatibility, restartable coordination, and enterprise-scale no-full-driver-materialization requirements.
-
 ## Current phase
 
 **[Phase 005 — Implementation Planning & Delivery Decomposition](phases/005/index.md) is current.**
 
+Completed:
+
+- [005-A — Implementation Authority, Delivery Governance, Toolchain & Repository Enforcement](phases/005/005-A-implementation-authority-delivery-governance-toolchain-repository-enforcement.md)
+
+Canonical implementation authority now begins at [Implementation Planning & Delivery Authority](implementation/index.md).
+
+005-A establishes implementation precedence/conflict escalation, delivery/change classification, acceptance evidence requirements, reproducible toolchain/dependency governance, migration/compatibility discipline, repository-wide [`AGENTS.md`](../AGENTS.md), and a GitHub PR review checklist without prematurely selecting source topology or concrete verification tooling.
+
 Next:
 
-**005-A — Implementation Authority, Delivery Governance, Toolchain & Repository Enforcement**
+**005-B — Verification Strategy, Test Harness, Architecture Fitness Functions, Evidence Fixtures & Quality Gates**
 
-Phase 005 must map upstream authority through architecture into modules/ports/adapters/persisted representations, dependency-safe implementation slices, verification/fitness tests, and acceptance evidence before coding is treated as implementation-complete.
+005-B must convert the accepted Phase 004 invariants and 005-A completion-evidence contract into executable verification layers and repository quality gates before 005-C selects detailed source/package topology.
 
 ## Documentation governance note
 
-The repository continues to use its project-specific OKF profile. The separate question of strict external OKF 0.2 metadata/frontmatter normalization has not been falsely declared resolved by the Phase 004 exit and remains documentation-governance debt until explicitly audited against current external authority.
+The repository continues to use its project-specific OKF profile. The separate question of strict external OKF 0.2 reserved-file/frontmatter normalization has not been falsely declared resolved and remains documentation-governance debt until explicitly audited against current external authority.
