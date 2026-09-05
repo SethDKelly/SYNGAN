@@ -10,7 +10,7 @@ status: active
 
 This directory is the canonical home for representation and architecture decisions that map SYNGAN's accepted semantic and experience contracts into modules, interfaces, identities, persistence boundaries, data/reference models, runtime integrations, execution/recovery mechanisms, provenance/evidence structures, security/disclosure controls, and deployment/platform architecture.
 
-Architecture remains downstream of design authority, accepted concepts/synchronizations, and experience authority. Representation/runtime convenience MUST NOT redefine semantic ownership.
+Architecture remains downstream of design authority, accepted concepts/synchronizations, and experience authority. Representation/runtime/security convenience MUST NOT redefine semantic ownership.
 
 ## Current canonical architecture authority
 
@@ -20,7 +20,8 @@ Architecture remains downstream of design authority, accepted concepts/synchroni
 - [Spark Data Boundary, Source/Output Reference, Distributed Materialization, Manifest & Promotion Architecture](spark-data-boundary-source-output-reference-distributed-materialization-manifest-promotion.md) — Phase 004-D distributed source/candidate/output architecture.
 - [Strategy Extension, Learning/Generation/Evaluation Runtime & Adapter Architecture](strategy-extension-learning-generation-evaluation-runtime-adapter.md) — Phase 004-E extension/runtime architecture.
 - [Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Architecture](execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation.md) — Phase 004-F operational continuation architecture.
-- [Evaluation/Evidence, Provenance, Reproducibility & Historical Query Architecture](evaluation-evidence-provenance-reproducibility-historical-query.md) — Phase 004-G durable Evidence, typed Provenance, historical query, and reproducibility-assessment architecture.
+- [Evaluation/Evidence, Provenance, Reproducibility & Historical Query Architecture](evaluation-evidence-provenance-reproducibility-historical-query.md) — Phase 004-G Evidence/history/query/reproducibility architecture.
+- [Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Architecture](dependency-resolution-offline-no-egress-authorization-redaction-enterprise-security.md) — Phase 004-H dependency trust, scoped authorization/capability, no-egress and disclosure architecture.
 
 Decision rationale/history is preserved under [Architecture Decision Records](../decisions/index.md). Current normative architecture remains here under `docs/architecture/`.
 
@@ -50,27 +51,31 @@ Later architecture MUST preserve at least:
 - committed checkpoints are immutable recovery snapshots and checkpoint existence does not imply resume eligibility;
 - retry/resume safety remains contextual to exact committed semantics and side-effect state;
 - unknown platform/side-effect state remains explicit until reconciled or safely fenced;
-- external unfenceable/undeduplicable ambiguity may block automatic retry;
-- Evaluation retries must not accidentally double-count logical work units;
-- cancellation is durable intent followed by reconciled operational outcome, not instantaneous domain-state rewrite;
 - Evaluation runtime results require semantic validation before Evidence establishment;
 - Evidence finding semantics are immutable while current applicability is separately conflict-versioned;
-- Evidence establishment is idempotent per logical Evaluation finding and may yield multiple independently interpretable Evidence resources;
 - Generation promotion preserves the exact Evidence/candidate/requirement basis used at completion;
 - Provenance is canonical typed relationship authority over stable references and does not duplicate canonical payloads;
 - required Provenance recording is idempotent, auditable, and recoverably consistent with the transition it explains;
-- Provenance correction preserves auditability and cannot mutate another concept's authority;
 - historical explain/compare/search indexes are derived projections, not canonical write state;
-- exact historical queries do not substitute current aliases/latest revisions;
-- historical comparison does not infer causality or quality from structural differences;
 - reproducibility is a qualified current assessment assembled from canonical historical facts, not a universal Boolean state;
-- reproduction strength cannot exceed unresolved identity/dependency/nondeterminism/equivalence boundaries;
-- reproduction readiness is distinct from successful new reproduction work;
-- absent, unknown, unavailable, withheld, invalid, and corrected historical states remain distinguishable;
-- external lineage/catalog systems remain integrations rather than canonical SYNGAN semantic authority;
-- automatic retry has no authority shortcut around semantic/dependency/no-egress/cancellation checks;
+- dependency requirement, resolution, integrity, compatibility, trust/approval, authorization, network and egress remain separate facts;
+- dependency/package acquisition is explicit and never hidden inside committed runtime execution;
+- supported offline/no-egress workflows remain executable without outbound network after approved local provisioning;
+- current authorization is action/resource/context specific and does not redefine committed semantics;
+- later grants do not broaden committed no-network/no-egress semantics and later revocations do not rewrite history;
+- durable public handles identify resources but are not bearer credentials;
+- Attempt runtimes receive scoped capabilities no broader than committed semantics, current authorization, and deployment capability;
+- source, Learned State, candidate/output, diagnostic, Provenance and control-plane/history access may be independently authorized;
+- secret values are excluded from canonical history/state and ordinary logs;
+- redaction/withholding is actor-specific view behavior rather than historical mutation;
+- absent, unknown, unavailable and withheld remain distinguishable where disclosure permits;
+- derived indexes/query/reproducibility views cannot bypass security or leak protected graph/count/existence facts;
+- retry/resume revalidates current security conditions while preserving committed semantics;
+- semantic completion does not imply export/release authorization;
+- security-domain/tenant isolation survives shared physical stores, caches and indexes;
+- security audit remains distinct from Provenance and neither overrides domain truth;
 - platform specialization may add capability but cannot silently weaken common guarantees;
-- enterprise-scale workflows and history queries cannot require ordinary full driver-local source/output/Learned-State/diagnostic/telemetry materialization.
+- enterprise-scale workflows, history queries and security enforcement cannot require ordinary full driver-local source/output/Learned-State/diagnostic/telemetry materialization.
 
 ## Active ADR rationale
 
@@ -80,6 +85,7 @@ Later architecture MUST preserve at least:
 - [ADR-0004 — Semantic Extension & Runtime Binding Separation](../decisions/ADR-0004-semantic-extension-runtime-binding-separation.md)
 - [ADR-0005 — Attempt-Epoch Fencing & Recoverable At-Least-Once Execution](../decisions/ADR-0005-attempt-epoch-fencing-recoverable-at-least-once-execution.md)
 - [ADR-0006 — Typed Canonical Provenance & Derived Historical Projections](../decisions/ADR-0006-typed-provenance-canonical-derived-history-projections.md)
+- [ADR-0007 — Explicit Dependency Resolution & Scoped Capability Security](../decisions/ADR-0007-explicit-dependency-resolution-scoped-capability-security.md)
 
 ## Phase 004 status
 
@@ -94,11 +100,12 @@ Completed:
 - [004-E — Strategy Extension, Learning/Generation/Evaluation Runtime & Adapter Architecture](../phases/004/004-E-strategy-extension-learning-generation-evaluation-runtime-adapter-architecture.md)
 - [004-F — Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Architecture](../phases/004/004-F-execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation-architecture.md)
 - [004-G — Evaluation/Evidence, Provenance, Reproducibility & Historical Query Architecture](../phases/004/004-G-evaluation-evidence-provenance-reproducibility-historical-query-architecture.md)
+- [004-H — Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Architecture](../phases/004/004-H-dependency-resolution-offline-no-egress-authorization-redaction-enterprise-security-architecture.md)
 
 Next:
 
-**004-H — Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Architecture**
+**004-I — Deployment, Scalability, Observability, Portability, Compatibility & Platform Integration Architecture**
 
 ## Representation boundary
 
-No final Python package layout/class spelling, database technology, Spark table/file provider, manifest/hash technology, plugin discovery mechanism, distributed-ML runtime choice, scheduler/orchestrator, concrete checkpoint/fencing implementation, provenance physical store/query engine, authorization engine, or deployment topology is accepted merely because Phase 004 is active.
+No final Python package layout/class spelling, database technology, Spark table/file provider, manifest/hash technology, plugin discovery mechanism, distributed-ML runtime choice, scheduler/orchestrator, concrete checkpoint/fencing implementation, provenance physical store/query engine, authorization/policy technology, secret manager, network control, or deployment topology is accepted merely because Phase 004 is active.
