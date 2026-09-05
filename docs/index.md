@@ -18,7 +18,7 @@ This directory is the canonical design and implementation-planning knowledge bun
 - [Accepted Synchronizations](synchronizations/index.md) — canonical cross-concept coordination rules.
 - [Experience & Workflow Design](experience/index.md) — start implementation-facing experience review with the [Phase 003 Consolidated Experience Contract](experience/phase-003-consolidated-experience-contract.md).
 - [Representation & Architecture Design](architecture/index.md) — start with the [Phase 004 Consolidated Architecture Contract](architecture/phase-004-consolidated-architecture-contract.md).
-- [Implementation Planning & Delivery Authority](implementation/index.md) — current implementation governance, verification, source/toolchain, control/data/runtime plans and later slice plans.
+- [Implementation Planning & Delivery Authority](implementation/index.md) — current implementation governance, verification, source/toolchain, control/data/runtime/execution plans and later slice plans.
 - [Architecture Decision Records](decisions/index.md) — architecture rationale/alternatives/supersession; normative architecture remains under `docs/architecture/`.
 - [Concept Discovery](discovery/index.md) — historical hypotheses, alternatives and design provenance.
 - [Phases](phases/index.md) — phase plans, outcomes and exit reviews.
@@ -77,6 +77,7 @@ Completed implementation plans:
 - [005-D — Public Resource API, Control-Plane Identity, State, Persistence, Transactions & Migration Implementation Plan](phases/005/005-D-public-resource-api-control-plane-identity-state-persistence-transactions-migration-implementation.md)
 - [005-E — Spark Data Boundary, Source/Output References, Manifest, Materialization & Promotion Implementation Plan](phases/005/005-E-spark-data-boundary-source-output-references-manifest-materialization-promotion-implementation-plan.md)
 - [005-F — Strategy/Method Extension SPI, Learning/Generation/Evaluation Runtime & Learned-State Implementation Plan](phases/005/005-F-strategy-method-extension-spi-learning-generation-evaluation-runtime-learned-state-implementation-plan.md)
+- [005-G — Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Implementation Plan](phases/005/005-G-execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation-implementation-plan.md)
 
 Canonical implementation-planning authority now includes:
 
@@ -85,7 +86,8 @@ Canonical implementation-planning authority now includes:
 - [source/package topology, foundational toolchain and dependency enforcement](implementation/source-topology-module-package-boundaries-shared-foundation-dependency-enforcement.md);
 - [public resource/control-plane identity, persistence, transaction and migration plan](implementation/public-resource-control-plane-identity-state-persistence-transactions-migration-plan.md);
 - [Spark data boundary, exact source/snapshot/candidate/promotion plan](implementation/spark-data-boundary-source-output-reference-manifest-materialization-promotion-plan.md);
-- [runtime extension SPI, runtime invocation and Learned-State plan](implementation/strategy-method-extension-spi-learning-generation-evaluation-runtime-learned-state-plan.md).
+- [runtime extension SPI, runtime invocation and Learned-State plan](implementation/strategy-method-extension-spi-learning-generation-evaluation-runtime-learned-state-plan.md);
+- [Execution/Attempt, checkpoint, recovery, fencing, idempotency and cancellation plan](implementation/execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation-plan.md).
 
 The current implementation plan preserves:
 
@@ -95,14 +97,16 @@ The current implementation plan preserves:
 - explicit Strategy/method implementation-binding and SPI version axes;
 - activity-specific immutable runtime invocations and runtime-result boundaries;
 - Learned-State logical identity separate from candidate representation, state codec and loaded runtime object;
-- optional Spark/PyTorch runtime families without making either universal semantics;
+- one stable Execution with monotonic Attempt epochs, stale-writer fencing, durable checkpoints and explicit recovery/cancellation semantics;
+- durable unknown state and launch reconciliation instead of assuming timeout means failure;
+- optional Spark/PyTorch/runtime/platform families without transferring semantic authority;
 - Phase 005 as documentation/planning only—no production package, schema, adapter, test suite or infrastructure has been implemented.
 
 Next:
 
-**005-G — Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Implementation Plan**
+**005-H — Evaluation/Evidence, Provenance, Historical Query & Reproducibility Implementation Plan**
 
-005-G will define the future durable operational substrate using 005-D CAS/outbox state, 005-E candidate writer-fence seams and 005-F immutable Attempt invocation/runtime checkpoint/cancellation boundaries.
+005-H will define the future semantic finding/history substrate using the exact activity/result/runtime/Execution/Attempt/checkpoint facts now planned through 005-G, while preserving typed Evidence authority, append/correctable Provenance, derived historical projections and qualified reproducibility assessments.
 
 ## Documentation governance note
 
