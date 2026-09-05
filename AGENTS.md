@@ -15,15 +15,16 @@ A Phase 005 group marked `complete` means its plan is complete, not that the pla
 For any material task:
 
 1. read `docs/index.md`;
-2. read `docs/architecture/phase-004-consolidated-architecture-contract.md` for implementation-facing architecture;
+2. read `docs/architecture/phase-004-consolidated-architecture-contract.md`;
 3. read `docs/implementation/index.md` and the implementation authority relevant to the task;
-4. read `docs/implementation/verification-strategy-test-harness-architecture-fitness-evidence-quality-gates.md` and identify affected verification/fitness obligations;
-5. read `docs/implementation/source-topology-module-package-boundaries-shared-foundation-dependency-enforcement.md` for package/import/dependency/toolchain constraints;
+4. read `docs/implementation/verification-strategy-test-harness-architecture-fitness-evidence-quality-gates.md`;
+5. read `docs/implementation/source-topology-module-package-boundaries-shared-foundation-dependency-enforcement.md`;
 6. for public handles/specs, durable identity, canonical state, persistence, transactions, historical resolution or migrations, read `docs/implementation/public-resource-control-plane-identity-state-persistence-transactions-migration-plan.md`;
 7. for Spark/data references, exact source state, manifests, candidates, sealed snapshots or output promotion, read `docs/implementation/spark-data-boundary-source-output-reference-manifest-materialization-promotion-plan.md`;
 8. for executable bindings, extension discovery, runtime invocation, Learning/Generation/Evaluation adapters or Learned-State physical representation/loading, read `docs/implementation/strategy-method-extension-spi-learning-generation-evaluation-runtime-learned-state-plan.md`;
-9. follow only the detailed concept/experience/architecture links needed for the active slice;
-10. use ADRs for rationale when necessary, not as a replacement for current canonical authority.
+9. for Execution/Attempt lifecycle, writer authority, launch reconciliation, checkpoints, retry/resume/recovery, cancellation or operational completion, read `docs/implementation/execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation-plan.md`;
+10. follow only the detailed concept/experience/architecture links needed for the active slice;
+11. use ADRs for rationale when necessary, not as a replacement for current canonical authority.
 
 Do not load or copy the entire documentation corpus by default.
 
@@ -70,18 +71,7 @@ Agents MUST NOT:
 
 ## Foundational toolchain plan
 
-When a later phase explicitly authorizes implementation, use the accepted baseline:
-
-- Python >=3.11 portable-core floor;
-- `pyproject.toml`;
-- uv + committed `uv.lock`;
-- Hatchling;
-- pytest + Hypothesis + pytest-socket;
-- Ruff;
-- mypy;
-- Import Linter;
-- coverage diagnostics;
-- GitHub Actions.
+When a later phase explicitly authorizes implementation, use the accepted baseline: Python >=3.11, `pyproject.toml`, uv + committed `uv.lock`, Hatchling, pytest + Hypothesis + pytest-socket, Ruff, mypy, Import Linter, coverage diagnostics and GitHub Actions.
 
 Tool changes are governed implementation decisions.
 
@@ -100,18 +90,7 @@ StateVersion
 SchemaVersion
 ```
 
-Do not:
-
-- use database auto-increment IDs, paths, table names, Spark/Databricks run IDs, model IDs, timestamps, or Python object identity as canonical ResourceId;
-- overload one generic `version` field across semantic revision, state concurrency, schema, Attempt epoch, package version, SPI version, codec version, or migration revision;
-- make ORM/database row objects canonical domain/public resources;
-- expose SQLAlchemy/Psycopg/Alembic types through foundation/domain/ports/application/API;
-- mutate immutable commitment/revision payloads through ordinary update paths;
-- use last-writer-wins for material canonical state;
-- silently resolve an exact historical ref to current/latest authority;
-- collapse absent/unavailable/unknown/invalid/withheld resolution into ordinary `None`;
-- put source/generated rows, DataFrames, tensors, checkpoints, large diagnostics, or full Spark logs into bounded control records;
-- put bearer secrets into canonical control records.
+Do not use database IDs, paths, table names, Spark/Databricks run IDs, model IDs, timestamps or Python object identity as canonical ResourceId; overload one generic `version`; make ORM rows canonical resources; mutate immutable commitments; use last-writer-wins; silently resolve exact historical refs to latest; collapse typed resolution outcomes into `None`; put data-plane payloads or bearer secrets into bounded control records.
 
 Material lifecycle mutation uses owner validation plus expected `StateVersion` CAS. Transactional outbox/durable-intent records are technical coordination state, not Provenance, Execution, or semantic completion.
 
@@ -119,17 +98,7 @@ Material lifecycle mutation uses owner validation plus expected `StateVersion` C
 
 005-E establishes the future data-boundary plan.
 
-Do not:
-
-- treat a Spark DataFrame, query, table/path alias or path listing as durable committed source/output identity;
-- bind committed work to a mutable selector when exact source-state preparation is required;
-- confuse Spark/storage structural schema with Data Meaning;
-- store one mandatory SQL/control row per physical file/component;
-- treat a candidate materialization or sealed snapshot as a completed Generation output;
-- let Evaluation Evidence for one sealed snapshot silently validate another snapshot;
-- require a second full distributed copy merely to promote an already sealed candidate;
-- design candidate write/seal ports without a future writer-fence/authority seam;
-- make Delta/Iceberg/Hudi/Databricks or Parquet itself semantic authority.
+Do not treat DataFrame/query/table/path as durable identity, confuse physical schema with Data Meaning, store mandatory per-file control rows, equate candidate/sealed snapshot with completed output, reuse Evidence across different sealed subjects, require a second full copy for metadata-only promotion, omit the writer-fence seam, or make a provider/table format semantic authority.
 
 Enterprise paths must not require complete source/output/component collection on the driver merely to establish identity, sealing, promotion or payload access.
 
@@ -137,109 +106,92 @@ Enterprise paths must not require complete source/output/component collection on
 
 005-F establishes the future executable extension boundary.
 
-Keep these axes separate:
+Keep Strategy/method revision, ImplementationBindingRef revision, RuntimeSpiVersion, implementation package/build version, Learned-State codec/version, representation SchemaVersion and runtime/platform version distinct.
+
+Agents MUST NOT treat discovered entry points as trusted/selected authority; create a global mutable plugin registry; eager-load optional runtimes; collapse all runtime activities into generic `run(context) -> Result`; expose unrestricted canonical repositories to adapters; let runtime success establish semantic results; equate checkpoint/candidate representation/loaded model with Learned State; fabricate Learning for direct Generation; choose one universal state format; require universal full-driver state loading; silently alter committed invocation semantics; auto-install/download missing runtime artifacts; or choose concrete launcher semantics inside the SPI.
+
+## Execution/recovery/fencing rules
+
+005-G establishes the future operational-realization plan.
+
+Keep these axes/roles distinct:
 
 ```text
-Strategy / method semantic revision
-ImplementationBindingRef revision
-RuntimeSpiVersion
-implementation package/build version
-Learned-State codec/version
-representation SchemaVersion
-runtime/platform version
+Execution ResourceRef
+Execution StateVersion
+AttemptRef
+AttemptEpoch
+Attempt observed state
+current mutation authority
+cancellation generation
+resource-local candidate/checkpoint generation
+platform job/run identity
 ```
 
 Agents MUST NOT:
 
-- treat an installed/discovered Python entry point as a selected, trusted, compatible or semantically effective implementation;
-- create a global mutable plugin registry as canonical runtime availability/authority;
-- make `import syngan` scan/load plugins or import PyTorch/Spark optional runtimes;
-- use one generic `run(context) -> Result` interface as the only Learning/Generation/Evaluation SPI;
-- let runtime adapters receive unrestricted `SynGANClient`, SQL repositories/sessions, or arbitrary canonical mutation authority;
-- let runtime success directly establish Learned State, completed Generation output, or Evidence;
-- equate a checkpoint, candidate Learned-State representation, loaded PyTorch/Spark model, or state file with the logical Learned State identity;
-- fabricate Learning/Learned State for direct-generation Strategies;
-- make pickle/`.pt`/Spark model directories/ONNX/model registries the universal state format;
-- require universal full-driver Learned-State loading/deserialization;
-- silently change committed source, Strategy/configuration, Learned State, Conditions, Evaluation method/scope, dependency identity, or network posture inside a runtime Attempt;
-- automatically install/download missing extension code/models/artifacts or switch to remote fallback;
-- choose a concrete distributed launcher inside the SPI when 005-G/005-J own Execution/platform realization.
+- use platform job/run/native retry identity as Execution or Attempt identity;
+- equate a failed Attempt with failed Execution automatically;
+- use lease/heartbeat expiry as proof a writer stopped or as a substitute for fencing;
+- create a newer Attempt without first ensuring prior side effects are fenceable/reconcilable enough for safe overlap;
+- let stale Attempts register candidate/state/checkpoint effects after their epoch is superseded;
+- force a database fence check on every Spark row/file when Attempt-isolated immutable namespaces can enforce authority at registration/seal boundaries;
+- allow shared mutable targets without a real provider fence/version/CAS guarantee where stale-writer safety is required;
+- blindly resubmit after an unknown external launch acknowledgement;
+- collapse unknown/indeterminate external state into failure merely to retry;
+- treat checkpoint bytes/file existence as a committed resumable checkpoint;
+- resume another Execution from a checkpoint while calling it same-Execution recovery;
+- use one global idempotency key for every operation;
+- allow same idempotency key with materially different request payload to reuse an old effect;
+- let a fenced Attempt's late success automatically become authoritative; current authority must explicitly verify/adopt immutable effects;
+- double-count repeated Evaluation work units after retry;
+- treat provider `SUCCESS`, `CANCELLED`, `KILLED`, or cancel-request acknowledgement as semantic completion/cancellation;
+- allow late completion/promotion after cancellation won the control-plane authority race;
+- change committed Strategy/source/state/method/network semantics through retry policy;
+- equate `completed_operationally` with Learning/Generation/Evaluation semantic completion.
 
-Future extension composition is explicit; optional Python entry-point discovery through the planned `syngan.runtime_extensions` group is lazy infrastructure only. Learned-State codecs must expose exact identity/version and material deserialization safety characteristics.
+The preferred stale-writer pattern is Attempt-isolated physical work plus `WriterFence` validation at bounded registration/adoption/seal/completion boundaries. A cancellation-generation change revokes old write/promotion authority without pretending the physical process has terminated.
 
 ## Dependencies and optional integrations
 
 The base/core distribution remains model/platform neutral.
 
-Do not add PySpark, PyTorch, Databricks/cloud SDKs, MLflow, remote-model/service clients, CUDA/GPU runtimes, SQLAlchemy/Psycopg, or similar adapter dependencies to base runtime dependencies merely for one implementation slice.
+Do not add PySpark, PyTorch, Databricks/cloud SDKs, MLflow, remote-model/service clients, CUDA/GPU runtimes, SQLAlchemy/Psycopg, scheduler SDKs or similar adapter dependencies to base runtime dependencies merely for one implementation slice.
 
-Optional capability families belong behind their owning extras/adapters. Any new direct dependency requires explicit purpose/classification and compatibility/offline/network/security review.
-
-Committed runtime execution must never install missing packages or download missing models/artifacts as an undocumented fallback.
+Any new direct dependency requires explicit purpose/classification and compatibility/offline/network/security review. Committed runtime execution must never install missing packages or download missing models/artifacts as an undocumented fallback.
 
 ## Scope and change discipline
 
-Before material work, identify:
-
-- the Phase 005 planning slice or later implementation slice;
-- upstream architecture/implementation authority;
-- change classification;
-- affected verification layer(s), AF fitness IDs, and quality gates.
+Before material work, identify the Phase 005 planning slice or later implementation slice, upstream authority, change classification, affected verification layers/AF fitness IDs and quality gates.
 
 Keep changes bounded to the requested slice. Avoid opportunistic refactors, dependency additions, package moves, terminology changes, or API/schema changes outside scope.
 
 ## Non-negotiable architecture guardrails
 
-Do not:
-
-- make Spark DataFrames, PyTorch/Spark model objects, platform runs, paths, aliases, or process-local objects canonical SYNGAN identity;
-- collapse typed semantic/operational/security/history state into one generic status/result/context owner;
-- equate checkpoint/candidate/runtime material with Learned State/completed output/Evidence;
-- let runtime/platform adapters establish semantic completion directly;
-- replace Attempt fencing with lease expiry, scheduler retry, or last-writer-wins;
-- hide dependency/model/package downloads, remote fallback, telemetry, or egress;
-- require full source/output/Learned-State/diagnostic collection to the driver on enterprise paths;
-- make Databricks, PyTorch, Spark ML, CTGAN, or another runtime/platform universal semantics;
-- let derived query indexes, telemetry, security audit, or SQL outbox become canonical domain state;
-- treat resource-handle possession as authorization;
-- weaken Evidence claim strength, Provenance history, exact historical binding, or disclosure distinctions for convenience.
+Do not make runtime/platform/payload objects canonical identity; collapse typed semantic/operational/security/history state; equate checkpoints/candidates/runtime material with semantic results; allow runtime/platform adapters to establish semantic completion; replace Attempt fencing with lease expiry/scheduler retry/last-writer-wins; hide dependency acquisition/remote fallback/telemetry/egress; require full driver collection on enterprise paths; make one runtime/platform universal semantics; let derived indexes/telemetry/security audit/outbox become domain authority; treat handle possession as authorization; or weaken Evidence/Provenance/historical/disclosure contracts for convenience.
 
 ## Verification
 
-Material behavior changes, once coding is authorized, require verification appropriate to the implementation slice.
+Once coding is authorized, tests derive their oracle from accepted authority and must not mock away the distributed, concurrency, security, persistence, runtime, or recovery property under test.
 
-Tests derive their oracle from accepted authority, not merely current implementation output. Do not refresh snapshots/goldens blindly to bless a contract change.
+Portable/core tests use default network denial where applicable. Never retry stochastic tests until green or weaken required fitness checks without 005-B governance.
 
-Do not mock away the distributed, concurrency, security, persistence, runtime, or recovery property under test. Production adapters must satisfy reusable conformance contracts.
-
-Portable/core pytest profiles use socket/network denial by default. Networked/platform tests must be explicitly profiled and narrowly allowed.
-
-Never use retry-until-pass for stochastic/statistical tests, or weaken/quarantine/waive required architecture-fitness checks merely to make a change pass without 005-B governance.
-
-005-F future runtime work directly contributes to V6 and AF-02/04/09/12/13/14/20. Extension conformance must prove runtime-result/semantic-result separation, immutable invocation, no hidden acquisition, optional dependency isolation, exact subject/state binding, state-codec safety and non-driver-local scale behavior.
-
-The accepted quality-gate command surface remains planned around `tools/verify.py` under `uv run --locked`.
+005-G future work directly contributes to V7 and AF-04/06/07/08/09/18/19/20. Critical evidence includes concurrent Attempt creation, stale-writer wake-up, ambiguous launch reconciliation, checkpoint compatibility, cancellation/completion races, Evaluation deduplication, coordinator restart and real PostgreSQL concurrency.
 
 ## Package/import behavior
 
-The root `syngan` import remains side-effect free and must not automatically import optional Spark/Torch/Databricks/SQL persistence SDKs, scan plugin entry points, open network connections, create Spark sessions, inspect credentials, initialize telemetry, or create a mutable global Session/Context.
-
-Future Q1 package verification must exercise a built/installed artifact. Production source must never import from `tests` or repository-only `tools`.
+The root `syngan` import remains side-effect free and must not automatically import optional platform/runtime/persistence/scheduler SDKs, scan plugins, open network connections, create sessions, inspect credentials, initialize telemetry, or create a global mutable Session/Context.
 
 ## Secrets and sensitive data
 
-Never commit real credentials, tokens, passwords, private keys, or bearer secrets.
-
-Do not place sensitive source rows, Learned-State payloads, protected diagnostics, or secret-bearing configuration in ordinary fixtures/logs/examples. Use synthetic/non-sensitive fixtures and explicit integration profiles.
+Never commit real credentials, tokens, passwords, private keys, bearer secrets, sensitive source rows, protected Learned-State payloads or protected diagnostics in ordinary fixtures/logs/examples.
 
 ## Documentation synchronization
 
-When a durable implementation decision changes, update canonical `docs/implementation/` authority in the same change where practical.
-
-If architecture itself changes, update `docs/architecture/` and relevant ADR rationale explicitly. Do not leave the new rule only in code, a PR description, or phase notes.
+When a durable implementation decision changes, update canonical `docs/implementation/` authority. If architecture itself changes, update `docs/architecture/` and ADR rationale explicitly rather than leaving the new rule only in code or phase notes.
 
 ## Completion
 
-Do not claim an implementation-planning slice complete unless its authority mapping, future source-boundary compliance, verification/fitness obligations, dependency/migration/security/network implications, and acceptance evidence requirements are accounted for.
+Do not claim an implementation-planning slice complete unless its authority mapping, future source-boundary compliance, verification/fitness obligations, dependency/migration/security/network implications, and acceptance-evidence requirements are accounted for.
 
 Do not claim production implementation exists merely because a Phase 005 plan is complete.
