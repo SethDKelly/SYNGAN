@@ -14,7 +14,8 @@ Implementation authority is downstream of the [Phase 004 Consolidated Architectu
 
 ## Start here
 
-- [Implementation Authority, Delivery Governance, Toolchain & Repository Enforcement](implementation-authority-delivery-governance-toolchain-repository-enforcement.md) — canonical Phase 005-A authority for implementation precedence, change classification, dependency/toolchain governance, repository/agent rules, migration discipline, and completion evidence.
+- [Implementation Authority, Delivery Governance, Toolchain & Repository Enforcement](implementation-authority-delivery-governance-toolchain-repository-enforcement.md) — canonical 005-A implementation precedence, change/dependency/toolchain governance, migration discipline and repository enforcement.
+- [Verification Strategy, Test Harness, Architecture Fitness Functions, Evidence Fixtures & Quality Gates](verification-strategy-test-harness-architecture-fitness-evidence-quality-gates.md) — canonical 005-B verification layers, fitness-function catalog, fixture/test policy and Q0-Q4 quality-gate contract.
 - [Phase 005 navigator](../phases/005/index.md) — implementation-planning sequence and current work.
 
 Additional implementation authorities will be added only when their Phase 005 slice promotes durable implementation decisions here.
@@ -50,9 +51,10 @@ For an implementation task, begin with:
 1. [`docs/index.md`](../index.md);
 2. the [Phase 004 Consolidated Architecture Contract](../architecture/phase-004-consolidated-architecture-contract.md);
 3. this implementation index and the relevant implementation authority;
-4. only the detailed architecture/concept/experience documents directly linked by that implementation slice;
-5. ADRs only when decision rationale or supersession history is needed;
-6. phase history/discovery only when the task requires design provenance.
+4. the [005-B verification authority](verification-strategy-test-harness-architecture-fitness-evidence-quality-gates.md) for material implementation behavior;
+5. only the detailed architecture/concept/experience documents directly linked by that implementation slice;
+6. ADRs only when decision rationale or supersession history is needed;
+7. phase history/discovery only when the task requires design provenance.
 
 Do not load the whole design corpus by default.
 
@@ -71,10 +73,20 @@ Immediate repository enforcement includes:
 
 These are enforcement/navigation aids below canonical implementation authority.
 
+### 005-B — Verification architecture
+
+Established logical verification layers V0-V11, architecture-fitness identifiers AF-01 through AF-20, reusable adapter conformance expectations, synthetic/non-sensitive fixture classes, deterministic versus statistical verification rules, explicit failure-injection/recovery scenarios, default-deny portable-core network testing, Q0-Q4 quality gates, flaky/quarantine/waiver governance, and bounded implementation acceptance-evidence requirements.
+
+The core test-oracle rule is that accepted authority defines correctness; current code/platform output or refreshed snapshots do not authorize behavior by themselves.
+
+Phase record: [005-B — Verification Strategy, Test Harness, Architecture Fitness Functions, Evidence Fixtures & Quality Gates](../phases/005/005-B-verification-strategy-test-harness-architecture-fitness-evidence-fixtures-quality-gates.md).
+
 ## Current state
 
 **Phase 005 — Implementation Planning & Delivery Decomposition is current.**
 
 Next:
 
-**005-B — Verification Strategy, Test Harness, Architecture Fitness Functions, Evidence Fixtures & Quality Gates**.
+**005-C — Source Topology, Module/Package Boundaries, Shared Foundation & Dependency Enforcement**.
+
+005-C must now select source/test/package topology and the foundational concrete Python/build/test/static-analysis toolchain so the accepted verification layers, fitness functions and quality gates are actually enforceable.
