@@ -12,9 +12,7 @@ See [Phase 001 index](001/index.md).
 
 ## Phase 002 — Concept Specification & Invariant Refinement — complete
 
-See [Phase 002 index](002/index.md).
-
-Phase 002 closed with eleven accepted concepts and fifteen synchronization rules.
+See [Phase 002 index](002/index.md). Phase 002 closed with eleven accepted concepts and fifteen synchronization rules.
 
 ## Phase 003 — Experience & Workflow Design — complete
 
@@ -42,14 +40,14 @@ See [Phase 005 index](005/index.md).
 - [005-F — Strategy/Method Extension SPI, Learning/Generation/Evaluation Runtime & Learned-State Implementation Plan](005/005-F-strategy-method-extension-spi-learning-generation-evaluation-runtime-learned-state-implementation-plan.md) — complete
 - [005-G — Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Implementation Plan](005/005-G-execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation-implementation-plan.md) — complete
 - [005-H — Evaluation/Evidence, Provenance, Historical Query & Reproducibility Implementation Plan](005/005-H-evaluation-evidence-provenance-historical-query-reproducibility-implementation-plan.md) — complete
-- **005-I — Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Implementation Plan — next**
-- 005-J — Deployment/Platform Adapters, Observability, Compatibility, Scale & Performance Implementation Plan
+- [005-I — Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Implementation Plan](005/005-I-dependency-resolution-offline-no-egress-authorization-redaction-enterprise-security-implementation-plan.md) — complete
+- **005-J — Deployment/Platform Adapters, Observability, Compatibility, Scale & Performance Implementation Plan — next**
 - 005-K — Cross-Slice Integration, Delivery Sequencing, Backlog Closure, Jackson-Methodology Completeness & Implementation-Readiness Exit
 
 Canonical implementation-planning authority is under [Implementation Planning & Delivery Authority](../implementation/index.md).
 
-005-H now fixes the future Evidence/Provenance/history/reproducibility boundary: owner-established Evidence, relational canonical typed Provenance, derived bounded query projections and qualified reproducibility assessments over exact historical facts.
+005-I now fixes the future enterprise-security/dependency boundary: exact dependency identity/trust/authorization separation, explicit acquisition, offline/no-egress defense in depth, action authorization, Attempt-scoped capabilities, non-bearer handles, secret brokering, security-aware history/query disclosure, audit separation and tenant/security-domain isolation.
 
-005-I is next so dependency trust, offline/no-egress, action authorization and redaction can be planned against canonical resources as well as history/query projections.
+005-J is next so these contracts can be mapped to concrete platform/deployment capability profiles without making any platform semantic authority or silently weakening unsupported guarantees.
 
 Phase 005-K is an explicit Jackson/design-completeness gate. It may require another design-refinement phase rather than implementation; even a positive readiness result does not itself authorize coding.
