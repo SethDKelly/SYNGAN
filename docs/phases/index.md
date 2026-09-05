@@ -38,8 +38,8 @@ The exit audit preserved the eleven accepted concepts and fifteen synchronizatio
 
 See [Phase 005 index](005/index.md).
 
-- **005-A — Implementation Authority, Delivery Governance, Toolchain & Repository Enforcement — next**
-- 005-B — Verification Strategy, Test Harness, Architecture Fitness Functions, Evidence Fixtures & Quality Gates
+- [005-A — Implementation Authority, Delivery Governance, Toolchain & Repository Enforcement](005/005-A-implementation-authority-delivery-governance-toolchain-repository-enforcement.md) — complete
+- **005-B — Verification Strategy, Test Harness, Architecture Fitness Functions, Evidence Fixtures & Quality Gates — next**
 - 005-C — Source Topology, Module/Package Boundaries, Shared Foundation & Dependency Enforcement
 - 005-D — Public Resource API, Control-Plane Identity, State, Persistence, Transactions & Migration Implementation Plan
 - 005-E — Spark Data Boundary, Source/Output References, Manifest, Materialization & Promotion Implementation Plan
@@ -50,4 +50,6 @@ See [Phase 005 index](005/index.md).
 - 005-J — Deployment/Platform Adapters, Observability, Compatibility, Scale & Performance Implementation Plan
 - 005-K — Cross-Slice Integration, Delivery Sequencing, Backlog Closure & Implementation-Readiness Exit
 
-Implementation planning is downstream of the [Phase 004 Consolidated Architecture Contract](../architecture/phase-004-consolidated-architecture-contract.md) and must map each slice to verification/acceptance evidence rather than reopening semantic authority for convenience.
+Canonical implementation-planning authority is under [Implementation Planning & Delivery Authority](../implementation/index.md).
+
+005-A established implementation precedence, change classification, dependency/toolchain governance, migration/compatibility discipline, completion-evidence requirements, agent governance, and PR review enforcement. 005-B now defines the executable verification/fitness/quality-gate system that later implementation slices must satisfy.
