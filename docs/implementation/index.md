@@ -14,6 +14,8 @@ This directory is the canonical home for **implementation planning** decisions t
 
 Implementation authority is downstream of the [Phase 004 Consolidated Architecture Contract](../architecture/phase-004-consolidated-architecture-contract.md) and MUST NOT redefine accepted semantic, experience, or architecture authority for implementation convenience.
 
+Completion of this planning program does not automatically authorize coding. Phase 005-K must explicitly determine whether Jackson-style concept/synchronization/experience/architecture refinement is sufficiently complete or whether another design phase is required.
+
 ## Start here
 
 - [Implementation Authority, Delivery Governance, Toolchain & Repository Enforcement](implementation-authority-delivery-governance-toolchain-repository-enforcement.md) — 005-A implementation precedence, change/dependency/toolchain governance and repository enforcement.
@@ -23,6 +25,7 @@ Implementation authority is downstream of the [Phase 004 Consolidated Architectu
 - [Spark Data Boundary, Source/Output References, Manifest, Materialization & Promotion Implementation Plan](spark-data-boundary-source-output-reference-manifest-materialization-promotion-plan.md) — 005-E future Spark selector/access, exact source-state, manifest/candidate/sealed-snapshot and output-promotion plan.
 - [Strategy/Method Extension SPI, Learning/Generation/Evaluation Runtime & Learned-State Implementation Plan](strategy-method-extension-spi-learning-generation-evaluation-runtime-learned-state-plan.md) — 005-F future binding/SPI/discovery/runtime invocation and Learned-State representation/codec plan.
 - [Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Implementation Plan](execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation-plan.md) — 005-G future Execution/Attempt epochs, writer fencing, launch reconciliation, checkpoint/recovery, cancellation and operational-completion plan.
+- [Evaluation/Evidence, Provenance, Historical Query & Reproducibility Implementation Plan](evaluation-evidence-provenance-historical-query-reproducibility-plan.md) — 005-H future Evidence establishment, canonical Provenance, bounded history query and qualified reproducibility plan.
 - [Phase 005 navigator](../phases/005/index.md) — current planning sequence.
 
 ## Authority relationship
@@ -58,8 +61,9 @@ For a material planning or later implementation task, begin with:
 7. [005-E Spark/data boundary plan](spark-data-boundary-source-output-reference-manifest-materialization-promotion-plan.md) whenever Spark selectors, exact source state, manifests, candidates, sealed snapshots, output representations or Generation promotion are involved;
 8. [005-F runtime/SPI/Learned-State plan](strategy-method-extension-spi-learning-generation-evaluation-runtime-learned-state-plan.md) whenever executable bindings, extension discovery, runtime invocation, Learned-State physical representation/loading or Evaluation-method runtime are involved;
 9. [005-G Execution/recovery plan](execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation-plan.md) whenever Attempt lifecycle, writer fencing, launch reconciliation, checkpoints, recovery, cancellation or operational completion are involved;
-10. only the detailed architecture/concept/experience documents directly linked by the active slice;
-11. ADRs only when rationale/supersession history is needed.
+10. [005-H Evidence/history plan](evaluation-evidence-provenance-historical-query-reproducibility-plan.md) whenever Evidence establishment, Generation completion basis, Provenance, explain/compare/history queries or reproducibility assessment are involved;
+11. only the detailed architecture/concept/experience documents directly linked by the active slice;
+12. ADRs only when rationale/supersession history is needed.
 
 Do not load the whole design corpus by default.
 
@@ -79,7 +83,7 @@ Phase record: [005-B](../phases/005/005-B-verification-strategy-test-harness-arc
 
 ### 005-C — Source/package topology and dependency enforcement
 
-Established one future `syngan` distribution/import package using `src/` layout, Python >=3.11, the `foundation/domain/ports/application/api/adapters/bootstrap` dependency direction, uv/Hatchling/pytest/Hypothesis/pytest-socket/Ruff/mypy/Import Linter/GitHub Actions toolchain, optional runtime/platform isolation, test topology and stable Q0-Q4 developer commands.
+Established one future `syngan` distribution/import package using `src/` layout, Python >=3.11, the `foundation/domain/ports/application/api/adapters/bootstrap` dependency direction, accepted foundational toolchain, optional runtime/platform isolation, test topology and stable Q0-Q4 developer commands.
 
 No package scaffold or production code was created by 005-C.
 
@@ -133,12 +137,36 @@ No Execution classes, SQL schema, migration, scheduler adapter, checkpoint imple
 
 Phase record: [005-G](../phases/005/005-G-execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation-implementation-plan.md).
 
+### 005-H — Evidence, Provenance, history and reproducibility planning
+
+Established the future Evidence/history substrate:
+
+- Evidence remains owner-established semantic authority downstream of exact Evaluation validation, never a runtime result;
+- one Evaluation may establish multiple stable Evidence resources using idempotent finding-slot identity;
+- immutable Evidence finding content remains separate from StateVersion-guarded applicability/current-use state;
+- claim support remains bounded by method, scope, achieved coverage, uncertainty and assumptions;
+- diagnostic support remains exact distributed references rather than copied control payloads;
+- Generation promotion retains one immutable exact Evidence completion basis;
+- canonical Provenance is initially planned as typed indexed relational assertions in the existing bounded SQL control-store family;
+- Provenance stores exact historical references/relationship meaning, not duplicated canonical resource payloads;
+- assertion retry is idempotent and correction is append/supersede rather than destructive rewrite;
+- same-store owner transitions and required Evidence/Provenance may share one transaction while external projections use outbox/reconciliation;
+- history APIs return bounded/paginated typed provenance/explain/compare views and preserve canonical-vs-projection freshness distinctions;
+- historical comparison never turns difference into causality/superiority without Evidence;
+- ReproducibilityAssessment remains derived and reports strongest historically supportable class separately from current feasibility;
+- history/query contracts reserve security-aware withheld/redacted behavior for 005-I;
+- V8 plus AF-08/09/10/11/16/17/18/19 obligations are mapped.
+
+No Evidence store, Provenance graph/table, query projection, reproducibility engine, migration, test suite or external lineage integration was created by 005-H.
+
+Phase record: [005-H](../phases/005/005-H-evaluation-evidence-provenance-historical-query-reproducibility-implementation-plan.md).
+
 ## Current state
 
 **Phase 005 — Implementation Planning & Delivery Decomposition is current and remains planning-only.**
 
 Next:
 
-**005-H — Evaluation/Evidence, Provenance, Historical Query & Reproducibility Implementation Plan**.
+**005-I — Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Implementation Plan**.
 
-005-H must now bind Evidence establishment and typed Provenance/history to the exact activity/result/Attempt/checkpoint/runtime facts planned in 005-D through 005-G, while keeping query projections non-authoritative and reproducibility a qualified derived assessment rather than beginning production implementation.
+005-I must now apply the accepted enterprise-security architecture to the exact resource/runtime/Execution/Evidence/Provenance/query surfaces defined in 005-D through 005-H without beginning production implementation.
