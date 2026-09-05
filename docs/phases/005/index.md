@@ -17,6 +17,7 @@ Implementation planning is downstream of:
 - [Accepted Synchronizations](../../synchronizations/index.md);
 - [Phase 003 Consolidated Experience Contract](../../experience/phase-003-consolidated-experience-contract.md);
 - [Phase 004 Consolidated Architecture Contract](../../architecture/phase-004-consolidated-architecture-contract.md);
+- [Implementation Planning & Delivery Authority](../../implementation/index.md);
 - detailed architecture authorities under [`docs/architecture/`](../../architecture/index.md);
 - active architecture rationale under [`docs/decisions/`](../../decisions/index.md).
 
@@ -30,6 +31,8 @@ Every material implementation slice SHOULD remain traceable through:
 concept / experience invariant
         ↓
 architecture authority
+        ↓
+implementation authority / plan
         ↓
 module / port / adapter / persisted representation
         ↓
@@ -46,8 +49,8 @@ Implementation planning MUST NOT begin with a preferred framework/package tree a
 
 | Group | Scope | Status |
 |---|---|---|
-| **005-A** | **Implementation Authority, Delivery Governance, Toolchain & Repository Enforcement** | **next** |
-| 005-B | Verification Strategy, Test Harness, Architecture Fitness Functions, Evidence Fixtures & Quality Gates | planned |
+| **005-A** | [**Implementation Authority, Delivery Governance, Toolchain & Repository Enforcement**](005-A-implementation-authority-delivery-governance-toolchain-repository-enforcement.md) | **complete** |
+| **005-B** | **Verification Strategy, Test Harness, Architecture Fitness Functions, Evidence Fixtures & Quality Gates** | **next** |
 | 005-C | Source Topology, Module/Package Boundaries, Shared Foundation & Dependency Enforcement | planned |
 | 005-D | Public Resource API, Control-Plane Identity, State, Persistence, Transactions & Migration Implementation Plan | planned |
 | 005-E | Spark Data Boundary, Source/Output References, Manifest, Materialization & Promotion Implementation Plan | planned |
@@ -58,66 +61,62 @@ Implementation planning MUST NOT begin with a preferred framework/package tree a
 | 005-J | Deployment/Platform Adapters, Observability, Compatibility, Scale & Performance Implementation Plan | planned |
 | 005-K | Cross-Slice Integration, Delivery Sequencing, Backlog Closure & Implementation-Readiness Exit | planned |
 
-## Why this order is dependency-safe
+## Completed implementation-planning refinement
 
-### 005-A — authority and delivery governance first
+### 005-A — implementation authority and delivery governance
 
-Before decomposing code, establish:
+Established [Implementation Authority, Delivery Governance, Toolchain & Repository Enforcement](../../implementation/implementation-authority-delivery-governance-toolchain-repository-enforcement.md).
 
-- implementation authority and supersession rules;
-- repository/change discipline;
-- agent/Codex implementation rules;
-- tooling/environment expectations;
-- dependency-introduction policy;
-- migration/change-management expectations;
-- evidence required to claim a slice complete.
+Key accepted rules include:
 
-This prevents code-generation or dependency convenience from outrunning architecture authority.
+- implementation is downstream realization rather than permission to override architecture;
+- existing code does not outrank canonical authority;
+- material changes are classified from local maintenance through semantic/experience-affecting changes so conflicts escalate to the correct layer;
+- delivery slices remain traceable from upstream authority through modules/ports/adapters to verification and acceptance evidence;
+- code compiling or succeeding once is not sufficient completion evidence;
+- build/test/development behavior must be repository-declared and reproducible rather than workstation-defined;
+- concrete tool selection remains deferred until verification/topology requirements are known;
+- direct dependencies require explicit purpose/classification and compatibility/offline/network/security consideration;
+- runtime package/model acquisition and hidden fallback remain prohibited;
+- optional integrations remain isolatable from the portable/offline core;
+- source/package topology is not created before 005-B defines verification obligations;
+- persisted/public/SPI changes require compatibility/migration analysis on their actual version axis;
+- real secrets and sensitive payloads remain out of source/fixtures/logs;
+- humans and agents follow the same authority/change/evidence rules;
+- architecture fitness checks are product-correctness controls, not optional style preferences;
+- required-check waivers must be explicit/bounded and cannot override semantic authority.
+
+Immediate repository governance created:
+
+- root [`AGENTS.md`](../../../AGENTS.md);
+- [`.github/pull_request_template.md`](../../../.github/pull_request_template.md).
+
+005-A deliberately does not claim that branch protection/CI checks already exist. 005-B owns the verification gates that later repository enforcement must execute.
+
+## Why the remaining order is dependency-safe
 
 ### 005-B — verification before detailed implementation decomposition
 
 Define the verification model before choosing concrete module boundaries so architecture invariants become executable quality gates rather than retrospective documentation.
 
-This should include tests/fitness functions for:
+This includes test layers, fixtures, architecture fitness functions, CI quality gates, failure/recovery testing, and acceptance-evidence conventions.
 
-- dependency direction;
-- no hidden network acquisition;
-- no full-driver collection on enterprise paths;
-- immutable commitment/history;
-- typed result/promotion boundaries;
-- retry/fencing/idempotency;
-- Evidence/Provenance authority;
-- security/redaction/query isolation;
-- platform capability conformance.
+### 005-C — source/package topology after governance and verification
 
-### 005-C — source/package topology after governance and test obligations
-
-Only then define:
+Only after 005-B defines enforceable obligations should 005-C select:
 
 - package/source topology;
 - shared primitives;
 - application/port/adapter boundaries;
-- import rules;
-- plugin/optional-dependency isolation;
-- anti-god-module enforcement.
-
-This phase should map architecture layers to code boundaries without mechanically creating one package/class per concept.
+- import/dependency rules;
+- optional-dependency isolation;
+- foundational concrete Python/build/static-analysis toolchain needed to enforce those boundaries.
 
 ### 005-D through 005-J — implementation slices follow architectural dependency order
 
-The implementation plans then proceed from durable control/public foundations into distributed data, runtime extension, execution/recovery, evidence/history, security, and deployment/platform integration.
+The implementation plans then proceed from durable control/public foundations into distributed data, runtime extension, execution/recovery, Evidence/history, security, and deployment/platform integration.
 
-Each slice should identify:
-
-- owning modules/interfaces;
-- persisted and wire representations;
-- public/internal contracts;
-- migrations;
-- dependencies;
-- test/fixture requirements;
-- failure/recovery behavior;
-- integration points;
-- explicit deferred work.
+Each slice identifies ownership, persisted/wire representation, interfaces, dependencies, tests/fixtures, migration/failure behavior, integration points, and explicit deferred work.
 
 ### 005-K — integration and readiness exit
 
@@ -159,4 +158,4 @@ The exit should be strong enough that subsequent coding phases can execute the p
 
 ## Current next phase
 
-**005-A — Implementation Authority, Delivery Governance, Toolchain & Repository Enforcement**
+**005-B — Verification Strategy, Test Harness, Architecture Fitness Functions, Evidence Fixtures & Quality Gates**
