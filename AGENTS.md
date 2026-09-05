@@ -2,18 +2,27 @@
 
 These instructions apply repository-wide to automated coding/documentation agents, including Codex-style agents.
 
+## Current program boundary
+
+**Phase 005 is implementation planning only.**
+
+Unless a later phase explicitly authorizes production coding, agents working in Phase 005 MUST NOT create or modify production source code, package scaffolds/tool configuration, database schemas/migrations, Spark/runtime adapters, test suites, CI workflows, deployment infrastructure, or runtime/platform configuration merely because the corresponding plan is detailed enough to implement.
+
+During Phase 005, terms such as `implementation sequence`, `package path`, `class`, `port`, `adapter`, `migration`, and `quality gate` describe **future implementation contracts**.
+
 ## Start with authority, not repository-wide scanning
 
 For any material task:
 
 1. read `docs/index.md`;
 2. read `docs/architecture/phase-004-consolidated-architecture-contract.md` for implementation-facing architecture;
-3. read `docs/implementation/index.md` and the implementation authority relevant to the task;
+3. read `docs/implementation/index.md` and the implementation plan relevant to the task;
 4. read `docs/implementation/verification-strategy-test-harness-architecture-fitness-evidence-quality-gates.md` and identify affected verification/fitness obligations;
 5. read `docs/implementation/source-topology-module-package-boundaries-shared-foundation-dependency-enforcement.md` for package/import/dependency/toolchain constraints;
-6. for any task touching public handles/specs, durable identity, canonical state, persistence, transactions, historical resolution or migrations, read `docs/implementation/public-resource-control-plane-identity-state-persistence-transactions-migration-plan.md`;
-7. follow only the detailed concept/experience/architecture links needed for the active slice;
-8. use ADRs for rationale when necessary, not as a replacement for current canonical authority.
+6. for public handles/specs, durable identity, canonical state, persistence, transactions, historical resolution or migrations, read `docs/implementation/public-resource-control-plane-identity-state-persistence-transactions-migration-plan.md`;
+7. for Spark selectors/access, exact source state, manifests, candidates, sealed snapshots, output representations or Generation promotion, read `docs/implementation/spark-data-boundary-source-output-reference-manifest-materialization-promotion-plan.md`;
+8. follow only the detailed concept/experience/architecture links needed for the active slice;
+9. use ADRs for rationale when necessary, not as a replacement for current canonical authority.
 
 Do not load or copy the entire documentation corpus by default.
 
@@ -24,16 +33,16 @@ authority
   > concepts / synchronizations
   > experience
   > architecture
-  > implementation authority / accepted plan
-  > code / deployment
+  > implementation planning authority
+  > future code / deployment
   > examples / generated artifacts / runtime state
 ```
 
-Existing code does not override upstream authority. If implementation appears incompatible with an accepted contract, identify the conflict explicitly rather than silently redefining it in code.
+Existing or future code does not override upstream authority. If implementation later appears incompatible with an accepted contract, identify the conflict explicitly rather than silently redefining it in code.
 
 ## Current source topology contract
 
-The accepted production topology is rooted at `src/syngan/` with top-level responsibilities:
+The accepted future production topology is rooted at `src/syngan/` with top-level responsibilities:
 
 ```text
 foundation
@@ -49,18 +58,19 @@ Dependency direction is inward.
 
 Agents MUST NOT:
 
-- move concept-owned behavior into `foundation` merely to avoid an import boundary;
+- create this scaffold during Phase 005 merely because it is planned;
+- move concept-owned behavior into `foundation` to avoid an import boundary;
 - create generic `utils`, `Context`, `Config`, `Metadata`, `State`, `Result`, `Manager`, `Registry`, or Session-like ownership as a shortcut;
 - make `domain` depend on ports/application/API/adapters/bootstrap;
 - make application/API depend on concrete adapters;
 - make optional adapter SDKs import-time requirements of the base package;
-- bypass Import Linter/architecture fitness by adding broad ignored imports without an accepted boundary revision.
+- bypass future Import Linter/architecture fitness by adding broad ignored imports without an accepted boundary revision.
 
-`bootstrap` may wire the full graph but does not own canonical state.
+`bootstrap` may eventually wire the full graph but does not own canonical state.
 
-## Foundational toolchain
+## Foundational toolchain plan
 
-When implementation scaffolding begins, use the accepted baseline:
+When a later phase explicitly begins implementation, use the accepted baseline:
 
 - Python >=3.11 portable-core floor;
 - `pyproject.toml`;
@@ -73,13 +83,11 @@ When implementation scaffolding begins, use the accepted baseline:
 - coverage diagnostics;
 - GitHub Actions.
 
-Tool changes are governed implementation decisions.
+Do not instantiate this toolchain during Phase 005 unless the phase program is explicitly changed to authorize coding.
 
 ## Durable identity and control-plane rules
 
-005-D establishes one identity/version substrate for all later slices.
-
-Use the accepted distinct axes rather than inventing local replacements:
+005-D establishes one future identity/version substrate for all later slices:
 
 ```text
 AuthorityId
@@ -91,6 +99,8 @@ SnapshotId
 StateVersion
 SchemaVersion
 ```
+
+Do not plan or later implement competing replacements.
 
 Do not:
 
@@ -105,21 +115,61 @@ Do not:
 - put source/generated rows, DataFrames, tensors, checkpoints, large diagnostics, or full Spark logs into bounded control records;
 - put bearer secrets into canonical control records.
 
-Material lifecycle mutation uses owner validation plus expected `StateVersion` CAS. Persistence adapters enforce conditional writes; they do not decide semantic transition legality.
+Future material lifecycle mutation uses owner validation plus expected `StateVersion` CAS. Persistence adapters enforce conditional writes; they do not decide semantic transition legality.
 
-The built-in SQL plan is adapter-only SQLAlchemy Core + Alembic, with PostgreSQL as the reference production control backend and SQLite restricted to local/test evidence unless a later profile proves more. Base `syngan` must remain importable without SQL persistence extras.
+The planned built-in SQL boundary is adapter-only SQLAlchemy Core + Alembic, with PostgreSQL as reference production control backend and SQLite restricted to local/test evidence. Transactional outbox/durable-intent records remain technical coordination state, not Provenance, Execution, or semantic completion.
 
-Transactional outbox/durable-intent records are technical coordination state, not Provenance, Execution, or semantic completion.
+## Spark/data boundary rules
+
+005-E establishes the future Spark/data contract.
+
+Do not:
+
+- treat DataFrame/table/path/query values as durable source or output identity;
+- store a live DataFrame in a committed specification/snapshot;
+- assume rerunning an arbitrary query/DataFrame plan recreates the historical source state;
+- treat path/file existence as candidate seal or Generation completion;
+- make candidate materialization or sealed data snapshot interchangeable with `GenerationOutput`;
+- copy full manifest component membership into bounded control SQL or one required driver list;
+- make Delta, Iceberg, Hudi, Databricks, or Parquet itself semantic authority;
+- require a second full data copy merely to promote a sealed candidate;
+- silently materialize/snapshot data into another security domain;
+- omit the future writer-fence parameter from candidate write/seal boundaries simply because 005-G has not yet specified Attempt epochs.
+
+The planned source-resolution posture is conservative:
+
+```text
+exact SourceStateRef
+    -> reuse exact state
+
+provider-native exact snapshot
+    -> bind exact native state
+
+arbitrary DataFrame/query/mutable locator
+    -> distributed snapshot preparation before commitment
+       unless exact stable binding is proved
+```
+
+The planned physical chain remains:
+
+```text
+candidate materialization
+    -> sealed exact data snapshot
+    -> required Evaluation/Evidence
+    -> one logical GenerationOutput
+```
+
+Sealing is not semantic completion.
 
 ## Dependencies and optional integrations
 
 The base/core distribution remains model/platform neutral.
 
-Do not add PySpark, PyTorch, Databricks/cloud SDKs, MLflow, remote-model/service clients, CUDA/GPU runtimes, SQLAlchemy/Psycopg, or similar adapter dependencies to base runtime dependencies merely for one implementation slice.
+Do not place PySpark, PyTorch, Databricks/cloud SDKs, MLflow, remote-model/service clients, CUDA/GPU runtimes, SQLAlchemy/Psycopg, or similar adapter dependencies into base runtime dependencies merely for one planned slice.
 
-Optional capability families belong behind their owning extras/adapters. 005-D reserves SQL/PostgreSQL persistence capability isolation; Spark/Torch/Databricks remain downstream owners.
+005-E reserves Spark as an optional capability. `syngan[spark]` must not implicitly mean Databricks, Delta/Iceberg/Hudi, cloud SDKs, or remote catalog clients.
 
-Any new direct dependency requires an explicit purpose/classification and compatibility/offline/network/security review.
+Any future direct dependency requires explicit purpose/classification and compatibility/offline/network/security review.
 
 Committed runtime execution must never install missing packages or download missing models/artifacts as an undocumented fallback.
 
@@ -127,12 +177,12 @@ Committed runtime execution must never install missing packages or download miss
 
 Before material work, identify:
 
-- the Phase 005 implementation slice;
-- upstream architecture/implementation authority;
-- change classification;
+- the active Phase 005 planning slice;
+- upstream architecture/implementation-planning authority;
+- whether the work is planning/documentation only or later explicitly authorized implementation;
 - affected verification layer(s), AF fitness IDs, and quality gates.
 
-Keep changes bounded to the requested slice. Avoid opportunistic refactors, dependency additions, package moves, terminology changes, or API/schema changes outside scope.
+Keep changes bounded to the requested slice.
 
 ## Non-negotiable architecture guardrails
 
@@ -152,45 +202,32 @@ Do not:
 
 ## Verification
 
-Material behavior changes require verification appropriate to the implementation slice.
+005-B defines future verification obligations. During Phase 005, agents plan these tests/gates but do not create production verification suites unless later coding is explicitly authorized.
 
-Tests derive their oracle from accepted authority, not merely current implementation output. Do not refresh snapshots/goldens blindly to bless a contract change.
+Future tests must derive their oracle from accepted authority, not merely current implementation output. Do not plan blind snapshot/golden refresh as a contract-change mechanism.
 
-Do not mock away the distributed, concurrency, security, persistence, or recovery property under test. Production adapters must ultimately satisfy reusable conformance contracts.
+Future portable/core pytest profiles use socket/network denial by default. Networked/platform tests must be explicitly profiled and narrowly allowed.
 
-Portable/core pytest profiles use socket/network denial by default. Networked/platform tests must be explicitly profiled and narrowly allowed.
-
-Never use retry-until-pass for stochastic/statistical tests, or weaken/quarantine/waive required architecture-fitness checks merely to make a change pass without 005-B governance.
-
-For 005-D implementation, AF-03/05/06/16/17 are direct required concerns, including real stale-write and exact-history scenarios. SQLite-only concurrency success cannot justify PostgreSQL production claims.
-
-The accepted quality-gate command surface is planned around `tools/verify.py` under `uv run --locked`.
-
-## Package/import behavior
-
-The root `syngan` import remains side-effect free and must not automatically import optional Spark/Torch/Databricks/SQL persistence SDKs, open network connections, create Spark sessions, inspect credentials, initialize telemetry, or create a mutable global Session/Context.
-
-Q1 package verification must ultimately exercise a built/installed artifact. Production source must never import from `tests` or repository-only `tools`.
+For 005-E future implementation, V5 and AF-03/04/08/13/17 are direct concerns, with AF-07 completed after 005-G defines Attempt fencing.
 
 ## Secrets and sensitive data
 
-Never commit real credentials, tokens, passwords, private keys, or bearer secrets.
-
-Do not place sensitive source rows, Learned State payloads, protected diagnostics, or secret-bearing configuration in ordinary fixtures/logs/examples. Use synthetic/non-sensitive fixtures and explicit integration profiles.
+Never commit real credentials, tokens, passwords, private keys, bearer secrets, sensitive source rows, Learned State payloads, or protected diagnostics into planning fixtures/examples.
 
 ## Documentation synchronization
 
-When a durable implementation decision changes, update canonical `docs/implementation/` authority in the same change where practical.
+When a durable planning decision changes, update canonical `docs/implementation/` authority.
 
-If architecture itself changes, update `docs/architecture/` and relevant ADR rationale explicitly. Do not leave the new rule only in code, a PR description, or phase notes.
+If architecture itself changes, update `docs/architecture/` and relevant ADR rationale explicitly.
 
 ## Completion
 
-Do not claim an implementation slice complete unless its authority mapping, source-boundary compliance, verification/fitness checks, dependency/migration/security/network implications, and acceptance evidence are accounted for.
+During Phase 005, `complete` means the **implementation plan** for that slice is complete, not that production code exists.
 
-Canonical governance currently includes:
+Canonical planning authority currently includes:
 
 - `docs/implementation/implementation-authority-delivery-governance-toolchain-repository-enforcement.md`
 - `docs/implementation/verification-strategy-test-harness-architecture-fitness-evidence-quality-gates.md`
 - `docs/implementation/source-topology-module-package-boundaries-shared-foundation-dependency-enforcement.md`
 - `docs/implementation/public-resource-control-plane-identity-state-persistence-transactions-migration-plan.md`
+- `docs/implementation/spark-data-boundary-source-output-reference-manifest-materialization-promotion-plan.md`
