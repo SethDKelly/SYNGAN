@@ -16,9 +16,9 @@ This directory is the canonical design and implementation-planning knowledge bun
 - [Domain Terminology](terminology/index.md) — canonical vocabulary and compatibility mappings.
 - [Accepted Concepts](concepts/index.md) — canonical concept purpose, ownership, actions, lifecycle, invariants and boundaries.
 - [Accepted Synchronizations](synchronizations/index.md) — canonical cross-concept coordination rules.
-- [Experience & Workflow Design](experience/index.md) — actor-visible/programmatic workflow semantics; start implementation-facing experience review with the [Phase 003 Consolidated Experience Contract](experience/phase-003-consolidated-experience-contract.md).
-- [Representation & Architecture Design](architecture/index.md) — accepted implementation-facing architecture; start with the [Phase 004 Consolidated Architecture Contract](architecture/phase-004-consolidated-architecture-contract.md).
-- [Implementation Planning & Delivery Authority](implementation/index.md) — current implementation governance, verification authority, source/package/toolchain authority and accepted Phase 005 implementation plans.
+- [Experience & Workflow Design](experience/index.md) — start implementation-facing experience review with the [Phase 003 Consolidated Experience Contract](experience/phase-003-consolidated-experience-contract.md).
+- [Representation & Architecture Design](architecture/index.md) — start with the [Phase 004 Consolidated Architecture Contract](architecture/phase-004-consolidated-architecture-contract.md).
+- [Implementation Planning & Delivery Authority](implementation/index.md) — current implementation governance, verification, source/toolchain, public/control-plane persistence and later slice plans.
 - [Architecture Decision Records](decisions/index.md) — architecture rationale/alternatives/supersession; current normative architecture remains under `docs/architecture/`.
 - [Concept Discovery](discovery/index.md) — historical hypotheses, alternatives and design provenance.
 - [Phases](phases/index.md) — phase plans, outcomes and exit reviews.
@@ -28,8 +28,6 @@ This directory is the canonical design and implementation-planning knowledge bun
 ## Authority rule
 
 A durable fact, definition, requirement, invariant, policy, design decision, or implementation rule has one canonical home. Other documents SHOULD reference that authority rather than restating it as a competing source of truth.
-
-The active downstream order is:
 
 ```text
 authority
@@ -67,8 +65,6 @@ Exit: [004-J — Cross-Architecture Invariant Audit, Decision Consolidation & Ph
 
 Exit authority: [Phase 004 Consolidated Architecture Contract](architecture/phase-004-consolidated-architecture-contract.md).
 
-Phase 004 closed with no concept/synchronization redesign, nine detailed architecture authorities, and active ADR-0001 through ADR-0008.
-
 ## Current phase
 
 **[Phase 005 — Implementation Planning & Delivery Decomposition](phases/005/index.md) is current.**
@@ -78,20 +74,31 @@ Completed:
 - [005-A — Implementation Authority, Delivery Governance, Toolchain & Repository Enforcement](phases/005/005-A-implementation-authority-delivery-governance-toolchain-repository-enforcement.md)
 - [005-B — Verification Strategy, Test Harness, Architecture Fitness Functions, Evidence Fixtures & Quality Gates](phases/005/005-B-verification-strategy-test-harness-architecture-fitness-evidence-fixtures-quality-gates.md)
 - [005-C — Source Topology, Module/Package Boundaries, Shared Foundation & Dependency Enforcement](phases/005/005-C-source-topology-module-package-boundaries-shared-foundation-dependency-enforcement.md)
+- [005-D — Public Resource API, Control-Plane Identity, State, Persistence, Transactions & Migration Implementation Plan](phases/005/005-D-public-resource-api-control-plane-identity-state-persistence-transactions-migration-implementation.md)
 
 Canonical implementation authority now includes:
 
 - [implementation/delivery governance](implementation/implementation-authority-delivery-governance-toolchain-repository-enforcement.md);
 - [verification layers, fitness functions, fixtures and quality gates](implementation/verification-strategy-test-harness-architecture-fitness-evidence-quality-gates.md);
-- [source/package topology, foundational toolchain and dependency enforcement](implementation/source-topology-module-package-boundaries-shared-foundation-dependency-enforcement.md).
+- [source/package topology, foundational toolchain and dependency enforcement](implementation/source-topology-module-package-boundaries-shared-foundation-dependency-enforcement.md);
+- [public resource/control-plane identity, persistence, transaction and migration plan](implementation/public-resource-control-plane-identity-state-persistence-transactions-migration-plan.md).
 
-005-C establishes the initial `src/syngan` topology with `foundation`, `domain`, `ports`, `application`, `api`, `adapters` and `bootstrap` boundaries; Python >=3.11; uv/Hatchling/pytest/Hypothesis/pytest-socket/Ruff/mypy/Import Linter/coverage/GitHub Actions as the foundational tooling; platform-neutral base dependencies; and explicit Q0-Q4 developer/CI command/check architecture.
+The implementation baseline now includes:
+
+- one `src/syngan` package with enforced inward boundaries and optional runtime/platform isolation;
+- Python >=3.11 and the accepted uv/Hatchling/pytest/Hypothesis/pytest-socket/Ruff/mypy/Import Linter/GitHub Actions toolchain;
+- typed AuthorityId/ResourceId/ResourceRef/RevisionRef/SnapshotId/StateVersion/SchemaVersion conventions;
+- immutable public specs/handles/views plus a non-authoritative `SynGANClient` facade;
+- exact typed historical resolution and explicit versioned JSON codecs;
+- owner-specific persistence ports;
+- SQLAlchemy Core/Alembic SQL adapter plan with PostgreSQL production and SQLite local/test profiles;
+- expected-version CAS, bounded transactions/locks, transactional outbox/durable intent, tombstones and migration rules preserving immutable history.
 
 Next:
 
-**005-D — Public Resource API, Control-Plane Identity, State, Persistence, Transactions & Migration Implementation Plan**
+**005-E — Spark Data Boundary, Source/Output References, Manifest, Materialization & Promotion Implementation Plan**
 
-005-D now defines the first behavioral implementation slice on top of the accepted source/toolchain/verification foundation.
+005-E must preserve 005-D identity/history/transaction semantics while implementing distributed source binding, candidate materialization/sealing, manifest representation and Generation output promotion without mandatory driver-local collection.
 
 ## Documentation governance note
 
