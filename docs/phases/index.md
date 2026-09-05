@@ -40,8 +40,8 @@ See [Phase 005 index](005/index.md).
 
 - [005-A — Implementation Authority, Delivery Governance, Toolchain & Repository Enforcement](005/005-A-implementation-authority-delivery-governance-toolchain-repository-enforcement.md) — complete
 - [005-B — Verification Strategy, Test Harness, Architecture Fitness Functions, Evidence Fixtures & Quality Gates](005/005-B-verification-strategy-test-harness-architecture-fitness-evidence-fixtures-quality-gates.md) — complete
-- **005-C — Source Topology, Module/Package Boundaries, Shared Foundation & Dependency Enforcement — next**
-- 005-D — Public Resource API, Control-Plane Identity, State, Persistence, Transactions & Migration Implementation Plan
+- [005-C — Source Topology, Module/Package Boundaries, Shared Foundation & Dependency Enforcement](005/005-C-source-topology-module-package-boundaries-shared-foundation-dependency-enforcement.md) — complete
+- **005-D — Public Resource API, Control-Plane Identity, State, Persistence, Transactions & Migration Implementation Plan — next**
 - 005-E — Spark Data Boundary, Source/Output References, Manifest, Materialization & Promotion Implementation Plan
 - 005-F — Strategy/Method Extension SPI, Learning/Generation/Evaluation Runtime & Learned-State Implementation Plan
 - 005-G — Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Implementation Plan
@@ -52,6 +52,6 @@ See [Phase 005 index](005/index.md).
 
 Canonical implementation-planning authority is under [Implementation Planning & Delivery Authority](../implementation/index.md).
 
-005-A established implementation precedence/change/dependency/toolchain governance and repository review/agent controls. 005-B now freezes the executable verification model: V0-V11 layers, AF-01 through AF-20 architecture fitness properties, synthetic fixture policy, no-network portable-core testing, failure/security/platform conformance and Q0-Q4 quality gates.
+005-A established implementation governance. 005-B froze executable verification/fitness requirements. 005-C now freezes the initial `src/syngan` package boundaries, Python/toolchain baseline, test topology, optional dependency isolation and GitHub Actions/Q0-Q4 delivery structure.
 
-005-C is next because source/package/tool boundaries can now be selected against known executable enforcement requirements rather than by framework preference.
+005-D is next because public resource/control-plane identity and persistence need to be planned before distributed Spark/runtime/recovery/history/security/platform slices can safely depend on them.
