@@ -18,7 +18,7 @@ This directory is the canonical design and implementation-planning knowledge bun
 - [Accepted Synchronizations](synchronizations/index.md) — canonical cross-concept coordination rules.
 - [Experience & Workflow Design](experience/index.md) — actor-visible/programmatic workflow semantics; start implementation-facing experience review with the [Phase 003 Consolidated Experience Contract](experience/phase-003-consolidated-experience-contract.md).
 - [Representation & Architecture Design](architecture/index.md) — accepted implementation-facing architecture; start with the [Phase 004 Consolidated Architecture Contract](architecture/phase-004-consolidated-architecture-contract.md).
-- [Implementation Planning & Delivery Authority](implementation/index.md) — current implementation governance and accepted Phase 005 implementation plans.
+- [Implementation Planning & Delivery Authority](implementation/index.md) — current implementation governance, verification authority and accepted Phase 005 implementation plans.
 - [Architecture Decision Records](decisions/index.md) — architecture rationale/alternatives/supersession; current normative architecture remains under `docs/architecture/`.
 - [Concept Discovery](discovery/index.md) — historical hypotheses, alternatives and design provenance.
 - [Phases](phases/index.md) — phase plans, outcomes and exit reviews.
@@ -76,16 +76,19 @@ Phase 004 closed with no concept/synchronization redesign, nine detailed archite
 Completed:
 
 - [005-A — Implementation Authority, Delivery Governance, Toolchain & Repository Enforcement](phases/005/005-A-implementation-authority-delivery-governance-toolchain-repository-enforcement.md)
+- [005-B — Verification Strategy, Test Harness, Architecture Fitness Functions, Evidence Fixtures & Quality Gates](phases/005/005-B-verification-strategy-test-harness-architecture-fitness-evidence-fixtures-quality-gates.md)
 
 Canonical implementation authority now begins at [Implementation Planning & Delivery Authority](implementation/index.md).
 
-005-A establishes implementation precedence/conflict escalation, delivery/change classification, acceptance evidence requirements, reproducible toolchain/dependency governance, migration/compatibility discipline, repository-wide [`AGENTS.md`](../AGENTS.md), and a GitHub PR review checklist without prematurely selecting source topology or concrete verification tooling.
+005-A establishes implementation precedence/conflict escalation, delivery/change classification, acceptance evidence, reproducible toolchain/dependency governance, migration/compatibility discipline, repository-wide agent rules and PR review enforcement.
+
+005-B establishes verification layers V0-V11, architecture-fitness IDs AF-01 through AF-20, synthetic/non-sensitive fixture policy, deterministic/statistical/failure/security/platform verification requirements, default-deny portable-core network testing, and Q0-Q4 quality gates.
 
 Next:
 
-**005-B — Verification Strategy, Test Harness, Architecture Fitness Functions, Evidence Fixtures & Quality Gates**
+**005-C — Source Topology, Module/Package Boundaries, Shared Foundation & Dependency Enforcement**
 
-005-B must convert the accepted Phase 004 invariants and 005-A completion-evidence contract into executable verification layers and repository quality gates before 005-C selects detailed source/package topology.
+005-C must choose the physical Python/source/test topology and foundational concrete build/test/static-analysis toolchain so the accepted architecture and verification contracts can be enforced mechanically rather than only documented.
 
 ## Documentation governance note
 
