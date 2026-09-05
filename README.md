@@ -45,23 +45,29 @@ See [`docs/phases/005/index.md`](docs/phases/005/index.md).
 Completed:
 
 - **005-A — Implementation Authority, Delivery Governance, Toolchain & Repository Enforcement**
+- **005-B — Verification Strategy, Test Harness, Architecture Fitness Functions, Evidence Fixtures & Quality Gates**
 
-005-A establishes:
+005-A establishes implementation/code as downstream realization, explicit change classification, traceable delivery slices, dependency/toolchain/migration governance, mandatory acceptance evidence, repository-wide [`AGENTS.md`](AGENTS.md), and PR review discipline.
 
-- implementation/code as downstream realization rather than authority override;
-- explicit change classification and upstream conflict escalation;
-- traceable delivery slices and mandatory acceptance evidence;
-- repository-declared/reproducible toolchain governance without premature tool selection;
-- dependency classification/intake rules, optional-integration isolation, and no hidden runtime acquisition;
-- migration/compatibility discipline for public/persisted/SPI changes;
-- repository-wide [`AGENTS.md`](AGENTS.md) rules for automated contributors;
-- a GitHub pull-request checklist covering authority, tests/fitness evidence, dependencies, migration, security/network, scale, and deferred work;
-- truthful deferral of CI/branch protection and concrete source/toolchain topology until their requirements are defined.
+005-B establishes the executable verification baseline:
+
+- logical verification layers V0-V11 from repository/unit checks through distributed, recovery, Evidence/history, security/offline, platform and scale/compatibility verification;
+- stable architecture-fitness properties AF-01 through AF-20;
+- synthetic/non-sensitive micro, generated-medium, ephemeral-scale and fault/control fixture classes;
+- authority-derived test oracles and controlled golden-fixture updates;
+- deterministic and statistical/stochastic test lanes without retry-until-green;
+- explicit failure injection around durable mutation, launch, checkpoint, candidate seal, Evidence establishment and promotion;
+- reusable common adapter conformance suites;
+- default-deny portable/core outbound-network testing;
+- Q0-Q4 local, PR, integration, scheduled and release/support quality gates;
+- explicit flakiness, quarantine, waiver and acceptance-evidence governance.
+
+Canonical verification authority: [`docs/implementation/verification-strategy-test-harness-architecture-fitness-evidence-quality-gates.md`](docs/implementation/verification-strategy-test-harness-architecture-fitness-evidence-quality-gates.md).
 
 Next:
 
-- **005-B — Verification Strategy, Test Harness, Architecture Fitness Functions, Evidence Fixtures & Quality Gates**
+- **005-C — Source Topology, Module/Package Boundaries, Shared Foundation & Dependency Enforcement**
 
-005-B will define the executable verification layers and required quality gates before 005-C selects detailed source/package topology and the foundational concrete Python/build/static-analysis toolchain.
+005-C will now select the physical Python/source/test topology and foundational concrete build/test/static-analysis toolchain so the accepted architecture and verification contracts can be enforced mechanically.
 
-The repository intentionally does not yet claim final Python/package layout, supported Python versions, dependency manager, build backend, test/lint/type tooling, database, Spark storage/catalog technology, scheduler/fencing mechanism, plugin/runtime implementation, IAM/network/security stack, observability vendor, Databricks API topology, CI/CD topology, or benchmark/support matrices. Those remain dependency-safe implementation-planning decisions constrained by the accepted architecture.
+The repository intentionally does not yet claim final Python/package layout, supported Python versions, dependency manager, build backend, test/lint/type tooling, database, Spark storage/catalog technology, scheduler/fencing mechanism, plugin/runtime implementation, IAM/network/security stack, observability vendor, Databricks API topology, CI/CD topology, or benchmark/support matrices. Those remain dependency-safe implementation-planning decisions constrained by the accepted architecture and verification authority.
