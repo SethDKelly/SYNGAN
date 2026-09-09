@@ -12,20 +12,6 @@ Use the concrete implementation-planning evidence produced by Phase 005 to re-te
 
 **Phase 006 is design/refinement only.** It does not authorize production source, package scaffolds, schemas/migrations, adapters, executable verification suites, CI/deployment infrastructure or benchmark implementation.
 
-## Structured-data capability direction
-
-Phase 006 explicitly validates:
-
-```text
-single-table generation
-time-series table generation
-multi-table generation with shared-key relationships
-```
-
-A future function parameter/typed specification may select a capability profile, but selection syntax is not semantic authority.
-
-006-D established a self-contained source-derived text-capable baseline and cluster-wide runtime-distribution closure. 006-E established lossless resource/backpressure semantics. 006-F now establishes that synthetic origin, privacy-related Evidence and offline operation are not formal privacy or release authority, while formal DP remains deferred behind future mechanism-specific concept discovery.
-
 ## Groups
 
 | Group | Scope | Status |
@@ -36,14 +22,30 @@ A future function parameter/typed specification may select a capability profile,
 | **006-D** | [Reference Strategy/Method and Topology Design Probes & Algorithm-Neutrality Stress Test](006-D-reference-strategy-method-topology-design-probes-algorithm-neutrality-stress-test.md) | **complete** |
 | **006-E** | [Enterprise Scale, Resource/Approximation, Backpressure & Degraded-Mode Design Validation](006-E-enterprise-scale-resource-approximation-backpressure-degraded-mode-design-validation.md) | **complete** |
 | **006-F** | [Privacy, Disclosure, Release-Governance Boundary & Mechanism-Specific Scope Decision](006-F-privacy-disclosure-release-governance-boundary-mechanism-specific-scope-decision.md) | **complete** |
-| **006-G** | **Structured-Data Topology: Single-Table, Time-Series & Multi-Table Relationship Concept/Extensibility Audit** | **next** |
-| 006-H | Human/Programmatic Experience Closure for Recovery, Security, Degraded & Historical Workflows | planned |
+| **006-G** | [Structured-Data Topology: Single-Table, Time-Series & Multi-Table Relationship Concept/Extensibility Audit](006-G-structured-data-topology-single-table-time-series-multi-table-relationship-concept-extensibility-audit.md) | **complete** |
+| **006-H** | **Human/Programmatic Experience Closure for Recovery, Security, Degraded & Historical Workflows** | **next** |
 | 006-I | Architecture/ADR Reconciliation, Canonical Authority Promotion & Planning Back-Propagation | planned |
 | 006-J | Phase 006 Consolidation, Residual Design-Debt Audit & Implementation-Authority Readiness Decision | planned |
 
+## Current structured-data capability baseline
+
+006-G closes the topology/scope question.
+
+The first **complete SYNGAN structured-data capability baseline** includes:
+
+```text
+single-table generation
+time-series generation
+multi-table shared-key generation
+```
+
+Implementation may be staged and individual Strategies may support subsets, but the complete baseline claim requires at least one supported self-contained Strategy path for each family.
+
+A future convenience parameter/preset may select common topology shapes, but selection syntax is not semantic authority and must not prevent composite topology such as a multi-table subject containing a time-series child scope.
+
 ## 006-A through 006-C result
 
-006-A retained the eleven-concept/fifteen-synchronization catalog, made time-series an explicit target and reopened `Relationship` provisionally.
+006-A retained the eleven-concept/fifteen-synchronization catalog and reopened `Relationship` provisionally.
 
 006-B established the [Operational Authority Continuity & Regressive Recovery Contract](../../authority/operational-authority-continuity-regressive-recovery-contract.md).
 
@@ -51,58 +53,49 @@ A future function parameter/typed specification may select a capability profile,
 
 ## 006-D result
 
-006-D returned **PASS WITH TARGETED CROSS-CUTTING REFINEMENT** and established the [Self-Contained Execution & Runtime Distribution Closure Contract](../../authority/self-contained-execution-runtime-distribution-closure-contract.md).
+006-D established the [Self-Contained Execution & Runtime Distribution Closure Contract](../../authority/self-contained-execution-runtime-distribution-closure-contract.md).
 
-Key results include:
-
-- one self-contained source-derived free-form-text path in the supported baseline;
-- optional pretrained/network text capability remains explicit;
-- one implementation binding may resolve multiple executable/artifact components;
-- driver availability is not cluster readiness;
-- every material worker must satisfy runtime closure;
-- large state/model distribution cannot universally require driver loading/broadcast.
+Key results include a self-contained source-derived text-capable baseline, explicit optional pretrained/network text capability, multi-component implementation closure, cluster-wide executor runtime closure and no universal driver-memory loading/broadcast for large state.
 
 BDR-003 is resolved.
 
 ## 006-E result
 
-006-E returned **PASS WITH TARGETED CROSS-CUTTING REFINEMENT** and established the [Enterprise Scale, Resource Admission, Approximation & Degraded Operation Contract](../../authority/enterprise-scale-resource-admission-approximation-degraded-operation-contract.md).
+006-E established the [Enterprise Scale, Resource Admission, Approximation & Degraded Operation Contract](../../authority/enterprise-scale-resource-admission-approximation-degraded-operation-contract.md).
 
-Key rules include:
-
-- enterprise compatibility is multidimensional;
-- resource pressure may queue/block/retry but cannot silently weaken committed semantics;
-- approximation remains explicit owner-bound semantics;
-- backpressure must be lossless with respect to mandatory work/scope;
-- sampled/sketched Evaluation cannot become universal Evidence;
-- degraded operation is capability-specific rather than one global state.
+Resource pressure may queue/block/retry but cannot silently weaken committed semantics; approximation remains owner-bound; backpressure must preserve mandatory work; degraded operation is capability-specific.
 
 ## 006-F result
 
-006-F returned:
+006-F established the [Privacy, Disclosure Risk, Formal Guarantee & External Release Boundary Contract](../../authority/privacy-disclosure-formal-guarantee-release-boundary-contract.md).
+
+Synthetic/offline output is not automatically private, disclosure Evidence is not a formal guarantee, differential privacy is deferred behind future mechanism-specific concept discovery, and release/use governance remains external.
+
+## 006-G result
+
+006-G returned:
 
 ```text
-PASS WITH TARGETED CROSS-CUTTING REFINEMENT
-AND EXPLICIT MECHANISM-SPECIFIC DEFERRAL
+PASS WITH RELATIONSHIP SUBORDINATION,
+TOPOLOGY CONTRACT PROMOTION &
+BASELINE-SCOPE CLOSURE
 ```
 
-006-F established the active [Privacy, Disclosure Risk, Formal Guarantee & External Release Boundary Contract](../../authority/privacy-disclosure-formal-guarantee-release-boundary-contract.md).
+006-G established the [Structured-Data Topology & Relationship Semantics Contract](../../authority/structured-data-topology-relationship-semantics-contract.md).
 
 Key accepted rules:
 
-- synthetic origin does not imply privacy/anonymization;
-- self-contained/offline execution is not a privacy guarantee;
-- disclosure/memorization remain Criterion/Evaluation/Evidence concerns rather than standalone concepts;
-- favorable empirical Evidence does not become a formal privacy guarantee;
-- privacy Evaluation may need joined multi-table or longitudinal/trajectory scope;
-- differential privacy is not part of the initial implementation baseline;
-- future composable DP/formal privacy mechanisms with independent state/actions must reopen Jackson concept discovery before implementation;
-- privacy-budget/accounting state must not be hidden in generic Strategy metadata, Evidence or deployment quotas;
-- Use/Release Decision remains external to current SYNGAN concept authority;
-- security authorization/redaction can block or shape current access without rewriting Generation/Evidence history;
-- no new concept or synchronization ID was introduced.
-
-BSD-002 is resolved for the initial baseline through explicit deferral. BSD-003 is reaffirmed as an external product boundary.
+- `Relationship` is **not** a standalone concept;
+- material structural relationship semantics are subordinate descriptive state owned by Data Meaning;
+- descriptive shared-key/sequence meaning remains distinct from prescriptive Constraint authority;
+- single-table requires no fabricated relationship state;
+- time-series is not reducible to `single_table + timestamp`;
+- multi-table shared-key semantics are first-class without a twelfth concept;
+- topology presets may be convenience syntax but not the sole durable semantic representation;
+- composite topologies must remain representable;
+- historical relationship correction follows Data Meaning revision semantics;
+- the topology-sensitive 006-C scenarios remain coherent after conceptual replay;
+- BDR-004 is resolved.
 
 ## Current design counts
 
@@ -111,37 +104,32 @@ accepted concepts             11
 accepted synchronizations     15
 new Phase 006 concepts          0
 new Phase 006 sync IDs          0
-reopened candidate concepts    Relationship
+reopened candidate concepts     0
 cross-cutting contracts
   Operational Authority Continuity
   Self-Contained Execution & Runtime Distribution Closure
   Enterprise Scale / Resource Admission / Approximation / Degraded Operation
   Privacy / Disclosure Risk / Formal Guarantee / External Release Boundary
+  Structured-Data Topology / Relationship Semantics
 ```
 
-## 006-G — next
+## 006-H — next
 
-006-G must now make the outstanding structured-topology decision and close the principal remaining BDR-004 scope question.
+006-H must now close the actor/programmatic experience gaps exposed by Phase 006, including at least:
 
-It must test at least:
+- recovery quarantine and regressive-restore uncertainty;
+- queued/blocked/limited/incompatible resource/runtime states;
+- cluster runtime-distribution closure and missing worker capability;
+- authorization/redaction/withholding distinctions;
+- privacy Evidence versus formal guarantee versus release approval;
+- topology capability/unsupported-shape feedback;
+- historical unknown/unavailable/reconstructed facts;
+- exact current versus historical state;
+- programmatic error/result shapes that preserve these distinctions without forcing users to understand internal architecture terminology.
 
-- whether single-table remains a valid topology with no fabricated Relationship state;
-- whether multi-table shared-key linkage has independent reusable descriptive state/actions beyond Data Meaning and Constraint;
-- whether time-series sequence membership/order can share the same Relationship purpose or should remain Data Meaning/Constraint/Generation-owned;
-- relationship identity/revision/authority and correction semantics if accepted;
-- cardinality/participation/key-role semantics versus prescriptive referential-integrity Constraints;
-- coordinated Generation scope/completion and partial constituent handling;
-- Evaluation subjects spanning joins/trajectories, including privacy/disclosure Criteria from 006-F;
-- scale implications from 006-E;
-- future extensibility without forcing relational semantics into the first implementation if not selected for baseline delivery.
-
-If `Relationship` is accepted, concept and synchronization discovery must be completed rather than merely adding a schema object or `mode="multi_table"` parameter.
-
-006-G is design-only and implements no relational/time-series algorithm or schema.
+006-H remains design-only.
 
 ## Later obligations
-
-006-H promotes recovery/security/degraded/history/privacy-disclosure semantics into human/programmatic experience.
 
 006-I reconciles Phase 004 architecture/ADRs and back-propagates accepted Phase 006 changes into Phase 005 planning without rewriting phase history.
 
@@ -153,14 +141,15 @@ Phase 006 MUST NOT:
 
 - implement the planned package/runtime/platform stack;
 - let CTGAN, Hugging Face, time-series libraries, Spark, PyTorch or Databricks define concept boundaries;
+- create a standalone Relationship/Table/Series/DataTopology concept contrary to 006-G;
 - make a topology `mode` parameter semantic authority;
+- make topology presets permanently mutually exclusive;
 - treat synthetic/offline output as automatically private;
-- represent favorable disclosure Evidence as formal privacy or release approval;
 - add differential-privacy budget/accounting fields without prior mechanism-specific concept discovery;
 - use resource pressure to silently reduce quantity, horizon, topology scope, Evaluation coverage or Constraint strength;
-- hard-code current single-table scope so later time-series/multi-table support becomes impossible;
+- hard-code one-table implementation assumptions that violate the complete three-family baseline;
 - claim design completion by phase count.
 
 ## Current next group
 
-**006-G — Structured-Data Topology: Single-Table, Time-Series & Multi-Table Relationship Concept/Extensibility Audit**
+**006-H — Human/Programmatic Experience Closure for Recovery, Security, Degraded & Historical Workflows**
