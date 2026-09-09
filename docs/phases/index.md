@@ -48,12 +48,13 @@ Completed:
 
 - **006-A** — concept/mechanism/scope revalidation; accepted concept/synchronization counts remain eleven/fifteen; `Relationship` reopened only as a candidate.
 - **006-B** — temporal authority/regressive-recovery refinement; established the cross-cutting Operational Authority Continuity contract without adding a new concept or synchronization.
+- **006-C** — twenty-four-scenario adversarial synchronization validation; retained fifteen synchronization IDs while refining SYNC-04/07/08/11/14/15.
 
 Current next:
 
-**006-C — End-to-End Scenario, Exception, Failure & Adversarial Synchronization Validation**
+**006-D — Reference Strategy/Method and Topology Design Probes & Algorithm-Neutrality Stress Test**
 
-006-C must re-test the accepted synchronization set under ordinary, failure, recovery, security, topology and regressive-restore scenarios.
+006-D must stress the design with materially different Learning-based/direct/time-series/multi-table Strategy and Evaluation shapes without implementing them.
 
 ## Implementation boundary
 
