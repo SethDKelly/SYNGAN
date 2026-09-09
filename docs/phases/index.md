@@ -46,18 +46,19 @@ Phase 006 is design-only. It uses implementation-planning evidence to revalidate
 
 Completed:
 
-- **006-A** — concept/mechanism/scope revalidation; accepted concept/synchronization counts remain eleven/fifteen; `Relationship` reopened only as a candidate.
-- **006-B** — temporal authority/regressive-recovery refinement; established the Operational Authority Continuity contract.
+- **006-A** — concept/mechanism/scope revalidation; retained eleven concepts/fifteen synchronizations and reopened Relationship provisionally.
+- **006-B** — temporal authority/regressive-recovery refinement; established Operational Authority Continuity.
 - **006-C** — twenty-four-scenario adversarial synchronization validation; retained fifteen synchronization IDs while refining SYNC-04/07/08/11/14/15.
-- **006-D** — representative Strategy/method/text/topology/runtime-distribution probes; retained the eleven/fifteen model and established the Self-Contained Execution & Runtime Distribution Closure contract.
-- **006-E** — enterprise scale/resource/approximation/backpressure/degraded-mode validation; retained the eleven/fifteen model and established capability-specific scale/degraded-operation authority.
-- **006-F** — privacy/disclosure/formal-guarantee/release-boundary validation; retained the eleven/fifteen model, deferred formal DP behind future mechanism-specific concept discovery, and reaffirmed release/use governance as external authority.
+- **006-D** — representative Strategy/method/text/topology/runtime-distribution probes; established Self-Contained Execution & Runtime Distribution Closure.
+- **006-E** — enterprise scale/resource/approximation/backpressure/degraded-mode validation; established capability-specific scale/degraded-operation authority.
+- **006-F** — privacy/disclosure/formal-guarantee/release-boundary validation; deferred formal DP behind future concept discovery and reaffirmed release/use governance as external.
+- **006-G** — structured-topology audit; resolved Relationship as Data Meaning-owned structural semantics, retained eleven concepts/fifteen synchronizations, and set the complete baseline target to single-table + time-series + multi-table shared-key generation.
 
 Current next:
 
-**006-G — Structured-Data Topology: Single-Table, Time-Series & Multi-Table Relationship Concept/Extensibility Audit**
+**006-H — Human/Programmatic Experience Closure for Recovery, Security, Degraded & Historical Workflows**
 
-006-G is the principal remaining BDR-004 scope/concept decision.
+No Phase 006 concept/scope blocker remains open. 006-H and 006-I still must propagate accepted design into experience and architecture/planning before 006-J may judge readiness.
 
 ## Implementation boundary
 
