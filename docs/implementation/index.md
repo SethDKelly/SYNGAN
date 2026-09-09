@@ -6,35 +6,45 @@ status: active
 
 # SYNGAN Implementation Planning & Delivery Authority
 
-## Current authority
+## Current posture
 
-Phase 007 remains active under:
+Production implementation expansion is **frozen** under:
 
-- [Phase 007 Implementation Authority Lock](phase-007-implementation-authority-lock.md)
-- [Phase 007-B Bootstrap Execution Authority](phase-007-b-bootstrap-execution-authority.md)
-- [Phase 007-C Source/Package Topology Execution Authority](phase-007-c-source-package-topology-execution-authority.md)
+[Phase 007 Design Continuation & Implementation Freeze](../authority/phase-007-design-continuation-implementation-freeze.md)
 
-Current subgroup state:
+Phase 007-A through 007-C remain historical/provisional bootstrap work. Existing source/tests/tooling may remain for feasibility and history, but they do not constrain active architecture design.
+
+Current implementation authorization state:
 
 ```text
-007-A  complete
-007-B  complete
-007-C  complete
-007-D  NOT AUTHORIZED — next eligible
+007-A  complete historical authority transition
+007-B  complete historical repository/toolchain scaffold
+007-C  complete historical/provisional source-topology scaffold
+007-D  NOT AUTHORIZED — design only
 007-E..007-K  NOT AUTHORIZED
 ```
 
-No 007-D behavior is currently authorized.
+No new production behavior, persistence schema, serializer, public API class, runtime/platform integration, architecture fitness restriction or CI enforcement is authorized while the design continuation is active.
 
 ## Governing order
 
-For implementation work, read current design/experience/architecture/planning authority first, then the Phase 007 implementation lock, the enduring 007-B/007-C contracts, and only the explicitly authorized current subgroup.
+For future implementation work:
 
-Code does not outrank this chain. Class 3 architecture or Class 4 semantic/experience conflicts stop implementation and reopen upstream authority.
+```text
+current design authority
+  > concepts / synchronizations
+  > experience
+  > current architecture
+  > implementation planning
+  > later explicit implementation-reentry authority
+  > code/tests/config/migrations
+```
 
-## Executable substrate through 007-C
+Code/tests do not outrank this chain. Existing implementation artifacts may be revised when later design requires it.
 
-007-B established the reproducible tool/test/CI substrate. 007-C added the first production package architecture:
+## Retained executable substrate through 007-C
+
+The repository currently contains the provisional source scaffold:
 
 ```text
 src/syngan/
@@ -49,35 +59,50 @@ src/syngan/
 └── bootstrap/
 ```
 
-Import Linter now executes in the normal gate and enforces inward core dependency direction plus adapter/composition boundaries.
+It also retains the repository verification/toolchain work from 007-B/007-C, including Import Linter and existing fitness tests.
 
-The repository verification flow installs the first-party package from locked tooling and then runs lint/format/type/unit/architecture/fitness/package checks:
+These artifacts are retained rather than removed during active design, but **they are not design authority**. No new design choice must preserve them solely because CI currently encodes them.
 
-```text
-uv sync --all-groups --no-install-project --locked
-uv sync --all-groups --locked --no-build-isolation
-uv run --no-sync python tools/verify.py all
-```
+## Current architecture work
 
-The package gate verifies imports, `py.typed`, and non-publishing wheel/sdist construction/content.
+007-D is complete as design:
 
-`[project].dependencies` remains empty. Hatchling and `editables` are build/development dependencies only. Portable-core pytest remains socket-denied after explicit provisioning.
+[Phase 007-D Identity, Revision, Serialization, Resource/Handle & Programmatic-View Foundation](../architecture/phase-007-d-identity-revision-serialization-resource-handle-programmatic-view-foundation.md)
 
-## Evidence status
+007-D introduced no implementation artifacts.
+
+Its concrete implementation choices remain deliberately open, including:
+
+- identifier encoding;
+- Python class/protocol spelling;
+- serialized wire format;
+- persistence representation;
+- concurrency/CAS mechanism;
+- migration tooling;
+- client cache/refresh protocol.
+
+## Historical evidence
 
 - [007-B phase record](../phases/007/007-B-repository-toolchain-bootstrap-reproducible-environment-verification-harness.md)
 - [007-C phase record](../phases/007/007-C-source-package-topology-dependency-direction-architecture-fitness-enforcement.md)
+- [007-D design record](../phases/007/007-D-identity-revision-serialization-typed-public-resource-handle-programmatic-view-foundation.md)
 
-007-C was reviewed as PR #1, passed the permanent `Verify` workflow on exact PR head `9f93b6eff7f8d8a1b19950745530dc273d462d6d`, and merged as `063f847953f69a525ee04315fa92bc0e9fa36a1c`.
+007-B/007-C evidence remains useful feasibility information. It is not a reason to bypass later design reconsideration.
 
-`main` remains unprotected and Verify is not claimed as a required repository check. Material production-source work should continue using reviewable branches/PRs when supported and retain exact-head green evidence.
+## Future implementation re-entry
 
-## Historical planning
+Implementation may resume only after an explicit design-completion/re-entry decision identifies:
 
-Phase 005 and Phase 006 planning remain active beneath Phase 007 where not refined. The broader future wave sequence remains planning authority, but only an explicitly authorized Phase 007 subgroup may execute.
+- current architecture authority;
+- which provisional 007-A through 007-C choices remain compatible;
+- which existing source/tests need revision/removal;
+- which executable guardrails are now justified;
+- the bounded production subgroup authorized next.
+
+No green test suite or phase number substitutes for that decision.
 
 ## Current next boundary
 
-**007-D — Identity, Revision, Serialization, Typed Public Resource/Handle & Programmatic-View Foundation** is next eligible but **not yet authorized**.
+The next active work is not implementation.
 
-An explicit proceed decision is required before 007-D implementation begins.
+**007-E — Control Persistence, Transactions, CAS, Outbox, Historical References & Migration Baseline** is the next eligible **design** subgroup and requires an explicit proceed decision.
