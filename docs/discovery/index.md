@@ -26,6 +26,7 @@ Current evidence:
 - [Temporal Authority, Regressive Recovery & Historical-Truth Revalidation](temporal-authority-regressive-recovery-revalidation.md) — 006-B alternatives/falsification evidence that led to the canonical Operational Authority Continuity contract.
 - [End-to-End Scenario, Exception, Failure & Adversarial Synchronization Validation](end-to-end-adversarial-synchronization-validation.md) — 006-C twenty-four-scenario falsification pass over SYNC-01 through SYNC-15. The accepted result retained fifteen synchronization IDs with targeted wording refinements.
 - [Reference Strategy/Method, Text & Distributed-Runtime Falsification Probes](reference-strategy-method-topology-text-distribution-probes.md) — 006-D algorithm/topology/text/large-state/Spark-distribution probe set. It led to the canonical Self-Contained Execution & Runtime Distribution Closure contract without adding a new concept or synchronization.
+- [Enterprise Scale, Resource/Approximation, Backpressure & Degraded-Mode Validation](enterprise-scale-resource-approximation-backpressure-degraded-mode-validation.md) — 006-E thirty-scenario scale/resource/degraded-mode falsification pass. It led to the canonical Enterprise Scale, Resource Admission, Approximation & Degraded Operation contract without adding Resource/Backpressure/Approximation/DegradedMode concepts or a synchronization ID.
 
 See [Phase 006](../phases/006/index.md) for the active design-refinement sequence.
 
@@ -66,7 +67,8 @@ See [docs/concepts](../concepts/index.md) for current canonical definitions.
 - Relationship → originally deferred relational edge; **reopened provisionally in Phase 006-A**;
 - Use / Release Decision → external authority;
 - Source Characterization/Profile → supporting observation/method;
-- Text / Language Model / Tokenizer / Composite Strategy / Runtime Distribution → rejected as standalone concepts by 006-D; represented through existing meaning/Strategy/state/integration authority.
+- Text / Language Model / Tokenizer / Composite Strategy / Runtime Distribution → rejected as standalone concepts by 006-D; represented through existing meaning/Strategy/state/integration authority;
+- Resource / Capacity / Backpressure / Admission / Approximation / DegradedMode / Cost / Quota → rejected as standalone concepts by 006-E under the current scope; represented through Strategy/activity semantics, Execution, Evidence and deployment/operator policy as appropriate.
 
 ## Earlier discovery layers
 
