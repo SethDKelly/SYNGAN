@@ -65,7 +65,9 @@ def test_locked_development_groups_contain_only_authorized_tool_families() -> No
 
 def test_import_linter_contracts_cover_required_topology_boundaries() -> None:
     project = _pyproject()
-    contracts = {contract["id"]: contract for contract in project["tool"]["importlinter"]["contracts"]}
+    contracts = {
+        contract["id"]: contract for contract in project["tool"]["importlinter"]["contracts"]
+    }
 
     assert set(contracts) == {
         "core-layers",
