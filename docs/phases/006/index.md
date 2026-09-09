@@ -24,7 +24,7 @@ multi-table generation with shared-key relationships
 
 A future function parameter/typed specification may select a capability profile, but selection syntax is not semantic authority.
 
-006-D additionally establishes that the supported baseline must include a self-contained source-derived text-capable structured-data path and that distributed execution requires exact runtime distribution closure across every material worker.
+006-D additionally established a self-contained source-derived text-capable baseline and cluster-wide runtime-distribution closure. 006-E now establishes that resource pressure/backpressure cannot silently weaken committed semantics and that approximation/degraded behavior remains explicit and owner/capability specific.
 
 ## Groups
 
@@ -34,8 +34,8 @@ A future function parameter/typed specification may select a capability profile,
 | **006-B** | [Temporal Authority, Disaster Recovery, Rollback, Fork & Historical-Truth Refinement](006-B-temporal-authority-disaster-recovery-rollback-fork-historical-truth-refinement.md) | **complete** |
 | **006-C** | [End-to-End Scenario, Exception, Failure & Adversarial Synchronization Validation](006-C-end-to-end-scenario-exception-failure-adversarial-synchronization-validation.md) | **complete** |
 | **006-D** | [Reference Strategy/Method and Topology Design Probes & Algorithm-Neutrality Stress Test](006-D-reference-strategy-method-topology-design-probes-algorithm-neutrality-stress-test.md) | **complete** |
-| **006-E** | **Enterprise Scale, Resource/Approximation, Backpressure & Degraded-Mode Design Validation** | **next** |
-| 006-F | Privacy, Disclosure, Release-Governance Boundary & Mechanism-Specific Scope Decision | planned |
+| **006-E** | [Enterprise Scale, Resource/Approximation, Backpressure & Degraded-Mode Design Validation](006-E-enterprise-scale-resource-approximation-backpressure-degraded-mode-design-validation.md) | **complete** |
+| **006-F** | **Privacy, Disclosure, Release-Governance Boundary & Mechanism-Specific Scope Decision** | **next** |
 | 006-G | Structured-Data Topology: Single-Table, Time-Series & Multi-Table Relationship Concept/Extensibility Audit | planned |
 | 006-H | Human/Programmatic Experience Closure for Recovery, Security, Degraded & Historical Workflows | planned |
 | 006-I | Architecture/ADR Reconciliation, Canonical Authority Promotion & Planning Back-Propagation | planned |
@@ -63,16 +63,21 @@ The synchronization count remains fifteen. SYNC-04, 07, 08, 11, 14 and 15 were r
 
 ## 006-D result
 
-006-D stress-tested the design with:
+006-D returned:
 
-- Learning-based CTGAN-like/deep-generative shape;
-- direct Generation;
-- self-contained, locally pretrained and runtime-network text shapes;
-- mixed-field/composite Strategy;
-- time-series and multi-table shared-key Strategy shapes;
-- deterministic/bounded and statistical/approximate Evaluation;
-- large/sharded Learned State;
-- Spark cluster package/runtime distribution.
+```text
+PASS WITH TARGETED CROSS-CUTTING REFINEMENT
+```
+
+and established the active [Self-Contained Execution & Runtime Distribution Closure Contract](../../authority/self-contained-execution-runtime-distribution-closure-contract.md).
+
+Key accepted rules include a self-contained source-derived free-form-text path in the supported baseline, explicit optional pretrained/network text capability, multi-component implementation closure, cluster-wide executor runtime closure, and no universal driver-memory loading/broadcast for large state.
+
+BDR-003 is resolved.
+
+## 006-E result
+
+006-E stress-tested rows/bytes/width/cardinality/skew, large state/text artifacts, dynamic workers, time-series horizon/entity scale, multi-table fan-out, approximate Evaluation, concurrency/backpressure and capability-specific outages.
 
 Result:
 
@@ -80,19 +85,23 @@ Result:
 PASS WITH TARGETED CROSS-CUTTING REFINEMENT
 ```
 
-006-D established the active [Self-Contained Execution & Runtime Distribution Closure Contract](../../authority/self-contained-execution-runtime-distribution-closure-contract.md).
+006-E established the active [Enterprise Scale, Resource Admission, Approximation & Degraded Operation Contract](../../authority/enterprise-scale-resource-admission-approximation-degraded-operation-contract.md).
 
 Key accepted rules:
 
-- the supported baseline includes at least one source-derived/local free-form-text synthesis path with no required pretrained artifact or runtime network service;
-- richer pretrained/world-knowledge text remains explicit optional local-artifact or runtime-network capability;
-- one implementation binding may resolve a multi-component executable/artifact closure;
-- driver package/model availability is not proof of Spark executor readiness;
-- every material worker, including dynamically allocated workers, must satisfy compatible runtime closure before executing the Attempt;
-- missing worker dependencies cannot trigger undeclared network acquisition;
-- large model/Learned-State distribution cannot universally require driver-memory loading/broadcast.
+- enterprise compatibility is multidimensional and workload-specific rather than a row-count flag;
+- an undisclosed source-size-proportional driver/single-process stage invalidates an enterprise-scale claim for that path;
+- resource pressure may queue/block/retry work but cannot silently weaken an existing semantic commitment;
+- approximation is explicit owner-bound semantics, not an implicit runtime fallback;
+- backpressure must be lossless with respect to mandatory logical work/scope;
+- sampled/sketched Evaluation cannot become universal Evidence because exhaustive validation is expensive;
+- caches are performance mechanisms rather than dependency identity;
+- dynamically admitted workers must preserve runtime-distribution closure;
+- degraded operation is capability-specific rather than one global `degraded` state;
+- canonical-store loss, projection loss, telemetry loss, dependency loss, source loss and output-storage loss have distinct consequences;
+- storage pressure does not override authority-aware retention.
 
-BDR-003 is resolved. BDR-004 remains the principal open scope/extensibility blocker.
+No new concept or synchronization ID was introduced.
 
 ## Current design counts
 
@@ -105,34 +114,26 @@ reopened candidate concepts    Relationship
 cross-cutting contracts
   Operational Authority Continuity
   Self-Contained Execution & Runtime Distribution Closure
+  Enterprise Scale / Resource Admission / Approximation / Degraded Operation
 ```
 
-## 006-E — next
+## 006-F — next
 
-006-E must now attempt to falsify enterprise-scale and degraded-mode semantics across the refined model.
+006-F must revalidate privacy/disclosure/release boundaries in light of:
 
-Required areas include at least:
+- self-contained free-form text generation and memorization risk;
+- optional locally pretrained/runtime-network text capability;
+- privacy/disclosure-risk Evaluation at enterprise scale;
+- sample/approximate privacy Evidence and its claim-strength limits;
+- formal mechanism-specific guarantees such as differential privacy and whether they require independent concept discovery;
+- external release/use approval remaining distinct from Generation completion and favorable Evidence;
+- disclosure/redaction behavior for Evidence/history under security policy.
 
-- rows/bytes/width/cardinality/skew/partition scaling;
-- driver/coordinator memory bounds;
-- large/sharded Learned State and text model/tokenizer state;
-- worker-local/shared artifact caching and runtime-distribution pressure;
-- dynamic executor churn/autoscaling;
-- Spark shuffle/network/storage pressure;
-- time-series entity/sequence cardinality and horizon;
-- multi-table fan-out/shared-key cardinality and coordinated result scale;
-- Evaluation sampling/sketching/approximation and claim strength;
-- backpressure/admission/quotas/concurrency;
-- degraded projection/telemetry/dependency/runtime/storage conditions;
-- partial capability availability without silent semantic degradation.
-
-No benchmarks are implemented during 006-E.
+006-F is a design/scope decision only and does not implement a privacy mechanism, attack suite, release gate or governance service.
 
 ## Later obligations
 
-006-F closes privacy/disclosure/release scope.
-
-006-G makes the provisional `Relationship`/structured-topology concept decision.
+006-G makes the provisional `Relationship`/structured-topology concept decision and closes BDR-004.
 
 006-H promotes recovery/security/degraded/history semantics into human/programmatic experience.
 
@@ -149,10 +150,12 @@ Phase 006 MUST NOT:
 - make a topology `mode` parameter semantic authority;
 - make driver-local package availability equivalent to cluster execution readiness;
 - use hidden first-use package/model acquisition to satisfy baseline capability;
-- promote every durable recovery/security/distribution structure into a concept;
+- use resource pressure to silently reduce quantity, horizon, topology scope, Evaluation coverage or Constraint strength;
+- treat a sampled/approximate method as stronger Evidence than it supports;
+- promote every resource/admission/degradation mechanism into a concept;
 - hard-code current single-table scope so later time-series/multi-table support becomes impossible;
 - claim design completion by phase count.
 
 ## Current next group
 
-**006-E — Enterprise Scale, Resource/Approximation, Backpressure & Degraded-Mode Design Validation**
+**006-F — Privacy, Disclosure, Release-Governance Boundary & Mechanism-Specific Scope Decision**
