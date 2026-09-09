@@ -51,19 +51,22 @@ If later Phase 006 work accepts a new `Relationship` concept or materially chang
 
 ### BDR-003 — representative Strategy/method and topology design probes
 
-**Status:** open — 006-D next; Phase 006 blocking.
+**Status:** resolved by 006-D for the current concept/runtime baseline.
 
-The model-neutral runtime architecture must be stress-tested against materially different synthesis/evaluation shapes before infrastructure implementation begins.
+[006-D](../phases/006/006-D-reference-strategy-method-topology-design-probes-algorithm-neutrality-stress-test.md) stress-tested the design against Learning-based deep-generative, direct-generation, self-contained and pretrained/network text, composite mixed-field, time-series, multi-table shared-key, deterministic/bounded and statistical/approximate Evaluation, large/sharded Learned State, and Spark cluster-distribution shapes.
 
-At minimum, design probes must cover:
+The result was **PASS WITH TARGETED CROSS-CUTTING REFINEMENT**.
 
-- a Learning-based single-table deep-generative family;
-- a direct/simple single-table generation path;
-- a time-series Strategy shape;
-- a multi-table shared-key Strategy shape;
-- representative deterministic/bounded and statistical/approximate Evaluation methods.
+006-D established the canonical [Self-Contained Execution & Runtime Distribution Closure Contract](../authority/self-contained-execution-runtime-distribution-closure-contract.md), including:
 
-These are design/feasibility probes only. They do not authorize implementation of CTGAN, TimeGAN, a relational synthesizer or another algorithm during Phase 006.
+- at least one supported baseline source-derived/local text-capable synthesis path requiring no pretrained artifact or runtime network service;
+- optional local-artifact and runtime-network text capability remaining explicit and non-baseline;
+- exact implementation closure may contain multiple code/runtime/model/tokenizer/codec components;
+- driver import/availability is not proof of Spark executor readiness;
+- all material workers, including dynamically allocated workers, must satisfy compatible runtime distribution closure;
+- large model/state distribution cannot universally require driver-local materialization/broadcast.
+
+No new domain concept or synchronization was required. If 006-G/006-I materially changes Strategy/topology/runtime architecture, affected probes must be replayed before 006-J readiness approval.
 
 ### BDR-004 — initial-baseline scope and future-extensibility closure
 
@@ -81,6 +84,8 @@ multi-table shared-key      explicit candidate capability; Relationship reopened
 
 006-G owns the concept/extensibility decision. A future function parameter may select a topology, but the parameter cannot substitute for the underlying descriptive relationship/temporal semantics.
 
+The baseline self-contained text-bearing requirement is no longer a scope question: 006-D accepted it as cross-cutting authority. Advanced pretrained/world-knowledge text Strategies remain optional capability.
+
 ## Baseline scope decisions
 
 ### BSD-001 — relational/multi-table shared-key synthesis
@@ -89,7 +94,7 @@ multi-table shared-key      explicit candidate capability; Relationship reopened
 
 Current contracts must not hard-code a permanent single-table invariant. Phase 006-A reopened `Relationship` as a candidate concept because shared-key linkage may have reusable descriptive purpose independent of Data Meaning and Constraint.
 
-006-C confirmed that Generation/Constraint/Evaluation coordination can already represent one logical multi-table result and prevent partial constituent completion from being mistaken for total completion. 006-G must still decide whether the descriptive shared-key structure itself requires `Relationship` or another narrower boundary.
+006-C confirmed that Generation/Constraint/Evaluation coordination can already represent one logical multi-table result and prevent partial constituent completion from being mistaken for total completion. 006-D confirmed that multi-component Strategy/Learned-State/runtime shapes do not by themselves require architecture redesign. 006-G must still decide whether the descriptive shared-key structure itself requires `Relationship` or another narrower boundary.
 
 ### BSD-002 — mechanism-specific formal privacy
 
@@ -107,7 +112,7 @@ Generation completion and favorable Evidence do not imply release/use approval. 
 
 **Status:** deferred beyond the minimum diverse reference design probes.
 
-The framework should not attempt to design every method before implementation. A minimum reference set is required to falsify hidden assumptions; broader catalog breadth can remain backlog.
+006-D has completed the minimum diverse falsification set. The framework should not attempt to design every synthesis/Evaluation family before implementation; broader catalog breadth can remain backlog.
 
 ### BSD-005 — time-series / temporal-table synthesis
 
@@ -115,7 +120,7 @@ The framework should not attempt to design every method before implementation. A
 
 Time-series must not be reduced to “single-table plus timestamp.” Phase 006 must validate entity/series identity, temporal ordering, horizon/continuation semantics, temporal Constraints, Strategy capability, Evaluation claim strength, checkpoint/recovery consequences and enterprise-scale behavior.
 
-006-C confirmed that interrupted time-series continuation and validation-later temporal rules compose with existing activity/Execution/Evaluation synchronizations. 006-G must still test whether reusable sequence membership/order semantics fit the reopened generic `Relationship` candidate or remain adequately owned by existing concepts.
+006-C confirmed that interrupted time-series continuation and validation-later temporal rules compose with existing activity/Execution/Evaluation synchronizations. 006-D confirmed that representative sequence-model/runtime/checkpoint shapes fit the current runtime model. 006-G must still test whether reusable sequence membership/order semantics fit the reopened generic `Relationship` candidate or remain adequately owned by existing concepts.
 
 ## Implementation/release debt
 
@@ -138,6 +143,12 @@ Operational objectives, queue/admission defaults and capacity policy remain deli
 ### IRD-005 — public package/name/ecosystem review
 
 Before public release, verify PyPI/package naming, project-name collisions, trademarks and adjacent ecosystem usage. SynGAN remains the current brand; the framework must not be publicly described as a Spark port of CTGAN.
+
+### IRD-006 — exact Spark/runtime distribution mechanism
+
+006-D establishes runtime distribution closure as an invariant but intentionally does not select one universal mechanism. Later implementation/deployment work must choose and verify profile-specific delivery such as immutable cluster/container environments, Spark-native pure-Python shipping where sufficient, packed environments/archives/PEX/equivalent, provider-managed libraries, and exact distributed artifact/model/state resolution.
+
+A selected mechanism must satisfy the canonical [Self-Contained Execution & Runtime Distribution Closure Contract](../authority/self-contained-execution-runtime-distribution-closure-contract.md); driver-only package availability is insufficient.
 
 ## Governance debt
 
