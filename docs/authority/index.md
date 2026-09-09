@@ -45,12 +45,13 @@ Completed current design groups:
 
 - [007-D — Identity, Revision, Serialization, Resource/Handle & Programmatic-View Foundation](../architecture/phase-007-d-identity-revision-serialization-resource-handle-programmatic-view-foundation.md)
 - [007-E — Control Persistence, Transactions, CAS, Outbox, Historical References & Migration Baseline](../architecture/phase-007-e-control-persistence-transactions-cas-outbox-historical-reference-migration-baseline.md)
+- [007-F — Distributed Data-State, Structured Topology, Manifest, Candidate/Seal & Promotion Foundation](../architecture/phase-007-f-distributed-data-state-structured-topology-manifest-candidate-seal-promotion-foundation.md)
 
-Both are architecture/design authority only. Their production implementation is not authorized.
+All are architecture/design authority only. Their production implementation is not authorized.
 
 The next eligible design group is:
 
-**007-F — Distributed Data-State, Structured Topology, Manifest, Candidate/Seal & Promotion Foundation**.
+**007-G — Strategy/Method Binding, Dependency Trust, Authorization, Secrets & Distributed Runtime Closure Foundation**.
 
 ## Historical readiness authority
 
