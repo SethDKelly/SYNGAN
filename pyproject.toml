@@ -1,0 +1,85 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "syngan"
+version = "0.0.0"
+description = "Spark-native, model-neutral synthetic data generation framework."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[dependency-groups]
+test = [
+  "hypothesis>=6.130,<7",
+  "pytest>=8.4,<10",
+  "pytest-cov>=6,<8",
+  "pytest-socket>=0.7,<1",
+]
+lint = [
+  "ruff>=0.12,<1",
+]
+type = [
+  "mypy>=1.17,<2",
+]
+fitness = [
+  "import-linter>=2.3,<3",
+]
+dev = [
+  { include-group = "test" },
+  { include-group = "lint" },
+  { include-group = "type" },
+  { include-group = "fitness" },
+]
+
+[tool.uv]
+required-version = ">=0.10,<0.11"
+default-groups = ["dev"]
+
+[tool.pytest.ini_options]
+minversion = "8.4"
+addopts = [
+  "-ra",
+  "--strict-config",
+  "--strict-markers",
+  "--disable-socket",
+]
+testpaths = ["tests"]
+markers = [
+  "network: explicitly permits network access; never part of portable-core verification",
+  "spark: requires a Spark/local-distributed runtime profile; introduced only by later authority",
+  "integration: exercises an explicitly provisioned integration profile",
+]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+extend-exclude = ["docs"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+show_error_codes = true
+pretty = true
+warn_unreachable = true
+exclude = ["^docs/"]
+
+[tool.coverage.run]
+branch = true
+parallel = false
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
+precision = 1
+
+[tool.coverage.paths]
+source = ["tools"]
