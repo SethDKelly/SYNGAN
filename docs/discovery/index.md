@@ -18,12 +18,13 @@ When provisional discovery conflicts with accepted authority, accepted authority
 
 ## Phase 006 post-planning discovery
 
-Phase 006 reopens discovery only where Phase 005 implementation planning or new capability evidence exposes a legitimate concept-boundary or authority question.
+Phase 006 reopens discovery only where Phase 005 implementation planning or new capability evidence exposes a legitimate design question.
 
 Current evidence:
 
 - [Post-Planning Concept Revalidation & Structured-Data Topology Candidates](post-planning-concept-revalidation-structured-topology-candidates.md) — 006-A mechanism-vs-concept audit plus single-table/time-series/multi-table capability analysis. It reopens `Relationship` as a **candidate**, not an accepted concept.
-- [Temporal Authority, Regressive Recovery & Historical-Truth Revalidation](temporal-authority-regressive-recovery-revalidation.md) — 006-B alternatives/falsification analysis. It rejects `ControlPlaneIncarnation`, Disaster Recovery and Historical Fork as standalone concepts and supports the accepted cross-cutting Operational Authority Continuity contract.
+- [Temporal Authority, Regressive Recovery & Historical-Truth Revalidation](temporal-authority-regressive-recovery-revalidation.md) — 006-B alternatives/falsification evidence that led to the canonical Operational Authority Continuity contract.
+- [End-to-End Scenario, Exception, Failure & Adversarial Synchronization Validation](end-to-end-adversarial-synchronization-validation.md) — 006-C twenty-four-scenario falsification pass over SYNC-01 through SYNC-15. The accepted result retained fifteen synchronization IDs with targeted wording refinements.
 
 See [Phase 006](../phases/006/index.md) for the active design-refinement sequence.
 
