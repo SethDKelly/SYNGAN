@@ -32,7 +32,7 @@ No production implementation was authorized or performed.
 
 See [Phase 006 index](006/index.md).
 
-006-A through 006-J completed concept/synchronization revalidation, recovery authority, adversarial scenarios, algorithm/runtime probes, enterprise scale/degraded-operation validation, privacy/release boundaries, structured-topology closure, experience closure, architecture/ADR/planning reconciliation, and the final readiness audit.
+006-A through 006-J completed design revalidation, cross-layer reconciliation and the final implementation-authority readiness audit.
 
 Canonical exit authority: [Phase 006 Consolidated Design Readiness Contract](../authority/phase-006-consolidated-design-readiness-contract.md).
 
@@ -43,14 +43,36 @@ DESIGN COMPLETE ENOUGH FOR A LATER
 EXPLICIT IMPLEMENTATION-AUTHORITY PHASE
 ```
 
-This does not authorize production implementation.
+This does not itself authorize production implementation.
 
-## Recommended next phase
+## Phase 007 — Implementation Authority, Controlled Bootstrap & Evidence-Gated Delivery — planned
 
-**Phase 007 — Implementation Authority, Controlled Bootstrap & Evidence-Gated Delivery** is recommended but not yet active.
+See [Phase 007 index](007/index.md).
 
-A Phase 007 first subgroup must explicitly lock current authority and authorize defined implementation slices before any production coding begins.
+**Logical subgroup design is complete, but Phase 007 is not active.**
+
+The planned dependency-safe sequence is:
+
+```text
+007-A  authority lock / change control / slice authorization
+007-B  repository-toolchain-verification bootstrap
+007-C  source/package topology + architecture fitness
+007-D  identity / serialization / public handle foundation
+007-E  control persistence / CAS / history / migrations
+007-F  distributed data / topology / manifests / promotion
+007-G  runtime binding / dependencies / security / worker closure
+007-H  Execution / fencing / recovery / cancellation / admission
+007-I  Evidence / Provenance / history / reproducibility / disclosure
+007-J  bounded self-contained single-table Spark-local vertical proof
+007-K  consolidation / evidence audit / next-delivery decision
+```
+
+007-A is the only valid implementation-authority entry point. It is governance-only and must explicitly lock authority and decide which bounded implementation slice is authorized next.
+
+Until 007-A is explicitly entered and completes that lock, production implementation remains unauthorized.
 
 ## Implementation boundary
 
-Phase completion alone never authorizes coding. Production source/schema/runtime/test/deployment implementation remains unauthorized until an explicit implementation-authority phase is entered and grants that authority.
+Phase completion or subgroup planning never authorizes coding by itself.
+
+Implementation authority must be granted explicitly and incrementally. Any Class 3 architecture conflict or Class 4 semantic/experience conflict discovered during future implementation must stop ordinary implementation and reopen the appropriate upstream authority rather than being coded around.
