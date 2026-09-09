@@ -41,7 +41,10 @@ def verify_bootstrap() -> None:
         ROOT / "src" / "syngan" / "__init__.py",
         ROOT / "src" / "syngan" / "py.typed",
         ROOT / "docs" / "implementation" / "phase-007-implementation-authority-lock.md",
-        ROOT / "docs" / "implementation" / "phase-007-c-source-package-topology-execution-authority.md",
+        ROOT
+        / "docs"
+        / "implementation"
+        / "phase-007-c-source-package-topology-execution-authority.md",
     )
     missing = [str(path.relative_to(ROOT)) for path in required_paths if not path.exists()]
     if missing:
