@@ -20,7 +20,7 @@ Read only what the active task needs:
 5. [Implementation Planning & Authority](implementation/index.md)
 6. [ADRs](decisions/index.md) for rationale
 7. [Backlog](backlog/index.md) for deferred work
-8. [Phases](phases/index.md) for execution evidence/current authorization
+8. [Phases](phases/index.md) for design/execution history and current progression
 
 ## Authority order
 
@@ -28,91 +28,96 @@ Read only what the active task needs:
 authority
   > concepts / synchronizations
   > experience
-  > architecture
+  > current architecture design
   > implementation planning
-  > Phase 007 implementation authority + explicitly authorized subgroup
+  > later explicit implementation re-entry
   > code / deployment
   > ADR rationale / phase history / backlog / examples
 ```
 
-Implementation feasibility may reopen upstream design explicitly; implementation never silently redefines it.
+Code/tests never become upstream design authority because they already exist or pass.
 
-## Completed design/planning baseline
+## Current design posture
 
-- Phase 001 — complete
-- Phase 002 — complete — 11 concepts / 15 synchronizations
-- Phase 003 — complete historical experience baseline
-- Phase 004 — complete historical architecture baseline
-- Phase 005 — complete implementation planning baseline
-- Phase 006 — complete post-planning design validation/readiness
+The current posture is governed by:
 
-Phase 006 concluded that design was complete enough for an explicit implementation-authority phase.
+[Phase 007 Design Continuation & Implementation Freeze](authority/phase-007-design-continuation-implementation-freeze.md)
 
-## Phase 007 — active, incrementally authorized
+Phase 006 historically concluded that design was complete enough to consider implementation. Phase 007-A through 007-C then created a provisional repository/tool/package scaffold.
 
-Current implementation authority includes:
-
-- [Phase 007 Implementation Authority Lock](implementation/phase-007-implementation-authority-lock.md)
-- [Phase 007-B Bootstrap Execution Authority](implementation/phase-007-b-bootstrap-execution-authority.md)
-- [Phase 007-C Source/Package Topology Execution Authority](implementation/phase-007-c-source-package-topology-execution-authority.md)
-
-Current subgroup state:
-
-```text
-007-A  COMPLETE
-007-B  COMPLETE
-007-C  COMPLETE
-007-D  NOT AUTHORIZED — next eligible subgroup
-007-E..007-K  NOT AUTHORIZED
-```
-
-007-B established the reproducible Python/tool/test/CI substrate. 007-C then established and enforced the first production package architecture:
-
-```text
-src/syngan/
-├── __init__.py
-├── py.typed
-├── foundation/
-├── domain/
-├── ports/
-├── application/
-├── api/
-├── adapters/
-└── bootstrap/
-```
-
-Import Linter now enforces inward core layering and outer adapter/composition boundaries. Normal verification installs the first-party package, runs architecture fitness, and builds/inspects wheel + sdist without publication.
-
-`[project].dependencies` remains empty. Hatchling and `editables` are locked build/development tooling for installed-project verification, not runtime capabilities.
-
-Current reproducible verification sequence:
-
-```text
-uv sync --all-groups --no-install-project --locked
-uv sync --all-groups --locked --no-build-isolation
-uv run --no-sync python tools/verify.py all
-```
-
-Portable-core pytest remains Python-socket denied after explicit provisioning.
-
-007-C was implemented through PR #1, verified on exact PR head `9f93b6eff7f8d8a1b19950745530dc273d462d6d`, and merged as `063f847953f69a525ee04315fa92bc0e9fa36a1c`.
-
-## Locked design baseline
+The project has now explicitly returned to **architecture/design refinement before further production implementation** so that provisional tests/source choices do not harden unsettled representation decisions.
 
 ```text
 accepted concepts          11
 accepted synchronizations  15
 active ADRs                10
-provisional concepts        0
+architecture design         ACTIVE
+new implementation          FROZEN
+new executable restrictions FROZEN
 ```
 
-Complete structured-data target remains single-table + time-series + multi-table shared-key with source-derived/local free-form-text support in the complete supported baseline.
+No `SYNC-16`.
+
+## Phase 007 design progression
+
+```text
+007-A  historical authority/bootstrap transition
+007-B  historical repository/toolchain scaffold
+007-C  historical/provisional source-topology scaffold
+007-D  DESIGN COMPLETE
+007-E  next eligible design subgroup — not started
+007-F..007-K  not started
+```
+
+The frozen implementation authorization track remains:
+
+```text
+007-A  COMPLETE
+007-B  COMPLETE
+007-C  COMPLETE
+007-D and later  NOT AUTHORIZED FOR IMPLEMENTATION
+```
+
+## 007-D result
+
+[007-D — Identity, Revision, Serialization, Typed Public Resource/Handle & Programmatic-View Foundation](architecture/phase-007-d-identity-revision-serialization-resource-handle-programmatic-view-foundation.md) is complete as architecture design.
+
+It separates:
+
+- authority/namespace scope;
+- stable logical resource identity;
+- exact semantic revision/commitment snapshot;
+- mutable current-state version/view freshness;
+- representation schema version;
+- external/provider identity or locator where material.
+
+It also establishes that handles resolve/present authority rather than own it, serialization is representation rather than mutation authority, and programmatic views remain orthogonal rather than collapsing lifecycle/actionability/operation/disclosure/history into one object/status.
+
+No concrete ID format, Python public class hierarchy, wire format, serializer, persistence schema, CAS/outbox mechanism, migration tool, test or executable enforcement was introduced by 007-D.
+
+## Provisional executable scaffold
+
+The 007-C source/tool/test scaffold remains in the repository for feasibility/history, but is downstream evidence only. It may be revised later if current design requires it.
+
+No current design decision must preserve an implementation choice solely because existing tests encode it.
+
+## Complete capability target
+
+The structured-data target remains:
+
+```text
+single-table generation
+time-series generation
+multi-table shared-key generation
+```
+
+The complete supported baseline also retains source-derived/local free-form-text synthesis without mandatory public model-hub or runtime inference-service dependency.
 
 ## Current next boundary
 
-**007-D — Identity, Revision, Serialization, Typed Public Resource/Handle & Programmatic-View Foundation** is next eligible but **not yet authorized**.
+**007-E — Control Persistence, Transactions, CAS, Outbox, Historical References & Migration Baseline** is the next eligible **design** subgroup.
 
-An explicit proceed decision is required before 007-D implementation begins.
+It requires an explicit proceed decision. Production implementation remains frozen independently of design progression.
 
 ## Governance note
 
