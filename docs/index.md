@@ -9,19 +9,6 @@ status: active
 
 This directory is the canonical knowledge bundle for SYNGAN.
 
-## Progressive disclosure
-
-Read only what the active task needs:
-
-1. [Authority](authority/index.md)
-2. [Concepts](concepts/index.md) + [Synchronizations](synchronizations/index.md)
-3. [Experience](experience/index.md)
-4. [Architecture](architecture/index.md)
-5. [Implementation Planning & Authority](implementation/index.md)
-6. [ADRs](decisions/index.md) for rationale
-7. [Backlog](backlog/index.md) for deferred work
-8. [Phases](phases/index.md) for design/execution history and current progression
-
 ## Authority order
 
 ```text
@@ -31,21 +18,15 @@ authority
   > current architecture design
   > implementation planning
   > later explicit implementation re-entry
-  > code / deployment
+  > code / tests / deployment
   > ADR rationale / phase history / backlog / examples
 ```
 
-Code/tests never become upstream design authority because they already exist or pass.
+Existing source/tests never become upstream design authority merely because they exist or pass.
 
-## Current design posture
+## Current posture
 
-The current posture is governed by:
-
-[Phase 007 Design Continuation & Implementation Freeze](authority/phase-007-design-continuation-implementation-freeze.md)
-
-Phase 006 historically concluded that design was complete enough to consider implementation. Phase 007-A through 007-C then created a provisional repository/tool/package scaffold.
-
-The project has now explicitly returned to **architecture/design refinement before further production implementation** so that provisional tests/source choices do not harden unsettled representation decisions.
+[Phase 007 Design Continuation & Implementation Freeze](authority/phase-007-design-continuation-implementation-freeze.md) governs current work.
 
 ```text
 accepted concepts          11
@@ -61,45 +42,42 @@ No `SYNC-16`.
 ## Phase 007 design progression
 
 ```text
-007-A  historical authority/bootstrap transition
-007-B  historical repository/toolchain scaffold
-007-C  historical/provisional source-topology scaffold
-007-D  DESIGN COMPLETE
-007-E  next eligible design subgroup — not started
-007-F..007-K  not started
+007-A..007-C  historical/provisional bootstrap work
+007-D         DESIGN COMPLETE
+007-E         DESIGN COMPLETE
+007-F         next eligible design subgroup — not started
+007-G..007-K  not started
 ```
 
-The frozen implementation authorization track remains:
+Implementation remains frozen at the retained 007-C scaffold; 007-D and later production implementation are not authorized.
 
-```text
-007-A  COMPLETE
-007-B  COMPLETE
-007-C  COMPLETE
-007-D and later  NOT AUTHORIZED FOR IMPLEMENTATION
-```
+## Current architecture continuation
 
-## 007-D result
+### 007-D — identity / references / views
 
-[007-D — Identity, Revision, Serialization, Typed Public Resource/Handle & Programmatic-View Foundation](architecture/phase-007-d-identity-revision-serialization-resource-handle-programmatic-view-foundation.md) is complete as architecture design.
+[007-D architecture](architecture/phase-007-d-identity-revision-serialization-resource-handle-programmatic-view-foundation.md) separates logical identity, exact semantic revision/commitment, mutable current-state version/freshness, representation schema version and authority/provider context.
 
-It separates:
+Handles resolve/present authority; serialization is representation, not mutation authority.
 
-- authority/namespace scope;
-- stable logical resource identity;
-- exact semantic revision/commitment snapshot;
-- mutable current-state version/view freshness;
-- representation schema version;
-- external/provider identity or locator where material.
+### 007-E — persistence / transactions / history / migration
 
-It also establishes that handles resolve/present authority rather than own it, serialization is representation rather than mutation authority, and programmatic views remain orthogonal rather than collapsing lifecycle/actionability/operation/disclosure/history into one object/status.
+[007-E architecture](architecture/phase-007-e-control-persistence-transactions-cas-outbox-historical-reference-migration-baseline.md) establishes:
 
-No concrete ID format, Python public class hierarchy, wire format, serializer, persistence schema, CAS/outbox mechanism, migration tool, test or executable enforcement was introduced by 007-D.
+- owner-controlled canonical writes;
+- atomic same-boundary coupled facts;
+- durable reconcilable intent for required cross-boundary work;
+- stale-write detection without treating CAS as semantic validation;
+- material history without universal event sourcing;
+- exact historical resolution without `latest` substitution;
+- derived projections as non-authoritative;
+- migration as representation change by default;
+- canonical-state rollback as potentially regressive recovery.
+
+Earlier concrete Phase 005-D technology selections are provisional implementation-planning evidence, not current architecture commitments.
 
 ## Provisional executable scaffold
 
-The 007-C source/tool/test scaffold remains in the repository for feasibility/history, but is downstream evidence only. It may be revised later if current design requires it.
-
-No current design decision must preserve an implementation choice solely because existing tests encode it.
+The retained 007-B/007-C package/tests/CI remain feasibility/history evidence and may be revised later if architecture requires it. No current design choice must preserve them solely because executable checks encode them.
 
 ## Complete capability target
 
@@ -115,10 +93,6 @@ The complete supported baseline also retains source-derived/local free-form-text
 
 ## Current next boundary
 
-**007-E — Control Persistence, Transactions, CAS, Outbox, Historical References & Migration Baseline** is the next eligible **design** subgroup.
+**007-F — Distributed Data-State, Structured Topology, Manifest, Candidate/Seal & Promotion Foundation** is the next eligible **design** subgroup.
 
 It requires an explicit proceed decision. Production implementation remains frozen independently of design progression.
-
-## Governance note
-
-The repository uses a project-specific OKF-oriented profile. Strict external OKF 0.2 normalization remains non-blocking while authority is unambiguous.
