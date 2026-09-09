@@ -37,8 +37,8 @@ A future function parameter or typed request may select such a capability, but t
 |---|---|---|
 | **006-A** | [Post-Planning Concept Completeness, Mechanism-vs-Concept & Scope-Boundary Revalidation](006-A-post-planning-concept-completeness-mechanism-vs-concept-scope-boundary-revalidation.md) | **complete** |
 | **006-B** | [Temporal Authority, Disaster Recovery, Rollback, Fork & Historical-Truth Refinement](006-B-temporal-authority-disaster-recovery-rollback-fork-historical-truth-refinement.md) | **complete** |
-| **006-C** | **End-to-End Scenario, Exception, Failure & Adversarial Synchronization Validation** | **next** |
-| 006-D | Reference Strategy/Method and Topology Design Probes & Algorithm-Neutrality Stress Test | planned |
+| **006-C** | [End-to-End Scenario, Exception, Failure & Adversarial Synchronization Validation](006-C-end-to-end-scenario-exception-failure-adversarial-synchronization-validation.md) | **complete** |
+| **006-D** | **Reference Strategy/Method and Topology Design Probes & Algorithm-Neutrality Stress Test** | **next** |
 | 006-E | Enterprise Scale, Resource/Approximation, Backpressure & Degraded-Mode Design Validation | planned |
 | 006-F | Privacy, Disclosure, Release-Governance Boundary & Mechanism-Specific Scope Decision | planned |
 | 006-G | Structured-Data Topology: Single-Table, Time-Series & Multi-Table Relationship Concept/Extensibility Audit | planned |
@@ -50,11 +50,11 @@ A future function parameter or typed request may select such a capability, but t
 
 006-A found no Phase 005 mechanism that must immediately become a new concept.
 
-Accepted counts remain eleven concepts and fifteen synchronizations. `GenerationMode`/`DataTopologyMode` was rejected as a concept; time-series became an explicit design target; and multi-table shared-key synthesis formally reopened `Relationship` as a provisional candidate for 006-G.
+Accepted counts remained eleven concepts and fifteen synchronizations. `GenerationMode`/`DataTopologyMode` was rejected as a concept; time-series became an explicit design target; and multi-table shared-key synthesis formally reopened `Relationship` as a provisional candidate for 006-G.
 
 ## 006-B result
 
-006-B closes the semantic core of the regressive-restore blocker by establishing the active [Operational Authority Continuity & Regressive Recovery Contract](../../authority/operational-authority-continuity-regressive-recovery-contract.md).
+006-B closed the semantic core of the regressive-restore blocker by establishing the active [Operational Authority Continuity & Regressive Recovery Contract](../../authority/operational-authority-continuity-regressive-recovery-contract.md).
 
 Key results:
 
@@ -66,10 +66,30 @@ Key results:
 - missing post-backup history is not automatically absence, failure or success;
 - semantic history may be reconstructed only from evidence sufficient for the owning concept's normal invariants;
 - unresolved post-restore history remains explicitly unknown/unavailable;
-- `ControlPlaneIncarnation` remains an architecture realization candidate rather than a concept;
-- no new synchronization ID is introduced by 006-B.
+- `ControlPlaneIncarnation` remains an architecture realization candidate rather than a concept.
 
-BDR-001 is semantically resolved; 006-C, 006-H and 006-I must validate and propagate the accepted contract.
+## 006-C result
+
+006-C replayed the design against twenty-four normal and adversarial scenarios, including topology-sensitive time-series/multi-table cases and the 006-B regressive-recovery model.
+
+Result:
+
+```text
+PASS WITH TARGETED SYNCHRONIZATION REFINEMENT
+```
+
+The accepted synchronization count remains fifteen. No `SYNC-16` is currently justified.
+
+Canonical refinements were made to:
+
+- **SYNC-04 / SYNC-07 / SYNC-11** — same-Execution continuation now explicitly depends on current authorization/dependency/platform capability and restore-safe operational-authority continuity in addition to unchanged committed semantics;
+- **SYNC-08** — completion of a coordinated logical output applies to the whole committed scope, not one constituent table/sequence;
+- **SYNC-14** — restored absence is not proof of non-occurrence; surviving physical effects are not proof of semantic transition; reconstruction is owner-gated and auditable;
+- **SYNC-15** — unresolved continuity/history gaps weaken the strongest defensible reproducibility/comparison claim rather than rewriting historical commitments.
+
+[Core Synchronizations](../../synchronizations/core-synchronizations.md) remains the canonical coordination authority.
+
+BDR-002 is resolved for the current eleven-concept/fifteen-synchronization baseline. If later Phase 006 work accepts `Relationship` or materially revises coordination, affected scenarios must be replayed before the final readiness exit.
 
 ## Current design counts
 
@@ -77,42 +97,31 @@ BDR-001 is semantically resolved; 006-C, 006-H and 006-I must validate and propa
 accepted concepts             11
 accepted synchronizations     15
 new Phase 006 concepts          0
-new Phase 006 synchronizations  0
+new Phase 006 sync IDs          0
 reopened candidate concepts    Relationship
 new cross-cutting contracts    Operational Authority Continuity
 ```
 
-## 006-C — next
+## 006-D — next
 
-006-C must now use complete scenarios to try to falsify the existing synchronization set under the refined continuity contract.
+006-D must now use materially different Strategy, runtime-state, Evaluation and topology shapes as design probes rather than semantic templates.
 
-Required cases include at least:
+At minimum the probes must cover:
 
-- normal Learning → Learned State → Generation → Evaluation/Evidence → promotion;
-- direct Generation;
-- ambiguous external launch;
-- stale Attempt wake-up;
-- cancellation/completion race;
-- policy revocation between Attempts;
-- dependency disappearance;
-- projection/telemetry outage;
-- payload retention loss;
-- mixed-version retry/resume;
-- platform capability fallback;
-- cross-security-domain isolation;
-- regressive restore with surviving workers/effects;
-- restored state predating an Execution entirely;
-- post-backup semantic promotion missing after restore;
-- partial multi-table output / parent-child mismatch;
-- interrupted time-series continuation.
+- one Learning-based single-table deep-generative family, with CTGAN-like behavior a legitimate falsification probe;
+- one direct/simple single-table Strategy requiring no fabricated Learning/Learned State;
+- one time-series Strategy shape;
+- one multi-table shared-key Strategy shape;
+- deterministic/bounded Evaluation behavior;
+- statistical/approximate Evaluation behavior;
+- large/sharded Learned State and checkpoint consequences;
+- distributed training/generation/evaluation without a hidden mandatory full-corpus driver-local stage.
 
-The purpose is to decide whether SYNC-01 through SYNC-15 remain sufficient, require wording refinement, or genuinely need an additional synchronization.
+The purpose is to discover whether the accepted concepts, Strategy capability model, runtime SPI boundaries, Learned-State semantics, Execution/recovery rules, Evaluation/Evidence contracts and topology assumptions remain algorithm-neutral when confronted with concrete method shapes.
 
-This is scenario/specification validation, not executable testing.
+No algorithm is implemented during 006-D.
 
 ## Later Phase 006 obligations
-
-006-D must test algorithm and topology neutrality using single-table, time-series, multi-table, Learning-based/direct, deterministic/bounded and statistical/approximate method shapes.
 
 006-E must revalidate enterprise-scale/degraded semantics.
 
@@ -140,4 +149,4 @@ Phase 006 MUST NOT:
 
 ## Current next group
 
-**006-C — End-to-End Scenario, Exception, Failure & Adversarial Synchronization Validation**
+**006-D — Reference Strategy/Method and Topology Design Probes & Algorithm-Neutrality Stress Test**
