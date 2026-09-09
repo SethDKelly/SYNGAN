@@ -49,13 +49,14 @@ Completed:
 - **006-A** — concept/mechanism/scope revalidation; accepted concept/synchronization counts remain eleven/fifteen; `Relationship` reopened only as a candidate.
 - **006-B** — temporal authority/regressive-recovery refinement; established the cross-cutting Operational Authority Continuity contract.
 - **006-C** — twenty-four-scenario adversarial synchronization validation; retained fifteen synchronization IDs while refining SYNC-04/07/08/11/14/15.
-- **006-D** — representative Strategy/method/text/topology/runtime-distribution probes; retained the eleven/fifteen model and established the Self-Contained Execution & Runtime Distribution Closure contract.
+- **006-D** — representative Strategy/method/text/topology/runtime-distribution probes; established the Self-Contained Execution & Runtime Distribution Closure contract.
+- **006-E** — enterprise scale/resource/approximation/backpressure/degraded-mode validation; established the Enterprise Scale, Resource Admission, Approximation & Degraded Operation contract without adding a concept or synchronization.
 
 Current next:
 
-**006-E — Enterprise Scale, Resource/Approximation, Backpressure & Degraded-Mode Design Validation**
+**006-F — Privacy, Disclosure, Release-Governance Boundary & Mechanism-Specific Scope Decision**
 
-006-E must stress the design under large/sharded state, text/runtime-distribution pressure, dynamic workers, topology-specific scaling, approximation, concurrency/backpressure and degraded platform conditions without implementing benchmarks.
+006-F must revalidate privacy/disclosure/release boundaries, including self-contained text memorization risk, sampled privacy Evidence, mechanism-specific guarantees and external release/use authority, without implementing a privacy mechanism or governance service.
 
 ## Implementation boundary
 
