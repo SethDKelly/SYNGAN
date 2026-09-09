@@ -16,11 +16,13 @@ Canonical facts remain under `docs/authority/`, `docs/concepts/`, `docs/synchron
 
 ### BDR-001 — regressive restore and temporal authority closure
 
-**Status:** semantic/synchronization closure accepted; experience/architecture propagation pending 006-H and 006-I.
+**Status:** semantic/synchronization/experience closure accepted; architecture/planning propagation pending 006-I.
 
 006-B established the canonical [Operational Authority Continuity & Regressive Recovery Contract](../authority/operational-authority-continuity-regressive-recovery-contract.md). 006-C adversarially validated the synchronization consequences without creating `SYNC-16`.
 
-Remaining work is downstream propagation rather than unresolved concept semantics.
+006-H established the canonical [Phase 006 Recovery, Security, Degraded, Historical & Topology Experience Contract](../experience/phase-006-recovery-security-degraded-history-topology-experience-contract.md), including actor/programmatic recovery-restricted state, post-backup historical uncertainty, reconstructed-history disclosure, current-authority versus restored-state distinction and safe next-action semantics.
+
+The remaining BDR-001 work is exclusively downstream architecture/ADR and Phase 005 planning propagation in 006-I. The concept/synchronization/experience semantics are no longer open.
 
 ### BDR-002 — post-planning adversarial end-to-end validation
 
@@ -40,7 +42,7 @@ The current model survived Learning-based, direct, text, composite, time-series,
 
 ### BDR-004 — initial-baseline scope and future-extensibility closure
 
-**Status:** **resolved by 006-G**.
+**Status:** resolved by 006-G.
 
 Canonical authority: [Structured-Data Topology & Relationship Semantics Contract](../authority/structured-data-topology-relationship-semantics-contract.md).
 
@@ -58,13 +60,13 @@ Implementation may be staged and individual Strategies may support subsets, but 
 
 Topology presets may be exposed through future API convenience syntax, but the durable model must permit composition and cannot be reduced to one mutually exclusive enum.
 
-No Phase 006 concept/scope blocker remains open after 006-G. 006-H/006-I still must propagate the accepted design into experience and architecture/planning before 006-J can judge implementation readiness.
+No Phase 006 concept/scope/experience blocker remains open after 006-H. 006-I must now propagate the accepted design into architecture/ADR and Phase 005 planning before 006-J can judge implementation readiness.
 
 ## Baseline scope decisions
 
 ### BSD-001 — relational/multi-table shared-key synthesis
 
-**Status:** **included in the complete baseline capability target by 006-G**.
+**Status:** included in the complete baseline capability target by 006-G.
 
 The baseline covers explicit shared-key relationships and common relational shapes such as one-to-one, one-to-many/many-to-one, composite keys and association tables when supported by the Strategy.
 
@@ -90,7 +92,7 @@ Generation completion and favorable Evidence do not imply release/use approval. 
 
 ### BSD-005 — time-series / temporal-table synthesis
 
-**Status:** **included in the complete baseline capability target by 006-G**.
+**Status:** included in the complete baseline capability target by 006-G.
 
 Time-series must preserve explicit entity/series membership and temporal/order semantics through Data Meaning, temporal validity through Constraints, requested horizon/scope through Generation, and method-specific capability through Strategy.
 
