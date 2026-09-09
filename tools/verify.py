@@ -64,6 +64,21 @@ def verify_fitness() -> None:
     _run([sys.executable, "-m", "pytest", "tests/fitness"])
 
 
+def verify_coverage() -> None:
+    _run(
+        [
+            sys.executable,
+            "-m",
+            "pytest",
+            "tests/unit",
+            "tests/fitness",
+            "--cov=tools",
+            "--cov-report=term-missing",
+            "--cov-report=xml",
+        ]
+    )
+
+
 def verify_all() -> None:
     verify_bootstrap()
     verify_lint()
@@ -77,7 +92,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Run repository-owned SYNGAN verification gates.")
     parser.add_argument(
         "profile",
-        choices=("bootstrap", "lint", "format", "type", "unit", "fitness", "all"),
+        choices=("bootstrap", "lint", "format", "type", "unit", "fitness", "coverage", "all"),
         nargs="?",
         default="all",
     )
@@ -90,6 +105,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         "type": verify_type,
         "unit": verify_unit,
         "fitness": verify_fitness,
+        "coverage": verify_coverage,
         "all": verify_all,
     }
     profiles[args.profile]()
