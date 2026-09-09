@@ -27,6 +27,7 @@ Repository-wide automated-agent rules are in [`AGENTS.md`](AGENTS.md).
 - **Phase 004 — Representation & Architecture Design: complete historical baseline**
 - **Phase 005 — Implementation Planning & Delivery Decomposition: complete as planning only**
 - **Phase 006 — Post-Planning Design Validation & Adversarial Refinement: complete**
+- **Phase 007 — Implementation Authority, Controlled Bootstrap & Evidence-Gated Delivery: subgroup design complete, not active**
 
 No production implementation has begun or been authorized.
 
@@ -96,14 +97,30 @@ ADR-0009 adds non-regressing recovery authority after stale control-state restor
 
 ADR-0010 adds explicit acquisition closure plus distributed runtime closure across every material worker.
 
-## Remaining work
+## Phase 007 logical subgroup design
 
-Known remaining work is primarily implementation/release selection and evidence: concrete algorithms, Spark/runtime packaging and distribution, recovery-frontier realization, provider/runtime versions, persistence/API spelling, security products, benchmarks/SLOs, privacy Evaluation catalog, and publication/name review.
+The planned Phase 007 structure is documented at [`docs/phases/007/index.md`](docs/phases/007/index.md).
 
-Those are no longer classified as design-readiness blockers.
+It intentionally does **not** attempt to implement the entire complete product baseline in the bootstrap phase. The sequence is:
 
-## Recommended next phase
+```text
+007-A  authority lock / slice authorization
+007-B  reproducible toolchain + verification harness
+007-C  source/package topology + architecture fitness
+007-D  identity / serialization / public handle foundation
+007-E  control persistence / CAS / history / migrations
+007-F  distributed data / topology / manifests / promotion
+007-G  runtime binding / dependency trust / security / worker closure
+007-H  Execution / fencing / recovery / cancellation / admission
+007-I  Evidence / Provenance / history / reproducibility / disclosure
+007-J  bounded self-contained single-table Spark-local vertical proof
+007-K  consolidation / evidence audit / next-delivery decision
+```
 
-**Phase 007 — Implementation Authority, Controlled Bootstrap & Evidence-Gated Delivery** is the recommended next phase.
+007-J is deliberately a bounded first vertical proof, not a claim of complete topology breadth or enterprise-scale certification. The shared substrate must already remain compatible with time-series and multi-table topology so later delivery does not have to undo single-table assumptions.
 
-It is not active yet. Its first subgroup must explicitly lock current authority, repository/toolchain/change-control rules, verification gates, and which implementation slices are authorized before production coding begins.
+## Current next step
+
+**007-A — Implementation Authority Lock, Canonical Baseline, Change Control & Slice Authorization** is the proposed next subgroup.
+
+Phase 007 is still **not active**. 007-A must be explicitly entered and complete the authority lock before any production package/source/schema/test/CI implementation is permitted.
