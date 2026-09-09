@@ -8,44 +8,31 @@ status: active
 
 ## Purpose
 
-Consolidate the accepted implementation-planning decisions from 005-A through 005-J into one dependency-aware handoff without converting those plans into production implementation authority.
+Consolidate the implementation-planning decisions produced by 005-A through 005-J into one dependency-aware baseline without converting those plans into production implementation authority.
 
-This contract is downstream of the accepted concepts, synchronizations, Phase 003 experience contract and Phase 004 architecture contract. It is a planning baseline only.
+This remains the **Phase 005 baseline**. Current planning for work affected by Phase 006 MUST also read the [Phase 006 Implementation-Planning Reconciliation](phase-006-implementation-planning-reconciliation.md), which is the current overlay and governs where it explicitly refines this contract.
 
 ## Critical status
 
-**Phase 005 planning is complete, but implementation readiness is not approved.**
+**Phase 005 planning is complete. Production implementation is still not authorized.**
 
-005-K found that the A-J plans are internally coherent enough to preserve as the future implementation baseline, but later planning exposed design questions that require another Jackson-style design/refinement phase before any implementation-authority phase may begin.
+005-K correctly concluded at the time that further design refinement was required. Phase 006 subsequently performed that refinement through 006-I.
 
-The current outcome is:
-
-```text
-FURTHER CONCEPT / SYNCHRONIZATION / EXPERIENCE /
-ARCHITECTURE / PLANNING REFINEMENT REQUIRED
-```
-
-No code, schema, migration, test suite, CI workflow, adapter or deployment infrastructure is authorized by this contract.
-
-## Authority chain
+Current planning authority therefore reads:
 
 ```text
-problem / methodology authority
+Phase 006 upstream authority / experience
         ↓
-accepted concepts + synchronizations
+Phase 006 Architecture Reconciliation
         ↓
-Phase 003 experience contract
-        ↓
-Phase 004 architecture contract
-        ↓
-Phase 005 implementation-planning contract
-        ↓
-Phase 006 design refinement
+THIS Phase 005 baseline where not refined
+        +
+Phase 006 Implementation-Planning Reconciliation where refined
         ↓
 future explicit implementation-authority phase, only if approved
 ```
 
-Phase 006 may revise this implementation-planning baseline where upstream design changes require it. Phase 005 planning never overrides revised upstream authority.
+No code, schema, migration, test suite, CI workflow, adapter or deployment infrastructure is authorized by this contract.
 
 ## Consolidated future topology
 
@@ -63,14 +50,16 @@ domain
 foundation
 ```
 
-The semantic meaning of that diagram remains the 005-C rule: adapters and bootstrap are replaceable realization mechanisms; concept ownership does not collapse into package ownership; `foundation` is not a generic dumping ground.
+This remains a package/dependency structure, not concept ownership.
+
+Phase 006 adds one important planning qualification: structured-data topology itself must remain composable and cannot be hard-coded as one exclusive single-table/time-series/multi-table package mode. `Relationship` remains Data Meaning-owned semantics rather than a standalone package/domain owner.
 
 ## Consolidated future implementation responsibilities
 
 | Planning slice | Future responsibility |
 |---|---|
 | 005-A | implementation authority, change/dependency/toolchain governance, completion evidence |
-| 005-B | V0-V11 verification architecture, AF-01..AF-20 fitness, Q0-Q4 gates |
+| 005-B | V0-V11 verification architecture, architecture fitness and quality gates |
 | 005-C | source/package/test topology, foundational Python/toolchain choices, dependency enforcement |
 | 005-D | ResourceRef/revision/SnapshotId/StateVersion/SchemaVersion model, public handles, control persistence, CAS/outbox/migrations |
 | 005-E | exact SourceStateRef, distributed manifests, candidate/sealed snapshot/output promotion |
@@ -80,177 +69,191 @@ The semantic meaning of that diagram remains the 005-C rule: adapters and bootst
 | 005-I | dependency resolution/trust, offline/no-egress, authorization, scoped capabilities, secrets, redaction/isolation |
 | 005-J | deployment profiles, platform capability negotiation, observability, HA/DR, compatibility/support, scale/performance |
 
+Phase 006-I refines these future responsibilities with recovery-authority continuity, distributed runtime closure, composable topology, privacy/release boundaries, actionability views and historical reconstruction semantics.
+
 ## Cross-slice dependency audit
 
 ### No semantic authority cycle
 
 No 005-A through 005-J plan requires an adapter, platform, persistence technology, runtime library, security mechanism, query projection or telemetry system to redefine an accepted concept.
 
-The primary authority direction remains inward/upstream.
+This remains true after Phase 006 reconciliation.
 
-### Intentional contract interlocks
+### Intentional interlocks
 
-Several slices are mutually informative but not authority cycles:
-
-- **005-E ↔ 005-G:** candidate/data sinks reserve writer-fence authority; Execution owns the actual Attempt epoch/fence.
-- **005-F ↔ 005-G:** runtime invocation shape is defined by the runtime boundary while Attempt identity/authority is supplied by Execution.
+- **005-E ↔ 005-G:** candidate/data sinks reserve writer-fence authority; Execution owns the actual Attempt/recovery authority.
+- **005-F ↔ 005-G:** runtime invocation shape is defined by the runtime boundary while Attempt identity/current authority is supplied by Execution.
 - **005-G ↔ 005-I:** recovery/retry needs current authorization; revocation does not substitute for fencing.
 - **005-H ↔ 005-E/005-G:** Evidence and Provenance bind exact sealed subjects and operational history without owning them.
 - **005-I ↔ 005-J:** security defines required enforcement semantics; deployment reports whether the environment can actually enforce them.
+- **Phase 006 runtime closure ↔ 005-F/005-I/005-J:** exact implementation/dependency identity, trust/authorization and distributed worker realization must agree without one layer silently substituting another.
+- **Phase 006 topology ↔ 005-D/005-E/005-F/005-H:** structural semantics remain Data Meaning-owned while representation/runtime/Evaluation support the same exact logical scope.
 
-These interlocks require contract-first delivery ordering but do not justify merging ownership.
+## Cross-slice invariants retained and refined
 
-## Cross-slice invariants retained
-
-Future implementation must preserve at least the Phase 004 invariants plus the more concrete planning consequences below:
+Future implementation must preserve at least:
 
 1. durable SYNGAN identity never becomes a database key, path, DataFrame, loaded model or platform run ID;
 2. immutable commitment/history never silently resolves to current/latest;
-3. runtime/platform operational success never becomes Learning/Generation/Evaluation semantic completion;
+3. runtime/platform success never becomes Learning/Generation/Evaluation semantic completion;
 4. candidate/checkpoint/runtime material remains non-final until the owning semantic barrier is crossed;
 5. duplicate physical work may occur, but duplicate semantic authority may not;
 6. Attempt liveness and writer authority remain separate; lease expiry is not fencing;
-7. exact Evaluation subject and Evidence completion basis are immutable historical facts;
-8. Evidence claim strength remains bounded by method/coverage/uncertainty/assumptions;
-9. Provenance owns typed relationships, not copied resource state or platform telemetry;
-10. history/query/search projections remain derived and security-filtered;
-11. reproducibility remains a qualified assessment, not a stored Boolean;
-12. dependency availability, exact identity/integrity, trust, compatibility, authorization, network and egress remain separate;
-13. handles are identifiers rather than credentials; bearer secrets remain non-canonical;
-14. runtime capability is no broader than semantic requirement ∩ current authorization ∩ deployment capability;
-15. no supported offline/no-egress path may depend on hidden acquisition, remote fallback or required external telemetry;
-16. enterprise-scale paths do not require complete source/output/Learned-State/diagnostic collection on one driver;
-17. provider/platform support is capability-negotiated and missing guarantees are explicit;
-18. control-plane rollback cannot be treated as restored writer authority without a restore-safe fencing/reconciliation boundary.
+7. potentially regressive control-state restore cannot resurrect stale writer/cancellation/security authority;
+8. fresh non-regressing recovery authority is required before write-capable continuation after possible regression;
+9. exact Evaluation subject and Evidence completion basis are immutable historical facts;
+10. Evidence claim strength remains bounded by method/coverage/uncertainty/assumptions;
+11. privacy/disclosure Evidence is not a formal privacy guarantee or release approval;
+12. Provenance owns typed relationships, not copied resource state or platform telemetry;
+13. history/query/search projections remain derived and security-filtered;
+14. reconstructed/partial/unknown/unavailable history remains distinguishable from directly retained fact;
+15. reproducibility remains a qualified assessment, not a stored Boolean;
+16. dependency availability, exact identity/integrity, trust, compatibility, authorization, network and egress remain separate;
+17. handles are identifiers rather than credentials; bearer secrets remain non-canonical;
+18. runtime capability is no broader than semantic requirement ∩ current authorization ∩ deployment capability;
+19. no supported offline/no-egress path may depend on hidden acquisition, remote fallback or required external telemetry;
+20. driver/coordinator readiness does not establish distributed worker runtime closure;
+21. every material worker role must satisfy exact compatible implementation/runtime/artifact closure;
+22. large Learned State/model distribution cannot universally require driver-local loading/broadcast;
+23. enterprise-scale paths do not require complete source/output/Learned-State/diagnostic collection on one driver;
+24. resource pressure cannot silently reduce quantity, horizon, topology scope, Evaluation coverage, Constraint strength or security posture;
+25. provider/platform support is capability-negotiated and missing guarantees are explicit;
+26. structured-data representation remains capable of single-table, time-series, multi-table shared-key and composite topology;
+27. topology convenience syntax cannot replace exact Data Meaning/Generation/Constraint semantics;
+28. whole logical output completion covers all mandatory coordinated scopes;
+29. programmatic/human surfaces preserve actionability/recovery/disclosure/history distinctions rather than one universal status/error.
 
-## Provisional future delivery sequence
+## Reconciled future delivery sequence
 
-This sequence is **not authorized for execution yet**. It is the dependency-safe starting point for a later implementation-authority phase if Phase 006 closes successfully.
+This sequence remains **not authorized for execution**.
 
-### Wave 0 — repository and verification bootstrap
+### Wave 0 — governance / verification / architecture fitness
 
-Realize 005-A through 005-C governance/toolchain/test architecture first so subsequent code is constrained from its first commit.
+Realize governance/toolchain/test architecture first if a later implementation-authority phase approves coding.
 
-### Wave 1 — identity/control substrate
+Phase 006 adds architecture-fitness obligations for regressive restore, runtime-distribution closure, topology preservation, lossless backpressure, privacy/release boundaries, historical reconstruction and typed actionability.
 
-Implement 005-D foundation/domain/public reference types, serialization, persistence ports and transactional control-store baseline before downstream slices invent parallel identity/state systems.
+### Wave 1 — identity / control / historical substrate
 
-### Wave 2 — exact distributed data boundary
+Implement durable identity, exact revision/commitment state, concurrency control, outbox/migrations, historical references and the recovery-authority/history-quality substrate before downstream slices invent parallel state.
 
-Implement 005-E source-state, manifest, candidate/sealed-snapshot and promotion contracts against the Wave 1 identity/control substrate.
+### Wave 2 — exact distributed data + topology substrate
 
-### Wave 3 — runtime/Execution contract foundation
+Implement source-state, composite/multi-scope manifests, candidate/sealed-snapshot and promotion contracts capable of single-table, time-series, multi-table shared-key and composite subjects.
 
-Implement the contract portions of 005-F and 005-G together in dependency-safe order:
+### Wave 3 — runtime + Execution + fencing + recovery authority
+
+Implement contract portions of runtime binding and Execution together in dependency-safe order:
 
 ```text
-binding/SPI/invocation value contracts
+binding/SPI/invocation contracts
         ↓
-Execution/Attempt identity + authority
+Execution/Attempt identity
         ↓
-WriterFence / runtime invocation composition
+writer fence + fresh recovery-authority frontier
         ↓
-checkpoint/recovery/cancellation contracts
+checkpoint/recovery/cancellation
         ↓
 concrete runtime adapters later
 ```
 
-This avoids a circular implementation where runtime needs Attempt authority while Execution depends on an already-concrete runtime.
+### Wave 4 — dependency / security / runtime-distribution closure
 
-### Wave 4 — dependency/security capability boundary
+Implement dependency resolution, trust/authorization, secret/capability boundaries and distributed-worker closure before protected data is exposed to optional runtime extensions.
 
-Implement 005-I dependency resolution, authorization, secret and capability ports before executing untrusted/optional runtime extensions against protected data.
+### Wave 5 — complete-baseline vertical slices
 
-### Wave 5 — minimum reference capability vertical slice
+The original 005-K blocker on representative Strategy/topology design has been resolved by Phase 006-D/G.
 
-**Currently blocked pending Phase 006 design refinement.**
+A later authorized implementation must eventually provide at least one supported self-contained Strategy path for each:
 
-A later implementation needs at least one Learning-based synthesis Strategy, one direct/simple Strategy or equivalent contrasting path, and representative Evaluation methods to prove the generic contracts end-to-end without allowing one algorithm family to define semantics.
+```text
+single-table
+time-series
+multi-table shared-key
+```
 
-Phase 006 must design and validate those reference probes before this wave is authorized.
+and the supported baseline includes a source-derived/local free-form-text-capable path with no required pretrained model-hub/runtime-service dependency.
 
-### Wave 6 — Evidence/history/reproducibility
+These capabilities may be implemented in stages and may use materially different Strategy families. No algorithm becomes framework semantics.
 
-Implement 005-H against exact activities/results/Attempts/security facts, including idempotent Evidence establishment and canonical typed Provenance.
+### Wave 6 — Evidence / history / reproducibility / privacy-disclosure
 
-### Wave 7 — platform/deployment adapters
+Implement owner-established Evidence, typed Provenance, bounded history/query, reconstructed-history semantics, qualified reproducibility and privacy/disclosure Evaluation support.
 
-Implement 005-J portable Spark and selected managed/private profiles only after the portable contracts and security/fencing behavior are executable and testable.
+Formal composable DP remains outside the baseline and requires new concept discovery before any future implementation planning.
+
+### Wave 7 — platform/deployment/runtime-distribution adapters
+
+Implement portable Spark and selected managed/private profiles only after portable contracts/security/fencing/runtime-closure behavior are executable and testable.
 
 ### Wave 8 — hardening and release certification
 
-Execute cross-profile V9-V11, support/compatibility matrices, scale benchmarks, HA/DR tests, migration/rolling-upgrade tests and release evidence.
+Execute cross-profile security, HA/DR, regressive-restore, runtime-distribution, compatibility, topology, scale, migration/rolling-upgrade and release evidence.
 
-## Implementation-readiness blockers discovered by 005-K
+## 005-K blockers — current disposition after Phase 006-I
 
-### BLOCK-01 — regressive restore / temporal authority requires upstream closure
+### BLOCK-01 — regressive restore / temporal authority
 
-005-J correctly identified a failure mode not explicitly closed by the Phase 003/004 contracts:
+**Resolved through 006-I.**
 
-```text
-backup at T1
-Attempt/fence authority changes after T1
-external work remains alive
-control state restored to T1
-```
+- semantic contract: 006-B;
+- synchronization validation: 006-C;
+- experience: 006-H;
+- architecture/ADR/planning: 006-I / ADR-0009.
 
-A restored older authority projection can make stale work appear current unless a non-regressing recovery boundary exists.
+### BLOCK-02 — post-planning adversarial validation
 
-005-J's planned recovery quarantine plus fresh `ControlPlaneIncarnation`/equivalent mechanism is a credible realization, but the observable recovery semantics cross Execution, security, history, deployment and operator experience. Phase 006 must validate/promote the required invariant to the appropriate upstream authority rather than leaving the rule only in implementation planning.
+**Resolved by 006-C**, with topology-sensitive replay in 006-G. 006-J must replay materially affected scenarios as an exit verification against the reconciled architecture, not because the original blocker remains open.
 
-### BLOCK-02 — post-planning adversarial end-to-end validation is incomplete
+### BLOCK-03 — representative Strategy/method probes
 
-Phase 004-J audited architecture before the concrete 005-A through 005-J plans existed. The plans introduce more precise seams—finding slots, HistoricalRef, runtime bindings, WriterFence composition, security capabilities, deployment compatibility, restore quarantine—that now require a new integrated scenario audit.
+**Resolved by 006-D.**
 
-Phase 006 must exercise complete Learning/Generation/Evaluation flows under failure, retry, cancellation, revocation, projection outage, retention loss, mixed versions, platform fallback and disaster recovery and determine whether any hidden concept/synchronization/experience gap remains.
+The architecture survived Learning-based, direct, text, topology, Evaluation, large-state and distributed-runtime probes. ADR-0010 and the Phase 006 planning overlay preserve the resulting constraints.
 
-### BLOCK-03 — representative Strategy/method design probes are missing
+### BLOCK-04 — baseline scope/future extensibility
 
-The framework's extension/runtime architecture is intentionally model-neutral, but the current baseline has not yet been stress-tested against a concrete minimum capability set.
+**Resolved by 006-F/006-G.**
 
-Before implementing infrastructure at scale, Phase 006 must perform design probes with materially different strategy shapes—for example a Learning-based deep generative strategy, a simpler/direct generation path, and representative large-scale Evaluation methods—and confirm that the accepted concepts, operational principles, runtime boundaries, state representation, checkpoint/recovery and scale contracts remain generic.
-
-This is a design/feasibility probe, not permission to implement CTGAN or any other model during Phase 006.
-
-### BLOCK-04 — deferred scope edges need explicit baseline closure
-
-Phase 002/004 intentionally deferred:
-
-- relational/multi-table synthesis and Relationship semantics;
-- mechanism-specific formal privacy concepts/guarantees;
-- external use/release governance;
-- broader Strategy/Evaluation method catalog.
-
-They do not automatically belong in the initial baseline. However, Phase 006 must explicitly confirm the initial scope and verify that current contracts do not accidentally encode permanent single-table, no-formal-privacy, or one-method assumptions that would contradict the stated future extensibility.
+- complete structured-data baseline target = single-table + time-series + multi-table shared-key;
+- formal DP deferred behind future concept discovery;
+- release/use governance remains external;
+- broader Strategy/Evaluation catalog remains later delivery work.
 
 ## Non-blocking implementation/publication debt
 
-The following do not currently require concept redesign but remain governed backlog items:
+Still deferred:
 
 - strict external OKF 0.2 reserved-file/frontmatter normalization;
-- external package/name collision and ecosystem review before publication;
-- exact cloud/Databricks/runtime API/version selections;
-- exact production IAM/secret/network/KMS/DLP products;
-- benchmark thresholds and support claims, which require implementation evidence rather than design assertion;
-- exact SLO/SLA and capacity policy;
-- broader provider/Strategy/Evaluation catalog after the minimum reference capability is proven.
+- public package/name collision/ecosystem review before publication;
+- exact Spark/Python/PyTorch/Databricks/runtime versions;
+- exact package/runtime distribution mechanism;
+- exact topology algorithms;
+- exact IAM/secret/network/KMS/DLP products;
+- exact benchmark thresholds, SLO/SLA and capacity policy;
+- exact privacy/disclosure attack catalog;
+- exact SDK/REST result/error spelling;
+- exact non-regressing recovery mechanism/product.
 
-## Phase 005 readiness verdict
+## Current readiness
 
 ### Planning completeness
 
-**PASS.** A-J provide a coherent, traceable future implementation decomposition.
+**Phase 005 baseline plus Phase 006-I reconciliation: coherent and complete enough for final design-readiness audit.**
 
-### Production implementation readiness
+### Production implementation authorization
 
-**NOT YET APPROVED.** The blockers above require deliberate Phase 006 design refinement.
+**NOT APPROVED.**
 
-### Jackson-methodology conclusion
+006-J must still replay affected scenarios/probes and perform the residual design-debt audit.
 
-The existing concept catalog is strong and has satisfied the repository's original concept-design handoff criteria for the current structured/tabular scope. Jackson's methodology does not prescribe a magic number of phases. However, later representation/implementation planning has produced new feasibility and temporal-authority evidence. Under the methodology's own rule that later layers may expose the need for explicit upstream revision, that evidence must be resolved before coding.
+Even a positive 006-J result only permits creation of a later explicit implementation-authority phase.
 
-## Next authority
+## Current next authority
 
-[Phase 006 — Post-Planning Design Validation & Adversarial Refinement](../phases/006/index.md) is the next phase.
+[Phase 006 — Post-Planning Design Validation & Adversarial Refinement](../phases/006/index.md)
 
-Phase 006 remains design-only. No production implementation is authorized until a later explicit implementation-authority phase is created after a positive design-readiness exit.
+Current next group:
+
+**006-J — Phase 006 Consolidation, Residual Design-Debt Audit & Implementation-Authority Readiness Decision**.
