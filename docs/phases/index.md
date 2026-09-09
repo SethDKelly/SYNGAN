@@ -28,7 +28,7 @@ See [Phase 005 index](005/index.md). Current planning is refined by Phase 006 im
 
 ## Phase 006 — Post-Planning Design Validation & Adversarial Refinement — complete
 
-See [Phase 006 index](006/index.md). The final decision was that design is complete enough for a later explicit implementation-authority phase.
+See [Phase 006 index](006/index.md). The final decision was that design was complete enough for an explicit implementation-authority phase.
 
 ## Phase 007 — Implementation Authority, Controlled Bootstrap & Evidence-Gated Delivery — active
 
@@ -39,11 +39,12 @@ Current state:
 ```text
 007-A  complete — implementation authority lock
 007-B  complete — reproducible repository/toolchain/verification bootstrap
-007-C  not authorized — next eligible subgroup
-007-D..007-K  not authorized
+007-C  complete — source/package topology + architecture fitness
+007-D  not authorized — next eligible subgroup
+007-E..007-K  not authorized
 ```
 
-007-B established committed Python/tool metadata, `uv.lock`, stable repository verification commands, bootstrap/fitness tests, default portable-core socket denial and a read-only GitHub Actions Verify workflow. It did not create `src/syngan/` or substantive production behavior.
+007-C established the first `src/syngan` package topology, installed-project verification, executable Import Linter dependency contracts, typed-package marker and non-publishing wheel/sdist smoke verification. It was reviewed through PR #1 and passed the permanent Verify workflow on the exact reviewed head before merge.
 
 ## Implementation boundary
 
@@ -53,4 +54,4 @@ Every later subgroup requires prior evidence plus an explicit proceed decision. 
 
 ## Current next boundary
 
-**007-C — Source/Package Topology, Dependency Direction & Architecture-Fitness Enforcement** is next eligible but **not yet authorized**.
+**007-D — Identity, Revision, Serialization, Typed Public Resource/Handle & Programmatic-View Foundation** is next eligible but **not yet authorized**.
