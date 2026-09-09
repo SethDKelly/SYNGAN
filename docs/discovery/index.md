@@ -22,12 +22,13 @@ Phase 006 reopens discovery only where Phase 005 implementation planning or new 
 
 Current evidence:
 
-- [Post-Planning Concept Revalidation & Structured-Data Topology Candidates](post-planning-concept-revalidation-structured-topology-candidates.md) — 006-A mechanism-vs-concept audit plus single-table/time-series/multi-table capability analysis. It reopens `Relationship` as a **candidate**, not an accepted concept.
-- [Temporal Authority, Regressive Recovery & Historical-Truth Revalidation](temporal-authority-regressive-recovery-revalidation.md) — 006-B alternatives/falsification evidence that led to the canonical Operational Authority Continuity contract.
+- [Post-Planning Concept Revalidation & Structured-Data Topology Candidates](post-planning-concept-revalidation-structured-topology-candidates.md) — 006-A mechanism-vs-concept audit plus single-table/time-series/multi-table capability analysis. It reopened `Relationship` provisionally.
+- [Temporal Authority, Regressive Recovery & Historical-Truth Revalidation](temporal-authority-regressive-recovery-revalidation.md) — 006-B evidence leading to Operational Authority Continuity.
 - [End-to-End Scenario, Exception, Failure & Adversarial Synchronization Validation](end-to-end-adversarial-synchronization-validation.md) — 006-C twenty-four-scenario falsification pass over SYNC-01 through SYNC-15.
-- [Reference Strategy/Method, Text & Distributed-Runtime Falsification Probes](reference-strategy-method-topology-text-distribution-probes.md) — 006-D algorithm/topology/text/large-state/Spark-distribution probes that led to the Self-Contained Execution & Runtime Distribution Closure contract.
-- [Enterprise Scale, Resource/Approximation, Backpressure & Degraded-Mode Validation](enterprise-scale-resource-approximation-backpressure-degraded-mode-validation.md) — 006-E scale/resource/degraded-operation falsification evidence that rejected generic Resource/Backpressure/Approximation/DegradedMode concepts.
-- [Privacy, Disclosure, Release Governance & Mechanism-Specific Scope Validation](privacy-disclosure-release-governance-mechanism-specific-scope-validation.md) — 006-F privacy/disclosure/formal-guarantee/release-boundary evidence. It retained generic Privacy as rejected, kept release/use governance external, and established a future mechanism-specific concept-discovery gate for composable DP/formal privacy mechanisms.
+- [Reference Strategy/Method, Text & Distributed-Runtime Falsification Probes](reference-strategy-method-topology-text-distribution-probes.md) — 006-D algorithm/topology/text/large-state/Spark-distribution probes leading to Self-Contained Execution & Runtime Distribution Closure.
+- [Enterprise Scale, Resource/Approximation, Backpressure & Degraded-Mode Validation](enterprise-scale-resource-approximation-backpressure-degraded-mode-validation.md) — 006-E scale/resource/degraded-operation evidence rejecting generic Resource/Backpressure/Approximation/DegradedMode concepts.
+- [Privacy, Disclosure, Release Governance & Mechanism-Specific Scope Validation](privacy-disclosure-release-governance-mechanism-specific-scope-validation.md) — 006-F privacy/disclosure/formal-guarantee/release evidence retaining generic Privacy as rejected and establishing a future DP concept-discovery gate.
+- [Structured-Data Topology & Relationship Concept/Extensibility Audit](structured-data-topology-relationship-concept-extensibility-audit.md) — 006-G deliberate rediscovery of Relationship and topology scope. It rejected standalone Relationship, subordinated structural relationship semantics to Data Meaning, and set the complete baseline target to single-table + time-series + multi-table shared-key generation.
 
 See [Phase 006](../phases/006/index.md) for the active design-refinement sequence.
 
@@ -41,7 +42,7 @@ The following documents supplied the direct evidence for the original accepted c
 - [Candidate Synchronization Specification](synchronization-specification.md)
 - [Composition, Coupling & Dependency Risk Review](composition-risk-review.md)
 
-The original candidates promoted to accepted concepts were:
+The accepted concepts remain:
 
 1. Data Meaning
 2. Synthesis Strategy
@@ -55,7 +56,7 @@ The original candidates promoted to accepted concepts were:
 10. Execution
 11. Provenance
 
-See [docs/concepts](../concepts/index.md) for current canonical definitions.
+See [docs/concepts](../concepts/index.md) for current canonical definitions/dispositions.
 
 ## Historical subordinate/reclassified results
 
@@ -64,32 +65,15 @@ See [docs/concepts](../concepts/index.md) for current canonical definitions.
 - Attempt → Execution-owned history;
 - stable dataset/artifact references → representation/integration obligation;
 - reproducibility → cross-cutting contract;
-- generic Privacy → rejected; 006-F reaffirms mechanism-specific concept discovery when independently meaningful formal privacy state/actions enter scope;
-- Relationship → originally deferred relational edge; reopened provisionally in Phase 006-A and still pending 006-G;
-- Use / Release Decision → external authority; reaffirmed by 006-F;
+- generic Privacy → rejected; formal mechanism-specific discovery required when independent accounting state enters scope;
+- **Relationship → originally deferred, reopened by 006-A, resolved by 006-G as Data Meaning-owned structural relationship semantics rather than a standalone concept**;
+- Use / Release Decision → external authority;
 - Source Characterization/Profile → supporting observation/method;
 - Text / Language Model / Tokenizer / Composite Strategy / Runtime Distribution → rejected as standalone concepts by 006-D;
 - Resource / Backpressure / Approximation / DegradedMode / Cost / Quota → rejected as current standalone concepts by 006-E;
-- Disclosure Risk / Memorization / Redaction Decision → rejected as standalone concepts by 006-F; handled through existing Evaluation/Evidence/security boundaries.
-
-## Earlier discovery layers
-
-### Phase 001-E / 001-F
-
-- [Concept Review Criteria](concept-review-criteria.md)
-- [Candidate Disposition Review](candidate-disposition-review.md)
-- [Reduced Candidate Set](reduced-candidate-set.md)
-- [Completeness, Independence & Genericity Review](completeness-genericity-review.md)
-
-### Phase 001-D
-
-- [Candidate Concept Catalog](candidate-concept-catalog.md)
-- [Boundary Hypotheses](boundary-hypotheses.md)
-- [Synchronization Hypotheses](synchronization-hypotheses.md)
-- [Purpose / Outcome Coverage](purpose-outcome-coverage.md)
-
-These remain design provenance, not active concept authority.
+- Disclosure Risk / Memorization / Redaction Decision → rejected as standalone concepts by 006-F;
+- TimeSeries / Series / Sequence / Table / DataTopology → rejected as standalone concepts by 006-G; topology semantics remain distributed across Data Meaning, Generation, Constraint and Strategy ownership.
 
 ## Representation boundary
 
-Nothing in this directory directly defines Python classes, package modules, Spark jobs, PyTorch objects, function signatures, file formats, storage schemes, event architectures, transaction mechanisms, plugin architectures, privacy accountants, release-governance engines or package-distribution mechanisms.
+Nothing in this directory directly defines Python classes, package modules, Spark jobs, PyTorch objects, function signatures, file formats, storage schemes, event architectures, transaction mechanisms, plugin architectures, privacy accountants, topology schemas, release-governance engines or package-distribution mechanisms.
