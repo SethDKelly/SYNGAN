@@ -30,8 +30,8 @@ jobs:
       - name: Verify lockfile is current
         run: uv lock --check
 
-      - name: Provision locked verification environment
-        run: uv sync --all-groups --no-install-project --locked
+      - name: Provision locked environment and install SYNGAN
+        run: uv sync --all-groups --locked --no-build-isolation
 
       - name: Run repository verification gates
         run: uv run --no-sync python tools/verify.py all
