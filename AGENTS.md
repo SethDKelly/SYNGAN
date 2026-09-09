@@ -17,13 +17,14 @@ For material work:
 1. read `docs/index.md`;
 2. read `docs/authority/design-methodology.md` for methodology-sensitive work;
 3. for recovery/HA/current-authority work, read `docs/authority/operational-authority-continuity-regressive-recovery-contract.md`;
-4. read `docs/synchronizations/core-synchronizations.md` for cross-concept coordination—the 006-C refinements are canonical;
-5. read `docs/architecture/phase-004-consolidated-architecture-contract.md`;
-6. read `docs/implementation/phase-005-consolidated-implementation-planning-contract.md`;
-7. read the active Phase 006 record/index and only the detailed 005 plan affected by the design question;
-8. follow only directly relevant concept/synchronization/experience/architecture authority;
-9. use ADRs for rationale/history rather than as replacement for current canonical authority;
-10. consult `docs/backlog/index.md` for blocker/deferred classification, not as canonical design truth.
+4. for runtime packaging, text/self-contained behavior, Spark executor/runtime availability or model/artifact distribution, read `docs/authority/self-contained-execution-runtime-distribution-closure-contract.md`;
+5. read `docs/synchronizations/core-synchronizations.md` for cross-concept coordination—the 006-C refinements are canonical;
+6. read `docs/architecture/phase-004-consolidated-architecture-contract.md`;
+7. read `docs/implementation/phase-005-consolidated-implementation-planning-contract.md`;
+8. read the active Phase 006 record/index and only the detailed 005 plan affected by the design question;
+9. follow only directly relevant concept/synchronization/experience/architecture authority;
+10. use ADRs for rationale/history rather than as replacement for current canonical authority;
+11. consult `docs/backlog/index.md` for blocker/deferred classification, not as canonical design truth.
 
 Do not load or copy the entire documentation corpus by default.
 
@@ -47,11 +48,12 @@ Completed:
 
 - **006-A** — post-planning concept/mechanism/scope revalidation;
 - **006-B** — temporal authority/regressive-recovery/historical-truth refinement;
-- **006-C** — end-to-end adversarial synchronization validation.
+- **006-C** — end-to-end adversarial synchronization validation;
+- **006-D** — representative Strategy/method/text/topology/runtime-distribution probes.
 
 Current next:
 
-**006-D — Reference Strategy/Method and Topology Design Probes & Algorithm-Neutrality Stress Test**.
+**006-E — Enterprise Scale, Resource/Approximation, Backpressure & Degraded-Mode Design Validation**.
 
 Current design counts remain:
 
@@ -96,26 +98,40 @@ Agents MUST preserve:
 - reconstruction of missing canonical history is owner-gated and auditable;
 - unresolved continuity/history gaps constrain the strongest reproducibility/comparison claim rather than rewriting historical commitments.
 
-BDR-002 is resolved for the current eleven-concept/fifteen-sync baseline. If 006-G later accepts `Relationship` or changes coordination materially, replay the affected scenarios before 006-J readiness approval.
+BDR-002 is resolved for the current eleven-concept/fifteen-sync baseline. If 006-G later accepts `Relationship` or changes coordination materially, replay affected scenarios before 006-J readiness approval.
+
+## 006-D self-contained/runtime-distribution rules
+
+The active Self-Contained Execution & Runtime Distribution Closure contract is non-negotiable.
+
+Agents MUST preserve:
+
+- the supported baseline includes at least one source-derived/local free-form-text synthesis path that requires no externally acquired pretrained model or runtime network service;
+- Hugging Face/model hubs/LLM APIs/remote inference are optional integrations, never hidden baseline requirements or automatic fallbacks;
+- a locally provisioned pretrained model/tokenizer is a distinct local-artifact-dependent capability, not package-only self-containment;
+- `Text`, `LanguageModel`, `Tokenizer`, `CompositeStrategy`, `RuntimeEnvironment` and `Distribution` are not accepted standalone concepts merely because implementations have corresponding objects;
+- one top-level Strategy implementation binding may resolve multiple exact implementation/runtime/model/tokenizer/codec components;
+- material component choice cannot silently change during runtime;
+- driver import/discovery success is **not** proof that Spark executors can execute the same binding;
+- every worker that may execute material code, including dynamically allocated workers, must inherit/prove a compatible exact runtime closure;
+- missing worker code/dependencies/artifacts MUST NOT trigger undeclared public-network installation/download during an Attempt;
+- large Learned State/model artifacts MUST NOT require universal driver-local loading or broadcast; scalable distributed/provider-native loading must remain possible;
+- implementation/artifact presence does not override current trust/authorization policy;
+- platform support must report a distribution capability gap as limited/incompatible/indeterminate rather than silently weakening behavior.
+
+BDR-003 is resolved by 006-D. If 006-G/006-I materially changes Strategy/topology/runtime architecture, replay affected probes before 006-J readiness approval.
 
 ## Phase 006 design rules
 
-Remaining blocking questions are concentrated in:
-
-```text
-BDR-003  representative Strategy/method/topology design probes
-BDR-004  initial-scope / future-extensibility closure
-```
-
-BDR-001 has semantic/synchronization closure with experience/architecture propagation pending 006-H/006-I.
+The remaining blocking scope question is concentrated in BDR-004 — initial-scope/future-extensibility closure. BDR-001 still requires experience/architecture propagation through 006-H/006-I.
 
 Agents MUST:
 
 - judge candidate concepts by purpose, independent state/actions, operational principle and genericity—not by whether a persistent record/class would be convenient;
-- treat `ControlPlaneIncarnation`, `HistoricalRef`, finding slots, completion basis, capability grants, deployment profiles, support claims and similar structures as mechanisms/hypotheses unless concept review proves otherwise;
+- treat `ControlPlaneIncarnation`, `HistoricalRef`, finding slots, completion basis, capability grants, runtime-distribution manifests, deployment profiles, support claims and similar structures as mechanisms/hypotheses unless concept review proves otherwise;
 - preserve the eleven concepts/fifteen synchronizations unless explicit Phase 006 evidence justifies revision;
 - use representative synthesis/evaluation methods as design probes, never as semantic templates;
-- keep CTGAN/PyTorch/Spark/Databricks/provider behavior downstream of concept authority;
+- keep CTGAN/PyTorch/Hugging Face/Spark/Databricks/provider behavior downstream of concept authority;
 - preserve deliberate initial-scope exclusions without hard-coding them as permanent impossibilities;
 - promote material changes to concept/synchronization/experience/architecture authority explicitly before back-propagating them into Phase 005 planning.
 
@@ -133,24 +149,25 @@ A future API `mode`/parameter may select a capability profile, but that paramete
 
 `Relationship` is reopened only as a candidate pending 006-G. Do not treat it as accepted concept authority before that decision.
 
-## 006-D probe discipline
+## 006-E scale/degraded-mode discipline
 
-006-D is **design probing, not algorithm implementation**.
+006-E is design validation, not benchmark implementation.
 
-Agents may analyze concrete method shapes such as CTGAN-like Learning, direct/statistical generation, sequence/time-series synthesis, multi-table relational synthesis, deterministic validation, and statistical/approximate Evaluation only to test whether existing concepts/contracts remain generic.
+Agents must challenge the design across rows/bytes/width/cardinality/skew/partitions, large/sharded state, text/model/runtime-distribution pressure, dynamic workers, multi-table fan-out, time-series entity/horizon scale, Evaluation approximation, concurrent workloads, backpressure/admission and degraded dependencies/platform services.
 
 Do not:
 
-- create model/runtime source code;
-- select one probe as canonical SYNGAN behavior;
-- infer a concept merely because one library exposes a class/object for it;
-- hide full-corpus driver collection, centralized model-state assumptions, or algorithm-specific checkpoint semantics behind generic SPI names;
-- assume all Strategies require Learning/Learned State;
-- assume one file/object is the universal Learned-State representation.
+- claim enterprise scale from row count alone;
+- hide source-size-proportional driver/coordinator stages;
+- solve cluster artifact pressure with universal driver broadcast;
+- let approximation/sampling silently strengthen Evidence claims;
+- let backpressure drop canonical transitions/outbox/security obligations;
+- map degraded/unknown capability to success merely to keep work running;
+- turn resource scarcity into a semantic change or hidden Strategy fallback.
 
 ## Frozen implementation-planning baseline
 
-Until Phase 006 changes upstream authority and 006-I deliberately back-propagates it, preserve the Phase 005 planning baseline rather than rewriting it ad hoc.
+Until 006-I deliberately back-propagates accepted Phase 006 authority, preserve the Phase 005 planning baseline rather than rewriting it ad hoc.
 
 Key constraints include:
 
@@ -198,4 +215,4 @@ Backlog items close only after the canonical owner reflects the accepted resolut
 
 ## Current next group
 
-**006-D — Reference Strategy/Method and Topology Design Probes & Algorithm-Neutrality Stress Test**
+**006-E — Enterprise Scale, Resource/Approximation, Backpressure & Degraded-Mode Design Validation**
