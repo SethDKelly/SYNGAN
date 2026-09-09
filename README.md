@@ -14,6 +14,7 @@ Primary authority:
 - [`Phase 004 Consolidated Architecture Contract`](docs/architecture/phase-004-consolidated-architecture-contract.md)
 - [`Phase 005 Consolidated Implementation-Planning Contract`](docs/implementation/phase-005-consolidated-implementation-planning-contract.md)
 - [`Operational Authority Continuity & Regressive Recovery Contract`](docs/authority/operational-authority-continuity-regressive-recovery-contract.md)
+- [`Self-Contained Execution & Runtime Distribution Closure Contract`](docs/authority/self-contained-execution-runtime-distribution-closure-contract.md)
 - [`Core Synchronizations`](docs/synchronizations/core-synchronizations.md)
 - [`Phase 006`](docs/phases/006/index.md) for current post-planning design refinement
 
@@ -56,24 +57,50 @@ Potentially regressive recovery therefore enters continuity-unverified/recovery-
 
 ### 006-C — complete
 
-006-C replayed the design against twenty-four normal/adversarial scenarios including ambiguous launch, stale writers, cancellation races, current-policy/dependency change, mixed versions, regressive restore, repeated Evaluation work, partial multi-table output and interrupted time-series continuation.
-
-Result:
+006-C replayed the design against twenty-four normal/adversarial scenarios and returned:
 
 ```text
 PASS WITH TARGETED SYNCHRONIZATION REFINEMENT
 ```
 
-The synchronization count remains **15**; no `SYNC-16` is currently justified.
+The synchronization count remains **15**; no `SYNC-16` is currently justified. SYNC-04 / 07 / 08 / 11 / 14 / 15 were refined.
 
-Canonical refinements were made to:
+### 006-D — complete
 
-- SYNC-04 / 07 / 11 — current continuation qualification and restore-safe authority continuity;
-- SYNC-08 — coordinated logical-output completion applies to the whole committed scope;
-- SYNC-14 — rollback/history reconstruction truthfulness;
-- SYNC-15 — continuity gaps constrain reproducibility claims.
+006-D stress-tested the model/runtime design against:
 
-BDR-002 is resolved for the current eleven-concept/fifteen-synchronization baseline. If a later Phase 006 group accepts `Relationship` or materially changes coordination, affected scenarios must be replayed before the final readiness exit.
+- CTGAN-like Learning-based synthesis;
+- direct Generation;
+- self-contained, locally pretrained and runtime-network text generation;
+- mixed-field/composite Strategy behavior;
+- time-series and multi-table shared-key Strategy shapes;
+- deterministic/bounded and statistical/approximate Evaluation;
+- large/sharded Learned State;
+- Spark cluster package/runtime distribution.
+
+Result:
+
+```text
+PASS WITH TARGETED CROSS-CUTTING REFINEMENT
+```
+
+006-D established the [`Self-Contained Execution & Runtime Distribution Closure Contract`](docs/authority/self-contained-execution-runtime-distribution-closure-contract.md).
+
+The supported baseline must now include at least one **source-derived/local free-form-text synthesis path** that does not require a pretrained model artifact, Hugging Face/model-hub lookup, hosted inference API, or first-use remote download.
+
+Richer pretrained/world-knowledge text remains optional and explicit: it may use locally provisioned artifacts or a declared runtime-network Strategy, but neither may become a hidden baseline fallback.
+
+For distributed Spark execution:
+
+```text
+driver can import/resolve SYNGAN
+        !=
+all executors are runtime-compatible
+```
+
+Every material worker—including dynamically allocated workers—must satisfy the exact compatible executable/artifact closure before running the Attempt. Missing worker dependencies must not trigger undeclared network repair. Large model/Learned-State distribution cannot universally depend on loading/broadcasting the whole state from the driver.
+
+BDR-003 is resolved.
 
 ## Structured-data capability direction
 
@@ -89,8 +116,7 @@ A future API may expose these through a parameter or typed specification, but se
 
 ## Remaining Phase 006 groups
 
-- **006-D — Reference Strategy/Method and Topology Design Probes & Algorithm-Neutrality Stress Test — next**
-- 006-E — Enterprise Scale, Resource/Approximation, Backpressure & Degraded-Mode Design Validation
+- **006-E — Enterprise Scale, Resource/Approximation, Backpressure & Degraded-Mode Design Validation — next**
 - 006-F — Privacy, Disclosure, Release-Governance Boundary & Mechanism-Specific Scope Decision
 - 006-G — Structured-Data Topology: Single-Table, Time-Series & Multi-Table Relationship Concept/Extensibility Audit
 - 006-H — Human/Programmatic Experience Closure for Recovery, Security, Degraded & Historical Workflows
@@ -101,4 +127,4 @@ Jackson-style completeness is judged by design evidence, not by a fixed number o
 
 ## Current next group
 
-**006-D — Reference Strategy/Method and Topology Design Probes & Algorithm-Neutrality Stress Test**
+**006-E — Enterprise Scale, Resource/Approximation, Backpressure & Degraded-Mode Design Validation**
