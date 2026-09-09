@@ -20,7 +20,7 @@ Read only the layers needed for the task:
 5. [Implementation Planning](implementation/index.md) — begin with the Phase 006 Implementation-Planning Reconciliation.
 6. [ADRs](decisions/index.md) for rationale/history.
 7. [Backlog](backlog/index.md) for non-authoritative deferred implementation/release work.
-8. [Phases](phases/index.md) for execution history.
+8. [Phases](phases/index.md) for execution history and planned Phase 007 subgroup authority.
 
 ## Authority rule
 
@@ -30,7 +30,8 @@ authority
   > experience
   > architecture
   > implementation planning
-  > future code / deployment
+  > future implementation authority
+  > code / deployment
   > ADR rationale / phase history / backlog / examples
 ```
 
@@ -93,7 +94,9 @@ Phase 006 Implementation-Planning Reconciliation
         ↓
 Phase 005 planning where not refined
         ↓
-future implementation-authority phase
+future explicit implementation-authority phase
+        ↓
+future code / deployment
 ```
 
 ## Current blocker/debt state
@@ -102,11 +105,19 @@ No identified design-readiness blocker remains open after 006-J.
 
 Remaining known debt is primarily implementation/release/governance work: exact algorithms, Spark/runtime distribution mechanism, recovery-frontier mechanism, provider/runtime versions, persistence/API/error spelling, benchmark/SLO evidence, enterprise security products, package-name review and optional strict OKF normalization.
 
-## Recommended next phase
+## Planned Phase 007
 
-**Phase 007 — Implementation Authority, Controlled Bootstrap & Evidence-Gated Delivery** is the recommended next phase.
+[Phase 007 — Implementation Authority, Controlled Bootstrap & Evidence-Gated Delivery](phases/007/index.md) now has a completed **logical subgroup design**, but it is **not active**.
 
-It is not active until explicitly entered. Its first subgroup must lock current authority, repository/toolchain/change-control boundaries, verification gates and which implementation slices are authorized.
+Its dependency-safe plan runs from 007-A authority lock through verification/toolchain/source topology and shared implementation foundations to a bounded self-contained single-table Spark-local vertical proof and a 007-K evidence/fitness exit.
+
+The planned first subgroup is:
+
+**007-A — Implementation Authority Lock, Canonical Baseline, Change Control & Slice Authorization**
+
+007-A is governance-only. It must explicitly lock current authority and normally authorize only the next bounded subgroup rather than granting blanket implementation permission across Phase 007.
+
+Until 007-A is explicitly entered and completed, production implementation remains prohibited.
 
 ## Documentation governance note
 
