@@ -12,73 +12,65 @@ Phase 007 remains active under:
 
 - [Phase 007 Implementation Authority Lock](phase-007-implementation-authority-lock.md)
 - [Phase 007-B Bootstrap Execution Authority](phase-007-b-bootstrap-execution-authority.md)
+- [Phase 007-C Source/Package Topology Execution Authority](phase-007-c-source-package-topology-execution-authority.md)
 
 Current subgroup state:
 
 ```text
 007-A  complete
 007-B  complete
-007-C  NOT AUTHORIZED — next eligible
-007-D..007-K  NOT AUTHORIZED
+007-C  complete
+007-D  NOT AUTHORIZED — next eligible
+007-E..007-K  NOT AUTHORIZED
 ```
 
-No production package/source topology beyond the completed bootstrap is currently authorized.
+No 007-D behavior is currently authorized.
 
 ## Governing order
 
-For implementation work, read current design/experience/architecture/planning authority first, then the Phase 007 implementation lock and only the explicitly authorized subgroup.
+For implementation work, read current design/experience/architecture/planning authority first, then the Phase 007 implementation lock, the enduring 007-B/007-C contracts, and only the explicitly authorized current subgroup.
 
 Code does not outrank this chain. Class 3 architecture or Class 4 semantic/experience conflicts stop implementation and reopen upstream authority.
 
-## 007-B executable bootstrap
+## Executable substrate through 007-C
 
-The repository now has:
-
-```text
-pyproject.toml
-uv.lock
-.python-version
-.gitignore
-tools/verify.py
-tests/unit/
-tests/fitness/
-.github/workflows/verify.yml
-```
-
-Locked bootstrap stack:
+007-B established the reproducible tool/test/CI substrate. 007-C added the first production package architecture:
 
 ```text
-Python >=3.11
-uv >=0.12,<0.13
-Hatchling
-pytest
-Hypothesis
-pytest-socket
-Ruff
-mypy
-Import Linter
-coverage.py / pytest-cov
+src/syngan/
+├── __init__.py
+├── py.typed
+├── foundation/
+├── domain/
+├── ports/
+├── application/
+├── api/
+├── adapters/
+└── bootstrap/
 ```
 
-The base runtime dependency list remains empty. No PySpark/PyTorch/Transformers/Databricks/MLflow/cloud/database/runtime-service dependency was introduced.
+Import Linter now executes in the normal gate and enforces inward core dependency direction plus adapter/composition boundaries.
 
-Stable commands after explicit provisioning:
+The repository verification flow installs the first-party package from locked tooling and then runs lint/format/type/unit/architecture/fitness/package checks:
 
 ```text
 uv sync --all-groups --no-install-project --locked
+uv sync --all-groups --locked --no-build-isolation
 uv run --no-sync python tools/verify.py all
-uv run --no-sync python tools/verify.py coverage
 ```
 
-Portable-core pytest denies Python sockets by default. The permanent GitHub Actions Verify workflow has read-only repository permissions and runs from the committed lock.
+The package gate verifies imports, `py.typed`, and non-publishing wheel/sdist construction/content.
 
-Import Linter is installed but its production import contracts remain 007-C work because `src/syngan/` is intentionally absent.
+`[project].dependencies` remains empty. Hatchling and `editables` are build/development dependencies only. Portable-core pytest remains socket-denied after explicit provisioning.
 
 ## Evidence status
 
-[007-B phase record](../phases/007/007-B-repository-toolchain-bootstrap-reproducible-environment-verification-harness.md) records entry baseline, dependency/tool choices, useful CI failures/corrections, green verification runs, lock materialization, network/offline posture and explicit non-claims.
+- [007-B phase record](../phases/007/007-B-repository-toolchain-bootstrap-reproducible-environment-verification-harness.md)
+- [007-C phase record](../phases/007/007-C-source-package-topology-dependency-direction-architecture-fitness-enforcement.md)
 
-`main` remains unprotected and Verify is not currently a required branch check. 007-C must revisit PR/review enforcement now that executable checks exist.
+007-C was reviewed as PR #1, passed the permanent `Verify` workflow on exact PR head `9f93b6eff7f8d8a1b19950745530dc273d462d6d`, and merged as `063f847953f69a525ee04315fa92bc0e9fa36a1c`.
+
+`main` remains unprotected and Verify is not claimed as a required repository check. Material production-source work should continue using reviewable branches/PRs when supported and retain exact-head green evidence.
 
 ## Historical planning
 
@@ -86,6 +78,6 @@ Phase 005 and Phase 006 planning remain active beneath Phase 007 where not refin
 
 ## Current next boundary
 
-**007-C — Source/Package Topology, Dependency Direction & Architecture-Fitness Enforcement** is next eligible but **not yet authorized**.
+**007-D — Identity, Revision, Serialization, Typed Public Resource/Handle & Programmatic-View Foundation** is next eligible but **not yet authorized**.
 
-An explicit proceed decision is required before `src/syngan/` or production package topology may be created.
+An explicit proceed decision is required before 007-D implementation begins.
