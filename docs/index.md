@@ -11,7 +11,7 @@ This directory is the canonical design and implementation-planning knowledge bun
 
 ## Progressive disclosure
 
-- [Authority](authority/index.md) — methodology/governance/cross-cutting contracts, including operational-authority continuity and self-contained/runtime-distribution closure.
+- [Authority](authority/index.md) — methodology/governance/cross-cutting contracts, including operational-authority continuity, self-contained/runtime-distribution closure and enterprise-scale/resource/degraded-operation rules.
 - [Problem Knowledge](problem/index.md) — problem, purpose, actors, constraints and enterprise scale envelope.
 - [Domain Terminology](terminology/index.md) — canonical vocabulary.
 - [Accepted Concepts](concepts/index.md) — current concept authority.
@@ -60,14 +60,13 @@ Completed Phase 006 groups:
 - [006-B — Temporal Authority, Disaster Recovery, Rollback, Fork & Historical-Truth Refinement](phases/006/006-B-temporal-authority-disaster-recovery-rollback-fork-historical-truth-refinement.md)
 - [006-C — End-to-End Scenario, Exception, Failure & Adversarial Synchronization Validation](phases/006/006-C-end-to-end-scenario-exception-failure-adversarial-synchronization-validation.md)
 - [006-D — Reference Strategy/Method and Topology Design Probes & Algorithm-Neutrality Stress Test](phases/006/006-D-reference-strategy-method-topology-design-probes-algorithm-neutrality-stress-test.md)
+- [006-E — Enterprise Scale, Resource/Approximation, Backpressure & Degraded-Mode Design Validation](phases/006/006-E-enterprise-scale-resource-approximation-backpressure-degraded-mode-design-validation.md)
 
-006-A kept the accepted concept/synchronization counts unchanged, made time-series an explicit design target, and reopened `Relationship` only as a candidate for multi-table/shared-key and possible temporal sequence semantics.
+Current Phase 006 cross-cutting authority includes:
 
-006-B established the active [Operational Authority Continuity & Regressive Recovery Contract](authority/operational-authority-continuity-regressive-recovery-contract.md).
-
-006-C adversarially replayed the design across twenty-four scenarios. The synchronization count remains fifteen and no `SYNC-16` is currently justified.
-
-006-D stress-tested Learning-based/direct/text/time-series/multi-table/Evaluation/large-state/Spark-distribution shapes and established the active [Self-Contained Execution & Runtime Distribution Closure Contract](authority/self-contained-execution-runtime-distribution-closure-contract.md).
+- [Operational Authority Continuity & Regressive Recovery Contract](authority/operational-authority-continuity-regressive-recovery-contract.md)
+- [Self-Contained Execution & Runtime Distribution Closure Contract](authority/self-contained-execution-runtime-distribution-closure-contract.md)
+- [Enterprise Scale, Resource Admission, Approximation & Degraded Operation Contract](authority/enterprise-scale-resource-admission-approximation-degraded-operation-contract.md)
 
 ## Current invariant baseline
 
@@ -75,33 +74,30 @@ Until Phase 006 explicitly revises further authority, preserve:
 
 - eleven accepted concepts and fifteen synchronizations;
 - `Relationship` provisional only, pending 006-G;
-- single-table generation as the current baseline capability, with time-series and multi-table shared-key as explicit Phase 006 design targets;
-- the supported baseline includes at least one source-derived/local free-form-text synthesis path requiring no pretrained artifact or runtime network service;
-- externally pretrained/world-knowledge text remains explicit optional local-artifact or runtime-network capability;
-- model-neutral structured/tabular synthesis;
-- semantic completion distinct from runtime/platform completion;
-- one Execution with multiple fenced Attempts and explicit recovery/cancellation semantics;
-- same-Execution continuation may be blocked by current authorization/dependency/platform capability without rewriting the commitment;
-- coordinated logical-output completion applies to the whole committed scope rather than one constituent;
+- single-table generation as the current baseline topology, with time-series and multi-table shared-key as explicit design targets;
+- at least one self-contained source-derived free-form-text synthesis path in the supported baseline;
+- optional pretrained/world-knowledge text remains explicit local-artifact or runtime-network capability;
+- driver-local availability is not cluster readiness; every material worker must satisfy compatible runtime closure;
+- no hidden first-use dependency/model acquisition;
+- large state/model distribution cannot universally require driver-memory loading/broadcast;
+- enterprise compatibility is multidimensional and workload-specific;
+- undisclosed source-size-proportional driver/single-process stages invalidate enterprise-scale claims for that path;
+- resource pressure may queue/block/retry work but MUST NOT silently weaken committed semantics;
+- approximation is explicit owner-bound semantics, not a hidden runtime fallback;
+- backpressure is lossless with respect to mandatory logical scope;
+- degraded operation is capability-specific rather than one global state;
+- sampled/sketched Evaluation cannot claim stronger Evidence because exhaustive validation is expensive;
+- semantic completion remains distinct from runtime/platform/progress completion;
+- one Execution may span multiple fenced Attempts with explicit recovery/cancellation semantics;
 - potentially regressive recovery enters continuity-unverified/recovery-quarantine semantics before write authority resumes;
-- rollback cannot resurrect stale writer/cancellation/security authority;
-- missing post-restore-point history is not proof of non-occurrence, and surviving physical effects are not proof of semantic transition;
-- driver-local package/model availability is not distributed executor readiness;
-- every material runtime worker must satisfy exact compatible runtime distribution closure, including dynamically allocated workers;
-- missing runtime dependencies cannot trigger undeclared first-use package/model acquisition;
-- large model/Learned-State distribution cannot universally require full driver-memory loading/broadcast;
-- owner-established Evidence and typed canonical Provenance;
-- unresolved continuity/history gaps may weaken current reproducibility without rewriting historical commitments;
-- explicit dependency/trust/authorization/network/egress distinctions;
-- capability-negotiated platforms rather than provider-name authority;
-- enterprise-scale workflows without mandatory full-corpus driver-local materialization;
+- owner-established Evidence and typed canonical Provenance remain distinct from projections/telemetry/security audit;
 - no production implementation until a later explicit implementation-authority phase is approved.
 
 ## Next
 
-**006-E — Enterprise Scale, Resource/Approximation, Backpressure & Degraded-Mode Design Validation**
+**006-F — Privacy, Disclosure, Release-Governance Boundary & Mechanism-Specific Scope Decision**
 
-006-E must stress the refined design under enterprise-scale resource pressure, large/sharded state, text/runtime-distribution pressure, dynamic workers, topology-specific scaling, statistical approximation, backpressure and partial/degraded platform capability—without implementing benchmarks.
+006-F must revalidate privacy/disclosure/release authority in light of self-contained text generation, memorization/disclosure risk, enterprise-scale sampling/approximation, optional pretrained/network text, and possible mechanism-specific guarantees such as differential privacy—without implementing any privacy mechanism or release-governance system.
 
 ## Documentation governance note
 
