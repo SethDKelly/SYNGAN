@@ -16,37 +16,34 @@ Canonical facts remain under `docs/authority/`, `docs/concepts/`, `docs/synchron
 
 ### BDR-001 — regressive restore and temporal authority closure
 
-**Status:** semantic/synchronization/experience closure accepted; architecture/planning propagation pending 006-I.
+**Status: resolved through 006-I.**
 
-006-B established the canonical [Operational Authority Continuity & Regressive Recovery Contract](../authority/operational-authority-continuity-regressive-recovery-contract.md). 006-C adversarially validated the synchronization consequences without creating `SYNC-16`.
+Closure chain:
 
-006-H established the canonical [Phase 006 Recovery, Security, Degraded, Historical & Topology Experience Contract](../experience/phase-006-recovery-security-degraded-history-topology-experience-contract.md), including actor/programmatic recovery-restricted state, post-backup historical uncertainty, reconstructed-history disclosure, current-authority versus restored-state distinction and safe next-action semantics.
+- semantic authority — 006-B, [Operational Authority Continuity & Regressive Recovery Contract](../authority/operational-authority-continuity-regressive-recovery-contract.md);
+- synchronization validation — 006-C;
+- actor/programmatic experience — 006-H, [Phase 006 Recovery, Security, Degraded, Historical & Topology Experience Contract](../experience/phase-006-recovery-security-degraded-history-topology-experience-contract.md);
+- architecture/ADR/planning propagation — 006-I, [Phase 006 Architecture Reconciliation Contract](../architecture/phase-006-architecture-reconciliation-contract.md) + [Phase 006 Implementation-Planning Reconciliation](../implementation/phase-006-implementation-planning-reconciliation.md) + ADR-0009.
 
-The remaining BDR-001 work is exclusively downstream architecture/ADR and Phase 005 planning propagation in 006-I. The concept/synchronization/experience semantics are no longer open.
+Potentially regressive restore cannot resurrect stale writer/cancellation/security authority. A fresh non-regressing recovery-authority frontier is required before ordinary mutation resumes.
 
 ### BDR-002 — post-planning adversarial end-to-end validation
 
-**Status:** resolved by 006-C for the accepted eleven-concept / fifteen-synchronization model.
+**Status: resolved by 006-C for the accepted eleven-concept / fifteen-synchronization model.**
 
-006-G conceptually replayed the topology-sensitive multi-table/time-series/privacy scenarios after resolving Relationship as Data Meaning-owned structural semantics. The existing synchronization set remains coherent.
-
-006-I/006-J must replay affected scenarios only if architecture/planning reconciliation materially changes accepted coordination.
+006-G conceptually replayed topology-sensitive scenarios after resolving Relationship as Data Meaning-owned structural semantics. 006-J must replay materially affected scenarios against the reconciled 006-I architecture/planning baseline as an exit check, not because the underlying blocker remains open.
 
 ### BDR-003 — representative Strategy/method and topology design probes
 
-**Status:** resolved by 006-D.
+**Status: resolved by 006-D.**
 
-The current model survived Learning-based, direct, text, composite, time-series, multi-table, deterministic/statistical Evaluation, large-state and Spark-distribution probes.
-
-006-G's topology decision does not invalidate the runtime probe result: topology semantics remain upstream of Strategy/runtime implementation.
+The current model survived Learning-based, direct, text, composite, time-series, multi-table, deterministic/statistical Evaluation, large-state and Spark-distribution probes. 006-I propagated the resulting runtime-distribution and topology obligations into architecture/planning.
 
 ### BDR-004 — initial-baseline scope and future-extensibility closure
 
-**Status:** resolved by 006-G.
+**Status: resolved by 006-G.**
 
-Canonical authority: [Structured-Data Topology & Relationship Semantics Contract](../authority/structured-data-topology-relationship-semantics-contract.md).
-
-The first **complete structured-data capability baseline** includes:
+The first complete structured-data capability baseline includes:
 
 ```text
 single-table generation
@@ -56,11 +53,13 @@ multi-table shared-key generation
 
 Implementation may be staged and individual Strategies may support subsets, but the complete baseline claim requires at least one supported self-contained Strategy path for each family.
 
-`Relationship` is not a standalone concept. Material shared-key/sequence structural semantics are Data Meaning-owned descriptive state; Constraint owns prescriptive validity; Generation owns requested topology/scope; Strategy owns capability.
+`Relationship` is not a standalone concept. Shared-key/sequence structural semantics remain Data Meaning-owned descriptive state; Constraint owns prescriptive validity; Generation owns requested topology/scope; Strategy owns capability.
 
-Topology presets may be exposed through future API convenience syntax, but the durable model must permit composition and cannot be reduced to one mutually exclusive enum.
+### Phase 006 blocking status
 
-No Phase 006 concept/scope/experience blocker remains open after 006-H. 006-I must now propagate the accepted design into architecture/ADR and Phase 005 planning before 006-J can judge implementation readiness.
+**No identified Phase 006 design blocker remains open after 006-I.**
+
+This does not itself approve implementation. 006-J must perform the final residual design-debt/readiness audit and may still discover a new blocker.
 
 ## Baseline scope decisions
 
@@ -70,7 +69,7 @@ No Phase 006 concept/scope/experience blocker remains open after 006-H. 006-I mu
 
 The baseline covers explicit shared-key relationships and common relational shapes such as one-to-one, one-to-many/many-to-one, composite keys and association tables when supported by the Strategy.
 
-Arbitrary recursive/cyclic graph synthesis is not a universal baseline promise. Strategy capability may support, limit or reject those shapes explicitly.
+Arbitrary recursive/cyclic graph synthesis is not a universal baseline promise.
 
 ### BSD-002 — mechanism-specific formal privacy
 
@@ -94,7 +93,7 @@ Generation completion and favorable Evidence do not imply release/use approval. 
 
 **Status:** included in the complete baseline capability target by 006-G.
 
-Time-series must preserve explicit entity/series membership and temporal/order semantics through Data Meaning, temporal validity through Constraints, requested horizon/scope through Generation, and method-specific capability through Strategy.
+Time-series preserves explicit entity/series membership and temporal/order semantics through Data Meaning, temporal validity through Constraints, requested horizon/scope through Generation, and method-specific capability through Strategy.
 
 The baseline does not promise every sequence-model family, streaming/online generation, regular cadence, or arbitrary temporal hierarchy.
 
@@ -102,11 +101,11 @@ The baseline does not promise every sequence-model family, streaming/online gene
 
 ### IRD-001 — exact provider/runtime support matrix
 
-Select exact Spark/Python/PyTorch/Databricks/storage/runtime versions only when later implementation and conformance evidence exists.
+Select exact Spark/Python/PyTorch/Databricks/storage/runtime versions only when implementation and conformance evidence exists.
 
 ### IRD-002 — exact IAM/secret/network/KMS/DLP products
 
-005-I/Phase 006 define the contracts; concrete enterprise products remain deployment selections.
+Current architecture defines required contracts; concrete enterprise products remain deployment selections.
 
 ### IRD-003 — benchmark thresholds and support claims
 
@@ -122,23 +121,29 @@ Before public release, verify PyPI/package naming, project-name collisions, trad
 
 ### IRD-006 — exact Spark/runtime distribution mechanism
 
-006-D establishes runtime distribution closure but intentionally does not select one universal packaging/distribution mechanism. Later delivery must choose and verify profile-specific approaches while preserving exact closure across all material workers.
+ADR-0010 and the Phase 006 runtime-closure authority define what must be true, but not one universal packaging/distribution mechanism. Later delivery must choose and verify profile-specific approaches.
 
 ### IRD-007 — concrete privacy/disclosure Evaluation catalog
 
-006-F keeps privacy/disclosure-risk Evaluation in the framework capability surface but does not select a universal attack suite or privacy score. Later delivery may choose a small reference/conformance set while preserving threat-model/scope/claim-strength distinctions.
+The framework supports privacy/disclosure-risk Evaluation but does not select one universal attack suite or privacy score. Later delivery may choose a small reference/conformance set while preserving threat-model/scope/claim-strength distinctions.
 
 ### IRD-008 — concrete baseline topology Strategy catalog
 
-006-G defines the complete capability target but does not select the exact first algorithms for all topology families.
-
-Later implementation/delivery must provide at least one supported self-contained Strategy path for:
+Later authorized implementation/delivery must provide at least one supported self-contained Strategy path for:
 
 - single-table;
 - time-series;
 - multi-table shared-key.
 
-The algorithms may differ materially and must continue to preserve model/topology neutrality rather than becoming framework semantics.
+The algorithms may differ materially and must preserve model/topology neutrality.
+
+### IRD-009 — exact actionability/result/error representation
+
+006-H/006-I require typed programmatic distinctions for queue/block/incompatibility/denial/recovery/disclosure/history, but do not select exact Python exception classes, SDK result objects, REST status codes or wire enums.
+
+### IRD-010 — exact non-regressing recovery realization
+
+ADR-0009 requires a fresh recovery-authority frontier, but exact realization (`ControlPlaneIncarnation`, external monotonic fence, provider-native generation, credential/namespace rotation combination, etc.) remains deployment implementation work.
 
 ## Governance debt
 
