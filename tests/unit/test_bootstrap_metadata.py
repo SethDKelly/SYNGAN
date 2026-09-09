@@ -40,6 +40,7 @@ def test_locked_development_groups_contain_only_authorized_tool_families() -> No
 
     for required in (
         "hatchling",
+        "editables",
         "pytest",
         "hypothesis",
         "pytest-socket",
