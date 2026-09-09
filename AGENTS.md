@@ -17,14 +17,15 @@ For material work:
 1. read `docs/index.md`;
 2. read `docs/authority/design-methodology.md` for methodology-sensitive work;
 3. for recovery/HA/current-authority work, read `docs/authority/operational-authority-continuity-regressive-recovery-contract.md`;
-4. for runtime packaging, text/self-contained behavior, Spark executor/runtime availability or model/artifact distribution, read `docs/authority/self-contained-execution-runtime-distribution-closure-contract.md`;
-5. read `docs/synchronizations/core-synchronizations.md` for cross-concept coordination—the 006-C refinements are canonical;
-6. read `docs/architecture/phase-004-consolidated-architecture-contract.md`;
-7. read `docs/implementation/phase-005-consolidated-implementation-planning-contract.md`;
-8. read the active Phase 006 record/index and only the detailed 005 plan affected by the design question;
-9. follow only directly relevant concept/synchronization/experience/architecture authority;
-10. use ADRs for rationale/history rather than as replacement for current canonical authority;
-11. consult `docs/backlog/index.md` for blocker/deferred classification, not as canonical design truth.
+4. for runtime packaging/text/Spark worker closure, read `docs/authority/self-contained-execution-runtime-distribution-closure-contract.md`;
+5. for scale/resource/admission/approximation/degraded-operation work, read `docs/authority/enterprise-scale-resource-admission-approximation-degraded-operation-contract.md`;
+6. read `docs/synchronizations/core-synchronizations.md` for cross-concept coordination;
+7. read `docs/architecture/phase-004-consolidated-architecture-contract.md`;
+8. read `docs/implementation/phase-005-consolidated-implementation-planning-contract.md`;
+9. read the active Phase 006 record/index and only the detailed 005 plan affected by the design question;
+10. follow only directly relevant concept/synchronization/experience/architecture authority;
+11. use ADRs for rationale/history rather than as replacement for current canonical authority;
+12. consult `docs/backlog/index.md` for blocker/deferred classification, not as canonical design truth.
 
 Do not load or copy the entire documentation corpus by default.
 
@@ -49,11 +50,12 @@ Completed:
 - **006-A** — post-planning concept/mechanism/scope revalidation;
 - **006-B** — temporal authority/regressive-recovery/historical-truth refinement;
 - **006-C** — end-to-end adversarial synchronization validation;
-- **006-D** — representative Strategy/method/text/topology/runtime-distribution probes.
+- **006-D** — representative Strategy/method/text/topology/runtime-distribution probes;
+- **006-E** — enterprise scale/resource/approximation/backpressure/degraded-mode design validation.
 
 Current next:
 
-**006-E — Enterprise Scale, Resource/Approximation, Backpressure & Degraded-Mode Design Validation**.
+**006-F — Privacy, Disclosure, Release-Governance Boundary & Mechanism-Specific Scope Decision**.
 
 Current design counts remain:
 
@@ -65,70 +67,39 @@ reopened candidate concepts    Relationship
 
 No `SYNC-16` is currently accepted.
 
-## 006-B operational-authority rules
+## Phase 006 cross-cutting rules
 
 Agents MUST preserve:
 
-- restoring older persistence is not proof that its `current` Attempt/fence/cancellation/security state is actually current;
-- a potentially regressive restore enters recovery quarantine / continuity-unverified semantics before ordinary write-capable operation resumes;
-- a fresh non-regressing authority boundary is required before write capability resumes;
-- a superseded writer cannot regain authority merely because restored state predates the supersession;
-- a cancellation omitted from an old backup cannot reactivate pre-cancellation write authority;
-- pre-recovery capability grants/credentials are not current permission merely because they reappear in restored state;
-- surviving external effects are observations until their exact canonical meaning is reconciled;
-- absence of a post-backup transition from restored persistence does not prove it never happened;
-- physical bytes/provider success do not by themselves reconstruct Learned State, completed Generation output or Evidence authority;
-- historical reconstruction requires evidence sufficient for the owning concept's normal transition/completion invariants;
-- unresolved post-restore history remains explicitly unknown/unavailable rather than silently coerced;
-- current post-recovery authority may adopt verified immutable effects, but old writers never regain authority through adoption;
-- `ControlPlaneIncarnation` or equivalent remains a downstream realization mechanism, not a domain concept.
-
-## 006-C synchronization rules
-
-The 006-C adversarial pass retained fifteen synchronization IDs and refined the canonical rules.
-
-Agents MUST preserve:
-
-- same-Execution retry/resume requires unchanged committed semantics **and** current authorization/dependency/platform/recovery qualification;
-- current inability to continue does not authorize silent source/Strategy/Learned-State/dependency/method/network substitution;
-- after potentially regressive recovery, restored Attempt/current-state values do not authorize continuation by themselves;
-- a coordinated logical Generation output is completed only when the whole committed scope is completion-sufficient, not when one constituent table/sequence is complete;
-- missing restored history is not proof of non-occurrence;
-- surviving external/physical effects are not automatic proof of a missing semantic transition;
-- reconstruction of missing canonical history is owner-gated and auditable;
-- unresolved continuity/history gaps constrain the strongest reproducibility/comparison claim rather than rewriting historical commitments.
-
-BDR-002 is resolved for the current eleven-concept/fifteen-sync baseline. If 006-G later accepts `Relationship` or changes coordination materially, replay affected scenarios before 006-J readiness approval.
-
-## 006-D self-contained/runtime-distribution rules
-
-The active Self-Contained Execution & Runtime Distribution Closure contract is non-negotiable.
-
-Agents MUST preserve:
-
-- the supported baseline includes at least one source-derived/local free-form-text synthesis path that requires no externally acquired pretrained model or runtime network service;
-- Hugging Face/model hubs/LLM APIs/remote inference are optional integrations, never hidden baseline requirements or automatic fallbacks;
-- a locally provisioned pretrained model/tokenizer is a distinct local-artifact-dependent capability, not package-only self-containment;
-- `Text`, `LanguageModel`, `Tokenizer`, `CompositeStrategy`, `RuntimeEnvironment` and `Distribution` are not accepted standalone concepts merely because implementations have corresponding objects;
-- one top-level Strategy implementation binding may resolve multiple exact implementation/runtime/model/tokenizer/codec components;
-- material component choice cannot silently change during runtime;
-- driver import/discovery success is **not** proof that Spark executors can execute the same binding;
-- every worker that may execute material code, including dynamically allocated workers, must inherit/prove a compatible exact runtime closure;
-- missing worker code/dependencies/artifacts MUST NOT trigger undeclared public-network installation/download during an Attempt;
-- large Learned State/model artifacts MUST NOT require universal driver-local loading or broadcast; scalable distributed/provider-native loading must remain possible;
-- implementation/artifact presence does not override current trust/authorization policy;
-- platform support must report a distribution capability gap as limited/incompatible/indeterminate rather than silently weakening behavior.
-
-BDR-003 is resolved by 006-D. If 006-G/006-I materially changes Strategy/topology/runtime architecture, replay affected probes before 006-J readiness approval.
+- restored historical persistence is not current mutation authority after potentially regressive recovery;
+- stale Attempts/cancellations/capabilities cannot resurrect through rollback;
+- history reconstruction is owner-gated and unresolved gaps remain explicit;
+- the supported baseline includes a self-contained source-derived free-form-text synthesis path with no required pretrained artifact/runtime network service;
+- optional pretrained/model-hub/LLM/service text capability remains explicit and cannot become a hidden fallback;
+- driver import/discovery success is not proof that Spark executors can execute the same binding;
+- every material worker, including dynamically allocated workers, must satisfy compatible exact runtime closure;
+- missing worker dependencies/artifacts cannot trigger undeclared public-network acquisition;
+- large Learned State/model artifacts cannot universally require full driver load/broadcast;
+- enterprise compatibility is multidimensional and workload-specific rather than a row-count flag;
+- an undisclosed source-size-proportional single-process/driver stage invalidates an enterprise-scale claim for that path;
+- resource pressure may queue/block/retry work but MUST NOT silently weaken an existing committed semantic contract;
+- approximation is explicit owner-bound semantics, never an implicit resource-pressure fallback;
+- backpressure must not drop mandatory logical work, truncate quantity/horizon, omit required topology constituents or weaken Evaluation coverage;
+- sampled/sketched Evaluation cannot become universal Evidence because exhaustive evaluation is expensive;
+- cache presence/absence does not redefine exact artifact/runtime identity;
+- degraded operation must be capability-specific: canonical-store loss, projection loss, telemetry loss, dependency loss, exact-reference loss, storage loss, worker loss and authorization loss have different consequences;
+- security/authorization uncertainty fails closed for protected actions;
+- progress/ETA/task completion is not semantic completion;
+- storage pressure does not override authority-aware retention.
 
 ## Phase 006 design rules
 
-The remaining blocking scope question is concentrated in BDR-004 — initial-scope/future-extensibility closure. BDR-001 still requires experience/architecture propagation through 006-H/006-I.
+The remaining blocking scope question is concentrated in **BDR-004 — initial-scope/future-extensibility closure**. BDR-001 still requires experience/architecture propagation through 006-H/006-I.
 
 Agents MUST:
 
 - judge candidate concepts by purpose, independent state/actions, operational principle and genericity—not by whether a persistent record/class would be convenient;
-- treat `ControlPlaneIncarnation`, `HistoricalRef`, finding slots, completion basis, capability grants, runtime-distribution manifests, deployment profiles, support claims and similar structures as mechanisms/hypotheses unless concept review proves otherwise;
+- treat `ControlPlaneIncarnation`, `HistoricalRef`, finding slots, completion basis, capability grants, runtime-distribution manifests, resource reservations, queues, caches, deployment profiles, support claims and similar structures as mechanisms/hypotheses unless concept review proves otherwise;
 - preserve the eleven concepts/fifteen synchronizations unless explicit Phase 006 evidence justifies revision;
 - use representative synthesis/evaluation methods as design probes, never as semantic templates;
 - keep CTGAN/PyTorch/Hugging Face/Spark/Databricks/provider behavior downstream of concept authority;
@@ -149,21 +120,28 @@ A future API `mode`/parameter may select a capability profile, but that paramete
 
 `Relationship` is reopened only as a candidate pending 006-G. Do not treat it as accepted concept authority before that decision.
 
-## 006-E scale/degraded-mode discipline
+## 006-F privacy/disclosure/release discipline
 
-006-E is design validation, not benchmark implementation.
+006-F is design/scope refinement, not privacy-mechanism implementation.
 
-Agents must challenge the design across rows/bytes/width/cardinality/skew/partitions, large/sharded state, text/model/runtime-distribution pressure, dynamic workers, multi-table fan-out, time-series entity/horizon scale, Evaluation approximation, concurrent workloads, backpressure/admission and degraded dependencies/platform services.
+Agents must explicitly test:
+
+- memorization/disclosure risk from self-contained free-form text generation;
+- optional pretrained/runtime-network text and egress implications;
+- sample/statistical privacy Evidence at enterprise scale and its claim limits;
+- the distinction between privacy-risk Evaluation/Evidence and a formal privacy guarantee;
+- whether a mechanism such as differential privacy would have sufficiently independent purpose/state/actions to require concept discovery;
+- the boundary between Generation completion, favorable Evidence and external release/use approval;
+- truthful security redaction/withholding of sensitive Evidence/history.
 
 Do not:
 
-- claim enterprise scale from row count alone;
-- hide source-size-proportional driver/coordinator stages;
-- solve cluster artifact pressure with universal driver broadcast;
-- let approximation/sampling silently strengthen Evidence claims;
-- let backpressure drop canonical transitions/outbox/security obligations;
-- map degraded/unknown capability to success merely to keep work running;
-- turn resource scarcity into a semantic change or hidden Strategy fallback.
+- equate synthetic data with anonymous/private data by default;
+- equate successful privacy Evaluation with a formal guarantee unless the mechanism actually supports it;
+- treat favorable Evidence as release/use authorization;
+- let scale pressure weaken a privacy Criterion or inflate sampled Evidence;
+- make a hosted text service an implicit privacy/release authority;
+- implement DP, attack suites, DLP or governance workflows during Phase 006.
 
 ## Frozen implementation-planning baseline
 
@@ -186,9 +164,9 @@ Key constraints include:
 
 Do not:
 
-- create universal `Context`, `Session`, `Manager`, `Registry`, `Metadata`, `State`, `Result`, `Quality`, `Run`, `Artifact`, `Security` or similar god-owner;
+- create universal `Context`, `Session`, `Manager`, `Registry`, `Metadata`, `State`, `Result`, `Quality`, `Run`, `Artifact`, `Security`, `Resource`, `Backpressure`, `Approximation` or `DegradedMode` god-owner;
 - make DataFrame, path/table alias, loaded model, database row, scheduler job or platform ID canonical semantic identity;
-- equate runtime/platform success with semantic completion;
+- equate runtime/platform/progress success with semantic completion;
 - equate checkpoint/candidate/runtime material with Learned State/output/Evidence;
 - replace fencing with lease expiry, scheduler retry or last-writer-wins;
 - let hidden acquisition/network/egress appear because an adapter/provider makes it easy;
@@ -196,7 +174,7 @@ Do not:
 - let graph/search/telemetry/security-audit projections become canonical Provenance/history;
 - use current/latest values in place of exact historical refs;
 - treat handle possession as authorization or persist bearer credentials in canonical history;
-- infer causal/quality claims from structural history differences alone;
+- infer causal/quality/privacy/release claims from structural history differences alone;
 - claim enterprise scale while hiding source-size-proportional single-process stages.
 
 ## Documentation synchronization
@@ -215,4 +193,4 @@ Backlog items close only after the canonical owner reflects the accepted resolut
 
 ## Current next group
 
-**006-E — Enterprise Scale, Resource/Approximation, Backpressure & Degraded-Mode Design Validation**
+**006-F — Privacy, Disclosure, Release-Governance Boundary & Mechanism-Specific Scope Decision**
