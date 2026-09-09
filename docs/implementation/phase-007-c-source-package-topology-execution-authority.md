@@ -8,27 +8,15 @@ status: active
 
 ## Purpose
 
-Authorize the first production Python package structure for SYNGAN after the successful 007-B repository/toolchain bootstrap, while keeping implementation limited to **source/package topology, dependency direction and architecture-fitness enforcement**.
+Preserve the implementation architecture established by completed 007-C: the first production Python package structure, dependency direction, package-build boundary and architecture-fitness enforcement for SYNGAN.
 
-This authority does not authorize concept behavior, public resource contracts, persistence, Spark/runtime execution, synthesis algorithms, security adapters, Evidence/history behavior or deployment infrastructure.
+Execution evidence/history is recorded in [007-C — Source/Package Topology, Dependency Direction & Architecture-Fitness Enforcement](../phases/007/007-C-source-package-topology-dependency-direction-architecture-fitness-enforcement.md).
 
-## Entry baseline
+007-C is complete. This contract remains active because later implementation must continue to obey the topology it established.
 
-007-C is entered against:
+## Governing precedence
 
-```text
-repository: SethDKelly/SYNGAN
-branch:     main
-commit:     c833c5de8ecb0b84481ab6046af6e929b34d01e9
-```
-
-007-B acceptance evidence is recorded in:
-
-`docs/phases/007/007-B-repository-toolchain-bootstrap-reproducible-environment-verification-harness.md`
-
-## Governing authority
-
-007-C SHALL implement, in precedence order:
+Implementation SHALL continue to follow, in order:
 
 1. current Phase 006 authority/concepts/synchronizations/experience;
 2. `docs/architecture/phase-006-architecture-reconciliation-contract.md`;
@@ -36,11 +24,10 @@ commit:     c833c5de8ecb0b84481ab6046af6e929b34d01e9
 4. `docs/implementation/source-topology-module-package-boundaries-shared-foundation-dependency-enforcement.md`;
 5. `docs/implementation/verification-strategy-test-harness-architecture-fitness-evidence-quality-gates.md`;
 6. `docs/implementation/phase-007-implementation-authority-lock.md`;
-7. this 007-C bounded authority.
+7. this topology contract;
+8. any later explicitly authorized Phase 007 subgroup.
 
-## Authorized production topology
-
-007-C SHALL establish exactly one initial Python distribution/import package using a `src/` layout:
+## Canonical production topology
 
 ```text
 src/syngan/
@@ -55,13 +42,11 @@ src/syngan/
 └── bootstrap/
 ```
 
-Each top-level responsibility package may contain only minimal package markers/documentation in 007-C. Owner-specific implementations belong to 007-D and later slices.
+These are implementation responsibility boundaries, not new concepts.
 
-Empty placeholder module forests are prohibited. Create only the package boundaries required to make the accepted topology importable and enforceable.
+Later owner-specific modules may be created inside the appropriate responsibility package only when their subgroup is authorized. Do not create empty package forests or generic convenience owners merely to anticipate future work.
 
 ## Dependency direction
-
-The executable architecture SHALL preserve:
 
 ```text
 foundation
@@ -78,120 +63,117 @@ foundation/domain/ports
     ↑
 adapters
 
-all required outer/inner packages
+required outer/inner packages
     ↑
 bootstrap
 ```
 
-Specific rules:
+Rules:
 
 - `foundation` imports no other SYNGAN top-level package;
 - `domain` may import `foundation` only;
 - `ports` may import `foundation` and `domain`;
 - `application` may import `foundation`, `domain`, `ports`;
 - `api` may import `foundation`, `domain`, `ports`, `application`;
-- `adapters` may import `foundation`, `domain`, `ports` but not `application`, `api`, or `bootstrap`;
-- `bootstrap` is composition-only and may import the packages it needs for wiring;
+- `adapters` may import `foundation`, `domain`, `ports`, but not `application`, `api`, or `bootstrap`;
+- `bootstrap` is composition-only and may import packages required for wiring;
 - inner/core packages may not import `adapters` or `bootstrap`.
 
-These are code-responsibility boundaries, not new domain concepts.
+Import Linter is the executable architecture-fitness mechanism for these boundaries and is part of normal repository verification.
 
-## Root package rule
+## Root package contract
 
-`syngan.__init__` SHALL remain small and side-effect free.
+`syngan.__init__` remains small and side-effect free.
 
-007-C SHALL NOT introduce root-package imports/re-exports that pull in adapters or optional runtimes. Importing `syngan` in the base environment must succeed without PySpark, PyTorch, Hugging Face/Transformers, Databricks, MLflow, database drivers, cloud SDKs or remote-service clients.
+Do not introduce root imports/re-exports that force adapters or optional runtimes into the base import closure. Importing `syngan` must remain possible without PySpark, PyTorch, Hugging Face/Transformers, Databricks, MLflow, database drivers, cloud SDKs or remote-service clients unless later explicit authority changes the base dependency contract.
 
-A curated public re-export surface is deferred until the owning API/public-contract slices.
+Curated public re-exports belong to the subgroup that owns the public API contract.
 
-## Build/package authority
+## Build/package contract
 
-007-C MAY:
+Current package/build rules:
 
-- make Hatchling's `src/syngan` package selection explicit;
-- add `py.typed` as package data through the selected package layout;
-- make Hatchling a locked development/build dependency so installing/building the first-party package does not depend on an untracked build-backend version;
-- update locked dependency state only for that authorized build-tooling change;
-- change CI/local provisioning from `--no-install-project` to installed-project verification;
-- add a build/package smoke gate that verifies wheel/sdist creation and expected package contents without publishing artifacts.
+- one `syngan` distribution/import package;
+- `src/` layout;
+- Hatchling package selection explicitly targets `src/syngan`;
+- `py.typed` is included in the package;
+- `[project].dependencies` remains the runtime dependency authority and was empty at 007-C exit;
+- Hatchling and `editables` are locked build/development tooling, not runtime capabilities;
+- first-party verification provisions locked tooling before installing SYNGAN with build isolation disabled;
+- normal verification builds and inspects wheel + sdist without publishing.
 
-007-C MUST NOT publish a package or claim that the public `syngan` distribution name has completed ecosystem/trademark review.
+No package-publication or public-name/trademark clearance was established by 007-C.
 
-## Architecture-fitness enforcement
+## Architecture-fitness contract
 
-Import Linter SHALL become an executed verification gate in 007-C.
-
-At minimum its contracts must enforce:
+Normal verification must preserve at least:
 
 1. inward core layers;
-2. no inner/core dependency on adapters/bootstrap;
-3. no adapter dependency on application/api/bootstrap.
+2. no core dependency on adapters/bootstrap;
+3. no adapter dependency on application/api/bootstrap;
+4. exact accepted top-level responsibility boundaries unless later architecture authority changes them;
+5. no production dependency on test support;
+6. base/root import without unauthorized optional runtime dependencies;
+7. packaged `py.typed` visibility;
+8. no generic `utils`, `context`, `config`, `manager`, `registry`, `metadata`, `state`, `result`, `relationship` or `data_topology` god-owner introduced as a substitute for explicit responsibility.
 
-The permanent repository verification entry point must run this check automatically.
+## Verification/install contract
 
-007-C SHALL also retain executable checks that:
+Repository verification installs the first-party package; it must not rely on an ad hoc `PYTHONPATH=src` as a substitute for package installation.
 
-- the expected top-level package boundaries exist and import;
-- root/base import requires no unauthorized optional runtime dependency;
-- `py.typed` is packaged/visible;
-- production code does not import from `tests`;
-- the 007-C topology does not invent generic `utils`, `context`, `manager`, `registry`, `metadata`, `result`, `relationship` or `data_topology` owner packages.
+Current reproducible sequence is conceptually:
 
-## Verification/source posture
+```text
+provision locked build/test tooling
+        ↓
+install first-party SYNGAN with provisioned backend
+        ↓
+run lint / format / type / unit
+        ↓
+run Import Linter + architecture fitness
+        ↓
+run package build/content smoke
+```
 
-Once `src/syngan` exists, CI and local verification SHALL install the first-party package before running tests. The repository must not rely on adding `src/` to `PYTHONPATH` as a substitute for package installation.
+Portable-core pytest remains socket-denied by default after explicit dependency provisioning.
 
-Portable-core pytest remains socket-denied by default after explicit provisioning.
+## Review/check contract
 
-## Review/check policy refinement
+`Verify` is the canonical repository check for material source work.
 
-007-B established a green `Verify` workflow but `main` remains unprotected and the current connector does not provide repository-administration writes for branch protection.
+Material production-source changes SHOULD use a reviewable branch/pull request when supported, with a green `Verify` result against the exact reviewed head retained as evidence.
 
-007-C therefore adopts the following procedural policy for subsequent material production-source work:
+Direct-to-main does not count as independent review. Do not claim branch protection or required-check enforcement unless repository state confirms it.
 
-- `Verify` is the canonical repository check;
-- material production-source changes SHOULD be made through a reviewable branch/pull request when the execution environment supports that workflow;
-- a green `Verify` result against the exact reviewed head is required evidence before merge/acceptance;
-- direct-to-main remains possible only when explicitly authorized by the active subgroup/user and must not be described as independent review;
-- branch protection/required-check enforcement must not be claimed until GitHub repository state confirms it.
+## Anti-drift boundary
 
-007-C does not silently enable administration settings it cannot verify or manage.
+This contract does not itself authorize later behavior.
 
-## Prohibited 007-C work
+It does not grant authority for:
 
-007-C MUST NOT implement:
-
-- accepted concept lifecycle/state behavior;
-- `ResourceRef`, revision/snapshot/public handle contracts;
-- persistence schemas, CAS/outbox/migrations;
-- Spark/DataFrame source/output behavior;
-- Strategy, Learning, Generation or Evaluation algorithms;
+- concept lifecycle/state behavior;
+- ResourceRef/revision/snapshot/public-handle contracts;
+- persistence/CAS/outbox/migrations;
+- Spark/DataFrame behavior;
+- Strategy/Learning/Generation/Evaluation algorithms;
 - runtime/model bindings;
-- Execution/Attempt/fencing/recovery behavior;
+- Execution/Attempt/fencing/recovery;
 - authorization/secrets/provider integrations;
 - Evidence/Provenance/history/reproducibility behavior;
-- API facades beyond importable structural package markers;
 - deployment/release/publish workflows.
 
-Those remain owned by 007-D and later subgroups.
+Those require their owning later subgroup.
 
-## Completion gate
+## Stop/reopen rule
 
-007-C may be marked complete only if:
+If implementation requires weakening or relocating these package boundaries, treat that as a Class 3 architecture issue and stop ordinary implementation until the smallest affected architecture authority is explicitly reopened.
 
-1. `src/syngan` and the seven accepted top-level responsibility packages exist without substantive premature behavior;
-2. Hatchling package selection is explicit and the package installs from the declared locked environment;
-3. Import Linter contracts are configured and executed in normal verification;
-4. architecture/topology fitness checks pass;
-5. root/base import works without unauthorized optional runtime dependencies or side effects;
-6. package build smoke evidence succeeds without publication;
-7. the committed lock is current after any authorized build-tool dependency change;
-8. the permanent read-only `Verify` workflow passes on the completed repository head;
-9. no Class 3 architecture or Class 4 semantic/experience conflict is unresolved;
-10. 007-C records its evidence and does not authorize 007-D without a later explicit proceed decision.
+If the pressure changes concept ownership, synchronization responsibility or required actor/programmatic meaning, treat it as Class 4 and reopen upstream design authority.
 
-## Authorization state
+## Current authorization state
 
-**007-C: AUTHORIZED / ACTIVE.**
+**007-C: COMPLETE — TOPOLOGY CONTRACT REMAINS ACTIVE.**
 
-**007-D through 007-K: NOT AUTHORIZED.**
+**007-D: NOT YET AUTHORIZED — NEXT ELIGIBLE.**
+
+007-E through 007-K remain not authorized.
