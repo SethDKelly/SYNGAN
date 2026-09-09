@@ -30,7 +30,10 @@ jobs:
       - name: Verify lockfile is current
         run: uv lock --check
 
-      - name: Provision locked environment and install SYNGAN
+      - name: Provision locked tool and test environment
+        run: uv sync --all-groups --no-install-project --locked
+
+      - name: Install SYNGAN with provisioned build backend
         run: uv sync --all-groups --locked --no-build-isolation
 
       - name: Run repository verification gates
