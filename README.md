@@ -16,6 +16,7 @@ Primary authority:
 - [`Operational Authority Continuity & Regressive Recovery Contract`](docs/authority/operational-authority-continuity-regressive-recovery-contract.md)
 - [`Self-Contained Execution & Runtime Distribution Closure Contract`](docs/authority/self-contained-execution-runtime-distribution-closure-contract.md)
 - [`Enterprise Scale, Resource Admission, Approximation & Degraded Operation Contract`](docs/authority/enterprise-scale-resource-admission-approximation-degraded-operation-contract.md)
+- [`Privacy, Disclosure Risk, Formal Guarantee & External Release Boundary Contract`](docs/authority/privacy-disclosure-formal-guarantee-release-boundary-contract.md)
 - [`Core Synchronizations`](docs/synchronizations/core-synchronizations.md)
 - [`Phase 006`](docs/phases/006/index.md) for current post-planning design refinement
 
@@ -34,57 +35,41 @@ No production implementation has begun or been authorized.
 
 ## Phase 006 progress
 
-### 006-A through 006-D — complete
+006-A through 006-C retained the current **11 accepted concepts / 15 synchronizations**, reopened `Relationship` provisionally, established restore-safe operational-authority continuity, and adversarially refined the current synchronization set without introducing `SYNC-16`.
 
-These groups retained the current **11-concept / 15-synchronization** model, reopened `Relationship` only as a provisional candidate, established restore-safe Operational Authority Continuity, adversarially refined SYNC-04/07/08/11/14/15, and validated Learning-based/direct/text/time-series/multi-table/Evaluation/runtime-distribution shapes.
+006-D established a self-contained source-derived free-form-text baseline and cluster-wide runtime-distribution closure. Driver import success is not Spark executor readiness, optional pretrained/network text remains explicit, and large state/model distribution cannot universally require driver loading/broadcast.
 
-006-D additionally requires:
+006-E established that enterprise scale is multidimensional, resource pressure cannot silently weaken committed semantics, approximation remains owner-specific, backpressure must preserve mandatory logical scope, and degraded operation is capability-specific.
 
-- at least one self-contained source-derived free-form-text synthesis path in the supported baseline;
-- optional pretrained/world-knowledge text to remain explicit local-artifact/runtime-network capability;
-- exact compatible runtime closure across every material Spark worker, including dynamically allocated workers;
-- no hidden first-use dependency/model acquisition;
-- no universal driver-memory load/broadcast requirement for large Learned State/model artifacts.
+### 006-F — complete
 
-### 006-E — complete
+006-F established the [`Privacy, Disclosure Risk, Formal Guarantee & External Release Boundary Contract`](docs/authority/privacy-disclosure-formal-guarantee-release-boundary-contract.md).
 
-006-E stress-tested the design under multidimensional enterprise scale, large state/text artifacts, dynamic workers, time-series horizon/entity growth, multi-table fan-out, statistical approximation, concurrent workloads, backpressure and capability-specific failures.
-
-Result:
+Key rules:
 
 ```text
-PASS WITH TARGETED CROSS-CUTTING REFINEMENT
+synthetic data
+    != automatically private/anonymized
+
+favorable disclosure-risk Evidence
+    != formal privacy guarantee
+
+Generation completed
+    != release approved
+
+offline/self-contained
+    != privacy guarantee
 ```
 
-It established the [`Enterprise Scale, Resource Admission, Approximation & Degraded Operation Contract`](docs/authority/enterprise-scale-resource-admission-approximation-degraded-operation-contract.md).
+Disclosure/memorization remain threat-model-specific Criterion/Evaluation/Evidence concerns rather than new standalone concepts.
 
-Core rules now include:
+Differential privacy is **not part of the initial implementation baseline**. If SYNGAN later adds a composable formal DP mechanism, Jackson-style concept discovery must reopen before implementation so privacy-unit/budget/allocation/consumption/composition state is not hidden inside generic Strategy metadata, Evidence or quota configuration.
 
-```text
-resource pressure
-    may queue / block / retry / reduce observability
-
-resource pressure
-    MUST NOT silently weaken committed semantics
-```
-
-Accordingly:
-
-- enterprise compatibility is workload-specific across rows, bytes, width, cardinality, skew, state size, topology, Evaluation coverage and concurrency—not a row-count flag;
-- hidden source-size-proportional driver/single-process stages invalidate enterprise-scale claims for that path;
-- approximation must be explicit and owned by Learning, Generation or Evaluation as appropriate;
-- exhaustive Evaluation cannot quietly become sampled because resources are scarce;
-- backpressure cannot silently truncate Generation quantity, time-series horizon or mandatory multi-table scope;
-- caches remain performance mechanisms, not dependency identity;
-- dynamically admitted workers must retain runtime-distribution closure;
-- degraded operation must state which capability is unavailable—canonical persistence, projection/search, telemetry, dependency source, exact data reference, output/checkpoint storage, worker/accelerator or authorization have different consequences;
-- storage pressure does not override authority-aware retention.
-
-No Resource, Backpressure, Approximation, DegradedMode, Cost or Quota concept was added, and no new synchronization ID was required.
+Use/Release Decision remains external to current SYNGAN concept authority. SYNGAN may supply exact Evidence/Provenance and enforce current access decisions through security adapters, but it does not become the enterprise release-approval authority.
 
 ## Structured-data capability direction
 
-Phase 006 continues to validate:
+Phase 006 is explicitly validating:
 
 ```text
 single-table generation
@@ -92,12 +77,11 @@ time-series table generation
 multi-table shared-key generation
 ```
 
-A future API may expose these through a parameter or typed specification, but selection syntax cannot own relationship, temporal-order, validity, completion or Evidence semantics.
+A future API may expose these through a parameter or typed specification, but selection syntax cannot own relationship, temporal-order, validity, completion, privacy or Evidence semantics.
 
 ## Remaining Phase 006 groups
 
-- **006-F — Privacy, Disclosure, Release-Governance Boundary & Mechanism-Specific Scope Decision — next**
-- 006-G — Structured-Data Topology: Single-Table, Time-Series & Multi-Table Relationship Concept/Extensibility Audit
+- **006-G — Structured-Data Topology: Single-Table, Time-Series & Multi-Table Relationship Concept/Extensibility Audit — next**
 - 006-H — Human/Programmatic Experience Closure for Recovery, Security, Degraded & Historical Workflows
 - 006-I — Architecture/ADR Reconciliation, Canonical Authority Promotion & Planning Back-Propagation
 - 006-J — Consolidation, Residual Design-Debt Audit & Implementation-Authority Readiness Decision
@@ -106,4 +90,4 @@ Jackson-style completeness is judged by design evidence, not by a fixed number o
 
 ## Current next group
 
-**006-F — Privacy, Disclosure, Release-Governance Boundary & Mechanism-Specific Scope Decision**
+**006-G — Structured-Data Topology: Single-Table, Time-Series & Multi-Table Relationship Concept/Extensibility Audit**
