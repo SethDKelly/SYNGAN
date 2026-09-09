@@ -23,17 +23,27 @@ Canonical facts remain under `docs/authority/`, `docs/concepts/`, `docs/synchron
 
 ### BDR-001 — regressive restore and temporal authority closure
 
-**Status:** open — Phase 006 blocking.
+**Status:** semantic closure accepted in 006-B; adversarial/experience/architecture propagation pending 006-C, 006-H and 006-I.
 
-005-J exposed the case where restoring older control state while newer external workers/effects survive can resurrect stale writer authority unless restore introduces a non-regressing recovery boundary.
+006-B established the canonical [Operational Authority Continuity & Regressive Recovery Contract](../authority/operational-authority-continuity-regressive-recovery-contract.md).
 
-Phase 006 must validate observable semantics across Execution, cancellation, security, history, recovery and operator experience and promote the necessary invariant upstream. `ControlPlaneIncarnation`/equivalent remains a candidate realization rather than unquestioned concept authority.
+Accepted design consequences include:
+
+- persistence restore is not proof of current writer authority;
+- potentially regressive recovery enters recovery quarantine / continuity-unverified state;
+- a non-regressing post-recovery authority boundary is required before ordinary writes resume;
+- rollback cannot resurrect superseded Attempts, lost cancellation generations or old capabilities/credentials;
+- surviving effects are reconciled rather than automatically accepted or denied as history;
+- missing post-backup canonical facts remain reconstructable/unknown/unavailable according to evidence rather than being silently treated as absence;
+- `ControlPlaneIncarnation`/equivalent remains an architecture realization candidate, not a concept.
+
+The original semantic/design gap is closed. The item remains in this section until 006-C validates synchronization behavior, 006-H closes actor/programmatic experience and 006-I reconciles architecture/planning authority.
 
 ### BDR-002 — post-planning adversarial end-to-end validation
 
-**Status:** open — Phase 006 blocking.
+**Status:** open — 006-C next.
 
-A full-system scenario audit must re-test the accepted concepts/synchronizations against the concrete Phase 005 plans, including ambiguous launch, stale writers, retry/resume, cancellation races, revocation, projection outages, mixed versions, retention loss, platform fallback, security-domain isolation, disaster recovery and topology-sensitive partial-output cases.
+A full-system scenario audit must re-test the accepted concepts/synchronizations against the concrete Phase 005 plans and the 006-B continuity contract, including ambiguous launch, stale writers, retry/resume, cancellation races, revocation, projection outages, mixed versions, retention loss, platform fallback, security-domain isolation, disaster recovery and topology-sensitive partial-output cases.
 
 ### BDR-003 — representative Strategy/method and topology design probes
 
@@ -57,7 +67,7 @@ These are design/feasibility probes only. They do not authorize implementation o
 
 Phase 006 must explicitly determine the initial implementation scope while proving that deferred capabilities are not accidentally made impossible by current concept/API/schema/architecture assumptions.
 
-The structured-data topology decision now includes:
+The structured-data topology decision includes:
 
 ```text
 single-table                current baseline capability
