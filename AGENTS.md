@@ -1,30 +1,29 @@
 # SYNGAN Agent Instructions
 
-These instructions apply repository-wide to automated coding/documentation agents.
+These instructions apply repository-wide to automated coding/documentation agents, including Codex-style agents.
 
-## Phase 005 is planning-only
+## Current authority state
 
-Phase 005 does **not** authorize production implementation.
+**Phase 005 implementation planning is complete. Phase 006 design refinement is current. Production implementation is NOT authorized.**
 
-During 005-A through 005-K, agents may update requested planning/governance/documentation artifacts but MUST NOT create production source, package scaffolds, database schemas/migrations, runtime/Spark/security/platform adapters, Evidence/Provenance stores, verification suites, CI workflows or deployment infrastructure merely because a future plan describes them.
+During Phase 006, agents may update design/authority/planning documentation requested by the active phase group, but MUST NOT create production package scaffolding, source code, database schemas/migrations, runtime/Spark/security/platform adapters, verification suites, CI workflows, deployment infrastructure or benchmark harnesses.
 
-A Phase 005 group marked `complete` means its **plan** is complete.
-
-005-K is the explicit Jackson/design-completeness gate. It may require another concept/synchronization/experience/architecture/planning phase. Even a positive result requires a later explicit implementation-authority phase before coding begins.
+A future implementation-authority phase may be created only after a positive design-readiness exit explicitly authorizes it.
 
 ## Progressive disclosure
 
 For material work:
 
 1. read `docs/index.md`;
-2. read `docs/architecture/phase-004-consolidated-architecture-contract.md`;
-3. read `docs/implementation/index.md` and the active implementation plan;
-4. read 005-B verification and 005-C topology authority;
-5. load only the 005-D through 005-J plans whose boundaries the task touches;
-6. follow only directly relevant concept/experience/architecture links;
-7. use ADRs for rationale, not instead of current authority.
+2. read `docs/authority/design-methodology.md` for methodology-sensitive work;
+3. read `docs/architecture/phase-004-consolidated-architecture-contract.md`;
+4. read `docs/implementation/phase-005-consolidated-implementation-planning-contract.md`;
+5. read the active Phase 006 record/index and only the detailed 005 plan affected by the design question;
+6. follow only directly relevant concept/synchronization/experience/architecture authority;
+7. use ADRs for rationale/history rather than as replacement for current canonical authority;
+8. consult `docs/backlog/index.md` for blocker/deferred classification, not as canonical design truth.
 
-Do not load/copy the full documentation corpus by default.
+Do not load or copy the entire documentation corpus by default.
 
 ## Authority order
 
@@ -35,98 +34,97 @@ authority
   > architecture
   > implementation planning
   > future code / deployment
+  > ADR rationale / phase history / backlog / examples
 ```
 
-Existing or future code never overrides upstream authority.
+Later feasibility evidence may justify reopening upstream authority. Do not patch a genuine design conflict only inside an implementation-plan document.
 
-## Non-negotiable boundaries
+## Phase 006 design rules
 
-Future implementation MUST preserve:
+Phase 006 exists because 005-K found four design-readiness blockers:
 
-- one inward `src/syngan` topology: `foundation/domain/ports/application/api/adapters/bootstrap`;
-- no universal `utils`, `Context`, `Metadata`, `Result`, `Manager`, `Registry`, Session or similar god-owner;
+```text
+BDR-001  regressive restore / temporal authority
+BDR-002  post-planning adversarial end-to-end validation
+BDR-003  representative Strategy/method design probes
+BDR-004  initial-scope / future-extensibility closure
+```
+
+Agents MUST:
+
+- judge candidate concepts by purpose, independent state/actions, operational principle and genericity—not by whether a persistent record/class would be convenient;
+- treat `ControlPlaneIncarnation`, `HistoricalRef`, finding slots, completion basis, capability grants, deployment profiles, support claims and similar structures as mechanisms/hypotheses unless concept review proves otherwise;
+- preserve the eleven concepts/fifteen synchronizations unless explicit Phase 006 evidence justifies revision;
+- use representative synthesis/evaluation methods as design probes, never as semantic templates;
+- keep CTGAN/PyTorch/Spark/Databricks/provider behavior downstream of concept authority;
+- preserve deliberate initial-scope exclusions without hard-coding them as permanent impossibilities;
+- promote material changes to concept/synchronization/experience/architecture authority explicitly before back-propagating them into Phase 005 planning.
+
+## Frozen implementation-planning baseline
+
+Until Phase 006 changes upstream authority, preserve:
+
+- one future `src/syngan` package with inward `foundation/domain/ports/application/api/adapters/bootstrap` responsibilities;
 - one durable ResourceRef/revision/SnapshotId/StateVersion/SchemaVersion substrate;
-- platform/job/path/DataFrame/model/process objects are never canonical SYNGAN identity;
-- exact historical refs never silently resolve to current/latest;
-- DataFrame/query/path/table selectors are access instructions, not durable source identity;
-- candidate/sealed snapshot/checkpoint/runtime material are not semantic results;
-- runtime/platform success does not establish Learning, Generation, Evaluation or Evidence completion;
-- Strategy/method semantic revision, ImplementationBindingRef, RuntimeSpiVersion, package build, state codec and platform/runtime version remain distinct;
-- direct Generation remains valid without fabricated Learning/Learned State;
-- one stable Execution may have multiple Attempts; AttemptEpoch fencing is distinct from liveness/lease state;
-- stale Attempts cannot register/adopt/seal/complete through obsolete writer authority;
-- unknown external launch/effect state is reconciled before unsafe retry;
-- cancellation that wins the authority race revokes late completion/promotion authority;
-- Evidence is owner-established from exact Evaluation subjects and cannot exceed method/coverage/uncertainty support;
-- canonical Provenance is typed relationship authority, not copied metadata or graph/search projection state;
-- reproducibility is a qualified assessment, not a seed/Boolean;
-- dependency existence, exact identity, integrity/authenticity, trust, compatibility, authorization and runtime capability remain distinct;
-- runtime never auto-installs/downloads dependencies, queries public registries, enables telemetry or switches to remote fallback silently;
-- handles are identifiers, never bearer credentials;
-- bearer secret values remain ephemeral/non-canonical;
-- redaction/withholding preserves `absent`, `unknown`, `unavailable`, `withheld` and authorized/redacted distinctions;
-- derived indexes/counts/search/reverse traversal are inside the security boundary;
-- security audit, runtime telemetry and canonical history remain separate;
-- enterprise paths do not require complete source/output/Learned-State/diagnostic collection on the driver;
-- platform fallback must preserve semantics or report limitation/incompatibility.
+- exact SourceStateRef/candidate/sealed-snapshot/output boundaries;
+- Strategy/method semantic revision separate from implementation binding/SPI/runtime version;
+- Learning/Generation/Evaluation activity-specific runtime contracts;
+- stable Execution with durable Attempts, AttemptEpoch/WriterFence, checkpoints, recovery and cancellation linearization;
+- owner-established Evidence with bounded claim strength;
+- typed canonical Provenance distinct from query projections, telemetry and security audit;
+- qualified reproducibility rather than a Boolean/seed claim;
+- dependency availability/identity/integrity/trust/compatibility/authorization/network/egress separation;
+- non-bearer handles and non-canonical bearer secrets;
+- Attempt capability no broader than semantic requirement ∩ current authorization ∩ deployment capability;
+- no hidden acquisition, remote fallback or mandatory external telemetry in supported offline/no-egress profiles;
+- enterprise paths without mandatory full-corpus driver-local materialization;
+- provider/platform support through explicit capability negotiation;
+- restore-safe recovery cannot let regressed control state resurrect stale writer authority.
 
-## 005-J deployment/platform rules
+## Non-negotiable anti-collapse rules
 
-005-J establishes the future deployment reality contract.
+Do not:
 
-Agents MUST NOT:
+- create universal `Context`, `Session`, `Manager`, `Registry`, `Metadata`, `State`, `Result`, `Quality`, `Run`, `Artifact`, `Security` or similar god-owner merely to simplify representation;
+- make DataFrame, path/table alias, loaded model, database row, scheduler job or platform ID canonical semantic identity;
+- equate runtime/platform success with semantic completion;
+- equate checkpoint/candidate/runtime material with Learned State/output/Evidence;
+- replace fencing with lease expiry, scheduler retry or last-writer-wins;
+- let hidden acquisition/network/egress appear because an adapter/provider makes it easy;
+- let Evidence exceed Evaluation support;
+- let graph/search/telemetry/security-audit projections become canonical Provenance/history;
+- use current/latest values in place of exact historical refs;
+- treat handle possession as authorization or persist bearer credentials in canonical history;
+- infer causal/quality claims from structural history differences alone;
+- claim enterprise scale while hiding source-size-proportional single-process stages.
 
-- treat `Databricks`, `Spark`, a cloud provider or another platform name as proof of a capability;
-- use platform job/run IDs as Execution/Attempt identity;
-- treat native scheduler retries/speculation as SYNGAN Attempts without explicit coordination;
-- treat native lineage/catalog/ML metadata as canonical Provenance/Evidence;
-- use native source versioning as `SourceStateRef` unless exact historical reread/retention guarantees satisfy the data contract;
-- serialize live Spark DataFrame/SparkSession, SQL sessions, loaded models or SDK clients across durable service/API boundaries;
-- require external telemetry exporters in offline/no-egress profiles;
-- let telemetry loss corrupt canonical transition state;
-- publish one global `supported=true` or generic `version` instead of multi-axis compatibility evidence;
-- claim enterprise scale from row count alone or hide a source-size-proportional driver/single-process stage;
-- resume normal authoritative operation immediately after a potentially regressive control-store restore;
-- allow a restored old AttemptEpoch to revive stale writer authority;
-- use `ControlPlaneIncarnation` as a domain concept, credential or semantic revision;
-- omit provider credential/namespace/native-fence rotation when an external mutable target can otherwise accept pre-restore stale writers;
-- delete payloads still required by promoted outputs, usable Learned State, checkpoints, Evidence support, retained history or reproducibility without truthful unavailability/tombstone treatment.
+## Scope discipline
 
-Future deployment profiles are local/development, portable Spark, managed Databricks-oriented and private/offline/no-egress, with hybrid composition only when its exact cross-boundary capability/security contracts are satisfied.
+Current initial scope is structured/tabular synthesis.
 
-Future support is contextual: direct, semantics-preserving fallback, limited, incompatible or indeterminate.
+Relational/multi-table synthesis, mechanism-specific formal privacy, external release/use governance and broad Strategy/Evaluation catalog breadth remain explicit scope decisions under Phase 006 review.
 
-OpenTelemetry is planned only as an optional vendor-neutral telemetry integration; it is not a base semantic/offline dependency.
+Do not expand those domains by accident, but do not introduce representation assumptions that permanently prevent future explicit design expansion.
 
-## Dependencies and package import
+## Verification and future implementation
 
-The base/core distribution remains model/platform neutral. Do not place PySpark, PyTorch, Databricks/cloud SDKs, graph/lineage clients, scheduler/IAM/policy/secret-manager SDKs, telemetry exporters, SQL provider SDKs or similar adapter dependencies into base runtime dependencies merely for one slice.
+005-B remains the accepted future verification architecture (V0-V11, AF-01..20, Q0-Q4). No executable verification suite should be created during Phase 006.
 
-`import syngan` must remain side-effect free: no plugin scan/load, network access, dependency acquisition, Spark/session creation, credential inspection, telemetry initialization or mutable global Session/Context.
-
-## Verification
-
-When a later phase explicitly authorizes coding, tests derive their oracle from accepted authority and must not mock away the distributed, concurrency, persistence, runtime, recovery, Evidence/history, security or platform property under test.
-
-005-J future work primarily owns V10/V11 and exercises AF-01/02/03/07/09/10/11/12/13/14/15/17/18/20, including:
-
-- exact-source native/fallback conformance;
-- stale-writer/provider fencing;
-- ambiguous launch reconciliation;
-- platform retry duplication;
-- coordinator/client restart;
-- projection/telemetry outage;
-- offline/no-egress operation;
-- workload identity/secret revocation;
-- tenant/query isolation;
-- mixed-version/rolling upgrades;
-- regressive backup restore with surviving workers and fresh `ControlPlaneIncarnation` rejection;
-- multi-dimensional scale profiles and bounded driver/control memory.
-
-Do not weaken/quarantine required fitness checks outside 005-B governance.
+If Phase 006 ultimately approves later implementation, future tests derive their oracle from the then-current accepted authority and must not mock away the distributed, concurrency, security, persistence, recovery, history or scale property under test.
 
 ## Documentation synchronization
 
-Durable implementation decisions belong in `docs/implementation/`. Architecture changes belong in `docs/architecture/` with ADR rationale where appropriate.
+When Phase 006 changes accepted design:
 
-Do not claim production implementation exists merely because a Phase 005 plan is complete, and do not assume 005-K must authorize coding.
+- concept changes go to `docs/concepts/`;
+- synchronization changes go to `docs/synchronizations/`;
+- actor/programmatic experience changes go to `docs/experience/`;
+- architecture changes go to `docs/architecture/` and material rationale to ADRs when appropriate;
+- only then update affected `docs/implementation/` plans;
+- phase records preserve history and MUST NOT become the sole current authority.
+
+Backlog items close only after the canonical owner reflects the accepted resolution.
+
+## Current next group
+
+**006-A — Post-Planning Concept Completeness, Mechanism-vs-Concept & Scope-Boundary Revalidation**
