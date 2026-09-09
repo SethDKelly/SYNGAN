@@ -4,32 +4,68 @@ These instructions apply repository-wide to automated coding/documentation agent
 
 ## Current authority state
 
-**Phase 007 is ACTIVE under a bounded implementation-authority lock.**
+**Phase 007 is ACTIVE and incrementally authorized.**
 
-Current authorization:
+Current state:
 
 ```text
 007-A  COMPLETE
-007-B  AUTHORIZED / NEXT
-007-C..007-K  NOT AUTHORIZED
+007-B  COMPLETE
+007-C  NOT AUTHORIZED — next eligible subgroup
+007-D..007-K  NOT AUTHORIZED
 ```
 
 Canonical implementation authority:
 
-`docs/implementation/phase-007-implementation-authority-lock.md`
+- `docs/implementation/phase-007-implementation-authority-lock.md`
+- `docs/implementation/phase-007-b-bootstrap-execution-authority.md`
+- `docs/phases/007/index.md`
 
-Agents may implement **007-B repository/toolchain/verification bootstrap only**. They MUST NOT create `src/syngan/`, substantive domain/application/port/adapter behavior, schemas/migrations, Spark/runtime/security/platform behavior, benchmark infrastructure, or release/deployment automation until the owning later subgroup is explicitly authorized.
+No agent may create `src/syngan/` or substantive production package/domain/runtime/platform behavior until 007-C is explicitly authorized.
+
+## Current executable bootstrap
+
+Repository-owned toolchain/verification now exists:
+
+```text
+Python >=3.11
+uv >=0.12,<0.13
+Hatchling
+pytest
+Hypothesis
+pytest-socket
+Ruff
+mypy
+Import Linter
+coverage.py / pytest-cov
+GitHub Actions Verify workflow
+```
+
+The base runtime dependency list is empty.
+
+After explicit dependency provisioning, use:
+
+```text
+uv sync --all-groups --no-install-project --locked
+uv run --no-sync python tools/verify.py all
+uv run --no-sync python tools/verify.py coverage
+```
+
+The permanent Verify workflow is read-only and runs from the committed `uv.lock`.
+
+Portable/core pytest denies Python sockets by default. Explicit provisioning may access declared package infrastructure; hidden package/model acquisition, hosted inference, or undeclared runtime fallback is prohibited.
+
+Import Linter is installed but production import contracts are intentionally deferred until 007-C creates the package topology.
 
 ## Progressive disclosure
 
-For 007-B work:
+For future implementation work:
 
 1. read `docs/index.md`;
-2. read `docs/implementation/phase-007-implementation-authority-lock.md`;
+2. read the Phase 007 implementation lock;
 3. read `docs/phases/007/index.md`;
-4. read `docs/implementation/source-topology-module-package-boundaries-shared-foundation-dependency-enforcement.md` for the authorized toolchain decisions;
-5. read `docs/implementation/verification-strategy-test-harness-architecture-fitness-evidence-quality-gates.md` for verification semantics;
-6. load Phase 006 authority/architecture only where a particular bootstrap rule needs it.
+4. read only the implementation/architecture authority relevant to the explicitly authorized subgroup;
+5. use the repository-owned verification commands and preserve subgroup evidence.
 
 Do not load/copy the full design corpus by default.
 
@@ -41,7 +77,7 @@ docs/authority/
   > experience
   > Phase 006-reconciled architecture
   > Phase 006-reconciled implementation planning
-  > Phase 007 implementation authority + active subgroup
+  > Phase 007 implementation authority + explicitly authorized subgroup
   > code / config / tests / migrations
   > runtime/platform/generated state
 ```
@@ -58,53 +94,6 @@ provisional concepts        0
 ```
 
 No `SYNC-16`.
-
-## 007-B authorized file/change surface
-
-Agents MAY add/update, when needed for 007-B:
-
-```text
-pyproject.toml
-uv.lock
-.python-version
-.gitignore
-tools/verify.py
-narrow verification/bootstrap scripts
-bootstrap-only tests/unit, tests/fitness, tests/support
-verification-only .github/workflows
-.github/pull_request_template.md
-README.md
-AGENTS.md
-docs/
-```
-
-Agents MUST NOT create `src/syngan/` in 007-B.
-
-## 007-B authorized toolchain
-
-Unless an explicit compatibility conflict is found and escalated:
-
-```text
-Python >=3.11
-uv
-Hatchling
-pytest
-Hypothesis
-pytest-socket
-Ruff
-mypy
-Import Linter
-coverage.py / pytest-compatible coverage integration
-GitHub Actions verification-only workflow if introduced
-```
-
-No production/runtime PySpark, PyTorch, Hugging Face, Databricks, MLflow, cloud SDK, database/ORM, remote-model/service, or telemetry-export dependency is authorized in the 007-B base closure.
-
-## Network/offline posture
-
-Explicit environment/dependency provisioning may use network access.
-
-Portable/core verification itself must deny undeclared outbound Python sockets by default and must not trigger hidden installation, public model-hub access, hosted inference, or remote fallback.
 
 ## Change classification
 
@@ -137,9 +126,9 @@ A subgroup is not complete because a command exits zero once.
 
 ## Branch/review posture
 
-At 007-A entry, `main` was unprotected and had no required status checks.
+`main` remains unprotected and the Verify workflow is not currently a required branch check.
 
-Direct-to-main is permitted for explicitly authorized 007-B work, but it is not independent review or CI evidence. 007-B must establish repository-owned verification entry points. 007-C must revisit review/PR enforcement once executable checks exist.
+007-C must revisit PR/review/required-check policy now that executable verification exists. Do not claim branch protection or required checks until repository state confirms them.
 
 ## Non-negotiable design rules
 
@@ -149,15 +138,15 @@ Preserve at minimum:
 - driver import success != distributed worker readiness;
 - no hidden dependency/model acquisition or remote fallback;
 - topology presets != durable semantic topology;
-- 007-B/007-C implementation must not preclude time-series/multi-table shared-key support;
+- production topology must not preclude time-series/multi-table shared-key support;
 - resource pressure cannot silently weaken committed semantics;
 - synthetic/offline/favorable Evidence != formal privacy guarantee/release approval;
 - directly retained/reconstructed/partial/unavailable/unknown history remain distinct;
 - semantic completion != runtime/platform success;
 - no universal Session/Context/Manager/Metadata/Result/Relationship/DataTopology god-owner.
 
-## Current next subgroup
+## Current next boundary
 
-**007-B — Repository/Toolchain Bootstrap, Reproducible Environment & Verification Harness**
+**007-C — Source/Package Topology, Dependency Direction & Architecture-Fitness Enforcement** is next eligible but **NOT AUTHORIZED**.
 
-Do not begin 007-C until 007-B has acceptance evidence and an explicit proceed decision.
+Do not create `src/syngan/` until the user explicitly proceeds to 007-C.
