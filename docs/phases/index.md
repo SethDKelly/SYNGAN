@@ -18,39 +18,36 @@ See [Phase 002 index](002/index.md). Phase 002 closed with eleven accepted conce
 
 See [Phase 003 index](003/index.md).
 
-Exit authority: [Phase 003 Consolidated Experience Contract](../experience/phase-003-consolidated-experience-contract.md).
-
 ## Phase 004 — Representation & Architecture Design — complete
 
 See [Phase 004 index](004/index.md).
 
-Exit authority: [Phase 004 Consolidated Architecture Contract](../architecture/phase-004-consolidated-architecture-contract.md).
-
-## Phase 005 — Implementation Planning & Delivery Decomposition — complete
+## Phase 005 — Implementation Planning & Delivery Decomposition — complete as planning only
 
 See [Phase 005 index](005/index.md).
 
-**Phase 005 completed implementation planning only; no production implementation was authorized or performed.**
-
-Exit:
-
-[005-K — Cross-Slice Integration, Delivery Sequencing, Backlog Closure, Jackson-Methodology Completeness & Implementation-Readiness Exit](005/005-K-cross-slice-integration-delivery-sequencing-backlog-closure-jackson-methodology-completeness-implementation-readiness-exit.md)
-
-Consolidated planning authority:
-
-[Phase 005 Consolidated Implementation-Planning Contract](../implementation/phase-005-consolidated-implementation-planning-contract.md)
-
-005-K found the A-J plans coherent but did **not** approve implementation readiness. Four design blockers remain: temporal authority after regressive restore, post-planning adversarial validation, representative Strategy/method design probes, and explicit initial-scope/future-extensibility closure.
+[005-K](005/005-K-cross-slice-integration-delivery-sequencing-backlog-closure-jackson-methodology-completeness-implementation-readiness-exit.md) found the A-J implementation plans coherent but did not approve production implementation readiness.
 
 ## Phase 006 — Post-Planning Design Validation & Adversarial Refinement — current
 
 See [Phase 006 index](006/index.md).
 
-Phase 006 is design-only. It uses the implementation-planning evidence from Phase 005 to revalidate concepts, synchronizations, experience and architecture before any later explicit implementation-authority phase is considered.
+**Phase 006 remains design-only; no production implementation is authorized.**
 
-Next:
+Current progress:
 
-**006-A — Post-Planning Concept Completeness, Mechanism-vs-Concept & Scope-Boundary Revalidation**
+- [006-A — Post-Planning Concept Completeness, Mechanism-vs-Concept & Scope-Boundary Revalidation](006/006-A-post-planning-concept-completeness-mechanism-vs-concept-scope-boundary-revalidation.md) — **complete**
+- **006-B — Temporal Authority, Disaster Recovery, Rollback, Fork & Historical-Truth Refinement — next**
+- 006-C — End-to-End Scenario, Exception, Failure & Adversarial Synchronization Validation — planned
+- 006-D — Reference Strategy/Method and Topology Design Probes & Algorithm-Neutrality Stress Test — planned
+- 006-E — Enterprise Scale, Resource/Approximation, Backpressure & Degraded-Mode Design Validation — planned
+- 006-F — Privacy, Disclosure, Release-Governance Boundary & Mechanism-Specific Scope Decision — planned
+- 006-G — Structured-Data Topology: Single-Table, Time-Series & Multi-Table Relationship Concept/Extensibility Audit — planned
+- 006-H — Human/Programmatic Experience Closure for Recovery, Security, Degraded & Historical Workflows — planned
+- 006-I — Architecture/ADR Reconciliation, Canonical Authority Promotion & Planning Back-Propagation — planned
+- 006-J — Consolidation, Residual Design-Debt Audit & Implementation-Authority Readiness Decision — planned
+
+006-A keeps the accepted catalog at eleven concepts/fifteen synchronizations, rejects `GenerationMode`/`DataTopologyMode` as concepts, confirms single-table as the existing baseline capability, adds time-series as an explicit design target, and reopens `Relationship` provisionally for multi-table shared-key / temporal-sequence testing in 006-G.
 
 ## Implementation boundary
 
