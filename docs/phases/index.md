@@ -4,7 +4,7 @@ title: SYNGAN Design Phases
 status: active
 ---
 
-# Design Phases
+# SYNGAN Design Phases
 
 ## Phase 001 — Design Foundation & Concept Discovery — complete
 
@@ -14,57 +14,60 @@ See [Phase 001 index](001/index.md).
 
 See [Phase 002 index](002/index.md). Phase 002 closed with eleven accepted concepts and fifteen synchronization rules.
 
-## Phase 003 — Experience & Workflow Design — complete
+## Phase 003 — Experience & Workflow Design — complete historical baseline
 
 See [Phase 003 index](003/index.md).
 
 Exit authority: [Phase 003 Consolidated Experience Contract](../experience/phase-003-consolidated-experience-contract.md).
 
-Current post-planning experience refinement: [Phase 006 Recovery, Security, Degraded, Historical & Topology Experience Contract](../experience/phase-006-recovery-security-degraded-history-topology-experience-contract.md).
-
-## Phase 004 — Representation & Architecture Design — complete
+## Phase 004 — Representation & Architecture Design — complete historical baseline
 
 See [Phase 004 index](004/index.md).
 
-Exit authority: [Phase 004 Consolidated Architecture Contract](../architecture/phase-004-consolidated-architecture-contract.md).
+Historical exit authority: [Phase 004 Consolidated Architecture Contract](../architecture/phase-004-consolidated-architecture-contract.md).
 
-## Phase 005 — Implementation Planning & Delivery Decomposition — complete
+Current architecture is refined by the [Phase 006 Architecture Reconciliation Contract](../architecture/phase-006-architecture-reconciliation-contract.md).
+
+## Phase 005 — Implementation Planning & Delivery Decomposition — complete as planning only
 
 See [Phase 005 index](005/index.md).
 
-**Phase 005 completed implementation planning only; no production implementation was authorized or performed.**
+Historical/consolidated planning authority: [Phase 005 Consolidated Implementation-Planning Contract](../implementation/phase-005-consolidated-implementation-planning-contract.md).
 
-Exit: [005-K — Cross-Slice Integration, Delivery Sequencing, Backlog Closure, Jackson-Methodology Completeness & Implementation-Readiness Exit](005/005-K-cross-slice-integration-delivery-sequencing-backlog-closure-jackson-methodology-completeness-implementation-readiness-exit.md).
+Current planning is refined by the [Phase 006 Implementation-Planning Reconciliation](../implementation/phase-006-implementation-planning-reconciliation.md).
 
-Consolidated planning authority: [Phase 005 Consolidated Implementation-Planning Contract](../implementation/phase-005-consolidated-implementation-planning-contract.md).
-
-005-K found the A-J plans coherent but did **not** approve implementation readiness.
+No production implementation was authorized or performed.
 
 ## Phase 006 — Post-Planning Design Validation & Adversarial Refinement — current
 
 See [Phase 006 index](006/index.md).
 
-Phase 006 is design-only. It uses implementation-planning evidence to revalidate concepts, synchronizations, experience and architecture before any later implementation-authority phase is considered.
+Phase 006 is design/planning-only.
 
 Completed:
 
 - **006-A** — concept/mechanism/scope revalidation;
-- **006-B** — temporal authority/regressive-recovery refinement;
+- **006-B** — regressive recovery/current-authority refinement;
 - **006-C** — adversarial synchronization validation;
-- **006-D** — representative Strategy/method/text/topology/runtime-distribution probes;
-- **006-E** — enterprise scale/resource/approximation/backpressure/degraded-mode validation;
-- **006-F** — privacy/disclosure/formal-guarantee/release-boundary validation;
-- **006-G** — structured-topology audit; Relationship resolved as Data Meaning-owned structural semantics and complete baseline target set to single-table + time-series + multi-table shared-key;
-- **006-H** — human/programmatic experience closure; Phase 003's four barriers retained with current actionability, recovery-continuity, disclosure, historical-knowledge, privacy/release and topology experience refinements.
+- **006-D** — Strategy/method/text/runtime-distribution probes;
+- **006-E** — scale/resource/backpressure/degraded-operation validation;
+- **006-F** — privacy/disclosure/formal-guarantee/release-boundary decision;
+- **006-G** — structured-topology/Relationship/baseline scope decision;
+- **006-H** — human/programmatic experience closure;
+- **006-I** — architecture/ADR reconciliation and implementation-planning back-propagation.
 
-Current next:
+006-I established current architecture/planning overlays and added ADR-0009/ADR-0010 without superseding ADR-0001 through ADR-0008.
 
-**006-I — Architecture/ADR Reconciliation, Canonical Authority Promotion & Planning Back-Propagation**
+The previously identified BDR-001 through BDR-004 design blockers now have accepted closure sufficient for final readiness review.
 
-All Phase 006 concept/scope blockers are resolved. BDR-001 now requires only architecture/planning propagation in 006-I before 006-J may judge readiness.
+### Current next
+
+**006-J — Phase 006 Consolidation, Residual Design-Debt Audit & Implementation-Authority Readiness Decision**
+
+006-J is the true design-readiness gate. It may still conclude that further design refinement is required.
 
 ## Implementation boundary
 
-Reaching a phase number does not itself authorize coding.
+Reaching a phase number does not authorize coding.
 
-A later explicit implementation-authority phase may be created only after a positive design-readiness exit. Until then, production source/schema/runtime/test/deployment work remains unauthorized.
+Even a positive 006-J result only permits creation of a later explicit implementation-authority phase. Until such a phase explicitly authorizes production work, source/schema/runtime/test/deployment implementation remains unauthorized.
