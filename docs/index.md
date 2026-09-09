@@ -45,8 +45,9 @@ No `SYNC-16`.
 007-A..007-C  historical/provisional bootstrap work
 007-D         DESIGN COMPLETE
 007-E         DESIGN COMPLETE
-007-F         next eligible design subgroup — not started
-007-G..007-K  not started
+007-F         DESIGN COMPLETE
+007-G         next eligible design subgroup — not started
+007-H..007-K  not started
 ```
 
 Implementation remains frozen at the retained 007-C scaffold; 007-D and later production implementation are not authorized.
@@ -57,27 +58,31 @@ Implementation remains frozen at the retained 007-C scaffold; 007-D and later pr
 
 [007-D architecture](architecture/phase-007-d-identity-revision-serialization-resource-handle-programmatic-view-foundation.md) separates logical identity, exact semantic revision/commitment, mutable current-state version/freshness, representation schema version and authority/provider context.
 
-Handles resolve/present authority; serialization is representation, not mutation authority.
-
 ### 007-E — persistence / transactions / history / migration
 
-[007-E architecture](architecture/phase-007-e-control-persistence-transactions-cas-outbox-historical-reference-migration-baseline.md) establishes:
+[007-E architecture](architecture/phase-007-e-control-persistence-transactions-cas-outbox-historical-reference-migration-baseline.md) establishes owner-controlled writes, same-boundary atomic visibility, durable cross-boundary intent, stale-write conflict detection, exact material history/reference semantics, migration as representation change, and regressive-recovery qualification.
 
-- owner-controlled canonical writes;
-- atomic same-boundary coupled facts;
-- durable reconcilable intent for required cross-boundary work;
-- stale-write detection without treating CAS as semantic validation;
-- material history without universal event sourcing;
-- exact historical resolution without `latest` substitution;
-- derived projections as non-authoritative;
-- migration as representation change by default;
-- canonical-state rollback as potentially regressive recovery.
+### 007-F — distributed data state / topology / promotion
 
-Earlier concrete Phase 005-D technology selections are provisional implementation-planning evidence, not current architecture commitments.
+[007-F architecture](architecture/phase-007-f-distributed-data-state-structured-topology-manifest-candidate-seal-promotion-foundation.md) establishes:
+
+- logical subject distinct from physical representation;
+- bounded logical scopes for single-table, time-series, multi-table and composite subjects;
+- exact source state with separately represented identity/read/integrity/retention/coordination strength;
+- cross-scope coherence as an explicit guarantee rather than an inference from individually exact scopes;
+- bounded scope-aware manifest roots over distributed/hierarchical detail;
+- partial candidate progress distinct from whole-candidate seal;
+- sealing as immutable physical closure rather than semantic validity;
+- exact sealed subjects for completion Evaluation;
+- Generation-owned promotion to one logical completed output without universal row copying;
+- representation evolution under explicit equivalence while original promotion basis remains historical fact;
+- distributed-scale operation without ordinary full-corpus collection or driver-local component enumeration.
+
+Earlier Phase 005-D/E concrete technologies remain provisional implementation-planning evidence rather than current architecture requirements.
 
 ## Provisional executable scaffold
 
-The retained 007-B/007-C package/tests/CI remain feasibility/history evidence and may be revised later if architecture requires it. No current design choice must preserve them solely because executable checks encode them.
+The retained 007-B/007-C package/tests/CI remain feasibility/history evidence and may be revised later if architecture requires it. Existing delivery-state fitness assertions are known to be provisional and are not updated during the design freeze merely to mirror each design subgroup transition.
 
 ## Complete capability target
 
@@ -93,6 +98,6 @@ The complete supported baseline also retains source-derived/local free-form-text
 
 ## Current next boundary
 
-**007-F — Distributed Data-State, Structured Topology, Manifest, Candidate/Seal & Promotion Foundation** is the next eligible **design** subgroup.
+**007-G — Strategy/Method Binding, Dependency Trust, Authorization, Secrets & Distributed Runtime Closure Foundation** is the next eligible **design** subgroup.
 
 It requires an explicit proceed decision. Production implementation remains frozen independently of design progression.
