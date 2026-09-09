@@ -47,16 +47,17 @@ Phase 006 is design-only. It uses implementation-planning evidence to revalidate
 Completed:
 
 - **006-A** — concept/mechanism/scope revalidation; accepted concept/synchronization counts remain eleven/fifteen; `Relationship` reopened only as a candidate.
-- **006-B** — temporal authority/regressive-recovery refinement; established the cross-cutting Operational Authority Continuity contract.
+- **006-B** — temporal authority/regressive-recovery refinement; established the Operational Authority Continuity contract.
 - **006-C** — twenty-four-scenario adversarial synchronization validation; retained fifteen synchronization IDs while refining SYNC-04/07/08/11/14/15.
-- **006-D** — representative Strategy/method/text/topology/runtime-distribution probes; established the Self-Contained Execution & Runtime Distribution Closure contract.
-- **006-E** — enterprise scale/resource/approximation/backpressure/degraded-mode validation; established the Enterprise Scale, Resource Admission, Approximation & Degraded Operation contract without adding a concept or synchronization.
+- **006-D** — representative Strategy/method/text/topology/runtime-distribution probes; retained the eleven/fifteen model and established the Self-Contained Execution & Runtime Distribution Closure contract.
+- **006-E** — enterprise scale/resource/approximation/backpressure/degraded-mode validation; retained the eleven/fifteen model and established capability-specific scale/degraded-operation authority.
+- **006-F** — privacy/disclosure/formal-guarantee/release-boundary validation; retained the eleven/fifteen model, deferred formal DP behind future mechanism-specific concept discovery, and reaffirmed release/use governance as external authority.
 
 Current next:
 
-**006-F — Privacy, Disclosure, Release-Governance Boundary & Mechanism-Specific Scope Decision**
+**006-G — Structured-Data Topology: Single-Table, Time-Series & Multi-Table Relationship Concept/Extensibility Audit**
 
-006-F must revalidate privacy/disclosure/release boundaries, including self-contained text memorization risk, sampled privacy Evidence, mechanism-specific guarantees and external release/use authority, without implementing a privacy mechanism or governance service.
+006-G is the principal remaining BDR-004 scope/concept decision.
 
 ## Implementation boundary
 
