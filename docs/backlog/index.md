@@ -14,7 +14,7 @@ Items are classified as:
 
 - **blocking design refinement** — must be resolved before a later implementation-authority phase may begin;
 - **baseline scope decision** — may remain out of the first implementation if explicitly reaffirmed and extensibility is preserved;
-- **implementation/release debt** — resolved during later delivery or publication work rather than by redefining concepts now;
+- **implementation/release debt** — resolved during later delivery/publication work;
 - **governance debt** — documentation/process work that does not currently block product-design readiness unless it causes authority ambiguity.
 
 Canonical facts remain under `docs/authority/`, `docs/concepts/`, `docs/synchronizations/`, `docs/experience/`, `docs/architecture/`, and `docs/implementation/`.
@@ -27,41 +27,59 @@ Canonical facts remain under `docs/authority/`, `docs/concepts/`, `docs/synchron
 
 005-J exposed the case where restoring older control state while newer external workers/effects survive can resurrect stale writer authority unless restore introduces a non-regressing recovery boundary.
 
-Phase 006 must validate the observable semantics across Execution, cancellation, security, history, recovery and operator experience, and promote the necessary invariant upstream. `ControlPlaneIncarnation`/equivalent remains a candidate realization rather than unquestioned concept authority.
+Phase 006 must validate observable semantics across Execution, cancellation, security, history, recovery and operator experience and promote the necessary invariant upstream. `ControlPlaneIncarnation`/equivalent remains a candidate realization rather than unquestioned concept authority.
 
 ### BDR-002 — post-planning adversarial end-to-end validation
 
 **Status:** open — Phase 006 blocking.
 
-A full-system scenario audit must re-test the eleven concepts and fifteen synchronizations against the concrete A-J plans, including ambiguous launch, stale writers, retry/resume, cancellation races, revocation, projection outages, mixed versions, retention loss, platform fallback, security-domain isolation and disaster recovery.
+A full-system scenario audit must re-test the accepted concepts/synchronizations against the concrete Phase 005 plans, including ambiguous launch, stale writers, retry/resume, cancellation races, revocation, projection outages, mixed versions, retention loss, platform fallback, security-domain isolation, disaster recovery and topology-sensitive partial-output cases.
 
-### BDR-003 — representative Strategy/method design probes
+### BDR-003 — representative Strategy/method and topology design probes
 
 **Status:** open — Phase 006 blocking.
 
-The model-neutral runtime architecture must be stress-tested against materially different synthesis/evaluation shapes before infrastructure implementation begins. At minimum, design probes should cover a Learning-based deep-generative family, a direct/simple generation path, and representative large-scale Evaluation methods.
+The model-neutral runtime architecture must be stress-tested against materially different synthesis/evaluation shapes before infrastructure implementation begins.
 
-This does not authorize implementation of CTGAN or any other algorithm during design refinement.
+At minimum, design probes must cover:
+
+- a Learning-based single-table deep-generative family;
+- a direct/simple single-table generation path;
+- a time-series Strategy shape;
+- a multi-table shared-key Strategy shape;
+- representative deterministic/bounded and statistical/approximate Evaluation methods.
+
+These are design/feasibility probes only. They do not authorize implementation of CTGAN, TimeGAN, a relational synthesizer or another algorithm during Phase 006.
 
 ### BDR-004 — initial-baseline scope and future-extensibility closure
 
 **Status:** open — Phase 006 blocking.
 
-The current implementation baseline intentionally excludes several possible future product domains. Phase 006 must explicitly reaffirm which are outside the first baseline and validate that existing concept/experience/architecture contracts do not accidentally make those exclusions permanent implementation assumptions.
+Phase 006 must explicitly determine the initial implementation scope while proving that deferred capabilities are not accidentally made impossible by current concept/API/schema/architecture assumptions.
 
-The relevant scope items are BSD-001 through BSD-004 below.
+The structured-data topology decision now includes:
+
+```text
+single-table                current baseline capability
+time-series                 explicit candidate capability
+multi-table shared-key      explicit candidate capability; Relationship reopened
+```
+
+006-G owns the concept/extensibility decision. A future function parameter may select a topology, but the parameter cannot substitute for the underlying descriptive relationship/temporal semantics.
 
 ## Baseline scope decisions
 
-### BSD-001 — relational/multi-table synthesis
+### BSD-001 — relational/multi-table shared-key synthesis
 
-**Status:** deferred from initial baseline; extensibility validation required in Phase 006.
+**Status:** candidate capability; initial-implementation inclusion TBD in Phase 006.
 
-Current structured/tabular scope must not hard-code a permanent single-table invariant. Relationship/multi-table concepts are reopened only through explicit upstream design authority.
+Current contracts must not hard-code a permanent single-table invariant. Phase 006-A reopened `Relationship` as a candidate concept because shared-key linkage may have reusable descriptive purpose independent of Data Meaning and Constraint.
+
+006-G must decide whether existing concepts suffice, Relationship should be accepted, or a narrower boundary is required.
 
 ### BSD-002 — mechanism-specific formal privacy
 
-**Status:** deferred from initial baseline; scope boundary revalidation required in Phase 006.
+**Status:** deferred from initial baseline; scope-boundary revalidation required in Phase 006.
 
 Privacy/disclosure-risk Evaluation and Evidence remain valid without claiming a formal privacy mechanism. Differential privacy or another mechanism with independent budget/state/actions may require new concept discovery if introduced.
 
@@ -73,9 +91,17 @@ Generation completion and favorable Evidence do not imply release/use approval. 
 
 ### BSD-004 — broader Strategy/Evaluation catalog
 
-**Status:** deferred beyond minimum reference design probes.
+**Status:** deferred beyond the minimum diverse reference design probes.
 
-The framework should not attempt to design every method before implementation. A minimum diverse reference set is required for design validation; broader catalog breadth can remain backlog.
+The framework should not attempt to design every method before implementation. A minimum reference set is required to falsify hidden assumptions; broader catalog breadth can remain backlog.
+
+### BSD-005 — time-series / temporal-table synthesis
+
+**Status:** candidate capability; initial-implementation inclusion TBD in Phase 006.
+
+Time-series must not be reduced to “single-table plus timestamp.” Phase 006 must validate entity/series identity, temporal ordering, horizon/continuation semantics, temporal Constraints, Strategy capability, Evaluation claim strength, checkpoint/recovery consequences and enterprise-scale behavior.
+
+006-A did not accept a standalone `Series`, `Temporal Structure` or `TimeSeriesMode` concept. 006-G must test whether reusable temporal sequence structure fits the reopened generic `Relationship` candidate or remains adequately owned by existing concepts.
 
 ## Implementation/release debt
 
