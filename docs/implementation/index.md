@@ -8,110 +8,106 @@ status: active
 
 ## Purpose
 
-This directory is the canonical home for **implementation planning** that translates accepted architecture into future source boundaries, interfaces, persistence, deployment, verification, delivery sequencing and acceptance evidence.
+This directory is the canonical home for implementation-planning decisions that translate accepted architecture into future source boundaries, interfaces, persistence, deployment, verification, delivery sequencing and acceptance evidence.
 
-**Phase 005 remains planning-only.** These documents may select concrete future technologies and contracts, but they do not authorize production code, schema, adapters, tests, CI or deployment infrastructure.
+**Phase 005 is complete as planning only. Production implementation is not authorized.**
 
-Implementation planning is downstream of the [Phase 004 Consolidated Architecture Contract](../architecture/phase-004-consolidated-architecture-contract.md) and cannot redefine concepts, synchronizations, experience or architecture for implementation convenience.
+The consolidated baseline is:
 
-005-K must explicitly determine whether the Jackson design program is complete enough for a later implementation-authority phase or whether another design/refinement phase is required.
+[Phase 005 Consolidated Implementation-Planning Contract](phase-005-consolidated-implementation-planning-contract.md)
+
+005-K concluded that further design refinement is required before a later implementation-authority phase may begin. Phase 006 may revise this planning baseline when upstream design authority changes.
 
 ## Start here
 
-1. [Implementation governance](implementation-authority-delivery-governance-toolchain-repository-enforcement.md) — 005-A.
-2. [Verification/fitness/quality gates](verification-strategy-test-harness-architecture-fitness-evidence-quality-gates.md) — 005-B.
-3. [Source/package/toolchain topology](source-topology-module-package-boundaries-shared-foundation-dependency-enforcement.md) — 005-C.
-4. [Public/control-plane identity, persistence and migration](public-resource-control-plane-identity-state-persistence-transactions-migration-plan.md) — 005-D.
-5. [Spark data boundary, manifests and promotion](spark-data-boundary-source-output-reference-manifest-materialization-promotion-plan.md) — 005-E.
-6. [Runtime extension SPI and Learned State](strategy-method-extension-spi-learning-generation-evaluation-runtime-learned-state-plan.md) — 005-F.
-7. [Execution/recovery/fencing/cancellation](execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation-plan.md) — 005-G.
-8. [Evidence/Provenance/history/reproducibility](evaluation-evidence-provenance-historical-query-reproducibility-plan.md) — 005-H.
-9. [Dependency/offline/security/redaction](dependency-resolution-offline-no-egress-authorization-redaction-enterprise-security-plan.md) — 005-I.
-10. [Deployment/platform/observability/compatibility/scale](deployment-platform-adapters-observability-compatibility-scale-performance-plan.md) — 005-J.
-11. [Phase 005 navigator](../phases/005/index.md) — current sequence and exit gate.
+For later implementation planning or design-refinement impact analysis:
 
-For progressive disclosure, read only the active slice plus directly referenced upstream authority; do not load the full corpus by default.
+1. [Phase 004 Consolidated Architecture Contract](../architecture/phase-004-consolidated-architecture-contract.md);
+2. [Phase 005 Consolidated Implementation-Planning Contract](phase-005-consolidated-implementation-planning-contract.md);
+3. the one detailed 005 slice relevant to the task;
+4. [005-B verification authority](verification-strategy-test-harness-architecture-fitness-evidence-quality-gates.md) when acceptance/fitness is relevant;
+5. [Phase 006 navigator](../phases/006/index.md) for active design refinement;
+6. ADRs only when rationale/supersession history is needed.
 
-## Authority relationship
+Do not load the full implementation-planning corpus by default.
+
+## Detailed Phase 005 authority
+
+1. [005-A — Implementation governance](implementation-authority-delivery-governance-toolchain-repository-enforcement.md)
+2. [005-B — Verification/fitness/quality gates](verification-strategy-test-harness-architecture-fitness-evidence-quality-gates.md)
+3. [005-C — Source/package/toolchain topology](source-topology-module-package-boundaries-shared-foundation-dependency-enforcement.md)
+4. [005-D — Public/control-plane identity, persistence and migration](public-resource-control-plane-identity-state-persistence-transactions-migration-plan.md)
+5. [005-E — Spark data boundary, manifests and promotion](spark-data-boundary-source-output-reference-manifest-materialization-promotion-plan.md)
+6. [005-F — Runtime extension SPI and Learned State](strategy-method-extension-spi-learning-generation-evaluation-runtime-learned-state-plan.md)
+7. [005-G — Execution/recovery/fencing/cancellation](execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation-plan.md)
+8. [005-H — Evidence/Provenance/history/reproducibility](evaluation-evidence-provenance-historical-query-reproducibility-plan.md)
+9. [005-I — Dependency/offline/security/redaction](dependency-resolution-offline-no-egress-authorization-redaction-enterprise-security-plan.md)
+10. [005-J — Deployment/platform/observability/compatibility/scale](deployment-platform-adapters-observability-compatibility-scale-performance-plan.md)
+
+## Consolidated future delivery shape
+
+The provisional future implementation sequence remains:
 
 ```text
-authority / concepts / synchronizations
-        ↓
-experience
-        ↓
-architecture
-        ↓
-implementation planning
-        ↓
-future code / deployment
+Wave 0  governance / toolchain / verification bootstrap
+Wave 1  durable identity and control persistence
+Wave 2  exact distributed data boundary
+Wave 3  runtime + Execution contract foundation
+Wave 4  dependency/security capability boundary
+Wave 5  minimum representative synthesis/evaluation vertical slice
+Wave 6  Evidence/history/reproducibility
+Wave 7  platform/deployment adapters
+Wave 8  hardening/release certification
 ```
 
-Future code remains realization, not authority over upstream contracts.
+This sequence is **not authorized for execution yet**.
 
-## Consolidated plan map
+Wave 5 and overall implementation authority remain blocked pending Phase 006 design refinement.
 
-| Slice | Future implementation responsibility |
-|---|---|
-| 005-A | change governance, dependency/toolchain policy, acceptance evidence |
-| 005-B | V0-V11 verification, AF-01..20 fitness, Q0-Q4 gates |
-| 005-C | one `src/syngan` package, inward dependency direction, foundational toolchain |
-| 005-D | ResourceRef/revision/state/schema model, public handles, SQL control persistence, CAS/outbox/migrations |
-| 005-E | exact source state, distributed manifests, candidate/sealed snapshot/output promotion |
-| 005-F | executable bindings, activity-specific runtime SPI, Learned-State representation/codecs |
-| 005-G | Execution/Attempt, AttemptEpoch/WriterFence, checkpoints, recovery, reconciliation, cancellation |
-| 005-H | Evidence establishment, canonical typed Provenance, bounded history/query, reproducibility assessment |
-| 005-I | dependency resolution/trust, offline/no-egress, authorization, capabilities, secrets, redaction/isolation |
-| 005-J | deployment profiles, platform adapters, observability, HA/DR, compatibility/support, scale/performance |
+## Frozen cross-slice invariants
 
-## Key cross-slice invariants
+Until upstream authority changes, future implementation planning continues to preserve:
 
-Future implementation must preserve at least:
+- durable SYNGAN identity distinct from payload/location/platform/runtime identity;
+- immutable commitment/history and exact historical resolution;
+- semantic completion distinct from runtime/platform success;
+- candidate/checkpoint/runtime material distinct from semantic results;
+- single semantic authority under at-least-once physical work;
+- Attempt fencing distinct from liveness;
+- Evidence claim strength bounded by Evaluation support;
+- typed canonical Provenance distinct from projections/telemetry/security audit;
+- qualified reproducibility rather than Boolean inheritance;
+- dependency identity/trust/compatibility/authorization/network/egress separation;
+- non-bearer handles and non-canonical bearer secrets;
+- Attempt-scoped capability bounded by semantics ∩ authorization ∩ deployment capability;
+- no hidden acquisition/remote fallback/external telemetry in supported offline/no-egress profiles;
+- no mandatory full-driver corpus materialization on enterprise paths;
+- capability-negotiated platform support with explicit fallback/limitation/incompatibility;
+- restore-safe recovery must not allow regressed control state to resurrect stale writer authority.
 
-- platform/runtime/payload objects never replace SYNGAN durable identity;
-- exact historical references never silently resolve to latest;
-- semantic completion remains owner-side and distinct from runtime/platform success;
-- duplicate physical work cannot create duplicate semantic authority;
-- stale Attempts are fenced; lease expiry is not fencing;
-- checkpoint/candidate/runtime material remains non-final;
-- Evidence claim strength cannot exceed Evaluation support;
-- Provenance remains typed canonical relationships, not a metadata warehouse;
-- query/search/telemetry/security audit remain derived or separate lanes;
-- reproducibility remains qualified assessment, not Boolean inheritance;
-- authorization cannot broaden committed semantics;
-- handles are not credentials and bearer secrets are non-canonical;
-- offline/no-egress profiles have no hidden acquisition, telemetry or remote fallback;
-- enterprise paths do not require full source/output/Learned-State collection on the driver;
-- platform support is capability-negotiated and fallback must preserve semantics;
-- a regressive control-store restore cannot resurrect stale writer authority: recovery quarantine and a fresh `ControlPlaneIncarnation`/equivalent fence context are required where needed.
+## Current readiness
 
-## 005-J deployment/platform plan
+### Implementation-planning completeness
 
-005-J adds the future deployment realization contract:
+**Complete.** 005-A through 005-K are closed.
 
-- local/development, portable Spark, managed Databricks-oriented and private/offline/no-egress profiles;
-- optional advanced hybrid composition with explicit cross-domain/security requirements;
-- guarantee-oriented `PlatformCapabilityDescriptor` and contextual `PlatformCompatibilityAssessment`;
-- durable reference transport across service boundaries rather than serialized live DataFrame/model/session objects;
-- restartable/horizontally safe coordinators over the PostgreSQL reference control-store family;
-- generic Spark as a first-class profile when required contracts are supplied;
-- Databricks as an optional adapter target whose jobs/versioning/identity/secrets/lineage remain subordinate integrations;
-- optional OpenTelemetry/OTLP-oriented vendor-neutral telemetry integration with no offline exporter requirement;
-- canonical history, runtime telemetry and security audit kept distinct;
-- multi-axis compatibility/support tiers and rolling-upgrade safety;
-- multi-dimensional benchmark evidence rather than row-count-only scale claims;
-- disaster-recovery quarantine and `ControlPlaneIncarnation`/equivalent fencing after potentially regressive restore;
-- V10/V11 and AF-01/02/03/07/09/10/11/12/13/14/15/17/18/20 obligations.
+### Implementation authorization
 
-No deployment/platform implementation was created by 005-J.
+**Not approved.**
 
-Phase record: [005-J](../phases/005/005-J-deployment-platform-adapters-observability-compatibility-scale-performance-implementation-plan.md).
+[005-K](../phases/005/005-K-cross-slice-integration-delivery-sequencing-backlog-closure-jackson-methodology-completeness-implementation-readiness-exit.md) requires Phase 006 design refinement for:
 
-## Current state
+- temporal/disaster-recovery authority;
+- post-planning adversarial end-to-end validation;
+- representative Strategy/Evaluation design probes;
+- explicit initial-scope/future-extensibility closure.
 
-**005-A through 005-J are complete as plans only.**
+Tracked blockers and deferred items are in the [Backlog](../backlog/index.md).
+
+## Current phase
+
+[Phase 006 — Post-Planning Design Validation & Adversarial Refinement](../phases/006/index.md)
 
 Next:
 
-**005-K — Cross-Slice Integration, Delivery Sequencing, Backlog Closure, Jackson-Methodology Completeness & Implementation-Readiness Exit**.
-
-005-K must not assume coding is next. It must either approve a later explicit implementation-authority phase or require additional design refinement.
+**006-A — Post-Planning Concept Completeness, Mechanism-vs-Concept & Scope-Boundary Revalidation**
