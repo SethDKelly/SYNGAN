@@ -15,6 +15,7 @@ Primary authority:
 - [`Phase 005 Consolidated Implementation-Planning Contract`](docs/implementation/phase-005-consolidated-implementation-planning-contract.md)
 - [`Operational Authority Continuity & Regressive Recovery Contract`](docs/authority/operational-authority-continuity-regressive-recovery-contract.md)
 - [`Self-Contained Execution & Runtime Distribution Closure Contract`](docs/authority/self-contained-execution-runtime-distribution-closure-contract.md)
+- [`Enterprise Scale, Resource Admission, Approximation & Degraded Operation Contract`](docs/authority/enterprise-scale-resource-admission-approximation-degraded-operation-contract.md)
 - [`Core Synchronizations`](docs/synchronizations/core-synchronizations.md)
 - [`Phase 006`](docs/phases/006/index.md) for current post-planning design refinement
 
@@ -33,50 +34,21 @@ No production implementation has begun or been authorized.
 
 ## Phase 006 progress
 
-### 006-A — complete
+### 006-A through 006-D — complete
 
-- accepted concept/synchronization counts remained **11 / 15**;
-- `GenerationMode` / `DataTopologyMode` is not a concept;
-- single-table generation remains the current baseline capability;
-- time-series generation is an explicit Phase 006 design target;
-- multi-table shared-key generation reopens `Relationship` as a provisional candidate for 006-G.
+These groups retained the current **11-concept / 15-synchronization** model, reopened `Relationship` only as a provisional candidate, established restore-safe Operational Authority Continuity, adversarially refined SYNC-04/07/08/11/14/15, and validated Learning-based/direct/text/time-series/multi-table/Evaluation/runtime-distribution shapes.
 
-### 006-B — complete
+006-D additionally requires:
 
-006-B established the cross-cutting [`Operational Authority Continuity & Regressive Recovery Contract`](docs/authority/operational-authority-continuity-regressive-recovery-contract.md).
+- at least one self-contained source-derived free-form-text synthesis path in the supported baseline;
+- optional pretrained/world-knowledge text to remain explicit local-artifact/runtime-network capability;
+- exact compatible runtime closure across every material Spark worker, including dynamically allocated workers;
+- no hidden first-use dependency/model acquisition;
+- no universal driver-memory load/broadcast requirement for large Learned State/model artifacts.
 
-Its core rule is:
+### 006-E — complete
 
-```text
-restored historical control state
-        !=
-current mutation authority
-```
-
-Potentially regressive recovery therefore enters continuity-unverified/recovery-quarantine semantics until a non-regressing authority boundary is established and surviving work/effects are reconciled.
-
-### 006-C — complete
-
-006-C replayed the design against twenty-four normal/adversarial scenarios and returned:
-
-```text
-PASS WITH TARGETED SYNCHRONIZATION REFINEMENT
-```
-
-The synchronization count remains **15**; no `SYNC-16` is currently justified. SYNC-04 / 07 / 08 / 11 / 14 / 15 were refined.
-
-### 006-D — complete
-
-006-D stress-tested the model/runtime design against:
-
-- CTGAN-like Learning-based synthesis;
-- direct Generation;
-- self-contained, locally pretrained and runtime-network text generation;
-- mixed-field/composite Strategy behavior;
-- time-series and multi-table shared-key Strategy shapes;
-- deterministic/bounded and statistical/approximate Evaluation;
-- large/sharded Learned State;
-- Spark cluster package/runtime distribution.
+006-E stress-tested the design under multidimensional enterprise scale, large state/text artifacts, dynamic workers, time-series horizon/entity growth, multi-table fan-out, statistical approximation, concurrent workloads, backpressure and capability-specific failures.
 
 Result:
 
@@ -84,27 +56,35 @@ Result:
 PASS WITH TARGETED CROSS-CUTTING REFINEMENT
 ```
 
-006-D established the [`Self-Contained Execution & Runtime Distribution Closure Contract`](docs/authority/self-contained-execution-runtime-distribution-closure-contract.md).
+It established the [`Enterprise Scale, Resource Admission, Approximation & Degraded Operation Contract`](docs/authority/enterprise-scale-resource-admission-approximation-degraded-operation-contract.md).
 
-The supported baseline must now include at least one **source-derived/local free-form-text synthesis path** that does not require a pretrained model artifact, Hugging Face/model-hub lookup, hosted inference API, or first-use remote download.
-
-Richer pretrained/world-knowledge text remains optional and explicit: it may use locally provisioned artifacts or a declared runtime-network Strategy, but neither may become a hidden baseline fallback.
-
-For distributed Spark execution:
+Core rules now include:
 
 ```text
-driver can import/resolve SYNGAN
-        !=
-all executors are runtime-compatible
+resource pressure
+    may queue / block / retry / reduce observability
+
+resource pressure
+    MUST NOT silently weaken committed semantics
 ```
 
-Every material worker—including dynamically allocated workers—must satisfy the exact compatible executable/artifact closure before running the Attempt. Missing worker dependencies must not trigger undeclared network repair. Large model/Learned-State distribution cannot universally depend on loading/broadcasting the whole state from the driver.
+Accordingly:
 
-BDR-003 is resolved.
+- enterprise compatibility is workload-specific across rows, bytes, width, cardinality, skew, state size, topology, Evaluation coverage and concurrency—not a row-count flag;
+- hidden source-size-proportional driver/single-process stages invalidate enterprise-scale claims for that path;
+- approximation must be explicit and owned by Learning, Generation or Evaluation as appropriate;
+- exhaustive Evaluation cannot quietly become sampled because resources are scarce;
+- backpressure cannot silently truncate Generation quantity, time-series horizon or mandatory multi-table scope;
+- caches remain performance mechanisms, not dependency identity;
+- dynamically admitted workers must retain runtime-distribution closure;
+- degraded operation must state which capability is unavailable—canonical persistence, projection/search, telemetry, dependency source, exact data reference, output/checkpoint storage, worker/accelerator or authorization have different consequences;
+- storage pressure does not override authority-aware retention.
+
+No Resource, Backpressure, Approximation, DegradedMode, Cost or Quota concept was added, and no new synchronization ID was required.
 
 ## Structured-data capability direction
 
-Phase 006 is explicitly validating:
+Phase 006 continues to validate:
 
 ```text
 single-table generation
@@ -116,8 +96,7 @@ A future API may expose these through a parameter or typed specification, but se
 
 ## Remaining Phase 006 groups
 
-- **006-E — Enterprise Scale, Resource/Approximation, Backpressure & Degraded-Mode Design Validation — next**
-- 006-F — Privacy, Disclosure, Release-Governance Boundary & Mechanism-Specific Scope Decision
+- **006-F — Privacy, Disclosure, Release-Governance Boundary & Mechanism-Specific Scope Decision — next**
 - 006-G — Structured-Data Topology: Single-Table, Time-Series & Multi-Table Relationship Concept/Extensibility Audit
 - 006-H — Human/Programmatic Experience Closure for Recovery, Security, Degraded & Historical Workflows
 - 006-I — Architecture/ADR Reconciliation, Canonical Authority Promotion & Planning Back-Propagation
@@ -127,4 +106,4 @@ Jackson-style completeness is judged by design evidence, not by a fixed number o
 
 ## Current next group
 
-**006-E — Enterprise Scale, Resource/Approximation, Backpressure & Degraded-Mode Design Validation**
+**006-F — Privacy, Disclosure, Release-Governance Boundary & Mechanism-Specific Scope Decision**
