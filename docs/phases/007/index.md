@@ -21,8 +21,8 @@ Current implementation authority is layered through:
 ```text
 007-A  COMPLETE
 007-B  COMPLETE
-007-C  AUTHORIZED / ACTIVE
-007-D  NOT AUTHORIZED
+007-C  COMPLETE
+007-D  NOT AUTHORIZED — NEXT ELIGIBLE
 007-E  NOT AUTHORIZED
 007-F  NOT AUTHORIZED
 007-G  NOT AUTHORIZED
@@ -32,7 +32,7 @@ Current implementation authority is layered through:
 007-K  NOT AUTHORIZED
 ```
 
-Phase 007 remains active and implementation permission is limited to 007-C.
+Phase 007 remains active, but no subgroup beyond completed 007-C is authorized until an explicit proceed decision is given.
 
 ## Locked design baseline
 
@@ -73,9 +73,9 @@ Implementation realizes authority; code/platform/model convenience does not rede
 007-A authority lock                                COMPLETE
         ↓
 007-B repository/toolchain/verification bootstrap   COMPLETE
-        ↓ explicit proceed
-007-C source/package topology                       ACTIVE
-        ↓ evidence + explicit proceed
+        ↓
+007-C source/package topology                       COMPLETE
+        ↓ explicit proceed required
 007-D identity/public contracts                     NOT AUTHORIZED
         ↓
 007-E control persistence/history
@@ -101,8 +101,8 @@ No later subgroup is authorized automatically by the existence of this plan or c
 |---|---|---|
 | **007-A** | [Implementation Authority Lock, Canonical Baseline, Change Control & Slice Authorization](007-A-implementation-authority-lock-canonical-baseline-change-control-slice-authorization.md) | **complete** |
 | **007-B** | [Repository/Toolchain Bootstrap, Reproducible Environment & Verification Harness](007-B-repository-toolchain-bootstrap-reproducible-environment-verification-harness.md) | **complete** |
-| **007-C** | Source/Package Topology, Dependency Direction & Architecture-Fitness Enforcement | **authorized / active** |
-| 007-D | Identity, Revision, Serialization, Typed Public Resource/Handle & Programmatic-View Foundation | not authorized |
+| **007-C** | [Source/Package Topology, Dependency Direction & Architecture-Fitness Enforcement](007-C-source-package-topology-dependency-direction-architecture-fitness-enforcement.md) | **complete** |
+| **007-D** | Identity, Revision, Serialization, Typed Public Resource/Handle & Programmatic-View Foundation | **not authorized / next eligible** |
 | 007-E | Control Persistence, Transactions, CAS, Outbox, Historical References & Migration Baseline | not authorized |
 | 007-F | Distributed Data-State, Structured Topology, Manifest, Candidate/Seal & Promotion Foundation | not authorized |
 | 007-G | Strategy/Method Binding, Dependency Trust, Authorization, Secrets & Distributed Runtime Closure Foundation | not authorized |
@@ -117,11 +117,9 @@ No later subgroup is authorized automatically by the existence of this plan or c
 
 Portable-core pytest denies Python sockets by default after explicit dependency provisioning.
 
-## 007-C current implementation boundary
+## 007-C result
 
-007-C is authorized to establish only the source/package architecture and its executable fitness enforcement.
-
-Authorized production topology:
+007-C established the first production package structure without implementing later-slice behavior:
 
 ```text
 src/syngan/
@@ -136,22 +134,26 @@ src/syngan/
 └── bootstrap/
 ```
 
-007-C may configure Hatchling package selection, installed-project verification, Import Linter contracts, structural/package fitness tests and non-publishing wheel/sdist smoke builds.
+Executable Import Linter contracts now enforce inward core layering, prohibit core dependencies on adapters/bootstrap, and prohibit adapters from depending on application/api/bootstrap.
 
-007-C must not implement concept state/lifecycles, public resource/handle contracts, persistence, Spark/runtime behavior, synthesis algorithms, Execution/recovery, security/provider integrations, Evidence/history, deployment or release behavior.
+Normal verification installs the first-party package from the locked environment, runs architecture fitness, checks root/typed-package behavior, and builds/inspects wheel + sdist without publication.
+
+PR #1 was verified on exact head `9f93b6eff7f8d8a1b19950745530dc273d462d6d` by `Verify` run `34389127442` and merged as `063f847953f69a525ee04315fa92bc0e9fa36a1c`.
+
+`[project].dependencies` remains empty. Build-only Hatchling/editables support is locked for the no-build-isolation verification path.
 
 ## Branch/review posture
 
-007-B established a green `Verify` workflow, but `main` remains unprotected and the check is not repository-enforced.
+007-C successfully exercised the feature-branch/pull-request path with a green exact-head `Verify` result before merge.
 
-007-C material production-source work is being performed on a reviewable feature branch so the pull-request verification path is exercised. A green `Verify` result against the exact reviewed head is required subgroup evidence. This procedural use does not imply GitHub branch-protection enforcement.
+`main` is still not claimed as protected and `Verify` is not claimed as a repository-enforced required check. Subsequent material production-source work should continue using reviewable branches/PRs when supported and retain exact-head verification evidence.
 
 ## Stop/reopen rule
 
 Class 3 architecture conflicts and Class 4 semantic/experience conflicts stop ordinary implementation. Reopen the smallest upstream canonical authority rather than coding around the conflict.
 
-## Current boundary
+## Current next boundary
 
-**007-C — Source/Package Topology, Dependency Direction & Architecture-Fitness Enforcement is active.**
+**007-D — Identity, Revision, Serialization, Typed Public Resource/Handle & Programmatic-View Foundation** is the next eligible subgroup, but it is **not yet authorized**.
 
-007-D remains not authorized until 007-C completes its evidence gate and a later explicit proceed decision is given.
+An explicit proceed decision is required before 007-D implementation begins.
