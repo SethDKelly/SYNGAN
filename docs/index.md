@@ -58,10 +58,13 @@ Completed Phase 006 groups:
 
 - [006-A — Concept Completeness, Mechanism-vs-Concept & Scope-Boundary Revalidation](phases/006/006-A-post-planning-concept-completeness-mechanism-vs-concept-scope-boundary-revalidation.md)
 - [006-B — Temporal Authority, Disaster Recovery, Rollback, Fork & Historical-Truth Refinement](phases/006/006-B-temporal-authority-disaster-recovery-rollback-fork-historical-truth-refinement.md)
+- [006-C — End-to-End Scenario, Exception, Failure & Adversarial Synchronization Validation](phases/006/006-C-end-to-end-scenario-exception-failure-adversarial-synchronization-validation.md)
 
 006-A kept the accepted concept/synchronization counts unchanged, made time-series an explicit design target, and reopened `Relationship` only as a candidate for multi-table/shared-key and possible temporal sequence semantics.
 
-006-B established the active [Operational Authority Continuity & Regressive Recovery Contract](authority/operational-authority-continuity-regressive-recovery-contract.md): a restored historical persistence view cannot by itself re-establish current mutation authority, resurrect superseded Attempts/cancellations/capabilities, or erase later historical reality.
+006-B established the active [Operational Authority Continuity & Regressive Recovery Contract](authority/operational-authority-continuity-regressive-recovery-contract.md).
+
+006-C adversarially replayed the design across twenty-four scenarios. The result was **PASS WITH TARGETED SYNCHRONIZATION REFINEMENT**: the synchronization count remains fifteen, no `SYNC-16` is currently justified, and SYNC-04/07/08/11/14/15 were refined in the canonical [Core Synchronizations](synchronizations/core-synchronizations.md).
 
 ## Current invariant baseline
 
@@ -73,11 +76,13 @@ Until Phase 006 explicitly revises further authority, preserve:
 - model-neutral structured/tabular synthesis;
 - semantic completion distinct from runtime/platform completion;
 - one Execution with multiple fenced Attempts and explicit recovery/cancellation semantics;
+- same-Execution continuation may be blocked by current authorization/dependency/platform capability without rewriting the commitment;
+- coordinated logical-output completion applies to the whole committed scope rather than one constituent;
 - potentially regressive recovery enters continuity-unverified/recovery-quarantine semantics before write authority resumes;
 - rollback cannot resurrect stale writer/cancellation/security authority;
-- missing post-restore-point history remains recoverable/unknown/unavailable according to evidence rather than silently becoming absence;
+- missing post-restore-point history is not proof of non-occurrence, and surviving physical effects are not proof of semantic transition;
 - owner-established Evidence and typed canonical Provenance;
-- qualified reproducibility rather than Boolean inheritance;
+- unresolved continuity/history gaps may weaken current reproducibility without rewriting historical commitments;
 - explicit dependency/trust/authorization/network/egress distinctions;
 - no hidden runtime acquisition/remote fallback/required external telemetry in offline/no-egress profiles;
 - capability-negotiated platforms rather than provider-name authority;
@@ -86,9 +91,9 @@ Until Phase 006 explicitly revises further authority, preserve:
 
 ## Next
 
-**006-C — End-to-End Scenario, Exception, Failure & Adversarial Synchronization Validation**
+**006-D — Reference Strategy/Method and Topology Design Probes & Algorithm-Neutrality Stress Test**
 
-006-C must try to falsify SYNC-01 through SYNC-15 against complete happy-path, failure, restore, topology and security scenarios before the synchronization set is considered closed after Phase 005 planning.
+006-D must use materially different Learning-based, direct, time-series, multi-table and Evaluation method shapes to try to falsify model-neutrality, runtime/state boundaries and topology assumptions without implementing any algorithm.
 
 ## Documentation governance note
 
