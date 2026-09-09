@@ -24,9 +24,10 @@ Current evidence:
 
 - [Post-Planning Concept Revalidation & Structured-Data Topology Candidates](post-planning-concept-revalidation-structured-topology-candidates.md) — 006-A mechanism-vs-concept audit plus single-table/time-series/multi-table capability analysis. It reopens `Relationship` as a **candidate**, not an accepted concept.
 - [Temporal Authority, Regressive Recovery & Historical-Truth Revalidation](temporal-authority-regressive-recovery-revalidation.md) — 006-B alternatives/falsification evidence that led to the canonical Operational Authority Continuity contract.
-- [End-to-End Scenario, Exception, Failure & Adversarial Synchronization Validation](end-to-end-adversarial-synchronization-validation.md) — 006-C twenty-four-scenario falsification pass over SYNC-01 through SYNC-15. The accepted result retained fifteen synchronization IDs with targeted wording refinements.
-- [Reference Strategy/Method, Text & Distributed-Runtime Falsification Probes](reference-strategy-method-topology-text-distribution-probes.md) — 006-D algorithm/topology/text/large-state/Spark-distribution probe set. It led to the canonical Self-Contained Execution & Runtime Distribution Closure contract without adding a new concept or synchronization.
-- [Enterprise Scale, Resource/Approximation, Backpressure & Degraded-Mode Validation](enterprise-scale-resource-approximation-backpressure-degraded-mode-validation.md) — 006-E thirty-scenario scale/resource/degraded-mode falsification pass. It led to the canonical Enterprise Scale, Resource Admission, Approximation & Degraded Operation contract without adding Resource/Backpressure/Approximation/DegradedMode concepts or a synchronization ID.
+- [End-to-End Scenario, Exception, Failure & Adversarial Synchronization Validation](end-to-end-adversarial-synchronization-validation.md) — 006-C twenty-four-scenario falsification pass over SYNC-01 through SYNC-15.
+- [Reference Strategy/Method, Text & Distributed-Runtime Falsification Probes](reference-strategy-method-topology-text-distribution-probes.md) — 006-D algorithm/topology/text/large-state/Spark-distribution probes that led to the Self-Contained Execution & Runtime Distribution Closure contract.
+- [Enterprise Scale, Resource/Approximation, Backpressure & Degraded-Mode Validation](enterprise-scale-resource-approximation-backpressure-degraded-mode-validation.md) — 006-E scale/resource/degraded-operation falsification evidence that rejected generic Resource/Backpressure/Approximation/DegradedMode concepts.
+- [Privacy, Disclosure, Release Governance & Mechanism-Specific Scope Validation](privacy-disclosure-release-governance-mechanism-specific-scope-validation.md) — 006-F privacy/disclosure/formal-guarantee/release-boundary evidence. It retained generic Privacy as rejected, kept release/use governance external, and established a future mechanism-specific concept-discovery gate for composable DP/formal privacy mechanisms.
 
 See [Phase 006](../phases/006/index.md) for the active design-refinement sequence.
 
@@ -63,12 +64,13 @@ See [docs/concepts](../concepts/index.md) for current canonical definitions.
 - Attempt → Execution-owned history;
 - stable dataset/artifact references → representation/integration obligation;
 - reproducibility → cross-cutting contract;
-- generic Privacy → rejected; mechanism-specific discovery when needed;
-- Relationship → originally deferred relational edge; **reopened provisionally in Phase 006-A**;
-- Use / Release Decision → external authority;
+- generic Privacy → rejected; 006-F reaffirms mechanism-specific concept discovery when independently meaningful formal privacy state/actions enter scope;
+- Relationship → originally deferred relational edge; reopened provisionally in Phase 006-A and still pending 006-G;
+- Use / Release Decision → external authority; reaffirmed by 006-F;
 - Source Characterization/Profile → supporting observation/method;
-- Text / Language Model / Tokenizer / Composite Strategy / Runtime Distribution → rejected as standalone concepts by 006-D; represented through existing meaning/Strategy/state/integration authority;
-- Resource / Capacity / Backpressure / Admission / Approximation / DegradedMode / Cost / Quota → rejected as standalone concepts by 006-E under the current scope; represented through Strategy/activity semantics, Execution, Evidence and deployment/operator policy as appropriate.
+- Text / Language Model / Tokenizer / Composite Strategy / Runtime Distribution → rejected as standalone concepts by 006-D;
+- Resource / Backpressure / Approximation / DegradedMode / Cost / Quota → rejected as current standalone concepts by 006-E;
+- Disclosure Risk / Memorization / Redaction Decision → rejected as standalone concepts by 006-F; handled through existing Evaluation/Evidence/security boundaries.
 
 ## Earlier discovery layers
 
@@ -90,4 +92,4 @@ These remain design provenance, not active concept authority.
 
 ## Representation boundary
 
-Nothing in this directory directly defines Python classes, package modules, Spark jobs, PyTorch objects, function signatures, file formats, storage schemes, event architectures, transaction mechanisms, plugin architectures or package-distribution mechanisms.
+Nothing in this directory directly defines Python classes, package modules, Spark jobs, PyTorch objects, function signatures, file formats, storage schemes, event architectures, transaction mechanisms, plugin architectures, privacy accountants, release-governance engines or package-distribution mechanisms.
