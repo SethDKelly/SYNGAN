@@ -6,28 +6,54 @@ status: active
 
 # Design Phases
 
-- **Phase 001 — Design Foundation & Concept Discovery — complete** — [index](001/index.md)
-- **Phase 002 — Concept Specification & Invariant Refinement — complete** — [index](002/index.md)
-- **Phase 003 — Experience & Workflow Design — complete** — [index](003/index.md)
-- **Phase 004 — Representation & Architecture Design — complete** — [index](004/index.md)
-- **Phase 005 — Implementation Planning & Delivery Decomposition — current, planning-only** — [index](005/index.md)
+## Phase 001 — Design Foundation & Concept Discovery — complete
 
-Phase 002 closed with eleven accepted concepts and fifteen synchronization rules.
+See [Phase 001 index](001/index.md).
 
-Phase 003 exit authority: [Phase 003 Consolidated Experience Contract](../experience/phase-003-consolidated-experience-contract.md).
+## Phase 002 — Concept Specification & Invariant Refinement — complete
 
-Phase 004 exit authority: [Phase 004 Consolidated Architecture Contract](../architecture/phase-004-consolidated-architecture-contract.md).
+See [Phase 002 index](002/index.md). Phase 002 closed with eleven accepted concepts and fifteen synchronization rules.
 
-## Phase 005 status
+## Phase 003 — Experience & Workflow Design — complete
 
-005-A through 005-J are complete **as plans only**. No production implementation is implied.
+See [Phase 003 index](003/index.md).
 
-Completed plans cover governance/verification/topology; control persistence; Spark data/materialization; runtime/Learned State; Execution/recovery; Evidence/Provenance/history; dependency/security; and deployment/platform/observability/compatibility/scale.
+Exit authority: [Phase 003 Consolidated Experience Contract](../experience/phase-003-consolidated-experience-contract.md).
 
-The deployment plan adds local, portable Spark, Databricks-oriented and private/offline profiles, capability-negotiated platform support, explicit HA/DR treatment, multi-axis compatibility, and benchmark evidence requirements.
+## Phase 004 — Representation & Architecture Design — complete
+
+See [Phase 004 index](004/index.md).
+
+Exit authority: [Phase 004 Consolidated Architecture Contract](../architecture/phase-004-consolidated-architecture-contract.md).
+
+## Phase 005 — Implementation Planning & Delivery Decomposition — complete
+
+See [Phase 005 index](005/index.md).
+
+**Phase 005 completed implementation planning only; no production implementation was authorized or performed.**
+
+Exit:
+
+[005-K — Cross-Slice Integration, Delivery Sequencing, Backlog Closure, Jackson-Methodology Completeness & Implementation-Readiness Exit](005/005-K-cross-slice-integration-delivery-sequencing-backlog-closure-jackson-methodology-completeness-implementation-readiness-exit.md)
+
+Consolidated planning authority:
+
+[Phase 005 Consolidated Implementation-Planning Contract](../implementation/phase-005-consolidated-implementation-planning-contract.md)
+
+005-K found the A-J plans coherent but did **not** approve implementation readiness. Four design blockers remain: temporal authority after regressive restore, post-planning adversarial validation, representative Strategy/method design probes, and explicit initial-scope/future-extensibility closure.
+
+## Phase 006 — Post-Planning Design Validation & Adversarial Refinement — current
+
+See [Phase 006 index](006/index.md).
+
+Phase 006 is design-only. It uses the implementation-planning evidence from Phase 005 to revalidate concepts, synchronizations, experience and architecture before any later explicit implementation-authority phase is considered.
 
 Next:
 
-**005-K — Cross-Slice Integration, Delivery Sequencing, Backlog Closure, Jackson-Methodology Completeness & Implementation-Readiness Exit**
+**006-A — Post-Planning Concept Completeness, Mechanism-vs-Concept & Scope-Boundary Revalidation**
 
-005-K is an explicit Jackson/design-completeness gate. It may require another design-refinement phase rather than implementation. Even a positive readiness result does not itself authorize coding; implementation requires a later explicit implementation-authority phase.
+## Implementation boundary
+
+Reaching a phase number does not itself authorize coding.
+
+A later explicit implementation-authority phase may be created only after a positive design-readiness exit. Until then, production source/schema/runtime/test/deployment work remains unauthorized.
