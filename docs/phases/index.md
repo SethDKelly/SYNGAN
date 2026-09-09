@@ -20,6 +20,8 @@ See [Phase 003 index](003/index.md).
 
 Exit authority: [Phase 003 Consolidated Experience Contract](../experience/phase-003-consolidated-experience-contract.md).
 
+Current post-planning experience refinement: [Phase 006 Recovery, Security, Degraded, Historical & Topology Experience Contract](../experience/phase-006-recovery-security-degraded-history-topology-experience-contract.md).
+
 ## Phase 004 — Representation & Architecture Design — complete
 
 See [Phase 004 index](004/index.md).
@@ -46,19 +48,20 @@ Phase 006 is design-only. It uses implementation-planning evidence to revalidate
 
 Completed:
 
-- **006-A** — concept/mechanism/scope revalidation; retained eleven concepts/fifteen synchronizations and reopened Relationship provisionally.
-- **006-B** — temporal authority/regressive-recovery refinement; established Operational Authority Continuity.
-- **006-C** — twenty-four-scenario adversarial synchronization validation; retained fifteen synchronization IDs while refining SYNC-04/07/08/11/14/15.
-- **006-D** — representative Strategy/method/text/topology/runtime-distribution probes; established Self-Contained Execution & Runtime Distribution Closure.
-- **006-E** — enterprise scale/resource/approximation/backpressure/degraded-mode validation; established capability-specific scale/degraded-operation authority.
-- **006-F** — privacy/disclosure/formal-guarantee/release-boundary validation; deferred formal DP behind future concept discovery and reaffirmed release/use governance as external.
-- **006-G** — structured-topology audit; resolved Relationship as Data Meaning-owned structural semantics, retained eleven concepts/fifteen synchronizations, and set the complete baseline target to single-table + time-series + multi-table shared-key generation.
+- **006-A** — concept/mechanism/scope revalidation;
+- **006-B** — temporal authority/regressive-recovery refinement;
+- **006-C** — adversarial synchronization validation;
+- **006-D** — representative Strategy/method/text/topology/runtime-distribution probes;
+- **006-E** — enterprise scale/resource/approximation/backpressure/degraded-mode validation;
+- **006-F** — privacy/disclosure/formal-guarantee/release-boundary validation;
+- **006-G** — structured-topology audit; Relationship resolved as Data Meaning-owned structural semantics and complete baseline target set to single-table + time-series + multi-table shared-key;
+- **006-H** — human/programmatic experience closure; Phase 003's four barriers retained with current actionability, recovery-continuity, disclosure, historical-knowledge, privacy/release and topology experience refinements.
 
 Current next:
 
-**006-H — Human/Programmatic Experience Closure for Recovery, Security, Degraded & Historical Workflows**
+**006-I — Architecture/ADR Reconciliation, Canonical Authority Promotion & Planning Back-Propagation**
 
-No Phase 006 concept/scope blocker remains open. 006-H and 006-I still must propagate accepted design into experience and architecture/planning before 006-J may judge readiness.
+All Phase 006 concept/scope blockers are resolved. BDR-001 now requires only architecture/planning propagation in 006-I before 006-J may judge readiness.
 
 ## Implementation boundary
 
