@@ -1,14 +1,14 @@
 # SYNGAN Agent Instructions
 
-These instructions apply repository-wide to automated coding/documentation agents, including Codex-style agents.
+These instructions apply repository-wide to automated coding/documentation agents.
 
 ## Current authority state
 
-**Phase 005 implementation planning is complete. Phase 006 design refinement is current. Production implementation is NOT authorized.**
+**Phase 006 design refinement is current. Production implementation is NOT authorized.**
 
-During Phase 006, agents may update requested design/authority/planning documentation, but MUST NOT create production package scaffolding, source code, database schemas/migrations, runtime/Spark/security/platform adapters, executable verification suites, CI workflows, deployment infrastructure or benchmark harnesses.
+Phase 005 completed implementation planning only. During Phase 006, agents may update accepted design/authority/experience/architecture/planning documentation requested by the active group, but MUST NOT create production package scaffolding, source code, database schemas/migrations, runtime/Spark/security/platform adapters, executable verification suites, CI workflows, deployment infrastructure or benchmark harnesses.
 
-A future implementation-authority phase may be created only after a positive design-readiness exit explicitly authorizes it.
+A later implementation-authority phase may exist only after a positive explicit design-readiness exit.
 
 ## Progressive disclosure
 
@@ -16,21 +16,20 @@ For material work:
 
 1. read `docs/index.md`;
 2. read `docs/authority/design-methodology.md` for methodology-sensitive work;
-3. read only directly relevant cross-cutting authority:
+3. read only the relevant current cross-cutting authority:
    - recovery/HA → `operational-authority-continuity-regressive-recovery-contract.md`;
-   - packaging/text/Spark worker closure → `self-contained-execution-runtime-distribution-closure-contract.md`;
+   - packaging/text/Spark-worker closure → `self-contained-execution-runtime-distribution-closure-contract.md`;
    - scale/backpressure/approximation/degraded operation → `enterprise-scale-resource-admission-approximation-degraded-operation-contract.md`;
    - privacy/disclosure/formal guarantee/release → `privacy-disclosure-formal-guarantee-release-boundary-contract.md`;
    - structured topology/relationship semantics → `structured-data-topology-relationship-semantics-contract.md`;
-4. read `docs/synchronizations/core-synchronizations.md` for cross-concept coordination;
-5. read the Phase 003 consolidated experience contract for experience work;
-6. read the Phase 004 consolidated architecture contract for architecture work;
-7. read the Phase 005 consolidated planning contract and only affected detailed plans for planning work;
+4. read `docs/synchronizations/core-synchronizations.md`;
+5. for experience work, read both Phase 003 and Phase 006 consolidated experience contracts;
+6. for architecture work, read the Phase 004 consolidated architecture contract;
+7. for implementation-planning reconciliation, read the Phase 005 consolidated plan and only affected detailed plans;
 8. read the active Phase 006 record/index;
-9. use ADRs for rationale/history, not as replacement current authority;
-10. use `docs/backlog/index.md` only for blocker/deferred classification.
+9. use ADRs for rationale/history and backlog only for classification.
 
-Do not load/copy the entire documentation corpus by default.
+Do not load/copy the whole documentation corpus by default.
 
 ## Authority order
 
@@ -44,97 +43,79 @@ authority
   > ADR rationale / phase history / backlog / examples
 ```
 
-If later feasibility exposes a genuine upstream issue, reopen the upstream authority explicitly rather than patching only an implementation plan.
+If later feasibility reveals a genuine upstream issue, reopen upstream authority explicitly rather than patching only implementation planning.
 
 ## Phase 006 state
 
 Completed:
 
-- **006-A** — concept/mechanism/scope revalidation;
-- **006-B** — regressive-recovery/current-authority refinement;
-- **006-C** — adversarial synchronization validation;
-- **006-D** — Strategy/method/text/topology/runtime-distribution probes;
-- **006-E** — enterprise scale/resource/approximation/backpressure/degraded-mode validation;
-- **006-F** — privacy/disclosure/formal-guarantee/release-boundary validation;
-- **006-G** — structured-topology/Relationship concept and baseline-scope decision.
+- 006-A — concept/mechanism/scope revalidation;
+- 006-B — regressive-recovery/current-authority refinement;
+- 006-C — adversarial synchronization validation;
+- 006-D — Strategy/method/text/topology/runtime-distribution probes;
+- 006-E — enterprise scale/resource/approximation/backpressure/degraded validation;
+- 006-F — privacy/disclosure/formal-guarantee/release-boundary validation;
+- 006-G — structured-topology/Relationship and baseline-scope decision;
+- 006-H — human/programmatic experience closure.
 
 Current next:
 
-**006-H — Human/Programmatic Experience Closure for Recovery, Security, Degraded & Historical Workflows**.
+**006-I — Architecture/ADR Reconciliation, Canonical Authority Promotion & Planning Back-Propagation**.
 
-Current design counts:
+Current design counts remain **11 accepted concepts / 15 synchronizations**. No `SYNC-16` or provisional concept candidate exists.
 
-```text
-accepted concepts             11
-accepted synchronizations     15
-reopened candidate concepts     0
-```
-
-No `SYNC-16` is accepted.
-
-## Non-negotiable Phase 006 authority
+## Non-negotiable current authority
 
 ### Recovery/current authority
 
-Agents MUST preserve:
-
 - restored persistence is not proof of current writer/cancellation/security authority;
-- potentially regressive recovery enters continuity-unverified/recovery-quarantine semantics;
+- potentially regressive recovery enters continuity-unverified/recovery-restricted semantics;
 - a fresh non-regressing authority boundary is required before write-capable work resumes;
-- missing post-backup canonical history is not proof of non-occurrence;
+- missing post-backup history is not proof of non-occurrence;
 - surviving physical effects are not automatic proof of semantic transition;
-- reconstruction is owner-gated and auditable;
-- stale writers never regain authority merely because verified immutable effects may be adopted.
+- reconstruction is owner-gated/auditable;
+- stale writers never regain authority merely because immutable effects may be adopted.
 
 ### Execution/synchronization
 
-Agents MUST preserve:
-
-- same-Execution retry/resume requires unchanged committed semantics **and** current authorization/dependency/platform/recovery qualification;
-- inability to continue does not authorize silent source/Strategy/Learned-State/dependency/method/network substitution;
-- coordinated logical Generation completion applies to the whole committed scope;
+- retry/resume requires unchanged committed semantics **and** current authorization/dependency/platform/recovery qualification;
+- inability to continue never authorizes silent source/Strategy/Learned-State/dependency/method/network substitution;
+- coordinated Generation completion applies to the whole committed logical scope;
 - runtime/platform success remains distinct from Learning/Generation/Evaluation semantic completion;
 - checkpoint/candidate/runtime material remains non-final.
 
 ### Self-contained/runtime distribution
 
-Agents MUST preserve:
-
-- the supported baseline includes at least one source-derived/local free-form-text synthesis path requiring no externally acquired pretrained model or runtime network service;
+- supported baseline includes at least one source-derived/local free-form-text synthesis path requiring no externally acquired pretrained model or runtime network service;
 - model hubs/LLM APIs/remote inference are optional explicit integrations, never hidden baseline fallback;
-- one Strategy implementation binding may resolve multiple exact code/runtime/model/tokenizer/codec components;
-- driver import/discovery success is not proof that Spark executors can execute the same closure;
-- every material worker, including dynamically allocated workers, must inherit/prove compatible runtime closure;
+- one Strategy binding may resolve multiple exact code/runtime/model/tokenizer/codec components;
+- driver import/discovery is not proof of Spark-executor readiness;
+- every material worker, including dynamically allocated workers, must satisfy compatible exact runtime closure;
 - missing worker dependencies/artifacts must not trigger undeclared public-network acquisition;
 - large Learned State/model artifacts must not require universal driver-local loading/broadcast.
 
-### Enterprise scale/resource/degraded operation
-
-Agents MUST preserve:
+### Scale/resource/degraded operation
 
 - enterprise scale is multidimensional; row count alone is not a support claim;
-- undisclosed source-size-proportional driver/single-process stages invalidate enterprise-scale claims for that path;
-- resource pressure may queue/block/retry but must not silently weaken committed semantics;
-- approximation is owned by the concept whose semantics it changes, not a generic runtime fallback;
+- undisclosed source-size-proportional single-process/driver stages invalidate enterprise-scale claims for that path;
+- resource pressure may queue/block/retry but cannot silently weaken committed semantics;
+- approximation is owned by the concept whose semantics it changes;
 - backpressure must preserve mandatory records/scope/coverage/security obligations;
 - sampled/sketched Evaluation cannot become universal Evidence because exhaustive validation is expensive;
-- degraded operation is capability-specific rather than one global `degraded` state;
+- degraded operation is capability-specific, not one global status;
 - progress/ETA/task completion does not establish semantic completion.
 
 ### Privacy/disclosure/release
 
-Agents MUST preserve:
-
-- synthetic origin does not imply privacy/anonymization/safe release;
-- self-contained/offline execution is not a privacy guarantee;
+- synthetic origin/offline execution does not imply privacy, anonymization or safe release;
 - disclosure/memorization remain Criterion/Evaluation/Evidence concerns under current scope;
-- favorable empirical Evidence does not become a formal privacy guarantee;
+- favorable empirical Evidence is not a formal privacy guarantee;
 - differential privacy is not in the initial baseline;
-- future composable DP/formal privacy mechanisms with independent accounting state MUST reopen concept discovery before implementation;
+- future composable formal DP/privacy mechanisms with independent accounting state MUST reopen concept discovery before implementation;
 - Use/Release Decision remains external to current SYNGAN concept authority;
-- authorization/redaction may shape current access without rewriting canonical Generation/Evidence/Provenance history.
+- authorization/redaction may shape current access without rewriting canonical history.
 
-## Structured-data topology authority — 006-G
+### Structured-data topology
 
 The complete structured-data capability target includes:
 
@@ -144,73 +125,89 @@ time-series
 multi-table shared-key
 ```
 
-`Relationship` is **not** a standalone concept. Material structural relationship semantics are descriptive state owned by Data Meaning.
+`Relationship` is not a standalone concept. Material structural relationship semantics are descriptive Data Meaning state.
 
-Agents MUST preserve:
+Preserve:
 
-- descriptive shared-key correspondence and sequence membership/order are Data Meaning semantics;
-- referential integrity, temporal monotonicity, mandatory participation and other prescriptive validity remain Constraint authority;
-- requested topology, scope, horizon and topology-specific Conditions remain Generation authority;
-- Strategy owns topology capability/limitations rather than relationship meaning;
-- single-table work does not fabricate Relationship state;
+- shared-key correspondence and sequence membership/order → Data Meaning;
+- referential integrity, temporal monotonicity, mandatory participation → Constraint;
+- requested topology/scope/horizon/Conditions → Generation;
+- topology capability/limitations → Strategy;
+- single-table work does not fabricate relationship state;
 - time-series is not reduced to a timestamp physical type;
 - multi-table is not reduced to provider/foreign-key metadata;
-- whole-result completion covers all mandatory coordinated scopes;
+- whole-result completion covers every mandatory coordinated scope;
 - per-table/per-row Evidence does not automatically establish joined/trajectory claims;
-- a topology convenience parameter/preset is not the sole durable semantic representation;
-- topology must remain composable, including multi-table subjects with time-series children;
-- relationship corrections create new Data Meaning revision semantics for future work rather than rewriting history;
-- architecture may later provide a stable relationship-assertion reference scoped to a Data Meaning revision without creating an independent Relationship resource/concept.
+- topology presets are convenience syntax, not sole durable semantics;
+- composite topology must remain representable;
+- relationship correction creates new Data Meaning revision semantics for future work.
 
-The first complete baseline claim requires at least one supported self-contained Strategy path for each of the three capability families. Implementation may be staged and individual Strategies may support subsets.
+A complete baseline claim requires at least one supported self-contained Strategy path for each family. Delivery may be staged and Strategies may support subsets.
 
-Do NOT create standalone `Relationship`, `Table`, `Series`, `Sequence`, `TimeSeries`, `Dataset` or `DataTopology` concepts/classes as semantic owners merely for implementation convenience.
+### Phase 006 experience authority
 
-## 006-H experience obligations
+Human/programmatic surfaces MUST preserve equivalent material distinctions among:
 
-006-H must make the accumulated authority understandable to both human and programmatic actors without exposing internal implementation jargon as the user contract.
+- owner semantic state;
+- operational state;
+- current actionability;
+- recovery/current-authority continuity;
+- compatibility/limitations;
+- disclosure state;
+- historical-knowledge quality.
 
-Experience must preserve distinctions including:
+In particular:
 
-- current vs historical state;
-- recovery quarantine vs ordinary failure;
-- unknown vs unavailable vs withheld/redacted;
-- queued vs blocked vs incompatible vs limited;
-- semantic compatibility vs current runtime/worker readiness;
-- synthetic vs privacy-related Evidence vs formal guarantee vs release approval;
-- supported topology vs unsupported Strategy shape;
-- physical completion vs semantic completion.
+- `queued` remains distinct from blocked/incompatible/denied/indeterminate/failure;
+- regressive recovery must expose current mutation authority as unverified until continuity is re-established;
+- reconstructed/partial/unknown history remains explicit;
+- capability-specific outages identify the affected capability/consequence rather than `degraded=true`;
+- driver readiness is not cluster runtime readiness;
+- withheld/redacted/unknown/unavailable/absent remain distinct where disclosure policy allows;
+- when existence itself is protected, outward responses may intentionally avoid distinguishing absent from forbidden while internal audit remains precise;
+- synthetic origin, privacy Evidence, formal privacy guarantee, current export authorization and external release approval remain separate;
+- topology presets cannot hide actual logical scopes/structural semantics;
+- constituent progress does not imply whole-result completion;
+- normal queueing/readiness blockage cannot rely only on generic exception handling;
+- next-action guidance must not disguise semantic change as retry.
 
-## Frozen implementation-planning baseline
+## 006-I reconciliation rules
 
-Until 006-I deliberately back-propagates Phase 006 authority, preserve the Phase 005 planning baseline rather than rewriting it ad hoc.
+006-I is the controlled point for promoting accepted Phase 006 authority into architecture/ADRs and then back-propagating it into Phase 005 planning.
 
-Key constraints include durable identity, semantic/runtime separation, stable Execution with fenced Attempts, bounded Evidence/Provenance, explicit authorization/network semantics, no hidden acquisition, no full-corpus driver collection and capability-negotiated platforms.
+Agents MUST:
+
+- preserve Phase 001–005 historical phase records rather than rewriting them;
+- update current canonical architecture/ADR authority where Phase 006 materially changes architecture requirements;
+- then update only affected current implementation-planning authority;
+- decide explicitly whether existing ADRs can be refined or a new/superseding ADR is required;
+- replay affected architecture fitness/scenario obligations when the reconciliation changes a material seam;
+- keep production implementation unauthorized.
+
+At minimum 006-I must address recovery authority, runtime distribution closure, scale/degraded operation, privacy/release boundaries, structured topology, the Phase 006 experience dimensions, non-disclosing security views/errors, and resulting verification/conformance obligations.
 
 ## Anti-collapse rules
 
-Do not create universal `Context`, `Session`, `Manager`, `Registry`, `Metadata`, `State`, `Result`, `Quality`, `Run`, `Artifact`, `Security`, `Privacy`, `Resource`, `DegradedMode`, `Relationship` or `DataTopology` god-owners.
+Do not create universal `Context`, `Session`, `Manager`, `Registry`, `Metadata`, `State`, `Result`, `Quality`, `Run`, `Artifact`, `Security`, `Privacy`, `Resource`, `DegradedMode`, `Relationship`, `DataTopology`, `Readiness` or `Actionability` god-owners.
 
-Do not make DataFrame, path/table alias, loaded model, database row, scheduler job, provider foreign-key metadata or platform ID canonical semantic identity.
+Do not make DataFrame, path/table alias, loaded model, database row, scheduler job, provider foreign-key metadata, topology preset or platform ID canonical semantic identity.
 
-Do not equate runtime success, Evidence, security authorization, external governance approval, topology preset or physical artifact existence with another owner's semantic state.
+Do not equate runtime success, Evidence, security authorization, external governance approval, physical artifact existence or constituent completion with another owner's semantic state.
 
 Do not use current/latest values in place of exact historical refs.
 
 ## Documentation synchronization
 
-When Phase 006 changes accepted design:
+When accepted design changes:
 
 - cross-cutting authority → `docs/authority/`;
-- concept changes → `docs/concepts/`;
-- synchronization changes → `docs/synchronizations/`;
+- concepts → `docs/concepts/`;
+- synchronizations → `docs/synchronizations/`;
 - actor/programmatic experience → `docs/experience/`;
-- architecture + material rationale → `docs/architecture/` / ADRs;
-- only then back-propagate into affected `docs/implementation/` plans;
-- phase records preserve history and must not become the sole current authority.
-
-Backlog items close only after canonical authority reflects the accepted resolution.
+- architecture/rationale → `docs/architecture/` and ADRs;
+- only then back-propagate current rules into `docs/implementation/`;
+- phase records remain history, not sole current authority.
 
 ## Current next group
 
-**006-H — Human/Programmatic Experience Closure for Recovery, Security, Degraded & Historical Workflows**
+**006-I — Architecture/ADR Reconciliation, Canonical Authority Promotion & Planning Back-Propagation**
