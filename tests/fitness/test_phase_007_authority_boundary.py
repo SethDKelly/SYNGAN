@@ -34,7 +34,9 @@ def test_phase_007_index_records_007_c_complete_and_007_d_locked() -> None:
     assert "007-B" in phase_text and "COMPLETE" in phase_text
     assert "007-C" in phase_text and "COMPLETE" in phase_text
     assert "007-D  NOT AUTHORIZED — NEXT ELIGIBLE" in phase_text
-    assert "An explicit proceed decision is required before 007-D implementation begins" in phase_text
+    assert (
+        "An explicit proceed decision is required before 007-D implementation begins" in phase_text
+    )
 
 
 def test_production_source_tree_exists_after_completed_007_c() -> None:
