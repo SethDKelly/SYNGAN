@@ -14,147 +14,123 @@ Canonical facts remain under `docs/authority/`, `docs/concepts/`, `docs/synchron
 
 ## Blocking design refinement
 
+**No identified design-readiness blocker remains open after Phase 006-J.**
+
+006-J's canonical decision is recorded in the [Phase 006 Consolidated Design Readiness Contract](../authority/phase-006-consolidated-design-readiness-contract.md):
+
+```text
+DESIGN COMPLETE ENOUGH FOR A LATER
+EXPLICIT IMPLEMENTATION-AUTHORITY PHASE
+```
+
+This does not authorize implementation; it closes the known design blockers sufficiently to enter a later explicit implementation-authority phase.
+
 ### BDR-001 — regressive restore and temporal authority closure
 
-**Status: resolved through 006-I.**
+**Resolved.**
 
-Closure chain:
-
-- semantic authority — 006-B, [Operational Authority Continuity & Regressive Recovery Contract](../authority/operational-authority-continuity-regressive-recovery-contract.md);
-- synchronization validation — 006-C;
-- actor/programmatic experience — 006-H, [Phase 006 Recovery, Security, Degraded, Historical & Topology Experience Contract](../experience/phase-006-recovery-security-degraded-history-topology-experience-contract.md);
-- architecture/ADR/planning propagation — 006-I, [Phase 006 Architecture Reconciliation Contract](../architecture/phase-006-architecture-reconciliation-contract.md) + [Phase 006 Implementation-Planning Reconciliation](../implementation/phase-006-implementation-planning-reconciliation.md) + ADR-0009.
-
-Potentially regressive restore cannot resurrect stale writer/cancellation/security authority. A fresh non-regressing recovery-authority frontier is required before ordinary mutation resumes.
+Closure: 006-B semantic authority; 006-C synchronization validation; 006-H actor/programmatic experience; 006-I architecture/ADR/planning propagation; 006-J replay confirmation.
 
 ### BDR-002 — post-planning adversarial end-to-end validation
 
-**Status: resolved by 006-C for the accepted eleven-concept / fifteen-synchronization model.**
+**Resolved.**
 
-006-G conceptually replayed topology-sensitive scenarios after resolving Relationship as Data Meaning-owned structural semantics. 006-J must replay materially affected scenarios against the reconciled 006-I architecture/planning baseline as an exit check, not because the underlying blocker remains open.
+006-C completed the adversarial synchronization pass; 006-G replayed topology-sensitive implications; 006-J replayed materially affected cases against the reconciled architecture/planning baseline.
 
-### BDR-003 — representative Strategy/method and topology design probes
+### BDR-003 — representative Strategy/method and topology probes
 
-**Status: resolved by 006-D.**
+**Resolved.**
 
-The current model survived Learning-based, direct, text, composite, time-series, multi-table, deterministic/statistical Evaluation, large-state and Spark-distribution probes. 006-I propagated the resulting runtime-distribution and topology obligations into architecture/planning.
+006-D tested Learning-based, direct, text, time-series, multi-table, Evaluation, large-state and distributed-runtime shapes; 006-J found no hidden one-algorithm assumption after reconciliation.
 
 ### BDR-004 — initial-baseline scope and future-extensibility closure
 
-**Status: resolved by 006-G.**
+**Resolved.**
 
-The first complete structured-data capability baseline includes:
-
-```text
-single-table generation
-time-series generation
-multi-table shared-key generation
-```
-
-Implementation may be staged and individual Strategies may support subsets, but the complete baseline claim requires at least one supported self-contained Strategy path for each family.
-
-`Relationship` is not a standalone concept. Shared-key/sequence structural semantics remain Data Meaning-owned descriptive state; Constraint owns prescriptive validity; Generation owns requested topology/scope; Strategy owns capability.
-
-### Phase 006 blocking status
-
-**No identified Phase 006 design blocker remains open after 006-I.**
-
-This does not itself approve implementation. 006-J must perform the final residual design-debt/readiness audit and may still discover a new blocker.
+Complete structured-data baseline target = single-table + time-series + multi-table shared-key, with composable topology and self-contained supported paths.
 
 ## Baseline scope decisions
 
 ### BSD-001 — relational/multi-table shared-key synthesis
 
-**Status:** included in the complete baseline capability target by 006-G.
-
-The baseline covers explicit shared-key relationships and common relational shapes such as one-to-one, one-to-many/many-to-one, composite keys and association tables when supported by the Strategy.
-
-Arbitrary recursive/cyclic graph synthesis is not a universal baseline promise.
+**Included** in complete baseline capability target.
 
 ### BSD-002 — mechanism-specific formal privacy
 
-**Status:** resolved for initial baseline by 006-F — deferred.
-
-Differential privacy/formal composable privacy accounting is not part of the initial baseline. A future mechanism with independent reusable/accounting state must reopen Jackson-style concept discovery before implementation.
+**Deferred** from initial baseline. Future composable DP requires new concept discovery before implementation.
 
 ### BSD-003 — external use/release governance
 
-**Status:** reaffirmed external to current SYNGAN concept authority by 006-F.
-
-Generation completion and favorable Evidence do not imply release/use approval. SYNGAN may hand off Evidence/Provenance and enforce current authorization decisions without creating hidden semantic approval state.
+**External** to current SYNGAN concept authority.
 
 ### BSD-004 — broader Strategy/Evaluation catalog
 
-**Status:** deferred beyond the minimum diverse reference design probes.
-
-006-D completed the minimum falsification set. Broader Strategy/Evaluation/privacy-attack catalog breadth remains later delivery work.
+**Deferred** beyond the minimum baseline/conformance capability set.
 
 ### BSD-005 — time-series / temporal-table synthesis
 
-**Status:** included in the complete baseline capability target by 006-G.
-
-Time-series preserves explicit entity/series membership and temporal/order semantics through Data Meaning, temporal validity through Constraints, requested horizon/scope through Generation, and method-specific capability through Strategy.
-
-The baseline does not promise every sequence-model family, streaming/online generation, regular cadence, or arbitrary temporal hierarchy.
+**Included** in complete baseline capability target.
 
 ## Implementation/release debt
 
+These are non-blocking for creation of an implementation-authority phase but must be resolved/evidenced during implementation/release work as appropriate.
+
 ### IRD-001 — exact provider/runtime support matrix
 
-Select exact Spark/Python/PyTorch/Databricks/storage/runtime versions only when implementation and conformance evidence exists.
+Select and verify exact Spark/Python/PyTorch/Databricks/storage/runtime versions during implementation/conformance.
 
 ### IRD-002 — exact IAM/secret/network/KMS/DLP products
 
-Current architecture defines required contracts; concrete enterprise products remain deployment selections.
+Select deployment-specific enterprise products while preserving current security contracts.
 
 ### IRD-003 — benchmark thresholds and support claims
 
-Exact support thresholds must come from reproducible implementation evidence rather than design assertion.
+Establish from reproducible implementation evidence rather than design assertion.
 
 ### IRD-004 — SLO/SLA and capacity policies
 
-Operational objectives, queue/admission defaults and capacity policy remain delivery/operator decisions after benchmark evidence exists.
+Set after benchmark/operational evidence exists.
 
 ### IRD-005 — public package/name/ecosystem review
 
-Before public release, verify PyPI/package naming, project-name collisions, trademarks and adjacent ecosystem usage. SynGAN remains the current brand; do not publicly define it as a Spark port of CTGAN.
+Before public release, verify PyPI/package naming, project-name collisions, trademarks and adjacent ecosystem usage.
 
 ### IRD-006 — exact Spark/runtime distribution mechanism
 
-ADR-0010 and the Phase 006 runtime-closure authority define what must be true, but not one universal packaging/distribution mechanism. Later delivery must choose and verify profile-specific approaches.
+ADR-0010 defines required closure; later implementation selects/verifies profile-specific mechanism(s).
 
 ### IRD-007 — concrete privacy/disclosure Evaluation catalog
 
-The framework supports privacy/disclosure-risk Evaluation but does not select one universal attack suite or privacy score. Later delivery may choose a small reference/conformance set while preserving threat-model/scope/claim-strength distinctions.
+Select a bounded reference/conformance set without implying one universal privacy score.
 
 ### IRD-008 — concrete baseline topology Strategy catalog
 
-Later authorized implementation/delivery must provide at least one supported self-contained Strategy path for:
-
-- single-table;
-- time-series;
-- multi-table shared-key.
-
-The algorithms may differ materially and must preserve model/topology neutrality.
+Provide at least one supported self-contained Strategy path for single-table, time-series and multi-table shared-key before claiming the complete baseline.
 
 ### IRD-009 — exact actionability/result/error representation
 
-006-H/006-I require typed programmatic distinctions for queue/block/incompatibility/denial/recovery/disclosure/history, but do not select exact Python exception classes, SDK result objects, REST status codes or wire enums.
+Select Python/SDK/REST/wire representations while preserving current semantic distinctions.
 
 ### IRD-010 — exact non-regressing recovery realization
 
-ADR-0009 requires a fresh recovery-authority frontier, but exact realization (`ControlPlaneIncarnation`, external monotonic fence, provider-native generation, credential/namespace rotation combination, etc.) remains deployment implementation work.
+Select and verify a compliant recovery-authority mechanism (`ControlPlaneIncarnation`/external monotonic fence/provider-native generation/credential-namespace rotation combination or equivalent).
+
+### IRD-011 — exact source-derived text algorithm
+
+Select the baseline local/source-derived free-form-text technique during implementation. It must remain self-contained and must not make a pretrained/network dependency mandatory.
 
 ## Governance debt
 
 ### GOV-001 — strict external OKF 0.2 normalization
 
-The repository uses a project-specific OKF-oriented profile. Strict external OKF 0.2 reserved-file/frontmatter conformance has not been asserted as complete.
+The repository uses a project-specific OKF-oriented profile. Strict external OKF 0.2 normalization remains non-blocking while current authority is unambiguous.
 
-This remains non-blocking unless it creates authority ambiguity.
+## Phase 006 exit note
+
+The absence of open design blockers does not mean every implementation choice is predetermined. The methodology intentionally permits implementation choices when they are primarily representational and constrained by stable upstream authority.
+
+A later explicit implementation-authority phase must still define what implementation work is authorized and what evidence gates completion.
 
 ## Backlog discipline
 
-Closing or changing a backlog item does not itself change design authority.
-
-If resolution changes a concept, synchronization, experience contract, architecture contract or implementation plan, the canonical owner must be updated explicitly and the backlog item should link to that accepted change.
+Closing or changing a backlog item does not itself change design authority. Canonical owner documents govern current truth.
