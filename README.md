@@ -11,6 +11,7 @@ Start with [`docs/index.md`](docs/index.md).
 Primary authority:
 
 - [`Phase 003 Consolidated Experience Contract`](docs/experience/phase-003-consolidated-experience-contract.md)
+- [`Phase 006 Recovery, Security, Degraded, Historical & Topology Experience Contract`](docs/experience/phase-006-recovery-security-degraded-history-topology-experience-contract.md)
 - [`Phase 004 Consolidated Architecture Contract`](docs/architecture/phase-004-consolidated-architecture-contract.md)
 - [`Phase 005 Consolidated Implementation-Planning Contract`](docs/implementation/phase-005-consolidated-implementation-planning-contract.md)
 - [`Operational Authority Continuity & Regressive Recovery Contract`](docs/authority/operational-authority-continuity-regressive-recovery-contract.md)
@@ -36,21 +37,9 @@ No production implementation has begun or been authorized.
 
 ## Phase 006 progress
 
-006-A through 006-C retained the current **11 accepted concepts / 15 synchronizations**, established restore-safe operational-authority continuity, and adversarially refined the synchronization set without introducing `SYNC-16`.
+006-A through 006-G retained the current **11 accepted concepts / 15 synchronizations** while closing recovery authority, runtime-distribution, enterprise-scale/degraded-operation, privacy/release, and structured-topology design questions.
 
-006-D established a self-contained source-derived free-form-text baseline and cluster-wide runtime-distribution closure. Driver import success is not Spark executor readiness, optional pretrained/network text remains explicit, and large state/model distribution cannot universally require driver loading/broadcast.
-
-006-E established that enterprise scale is multidimensional, resource pressure cannot silently weaken committed semantics, approximation remains owner-specific, backpressure must preserve mandatory logical scope, and degraded operation is capability-specific.
-
-006-F established that synthetic/offline output is not automatically private, favorable disclosure Evidence is not a formal guarantee, differential privacy is deferred behind future mechanism-specific concept discovery, and release/use governance remains external.
-
-### 006-G — complete
-
-006-G established the [`Structured-Data Topology & Relationship Semantics Contract`](docs/authority/structured-data-topology-relationship-semantics-contract.md).
-
-`Relationship` is **not** a twelfth concept. Material shared-key and sequence/order structural semantics are descriptive state owned by Data Meaning. Constraint remains prescriptive authority; Generation owns requested topology/scope; Strategy owns topology capability.
-
-The first **complete structured-data capability baseline** now includes:
+The first complete structured-data capability baseline includes:
 
 ```text
 single-table generation
@@ -58,20 +47,41 @@ time-series generation
 multi-table shared-key generation
 ```
 
-Implementation may be staged and Strategies may support subsets, but a release must not claim the complete baseline until at least one supported self-contained Strategy path exists for each family.
+`Relationship` is not a twelfth concept; material shared-key and sequence/order structure is Data Meaning-owned descriptive state. Constraint remains prescriptive, Generation owns requested topology/scope, and Strategy owns topology capability.
 
-A future API can offer convenient presets such as `single_table`, `time_series`, or `multi_table`, but those labels are not semantic authority. Composite structures—such as a customer table with a time-series observations child—must remain representable rather than being blocked by a permanently exclusive topology enum.
+The supported baseline also requires at least one self-contained source-derived free-form-text path; optional pretrained/network text remains explicit. Driver import success is not Spark executor readiness, and resource pressure cannot silently weaken committed semantics.
 
-BDR-004 is resolved. No Phase 006 concept/scope blocker remains open.
+Synthetic/offline output is not automatically private, favorable disclosure Evidence is not a formal guarantee, differential privacy is deferred behind future mechanism-specific concept discovery, and release/use governance remains external.
+
+### 006-H — complete
+
+006-H established the [`Phase 006 Recovery, Security, Degraded, Historical & Topology Experience Contract`](docs/experience/phase-006-recovery-security-degraded-history-topology-experience-contract.md).
+
+The Phase 003 four-barrier experience model remains valid, but current surfaces must preserve orthogonal distinctions such as:
+
+```text
+semantic state
+operational state
+current actionability
+authority continuity
+compatibility / limitations
+disclosure state
+historical-knowledge quality
+```
+
+This keeps `queued` distinct from blocked/incompatible/denied/failure, exposes regressive-recovery authority uncertainty without leaking implementation jargon, distinguishes reconstructed/partial/unknown history, preserves non-disclosing security behavior where existence is protected, and keeps privacy Evidence/formal guarantee/export authorization/release approval separate.
+
+Topology presets remain ergonomic only; users/programs must still be able to inspect the actual logical scope and whole-result completion state.
+
+BDR-001's experience closure is complete. Only architecture/planning propagation remains.
 
 ## Remaining Phase 006 groups
 
-- **006-H — Human/Programmatic Experience Closure for Recovery, Security, Degraded & Historical Workflows — next**
-- 006-I — Architecture/ADR Reconciliation, Canonical Authority Promotion & Planning Back-Propagation
+- **006-I — Architecture/ADR Reconciliation, Canonical Authority Promotion & Planning Back-Propagation — next**
 - 006-J — Consolidation, Residual Design-Debt Audit & Implementation-Authority Readiness Decision
 
 Jackson-style completeness is judged by design evidence, not by a fixed number of phases. A positive 006-J result would still require a **later explicit implementation-authority phase** before production coding begins.
 
 ## Current next group
 
-**006-H — Human/Programmatic Experience Closure for Recovery, Security, Degraded & Historical Workflows**
+**006-I — Architecture/ADR Reconciliation, Canonical Authority Promotion & Planning Back-Propagation**
