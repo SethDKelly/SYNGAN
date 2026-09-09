@@ -1,6 +1,6 @@
 ---
 type: Backlog
-ntitle: SYNGAN Design & Delivery Backlog
+title: SYNGAN Design & Delivery Backlog
 status: active
 ---
 
@@ -42,6 +42,14 @@ A full-system scenario audit must re-test the eleven concepts and fifteen synchr
 The model-neutral runtime architecture must be stress-tested against materially different synthesis/evaluation shapes before infrastructure implementation begins. At minimum, design probes should cover a Learning-based deep-generative family, a direct/simple generation path, and representative large-scale Evaluation methods.
 
 This does not authorize implementation of CTGAN or any other algorithm during design refinement.
+
+### BDR-004 — initial-baseline scope and future-extensibility closure
+
+**Status:** open — Phase 006 blocking.
+
+The current implementation baseline intentionally excludes several possible future product domains. Phase 006 must explicitly reaffirm which are outside the first baseline and validate that existing concept/experience/architecture contracts do not accidentally make those exclusions permanent implementation assumptions.
+
+The relevant scope items are BSD-001 through BSD-004 below.
 
 ## Baseline scope decisions
 
