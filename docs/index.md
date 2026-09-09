@@ -11,7 +11,7 @@ This directory is the canonical design and implementation-planning knowledge bun
 
 ## Progressive disclosure
 
-- [Authority](authority/index.md) — methodology/governance/cross-cutting contracts, including operational-authority continuity, self-contained/runtime-distribution closure and enterprise-scale/resource/degraded-operation rules.
+- [Authority](authority/index.md) — methodology/governance and cross-cutting recovery, runtime-distribution, enterprise-scale/degraded-operation, privacy/disclosure/release boundaries.
 - [Problem Knowledge](problem/index.md) — problem, purpose, actors, constraints and enterprise scale envelope.
 - [Domain Terminology](terminology/index.md) — canonical vocabulary.
 - [Accepted Concepts](concepts/index.md) — current concept authority.
@@ -61,12 +61,7 @@ Completed Phase 006 groups:
 - [006-C — End-to-End Scenario, Exception, Failure & Adversarial Synchronization Validation](phases/006/006-C-end-to-end-scenario-exception-failure-adversarial-synchronization-validation.md)
 - [006-D — Reference Strategy/Method and Topology Design Probes & Algorithm-Neutrality Stress Test](phases/006/006-D-reference-strategy-method-topology-design-probes-algorithm-neutrality-stress-test.md)
 - [006-E — Enterprise Scale, Resource/Approximation, Backpressure & Degraded-Mode Design Validation](phases/006/006-E-enterprise-scale-resource-approximation-backpressure-degraded-mode-design-validation.md)
-
-Current Phase 006 cross-cutting authority includes:
-
-- [Operational Authority Continuity & Regressive Recovery Contract](authority/operational-authority-continuity-regressive-recovery-contract.md)
-- [Self-Contained Execution & Runtime Distribution Closure Contract](authority/self-contained-execution-runtime-distribution-closure-contract.md)
-- [Enterprise Scale, Resource Admission, Approximation & Degraded Operation Contract](authority/enterprise-scale-resource-admission-approximation-degraded-operation-contract.md)
+- [006-F — Privacy, Disclosure, Release-Governance Boundary & Mechanism-Specific Scope Decision](phases/006/006-F-privacy-disclosure-release-governance-boundary-mechanism-specific-scope-decision.md)
 
 ## Current invariant baseline
 
@@ -74,30 +69,32 @@ Until Phase 006 explicitly revises further authority, preserve:
 
 - eleven accepted concepts and fifteen synchronizations;
 - `Relationship` provisional only, pending 006-G;
-- single-table generation as the current baseline topology, with time-series and multi-table shared-key as explicit design targets;
-- at least one self-contained source-derived free-form-text synthesis path in the supported baseline;
-- optional pretrained/world-knowledge text remains explicit local-artifact or runtime-network capability;
-- driver-local availability is not cluster readiness; every material worker must satisfy compatible runtime closure;
-- no hidden first-use dependency/model acquisition;
-- large state/model distribution cannot universally require driver-memory loading/broadcast;
-- enterprise compatibility is multidimensional and workload-specific;
-- undisclosed source-size-proportional driver/single-process stages invalidate enterprise-scale claims for that path;
-- resource pressure may queue/block/retry work but MUST NOT silently weaken committed semantics;
-- approximation is explicit owner-bound semantics, not a hidden runtime fallback;
-- backpressure is lossless with respect to mandatory logical scope;
-- degraded operation is capability-specific rather than one global state;
-- sampled/sketched Evaluation cannot claim stronger Evidence because exhaustive validation is expensive;
-- semantic completion remains distinct from runtime/platform/progress completion;
-- one Execution may span multiple fenced Attempts with explicit recovery/cancellation semantics;
-- potentially regressive recovery enters continuity-unverified/recovery-quarantine semantics before write authority resumes;
+- single-table generation as current baseline capability, with time-series and multi-table shared-key as explicit design targets;
+- self-contained source-derived free-form-text capability in the supported baseline;
+- externally pretrained/world-knowledge text remains explicit optional local-artifact or runtime-network capability;
+- driver-local package/model availability is not distributed executor readiness;
+- every material worker must satisfy exact compatible runtime distribution closure;
+- enterprise-scale compatibility is multidimensional and cannot hide source-size-proportional driver stages;
+- resource pressure may queue/block/retry but cannot silently weaken committed semantics;
+- approximation remains explicit owner-bound semantics;
+- degraded operation is capability-specific;
+- synthetic origin, offline execution and favorable privacy-related Evidence do not imply formal privacy/anonymization;
+- disclosure/memorization remain threat-model-specific Criterion/Evaluation/Evidence concerns;
+- differential privacy is deferred from the initial baseline;
+- any future composable DP/formal mechanism with independent accounting state must reopen concept discovery before implementation;
+- Use/Release Decision remains external to current SYNGAN concept authority;
+- current security authorization/redaction does not rewrite canonical Evidence/history;
+- semantic completion remains distinct from runtime/platform completion;
+- one Execution may contain multiple fenced Attempts;
+- regressive recovery cannot resurrect stale writer/cancellation/security authority;
 - owner-established Evidence and typed canonical Provenance remain distinct from projections/telemetry/security audit;
 - no production implementation until a later explicit implementation-authority phase is approved.
 
-## Next
+## Current next
 
-**006-F — Privacy, Disclosure, Release-Governance Boundary & Mechanism-Specific Scope Decision**
+**006-G — Structured-Data Topology: Single-Table, Time-Series & Multi-Table Relationship Concept/Extensibility Audit**
 
-006-F must revalidate privacy/disclosure/release authority in light of self-contained text generation, memorization/disclosure risk, enterprise-scale sampling/approximation, optional pretrained/network text, and possible mechanism-specific guarantees such as differential privacy—without implementing any privacy mechanism or release-governance system.
+006-G is the principal remaining BDR-004 scope decision. It must decide whether reusable multi-table shared-key and/or temporal sequence structure justifies accepting a `Relationship` concept, while preserving single-table simplicity and future topology extensibility.
 
 ## Documentation governance note
 
