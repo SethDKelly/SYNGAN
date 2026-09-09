@@ -23,13 +23,11 @@ Use the concrete implementation-planning evidence produced by Phase 005 to re-te
 | **006-E** | [Enterprise Scale, Resource/Approximation, Backpressure & Degraded-Mode Design Validation](006-E-enterprise-scale-resource-approximation-backpressure-degraded-mode-design-validation.md) | **complete** |
 | **006-F** | [Privacy, Disclosure, Release-Governance Boundary & Mechanism-Specific Scope Decision](006-F-privacy-disclosure-release-governance-boundary-mechanism-specific-scope-decision.md) | **complete** |
 | **006-G** | [Structured-Data Topology: Single-Table, Time-Series & Multi-Table Relationship Concept/Extensibility Audit](006-G-structured-data-topology-single-table-time-series-multi-table-relationship-concept-extensibility-audit.md) | **complete** |
-| **006-H** | **Human/Programmatic Experience Closure for Recovery, Security, Degraded & Historical Workflows** | **next** |
-| 006-I | Architecture/ADR Reconciliation, Canonical Authority Promotion & Planning Back-Propagation | planned |
+| **006-H** | [Human/Programmatic Experience Closure for Recovery, Security, Degraded & Historical Workflows](006-H-human-programmatic-experience-closure-recovery-security-degraded-historical-workflows.md) | **complete** |
+| **006-I** | **Architecture/ADR Reconciliation, Canonical Authority Promotion & Planning Back-Propagation** | **next** |
 | 006-J | Phase 006 Consolidation, Residual Design-Debt Audit & Implementation-Authority Readiness Decision | planned |
 
 ## Current structured-data capability baseline
-
-006-G closes the topology/scope question.
 
 The first **complete SYNGAN structured-data capability baseline** includes:
 
@@ -43,59 +41,76 @@ Implementation may be staged and individual Strategies may support subsets, but 
 
 A future convenience parameter/preset may select common topology shapes, but selection syntax is not semantic authority and must not prevent composite topology such as a multi-table subject containing a time-series child scope.
 
-## 006-A through 006-C result
+## 006-A through 006-G result
 
-006-A retained the eleven-concept/fifteen-synchronization catalog and reopened `Relationship` provisionally.
+Phase 006 retained the eleven-concept/fifteen-synchronization catalog while promoting five cross-cutting design contracts:
 
-006-B established the [Operational Authority Continuity & Regressive Recovery Contract](../../authority/operational-authority-continuity-regressive-recovery-contract.md).
+- [Operational Authority Continuity & Regressive Recovery](../../authority/operational-authority-continuity-regressive-recovery-contract.md);
+- [Self-Contained Execution & Runtime Distribution Closure](../../authority/self-contained-execution-runtime-distribution-closure-contract.md);
+- [Enterprise Scale, Resource Admission, Approximation & Degraded Operation](../../authority/enterprise-scale-resource-admission-approximation-degraded-operation-contract.md);
+- [Privacy, Disclosure Risk, Formal Guarantee & External Release Boundary](../../authority/privacy-disclosure-formal-guarantee-release-boundary-contract.md);
+- [Structured-Data Topology & Relationship Semantics](../../authority/structured-data-topology-relationship-semantics-contract.md).
 
-006-C replayed twenty-four normal/adversarial scenarios, retained fifteen synchronization IDs, and refined SYNC-04/07/08/11/14/15 without introducing `SYNC-16`.
+Key outcomes include:
 
-## 006-D result
+- restored persistence cannot resurrect stale operational authority;
+- no `SYNC-16` is justified by the current model;
+- the supported baseline includes a self-contained source-derived free-form-text path;
+- driver availability is not cluster worker readiness;
+- resource pressure cannot silently weaken committed semantics;
+- degraded operation is capability-specific;
+- synthetic/offline output is not automatically private;
+- formal DP is deferred behind future mechanism-specific concept discovery;
+- release/use governance remains external;
+- `Relationship` is resolved as Data Meaning-owned structural semantics rather than a standalone concept;
+- BDR-002, BDR-003 and BDR-004 are resolved.
 
-006-D established the [Self-Contained Execution & Runtime Distribution Closure Contract](../../authority/self-contained-execution-runtime-distribution-closure-contract.md).
+## 006-H result
 
-Key results include a self-contained source-derived text-capable baseline, explicit optional pretrained/network text capability, multi-component implementation closure, cluster-wide executor runtime closure and no universal driver-memory loading/broadcast for large state.
-
-BDR-003 is resolved.
-
-## 006-E result
-
-006-E established the [Enterprise Scale, Resource Admission, Approximation & Degraded Operation Contract](../../authority/enterprise-scale-resource-admission-approximation-degraded-operation-contract.md).
-
-Resource pressure may queue/block/retry but cannot silently weaken committed semantics; approximation remains owner-bound; backpressure must preserve mandatory work; degraded operation is capability-specific.
-
-## 006-F result
-
-006-F established the [Privacy, Disclosure Risk, Formal Guarantee & External Release Boundary Contract](../../authority/privacy-disclosure-formal-guarantee-release-boundary-contract.md).
-
-Synthetic/offline output is not automatically private, disclosure Evidence is not a formal guarantee, differential privacy is deferred behind future mechanism-specific concept discovery, and release/use governance remains external.
-
-## 006-G result
-
-006-G returned:
+006-H returned:
 
 ```text
-PASS WITH RELATIONSHIP SUBORDINATION,
-TOPOLOGY CONTRACT PROMOTION &
-BASELINE-SCOPE CLOSURE
+PASS WITH EXPERIENCE CONTRACT PROMOTION
 ```
 
-006-G established the [Structured-Data Topology & Relationship Semantics Contract](../../authority/structured-data-topology-relationship-semantics-contract.md).
+and established the active [Phase 006 Recovery, Security, Degraded, Historical & Topology Experience Contract](../../experience/phase-006-recovery-security-degraded-history-topology-experience-contract.md).
 
-Key accepted rules:
+The Phase 003 four-barrier experience model remains valid:
 
-- `Relationship` is **not** a standalone concept;
-- material structural relationship semantics are subordinate descriptive state owned by Data Meaning;
-- descriptive shared-key/sequence meaning remains distinct from prescriptive Constraint authority;
-- single-table requires no fabricated relationship state;
-- time-series is not reducible to `single_table + timestamp`;
-- multi-table shared-key semantics are first-class without a twelfth concept;
-- topology presets may be convenience syntax but not the sole durable semantic representation;
-- composite topologies must remain representable;
-- historical relationship correction follows Data Meaning revision semantics;
-- the topology-sensitive 006-C scenarios remain coherent after conceptual replay;
-- BDR-004 is resolved.
+```text
+PREPARATION / READINESS
+        ↓
+SEMANTIC COMMITMENT
+        ↓
+OPERATIONAL REALIZATION
+        ↓
+SEMANTIC PROMOTION / FINDING
+```
+
+Phase 006 adds orthogonal actor/programmatic dimensions for:
+
+- owner semantic state;
+- operational state;
+- current actionability;
+- authority continuity;
+- compatibility/limitations;
+- disclosure state;
+- historical-knowledge quality.
+
+Key experience rules include:
+
+- queued/deferred work remains distinct from blocked, incompatible, denied, indeterminate and terminal failure;
+- potentially regressive recovery must expose that current mutation authority is unverified until a non-regressing boundary is established;
+- reconstructed/partial/unknown historical facts remain explicit;
+- capability-specific degraded behavior must name the affected capability/consequence;
+- driver readiness is not cluster runtime closure;
+- existence-protected resources may use intentionally non-disclosing outward errors while internal audit remains precise;
+- synthetic origin, disclosure Evidence, formal privacy guarantee, current export authorization and external release approval remain distinct;
+- topology presets remain ergonomic but cannot hide actual logical scopes/structural semantics;
+- constituent progress does not imply whole-result completion;
+- human and programmatic surfaces preserve equivalent material semantics at bounded enterprise scale.
+
+006-H closes the experience portion of BDR-001. Only architecture/planning propagation remains for 006-I.
 
 ## Current design counts
 
@@ -105,35 +120,36 @@ accepted synchronizations     15
 new Phase 006 concepts          0
 new Phase 006 sync IDs          0
 reopened candidate concepts     0
-cross-cutting contracts
-  Operational Authority Continuity
-  Self-Contained Execution & Runtime Distribution Closure
-  Enterprise Scale / Resource Admission / Approximation / Degraded Operation
-  Privacy / Disclosure Risk / Formal Guarantee / External Release Boundary
-  Structured-Data Topology / Relationship Semantics
 ```
 
-## 006-H — next
+## 006-I — next
 
-006-H must now close the actor/programmatic experience gaps exposed by Phase 006, including at least:
+006-I is the controlled reconciliation phase.
 
-- recovery quarantine and regressive-restore uncertainty;
-- queued/blocked/limited/incompatible resource/runtime states;
-- cluster runtime-distribution closure and missing worker capability;
-- authorization/redaction/withholding distinctions;
-- privacy Evidence versus formal guarantee versus release approval;
-- topology capability/unsupported-shape feedback;
-- historical unknown/unavailable/reconstructed facts;
-- exact current versus historical state;
-- programmatic error/result shapes that preserve these distinctions without forcing users to understand internal architecture terminology.
+It must promote accepted Phase 006 design into current architecture/ADR authority and then back-propagate it into the frozen Phase 005 implementation-planning baseline **without rewriting phase history**.
 
-006-H remains design-only.
+At minimum it must reconcile:
 
-## Later obligations
+- non-regressing recovery authority and restore quarantine;
+- runtime/package/artifact closure across every material worker;
+- multidimensional scale/admission/backpressure/degraded-operation contracts;
+- privacy/disclosure/formal-guarantee/release boundaries;
+- Data Meaning-owned structural relationship assertions and composable topology;
+- single-table/time-series/multi-table complete-baseline capability requirements;
+- orthogonal experience dimensions and typed programmatic actionability/reason semantics;
+- non-disclosing security error/view behavior;
+- historical reconstruction/current-vs-historical query semantics;
+- architecture fitness/conformance obligations affected by the Phase 006 changes.
 
-006-I reconciles Phase 004 architecture/ADRs and back-propagates accepted Phase 006 changes into Phase 005 planning without rewriting phase history.
+006-I must decide whether existing ADRs can be refined under their current decisions or whether a new/superseding ADR is required for any materially new architecture decision.
 
-006-J remains the true design-readiness gate and may still require further design refinement.
+006-I remains design/planning work only and must not create production implementation.
+
+## 006-J — later
+
+006-J remains the true design-readiness gate. It must replay materially affected scenarios/probes after architecture/planning reconciliation and may still conclude that further design refinement is required.
+
+Even a positive 006-J result does not itself authorize coding; production implementation requires a later explicit implementation-authority phase.
 
 ## Guardrails
 
@@ -143,13 +159,13 @@ Phase 006 MUST NOT:
 - let CTGAN, Hugging Face, time-series libraries, Spark, PyTorch or Databricks define concept boundaries;
 - create a standalone Relationship/Table/Series/DataTopology concept contrary to 006-G;
 - make a topology `mode` parameter semantic authority;
-- make topology presets permanently mutually exclusive;
 - treat synthetic/offline output as automatically private;
 - add differential-privacy budget/accounting fields without prior mechanism-specific concept discovery;
 - use resource pressure to silently reduce quantity, horizon, topology scope, Evaluation coverage or Constraint strength;
-- hard-code one-table implementation assumptions that violate the complete three-family baseline;
+- collapse current/historical/reconstructed/unknown state into one generic history/status flag;
+- collapse queue/block/incompatibility/security/recovery distinctions into one universal status;
 - claim design completion by phase count.
 
 ## Current next group
 
-**006-H — Human/Programmatic Experience Closure for Recovery, Security, Degraded & Historical Workflows**
+**006-I — Architecture/ADR Reconciliation, Canonical Authority Promotion & Planning Back-Propagation**
