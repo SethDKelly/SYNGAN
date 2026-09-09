@@ -6,21 +6,29 @@ status: historical
 
 # SYNGAN Concept Discovery History
 
-This directory preserves the hypotheses, alternatives, falsification tests, boundary reviews, operational-principle work, and composition analysis that produced the accepted Phase 001 model.
+This directory preserves hypotheses, alternatives, falsification tests, boundary reviews, operational-principle work, composition analysis and later explicit design-revalidation evidence.
 
-**It is no longer the current source of truth for accepted concept or synchronization semantics.**
-
-Current authority:
+**Discovery is not the current source of truth for accepted concepts or synchronizations.** Current accepted authority remains under:
 
 - [Accepted Concepts](../concepts/index.md)
 - [Accepted Synchronizations](../synchronizations/index.md)
-- [Phase 001 Exit](../phases/001/001-H-phase-001-consolidation-initial-concept-catalog.md)
+- [Design Authority](../authority/index.md)
 
-When an earlier provisional statement conflicts with accepted authority, accepted authority wins unless a later explicit design revision supersedes it.
+When provisional discovery conflicts with accepted authority, accepted authority wins unless a later explicit design revision promotes the discovery result.
+
+## Phase 006 post-planning discovery
+
+Phase 006 reopens discovery only where Phase 005 implementation planning or new capability evidence exposes a legitimate concept-boundary question.
+
+Current evidence:
+
+- [Post-Planning Concept Revalidation & Structured-Data Topology Candidates](post-planning-concept-revalidation-structured-topology-candidates.md) — 006-A mechanism-vs-concept audit plus single-table/time-series/multi-table capability analysis. It reopens `Relationship` as a **candidate**, not an accepted concept.
+
+See [Phase 006](../phases/006/index.md) for the active design-refinement sequence.
 
 ## Final Phase 001 discovery handoff
 
-The following documents supplied the direct evidence for 001-H:
+The following documents supplied the direct evidence for the original accepted catalog:
 
 - [Candidate Operational Principles](operational-principles.md)
 - [Operational Principle Falsification Review](operational-principle-review.md)
@@ -28,11 +36,7 @@ The following documents supplied the direct evidence for 001-H:
 - [Candidate Synchronization Specification](synchronization-specification.md)
 - [Composition, Coupling & Dependency Risk Review](composition-risk-review.md)
 
-These documents explain *why* the eleven accepted concepts and fifteen accepted synchronization rules survived.
-
-## Accepted outcome of discovery
-
-The following candidates were promoted to accepted concepts:
+The original candidates promoted to accepted concepts were:
 
 1. Data Meaning
 2. Synthesis Strategy
@@ -46,9 +50,9 @@ The following candidates were promoted to accepted concepts:
 10. Execution
 11. Provenance
 
-See [docs/concepts](../concepts/index.md) for canonical definitions.
+See [docs/concepts](../concepts/index.md) for current canonical definitions.
 
-## Subordinate/reclassified results preserved by history
+## Historical subordinate/reclassified results
 
 - Generation Request → Generation-owned state;
 - Condition → Generation-owned state, distinct from Constraint;
@@ -56,7 +60,7 @@ See [docs/concepts](../concepts/index.md) for canonical definitions.
 - stable dataset/artifact references → representation/integration obligation;
 - reproducibility → cross-cutting contract;
 - generic Privacy → rejected; mechanism-specific discovery when needed;
-- Relationship → deferred relational edge;
+- Relationship → originally deferred relational edge; **reopened provisionally in Phase 006-A**;
 - Use / Release Decision → external authority;
 - Source Characterization/Profile → supporting observation/method.
 
@@ -80,4 +84,4 @@ These remain design provenance, not active concept authority.
 
 ## Representation boundary
 
-Nothing in this historical directory directly defines Python classes, package modules, Spark jobs, PyTorch objects, file formats, storage schemes, event architectures, transaction mechanisms, or plugin architectures.
+Nothing in this directory directly defines Python classes, package modules, Spark jobs, PyTorch objects, function signatures, file formats, storage schemes, event architectures, transaction mechanisms, or plugin architectures.
