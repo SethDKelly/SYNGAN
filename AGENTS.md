@@ -11,26 +11,59 @@ Current state:
 ```text
 007-A  COMPLETE
 007-B  COMPLETE
-007-C  NOT AUTHORIZED — next eligible subgroup
-007-D..007-K  NOT AUTHORIZED
+007-C  COMPLETE
+007-D  NOT AUTHORIZED — next eligible subgroup
+007-E..007-K  NOT AUTHORIZED
 ```
 
-Canonical implementation authority:
+Canonical implementation authority currently includes:
 
 - `docs/implementation/phase-007-implementation-authority-lock.md`
 - `docs/implementation/phase-007-b-bootstrap-execution-authority.md`
+- `docs/implementation/phase-007-c-source-package-topology-execution-authority.md`
 - `docs/phases/007/index.md`
 
-No agent may create `src/syngan/` or substantive production package/domain/runtime/platform behavior until 007-C is explicitly authorized.
+No agent may begin 007-D identity/revision/serialization/public-resource behavior until the user explicitly authorizes that subgroup.
 
-## Current executable bootstrap
+## Executable substrate through 007-C
 
-Repository-owned toolchain/verification now exists:
+The production package structure now exists:
+
+```text
+src/syngan/
+├── __init__.py
+├── py.typed
+├── foundation/
+├── domain/
+├── ports/
+├── application/
+├── api/
+├── adapters/
+└── bootstrap/
+```
+
+These are responsibility boundaries, not concepts.
+
+Import Linter enforces:
+
+```text
+api -> application -> ports -> domain -> foundation
+
+core packages !-> adapters/bootstrap
+adapters !-> application/api/bootstrap
+```
+
+Do not bypass these contracts through dynamic import tricks, broad re-export modules, shared generic packages, or test-only path manipulation.
+
+## Toolchain / verification
+
+Current repository-owned stack:
 
 ```text
 Python >=3.11
 uv >=0.12,<0.13
 Hatchling
+editables
 pytest
 Hypothesis
 pytest-socket
@@ -38,34 +71,34 @@ Ruff
 mypy
 Import Linter
 coverage.py / pytest-cov
-GitHub Actions Verify workflow
+GitHub Actions Verify
 ```
 
-The base runtime dependency list is empty.
+`[project].dependencies` remains empty at 007-C exit. Hatchling and `editables` are build/development tooling, not runtime capabilities.
 
 After explicit dependency provisioning, use:
 
 ```text
 uv sync --all-groups --no-install-project --locked
+uv sync --all-groups --locked --no-build-isolation
 uv run --no-sync python tools/verify.py all
 uv run --no-sync python tools/verify.py coverage
 ```
 
-The permanent Verify workflow is read-only and runs from the committed `uv.lock`.
+Normal verification installs the first-party package, runs lint/format/type/unit/architecture/fitness gates, verifies package imports/`py.typed`, and builds/inspects wheel + sdist without publication.
 
-Portable/core pytest denies Python sockets by default. Explicit provisioning may access declared package infrastructure; hidden package/model acquisition, hosted inference, or undeclared runtime fallback is prohibited.
-
-Import Linter is installed but production import contracts are intentionally deferred until 007-C creates the package topology.
+Portable/core pytest denies Python sockets by default. Explicit provisioning may access declared package infrastructure; hidden package/model acquisition, hosted inference or undeclared runtime fallback is prohibited.
 
 ## Progressive disclosure
 
-For future implementation work:
+For implementation work:
 
 1. read `docs/index.md`;
 2. read the Phase 007 implementation lock;
 3. read `docs/phases/007/index.md`;
-4. read only the implementation/architecture authority relevant to the explicitly authorized subgroup;
-5. use the repository-owned verification commands and preserve subgroup evidence.
+4. read the enduring 007-C topology authority;
+5. read only the implementation/architecture authority relevant to the explicitly authorized current subgroup;
+6. use repository-owned verification and preserve exact subgroup evidence.
 
 Do not load/copy the full design corpus by default.
 
@@ -95,11 +128,30 @@ provisional concepts        0
 
 No `SYNC-16`.
 
+## Source topology guardrails
+
+Preserve at minimum:
+
+- `foundation` imports no other SYNGAN top-level package;
+- `domain` depends inward on `foundation` only;
+- `ports` depends only on `foundation/domain`;
+- `application` depends only on `foundation/domain/ports`;
+- `api` depends only on `foundation/domain/ports/application`;
+- `adapters` may depend on `foundation/domain/ports`, not `application/api/bootstrap`;
+- `bootstrap` is composition-only;
+- root `syngan.__init__` stays small and side-effect free;
+- root import must not force optional Spark/model/platform dependencies into the base closure;
+- do not introduce universal `utils`, `context`, `config`, `manager`, `registry`, `metadata`, `state`, `result`, `relationship` or `data_topology` god-owner packages;
+- production source must not import test support;
+- use installed-package verification, not `PYTHONPATH=src` as a substitute.
+
+If a later slice needs to change these boundaries, classify it as a potential Class 3 issue before proceeding.
+
 ## Change classification
 
 - Class 0 — local/non-contractual: allowed inside active scope.
 - Class 1 — implementation realization: allowed only when traced to active authority and verified.
-- Class 2 — public/persisted/compatibility: requires explicit implementation-authority + compatibility/migration evidence.
+- Class 2 — public/persisted/compatibility: requires explicit implementation authority + compatibility/migration evidence.
 - Class 3 — architecture-affecting: **STOP** and reopen the smallest architecture/ADR authority.
 - Class 4 — semantic/experience: **STOP** and reopen the appropriate upstream design authority.
 
@@ -126,9 +178,11 @@ A subgroup is not complete because a command exits zero once.
 
 ## Branch/review posture
 
-`main` remains unprotected and the Verify workflow is not currently a required branch check.
+`main` remains unprotected and Verify is not claimed as a required branch check.
 
-007-C must revisit PR/review/required-check policy now that executable verification exists. Do not claim branch protection or required checks until repository state confirms them.
+007-C successfully used PR #1 and a green Verify result on the exact reviewed head before merge. Material production-source work SHOULD continue using reviewable branches/PRs when supported and retain exact-head verification evidence.
+
+Do not describe direct-to-main as independent review and do not claim branch-protection enforcement unless repository state confirms it.
 
 ## Non-negotiable design rules
 
@@ -147,6 +201,6 @@ Preserve at minimum:
 
 ## Current next boundary
 
-**007-C — Source/Package Topology, Dependency Direction & Architecture-Fitness Enforcement** is next eligible but **NOT AUTHORIZED**.
+**007-D — Identity, Revision, Serialization, Typed Public Resource/Handle & Programmatic-View Foundation** is next eligible but **NOT AUTHORIZED**.
 
-Do not create `src/syngan/` until the user explicitly proceeds to 007-C.
+Do not begin 007-D until the user explicitly proceeds.
