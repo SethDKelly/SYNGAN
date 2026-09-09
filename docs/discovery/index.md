@@ -17,11 +17,11 @@ This directory preserves hypotheses, alternatives, falsification tests, boundary
 
 When provisional discovery conflicts with accepted authority, accepted authority wins unless a later explicit design revision promotes the discovery result.
 
-## Phase 006 post-planning discovery
+## Phase 006 post-planning discovery and validation
 
-Phase 006 reopens discovery/validation only where Phase 005 planning or new capability evidence exposes a legitimate upstream design question.
+Phase 006 reopened discovery/validation only where Phase 005 planning or new capability evidence exposed a legitimate upstream design question.
 
-Current evidence:
+Evidence:
 
 - [Post-Planning Concept Revalidation & Structured-Data Topology Candidates](post-planning-concept-revalidation-structured-topology-candidates.md) — 006-A mechanism-vs-concept and topology candidate audit.
 - [Temporal Authority, Regressive Recovery & Historical-Truth Revalidation](temporal-authority-regressive-recovery-revalidation.md) — 006-B evidence leading to Operational Authority Continuity.
@@ -29,10 +29,11 @@ Current evidence:
 - [Reference Strategy/Method, Text & Distributed-Runtime Falsification Probes](reference-strategy-method-topology-text-distribution-probes.md) — 006-D algorithm/topology/text/large-state/Spark-distribution probes leading to Self-Contained Execution & Runtime Distribution Closure.
 - [Enterprise Scale, Resource/Approximation, Backpressure & Degraded-Mode Validation](enterprise-scale-resource-approximation-backpressure-degraded-mode-validation.md) — 006-E scale/resource/degraded-operation evidence rejecting generic Resource/Backpressure/Approximation/DegradedMode concepts.
 - [Privacy, Disclosure, Release Governance & Mechanism-Specific Scope Validation](privacy-disclosure-release-governance-mechanism-specific-scope-validation.md) — 006-F privacy/disclosure/formal-guarantee/release evidence retaining generic Privacy as rejected and establishing a future DP concept-discovery gate.
-- [Structured-Data Topology & Relationship Concept/Extensibility Audit](structured-data-topology-relationship-concept-extensibility-audit.md) — 006-G Relationship rediscovery and topology-scope audit; Relationship was subordinated to Data Meaning and the complete baseline target became single-table + time-series + multi-table shared-key.
-- [Human & Programmatic Experience Closure Validation](human-programmatic-experience-recovery-security-degraded-history-topology-validation.md) — 006-H falsification of universal status/readiness models and validation of orthogonal semantic/operational/actionability/continuity/disclosure/historical-knowledge experience dimensions.
+- [Structured-Data Topology & Relationship Concept/Extensibility Audit](structured-data-topology-relationship-concept-extensibility-audit.md) — 006-G Relationship rediscovery and topology-scope audit.
+- [Human & Programmatic Experience Closure Validation](human-programmatic-experience-recovery-security-degraded-history-topology-validation.md) — 006-H falsification of universal status/readiness models.
+- [Phase 006 Final Cross-Layer Replay & Readiness Audit](phase-006-final-cross-layer-replay-readiness-audit.md) — 006-J replay of the reconciled concept/synchronization/experience/architecture/planning baseline; no new blocking design debt found.
 
-See [Phase 006](../phases/006/index.md) for the active design-refinement sequence.
+Phase 006 is now complete. Its canonical readiness conclusion is under [Design Authority](../authority/phase-006-consolidated-design-readiness-contract.md), not in this discovery directory.
 
 ## Final Phase 001 discovery handoff
 
@@ -58,24 +59,22 @@ The accepted concepts remain:
 10. Execution
 11. Provenance
 
-See [docs/concepts](../concepts/index.md) for current canonical definitions/dispositions.
-
 ## Historical subordinate/reclassified results
 
 - Generation Request → Generation-owned state;
-- Condition → Generation-owned state, distinct from Constraint;
+- Condition → Generation-owned state, distinct Constraint;
 - Attempt → Execution-owned history;
 - stable dataset/artifact references → representation/integration obligation;
 - reproducibility → cross-cutting contract;
 - generic Privacy → rejected; formal mechanism-specific discovery required when independent accounting state enters scope;
-- Relationship → originally deferred, reopened by 006-A, resolved by 006-G as Data Meaning-owned structural semantics rather than a standalone concept;
+- Relationship → deferred/reopened/resolved as Data Meaning-owned structural semantics rather than standalone concept;
 - Use / Release Decision → external authority;
 - Source Characterization/Profile → supporting observation/method;
-- Text / Language Model / Tokenizer / Composite Strategy / Runtime Distribution → rejected as standalone concepts by 006-D;
-- Resource / Backpressure / Approximation / DegradedMode / Cost / Quota → rejected as current standalone concepts by 006-E;
-- Disclosure Risk / Memorization / Redaction Decision → rejected as standalone concepts by 006-F;
-- TimeSeries / Series / Sequence / Table / DataTopology → rejected as standalone concepts by 006-G;
-- Actionability / Readiness / Recovery Quarantine / Historical Knowledge / Disclosure State / Programmatic Result → rejected as standalone concepts by 006-H; retained as contextual experience dimensions or downstream representations.
+- Text / Language Model / Tokenizer / Composite Strategy / Runtime Distribution → rejected as standalone concepts;
+- Resource / Backpressure / Approximation / DegradedMode / Cost / Quota → rejected as standalone concepts;
+- Disclosure Risk / Memorization / Redaction Decision → rejected as standalone concepts;
+- TimeSeries / Series / Sequence / Table / DataTopology → rejected as standalone concepts;
+- Actionability / Readiness / Recovery Quarantine / Historical Knowledge / Disclosure State / Programmatic Result → contextual experience/representation dimensions rather than concepts.
 
 ## Representation boundary
 
