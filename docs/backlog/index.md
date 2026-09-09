@@ -23,7 +23,7 @@ Canonical facts remain under `docs/authority/`, `docs/concepts/`, `docs/synchron
 
 ### BDR-001 — regressive restore and temporal authority closure
 
-**Status:** semantic closure accepted in 006-B; adversarial/experience/architecture propagation pending 006-C, 006-H and 006-I.
+**Status:** semantic closure accepted in 006-B; synchronization validation completed in 006-C; experience/architecture propagation pending 006-H and 006-I.
 
 006-B established the canonical [Operational Authority Continuity & Regressive Recovery Contract](../authority/operational-authority-continuity-regressive-recovery-contract.md).
 
@@ -37,17 +37,21 @@ Accepted design consequences include:
 - missing post-backup canonical facts remain reconstructable/unknown/unavailable according to evidence rather than being silently treated as absence;
 - `ControlPlaneIncarnation`/equivalent remains an architecture realization candidate, not a concept.
 
-The original semantic/design gap is closed. The item remains in this section until 006-C validates synchronization behavior, 006-H closes actor/programmatic experience and 006-I reconciles architecture/planning authority.
+006-C adversarially validated this contract against SYNC-01 through SYNC-15 and refined existing synchronization wording without creating `SYNC-16`. The original semantic/synchronization gap is closed; 006-H and 006-I still own experience and architecture/planning propagation.
 
 ### BDR-002 — post-planning adversarial end-to-end validation
 
-**Status:** open — 006-C next.
+**Status:** resolved by 006-C for the current eleven-concept / fifteen-synchronization baseline.
 
-A full-system scenario audit must re-test the accepted concepts/synchronizations against the concrete Phase 005 plans and the 006-B continuity contract, including ambiguous launch, stale writers, retry/resume, cancellation races, revocation, projection outages, mixed versions, retention loss, platform fallback, security-domain isolation, disaster recovery and topology-sensitive partial-output cases.
+[006-C](../phases/006/006-C-end-to-end-scenario-exception-failure-adversarial-synchronization-validation.md) evaluated twenty-four normal/adversarial scenarios covering Learning-based and direct Generation, ambiguous launch, stale writers, cancellation races, authorization/dependency changes, projection outage, retention loss, mixed versions, platform fallback, security isolation, regressive recovery, repeated Evaluation work, and topology-sensitive time-series/multi-table cases.
+
+The result was **PASS WITH TARGETED SYNCHRONIZATION REFINEMENT**. SYNC-04, SYNC-07, SYNC-08, SYNC-11, SYNC-14 and SYNC-15 were refined while the synchronization count remained fifteen.
+
+If later Phase 006 work accepts a new `Relationship` concept or materially changes accepted coordination/architecture, affected scenarios must be replayed conceptually in 006-I/006-J before readiness approval.
 
 ### BDR-003 — representative Strategy/method and topology design probes
 
-**Status:** open — Phase 006 blocking.
+**Status:** open — 006-D next; Phase 006 blocking.
 
 The model-neutral runtime architecture must be stress-tested against materially different synthesis/evaluation shapes before infrastructure implementation begins.
 
@@ -85,7 +89,7 @@ multi-table shared-key      explicit candidate capability; Relationship reopened
 
 Current contracts must not hard-code a permanent single-table invariant. Phase 006-A reopened `Relationship` as a candidate concept because shared-key linkage may have reusable descriptive purpose independent of Data Meaning and Constraint.
 
-006-G must decide whether existing concepts suffice, Relationship should be accepted, or a narrower boundary is required.
+006-C confirmed that Generation/Constraint/Evaluation coordination can already represent one logical multi-table result and prevent partial constituent completion from being mistaken for total completion. 006-G must still decide whether the descriptive shared-key structure itself requires `Relationship` or another narrower boundary.
 
 ### BSD-002 — mechanism-specific formal privacy
 
@@ -111,7 +115,7 @@ The framework should not attempt to design every method before implementation. A
 
 Time-series must not be reduced to “single-table plus timestamp.” Phase 006 must validate entity/series identity, temporal ordering, horizon/continuation semantics, temporal Constraints, Strategy capability, Evaluation claim strength, checkpoint/recovery consequences and enterprise-scale behavior.
 
-006-A did not accept a standalone `Series`, `Temporal Structure` or `TimeSeriesMode` concept. 006-G must test whether reusable temporal sequence structure fits the reopened generic `Relationship` candidate or remains adequately owned by existing concepts.
+006-C confirmed that interrupted time-series continuation and validation-later temporal rules compose with existing activity/Execution/Evaluation synchronizations. 006-G must still test whether reusable sequence membership/order semantics fit the reopened generic `Relationship` candidate or remain adequately owned by existing concepts.
 
 ## Implementation/release debt
 
