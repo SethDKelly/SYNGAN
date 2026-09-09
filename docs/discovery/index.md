@@ -25,6 +25,7 @@ Current evidence:
 - [Post-Planning Concept Revalidation & Structured-Data Topology Candidates](post-planning-concept-revalidation-structured-topology-candidates.md) — 006-A mechanism-vs-concept audit plus single-table/time-series/multi-table capability analysis. It reopens `Relationship` as a **candidate**, not an accepted concept.
 - [Temporal Authority, Regressive Recovery & Historical-Truth Revalidation](temporal-authority-regressive-recovery-revalidation.md) — 006-B alternatives/falsification evidence that led to the canonical Operational Authority Continuity contract.
 - [End-to-End Scenario, Exception, Failure & Adversarial Synchronization Validation](end-to-end-adversarial-synchronization-validation.md) — 006-C twenty-four-scenario falsification pass over SYNC-01 through SYNC-15. The accepted result retained fifteen synchronization IDs with targeted wording refinements.
+- [Reference Strategy/Method, Text & Distributed-Runtime Falsification Probes](reference-strategy-method-topology-text-distribution-probes.md) — 006-D algorithm/topology/text/large-state/Spark-distribution probe set. It led to the canonical Self-Contained Execution & Runtime Distribution Closure contract without adding a new concept or synchronization.
 
 See [Phase 006](../phases/006/index.md) for the active design-refinement sequence.
 
@@ -64,7 +65,8 @@ See [docs/concepts](../concepts/index.md) for current canonical definitions.
 - generic Privacy → rejected; mechanism-specific discovery when needed;
 - Relationship → originally deferred relational edge; **reopened provisionally in Phase 006-A**;
 - Use / Release Decision → external authority;
-- Source Characterization/Profile → supporting observation/method.
+- Source Characterization/Profile → supporting observation/method;
+- Text / Language Model / Tokenizer / Composite Strategy / Runtime Distribution → rejected as standalone concepts by 006-D; represented through existing meaning/Strategy/state/integration authority.
 
 ## Earlier discovery layers
 
@@ -86,4 +88,4 @@ These remain design provenance, not active concept authority.
 
 ## Representation boundary
 
-Nothing in this directory directly defines Python classes, package modules, Spark jobs, PyTorch objects, function signatures, file formats, storage schemes, event architectures, transaction mechanisms, or plugin architectures.
+Nothing in this directory directly defines Python classes, package modules, Spark jobs, PyTorch objects, function signatures, file formats, storage schemes, event architectures, transaction mechanisms, plugin architectures or package-distribution mechanisms.
