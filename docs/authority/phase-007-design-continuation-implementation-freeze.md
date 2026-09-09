@@ -73,13 +73,14 @@ Phase 007 subgroup numbering is retained for continuity, but current subgroups a
 Completed design groups:
 
 - **007-D — Identity, Revision, Serialization, Typed Public Resource/Handle & Programmatic-View Foundation**;
-- **007-E — Control Persistence, Transactions, CAS, Outbox, Historical References & Migration Baseline**.
+- **007-E — Control Persistence, Transactions, CAS, Outbox, Historical References & Migration Baseline**;
+- **007-F — Distributed Data-State, Structured Topology, Manifest, Candidate/Seal & Promotion Foundation**.
 
 Current next eligible design group:
 
-- **007-F — Distributed Data-State, Structured Topology, Manifest, Candidate/Seal & Promotion Foundation**.
+- **007-G — Strategy/Method Binding, Dependency Trust, Authorization, Secrets & Distributed Runtime Closure Foundation**.
 
-007-F is not active until explicitly entered.
+007-G is not active until explicitly entered.
 
 ## Design-first change discipline
 
@@ -111,6 +112,7 @@ No phase number or green test suite substitutes for this decision.
 Phase 007 design continuation        ACTIVE
 007-D architecture design            COMPLETE
 007-E architecture design            COMPLETE
-007-F architecture design            NEXT ELIGIBLE — NOT STARTED
+007-F architecture design            COMPLETE
+007-G architecture design            NEXT ELIGIBLE — NOT STARTED
 007-D and later implementation       NOT AUTHORIZED
 ```
