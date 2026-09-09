@@ -13,6 +13,7 @@ Current architecture/design posture:
 - [`Phase 007 Design Continuation & Implementation Freeze`](docs/authority/phase-007-design-continuation-implementation-freeze.md)
 - [`007-D Identity, Revision, Serialization, Resource/Handle & Programmatic-View Foundation`](docs/architecture/phase-007-d-identity-revision-serialization-resource-handle-programmatic-view-foundation.md)
 - [`007-E Control Persistence, Transactions, CAS, Outbox, Historical References & Migration Baseline`](docs/architecture/phase-007-e-control-persistence-transactions-cas-outbox-historical-reference-migration-baseline.md)
+- [`007-F Distributed Data-State, Structured Topology, Manifest, Candidate/Seal & Promotion Foundation`](docs/architecture/phase-007-f-distributed-data-state-structured-topology-manifest-candidate-seal-promotion-foundation.md)
 - [`Phase 007 index`](docs/phases/007/index.md)
 
 ## Status
@@ -21,7 +22,8 @@ Current architecture/design posture:
 - 007-A through 007-C — retained historical/provisional bootstrap work
 - **007-D — complete as architecture design**
 - **007-E — complete as architecture design**
-- **007-F — next eligible design subgroup, not started**
+- **007-F — complete as architecture design**
+- **007-G — next eligible design subgroup, not started**
 - **Production implementation expansion — frozen**
 
 Phase 006 historically concluded that design was complete enough to consider implementation. The project later reopened architecture design so existing source/tests do not prematurely harden unsettled representation choices.
@@ -30,35 +32,47 @@ Phase 006 historically concluded that design was complete enough to consider imp
 
 007-D separates logical identity, immutable semantic revision/commitment, mutable current-state version/freshness and representation schema version. Handles resolve/present authority; serialization is representation rather than write authority.
 
-007-E establishes a technology-neutral persistence baseline:
+007-E establishes a technology-neutral persistence baseline around owner validation, atomic same-boundary coupled facts, durable reconcilable cross-boundary intent, stale-write conflict detection, material history, exact historical references, representation-oriented migration and regressive-recovery semantics.
+
+007-F establishes the distributed data-state foundation:
 
 ```text
-owner validates semantic transition
+mutable selector/access
         ↓
-persistence commits under consistency preconditions
+exact logical data state
         ↓
-same-boundary coupled facts atomically visible
+open distributed candidate
         ↓
-required cross-boundary work gets durable reconcilable intent
+sealed immutable physical subject
+        ↓
+owner validation
+        ↓
+Generation promotion
+        ↓
+one logical completed output
 ```
 
-It also preserves:
+Important consequences include:
 
-- stale-write conflict detection without treating CAS as semantic validation;
-- material transition history without universal event sourcing;
-- exact historical references without silent `latest` substitution;
-- derived indexes/search views as non-authoritative;
-- migration as representation change by default;
-- migration revision distinct from semantic/state/schema/recovery versions;
-- canonical-state rollback as potentially regressive recovery under ADR-0009.
+- logical subjects and physical representations remain distinct;
+- single-table, time-series, multi-table shared-key and composite subjects use bounded logical scopes rather than one exclusive topology enum;
+- exact source-state claims separate identity, rereadability, integrity, retention and cross-scope coordination strength;
+- individually exact tables do not automatically imply a coherent multi-table snapshot;
+- manifests remain bounded roots over distributed/hierarchical/provider-native detail;
+- partial/scope-level candidate completion is never whole-output completion;
+- sealing creates an exact immutable physical subject but does not prove Constraints, privacy, fidelity or Generation completion;
+- required completion Evaluation binds the exact sealed subject;
+- promotion may reuse sealed distributed bytes rather than copying the full corpus;
+- later equivalent compaction/relocation can preserve logical output identity while the original promotion basis remains historical fact;
+- normal operation must not require full-corpus collection or driver-local enumeration of all distributed components.
 
-Earlier Phase 005-D choices such as UUIDv4, JSON codecs, SQLAlchemy Core, Alembic, PostgreSQL and SQLite remain possible implementation candidates, not current architecture requirements.
+Earlier Phase 005-D/E concrete choices such as PostgreSQL/SQLAlchemy/Alembic or a portable Parquet manifest profile remain possible implementation candidates, not current architecture requirements.
 
 ## Provisional executable scaffold
 
 The repository still contains the 007-B/007-C package/tool/test scaffold. It is feasibility/history evidence, **not upstream design authority**, and may be revised at a later implementation re-entry.
 
-No new tests or executable architecture enforcement are being added while architecture design remains active.
+No new tests or executable architecture enforcement are being added while architecture design remains active. Older delivery-state assertions may therefore remain intentionally stale until implementation re-entry.
 
 ## Locked semantic baseline
 
@@ -83,6 +97,6 @@ The complete supported baseline also requires source-derived/local free-form-tex
 
 ## Current next boundary
 
-**007-F — Distributed Data-State, Structured Topology, Manifest, Candidate/Seal & Promotion Foundation** is next eligible as a **design** subgroup.
+**007-G — Strategy/Method Binding, Dependency Trust, Authorization, Secrets & Distributed Runtime Closure Foundation** is next eligible as a **design** subgroup.
 
 An explicit proceed decision is required before it begins. Production implementation remains frozen independently of design progression.
