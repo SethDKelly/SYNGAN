@@ -11,7 +11,7 @@ This directory is the canonical design and implementation-planning knowledge bun
 
 ## Progressive disclosure
 
-- [Authority](authority/index.md) — methodology/governance/cross-cutting contracts, including operational-authority continuity after regressive recovery.
+- [Authority](authority/index.md) — methodology/governance/cross-cutting contracts, including operational-authority continuity and self-contained/runtime-distribution closure.
 - [Problem Knowledge](problem/index.md) — problem, purpose, actors, constraints and enterprise scale envelope.
 - [Domain Terminology](terminology/index.md) — canonical vocabulary.
 - [Accepted Concepts](concepts/index.md) — current concept authority.
@@ -59,12 +59,15 @@ Completed Phase 006 groups:
 - [006-A — Concept Completeness, Mechanism-vs-Concept & Scope-Boundary Revalidation](phases/006/006-A-post-planning-concept-completeness-mechanism-vs-concept-scope-boundary-revalidation.md)
 - [006-B — Temporal Authority, Disaster Recovery, Rollback, Fork & Historical-Truth Refinement](phases/006/006-B-temporal-authority-disaster-recovery-rollback-fork-historical-truth-refinement.md)
 - [006-C — End-to-End Scenario, Exception, Failure & Adversarial Synchronization Validation](phases/006/006-C-end-to-end-scenario-exception-failure-adversarial-synchronization-validation.md)
+- [006-D — Reference Strategy/Method and Topology Design Probes & Algorithm-Neutrality Stress Test](phases/006/006-D-reference-strategy-method-topology-design-probes-algorithm-neutrality-stress-test.md)
 
 006-A kept the accepted concept/synchronization counts unchanged, made time-series an explicit design target, and reopened `Relationship` only as a candidate for multi-table/shared-key and possible temporal sequence semantics.
 
 006-B established the active [Operational Authority Continuity & Regressive Recovery Contract](authority/operational-authority-continuity-regressive-recovery-contract.md).
 
-006-C adversarially replayed the design across twenty-four scenarios. The result was **PASS WITH TARGETED SYNCHRONIZATION REFINEMENT**: the synchronization count remains fifteen, no `SYNC-16` is currently justified, and SYNC-04/07/08/11/14/15 were refined in the canonical [Core Synchronizations](synchronizations/core-synchronizations.md).
+006-C adversarially replayed the design across twenty-four scenarios. The synchronization count remains fifteen and no `SYNC-16` is currently justified.
+
+006-D stress-tested Learning-based/direct/text/time-series/multi-table/Evaluation/large-state/Spark-distribution shapes and established the active [Self-Contained Execution & Runtime Distribution Closure Contract](authority/self-contained-execution-runtime-distribution-closure-contract.md).
 
 ## Current invariant baseline
 
@@ -73,6 +76,8 @@ Until Phase 006 explicitly revises further authority, preserve:
 - eleven accepted concepts and fifteen synchronizations;
 - `Relationship` provisional only, pending 006-G;
 - single-table generation as the current baseline capability, with time-series and multi-table shared-key as explicit Phase 006 design targets;
+- the supported baseline includes at least one source-derived/local free-form-text synthesis path requiring no pretrained artifact or runtime network service;
+- externally pretrained/world-knowledge text remains explicit optional local-artifact or runtime-network capability;
 - model-neutral structured/tabular synthesis;
 - semantic completion distinct from runtime/platform completion;
 - one Execution with multiple fenced Attempts and explicit recovery/cancellation semantics;
@@ -81,19 +86,22 @@ Until Phase 006 explicitly revises further authority, preserve:
 - potentially regressive recovery enters continuity-unverified/recovery-quarantine semantics before write authority resumes;
 - rollback cannot resurrect stale writer/cancellation/security authority;
 - missing post-restore-point history is not proof of non-occurrence, and surviving physical effects are not proof of semantic transition;
+- driver-local package/model availability is not distributed executor readiness;
+- every material runtime worker must satisfy exact compatible runtime distribution closure, including dynamically allocated workers;
+- missing runtime dependencies cannot trigger undeclared first-use package/model acquisition;
+- large model/Learned-State distribution cannot universally require full driver-memory loading/broadcast;
 - owner-established Evidence and typed canonical Provenance;
 - unresolved continuity/history gaps may weaken current reproducibility without rewriting historical commitments;
 - explicit dependency/trust/authorization/network/egress distinctions;
-- no hidden runtime acquisition/remote fallback/required external telemetry in offline/no-egress profiles;
 - capability-negotiated platforms rather than provider-name authority;
 - enterprise-scale workflows without mandatory full-corpus driver-local materialization;
 - no production implementation until a later explicit implementation-authority phase is approved.
 
 ## Next
 
-**006-D — Reference Strategy/Method and Topology Design Probes & Algorithm-Neutrality Stress Test**
+**006-E — Enterprise Scale, Resource/Approximation, Backpressure & Degraded-Mode Design Validation**
 
-006-D must use materially different Learning-based, direct, time-series, multi-table and Evaluation method shapes to try to falsify model-neutrality, runtime/state boundaries and topology assumptions without implementing any algorithm.
+006-E must stress the refined design under enterprise-scale resource pressure, large/sharded state, text/runtime-distribution pressure, dynamic workers, topology-specific scaling, statistical approximation, backpressure and partial/degraded platform capability—without implementing benchmarks.
 
 ## Documentation governance note
 
