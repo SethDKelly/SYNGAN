@@ -1,29 +1,28 @@
 ---
 type: Phase Index
 title: Phase 005 — Implementation Planning & Delivery Decomposition
-status: active
+status: complete
 ---
 
 # Phase 005 — Implementation Planning & Delivery Decomposition
 
-Phase 005 translates accepted Phase 004 architecture into dependency-safe **future implementation plans**.
+## Status
 
-## Critical boundary
+**Phase 005 is complete as implementation planning. Production implementation is not authorized.**
 
-**Phase 005 is planning-only and does not authorize production implementation.** No production package scaffold, source code, schema/migration, adapter, test suite, CI/deployment infrastructure or runtime is created merely because a plan describes it.
+005-A through 005-J produced a coherent future implementation-planning baseline. 005-K audited those plans as one system and concluded that additional Jackson-style design refinement is required before any later implementation-authority phase may begin.
 
-Completion of Phase 005 also does not automatically authorize coding. **005-K must explicitly decide whether the Jackson-style concept, synchronization, experience, architecture and implementation-planning program is complete enough for a later implementation-authority phase, or whether further design refinement is required.**
+Exit record:
 
-## Entry authority
+[005-K — Cross-Slice Integration, Delivery Sequencing, Backlog Closure, Jackson-Methodology Completeness & Implementation-Readiness Exit](005-K-cross-slice-integration-delivery-sequencing-backlog-closure-jackson-methodology-completeness-implementation-readiness-exit.md)
 
-Planning remains downstream of:
+Consolidated planning authority:
 
-- [Design Authority](../../authority/index.md);
-- [Accepted Concepts](../../concepts/index.md);
-- [Accepted Synchronizations](../../synchronizations/index.md);
-- [Phase 003 Consolidated Experience Contract](../../experience/phase-003-consolidated-experience-contract.md);
-- [Phase 004 Consolidated Architecture Contract](../../architecture/phase-004-consolidated-architecture-contract.md);
-- [Implementation Planning & Delivery Authority](../../implementation/index.md).
+[Phase 005 Consolidated Implementation-Planning Contract](../../implementation/phase-005-consolidated-implementation-planning-contract.md)
+
+Backlog/classification:
+
+[SYNGAN Design & Delivery Backlog](../../backlog/index.md)
 
 ## Groups
 
@@ -39,54 +38,49 @@ Planning remains downstream of:
 | 005-H | [Evaluation/Evidence, Provenance, Historical Query & Reproducibility Implementation Plan](005-H-evaluation-evidence-provenance-historical-query-reproducibility-implementation-plan.md) | complete |
 | 005-I | [Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Implementation Plan](005-I-dependency-resolution-offline-no-egress-authorization-redaction-enterprise-security-implementation-plan.md) | complete |
 | 005-J | [Deployment/Platform Adapters, Observability, Compatibility, Scale & Performance Implementation Plan](005-J-deployment-platform-adapters-observability-compatibility-scale-performance-implementation-plan.md) | complete |
-| **005-K** | **Cross-Slice Integration, Delivery Sequencing, Backlog Closure, Jackson-Methodology Completeness & Implementation-Readiness Exit** | **next** |
+| 005-K | [Cross-Slice Integration, Delivery Sequencing, Backlog Closure, Jackson-Methodology Completeness & Implementation-Readiness Exit](005-K-cross-slice-integration-delivery-sequencing-backlog-closure-jackson-methodology-completeness-implementation-readiness-exit.md) | complete |
 
-## Consolidated planning baseline through 005-J
+## Exit findings
 
-The future implementation is planned around:
+### What passed
 
-- one portable `syngan` package with inward `foundation/domain/ports/application/api/adapters/bootstrap` boundaries;
-- one durable ResourceRef/revision/SnapshotId/StateVersion/SchemaVersion substrate;
-- exact distributed source/candidate/sealed-snapshot/output references and bounded manifests;
-- activity-specific Strategy/method runtime bindings and Learned-State representation/codec boundaries;
-- stable Execution with multiple fenced Attempts, checkpoint/recovery, reconciliation and cancellation linearization;
-- owner-established Evidence, typed canonical Provenance and derived bounded historical/reproducibility views;
-- explicit dependency resolution, offline/no-egress, action authorization, scoped runtime capabilities, secret brokering and truthful redaction;
-- local, portable Spark, Databricks-oriented and private/offline deployment profiles using capability negotiation rather than platform identity;
-- distinct canonical history, platform telemetry and security-audit lanes;
-- multi-axis compatibility/support evidence and multi-dimensional scale/performance benchmarking;
-- disaster recovery that treats backup restore as persistence recovery rather than restored writer authority, using recovery quarantine and a fresh `ControlPlaneIncarnation`/equivalent fence context when rollback could resurrect stale writers.
+- the eleven accepted concepts and fifteen synchronizations remain coherent for the current structured/tabular scope;
+- A-J preserve upstream authority and contain no unsafe semantic authority cycle;
+- control/data/runtime/Execution/Evidence/history/security/platform responsibilities compose cleanly;
+- the runtime/Execution mutual dependency can be broken with contract-first implementation sequencing rather than concept merging;
+- a provisional future Wave 0-Wave 8 delivery sequence is dependency-safe;
+- no code, schema, migration, test suite, adapter or deployment infrastructure has been created.
 
-No production implementation has begun.
+### What blocks implementation readiness
 
-## 005-K mandate
+005-K identifies four design-refinement blockers:
 
-005-K must audit all plans as one system and resolve:
+1. **BDR-001 — regressive restore and temporal authority closure**;
+2. **BDR-002 — post-planning adversarial end-to-end validation**;
+3. **BDR-003 — representative Strategy/method design probes**;
+4. **BDR-004 — initial-baseline scope and future-extensibility closure**.
 
-1. cross-slice dependency direction and ownership;
-2. persistence/schema/migration ordering;
-3. runtime/data/execution/security/platform seam compatibility;
-4. verification and acceptance-evidence coverage;
-5. minimum coherent delivery sequence and deferred backlog;
-6. unresolved semantic/experience/architecture questions;
-7. whether `ControlPlaneIncarnation` and other downstream mechanisms remain faithful realizations rather than hidden new concepts;
-8. whether strict OKF/documentation-governance debt affects implementation readiness;
-9. whether a further Jackson design/refinement phase is required.
+The most concrete newly exposed defect is a control-store restore to older state while newer external workers/effects survive. 005-J's recovery-quarantine plus `ControlPlaneIncarnation`/equivalent approach is promising, but the required authority/experience semantics must be validated/promoted upstream rather than remaining only implementation-planning detail.
 
-Allowed 005-K outcomes are:
+## Jackson-methodology verdict
+
+Jackson-style design does not require a fixed number of phases. The repository's own methodology judges completeness through concept purpose/boundaries, operational principles, synchronizations and preservation through later design layers.
+
+Phase 005 planning produced new feasibility/temporal evidence. Under that methodology, the correct response is to return to deliberate design refinement rather than begin coding.
+
+The exit outcome is:
 
 ```text
-DESIGN COMPLETE ENOUGH FOR A LATER EXPLICIT IMPLEMENTATION-AUTHORITY PHASE
+FURTHER CONCEPT / SYNCHRONIZATION / EXPERIENCE /
+ARCHITECTURE / PLANNING REFINEMENT REQUIRED
 ```
 
-or:
+## Next phase
 
-```text
-FURTHER CONCEPT / SYNCHRONIZATION / EXPERIENCE / ARCHITECTURE / PLANNING REFINEMENT REQUIRED
-```
+[Phase 006 — Post-Planning Design Validation & Adversarial Refinement](../006/index.md)
 
-Even the first outcome does **not** authorize coding inside Phase 005.
+Next group:
 
-## Current next phase
+**006-A — Post-Planning Concept Completeness, Mechanism-vs-Concept & Scope-Boundary Revalidation**
 
-**005-K — Cross-Slice Integration, Delivery Sequencing, Backlog Closure, Jackson-Methodology Completeness & Implementation-Readiness Exit**
+Phase 006 is design-only and does not authorize production implementation.
