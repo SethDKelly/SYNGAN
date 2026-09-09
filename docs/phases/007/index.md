@@ -10,17 +10,18 @@ status: active
 
 Translate the completed Phase 006 design baseline into **incremental, evidence-gated implementation authority** rather than unrestricted coding.
 
-Canonical implementation authority begins with:
+Current implementation authority is layered through:
 
 - [Phase 007 Implementation Authority Lock](../../implementation/phase-007-implementation-authority-lock.md)
 - [Phase 007-B Bootstrap Execution Authority](../../implementation/phase-007-b-bootstrap-execution-authority.md)
+- [Phase 007-C Source/Package Topology Execution Authority](../../implementation/phase-007-c-source-package-topology-execution-authority.md)
 
 ## Current status
 
 ```text
 007-A  COMPLETE
 007-B  COMPLETE
-007-C  NOT AUTHORIZED — next eligible subgroup
+007-C  AUTHORIZED / ACTIVE
 007-D  NOT AUTHORIZED
 007-E  NOT AUTHORIZED
 007-F  NOT AUTHORIZED
@@ -31,7 +32,7 @@ Canonical implementation authority begins with:
 007-K  NOT AUTHORIZED
 ```
 
-Phase 007 remains active, but **no implementation subgroup beyond completed 007-B is authorized until an explicit proceed decision is given**.
+Phase 007 remains active and implementation permission is limited to 007-C.
 
 ## Locked design baseline
 
@@ -69,13 +70,13 @@ Implementation realizes authority; code/platform/model convenience does not rede
 ## Authorization ladder
 
 ```text
-007-A authority lock
+007-A authority lock                                COMPLETE
         ↓
 007-B repository/toolchain/verification bootstrap   COMPLETE
+        ↓ explicit proceed
+007-C source/package topology                       ACTIVE
         ↓ evidence + explicit proceed
-007-C source/package topology                       NOT AUTHORIZED
-        ↓
-007-D identity/public contracts
+007-D identity/public contracts                     NOT AUTHORIZED
         ↓
 007-E control persistence/history
         ↓
@@ -92,7 +93,7 @@ Implementation realizes authority; code/platform/model convenience does not rede
 007-K consolidation/evidence review
 ```
 
-No subgroup is authorized automatically by the existence of this plan or completion of the prior group.
+No later subgroup is authorized automatically by the existence of this plan or completion of the prior group.
 
 ## Groups
 
@@ -100,7 +101,7 @@ No subgroup is authorized automatically by the existence of this plan or complet
 |---|---|---|
 | **007-A** | [Implementation Authority Lock, Canonical Baseline, Change Control & Slice Authorization](007-A-implementation-authority-lock-canonical-baseline-change-control-slice-authorization.md) | **complete** |
 | **007-B** | [Repository/Toolchain Bootstrap, Reproducible Environment & Verification Harness](007-B-repository-toolchain-bootstrap-reproducible-environment-verification-harness.md) | **complete** |
-| **007-C** | Source/Package Topology, Dependency Direction & Architecture-Fitness Enforcement | **not authorized / next eligible** |
+| **007-C** | Source/Package Topology, Dependency Direction & Architecture-Fitness Enforcement | **authorized / active** |
 | 007-D | Identity, Revision, Serialization, Typed Public Resource/Handle & Programmatic-View Foundation | not authorized |
 | 007-E | Control Persistence, Transactions, CAS, Outbox, Historical References & Migration Baseline | not authorized |
 | 007-F | Distributed Data-State, Structured Topology, Manifest, Candidate/Seal & Promotion Foundation | not authorized |
@@ -110,88 +111,47 @@ No subgroup is authorized automatically by the existence of this plan or complet
 | 007-J | Self-Contained Single-Table Reference Vertical Slice & Spark-Local End-to-End Proof | not authorized |
 | 007-K | Phase 007 Consolidation, Architecture-Fitness Audit, Evidence Review & Next-Delivery Authorization Decision | not authorized |
 
-## 007-B result
+## 007-B retained substrate
 
-007-B established the first executable repository substrate without creating production package behavior.
+007-B established the committed Python/uv/Hatchling/pytest/Hypothesis/pytest-socket/Ruff/mypy/Import-Linter/coverage toolchain, full `uv.lock`, repository verification command and read-only `Verify` workflow.
 
-Committed bootstrap surfaces now include:
+Portable-core pytest denies Python sockets by default after explicit dependency provisioning.
 
-```text
-pyproject.toml
-uv.lock
-.python-version
-.gitignore
-tools/verify.py
-tests/unit/
-tests/fitness/
-.github/workflows/verify.yml
-```
+## 007-C current implementation boundary
 
-### Toolchain
+007-C is authorized to establish only the source/package architecture and its executable fitness enforcement.
+
+Authorized production topology:
 
 ```text
-Python >= 3.11
-uv 0.12.x
-Hatchling
-pytest
-Hypothesis
-pytest-socket
-Ruff
-mypy
-Import Linter
-coverage.py / pytest-cov
-GitHub Actions verification
+src/syngan/
+├── __init__.py
+├── py.typed
+├── foundation/
+├── domain/
+├── ports/
+├── application/
+├── api/
+├── adapters/
+└── bootstrap/
 ```
 
-`[project].dependencies` remains empty. No PySpark, PyTorch, Transformers, Databricks, MLflow, cloud SDK, database driver/ORM, remote-model client or telemetry exporter entered the runtime dependency closure.
+007-C may configure Hatchling package selection, installed-project verification, Import Linter contracts, structural/package fitness tests and non-publishing wheel/sdist smoke builds.
 
-### Stable commands
-
-After explicit dependency provisioning:
-
-```text
-uv sync --all-groups --no-install-project --locked
-uv run --no-sync python tools/verify.py all
-uv run --no-sync python tools/verify.py coverage
-```
-
-The `all` profile checks the lock, Ruff lint/format, strict mypy, bootstrap/unit contracts, architecture/governance fitness, and the socket-denied portable-core profile.
-
-Import Linter is installed as the selected dependency-fitness tool but does not yet enforce a package graph because `src/syngan/` is intentionally owned by 007-C.
-
-### Network/offline boundary
-
-Explicit environment provisioning may access declared package infrastructure. Once portable-core verification begins, pytest runs with Python sockets disabled by default; hidden runtime/test installation, model-hub access, hosted inference and undeclared remote fallback are not accepted.
-
-### Lock materialization
-
-A one-time, explicitly authorized writable bootstrap workflow generated and verified the full hash-bearing `uv.lock`, confirmed it was the only generated repository change, committed only that lock, and was then removed.
-
-Permanent `.github/workflows/verify.yml` uses `contents: read`, verifies `uv lock --check`, provisions with `--locked`, and runs the repository-owned verification gates on push/PR/manual invocation.
-
-### Explicit non-claims
-
-007-B does **not** establish:
-
-- production `syngan` source/package topology;
-- import-layer enforcement over production modules;
-- Spark or distributed-runtime behavior;
-- Strategy/model generation behavior;
-- persistence/migrations;
-- enterprise scale/support certification;
-- privacy/anonymization guarantees;
-- branch-protection or required-check enforcement.
+007-C must not implement concept state/lifecycles, public resource/handle contracts, persistence, Spark/runtime behavior, synthesis algorithms, Execution/recovery, security/provider integrations, Evidence/history, deployment or release behavior.
 
 ## Branch/review posture
 
-`main` remains unprotected and the verification workflow is not a required branch check. 007-C must revisit PR/review enforcement now that executable verification exists; no documentation may imply enforcement before repository state confirms it.
+007-B established a green `Verify` workflow, but `main` remains unprotected and the check is not repository-enforced.
+
+007-C material production-source work is being performed on a reviewable feature branch so the pull-request verification path is exercised. A green `Verify` result against the exact reviewed head is required subgroup evidence. This procedural use does not imply GitHub branch-protection enforcement.
 
 ## Stop/reopen rule
 
 Class 3 architecture conflicts and Class 4 semantic/experience conflicts stop ordinary implementation. Reopen the smallest upstream canonical authority rather than coding around the conflict.
 
-## Current next boundary
+## Current boundary
 
-**007-C — Source/Package Topology, Dependency Direction & Architecture-Fitness Enforcement** is the next eligible subgroup, but it is **not yet authorized**.
+**007-C — Source/Package Topology, Dependency Direction & Architecture-Fitness Enforcement is active.**
 
-An explicit proceed decision is required before `src/syngan/` or substantive production package structure may be created.
+007-D remains not authorized until 007-C completes its evidence gate and a later explicit proceed decision is given.

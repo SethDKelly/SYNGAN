@@ -11,6 +11,10 @@ requires-python = ">=3.11"
 dependencies = []
 
 [dependency-groups]
+build = [
+  "hatchling>=1.27,<2",
+  "editables>=0.6,<1",
+]
 test = [
   "hypothesis>=6.130,<7",
   "pytest>=8.4,<10",
@@ -27,6 +31,7 @@ fitness = [
   "import-linter>=2.3,<3",
 ]
 dev = [
+  { include-group = "build" },
   { include-group = "test" },
   { include-group = "lint" },
   { include-group = "type" },
@@ -36,6 +41,9 @@ dev = [
 [tool.uv]
 required-version = ">=0.12,<0.13"
 default-groups = ["dev"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/syngan"]
 
 [tool.pytest.ini_options]
 minversion = "8.4"
@@ -72,14 +80,55 @@ pretty = true
 warn_unreachable = true
 exclude = ["^docs/"]
 
+[tool.importlinter]
+root_package = "syngan"
+exclude_type_checking_imports = true
+
+[[tool.importlinter.contracts]]
+id = "core-layers"
+name = "Core package dependencies point inward"
+type = "layers"
+layers = [
+  "syngan.api",
+  "syngan.application",
+  "syngan.ports",
+  "syngan.domain",
+  "syngan.foundation",
+]
+
+[[tool.importlinter.contracts]]
+id = "core-no-outer-dependencies"
+name = "Core packages do not depend on adapters or bootstrap"
+type = "forbidden"
+source_modules = [
+  "syngan.foundation",
+  "syngan.domain",
+  "syngan.ports",
+  "syngan.application",
+  "syngan.api",
+]
+forbidden_modules = [
+  "syngan.adapters",
+  "syngan.bootstrap",
+]
+
+[[tool.importlinter.contracts]]
+id = "adapters-stay-outside-coordination"
+name = "Adapters do not depend on coordination or composition"
+type = "forbidden"
+source_modules = ["syngan.adapters"]
+forbidden_modules = [
+  "syngan.application",
+  "syngan.api",
+  "syngan.bootstrap",
+]
+
 [tool.coverage.run]
 branch = true
 parallel = false
+source = ["src/syngan", "tools"]
 
 [tool.coverage.report]
 show_missing = true
 skip_covered = true
 precision = 1
-
-[tool.coverage.paths]
-source = ["tools"]
