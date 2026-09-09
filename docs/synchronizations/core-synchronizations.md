@@ -6,9 +6,11 @@ status: accepted
 
 # SYNGAN Core Synchronizations
 
-These rules are the canonical cross-concept coordination authority accepted at the end of Phase 001 and refined by later concept-specification phases.
+These rules are the canonical cross-concept coordination authority accepted at the end of Phase 001 and refined by later concept-specification and design-validation phases.
 
 A synchronization coordinates concept-owned state; it does not transfer ownership merely because another concept reads, validates, records, or operationally realizes that state.
+
+Potentially regressive control-state recovery is additionally constrained by the [Operational Authority Continuity & Regressive Recovery Contract](../authority/operational-authority-continuity-regressive-recovery-contract.md). That contract refines how existing synchronizations behave after rollback/restore without introducing another concept or synchronization by itself.
 
 ## SYNC-01 — Data Meaning revision binding
 
@@ -87,6 +89,16 @@ One committed Learning MAY span multiple Attempts. A new Attempt remains part of
 Retry/resume MUST NOT silently change source identity, Data Meaning, Strategy/configuration, Constraints/handling, learning scope, sampling/approximation, dependency profile, base/pretrained artifact identity, or materially behavior-changing reproducibility state.
 
 A failed Attempt does not automatically fail Learning while a valid retry/recovery path remains.
+
+### Continuation qualification rule
+
+Preserving committed Learning semantics is necessary but not sufficient for current continuation.
+
+Retry/resume/start of another Attempt may additionally depend on current authorization, required dependency availability/integrity, runtime/platform capability, checkpoint compatibility, and operational-authority continuity.
+
+If current policy or environment blocks continuation, the committed Learning remains historically unchanged. SYNGAN MUST NOT silently substitute another source, dependency, Strategy behavior, network path, or other material semantic input merely to make retry possible.
+
+After a potentially regressive control-state recovery, restored Attempt/current-state values MUST NOT authorize continuation by themselves. Same-Execution continuation requires sufficient continuity of the parent Learning/Execution identity plus fresh current operational authority established according to the Operational Authority Continuity contract.
 
 ### Checkpoint rule
 
@@ -168,6 +180,16 @@ One committed Generation MAY span multiple Attempts. Retry/resume MUST preserve 
 
 Recovery may reuse partial materialization only when identity, scope, integrity, and committed-context compatibility can be established sufficiently. Recomputing or duplicating physical partitions is allowed; duplicate physical work MUST NOT create multiple authoritative completed outputs.
 
+### Continuation qualification rule
+
+Preserving committed Generation semantics is necessary but not sufficient for current continuation.
+
+Retry/resume/start of another Attempt may additionally depend on current authorization, required dependency availability/integrity, runtime/platform capability, safe side-effect reconciliation, and operational-authority continuity.
+
+If current policy or environment blocks continuation, the committed Generation remains historically unchanged. SYNGAN MUST NOT silently substitute another source, Learned State, dependency, Strategy behavior, network path, or output semantics merely to make retry possible.
+
+After a potentially regressive control-state recovery, restored Attempt/current-state values MUST NOT authorize continuation by themselves. Same-Execution continuation requires sufficient continuity of the parent Generation/Execution identity plus fresh current operational authority established according to the Operational Authority Continuity contract.
+
 ### Candidate-output rule
 
 Generation may have partial materialization, complete candidate materialization awaiting semantic validation, completed output, or abandoned/quarantined materialization.
@@ -203,6 +225,8 @@ Successful completion requires, where applicable, committed-specification consis
 `completed with limitations` may cover only explicitly permitted best-effort/approximate limitations and MUST NOT override mandatory failures.
 
 Retry/recovery MUST NOT permit multiple completed-output references to be promoted ambiguously for the same committed Generation.
+
+For a logical output spanning multiple constituent tables, partitions, sequences, or other coordinated scopes, completion applies to the committed logical output scope as a whole. Completion of one constituent MUST NOT be treated as completion of the whole result when other mandatory constituents or cross-scope requirements remain incomplete, violated, or indeterminate.
 
 ## SYNC-09 — Evaluation Criterion binding
 
@@ -263,6 +287,16 @@ One committed Evaluation MAY span multiple Attempts. Retry/resume MUST NOT silen
 For exhaustive/distributed validation, completed partitions or summaries may be reused only when the recovery contract can establish their identity, integrity, coverage, and compatibility with the same Evaluation.
 
 A retried partition or repeated method execution MUST NOT cause duplicate observations to be counted twice unless the Evaluation method explicitly defines that behavior.
+
+### Continuation qualification rule
+
+Preserving committed Evaluation semantics is necessary but not sufficient for current continuation.
+
+Retry/resume/start of another Attempt may additionally depend on current authorization, required subject/reference/dependency availability, runtime/platform capability, safe aggregation/reconciliation state, and operational-authority continuity.
+
+If current policy or environment blocks continuation, the committed Evaluation remains historically unchanged. SYNGAN MUST NOT silently substitute another subject, reference, method, sampling design, dependency, or network path merely to make retry possible.
+
+After a potentially regressive control-state recovery, restored Attempt/current-state values MUST NOT authorize continuation by themselves. Same-Execution continuation requires sufficient continuity of the parent Evaluation/Execution identity plus fresh current operational authority established according to the Operational Authority Continuity contract.
 
 ### Completion rule
 
@@ -376,6 +410,16 @@ For Execution/Attempt history, provenance SHOULD preserve stable references suff
 
 Attempt/task facts that do not materially contribute to derivation, diagnosis, policy review, or reproducibility SHOULD remain in platform-native telemetry rather than canonical Provenance.
 
+### Regressive-recovery historical-truth rule
+
+After a potentially regressive recovery, absence of a later transition from restored persistence MUST NOT be treated as proof that the transition never occurred.
+
+Likewise, a surviving platform job, physical artifact, checkpoint component, provider transaction, or output bytes MUST NOT by itself prove that the corresponding canonical semantic/operational transition occurred.
+
+A missing historical transition may be reconstructed only when retained independent evidence establishes the exact transition and satisfies the owning concept's normal preconditions/completion invariants strongly enough. The reconstruction action itself remains auditable and distinguishable from the historical transition being re-established.
+
+When retained evidence is insufficient, the affected history remains explicitly unknown, unavailable, or otherwise unresolved. Provenance records recovery/reconstruction/adoption relationships to established facts; it MUST NOT infer semantic authority from external effects alone.
+
 ### External-dependency rule
 
 When local/pretrained artifacts or remote services materially affect behavior, provenance MUST preserve/reference enough identity to expose what was actually used and any mutability limitation relevant to explanation/reproduction.
@@ -458,6 +502,14 @@ Retry/resume may preserve semantic/statistical/bounded reproduction even when ph
 
 Re-execution is not automatically reproduction; the resulting target must satisfy the declared equivalence/comparison rule.
 
+### Continuity-gap rule
+
+A regressive-recovery continuity gap, missing post-restore-point history, unresolved Attempt/checkpoint/dependency identity, or reconstructed-but-limited historical basis constrains the strongest currently defensible reproduction/comparison claim.
+
+Such a gap MUST NOT rewrite the historical commitment or silently substitute a current/latest identity. Where the material facts cannot be reconstructed sufficiently, the assessment must weaken its class or report insufficient context/current infeasibility as appropriate.
+
+Recovery/reconstruction facts become reproduction-relevant when they materially affect whether the original conditions can be stated or re-established.
+
 ## Non-synchronizations
 
 The following MUST NOT mutate historical work automatically:
@@ -480,16 +532,22 @@ The following MUST NOT mutate historical work automatically:
 - unknown platform state → assumed success or failure;
 - later source/artifact/service alias contents → historical bound identity;
 - later reproducibility assessment → historical committed semantics;
-- provenance correction → silent mutation of another concept's historical authority.
+- provenance correction → silent mutation of another concept's historical authority;
+- restored/regressed persistence state → current mutation authority;
+- surviving external/physical effect → automatic proof of a missing semantic transition;
+- missing restored row/history entry → proof that a later event never occurred.
 
 Further accepted refinements:
 
 - retrying Learning, Generation, or Evaluation is not permission to change committed semantic specifications;
+- current authorization/dependency/platform inability may block continuation without rewriting the original commitment;
 - materially different recovery inputs/artifacts/runtime behavior create a new semantic/compatibility question when they affect domain meaning;
 - physical relocation/reserialization may preserve logical identity only when later representation contracts guarantee semantic equivalence;
 - duplicate physical work is acceptable only when canonical promotion/side effects remain unambiguous;
 - new Evidence may supersede an older finding for current use but MUST NOT rewrite what the older Evaluation observed;
-- loss of a historical dependency may weaken current reproducibility without changing what the historical activity actually used.
+- loss of a historical dependency may weaken current reproducibility without changing what the historical activity actually used;
+- regressive recovery requires a fresh non-regressing authority boundary before restored/surviving operational state may participate in new authoritative mutation;
+- historical reconstruction after restore must satisfy the owning concept's normal invariants and remain distinguishable from the original transition.
 
 ## Cardinality guidance
 
@@ -514,3 +572,5 @@ These are conceptual expectations, not storage schemas:
 ## Synchronization economy assessment
 
 The model continues to avoid pathological all-to-all coordination. Domain concepts own semantic commitment and completion. Execution owns operational realization. Attempt remains subordinate history. Provenance records typed stable-reference history without becoming duplicate domain state or platform telemetry. Reproducibility is assembled as a cross-cutting contract from canonical bindings rather than centralized duplicate state. Exactly-once physical work is not required; single semantic promotion prevents duplicate authoritative domain results.
+
+Phase 006-C adversarial validation retained the fifteen-rule set. It refined SYNC-04, SYNC-07, SYNC-11, SYNC-14 and SYNC-15 but introduced no new synchronization ID. The provisional `Relationship` candidate remains deferred to 006-G; if accepted, its required coordination will be evaluated explicitly rather than inferred from the current topology mode or representation.
