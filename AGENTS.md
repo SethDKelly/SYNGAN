@@ -4,24 +4,26 @@ These instructions apply repository-wide to automated coding/documentation agent
 
 ## Current authority state
 
-**Phase 006 is complete. The design is complete enough for a later explicit implementation-authority phase, but production implementation is still NOT authorized.**
+**Phase 006 is complete. Phase 007 logical subgroup design exists, but Phase 007 is NOT active and production implementation is still NOT authorized.**
 
-No agent may create production package scaffolding, source code, database schemas/migrations, Spark/runtime/security/platform adapters, executable verification suites, CI workflows, deployment infrastructure or benchmark harnesses until a later explicit implementation-authority phase is entered and authorizes defined slices.
+No agent may create production package scaffolding, source code, database schemas/migrations, Spark/runtime/security/platform adapters, executable verification suites, CI workflows, deployment infrastructure or benchmark harnesses until **007-A is explicitly entered and completes the implementation-authority lock**.
+
+The planned Phase 007 structure is `docs/phases/007/index.md`.
 
 ## Progressive disclosure
 
 For material work:
 
 1. read `docs/index.md`;
-2. read `docs/authority/phase-006-consolidated-design-readiness-contract.md` for the current readiness/implementation boundary;
+2. read `docs/authority/phase-006-consolidated-design-readiness-contract.md`;
 3. read only directly relevant cross-cutting authority under `docs/authority/`;
 4. read `docs/synchronizations/core-synchronizations.md` for coordination-sensitive work;
-5. read `docs/experience/phase-006-recovery-security-degraded-history-topology-experience-contract.md` for current experience semantics;
-6. read `docs/architecture/phase-006-architecture-reconciliation-contract.md` before the Phase 004 baseline for affected architecture;
+5. read `docs/experience/phase-006-recovery-security-degraded-history-topology-experience-contract.md`;
+6. read `docs/architecture/phase-006-architecture-reconciliation-contract.md` before affected Phase 004 architecture;
 7. read `docs/implementation/phase-006-implementation-planning-reconciliation.md` before affected Phase 005 planning;
 8. use ADRs for rationale/history, not as replacement normative authority;
 9. use `docs/backlog/index.md` for deferred implementation/release debt;
-10. read Phase 006 records only for design history/evidence.
+10. read `docs/phases/007/index.md` only for planned implementation-authority sequencing until Phase 007 is explicitly activated.
 
 Do not load/copy the entire documentation corpus by default.
 
@@ -33,7 +35,8 @@ authority
   > experience
   > architecture
   > implementation planning
-  > future code / deployment
+  > explicit implementation authority
+  > code / deployment
   > ADR rationale / phase history / backlog / examples
 ```
 
@@ -55,23 +58,52 @@ DESIGN COMPLETE ENOUGH FOR A LATER
 EXPLICIT IMPLEMENTATION-AUTHORITY PHASE
 ```
 
-This means the known design blockers are closed and remaining uncertainty is primarily representational/delivery work. It does **not** grant implementation permission by itself.
+This means known design blockers are closed. It does **not** grant implementation permission by itself.
 
-## Current implementation-facing precedence
+## Planned Phase 007 authorization model
+
+Phase 007 is designed around incremental authority:
 
 ```text
-Phase 006 design authority / experience
-        ↓
-Phase 006 Architecture Reconciliation
-        ↓
-Phase 004 baseline where not refined
-        ↓
-Phase 006 Implementation-Planning Reconciliation
-        ↓
-Phase 005 planning where not refined
-        ↓
-future explicit implementation-authority phase
+007-A authority lock
+   ↓
+007-B toolchain / verification bootstrap
+   ↓
+007-C source/package topology
+   ↓
+007-D identity/public contracts
+   ↓
+007-E persistence/history
+   ↓
+007-F distributed data/topology
+   ↓
+007-G runtime/dependency/security closure
+   ↓
+007-H Execution/recovery
+   ↓
+007-I Evidence/history/reproducibility
+   ↓
+007-J bounded single-table vertical proof
+   ↓
+007-K exit
 ```
+
+No subgroup is authorized merely because it appears in this plan.
+
+007-A is governance-only. It should normally authorize **007-B only** after locking the exact baseline, change-control rules, allowed file/change surface and required evidence gates.
+
+Agents MUST NOT interpret `Phase 007 planned` or `subgroup design complete` as blanket permission to implement A-K.
+
+## Change-classification stop rule
+
+When implementation authority eventually exists:
+
+- Class 0/1 work proceeds only within the active authorized slice;
+- Class 2 public/persisted/compatibility changes require the prescribed plan/migration/contract evidence;
+- a Class 3 architecture conflict stops ordinary implementation and reopens architecture authority;
+- a Class 4 semantic/experience conflict stops ordinary implementation and reopens the appropriate design layer.
+
+`The code/library/platform already works this way` is not authority to bypass this rule.
 
 ## Non-negotiable recovery authority
 
@@ -121,6 +153,8 @@ Preserve:
 - whole-result completion covers every mandatory constituent/validation;
 - physical partition/file order is not time-series semantic order.
 
+Phase 007-J is intentionally only a bounded single-table implementation proof. Its code MUST NOT hard-code the shared substrate so that time-series or multi-table support later requires semantic redesign.
+
 ## Scale/admission/degraded authority
 
 Preserve:
@@ -156,14 +190,6 @@ Do not collapse these into one universal status/result/error.
 
 Programmatic clients must be able to determine safe reason/category, retry/resume qualification and legitimate next action where disclosure permits.
 
-## Current future planning
-
-The current future wave sequence is recorded in `docs/implementation/phase-006-implementation-planning-reconciliation.md`.
-
-No wave is authorized yet.
-
-A complete-baseline implementation must eventually provide at least one supported self-contained Strategy path for single-table, time-series and multi-table shared-key generation, with baseline source-derived/local text support.
-
 ## Anti-collapse rules
 
 Do not create universal `Context`, `Session`, `Manager`, `Registry`, `Metadata`, `State`, `Result`, `Quality`, `Run`, `Artifact`, `Security`, `Privacy`, `Resource`, `DegradedMode`, `Relationship`, `DataTopology` or similar god-owner.
@@ -174,8 +200,8 @@ Do not equate runtime success, Evidence, current authorization, release approval
 
 Do not use current/latest values in place of exact historical refs.
 
-## Recommended next phase
+## Current next step
 
-**Phase 007 — Implementation Authority, Controlled Bootstrap & Evidence-Gated Delivery** is recommended but not active.
+**007-A — Implementation Authority Lock, Canonical Baseline, Change Control & Slice Authorization** is the proposed next subgroup.
 
-When explicitly entered, its first subgroup must lock current authority and state exactly which implementation slices are authorized and what evidence gates each slice. Until then, production coding remains prohibited.
+It is not active until explicitly entered. Until that happens and 007-A completes its governance lock, production coding remains prohibited.
