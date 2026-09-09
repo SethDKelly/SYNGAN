@@ -4,43 +4,51 @@ These instructions apply repository-wide to automated coding/documentation agent
 
 ## Current authority state
 
-**Phase 006 is complete. Phase 007 logical subgroup design exists, but Phase 007 is NOT active and production implementation is still NOT authorized.**
+**Phase 007 is ACTIVE under a bounded implementation-authority lock.**
 
-No agent may create production package scaffolding, source code, database schemas/migrations, Spark/runtime/security/platform adapters, executable verification suites, CI workflows, deployment infrastructure or benchmark harnesses until **007-A is explicitly entered and completes the implementation-authority lock**.
+Current authorization:
 
-The planned Phase 007 structure is `docs/phases/007/index.md`.
+```text
+007-A  COMPLETE
+007-B  AUTHORIZED / NEXT
+007-C..007-K  NOT AUTHORIZED
+```
+
+Canonical implementation authority:
+
+`docs/implementation/phase-007-implementation-authority-lock.md`
+
+Agents may implement **007-B repository/toolchain/verification bootstrap only**. They MUST NOT create `src/syngan/`, substantive domain/application/port/adapter behavior, schemas/migrations, Spark/runtime/security/platform behavior, benchmark infrastructure, or release/deployment automation until the owning later subgroup is explicitly authorized.
 
 ## Progressive disclosure
 
-For material work:
+For 007-B work:
 
 1. read `docs/index.md`;
-2. read `docs/authority/phase-006-consolidated-design-readiness-contract.md`;
-3. read only directly relevant cross-cutting authority under `docs/authority/`;
-4. read `docs/synchronizations/core-synchronizations.md` for coordination-sensitive work;
-5. read `docs/experience/phase-006-recovery-security-degraded-history-topology-experience-contract.md`;
-6. read `docs/architecture/phase-006-architecture-reconciliation-contract.md` before affected Phase 004 architecture;
-7. read `docs/implementation/phase-006-implementation-planning-reconciliation.md` before affected Phase 005 planning;
-8. use ADRs for rationale/history, not as replacement normative authority;
-9. use `docs/backlog/index.md` for deferred implementation/release debt;
-10. read `docs/phases/007/index.md` only for planned implementation-authority sequencing until Phase 007 is explicitly activated.
+2. read `docs/implementation/phase-007-implementation-authority-lock.md`;
+3. read `docs/phases/007/index.md`;
+4. read `docs/implementation/source-topology-module-package-boundaries-shared-foundation-dependency-enforcement.md` for the authorized toolchain decisions;
+5. read `docs/implementation/verification-strategy-test-harness-architecture-fitness-evidence-quality-gates.md` for verification semantics;
+6. load Phase 006 authority/architecture only where a particular bootstrap rule needs it.
 
-Do not load/copy the entire documentation corpus by default.
+Do not load/copy the full design corpus by default.
 
 ## Authority order
 
 ```text
-authority
+docs/authority/
   > concepts / synchronizations
   > experience
-  > architecture
-  > implementation planning
-  > explicit implementation authority
-  > code / deployment
-  > ADR rationale / phase history / backlog / examples
+  > Phase 006-reconciled architecture
+  > Phase 006-reconciled implementation planning
+  > Phase 007 implementation authority + active subgroup
+  > code / config / tests / migrations
+  > runtime/platform/generated state
 ```
 
-## Final design counts
+Code does not become authority because it exists or passes tests.
+
+## Locked counts
 
 ```text
 accepted concepts          11
@@ -51,157 +59,105 @@ provisional concepts        0
 
 No `SYNC-16`.
 
-## Current readiness decision
+## 007-B authorized file/change surface
+
+Agents MAY add/update, when needed for 007-B:
 
 ```text
-DESIGN COMPLETE ENOUGH FOR A LATER
-EXPLICIT IMPLEMENTATION-AUTHORITY PHASE
+pyproject.toml
+uv.lock
+.python-version
+.gitignore
+tools/verify.py
+narrow verification/bootstrap scripts
+bootstrap-only tests/unit, tests/fitness, tests/support
+verification-only .github/workflows
+.github/pull_request_template.md
+README.md
+AGENTS.md
+docs/
 ```
 
-This means known design blockers are closed. It does **not** grant implementation permission by itself.
+Agents MUST NOT create `src/syngan/` in 007-B.
 
-## Planned Phase 007 authorization model
+## 007-B authorized toolchain
 
-Phase 007 is designed around incremental authority:
+Unless an explicit compatibility conflict is found and escalated:
 
 ```text
-007-A authority lock
-   ↓
-007-B toolchain / verification bootstrap
-   ↓
-007-C source/package topology
-   ↓
-007-D identity/public contracts
-   ↓
-007-E persistence/history
-   ↓
-007-F distributed data/topology
-   ↓
-007-G runtime/dependency/security closure
-   ↓
-007-H Execution/recovery
-   ↓
-007-I Evidence/history/reproducibility
-   ↓
-007-J bounded single-table vertical proof
-   ↓
-007-K exit
+Python >=3.11
+uv
+Hatchling
+pytest
+Hypothesis
+pytest-socket
+Ruff
+mypy
+Import Linter
+coverage.py / pytest-compatible coverage integration
+GitHub Actions verification-only workflow if introduced
 ```
 
-No subgroup is authorized merely because it appears in this plan.
+No production/runtime PySpark, PyTorch, Hugging Face, Databricks, MLflow, cloud SDK, database/ORM, remote-model/service, or telemetry-export dependency is authorized in the 007-B base closure.
 
-007-A is governance-only. It should normally authorize **007-B only** after locking the exact baseline, change-control rules, allowed file/change surface and required evidence gates.
+## Network/offline posture
 
-Agents MUST NOT interpret `Phase 007 planned` or `subgroup design complete` as blanket permission to implement A-K.
+Explicit environment/dependency provisioning may use network access.
 
-## Change-classification stop rule
+Portable/core verification itself must deny undeclared outbound Python sockets by default and must not trigger hidden installation, public model-hub access, hosted inference, or remote fallback.
 
-When implementation authority eventually exists:
+## Change classification
 
-- Class 0/1 work proceeds only within the active authorized slice;
-- Class 2 public/persisted/compatibility changes require the prescribed plan/migration/contract evidence;
-- a Class 3 architecture conflict stops ordinary implementation and reopens architecture authority;
-- a Class 4 semantic/experience conflict stops ordinary implementation and reopens the appropriate design layer.
+- Class 0 — local/non-contractual: allowed inside active scope.
+- Class 1 — implementation realization: allowed only when traced to active authority and verified.
+- Class 2 — public/persisted/compatibility: requires explicit implementation-authority + compatibility/migration evidence.
+- Class 3 — architecture-affecting: **STOP** and reopen the smallest architecture/ADR authority.
+- Class 4 — semantic/experience: **STOP** and reopen the appropriate upstream design authority.
 
-`The code/library/platform already works this way` is not authority to bypass this rule.
+Do not code around Class 3/4 conflicts.
 
-## Non-negotiable recovery authority
+## Evidence gate
 
-Preserve:
+Every material subgroup must retain:
 
-- restored persistence is not proof of current writer/cancellation/security authority;
-- potentially regressive recovery enters recovery-restricted/quarantine semantics;
-- a fresh non-regressing recovery-authority frontier is required before mutation resumes;
-- restored AttemptEpoch/StateVersion/cancellation/grant state is insufficient by itself;
-- surviving workers never regain old writer authority merely because they remain alive;
-- verified immutable effects may be adopted only by fresh current authority after reconciliation;
-- reconstructed/partial/unknown/unavailable history must remain distinguishable;
-- provider credential/namespace/native-fence rotation may be required when stale workers can bypass framework fencing.
+- entry repository/branch/commit;
+- authority implemented;
+- bounded files and change classes;
+- dependencies and rationale;
+- commands/tests/fitness results;
+- migration/compatibility impact;
+- network/offline/security/disclosure impact;
+- distributed/recovery/scale implications where relevant;
+- explicit non-claims;
+- waivers/debt;
+- Class 3/4 conflicts;
+- explicit next-subgroup authorization decision.
 
-## Non-negotiable runtime/package closure
+A subgroup is not complete because a command exits zero once.
 
-Preserve:
+## Branch/review posture
 
-- acquisition closure and distributed runtime closure are separate requirements;
-- driver/coordinator import success is not proof of worker/executor readiness;
-- every material worker role, including dynamically added workers, must inherit/prove exact compatible closure;
-- missing dependencies/artifacts must not trigger undeclared installation, public model-hub lookup, remote inference or fallback;
-- one implementation binding may resolve multiple packages/native libraries/codecs/model/tokenizer/state components;
-- large Learned State/model artifacts must not universally require driver loading/broadcast;
-- the supported baseline includes at least one source-derived/local free-form-text path needing no pretrained model or runtime network service.
+At 007-A entry, `main` was unprotected and had no required status checks.
 
-## Structured-data topology authority
+Direct-to-main is permitted for explicitly authorized 007-B work, but it is not independent review or CI evidence. 007-B must establish repository-owned verification entry points. 007-C must revisit review/PR enforcement once executable checks exist.
 
-The complete structured-data capability target includes:
+## Non-negotiable design rules
 
-```text
-single-table
-time-series
-multi-table shared-key
-```
+Preserve at minimum:
 
-Preserve:
+- restored stale control state != current mutation authority;
+- driver import success != distributed worker readiness;
+- no hidden dependency/model acquisition or remote fallback;
+- topology presets != durable semantic topology;
+- 007-B/007-C implementation must not preclude time-series/multi-table shared-key support;
+- resource pressure cannot silently weaken committed semantics;
+- synthetic/offline/favorable Evidence != formal privacy guarantee/release approval;
+- directly retained/reconstructed/partial/unavailable/unknown history remain distinct;
+- semantic completion != runtime/platform success;
+- no universal Session/Context/Manager/Metadata/Result/Relationship/DataTopology god-owner.
 
-- `Relationship` is not a standalone concept/resource owner;
-- structural shared-key/sequence semantics are Data Meaning-owned;
-- referential/temporal validity remains Constraint authority;
-- requested topology/scope/horizon remains Generation authority;
-- Strategy owns topology capability/limitations;
-- topology presets are ergonomic input, not durable semantic authority;
-- topology remains composable, including multi-table subjects with time-series children;
-- source/output/manifests support logical multi-scope representation;
-- whole-result completion covers every mandatory constituent/validation;
-- physical partition/file order is not time-series semantic order.
+## Current next subgroup
 
-Phase 007-J is intentionally only a bounded single-table implementation proof. Its code MUST NOT hard-code the shared substrate so that time-series or multi-table support later requires semantic redesign.
+**007-B — Repository/Toolchain Bootstrap, Reproducible Environment & Verification Harness**
 
-## Scale/admission/degraded authority
-
-Preserve:
-
-- enterprise scale is multidimensional;
-- source-size-proportional driver stages invalidate enterprise-scale claims for that path;
-- resource pressure may queue/block/retry but cannot silently reduce quantity, horizon, topology scope, Evaluation coverage, Constraint strength or security posture;
-- approximation belongs to the semantic owner and cannot arise as undeclared runtime fallback;
-- degraded operation is capability-specific rather than one global state;
-- queued/deferred, blocked, incompatible, denied and indeterminate remain distinct;
-- progress/task completion does not establish semantic completion.
-
-## Privacy/disclosure/release authority
-
-Preserve:
-
-- synthetic origin or offline operation does not imply privacy/anonymization/safe release;
-- privacy/disclosure findings remain Criterion/Evaluation/Evidence scoped;
-- favorable empirical Evidence is not a formal privacy guarantee;
-- differential privacy is not part of the initial baseline;
-- future composable DP with independent accounting state MUST reopen concept discovery before implementation;
-- do not add generic epsilon/delta/privacy-budget/guarantee fields as implementation shortcuts;
-- external Use/Release Decision remains outside current SYNGAN concept authority;
-- current authorization/redaction may shape access without rewriting canonical history;
-- existence-protected outward responses may intentionally be non-disclosing while internal audit remains precise;
-- no universal `private`, `safe`, `safe_to_release` or privacy score is accepted.
-
-## Human/programmatic experience authority
-
-Surfaces preserve equivalent material distinctions for semantic state, operational state, actionability, authority continuity, compatibility/limitations, disclosure and historical-knowledge quality.
-
-Do not collapse these into one universal status/result/error.
-
-Programmatic clients must be able to determine safe reason/category, retry/resume qualification and legitimate next action where disclosure permits.
-
-## Anti-collapse rules
-
-Do not create universal `Context`, `Session`, `Manager`, `Registry`, `Metadata`, `State`, `Result`, `Quality`, `Run`, `Artifact`, `Security`, `Privacy`, `Resource`, `DegradedMode`, `Relationship`, `DataTopology` or similar god-owner.
-
-Do not make DataFrame, table/path alias, provider foreign-key metadata, loaded model, database row, scheduler job, platform ID, topology preset or restored stale state canonical semantic authority.
-
-Do not equate runtime success, Evidence, current authorization, release approval, physical artifact existence or reconstructed history with another owner's state.
-
-Do not use current/latest values in place of exact historical refs.
-
-## Current next step
-
-**007-A — Implementation Authority Lock, Canonical Baseline, Change Control & Slice Authorization** is the proposed next subgroup.
-
-It is not active until explicitly entered. Until that happens and 007-A completes its governance lock, production coding remains prohibited.
+Do not begin 007-C until 007-B has acceptance evidence and an explicit proceed decision.
