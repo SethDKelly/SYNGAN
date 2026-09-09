@@ -18,9 +18,7 @@ def test_python_floor_build_backend_and_package_selection_are_locked() -> None:
     assert project["project"]["requires-python"] == ">=3.11"
     assert project["build-system"]["build-backend"] == "hatchling.build"
     assert project["tool"]["uv"]["required-version"] == ">=0.12,<0.13"
-    assert project["tool"]["hatch"]["build"]["targets"]["wheel"]["packages"] == [
-        "src/syngan"
-    ]
+    assert project["tool"]["hatch"]["build"]["targets"]["wheel"]["packages"] == ["src/syngan"]
 
 
 def test_base_runtime_dependency_closure_remains_empty_in_007_c() -> None:
