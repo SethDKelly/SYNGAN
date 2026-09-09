@@ -27,7 +27,9 @@ def _tool(name: str) -> str:
 
 
 def verify_bootstrap() -> None:
-    if sys.version_info < (3, 11):
+    # This script may be invoked outside the managed uv environment, so retain
+    # a runtime floor check even though Ruff's target version is Python 3.11.
+    if sys.version_info < (3, 11):  # noqa: UP036
         raise SystemExit("SYNGAN development requires Python >= 3.11")
 
     required_paths = (
