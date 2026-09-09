@@ -8,65 +8,48 @@ status: active
 
 ## Current authority
 
-Phase 007 is active under:
+Phase 007 remains active under:
 
-[Phase 007 Implementation Authority Lock](phase-007-implementation-authority-lock.md)
+- [Phase 007 Implementation Authority Lock](phase-007-implementation-authority-lock.md)
+- [Phase 007-B Bootstrap Execution Authority](phase-007-b-bootstrap-execution-authority.md)
 
-Current authorization is intentionally narrow:
+Current subgroup state:
 
 ```text
 007-A  complete
-007-B  AUTHORIZED
-007-C..007-K  NOT AUTHORIZED
+007-B  complete
+007-C  NOT AUTHORIZED — next eligible
+007-D..007-K  NOT AUTHORIZED
 ```
 
-The active production implementation authority is limited to **007-B repository/toolchain/verification bootstrap**.
+No production package/source topology beyond the completed bootstrap is currently authorized.
 
 ## Governing order
 
-For implementation work, read:
+For implementation work, read current design/experience/architecture/planning authority first, then the Phase 007 implementation lock and only the explicitly authorized subgroup.
 
-1. [Phase 006 Consolidated Design Readiness Contract](../authority/phase-006-consolidated-design-readiness-contract.md)
-2. current cross-cutting authority, concepts and synchronizations
-3. current experience authority
-4. [Phase 006 Architecture Reconciliation Contract](../architecture/phase-006-architecture-reconciliation-contract.md)
-5. [Phase 006 Implementation-Planning Reconciliation](phase-006-implementation-planning-reconciliation.md)
-6. relevant Phase 005 detailed plan where not refined
-7. [Phase 007 Implementation Authority Lock](phase-007-implementation-authority-lock.md)
-8. the active authorized Phase 007 subgroup
+Code does not outrank this chain. Class 3 architecture or Class 4 semantic/experience conflicts stop implementation and reopen upstream authority.
 
-Code does not outrank this chain.
+## 007-B executable bootstrap
 
-## 007-A locked baseline
-
-Entry baseline:
+The repository now has:
 
 ```text
-repository: SethDKelly/SYNGAN
-branch:     main
-commit:     843a518c12f7482229cfb012da658887cb92dfaa
+pyproject.toml
+uv.lock
+.python-version
+.gitignore
+tools/verify.py
+tests/unit/
+tests/fitness/
+.github/workflows/verify.yml
 ```
 
-Design counts:
-
-```text
-11 concepts
-15 synchronizations
-10 active ADRs
-0 provisional concepts
-```
-
-## 007-B allowed implementation
-
-007-B may introduce repository-owned project/build/test/static-analysis/verification bootstrap such as `pyproject.toml`, `uv.lock`, `tools/verify.py`, bootstrap-only tests and verification-only GitHub Actions.
-
-It must not introduce `src/syngan/` or substantive domain/runtime/platform behavior.
-
-Authorized initial toolchain:
+Locked bootstrap stack:
 
 ```text
 Python >=3.11
-uv
+uv >=0.12,<0.13
 Hatchling
 pytest
 Hypothesis
@@ -74,25 +57,35 @@ pytest-socket
 Ruff
 mypy
 Import Linter
-coverage.py / pytest-compatible coverage integration
+coverage.py / pytest-cov
 ```
 
-No PySpark/PyTorch/Hugging Face/Databricks/MLflow/cloud/database/runtime-service dependency is authorized in the 007-B base/runtime closure.
+The base runtime dependency list remains empty. No PySpark/PyTorch/Transformers/Databricks/MLflow/cloud/database/runtime-service dependency was introduced.
 
-## Evidence discipline
+Stable commands after explicit provisioning:
 
-Every material Phase 007 subgroup must retain its entry commit, authority trace, files/change classes, dependency changes, commands/results, architecture-fitness evidence, compatibility/migration/network/security/distributed/scale implications, explicit non-claims, waivers/debt, Class 3/4 conflict disposition and next-subgroup authorization decision.
+```text
+uv sync --all-groups --no-install-project --locked
+uv run --no-sync python tools/verify.py all
+uv run --no-sync python tools/verify.py coverage
+```
 
-Class 3 architecture conflicts and Class 4 semantic/experience conflicts stop ordinary implementation and reopen upstream authority.
+Portable-core pytest denies Python sockets by default. The permanent GitHub Actions Verify workflow has read-only repository permissions and runs from the committed lock.
 
-## Branch/review posture
+Import Linter is installed but its production import contracts remain 007-C work because `src/syngan/` is intentionally absent.
 
-At 007-A entry, `main` was unprotected and had no required checks. Direct-to-main is permitted for explicitly authorized 007-B work but is not independent review/CI evidence. 007-B must establish repository verification entry points; 007-C must revisit review/PR enforcement.
+## Evidence status
+
+[007-B phase record](../phases/007/007-B-repository-toolchain-bootstrap-reproducible-environment-verification-harness.md) records entry baseline, dependency/tool choices, useful CI failures/corrections, green verification runs, lock materialization, network/offline posture and explicit non-claims.
+
+`main` remains unprotected and Verify is not currently a required branch check. 007-C must revisit PR/review enforcement now that executable checks exist.
 
 ## Historical planning
 
-Phase 005 and Phase 006 planning remain active beneath the Phase 007 lock where not superseded/refined. The broader future wave sequence is still valid, but only the currently authorized subgroup may execute.
+Phase 005 and Phase 006 planning remain active beneath Phase 007 where not refined. The broader future wave sequence remains planning authority, but only an explicitly authorized Phase 007 subgroup may execute.
 
-## Current next
+## Current next boundary
 
-**007-B — Repository/Toolchain Bootstrap, Reproducible Environment & Verification Harness**
+**007-C — Source/Package Topology, Dependency Direction & Architecture-Fitness Enforcement** is next eligible but **not yet authorized**.
+
+An explicit proceed decision is required before `src/syngan/` or production package topology may be created.
