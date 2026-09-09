@@ -11,48 +11,62 @@ Start with [`docs/index.md`](docs/index.md).
 Current implementation authority:
 
 - [`Phase 007 Implementation Authority Lock`](docs/implementation/phase-007-implementation-authority-lock.md)
+- [`Phase 007-B Bootstrap Execution Authority`](docs/implementation/phase-007-b-bootstrap-execution-authority.md)
 - [`Phase 007 index`](docs/phases/007/index.md)
-- [`Phase 006 Consolidated Design Readiness Contract`](docs/authority/phase-006-consolidated-design-readiness-contract.md)
-- [`Phase 006 Architecture Reconciliation Contract`](docs/architecture/phase-006-architecture-reconciliation-contract.md)
-- [`Phase 006 Implementation-Planning Reconciliation`](docs/implementation/phase-006-implementation-planning-reconciliation.md)
 
 Repository-wide automated-agent rules are in [`AGENTS.md`](AGENTS.md).
 
 ## Status
 
-- Phase 001 — complete
-- Phase 002 — complete
-- Phase 003 — complete historical experience baseline
-- Phase 004 — complete historical architecture baseline
-- Phase 005 — complete implementation-planning baseline
-- Phase 006 — complete post-planning design/readiness validation
-- **Phase 007 — active, incrementally authorized**
+- Phases 001–006 — complete design/planning/readiness baseline
+- **007-A — complete: implementation authority lock**
+- **007-B — complete: reproducible repository/toolchain/verification bootstrap**
+- **007-C — next eligible, not yet authorized**
 
-### 007-A — complete
+No `src/syngan/` production package or substantive domain/runtime/platform behavior has been authorized yet.
 
-007-A locked the canonical implementation baseline, change-control rules, evidence gates and bounded slice authorization.
+## 007-B executable bootstrap
 
-Current permission:
+The repository now declares:
 
 ```text
-007-A  COMPLETE
-007-B  AUTHORIZED / NEXT
-007-C..007-K  NOT AUTHORIZED
+Python >= 3.11
+uv >=0.12,<0.13
+Hatchling
+pytest
+Hypothesis
+pytest-socket
+Ruff
+mypy
+Import Linter
+coverage.py / pytest-cov
 ```
 
-The active production implementation authority currently covers only **007-B — Repository/Toolchain Bootstrap, Reproducible Environment & Verification Harness**.
+`[project].dependencies` is still empty. The bootstrap adds development/build/verification tooling only; it does not add PySpark, PyTorch, Transformers/Hugging Face, Databricks, MLflow, cloud SDKs, database drivers/ORMs, remote-model clients, or telemetry exporters.
 
-007-B may add project metadata, dependency lock state, build/test/static-analysis tooling, verification scripts/bootstrap tests and verification-only CI. It may **not** yet create `src/syngan/` or substantive domain/runtime/platform behavior.
+### Reproduce the development verification environment
 
-## 007-A entry baseline
-
-```text
-repository: SethDKelly/SYNGAN
-branch:     main
-commit:     843a518c12f7482229cfb012da658887cb92dfaa
+```bash
+uv sync --all-groups --no-install-project --locked
 ```
 
-At entry, `main` was unprotected and had no required status checks. Direct-to-main is permitted for explicitly authorized 007-B work, but it is not independent review/CI evidence. 007-B must establish repository-owned verification entry points.
+### Run the normal verification gate
+
+```bash
+uv run --no-sync python tools/verify.py all
+```
+
+This checks the committed lock, Ruff lint/format, strict mypy, bootstrap/unit tests, authority/architecture fitness checks, and the default socket-denied portable-core pytest profile.
+
+### Coverage diagnostics
+
+```bash
+uv run --no-sync python tools/verify.py coverage
+```
+
+Coverage is diagnostic evidence, not a replacement for contract/architecture fitness.
+
+The permanent GitHub Actions [`Verify`](.github/workflows/verify.yml) workflow runs from the committed lock with read-only repository permissions on pushes and pull requests. `main` is still unprotected and Verify is not yet a required branch check.
 
 ## Locked design baseline
 
@@ -81,13 +95,10 @@ restored stale control state
 
 driver import success
     != cluster worker readiness
-
 resource pressure
     != permission to weaken semantics
-
 topology preset
     != durable semantic topology
-
 privacy Evidence
     != formal privacy guarantee
     != release approval
@@ -95,6 +106,8 @@ privacy Evidence
 
 Implementation is evidence-gated and incremental. A Class 3 architecture conflict or Class 4 semantic/experience conflict stops ordinary implementation and reopens upstream authority.
 
-## Current next
+## Current next boundary
 
-**007-B — Repository/Toolchain Bootstrap, Reproducible Environment & Verification Harness**
+**007-C — Source/Package Topology, Dependency Direction & Architecture-Fitness Enforcement** is next eligible but **not yet authorized**.
+
+An explicit proceed decision is required before production package/source topology may be created.
