@@ -14,6 +14,7 @@ Primary authority:
 - [`Phase 004 Consolidated Architecture Contract`](docs/architecture/phase-004-consolidated-architecture-contract.md)
 - [`Phase 005 Consolidated Implementation-Planning Contract`](docs/implementation/phase-005-consolidated-implementation-planning-contract.md)
 - [`Operational Authority Continuity & Regressive Recovery Contract`](docs/authority/operational-authority-continuity-regressive-recovery-contract.md)
+- [`Core Synchronizations`](docs/synchronizations/core-synchronizations.md)
 - [`Phase 006`](docs/phases/006/index.md) for current post-planning design refinement
 
 Repository-wide automated-agent rules are in [`AGENTS.md`](AGENTS.md).
@@ -33,11 +34,7 @@ No production implementation has begun or been authorized.
 
 ### 006-A — complete
 
-006-A re-tested Phase 005 mechanisms against Jackson concept criteria.
-
-Key results:
-
-- accepted concept/synchronization counts remain **11 / 15**;
+- accepted concept/synchronization counts remained **11 / 15**;
 - `GenerationMode` / `DataTopologyMode` is not a concept;
 - single-table generation remains the current baseline capability;
 - time-series generation is an explicit Phase 006 design target;
@@ -45,9 +42,9 @@ Key results:
 
 ### 006-B — complete
 
-006-B closed the semantic core of the regressive-control-state recovery problem.
+006-B established the cross-cutting [`Operational Authority Continuity & Regressive Recovery Contract`](docs/authority/operational-authority-continuity-regressive-recovery-contract.md).
 
-The new cross-cutting [`Operational Authority Continuity & Regressive Recovery Contract`](docs/authority/operational-authority-continuity-regressive-recovery-contract.md) establishes that:
+Its core rule is:
 
 ```text
 restored historical control state
@@ -55,18 +52,28 @@ restored historical control state
 current mutation authority
 ```
 
-A potentially regressive recovery therefore enters recovery-quarantine / continuity-unverified semantics until a non-regressing authority boundary is established and surviving work/effects are reconciled.
+Potentially regressive recovery therefore enters continuity-unverified/recovery-quarantine semantics until a non-regressing authority boundary is established and surviving work/effects are reconciled.
 
-Rollback cannot by itself resurrect:
+### 006-C — complete
 
-- superseded Attempt authority;
-- a cancellation generation omitted by the backup;
-- stale capability/credential authority;
-- semantic result authority merely because physical bytes survive.
+006-C replayed the design against twenty-four normal/adversarial scenarios including ambiguous launch, stale writers, cancellation races, current-policy/dependency change, mixed versions, regressive restore, repeated Evaluation work, partial multi-table output and interrupted time-series continuation.
 
-Likewise, missing post-backup rows do not prove that later historical events never occurred. Exact history may be reconstructed only from evidence sufficient for the owning concept's normal invariants; otherwise the state remains explicitly unknown/unavailable.
+Result:
 
-`ControlPlaneIncarnation` remains a downstream architecture realization candidate rather than a new concept.
+```text
+PASS WITH TARGETED SYNCHRONIZATION REFINEMENT
+```
+
+The synchronization count remains **15**; no `SYNC-16` is currently justified.
+
+Canonical refinements were made to:
+
+- SYNC-04 / 07 / 11 — current continuation qualification and restore-safe authority continuity;
+- SYNC-08 — coordinated logical-output completion applies to the whole committed scope;
+- SYNC-14 — rollback/history reconstruction truthfulness;
+- SYNC-15 — continuity gaps constrain reproducibility claims.
+
+BDR-002 is resolved for the current eleven-concept/fifteen-synchronization baseline. If a later Phase 006 group accepts `Relationship` or materially changes coordination, affected scenarios must be replayed before the final readiness exit.
 
 ## Structured-data capability direction
 
@@ -82,8 +89,7 @@ A future API may expose these through a parameter or typed specification, but se
 
 ## Remaining Phase 006 groups
 
-- **006-C — End-to-End Scenario, Exception, Failure & Adversarial Synchronization Validation — next**
-- 006-D — Reference Strategy/Method and Topology Design Probes & Algorithm-Neutrality Stress Test
+- **006-D — Reference Strategy/Method and Topology Design Probes & Algorithm-Neutrality Stress Test — next**
 - 006-E — Enterprise Scale, Resource/Approximation, Backpressure & Degraded-Mode Design Validation
 - 006-F — Privacy, Disclosure, Release-Governance Boundary & Mechanism-Specific Scope Decision
 - 006-G — Structured-Data Topology: Single-Table, Time-Series & Multi-Table Relationship Concept/Extensibility Audit
@@ -95,4 +101,4 @@ Jackson-style completeness is judged by design evidence, not by a fixed number o
 
 ## Current next group
 
-**006-C — End-to-End Scenario, Exception, Failure & Adversarial Synchronization Validation**
+**006-D — Reference Strategy/Method and Topology Design Probes & Algorithm-Neutrality Stress Test**
