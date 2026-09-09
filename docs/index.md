@@ -11,7 +11,7 @@ This directory is the canonical design and implementation-planning knowledge bun
 
 ## Progressive disclosure
 
-- [Authority](authority/index.md) — methodology/governance and cross-cutting recovery, runtime-distribution, enterprise-scale/degraded-operation, privacy/disclosure/release boundaries.
+- [Authority](authority/index.md) — methodology/governance and cross-cutting recovery, runtime-distribution, enterprise-scale/degraded-operation, privacy/disclosure/release, and structured-topology contracts.
 - [Problem Knowledge](problem/index.md) — problem, purpose, actors, constraints and enterprise scale envelope.
 - [Domain Terminology](terminology/index.md) — canonical vocabulary.
 - [Accepted Concepts](concepts/index.md) — current concept authority.
@@ -62,15 +62,19 @@ Completed Phase 006 groups:
 - [006-D — Reference Strategy/Method and Topology Design Probes & Algorithm-Neutrality Stress Test](phases/006/006-D-reference-strategy-method-topology-design-probes-algorithm-neutrality-stress-test.md)
 - [006-E — Enterprise Scale, Resource/Approximation, Backpressure & Degraded-Mode Design Validation](phases/006/006-E-enterprise-scale-resource-approximation-backpressure-degraded-mode-design-validation.md)
 - [006-F — Privacy, Disclosure, Release-Governance Boundary & Mechanism-Specific Scope Decision](phases/006/006-F-privacy-disclosure-release-governance-boundary-mechanism-specific-scope-decision.md)
+- [006-G — Structured-Data Topology: Single-Table, Time-Series & Multi-Table Relationship Concept/Extensibility Audit](phases/006/006-G-structured-data-topology-single-table-time-series-multi-table-relationship-concept-extensibility-audit.md)
 
 ## Current invariant baseline
 
 Until Phase 006 explicitly revises further authority, preserve:
 
 - eleven accepted concepts and fifteen synchronizations;
-- `Relationship` provisional only, pending 006-G;
-- single-table generation as current baseline capability, with time-series and multi-table shared-key as explicit design targets;
-- self-contained source-derived free-form-text capability in the supported baseline;
+- no provisional Relationship candidate remains: structural relationship semantics are Data Meaning-owned under the [Structured-Data Topology & Relationship Semantics Contract](authority/structured-data-topology-relationship-semantics-contract.md);
+- the first complete structured-data capability baseline includes single-table, time-series and multi-table shared-key generation;
+- implementation may be staged and Strategies may support subsets, but the complete baseline claim requires at least one supported self-contained Strategy path for each family;
+- topology convenience presets are not semantic authority and must not prevent composite topology;
+- descriptive shared-key/sequence structure remains distinct from prescriptive Constraint semantics and Generation request intent;
+- self-contained source-derived free-form-text capability is required in the supported baseline;
 - externally pretrained/world-knowledge text remains explicit optional local-artifact or runtime-network capability;
 - driver-local package/model availability is not distributed executor readiness;
 - every material worker must satisfy exact compatible runtime distribution closure;
@@ -79,11 +83,8 @@ Until Phase 006 explicitly revises further authority, preserve:
 - approximation remains explicit owner-bound semantics;
 - degraded operation is capability-specific;
 - synthetic origin, offline execution and favorable privacy-related Evidence do not imply formal privacy/anonymization;
-- disclosure/memorization remain threat-model-specific Criterion/Evaluation/Evidence concerns;
-- differential privacy is deferred from the initial baseline;
-- any future composable DP/formal mechanism with independent accounting state must reopen concept discovery before implementation;
+- differential privacy is deferred from the initial baseline and future composable DP requires concept discovery before implementation;
 - Use/Release Decision remains external to current SYNGAN concept authority;
-- current security authorization/redaction does not rewrite canonical Evidence/history;
 - semantic completion remains distinct from runtime/platform completion;
 - one Execution may contain multiple fenced Attempts;
 - regressive recovery cannot resurrect stale writer/cancellation/security authority;
@@ -92,9 +93,9 @@ Until Phase 006 explicitly revises further authority, preserve:
 
 ## Current next
 
-**006-G — Structured-Data Topology: Single-Table, Time-Series & Multi-Table Relationship Concept/Extensibility Audit**
+**006-H — Human/Programmatic Experience Closure for Recovery, Security, Degraded & Historical Workflows**
 
-006-G is the principal remaining BDR-004 scope decision. It must decide whether reusable multi-table shared-key and/or temporal sequence structure justifies accepting a `Relationship` concept, while preserving single-table simplicity and future topology extensibility.
+006-H must make the Phase 006 semantics usable and truthful for humans and programmatic clients: recovery quarantine, current-versus-historical state, blocked/queued/limited capability, runtime-distribution readiness, authorization/redaction, privacy Evidence/formal-guarantee/release distinctions, topology incompatibility and historical unknown/unavailable/reconstructed facts.
 
 ## Documentation governance note
 
