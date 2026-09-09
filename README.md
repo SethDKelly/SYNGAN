@@ -10,11 +10,13 @@ Start with [`docs/index.md`](docs/index.md).
 
 Primary authority:
 
-- [`Accepted Concepts`](docs/concepts/index.md)
 - [`Phase 003 Consolidated Experience Contract`](docs/experience/phase-003-consolidated-experience-contract.md)
 - [`Phase 004 Consolidated Architecture Contract`](docs/architecture/phase-004-consolidated-architecture-contract.md)
 - [`Phase 005 Consolidated Implementation-Planning Contract`](docs/implementation/phase-005-consolidated-implementation-planning-contract.md)
+- [`Operational Authority Continuity & Regressive Recovery Contract`](docs/authority/operational-authority-continuity-regressive-recovery-contract.md)
 - [`Phase 006`](docs/phases/006/index.md) for current post-planning design refinement
+
+Repository-wide automated-agent rules are in [`AGENTS.md`](AGENTS.md).
 
 ## Status
 
@@ -25,50 +27,72 @@ Primary authority:
 - **Phase 005 — Implementation Planning & Delivery Decomposition: complete as planning only**
 - **Phase 006 — Post-Planning Design Validation & Adversarial Refinement: current**
 
-No production implementation has begun.
+No production implementation has begun or been authorized.
 
-## Phase 006 capability revalidation
+## Phase 006 progress
 
-006-A is complete and keeps the accepted catalog at **eleven concepts / fifteen synchronizations**.
+### 006-A — complete
 
-The current structured-data capability direction being tested is:
+006-A re-tested Phase 005 mechanisms against Jackson concept criteria.
+
+Key results:
+
+- accepted concept/synchronization counts remain **11 / 15**;
+- `GenerationMode` / `DataTopologyMode` is not a concept;
+- single-table generation remains the current baseline capability;
+- time-series generation is an explicit Phase 006 design target;
+- multi-table shared-key generation reopens `Relationship` as a provisional candidate for 006-G.
+
+### 006-B — complete
+
+006-B closed the semantic core of the regressive-control-state recovery problem.
+
+The new cross-cutting [`Operational Authority Continuity & Regressive Recovery Contract`](docs/authority/operational-authority-continuity-regressive-recovery-contract.md) establishes that:
+
+```text
+restored historical control state
+        !=
+current mutation authority
+```
+
+A potentially regressive recovery therefore enters recovery-quarantine / continuity-unverified semantics until a non-regressing authority boundary is established and surviving work/effects are reconciled.
+
+Rollback cannot by itself resurrect:
+
+- superseded Attempt authority;
+- a cancellation generation omitted by the backup;
+- stale capability/credential authority;
+- semantic result authority merely because physical bytes survive.
+
+Likewise, missing post-backup rows do not prove that later historical events never occurred. Exact history may be reconstructed only from evidence sufficient for the owning concept's normal invariants; otherwise the state remains explicitly unknown/unavailable.
+
+`ControlPlaneIncarnation` remains a downstream architecture realization candidate rather than a new concept.
+
+## Structured-data capability direction
+
+Phase 006 is explicitly validating:
 
 ```text
 single-table generation
 time-series table generation
-multi-table generation with shared-key relationships
+multi-table shared-key generation
 ```
 
-Current disposition:
+A future API may expose these through a parameter or typed specification, but selection syntax cannot own relationship, temporal-order, validity, completion or Evidence semantics.
 
-- **single-table** — existing baseline capability;
-- **time-series** — explicit Phase 006 design target; initial implementation inclusion still to be decided;
-- **multi-table shared-key** — explicit Phase 006 design target; initial implementation inclusion still to be decided.
+## Remaining Phase 006 groups
 
-A future API may make these ergonomic through a function parameter or typed structure specification. That selection is an API/experience mechanism only; it cannot replace the semantics required to describe series identity/order, shared-key linkage, cardinality, Constraints, Generation scope, Evaluation or history.
+- **006-C — End-to-End Scenario, Exception, Failure & Adversarial Synchronization Validation — next**
+- 006-D — Reference Strategy/Method and Topology Design Probes & Algorithm-Neutrality Stress Test
+- 006-E — Enterprise Scale, Resource/Approximation, Backpressure & Degraded-Mode Design Validation
+- 006-F — Privacy, Disclosure, Release-Governance Boundary & Mechanism-Specific Scope Decision
+- 006-G — Structured-Data Topology: Single-Table, Time-Series & Multi-Table Relationship Concept/Extensibility Audit
+- 006-H — Human/Programmatic Experience Closure for Recovery, Security, Degraded & Historical Workflows
+- 006-I — Architecture/ADR Reconciliation, Canonical Authority Promotion & Planning Back-Propagation
+- 006-J — Consolidation, Residual Design-Debt Audit & Implementation-Authority Readiness Decision
 
-Multi-table shared-key synthesis has reopened the previously deferred **Relationship** candidate for Phase 006-G. It is **not yet an accepted concept**. Time-series is being used as a falsification case for whether one generic Relationship boundary can also represent sequence membership/order without overloading Data Meaning or Constraint.
-
-See:
-
-- [`006-A`](docs/phases/006/006-A-post-planning-concept-completeness-mechanism-vs-concept-scope-boundary-revalidation.md)
-- [`Post-Planning Concept Revalidation & Structured-Data Topology Candidates`](docs/discovery/post-planning-concept-revalidation-structured-topology-candidates.md)
-
-## Why Phase 006 is required
-
-Phase 005 exposed four design-readiness blockers:
-
-1. temporal operational authority after regressive restore;
-2. post-planning adversarial validation;
-3. representative Strategy/method and topology design probes;
-4. initial-scope/future-extensibility closure.
-
-[`Phase 006`](docs/phases/006/index.md) remains **design-only**. It does not authorize production package scaffolding, source code, schemas/migrations, adapters, tests, CI, deployment infrastructure or benchmarks.
+Jackson-style completeness is judged by design evidence, not by a fixed number of phases. A positive 006-J result would still require a **later explicit implementation-authority phase** before production coding begins.
 
 ## Current next group
 
-**006-B — Temporal Authority, Disaster Recovery, Rollback, Fork & Historical-Truth Refinement**
-
-Here `temporal` refers to operational authority across rollback/restore, not time-series data semantics.
-
-Jackson-style completeness is judged by design evidence, not a fixed phase count. Even a positive Phase 006 exit would require a later explicit implementation-authority phase before production coding begins.
+**006-C — End-to-End Scenario, Exception, Failure & Adversarial Synchronization Validation**
