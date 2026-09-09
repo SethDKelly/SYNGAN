@@ -11,6 +11,7 @@ Current design authority includes:
 - `docs/authority/phase-007-design-continuation-implementation-freeze.md`
 - `docs/architecture/phase-007-d-identity-revision-serialization-resource-handle-programmatic-view-foundation.md`
 - `docs/architecture/phase-007-e-control-persistence-transactions-cas-outbox-historical-reference-migration-baseline.md`
+- `docs/architecture/phase-007-f-distributed-data-state-structured-topology-manifest-candidate-seal-promotion-foundation.md`
 - `docs/phases/007/index.md`
 
 Current progression:
@@ -19,7 +20,8 @@ Current progression:
 007-A..007-C  historical/provisional bootstrap work
 007-D         DESIGN COMPLETE
 007-E         DESIGN COMPLETE
-007-F         next eligible DESIGN subgroup — not started
+007-F         DESIGN COMPLETE
+007-G         next eligible DESIGN subgroup — not started
 implementation expansion   FROZEN
 ```
 
@@ -47,16 +49,16 @@ For an explicitly entered design subgroup, agents may:
 Unless later implementation re-entry explicitly authorizes it, do not:
 
 - add production source behavior;
-- add persistence schemas/migrations;
+- add persistence/data-plane schemas or migrations;
 - add Spark/runtime/model/platform/security adapters;
 - add concrete public API classes merely to crystallize a hypothesis;
-- add production serialization/wire schemas;
+- add production serialization/wire/manifest schemas;
 - add runtime/build dependencies for future capability work;
 - add new tests or executable architecture/fitness restrictions for evolving design;
 - add Import Linter constraints for evolving design;
 - add CI/deployment/release enforcement for evolving architecture.
 
-Existing verification may continue. Its assertions are provisional where they encode earlier delivery-state assumptions.
+Existing verification may continue. Its assertions are provisional where they encode earlier delivery-state assumptions; do not churn tests merely to mirror design-phase navigation.
 
 ## Current design distinctions
 
@@ -73,16 +75,25 @@ Preserve at minimum:
 - migration revision != semantic/state/schema/recovery version;
 - representation migration != semantic correction;
 - canonical-state rollback = potentially regressive recovery requiring ADR-0009 qualification;
-- restored stale control state != current mutation authority;
+- logical data subject != physical representation;
+- exact per-scope source state != guaranteed coherent cross-scope snapshot;
+- physical schema/layout != Data Meaning;
+- time-series physical order != semantic sequence order;
+- open/partial candidate != sealed whole subject != promoted logical output;
+- scope-local closure != whole-candidate closure;
+- seal success != Constraint/Evaluation/privacy/Generation completion;
+- manifest/component identity != semantic topology authority;
+- promotion != physical row copy;
+- representation evolution != permission to rewrite original promotion history;
+- restored/surviving physical files != proof of semantic promotion/current writer authority;
 - semantic completion != runtime/platform success;
-- candidate/checkpoint/diagnostic material != promoted result;
 - favorable empirical privacy Evidence != formal privacy guarantee != external release approval.
 
-## 007-E design result
+## 007-F design result
 
-007-E is technology-neutral. It does **not** mandate SQL, SQLAlchemy, Alembic, PostgreSQL, SQLite, UUIDv4, JSON, a literal outbox table or a global event bus.
+007-F is technology-neutral. It does **not** mandate Parquet, Delta, Iceberg, Hudi, a specific manifest format, object store, table/catalog provider, Spark API class, checksum algorithm, writer-fence mechanism or copy-on-promotion policy.
 
-Earlier Phase 005-D concrete selections remain implementation-planning evidence to reconsider only after architecture design reaches explicit implementation re-entry.
+Earlier Phase 005-E concrete selections remain implementation-planning evidence to reconsider only after architecture design reaches explicit implementation re-entry.
 
 ## Progressive disclosure
 
@@ -98,6 +109,6 @@ Do not load or duplicate the full corpus by default.
 
 ## Current next boundary
 
-**007-F — Distributed Data-State, Structured Topology, Manifest, Candidate/Seal & Promotion Foundation** is the next eligible **design** subgroup.
+**007-G — Strategy/Method Binding, Dependency Trust, Authorization, Secrets & Distributed Runtime Closure Foundation** is the next eligible **design** subgroup.
 
-Do not begin 007-F until explicitly requested. Do not resume production implementation unless a separate implementation-reentry decision is made.
+Do not begin 007-G until explicitly requested. Do not resume production implementation unless a separate implementation-reentry decision is made.
