@@ -17,12 +17,13 @@ For material work:
 1. read `docs/index.md`;
 2. read `docs/authority/design-methodology.md` for methodology-sensitive work;
 3. for recovery/HA/current-authority work, read `docs/authority/operational-authority-continuity-regressive-recovery-contract.md`;
-4. read `docs/architecture/phase-004-consolidated-architecture-contract.md`;
-5. read `docs/implementation/phase-005-consolidated-implementation-planning-contract.md`;
-6. read the active Phase 006 record/index and only the detailed 005 plan affected by the design question;
-7. follow only directly relevant concept/synchronization/experience/architecture authority;
-8. use ADRs for rationale/history rather than as replacement for current canonical authority;
-9. consult `docs/backlog/index.md` for blocker/deferred classification, not as canonical design truth.
+4. read `docs/synchronizations/core-synchronizations.md` for cross-concept coordination—the 006-C refinements are canonical;
+5. read `docs/architecture/phase-004-consolidated-architecture-contract.md`;
+6. read `docs/implementation/phase-005-consolidated-implementation-planning-contract.md`;
+7. read the active Phase 006 record/index and only the detailed 005 plan affected by the design question;
+8. follow only directly relevant concept/synchronization/experience/architecture authority;
+9. use ADRs for rationale/history rather than as replacement for current canonical authority;
+10. consult `docs/backlog/index.md` for blocker/deferred classification, not as canonical design truth.
 
 Do not load or copy the entire documentation corpus by default.
 
@@ -45,11 +46,12 @@ Later feasibility evidence may justify reopening upstream authority. Do not patc
 Completed:
 
 - **006-A** — post-planning concept/mechanism/scope revalidation;
-- **006-B** — temporal authority/regressive-recovery/historical-truth refinement.
+- **006-B** — temporal authority/regressive-recovery/historical-truth refinement;
+- **006-C** — end-to-end adversarial synchronization validation.
 
 Current next:
 
-**006-C — End-to-End Scenario, Exception, Failure & Adversarial Synchronization Validation**.
+**006-D — Reference Strategy/Method and Topology Design Probes & Algorithm-Neutrality Stress Test**.
 
 Current design counts remain:
 
@@ -59,9 +61,9 @@ accepted synchronizations     15
 reopened candidate concepts    Relationship
 ```
 
-## 006-B operational-authority rules
+No `SYNC-16` is currently accepted.
 
-The active Operational Authority Continuity contract is non-negotiable for any current/future recovery design.
+## 006-B operational-authority rules
 
 Agents MUST preserve:
 
@@ -79,20 +81,33 @@ Agents MUST preserve:
 - current post-recovery authority may adopt verified immutable effects, but old writers never regain authority through adoption;
 - `ControlPlaneIncarnation` or equivalent remains a downstream realization mechanism, not a domain concept.
 
-Do not introduce a recovery mechanism that is replayable solely from the same regressed persistence snapshot and then claim the stale-writer problem is solved.
+## 006-C synchronization rules
+
+The 006-C adversarial pass retained fifteen synchronization IDs and refined the canonical rules.
+
+Agents MUST preserve:
+
+- same-Execution retry/resume requires unchanged committed semantics **and** current authorization/dependency/platform/recovery qualification;
+- current inability to continue does not authorize silent source/Strategy/Learned-State/dependency/method/network substitution;
+- after potentially regressive recovery, restored Attempt/current-state values do not authorize continuation by themselves;
+- a coordinated logical Generation output is completed only when the whole committed scope is completion-sufficient, not when one constituent table/sequence is complete;
+- missing restored history is not proof of non-occurrence;
+- surviving external/physical effects are not automatic proof of a missing semantic transition;
+- reconstruction of missing canonical history is owner-gated and auditable;
+- unresolved continuity/history gaps constrain the strongest reproducibility/comparison claim rather than rewriting historical commitments.
+
+BDR-002 is resolved for the current eleven-concept/fifteen-sync baseline. If 006-G later accepts `Relationship` or changes coordination materially, replay the affected scenarios before 006-J readiness approval.
 
 ## Phase 006 design rules
 
-Phase 006 exists because 005-K found four design-readiness blockers:
+Remaining blocking questions are concentrated in:
 
 ```text
-BDR-001  regressive restore / temporal authority
-BDR-002  post-planning adversarial end-to-end validation
 BDR-003  representative Strategy/method/topology design probes
 BDR-004  initial-scope / future-extensibility closure
 ```
 
-BDR-001 now has semantic closure from 006-B; its synchronization/experience/architecture propagation remains pending 006-C/006-H/006-I.
+BDR-001 has semantic/synchronization closure with experience/architecture propagation pending 006-H/006-I.
 
 Agents MUST:
 
@@ -114,18 +129,24 @@ time-series
 multi-table shared-key
 ```
 
-A future API `mode`/parameter may select a capability profile, but that parameter MUST NOT become the sole durable representation of:
-
-- participating scopes;
-- shared-key linkage;
-- temporal entity/series identity;
-- temporal order/cadence;
-- cardinality/participation;
-- validity Constraints;
-- coordinated completion semantics;
-- required Evaluation/Evidence.
+A future API `mode`/parameter may select a capability profile, but that parameter MUST NOT become the sole durable representation of participating scopes, shared-key linkage, temporal entity/series identity, temporal order/cadence, cardinality/participation, validity Constraints, coordinated completion semantics, or required Evaluation/Evidence.
 
 `Relationship` is reopened only as a candidate pending 006-G. Do not treat it as accepted concept authority before that decision.
+
+## 006-D probe discipline
+
+006-D is **design probing, not algorithm implementation**.
+
+Agents may analyze concrete method shapes such as CTGAN-like Learning, direct/statistical generation, sequence/time-series synthesis, multi-table relational synthesis, deterministic validation, and statistical/approximate Evaluation only to test whether existing concepts/contracts remain generic.
+
+Do not:
+
+- create model/runtime source code;
+- select one probe as canonical SYNGAN behavior;
+- infer a concept merely because one library exposes a class/object for it;
+- hide full-corpus driver collection, centralized model-state assumptions, or algorithm-specific checkpoint semantics behind generic SPI names;
+- assume all Strategies require Learning/Learned State;
+- assume one file/object is the universal Learned-State representation.
 
 ## Frozen implementation-planning baseline
 
@@ -177,4 +198,4 @@ Backlog items close only after the canonical owner reflects the accepted resolut
 
 ## Current next group
 
-**006-C — End-to-End Scenario, Exception, Failure & Adversarial Synchronization Validation**
+**006-D — Reference Strategy/Method and Topology Design Probes & Algorithm-Neutrality Stress Test**
