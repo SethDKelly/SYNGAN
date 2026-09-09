@@ -17,7 +17,7 @@ def test_python_floor_and_build_backend_are_locked() -> None:
 
     assert project["project"]["requires-python"] == ">=3.11"
     assert project["build-system"]["build-backend"] == "hatchling.build"
-    assert project["tool"]["uv"]["required-version"] == ">=0.10,<0.11"
+    assert project["tool"]["uv"]["required-version"] == ">=0.12,<0.13"
 
 
 def test_base_runtime_dependency_closure_is_empty_in_007_b() -> None:
