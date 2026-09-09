@@ -10,7 +10,7 @@ status: active
 
 This directory preserves durable decision rationale, considered alternatives, compatibility consequences, and supersession history for material architecture/governance decisions.
 
-Decision records support canonical authority; they do not replace it. Current accepted architecture rules belong under [`docs/architecture/`](../architecture/index.md).
+Decision records support canonical authority; they do not replace it. Current accepted architecture rules belong under [`docs/architecture/`](../architecture/index.md), with the [Phase 006 Architecture Reconciliation Contract](../architecture/phase-006-architecture-reconciliation-contract.md) as the current overlay.
 
 ## Authority relationship
 
@@ -21,61 +21,54 @@ Interpret architecture knowledge using this order:
 3. accepted ADR rationale/history under `docs/decisions/`;
 4. phase records preserving design execution history.
 
-If an ADR conflicts with newer canonical architecture authority, the canonical architecture document governs current implementation and the ADR SHOULD be marked superseded or linked to its replacement.
+If an ADR conflicts with newer canonical architecture authority, canonical architecture governs and the ADR should be marked superseded or linked to its replacement.
 
 ## Active decisions
 
-- [ADR-0001 — Typed Resource/Handle Public API](ADR-0001-typed-resource-handle-public-api.md) — adopts typed specification/activity/result/Execution/history resource roles rather than a universal mutable Session, payload-only API, universal Spark ML model, generic Result object, or process-local Future as canonical identity.
-- [ADR-0002 — Immutable Semantic Snapshots & Versioned Lifecycle State](ADR-0002-immutable-semantic-snapshots-versioned-lifecycle-state.md) — separates stable resource identity, immutable semantic revision/commitment snapshots, mutable lifecycle state versions, and representation schema versions while requiring stale-write detection without mandating universal event sourcing.
-- [ADR-0003 — Sealed Manifest-Gated Distributed Output Promotion](ADR-0003-sealed-manifest-gated-output-promotion.md) — separates mutable distributed candidate materialization, immutable sealed candidate identity, and Generation semantic promotion so Evaluation binds the exact candidate while at most one completed output is established without requiring copy-on-promotion or exactly-once physical writes.
-- [ADR-0004 — Semantic Extension & Runtime Binding Separation](ADR-0004-semantic-extension-runtime-binding-separation.md) — separates Strategy/Evaluation-method semantic authority from executable implementation bindings and Attempt-scoped runtime realization so multiple runtimes can preserve one semantic contract while exact implementation identity remains attributable.
-- [ADR-0005 — Attempt-Epoch Fencing & Recoverable At-Least-Once Execution](ADR-0005-attempt-epoch-fencing-recoverable-at-least-once-execution.md) — adopts at-least-once physical realization with ordered Attempt epochs, stale-writer fencing, operation-scoped idempotency, immutable checkpoints, explicit reconciliation, and cancellation races resolved as operational facts rather than guessed terminal state.
-- [ADR-0006 — Typed Canonical Provenance & Derived Historical Projections](ADR-0006-typed-provenance-canonical-derived-history-projections.md) — keeps canonical Provenance as typed stable-reference relationship assertions while historical navigation/search/comparison and reproducibility views remain rebuildable derived projections over canonical resource owners.
-- [ADR-0007 — Explicit Dependency Resolution & Scoped Capability Security](ADR-0007-explicit-dependency-resolution-scoped-capability-security.md) — separates committed dependency/network/egress semantics, environmental resolution, current action-oriented authorization, and scoped runtime capabilities while keeping durable handles non-bearing, secrets out of canonical history, and derived query projections subject to the same disclosure controls as source records.
-- [ADR-0008 — Portable Core & Capability-Negotiated Platform Adapters](ADR-0008-portable-core-capability-negotiated-platform-adapters.md) — keeps semantic/application/control contracts platform-neutral while managed/generic/private deployments advertise guarantees and bind through explicit capability negotiation, semantics-preserving fallback or declared incompatibility rather than platform-name assumptions or silent degradation.
+- [ADR-0001 — Typed Resource/Handle Public API](ADR-0001-typed-resource-handle-public-api.md) — typed specification/activity/result/Execution/history resource roles rather than a universal mutable Session or payload-only identity.
+- [ADR-0002 — Immutable Semantic Snapshots & Versioned Lifecycle State](ADR-0002-immutable-semantic-snapshots-versioned-lifecycle-state.md) — separates stable identity, semantic revisions/commitments, lifecycle concurrency and representation schema versions.
+- [ADR-0003 — Sealed Manifest-Gated Distributed Output Promotion](ADR-0003-sealed-manifest-gated-output-promotion.md) — separates candidate materialization, sealed exact subject and semantic promotion.
+- [ADR-0004 — Semantic Extension & Runtime Binding Separation](ADR-0004-semantic-extension-runtime-binding-separation.md) — separates Strategy/method authority from executable implementation binding/runtime realization.
+- [ADR-0005 — Attempt-Epoch Fencing & Recoverable At-Least-Once Execution](ADR-0005-attempt-epoch-fencing-recoverable-at-least-once-execution.md) — ordered Attempt epochs, stale-writer fencing, scoped idempotency, checkpoints, reconciliation and cancellation races.
+- [ADR-0006 — Typed Canonical Provenance & Derived Historical Projections](ADR-0006-typed-provenance-canonical-derived-history-projections.md) — canonical typed Provenance with rebuildable derived history/query/reproducibility views.
+- [ADR-0007 — Explicit Dependency Resolution & Scoped Capability Security](ADR-0007-explicit-dependency-resolution-scoped-capability-security.md) — dependency/network/egress semantics, current authorization and scoped runtime capabilities remain distinct.
+- [ADR-0008 — Portable Core & Capability-Negotiated Platform Adapters](ADR-0008-portable-core-capability-negotiated-platform-adapters.md) — portable core with explicit platform capability negotiation, semantics-preserving fallback or declared incompatibility.
+- [ADR-0009 — Non-Regressing Authority After Regressive Control-State Recovery](ADR-0009-non-regressing-authority-after-regressive-control-state-recovery.md) — adds a fresh non-regressing recovery-authority frontier so restoring stale persistence cannot resurrect writer/cancellation/security authority. **Extends ADR-0005; does not supersede it.**
+- [ADR-0010 — Self-Contained Distributed Runtime Closure](ADR-0010-self-contained-distributed-runtime-closure.md) — requires both acquisition closure and exact compatible runtime closure across every material distributed worker, including dynamically added workers. **Extends ADR-0004 and ADR-0008; does not supersede them.**
+
+## Phase 006 reconciliation result
+
+006-I reviewed ADR-0001 through ADR-0008 against recovery, runtime-distribution, scale/degraded-operation, privacy/release, structured-topology and Phase 006 experience authority.
+
+No prior ADR is superseded.
+
+Most Phase 006 findings are refinements already covered by the rationale of the existing decision families. ADR-0009 and ADR-0010 are additive because their failure modes/alternatives are materially distinct enough to merit independent durable rationale.
 
 ## When to create an ADR
 
-Use an ADR when a decision is materially consequential and benefits from preserved rationale, for example when it:
+Use an ADR when a decision is materially consequential and benefits from preserved rationale, particularly when it:
 
-- selects among credible architectural alternatives;
+- selects among credible architecture alternatives;
 - establishes a durable compatibility boundary;
-- changes dependency direction or layer ownership;
-- selects a persistence/transaction/identity approach;
-- commits to a distributed materialization/promotion mechanism;
-- chooses an extension/runtime/plugin boundary;
-- selects execution/recovery/fencing semantics;
+- changes dependency direction/layer ownership;
+- selects persistence/transaction/identity behavior;
+- commits to distributed promotion/recovery/runtime-distribution behavior;
 - selects provenance/history/security/platform integration architecture;
-- introduces significant migration or portability consequences;
-- supersedes a previously accepted architecture decision.
+- introduces significant migration/portability consequences;
+- supersedes or materially extends a prior decision.
 
-Do not create an ADR merely to repeat an invariant already stated canonically.
+Do not create an ADR merely to repeat an invariant already canonical elsewhere.
 
-## Suggested ADR shape
+## ADR lifecycle
 
-A record SHOULD contain:
+Decision records use states such as `proposed`, `active`, `deprecated`, `superseded`, or `archived`.
 
-```text
-Title / stable decision ID
-Status
-Decision context / problem
-Governing upstream authority
-Decision
-Alternatives considered
-Consequences / tradeoffs
-Compatibility / migration impact
-Canonical architecture documents affected
-Supersedes / superseded by
-```
-
-## Lifecycle
-
-Decision records SHOULD use documentation lifecycle states such as `proposed`, `active`, `deprecated`, `superseded`, or `archived`.
-
-A replaced ADR SHOULD retain historical rationale and link to the replacing decision rather than being silently rewritten.
+A replaced decision retains its historical rationale and points to the replacement.
 
 ## Anti-duplication rule
 
-An ADR SHOULD summarize the accepted decision sufficiently to explain its rationale but SHOULD link to the canonical architecture document for the full current normative rule.
+ADRs explain *why* a choice was made. Full current normative rules belong in canonical architecture documents.
 
-Large architecture specifications MUST NOT be copied wholesale into ADRs.
+For current Phase 006 implementation-facing architecture begin with:
+
+[Phase 006 Architecture Reconciliation Contract](../architecture/phase-006-architecture-reconciliation-contract.md).
