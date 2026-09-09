@@ -3,10 +3,12 @@ name: 007-B Bootstrap Lock
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - uv.lock
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   lock-and-verify:
@@ -34,6 +36,28 @@ jobs:
 
       - name: Run repository verification gates
         run: uv run --no-sync python tools/verify.py all
+
+      - name: Verify lock is the only generated repository change
+        shell: bash
+        run: |
+          status="$(git status --porcelain --untracked-files=all)"
+          printf '%s\n' "$status"
+          unexpected="$(printf '%s\n' "$status" | grep -vE '^\?\? uv\.lock$' || true)"
+          test -z "$unexpected"
+          test -f uv.lock
+
+      - name: Materialize verified lockfile
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add uv.lock
+          if git diff --cached --exit-code --quiet; then
+            echo "uv.lock is already current"
+            exit 0
+          fi
+          git commit -m "007-B materialize verified uv lock"
+          git push origin HEAD:main
 
       - name: Retain generated lockfile
         uses: actions/upload-artifact@v7.0.1
