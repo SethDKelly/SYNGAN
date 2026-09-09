@@ -1,35 +1,44 @@
 ## Scope
 
-- Implementation slice / phase:
+- Phase 007 subgroup / implementation slice:
+- Entry commit / branch:
 - Change classification: `0-local` / `1-realization` / `2-public-or-persisted-contract` / `3-architecture-affecting` / `4-semantic-or-experience`
+- Active implementation authority:
 - Upstream authority implemented:
+
+## Authorization check
+
+- [ ] This change is inside the currently authorized Phase 007 subgroup.
+- [ ] It does not rely on a later subgroup merely because that subgroup exists in the Phase 007 plan.
+- [ ] Any Class 3/4 conflict was stopped and escalated rather than coded around.
 
 ## What changed
 
-Describe the bounded change and why it is needed.
+Describe the bounded change and why it is required by the active slice.
 
 ## Verification / acceptance evidence
 
-- [ ] Relevant automated tests pass.
-- [ ] Required architecture fitness checks pass or an explicit bounded waiver is documented.
-- [ ] Failure/recovery paths were tested where material.
-- [ ] The change does not rely only on a one-off notebook/manual success.
+- [ ] Relevant deterministic/unit/contract tests pass.
+- [ ] Required architecture-fitness checks pass or an explicit bounded waiver is documented.
+- [ ] Portable/core verification does not depend on hidden external network/model/package acquisition.
+- [ ] Failure/recovery/distributed scenarios were exercised where material.
+- [ ] The evidence does not rely only on a one-off notebook/manual success.
 
-Evidence / commands / CI links:
+Commands / CI evidence:
 
 ## Architecture and authority
 
-- [ ] The change preserves the Phase 004 Consolidated Architecture Contract.
-- [ ] Durable implementation decisions are reflected in `docs/implementation/` where needed.
-- [ ] Any architecture-affecting change updates canonical architecture/ADR authority rather than hiding the change in code.
-- [ ] No new generic Session/Context/Metadata/Manager/Registry/Result ownership boundary was introduced without explicit authority.
+- [ ] Phase 006-reconciled architecture remains preserved.
+- [ ] Durable implementation decisions are reflected in `docs/implementation/` where required.
+- [ ] No platform/runtime/model/persistence convenience became semantic authority.
+- [ ] No universal Session/Context/Metadata/Manager/Registry/Result/Relationship/DataTopology ownership boundary was introduced without authority.
 
 ## Dependencies / toolchain
 
-- [ ] New or changed direct dependencies have an explicit purpose and correct classification.
-- [ ] Optional platform/runtime dependencies remain isolated from the supported portable/offline core.
-- [ ] No hidden runtime package/model/artifact download or remote fallback was introduced.
-- [ ] Material compatibility/offline/private-provisioning implications are documented.
+- [ ] New/changed direct dependencies have an explicit owning slice and correct runtime/dev/build/optional classification.
+- [ ] Optional platform/runtime dependencies remain isolated from portable/offline core.
+- [ ] No hidden runtime installation, model-hub lookup, remote inference or fallback was introduced.
+- [ ] Offline/private-provisioning implications are documented.
 
 Dependency/toolchain changes:
 
@@ -38,27 +47,33 @@ Dependency/toolchain changes:
 - [ ] Public API/SPI impact is documented.
 - [ ] Persisted/wire/schema impact is documented.
 - [ ] Migration/deprecation/backward-compatibility impact is documented where applicable.
-- [ ] Historical committed state is not rewritten by a persistence migration.
+- [ ] Historical committed state is not rewritten as a migration convenience.
 
 Impact:
 
 ## Security / network / egress
 
-- [ ] No real secrets or sensitive payloads are committed in code, fixtures, logs, or examples.
+- [ ] No real secrets or sensitive payloads are committed in code, fixtures, logs or examples.
 - [ ] Authorization/disclosure boundaries remain intact.
 - [ ] Network and data-egress behavior is unchanged or explicitly documented/reviewed.
-- [ ] Derived query/index paths do not bypass protected canonical resources.
+- [ ] Existence-protected/query/history paths do not bypass disclosure policy.
 
 Impact:
 
-## Scale / platform behavior
+## Scale / distributed / platform behavior
 
 - [ ] Enterprise paths do not introduce mandatory full driver-local materialization.
-- [ ] Platform/runtime specialization remains behind accepted ports/adapters.
+- [ ] Driver import/readiness is not treated as distributed worker runtime closure.
+- [ ] Platform specialization remains behind accepted boundaries.
+- [ ] Resource pressure does not silently weaken quantity/horizon/topology/Evaluation/Constraint/security semantics.
 - [ ] Platform success/retry/identity is not substituted for SYNGAN semantic authority.
 
-Impact:
+Impact / explicit non-claims:
 
-## Deferred / follow-up work
+## Evidence gate / next authorization
 
-List explicit deferred items, owner/phase/backlog location, and any temporary waiver/expiration condition.
+- [ ] Waivers/failures/deferred work are listed explicitly.
+- [ ] Remaining debt is linked to the appropriate phase/backlog owner.
+- [ ] This change does not claim the next subgroup is authorized unless an explicit proceed decision exists.
+
+Deferred / follow-up work:
