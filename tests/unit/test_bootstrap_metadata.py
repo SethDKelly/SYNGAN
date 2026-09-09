@@ -12,15 +12,18 @@ def _pyproject() -> dict[str, Any]:
         return tomllib.load(handle)
 
 
-def test_python_floor_and_build_backend_are_locked() -> None:
+def test_python_floor_build_backend_and_package_selection_are_locked() -> None:
     project = _pyproject()
 
     assert project["project"]["requires-python"] == ">=3.11"
     assert project["build-system"]["build-backend"] == "hatchling.build"
     assert project["tool"]["uv"]["required-version"] == ">=0.12,<0.13"
+    assert project["tool"]["hatch"]["build"]["targets"]["wheel"]["packages"] == [
+        "src/syngan"
+    ]
 
 
-def test_base_runtime_dependency_closure_is_empty_in_007_b() -> None:
+def test_base_runtime_dependency_closure_remains_empty_in_007_c() -> None:
     project = _pyproject()
 
     assert project["project"]["dependencies"] == []
@@ -31,11 +34,12 @@ def test_locked_development_groups_contain_only_authorized_tool_families() -> No
     groups = project["dependency-groups"]
     flattened = "\n".join(
         requirement
-        for group_name in ("test", "lint", "type", "fitness")
+        for group_name in ("build", "test", "lint", "type", "fitness")
         for requirement in groups[group_name]
     ).lower()
 
     for required in (
+        "hatchling",
         "pytest",
         "hypothesis",
         "pytest-socket",
@@ -58,5 +62,15 @@ def test_locked_development_groups_contain_only_authorized_tool_families() -> No
         assert prohibited not in flattened
 
 
-def test_007_b_does_not_create_production_package_early() -> None:
-    assert not (ROOT / "src" / "syngan").exists()
+def test_import_linter_contracts_cover_required_topology_boundaries() -> None:
+    project = _pyproject()
+    contracts = {contract["id"]: contract for contract in project["tool"]["importlinter"]["contracts"]}
+
+    assert set(contracts) == {
+        "core-layers",
+        "core-no-outer-dependencies",
+        "adapters-stay-outside-coordination",
+    }
+    assert contracts["core-layers"]["type"] == "layers"
+    assert contracts["core-no-outer-dependencies"]["type"] == "forbidden"
+    assert contracts["adapters-stay-outside-coordination"]["type"] == "forbidden"
