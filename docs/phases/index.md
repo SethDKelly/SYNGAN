@@ -47,14 +47,15 @@ Phase 006 is design-only. It uses implementation-planning evidence to revalidate
 Completed:
 
 - **006-A** — concept/mechanism/scope revalidation; accepted concept/synchronization counts remain eleven/fifteen; `Relationship` reopened only as a candidate.
-- **006-B** — temporal authority/regressive-recovery refinement; established the cross-cutting Operational Authority Continuity contract without adding a new concept or synchronization.
+- **006-B** — temporal authority/regressive-recovery refinement; established the cross-cutting Operational Authority Continuity contract.
 - **006-C** — twenty-four-scenario adversarial synchronization validation; retained fifteen synchronization IDs while refining SYNC-04/07/08/11/14/15.
+- **006-D** — representative Strategy/method/text/topology/runtime-distribution probes; retained the eleven/fifteen model and established the Self-Contained Execution & Runtime Distribution Closure contract.
 
 Current next:
 
-**006-D — Reference Strategy/Method and Topology Design Probes & Algorithm-Neutrality Stress Test**
+**006-E — Enterprise Scale, Resource/Approximation, Backpressure & Degraded-Mode Design Validation**
 
-006-D must stress the design with materially different Learning-based/direct/time-series/multi-table Strategy and Evaluation shapes without implementing them.
+006-E must stress the design under large/sharded state, text/runtime-distribution pressure, dynamic workers, topology-specific scaling, approximation, concurrency/backpressure and degraded platform conditions without implementing benchmarks.
 
 ## Implementation boundary
 
