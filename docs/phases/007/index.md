@@ -1,22 +1,43 @@
 ---
 type: Phase Index
-title: Phase 007 — Implementation Authority, Controlled Bootstrap & Evidence-Gated Delivery
+title: Phase 007 — Design Continuation, Architecture Completion & Controlled Pre-Implementation Refinement
 status: active
 ---
 
-# Phase 007 — Implementation Authority, Controlled Bootstrap & Evidence-Gated Delivery
+# Phase 007 — Design Continuation, Architecture Completion & Controlled Pre-Implementation Refinement
 
-## Purpose
+## Current purpose
 
-Translate the completed Phase 006 design baseline into **incremental, evidence-gated implementation authority** rather than unrestricted coding.
+Continue architecture/design work without allowing the provisional Phase 007 implementation scaffold to constrain unresolved representation decisions.
 
-Current implementation authority is layered through:
+The current posture is governed by:
 
-- [Phase 007 Implementation Authority Lock](../../implementation/phase-007-implementation-authority-lock.md)
-- [Phase 007-B Bootstrap Execution Authority](../../implementation/phase-007-b-bootstrap-execution-authority.md)
-- [Phase 007-C Source/Package Topology Execution Authority](../../implementation/phase-007-c-source-package-topology-execution-authority.md)
+- [Phase 007 Design Continuation & Implementation Freeze](../../authority/phase-007-design-continuation-implementation-freeze.md);
+- [Phase 007-D Identity, Revision, Serialization, Resource/Handle & Programmatic-View Foundation](../../architecture/phase-007-d-identity-revision-serialization-resource-handle-programmatic-view-foundation.md).
 
-## Current status
+Phase 007-A through 007-C remain historical/provisional bootstrap records. They are retained rather than erased, but current work is design-first.
+
+## Design progression
+
+```text
+007-A  historical implementation-authority/bootstrap transition
+007-B  historical repository/toolchain scaffold
+007-C  historical/provisional source-topology scaffold
+007-D  DESIGN COMPLETE
+007-E  DESIGN NOT STARTED — NEXT ELIGIBLE
+007-F  DESIGN NOT STARTED
+007-G  DESIGN NOT STARTED
+007-H  DESIGN NOT STARTED
+007-I  DESIGN NOT STARTED
+007-J  DESIGN NOT STARTED
+007-K  DESIGN NOT STARTED
+```
+
+007-D advanced architecture only. It added no production source behavior, serializer, persistence schema, public Python API, tests, Import Linter restrictions or CI enforcement.
+
+## Frozen implementation authorization track
+
+The historical implementation track remains frozen at the 007-C boundary:
 
 ```text
 007-A  COMPLETE
@@ -32,9 +53,39 @@ Current implementation authority is layered through:
 007-K  NOT AUTHORIZED
 ```
 
-Phase 007 remains active, but no subgroup beyond completed 007-C is authorized until an explicit proceed decision is given.
+**An explicit proceed decision is required before 007-D implementation begins.**
 
-## Locked design baseline
+The user's current proceed decision authorizes **007-D design**, not 007-D production implementation.
+
+No design group automatically reactivates implementation.
+
+## Why the track was separated
+
+The repository had begun creating implementation fitness gates while architecture remained open to deliberate refinement.
+
+That can create accidental reverse authority:
+
+```text
+existing test/package choice
+        ↓
+"design must preserve this because CI expects it"
+```
+
+The current methodology requires the opposite:
+
+```text
+problem / concepts / experience
+        ↓
+architecture design
+        ↓
+implementation design
+        ↓
+future code/tests/enforcement
+```
+
+Therefore existing 007-C tests/tooling may remain as provisional evidence, but they do not veto later architecture decisions and are not expanded during the design freeze.
+
+## Locked semantic baseline
 
 ```text
 accepted concepts          11
@@ -56,70 +107,64 @@ concepts + synchronizations
         ↓
 experience
         ↓
-Phase 006-reconciled architecture
+current architecture design
         ↓
-Phase 006-reconciled implementation planning
+implementation planning
         ↓
-Phase 007 authority + explicitly authorized subgroup
+later explicit implementation re-entry
         ↓
 production source/config/tests/migrations
 ```
 
-Implementation realizes authority; code/platform/model convenience does not redefine it.
-
-## Authorization ladder
-
-```text
-007-A authority lock                                COMPLETE
-        ↓
-007-B repository/toolchain/verification bootstrap   COMPLETE
-        ↓
-007-C source/package topology                       COMPLETE
-        ↓ explicit proceed required
-007-D identity/public contracts                     NOT AUTHORIZED
-        ↓
-007-E control persistence/history
-        ↓
-007-F distributed data/topology
-        ↓
-007-G runtime/dependency/security closure
-        ↓
-007-H Execution/recovery
-        ↓
-007-I Evidence/history/reproducibility
-        ↓
-007-J bounded self-contained vertical proof
-        ↓
-007-K consolidation/evidence review
-```
-
-No later subgroup is authorized automatically by the existence of this plan or completion of the prior group.
+Code/tests do not become design authority because they already exist or pass.
 
 ## Groups
 
-| Group | Scope | Status |
-|---|---|---|
-| **007-A** | [Implementation Authority Lock, Canonical Baseline, Change Control & Slice Authorization](007-A-implementation-authority-lock-canonical-baseline-change-control-slice-authorization.md) | **complete** |
-| **007-B** | [Repository/Toolchain Bootstrap, Reproducible Environment & Verification Harness](007-B-repository-toolchain-bootstrap-reproducible-environment-verification-harness.md) | **complete** |
-| **007-C** | [Source/Package Topology, Dependency Direction & Architecture-Fitness Enforcement](007-C-source-package-topology-dependency-direction-architecture-fitness-enforcement.md) | **complete** |
-| **007-D** | Identity, Revision, Serialization, Typed Public Resource/Handle & Programmatic-View Foundation | **not authorized / next eligible** |
-| 007-E | Control Persistence, Transactions, CAS, Outbox, Historical References & Migration Baseline | not authorized |
-| 007-F | Distributed Data-State, Structured Topology, Manifest, Candidate/Seal & Promotion Foundation | not authorized |
-| 007-G | Strategy/Method Binding, Dependency Trust, Authorization, Secrets & Distributed Runtime Closure Foundation | not authorized |
-| 007-H | Execution/Attempt, Idempotency, Fencing, Non-Regressing Recovery, Checkpoint, Cancellation & Admission Foundation | not authorized |
-| 007-I | Evaluation/Evidence, Provenance, Historical Query, Reproducibility & Disclosure Foundation | not authorized |
-| 007-J | Self-Contained Single-Table Reference Vertical Slice & Spark-Local End-to-End Proof | not authorized |
-| 007-K | Phase 007 Consolidation, Architecture-Fitness Audit, Evidence Review & Next-Delivery Authorization Decision | not authorized |
+| Group | Scope | Design status | Implementation status |
+|---|---|---|---|
+| **007-A** | [Implementation Authority Lock, Canonical Baseline, Change Control & Slice Authorization](007-A-implementation-authority-lock-canonical-baseline-change-control-slice-authorization.md) | historical | complete historical action |
+| **007-B** | [Repository/Toolchain Bootstrap, Reproducible Environment & Verification Harness](007-B-repository-toolchain-bootstrap-reproducible-environment-verification-harness.md) | historical | complete historical scaffold |
+| **007-C** | [Source/Package Topology, Dependency Direction & Architecture-Fitness Enforcement](007-C-source-package-topology-dependency-direction-architecture-fitness-enforcement.md) | provisional evidence | complete historical scaffold |
+| **007-D** | [Identity, Revision, Serialization, Typed Public Resource/Handle & Programmatic-View Foundation](007-D-identity-revision-serialization-typed-public-resource-handle-programmatic-view-foundation.md) | **complete** | **not authorized** |
+| 007-E | Control Persistence, Transactions, CAS, Outbox, Historical References & Migration Baseline | **next eligible** | not authorized |
+| 007-F | Distributed Data-State, Structured Topology, Manifest, Candidate/Seal & Promotion Foundation | not started | not authorized |
+| 007-G | Strategy/Method Binding, Dependency Trust, Authorization, Secrets & Distributed Runtime Closure Foundation | not started | not authorized |
+| 007-H | Execution/Attempt, Idempotency, Fencing, Non-Regressing Recovery, Checkpoint, Cancellation & Admission Foundation | not started | not authorized |
+| 007-I | Evaluation/Evidence, Provenance, Historical Query, Reproducibility & Disclosure Foundation | not started | not authorized |
+| 007-J | Self-Contained Single-Table Reference Vertical Slice & Spark-Local End-to-End Proof | not started / scope to be re-evaluated before entry | not authorized |
+| 007-K | Phase 007 Consolidation, Architecture-Fitness Audit, Evidence Review & Implementation-Reentry Readiness Decision | not started | not authorized |
 
-## 007-B retained substrate
+The titles of later groups are retained as working scopes; design may refine them before entry.
 
-007-B established the committed Python/uv/Hatchling/pytest/Hypothesis/pytest-socket/Ruff/mypy/Import-Linter/coverage toolchain, full `uv.lock`, repository verification command and read-only `Verify` workflow.
+## 007-D architecture result
 
-Portable-core pytest denies Python sockets by default after explicit dependency provisioning.
+007-D preserves independent axes for:
 
-## 007-C result
+```text
+authority / namespace scope
+stable logical identity
+exact semantic revision / commitment snapshot
+mutable state version / view freshness
+representation schema version
+external/provider identity or locator when material
+```
 
-007-C established the first production package structure without implementing later-slice behavior:
+It establishes that:
+
+- references are typed and exact historical references never substitute `latest`;
+- handles resolve/present authority but do not own canonical state;
+- handles are not inherently credentials;
+- local handle/view mutation is not canonical mutation;
+- serialization is representation, not mutation authority;
+- schema migration is distinct from semantic revision;
+- orthogonal programmatic views preserve current, historical, actionability, operational, Evidence/Provenance, disclosure and topology-summary concerns;
+- control-plane views stay bounded and reference large/distributed payloads.
+
+Concrete identifiers, Python classes, wire formats, persistence schemas, serializers, CAS/outbox mechanisms and migration tooling remain open.
+
+## Provisional 007-C scaffold
+
+The retained package scaffold is still:
 
 ```text
 src/syngan/
@@ -134,26 +179,12 @@ src/syngan/
 └── bootstrap/
 ```
 
-Executable Import Linter contracts now enforce inward core layering, prohibit core dependencies on adapters/bootstrap, and prohibit adapters from depending on application/api/bootstrap.
-
-Normal verification installs the first-party package from the locked environment, runs architecture fitness, checks root/typed-package behavior, and builds/inspects wheel + sdist without publication.
-
-PR #1 was verified on exact head `9f93b6eff7f8d8a1b19950745530dc273d462d6d` by `Verify` run `34389127442` and merged as `063f847953f69a525ee04315fa92bc0e9fa36a1c`.
-
-`[project].dependencies` remains empty. Build-only Hatchling/editables support is locked for the no-build-isolation verification path.
-
-## Branch/review posture
-
-007-C successfully exercised the feature-branch/pull-request path with a green exact-head `Verify` result before merge.
-
-`main` is still not claimed as protected and `Verify` is not claimed as a repository-enforced required check. Subsequent material production-source work should continue using reviewable branches/PRs when supported and retain exact-head verification evidence.
-
-## Stop/reopen rule
-
-Class 3 architecture conflicts and Class 4 semantic/experience conflicts stop ordinary implementation. Reopen the smallest upstream canonical authority rather than coding around the conflict.
+This remains implementation evidence, **not an architecture premise**. If later design requires another boundary, implementation may be revised during a future re-entry without treating the design change as invalid merely because existing tests disagree.
 
 ## Current next boundary
 
-**007-D — Identity, Revision, Serialization, Typed Public Resource/Handle & Programmatic-View Foundation** is the next eligible subgroup, but it is **not yet authorized**.
+**007-E — Control Persistence, Transactions, CAS, Outbox, Historical References & Migration Baseline** is the next eligible **design** subgroup.
 
-An explicit proceed decision is required before 007-D implementation begins.
+It is not active until explicitly entered.
+
+Production implementation remains frozen; no current authority permits 007-D or later production behavior.
