@@ -8,30 +8,72 @@ status: active
 
 ## Purpose
 
-This directory is the canonical home for implementation-facing architecture that maps accepted semantic and experience authority into representations, identities, persistence/data boundaries, runtime/extension contracts, recovery, Evidence/Provenance/history, enterprise security, and deployable platform integration.
+This directory is the canonical home for representation/architecture design that maps accepted semantic and experience authority into identities, views, persistence/data boundaries, runtime/extension contracts, recovery, Evidence/Provenance/history, enterprise security and deployable platform integration.
 
-Architecture remains downstream of design authority, accepted concepts/synchronizations, and experience authority.
+Architecture remains downstream of design authority, accepted concepts/synchronizations and experience authority.
 
 ## Start here — current authority
 
-For current architecture or future implementation-authority work, read:
+For current architecture design, read only what the active question needs:
 
-1. [Phase 006 Architecture Reconciliation Contract](phase-006-architecture-reconciliation-contract.md) — current overlay;
-2. [Phase 004 Consolidated Architecture Contract](phase-004-consolidated-architecture-contract.md) — baseline where not refined;
-3. only directly relevant detailed Phase 004 authority;
-4. [Architecture Decision Records](../decisions/index.md) for rationale/history;
-5. [Phase 006 Implementation-Planning Reconciliation](../implementation/phase-006-implementation-planning-reconciliation.md) for downstream planning consequences;
-6. [Phase 006 Consolidated Design Readiness Contract](../authority/phase-006-consolidated-design-readiness-contract.md) for current readiness boundary.
+1. [Phase 007 Design Continuation & Implementation Freeze](../authority/phase-007-design-continuation-implementation-freeze.md) — current design/implementation posture;
+2. [Phase 007-D Identity, Revision, Serialization, Resource/Handle & Programmatic-View Foundation](phase-007-d-identity-revision-serialization-resource-handle-programmatic-view-foundation.md) — latest architecture refinement;
+3. [Phase 006 Architecture Reconciliation Contract](phase-006-architecture-reconciliation-contract.md) — current cross-cutting overlay where not refined by later authority;
+4. [Phase 004 Consolidated Architecture Contract](phase-004-consolidated-architecture-contract.md) — historical baseline where still applicable;
+5. only directly relevant detailed architecture authorities;
+6. [Architecture Decision Records](../decisions/index.md) for rationale/history.
 
 Do not load the full architecture corpus by default.
 
+## Current design posture
+
+Architecture design is **active**.
+
+Phase 006 historically concluded that design was complete enough to consider implementation. Phase 007 later exercised a provisional repository/package bootstrap, but current authority has reopened the design handoff so remaining architecture can be resolved without tests/source structure becoming accidental upstream constraints.
+
+Existing Phase 007-A through 007-C implementation artifacts remain provisional and may be revised later.
+
+No new production implementation or executable architecture restriction is authorized while this design continuation is active.
+
+## 007-D result
+
+007-D is complete as architecture design.
+
+It sharpens the representation foundation around independent axes for:
+
+```text
+authority / namespace scope
+stable logical identity
+exact semantic revision / commitment snapshot
+mutable current-state version / freshness
+representation schema version
+external/provider identity or locator when material
+```
+
+Key rules include:
+
+- identity is distinct from physical location/platform identity;
+- semantic revision is distinct from current state version;
+- representation schema version is distinct from semantic revision;
+- historical references never silently substitute `latest`;
+- typed references preserve resource/authority kind;
+- handles resolve/present authority rather than owning it;
+- handles are not inherently credentials;
+- local handle/view mutation is not canonical mutation;
+- serialization is representation, not write authority;
+- deserialization does not turn a stale/current projection into historical truth;
+- programmatic views remain orthogonal across semantic/current, historical, actionability, operational, Evidence/Provenance, disclosure and topology-summary concerns;
+- control-plane views reference large/distributed payloads rather than absorbing them.
+
+No concrete ID format, class hierarchy, wire format, persistence schema, serializer technology, CAS mechanism or migration tool was selected.
+
 ## Current reconciled architecture baseline
 
-Future implementation must preserve, among other rules:
+Future design/implementation must continue to preserve, among other rules:
 
 - stable logical identity distinct from mutable location/platform/runtime identity;
 - immutable semantic revisions/commitments and exact historical references;
-- typed handles that are identifiers rather than credentials;
+- typed handles that are identity-bearing views rather than credentials/state owners;
 - bounded control-plane state with distributed payload/reference boundaries;
 - one logical Execution across fenced Attempts and at-least-once physical work;
 - non-regressing recovery authority after potentially stale control-state restore;
@@ -52,31 +94,24 @@ Future implementation must preserve, among other rules:
 
 ## Active ADR rationale
 
-The active set is **ADR-0001 through ADR-0010**.
+The active set remains **ADR-0001 through ADR-0010**.
 
-ADR-0009 extends ADR-0005 with non-regressing recovery authority.
+007-D did not create an ADR because it refines and consolidates already accepted identity/resource-handle architecture rather than choosing a new concrete mechanism whose alternatives require a separate rationale record.
 
-ADR-0010 extends ADR-0004/ADR-0008 with self-contained distributed runtime closure.
-
-No ADR was superseded by Phase 006.
-
-## Phase status
-
-**Phase 004 — Representation & Architecture Design: complete historical baseline.**
-
-**Phase 006 — Post-Planning Design Validation & Adversarial Refinement: complete.**
-
-Phase 006-J concluded:
+## Design counts
 
 ```text
-DESIGN COMPLETE ENOUGH FOR A LATER
-EXPLICIT IMPLEMENTATION-AUTHORITY PHASE
+accepted concepts          11
+accepted synchronizations  15
+active ADRs                10
+new concepts in 007-D       0
+new synchronizations        0
 ```
 
-Production implementation remains unauthorized until such a later phase is explicitly entered.
+No `SYNC-16`.
 
-## Remaining implementation-choice boundary
+## Current next boundary
 
-Current architecture intentionally does not select final Python class spelling, persistence technology, exact Spark storage/catalog or package-distribution mechanism, scheduler/fencing implementation, topology/text algorithm, privacy mechanism, policy/secret/network product, Databricks API topology, CI/deployment topology, benchmark values, SLOs, or exact support matrix.
+**007-E — Control Persistence, Transactions, CAS, Outbox, Historical References & Migration Baseline** is the next eligible **design** subgroup.
 
-Those are later implementation/release decisions constrained by current authority, not unresolved architecture by default.
+It is not active until explicitly entered. Production implementation remains frozen independently of design-group progression.
