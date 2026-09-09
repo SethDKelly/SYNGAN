@@ -70,7 +70,7 @@ No new domain concept or synchronization was required. If 006-G/006-I materially
 
 ### BDR-004 — initial-baseline scope and future-extensibility closure
 
-**Status:** open — Phase 006 blocking.
+**Status:** open — Phase 006 blocking; principal unresolved topology decision remains 006-G.
 
 Phase 006 must explicitly determine the initial implementation scope while proving that deferred capabilities are not accidentally made impossible by current concept/API/schema/architecture assumptions.
 
@@ -84,7 +84,7 @@ multi-table shared-key      explicit candidate capability; Relationship reopened
 
 006-G owns the concept/extensibility decision. A future function parameter may select a topology, but the parameter cannot substitute for the underlying descriptive relationship/temporal semantics.
 
-The baseline self-contained text-bearing requirement is no longer a scope question: 006-D accepted it as cross-cutting authority. Advanced pretrained/world-knowledge text Strategies remain optional capability.
+The baseline self-contained text-bearing requirement is already accepted by 006-D. 006-F has now also closed the privacy/release scope ambiguity: disclosure-risk Evaluation is in-scope, formal DP is deferred behind future concept discovery, and release/use governance remains external.
 
 ## Baseline scope decisions
 
@@ -94,19 +94,32 @@ The baseline self-contained text-bearing requirement is no longer a scope questi
 
 Current contracts must not hard-code a permanent single-table invariant. Phase 006-A reopened `Relationship` as a candidate concept because shared-key linkage may have reusable descriptive purpose independent of Data Meaning and Constraint.
 
-006-C confirmed that Generation/Constraint/Evaluation coordination can already represent one logical multi-table result and prevent partial constituent completion from being mistaken for total completion. 006-D confirmed that multi-component Strategy/Learned-State/runtime shapes do not by themselves require architecture redesign. 006-G must still decide whether the descriptive shared-key structure itself requires `Relationship` or another narrower boundary.
+006-C confirmed that Generation/Constraint/Evaluation coordination can already represent one logical multi-table result and prevent partial constituent completion from being mistaken for total completion. 006-D confirmed that multi-component Strategy/Learned-State/runtime shapes do not by themselves require architecture redesign. 006-E added shared-key cardinality/fan-out/whole-result scale obligations. 006-F added the requirement that disclosure-risk Evaluation may need to bind joined/whole-output topology scope. 006-G must still decide whether the descriptive shared-key structure itself requires `Relationship` or another narrower boundary.
 
 ### BSD-002 — mechanism-specific formal privacy
 
-**Status:** deferred from initial baseline; scope-boundary revalidation required in Phase 006.
+**Status:** resolved for initial baseline by 006-F — deferred; future formal mechanism requires concept discovery before implementation.
 
-Privacy/disclosure-risk Evaluation and Evidence remain valid without claiming a formal privacy mechanism. Differential privacy or another mechanism with independent budget/state/actions may require new concept discovery if introduced.
+The canonical [Privacy, Disclosure Risk, Formal Guarantee & External Release Boundary Contract](../authority/privacy-disclosure-formal-guarantee-release-boundary-contract.md) establishes:
+
+- synthetic origin is not a privacy/anonymization guarantee;
+- disclosure/memorization questions remain Criterion/Evaluation/Evidence concerns;
+- favorable empirical Evidence does not become a formal privacy guarantee;
+- differential privacy is not part of the initial implementation baseline;
+- a future composable DP/formal mechanism with independent state/actions must reopen Jackson-style concept discovery before implementation;
+- privacy-budget/accounting state must not be hidden inside generic Strategy metadata, Evidence, deployment quota or implementation configuration.
+
+This item no longer blocks current initial-baseline readiness when that deferral boundary is preserved.
 
 ### BSD-003 — external use/release governance
 
-**Status:** external to current SYNGAN concept authority.
+**Status:** reaffirmed external to current SYNGAN concept authority by 006-F.
 
-Generation completion and favorable Evidence do not imply release/use approval. Phase 006 should confirm this remains an intentional external authority seam.
+Generation completion and favorable Evidence do not imply release/use approval.
+
+SYNGAN may provide Evidence/Provenance to external governance systems and enforce their current authorization decisions through security adapters, but external policy must not create hidden semantic `approved` state on Generation, Output or Evidence.
+
+This item is a deliberate product boundary rather than an unresolved design blocker.
 
 ### BSD-004 — broader Strategy/Evaluation catalog
 
@@ -114,13 +127,15 @@ Generation completion and favorable Evidence do not imply release/use approval. 
 
 006-D has completed the minimum diverse falsification set. The framework should not attempt to design every synthesis/Evaluation family before implementation; broader catalog breadth can remain backlog.
 
+Privacy/disclosure-risk Evaluation is part of the framework capability surface, but concrete attack-suite breadth remains delivery/catalog work rather than a reason to design every privacy method now.
+
 ### BSD-005 — time-series / temporal-table synthesis
 
 **Status:** candidate capability; initial-implementation inclusion TBD in Phase 006.
 
 Time-series must not be reduced to “single-table plus timestamp.” Phase 006 must validate entity/series identity, temporal ordering, horizon/continuation semantics, temporal Constraints, Strategy capability, Evaluation claim strength, checkpoint/recovery consequences and enterprise-scale behavior.
 
-006-C confirmed that interrupted time-series continuation and validation-later temporal rules compose with existing activity/Execution/Evaluation synchronizations. 006-D confirmed that representative sequence-model/runtime/checkpoint shapes fit the current runtime model. 006-G must still test whether reusable sequence membership/order semantics fit the reopened generic `Relationship` candidate or remain adequately owned by existing concepts.
+006-C confirmed that interrupted time-series continuation and validation-later temporal rules compose with existing activity/Execution/Evaluation synchronizations. 006-D confirmed that representative sequence-model/runtime/checkpoint shapes fit the current runtime model. 006-E added sequence-cardinality/horizon/resource obligations. 006-F confirmed that disclosure-risk Evaluation may need trajectory-level rather than row-level subjects. 006-G must still test whether reusable sequence membership/order semantics fit the reopened generic `Relationship` candidate or remain adequately owned by existing concepts.
 
 ## Implementation/release debt
 
@@ -149,6 +164,12 @@ Before public release, verify PyPI/package naming, project-name collisions, trad
 006-D establishes runtime distribution closure as an invariant but intentionally does not select one universal mechanism. Later implementation/deployment work must choose and verify profile-specific delivery such as immutable cluster/container environments, Spark-native pure-Python shipping where sufficient, packed environments/archives/PEX/equivalent, provider-managed libraries, and exact distributed artifact/model/state resolution.
 
 A selected mechanism must satisfy the canonical [Self-Contained Execution & Runtime Distribution Closure Contract](../authority/self-contained-execution-runtime-distribution-closure-contract.md); driver-only package availability is insufficient.
+
+### IRD-007 — concrete privacy/disclosure Evaluation catalog
+
+006-F keeps privacy/disclosure-risk Evaluation in the initial framework capability surface but does not select a universal attack suite or privacy score.
+
+Later implementation may choose a small reference/conformance set of Criteria/method bindings for duplication/memorization/disclosure testing. Method breadth must preserve threat-model/scope/claim-strength distinctions and must not imply formal privacy or release approval.
 
 ## Governance debt
 
