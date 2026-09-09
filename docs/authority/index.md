@@ -15,5 +15,6 @@ These documents define how SYNGAN design knowledge is created, interpreted, chan
 - [Network and external dependency policy](network-external-dependency-policy.md)
 - [Reproducibility contract](reproducibility-contract.md)
 - [Operational Authority Continuity & Regressive Recovery Contract](operational-authority-continuity-regressive-recovery-contract.md)
+- [Self-Contained Execution & Runtime Distribution Closure Contract](self-contained-execution-runtime-distribution-closure-contract.md)
 
 Later documents MUST conform to these authorities unless an explicit superseding decision changes them.
