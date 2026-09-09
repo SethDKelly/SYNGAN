@@ -7,7 +7,7 @@ LOCK = ROOT / "docs" / "implementation" / "phase-007-implementation-authority-lo
 PHASE = ROOT / "docs" / "phases" / "007" / "index.md"
 
 
-def test_phase_007_lock_authorizes_007_b_only() -> None:
+def test_phase_007_lock_authorized_007_b_without_blanket_permission() -> None:
     lock_text = LOCK.read_text(encoding="utf-8")
 
     assert "**007-B: AUTHORIZED.**" in lock_text
@@ -15,15 +15,15 @@ def test_phase_007_lock_authorizes_007_b_only() -> None:
     assert "007-B MUST NOT create `src/syngan/`" in lock_text
 
 
-def test_phase_007_index_points_to_007_b_as_current_authorized_group() -> None:
+def test_phase_007_index_records_007_b_complete_and_007_c_not_authorized() -> None:
     phase_text = PHASE.read_text(encoding="utf-8")
 
     assert "status: active" in phase_text
-    assert "007-A" in phase_text
     assert "007-B" in phase_text
+    assert "complete" in phase_text.lower()
     assert "007-C" in phase_text
-    assert "007-B" in phase_text and "authorized" in phase_text.lower()
+    assert "not authorized" in phase_text.lower()
 
 
-def test_no_production_source_tree_exists_before_007_c() -> None:
+def test_no_production_source_tree_exists_before_007_c_authorization() -> None:
     assert not (ROOT / "src" / "syngan").exists()
