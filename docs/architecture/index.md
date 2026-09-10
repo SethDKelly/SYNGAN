@@ -20,9 +20,10 @@ For current design, read only what the active question needs:
 4. [007-F Distributed Data-State, Structured Topology, Manifest, Candidate/Seal & Promotion Foundation](phase-007-f-distributed-data-state-structured-topology-manifest-candidate-seal-promotion-foundation.md);
 5. [007-G Strategy/Method Binding, Dependency Trust, Authorization, Secrets & Distributed Runtime Closure Foundation](phase-007-g-strategy-method-binding-dependency-trust-authorization-secrets-distributed-runtime-closure-foundation.md);
 6. [007-H Execution/Attempt, Idempotency, Fencing, Non-Regressing Recovery, Checkpoint, Cancellation & Admission Foundation](phase-007-h-execution-attempt-idempotency-fencing-non-regressing-recovery-checkpoint-cancellation-admission-foundation.md);
-7. [Phase 006 Architecture Reconciliation Contract](phase-006-architecture-reconciliation-contract.md) where not refined later;
-8. only directly relevant Phase 004 detailed authorities;
-9. [ADRs](../decisions/index.md) for rationale/history.
+7. [007-I Evaluation/Evidence, Provenance, Historical Query, Reproducibility & Disclosure Foundation](phase-007-i-evaluation-evidence-provenance-historical-query-reproducibility-disclosure-foundation.md);
+8. [Phase 006 Architecture Reconciliation Contract](phase-006-architecture-reconciliation-contract.md) where not refined later;
+9. only directly relevant Phase 004 detailed authorities;
+10. [ADRs](../decisions/index.md) for rationale/history.
 
 ## Current posture
 
@@ -62,26 +63,9 @@ non-final result
 owner semantic validation
 ```
 
-Key rules:
+Key rules include semantic Strategy/method authority distinct from executable realization, exact Attempt-scoped composite closure, no silent in-Attempt substitution, explicit acquisition outside material runtime, current authorization separate from historical commitment, use-time secret resolution, role-specific distributed closure including dynamic workers, and no topology simplification merely because an implementation is narrower.
 
-- Strategy/method semantics remain distinct from executable binding/package/runtime identity;
-- one binding may resolve a composite implementation closure rather than one package/model;
-- every Attempt freezes one exact realization; runtime cannot hot-swap missing components silently;
-- a later Attempt may use another compatible implementation only when unchanged semantic commitment permits it and the new Attempt is independently attributable;
-- dependency requirement, resolution, exact identity, integrity/authenticity, trust, compatibility and current authorization remain separate axes;
-- explicit provisioning may occur before runtime, while hidden runtime acquisition/fallback is prohibited;
-- installed/discovered third-party code is not trusted merely by presence, and code-loading/unsafe deserialization are protected actions where material;
-- network capability is distinct from data egress, and remote-service reproducibility is limited to the identity/version guarantees the provider actually exposes;
-- historical semantic commitment and current authorization remain separate;
-- live runtime capabilities are bounded operational authority and are not serialized bearer authority;
-- secret values stay outside canonical semantic/history/provenance data and are resolved at use time;
-- driver/coordinator readiness never establishes distributed closure;
-- every material runtime role, including dynamic workers, must satisfy its role-specific closure or be ineligible;
-- large Learned State/model/artifact loading cannot universally require driver memory/broadcast;
-- implementation topology limitations cannot redefine or simplify Data Meaning/Generation/Constraint semantics;
-- self-contained source-derived free-form text remains a complete-baseline requirement.
-
-Earlier Phase 005-F/005-I choices such as `typing.Protocol`, Python entry points, named runtime SPIs, `spark`/`torch` extras and concrete security/dependency type names remain implementation candidates rather than architecture requirements.
+Earlier Phase 005-F/005-I SPI, entry-point, package-extra and concrete security/dependency choices remain implementation candidates rather than architecture requirements.
 
 ## 007-H — execution / recovery / admission
 
@@ -105,26 +89,59 @@ reconciliation + owner validation
 at-most-one authoritative semantic result transition
 ```
 
+Key rules include distinct Attempt observed state versus mutation authority, operation-scoped idempotency, Attempt epoch insufficiency after regressive restore, recovery quarantine plus fresh stale-writer exclusion, current-authority adoption/reconstruction of surviving effects, immutable qualified checkpoints, durable cancellation, admission distinct from semantic readiness/authorization/queue/write authority, and at-least-once physical realization with fenced/idempotent/reconcilable canonical effects.
+
+Earlier Phase 005-G concrete execution types, enums, integer epoch encoding and package/repository/API spelling remain implementation candidates.
+
+## 007-I — Evaluation / Evidence / Provenance / history / reproducibility / disclosure
+
+007-I establishes this current evidentiary/history architecture:
+
+```text
+committed Evaluation
+        ↓
+Execution / Attempts
+        ↓
+non-final method result
+        ↓
+Evaluation semantic validation
+        ↓
+idempotent Evidence establishment
+        ↓
+immutable Evidence finding + separate current applicability
+        ↓
+required typed Provenance
+        ↓
+exact historical query composition
+        ↓
+qualified reproducibility assessment
+        ↓
+actor-safe disclosure projection
+```
+
 Key rules:
 
-- stable Execution identity survives valid same-semantics recovery while material re-realization receives distinguishable Attempt history;
-- Attempt observed physical state and current mutation authority are separate;
-- provider-internal worker/task retry may remain within one Attempt when its immutable invocation and authority boundary do not change;
-- idempotency is scoped to the intended operation/effect and never substitutes for fencing or current authorization;
-- Attempt epoch alone is insufficient after potentially regressive control-state recovery;
-- material write authority composes the current recovery frontier, current Execution/Attempt authority, resource-local preconditions where required and current authorization;
-- regressive restore enters recovery quarantine and establishes fresh stale-writer exclusion before ordinary writes resume;
-- surviving effects are reconciled/reconstructed/adopted by current authority rather than reviving their old writer;
-- committed checkpoints remain immutable operational recovery state and require contextual resume qualification;
-- a later compatible implementation binding is not automatically checkpoint-compatible;
-- cancellation is durable intent that blocks ordinary new admission and is not erased by regressive restore;
-- late provider success is historical fact, not renewed promotion authority;
-- admission is current operational eligibility, distinct from semantic readiness, authorization, executable closure, queue placement and write authority;
-- temporary resource shortage remains distinguishable from true incompatibility and stale admission must be requalified before launch;
-- dynamic workers satisfy role-specific 007-G closure before material work;
-- the target is at-least-once physical realization with fenced/idempotent/reconcilable effects, not exactly-once computation.
+- runtime/platform Evaluation success never becomes Evidence directly;
+- Evidence establishment validates the exact Criterion, subject/reference, method/configuration, topology/scope/coverage, uncertainty, executable realization and retry/recovery contribution context;
+- one Evaluation may establish zero or more independently interpretable findings under retry-idempotent logical finding identity;
+- conflicting replay for one logical finding is a consistency defect rather than overwrite;
+- immutable Evidence finding semantics remain distinct from current applicability;
+- negative and indeterminate findings remain valid Evidence when the examination is valid;
+- Generation retains the exact candidate/requirement/Criterion/Evidence completion basis used at promotion, which later Evidence cannot rewrite;
+- privacy/disclosure Evidence is distinct from formal privacy guarantee, current disclosure permission and release/use approval;
+- Provenance remains narrow typed historical relationship authority over exact references rather than a duplicated metadata graph;
+- directly retained, reconstructed, partial and unknown historical knowledge remain distinguishable;
+- object/reference resolution state is distinct from historical knowledge quality;
+- historical query is bounded read composition, and derived projections cannot establish canonical absence or authority;
+- historical comparison reports differences without inventing causal or quality claims;
+- query freshness is represented truthfully rather than implying a universal cross-store snapshot;
+- disclosure may protect existence, relationship shape, reverse traversal, counts/cardinality and reproducibility reasons as well as field values;
+- canonical historical knowledge is distinct from one actor's visible knowledge;
+- reproducibility separates historical supportability from current reproduction feasibility and actor-visible assessability;
+- strongest-defensible reproduction class is constrained by the weakest material identity, nondeterminism, approximation, equivalence or historical-knowledge boundary;
+- reproduction readiness is not reproduction success; actual reproduction is new domain work.
 
-Earlier Phase 005-G concrete execution types, enums, integer epoch encoding, package topology and repository/API spelling remain implementation candidates to reassess at explicit re-entry.
+Earlier Phase 005-H concrete Evidence/history classes, SQL/relational storage assumptions, indexes, query APIs, package layout and cache design remain implementation candidates to reassess at explicit re-entry.
 
 ## Current design counts
 
@@ -132,17 +149,19 @@ Earlier Phase 005-G concrete execution types, enums, integer epoch encoding, pac
 accepted concepts          11
 accepted synchronizations  15
 active ADRs                10
-new concepts in 007-D..H    0
+new concepts in 007-D..I    0
 new synchronizations        0
 new ADRs                    0
 ```
 
 No `SYNC-16`.
 
-007-H composes/refines ADR-0002, ADR-0007 and ADR-0009 without superseding them. Existing ADRs remain sufficient.
+007-I composes/refines ADR-0002, ADR-0006, ADR-0007 and ADR-0009 without superseding them. Existing ADRs remain sufficient.
 
 ## Current next boundary
 
-**007-I — Evaluation/Evidence, Provenance, Historical Query, Reproducibility & Disclosure Foundation** is the next eligible **design** subgroup.
+The previously named 007-J executable vertical-slice proof is not automatically authorized under the design-first freeze.
+
+**007-J — Reference Vertical-Slice Scope Re-evaluation, Architecture Completeness & Implementation-Proof Boundary** is the next eligible **design** subgroup.
 
 Production implementation remains frozen independently of design progression.
