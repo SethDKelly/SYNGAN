@@ -1,27 +1,26 @@
 ---
 type: Phase Index
 title: Phase 007 — Design Continuation, Architecture Completion & Controlled Pre-Implementation Refinement
-status: active
+status: complete
 ---
 
 # Phase 007 — Design Continuation, Architecture Completion & Controlled Pre-Implementation Refinement
 
-## Current purpose
+## Final status
 
-Continue architecture/design work without allowing the provisional Phase 007 implementation scaffold to constrain unresolved representation choices.
+**Phase 007 is complete.**
 
-Current posture is governed by:
+007-D through 007-J refined and completed the architecture design that had been intentionally reopened after the provisional 007-B/007-C scaffold. 007-K consolidated that architecture, audited it against the accepted concept/synchronization/experience baseline, reviewed the actual retained scaffold, and approved controlled implementation re-entry for one bounded reconciliation tranche only.
 
-- [Phase 007 Design Continuation & Implementation Freeze](../../authority/phase-007-design-continuation-implementation-freeze.md);
-- [007-D Identity, Revision, Serialization, Resource/Handle & Programmatic-View Foundation](../../architecture/phase-007-d-identity-revision-serialization-resource-handle-programmatic-view-foundation.md);
-- [007-E Control Persistence, Transactions, CAS, Outbox, Historical References & Migration Baseline](../../architecture/phase-007-e-control-persistence-transactions-cas-outbox-historical-reference-migration-baseline.md);
-- [007-F Distributed Data-State, Structured Topology, Manifest, Candidate/Seal & Promotion Foundation](../../architecture/phase-007-f-distributed-data-state-structured-topology-manifest-candidate-seal-promotion-foundation.md);
-- [007-G Strategy/Method Binding, Dependency Trust, Authorization, Secrets & Distributed Runtime Closure Foundation](../../architecture/phase-007-g-strategy-method-binding-dependency-trust-authorization-secrets-distributed-runtime-closure-foundation.md);
-- [007-H Execution/Attempt, Idempotency, Fencing, Non-Regressing Recovery, Checkpoint, Cancellation & Admission Foundation](../../architecture/phase-007-h-execution-attempt-idempotency-fencing-non-regressing-recovery-checkpoint-cancellation-admission-foundation.md);
-- [007-I Evaluation/Evidence, Provenance, Historical Query, Reproducibility & Disclosure Foundation](../../architecture/phase-007-i-evaluation-evidence-provenance-historical-query-reproducibility-disclosure-foundation.md);
-- [007-J Reference Vertical-Slice Scope Re-evaluation, Architecture Completeness & Implementation-Proof Boundary](../../architecture/phase-007-j-reference-vertical-slice-scope-re-evaluation-architecture-completeness-implementation-proof-boundary.md).
+Canonical current authority:
 
-## Design progression
+- [Phase 007 Consolidated Architecture Contract](../../architecture/phase-007-consolidated-architecture-contract.md);
+- [Phase 007 Consolidated Architecture & Implementation-Reentry Readiness Contract](../../authority/phase-007-consolidated-architecture-implementation-reentry-readiness-contract.md);
+- [007-K Phase Record](007-K-phase-007-consolidation-architecture-fitness-audit-evidence-review-implementation-reentry-readiness-decision.md).
+
+The previous [Phase 007 Design Continuation & Implementation Freeze](../../authority/phase-007-design-continuation-implementation-freeze.md) is now historical/superseded.
+
+## Final progression
 
 ```text
 007-A  historical implementation-authority/bootstrap transition
@@ -34,21 +33,10 @@ Current posture is governed by:
 007-H  DESIGN COMPLETE
 007-I  DESIGN COMPLETE
 007-J  DESIGN COMPLETE
-007-K  DESIGN NOT STARTED — NEXT ELIGIBLE
+007-K  COMPLETE — CONSOLIDATION / RE-ENTRY DECISION
 ```
 
-## Frozen implementation progression
-
-```text
-007-A  complete historical transition
-007-B  complete historical scaffold
-007-C  complete historical/provisional scaffold
-007-D and later  NOT AUTHORIZED FOR IMPLEMENTATION
-```
-
-No design-group completion automatically reactivates implementation.
-
-## Locked semantic baseline
+## Final semantic baseline
 
 ```text
 accepted concepts          11
@@ -59,68 +47,77 @@ provisional concepts        0
 
 No `SYNC-16`.
 
-## 007-D through 007-I result
+## 007-D through 007-I architecture result
 
-007-D through 007-I establish the current technology-neutral architecture for identity/reference/view semantics; control persistence/history/recovery; distributed data/topology/manifest/candidate/seal/promotion; Strategy/method executable binding, dependency trust, authorization, secrets and runtime closure; Execution/Attempt/fencing/idempotency/non-regressing recovery/checkpoint/cancellation/admission; and Evaluation/Evidence/Provenance/history/reproducibility/disclosure.
+Phase 007 establishes a technology-neutral architecture for:
 
-Earlier Phase 005 concrete types, stores, schemas, APIs, package layouts, schedulers, security products, runtime mechanisms and provider choices remain implementation-planning evidence rather than current architecture requirements.
+- exact identity/revision/reference/view semantics;
+- owner-controlled persistence, transactions, stale-write protection, durable coordination and history;
+- distributed logical data state, composable topology, manifests, candidate/seal/promotion;
+- Strategy/method semantics versus executable/dependency/runtime realization;
+- dependency trust, authorization, secrets, network/egress and distributed runtime closure;
+- stable Execution, distinguishable Attempts, idempotency, fencing, non-regressing recovery, checkpoints, cancellation and admission;
+- Evaluation/Evidence, typed Provenance, historical query, qualified reproducibility and actor-safe disclosure.
 
-## 007-J result
+The detailed authorities remain under `docs/architecture/`; their composition is summarized by the Phase 007 Consolidated Architecture Contract.
 
-007-J re-evaluates the old single-table/Spark-local vertical-slice framing and concludes that architecture through 007-I is complete enough to define controlled implementation proof, but one vertical slice cannot prove the complete architecture/product baseline.
+## 007-J proof result
 
-It distinguishes:
+007-J replaces the old assumption that one single-table/Spark-local vertical slice can prove the architecture as a whole.
 
-- architecture-conformance proof;
-- capability proof;
-- runtime/platform-profile proof;
-- resilience/adversarial proof;
-- scale/release qualification.
+Implementation evidence is now explicitly partitioned into:
 
-A learning-based single-table/Spark-local path remains the recommended first bounded user-visible implementation proof after later re-entry because it exercises a broad architecture chain with limited topology complexity. It is not semantic authority and cannot certify time-series, multi-table, distributed-runtime, recovery, scale, managed-platform, privacy or release claims by itself.
+```text
+architecture-conformance proof
+capability proof
+runtime/platform-profile proof
+resilience/adversarial proof
+scale/release qualification
+```
 
-Separate proof remains required for direct-generation neutrality, self-contained free-form text, time-series, multi-table shared-key, composite-topology representability, Evaluation-method diversity, adversarial recovery/disclosure, distributed runtime closure, platform profiles and scale qualification.
+A self-contained learning-based single-table local/Spark-local path remains the recommended first eventual user-visible reference proof, but it cannot certify direct-generation neutrality, time-series, multi-table, distributed-runtime closure, regressive recovery, managed-platform support, enterprise scale, privacy/release posture or release readiness.
 
-007-J also confirms that the retained 007-B/007-C scaffold is useful feasibility evidence but its exact package set, Import Linter rules, tool versions, root import restrictions, Spark socket exceptions and obsolete phase-state fitness assertions must be explicitly reassessed at implementation re-entry.
+## 007-K final audit
 
-007-J introduced no new concept, synchronization or ADR.
+007-K found:
+
+- no missing concept owner;
+- no missing synchronization;
+- no experience-to-architecture contradiction;
+- no architecture seam requiring another design subgroup;
+- no ADR that must be added or superseded before controlled implementation;
+- the 007-B/007-C scaffold remains useful but requires executable reconciliation before feature implementation.
+
+A concrete stale-test issue was identified: `tests/fitness/test_phase_007_authority_boundary.py` still asserts the historical 007-C-era state in which 007-D was the next eligible subgroup. That is classified as bounded scaffold debt, not an architecture blocker.
+
+The exact seven-package topology and exact Import Linter contracts also remain provisional until the re-entry tranche explicitly revalidates them.
 
 ## Groups
 
-| Group | Scope | Design status | Implementation status |
-|---|---|---|---|
-| 007-A | Implementation Authority Lock, Canonical Baseline, Change Control & Slice Authorization | historical | complete historical action |
-| 007-B | Repository/Toolchain Bootstrap, Reproducible Environment & Verification Harness | historical | complete historical scaffold |
-| 007-C | Source/Package Topology, Dependency Direction & Architecture-Fitness Enforcement | provisional evidence | complete historical scaffold |
-| 007-D | [Identity, Revision, Serialization, Typed Public Resource/Handle & Programmatic-View Foundation](007-D-identity-revision-serialization-typed-public-resource-handle-programmatic-view-foundation.md) | complete | not authorized |
-| 007-E | [Control Persistence, Transactions, CAS, Outbox, Historical References & Migration Baseline](007-E-control-persistence-transactions-cas-outbox-historical-references-migration-baseline.md) | complete | not authorized |
-| 007-F | [Distributed Data-State, Structured Topology, Manifest, Candidate/Seal & Promotion Foundation](007-F-distributed-data-state-structured-topology-manifest-candidate-seal-promotion-foundation.md) | complete | not authorized |
-| 007-G | [Strategy/Method Binding, Dependency Trust, Authorization, Secrets & Distributed Runtime Closure Foundation](007-G-strategy-method-binding-dependency-trust-authorization-secrets-distributed-runtime-closure-foundation.md) | complete | not authorized |
-| 007-H | [Execution/Attempt, Idempotency, Fencing, Non-Regressing Recovery, Checkpoint, Cancellation & Admission Foundation](007-H-execution-attempt-idempotency-fencing-non-regressing-recovery-checkpoint-cancellation-admission-foundation.md) | complete | not authorized |
-| 007-I | [Evaluation/Evidence, Provenance, Historical Query, Reproducibility & Disclosure Foundation](007-I-evaluation-evidence-provenance-historical-query-reproducibility-disclosure-foundation.md) | complete | not authorized |
-| **007-J** | [Reference Vertical-Slice Scope Re-evaluation, Architecture Completeness & Implementation-Proof Boundary](007-J-reference-vertical-slice-scope-re-evaluation-architecture-completeness-implementation-proof-boundary.md) | **complete** | not authorized |
-| **007-K** | Phase 007 Consolidation, Architecture-Fitness Audit, Evidence Review & Implementation-Reentry Readiness Decision | **next eligible design/governance subgroup** | not authorized |
+| Group | Scope | Final status |
+|---|---|---|
+| 007-A | Implementation Authority Lock, Canonical Baseline, Change Control & Slice Authorization | historical transition |
+| 007-B | Repository/Toolchain Bootstrap, Reproducible Environment & Verification Harness | historical scaffold |
+| 007-C | Source/Package Topology, Dependency Direction & Architecture-Fitness Enforcement | historical/provisional scaffold |
+| 007-D | [Identity, Revision, Serialization, Typed Public Resource/Handle & Programmatic-View Foundation](007-D-identity-revision-serialization-typed-public-resource-handle-programmatic-view-foundation.md) | complete |
+| 007-E | [Control Persistence, Transactions, CAS, Outbox, Historical References & Migration Baseline](007-E-control-persistence-transactions-cas-outbox-historical-references-migration-baseline.md) | complete |
+| 007-F | [Distributed Data-State, Structured Topology, Manifest, Candidate/Seal & Promotion Foundation](007-F-distributed-data-state-structured-topology-manifest-candidate-seal-promotion-foundation.md) | complete |
+| 007-G | [Strategy/Method Binding, Dependency Trust, Authorization, Secrets & Distributed Runtime Closure Foundation](007-G-strategy-method-binding-dependency-trust-authorization-secrets-distributed-runtime-closure-foundation.md) | complete |
+| 007-H | [Execution/Attempt, Idempotency, Fencing, Non-Regressing Recovery, Checkpoint, Cancellation & Admission Foundation](007-H-execution-attempt-idempotency-fencing-non-regressing-recovery-checkpoint-cancellation-admission-foundation.md) | complete |
+| 007-I | [Evaluation/Evidence, Provenance, Historical Query, Reproducibility & Disclosure Foundation](007-I-evaluation-evidence-provenance-historical-query-reproducibility-disclosure-foundation.md) | complete |
+| 007-J | [Reference Vertical-Slice Scope Re-evaluation, Architecture Completeness & Implementation-Proof Boundary](007-J-reference-vertical-slice-scope-re-evaluation-architecture-completeness-implementation-proof-boundary.md) | complete |
+| **007-K** | [Phase 007 Consolidation, Architecture-Fitness Audit, Evidence Review & Implementation-Reentry Readiness Decision](007-K-phase-007-consolidation-architecture-fitness-audit-evidence-review-implementation-reentry-readiness-decision.md) | **complete** |
 
-## Provisional scaffold / verification rule
+## Implementation re-entry decision
 
-The retained 007-B/007-C package/tests/CI are feasibility evidence, not architecture premises. Existing old delivery-state fitness assertions may remain stale during the design freeze and must be reconciled at implementation re-entry rather than allowed to veto current architecture.
+Controlled re-entry is approved, but the only next eligible implementation tranche is scaffold/governance reconciliation:
 
-## 007-J proof boundary
+**008-A — Implementation Re-entry Authority, Scaffold Reconciliation & Verification Re-baseline**.
 
-007-J establishes that the complete proof portfolio is layered. No one demo is permitted to imply claims it did not actually exercise.
+008-A is not executed automatically by completion of Phase 007. It requires an explicit proceed decision.
 
-The complete structured-data baseline remains:
+008-A may reconcile historical authority docs, package topology assumptions, Import Linter contracts, stale fitness tests, tool/lock/verification metadata and repository evidence gates.
 
-```text
-single-table generation
-time-series generation
-multi-table shared-key generation
-```
+It must not implement owner-specific concept behavior, persistence schemas, Spark/runtime behavior, Strategy algorithms, Execution/recovery, Evidence/history, security/provider adapters or benchmarks.
 
-with a supported self-contained Strategy path for each required family before complete-baseline support is claimed, plus source-derived/local free-form-text support without mandatory public model-hub/runtime inference dependency.
-
-## Current next boundary
-
-**007-K — Phase 007 Consolidation, Architecture-Fitness Audit, Evidence Review & Implementation-Reentry Readiness Decision** is the next eligible **design/governance** subgroup.
-
-007-K must explicitly decide whether implementation re-entry is justified and, if so, which bounded tranche is authorized. Production implementation remains frozen until that decision.
+R1 and later feature/kernel implementation remain unauthorized until 008-A completes and a later explicit proceed decision grants the next tranche.
