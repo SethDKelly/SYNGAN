@@ -72,27 +72,30 @@ Revalidated problem/purpose/actors/outcomes against all eleven accepted concepts
 
 ### 008-C — complete
 
-Established [Concept State, Identity, History & Invariant Normalization](../concepts/state-identity-history-invariant-normalization.md).
+Established [Concept State, Identity, History & Invariant Normalization](../concepts/state-identity-history-invariant-normalization.md), closing the current individual-concept state/identity/history/invariant layer.
 
-All eleven concepts now have a current normalized state shape. The design distinguishes reusable revisioned authorities, committed domain activities, durable established results, operational realization and typed historical relationships rather than forcing one universal lifecycle.
+### 008-D — complete
 
-008-C also establishes:
+Established [Concept Action, Query, Preconditions/Postconditions & Lifecycle Normalization](../concepts/action-query-lifecycle-normalization.md).
 
-- lineage identity != semantic revision != activity occurrence != result identity != current-use status;
-- material historical meaning is non-destructive;
-- current eligibility/applicability is separate from historical fact;
-- unknown/indeterminate state remains explicit where false certainty would matter;
-- contextual judgments remain contextual rather than becoming global mutable truth;
-- physical durability does not establish semantic result/completion;
-- regressive persistence recovery does not itself resurrect conceptual authority;
-- current topology/text scope fits the existing state model without catalog expansion in 008-C.
+All eleven concepts now have a current conceptual command/query surface with material precondition/effect/postcondition semantics. The normalization separates read-only queries from state-changing actions, assigns contextual compatibility/applicability/sufficiency to the consuming activity, preserves result-establishment ownership, and makes lifecycle transition authority explicit.
 
-008-C closes conceptual state-model normalization only. Action/query/transition closure remains 008-D work.
+All fifteen accepted synchronizations can be interpreted through these owned behaviors without a hidden coordinator action or a new `SYNC-16`.
+
+008-D closes the individual-concept action/query/transition layer only. Operational principles, independence/familiarity and candidate rediscovery remain open.
+
+## Remaining Phase 008 work
+
+```text
+008-E  Operational Principle Completeness, Purpose Fulfillment & Counterexample Review
+008-F  Independence, Genericity, Familiarity & Reuse Revalidation
+008-G  Deferred/Rejected Candidate Rediscovery, Missing-Concept & Boundary Audit
+008-H  Phase 008 Consolidation, Individual-Concept Completeness Decision & Phase 009 Handoff
+```
 
 ## Remaining design roadmap
 
 ```text
-008  Individual Concept Design Normalization & Completeness
 009  Concept Dependence, Application Family, Composition & Synchronization Closure
 010  Concept Mapping, Interaction, Linguistic & Experience Alignment
 011  Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Design Validation
@@ -129,6 +132,6 @@ Existing executable scaffold may remain untouched as historical/provisional evid
 
 ## Current next boundary
 
-The next eligible work is **008-D — Concept Action, Query, Preconditions/Postconditions & Lifecycle Closure**.
+The next eligible work is **008-E — Operational Principle Completeness, Purpose Fulfillment & Counterexample Review**.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
