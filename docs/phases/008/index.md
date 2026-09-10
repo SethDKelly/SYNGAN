@@ -23,31 +23,27 @@ Current governing authority:
 - [Concept Design Methodology](../../authority/design-methodology.md)
 - [Jackson Design Completion & Implementation Hold](../../authority/jackson-design-completion-implementation-hold.md)
 - [Jackson Methodology Completion Matrix](../../authority/jackson-methodology-completion-matrix.md)
+- [Current Problem Knowledge](../../problem/index.md)
 
-## Why Phase 008 exists
-
-Phases 001-003 completed substantial concept-design work, and Phases 006-007 later stress-tested/refined many semantic boundaries. However, the repository had never performed one current-state normalization pass over all accepted concepts against the full Jackson design structure after those later refinements.
-
-Phase 008 therefore does **not** rediscover the product from scratch. It replays the latest problem/design evidence against every accepted concept and closes any individual-concept gaps before cross-concept dependence/mapping work continues.
-
-## Entry/current semantic baseline
+## Current semantic baseline
 
 ```text
 accepted concepts          11
 accepted synchronizations  15
 active ADRs                10
 provisional concepts        0
+current desired outcomes   16
 ```
 
-Counts are evidence, not completion criteria. Phase 008 may reopen a concept decision if the methodology review demonstrates a real purpose/boundary defect.
+Counts are evidence, not completion criteria. Phase 008 may reopen a concept decision if later methodology work demonstrates a real purpose/boundary defect.
 
 ## Subgroups
 
 | Group | Scope | Status |
 |---|---|---|
 | **008-A** | [**Methodology Authority Reset, Completion Matrix & Design-Only Guardrails**](008-A-methodology-authority-reset-completion-matrix-design-only-guardrails.md) | **complete** |
-| **008-B** | **Problem, Purpose, Outcome & Concept-Justification Traceability Revalidation** | **next eligible** |
-| **008-C** | Concept State Model, Identity, History & Invariant Normalization | planned |
+| **008-B** | [**Problem, Purpose, Outcome & Concept-Justification Traceability Revalidation**](008-B-problem-purpose-outcome-concept-justification-traceability-revalidation.md) | **complete** |
+| **008-C** | **Concept State Model, Identity, History & Invariant Normalization** | **next eligible** |
 | **008-D** | Concept Action, Query, Preconditions/Postconditions & Lifecycle Closure | planned |
 | **008-E** | Operational Principle Completeness, Purpose Fulfillment & Counterexample Review | planned |
 | **008-F** | Independence, Genericity, Familiarity & Reuse Revalidation | planned |
@@ -56,33 +52,37 @@ Counts are evidence, not completion criteria. Phase 008 may reopen a concept dec
 
 ## 008-A result
 
-008-A established the canonical [Jackson Methodology Completion Matrix](../../authority/jackson-methodology-completion-matrix.md) and classified prior evidence conservatively rather than accepting historical `complete` labels as current methodology closure.
+008-A established the fuller Jackson methodology rubric, canonical completion matrix, artifact-authority classes, J0-J7 stop/reopen discipline, and design-only implementation hold.
 
-Its current-state findings include:
+Historical phase completion labels remain evidence rather than automatic current closure.
 
-- problem/purpose and individual concept design have strong historical evidence but require current replay in Phase 008;
-- familiarity/reuse is only partial;
-- Jackson inclusion dependence/application-family analysis is open and belongs to Phase 009;
-- composition/synchronization has strong prior evidence but still requires current closure after individual concepts are normalized;
-- explicit concept mapping is partial and belongs to Phase 010;
-- final specificity/familiarity/integrity/synergy/misfit evaluation belongs to Phase 011;
-- one current-state Jackson completion decision remains open for Phase 012;
-- Phase 004/006/007 architecture is downstream evidence pending Phase 013 reconciliation;
-- whole-design implementation readiness remains open until Phase 014.
+## 008-B result
 
-008-A also established J0-J7 stop/reopen classes and reaffirmed that existing source/tests/tooling/CI cannot become executable design authority during the remaining design program.
+008-B replayed the current product problem, actors, scale envelope and desired outcomes against all eleven accepted concepts.
+
+It found and corrected two stale upstream scope assumptions:
+
+- time-series and multi-table shared-key synthesis are now explicit current structured-data capability targets rather than unresolved future scope;
+- free-form/source-language text **inside structured data** is in scope through at least one self-contained source-derived/local baseline path, while general free-standing/unstructured text generation remains out of scope.
+
+The current outcome set is now O1-O16, adding:
+
+- **O15 — Structured-topology breadth without semantic flattening**;
+- **O16 — Self-contained text-bearing structured-data capability**.
+
+Canonical [Concept-Justification Traceability](../../problem/concept-justification-traceability.md) now records for every accepted concept its distinct current purpose, principal actors, outcome basis, and the capability/safeguard lost if it were absent.
+
+All eleven concepts remain positively justified at the purpose level. No catalog change was made by 008-B.
+
+008-B closes current methodology rows A1-A3. It does not pre-judge state/action completeness, operational principles, independence/familiarity, rejected-candidate rediscovery, Jackson inclusion dependence, mapping, or final integrity.
 
 ## Remaining subgroup purposes
 
-### 008-B — Problem, Purpose, Outcome & Concept-Justification Traceability Revalidation
-
-Replay current problem knowledge, actors, needs, hazards, scale and outcomes against the eleven concepts.
-
-For each concept, confirm its distinct purpose, why the application needs it, which problem/outcomes justify inclusion, what would be lost without it, whether later scope growth changes its rationale, and whether purpose overlap or overload has emerged.
-
 ### 008-C — Concept State Model, Identity, History & Invariant Normalization
 
-Normalize each accepted concept's conceptual state, identity/history semantics, lifecycle distinctions, invariants and unresolved/invalidated states independently of representation.
+Normalize each accepted concept's conceptual state, identity/history semantics, lifecycle distinctions, invariants, unresolved/invalidated state, and scale-sensitive semantic state independently of representation.
+
+Later architecture may supply counterexamples, but it may not define the concept model by convenience.
 
 ### 008-D — Concept Action, Query, Preconditions/Postconditions & Lifecycle Closure
 
@@ -98,7 +98,7 @@ Re-test each concept as an independently understandable functional unit and expl
 
 ### 008-G — Deferred/Rejected Candidate Rediscovery, Missing-Concept & Boundary Audit
 
-Revisit the most important rejected, subordinated or deferred candidates in light of all later evidence and prove that no new independent purpose/lifecycle has emerged.
+Revisit important rejected, subordinated or deferred candidates in light of all later evidence and prove that no new independent purpose/lifecycle has emerged.
 
 ### 008-H — Phase 008 Consolidation, Individual-Concept Completeness Decision & Phase 009 Handoff
 
@@ -129,16 +129,7 @@ Phase 008 may close only if:
 
 ## Explicit non-goals
 
-Phase 008 does not:
-
-- implement or modify production behavior;
-- reconcile package topology, tests or CI for implementation readiness;
-- choose databases, APIs, schemas, runtimes, Spark mappings or provider technologies;
-- finalize concept inclusion-dependence/application-family structure;
-- finalize cross-concept synchronization integrity;
-- finalize concept-to-interface mappings;
-- declare the Jackson methodology complete;
-- authorize representation/architecture implementation.
+Phase 008 does not implement or modify production behavior; reconcile package topology/tests/CI for implementation readiness; choose databases/APIs/schemas/runtimes/Spark mappings/provider technologies; finalize Jackson inclusion dependence or concept mapping; declare the Jackson methodology complete; or authorize implementation.
 
 ## Subsequent high-level design roadmap
 
@@ -153,10 +144,10 @@ Phase 008 does not:
 015  Implementation Authority & Controlled Delivery — FUTURE ONLY
 ```
 
-Phases 009-014 remain high-level planned boundaries only and will each be decomposed immediately before starting.
+Phases 009-014 remain high-level boundaries and will each be subdivided immediately before starting.
 
 ## Current next boundary
 
-**008-B — Problem, Purpose, Outcome & Concept-Justification Traceability Revalidation** is the next eligible subgroup.
+**008-C — Concept State Model, Identity, History & Invariant Normalization** is the next eligible subgroup.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
