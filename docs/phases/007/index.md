@@ -16,7 +16,8 @@ Current posture is governed by:
 - [007-D Identity, Revision, Serialization, Resource/Handle & Programmatic-View Foundation](../../architecture/phase-007-d-identity-revision-serialization-resource-handle-programmatic-view-foundation.md);
 - [007-E Control Persistence, Transactions, CAS, Outbox, Historical References & Migration Baseline](../../architecture/phase-007-e-control-persistence-transactions-cas-outbox-historical-reference-migration-baseline.md);
 - [007-F Distributed Data-State, Structured Topology, Manifest, Candidate/Seal & Promotion Foundation](../../architecture/phase-007-f-distributed-data-state-structured-topology-manifest-candidate-seal-promotion-foundation.md);
-- [007-G Strategy/Method Binding, Dependency Trust, Authorization, Secrets & Distributed Runtime Closure Foundation](../../architecture/phase-007-g-strategy-method-binding-dependency-trust-authorization-secrets-distributed-runtime-closure-foundation.md).
+- [007-G Strategy/Method Binding, Dependency Trust, Authorization, Secrets & Distributed Runtime Closure Foundation](../../architecture/phase-007-g-strategy-method-binding-dependency-trust-authorization-secrets-distributed-runtime-closure-foundation.md);
+- [007-H Execution/Attempt, Idempotency, Fencing, Non-Regressing Recovery, Checkpoint, Cancellation & Admission Foundation](../../architecture/phase-007-h-execution-attempt-idempotency-fencing-non-regressing-recovery-checkpoint-cancellation-admission-foundation.md).
 
 ## Design progression
 
@@ -28,8 +29,8 @@ Current posture is governed by:
 007-E  DESIGN COMPLETE
 007-F  DESIGN COMPLETE
 007-G  DESIGN COMPLETE
-007-H  DESIGN NOT STARTED — NEXT ELIGIBLE
-007-I  DESIGN NOT STARTED
+007-H  DESIGN COMPLETE
+007-I  DESIGN NOT STARTED — NEXT ELIGIBLE
 007-J  DESIGN NOT STARTED / scope to be re-evaluated before entry
 007-K  DESIGN NOT STARTED
 ```
@@ -85,6 +86,32 @@ Earlier Phase 005-F/005-I concrete SPI, entry-point, package-extra and security-
 
 007-G introduced no new concept, synchronization or ADR.
 
+## 007-H result
+
+007-H refines operational realization, recovery and admission without selecting scheduler, fencing, checkpoint or admission technology.
+
+It establishes:
+
+- one stable logical Execution with distinguishable Attempts under unchanged committed semantics;
+- Attempt physical/observed state separately from current framework mutation authority;
+- operation-scoped idempotency rather than one global key;
+- current material write authority composed from a non-regressing recovery frontier, current Execution/Attempt authority, resource-local preconditions where required, and current authorization;
+- Attempt epoch alone as insufficient stale-writer protection after potentially regressive restore;
+- recovery quarantine plus fresh non-regressing authority before ordinary writes after regressive recovery;
+- reconciliation/reconstruction/adoption of surviving effects by current authority without reviving old writers;
+- checkpoint staging distinct from immutable committed recovery state and from semantic results;
+- contextual resume qualification, including checkpoint compatibility with any later compatible implementation binding;
+- durable cancellation intent that blocks ordinary new admission and does not disappear under regressive restore;
+- late provider success as historical fact rather than renewed promotion authority;
+- admission as current operational eligibility distinct from semantic readiness, authorization, runtime closure, queue placement and write authority;
+- temporary capacity shortage distinct from true incompatibility;
+- requalification of stale admission before launch and role-specific admission/closure for dynamic workers;
+- at-least-once physical realization with fenced/idempotent/reconcilable effects and at-most-one authoritative semantic result transition.
+
+Earlier Phase 005-G concrete execution types, enums, integer epoch encoding and package/repository layout remain provisional implementation-planning evidence.
+
+007-H introduced no new concept, synchronization or ADR.
+
 ## Groups
 
 | Group | Scope | Design status | Implementation status |
@@ -95,9 +122,9 @@ Earlier Phase 005-F/005-I concrete SPI, entry-point, package-extra and security-
 | 007-D | [Identity, Revision, Serialization, Typed Public Resource/Handle & Programmatic-View Foundation](007-D-identity-revision-serialization-typed-public-resource-handle-programmatic-view-foundation.md) | complete | not authorized |
 | 007-E | [Control Persistence, Transactions, CAS, Outbox, Historical References & Migration Baseline](007-E-control-persistence-transactions-cas-outbox-historical-references-migration-baseline.md) | complete | not authorized |
 | 007-F | [Distributed Data-State, Structured Topology, Manifest, Candidate/Seal & Promotion Foundation](007-F-distributed-data-state-structured-topology-manifest-candidate-seal-promotion-foundation.md) | complete | not authorized |
-| **007-G** | [Strategy/Method Binding, Dependency Trust, Authorization, Secrets & Distributed Runtime Closure Foundation](007-G-strategy-method-binding-dependency-trust-authorization-secrets-distributed-runtime-closure-foundation.md) | **complete** | not authorized |
-| **007-H** | Execution/Attempt, Idempotency, Fencing, Non-Regressing Recovery, Checkpoint, Cancellation & Admission Foundation | **next eligible** | not authorized |
-| 007-I | Evaluation/Evidence, Provenance, Historical Query, Reproducibility & Disclosure Foundation | not started | not authorized |
+| 007-G | [Strategy/Method Binding, Dependency Trust, Authorization, Secrets & Distributed Runtime Closure Foundation](007-G-strategy-method-binding-dependency-trust-authorization-secrets-distributed-runtime-closure-foundation.md) | complete | not authorized |
+| **007-H** | [Execution/Attempt, Idempotency, Fencing, Non-Regressing Recovery, Checkpoint, Cancellation & Admission Foundation](007-H-execution-attempt-idempotency-fencing-non-regressing-recovery-checkpoint-cancellation-admission-foundation.md) | **complete** | not authorized |
+| **007-I** | Evaluation/Evidence, Provenance, Historical Query, Reproducibility & Disclosure Foundation | **next eligible** | not authorized |
 | 007-J | Self-Contained Single-Table Reference Vertical Slice & Spark-Local End-to-End Proof | not started / scope to be re-evaluated | not authorized |
 | 007-K | Phase 007 Consolidation, Architecture-Fitness Audit, Evidence Review & Implementation-Reentry Readiness Decision | not started | not authorized |
 
@@ -107,6 +134,6 @@ The retained 007-B/007-C package/tests/CI are feasibility evidence, not architec
 
 ## Current next boundary
 
-**007-H — Execution/Attempt, Idempotency, Fencing, Non-Regressing Recovery, Checkpoint, Cancellation & Admission Foundation** is the next eligible **design** subgroup.
+**007-I — Evaluation/Evidence, Provenance, Historical Query, Reproducibility & Disclosure Foundation** is the next eligible **design** subgroup.
 
 It requires an explicit proceed decision. Production implementation remains frozen independently of design progression.
