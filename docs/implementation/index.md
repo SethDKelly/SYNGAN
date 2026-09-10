@@ -29,10 +29,11 @@ No implementation tranche is eligible.
 008-A  COMPLETE — methodology reset / matrix / guardrails
 008-B  COMPLETE — problem / purpose / concept justification
 008-C  COMPLETE — concept state / identity / history / invariants
-008-D  NEXT ELIGIBLE — concept actions / queries / transition contracts
+008-D  COMPLETE — concept actions / queries / transition contracts
+008-E  NEXT ELIGIBLE — operational principles / purpose fulfillment / counterexamples
 ```
 
-008-C established conceptual state normalization only. It did not reconcile or change source, tests, package topology, persistence, runtime, APIs, dependencies or CI.
+008-D established conceptual command/query and lifecycle-transition authority only. It does not reconcile or change source, tests, package topology, persistence, runtime, APIs, dependencies or CI.
 
 ## Superseded 007-K re-entry conclusion
 
@@ -43,7 +44,7 @@ The Phase 007 architecture and scaffold observations remain useful evidence but 
 ## Remaining design before implementation readiness can be decided
 
 ```text
-008-D..H  finish individual concept design
+008-E..H  finish individual concept design
 009       inclusion dependence / application family / composition / synchronization
 010       concept mapping / interaction / language / experience
 011       specificity / familiarity / integrity / synergy / misfit
@@ -75,4 +76,4 @@ Until Phase 014 passes, do not add production concept/domain behavior, implement
 
 Design-only work:
 
-**008-D — Concept Action, Query, Preconditions/Postconditions & Lifecycle Closure**.
+**008-E — Operational Principle Completeness, Purpose Fulfillment & Counterexample Review**.
