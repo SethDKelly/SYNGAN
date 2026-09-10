@@ -8,97 +8,83 @@ status: active
 
 These documents define how SYNGAN design knowledge is created, interpreted, changed, and eventually implemented.
 
-## Methodology and governance
+## Current methodology and governance
 
-- [Design methodology](design-methodology.md)
-- [Jackson Design Completion & Implementation Hold](jackson-design-completion-implementation-hold.md) — **current delivery/design posture authority**
-- [Jackson Methodology Completion Matrix](jackson-methodology-completion-matrix.md) — **current methodology completion ledger**
-- [Documentation governance](documentation-governance.md)
-- [Terminology policy](terminology-policy.md)
-- [Source and provenance policy](source-provenance-policy.md)
-- [Network and external dependency policy](network-external-dependency-policy.md)
-- [Reproducibility contract](reproducibility-contract.md)
+- [Concept Design Methodology](design-methodology.md)
+- [Jackson Design Completion & Implementation Hold](jackson-design-completion-implementation-hold.md) — current delivery/design posture
+- [Jackson Methodology Completion Matrix](jackson-methodology-completion-matrix.md) — current completion ledger
+- [Documentation Governance](documentation-governance.md)
+- [Terminology Policy](terminology-policy.md)
+- [Source & Provenance Policy](source-provenance-policy.md)
 
-Current upstream problem authority is under [Problem Knowledge](../problem/index.md), including the Phase 008-B [Concept-Justification Traceability](../problem/concept-justification-traceability.md).
+Current concept-state authority:
+
+- [Concept State, Identity, History & Invariant Normalization](../concepts/state-identity-history-invariant-normalization.md)
 
 ## Current posture
 
 ```text
-concept / synchronization baseline   11 / 15
-current desired outcomes             16
-active ADRs                          10
-Phase 008                            ACTIVE
-008-A                                COMPLETE
-008-B                                COMPLETE
-Jackson design completion            IN PROGRESS
-implementation readiness             NOT READY
-implementation start                 NOT STARTED
-implementation next                  NOT YET
+accepted concepts          11
+accepted synchronizations  15
+active ADRs                10
+current desired outcomes   16
+Phase 008                  ACTIVE
+008-A                      COMPLETE
+008-B                      COMPLETE
+008-C                      COMPLETE
+008-D                      NEXT ELIGIBLE
+Jackson design completion  IN PROGRESS
+implementation readiness   NOT READY
+implementation start       NOT STARTED
+implementation next        NOT YET
 ```
 
-Implementation is not an eligible next activity.
+## Phase 008 results to date
 
-## Phase 008 methodology progress
+008-A established the fuller Jackson methodology rubric, conservative completion matrix and design-only guardrails.
 
-008-A established the fuller Jackson methodology rubric, completion matrix, artifact-authority classes, J0-J7 stop/reopen rules, and design-only implementation hold.
+008-B reconciled current problem scope and established current problem/outcome → concept justification traceability.
 
-008-B revalidated the problem/purpose/actor/outcome foundation against all eleven accepted concepts. It:
+008-C normalized all eleven concepts' state shapes, logical identity distinctions, historical immutability, current-use/applicability state, uncertainty and invariant spine without changing the catalog or selecting representation mechanisms.
 
-- reconciled stale topology/text scope in the problem authority;
-- made single-table, time-series and multi-table shared-key generation explicit current structured-data targets;
-- clarified that text-bearing structured fields are in scope through at least one self-contained source-derived/local baseline path while general unstructured/free-standing text generation remains out of scope;
-- extended the desired outcome set with O15 structured-topology breadth and O16 self-contained text-bearing structured-data capability;
-- established current problem/actor/outcome → concept purpose and absence-consequence traceability;
-- found all eleven concepts positively justified at the purpose level without changing the catalog.
+The methodology matrix now marks C3 conceptual state modeling closed for this stage while C7 remains partial until 008-D closes transition/action semantics.
 
-This closes methodology rows A1-A3 only. State/action/OP completeness, independence/familiarity, rejected-candidate rediscovery, inclusion dependence, mapping, integrity and final completion remain open in their assigned phases.
+## Relationship to Phase 007 authority
+
+The [Phase 007 Consolidated Architecture Contract](../architecture/phase-007-consolidated-architecture-contract.md) remains downstream design evidence pending Phase 013 reconciliation.
+
+The historical 007-K implementation-reentry result remains superseded. Architecture may expose a concept misfit but cannot become upstream concept authority merely because it is detailed.
 
 ## Remaining design sequence
 
 ```text
-008  Individual Concept Design Normalization & Completeness
-009  Concept Dependence, Application Family, Composition & Synchronization Closure
-010  Concept Mapping, Interaction, Linguistic & Experience Alignment
-011  Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Design Validation
-012  Jackson Concept-Design Consolidation & Completion Decision
-013  Post-Concept Representation & Architecture Reconciliation
-014  Whole-Design Consolidation, Residual Debt Audit & Implementation-Readiness Decision
+008-D  Concept Action, Query, Preconditions/Postconditions & Lifecycle Closure
+008-E  Operational Principle Completeness, Purpose Fulfillment & Counterexample Review
+008-F  Independence, Genericity, Familiarity & Reuse Revalidation
+008-G  Deferred/Rejected Candidate Rediscovery, Missing-Concept & Boundary Audit
+008-H  Phase 008 Consolidation & Phase 009 Handoff
+009    Concept Dependence, Application Family, Composition & Synchronization Closure
+010    Concept Mapping, Interaction, Linguistic & Experience Alignment
+011    Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Validation
+012    Jackson Concept-Design Consolidation & Completion Decision
+013    Post-Concept Representation & Architecture Reconciliation
+014    Whole-Design Consolidation, Residual Debt Audit & Implementation-Readiness Decision
 ```
 
-Each later phase is subdivided only immediately before it starts using the latest upstream evidence.
-
-## Relationship to Phase 007 authority
-
-The [Phase 007 Consolidated Architecture Contract](../architecture/phase-007-consolidated-architecture-contract.md) remains downstream architecture evidence unless later design supersedes part of it.
-
-The [Phase 007 Consolidated Architecture & Implementation-Reentry Readiness Contract](phase-007-consolidated-architecture-implementation-reentry-readiness-contract.md) remains historically useful for its architecture/scaffold audit, but its implementation-reentry readiness conclusion is superseded.
+Phases 009-014 will be subdivided only immediately before they start.
 
 ## Cross-cutting authority retained
 
-- [Operational Authority Continuity & Regressive Recovery Contract](operational-authority-continuity-regressive-recovery-contract.md)
-- [Self-Contained Execution & Runtime Distribution Closure Contract](self-contained-execution-runtime-distribution-closure-contract.md)
-- [Enterprise Scale, Resource Admission, Approximation & Degraded Operation Contract](enterprise-scale-resource-admission-approximation-degraded-operation-contract.md)
-- [Privacy, Disclosure Risk, Formal Guarantee & External Release Boundary Contract](privacy-disclosure-formal-guarantee-release-boundary-contract.md)
-- [Structured-Data Topology & Relationship Semantics Contract](structured-data-topology-relationship-semantics-contract.md)
-
-These may supply design evidence but remain subject to upstream correction if Phase 008-012 changes the concept design.
+Operational-recovery, runtime-distribution, enterprise-scale, privacy/disclosure and structured-topology contracts remain useful design evidence/authority subject to correction when current Phase 008-012 concept work requires it.
 
 ## Implementation-readiness transition rule
 
 Phases 008-013 cannot make implementation ready.
 
-Only Phase 014 may decide the entire design complete enough to set:
-
-```text
-IMPLEMENTATION READINESS   READY
-IMPLEMENTATION START       NOT STARTED
-IMPLEMENTATION NEXT        NEXT
-```
-
-Even then, implementation begins only under a later explicit Phase 015 authority.
+Only Phase 014 may set **READY / NOT STARTED / NEXT**, and only after the whole design passes. A positive readiness result still requires a later explicit Phase 015 before implementation begins.
 
 ## Current next boundary
 
-**008-C — Concept State Model, Identity, History & Invariant Normalization**.
+**008-D — Concept Action, Query, Preconditions/Postconditions & Lifecycle Closure**.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
