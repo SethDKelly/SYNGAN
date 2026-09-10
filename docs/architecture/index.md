@@ -22,7 +22,8 @@ Phase 008-A                  COMPLETE
 Phase 008-B                  COMPLETE
 Phase 008-C                  COMPLETE
 Phase 008-D                  COMPLETE
-Phase 008-E                  NEXT ELIGIBLE
+Phase 008-E                  COMPLETE
+Phase 008-F                  NEXT ELIGIBLE
 architecture corpus          RETAINED AS DOWNSTREAM DESIGN EVIDENCE
 architecture reconciliation  PLANNED FOR PHASE 013
 implementation readiness     NOT READY
@@ -32,11 +33,11 @@ implementation next          NOT YET
 
 ## Relationship to current concept authority
 
-Phase 008-C established [Concept State, Identity, History & Invariant Normalization](../concepts/state-identity-history-invariant-normalization.md). Phase 008-D established [Concept Action, Query, Preconditions/Postconditions & Lifecycle Normalization](../concepts/action-query-lifecycle-normalization.md).
+Phase 008-C established [Concept State, Identity, History & Invariant Normalization](../concepts/state-identity-history-invariant-normalization.md). Phase 008-D established [Concept Action, Query, Preconditions/Postconditions & Lifecycle Normalization](../concepts/action-query-lifecycle-normalization.md). Phase 008-E established [Operational Principle, Purpose Fulfillment & Counterexample Normalization](../concepts/operational-principle-purpose-counterexample-normalization.md).
 
-Where retained Phase 004/006/007 architecture uses more specific identity, persistence, fencing, manifests, runtime events, recovery mechanisms or state machines, those are downstream realization hypotheses/evidence. They do not replace normalized conceptual state or action/query semantics.
+Where retained Phase 004/006/007 architecture uses more specific identity, persistence, fencing, manifests, runtime events, recovery mechanisms, distributed scans, accelerator assumptions or state machines, those are downstream realization hypotheses/evidence. They do not replace normalized conceptual state, action/query or operational-principle semantics.
 
-Architecture may expose a real misfit in the concept model, but it must not force a concept command/query to mirror a preferred API, transaction, scheduler event, object lifecycle or storage mechanism.
+Architecture may expose a real misfit in the concept model, but it must not force a concept command/query or operational principle to mirror a preferred API, transaction, scheduler event, object lifecycle, storage mechanism or runtime topology.
 
 ## Phase 007 architecture status
 
@@ -46,7 +47,7 @@ It remains subject to Phase 013 reconciliation after Jackson concept design is c
 
 ## Authority rule during Phases 008-012
 
-Architecture may provide feasibility evidence, representation pressure, counterexamples and misfits. It may not veto upstream corrections; turn implementation roles into concepts; define state/actions merely because a storage/runtime model needs them; or trigger implementation while design is incomplete.
+Architecture may provide feasibility evidence, representation pressure, counterexamples and misfits. It may not veto upstream corrections; turn implementation roles into concepts; define state/actions merely because a storage/runtime model needs them; turn an operational-principle example into an architecture requirement; or trigger implementation while design is incomplete.
 
 ## Phase 013 obligation
 
@@ -66,4 +67,4 @@ IMPLEMENTATION NEXT        NOT YET
 
 ## Current next boundary
 
-**008-E — Operational Principle Completeness, Purpose Fulfillment & Counterexample Review**.
+**008-F — Independence, Genericity, Familiarity & Reuse Revalidation**.
