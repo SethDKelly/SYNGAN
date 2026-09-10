@@ -8,18 +8,21 @@ status: active
 
 ## Purpose
 
-This directory preserves durable decision rationale, considered alternatives, compatibility consequences, and supersession history for material architecture/governance decisions.
+This directory preserves durable decision rationale, considered alternatives, compatibility consequences and supersession history for material architecture/governance decisions.
 
-Decision records support canonical authority; they do not replace it. Current accepted architecture rules belong under [`docs/architecture/`](../architecture/index.md), with the [Phase 006 Architecture Reconciliation Contract](../architecture/phase-006-architecture-reconciliation-contract.md) as the current overlay.
+Decision records support canonical authority; they do not replace it.
+
+Current accepted architecture begins with the [Phase 007 Consolidated Architecture Contract](../architecture/phase-007-consolidated-architecture-contract.md), with 007-D through 007-J supplying detailed authority where needed.
 
 ## Authority relationship
 
 Interpret architecture knowledge using this order:
 
-1. upstream design authority, concepts, synchronizations, and experience contracts;
-2. current canonical architecture authority under `docs/architecture/`;
-3. accepted ADR rationale/history under `docs/decisions/`;
-4. phase records preserving design execution history.
+1. upstream design authority, concepts, synchronizations and experience contracts;
+2. current [Phase 007 Consolidated Architecture Contract](../architecture/phase-007-consolidated-architecture-contract.md);
+3. detailed current 007-D through 007-J architecture authorities;
+4. accepted ADR rationale/history;
+5. implementation planning and historical phase records.
 
 If an ADR conflicts with newer canonical architecture authority, canonical architecture governs and the ADR should be marked superseded or linked to its replacement.
 
@@ -36,13 +39,15 @@ If an ADR conflicts with newer canonical architecture authority, canonical archi
 - [ADR-0009 — Non-Regressing Authority After Regressive Control-State Recovery](ADR-0009-non-regressing-authority-after-regressive-control-state-recovery.md) — adds a fresh non-regressing recovery-authority frontier so restoring stale persistence cannot resurrect writer/cancellation/security authority. **Extends ADR-0005; does not supersede it.**
 - [ADR-0010 — Self-Contained Distributed Runtime Closure](ADR-0010-self-contained-distributed-runtime-closure.md) — requires both acquisition closure and exact compatible runtime closure across every material distributed worker, including dynamically added workers. **Extends ADR-0004 and ADR-0008; does not supersede them.**
 
-## Phase 006 reconciliation result
+## Phase 007 consolidation result
 
-006-I reviewed ADR-0001 through ADR-0008 against recovery, runtime-distribution, scale/degraded-operation, privacy/release, structured-topology and Phase 006 experience authority.
+007-K reviewed ADR-0001 through ADR-0010 against the consolidated identity, persistence, distributed-data/topology, runtime/security, Execution/recovery, Evidence/history/disclosure and implementation-proof architecture.
 
-No prior ADR is superseded.
+No ADR requires supersession or amendment before controlled implementation re-entry.
 
-Most Phase 006 findings are refinements already covered by the rationale of the existing decision families. ADR-0009 and ADR-0010 are additive because their failure modes/alternatives are materially distinct enough to merit independent durable rationale.
+The active ADR count remains **10**.
+
+007-J/007-K add no ADR because they define proof/claim and re-entry governance boundaries under the existing architecture rather than selecting a new technical alternative requiring independent rationale.
 
 ## When to create an ADR
 
@@ -61,7 +66,7 @@ Do not create an ADR merely to repeat an invariant already canonical elsewhere.
 
 ## ADR lifecycle
 
-Decision records use states such as `proposed`, `active`, `deprecated`, `superseded`, or `archived`.
+Decision records use states such as `proposed`, `active`, `deprecated`, `superseded` or `archived`.
 
 A replaced decision retains its historical rationale and points to the replacement.
 
@@ -69,6 +74,6 @@ A replaced decision retains its historical rationale and points to the replaceme
 
 ADRs explain *why* a choice was made. Full current normative rules belong in canonical architecture documents.
 
-For current Phase 006 implementation-facing architecture begin with:
+For current implementation-facing architecture, begin with:
 
-[Phase 006 Architecture Reconciliation Contract](../architecture/phase-006-architecture-reconciliation-contract.md).
+[Phase 007 Consolidated Architecture Contract](../architecture/phase-007-consolidated-architecture-contract.md).
