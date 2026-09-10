@@ -59,6 +59,7 @@ Until explicit implementation re-entry, do not add:
 - Spark/runtime/model/platform/security adapters;
 - concrete public API classes solely to crystallize hypotheses;
 - production serialization/wire/manifest/runtime-closure schemas;
+- execution/recovery/fencing/checkpoint/admission implementations;
 - new executable architecture restrictions/fitness tests for evolving design;
 - new CI/deployment/release enforcement for evolving architecture.
 
@@ -75,15 +76,16 @@ Completed design groups:
 - **007-D — Identity, Revision, Serialization, Typed Public Resource/Handle & Programmatic-View Foundation**;
 - **007-E — Control Persistence, Transactions, CAS, Outbox, Historical References & Migration Baseline**;
 - **007-F — Distributed Data-State, Structured Topology, Manifest, Candidate/Seal & Promotion Foundation**;
-- **007-G — Strategy/Method Binding, Dependency Trust, Authorization, Secrets & Distributed Runtime Closure Foundation**.
+- **007-G — Strategy/Method Binding, Dependency Trust, Authorization, Secrets & Distributed Runtime Closure Foundation**;
+- **007-H — Execution/Attempt, Idempotency, Fencing, Non-Regressing Recovery, Checkpoint, Cancellation & Admission Foundation**.
 
 Current next eligible design group:
 
-- **007-H — Execution/Attempt, Idempotency, Fencing, Non-Regressing Recovery, Checkpoint, Cancellation & Admission Foundation**.
+- **007-I — Evaluation/Evidence, Provenance, Historical Query, Reproducibility & Disclosure Foundation**.
 
-007-H is not active until explicitly entered.
+007-I is not active until explicitly entered.
 
-## Current design distinctions added through 007-G
+## Current design distinctions added through 007-H
 
 Preserve at minimum:
 
@@ -98,7 +100,21 @@ Preserve at minimum:
 - a missing component cannot justify hidden runtime installation/download/fallback;
 - a later Attempt may use another compatible binding only when unchanged semantic commitment permits it and prior Attempt history is preserved;
 - secret values remain operational material, not canonical semantic/history/provenance state;
-- topology capability/limitations in an implementation cannot redefine committed topology semantics.
+- topology capability/limitations in an implementation cannot redefine committed topology semantics;
+- Execution identity != platform job/run identity;
+- Attempt observed physical state != current mutation authority;
+- provider/internal retry != automatically a new SYNGAN Attempt;
+- idempotency != fencing != current authorization;
+- lease/liveness evidence != stale-writer exclusion;
+- Attempt epoch != sufficient authority after potentially regressive restore;
+- restored persistence != current mutation authority;
+- current write authority may require a fresh non-regressing recovery frontier plus Attempt/resource fencing;
+- surviving immutable effect != revived producer authority;
+- checkpoint durability != resume eligibility != semantic result;
+- cancellation request != terminal cancellation, and pre-cancellation restore cannot resurrect old authority;
+- admission != semantic readiness != queue placement != write authority;
+- temporary resource shortage != semantic/runtime incompatibility;
+- semantic completion != runtime/platform success.
 
 ## Design-first change discipline
 
@@ -132,6 +148,7 @@ Phase 007 design continuation        ACTIVE
 007-E architecture design            COMPLETE
 007-F architecture design            COMPLETE
 007-G architecture design            COMPLETE
-007-H architecture design            NEXT ELIGIBLE — NOT STARTED
+007-H architecture design            COMPLETE
+007-I architecture design            NEXT ELIGIBLE — NOT STARTED
 007-D and later implementation       NOT AUTHORIZED
 ```
