@@ -36,14 +36,14 @@ Only Phase 014 may change that posture after a positive whole-design completion 
 008-C  COMPLETE — concept state / identity / history / invariants
 008-D  COMPLETE — actions / queries / preconditions / postconditions / lifecycle transitions
 008-E  COMPLETE — operational principles / purpose fulfillment / counterexamples
-008-F  NEXT ELIGIBLE — independence / genericity / familiarity / reuse
-008-G  PLANNED — candidate rediscovery / missing-concept / boundaries
+008-F  COMPLETE — independence / genericity / familiarity / reuse
+008-G  NEXT ELIGIBLE — candidate rediscovery / missing-concept / boundaries
 008-H  PLANNED — Phase 008 consolidation and Phase 009 handoff
 ```
 
-008-C established [Concept State, Identity, History & Invariant Normalization](../concepts/state-identity-history-invariant-normalization.md). 008-D established [Concept Action, Query, Preconditions/Postconditions & Lifecycle Normalization](../concepts/action-query-lifecycle-normalization.md). 008-E then established [Operational Principle, Purpose Fulfillment & Counterexample Normalization](../concepts/operational-principle-purpose-counterexample-normalization.md).
+The current accepted concepts now have present-state normalization for purpose, state/history/invariants, actions/queries/transitions, operational principles, independence, bounded genericity, naming/familiarity and conceptual reuse.
 
-The current individual-concept purpose/state/action/operational-principle layer is therefore substantially normalized, but Phase 008 remains open until independence/genericity/familiarity, candidate rediscovery and consolidation are complete.
+Phase 008 remains open because accepted-concept coherence is not the same as catalog completeness. 008-G must deliberately replay rejected/deferred/subordinate/external/representation-classified candidates before 008-H can make the individual-concept completion decision.
 
 ## Later design phases
 
@@ -89,4 +89,4 @@ Only the current high-level phase is decomposed in detail. Phases 009-014 are su
 
 ## Current next boundary
 
-**008-F — Independence, Genericity, Familiarity & Reuse Revalidation**.
+**008-G — Deferred/Rejected Candidate Rediscovery, Missing-Concept & Boundary Audit**.
