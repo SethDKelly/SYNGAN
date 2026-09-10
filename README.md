@@ -16,6 +16,7 @@ Current architecture/design posture:
 - [`007-F Distributed Data-State, Structured Topology, Manifest, Candidate/Seal & Promotion Foundation`](docs/architecture/phase-007-f-distributed-data-state-structured-topology-manifest-candidate-seal-promotion-foundation.md)
 - [`007-G Strategy/Method Binding, Dependency Trust, Authorization, Secrets & Distributed Runtime Closure Foundation`](docs/architecture/phase-007-g-strategy-method-binding-dependency-trust-authorization-secrets-distributed-runtime-closure-foundation.md)
 - [`007-H Execution/Attempt, Idempotency, Fencing, Non-Regressing Recovery, Checkpoint, Cancellation & Admission Foundation`](docs/architecture/phase-007-h-execution-attempt-idempotency-fencing-non-regressing-recovery-checkpoint-cancellation-admission-foundation.md)
+- [`007-I Evaluation/Evidence, Provenance, Historical Query, Reproducibility & Disclosure Foundation`](docs/architecture/phase-007-i-evaluation-evidence-provenance-historical-query-reproducibility-disclosure-foundation.md)
 - [`Phase 007 index`](docs/phases/007/index.md)
 
 ## Status
@@ -27,7 +28,8 @@ Current architecture/design posture:
 - **007-F — complete as architecture design**
 - **007-G — complete as architecture design**
 - **007-H — complete as architecture design**
-- **007-I — next eligible design subgroup, not started**
+- **007-I — complete as architecture design**
+- **007-J — next eligible design subgroup; reference-slice scope re-evaluation required**
 - **Production implementation expansion — frozen**
 
 Phase 006 historically concluded that design was complete enough to consider implementation. The project later reopened architecture design so existing source/tests do not prematurely harden unsettled representation choices.
@@ -42,36 +44,46 @@ Phase 006 historically concluded that design was complete enough to consider imp
 
 007-G establishes the executable realization/security/runtime foundation: semantic Strategy/method authority remains distinct from exact implementation/dependency closure, current trust/authorization, secrets and role-specific distributed runtime realization.
 
-007-H establishes the execution/recovery/admission foundation:
+007-H establishes stable Execution/Attempt history, operation-scoped idempotency, non-regressing recovery authority, stale-writer fencing, qualified checkpoints, durable cancellation and current operational admission without equating platform success with semantic completion.
+
+007-I establishes the Evaluation/Evidence/history/reproducibility/disclosure foundation:
 
 ```text
-committed activity / stable Execution
+committed Evaluation
         ↓
-current admission + recovery-continuity qualification
+Execution / Attempts
         ↓
-non-regressing recovery-authority frontier
+non-final method result
         ↓
-current Attempt authority + resource-local preconditions
+Evaluation semantic validation
         ↓
-immutable Attempt invocation
+idempotent Evidence establishment
         ↓
-physical work and non-final effects
+immutable Evidence finding + current applicability
         ↓
-reconciliation + semantic-owner validation
+typed Provenance
+        ↓
+exact historical query
+        ↓
+qualified reproducibility assessment
+        ↓
+actor-safe disclosure
 ```
 
 Important consequences include:
 
-- Attempt physical/observed state is distinct from current mutation authority;
-- operation-scoped idempotency does not replace fencing or authorization;
-- Attempt epoch alone cannot safely survive a potentially regressive control-state restore;
-- regressive recovery establishes fresh stale-writer exclusion before ordinary writes resume;
-- surviving immutable effects may be adopted by current authority without reviving the old producer;
-- checkpoint durability is distinct from current resume compatibility;
-- accepted cancellation blocks ordinary new admission and cannot be undone merely by restoring older control state;
-- admission is operational eligibility rather than semantic readiness, queue position or write authority;
-- temporary resource shortage remains distinguishable from true incompatibility;
-- at-least-once physical work remains acceptable while canonical semantic promotion remains singular and owner-controlled.
+- runtime Evaluation success does not create Evidence;
+- Evidence findings remain independently interpretable and retry-idempotent without forcing one concrete finding schema;
+- immutable finding semantics remain distinct from current applicability;
+- negative and indeterminate findings remain legitimate Evidence when the examination is valid;
+- Generation preserves the exact Evidence/candidate/requirement basis used at promotion;
+- privacy/disclosure Evidence remains distinct from formal privacy guarantees, current disclosure permission and release approval;
+- Provenance is typed relationship authority rather than a duplicated metadata graph;
+- directly retained, reconstructed, partial and unknown historical knowledge remain distinguishable;
+- historical query projections are derived and cannot establish canonical absence or authority;
+- disclosure may protect relationship existence, graph shape, counts and reproducibility reasons as well as values;
+- historical reproducibility support is distinct from current reproduction feasibility and actor-visible assessability;
+- actual reproduction is new domain work rather than mutation of the historical target.
 
 Earlier concrete Phase 005 implementation choices remain possible candidates to reassess at implementation re-entry rather than current architecture requirements.
 
@@ -104,6 +116,8 @@ The complete supported baseline also requires source-derived/local free-form-tex
 
 ## Current next boundary
 
-**007-I — Evaluation/Evidence, Provenance, Historical Query, Reproducibility & Disclosure Foundation** is next eligible as a **design** subgroup.
+The earlier executable framing of 007-J must be re-evaluated before any reference implementation proof can begin.
+
+**007-J — Reference Vertical-Slice Scope Re-evaluation, Architecture Completeness & Implementation-Proof Boundary** is next eligible as a **design** subgroup.
 
 An explicit proceed decision is required before it begins. Production implementation remains frozen independently of design progression.
