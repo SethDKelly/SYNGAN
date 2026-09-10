@@ -23,7 +23,8 @@ Phase 008-B                  COMPLETE
 Phase 008-C                  COMPLETE
 Phase 008-D                  COMPLETE
 Phase 008-E                  COMPLETE
-Phase 008-F                  NEXT ELIGIBLE
+Phase 008-F                  COMPLETE
+Phase 008-G                  NEXT ELIGIBLE
 architecture corpus          RETAINED AS DOWNSTREAM DESIGN EVIDENCE
 architecture reconciliation  PLANNED FOR PHASE 013
 implementation readiness     NOT READY
@@ -33,11 +34,11 @@ implementation next          NOT YET
 
 ## Relationship to current concept authority
 
-Phase 008-C established [Concept State, Identity, History & Invariant Normalization](../concepts/state-identity-history-invariant-normalization.md). Phase 008-D established [Concept Action, Query, Preconditions/Postconditions & Lifecycle Normalization](../concepts/action-query-lifecycle-normalization.md). Phase 008-E established [Operational Principle, Purpose Fulfillment & Counterexample Normalization](../concepts/operational-principle-purpose-counterexample-normalization.md).
+Phase 008-C through 008-F now provide current individual-concept authority for state/history, behavior, operational principles, independence, bounded genericity, familiarity/naming and conceptual reuse.
 
-Where retained Phase 004/006/007 architecture uses more specific identity, persistence, fencing, manifests, runtime events, recovery mechanisms, distributed scans, accelerator assumptions or state machines, those are downstream realization hypotheses/evidence. They do not replace normalized conceptual state, action/query or operational-principle semantics.
+Where retained Phase 004/006/007 architecture uses more specific identity, persistence, fencing, manifests, runtime events, recovery mechanisms, distributed scans, accelerator assumptions, state machines, plugins, models, jobs or storage objects, those remain downstream realization hypotheses/evidence. Their existence does not prove that an excluded candidate should be a concept.
 
-Architecture may expose a real misfit in the concept model, but it must not force a concept command/query or operational principle to mirror a preferred API, transaction, scheduler event, object lifecycle, storage mechanism or runtime topology.
+008-G may use architecture to discover a genuine missing purpose/state/action boundary, but a class/table/file/job/manifest/API/runtime role is never sufficient by itself to promote a candidate.
 
 ## Phase 007 architecture status
 
@@ -47,7 +48,7 @@ It remains subject to Phase 013 reconciliation after Jackson concept design is c
 
 ## Authority rule during Phases 008-012
 
-Architecture may provide feasibility evidence, representation pressure, counterexamples and misfits. It may not veto upstream corrections; turn implementation roles into concepts; define state/actions merely because a storage/runtime model needs them; turn an operational-principle example into an architecture requirement; or trigger implementation while design is incomplete.
+Architecture may provide feasibility evidence, representation pressure, counterexamples and misfits. It may not veto upstream corrections, turn implementation roles into concepts, redefine accepted concept state/actions, convert familiar implementation nouns into concept boundaries, or trigger implementation while design is incomplete.
 
 ## Phase 013 obligation
 
@@ -67,4 +68,4 @@ IMPLEMENTATION NEXT        NOT YET
 
 ## Current next boundary
 
-**008-F — Independence, Genericity, Familiarity & Reuse Revalidation**.
+**008-G — Deferred/Rejected Candidate Rediscovery, Missing-Concept & Boundary Audit**.
