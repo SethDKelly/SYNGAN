@@ -1,6 +1,6 @@
 ---
 type: Historical Design / Implementation Re-entry Authority
-ntitle: Phase 007 Consolidated Architecture & Implementation-Reentry Readiness Contract
+title: Phase 007 Consolidated Architecture & Implementation-Reentry Readiness Contract
 status: superseded
 ---
 
