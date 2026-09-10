@@ -12,6 +12,8 @@ Re-establish the correct design-to-implementation boundary for SYNGAN after revi
 
 This authority supersedes the **implementation-reentry readiness conclusion** of 007-K while retaining Phase 007 architecture documents as downstream design evidence. The repository must complete the remaining Jackson concept-design work and then reconcile all downstream representation/architecture design before implementation can become ready.
 
+Current methodology status is tracked by the [Jackson Methodology Completion Matrix](jackson-methodology-completion-matrix.md).
+
 ## Current implementation status
 
 ```text
@@ -53,17 +55,9 @@ Implementation is not part of Jackson concept design and must not be used as a s
 
 ### Phases 001-003
 
-These phases contain substantial valid Jackson-style design:
+These phases contain substantial valid Jackson-style design: problem, actors, purposes/outcomes, candidate discovery/reduction, purpose/independence/genericity analysis, operational principles, state/actions/invariants, composition/synchronizations and actor-visible/programmatic workflow experience.
 
-- problem, actors, purposes and outcomes;
-- candidate concept discovery and reduction;
-- concept purpose, independence and genericity analysis;
-- operational principles;
-- state/actions/invariants and lifecycle semantics;
-- concept composition and synchronizations;
-- actor-visible and programmatic workflow experience.
-
-They remain primary evidence for the remaining design-completion work.
+They remain primary evidence for the remaining design-completion work, but historical `complete` labels do not automatically establish current closure under the expanded methodology rubric.
 
 ### Phases 004-007
 
@@ -77,7 +71,7 @@ Where later Jackson work changes an upstream concept, synchronization, dependenc
 
 007-K correctly found that the architecture available at that time was internally coherent enough to support a bounded engineering re-entry. However, that audit used a narrower completeness criterion than the full Jackson methodology.
 
-Subsequent methodology review identified design work that had not yet received explicit closure, especially:
+The later methodology review identified design work that had not yet received explicit closure, especially:
 
 - Jackson-style **concept dependence** as inclusion dependence, distinct from authority/reference/validation dependencies;
 - application-family/subset analysis derived from those dependences;
@@ -88,9 +82,22 @@ Subsequent methodology review identified design work that had not yet received e
 
 Therefore the engineering-readiness result was premature as a full design-completion result.
 
-## Design-completion roadmap
+## Phase 008-A result
 
-The current dependency-safe roadmap is:
+008-A — Methodology Authority Reset, Completion Matrix & Design-Only Guardrails is complete.
+
+It established:
+
+- the fuller Jackson rubric as controlling completion authority;
+- the [Jackson Methodology Completion Matrix](jackson-methodology-completion-matrix.md);
+- artifact authority classes separating upstream design, supporting evidence, downstream architecture and historical executable evidence;
+- J0-J7 stop/reopen classifications;
+- conservative status ownership for every remaining methodology obligation;
+- continued implementation status of **NOT READY / NOT STARTED / NOT YET**.
+
+008-A changed no concept catalog, synchronization set, architecture, code, tests, dependencies or runtime behavior.
+
+## Design-completion roadmap
 
 ```text
 008  Individual Concept Design Normalization & Completeness
@@ -110,21 +117,13 @@ Phases 009-014 are high-level planned boundaries only. Each MUST be decomposed i
 
 ### Through Phase 012
 
-Implementation remains:
-
-```text
-NOT READY / NOT STARTED / NOT YET
-```
+Implementation remains **NOT READY / NOT STARTED / NOT YET**.
 
 Even if Phase 012 concludes Jackson concept design is complete, implementation does not become ready automatically because downstream representation/architecture must still be reconciled against the completed conceptual design.
 
 ### Through Phase 013
 
-Implementation remains:
-
-```text
-NOT READY / NOT STARTED / NOT YET
-```
+Implementation remains **NOT READY / NOT STARTED / NOT YET**.
 
 Phase 013 may reuse, revise, supersede or retain architecture from Phases 004, 006 and 007. It does not implement that architecture.
 
@@ -132,15 +131,7 @@ Phase 013 may reuse, revise, supersede or retain architecture from Phases 004, 0
 
 Phase 014 is the only currently planned phase allowed to make the final whole-design readiness decision.
 
-If and only if Phase 014 finds:
-
-- Jackson concept design complete;
-- concept mappings and experience contracts coherent;
-- representation/architecture reconciled to the completed concept design;
-- remaining uncertainty primarily implementation-specific;
-- no unresolved design blocker;
-
-then it may change status to:
+If and only if Phase 014 finds Jackson concept design complete, mappings/experience coherent, architecture reconciled, remaining uncertainty primarily implementation-specific and no unresolved design blocker, it may change status to:
 
 ```text
 IMPLEMENTATION READINESS   READY
@@ -182,6 +173,6 @@ Remaining design work must preserve Jackson's core distinctions:
 
 ## Current next boundary
 
-The next eligible work is **008-A — Methodology Authority Reset, Completion Matrix & Design-Only Guardrails**.
+The next eligible work is **008-B — Problem, Purpose, Outcome & Concept-Justification Traceability Revalidation**.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
