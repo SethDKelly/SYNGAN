@@ -1,166 +1,90 @@
 ---
 type: Implementation Index
 title: SYNGAN Implementation Planning & Delivery Authority
-status: active
+status: suspended
 ---
 
 # SYNGAN Implementation Planning & Delivery Authority
 
 ## Current posture
 
-Phase 007 architecture is complete and consolidated.
+Implementation planning and the retained Phase 007 scaffold remain historical/downstream evidence only.
 
-Current implementation transition authority is the [Phase 007 Consolidated Architecture & Implementation-Reentry Readiness Contract](../authority/phase-007-consolidated-architecture-implementation-reentry-readiness-contract.md), read with the [Phase 007 Consolidated Architecture Contract](../architecture/phase-007-consolidated-architecture-contract.md).
-
-Current authorization state:
+Current authority is [Jackson Design Completion & Implementation Hold](../authority/jackson-design-completion-implementation-hold.md).
 
 ```text
-007-A..007-C  historical/provisional scaffold
-007-D..007-K  completed architecture/design/governance
-R0 / 008-A    NEXT ELIGIBLE after explicit proceed
-R1+           NOT AUTHORIZED
+IMPLEMENTATION READINESS   NOT READY
+IMPLEMENTATION START       NOT STARTED
+IMPLEMENTATION NEXT        NOT YET
 ```
 
-The old Phase 007 implementation lock and 007-B/007-C execution authorities are historical/superseded. They remain implementation evidence, not current authority.
+No implementation tranche is currently eligible.
 
-## Current implementation obligations
+## Superseded 007-K re-entry conclusion
 
-Any later implementation must preserve at least:
+007-K previously approved a bounded R0/008-A scaffold-reconciliation tranche. That engineering-readiness conclusion is suspended/superseded because a later methodology review found remaining Jackson concept-design work that had not received explicit closure.
 
-- exact logical/semantic identity separate from storage/runtime identity;
-- immutable semantic commitments separate from mutable lifecycle/concurrency state;
-- owner-controlled persistence and exact historical references;
-- durable cross-boundary intent/reconciliation rather than assumed global atomicity;
-- composable logical topology, bounded manifests and candidate/seal/promotion separation;
-- Strategy/method semantics separate from exact executable/dependency/runtime realization;
-- dependency identity/integrity/trust/current authorization separation;
-- role-specific distributed runtime closure and no hidden acquisition;
-- stable Execution with distinguishable Attempts;
-- operation-scoped idempotency separate from stale-writer fencing and authorization;
-- non-regressing post-restore mutation authority;
-- checkpoint/cancellation/admission distinctions;
-- Evaluation semantic validation before Evidence establishment;
-- immutable Evidence findings separate from current applicability;
-- typed canonical Provenance over exact references;
-- directly retained/reconstructed/partial/unknown historical knowledge distinctions;
-- bounded derived historical queries without projection authority;
-- disclosure capable of protecting existence/graph shape/counts/reasons without mutating canonical history;
-- historical reproducibility support distinct from current reproduction feasibility and reproduction success.
+The architecture and scaffold observations from 007-K remain useful evidence. They do not constitute permission to reconcile or extend executable implementation while design remains incomplete.
 
-## Historical scaffold review result
-
-007-K directly inspected the current executable scaffold.
-
-Directionally retained evidence includes:
-
-- one `syngan` distribution;
-- `src/` packaging;
-- `py.typed`;
-- repository-owned locked toolchain and verification command;
-- Python `>=3.11` as a current implementation choice;
-- no base production runtime dependencies yet;
-- inward dependency intent;
-- portable-core socket denial after explicit provisioning;
-- CI as evidence rather than semantic authority.
-
-The following require explicit R0 revalidation:
-
-- exact seven top-level packages;
-- exact Import Linter contracts;
-- exact tool/version bounds;
-- root import/re-export restrictions;
-- package/build structural assertions;
-- local Spark socket/process exceptions;
-- phase-state fitness tests written for historical delivery progression.
-
-A known stale test is `tests/fitness/test_phase_007_authority_boundary.py`, which still asserts that 007-D is the next eligible subgroup. That is implementation-reentry debt, not a current design invariant.
-
-## R0 / recommended 008-A authority boundary
-
-The next eligible tranche is:
-
-**008-A — Implementation Re-entry Authority, Scaffold Reconciliation & Verification Re-baseline**.
-
-It requires an explicit proceed decision before execution.
-
-### 008-A may
-
-- retire/reconcile historical Phase 007 implementation-authority documentation;
-- classify and revise/remove stale executable architecture/delivery-state assertions;
-- justify, revise or relax exact package and Import Linter constraints;
-- update package/root-import/build smoke checks;
-- revalidate current tool versions and locked environment;
-- update `pyproject.toml`, `uv.lock`, `tools/verify.py` and verification CI only as required for a truthful current gate;
-- define narrow local-Spark process/socket testing policy if needed for later tests without implementing Spark capability;
-- establish current change-classification/stop-reopen rules and evidence gates for the next tranche.
-
-### 008-A must not
-
-- implement concept lifecycle/domain behavior;
-- implement public identity/reference contracts beyond scaffold reconciliation;
-- add persistence schemas/migrations;
-- add distributed data/source/output realization;
-- add Spark synthesis/runtime behavior;
-- add Strategy/Learning/Generation/Evaluation algorithms;
-- add dependency resolver or security-provider behavior;
-- add Execution/Attempt/fencing/recovery/checkpoint/admission implementation;
-- add Evidence/Provenance/history/query/reproducibility/disclosure implementation;
-- add platform/deployment adapters;
-- add benchmarks/release qualification.
-
-## 008-A completion gate
-
-Before R1 can even be proposed, 008-A must establish:
-
-1. truthful current implementation authority pointing to Phase 007 consolidated architecture;
-2. an explicit disposition for every retained executable architecture constraint;
-3. reconciliation of stale Phase 007 delivery-state tests;
-4. justified dependency/package direction;
-5. a reproducible normal verification environment;
-6. a truthful green verification gate on the reconciled scaffold;
-7. branch/review/check claims matching actual GitHub state;
-8. no owner-specific feature behavior introduced early;
-9. recorded waivers/debt;
-10. a separately proposed next bounded tranche requiring explicit proceed authority.
-
-## Likely later sequence
-
-007-K retains this dependency direction as guidance, not blanket authority:
+## Remaining design before implementation can become ready
 
 ```text
-R0  re-entry authority + scaffold/verification reconciliation
-R1  identity/control/historical-reference kernel
-R2  logical data/topology/manifest/candidate-seal kernel
-R3  Strategy binding + Execution/Attempt/fencing/admission contracts
-R4  dependency/security/runtime-closure kernel
-R5  first learning-based single-table reference path
-R6  Evaluation/Evidence/Provenance/history/reproducibility path
-R7  direct-generation + self-contained-text conformance
-R8  time-series + multi-table shared-key capability slices
-R9  adversarial recovery/disclosure/distributed-runtime conformance
-R10 platform/scale/hardening/release qualification
+008  Individual Concept Design Normalization & Completeness
+009  Concept Dependence, Application Family, Composition & Synchronization Closure
+010  Concept Mapping, Interaction, Linguistic & Experience Alignment
+011  Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Design Validation
+012  Jackson Concept-Design Consolidation & Completion Decision
+013  Post-Concept Representation & Architecture Reconciliation
+014  Whole-Design Consolidation, Residual Debt Audit & Implementation-Readiness Decision
 ```
 
-Each later tranche requires separate authorization.
+Even a positive Phase 012 Jackson concept-design result does not reactivate implementation. Architecture must first be reconciled downstream in Phase 013 and the complete design must pass Phase 014.
 
-## Implementation-proof claims
+## Historical implementation material
 
-Implementation evidence remains partitioned into:
+Retain as non-authoritative evidence:
+
+- Phase 005 implementation plans;
+- Phase 006 implementation-planning reconciliation;
+- 007-A/007-B/007-C bootstrap/scaffold work;
+- current `src/syngan` package skeleton;
+- existing tests, Import Linter contracts, lock/tooling and CI;
+- 007-K scaffold audit findings.
+
+Do not repair, expand or reinterpret this material merely to prepare for implementation while the design program is incomplete.
+
+## Current prohibition
+
+Until a positive Phase 014 readiness decision, do not add or expand:
+
+- production concept/domain behavior;
+- public API implementation;
+- persistence schemas or migrations;
+- distributed data/source/output implementations;
+- Spark/model/Strategy runtime behavior;
+- dependency/runtime/security providers;
+- Execution/Attempt/recovery/fencing/admission behavior;
+- Evidence/Provenance/history/query implementations;
+- platform/deployment adapters;
+- benchmarks or release qualification;
+- new executable architecture restrictions whose purpose is to freeze unfinished design.
+
+Existing executable material may remain untouched as historical/provisional evidence.
+
+## Future readiness state
+
+Only Phase 014 may set:
 
 ```text
-architecture-conformance proof
-capability proof
-runtime/platform-profile proof
-resilience/adversarial proof
-scale/release qualification
+IMPLEMENTATION READINESS   READY
+IMPLEMENTATION START       NOT STARTED
+IMPLEMENTATION NEXT        NEXT
 ```
 
-No one vertical slice may imply all five.
-
-The complete structured-data baseline remains single-table + time-series + multi-table shared-key, plus the required self-contained source-derived/local free-form-text capability.
+If Phase 014 passes, a future **Phase 015 — Implementation Authority & Controlled Delivery** may then be subdivided and proposed. Phase 015 is not currently ready or next.
 
 ## Current next boundary
 
-**008-A — Implementation Re-entry Authority, Scaffold Reconciliation & Verification Re-baseline** is next after explicit proceed.
+The next work is design-only:
 
-Feature implementation remains unauthorized until 008-A completes and a later tranche is separately approved.
+**008-A — Methodology Authority Reset, Completion Matrix & Design-Only Guardrails**.
