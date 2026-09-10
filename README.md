@@ -18,6 +18,7 @@ Current authority:
 - [`Concept State, Identity, History & Invariant Normalization`](docs/concepts/state-identity-history-invariant-normalization.md)
 - [`Concept Action, Query, Preconditions/Postconditions & Lifecycle Normalization`](docs/concepts/action-query-lifecycle-normalization.md)
 - [`Operational Principle, Purpose Fulfillment & Counterexample Normalization`](docs/concepts/operational-principle-purpose-counterexample-normalization.md)
+- [`Concept Independence, Genericity, Familiarity & Reuse Normalization`](docs/concepts/independence-genericity-familiarity-reuse-normalization.md)
 - [`Phase 008`](docs/phases/008/index.md)
 
 ## Status
@@ -32,25 +33,21 @@ Phase 008                  ACTIVE
 008-C                      COMPLETE
 008-D                      COMPLETE
 008-E                      COMPLETE
-008-F                      NEXT ELIGIBLE
+008-F                      COMPLETE
+008-G                      NEXT ELIGIBLE
 Jackson design completion  IN PROGRESS
 implementation readiness   NOT READY
 implementation start       NOT STARTED
 implementation next        NOT YET
 ```
 
-008-C normalized concept state/identity/history/invariants. 008-D normalized the behavioral counterpart: concept-owned commands, read-only queries, contextual assessments, material preconditions/effects/postconditions and lifecycle transition ownership.
+008-F completes the current accepted-concept independence, bounded-genericity, familiarity/naming and conceptual-reuse review. All eleven concepts pass and all eleven names are retained. More conventional terms such as `Schema`, `Model`, `Run`, `Metric`, `Validation`, `Result`, `Lineage`, `Training`, `Sampling` and `Synthesizer` remain non-canonical where they would import misleading authority or representation assumptions.
 
-008-E now closes the current operational-principle obligation. Every accepted concept's archetypal history was replayed against current purpose/state/action authority and explicit counterexamples; all eleven pass without catalog change.
-
-Several older operational principles used platform/architecture-heavy examples. Those examples remain useful evidence, but the current normalization makes clear that Spark, GPUs, distributed scans, manifests, fencing and similar realization details are not necessary to the concepts' purposes.
-
-This does not complete Phase 008 or Jackson concept design. Independence, genericity, familiarity/reuse and deferred/rejected candidate rediscovery remain ahead.
+This does not complete the concept catalog. 008-G must now deliberately rediscover rejected, subordinated, deferred, externalized and representation-classified candidates using the full current 008-B through 008-F evidence. Only after that may 008-H decide whether the individual-concept foundation is complete enough for Phase 009.
 
 ## Remaining design roadmap
 
 ```text
-008-F  Independence, Genericity, Familiarity & Reuse Revalidation
 008-G  Deferred/Rejected Candidate Rediscovery, Missing-Concept & Boundary Audit
 008-H  Phase 008 Consolidation & Phase 009 Handoff
 009    Concept Dependence, Application Family, Composition & Synchronization Closure
@@ -69,6 +66,6 @@ Only a positive Phase 014 may change implementation to **READY / NOT STARTED / N
 
 ## Current next boundary
 
-**008-F — Independence, Genericity, Familiarity & Reuse Revalidation**.
+**008-G — Deferred/Rejected Candidate Rediscovery, Missing-Concept & Boundary Audit**.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
