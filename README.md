@@ -16,6 +16,7 @@ Current authority:
 - [`Current Problem Knowledge`](docs/problem/index.md)
 - [`Accepted Concept Catalog`](docs/concepts/index.md)
 - [`Concept State, Identity, History & Invariant Normalization`](docs/concepts/state-identity-history-invariant-normalization.md)
+- [`Concept Action, Query, Preconditions/Postconditions & Lifecycle Normalization`](docs/concepts/action-query-lifecycle-normalization.md)
 - [`Phase 008`](docs/phases/008/index.md)
 
 ## Status
@@ -28,21 +29,23 @@ Phase 008                  ACTIVE
 008-A                      COMPLETE
 008-B                      COMPLETE
 008-C                      COMPLETE
-008-D                      NEXT ELIGIBLE
+008-D                      COMPLETE
+008-E                      NEXT ELIGIBLE
 Jackson design completion  IN PROGRESS
 implementation readiness   NOT READY
 implementation start       NOT STARTED
 implementation next        NOT YET
 ```
 
-008-C normalized all eleven concepts' state shapes, logical identity/history distinctions, current-use/applicability semantics, uncertainty and cross-concept invariants. It did not add, remove, merge or rename a concept and did not perform executable work.
+008-C normalized concept state/identity/history/invariants. 008-D now normalizes the behavioral counterpart: concept-owned commands, read-only queries, contextual assessments, material preconditions/effects/postconditions and lifecycle transition ownership.
 
-State normalization does not imply behavior completion. 008-D must still close actions, queries, preconditions/effects/postconditions and lifecycle transitions before operational-principle and independence/catalog reviews proceed.
+All fifteen accepted synchronizations can be expressed through accepted concept-owned actions/queries. No hidden coordinator action, new concept or `SYNC-16` was required by 008-D.
+
+This does not complete Phase 008 or Jackson concept design. Operational principles, independence/genericity/familiarity and deferred/rejected candidate rediscovery remain ahead.
 
 ## Remaining design roadmap
 
 ```text
-008-D  Concept Action, Query, Preconditions/Postconditions & Lifecycle Closure
 008-E  Operational Principle Completeness, Purpose Fulfillment & Counterexample Review
 008-F  Independence, Genericity, Familiarity & Reuse Revalidation
 008-G  Deferred/Rejected Candidate Rediscovery, Missing-Concept & Boundary Audit
@@ -63,6 +66,6 @@ Only a positive Phase 014 may change implementation to **READY / NOT STARTED / N
 
 ## Current next boundary
 
-**008-D — Concept Action, Query, Preconditions/Postconditions & Lifecycle Closure**.
+**008-E — Operational Principle Completeness, Purpose Fulfillment & Counterexample Review**.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
