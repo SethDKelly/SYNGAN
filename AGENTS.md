@@ -13,21 +13,23 @@ Start with:
 - `docs/authority/jackson-design-completion-implementation-hold.md`
 - `docs/authority/jackson-methodology-completion-matrix.md`
 - `docs/problem/index.md`
-- `docs/problem/concept-justification-traceability.md`
+- `docs/concepts/index.md`
+- `docs/concepts/state-identity-history-invariant-normalization.md`
 - `docs/phases/008/index.md`
-- relevant canonical concept/synchronization/experience authority
-- Phase 007 architecture only when it supplies downstream evidence or a design counterexample
+
+Phase 007 architecture is downstream evidence only until Phase 013 reconciliation.
 
 Current state:
 
 ```text
 accepted concepts          11
 accepted synchronizations  15
-active ADRs                10
 current desired outcomes   16
 Phase 008                  ACTIVE
 008-A                      COMPLETE
 008-B                      COMPLETE
+008-C                      COMPLETE
+008-D                      NEXT ELIGIBLE
 Jackson design completion  IN PROGRESS
 implementation readiness   NOT READY
 implementation start       NOT STARTED
@@ -38,105 +40,85 @@ implementation next        NOT YET
 
 > **Complete the design before making implementation ready. Existing architecture, code, tests or implementation plans may expose misfits, but they may not veto upstream concept-design correction.**
 
-The 007-K bounded implementation-reentry conclusion remains superseded. Its architecture/scaffold findings remain historical/downstream evidence.
+## Current concept-state authority
 
-## Current problem-purpose authority
+008-C established five intentional state-shape families:
 
-008-B reconciled the upstream problem corpus. Agents must now preserve these current scope facts unless later explicit design authority changes them:
+```text
+reusable revisioned authorities  Data Meaning / Strategy / Constraint / Criterion
+committed domain activities      Learning / Generation / Evaluation
+durable established results     Learned State / Evidence
+operational realization          Execution
+typed historical relationships  Provenance
+```
 
-- supported structured-data capability target includes single-table, time-series, and multi-table shared-key generation;
-- legitimate composite structured topology must remain representable;
-- arbitrary recursive/cyclic graph synthesis is not a universal baseline guarantee;
-- free-form/source-language text fields **inside structured data** are in scope;
-- at least one supported baseline text-bearing path must be self-contained/source-derived or local without mandatory public pretrained model, hidden first-use download, or runtime inference service;
-- general unstructured/free-standing text generation remains outside current scope;
-- streaming/real-time serving remains outside the current baseline;
-- synthetic origin never implies privacy or release approval.
+Agents must preserve these distinctions and must not normalize them into one generic lifecycle merely for implementation convenience.
 
-These are problem/design commitments, not implementation or architecture permissions.
+Also preserve:
 
-## Methodology completion matrix
-
-Use `docs/authority/jackson-methodology-completion-matrix.md` as the current ledger. Historical `complete` phase labels do not automatically establish current methodology closure.
-
-Artifact roles remain:
-
-- Class A — current upstream design authority;
-- Class B — supporting design evidence;
-- Class C — downstream architecture evidence pending reconciliation;
-- Class D — historical implementation-planning/executable evidence.
-
-Class C/D may reveal a misfit. They may not silently define unfinished Class A behavior.
+- lineage identity != semantic revision != activity occurrence != result identity != current-use status;
+- material historical meaning is non-destructive;
+- current eligibility/applicability is separate from historical fact;
+- contextual compatibility/applicability remains contextual;
+- unknown/indeterminate state stays explicit where false certainty would matter;
+- physical durability != semantic establishment/completion;
+- operational completion != domain completion;
+- restored historical persistence does not itself restore current conceptual authority;
+- bulk rows/tasks/logs are not canonical control-plane concept state by default.
 
 ## Current Phase 008 boundary
 
 ```text
 008-A  COMPLETE — Methodology Authority Reset, Completion Matrix & Design-Only Guardrails
 008-B  COMPLETE — Problem, Purpose, Outcome & Concept-Justification Traceability Revalidation
-008-C  NEXT ELIGIBLE — Concept State Model, Identity, History & Invariant Normalization
-008-D  PLANNED — Concept Action, Query, Preconditions/Postconditions & Lifecycle Closure
+008-C  COMPLETE — Concept State Model, Identity, History & Invariant Normalization
+008-D  NEXT ELIGIBLE — Concept Action, Query, Preconditions/Postconditions & Lifecycle Closure
 008-E  PLANNED — Operational Principle Completeness, Purpose Fulfillment & Counterexample Review
 008-F  PLANNED — Independence, Genericity, Familiarity & Reuse Revalidation
 008-G  PLANNED — Deferred/Rejected Candidate Rediscovery, Missing-Concept & Boundary Audit
-008-H  PLANNED — Phase 008 Consolidation, Individual-Concept Completeness Decision & Phase 009 Handoff
+008-H  PLANNED — Phase 008 Consolidation & Phase 009 Handoff
 ```
 
-008-B positively justified all eleven concepts at the full-product purpose level. Do **not** treat that as proof that every concept is independent, familiarly named, behaviorally complete, or required in every valid application subset.
+008-D must reason about conceptual actions and state-observing queries. Do not convert buttons, HTTP methods, Python functions, Spark jobs, database transitions, scheduler events or manifest operations into concept actions merely because they are implementation candidates.
 
-## Jackson methodology distinctions agents must preserve
+## Jackson distinctions to preserve
 
-- purpose explains why each concept exists;
-- operational principles demonstrate how the concept fulfills its purpose;
-- conceptual state/actions/queries specify behavior independently of interface mechanisms;
-- actions are conceptual acts, not buttons, endpoints, jobs or implementation functions;
-- concepts are independently understandable functional units, not classes/services/objects by default;
-- synchronizations compose concept actions without transferring state ownership;
-- **concept dependence means inclusion dependence in this application**, not import/reference/runtime dependency;
-- concept mapping connects state/actions/queries to physical and linguistic interaction without redefining semantics;
-- specificity, familiarity and integrity are design criteria, not implementation metrics;
-- downstream misfit evidence reopens the smallest affected upstream authority.
+- purpose explains why a concept exists;
+- operational principles demonstrate purpose but do not replace complete state/action specification;
+- actions/queries define conceptual behavior independent of interface mechanisms;
+- synchronizations compose independently defined concepts without transferring state ownership;
+- concept dependence means application inclusion dependence, not import/reference/runtime dependency;
+- concept mapping is downstream of concept behavior and must preserve it;
+- specificity, familiarity and integrity are design criteria, not implementation metrics.
 
 ## Stop/reopen classes
 
-Follow J0-J7 in the completion matrix:
-
-- J0 editorial/non-semantic;
-- J1 local concept specification gap;
-- J2 purpose/boundary/catalog defect;
-- J3 dependence/composition/synchronization defect;
-- J4 concept-mapping/experience defect;
-- J5 design-quality/misfit defect;
-- J6 architecture reconciliation defect;
-- J7 whole-design readiness defect.
-
-Do not patch a higher-class conceptual defect only in downstream architecture/code/tests.
+Follow J0-J7 in the completion matrix. Reopen the smallest affected upstream authority for a real defect; do not patch a conceptual defect only in architecture/code/tests.
 
 ## What agents may do now
 
-For explicitly entered design subgroups, agents may inspect repository evidence, refine current design documents within subgroup authority, record alternatives/counterexamples/misfits, and revise upstream design when justified.
+For an explicitly entered design subgroup, agents may inspect repository evidence, refine current design authority within that subgroup, record counterexamples/misfits, and revise upstream design when justified.
 
-For 008-C specifically, normalize conceptual state, identity, history, lifecycle and invariants independently of storage/schema/API/runtime representation. Phase 007 architecture may provide counterexamples but may not dictate concept state.
+Architecture/source/tests may be inspected only as feasibility or misfit evidence, not as authority over unfinished concepts.
 
 ## What agents must not do until Phase 014 passes
 
-Do not add production behavior; implementation APIs; persistence/data-plane schemas or migrations; Spark/runtime/model/platform/security adapters; Execution/recovery implementations; Evidence/Provenance/history implementations; reference Strategies/vertical slices; runtime/build dependencies for future capability; new executable architecture/fitness restrictions; package-topology changes; or stale-test repairs made merely to create implementation readiness.
+Do not add production behavior, implementation APIs, persistence/data-plane schemas, Spark/runtime/model/platform/security adapters, recovery implementations, Evidence/Provenance implementations, reference Strategies, runtime/build dependencies for future capability, package-topology changes, or executable architecture/fitness restrictions merely to freeze evolving design.
 
-Existing `src/syngan`, tests, Import Linter rules, tooling and CI remain historical/provisional evidence.
+Do not repair stale implementation tests solely to make implementation appear ready.
 
 ## Readiness rule
 
 Phases 008-013 retain:
 
 ```text
-IMPLEMENTATION READINESS   NOT READY
-IMPLEMENTATION START       NOT STARTED
-IMPLEMENTATION NEXT        NOT YET
+NOT READY / NOT STARTED / NOT YET
 ```
 
-Only Phase 014 may make the final whole-design readiness decision. If it passes, the allowed state is **READY / NOT STARTED / NEXT**, still requiring an explicit future Phase 015 before implementation begins.
+Only Phase 014 may make the final whole-design readiness decision. Even then, implementation itself requires a later explicit Phase 015.
 
 ## Current next boundary
 
-**008-C — Concept State Model, Identity, History & Invariant Normalization** is the next eligible subgroup.
+**008-D — Concept Action, Query, Preconditions/Postconditions & Lifecycle Closure**.
 
 Do not begin implementation work.
