@@ -21,7 +21,8 @@ Jackson concept design       IN PROGRESS
 Phase 008-A                  COMPLETE
 Phase 008-B                  COMPLETE
 Phase 008-C                  COMPLETE
-Phase 008-D                  NEXT ELIGIBLE
+Phase 008-D                  COMPLETE
+Phase 008-E                  NEXT ELIGIBLE
 architecture corpus          RETAINED AS DOWNSTREAM DESIGN EVIDENCE
 architecture reconciliation  PLANNED FOR PHASE 013
 implementation readiness     NOT READY
@@ -29,13 +30,13 @@ implementation start         NOT STARTED
 implementation next          NOT YET
 ```
 
-## Relationship to current concept-state authority
+## Relationship to current concept authority
 
-Phase 008-C established [Concept State, Identity, History & Invariant Normalization](../concepts/state-identity-history-invariant-normalization.md).
+Phase 008-C established [Concept State, Identity, History & Invariant Normalization](../concepts/state-identity-history-invariant-normalization.md). Phase 008-D established [Concept Action, Query, Preconditions/Postconditions & Lifecycle Normalization](../concepts/action-query-lifecycle-normalization.md).
 
-Where retained Phase 004/006/007 architecture uses more specific identity, revision, persistence, fencing, manifest, runtime or recovery mechanisms, those mechanisms are downstream realization hypotheses/evidence. They do not replace the normalized conceptual distinctions.
+Where retained Phase 004/006/007 architecture uses more specific identity, persistence, fencing, manifests, runtime events, recovery mechanisms or state machines, those are downstream realization hypotheses/evidence. They do not replace normalized conceptual state or action/query semantics.
 
-Architecture may expose a real misfit in the concept model, but it must not force concept state to mirror a preferred storage/runtime representation.
+Architecture may expose a real misfit in the concept model, but it must not force a concept command/query to mirror a preferred API, transaction, scheduler event, object lifecycle or storage mechanism.
 
 ## Phase 007 architecture status
 
@@ -65,4 +66,4 @@ IMPLEMENTATION NEXT        NOT YET
 
 ## Current next boundary
 
-**008-D — Concept Action, Query, Preconditions/Postconditions & Lifecycle Closure**.
+**008-E — Operational Principle Completeness, Purpose Fulfillment & Counterexample Review**.
