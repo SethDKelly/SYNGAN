@@ -37,8 +37,9 @@ Current design progression:
 007-F         complete — distributed data-state/topology/manifest/candidate-seal/promotion architecture
 007-G         complete — Strategy/method binding/dependency trust/authorization/secrets/runtime-closure architecture
 007-H         complete — Execution/Attempt/idempotency/fencing/non-regressing recovery/checkpoint/cancellation/admission architecture
-007-I         next eligible design subgroup — not started
-007-J..007-K  not started
+007-I         complete — Evaluation/Evidence/Provenance/history/reproducibility/disclosure architecture
+007-J         next eligible design subgroup — reference-slice scope/architecture-completeness re-evaluation
+007-K         not started
 ```
 
 Current implementation progression:
@@ -52,10 +53,12 @@ Current implementation progression:
 
 Production implementation expansion is frozen under the [Phase 007 Design Continuation & Implementation Freeze](../authority/phase-007-design-continuation-implementation-freeze.md).
 
-007-D through 007-H changed architecture/documentation only. No new production behavior, persistence/data-plane schemas, Spark/runtime/security adapters, execution/recovery/admission mechanisms, dependencies, tests, executable restrictions or CI enforcement were added.
+007-D through 007-I changed architecture/documentation only. No new production behavior, persistence/data-plane schemas, Spark/runtime/security adapters, execution/recovery/admission mechanisms, Evidence/Provenance/history/query/reproducibility/disclosure implementations, dependencies, tests, executable restrictions or CI enforcement were added.
+
+The earlier 007-J wording proposed a self-contained single-table/Spark-local executable proof. That label is now subject to design review rather than being treated as implementation authority.
 
 ## Current next boundary
 
-**007-I — Evaluation/Evidence, Provenance, Historical Query, Reproducibility & Disclosure Foundation** is next eligible as a **design** subgroup.
+**007-J — Reference Vertical-Slice Scope Re-evaluation, Architecture Completeness & Implementation-Proof Boundary** is next eligible as a **design** subgroup.
 
 It requires an explicit proceed decision. Implementation remains frozen independently of design progression.
