@@ -35,13 +35,15 @@ Only Phase 014 may change that posture after a positive whole-design completion 
 008-B  COMPLETE — problem / purpose / outcome / concept justification
 008-C  COMPLETE — concept state / identity / history / invariants
 008-D  COMPLETE — actions / queries / preconditions / postconditions / lifecycle transitions
-008-E  NEXT ELIGIBLE — operational principles / purpose fulfillment / counterexamples
-008-F  PLANNED — independence / genericity / familiarity / reuse
+008-E  COMPLETE — operational principles / purpose fulfillment / counterexamples
+008-F  NEXT ELIGIBLE — independence / genericity / familiarity / reuse
 008-G  PLANNED — candidate rediscovery / missing-concept / boundaries
 008-H  PLANNED — Phase 008 consolidation and Phase 009 handoff
 ```
 
-008-C established [Concept State, Identity, History & Invariant Normalization](../concepts/state-identity-history-invariant-normalization.md). 008-D then established [Concept Action, Query, Preconditions/Postconditions & Lifecycle Normalization](../concepts/action-query-lifecycle-normalization.md), closing current individual-concept state/action/query/transition specification while leaving OP and catalog-quality work open.
+008-C established [Concept State, Identity, History & Invariant Normalization](../concepts/state-identity-history-invariant-normalization.md). 008-D established [Concept Action, Query, Preconditions/Postconditions & Lifecycle Normalization](../concepts/action-query-lifecycle-normalization.md). 008-E then established [Operational Principle, Purpose Fulfillment & Counterexample Normalization](../concepts/operational-principle-purpose-counterexample-normalization.md).
+
+The current individual-concept purpose/state/action/operational-principle layer is therefore substantially normalized, but Phase 008 remains open until independence/genericity/familiarity, candidate rediscovery and consolidation are complete.
 
 ## Later design phases
 
@@ -87,4 +89,4 @@ Only the current high-level phase is decomposed in detail. Phases 009-014 are su
 
 ## Current next boundary
 
-**008-E — Operational Principle Completeness, Purpose Fulfillment & Counterexample Review**.
+**008-F — Independence, Genericity, Familiarity & Reuse Revalidation**.
