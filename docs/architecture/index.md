@@ -10,50 +10,115 @@ status: active
 
 This directory is the canonical home for representation/architecture design downstream of accepted concepts, synchronizations and experience authority.
 
-## Start here — current architecture continuation
+## Start here — current architecture
 
-For current design, read only what the active question needs:
+For current implementation-facing architecture, begin with:
 
-1. [Phase 007 Design Continuation & Implementation Freeze](../authority/phase-007-design-continuation-implementation-freeze.md);
-2. [007-D Identity, Revision, Serialization, Resource/Handle & Programmatic-View Foundation](phase-007-d-identity-revision-serialization-resource-handle-programmatic-view-foundation.md);
-3. [007-E Control Persistence, Transactions, CAS, Outbox, Historical References & Migration Baseline](phase-007-e-control-persistence-transactions-cas-outbox-historical-reference-migration-baseline.md);
-4. [007-F Distributed Data-State, Structured Topology, Manifest, Candidate/Seal & Promotion Foundation](phase-007-f-distributed-data-state-structured-topology-manifest-candidate-seal-promotion-foundation.md);
-5. [007-G Strategy/Method Binding, Dependency Trust, Authorization, Secrets & Distributed Runtime Closure Foundation](phase-007-g-strategy-method-binding-dependency-trust-authorization-secrets-distributed-runtime-closure-foundation.md);
-6. [007-H Execution/Attempt, Idempotency, Fencing, Non-Regressing Recovery, Checkpoint, Cancellation & Admission Foundation](phase-007-h-execution-attempt-idempotency-fencing-non-regressing-recovery-checkpoint-cancellation-admission-foundation.md);
-7. [007-I Evaluation/Evidence, Provenance, Historical Query, Reproducibility & Disclosure Foundation](phase-007-i-evaluation-evidence-provenance-historical-query-reproducibility-disclosure-foundation.md);
-8. [007-J Reference Vertical-Slice Scope Re-evaluation, Architecture Completeness & Implementation-Proof Boundary](phase-007-j-reference-vertical-slice-scope-re-evaluation-architecture-completeness-implementation-proof-boundary.md);
-9. [Phase 006 Architecture Reconciliation Contract](phase-006-architecture-reconciliation-contract.md) where not refined later;
-10. only directly relevant Phase 004 detailed authorities;
-11. [ADRs](../decisions/index.md) for rationale/history.
+1. [Phase 007 Consolidated Architecture Contract](phase-007-consolidated-architecture-contract.md);
+2. [Phase 007 Consolidated Architecture & Implementation-Reentry Readiness Contract](../authority/phase-007-consolidated-architecture-implementation-reentry-readiness-contract.md);
+3. only the directly relevant 007-D through 007-J detailed authority;
+4. [ADRs](../decisions/index.md) for rationale/history;
+5. Phase 006/004 architecture only where the Phase 007 consolidated authority delegates or has not refined the question.
 
 ## Current posture
 
-Architecture design is **active**; production implementation expansion and new executable architecture enforcement remain frozen pending 007-K.
+Phase 007 architecture design is **complete and consolidated**.
 
-Existing 007-A through 007-C implementation artifacts are provisional feasibility/history evidence and may be revised later.
+Controlled implementation re-entry is approved for a bounded scaffold/verification reconciliation tranche only. Owner-specific feature implementation remains unauthorized until that tranche completes and a later implementation subgroup is separately approved.
 
-## 007-D through 007-I architecture foundation
+The previous [Phase 007 Design Continuation & Implementation Freeze](../authority/phase-007-design-continuation-implementation-freeze.md) is historical/superseded.
 
-007-D through 007-I establish the current technology-neutral architecture for identity/reference/view semantics; control persistence/history/recovery; distributed data/topology/manifest/candidate/seal/promotion; Strategy/method executable binding, dependency trust, authorization, secrets and runtime closure; Execution/Attempt/fencing/idempotency/non-regressing recovery/checkpoint/cancellation/admission; and Evaluation/Evidence/Provenance/history/reproducibility/disclosure.
+## Detailed Phase 007 architecture authorities
 
-Important cross-cutting rules include:
+- [007-D — Identity, Revision, Serialization, Resource/Handle & Programmatic-View Foundation](phase-007-d-identity-revision-serialization-resource-handle-programmatic-view-foundation.md)
+- [007-E — Control Persistence, Transactions, CAS, Outbox, Historical References & Migration Baseline](phase-007-e-control-persistence-transactions-cas-outbox-historical-reference-migration-baseline.md)
+- [007-F — Distributed Data-State, Structured Topology, Manifest, Candidate/Seal & Promotion Foundation](phase-007-f-distributed-data-state-structured-topology-manifest-candidate-seal-promotion-foundation.md)
+- [007-G — Strategy/Method Binding, Dependency Trust, Authorization, Secrets & Distributed Runtime Closure Foundation](phase-007-g-strategy-method-binding-dependency-trust-authorization-secrets-distributed-runtime-closure-foundation.md)
+- [007-H — Execution/Attempt, Idempotency, Fencing, Non-Regressing Recovery, Checkpoint, Cancellation & Admission Foundation](phase-007-h-execution-attempt-idempotency-fencing-non-regressing-recovery-checkpoint-cancellation-admission-foundation.md)
+- [007-I — Evaluation/Evidence, Provenance, Historical Query, Reproducibility & Disclosure Foundation](phase-007-i-evaluation-evidence-provenance-historical-query-reproducibility-disclosure-foundation.md)
+- [007-J — Reference Vertical-Slice Scope Re-evaluation, Architecture Completeness & Implementation-Proof Boundary](phase-007-j-reference-vertical-slice-scope-re-evaluation-architecture-completeness-implementation-proof-boundary.md)
 
-- exact historical/semantic identity remains distinct from mutable current state and physical/runtime identity;
-- semantic owners retain promotion/completion authority rather than platform/runtime outcomes;
-- distributed logical subjects remain separate from physical layouts and support composable topology;
-- implementation/dependency/runtime closure remains separate from Strategy/method semantics;
-- stale-writer safety requires current non-regressing authority rather than leases or restored epochs alone;
-- Evidence is established only after Evaluation semantic validation;
-- Provenance remains typed relationship authority rather than duplicated canonical state;
-- historical knowledge quality, current applicability/availability, reproducibility support and actor-visible disclosure remain separable.
+## Consolidated architecture spine
 
-Earlier Phase 005 concrete types, stores, APIs, package layouts, schedulers, runtime mechanisms and security products remain implementation candidates rather than architecture requirements.
+The current architecture preserves this composition:
 
-## 007-J — proof boundary and architecture-completeness finding
+```text
+semantic authority / exact commitments
+        ↓
+typed exact identity / revisions / references / views
+        ↓
+owner-controlled persistence / concurrency / exact history
+        ↓
+logical data state / composable topology / manifested representation
+        ↓
+semantic Strategy/method ↔ exact executable/dependency/runtime realization
+        ↓
+stable Execution / distinguishable Attempts / current mutation authority
+        ↓
+candidate sealing / owner semantic completion and promotion
+        ↓
+Evaluation semantic validation / Evidence / typed Provenance
+        ↓
+historical query / qualified reproducibility / actor-safe disclosure
+        ↓
+explicit proof and claim boundaries
+```
 
-007-J establishes that architecture through 007-I is complete enough to define controlled implementation proof without discovering another missing concept/synchronization/ADR prerequisite.
+This is an authority composition, not a required one-size-fits-all workflow. Direct Generation may omit Learning/Learned State when its Strategy semantics do not require them.
 
-It distinguishes five evidence classes:
+## Core cross-cutting rules
+
+Current architecture requires at least:
+
+- logical identity != semantic revision != mutable state version != representation schema version;
+- handle/view != canonical owner;
+- historical exact reference != current/latest substitution;
+- persistence durability != semantic completion;
+- CAS != semantic transition validation;
+- logical data subject != physical representation;
+- physical layout != Data Meaning/topology semantics;
+- open candidate != sealed subject != promoted output;
+- semantic Strategy/method != implementation binding/dependency/runtime identity;
+- explicit provisioning != material runtime acquisition;
+- current authorization != historical commitment;
+- secret values != canonical history/Provenance;
+- driver readiness != distributed worker closure;
+- Execution != provider job/run;
+- Attempt observed state != current mutation authority;
+- idempotency != fencing != authorization;
+- lease/liveness != stale-writer exclusion;
+- restored state != current mutation authority;
+- checkpoint durability != resume eligibility != semantic result;
+- admission != semantic readiness != queue placement != write authority;
+- runtime/platform completion != Learning/Generation/Evaluation completion;
+- Evaluation runtime result != Evidence;
+- immutable Evidence finding != current applicability;
+- favorable privacy Evidence != formal guarantee != release approval;
+- Provenance != duplicated canonical metadata graph;
+- reference resolution != historical-knowledge quality;
+- directly retained != reconstructed != partial/unknown history;
+- derived query/projection != canonical historical authority;
+- historical difference != causal/quality claim;
+- canonical truth != actor-visible disclosure;
+- historical reproducibility support != current reproduction feasibility != reproduction success.
+
+## Complete capability target
+
+The complete structured-data baseline remains:
+
+```text
+single-table generation
+time-series generation
+multi-table shared-key generation
+```
+
+with composable topology and a supported self-contained Strategy path for each required family before complete-baseline support is claimed.
+
+The supported baseline also requires source-derived/local free-form-text synthesis without mandatory pretrained model, public model hub, first-use model download or runtime inference service.
+
+## Implementation-proof boundary
+
+Implementation evidence must distinguish:
 
 ```text
 architecture-conformance proof
@@ -63,37 +128,13 @@ resilience/adversarial proof
 scale/release qualification
 ```
 
-A single green end-to-end demo cannot stand in for all five.
+A learning-based single-table local/Spark-local reference path may be the first bounded user-visible proof after later feature authority, but it is not proof of direct-generation neutrality, time-series, multi-table, distributed runtime, regressive recovery, enterprise scale, privacy/release guarantees or release readiness.
 
-### First reference path
+## Historical scaffold status
 
-After a later explicit implementation re-entry, the preferred first bounded user-visible reference path is a self-contained learning-based single-table path on a local/Spark-local profile using a deliberately simple, replaceable Strategy implementation.
+The retained 007-B/007-C source/tool/test scaffold is feasibility evidence, not architecture authority.
 
-Its value is breadth with bounded topology complexity: it can exercise source identity, semantic commitments, Learning/Learned State, Generation, Execution/Attempt, candidate/seal, Evaluation/Evidence, promotion, Provenance/history and reproducibility composition.
-
-It does **not** make the reference algorithm or `fit/sample` lifecycle semantic authority.
-
-### Separate required proof
-
-Before broader baseline claims, implementation evidence must separately cover:
-
-- direct-generation neutrality without fabricated Learning/Learned State;
-- source-derived/local free-form text without mandatory public model/service dependency;
-- time-series semantics and whole-scope completion;
-- multi-table shared-key semantics and coordinated completion;
-- composite-topology representability;
-- deterministic/bounded and statistical/approximate Evaluation forms;
-- adversarial retry/fencing/recovery/cancellation/history/disclosure scenarios;
-- distributed worker runtime closure and managed-platform capability where claimed;
-- enterprise scale and release qualification.
-
-Local/Spark-local success proves only the local profile guarantees actually exercised.
-
-### Provisional scaffold consequence
-
-007-J retains the 007-B/007-C tool/package scaffold only as feasibility evidence. Exact package count, Import Linter contracts, tool versions, root-import rules, socket exceptions and delivery-state fitness assertions must be reassessed at re-entry against 007-D through 007-J.
-
-Existing executable gates cannot become upstream authority merely because they predate the refined architecture.
+The exact seven-package set, Import Linter contracts, tool versions, root import restrictions, socket exceptions and historical delivery-state fitness tests must be reconciled in the next R0/008-A tranche before owner-specific feature implementation begins.
 
 ## Current design counts
 
@@ -101,17 +142,13 @@ Existing executable gates cannot become upstream authority merely because they p
 accepted concepts          11
 accepted synchronizations  15
 active ADRs                10
-new concepts in 007-D..J    0
-new synchronizations        0
-new ADRs                    0
+provisional concepts        0
 ```
 
 No `SYNC-16`.
 
-007-J adds no ADR because it defines delivery/evidence claim boundaries under existing architecture decisions rather than selecting a new technical architecture alternative.
-
 ## Current next boundary
 
-**007-K — Phase 007 Consolidation, Architecture-Fitness Audit, Evidence Review & Implementation-Reentry Readiness Decision** is the next eligible **design/governance** subgroup.
+**008-A — Implementation Re-entry Authority, Scaffold Reconciliation & Verification Re-baseline** is the next eligible tranche after an explicit proceed decision.
 
-007-K must decide explicitly whether implementation re-entry is justified and, if so, what bounded implementation tranche can begin. Production implementation remains frozen until that decision.
+008-A is limited to making the implementation substrate and executable verification truthful against this consolidated architecture. It does not authorize domain/runtime feature implementation.
