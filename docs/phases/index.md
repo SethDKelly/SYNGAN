@@ -34,14 +34,14 @@ Only Phase 014 may change that posture after a positive whole-design completion 
 008-A  COMPLETE — methodology authority / completion matrix / guardrails
 008-B  COMPLETE — problem / purpose / outcome / concept justification
 008-C  COMPLETE — concept state / identity / history / invariants
-008-D  NEXT ELIGIBLE — actions / queries / preconditions / postconditions / lifecycle transitions
-008-E  PLANNED — operational principles / counterexamples
+008-D  COMPLETE — actions / queries / preconditions / postconditions / lifecycle transitions
+008-E  NEXT ELIGIBLE — operational principles / purpose fulfillment / counterexamples
 008-F  PLANNED — independence / genericity / familiarity / reuse
 008-G  PLANNED — candidate rediscovery / missing-concept / boundaries
 008-H  PLANNED — Phase 008 consolidation and Phase 009 handoff
 ```
 
-008-C established [Concept State, Identity, History & Invariant Normalization](../concepts/state-identity-history-invariant-normalization.md). It closes state-model normalization for the present stage but deliberately leaves action transition closure to 008-D.
+008-C established [Concept State, Identity, History & Invariant Normalization](../concepts/state-identity-history-invariant-normalization.md). 008-D then established [Concept Action, Query, Preconditions/Postconditions & Lifecycle Normalization](../concepts/action-query-lifecycle-normalization.md), closing current individual-concept state/action/query/transition specification while leaving OP and catalog-quality work open.
 
 ## Later design phases
 
@@ -87,4 +87,4 @@ Only the current high-level phase is decomposed in detail. Phases 009-014 are su
 
 ## Current next boundary
 
-**008-D — Concept Action, Query, Preconditions/Postconditions & Lifecycle Closure**.
+**008-E — Operational Principle Completeness, Purpose Fulfillment & Counterexample Review**.
