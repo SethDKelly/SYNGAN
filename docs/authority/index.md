@@ -47,14 +47,19 @@ Completed current design groups:
 - [007-E — Control Persistence, Transactions, CAS, Outbox, Historical References & Migration Baseline](../architecture/phase-007-e-control-persistence-transactions-cas-outbox-historical-reference-migration-baseline.md)
 - [007-F — Distributed Data-State, Structured Topology, Manifest, Candidate/Seal & Promotion Foundation](../architecture/phase-007-f-distributed-data-state-structured-topology-manifest-candidate-seal-promotion-foundation.md)
 - [007-G — Strategy/Method Binding, Dependency Trust, Authorization, Secrets & Distributed Runtime Closure Foundation](../architecture/phase-007-g-strategy-method-binding-dependency-trust-authorization-secrets-distributed-runtime-closure-foundation.md)
+- [007-H — Execution/Attempt, Idempotency, Fencing, Non-Regressing Recovery, Checkpoint, Cancellation & Admission Foundation](../architecture/phase-007-h-execution-attempt-idempotency-fencing-non-regressing-recovery-checkpoint-cancellation-admission-foundation.md)
 
 All are architecture/design authority only. Their production implementation is not authorized.
 
-007-G preserves semantic Strategy/method authority separately from executable binding, dependency closure, trust/authorization, secrets and role-specific distributed runtime closure. It does not select a plugin technology, runtime SPI, package-distribution mechanism, policy engine or secret manager.
+007-G preserves semantic Strategy/method authority separately from executable binding, dependency closure, trust/authorization, secrets and role-specific distributed runtime closure.
+
+007-H preserves stable Execution/Attempt history while separating observed physical state, current mutation authority, idempotency, fencing, recovery-frontier continuity, checkpoint reuse, cancellation and admission. Potentially regressive recovery must establish fresh non-regressing stale-writer exclusion before ordinary writes resume, and admission remains current operational eligibility rather than semantic readiness or write authority.
+
+Neither 007-G nor 007-H selects concrete runtime, security, scheduler, queue, fencing, checkpoint, persistence or admission technology.
 
 The next eligible design group is:
 
-**007-H — Execution/Attempt, Idempotency, Fencing, Non-Regressing Recovery, Checkpoint, Cancellation & Admission Foundation**.
+**007-I — Evaluation/Evidence, Provenance, Historical Query, Reproducibility & Disclosure Foundation**.
 
 ## Historical readiness authority
 
