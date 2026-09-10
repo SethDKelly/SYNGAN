@@ -10,7 +10,10 @@ status: suspended
 
 Implementation planning and the retained Phase 007 scaffold remain historical/downstream evidence only.
 
-Current authority is [Jackson Design Completion & Implementation Hold](../authority/jackson-design-completion-implementation-hold.md).
+Current authority:
+
+- [Jackson Design Completion & Implementation Hold](../authority/jackson-design-completion-implementation-hold.md)
+- [Jackson Methodology Completion Matrix](../authority/jackson-methodology-completion-matrix.md)
 
 ```text
 IMPLEMENTATION READINESS   NOT READY
@@ -20,11 +23,17 @@ IMPLEMENTATION NEXT        NOT YET
 
 No implementation tranche is currently eligible.
 
+## Phase 008-A result
+
+008-A completed the methodology-authority reset and established the canonical completion matrix. That work reinforces rather than relaxes the implementation suspension.
+
+The matrix explicitly classifies implementation planning, source/tests/tooling/CI and the historical 007-K engineering-readiness result as evidence that may expose design misfits but cannot satisfy unfinished concept-design obligations.
+
 ## Superseded 007-K re-entry conclusion
 
-007-K previously approved a bounded R0/008-A scaffold-reconciliation tranche. That engineering-readiness conclusion is suspended/superseded because a later methodology review found remaining Jackson concept-design work that had not received explicit closure.
+007-K previously approved a bounded R0 scaffold-reconciliation tranche. That engineering-readiness conclusion is suspended/superseded because the fuller methodology still has open concept-dependence, mapping, quality/misfit and current-state consolidation work.
 
-The architecture and scaffold observations from 007-K remain useful evidence. They do not constitute permission to reconcile or extend executable implementation while design remains incomplete.
+The architecture and scaffold observations from 007-K remain useful downstream evidence. They do not constitute permission to reconcile or extend executable implementation while design remains incomplete.
 
 ## Remaining design before implementation can become ready
 
@@ -55,19 +64,7 @@ Do not repair, expand or reinterpret this material merely to prepare for impleme
 
 ## Current prohibition
 
-Until a positive Phase 014 readiness decision, do not add or expand:
-
-- production concept/domain behavior;
-- public API implementation;
-- persistence schemas or migrations;
-- distributed data/source/output implementations;
-- Spark/model/Strategy runtime behavior;
-- dependency/runtime/security providers;
-- Execution/Attempt/recovery/fencing/admission behavior;
-- Evidence/Provenance/history/query implementations;
-- platform/deployment adapters;
-- benchmarks or release qualification;
-- new executable architecture restrictions whose purpose is to freeze unfinished design.
+Until a positive Phase 014 readiness decision, do not add or expand production concept/domain behavior, public API implementation, persistence/data-plane schemas, runtime/model/security/platform adapters, Execution/recovery behavior, Evidence/Provenance/history implementation, benchmarks, or executable architecture restrictions intended to freeze unfinished design.
 
 Existing executable material may remain untouched as historical/provisional evidence.
 
@@ -87,4 +84,4 @@ If Phase 014 passes, a future **Phase 015 — Implementation Authority & Control
 
 The next work is design-only:
 
-**008-A — Methodology Authority Reset, Completion Matrix & Design-Only Guardrails**.
+**008-B — Problem, Purpose, Outcome & Concept-Justification Traceability Revalidation**.
