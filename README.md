@@ -15,6 +15,7 @@ Current architecture/design posture:
 - [`007-E Control Persistence, Transactions, CAS, Outbox, Historical References & Migration Baseline`](docs/architecture/phase-007-e-control-persistence-transactions-cas-outbox-historical-reference-migration-baseline.md)
 - [`007-F Distributed Data-State, Structured Topology, Manifest, Candidate/Seal & Promotion Foundation`](docs/architecture/phase-007-f-distributed-data-state-structured-topology-manifest-candidate-seal-promotion-foundation.md)
 - [`007-G Strategy/Method Binding, Dependency Trust, Authorization, Secrets & Distributed Runtime Closure Foundation`](docs/architecture/phase-007-g-strategy-method-binding-dependency-trust-authorization-secrets-distributed-runtime-closure-foundation.md)
+- [`007-H Execution/Attempt, Idempotency, Fencing, Non-Regressing Recovery, Checkpoint, Cancellation & Admission Foundation`](docs/architecture/phase-007-h-execution-attempt-idempotency-fencing-non-regressing-recovery-checkpoint-cancellation-admission-foundation.md)
 - [`Phase 007 index`](docs/phases/007/index.md)
 
 ## Status
@@ -25,7 +26,8 @@ Current architecture/design posture:
 - **007-E — complete as architecture design**
 - **007-F — complete as architecture design**
 - **007-G — complete as architecture design**
-- **007-H — next eligible design subgroup, not started**
+- **007-H — complete as architecture design**
+- **007-I — next eligible design subgroup, not started**
 - **Production implementation expansion — frozen**
 
 Phase 006 historically concluded that design was complete enough to consider implementation. The project later reopened architecture design so existing source/tests do not prematurely harden unsettled representation choices.
@@ -38,42 +40,38 @@ Phase 006 historically concluded that design was complete enough to consider imp
 
 007-F establishes the distributed data-state foundation: logical subject versus physical representation, bounded logical scopes, exact source-state/coordination strength, bounded manifests, candidate/seal separation and Generation-owned promotion.
 
-007-G establishes the executable realization/security/runtime foundation:
+007-G establishes the executable realization/security/runtime foundation: semantic Strategy/method authority remains distinct from exact implementation/dependency closure, current trust/authorization, secrets and role-specific distributed runtime realization.
+
+007-H establishes the execution/recovery/admission foundation:
 
 ```text
-semantic Strategy / method / activity commitment
+committed activity / stable Execution
         ↓
-implementation binding
+current admission + recovery-continuity qualification
         ↓
-exact implementation + dependency closure
+non-regressing recovery-authority frontier
         ↓
-identity / integrity / trust / compatibility
-        ↓
-current authorization + network/egress qualification
-        ↓
-role-specific distributed runtime closure
+current Attempt authority + resource-local preconditions
         ↓
 immutable Attempt invocation
-        +
-current scoped capabilities / secret access
         ↓
-physical runtime realization
+physical work and non-final effects
+        ↓
+reconciliation + semantic-owner validation
 ```
 
 Important consequences include:
 
-- semantic Strategy/method identity is not a plugin/package/model/runtime identity;
-- one binding may resolve multiple exact implementation/artifact components;
-- one Attempt cannot silently hot-swap a missing binding/dependency/model/service;
-- a later Attempt may use another compatible binding only when the unchanged semantic commitment permits that operational choice and history records the new realization;
-- dependency presence, exact identity, integrity/authenticity, trust/approval, compatibility and current authorization remain distinct;
-- explicit provisioning is separate from execution and missing runtime dependencies cannot trigger hidden installation/model-hub access/remote fallback;
-- network connectivity is not the same thing as data-egress permission;
-- live runtime capabilities and secret values do not become durable semantic authority;
-- driver readiness does not imply executor/worker readiness;
-- dynamic workers must inherit/prove the required role-specific closure before material work;
-- large Learned State/model/artifact loading cannot universally depend on driver broadcast;
-- implementation topology limitations cannot simplify or redefine committed topology semantics.
+- Attempt physical/observed state is distinct from current mutation authority;
+- operation-scoped idempotency does not replace fencing or authorization;
+- Attempt epoch alone cannot safely survive a potentially regressive control-state restore;
+- regressive recovery establishes fresh stale-writer exclusion before ordinary writes resume;
+- surviving immutable effects may be adopted by current authority without reviving the old producer;
+- checkpoint durability is distinct from current resume compatibility;
+- accepted cancellation blocks ordinary new admission and cannot be undone merely by restoring older control state;
+- admission is operational eligibility rather than semantic readiness, queue position or write authority;
+- temporary resource shortage remains distinguishable from true incompatibility;
+- at-least-once physical work remains acceptable while canonical semantic promotion remains singular and owner-controlled.
 
 Earlier concrete Phase 005 implementation choices remain possible candidates to reassess at implementation re-entry rather than current architecture requirements.
 
@@ -106,6 +104,6 @@ The complete supported baseline also requires source-derived/local free-form-tex
 
 ## Current next boundary
 
-**007-H — Execution/Attempt, Idempotency, Fencing, Non-Regressing Recovery, Checkpoint, Cancellation & Admission Foundation** is next eligible as a **design** subgroup.
+**007-I — Evaluation/Evidence, Provenance, Historical Query, Reproducibility & Disclosure Foundation** is next eligible as a **design** subgroup.
 
 An explicit proceed decision is required before it begins. Production implementation remains frozen independently of design progression.
