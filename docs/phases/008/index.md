@@ -25,6 +25,7 @@ Current governing authority:
 - [Accepted Concept Catalog](../../concepts/index.md)
 - [Concept State, Identity, History & Invariant Normalization](../../concepts/state-identity-history-invariant-normalization.md)
 - [Concept Action, Query, Preconditions/Postconditions & Lifecycle Normalization](../../concepts/action-query-lifecycle-normalization.md)
+- [Operational Principle, Purpose Fulfillment & Counterexample Normalization](../../concepts/operational-principle-purpose-counterexample-normalization.md)
 
 ## Current semantic baseline
 
@@ -46,8 +47,8 @@ Counts are evidence, not completion criteria.
 | **008-B** | [Problem, Purpose, Outcome & Concept-Justification Traceability Revalidation](008-B-problem-purpose-outcome-concept-justification-traceability-revalidation.md) | **complete** |
 | **008-C** | [Concept State Model, Identity, History & Invariant Normalization](008-C-concept-state-model-identity-history-invariant-normalization.md) | **complete** |
 | **008-D** | [Concept Action, Query, Preconditions/Postconditions & Lifecycle Closure](008-D-concept-action-query-preconditions-postconditions-lifecycle-closure.md) | **complete** |
-| **008-E** | **Operational Principle Completeness, Purpose Fulfillment & Counterexample Review** | **next eligible** |
-| **008-F** | Independence, Genericity, Familiarity & Reuse Revalidation | planned |
+| **008-E** | [Operational Principle Completeness, Purpose Fulfillment & Counterexample Review](008-E-operational-principle-completeness-purpose-fulfillment-counterexample-review.md) | **complete** |
+| **008-F** | **Independence, Genericity, Familiarity & Reuse Revalidation** | **next eligible** |
 | **008-G** | Deferred/Rejected Candidate Rediscovery, Missing-Concept & Boundary Audit | planned |
 | **008-H** | Phase 008 Consolidation, Individual-Concept Completeness Decision & Phase 009 Handoff | planned |
 
@@ -87,15 +88,21 @@ SYNC-01 through SYNC-15 can all be expressed through accepted owned actions/quer
 
 008-D closes current methodology rows C4-C6 and, combined with 008-C, closes C7 for individual-concept lifecycle/state behavior. No catalog change was made.
 
+### 008-E
+
+Established the canonical [Operational Principle, Purpose Fulfillment & Counterexample Normalization](../../concepts/operational-principle-purpose-counterexample-normalization.md).
+
+Every accepted concept's operational principle was replayed against its current purpose, normalized state/actions/queries and a falsifying counterexample. All eleven concepts pass.
+
+008-E found several older principles to be representation-heavy or overly focused on collaborators, but no concept defect. It normalized those stories without mass-rewriting Phase 002 history and made important absence cases explicit: direct generation need not fabricate Learning/Learned State; trivial work need not fabricate Execution; and workflows without evaluative or prescriptive need do not fabricate those concept occurrences.
+
+008-E closes current methodology row C2. It contributes counterexample evidence to the later final misfit audit but does not close independence, familiarity, catalog rediscovery, composition, mapping or whole Jackson completion.
+
 ## Remaining subgroup purposes
-
-### 008-E — Operational Principle Completeness, Purpose Fulfillment & Counterexample Review
-
-Replay every concept's operational principle against its current purpose and normalized state/actions/queries. Each principle must demonstrate the concept's benefit through a sufficiently rich history rather than merely restating actions. Counterexamples should attempt to falsify the claimed purpose fulfillment, expose hidden dependence, representation assumptions, circular reasoning or compound/god-concept behavior.
 
 ### 008-F — Independence, Genericity, Familiarity & Reuse Revalidation
 
-Re-test each concept as an independently understandable functional unit and explicitly evaluate naming/familiar analogues/reuse.
+Re-test each concept as an independently understandable functional unit. Review whether its purpose/state/actions remain coherent without hidden reliance on another concept, whether genericity is appropriately domain-level rather than infrastructure-shaped, whether a familiar existing concept or name fits better, and where concept reuse/generalization is legitimate without weakening problem-specific semantics.
 
 ### 008-G — Deferred/Rejected Candidate Rediscovery, Missing-Concept & Boundary Audit
 
@@ -135,6 +142,6 @@ Phases 009-014 will each be subdivided immediately before starting.
 
 ## Current next boundary
 
-**008-E — Operational Principle Completeness, Purpose Fulfillment & Counterexample Review** is the next eligible subgroup.
+**008-F — Independence, Genericity, Familiarity & Reuse Revalidation** is the next eligible subgroup.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
