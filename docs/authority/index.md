@@ -32,7 +32,7 @@ These documents define how SYNGAN design knowledge is created, interpreted, chan
 ```text
 concept / synchronization baseline   retained — 11 / 15
 experience authority                 retained
-architecture design                  ACTIVE
+architecture design                  COMPLETE THROUGH 007-J / consolidation pending
 new production implementation        FROZEN
 new executable architecture gates    FROZEN
 ```
@@ -49,25 +49,27 @@ Completed current design groups:
 - [007-G — Strategy/Method Binding, Dependency Trust, Authorization, Secrets & Distributed Runtime Closure Foundation](../architecture/phase-007-g-strategy-method-binding-dependency-trust-authorization-secrets-distributed-runtime-closure-foundation.md)
 - [007-H — Execution/Attempt, Idempotency, Fencing, Non-Regressing Recovery, Checkpoint, Cancellation & Admission Foundation](../architecture/phase-007-h-execution-attempt-idempotency-fencing-non-regressing-recovery-checkpoint-cancellation-admission-foundation.md)
 - [007-I — Evaluation/Evidence, Provenance, Historical Query, Reproducibility & Disclosure Foundation](../architecture/phase-007-i-evaluation-evidence-provenance-historical-query-reproducibility-disclosure-foundation.md)
+- [007-J — Reference Vertical-Slice Scope Re-evaluation, Architecture Completeness & Implementation-Proof Boundary](../architecture/phase-007-j-reference-vertical-slice-scope-re-evaluation-architecture-completeness-implementation-proof-boundary.md)
 
-All are architecture/design authority only. Their production implementation is not authorized.
+All remain design/architecture authority only. Their production implementation is not authorized.
 
-007-G preserves semantic Strategy/method authority separately from executable binding, dependency closure, trust/authorization, secrets and role-specific distributed runtime closure.
+007-G through 007-I define executable/runtime/security, operational recovery, and Evidence/history/disclosure responsibilities without selecting concrete implementation technology.
 
-007-H preserves stable Execution/Attempt history while separating observed physical state, current mutation authority, idempotency, fencing, recovery-frontier continuity, checkpoint reuse, cancellation and admission.
+007-J concludes that architecture through 007-I is complete enough to define a controlled proof portfolio and establishes that:
 
-007-I preserves Evaluation semantic validation separately from Evidence establishment; immutable Evidence separately from current applicability; typed Provenance separately from canonical owner payloads; historical resolution separately from historical-knowledge quality; historical supportability separately from current reproduction feasibility; and canonical history separately from actor-visible disclosure. Disclosure may protect existence, relationship shape, counts and reason text without rewriting internal truth.
+- architecture-conformance, capability, runtime/platform, resilience/adversarial and scale/release proof are distinct evidence classes;
+- single-table/Spark-local is a valid first bounded proof but cannot certify the complete baseline;
+- direct generation, self-contained text, time-series, multi-table shared-key, composite representability, Evaluation-method diversity, recovery/disclosure, distributed-runtime, platform and scale claims require separate evidence;
+- the existing 007-B/007-C scaffold remains provisional and must be reconciled before implementation resumes.
 
-007-G through 007-I select no concrete runtime/security/scheduler/fencing/checkpoint/Evidence/provenance/query/redaction technology.
+The next eligible design/governance group is:
 
-The next eligible design group is:
+**007-K — Phase 007 Consolidation, Architecture-Fitness Audit, Evidence Review & Implementation-Reentry Readiness Decision**.
 
-**007-J — Reference Vertical-Slice Scope Re-evaluation, Architecture Completeness & Implementation-Proof Boundary**.
-
-007-J is design-only unless a later explicit implementation re-entry decision separately authorizes executable work.
+007-K must explicitly decide whether implementation re-entry is justified and, if so, what bounded tranche is authorized. Until then, implementation remains frozen.
 
 ## Historical readiness authority
 
-[Phase 006 Consolidated Design Readiness Contract](phase-006-consolidated-design-readiness-contract.md) remains historically accurate but is reopened for current work by the Phase 007 design-continuation authority.
+[Phase 006 Consolidated Design Readiness Contract](phase-006-consolidated-design-readiness-contract.md) remains historically accurate but was reopened for additional architecture refinement by the Phase 007 design-continuation authority.
 
-Later documents must conform to current authority unless an explicit superseding design decision changes it.
+007-K will determine the current readiness conclusion after consolidating 007-D through 007-J.
