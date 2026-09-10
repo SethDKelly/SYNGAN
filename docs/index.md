@@ -32,6 +32,7 @@ Current governing authority:
 - [Concept Design Methodology](authority/design-methodology.md)
 - [Jackson Design Completion & Implementation Hold](authority/jackson-design-completion-implementation-hold.md)
 - [Jackson Methodology Completion Matrix](authority/jackson-methodology-completion-matrix.md)
+- [Current Problem Knowledge](problem/index.md)
 - [Phase 008 — Individual Concept Design Normalization & Completeness](phases/008/index.md)
 
 Current state:
@@ -40,34 +41,31 @@ Current state:
 accepted concepts          11
 accepted synchronizations  15
 active ADRs                10
+current desired outcomes   16
 Phase 008                  ACTIVE
 008-A                      COMPLETE
+008-B                      COMPLETE
 Jackson design completion  IN PROGRESS
 implementation readiness   NOT READY
 implementation start       NOT STARTED
 implementation next        NOT YET
 ```
 
-No `SYNC-16` is assumed; later design may change catalog/synchronization counts only if the methodology requires it.
+## Phase 008 progress
 
-## 008-A methodology reset
+008-A established the fuller Jackson methodology completion ledger, artifact-authority classes, J0-J7 stop/reopen discipline, and design-only guardrails.
 
-008-A established the canonical [Jackson Methodology Completion Matrix](authority/jackson-methodology-completion-matrix.md).
+008-B then reconciled current problem scope and established [Concept-Justification Traceability](problem/concept-justification-traceability.md). It made time-series and multi-table shared-key generation explicit current structured-data targets, clarified that free-form/source-language text fields inside structured data are in scope through a self-contained baseline path, and extended desired outcomes to O1-O16.
 
-The matrix deliberately treats historical phase completion as evidence rather than current closure and assigns every remaining methodology obligation to a future phase. It also separates:
+All eleven accepted concepts remain positively justified at the purpose level. No concept/synchronization/ADR catalog change was made by 008-B.
 
-- current upstream design authority;
-- supporting design evidence;
-- downstream representation/architecture evidence;
-- historical implementation-planning/executable evidence.
-
-J0-J7 stop/reopen classes ensure any later misfit reopens the smallest affected design authority rather than being patched downstream by implementation convenience.
+That purpose result does not close state/actions, operational principles, independence/familiarity, deferred-candidate rediscovery, inclusion dependence, mapping, or final integrity.
 
 ## Corrected interpretation of Phase 007
 
-Phase 007 produced valuable architecture refinement and a coherent architecture consolidation. Its 007-K engineering-readiness conclusion is **superseded as an implementation-readiness decision** because the fuller Jackson methodology still has open work.
+Phase 007 produced valuable architecture refinement and consolidation. Its 007-K engineering-readiness conclusion remains superseded as an implementation-readiness decision because the fuller Jackson methodology still has open work.
 
-The [Phase 007 Consolidated Architecture Contract](architecture/phase-007-consolidated-architecture-contract.md) remains valuable downstream design evidence. It does not prove that upstream concept design is complete.
+The [Phase 007 Consolidated Architecture Contract](architecture/phase-007-consolidated-architecture-contract.md) remains downstream design evidence pending Phase 013 reconciliation.
 
 ## Design-completion roadmap
 
@@ -83,34 +81,36 @@ The [Phase 007 Consolidated Architecture Contract](architecture/phase-007-consol
 015  Implementation Authority & Controlled Delivery — FUTURE ONLY
 ```
 
-Phases 009-014 are high-level boundaries only. Each must be decomposed into dependency-safe subgroups immediately before it starts.
+Phases 009-014 remain high-level boundaries and are subdivided only immediately before they start.
 
 ## Implementation status rule
 
-Through Phases 008-014, implementation remains:
+Through Phases 008-014:
 
 ```text
-NOT READY / NOT STARTED / NOT YET
+IMPLEMENTATION READINESS   NOT READY
+IMPLEMENTATION START       NOT STARTED
+IMPLEMENTATION NEXT        NOT YET
 ```
 
-Even a positive Phase 012 Jackson concept-design completion decision does not make implementation ready automatically. Phase 013 must first reconcile all downstream representation/architecture design against the completed concept design, and Phase 014 must then perform the whole-design exit audit.
+Even a positive Phase 012 result does not make implementation ready. Phase 013 must reconcile representation/architecture and Phase 014 must pass the whole-design exit gate.
 
-Only a positive Phase 014 decision may change the posture to:
+Only a positive Phase 014 may set:
 
 ```text
-READY / NOT STARTED / NEXT
+IMPLEMENTATION READINESS   READY
+IMPLEMENTATION START       NOT STARTED
+IMPLEMENTATION NEXT        NEXT
 ```
 
 That still does not start implementation; it only makes a future Phase 015 implementation-authority phase eligible.
 
 ## Historical executable scaffold
 
-The retained 007-B/007-C source/tests/CI remain historical/provisional evidence. Known stale tests and package/Import Linter assumptions need not be repaired during concept design merely to make the repository look implementation-ready.
-
-No new executable architecture constraints or feature implementation should be added until the full design program reaches its explicit readiness gate.
+The retained 007-B/007-C source/tests/CI remain historical/provisional evidence. They are not repaired or extended during concept design merely to create delivery readiness.
 
 ## Current next boundary
 
-**008-B — Problem, Purpose, Outcome & Concept-Justification Traceability Revalidation** is the next eligible subgroup.
+**008-C — Concept State Model, Identity, History & Invariant Normalization** is the next eligible subgroup.
 
-Implementation is **NOT READY / NOT STARTED / NOT YET**.
+Implementation remains **NOT READY / NOT STARTED / NOT YET**.
