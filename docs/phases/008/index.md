@@ -26,6 +26,7 @@ Current governing authority:
 - [Concept State, Identity, History & Invariant Normalization](../../concepts/state-identity-history-invariant-normalization.md)
 - [Concept Action, Query, Preconditions/Postconditions & Lifecycle Normalization](../../concepts/action-query-lifecycle-normalization.md)
 - [Operational Principle, Purpose Fulfillment & Counterexample Normalization](../../concepts/operational-principle-purpose-counterexample-normalization.md)
+- [Concept Independence, Genericity, Familiarity & Reuse Normalization](../../concepts/independence-genericity-familiarity-reuse-normalization.md)
 
 ## Current semantic baseline
 
@@ -48,8 +49,8 @@ Counts are evidence, not completion criteria.
 | **008-C** | [Concept State Model, Identity, History & Invariant Normalization](008-C-concept-state-model-identity-history-invariant-normalization.md) | **complete** |
 | **008-D** | [Concept Action, Query, Preconditions/Postconditions & Lifecycle Closure](008-D-concept-action-query-preconditions-postconditions-lifecycle-closure.md) | **complete** |
 | **008-E** | [Operational Principle Completeness, Purpose Fulfillment & Counterexample Review](008-E-operational-principle-completeness-purpose-fulfillment-counterexample-review.md) | **complete** |
-| **008-F** | **Independence, Genericity, Familiarity & Reuse Revalidation** | **next eligible** |
-| **008-G** | Deferred/Rejected Candidate Rediscovery, Missing-Concept & Boundary Audit | planned |
+| **008-F** | [Independence, Genericity, Familiarity & Reuse Revalidation](008-F-independence-genericity-familiarity-reuse-revalidation.md) | **complete** |
+| **008-G** | **Deferred/Rejected Candidate Rediscovery, Missing-Concept & Boundary Audit** | **next eligible** |
 | **008-H** | Phase 008 Consolidation, Individual-Concept Completeness Decision & Phase 009 Handoff | planned |
 
 ## Completed subgroup results
@@ -64,49 +65,33 @@ Revalidated the current problem/purpose, actors, scale and outcomes; reconciled 
 
 ### 008-C
 
-Normalized all eleven concepts across five legitimate state shapes: reusable revisioned authorities; committed domain activities; durable established results; operational realization; and typed historical relationships.
-
-It distinguished lineage identity, semantic revision, activity occurrence, result identity and current-use/applicability status; established non-destructive history and explicit uncertainty; and confirmed current topology/text scope fits the state model without catalog expansion at that stage.
+Normalized all eleven concepts across five legitimate state shapes and closed current conceptual state/identity/history/invariant semantics without changing the catalog.
 
 ### 008-D
 
-Established the canonical [Concept Action, Query, Preconditions/Postconditions & Lifecycle Normalization](../../concepts/action-query-lifecycle-normalization.md).
-
-008-D separates:
-
-```text
-command/action         concept-owned state transition
-query/observation      state observation/derivation without mutation
-contextual assessment  consumer-owned context-specific result
-synchronization        coordination of already-owned behavior
-external interaction   later mapping/handoff, not automatic mutation
-```
-
-All eleven concepts now have normalized command/query surfaces with semantic preconditions/effects/postconditions for material transitions. The activity commitment model, result-establishment boundaries, Generation completion barrier, Execution retry/recovery/cancellation behavior and append-preserving Provenance correction are explicit.
-
-SYNC-01 through SYNC-15 can all be expressed through accepted owned actions/queries. No hidden coordinator action or `SYNC-16` was required.
-
-008-D closes current methodology rows C4-C6 and, combined with 008-C, closes C7 for individual-concept lifecycle/state behavior. No catalog change was made.
+Established the canonical [Concept Action, Query, Preconditions/Postconditions & Lifecycle Normalization](../../concepts/action-query-lifecycle-normalization.md). All eleven concepts have normalized command/query surfaces and material semantic preconditions/effects/postconditions. SYNC-01 through SYNC-15 can be expressed through accepted owned behavior without a hidden coordinator or `SYNC-16`.
 
 ### 008-E
 
-Established the canonical [Operational Principle, Purpose Fulfillment & Counterexample Normalization](../../concepts/operational-principle-purpose-counterexample-normalization.md).
+Established the canonical [Operational Principle, Purpose Fulfillment & Counterexample Normalization](../../concepts/operational-principle-purpose-counterexample-normalization.md). Every accepted concept's operational principle survives current purpose/state/action replay and explicit falsifying counterexamples. C2 is currently closed.
 
-Every accepted concept's operational principle was replayed against its current purpose, normalized state/actions/queries and a falsifying counterexample. All eleven concepts pass.
+### 008-F
 
-008-E found several older principles to be representation-heavy or overly focused on collaborators, but no concept defect. It normalized those stories without mass-rewriting Phase 002 history and made important absence cases explicit: direct generation need not fabricate Learning/Learned State; trivial work need not fabricate Execution; and workflows without evaluative or prescriptive need do not fabricate those concept occurrences.
+Established [Concept Independence, Genericity, Familiarity & Reuse Normalization](../../concepts/independence-genericity-familiarity-reuse-normalization.md).
 
-008-E closes current methodology row C2. It contributes counterexample evidence to the later final misfit audit but does not close independence, familiarity, catalog rediscovery, composition, mapping or whole Jackson completion.
+All eleven concepts pass current independence, bounded-genericity, familiarity/naming and conceptual-reuse review. Independence is explicitly distinguished from isolation: establishment/reference/synchronization relationships do not by themselves collapse concept boundaries.
+
+All eleven names are retained after comparison with familiar alternatives such as `Schema`, `Model`, `Run`, `Metric`, `Validation`, `Result`, `Lineage`, `Training`, `Sampling`, and `Synthesizer`. Those alternatives remain useful vocabulary where appropriate but would import misleading authority, lifecycle or representation assumptions if they replaced the canonical concept names.
+
+008-F closes B3, closes B4 for individual concepts, completes C1 when combined with 008-B purpose closure, and closes C8 for the accepted concepts subject to 008-G candidate/boundary rediscovery. No concept was added, removed, merged, split or renamed.
 
 ## Remaining subgroup purposes
 
-### 008-F — Independence, Genericity, Familiarity & Reuse Revalidation
-
-Re-test each concept as an independently understandable functional unit. Review whether its purpose/state/actions remain coherent without hidden reliance on another concept, whether genericity is appropriately domain-level rather than infrastructure-shaped, whether a familiar existing concept or name fits better, and where concept reuse/generalization is legitimate without weakening problem-specific semantics.
-
 ### 008-G — Deferred/Rejected Candidate Rediscovery, Missing-Concept & Boundary Audit
 
-Deliberately revisit rejected/subordinated/deferred candidates under the final current Phase 008 evidence.
+Deliberately revisit every rejected, subordinated, deferred, externalized or representation-classified candidate using the complete current 008-B through 008-F evidence. Re-test whether any now has a distinct purpose, meaningful state/history, actions/queries, an operational principle, independence, appropriate genericity and a clean boundary.
+
+The default is not to restore candidates. A candidate returns only when current design evidence establishes an independently useful concept rather than a representation object, supporting method, subordinate state, external authority or umbrella term.
 
 ### 008-H — Phase 008 Consolidation, Individual-Concept Completeness Decision & Phase 009 Handoff
 
@@ -142,6 +127,6 @@ Phases 009-014 will each be subdivided immediately before starting.
 
 ## Current next boundary
 
-**008-F — Independence, Genericity, Familiarity & Reuse Revalidation** is the next eligible subgroup.
+**008-G — Deferred/Rejected Candidate Rediscovery, Missing-Concept & Boundary Audit** is the next eligible subgroup.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
