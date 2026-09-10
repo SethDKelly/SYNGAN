@@ -76,26 +76,32 @@ Established [Concept State, Identity, History & Invariant Normalization](../conc
 
 ### 008-D — complete
 
-Established [Concept Action, Query, Preconditions/Postconditions & Lifecycle Normalization](../concepts/action-query-lifecycle-normalization.md).
-
-All eleven concepts have a current conceptual command/query surface with material precondition/effect/postcondition semantics. The normalization separates read-only queries from state-changing actions, assigns contextual compatibility/applicability/sufficiency to the consuming activity, preserves result-establishment ownership, and makes lifecycle transition authority explicit.
-
-All fifteen accepted synchronizations can be interpreted through these owned behaviors without a hidden coordinator action or a new `SYNC-16`.
+Established [Concept Action, Query, Preconditions/Postconditions & Lifecycle Normalization](../concepts/action-query-lifecycle-normalization.md), closing the current command/query/transition layer and confirming all fifteen accepted synchronizations can be expressed through owned behavior.
 
 ### 008-E — complete
 
-Established [Operational Principle, Purpose Fulfillment & Counterexample Normalization](../concepts/operational-principle-purpose-counterexample-normalization.md).
+Established [Operational Principle, Purpose Fulfillment & Counterexample Normalization](../concepts/operational-principle-purpose-counterexample-normalization.md). All eleven accepted concepts pass current purpose-fulfillment and falsifiability review.
 
-All eleven accepted concepts were replayed against current purposes, state/actions and explicit falsifying counterexamples. All pass. The normalization removes accidental dependence on implementation-heavy examples while retaining those examples as historical/supporting evidence.
+### 008-F — complete
 
-008-E also confirms important no-occurrence boundaries: direct generation need not fabricate Learning/Learned State, trivial work need not fabricate Execution, and workflows without evaluative/prescriptive need do not fabricate those concept occurrences.
+Established [Concept Independence, Genericity, Familiarity & Reuse Normalization](../concepts/independence-genericity-familiarity-reuse-normalization.md).
 
-C2 operational-principle completeness is now currently closed. Independence/genericity/familiarity and candidate rediscovery remain open.
+All eleven accepted concepts pass current independence and bounded-genericity review. All eleven canonical names are retained after explicit familiarity/analogue comparison, and conceptual reuse remains coherent across current algorithm, topology, scale and deployment variation without forcing every concept into every workflow.
+
+008-F explicitly establishes:
+
+```text
+independence != isolation
+reuse        != universal presence
+familiarity  != copying another product/object model
+genericity   != generic infrastructure
+```
+
+No accepted concept was added, removed, merged, split or renamed. This does not establish catalog finality: 008-G must now rediscover rejected/deferred/subordinate/external/representation-classified candidates from first principles.
 
 ## Remaining Phase 008 work
 
 ```text
-008-F  Independence, Genericity, Familiarity & Reuse Revalidation
 008-G  Deferred/Rejected Candidate Rediscovery, Missing-Concept & Boundary Audit
 008-H  Phase 008 Consolidation, Individual-Concept Completeness Decision & Phase 009 Handoff
 ```
@@ -139,6 +145,6 @@ Existing executable scaffold may remain untouched as historical/provisional evid
 
 ## Current next boundary
 
-The next eligible work is **008-F — Independence, Genericity, Familiarity & Reuse Revalidation**.
+The next eligible work is **008-G — Deferred/Rejected Candidate Rediscovery, Missing-Concept & Boundary Audit**.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
