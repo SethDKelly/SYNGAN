@@ -24,6 +24,7 @@ Current governing authority:
 - [Current Problem Knowledge](../../problem/index.md)
 - [Accepted Concept Catalog](../../concepts/index.md)
 - [Concept State, Identity, History & Invariant Normalization](../../concepts/state-identity-history-invariant-normalization.md)
+- [Concept Action, Query, Preconditions/Postconditions & Lifecycle Normalization](../../concepts/action-query-lifecycle-normalization.md)
 
 ## Current semantic baseline
 
@@ -44,8 +45,8 @@ Counts are evidence, not completion criteria.
 | **008-A** | [Methodology Authority Reset, Completion Matrix & Design-Only Guardrails](008-A-methodology-authority-reset-completion-matrix-design-only-guardrails.md) | **complete** |
 | **008-B** | [Problem, Purpose, Outcome & Concept-Justification Traceability Revalidation](008-B-problem-purpose-outcome-concept-justification-traceability-revalidation.md) | **complete** |
 | **008-C** | [Concept State Model, Identity, History & Invariant Normalization](008-C-concept-state-model-identity-history-invariant-normalization.md) | **complete** |
-| **008-D** | **Concept Action, Query, Preconditions/Postconditions & Lifecycle Closure** | **next eligible** |
-| **008-E** | Operational Principle Completeness, Purpose Fulfillment & Counterexample Review | planned |
+| **008-D** | [Concept Action, Query, Preconditions/Postconditions & Lifecycle Closure](008-D-concept-action-query-preconditions-postconditions-lifecycle-closure.md) | **complete** |
+| **008-E** | **Operational Principle Completeness, Purpose Fulfillment & Counterexample Review** | **next eligible** |
 | **008-F** | Independence, Genericity, Familiarity & Reuse Revalidation | planned |
 | **008-G** | Deferred/Rejected Candidate Rediscovery, Missing-Concept & Boundary Audit | planned |
 | **008-H** | Phase 008 Consolidation, Individual-Concept Completeness Decision & Phase 009 Handoff | planned |
@@ -54,7 +55,7 @@ Counts are evidence, not completion criteria.
 
 ### 008-A
 
-Established the fuller Jackson completion rubric, the canonical methodology matrix, artifact-authority classes, J0-J7 stop/reopen discipline, and design-only guardrails.
+Established the fuller Jackson completion rubric, canonical methodology matrix, artifact-authority classes, J0-J7 stop/reopen discipline and design-only guardrails.
 
 ### 008-B
 
@@ -62,29 +63,35 @@ Revalidated the current problem/purpose, actors, scale and outcomes; reconciled 
 
 ### 008-C
 
-Normalized all eleven concepts across five legitimate state shapes:
+Normalized all eleven concepts across five legitimate state shapes: reusable revisioned authorities; committed domain activities; durable established results; operational realization; and typed historical relationships.
+
+It distinguished lineage identity, semantic revision, activity occurrence, result identity and current-use/applicability status; established non-destructive history and explicit uncertainty; and confirmed current topology/text scope fits the state model without catalog expansion at that stage.
+
+### 008-D
+
+Established the canonical [Concept Action, Query, Preconditions/Postconditions & Lifecycle Normalization](../../concepts/action-query-lifecycle-normalization.md).
+
+008-D separates:
 
 ```text
-reusable revisioned authorities  Data Meaning / Strategy / Constraint / Criterion
-committed domain activities      Learning / Generation / Evaluation
-durable established results     Learned State / Evidence
-operational realization          Execution
-typed historical relationships  Provenance
+command/action         concept-owned state transition
+query/observation      state observation/derivation without mutation
+contextual assessment  consumer-owned context-specific result
+synchronization        coordination of already-owned behavior
+external interaction   later mapping/handoff, not automatic mutation
 ```
 
-008-C distinguishes lineage identity, semantic revision, activity occurrence, result identity and current-use/applicability status without selecting an ID/storage mechanism. It establishes non-destructive history, explicit uncertainty where material, contextual-result locality, physical durability != semantic establishment, and a common cross-concept invariant spine.
+All eleven concepts now have normalized command/query surfaces with semantic preconditions/effects/postconditions for material transitions. The activity commitment model, result-establishment boundaries, Generation completion barrier, Execution retry/recovery/cancellation behavior and append-preserving Provenance correction are explicit.
 
-Current O15/O16 topology/text scope fits the state model without catalog expansion in 008-C. Candidate rediscovery remains 008-G work.
+SYNC-01 through SYNC-15 can all be expressed through accepted owned actions/queries. No hidden coordinator action or `SYNC-16` was required.
+
+008-D closes current methodology rows C4-C6 and, combined with 008-C, closes C7 for individual-concept lifecycle/state behavior. No catalog change was made.
 
 ## Remaining subgroup purposes
 
-### 008-D — Concept Action, Query, Preconditions/Postconditions & Lifecycle Closure
-
-Normalize every accepted concept's state-transforming actions and state-observing queries; identify preconditions/effects/postconditions sufficient for behavioral reasoning; verify lifecycle transitions are concept-owned; and ensure no required behavior exists only in synchronization, architecture or interface documents.
-
 ### 008-E — Operational Principle Completeness, Purpose Fulfillment & Counterexample Review
 
-Replay every concept's operational principle against its normalized purpose/state/actions and challenge it with counterexamples.
+Replay every concept's operational principle against its current purpose and normalized state/actions/queries. Each principle must demonstrate the concept's benefit through a sufficiently rich history rather than merely restating actions. Counterexamples should attempt to falsify the claimed purpose fulfillment, expose hidden dependence, representation assumptions, circular reasoning or compound/god-concept behavior.
 
 ### 008-F — Independence, Genericity, Familiarity & Reuse Revalidation
 
@@ -128,6 +135,6 @@ Phases 009-014 will each be subdivided immediately before starting.
 
 ## Current next boundary
 
-**008-D — Concept Action, Query, Preconditions/Postconditions & Lifecycle Closure** is the next eligible subgroup.
+**008-E — Operational Principle Completeness, Purpose Fulfillment & Counterexample Review** is the next eligible subgroup.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
