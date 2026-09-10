@@ -13,7 +13,8 @@ The catalog remains authoritative for concept purpose, owned state/actions, life
 Current cross-concept normalization is governed by:
 
 - [Concept State, Identity, History & Invariant Normalization](state-identity-history-invariant-normalization.md);
-- [Concept Action, Query, Preconditions/Postconditions & Lifecycle Normalization](action-query-lifecycle-normalization.md).
+- [Concept Action, Query, Preconditions/Postconditions & Lifecycle Normalization](action-query-lifecycle-normalization.md);
+- [Operational Principle, Purpose Fulfillment & Counterexample Normalization](operational-principle-purpose-counterexample-normalization.md).
 
 ## Accepted concepts
 
@@ -33,9 +34,11 @@ Current cross-concept normalization is governed by:
 
 The accepted catalog remains **eleven concepts**.
 
-Phase 008-B revalidated a distinct current problem-facing purpose for every accepted concept. Phase 008-C normalized state/identity/history/invariants. Phase 008-D normalized actions, queries, contextual-assessment ownership and lifecycle transitions without adding, removing, merging or renaming a concept.
+Phase 008-B revalidated a distinct current problem-facing purpose for every accepted concept. Phase 008-C normalized state/identity/history/invariants. Phase 008-D normalized actions, queries, contextual-assessment ownership and lifecycle transitions. Phase 008-E revalidated each operational principle against those current purposes and behaviors and challenged each with explicit counterexamples.
 
-Catalog finality is **not** yet claimed: 008-E still owns operational-principle revalidation, 008-F independence/genericity/familiarity and 008-G deliberate deferred/rejected candidate rediscovery.
+No concept has been added, removed, merged or renamed through 008-E.
+
+Catalog finality is **not** yet claimed: 008-F still owns independence/genericity/familiarity and 008-G deliberate deferred/rejected candidate rediscovery.
 
 ## Phase 008-C state normalization
 
@@ -72,11 +75,29 @@ Several older Phase 002 `Actions` sections use that heading broadly. Under curre
 
 All fifteen accepted synchronizations can be expressed using these owned behaviors. 008-D found no hidden coordinator action and introduced no `SYNC-16`.
 
+## Phase 008-E operational-principle normalization
+
+Every accepted concept now has a current operational principle that visibly demonstrates its purpose through an archetypal history, uses its 008-D-owned actions/queries, preserves collaborating concept boundaries and remains intelligible after implementation-specific examples are removed.
+
+Each concept was also challenged with a falsifying counterexample. Important boundary cases include:
+
+- direct-generation behavior does not fabricate Learning/Learned State;
+- operationally trivial activity does not fabricate Execution;
+- checkpoint durability does not establish Learned State;
+- candidate data does not establish Generation completion;
+- metric output does not automatically establish Evidence;
+- Strategy/Constraint/Learned State/Criterion do not own consuming-activity contextual judgments;
+- Evidence does not become approval authority;
+- Execution does not become domain semantic-completion authority;
+- Provenance does not become a shadow copy of canonical concept state.
+
+All eleven concepts pass the 008-E purpose-fulfillment and counterexample review. This closes operational-principle completeness for the current catalog while leaving independence/familiarity and candidate rediscovery open.
+
 ## Current topology/text interpretation
 
 Older concept wording that describes relational/time-series semantics only as future is superseded as a scope qualifier by Phase 008-B's current problem authority. The present structured-data target includes single-table, time-series and multi-table shared-key generation with legitimate composite structured topology representable.
 
-008-C and 008-D show that this scope, including text-bearing structured fields, fits the current state/action model without a new concept at those stages. 008-G must still deliberately rediscover the rejected/deferred candidates before Phase 008 claims individual-concept completeness.
+008-C through 008-E show that this scope, including text-bearing structured fields, fits the current state/action/operational-principle model without a new concept at those stages. 008-G must still deliberately rediscover the rejected/deferred candidates before Phase 008 claims individual-concept completeness.
 
 ## Relationship candidate disposition
 
@@ -96,7 +117,7 @@ Phase 006 later revalidated the catalog against recovery, runtime-distribution, 
 
 The individual concept specifications plus current Phase 008 cross-concept normalization authorities and active cross-cutting authority under `docs/authority/` supersede provisional concept statements under `docs/discovery/` unless later explicit design authority accepts a revision.
 
-No Python class, Spark API, PyTorch object, storage format, job type, package module, database, function parameter, UI element, UUID scheme, manifest, event-store representation or persistence layout is implied by one concept document or command/query specification.
+No Python class, Spark API, PyTorch object, storage format, job type, package module, database, function parameter, UI element, UUID scheme, manifest, event-store representation or persistence layout is implied by one concept document, command/query specification or operational principle.
 
 ## Deferred/non-concept responsibilities
 
