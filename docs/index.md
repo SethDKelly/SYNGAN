@@ -33,6 +33,7 @@ Existing architecture, source or tests never become upstream concept-design auth
 - [Current Problem Knowledge](problem/index.md)
 - [Accepted Concept Catalog](concepts/index.md)
 - [Concept State, Identity, History & Invariant Normalization](concepts/state-identity-history-invariant-normalization.md)
+- [Concept Action, Query, Preconditions/Postconditions & Lifecycle Normalization](concepts/action-query-lifecycle-normalization.md)
 - [Phase 008](phases/008/index.md)
 
 ## Current state
@@ -46,7 +47,8 @@ Phase 008                  ACTIVE
 008-A                      COMPLETE
 008-B                      COMPLETE
 008-C                      COMPLETE
-008-D                      NEXT ELIGIBLE
+008-D                      COMPLETE
+008-E                      NEXT ELIGIBLE
 Jackson design completion  IN PROGRESS
 implementation readiness   NOT READY
 implementation start       NOT STARTED
@@ -59,9 +61,11 @@ implementation next        NOT YET
 
 008-B reconciled current problem scope, established O1-O16, and created problem/outcome → concept justification traceability. All eleven concepts remain justified at purpose level.
 
-008-C normalized state, identity, history, uncertainty and invariants across all eleven concepts. It distinguishes five legitimate state-shape families rather than imposing one generic lifecycle and establishes that physical durability does not create semantic completion or historical authority.
+008-C normalized state, identity, history, uncertainty and invariants across all eleven concepts using five legitimate state-shape families.
 
-008-C does **not** close actions/queries/transitions, operational principles, independence/familiarity or candidate rediscovery.
+008-D normalized conceptual commands, queries, contextual-assessment ownership, material preconditions/effects/postconditions and lifecycle transition ownership. All fifteen accepted synchronizations can be expressed through accepted owned behavior; no hidden coordinator action or `SYNC-16` is required.
+
+State/action closure does not imply operational-principle, independence/familiarity or catalog closure. Those remain 008-E through 008-G.
 
 ## Corrected interpretation of Phase 007
 
@@ -70,7 +74,6 @@ Phase 007 remains valuable downstream architecture evidence. Its historical impl
 ## Remaining design roadmap
 
 ```text
-008-D  Concept Action, Query, Preconditions/Postconditions & Lifecycle Closure
 008-E  Operational Principle Completeness, Purpose Fulfillment & Counterexample Review
 008-F  Independence, Genericity, Familiarity & Reuse Revalidation
 008-G  Deferred/Rejected Candidate Rediscovery, Missing-Concept & Boundary Audit
@@ -103,6 +106,6 @@ The retained 007-B/007-C source/tests/tooling/CI remain historical/provisional e
 
 ## Current next boundary
 
-**008-D — Concept Action, Query, Preconditions/Postconditions & Lifecycle Closure** is next.
+**008-E — Operational Principle Completeness, Purpose Fulfillment & Counterexample Review** is next.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
