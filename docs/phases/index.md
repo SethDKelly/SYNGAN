@@ -35,8 +35,9 @@ Current design progression:
 007-D         complete — identity/revision/serialization/resource-handle/view architecture
 007-E         complete — control persistence/transaction/CAS/outbox/history/migration architecture
 007-F         complete — distributed data-state/topology/manifest/candidate-seal/promotion architecture
-007-G         next eligible design subgroup — not started
-007-H..007-K  not started
+007-G         complete — Strategy/method binding/dependency trust/authorization/secrets/runtime-closure architecture
+007-H         next eligible design subgroup — not started
+007-I..007-K  not started
 ```
 
 Current implementation progression:
@@ -50,10 +51,10 @@ Current implementation progression:
 
 Production implementation expansion is frozen under the [Phase 007 Design Continuation & Implementation Freeze](../authority/phase-007-design-continuation-implementation-freeze.md).
 
-007-D through 007-F changed architecture/documentation only. No new production behavior, persistence/data-plane schemas, Spark adapters, dependencies, tests, executable restrictions or CI enforcement were added.
+007-D through 007-G changed architecture/documentation only. No new production behavior, persistence/data-plane schemas, Spark/runtime/security adapters, dependencies, tests, executable restrictions or CI enforcement were added.
 
 ## Current next boundary
 
-**007-G — Strategy/Method Binding, Dependency Trust, Authorization, Secrets & Distributed Runtime Closure Foundation** is next eligible as a **design** subgroup.
+**007-H — Execution/Attempt, Idempotency, Fencing, Non-Regressing Recovery, Checkpoint, Cancellation & Admission Foundation** is next eligible as a **design** subgroup.
 
 It requires an explicit proceed decision. Implementation remains frozen independently of design progression.
