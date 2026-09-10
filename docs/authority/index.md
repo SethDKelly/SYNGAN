@@ -17,9 +17,10 @@ These documents define how SYNGAN design knowledge is created, interpreted, chan
 - [Terminology Policy](terminology-policy.md)
 - [Source & Provenance Policy](source-provenance-policy.md)
 
-Current concept-state authority:
+Current individual-concept normalization authority:
 
 - [Concept State, Identity, History & Invariant Normalization](../concepts/state-identity-history-invariant-normalization.md)
+- [Concept Action, Query, Preconditions/Postconditions & Lifecycle Normalization](../concepts/action-query-lifecycle-normalization.md)
 
 ## Current posture
 
@@ -32,7 +33,8 @@ Phase 008                  ACTIVE
 008-A                      COMPLETE
 008-B                      COMPLETE
 008-C                      COMPLETE
-008-D                      NEXT ELIGIBLE
+008-D                      COMPLETE
+008-E                      NEXT ELIGIBLE
 Jackson design completion  IN PROGRESS
 implementation readiness   NOT READY
 implementation start       NOT STARTED
@@ -45,9 +47,11 @@ implementation next        NOT YET
 
 008-B reconciled current problem scope and established current problem/outcome → concept justification traceability.
 
-008-C normalized all eleven concepts' state shapes, logical identity distinctions, historical immutability, current-use/applicability state, uncertainty and invariant spine without changing the catalog or selecting representation mechanisms.
+008-C normalized all eleven concepts' state shapes, logical identity distinctions, historical immutability, current-use/applicability state, uncertainty and invariant spine.
 
-The methodology matrix now marks C3 conceptual state modeling closed for this stage while C7 remains partial until 008-D closes transition/action semantics.
+008-D normalized the behavior of all eleven concepts. It separates state-changing commands from queries, assigns context-specific validation to the consuming activity, specifies semantic preconditions/effects/postconditions for material transitions, and confirms that SYNC-01 through SYNC-15 compose accepted owned behavior without a hidden coordinator or `SYNC-16`.
+
+The methodology matrix now marks C3-C7 currently closed for the individual-concept state/behavior layer. C2 operational-principle revalidation remains next; independence/familiarity and candidate rediscovery remain open after it.
 
 ## Relationship to Phase 007 authority
 
@@ -58,7 +62,6 @@ The historical 007-K implementation-reentry result remains superseded. Architect
 ## Remaining design sequence
 
 ```text
-008-D  Concept Action, Query, Preconditions/Postconditions & Lifecycle Closure
 008-E  Operational Principle Completeness, Purpose Fulfillment & Counterexample Review
 008-F  Independence, Genericity, Familiarity & Reuse Revalidation
 008-G  Deferred/Rejected Candidate Rediscovery, Missing-Concept & Boundary Audit
@@ -85,6 +88,6 @@ Only Phase 014 may set **READY / NOT STARTED / NEXT**, and only after the whole 
 
 ## Current next boundary
 
-**008-D — Concept Action, Query, Preconditions/Postconditions & Lifecycle Closure**.
+**008-E — Operational Principle Completeness, Purpose Fulfillment & Counterexample Review**.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
