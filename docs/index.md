@@ -48,8 +48,9 @@ No `SYNC-16`.
 007-F         DESIGN COMPLETE
 007-G         DESIGN COMPLETE
 007-H         DESIGN COMPLETE
-007-I         next eligible design subgroup — not started
-007-J..007-K  not started
+007-I         DESIGN COMPLETE
+007-J         next eligible design subgroup — scope re-evaluation required
+007-K         not started
 ```
 
 Implementation remains frozen at the retained 007-C scaffold; 007-D and later production implementation are not authorized.
@@ -70,42 +71,33 @@ Implementation remains frozen at the retained 007-C scaffold; 007-D and later pr
 
 ### 007-G — Strategy/runtime/security closure
 
-[007-G architecture](architecture/phase-007-g-strategy-method-binding-dependency-trust-authorization-secrets-distributed-runtime-closure-foundation.md) establishes:
-
-- semantic Strategy/method identity distinct from implementation binding and package/runtime identity;
-- exact Attempt-scoped composite implementation/dependency closure;
-- no silent in-Attempt component substitution;
-- implementation-neutral retry only when the unchanged semantic commitment permits it and the new Attempt is independently attributable;
-- dependency requirement, resolution, identity/integrity, trust, compatibility and authorization as separate axes;
-- explicit provisioning separated from runtime and no hidden first-use acquisition/fallback;
-- third-party code loading/unsafe deserialization as trust boundaries;
-- network capability distinct from data-egress authorization;
-- current action authorization distinct from historical semantic commitment;
-- scoped runtime capabilities and use-time secret resolution without durable bearer credentials;
-- role-specific cluster/runtime closure including dynamic workers;
-- large state/model/artifact loading without universal driver broadcast;
-- topology/runtime limitations that cannot redefine committed topology semantics;
-- self-contained source-derived free-form text retained as a baseline requirement.
+[007-G architecture](architecture/phase-007-g-strategy-method-binding-dependency-trust-authorization-secrets-distributed-runtime-closure-foundation.md) separates semantic Strategy/method authority from executable binding/dependency/runtime realization; requires exact Attempt-scoped composite closure, explicit provisioning rather than hidden fallback, current authorization/use-time secrets, and role-specific distributed runtime closure.
 
 ### 007-H — Execution/recovery/admission
 
-[007-H architecture](architecture/phase-007-h-execution-attempt-idempotency-fencing-non-regressing-recovery-checkpoint-cancellation-admission-foundation.md) establishes:
+[007-H architecture](architecture/phase-007-h-execution-attempt-idempotency-fencing-non-regressing-recovery-checkpoint-cancellation-admission-foundation.md) establishes stable Execution with distinguishable Attempts, operation-scoped idempotency, non-regressing recovery authority, stale-writer fencing, qualified immutable checkpoints, durable cancellation, and admission as current operational eligibility distinct from semantic readiness and write authority.
 
-- one stable logical Execution with distinguishable Attempts under unchanged committed semantics;
-- Attempt observed physical state distinct from current mutation authority;
-- operation-scoped idempotency rather than a universal key;
-- non-regressing write authority that composes the current recovery frontier, current Execution/Attempt authority, resource-local preconditions where needed and current authorization;
-- recovery quarantine before ordinary write-capable operation after a potentially regressive restore;
-- reconciliation/reconstruction/adoption by current authority without reviving stale writers;
-- checkpoint integrity/identity distinct from contextual resume eligibility;
-- later implementation-binding retry distinct from checkpoint compatibility;
-- durable cancellation intent that blocks ordinary new admission and is not erased by restore semantics;
-- admission as current operational eligibility, distinct from semantic readiness, authorization, runtime closure, scheduler placement and write authority;
-- temporary capacity shortage distinct from true incompatibility;
-- role-specific admission/closure for dynamic workers;
-- at-least-once physical realization with fenced/idempotent/reconcilable effects and at-most-one authoritative semantic result transition.
+### 007-I — Evaluation/Evidence/history/reproducibility/disclosure
 
-Earlier Phase 005-D through 005-I concrete technologies, types, SPIs and package choices remain provisional implementation-planning evidence rather than current architecture requirements.
+[007-I architecture](architecture/phase-007-i-evaluation-evidence-provenance-historical-query-reproducibility-disclosure-foundation.md) establishes:
+
+- runtime Evaluation results distinct from semantic Evaluation validation and Evidence establishment;
+- independently interpretable retry-idempotent Evidence findings;
+- immutable Evidence finding semantics distinct from current applicability;
+- negative and indeterminate Evidence preserved without overclaiming;
+- exact Generation completion-basis history;
+- privacy/disclosure Evidence distinct from formal privacy guarantee, disclosure authorization and release approval;
+- narrow typed canonical Provenance over exact references;
+- directly retained, reconstructed, partial and unknown historical knowledge distinctions;
+- exact bounded historical query with derived non-authoritative projections;
+- query freshness that does not pretend to be globally atomic when it is not;
+- disclosure protection for existence, graph shape, counts, reverse traversal and reason text as well as values;
+- canonical historical knowledge distinct from actor-visible knowledge;
+- historical reproducibility support distinct from current reproduction feasibility and actor-visible assessability;
+- strongest-defensible reproduction classes constrained by actual identity/nondeterminism/approximation/equivalence/history support;
+- reproduction readiness distinct from actual new reproduction work.
+
+Earlier Phase 005-D through 005-I concrete technologies, types, SPIs, storage/index/query APIs and package choices remain provisional implementation-planning evidence rather than current architecture requirements.
 
 ## Provisional executable scaffold
 
@@ -125,6 +117,8 @@ The complete supported baseline also retains source-derived/local free-form-text
 
 ## Current next boundary
 
-**007-I — Evaluation/Evidence, Provenance, Historical Query, Reproducibility & Disclosure Foundation** is the next eligible **design** subgroup.
+The earlier executable wording for 007-J must be re-evaluated before any reference implementation proof can be authorized.
+
+**007-J — Reference Vertical-Slice Scope Re-evaluation, Architecture Completeness & Implementation-Proof Boundary** is the next eligible **design** subgroup.
 
 It requires an explicit proceed decision. Production implementation remains frozen independently of design progression.
