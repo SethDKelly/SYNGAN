@@ -18,9 +18,10 @@ For current design, read only what the active question needs:
 2. [007-D Identity, Revision, Serialization, Resource/Handle & Programmatic-View Foundation](phase-007-d-identity-revision-serialization-resource-handle-programmatic-view-foundation.md);
 3. [007-E Control Persistence, Transactions, CAS, Outbox, Historical References & Migration Baseline](phase-007-e-control-persistence-transactions-cas-outbox-historical-reference-migration-baseline.md);
 4. [007-F Distributed Data-State, Structured Topology, Manifest, Candidate/Seal & Promotion Foundation](phase-007-f-distributed-data-state-structured-topology-manifest-candidate-seal-promotion-foundation.md);
-5. [Phase 006 Architecture Reconciliation Contract](phase-006-architecture-reconciliation-contract.md) where not refined later;
-6. only directly relevant Phase 004 detailed authorities;
-7. [ADRs](../decisions/index.md) for rationale/history.
+5. [007-G Strategy/Method Binding, Dependency Trust, Authorization, Secrets & Distributed Runtime Closure Foundation](phase-007-g-strategy-method-binding-dependency-trust-authorization-secrets-distributed-runtime-closure-foundation.md);
+6. [Phase 006 Architecture Reconciliation Contract](phase-006-architecture-reconciliation-contract.md) where not refined later;
+7. only directly relevant Phase 004 detailed authorities;
+8. [ADRs](../decisions/index.md) for rationale/history.
 
 ## Current posture
 
@@ -28,65 +29,58 @@ Architecture design is **active**; production implementation expansion and new e
 
 Existing 007-A through 007-C implementation artifacts are provisional feasibility/history evidence and may be revised later.
 
-## 007-D — identity/reference/view foundation
+## 007-D / 007-E / 007-F foundations
 
-007-D keeps separate:
+007-D separates identity, semantic revision/commitment, mutable state version/freshness, representation schema version and provider/authority scope. 007-E defines technology-neutral persistence, transaction, CAS, durable-intent, exact-history and migration/recovery boundaries. 007-F defines logical distributed subjects/scopes, exact source-state strength, bounded manifested representation, candidate/seal separation and Generation-owned promotion.
 
-```text
-authority scope
-logical identity
-exact semantic revision / commitment
-mutable current-state version / freshness
-representation schema version
-provider identity / locator when material
-```
+## 007-G — executable realization / security / runtime closure
 
-Handles resolve/present authority rather than own it, and serialization is representation rather than mutation authority.
-
-## 007-E — control persistence foundation
-
-007-E establishes owner-controlled writes, same-boundary atomic visibility, durable reconcilable cross-boundary intent, stale-write detection without conflating CAS with semantic validation, append-preserving material history, exact historical resolution, representation-oriented migration, and regressive-restore qualification under ADR-0009.
-
-Concrete Phase 005-D persistence technologies remain implementation candidates rather than architecture requirements.
-
-## 007-F — distributed data-state foundation
-
-007-F refines the distributed data plane around this separation:
+007-G establishes this current architecture:
 
 ```text
-mutable selector/access
+semantic Strategy / method / activity commitment
         ↓
-exact logical data state
+implementation binding
         ↓
-open distributed candidate
+exact implementation + dependency closure
         ↓
-sealed immutable physical subject
+identity / integrity / trust / compatibility
         ↓
-owner validation / completion basis
+current authorization + network/egress qualification
         ↓
-Generation promotion
+role-specific distributed runtime closure
         ↓
-one logical completed-output identity
+immutable Attempt invocation
+        +
+current scoped capabilities / secret access
+        ↓
+physical runtime realization
+        ↓
+non-final result
+        ↓
+owner semantic validation
 ```
 
-Key current rules include:
+Key rules:
 
-- logical subject and physical representation are distinct axes;
-- distributed subjects may contain bounded logical scopes without creating `Dataset`, `Table`, `Series`, `Relationship` or `DataTopology` concepts;
-- single-table, time-series, multi-table shared-key and composite subjects remain representable;
-- topology presets/physical layout do not replace Data Meaning/Generation/Constraint authority;
-- exact source state distinguishes identity, read binding, integrity coverage, retention/rereadability and cross-scope coordination strength;
-- individually exact source scopes do not automatically establish one coherent cross-scope snapshot;
-- manifests remain bounded roots over distributed/hierarchical/provider-native detail;
-- candidates may make partial/scope-local physical progress without becoming final output;
-- whole-candidate sealing establishes immutable physical closure, not semantic validity;
-- required completion Evaluation binds the exact sealed subject;
-- Generation promotion remains owner-controlled and may reuse sealed bytes without full-copy promotion;
-- later equivalent compaction/relocation/re-encoding may preserve logical output identity while the original promotion basis remains historical fact;
-- surviving physical material after recovery does not prove semantic promotion or current authority;
-- normal data-state handling must remain distributed and avoid full-corpus driver collection/component enumeration.
+- Strategy/method semantics remain distinct from executable binding/package/runtime identity;
+- one binding may resolve a composite implementation closure rather than one package/model;
+- every Attempt freezes one exact realization; runtime cannot hot-swap missing components silently;
+- a later Attempt may use another compatible implementation only when unchanged semantic commitment permits it and the new Attempt is independently attributable;
+- dependency requirement, resolution, exact identity, integrity/authenticity, trust, compatibility and current authorization remain separate axes;
+- explicit provisioning may occur before runtime, while hidden runtime acquisition/fallback is prohibited;
+- installed/discovered third-party code is not trusted merely by presence, and code-loading/unsafe deserialization are protected actions where material;
+- network capability is distinct from data egress, and remote-service reproducibility is limited to the identity/version guarantees the provider actually exposes;
+- historical semantic commitment and current authorization remain separate;
+- live runtime capabilities are bounded operational authority and are not serialized bearer authority;
+- secret values stay outside canonical semantic/history/provenance data and are resolved at use time;
+- driver/coordinator readiness never establishes distributed closure;
+- every material runtime role, including dynamic workers, must satisfy its role-specific closure or be ineligible;
+- large Learned State/model/artifact loading cannot universally require driver memory/broadcast;
+- implementation topology limitations cannot redefine or simplify Data Meaning/Generation/Constraint semantics;
+- self-contained source-derived free-form text remains a complete-baseline requirement.
 
-Earlier Phase 005-E choices such as a portable Parquet manifest profile and concrete PySpark/reference classes remain implementation-planning evidence, not current architecture requirements.
+Earlier Phase 005-F/005-I choices such as `typing.Protocol`, Python entry points, named runtime SPIs, `spark`/`torch` extras and concrete security/dependency type names remain implementation candidates rather than architecture requirements.
 
 ## Current design counts
 
@@ -94,17 +88,17 @@ Earlier Phase 005-E choices such as a portable Parquet manifest profile and conc
 accepted concepts          11
 accepted synchronizations  15
 active ADRs                10
-new concepts in 007-D/E/F   0
+new concepts in 007-D..G    0
 new synchronizations        0
 new ADRs                    0
 ```
 
 No `SYNC-16`.
 
-ADR-0003 remains active and sufficient; 007-F refines it for multi-scope/time-series/composite topology rather than superseding it.
+ADR-0004, ADR-0007 and ADR-0010 remain active and sufficient; 007-G composes/refines them rather than superseding them.
 
 ## Current next boundary
 
-**007-G — Strategy/Method Binding, Dependency Trust, Authorization, Secrets & Distributed Runtime Closure Foundation** is the next eligible **design** subgroup.
+**007-H — Execution/Attempt, Idempotency, Fencing, Non-Regressing Recovery, Checkpoint, Cancellation & Admission Foundation** is the next eligible **design** subgroup.
 
 Production implementation remains frozen independently of design progression.
