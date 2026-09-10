@@ -31,10 +31,11 @@ No implementation tranche is eligible.
 008-C  COMPLETE — concept state / identity / history / invariants
 008-D  COMPLETE — concept actions / queries / transition contracts
 008-E  COMPLETE — operational principles / purpose fulfillment / counterexamples
-008-F  NEXT ELIGIBLE — independence / genericity / familiarity / reuse
+008-F  COMPLETE — independence / genericity / familiarity / reuse
+008-G  NEXT ELIGIBLE — candidate rediscovery / missing concept / boundary audit
 ```
 
-008-E established concept-level operational-principle completeness only. It revalidated all eleven concepts against current purposes/state/actions and counterexamples without reconciling or changing source, tests, package topology, persistence, runtime, APIs, dependencies, CI or architecture.
+008-F is concept-design documentation only. It confirms the current eleven accepted concepts remain independently purposeful, appropriately generic and sufficiently familiar without changing any executable or architecture realization.
 
 ## Superseded 007-K re-entry conclusion
 
@@ -45,7 +46,7 @@ The Phase 007 architecture and scaffold observations remain useful evidence but 
 ## Remaining design before implementation readiness can be decided
 
 ```text
-008-F..H  finish individual concept design
+008-G..H  finish individual concept design
 009       inclusion dependence / application family / composition / synchronization
 010       concept mapping / interaction / language / experience
 011       specificity / familiarity / integrity / synergy / misfit
@@ -77,4 +78,4 @@ Until Phase 014 passes, do not add production concept/domain behavior, implement
 
 Design-only work:
 
-**008-F — Independence, Genericity, Familiarity & Reuse Revalidation**.
+**008-G — Deferred/Rejected Candidate Rediscovery, Missing-Concept & Boundary Audit**.
