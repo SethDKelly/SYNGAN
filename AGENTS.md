@@ -17,6 +17,7 @@ Start with:
 - `docs/concepts/state-identity-history-invariant-normalization.md`
 - `docs/concepts/action-query-lifecycle-normalization.md`
 - `docs/concepts/operational-principle-purpose-counterexample-normalization.md`
+- `docs/concepts/independence-genericity-familiarity-reuse-normalization.md`
 - `docs/phases/008/index.md`
 
 Phase 007 architecture is downstream evidence only until Phase 013 reconciliation.
@@ -33,7 +34,8 @@ Phase 008                  ACTIVE
 008-C                      COMPLETE
 008-D                      COMPLETE
 008-E                      COMPLETE
-008-F                      NEXT ELIGIBLE
+008-F                      COMPLETE
+008-G                      NEXT ELIGIBLE
 Jackson design completion  IN PROGRESS
 implementation readiness   NOT READY
 implementation start       NOT STARTED
@@ -44,52 +46,28 @@ implementation next        NOT YET
 
 > **Complete the design before making implementation ready. Existing architecture, code, tests or implementation plans may expose misfits, but they may not veto upstream concept-design correction.**
 
-## Current concept state and behavior authority
+## Current individual-concept authority
 
-008-C established five intentional state-shape families:
-
-```text
-reusable revisioned authorities  Data Meaning / Strategy / Constraint / Criterion
-committed domain activities      Learning / Generation / Evaluation
-durable established results     Learned State / Evidence
-operational realization          Execution
-typed historical relationships  Provenance
-```
-
-008-D established the behavioral vocabulary:
+Phase 008 has current authority for:
 
 ```text
-command/action         changes concept-owned state
-query/observation      reads or derives state without mutation
-contextual assessment  consuming concept owns the context-specific result
-synchronization        coordinates already-owned behavior
-external interaction   later mapping/handoff, not automatic mutation
+008-B  purpose / justification
+008-C  state / identity / history / invariants
+008-D  actions / queries / transitions
+008-E  operational principles / counterexamples
+008-F  independence / genericity / familiarity / reuse
 ```
 
-008-E established the operational-principle discipline:
+008-F establishes:
 
-- the principle must demonstrate the concept's own purpose through an archetypal history;
-- collaborating concepts may participate without supplying the concept's purpose or stealing its state;
-- representation/platform examples are illustrative rather than essential semantics;
-- a falsifying counterexample must be able to expose misuse, redundancy or over-breadth;
-- valid no-occurrence cases must remain possible rather than forcing every concept into every workflow.
+```text
+independence != isolation
+reuse        != universal presence
+familiarity  != copying another product/object model
+genericity   != generic infrastructure
+```
 
-All eleven accepted concepts pass that current operational-principle review.
-
-Agents must preserve:
-
-- lineage identity != semantic revision != activity occurrence != result identity != current-use status;
-- material historical meaning is non-destructive;
-- current eligibility/applicability is separate from historical fact;
-- contextual compatibility/applicability/sufficiency belongs to the consuming activity unless explicitly owned otherwise;
-- queries do not create mutable shadow authority;
-- physical durability != semantic establishment/completion;
-- operational completion != domain completion;
-- result establishment remains with the accepted producer/result owners;
-- retry/resume creates another Attempt only under unchanged parent semantics and sufficient continuation authority/evidence;
-- restored historical persistence does not itself restore current conceptual authority;
-- synchronizations coordinate owned actions rather than hiding new behavior;
-- operational-principle examples do not create new implementation requirements.
+All eleven accepted concepts pass the current independence/genericity/familiarity/reuse review and all eleven names are retained. That is **not** catalog finality.
 
 ## Current Phase 008 boundary
 
@@ -99,14 +77,29 @@ Agents must preserve:
 008-C  COMPLETE — Concept State Model, Identity, History & Invariant Normalization
 008-D  COMPLETE — Concept Action, Query, Preconditions/Postconditions & Lifecycle Closure
 008-E  COMPLETE — Operational Principle Completeness, Purpose Fulfillment & Counterexample Review
-008-F  NEXT ELIGIBLE — Independence, Genericity, Familiarity & Reuse Revalidation
-008-G  PLANNED — Deferred/Rejected Candidate Rediscovery, Missing-Concept & Boundary Audit
+008-F  COMPLETE — Independence, Genericity, Familiarity & Reuse Revalidation
+008-G  NEXT ELIGIBLE — Deferred/Rejected Candidate Rediscovery, Missing-Concept & Boundary Audit
 008-H  PLANNED — Phase 008 Consolidation & Phase 009 Handoff
 ```
 
-008-F must test every concept as an independently understandable functional unit, examine whether its genericity is domain-appropriate rather than infrastructure-shaped, and explicitly compare familiar conceptual analogues/naming/reuse opportunities.
+008-G must deliberately re-evaluate every rejected, subordinated, deferred, externalized or representation-classified candidate using the **current** 008-B through 008-F criteria. Do not merely restate Phase 001 dispositions.
 
-Do not allow a familiar library/API/class/database term to redefine the concept merely because it is well known. Familiarity is a design criterion, not permission to inherit another system's implementation model.
+A candidate may become accepted only if it now has a distinct problem-facing purpose, meaningful state/history, concept-owned actions/queries, an operational principle, independence, appropriate genericity and a clean authority boundary. A class/table/file/job/API/manifest/runtime role is not sufficient evidence.
+
+Candidates explicitly requiring rediscovery include at least:
+
+- Generation Request and Condition;
+- Attempt / Checkpoint / Retry / cancellation-related candidates;
+- Dataset / Artifact identity;
+- Reproducibility;
+- mechanism-specific privacy state/guarantee;
+- Relationship / topology-related candidates;
+- Use / Release Decision;
+- Source Characterization / Profile;
+- Resource / Admission / Backpressure / Approximation / Degraded Mode / Cost / Quota-like candidates;
+- umbrella terms such as Validation, Metric, Quality, Model, Metadata, Run, Artifact and Synthesizer.
+
+Do not promote any candidate for catalog symmetry or because retained architecture already has an object for it.
 
 ## Jackson distinctions to preserve
 
@@ -124,7 +117,7 @@ Follow J0-J7 in the completion matrix. Reopen the smallest affected upstream aut
 
 ## What agents may do now
 
-For an explicitly entered design subgroup, agents may inspect repository evidence, refine current design authority within that subgroup, record counterexamples/misfits, and revise upstream design when justified.
+For 008-G, agents may inspect historical discovery and later design evidence, re-run candidate criteria, refine the catalog or boundaries when genuinely justified, and record why candidates remain rejected/subordinate/deferred/external/representation-only.
 
 Architecture/source/tests may be inspected only as feasibility or misfit evidence, not as authority over unfinished concepts.
 
@@ -146,6 +139,6 @@ Only Phase 014 may make the final whole-design readiness decision. Even then, im
 
 ## Current next boundary
 
-**008-F — Independence, Genericity, Familiarity & Reuse Revalidation**.
+**008-G — Deferred/Rejected Candidate Rediscovery, Missing-Concept & Boundary Audit**.
 
 Do not begin implementation work.
