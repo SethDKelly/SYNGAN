@@ -15,6 +15,7 @@ Start with:
 - `docs/problem/index.md`
 - `docs/concepts/index.md`
 - `docs/concepts/state-identity-history-invariant-normalization.md`
+- `docs/concepts/action-query-lifecycle-normalization.md`
 - `docs/phases/008/index.md`
 
 Phase 007 architecture is downstream evidence only until Phase 013 reconciliation.
@@ -29,7 +30,8 @@ Phase 008                  ACTIVE
 008-A                      COMPLETE
 008-B                      COMPLETE
 008-C                      COMPLETE
-008-D                      NEXT ELIGIBLE
+008-D                      COMPLETE
+008-E                      NEXT ELIGIBLE
 Jackson design completion  IN PROGRESS
 implementation readiness   NOT READY
 implementation start       NOT STARTED
@@ -40,7 +42,7 @@ implementation next        NOT YET
 
 > **Complete the design before making implementation ready. Existing architecture, code, tests or implementation plans may expose misfits, but they may not veto upstream concept-design correction.**
 
-## Current concept-state authority
+## Current concept state and behavior authority
 
 008-C established five intentional state-shape families:
 
@@ -52,19 +54,29 @@ operational realization          Execution
 typed historical relationships  Provenance
 ```
 
-Agents must preserve these distinctions and must not normalize them into one generic lifecycle merely for implementation convenience.
+008-D established the behavioral vocabulary:
 
-Also preserve:
+```text
+command/action         changes concept-owned state
+query/observation      reads or derives state without mutation
+contextual assessment  consuming concept owns the context-specific result
+synchronization        coordinates already-owned behavior
+external interaction   later mapping/handoff, not automatic mutation
+```
+
+Agents must preserve:
 
 - lineage identity != semantic revision != activity occurrence != result identity != current-use status;
 - material historical meaning is non-destructive;
 - current eligibility/applicability is separate from historical fact;
-- contextual compatibility/applicability remains contextual;
-- unknown/indeterminate state stays explicit where false certainty would matter;
+- contextual compatibility/applicability/sufficiency belongs to the consuming activity unless explicitly owned otherwise;
+- queries do not create mutable shadow authority;
 - physical durability != semantic establishment/completion;
 - operational completion != domain completion;
+- result establishment remains with the accepted producer/result owners;
+- retry/resume creates another Attempt only under unchanged parent semantics and sufficient continuation authority/evidence;
 - restored historical persistence does not itself restore current conceptual authority;
-- bulk rows/tasks/logs are not canonical control-plane concept state by default.
+- synchronizations coordinate owned actions rather than hiding new behavior.
 
 ## Current Phase 008 boundary
 
@@ -72,14 +84,16 @@ Also preserve:
 008-A  COMPLETE — Methodology Authority Reset, Completion Matrix & Design-Only Guardrails
 008-B  COMPLETE — Problem, Purpose, Outcome & Concept-Justification Traceability Revalidation
 008-C  COMPLETE — Concept State Model, Identity, History & Invariant Normalization
-008-D  NEXT ELIGIBLE — Concept Action, Query, Preconditions/Postconditions & Lifecycle Closure
-008-E  PLANNED — Operational Principle Completeness, Purpose Fulfillment & Counterexample Review
+008-D  COMPLETE — Concept Action, Query, Preconditions/Postconditions & Lifecycle Closure
+008-E  NEXT ELIGIBLE — Operational Principle Completeness, Purpose Fulfillment & Counterexample Review
 008-F  PLANNED — Independence, Genericity, Familiarity & Reuse Revalidation
 008-G  PLANNED — Deferred/Rejected Candidate Rediscovery, Missing-Concept & Boundary Audit
 008-H  PLANNED — Phase 008 Consolidation & Phase 009 Handoff
 ```
 
-008-D must reason about conceptual actions and state-observing queries. Do not convert buttons, HTTP methods, Python functions, Spark jobs, database transitions, scheduler events or manifest operations into concept actions merely because they are implementation candidates.
+008-E must test each operational principle against the current 008-B purpose and 008-C/008-D state/behavior authorities. It may refine concept design when a counterexample shows the principle is circular, implementation-dependent, incomplete or actually demonstrates multiple hidden concepts.
+
+Do not use operational-principle examples to smuggle in classes, endpoints, tables, jobs, storage mechanisms or platform behavior.
 
 ## Jackson distinctions to preserve
 
@@ -119,6 +133,6 @@ Only Phase 014 may make the final whole-design readiness decision. Even then, im
 
 ## Current next boundary
 
-**008-D — Concept Action, Query, Preconditions/Postconditions & Lifecycle Closure**.
+**008-E — Operational Principle Completeness, Purpose Fulfillment & Counterexample Review**.
 
 Do not begin implementation work.
