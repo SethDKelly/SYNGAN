@@ -46,12 +46,15 @@ Completed current design groups:
 - [007-D — Identity, Revision, Serialization, Resource/Handle & Programmatic-View Foundation](../architecture/phase-007-d-identity-revision-serialization-resource-handle-programmatic-view-foundation.md)
 - [007-E — Control Persistence, Transactions, CAS, Outbox, Historical References & Migration Baseline](../architecture/phase-007-e-control-persistence-transactions-cas-outbox-historical-reference-migration-baseline.md)
 - [007-F — Distributed Data-State, Structured Topology, Manifest, Candidate/Seal & Promotion Foundation](../architecture/phase-007-f-distributed-data-state-structured-topology-manifest-candidate-seal-promotion-foundation.md)
+- [007-G — Strategy/Method Binding, Dependency Trust, Authorization, Secrets & Distributed Runtime Closure Foundation](../architecture/phase-007-g-strategy-method-binding-dependency-trust-authorization-secrets-distributed-runtime-closure-foundation.md)
 
 All are architecture/design authority only. Their production implementation is not authorized.
 
+007-G preserves semantic Strategy/method authority separately from executable binding, dependency closure, trust/authorization, secrets and role-specific distributed runtime closure. It does not select a plugin technology, runtime SPI, package-distribution mechanism, policy engine or secret manager.
+
 The next eligible design group is:
 
-**007-G — Strategy/Method Binding, Dependency Trust, Authorization, Secrets & Distributed Runtime Closure Foundation**.
+**007-H — Execution/Attempt, Idempotency, Fencing, Non-Regressing Recovery, Checkpoint, Cancellation & Admission Foundation**.
 
 ## Historical readiness authority
 
