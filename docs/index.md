@@ -17,7 +17,7 @@ methodology / design authority
   > concepts / synchronizations
   > concept dependence / composition
   > concept mapping / experience
-  > current representation / architecture design
+  > representation / architecture design
   > implementation planning history
   > code / tests / deployment evidence
   > ADR rationale / phase history / backlog / examples
@@ -25,17 +25,17 @@ methodology / design authority
 
 Existing architecture, source or tests never become upstream concept-design authority merely because they exist or pass.
 
-## Current posture
-
-Current governing authority:
+## Current governing authority
 
 - [Concept Design Methodology](authority/design-methodology.md)
 - [Jackson Design Completion & Implementation Hold](authority/jackson-design-completion-implementation-hold.md)
 - [Jackson Methodology Completion Matrix](authority/jackson-methodology-completion-matrix.md)
 - [Current Problem Knowledge](problem/index.md)
-- [Phase 008 — Individual Concept Design Normalization & Completeness](phases/008/index.md)
+- [Accepted Concept Catalog](concepts/index.md)
+- [Concept State, Identity, History & Invariant Normalization](concepts/state-identity-history-invariant-normalization.md)
+- [Phase 008](phases/008/index.md)
 
-Current state:
+## Current state
 
 ```text
 accepted concepts          11
@@ -45,6 +45,8 @@ current desired outcomes   16
 Phase 008                  ACTIVE
 008-A                      COMPLETE
 008-B                      COMPLETE
+008-C                      COMPLETE
+008-D                      NEXT ELIGIBLE
 Jackson design completion  IN PROGRESS
 implementation readiness   NOT READY
 implementation start       NOT STARTED
@@ -53,35 +55,35 @@ implementation next        NOT YET
 
 ## Phase 008 progress
 
-008-A established the fuller Jackson methodology completion ledger, artifact-authority classes, J0-J7 stop/reopen discipline, and design-only guardrails.
+008-A established the fuller methodology completion ledger and design-only guardrails.
 
-008-B then reconciled current problem scope and established [Concept-Justification Traceability](problem/concept-justification-traceability.md). It made time-series and multi-table shared-key generation explicit current structured-data targets, clarified that free-form/source-language text fields inside structured data are in scope through a self-contained baseline path, and extended desired outcomes to O1-O16.
+008-B reconciled current problem scope, established O1-O16, and created problem/outcome → concept justification traceability. All eleven concepts remain justified at purpose level.
 
-All eleven accepted concepts remain positively justified at the purpose level. No concept/synchronization/ADR catalog change was made by 008-B.
+008-C normalized state, identity, history, uncertainty and invariants across all eleven concepts. It distinguishes five legitimate state-shape families rather than imposing one generic lifecycle and establishes that physical durability does not create semantic completion or historical authority.
 
-That purpose result does not close state/actions, operational principles, independence/familiarity, deferred-candidate rediscovery, inclusion dependence, mapping, or final integrity.
+008-C does **not** close actions/queries/transitions, operational principles, independence/familiarity or candidate rediscovery.
 
 ## Corrected interpretation of Phase 007
 
-Phase 007 produced valuable architecture refinement and consolidation. Its 007-K engineering-readiness conclusion remains superseded as an implementation-readiness decision because the fuller Jackson methodology still has open work.
+Phase 007 remains valuable downstream architecture evidence. Its historical implementation-reentry conclusion is superseded because the full Jackson design program remains incomplete. Phase 013 will reconcile that architecture after concept design closes.
 
-The [Phase 007 Consolidated Architecture Contract](architecture/phase-007-consolidated-architecture-contract.md) remains downstream design evidence pending Phase 013 reconciliation.
-
-## Design-completion roadmap
+## Remaining design roadmap
 
 ```text
-008  Individual Concept Design Normalization & Completeness
-009  Concept Dependence, Application Family, Composition & Synchronization Closure
-010  Concept Mapping, Interaction, Linguistic & Experience Alignment
-011  Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Design Validation
-012  Jackson Concept-Design Consolidation & Completion Decision
-013  Post-Concept Representation & Architecture Reconciliation
-014  Whole-Design Consolidation, Residual Debt Audit & Implementation-Readiness Decision
+008-D  Concept Action, Query, Preconditions/Postconditions & Lifecycle Closure
+008-E  Operational Principle Completeness, Purpose Fulfillment & Counterexample Review
+008-F  Independence, Genericity, Familiarity & Reuse Revalidation
+008-G  Deferred/Rejected Candidate Rediscovery, Missing-Concept & Boundary Audit
+008-H  Phase 008 Consolidation & Phase 009 Handoff
+009    Concept Dependence, Application Family, Composition & Synchronization Closure
+010    Concept Mapping, Interaction, Linguistic & Experience Alignment
+011    Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Design Validation
+012    Jackson Concept-Design Consolidation & Completion Decision
+013    Post-Concept Representation & Architecture Reconciliation
+014    Whole-Design Consolidation, Residual Debt Audit & Implementation-Readiness Decision
 ---
-015  Implementation Authority & Controlled Delivery — FUTURE ONLY
+015    Implementation Authority & Controlled Delivery — FUTURE ONLY
 ```
-
-Phases 009-014 remain high-level boundaries and are subdivided only immediately before they start.
 
 ## Implementation status rule
 
@@ -93,24 +95,14 @@ IMPLEMENTATION START       NOT STARTED
 IMPLEMENTATION NEXT        NOT YET
 ```
 
-Even a positive Phase 012 result does not make implementation ready. Phase 013 must reconcile representation/architecture and Phase 014 must pass the whole-design exit gate.
-
-Only a positive Phase 014 may set:
-
-```text
-IMPLEMENTATION READINESS   READY
-IMPLEMENTATION START       NOT STARTED
-IMPLEMENTATION NEXT        NEXT
-```
-
-That still does not start implementation; it only makes a future Phase 015 implementation-authority phase eligible.
+A positive Phase 012 still does not make implementation ready. Phase 013 must reconcile architecture, and only a positive Phase 014 whole-design decision may change readiness to **READY / NOT STARTED / NEXT**. Implementation itself would still require a later explicit Phase 015.
 
 ## Historical executable scaffold
 
-The retained 007-B/007-C source/tests/CI remain historical/provisional evidence. They are not repaired or extended during concept design merely to create delivery readiness.
+The retained 007-B/007-C source/tests/tooling/CI remain historical/provisional evidence and are not repaired or extended merely to manufacture readiness during design.
 
 ## Current next boundary
 
-**008-C — Concept State Model, Identity, History & Invariant Normalization** is the next eligible subgroup.
+**008-D — Concept Action, Query, Preconditions/Postconditions & Lifecycle Closure** is next.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
