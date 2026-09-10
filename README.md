@@ -17,81 +17,55 @@ Current architecture/design posture:
 - [`007-G Strategy/Method Binding, Dependency Trust, Authorization, Secrets & Distributed Runtime Closure Foundation`](docs/architecture/phase-007-g-strategy-method-binding-dependency-trust-authorization-secrets-distributed-runtime-closure-foundation.md)
 - [`007-H Execution/Attempt, Idempotency, Fencing, Non-Regressing Recovery, Checkpoint, Cancellation & Admission Foundation`](docs/architecture/phase-007-h-execution-attempt-idempotency-fencing-non-regressing-recovery-checkpoint-cancellation-admission-foundation.md)
 - [`007-I Evaluation/Evidence, Provenance, Historical Query, Reproducibility & Disclosure Foundation`](docs/architecture/phase-007-i-evaluation-evidence-provenance-historical-query-reproducibility-disclosure-foundation.md)
+- [`007-J Reference Vertical-Slice Scope Re-evaluation, Architecture Completeness & Implementation-Proof Boundary`](docs/architecture/phase-007-j-reference-vertical-slice-scope-re-evaluation-architecture-completeness-implementation-proof-boundary.md)
 - [`Phase 007 index`](docs/phases/007/index.md)
 
 ## Status
 
 - Phases 001–006 — retained design/planning/readiness history
 - 007-A through 007-C — retained historical/provisional bootstrap work
-- **007-D — complete as architecture design**
-- **007-E — complete as architecture design**
-- **007-F — complete as architecture design**
-- **007-G — complete as architecture design**
-- **007-H — complete as architecture design**
-- **007-I — complete as architecture design**
-- **007-J — next eligible design subgroup; reference-slice scope re-evaluation required**
+- **007-D through 007-J — complete as architecture/design work**
+- **007-K — next eligible consolidation / implementation-reentry readiness subgroup**
 - **Production implementation expansion — frozen**
 
-Phase 006 historically concluded that design was complete enough to consider implementation. The project later reopened architecture design so existing source/tests do not prematurely harden unsettled representation choices.
+Phase 006 historically concluded that design was complete enough to consider implementation. The project later reopened architecture design so existing source/tests would not prematurely harden unsettled representation choices.
 
-## Current architecture results
+## Current architecture result
 
-007-D separates logical identity, immutable semantic revision/commitment, mutable current-state version/freshness and representation schema version.
+007-D through 007-I establish technology-neutral architecture for exact identity/commitment/history, persistence and distributed data state, composable topology, runtime/dependency/security closure, Execution/recovery/admission, and Evaluation/Evidence/Provenance/history/reproducibility/disclosure.
 
-007-E establishes technology-neutral persistence, transaction, CAS, durable-intent, exact-history and migration/recovery boundaries.
-
-007-F establishes the distributed data-state foundation: logical subject versus physical representation, bounded logical scopes, exact source-state/coordination strength, bounded manifests, candidate/seal separation and Generation-owned promotion.
-
-007-G establishes the executable realization/security/runtime foundation: semantic Strategy/method authority remains distinct from exact implementation/dependency closure, current trust/authorization, secrets and role-specific distributed runtime realization.
-
-007-H establishes stable Execution/Attempt history, operation-scoped idempotency, non-regressing recovery authority, stale-writer fencing, qualified checkpoints, durable cancellation and current operational admission without equating platform success with semantic completion.
-
-007-I establishes the Evaluation/Evidence/history/reproducibility/disclosure foundation:
+007-J establishes the implementation-proof boundary. It distinguishes:
 
 ```text
-committed Evaluation
-        ↓
-Execution / Attempts
-        ↓
-non-final method result
-        ↓
-Evaluation semantic validation
-        ↓
-idempotent Evidence establishment
-        ↓
-immutable Evidence finding + current applicability
-        ↓
-typed Provenance
-        ↓
-exact historical query
-        ↓
-qualified reproducibility assessment
-        ↓
-actor-safe disclosure
+architecture-conformance proof
+capability proof
+runtime/platform-profile proof
+resilience/adversarial proof
+scale/release qualification
 ```
 
-Important consequences include:
+A self-contained learning-based single-table/Spark-local path is the recommended first bounded reference proof after later implementation re-entry because it can exercise a broad end-to-end architecture path without introducing unnecessary topology complexity.
 
-- runtime Evaluation success does not create Evidence;
-- Evidence findings remain independently interpretable and retry-idempotent without forcing one concrete finding schema;
-- immutable finding semantics remain distinct from current applicability;
-- negative and indeterminate findings remain legitimate Evidence when the examination is valid;
-- Generation preserves the exact Evidence/candidate/requirement basis used at promotion;
-- privacy/disclosure Evidence remains distinct from formal privacy guarantees, current disclosure permission and release approval;
-- Provenance is typed relationship authority rather than a duplicated metadata graph;
-- directly retained, reconstructed, partial and unknown historical knowledge remain distinguishable;
-- historical query projections are derived and cannot establish canonical absence or authority;
-- disclosure may protect relationship existence, graph shape, counts and reproducibility reasons as well as values;
-- historical reproducibility support is distinct from current reproduction feasibility and actor-visible assessability;
-- actual reproduction is new domain work rather than mutation of the historical target.
+That proof is deliberately limited. It cannot by itself establish:
 
-Earlier concrete Phase 005 implementation choices remain possible candidates to reassess at implementation re-entry rather than current architecture requirements.
+- direct-generation neutrality;
+- self-contained free-form-text capability;
+- time-series support;
+- multi-table shared-key support;
+- composite-topology representability;
+- distributed cluster/runtime closure;
+- regressive-recovery safety;
+- managed-platform support;
+- enterprise scale;
+- privacy guarantees or release approval.
+
+Those claims require separate conformance evidence.
 
 ## Provisional executable scaffold
 
-The repository still contains the 007-B/007-C package/tool/test scaffold. It is feasibility/history evidence, **not upstream design authority**, and may be revised at a later implementation re-entry.
+The repository still contains the 007-B/007-C package/tool/test scaffold. It is feasibility/history evidence, **not upstream design authority**.
 
-No new tests or executable architecture enforcement are being added while architecture design remains active. Older delivery-state assertions may therefore remain intentionally stale until implementation re-entry.
+Before production work resumes, 007-K/re-entry must explicitly decide which package boundaries, Import Linter contracts, tool choices and existing fitness checks remain compatible with architecture through 007-J.
 
 ## Locked semantic baseline
 
@@ -116,8 +90,6 @@ The complete supported baseline also requires source-derived/local free-form-tex
 
 ## Current next boundary
 
-The earlier executable framing of 007-J must be re-evaluated before any reference implementation proof can begin.
+**007-K — Phase 007 Consolidation, Architecture-Fitness Audit, Evidence Review & Implementation-Reentry Readiness Decision** is next eligible as a **design/governance** subgroup.
 
-**007-J — Reference Vertical-Slice Scope Re-evaluation, Architecture Completeness & Implementation-Proof Boundary** is next eligible as a **design** subgroup.
-
-An explicit proceed decision is required before it begins. Production implementation remains frozen independently of design progression.
+Production implementation remains frozen until 007-K explicitly decides whether re-entry is justified and which bounded tranche, if any, may begin.
