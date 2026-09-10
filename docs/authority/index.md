@@ -12,6 +12,7 @@ These documents define how SYNGAN design knowledge is created, interpreted, chan
 
 - [Design methodology](design-methodology.md)
 - [Jackson Design Completion & Implementation Hold](jackson-design-completion-implementation-hold.md) — **current delivery/design posture authority**
+- [Jackson Methodology Completion Matrix](jackson-methodology-completion-matrix.md) — **current methodology completion ledger**
 - [Documentation governance](documentation-governance.md)
 - [Terminology policy](terminology-policy.md)
 - [Source and provenance policy](source-provenance-policy.md)
@@ -23,13 +24,31 @@ These documents define how SYNGAN design knowledge is created, interpreted, chan
 ```text
 concept / synchronization baseline   11 / 15
 active ADRs                          10
+Phase 008                            ACTIVE
+008-A                                COMPLETE
 Jackson design completion            IN PROGRESS
 implementation readiness             NOT READY
 implementation start                 NOT STARTED
 implementation next                  NOT YET
 ```
 
-The repository is back in deliberate design completion. Implementation is not an eligible next activity.
+The repository is in deliberate design completion. Implementation is not an eligible next activity.
+
+## 008-A methodology result
+
+008-A formally established the fuller Jackson methodology as the completion rubric and created the canonical completion matrix.
+
+The matrix records that:
+
+- strong historical concept work must still receive current-state replay where assigned;
+- Jackson inclusion dependence/application-family analysis remains open for Phase 009;
+- explicit concept mapping remains partial for Phase 010;
+- final specificity/familiarity/integrity/synergy/misfit closure belongs to Phase 011;
+- current-state Jackson consolidation remains open for Phase 012;
+- retained architecture is downstream and pending Phase 013 reconciliation;
+- whole-design implementation readiness cannot be decided before Phase 014.
+
+It also classifies design artifacts by authority role and defines J0-J7 stop/reopen rules so downstream evidence can expose a misfit without becoming upstream authority.
 
 ## Remaining design sequence
 
@@ -47,11 +66,9 @@ Each later phase must be subdivided only when it becomes next, using the latest 
 
 ## Relationship to Phase 007 authority
 
-The [Phase 007 Consolidated Architecture Contract](../architecture/phase-007-consolidated-architecture-contract.md) remains current downstream architecture evidence unless later design supersedes part of it.
+The [Phase 007 Consolidated Architecture Contract](../architecture/phase-007-consolidated-architecture-contract.md) remains downstream architecture evidence unless later design supersedes part of it.
 
 The [Phase 007 Consolidated Architecture & Implementation-Reentry Readiness Contract](phase-007-consolidated-architecture-implementation-reentry-readiness-contract.md) remains historically useful for its architecture/scaffold audit, but its **implementation-reentry readiness conclusion is superseded** by the Jackson Design Completion & Implementation Hold.
-
-The supersession is methodological: 007-K showed that the then-current architecture was coherent enough for engineering re-entry, but it did not prove completion of the fuller Jackson design program.
 
 ## Cross-cutting authority retained
 
@@ -61,7 +78,7 @@ The supersession is methodological: 007-K showed that the then-current architect
 - [Privacy, Disclosure Risk, Formal Guarantee & External Release Boundary Contract](privacy-disclosure-formal-guarantee-release-boundary-contract.md)
 - [Structured-Data Topology & Relationship Semantics Contract](structured-data-topology-relationship-semantics-contract.md)
 
-These are subject to upstream correction if Phase 008-012 changes the concept design they depend upon.
+These remain subject to upstream correction if Phase 008-012 changes the concept design they depend upon.
 
 ## Implementation-readiness transition rule
 
@@ -77,6 +94,6 @@ A positive readiness decision still does not authorize code; it only makes a fut
 
 ## Current next boundary
 
-**008-A — Methodology Authority Reset, Completion Matrix & Design-Only Guardrails**.
+**008-B — Problem, Purpose, Outcome & Concept-Justification Traceability Revalidation**.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
