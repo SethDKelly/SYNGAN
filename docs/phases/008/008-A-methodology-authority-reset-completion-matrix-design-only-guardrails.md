@@ -161,7 +161,7 @@ Phases 004/006/007 provide valuable representation and adversarial evidence. The
 
 ### Engineering readiness is not whole-design readiness
 
-007-K's engineering-readentry conclusion is retained as historical evidence but remains superseded. The only planned gate capable of making implementation ready is Phase 014 after concept design and downstream architecture reconciliation have both completed.
+007-K's engineering-readiness conclusion is retained as historical evidence but remains superseded. The only planned gate capable of making implementation ready is Phase 014 after concept design and downstream architecture reconciliation have both completed.
 
 ## No semantic catalog changes in 008-A
 
