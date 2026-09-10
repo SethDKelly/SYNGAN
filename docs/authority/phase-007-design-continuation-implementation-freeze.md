@@ -58,7 +58,7 @@ Until explicit implementation re-entry, do not add:
 - persistence schemas/migrations;
 - Spark/runtime/model/platform/security adapters;
 - concrete public API classes solely to crystallize hypotheses;
-- production serialization/wire schemas;
+- production serialization/wire/manifest/runtime-closure schemas;
 - new executable architecture restrictions/fitness tests for evolving design;
 - new CI/deployment/release enforcement for evolving architecture.
 
@@ -74,13 +74,31 @@ Completed design groups:
 
 - **007-D — Identity, Revision, Serialization, Typed Public Resource/Handle & Programmatic-View Foundation**;
 - **007-E — Control Persistence, Transactions, CAS, Outbox, Historical References & Migration Baseline**;
-- **007-F — Distributed Data-State, Structured Topology, Manifest, Candidate/Seal & Promotion Foundation**.
+- **007-F — Distributed Data-State, Structured Topology, Manifest, Candidate/Seal & Promotion Foundation**;
+- **007-G — Strategy/Method Binding, Dependency Trust, Authorization, Secrets & Distributed Runtime Closure Foundation**.
 
 Current next eligible design group:
 
-- **007-G — Strategy/Method Binding, Dependency Trust, Authorization, Secrets & Distributed Runtime Closure Foundation**.
+- **007-H — Execution/Attempt, Idempotency, Fencing, Non-Regressing Recovery, Checkpoint, Cancellation & Admission Foundation**.
 
-007-G is not active until explicitly entered.
+007-H is not active until explicitly entered.
+
+## Current design distinctions added through 007-G
+
+Preserve at minimum:
+
+- semantic Strategy/method identity != implementation binding != package/model/runtime identity;
+- dependency requirement != resolved dependency != trust/approval != current authorization;
+- acquisition/provisioning != material runtime execution;
+- installed/discovered code != trusted/authorized executable code;
+- immutable Attempt invocation != live bearer capability/secret;
+- committed network profile != current authorization != data-egress permission;
+- driver readiness != distributed worker/runtime closure;
+- one top-level implementation binding may resolve several exact role-specific components;
+- a missing component cannot justify hidden runtime installation/download/fallback;
+- a later Attempt may use another compatible binding only when unchanged semantic commitment permits it and prior Attempt history is preserved;
+- secret values remain operational material, not canonical semantic/history/provenance state;
+- topology capability/limitations in an implementation cannot redefine committed topology semantics.
 
 ## Design-first change discipline
 
@@ -113,6 +131,7 @@ Phase 007 design continuation        ACTIVE
 007-D architecture design            COMPLETE
 007-E architecture design            COMPLETE
 007-F architecture design            COMPLETE
-007-G architecture design            NEXT ELIGIBLE — NOT STARTED
+007-G architecture design            COMPLETE
+007-H architecture design            NEXT ELIGIBLE — NOT STARTED
 007-D and later implementation       NOT AUTHORIZED
 ```
