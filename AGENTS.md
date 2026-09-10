@@ -16,6 +16,7 @@ Start with:
 - `docs/concepts/index.md`
 - `docs/concepts/state-identity-history-invariant-normalization.md`
 - `docs/concepts/action-query-lifecycle-normalization.md`
+- `docs/concepts/operational-principle-purpose-counterexample-normalization.md`
 - `docs/phases/008/index.md`
 
 Phase 007 architecture is downstream evidence only until Phase 013 reconciliation.
@@ -31,7 +32,8 @@ Phase 008                  ACTIVE
 008-B                      COMPLETE
 008-C                      COMPLETE
 008-D                      COMPLETE
-008-E                      NEXT ELIGIBLE
+008-E                      COMPLETE
+008-F                      NEXT ELIGIBLE
 Jackson design completion  IN PROGRESS
 implementation readiness   NOT READY
 implementation start       NOT STARTED
@@ -64,6 +66,16 @@ synchronization        coordinates already-owned behavior
 external interaction   later mapping/handoff, not automatic mutation
 ```
 
+008-E established the operational-principle discipline:
+
+- the principle must demonstrate the concept's own purpose through an archetypal history;
+- collaborating concepts may participate without supplying the concept's purpose or stealing its state;
+- representation/platform examples are illustrative rather than essential semantics;
+- a falsifying counterexample must be able to expose misuse, redundancy or over-breadth;
+- valid no-occurrence cases must remain possible rather than forcing every concept into every workflow.
+
+All eleven accepted concepts pass that current operational-principle review.
+
 Agents must preserve:
 
 - lineage identity != semantic revision != activity occurrence != result identity != current-use status;
@@ -76,7 +88,8 @@ Agents must preserve:
 - result establishment remains with the accepted producer/result owners;
 - retry/resume creates another Attempt only under unchanged parent semantics and sufficient continuation authority/evidence;
 - restored historical persistence does not itself restore current conceptual authority;
-- synchronizations coordinate owned actions rather than hiding new behavior.
+- synchronizations coordinate owned actions rather than hiding new behavior;
+- operational-principle examples do not create new implementation requirements.
 
 ## Current Phase 008 boundary
 
@@ -85,15 +98,15 @@ Agents must preserve:
 008-B  COMPLETE — Problem, Purpose, Outcome & Concept-Justification Traceability Revalidation
 008-C  COMPLETE — Concept State Model, Identity, History & Invariant Normalization
 008-D  COMPLETE — Concept Action, Query, Preconditions/Postconditions & Lifecycle Closure
-008-E  NEXT ELIGIBLE — Operational Principle Completeness, Purpose Fulfillment & Counterexample Review
-008-F  PLANNED — Independence, Genericity, Familiarity & Reuse Revalidation
+008-E  COMPLETE — Operational Principle Completeness, Purpose Fulfillment & Counterexample Review
+008-F  NEXT ELIGIBLE — Independence, Genericity, Familiarity & Reuse Revalidation
 008-G  PLANNED — Deferred/Rejected Candidate Rediscovery, Missing-Concept & Boundary Audit
 008-H  PLANNED — Phase 008 Consolidation & Phase 009 Handoff
 ```
 
-008-E must test each operational principle against the current 008-B purpose and 008-C/008-D state/behavior authorities. It may refine concept design when a counterexample shows the principle is circular, implementation-dependent, incomplete or actually demonstrates multiple hidden concepts.
+008-F must test every concept as an independently understandable functional unit, examine whether its genericity is domain-appropriate rather than infrastructure-shaped, and explicitly compare familiar conceptual analogues/naming/reuse opportunities.
 
-Do not use operational-principle examples to smuggle in classes, endpoints, tables, jobs, storage mechanisms or platform behavior.
+Do not allow a familiar library/API/class/database term to redefine the concept merely because it is well known. Familiarity is a design criterion, not permission to inherit another system's implementation model.
 
 ## Jackson distinctions to preserve
 
@@ -133,6 +146,6 @@ Only Phase 014 may make the final whole-design readiness decision. Even then, im
 
 ## Current next boundary
 
-**008-E — Operational Principle Completeness, Purpose Fulfillment & Counterexample Review**.
+**008-F — Independence, Genericity, Familiarity & Reuse Revalidation**.
 
 Do not begin implementation work.
