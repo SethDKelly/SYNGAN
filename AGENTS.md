@@ -4,7 +4,7 @@ These instructions apply repository-wide to automated coding/documentation agent
 
 ## Current posture
 
-**SYNGAN is in architecture/design refinement, not production implementation.**
+**SYNGAN is in architecture/design refinement and consolidation, not production implementation.**
 
 Current design authority includes:
 
@@ -15,6 +15,7 @@ Current design authority includes:
 - `docs/architecture/phase-007-g-strategy-method-binding-dependency-trust-authorization-secrets-distributed-runtime-closure-foundation.md`
 - `docs/architecture/phase-007-h-execution-attempt-idempotency-fencing-non-regressing-recovery-checkpoint-cancellation-admission-foundation.md`
 - `docs/architecture/phase-007-i-evaluation-evidence-provenance-historical-query-reproducibility-disclosure-foundation.md`
+- `docs/architecture/phase-007-j-reference-vertical-slice-scope-re-evaluation-architecture-completeness-implementation-proof-boundary.md`
 - `docs/phases/007/index.md`
 
 Current progression:
@@ -27,7 +28,8 @@ Current progression:
 007-G         DESIGN COMPLETE
 007-H         DESIGN COMPLETE
 007-I         DESIGN COMPLETE
-007-J         next eligible DESIGN subgroup — scope re-evaluation required
+007-J         DESIGN COMPLETE
+007-K         next eligible consolidation/re-entry audit
 implementation expansion   FROZEN
 ```
 
@@ -41,17 +43,18 @@ The existing `src/syngan`, tests, Import Linter rules and CI are retained feasib
 
 ## What agents may do now
 
-For an explicitly entered design subgroup, agents may inspect directly relevant authority, create/refine architecture documentation, compare alternatives, preserve unresolved choices, record future verification obligations non-executably, update canonical navigation, and create an ADR only when a durable architecture choice genuinely needs separate rationale.
+For an explicitly entered design/governance subgroup, agents may inspect directly relevant authority, create/refine architecture and consolidation documentation, compare alternatives, preserve unresolved implementation choices, record future verification obligations non-executably, update canonical navigation, and create an ADR only when a durable architecture choice genuinely needs separate rationale.
 
 ## What agents must not do during the design freeze
 
-Unless later implementation re-entry explicitly authorizes it, do not:
+Unless implementation re-entry is explicitly authorized, do not:
 
 - add production source behavior;
 - add persistence/data-plane schemas or migrations;
 - add Spark/runtime/model/platform/security adapters;
 - add execution/recovery/fencing/checkpoint/admission implementations;
 - add Evidence/Provenance/history/query/reproducibility/disclosure implementations;
+- add reference Strategy or vertical-slice implementation merely because 007-J defined the proof boundary;
 - add concrete public API classes merely to crystallize a hypothesis;
 - add production serialization/wire/manifest/runtime-closure/Evidence-history schemas;
 - add runtime/build dependencies for future capability work;
@@ -66,93 +69,95 @@ Existing verification may continue. Its assertions are provisional where they en
 Preserve at minimum:
 
 - logical identity != semantic revision != mutable state version != representation schema version;
-- handle/view != canonical state owner;
 - persistence durability != semantic completion;
 - exact historical reference != current/latest substitution;
-- migration revision != semantic/state/schema/recovery version;
 - logical data subject != physical representation;
-- exact per-scope source state != guaranteed coherent cross-scope snapshot;
 - physical schema/layout != Data Meaning;
 - open/partial candidate != sealed whole subject != promoted logical output;
-- seal success != Constraint/Evaluation/privacy/Generation completion;
 - semantic Strategy/method identity != implementation binding != package/model/runtime identity;
-- one implementation binding may resolve multiple exact components/artifacts;
-- dependency requirement != concrete resolution != integrity/authenticity != trust/approval != current authorization;
-- installed/discovered extension != trusted/authorized executable code;
+- dependency requirement != concrete resolution != trust/approval != current authorization;
 - explicit provisioning/acquisition != material runtime execution;
 - immutable Attempt invocation != live capability/secret credential;
-- runtime network capability != data-egress permission;
-- commitment-time permission != current use-time authorization;
 - driver/coordinator readiness != distributed worker/runtime closure;
-- dynamic worker admission must preserve role-specific closure;
 - missing dependencies must not trigger hidden package/model acquisition or remote fallback;
-- secret values != canonical semantic/history/Provenance material;
 - implementation topology limitation != permission to simplify committed topology;
 - Execution identity != platform job/run identity;
 - Attempt observed physical state != current framework mutation authority;
-- provider retry count != Attempt identity/epoch by definition;
 - idempotency != fencing != authorization;
 - lease/liveness evidence != stale-writer exclusion;
-- Attempt epoch != sufficient post-restore authority after potentially regressive recovery;
-- restored control state != current mutation authority;
-- non-regressing recovery frontier + current Attempt/resource authority may be required before writes resume;
-- surviving immutable effect != revived producer authority;
+- restored control state/Attempt epoch != current post-restore authority;
 - checkpoint durability != current resume eligibility != semantic result;
-- cancellation request != terminal cancellation and cannot be erased by restoring older control state;
+- cancellation request != terminal cancellation;
 - admission != semantic readiness != queue placement != write authority;
-- temporary resource scarcity != true runtime/semantic incompatibility;
-- semantic completion != runtime/platform success;
 - runtime Evaluation result != semantic Evaluation completion != Evidence establishment;
 - Evidence immutable finding != current Evidence applicability;
 - negative/indeterminate finding != Evaluation failure;
-- Evidence != Generation promotion authority;
 - privacy/disclosure Evidence != formal privacy guarantee != current disclosure authorization != external release approval;
 - Provenance relationship authority != duplicated canonical owner state;
 - object/reference resolution != historical knowledge quality;
 - directly retained history != reconstructed history != partial/unknown history;
-- current lifecycle/availability/policy annotation != historical binding;
 - projection/search absence != canonical historical absence;
 - historical difference != causality/superiority/quality claim;
 - disclosure/redaction != mutation of canonical history;
 - canonical historical knowledge != actor-visible knowledge;
-- historical reproducibility support != current reproduction feasibility != actor-visible assessability;
+- historical reproducibility support != current reproduction feasibility;
 - seed presence != exact deterministic reproduction;
-- reproduction readiness != reproduction success.
+- reproduction readiness != reproduction success;
+- architecture-conformance proof != capability proof != runtime/platform-profile proof != resilience/adversarial proof != scale/release qualification;
+- single-table proof != complete structured-data baseline support;
+- Spark-local proof != cluster/runtime-closure or managed-platform proof;
+- learning-based reference path != mandatory Learning/Learned State lifecycle;
+- small Spark fixture != enterprise-scale qualification.
 
-## 007-G design result
+## 007-J design result
 
-007-G is technology-neutral. It does **not** mandate Python Protocols/ABCs, entry points, a particular plugin catalog, Spark/PyTorch versions, package/environment distribution, containers, artifact registries, SBOM/signing systems, IAM/policy products, secret managers, firewalls/service meshes, or concrete runtime/security types.
+007-J is design/delivery-boundary authority, not executable proof authority.
 
-A material Attempt binds one exact executable/dependency realization. Runtime may not hot-swap missing components. A later Attempt may use another compatible binding only when the unchanged semantic commitment permits implementation-neutral realization and the new realization is independently attributable.
+It concludes that architecture through 007-I is complete enough to define controlled implementation evidence and recommends, after later re-entry, a self-contained learning-based single-table/Spark-local path as the first bounded user-visible reference proof.
 
-## 007-H design result
+That recommendation is intentionally narrow. Agents must not let the reference Strategy, its algorithm, one-table representation, Spark-local behavior or `fit/sample` flow become framework semantics.
 
-007-H is likewise technology-neutral. It does **not** mandate a scheduler, queue, lease/lock service, fencing-token encoding, Attempt epoch encoding, recovery-frontier mechanism, checkpoint format, retry/backoff policy, idempotency store, admission algorithm, provider launcher, persistence schema, or concrete execution classes/enums.
+Separate evidence remains required for:
 
-Operational design must preserve stable Execution identity and distinguishable Attempts, operation-scoped idempotency, stale-writer fencing stronger than leases, a non-regressing authority frontier after potentially regressive restore, recovery quarantine/reconciliation, immutable checkpoint identity with contextual resume qualification, durable cancellation intent, and operational admission distinct from semantic readiness and write authority.
+- direct-generation neutrality;
+- source-derived/local free-form-text support;
+- time-series capability;
+- multi-table shared-key capability;
+- composite-topology representability;
+- deterministic/bounded and statistical/approximate Evaluation forms;
+- adversarial retry/fencing/recovery/cancellation/history/disclosure behavior;
+- distributed worker runtime closure;
+- managed/private platform guarantees where claimed;
+- enterprise scale and release qualification.
 
-## 007-I design result
+## Provisional scaffold rule
 
-007-I is technology-neutral. It does **not** mandate an Evidence schema, finding class hierarchy, finding-slot encoding, relational or graph Provenance store, query language/index engine, report/UI format, public history API, authorization/redaction product, lineage integration, reproducibility cache, or privacy mechanism.
+The 007-B/007-C scaffold is not automatically retained unchanged at re-entry.
 
-Design must preserve Evaluation semantic validation before Evidence establishment; independently interpretable retry-idempotent findings; immutable findings separately from current applicability; typed canonical Provenance; directly retained/reconstructed/partial/unknown historical knowledge; exact bounded historical queries with derived non-authoritative projections; view-time disclosure including existence/graph-shape protection; historical reproducibility support separately from current feasibility and actor-visible assessability; and reproduction readiness separately from actual new reproduction work.
+007-K/re-entry must explicitly reassess at least:
 
-Earlier Phase 005-G/H concrete types, enums, SQL choices, package/repository layouts, query APIs and cache designs remain implementation-planning evidence to reconsider only after explicit implementation re-entry.
+- exact top-level package set;
+- Import Linter contracts;
+- build/test/tool versions;
+- root import restrictions;
+- local Spark socket/process exceptions;
+- fitness checks that encode historical phase state instead of durable architecture invariants.
 
 ## Progressive disclosure
 
-For design work:
+For current work:
 
 1. read `docs/index.md`;
 2. read the Phase 007 design-continuation/freeze authority;
 3. read `docs/phases/007/index.md`;
-4. read only the concepts/synchronizations/experience/architecture directly relevant to the active design question;
-5. use phase/implementation history only for rationale/feasibility evidence.
+4. read 007-J for proof/claim boundaries when discussing implementation evidence;
+5. read only the concepts/synchronizations/experience/architecture directly relevant to the active question;
+6. use phase/implementation history only for rationale/feasibility evidence.
 
 Do not load or duplicate the full corpus by default.
 
 ## Current next boundary
 
-**007-J — Reference Vertical-Slice Scope Re-evaluation, Architecture Completeness & Implementation-Proof Boundary** is the next eligible **design** subgroup.
+**007-K — Phase 007 Consolidation, Architecture-Fitness Audit, Evidence Review & Implementation-Reentry Readiness Decision** is the next eligible design/governance subgroup.
 
-Do not begin executable vertical-slice/proof implementation merely from the earlier 007-J name. 007-J must first be explicitly entered as design and re-evaluate the proof boundary. Do not resume production implementation unless a separate implementation-reentry decision is made.
+Do not resume production implementation, create the reference slice, or add executable conformance gates until 007-K explicitly decides re-entry and identifies the bounded authorized tranche.
