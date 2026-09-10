@@ -52,41 +52,42 @@ implementation MAY become READY / NOT STARTED / NEXT
 
 Implementation is not part of Jackson concept design and must not be used to discover unfinished product semantics by accident.
 
-## Relationship to prior work
+## Prior-work authority boundary
 
-### Phases 001-003
+Phases 001-003 contain substantial valid Jackson-style design evidence. Historical `complete` labels do not automatically establish current closure under the expanded methodology rubric.
 
-These contain substantial valid Jackson-style problem, discovery, concept specification, operational-principle, synchronization, and experience evidence. Historical `complete` labels do not automatically establish current closure under the expanded methodology rubric.
+Phases 004-007 contain valuable representation/architecture, implementation-planning and adversarial evidence. They remain downstream evidence, not proof of Jackson completion. Architecture may reveal a real misfit but cannot veto an upstream concept correction merely because it is detailed or executable.
 
-### Phases 004-007
-
-These contain valuable representation/architecture, implementation-planning, and adversarial design evidence. They remain preserved but are downstream evidence, not proof that Jackson concept design is complete.
-
-Where later design changes upstream purpose, concept, dependence, synchronization, or mapping authority, downstream architecture must be reconciled. Existing architecture may not veto an upstream correction merely because it is detailed.
-
-## Why 007-K implementation re-entry remains suspended
-
-007-K established that the architecture available then was coherent enough for bounded engineering re-entry, but it did not prove completion of the fuller Jackson design program.
-
-Remaining methodology work includes inclusion dependence/application families, normalized concept mapping, familiarity/reuse, whole-design specificity/integrity/synergy/misfit evaluation, current-state Jackson consolidation, and downstream architecture reconciliation.
-
-Therefore the historical R0/implementation-reentry conclusion remains superseded.
+The historical 007-K R0/implementation-reentry conclusion therefore remains superseded.
 
 ## Phase 008 progress
 
 ### 008-A — complete
 
-008-A established the fuller Jackson rubric, completion matrix, artifact-authority classes, J0-J7 stop/reopen discipline, and design-only guardrails.
+Established the fuller Jackson rubric, completion matrix, artifact-authority classes, J0-J7 stop/reopen discipline and design-only guardrails.
 
 ### 008-B — complete
 
-008-B revalidated the current problem/purpose/actor/outcome foundation against all eleven accepted concepts and established [Concept-Justification Traceability](../problem/concept-justification-traceability.md).
+Revalidated problem/purpose/actors/outcomes against all eleven accepted concepts, reconciled current topology/text scope, established O1-O16 and current [Concept-Justification Traceability](../problem/concept-justification-traceability.md).
 
-It corrected stale problem scope so the current structured-data target explicitly includes single-table, time-series, and multi-table shared-key generation, with legitimate composite topology representable. It also clarifies that free-form/source-language text fields inside structured data are in scope through at least one self-contained source-derived/local baseline path, while general unstructured/free-standing text generation remains out of scope.
+### 008-C — complete
 
-The current desired outcome set is O1-O16. All eleven accepted concepts remain positively justified at the purpose level with no catalog change.
+Established [Concept State, Identity, History & Invariant Normalization](../concepts/state-identity-history-invariant-normalization.md).
 
-008-B does not close state/action/OP completeness, independence/familiarity, deferred-candidate rediscovery, inclusion dependence, mapping, or final integrity.
+All eleven concepts now have a current normalized state shape. The design distinguishes reusable revisioned authorities, committed domain activities, durable established results, operational realization and typed historical relationships rather than forcing one universal lifecycle.
+
+008-C also establishes:
+
+- lineage identity != semantic revision != activity occurrence != result identity != current-use status;
+- material historical meaning is non-destructive;
+- current eligibility/applicability is separate from historical fact;
+- unknown/indeterminate state remains explicit where false certainty would matter;
+- contextual judgments remain contextual rather than becoming global mutable truth;
+- physical durability does not establish semantic result/completion;
+- regressive persistence recovery does not itself resurrect conceptual authority;
+- current topology/text scope fits the existing state model without catalog expansion in 008-C.
+
+008-C closes conceptual state-model normalization only. Action/query/transition closure remains 008-D work.
 
 ## Remaining design roadmap
 
@@ -110,7 +111,7 @@ Through Phases 008-013 implementation remains **NOT READY / NOT STARTED / NOT YE
 
 Even if Phase 012 closes Jackson concept design, Phase 013 must still reconcile downstream architecture. Only Phase 014 may make the final whole-design readiness decision.
 
-If and only if Phase 014 finds concept design complete, mappings/experience coherent, architecture reconciled, remaining uncertainty implementation-specific, and no unresolved design blocker, it may set:
+A positive Phase 014 may set only:
 
 ```text
 IMPLEMENTATION READINESS   READY
@@ -118,16 +119,16 @@ IMPLEMENTATION START       NOT STARTED
 IMPLEMENTATION NEXT        NEXT
 ```
 
-A positive Phase 014 still does not start implementation. It only makes a future explicit Phase 015 implementation-authority phase eligible.
+That still does not start implementation; a later explicit Phase 015 implementation-authority phase would be required.
 
 ## No executable design-by-accident
 
-Until Phase 014 passes, do not add production behavior, new executable architecture restrictions merely to crystallize hypotheses, package-topology changes anticipating future design, persistence schemas/migrations, runtime/model/platform/security adapters, public API implementation, reference algorithms, vertical slices, benchmarks, or repairs to stale implementation tests solely to make the repository appear ready.
+Until Phase 014 passes, do not add production behavior, new executable architecture restrictions merely to crystallize hypotheses, package-topology changes anticipating future design, persistence schemas/migrations, runtime/model/platform/security adapters, public API implementation, reference algorithms, vertical slices, benchmarks, or repairs to stale implementation tests solely to create readiness.
 
-Existing executable scaffold may remain untouched as historical/provisional evidence while design proceeds.
+Existing executable scaffold may remain untouched as historical/provisional evidence.
 
 ## Current next boundary
 
-The next eligible work is **008-C — Concept State Model, Identity, History & Invariant Normalization**.
+The next eligible work is **008-D — Concept Action, Query, Preconditions/Postconditions & Lifecycle Closure**.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
