@@ -21,7 +21,7 @@ Current posture:
 ```text
 problem / concept authority          retained
 experience authority                 retained
-architecture design                  ACTIVE
+architecture design                  ACTIVE THROUGH 007-J
 implementation planning              informative / downstream
 new production implementation        FROZEN
 new executable architecture gates    FROZEN
@@ -33,9 +33,9 @@ The accepted concept/synchronization baseline remains **11 / 15** with no `SYNC-
 
 Phase 006 remains historically correct: at that point the design was judged complete enough to consider implementation authority.
 
-That handoff conclusion is reopened for current work because additional architecture refinement is being performed before implementation is allowed to harden representational choices.
+That handoff conclusion was reopened because additional architecture refinement was performed before implementation was allowed to harden representational choices.
 
-This does not invalidate the accepted concepts/synchronizations. It changes the current delivery posture.
+007-D through 007-J now provide that refinement. 007-K must still consolidate the result and make the explicit implementation-reentry decision.
 
 ## Treatment of Phase 007-A through 007-C
 
@@ -45,7 +45,7 @@ The repository/tooling/package scaffold may remain as feasibility evidence, but:
 
 - source/package/test choices are not upstream design authority;
 - current design may revise or invalidate provisional implementation choices;
-- existing tests/fitness rules must not veto a sound architecture refinement merely because they later require change;
+- existing tests/fitness rules must not veto sound current architecture merely because they later require change;
 - no design rule is required to preserve an implementation artifact solely because it already exists.
 
 > **Design may invalidate provisional implementation; provisional implementation may not veto design.**
@@ -61,6 +61,7 @@ Until explicit implementation re-entry, do not add:
 - production serialization/wire/manifest/runtime-closure schemas;
 - execution/recovery/fencing/checkpoint/admission implementations;
 - Evidence/Provenance/history/query/reproducibility/disclosure implementations;
+- reference Strategy/vertical-slice implementation merely because 007-J defined its proof boundary;
 - new executable architecture restrictions/fitness tests for evolving design;
 - new CI/deployment/release enforcement for evolving architecture.
 
@@ -70,8 +71,6 @@ Existing verification may continue running against the retained scaffold, but it
 
 ## Phase 007 design track
 
-Phase 007 subgroup numbering is retained for continuity, but current subgroups are interpreted as **design/architecture groups unless explicitly stated otherwise**.
-
 Completed design groups:
 
 - **007-D — Identity, Revision, Serialization, Typed Public Resource/Handle & Programmatic-View Foundation**;
@@ -79,57 +78,57 @@ Completed design groups:
 - **007-F — Distributed Data-State, Structured Topology, Manifest, Candidate/Seal & Promotion Foundation**;
 - **007-G — Strategy/Method Binding, Dependency Trust, Authorization, Secrets & Distributed Runtime Closure Foundation**;
 - **007-H — Execution/Attempt, Idempotency, Fencing, Non-Regressing Recovery, Checkpoint, Cancellation & Admission Foundation**;
-- **007-I — Evaluation/Evidence, Provenance, Historical Query, Reproducibility & Disclosure Foundation**.
-
-Current next eligible design group:
-
+- **007-I — Evaluation/Evidence, Provenance, Historical Query, Reproducibility & Disclosure Foundation**;
 - **007-J — Reference Vertical-Slice Scope Re-evaluation, Architecture Completeness & Implementation-Proof Boundary**.
 
-007-J is not active until explicitly entered. Its work is design-only unless a separate later implementation re-entry decision authorizes executable proof work.
+Current next eligible design/governance group:
 
-## Current design distinctions added through 007-I
+- **007-K — Phase 007 Consolidation, Architecture-Fitness Audit, Evidence Review & Implementation-Reentry Readiness Decision**.
+
+007-K is not active until explicitly entered.
+
+## Current design distinctions added through 007-J
 
 Preserve at minimum:
 
 - semantic Strategy/method identity != implementation binding != package/model/runtime identity;
 - dependency requirement != resolved dependency != trust/approval != current authorization;
 - acquisition/provisioning != material runtime execution;
-- installed/discovered code != trusted/authorized executable code;
 - immutable Attempt invocation != live bearer capability/secret;
-- committed network profile != current authorization != data-egress permission;
 - driver readiness != distributed worker/runtime closure;
-- one top-level implementation binding may resolve several exact role-specific components;
-- a missing component cannot justify hidden runtime installation/download/fallback;
-- a later Attempt may use another compatible binding only when unchanged semantic commitment permits it and prior Attempt history is preserved;
-- secret values remain operational material, not canonical semantic/history/provenance state;
-- topology capability/limitations in an implementation cannot redefine committed topology semantics;
+- topology capability limitations cannot redefine committed topology semantics;
 - Execution identity != platform job/run identity;
 - Attempt observed physical state != current mutation authority;
-- provider/internal retry != automatically a new SYNGAN Attempt;
-- idempotency != fencing != current authorization;
+- idempotency != fencing != authorization;
 - lease/liveness evidence != stale-writer exclusion;
-- Attempt epoch != sufficient authority after potentially regressive restore;
-- restored persistence != current mutation authority;
-- current write authority may require a fresh non-regressing recovery frontier plus Attempt/resource fencing;
-- surviving immutable effect != revived producer authority;
+- restored persistence/Attempt epoch != current post-restore mutation authority;
 - checkpoint durability != resume eligibility != semantic result;
-- cancellation request != terminal cancellation, and pre-cancellation restore cannot resurrect old authority;
+- cancellation request != terminal cancellation;
 - admission != semantic readiness != queue placement != write authority;
-- temporary resource shortage != semantic/runtime incompatibility;
-- semantic completion != runtime/platform success;
-- Evaluation runtime/method success != Evidence establishment;
-- Evidence finding semantics != current Evidence applicability;
-- favorable Evidence != valid Evaluation != Generation/release approval;
+- Evaluation runtime success != Evidence establishment;
+- immutable Evidence finding != current Evidence applicability;
 - privacy/disclosure Evidence != formal privacy guarantee != disclosure permission != release approval;
 - Provenance relationship authority != duplicated canonical resource state;
-- object/reference resolution != historical knowledge quality;
+- reference resolution != historical knowledge quality;
 - directly retained history != reconstructed history != partial/unknown history;
-- current annotations != historical bindings;
-- projection/search absence != canonical historical absence;
-- historical difference != causal/quality claim;
 - canonical historical knowledge != one actor's visible knowledge;
-- historical reproducibility support != current reproduction feasibility != actor-visible assessability;
-- reproduction readiness != reproduction success.
+- historical reproducibility support != current reproduction feasibility;
+- reproduction readiness != reproduction success;
+- architecture-conformance proof != capability proof != runtime/platform proof != resilience proof != scale/release qualification;
+- single-table reference success != complete structured-data baseline support;
+- Spark-local success != distributed cluster/runtime-closure or managed-platform proof;
+- one learning-based reference path != proof that Learning/Learned State are universally required;
+- small functional fixtures != enterprise-scale qualification.
+
+## 007-J proof-boundary result
+
+007-J determines that architecture through 007-I is complete enough to define a controlled implementation-proof portfolio.
+
+A first learning-based single-table/Spark-local path is recommended after later re-entry because it exercises a broad architecture chain with bounded topology complexity. That path is deliberately only one bounded proof.
+
+Separate evidence remains required for direct-generation neutrality, self-contained free-form text, time-series, multi-table shared-key, composite-topology representability, Evaluation-method diversity, adversarial recovery/disclosure, distributed runtime closure, platform profiles and scale/release qualification.
+
+The retained 007-B/007-C scaffold must be explicitly reconciled before implementation resumes; its exact package/test/tool rules do not automatically survive merely because they are executable.
 
 ## Design-first change discipline
 
@@ -138,28 +137,24 @@ During the freeze:
 1. start from problem/concept/experience authority;
 2. treat prior architecture/implementation as evidence, not an untouchable template;
 3. distinguish accepted architecture roles from illustrative implementation spelling;
-4. leave unresolved alternatives open until purpose/constraints justify selection;
+4. leave unresolved implementation alternatives open until purpose/constraints justify selection;
 5. prefer responsibilities/invariants over premature classes/tables/tools;
 6. create ADRs only when a material architecture choice benefits from durable alternatives/rationale;
-7. avoid executable enforcement until the design boundary is sufficiently stable.
+7. avoid executable enforcement until implementation re-entry explicitly authorizes stable guardrails.
 
 ## Re-entry condition
 
 Production implementation may resume only after an explicit later decision states at minimum:
 
 - which architecture authorities are current;
+- whether 007-D through 007-J are consolidated without blocking contradiction;
 - which provisional 007-A through 007-C choices remain compatible;
 - which retained implementation artifacts need revision/removal;
+- which proof claims/non-claims govern the first implementation tranche;
 - which executable guardrails are then justified;
-- which production subgroup is authorized next.
+- which bounded production subgroup is authorized next.
 
-No phase number or green test suite substitutes for this decision.
-
-## 007-J precondition
-
-The earlier 007-J label proposed an executable self-contained single-table/Spark-local reference slice. Under the current freeze that framing must be re-evaluated before any implementation proof begins.
-
-007-J must first determine whether the architecture is complete enough for a proof slice, what complete-baseline coverage the proof must represent without hard-coding single-table bias, and which obligations remain documentary until explicit implementation re-entry.
+No phase number, reference-slice label or green test suite substitutes for this decision.
 
 ## Current authority state
 
@@ -171,6 +166,7 @@ Phase 007 design continuation        ACTIVE
 007-G architecture design            COMPLETE
 007-H architecture design            COMPLETE
 007-I architecture design            COMPLETE
-007-J design scope re-evaluation      NEXT ELIGIBLE — NOT STARTED
+007-J proof-boundary design          COMPLETE
+007-K consolidation/re-entry audit   NEXT ELIGIBLE — NOT STARTED
 007-D and later implementation       NOT AUTHORIZED
 ```
