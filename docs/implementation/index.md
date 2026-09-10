@@ -8,60 +8,37 @@ status: active
 
 ## Current posture
 
-Production implementation expansion is **frozen** under the [Phase 007 Design Continuation & Implementation Freeze](../authority/phase-007-design-continuation-implementation-freeze.md).
+Phase 007 architecture is complete and consolidated.
 
-Phase 007-A through 007-C remain historical/provisional bootstrap work. Existing source/tests/tooling may remain for feasibility/history, but they do not constrain current architecture.
+Current implementation transition authority is the [Phase 007 Consolidated Architecture & Implementation-Reentry Readiness Contract](../authority/phase-007-consolidated-architecture-implementation-reentry-readiness-contract.md), read with the [Phase 007 Consolidated Architecture Contract](../architecture/phase-007-consolidated-architecture-contract.md).
 
-Current implementation authorization state:
+Current authorization state:
 
 ```text
-007-A..007-C  retained historical/provisional scaffold
-007-D and later  NOT AUTHORIZED FOR IMPLEMENTATION
+007-A..007-C  historical/provisional scaffold
+007-D..007-K  completed architecture/design/governance
+R0 / 008-A    NEXT ELIGIBLE after explicit proceed
+R1+           NOT AUTHORIZED
 ```
 
-No reference Strategy, vertical slice, persistence/runtime/security/Evidence implementation, new executable architecture gate or expanded CI enforcement is authorized before the explicit implementation-reentry decision.
+The old Phase 007 implementation lock and 007-B/007-C execution authorities are historical/superseded. They remain implementation evidence, not current authority.
 
-## Current architecture work
-
-Completed design authorities:
-
-- [007-D Identity, Revision, Serialization, Resource/Handle & Programmatic-View Foundation](../architecture/phase-007-d-identity-revision-serialization-resource-handle-programmatic-view-foundation.md)
-- [007-E Control Persistence, Transactions, CAS, Outbox, Historical References & Migration Baseline](../architecture/phase-007-e-control-persistence-transactions-cas-outbox-historical-reference-migration-baseline.md)
-- [007-F Distributed Data-State, Structured Topology, Manifest, Candidate/Seal & Promotion Foundation](../architecture/phase-007-f-distributed-data-state-structured-topology-manifest-candidate-seal-promotion-foundation.md)
-- [007-G Strategy/Method Binding, Dependency Trust, Authorization, Secrets & Distributed Runtime Closure Foundation](../architecture/phase-007-g-strategy-method-binding-dependency-trust-authorization-secrets-distributed-runtime-closure-foundation.md)
-- [007-H Execution/Attempt, Idempotency, Fencing, Non-Regressing Recovery, Checkpoint, Cancellation & Admission Foundation](../architecture/phase-007-h-execution-attempt-idempotency-fencing-non-regressing-recovery-checkpoint-cancellation-admission-foundation.md)
-- [007-I Evaluation/Evidence, Provenance, Historical Query, Reproducibility & Disclosure Foundation](../architecture/phase-007-i-evaluation-evidence-provenance-historical-query-reproducibility-disclosure-foundation.md)
-- [007-J Reference Vertical-Slice Scope Re-evaluation, Architecture Completeness & Implementation-Proof Boundary](../architecture/phase-007-j-reference-vertical-slice-scope-re-evaluation-architecture-completeness-implementation-proof-boundary.md)
-
-These documents introduce no new implementation artifacts.
-
-## Earlier concrete implementation choices remain provisional
-
-Historical Phase 005 planning selected concrete candidates for identity encoding, SQL persistence, Spark/Parquet data representation, Python runtime SPIs, package discovery, execution types, Evidence/Provenance storage, query APIs, security products/interfaces and package layouts.
-
-Under current design:
-
-- those choices remain useful feasibility/planning evidence;
-- they are not current architecture requirements;
-- they must be re-evaluated at implementation re-entry against 007-D through 007-J and the then-current ecosystem/deployment needs;
-- no technology is authorized merely because Phase 005 planned it.
-
-The retained 007-B/007-C executable scaffold is similarly provisional.
-
-## Current implementation obligations from 007-D through 007-I
+## Current implementation obligations
 
 Any later implementation must preserve at least:
 
 - exact logical/semantic identity separate from storage/runtime identity;
+- immutable semantic commitments separate from mutable lifecycle/concurrency state;
 - owner-controlled persistence and exact historical references;
-- composable logical topology, bounded manifests, candidate/seal/promotion separation;
+- durable cross-boundary intent/reconciliation rather than assumed global atomicity;
+- composable logical topology, bounded manifests and candidate/seal/promotion separation;
 - Strategy/method semantics separate from exact executable/dependency/runtime realization;
 - dependency identity/integrity/trust/current authorization separation;
 - role-specific distributed runtime closure and no hidden acquisition;
 - stable Execution with distinguishable Attempts;
 - operation-scoped idempotency separate from stale-writer fencing and authorization;
 - non-regressing post-restore mutation authority;
-- qualified checkpoints, durable cancellation and admission distinct from semantic state;
+- checkpoint/cancellation/admission distinctions;
 - Evaluation semantic validation before Evidence establishment;
 - immutable Evidence findings separate from current applicability;
 - typed canonical Provenance over exact references;
@@ -70,67 +47,88 @@ Any later implementation must preserve at least:
 - disclosure capable of protecting existence/graph shape/counts/reasons without mutating canonical history;
 - historical reproducibility support distinct from current reproduction feasibility and reproduction success.
 
-## 007-J implementation-proof consequences
+## Historical scaffold review result
 
-007-J does not authorize implementation. It defines how later evidence must be interpreted.
+007-K directly inspected the current executable scaffold.
 
-A complete implementation evidence portfolio must distinguish:
+Directionally retained evidence includes:
+
+- one `syngan` distribution;
+- `src/` packaging;
+- `py.typed`;
+- repository-owned locked toolchain and verification command;
+- Python `>=3.11` as a current implementation choice;
+- no base production runtime dependencies yet;
+- inward dependency intent;
+- portable-core socket denial after explicit provisioning;
+- CI as evidence rather than semantic authority.
+
+The following require explicit R0 revalidation:
+
+- exact seven top-level packages;
+- exact Import Linter contracts;
+- exact tool/version bounds;
+- root import/re-export restrictions;
+- package/build structural assertions;
+- local Spark socket/process exceptions;
+- phase-state fitness tests written for historical delivery progression.
+
+A known stale test is `tests/fitness/test_phase_007_authority_boundary.py`, which still asserts that 007-D is the next eligible subgroup. That is implementation-reentry debt, not a current design invariant.
+
+## R0 / recommended 008-A authority boundary
+
+The next eligible tranche is:
+
+**008-A — Implementation Re-entry Authority, Scaffold Reconciliation & Verification Re-baseline**.
+
+It requires an explicit proceed decision before execution.
+
+### 008-A may
+
+- retire/reconcile historical Phase 007 implementation-authority documentation;
+- classify and revise/remove stale executable architecture/delivery-state assertions;
+- justify, revise or relax exact package and Import Linter constraints;
+- update package/root-import/build smoke checks;
+- revalidate current tool versions and locked environment;
+- update `pyproject.toml`, `uv.lock`, `tools/verify.py` and verification CI only as required for a truthful current gate;
+- define narrow local-Spark process/socket testing policy if needed for later tests without implementing Spark capability;
+- establish current change-classification/stop-reopen rules and evidence gates for the next tranche.
+
+### 008-A must not
+
+- implement concept lifecycle/domain behavior;
+- implement public identity/reference contracts beyond scaffold reconciliation;
+- add persistence schemas/migrations;
+- add distributed data/source/output realization;
+- add Spark synthesis/runtime behavior;
+- add Strategy/Learning/Generation/Evaluation algorithms;
+- add dependency resolver or security-provider behavior;
+- add Execution/Attempt/fencing/recovery/checkpoint/admission implementation;
+- add Evidence/Provenance/history/query/reproducibility/disclosure implementation;
+- add platform/deployment adapters;
+- add benchmarks/release qualification.
+
+## 008-A completion gate
+
+Before R1 can even be proposed, 008-A must establish:
+
+1. truthful current implementation authority pointing to Phase 007 consolidated architecture;
+2. an explicit disposition for every retained executable architecture constraint;
+3. reconciliation of stale Phase 007 delivery-state tests;
+4. justified dependency/package direction;
+5. a reproducible normal verification environment;
+6. a truthful green verification gate on the reconciled scaffold;
+7. branch/review/check claims matching actual GitHub state;
+8. no owner-specific feature behavior introduced early;
+9. recorded waivers/debt;
+10. a separately proposed next bounded tranche requiring explicit proceed authority.
+
+## Likely later sequence
+
+007-K retains this dependency direction as guidance, not blanket authority:
 
 ```text
-architecture-conformance proof
-capability proof
-runtime/platform-profile proof
-resilience/adversarial proof
-scale/release qualification
-```
-
-No one vertical slice may claim all five.
-
-### Recommended first bounded reference path
-
-After explicit implementation re-entry, the preferred first user-visible reference path is a self-contained learning-based single-table path on a local/Spark-local profile using a deliberately simple, replaceable Strategy implementation.
-
-Its acceptance claim is limited to the architecture and capability path actually exercised.
-
-It must not make one-table representation, the chosen algorithm or a `fit/sample` lifecycle universal framework semantics.
-
-### Separate proof required before broader claims
-
-Later implementation evidence must separately establish, where claimed:
-
-- direct-generation neutrality without fabricated Learning/Learned State;
-- source-derived/local free-form-text synthesis without mandatory public model/service dependency;
-- time-series generation;
-- multi-table shared-key generation;
-- composite-topology representability;
-- deterministic/bounded and statistical/approximate Evaluation forms;
-- duplicate-launch/idempotency/fencing/cancellation/regressive-recovery behavior;
-- reconstructed-history and disclosure correctness;
-- distributed worker runtime closure;
-- managed/private platform capability;
-- enterprise scale and release qualification.
-
-A small Spark-local success is not distributed-cluster or enterprise-scale evidence.
-
-## Provisional 007-B/007-C scaffold review required at re-entry
-
-Re-entry must explicitly determine whether to retain, revise or remove:
-
-- the exact seven top-level `syngan` responsibility packages;
-- current Import Linter contracts;
-- current build/test/tool versions;
-- root import restrictions;
-- portable socket-denial behavior and any narrowly required local-Spark process exceptions;
-- fitness assertions encoding historical phase state rather than durable architecture invariants.
-
-Executable history cannot veto current architecture merely because it already exists.
-
-## Recommended later re-entry sequence
-
-007-J recommends the following dependency order as guidance, not authorization or fixed future phase numbering:
-
-```text
-R0  implementation re-entry authority + scaffold reconciliation
+R0  re-entry authority + scaffold/verification reconciliation
 R1  identity/control/historical-reference kernel
 R2  logical data/topology/manifest/candidate-seal kernel
 R3  Strategy binding + Execution/Attempt/fencing/admission contracts
@@ -143,26 +141,26 @@ R9  adversarial recovery/disclosure/distributed-runtime conformance
 R10 platform/scale/hardening/release qualification
 ```
 
-007-K may refine this while preserving the dependency and claim boundaries.
+Each later tranche requires separate authorization.
 
-## Re-entry condition
+## Implementation-proof claims
 
-Implementation may resume only after an explicit design-completion/re-entry decision identifies:
+Implementation evidence remains partitioned into:
 
-- current architecture authority through 007-J;
-- whether the architecture is consolidated without blocking contradiction;
-- which provisional 007-A through 007-C choices remain compatible;
-- which retained source/tests/gates need revision or removal;
-- the explicit proof claim and non-claims for the first authorized tranche;
-- which executable guardrails are justified;
-- which bounded production subgroup is authorized next.
+```text
+architecture-conformance proof
+capability proof
+runtime/platform-profile proof
+resilience/adversarial proof
+scale/release qualification
+```
 
-No phase number, prior implementation-plan label, reference-slice name or green test suite substitutes for that decision.
+No one vertical slice may imply all five.
+
+The complete structured-data baseline remains single-table + time-series + multi-table shared-key, plus the required self-contained source-derived/local free-form-text capability.
 
 ## Current next boundary
 
-The next active work is design/governance, not implementation:
+**008-A — Implementation Re-entry Authority, Scaffold Reconciliation & Verification Re-baseline** is next after explicit proceed.
 
-**007-K — Phase 007 Consolidation, Architecture-Fitness Audit, Evidence Review & Implementation-Reentry Readiness Decision**.
-
-007-K must explicitly decide whether implementation re-entry is justified and, if so, what bounded tranche can begin. Production implementation remains frozen until then.
+Feature implementation remains unauthorized until 008-A completes and a later tranche is separately approved.
