@@ -19,9 +19,10 @@ For current design, read only what the active question needs:
 3. [007-E Control Persistence, Transactions, CAS, Outbox, Historical References & Migration Baseline](phase-007-e-control-persistence-transactions-cas-outbox-historical-reference-migration-baseline.md);
 4. [007-F Distributed Data-State, Structured Topology, Manifest, Candidate/Seal & Promotion Foundation](phase-007-f-distributed-data-state-structured-topology-manifest-candidate-seal-promotion-foundation.md);
 5. [007-G Strategy/Method Binding, Dependency Trust, Authorization, Secrets & Distributed Runtime Closure Foundation](phase-007-g-strategy-method-binding-dependency-trust-authorization-secrets-distributed-runtime-closure-foundation.md);
-6. [Phase 006 Architecture Reconciliation Contract](phase-006-architecture-reconciliation-contract.md) where not refined later;
-7. only directly relevant Phase 004 detailed authorities;
-8. [ADRs](../decisions/index.md) for rationale/history.
+6. [007-H Execution/Attempt, Idempotency, Fencing, Non-Regressing Recovery, Checkpoint, Cancellation & Admission Foundation](phase-007-h-execution-attempt-idempotency-fencing-non-regressing-recovery-checkpoint-cancellation-admission-foundation.md);
+7. [Phase 006 Architecture Reconciliation Contract](phase-006-architecture-reconciliation-contract.md) where not refined later;
+8. only directly relevant Phase 004 detailed authorities;
+9. [ADRs](../decisions/index.md) for rationale/history.
 
 ## Current posture
 
@@ -82,23 +83,66 @@ Key rules:
 
 Earlier Phase 005-F/005-I choices such as `typing.Protocol`, Python entry points, named runtime SPIs, `spark`/`torch` extras and concrete security/dependency type names remain implementation candidates rather than architecture requirements.
 
+## 007-H — execution / recovery / admission
+
+007-H establishes the operational authority chain beneath the committed activity and 007-G invocation:
+
+```text
+committed activity / stable Execution
+        ↓
+current admission + recovery-continuity qualification
+        ↓
+non-regressing recovery-authority frontier
+        ↓
+current Attempt authority + resource-local preconditions
+        ↓
+immutable Attempt invocation
+        ↓
+physical work / checkpoint / candidate / method-result effects
+        ↓
+reconciliation + owner validation
+        ↓
+at-most-one authoritative semantic result transition
+```
+
+Key rules:
+
+- stable Execution identity survives valid same-semantics recovery while material re-realization receives distinguishable Attempt history;
+- Attempt observed physical state and current mutation authority are separate;
+- provider-internal worker/task retry may remain within one Attempt when its immutable invocation and authority boundary do not change;
+- idempotency is scoped to the intended operation/effect and never substitutes for fencing or current authorization;
+- Attempt epoch alone is insufficient after potentially regressive control-state recovery;
+- material write authority composes the current recovery frontier, current Execution/Attempt authority, resource-local preconditions where required and current authorization;
+- regressive restore enters recovery quarantine and establishes fresh stale-writer exclusion before ordinary writes resume;
+- surviving effects are reconciled/reconstructed/adopted by current authority rather than reviving their old writer;
+- committed checkpoints remain immutable operational recovery state and require contextual resume qualification;
+- a later compatible implementation binding is not automatically checkpoint-compatible;
+- cancellation is durable intent that blocks ordinary new admission and is not erased by regressive restore;
+- late provider success is historical fact, not renewed promotion authority;
+- admission is current operational eligibility, distinct from semantic readiness, authorization, executable closure, queue placement and write authority;
+- temporary resource shortage remains distinguishable from true incompatibility and stale admission must be requalified before launch;
+- dynamic workers satisfy role-specific 007-G closure before material work;
+- the target is at-least-once physical realization with fenced/idempotent/reconcilable effects, not exactly-once computation.
+
+Earlier Phase 005-G concrete execution types, enums, integer epoch encoding, package topology and repository/API spelling remain implementation candidates to reassess at explicit re-entry.
+
 ## Current design counts
 
 ```text
 accepted concepts          11
 accepted synchronizations  15
 active ADRs                10
-new concepts in 007-D..G    0
+new concepts in 007-D..H    0
 new synchronizations        0
 new ADRs                    0
 ```
 
 No `SYNC-16`.
 
-ADR-0004, ADR-0007 and ADR-0010 remain active and sufficient; 007-G composes/refines them rather than superseding them.
+007-H composes/refines ADR-0002, ADR-0007 and ADR-0009 without superseding them. Existing ADRs remain sufficient.
 
 ## Current next boundary
 
-**007-H — Execution/Attempt, Idempotency, Fencing, Non-Regressing Recovery, Checkpoint, Cancellation & Admission Foundation** is the next eligible **design** subgroup.
+**007-I — Evaluation/Evidence, Provenance, Historical Query, Reproducibility & Disclosure Foundation** is the next eligible **design** subgroup.
 
 Production implementation remains frozen independently of design progression.
