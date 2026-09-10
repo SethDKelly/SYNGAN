@@ -9,9 +9,11 @@ These instructions apply repository-wide to automated coding/documentation agent
 Start with:
 
 - `docs/index.md`
+- `docs/authority/design-methodology.md`
 - `docs/authority/jackson-design-completion-implementation-hold.md`
+- `docs/authority/jackson-methodology-completion-matrix.md`
 - `docs/phases/008/index.md`
-- relevant canonical concept/synchronization/experience authority
+- relevant canonical problem/concept/synchronization/experience authority
 - Phase 007 architecture only when it supplies downstream evidence or a design counterexample
 
 Current state:
@@ -20,6 +22,8 @@ Current state:
 accepted concepts          11
 accepted synchronizations  15
 active ADRs                10
+Phase 008                  ACTIVE
+008-A                      COMPLETE
 Jackson design completion  IN PROGRESS
 implementation readiness   NOT READY
 implementation start       NOT STARTED
@@ -31,6 +35,21 @@ implementation next        NOT YET
 > **Complete the design before making implementation ready. Existing architecture, code, tests or implementation plans may expose misfits, but they may not veto upstream concept-design correction.**
 
 The 007-K bounded implementation-reentry conclusion is superseded as premature. Its architecture/scaffold findings remain historical/downstream evidence.
+
+## Methodology completion matrix
+
+The canonical `docs/authority/jackson-methodology-completion-matrix.md` is the current ledger for remaining design obligations.
+
+Do not infer methodology completion from historical `complete` phase labels. Use the matrix state and owning closure phase.
+
+Artifact roles are:
+
+- Class A — current upstream design authority;
+- Class B — supporting design evidence;
+- Class C — downstream architecture evidence pending reconciliation;
+- Class D — historical implementation-planning/executable evidence.
+
+Class C/D may reveal a misfit. They may not silently define unfinished Class A behavior.
 
 ## Current design roadmap
 
@@ -46,21 +65,19 @@ The 007-K bounded implementation-reentry conclusion is superseded as premature. 
 015  Implementation Authority & Controlled Delivery — FUTURE ONLY
 ```
 
-Only the next high-level phase is decomposed in advance. Phases 009-014 must be divided into dependency-safe subgroups immediately before they start.
+Only the current high-level phase is decomposed in advance. Phases 009-014 must be divided into dependency-safe subgroups immediately before they start.
 
 ## Current Phase 008 boundary
 
-Phase 008 is divided into:
-
 ```text
-008-A  Methodology Authority Reset, Completion Matrix & Design-Only Guardrails
-008-B  Problem, Purpose, Outcome & Concept-Justification Traceability Revalidation
-008-C  Concept State Model, Identity, History & Invariant Normalization
-008-D  Concept Action, Query, Preconditions/Postconditions & Lifecycle Closure
-008-E  Operational Principle Completeness, Purpose Fulfillment & Counterexample Review
-008-F  Independence, Genericity, Familiarity & Reuse Revalidation
-008-G  Deferred/Rejected Candidate Rediscovery, Missing-Concept & Boundary Audit
-008-H  Phase 008 Consolidation, Individual-Concept Completeness Decision & Phase 009 Handoff
+008-A  COMPLETE — Methodology Authority Reset, Completion Matrix & Design-Only Guardrails
+008-B  NEXT ELIGIBLE — Problem, Purpose, Outcome & Concept-Justification Traceability Revalidation
+008-C  PLANNED — Concept State Model, Identity, History & Invariant Normalization
+008-D  PLANNED — Concept Action, Query, Preconditions/Postconditions & Lifecycle Closure
+008-E  PLANNED — Operational Principle Completeness, Purpose Fulfillment & Counterexample Review
+008-F  PLANNED — Independence, Genericity, Familiarity & Reuse Revalidation
+008-G  PLANNED — Deferred/Rejected Candidate Rediscovery, Missing-Concept & Boundary Audit
+008-H  PLANNED — Phase 008 Consolidation, Individual-Concept Completeness Decision & Phase 009 Handoff
 ```
 
 008-H does not declare Jackson concept design complete; it only decides whether individual concepts are ready for cross-concept dependence/composition work.
@@ -79,17 +96,26 @@ Phase 008 is divided into:
 - specificity, familiarity and integrity are design criteria, not implementation metrics;
 - misfits discovered from architecture or implementation planning must reopen the smallest affected upstream design authority.
 
+## Stop/reopen classes
+
+Follow the J0-J7 classes in the completion matrix:
+
+- J0 editorial/non-semantic;
+- J1 local concept specification gap;
+- J2 purpose/boundary/catalog defect;
+- J3 dependence/composition/synchronization defect;
+- J4 concept-mapping/experience defect;
+- J5 design-quality/misfit defect;
+- J6 architecture reconciliation defect;
+- J7 whole-design readiness defect.
+
+Do not patch a higher-class conceptual defect only in downstream architecture/code/tests.
+
 ## What agents may do now
 
-For explicitly entered design subgroups, agents may:
+For explicitly entered design subgroups, agents may inspect repository evidence, refine current design documents within the subgroup's authority, record alternatives/counterexamples/misfits, and revise upstream design when justified.
 
-- inspect problem/concept/synchronization/experience/architecture evidence;
-- refine concept purposes, state, actions, queries, invariants and operational principles;
-- rediscover/defer/reject concept candidates based on purpose and independence;
-- analyze concept dependence, composition, synchronization and mapping when the active phase reaches them;
-- record counterexamples, misfits and unresolved alternatives;
-- update canonical documentation and phase navigation;
-- use downstream architecture as feasibility/misfit evidence without treating it as upstream authority.
+Downstream architecture may be used as feasibility or counterexample evidence without becoming upstream authority.
 
 ## What agents must not do until Phase 014 passes
 
@@ -130,6 +156,6 @@ That state still requires an explicit future Phase 015 before implementation beg
 
 ## Current next boundary
 
-**008-A — Methodology Authority Reset, Completion Matrix & Design-Only Guardrails** is the next eligible subgroup.
+**008-B — Problem, Purpose, Outcome & Concept-Justification Traceability Revalidation** is the next eligible subgroup.
 
 Do not begin implementation work.
