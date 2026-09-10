@@ -14,7 +14,8 @@ Current cross-concept normalization is governed by:
 
 - [Concept State, Identity, History & Invariant Normalization](state-identity-history-invariant-normalization.md);
 - [Concept Action, Query, Preconditions/Postconditions & Lifecycle Normalization](action-query-lifecycle-normalization.md);
-- [Operational Principle, Purpose Fulfillment & Counterexample Normalization](operational-principle-purpose-counterexample-normalization.md).
+- [Operational Principle, Purpose Fulfillment & Counterexample Normalization](operational-principle-purpose-counterexample-normalization.md);
+- [Concept Independence, Genericity, Familiarity & Reuse Normalization](independence-genericity-familiarity-reuse-normalization.md).
 
 ## Accepted concepts
 
@@ -34,70 +35,79 @@ Current cross-concept normalization is governed by:
 
 The accepted catalog remains **eleven concepts**.
 
-Phase 008-B revalidated a distinct current problem-facing purpose for every accepted concept. Phase 008-C normalized state/identity/history/invariants. Phase 008-D normalized actions, queries, contextual-assessment ownership and lifecycle transitions. Phase 008-E revalidated each operational principle against those current purposes and behaviors and challenged each with explicit counterexamples.
+Phase 008-B revalidated a distinct current problem-facing purpose for every accepted concept. Phase 008-C normalized state/identity/history/invariants. Phase 008-D normalized actions, queries, contextual-assessment ownership and lifecycle transitions. Phase 008-E revalidated each operational principle. Phase 008-F now revalidates independence, bounded genericity, familiarity/naming and conceptual reuse for every accepted concept.
 
-No concept has been added, removed, merged or renamed through 008-E.
+No concept has been added, removed, merged, split or renamed through 008-F.
 
-Catalog finality is **not** yet claimed: 008-F still owns independence/genericity/familiarity and 008-G deliberate deferred/rejected candidate rediscovery.
+Catalog finality is **not** yet claimed: 008-G still owns deliberate deferred/rejected candidate rediscovery and missing-concept/perimeter-boundary review; 008-H owns Phase 008 consolidation.
 
-## Phase 008-C state normalization
+## Current individual-concept closure
 
-The eleven concepts intentionally do not share one generic lifecycle. Current state-shape families are:
-
-- reusable revisioned authorities — Data Meaning, Synthesis Strategy, Constraint, Evaluation Criterion;
-- committed domain activities — Learning, Generation, Evaluation;
-- durable established results — Learned State, Evidence;
-- operational realization — Execution;
-- typed historical relationships — Provenance.
-
-The state normalization distinguishes lineage identity, semantic revision, activity occurrence identity, result identity and current-use/applicability status without selecting identifier/storage technology. Material historical state is non-destructive, contextual judgments remain contextual, physical durability does not establish semantic completion, and unresolved/indeterminate state remains explicit where false certainty would matter.
-
-## Phase 008-D behavioral normalization
-
-The current behavioral vocabulary is:
+The current catalog now has dedicated present-state authority for:
 
 ```text
-command / action       changes concept-owned state
-query / observation    reads or derives state without mutation
-contextual assessment  consuming concept owns the context-specific result
-synchronization        coordinates already-owned actions/queries
-external interaction   later mapping/handoff, not automatic mutation
+purpose / justification               008-B
+state / identity / history / invariants 008-C
+actions / queries / transitions       008-D
+operational principles / counterexamples 008-E
+independence / genericity / familiarity / reuse 008-F
 ```
 
-The canonical behavioral authority provides command/query surfaces and semantic preconditions/effects/postconditions for all eleven concepts.
+These are individual-concept results only. Jackson inclusion dependence, application family, final composition/synchronization, mapping and final whole-concept quality remain later work.
 
-Several older Phase 002 `Actions` sections use that heading broadly. Under current authority:
+## Phase 008-F independence and familiarity result
 
-- inspect/review/observe/compare/traverse/explain operations are queries when they do not change canonical state;
-- selecting/reusing a reusable concept is normally behavior of the consuming concept or later interaction mapping;
-- contextual compatibility/applicability belongs to the consuming activity;
-- cross-concept production/coordination occurs through explicit synchronizations of owned actions.
+008-F explicitly distinguishes:
 
-All fifteen accepted synchronizations can be expressed using these owned behaviors. 008-D found no hidden coordinator action and introduced no `SYNC-16`.
+```text
+independence != isolation
+reuse        != universal presence
+familiarity  != copying a neighboring object model
+genericity   != generic infrastructure
+```
 
-## Phase 008-E operational-principle normalization
+All eleven concepts pass current independence review. Creation or synchronization relationships do not collapse purpose/state ownership: Learning and Learned State remain activity/result; Evaluation and Evidence remain examination/finding; Execution remains operational realization rather than domain completion; Provenance remains typed historical-relationship authority despite high fan-in.
 
-Every accepted concept now has a current operational principle that visibly demonstrates its purpose through an archetypal history, uses its 008-D-owned actions/queries, preserves collaborating concept boundaries and remains intelligible after implementation-specific examples are removed.
+All eleven concepts are generic enough for the current product variation while remaining bounded to synthetic-data purposes. They do not become enterprise-wide metadata, workflow, policy, artifact, model-registry, evidence, observability or lineage systems.
 
-Each concept was also challenged with a falsifying counterexample. Important boundary cases include:
+All eleven names are retained after explicit familiarity review. Several familiar alternatives remain intentionally non-canonical because they would import misleading assumptions:
 
-- direct-generation behavior does not fabricate Learning/Learned State;
-- operationally trivial activity does not fabricate Execution;
-- checkpoint durability does not establish Learned State;
-- candidate data does not establish Generation completion;
-- metric output does not automatically establish Evidence;
-- Strategy/Constraint/Learned State/Criterion do not own consuming-activity contextual judgments;
-- Evidence does not become approval authority;
-- Execution does not become domain semantic-completion authority;
-- Provenance does not become a shadow copy of canonical concept state.
+- `Schema` / `Metadata` for Data Meaning;
+- `Synthesizer` / `Algorithm` for Synthesis Strategy;
+- `Training` / `Fit` for Learning;
+- `Model` / `Artifact` for Learned State;
+- `Sampling` for Generation;
+- `Metric` for Evaluation Criterion;
+- `Validation` for Evaluation;
+- `Result` for Evidence;
+- `Run` / `Job` for Execution;
+- `Lineage` for Provenance.
 
-All eleven concepts pass the 008-E purpose-fulfillment and counterexample review. This closes operational-principle completeness for the current catalog while leaving independence/familiarity and candidate rediscovery open.
+Those terms may still appear in future concept mappings or compatibility surfaces where their local meaning is clear, but they cannot silently redefine the accepted concepts.
 
 ## Current topology/text interpretation
 
-Older concept wording that describes relational/time-series semantics only as future is superseded as a scope qualifier by Phase 008-B's current problem authority. The present structured-data target includes single-table, time-series and multi-table shared-key generation with legitimate composite structured topology representable.
+The present structured-data target includes single-table, time-series and multi-table shared-key generation with legitimate composite structured topology representable, plus source-derived/local text-bearing structured fields under the current capability boundary.
 
-008-C through 008-E show that this scope, including text-bearing structured fields, fits the current state/action/operational-principle model without a new concept at those stages. 008-G must still deliberately rediscover the rejected/deferred candidates before Phase 008 claims individual-concept completeness.
+008-C through 008-F show that this variation fits the current state, behavior, operational-principle and genericity model without a new concept at those stages. This remains subject to the deliberate 008-G candidate rediscovery audit.
+
+## High-risk boundary results
+
+The following distinctions continue to pass current individual-concept review:
+
+```text
+Data Meaning          != Constraint
+Synthesis Strategy    != Learning / Generation / implementation plugin
+Learning              != Learned State
+Learning/Generation/
+Evaluation             != Execution
+Generation Condition  != Constraint
+Evaluation Criterion  != Evaluation != Evidence
+Evidence               != Provenance
+Execution              != Attempt != platform job
+```
+
+008-F also continues to reject umbrella collapse through `Synthesizer`, `Model`, `Run`, `Quality`, `Metadata`, `Validation`, `Artifact`, or generic `Privacy` as replacements for the accepted concept boundaries.
 
 ## Relationship candidate disposition
 
@@ -105,23 +115,23 @@ Older concept wording that describes relational/time-series semantics only as fu
 
 **Relationship is not a standalone accepted concept under the current catalog.** Material structural relationship semantics are currently subordinate descriptive state owned by Data Meaning under the canonical [Structured-Data Topology & Relationship Semantics Contract](../authority/structured-data-topology-relationship-semantics-contract.md).
 
-This remains subject to 008-G rediscovery.
+This disposition is not considered final until 008-G deliberately replays the candidate against all current evidence.
 
 ## Historical consolidation
 
 [002-H — Cross-Concept Invariant, Synchronization & Phase 002 Consolidation Review](../phases/002/002-H-cross-concept-invariant-synchronization-consolidation-review.md) confirmed that the eleven-concept model was coherent at the Phase 002 exit.
 
-Phase 006 later revalidated the catalog against recovery, runtime-distribution, scale, privacy and structured-topology evidence. Phase 008 is now replaying the catalog against the fuller Jackson methodology rather than treating historical completion as final proof.
+Phase 006 later revalidated the catalog against recovery, runtime-distribution, scale, privacy and structured-topology evidence. Phase 008 now replaces reliance on those historical completion labels with current normalized concept authority.
 
 ## Authority rule
 
 The individual concept specifications plus current Phase 008 cross-concept normalization authorities and active cross-cutting authority under `docs/authority/` supersede provisional concept statements under `docs/discovery/` unless later explicit design authority accepts a revision.
 
-No Python class, Spark API, PyTorch object, storage format, job type, package module, database, function parameter, UI element, UUID scheme, manifest, event-store representation or persistence layout is implied by one concept document, command/query specification or operational principle.
+No Python class, Spark API, PyTorch object, storage format, job type, package module, database, function parameter, UI element, UUID scheme, manifest, event-store representation or persistence layout is implied by one concept document or normalization authority.
 
 ## Deferred/non-concept responsibilities
 
-The following remain intentionally outside the accepted standalone concept catalog unless later authority changes them:
+The following remain intentionally outside the accepted standalone concept catalog **pending 008-G rediscovery**:
 
 - Generation Request and Condition — subordinate to Generation;
 - Attempt, Checkpoint, Retry, and cancellation realization — subordinate to Execution/domain lifecycle semantics;
@@ -129,11 +139,11 @@ The following remain intentionally outside the accepted standalone concept catal
 - reproducibility — cross-cutting [Reproducibility Contract](../authority/reproducibility-contract.md);
 - lineage — derivational subset of Provenance;
 - privacy objectives/guarantees — mechanism-specific future discovery; formal composable DP remains deferred and requires concept rediscovery before implementation;
-- Relationship — currently Data Meaning-owned structural relationship semantics, not a standalone concept;
+- Relationship — currently Data Meaning-owned structural relationship semantics;
 - Use / Release Decision — external authority boundary;
 - Source Characterization/Profile — supporting observation/method;
-- `GenerationMode`, `DataTopologyMode`, `Series`, `Sequence`, `TimeSeries`, `Table`, and generic `Dataset` — not accepted concepts merely because an API may select or represent single-table/time-series/multi-table behavior;
-- Resource, Backpressure, Approximation, DegradedMode, Cost and Quota — cross-cutting/operational policy or owner-specific semantics rather than standalone concepts under current evidence;
-- Validation, Metric, Quality, Model, Metadata, Run, Artifact, and Synthesizer — umbrella/compatibility terms that MUST NOT silently become god-concepts.
+- `GenerationMode`, `DataTopologyMode`, `Series`, `Sequence`, `TimeSeries`, `Table`, and generic `Dataset` — not accepted concepts merely because a later API may represent those variations;
+- Resource, Backpressure, Approximation, DegradedMode, Cost and Quota — cross-cutting/operational policy or owner-specific semantics under current evidence;
+- Validation, Metric, Quality, Model, Metadata, Run, Artifact, and Synthesizer — umbrella/compatibility terms that must not silently become god-concepts.
 
-These dispositions remain subject to the explicit Phase 008-G rediscovery audit.
+008-G must retest these dispositions from first principles rather than merely reaffirming Phase 001 decisions.
