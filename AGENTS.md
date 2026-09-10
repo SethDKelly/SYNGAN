@@ -14,6 +14,7 @@ Current design authority includes:
 - `docs/architecture/phase-007-f-distributed-data-state-structured-topology-manifest-candidate-seal-promotion-foundation.md`
 - `docs/architecture/phase-007-g-strategy-method-binding-dependency-trust-authorization-secrets-distributed-runtime-closure-foundation.md`
 - `docs/architecture/phase-007-h-execution-attempt-idempotency-fencing-non-regressing-recovery-checkpoint-cancellation-admission-foundation.md`
+- `docs/architecture/phase-007-i-evaluation-evidence-provenance-historical-query-reproducibility-disclosure-foundation.md`
 - `docs/phases/007/index.md`
 
 Current progression:
@@ -25,7 +26,8 @@ Current progression:
 007-F         DESIGN COMPLETE
 007-G         DESIGN COMPLETE
 007-H         DESIGN COMPLETE
-007-I         next eligible DESIGN subgroup — not started
+007-I         DESIGN COMPLETE
+007-J         next eligible DESIGN subgroup — scope re-evaluation required
 implementation expansion   FROZEN
 ```
 
@@ -49,8 +51,9 @@ Unless later implementation re-entry explicitly authorizes it, do not:
 - add persistence/data-plane schemas or migrations;
 - add Spark/runtime/model/platform/security adapters;
 - add execution/recovery/fencing/checkpoint/admission implementations;
+- add Evidence/Provenance/history/query/reproducibility/disclosure implementations;
 - add concrete public API classes merely to crystallize a hypothesis;
-- add production serialization/wire/manifest/runtime-closure schemas;
+- add production serialization/wire/manifest/runtime-closure/Evidence-history schemas;
 - add runtime/build dependencies for future capability work;
 - add new tests or executable architecture/fitness restrictions for evolving design;
 - add Import Linter constraints for evolving design;
@@ -99,7 +102,22 @@ Preserve at minimum:
 - admission != semantic readiness != queue placement != write authority;
 - temporary resource scarcity != true runtime/semantic incompatibility;
 - semantic completion != runtime/platform success;
-- favorable empirical privacy Evidence != formal privacy guarantee != external release approval.
+- runtime Evaluation result != semantic Evaluation completion != Evidence establishment;
+- Evidence immutable finding != current Evidence applicability;
+- negative/indeterminate finding != Evaluation failure;
+- Evidence != Generation promotion authority;
+- privacy/disclosure Evidence != formal privacy guarantee != current disclosure authorization != external release approval;
+- Provenance relationship authority != duplicated canonical owner state;
+- object/reference resolution != historical knowledge quality;
+- directly retained history != reconstructed history != partial/unknown history;
+- current lifecycle/availability/policy annotation != historical binding;
+- projection/search absence != canonical historical absence;
+- historical difference != causality/superiority/quality claim;
+- disclosure/redaction != mutation of canonical history;
+- canonical historical knowledge != actor-visible knowledge;
+- historical reproducibility support != current reproduction feasibility != actor-visible assessability;
+- seed presence != exact deterministic reproduction;
+- reproduction readiness != reproduction success.
 
 ## 007-G design result
 
@@ -113,7 +131,13 @@ A material Attempt binds one exact executable/dependency realization. Runtime ma
 
 Operational design must preserve stable Execution identity and distinguishable Attempts, operation-scoped idempotency, stale-writer fencing stronger than leases, a non-regressing authority frontier after potentially regressive restore, recovery quarantine/reconciliation, immutable checkpoint identity with contextual resume qualification, durable cancellation intent, and operational admission distinct from semantic readiness and write authority.
 
-Earlier Phase 005-G concrete execution types, enums, integer epoch assumptions and package/repository layouts remain implementation-planning evidence to reconsider only after explicit implementation re-entry.
+## 007-I design result
+
+007-I is technology-neutral. It does **not** mandate an Evidence schema, finding class hierarchy, finding-slot encoding, relational or graph Provenance store, query language/index engine, report/UI format, public history API, authorization/redaction product, lineage integration, reproducibility cache, or privacy mechanism.
+
+Design must preserve Evaluation semantic validation before Evidence establishment; independently interpretable retry-idempotent findings; immutable findings separately from current applicability; typed canonical Provenance; directly retained/reconstructed/partial/unknown historical knowledge; exact bounded historical queries with derived non-authoritative projections; view-time disclosure including existence/graph-shape protection; historical reproducibility support separately from current feasibility and actor-visible assessability; and reproduction readiness separately from actual new reproduction work.
+
+Earlier Phase 005-G/H concrete types, enums, SQL choices, package/repository layouts, query APIs and cache designs remain implementation-planning evidence to reconsider only after explicit implementation re-entry.
 
 ## Progressive disclosure
 
@@ -129,6 +153,6 @@ Do not load or duplicate the full corpus by default.
 
 ## Current next boundary
 
-**007-I — Evaluation/Evidence, Provenance, Historical Query, Reproducibility & Disclosure Foundation** is the next eligible **design** subgroup.
+**007-J — Reference Vertical-Slice Scope Re-evaluation, Architecture Completeness & Implementation-Proof Boundary** is the next eligible **design** subgroup.
 
-Do not begin 007-I until explicitly requested. Do not resume production implementation unless a separate implementation-reentry decision is made.
+Do not begin executable vertical-slice/proof implementation merely from the earlier 007-J name. 007-J must first be explicitly entered as design and re-evaluate the proof boundary. Do not resume production implementation unless a separate implementation-reentry decision is made.
