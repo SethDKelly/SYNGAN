@@ -2,7 +2,7 @@
 
 SYNGAN is a design-first synthetic-data generation framework intended for Spark-scale workloads.
 
-SYNGAN follows Daniel Jackson-style concept design: problem/concept/experience authority precedes representation and implementation choices.
+SYNGAN follows Daniel Jackson-style concept design and now explicitly requires the full design program to complete before implementation can become ready.
 
 ## Documentation
 
@@ -10,59 +10,54 @@ Start with [`docs/index.md`](docs/index.md).
 
 Current authority:
 
-- [`Phase 007 Consolidated Architecture Contract`](docs/architecture/phase-007-consolidated-architecture-contract.md)
-- [`Phase 007 Consolidated Architecture & Implementation-Reentry Readiness Contract`](docs/authority/phase-007-consolidated-architecture-implementation-reentry-readiness-contract.md)
-- [`007-K Phase Record`](docs/phases/007/007-K-phase-007-consolidation-architecture-fitness-audit-evidence-review-implementation-reentry-readiness-decision.md)
-- [`Phase 007 index`](docs/phases/007/index.md)
+- [`Jackson Design Completion & Implementation Hold`](docs/authority/jackson-design-completion-implementation-hold.md)
+- [`Phase 008 — Individual Concept Design Normalization & Completeness`](docs/phases/008/index.md)
+- [`Phase 007 Consolidated Architecture Contract`](docs/architecture/phase-007-consolidated-architecture-contract.md) as downstream architecture evidence
 
 ## Status
 
-- Phases 001–006 — retained design/planning/readiness history
-- 007-A through 007-C — retained historical/provisional bootstrap work
-- **007-D through 007-J — complete architecture/design authorities**
-- **007-K — complete; Phase 007 consolidated**
-- **Controlled implementation re-entry — approved for R0/008-A only after explicit proceed**
-- **Domain/runtime feature implementation — not yet authorized**
-
-The Phase 007 design freeze is closed. It is not replaced by blanket coding authority: implementation re-entry starts by reconciling the retained scaffold and executable verification against the now-consolidated architecture.
-
-## Current architecture result
-
-The consolidated architecture preserves technology-neutral boundaries for:
-
-- exact identity, revision, references and views;
-- owner-controlled persistence, concurrency, durable coordination and history;
-- distributed logical data state, composable topology, manifests and Generation promotion;
-- Strategy/method semantics separate from executable/dependency/runtime realization;
-- trust, authorization, secrets, network/egress and distributed worker closure;
-- stable Execution, distinguishable Attempts, idempotency, fencing, non-regressing recovery, checkpoints, cancellation and admission;
-- Evaluation/Evidence, typed Provenance, historical query, qualified reproducibility and actor-safe disclosure.
-
-## Implementation-proof boundary
-
-Implementation evidence must distinguish:
-
 ```text
-architecture-conformance proof
-capability proof
-runtime/platform-profile proof
-resilience/adversarial proof
-scale/release qualification
+Jackson design completion  IN PROGRESS
+implementation readiness   NOT READY
+implementation start       NOT STARTED
+implementation next        NOT YET
 ```
 
-A self-contained learning-based single-table local/Spark-local path remains a suitable first eventual user-visible proof because it exercises a broad architecture path with bounded topology complexity.
+Phase 007 remains valuable architecture work, but its 007-K implementation-reentry conclusion is superseded as premature because a later review against the fuller Jackson methodology identified remaining concept-design work.
 
-It cannot by itself establish direct-generation neutrality, self-contained text support, time-series, multi-table shared-key, distributed cluster/runtime closure, regressive-recovery safety, managed-platform guarantees, enterprise scale, privacy guarantees or release approval.
+## Remaining design roadmap
 
-## Provisional executable scaffold
+```text
+008  Individual Concept Design Normalization & Completeness
+009  Concept Dependence, Application Family, Composition & Synchronization Closure
+010  Concept Mapping, Interaction, Linguistic & Experience Alignment
+011  Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Design Validation
+012  Jackson Concept-Design Consolidation & Completion Decision
+013  Post-Concept Representation & Architecture Reconciliation
+014  Whole-Design Consolidation, Residual Debt Audit & Implementation-Readiness Decision
+---
+015  Implementation Authority & Controlled Delivery — FUTURE ONLY
+```
 
-The repository still contains the 007-B/007-C package/tool/test scaffold as feasibility/history evidence.
+Phases 009-014 will each be divided into dependency-safe subgroups immediately before that phase begins rather than prematurely freezing their detailed work now.
 
-007-K confirmed that `tests/fitness/test_phase_007_authority_boundary.py` is stale relative to the completed design progression, and the exact seven-package topology plus Import Linter contracts remain provisional until explicitly revalidated.
+## Methodology boundary
 
-The next tranche exists specifically to reconcile these executable assumptions before feature code is added.
+SYNGAN will not treat architecture completeness, implementation planning, a green test suite or an existing scaffold as proof that concept design is complete.
 
-## Locked semantic baseline
+The remaining Jackson work includes individual-concept normalization, application inclusion-dependence and valid subsets, composition/synchronization integrity, concept mapping to actor-visible human/programmatic surfaces, familiarity/specificity/integrity/synergy/misfit evaluation and a final current-state methodology audit.
+
+After Jackson concept design passes Phase 012, representation/architecture from Phases 004, 006 and 007 must still be reconciled downstream in Phase 013. Only Phase 014 may determine that the *entire* design is ready for implementation.
+
+A positive Phase 014 result may change implementation to:
+
+```text
+READY / NOT STARTED / NEXT
+```
+
+It still does not start implementation. A future explicit Phase 015 would then establish implementation authority.
+
+## Current semantic baseline
 
 ```text
 accepted concepts          11
@@ -71,20 +66,10 @@ active ADRs                10
 provisional concepts        0
 ```
 
-No `SYNC-16`.
-
-Complete structured-data target:
-
-```text
-single-table generation
-time-series generation
-multi-table shared-key generation
-```
-
-The complete supported baseline also requires source-derived/local free-form-text synthesis without mandatory pretrained model, public model hub, first-use model download or runtime inference service.
+These counts remain subject to genuine design correction if later Jackson work demonstrates a missing or invalid concept/synchronization.
 
 ## Current next boundary
 
-**008-A — Implementation Re-entry Authority, Scaffold Reconciliation & Verification Re-baseline** is next after an explicit proceed decision.
+**008-A — Methodology Authority Reset, Completion Matrix & Design-Only Guardrails** is next.
 
-008-A may reconcile historical implementation authority, package boundaries, Import Linter contracts, stale fitness tests, tool/lock/verification metadata and repository evidence gates. It does not authorize owner-specific domain, persistence, Spark/runtime, Strategy, Execution/recovery, Evidence/history, security/provider or benchmark implementation.
+Implementation remains **NOT READY / NOT STARTED / NOT YET**.
