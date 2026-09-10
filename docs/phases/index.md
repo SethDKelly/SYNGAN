@@ -6,61 +6,86 @@ status: active
 
 # SYNGAN Design Phases
 
-## Phase 001 — Design Foundation & Concept Discovery — complete
+## Historical work through Phase 007
 
-## Phase 002 — Concept Specification & Invariant Refinement — complete
+- **Phase 001 — Design Foundation & Concept Discovery:** complete historical concept-discovery baseline.
+- **Phase 002 — Concept Specification & Invariant Refinement:** complete historical concept-specification baseline.
+- **Phase 003 — Experience & Workflow Design:** complete historical experience baseline.
+- **Phase 004 — Representation & Architecture Design:** complete historical architecture baseline; subject to later reconciliation.
+- **Phase 005 — Implementation Planning & Delivery Decomposition:** complete as planning/history only.
+- **Phase 006 — Post-Planning Design Validation & Adversarial Refinement:** complete historical design-refinement/readiness work.
+- **Phase 007 — Design Continuation, Architecture Completion & Controlled Pre-Implementation Refinement:** complete architecture/design history.
 
-Final catalog remains eleven accepted concepts / fifteen synchronizations.
+Phase 007-K's architecture consolidation remains useful. Its conclusion that controlled implementation re-entry was next is superseded by the later review against the fuller Daniel Jackson concept-design methodology.
 
-## Phase 003 — Experience & Workflow Design — complete historical baseline
-
-## Phase 004 — Representation & Architecture Design — complete historical baseline
-
-Current architecture is refined and consolidated by later Phase 006/007 authority.
-
-## Phase 005 — Implementation Planning & Delivery Decomposition — complete as planning only
-
-## Phase 006 — Post-Planning Design Validation & Adversarial Refinement — complete historical readiness decision
-
-Phase 006 historically judged the design complete enough to consider implementation authority.
-
-## Phase 007 — Design Continuation, Architecture Completion & Controlled Pre-Implementation Refinement — complete
-
-Phase 007-A through 007-C produced provisional implementation/bootstrap evidence. The project then deliberately returned to architecture design so those executable structures would not constrain unresolved representation choices.
-
-Final progression:
+## Current implementation posture
 
 ```text
-007-A..007-C  historical/provisional bootstrap work
-007-D         complete — identity/revision/reference/view architecture
-007-E         complete — persistence/transaction/CAS/outbox/history/migration architecture
-007-F         complete — distributed data/topology/manifest/candidate-seal/promotion architecture
-007-G         complete — Strategy/method binding/dependency trust/authorization/secrets/runtime-closure architecture
-007-H         complete — Execution/Attempt/idempotency/fencing/recovery/checkpoint/cancellation/admission architecture
-007-I         complete — Evaluation/Evidence/Provenance/history/reproducibility/disclosure architecture
-007-J         complete — implementation-proof and claim boundary
-007-K         complete — consolidation/fitness/evidence/re-entry readiness decision
+IMPLEMENTATION READINESS   NOT READY
+IMPLEMENTATION START       NOT STARTED
+IMPLEMENTATION NEXT        NOT YET
 ```
 
-007-K found no remaining concept, synchronization, experience or architecture blocker to controlled implementation re-entry.
+This posture remains fixed until the full design program reaches and passes Phase 014.
 
-Current architecture authority:
+Current authority: [Jackson Design Completion & Implementation Hold](../authority/jackson-design-completion-implementation-hold.md).
 
-- [Phase 007 Consolidated Architecture Contract](../architecture/phase-007-consolidated-architecture-contract.md)
-- [Phase 007 Consolidated Architecture & Implementation-Reentry Readiness Contract](../authority/phase-007-consolidated-architecture-implementation-reentry-readiness-contract.md)
+## Phase 008 — Individual Concept Design Normalization & Completeness — planned/current next
 
-## Current implementation transition
+[Phase 008](008/index.md) returns explicitly to Jackson concept design and normalizes the eleven accepted concepts against the current problem evidence and full purpose/OP/state/action/independence/familiarity rubric.
 
-The prior Phase 007 design freeze is historical/superseded.
+008 is already divided into dependency-safe subgroups 008-A through 008-H.
 
-Controlled implementation re-entry is approved for only the first scaffold/governance reconciliation tranche:
+**Next:** 008-A — Methodology Authority Reset, Completion Matrix & Design-Only Guardrails.
 
-**008-A — Implementation Re-entry Authority, Scaffold Reconciliation & Verification Re-baseline**.
+## Phase 009 — Concept Dependence, Application Family, Composition & Synchronization Closure — planned
 
-008-A requires an explicit proceed decision before execution.
+After individual-concept closure, establish Jackson-style inclusion dependence, meaningful concept subsets/application-family variants, explanation/development ordering, composition/synchronization closure, synergy and conceptual integrity.
 
-It may reconcile historical authority docs, exact package/Import Linter assumptions, stale phase-state fitness tests, root/package build checks, tool/lock/verification metadata and evidence gates.
+Detailed subgroups will be defined immediately before Phase 009 starts.
 
-It may not implement owner-specific concept behavior, persistence schemas, Spark/runtime synthesis, Strategy algorithms, Execution/recovery, Evidence/history, security/provider adapters, platform integration or benchmarks.
+## Phase 010 — Concept Mapping, Interaction, Linguistic & Experience Alignment — planned
 
-R1 and later feature/kernel implementation remain unauthorized until 008-A completes and a later explicit proceed decision grants the next tranche.
+Map concept state/actions/queries to the human and programmatic surfaces by which actors encounter the product, and reconcile the physical/interaction and linguistic mappings with the concept model without allowing interface convenience to redefine concepts.
+
+Detailed subgroups will be defined immediately before Phase 010 starts.
+
+## Phase 011 — Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Design Validation — planned
+
+Evaluate the whole composed design using Jackson's generic design criteria and misfit-driven analysis, including archetypal, exceptional, degraded, adversarial and future-scope scenarios.
+
+Detailed subgroups will be defined immediately before Phase 011 starts.
+
+## Phase 012 — Jackson Concept-Design Consolidation & Completion Decision — planned
+
+Perform one current-state audit of the complete concept design against the full Jackson methodology and decide whether conceptual design is actually complete.
+
+A positive Phase 012 result does **not** make implementation ready.
+
+## Phase 013 — Post-Concept Representation & Architecture Reconciliation — planned
+
+Reassess Phase 004/006/007 architecture strictly downstream of the completed concept design. Preserve compatible architecture, revise or supersede conflicts, and close remaining representation-level design without production implementation.
+
+Implementation remains NOT READY / NOT STARTED / NOT YET throughout Phase 013.
+
+## Phase 014 — Whole-Design Consolidation, Residual Debt Audit & Implementation-Readiness Decision — planned
+
+Perform the final whole-design audit across problem, concepts, dependence/composition/synchronization, mappings/experience and representation/architecture.
+
+Only Phase 014 may change implementation posture, and only if all design work is complete and remaining uncertainty is implementation-specific.
+
+Permitted positive exit state:
+
+```text
+IMPLEMENTATION READINESS   READY
+IMPLEMENTATION START       NOT STARTED
+IMPLEMENTATION NEXT        NEXT
+```
+
+## Future Phase 015 — Implementation Authority & Controlled Delivery — not ready
+
+Phase 015 is a placeholder only. It is not active, not ready and not next unless Phase 014 explicitly passes the entire design program.
+
+## Decomposition rule
+
+Only the current/next high-level design phase is decomposed in detail. Phases 009-014 must be subdivided immediately before they begin using all evidence from prior phases, preventing premature downstream structure from constraining unfinished design.
