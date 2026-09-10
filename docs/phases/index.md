@@ -16,7 +16,7 @@ status: active
 - **Phase 006 — Post-Planning Design Validation & Adversarial Refinement:** complete historical design-refinement/readiness work.
 - **Phase 007 — Design Continuation, Architecture Completion & Controlled Pre-Implementation Refinement:** complete architecture/design history.
 
-Phase 007-K's architecture consolidation remains useful. Its conclusion that controlled implementation re-entry was next is superseded by the later review against the fuller Daniel Jackson concept-design methodology.
+Phase 007-K's architecture consolidation remains useful. Its implementation-reentry conclusion is superseded by the fuller Jackson design-completion program.
 
 ## Current implementation posture
 
@@ -26,7 +26,7 @@ IMPLEMENTATION START       NOT STARTED
 IMPLEMENTATION NEXT        NOT YET
 ```
 
-This posture remains fixed until the full design program reaches and passes Phase 014.
+This posture remains fixed unless Phase 014 positively passes the whole-design readiness gate.
 
 Current authority:
 
@@ -35,14 +35,12 @@ Current authority:
 
 ## Phase 008 — Individual Concept Design Normalization & Completeness — active
 
-[Phase 008](008/index.md) returns explicitly to Jackson concept design and normalizes the eleven accepted concepts against the current problem evidence and full purpose/OP/state/action/independence/familiarity rubric.
-
-Current subgroup state:
+[Phase 008](008/index.md) is the current design phase.
 
 ```text
-008-A  COMPLETE — methodology authority reset, completion matrix, design-only guardrails
-008-B  NEXT ELIGIBLE — problem/purpose/outcome/concept-justification traceability
-008-C  PLANNED
+008-A  COMPLETE — methodology authority reset / completion matrix / design-only guardrails
+008-B  COMPLETE — problem / purpose / outcome / concept-justification traceability
+008-C  NEXT ELIGIBLE — concept state / identity / history / invariant normalization
 008-D  PLANNED
 008-E  PLANNED
 008-F  PLANNED
@@ -50,45 +48,33 @@ Current subgroup state:
 008-H  PLANNED
 ```
 
-008-A established the conservative completion ledger. Historical phase labels no longer count as current methodology closure by themselves.
+008-B reconciled current problem scope, extended desired outcomes from O1-O14 to O1-O16 for structured-topology breadth and self-contained text-bearing structured-data capability, and established current [Concept-Justification Traceability](../problem/concept-justification-traceability.md). All eleven accepted concepts remain justified at the purpose level without a catalog change.
 
 ## Phase 009 — Concept Dependence, Application Family, Composition & Synchronization Closure — planned
 
-After individual-concept closure, establish Jackson-style inclusion dependence, meaningful concept subsets/application-family variants, explanation/development ordering, composition/synchronization closure, synergy and conceptual integrity.
-
-Detailed subgroups will be defined immediately before Phase 009 starts.
+After Phase 008 closes individual concepts, establish Jackson inclusion dependence, meaningful concept subsets/application-family variants, explanation/development ordering, composition/synchronization closure, synergy and conceptual integrity. Detailed subgroups will be defined immediately before Phase 009 starts.
 
 ## Phase 010 — Concept Mapping, Interaction, Linguistic & Experience Alignment — planned
 
-Map concept state/actions/queries to the human and programmatic surfaces by which actors encounter the product, and reconcile physical/interaction and linguistic mappings with the concept model without allowing interface convenience to redefine concepts.
-
-Detailed subgroups will be defined immediately before Phase 010 starts.
+Map concept state/actions/queries to human and programmatic interaction and reconcile physical/interaction and linguistic mappings without allowing interface convenience to redefine concepts. Detailed subgroups will be defined immediately before Phase 010 starts.
 
 ## Phase 011 — Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Design Validation — planned
 
-Evaluate the whole composed design using Jackson's generic design criteria and misfit-driven analysis, including archetypal, exceptional, degraded, adversarial and future-scope scenarios.
-
-Detailed subgroups will be defined immediately before Phase 011 starts.
+Evaluate the whole composed design with Jackson's generic design criteria and misfit-driven analysis. Detailed subgroups will be defined immediately before Phase 011 starts.
 
 ## Phase 012 — Jackson Concept-Design Consolidation & Completion Decision — planned
 
-Perform one current-state audit of the complete concept design against the full Jackson methodology and decide whether conceptual design is actually complete.
-
-A positive Phase 012 result does **not** make implementation ready.
+Perform one current-state audit of the complete concept design against the full Jackson methodology. A positive Phase 012 result does **not** make implementation ready.
 
 ## Phase 013 — Post-Concept Representation & Architecture Reconciliation — planned
 
-Reassess Phase 004/006/007 architecture strictly downstream of the completed concept design. Preserve compatible architecture, revise or supersede conflicts, and close remaining representation-level design without production implementation.
-
-Implementation remains NOT READY / NOT STARTED / NOT YET throughout Phase 013.
+Reassess Phase 004/006/007 architecture strictly downstream of the completed concept design. Preserve compatible architecture and revise/supersede conflicts without production implementation.
 
 ## Phase 014 — Whole-Design Consolidation, Residual Debt Audit & Implementation-Readiness Decision — planned
 
-Perform the final whole-design audit across problem, concepts, dependence/composition/synchronization, mappings/experience and representation/architecture.
+Perform the final whole-design audit across problem, concepts, dependence/composition/synchronization, mapping/experience and representation/architecture.
 
-Only Phase 014 may change implementation posture, and only if all design work is complete and remaining uncertainty is implementation-specific.
-
-Permitted positive exit state:
+Only a positive Phase 014 may set:
 
 ```text
 IMPLEMENTATION READINESS   READY
@@ -98,12 +84,12 @@ IMPLEMENTATION NEXT        NEXT
 
 ## Future Phase 015 — Implementation Authority & Controlled Delivery — not ready
 
-Phase 015 is a placeholder only. It is not active, not ready and not next unless Phase 014 explicitly passes the entire design program.
+Phase 015 is a placeholder only. It is not active, ready, or next unless Phase 014 explicitly passes the entire design program.
 
 ## Decomposition rule
 
-Only the current/next high-level design phase is decomposed in detail. Phases 009-014 must be subdivided immediately before they begin using all evidence from prior phases, preventing premature downstream structure from constraining unfinished design.
+Only the current high-level design phase is decomposed in advance. Phases 009-014 must be subdivided immediately before they begin using all evidence from preceding phases.
 
 ## Current next boundary
 
-**008-B — Problem, Purpose, Outcome & Concept-Justification Traceability Revalidation** is the next eligible subgroup.
+**008-C — Concept State Model, Identity, History & Invariant Normalization** is the next eligible subgroup.
