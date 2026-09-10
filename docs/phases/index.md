@@ -16,7 +16,7 @@ Final catalog remains eleven accepted concepts / fifteen synchronizations.
 
 ## Phase 004 — Representation & Architecture Design — complete historical baseline
 
-Current architecture is refined by later Phase 006/007 authority.
+Current architecture is refined and consolidated by later Phase 006/007 authority.
 
 ## Phase 005 — Implementation Planning & Delivery Decomposition — complete as planning only
 
@@ -24,49 +24,43 @@ Current architecture is refined by later Phase 006/007 authority.
 
 Phase 006 historically judged the design complete enough to consider implementation authority.
 
-## Phase 007 — Design Continuation, Architecture Completion & Controlled Pre-Implementation Refinement — active
+## Phase 007 — Design Continuation, Architecture Completion & Controlled Pre-Implementation Refinement — complete
 
-Phase 007-A through 007-C produced a provisional implementation/bootstrap scaffold. Current authority explicitly reopened architecture design so implementation artifacts do not prematurely constrain unresolved representation decisions.
+Phase 007-A through 007-C produced provisional implementation/bootstrap evidence. The project then deliberately returned to architecture design so those executable structures would not constrain unresolved representation choices.
 
-Current design progression:
+Final progression:
 
 ```text
 007-A..007-C  historical/provisional bootstrap work
-007-D         complete — identity/revision/serialization/resource-handle/view architecture
-007-E         complete — control persistence/transaction/CAS/outbox/history/migration architecture
-007-F         complete — distributed data-state/topology/manifest/candidate-seal/promotion architecture
+007-D         complete — identity/revision/reference/view architecture
+007-E         complete — persistence/transaction/CAS/outbox/history/migration architecture
+007-F         complete — distributed data/topology/manifest/candidate-seal/promotion architecture
 007-G         complete — Strategy/method binding/dependency trust/authorization/secrets/runtime-closure architecture
-007-H         complete — Execution/Attempt/idempotency/fencing/non-regressing recovery/checkpoint/cancellation/admission architecture
+007-H         complete — Execution/Attempt/idempotency/fencing/recovery/checkpoint/cancellation/admission architecture
 007-I         complete — Evaluation/Evidence/Provenance/history/reproducibility/disclosure architecture
-007-J         complete — reference proof scope/architecture-completeness/implementation-proof boundary
-007-K         next eligible — consolidation/fitness/evidence/re-entry readiness decision
+007-J         complete — implementation-proof and claim boundary
+007-K         complete — consolidation/fitness/evidence/re-entry readiness decision
 ```
 
-Current implementation progression:
+007-K found no remaining concept, synchronization, experience or architecture blocker to controlled implementation re-entry.
 
-```text
-007-A..007-C  retained historical/provisional scaffold
-007-D and later  NOT AUTHORIZED FOR IMPLEMENTATION
-```
+Current architecture authority:
 
-## Current design boundary
+- [Phase 007 Consolidated Architecture Contract](../architecture/phase-007-consolidated-architecture-contract.md)
+- [Phase 007 Consolidated Architecture & Implementation-Reentry Readiness Contract](../authority/phase-007-consolidated-architecture-implementation-reentry-readiness-contract.md)
 
-Production implementation expansion is frozen under the [Phase 007 Design Continuation & Implementation Freeze](../authority/phase-007-design-continuation-implementation-freeze.md).
+## Current implementation transition
 
-007-D through 007-J changed architecture/documentation only. No new production behavior, persistence/data-plane schemas, Spark/runtime/security adapters, execution/recovery/admission mechanisms, Evidence/Provenance/history/query/reproducibility/disclosure implementations, reference Strategy, dependencies, tests, executable restrictions or CI enforcement were added.
+The prior Phase 007 design freeze is historical/superseded.
 
-## 007-J result
+Controlled implementation re-entry is approved for only the first scaffold/governance reconciliation tranche:
 
-007-J concludes that architecture through 007-I is complete enough to define a controlled implementation-proof portfolio.
+**008-A — Implementation Re-entry Authority, Scaffold Reconciliation & Verification Re-baseline**.
 
-A first self-contained learning-based single-table/Spark-local path remains a suitable bounded reference proof after explicit re-entry, but it cannot certify the complete baseline or broader runtime/platform/recovery/scale claims by itself.
+008-A requires an explicit proceed decision before execution.
 
-Separate evidence remains required for direct-generation neutrality, source-derived/local text, time-series, multi-table shared-key, composite-topology representability, Evaluation-method diversity, adversarial recovery/disclosure, distributed worker closure, managed-platform claims and enterprise scale/release qualification.
+It may reconcile historical authority docs, exact package/Import Linter assumptions, stale phase-state fitness tests, root/package build checks, tool/lock/verification metadata and evidence gates.
 
-The retained 007-B/007-C scaffold remains provisional and must be reconciled before implementation resumes.
+It may not implement owner-specific concept behavior, persistence schemas, Spark/runtime synthesis, Strategy algorithms, Execution/recovery, Evidence/history, security/provider adapters, platform integration or benchmarks.
 
-## Current next boundary
-
-**007-K — Phase 007 Consolidation, Architecture-Fitness Audit, Evidence Review & Implementation-Reentry Readiness Decision** is next eligible as a **design/governance** subgroup.
-
-007-K must explicitly decide whether implementation re-entry is justified and, if so, what bounded tranche may begin. Implementation remains frozen until that decision.
+R1 and later feature/kernel implementation remain unauthorized until 008-A completes and a later explicit proceed decision grants the next tranche.
