@@ -60,6 +60,7 @@ Until explicit implementation re-entry, do not add:
 - concrete public API classes solely to crystallize hypotheses;
 - production serialization/wire/manifest/runtime-closure schemas;
 - execution/recovery/fencing/checkpoint/admission implementations;
+- Evidence/Provenance/history/query/reproducibility/disclosure implementations;
 - new executable architecture restrictions/fitness tests for evolving design;
 - new CI/deployment/release enforcement for evolving architecture.
 
@@ -77,15 +78,16 @@ Completed design groups:
 - **007-E — Control Persistence, Transactions, CAS, Outbox, Historical References & Migration Baseline**;
 - **007-F — Distributed Data-State, Structured Topology, Manifest, Candidate/Seal & Promotion Foundation**;
 - **007-G — Strategy/Method Binding, Dependency Trust, Authorization, Secrets & Distributed Runtime Closure Foundation**;
-- **007-H — Execution/Attempt, Idempotency, Fencing, Non-Regressing Recovery, Checkpoint, Cancellation & Admission Foundation**.
+- **007-H — Execution/Attempt, Idempotency, Fencing, Non-Regressing Recovery, Checkpoint, Cancellation & Admission Foundation**;
+- **007-I — Evaluation/Evidence, Provenance, Historical Query, Reproducibility & Disclosure Foundation**.
 
 Current next eligible design group:
 
-- **007-I — Evaluation/Evidence, Provenance, Historical Query, Reproducibility & Disclosure Foundation**.
+- **007-J — Reference Vertical-Slice Scope Re-evaluation, Architecture Completeness & Implementation-Proof Boundary**.
 
-007-I is not active until explicitly entered.
+007-J is not active until explicitly entered. Its work is design-only unless a separate later implementation re-entry decision authorizes executable proof work.
 
-## Current design distinctions added through 007-H
+## Current design distinctions added through 007-I
 
 Preserve at minimum:
 
@@ -114,7 +116,20 @@ Preserve at minimum:
 - cancellation request != terminal cancellation, and pre-cancellation restore cannot resurrect old authority;
 - admission != semantic readiness != queue placement != write authority;
 - temporary resource shortage != semantic/runtime incompatibility;
-- semantic completion != runtime/platform success.
+- semantic completion != runtime/platform success;
+- Evaluation runtime/method success != Evidence establishment;
+- Evidence finding semantics != current Evidence applicability;
+- favorable Evidence != valid Evaluation != Generation/release approval;
+- privacy/disclosure Evidence != formal privacy guarantee != disclosure permission != release approval;
+- Provenance relationship authority != duplicated canonical resource state;
+- object/reference resolution != historical knowledge quality;
+- directly retained history != reconstructed history != partial/unknown history;
+- current annotations != historical bindings;
+- projection/search absence != canonical historical absence;
+- historical difference != causal/quality claim;
+- canonical historical knowledge != one actor's visible knowledge;
+- historical reproducibility support != current reproduction feasibility != actor-visible assessability;
+- reproduction readiness != reproduction success.
 
 ## Design-first change discipline
 
@@ -140,6 +155,12 @@ Production implementation may resume only after an explicit later decision state
 
 No phase number or green test suite substitutes for this decision.
 
+## 007-J precondition
+
+The earlier 007-J label proposed an executable self-contained single-table/Spark-local reference slice. Under the current freeze that framing must be re-evaluated before any implementation proof begins.
+
+007-J must first determine whether the architecture is complete enough for a proof slice, what complete-baseline coverage the proof must represent without hard-coding single-table bias, and which obligations remain documentary until explicit implementation re-entry.
+
 ## Current authority state
 
 ```text
@@ -149,6 +170,7 @@ Phase 007 design continuation        ACTIVE
 007-F architecture design            COMPLETE
 007-G architecture design            COMPLETE
 007-H architecture design            COMPLETE
-007-I architecture design            NEXT ELIGIBLE — NOT STARTED
+007-I architecture design            COMPLETE
+007-J design scope re-evaluation      NEXT ELIGIBLE — NOT STARTED
 007-D and later implementation       NOT AUTHORIZED
 ```
