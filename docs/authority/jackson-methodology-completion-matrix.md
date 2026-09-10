@@ -43,7 +43,7 @@ No row in this matrix can change that posture by itself.
 
 ### Class A — current upstream design authority
 
-Methodology/cross-cutting authority, problem knowledge, accepted concept specifications, the current [Concept State, Identity, History & Invariant Normalization](../concepts/state-identity-history-invariant-normalization.md), accepted synchronizations, and later current dependence/mapping authorities.
+Methodology/cross-cutting authority, problem knowledge, accepted concept specifications, current [Concept State, Identity, History & Invariant Normalization](../concepts/state-identity-history-invariant-normalization.md), current [Concept Action, Query, Preconditions/Postconditions & Lifecycle Normalization](../concepts/action-query-lifecycle-normalization.md), accepted synchronizations, and later current dependence/mapping authorities.
 
 ### Class B — supporting design evidence
 
@@ -65,10 +65,11 @@ Class C/D may reveal a misfit. They cannot silently define unfinished Class A be
 008-A  COMPLETE — methodology authority reset / matrix / guardrails
 008-B  COMPLETE — problem / purpose / outcome / concept justification
 008-C  COMPLETE — state / identity / history / invariant normalization
-008-D  NEXT ELIGIBLE — actions / queries / preconditions / postconditions / lifecycle transitions
+008-D  COMPLETE — actions / queries / preconditions / postconditions / lifecycle transitions
+008-E  NEXT ELIGIBLE — operational principles / purpose fulfillment / counterexamples
 ```
 
-008-B established O1-O16 problem/outcome authority and positive purpose justification for all eleven concepts. 008-C established the current cross-concept state/identity/history/invariant normalization without changing the catalog.
+008-B established O1-O16 problem/outcome authority and positive purpose justification for all eleven concepts. 008-C established state/identity/history/invariant normalization. 008-D established the current action/query/transition authority without changing the catalog or synchronization count.
 
 ## Jackson completion matrix
 
@@ -84,19 +85,19 @@ Class C/D may reveal a misfit. They cannot silently define unfinished Class A be
 | B5 | Missing-concept/god-concept/representation-leakage audit | Strong prior evidence; final current replay outstanding | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 008-G |
 | C1 | Concept name and distinct purpose | Purpose closed in 008-B; naming/familiarity still pending | **PARTIAL — PURPOSE CLOSED; NAME/FAMILIARITY PENDING** | 008-F |
 | C2 | Operational principle demonstrating purpose | OPs exist across accepted concepts | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 008-E |
-| C3 | Complete conceptual state model | 008-C normalized all eleven state shapes, identity units, historical immutability, current-use status and uncertainty semantics | **CURRENTLY CLOSED FOR STATE MODEL** | 008-C; reopen on later misfit |
-| C4 | Conceptual actions | Actions exist but require current normalization | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 008-D |
-| C5 | Conceptual queries/observations | Actor inspection strong; explicit concept queries uneven | **PARTIAL** | 008-D |
-| C6 | Preconditions/effects/postconditions sufficient for behavioral reasoning | Uneven across concept specs; later docs may contain detail needing promotion upstream | **PARTIAL** | 008-D |
-| C7 | Invariants, lifecycle/history, unresolved/invalidated states | 008-C normalized state/history/invariants and uncertainty; exact transition/action closure remains outstanding | **PARTIAL — STATE/HISTORY/INVARIANTS CLOSED; TRANSITIONS PENDING** | 008-D |
+| C3 | Complete conceptual state model | 008-C normalized all eleven state shapes, identity units, historical immutability, current-use status and uncertainty semantics | **CURRENTLY CLOSED** | 008-C; reopen on later misfit |
+| C4 | Conceptual actions | 008-D normalized state-changing commands for every accepted concept and separated them from observation/handoff behavior | **CURRENTLY CLOSED** | 008-D; reopen on later misfit |
+| C5 | Conceptual queries/observations | 008-D established explicit query surfaces for every accepted concept and prohibited query-created shadow authority | **CURRENTLY CLOSED** | 008-D; mapping remains Phase 010 |
+| C6 | Preconditions/effects/postconditions sufficient for behavioral reasoning | 008-D establishes semantic preconditions, effects and postconditions for material commands across all eleven concepts | **CURRENTLY CLOSED** | 008-D; reopen on later misfit |
+| C7 | Invariants, lifecycle/history, unresolved/invalidated states | 008-C normalized state/history/invariants; 008-D closed command-driven lifecycle transitions, cancellation/recovery and non-success conditions | **CURRENTLY CLOSED** | 008-C/008-D; reopen on later misfit |
 | C8 | Explicit boundaries/non-responsibilities independent of representation | Strong prior evidence | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 008-F/008-G |
 | D1 | Jackson application inclusion-dependence graph | Existing dependency taxonomy is not inclusion dependence | **OPEN** | 009 |
 | D2 | Meaningful valid concept subsets/application family | Not systematically derived | **OPEN** | 009 |
 | D3 | Explanation/design ordering implied by inclusion dependence | Not derived | **OPEN** | 009 |
 | D4 | Product-scope consequences of adding/removing concepts | Full-product absence consequences exist; reduced-application consequences remain open | **PARTIAL** | 009 |
-| E1 | Explicit concept synchronizations | 15 accepted rules plus strong historical stress testing | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 009 |
-| E2 | Singular state ownership across synchronizations | Strong prior authority work | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 009 |
-| E3 | Composition burden/economy and hidden-coordinator avoidance | Strong prior evidence | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 009 |
+| E1 | Explicit concept synchronizations | 008-D replayed all 15 as coordination of owned actions/queries; final composition/integrity replay remains | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 009 |
+| E2 | Singular state ownership across synchronizations | 008-D found no hidden action owner and normalized contextual-assessment ownership; composed closure remains | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 009 |
+| E3 | Composition burden/economy and hidden-coordinator avoidance | 008-D found no hidden coordinator action or need for SYNC-16; whole composition economy still pending | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 009 |
 | E4 | Composition synergy | Mostly implicit | **PARTIAL** | 009/011 |
 | E5 | Integrity under composition | Strong adversarial evidence but no final Jackson integrity closure | **PARTIAL TO STRONG** | 009/011 |
 | F1 | Concept action → human/programmatic interaction mapping | Phase 003 workflows exist; normalized map does not | **PARTIAL** | 010 |
@@ -117,29 +118,29 @@ Class C/D may reveal a misfit. They cannot silently define unfinished Class A be
 | R2 | Whole design audited problem → concepts → dependence/sync → mapping/experience → architecture | Not yet possible | **OPEN** | 014 |
 | R3 | Implementation-readiness decision based on complete design | Historical 007-K decision superseded | **OPEN** | 014 |
 
-## 008-C state-normalization finding
+## 008-D behavioral-normalization finding
 
-The current catalog intentionally uses five state-shape families rather than one generic lifecycle:
+The current concept model distinguishes:
 
 ```text
-reusable revisioned authorities  Data Meaning / Strategy / Constraint / Criterion
-committed domain activities      Learning / Generation / Evaluation
-durable established results     Learned State / Evidence
-operational realization          Execution
-typed historical relationships  Provenance
+command/action         concept-owned state transition
+query/observation      state observation/derivation without mutation
+contextual assessment  consumer-owned context-specific result
+synchronization        coordination of already-owned behavior
+external interaction   later mapping/handoff, not automatic mutation
 ```
 
-The normalization distinguishes lineage identity, semantic revision, activity occurrence, result identity and current-use/applicability status. Material historical meaning is non-destructive; physical durability does not establish semantic completion; contextual compatibility remains contextual; and explicit unknown/indeterminate state is required where false certainty would change behavior or history.
+All eleven concepts now have normalized actions/queries and material precondition/effect/postcondition contracts in the current cross-concept authority.
 
-Current topology breadth (single-table, time-series, multi-table shared-key and legitimate composite structured topology) and text-bearing structured-data scope fit these state models without adding a concept in 008-C. 008-G still owns deliberate candidate rediscovery.
+The fifteen accepted synchronizations can be expressed using those owned behaviors. No unnamed coordinator action, new concept or `SYNC-16` is required by 008-D.
 
 ## Current methodological verdict
 
 ```text
 PROBLEM / PURPOSE GROUNDING          CURRENTLY CLOSED
 CONCEPT PURPOSE JUSTIFICATION        CURRENTLY CLOSED
-CONCEPT STATE / IDENTITY / HISTORY   CURRENTLY CLOSED FOR 008-C
-ACTION / QUERY / TRANSITION MODEL    NOT YET CLOSED
+CONCEPT STATE / IDENTITY / HISTORY   CURRENTLY CLOSED
+ACTION / QUERY / TRANSITION MODEL    CURRENTLY CLOSED
 OPERATIONAL PRINCIPLES               NOT YET REVALIDATED
 CATALOG INDEPENDENCE / FAMILIARITY   NOT YET CLOSED
 JACKSON CONCEPT DESIGN COMPLETE      NO
@@ -150,15 +151,13 @@ IMPLEMENTATION START                 NOT STARTED
 IMPLEMENTATION NEXT                  NOT YET
 ```
 
-## Phase ownership and dependency order
+## Remaining Phase 008 dependency order
 
 ```text
-008  individual concept design closure
-  D  actions/queries/transitions
-  E  operational principles
-  F  independence/genericity/familiarity
-  G  candidate rediscovery
-  H  Phase 008 consolidation
+008-E  operational-principle completeness / purpose fulfillment / counterexamples
+008-F  independence / genericity / familiarity / reuse
+008-G  deferred/rejected candidate rediscovery / missing concept / boundary audit
+008-H  Phase 008 consolidation / individual-concept completion decision
         ↓
 009  inclusion dependence / application family / composition / synchronization
         ↓
