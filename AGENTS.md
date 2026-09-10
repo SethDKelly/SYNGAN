@@ -12,6 +12,7 @@ Current design authority includes:
 - `docs/architecture/phase-007-d-identity-revision-serialization-resource-handle-programmatic-view-foundation.md`
 - `docs/architecture/phase-007-e-control-persistence-transactions-cas-outbox-historical-reference-migration-baseline.md`
 - `docs/architecture/phase-007-f-distributed-data-state-structured-topology-manifest-candidate-seal-promotion-foundation.md`
+- `docs/architecture/phase-007-g-strategy-method-binding-dependency-trust-authorization-secrets-distributed-runtime-closure-foundation.md`
 - `docs/phases/007/index.md`
 
 Current progression:
@@ -21,7 +22,8 @@ Current progression:
 007-D         DESIGN COMPLETE
 007-E         DESIGN COMPLETE
 007-F         DESIGN COMPLETE
-007-G         next eligible DESIGN subgroup — not started
+007-G         DESIGN COMPLETE
+007-H         next eligible DESIGN subgroup — not started
 implementation expansion   FROZEN
 ```
 
@@ -35,14 +37,7 @@ The existing `src/syngan`, tests, Import Linter rules and CI are retained feasib
 
 ## What agents may do now
 
-For an explicitly entered design subgroup, agents may:
-
-- inspect directly relevant problem/concept/synchronization/experience/architecture authority;
-- create/refine architecture documentation;
-- compare alternatives and preserve unresolved choices;
-- record future verification obligations as non-executable design requirements;
-- update canonical navigation when design is accepted;
-- create an ADR only when a material architecture choice benefits from durable alternatives/rationale.
+For an explicitly entered design subgroup, agents may inspect directly relevant authority, create/refine architecture documentation, compare alternatives, preserve unresolved choices, record future verification obligations non-executably, update canonical navigation, and create an ADR only when a durable architecture choice genuinely needs separate rationale.
 
 ## What agents must not do during the design freeze
 
@@ -52,7 +47,7 @@ Unless later implementation re-entry explicitly authorizes it, do not:
 - add persistence/data-plane schemas or migrations;
 - add Spark/runtime/model/platform/security adapters;
 - add concrete public API classes merely to crystallize a hypothesis;
-- add production serialization/wire/manifest schemas;
+- add production serialization/wire/manifest/runtime-closure schemas;
 - add runtime/build dependencies for future capability work;
 - add new tests or executable architecture/fitness restrictions for evolving design;
 - add Import Linter constraints for evolving design;
@@ -66,34 +61,37 @@ Preserve at minimum:
 
 - logical identity != semantic revision != mutable state version != representation schema version;
 - handle/view != canonical state owner;
-- serialization != mutation authority;
 - persistence durability != semantic completion;
-- owner semantic validation != persistence CAS success;
-- durable outbox/intent != target success;
 - exact historical reference != current/latest substitution;
-- material history != derived read/search projection;
 - migration revision != semantic/state/schema/recovery version;
-- representation migration != semantic correction;
-- canonical-state rollback = potentially regressive recovery requiring ADR-0009 qualification;
 - logical data subject != physical representation;
 - exact per-scope source state != guaranteed coherent cross-scope snapshot;
 - physical schema/layout != Data Meaning;
-- time-series physical order != semantic sequence order;
 - open/partial candidate != sealed whole subject != promoted logical output;
-- scope-local closure != whole-candidate closure;
 - seal success != Constraint/Evaluation/privacy/Generation completion;
-- manifest/component identity != semantic topology authority;
-- promotion != physical row copy;
-- representation evolution != permission to rewrite original promotion history;
-- restored/surviving physical files != proof of semantic promotion/current writer authority;
+- semantic Strategy/method identity != implementation binding != package/model/runtime identity;
+- one implementation binding may resolve multiple exact components/artifacts;
+- dependency requirement != concrete resolution != integrity/authenticity != trust/approval != current authorization;
+- installed/discovered extension != trusted/authorized executable code;
+- explicit provisioning/acquisition != material runtime execution;
+- immutable Attempt invocation != live capability/secret credential;
+- runtime network capability != data-egress permission;
+- commitment-time permission != current use-time authorization;
+- driver/coordinator readiness != distributed worker/runtime closure;
+- dynamic worker admission must preserve role-specific closure;
+- missing dependencies must not trigger hidden package/model acquisition or remote fallback;
+- secret values != canonical semantic/history/Provenance material;
+- implementation topology limitation != permission to simplify committed topology;
 - semantic completion != runtime/platform success;
 - favorable empirical privacy Evidence != formal privacy guarantee != external release approval.
 
-## 007-F design result
+## 007-G design result
 
-007-F is technology-neutral. It does **not** mandate Parquet, Delta, Iceberg, Hudi, a specific manifest format, object store, table/catalog provider, Spark API class, checksum algorithm, writer-fence mechanism or copy-on-promotion policy.
+007-G is technology-neutral. It does **not** mandate Python Protocols/ABCs, entry points, a particular plugin catalog, Spark/PyTorch versions, package/environment distribution, containers, artifact registries, SBOM/signing systems, IAM/policy products, secret managers, firewalls/service meshes, or concrete runtime/security types.
 
-Earlier Phase 005-E concrete selections remain implementation-planning evidence to reconsider only after architecture design reaches explicit implementation re-entry.
+A material Attempt binds one exact executable/dependency realization. Runtime may not hot-swap missing components. A later Attempt may use another compatible binding only when the unchanged semantic commitment permits implementation-neutral realization and the new realization is independently attributable.
+
+Earlier Phase 005-F/005-I concrete choices remain implementation-planning evidence to reconsider only after architecture design reaches explicit implementation re-entry.
 
 ## Progressive disclosure
 
@@ -109,6 +107,6 @@ Do not load or duplicate the full corpus by default.
 
 ## Current next boundary
 
-**007-G — Strategy/Method Binding, Dependency Trust, Authorization, Secrets & Distributed Runtime Closure Foundation** is the next eligible **design** subgroup.
+**007-H — Execution/Attempt, Idempotency, Fencing, Non-Regressing Recovery, Checkpoint, Cancellation & Admission Foundation** is the next eligible **design** subgroup.
 
-Do not begin 007-G until explicitly requested. Do not resume production implementation unless a separate implementation-reentry decision is made.
+Do not begin 007-H until explicitly requested. Do not resume production implementation unless a separate implementation-reentry decision is made.
