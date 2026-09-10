@@ -46,8 +46,9 @@ No `SYNC-16`.
 007-D         DESIGN COMPLETE
 007-E         DESIGN COMPLETE
 007-F         DESIGN COMPLETE
-007-G         next eligible design subgroup — not started
-007-H..007-K  not started
+007-G         DESIGN COMPLETE
+007-H         next eligible design subgroup — not started
+007-I..007-K  not started
 ```
 
 Implementation remains frozen at the retained 007-C scaffold; 007-D and later production implementation are not authorized.
@@ -64,21 +65,28 @@ Implementation remains frozen at the retained 007-C scaffold; 007-D and later pr
 
 ### 007-F — distributed data state / topology / promotion
 
-[007-F architecture](architecture/phase-007-f-distributed-data-state-structured-topology-manifest-candidate-seal-promotion-foundation.md) establishes:
+[007-F architecture](architecture/phase-007-f-distributed-data-state-structured-topology-manifest-candidate-seal-promotion-foundation.md) establishes logical subject/physical representation separation, bounded logical scopes, exact source-state strength, cross-scope coordination, bounded manifests, candidate/seal separation and Generation-owned promotion.
 
-- logical subject distinct from physical representation;
-- bounded logical scopes for single-table, time-series, multi-table and composite subjects;
-- exact source state with separately represented identity/read/integrity/retention/coordination strength;
-- cross-scope coherence as an explicit guarantee rather than an inference from individually exact scopes;
-- bounded scope-aware manifest roots over distributed/hierarchical detail;
-- partial candidate progress distinct from whole-candidate seal;
-- sealing as immutable physical closure rather than semantic validity;
-- exact sealed subjects for completion Evaluation;
-- Generation-owned promotion to one logical completed output without universal row copying;
-- representation evolution under explicit equivalence while original promotion basis remains historical fact;
-- distributed-scale operation without ordinary full-corpus collection or driver-local component enumeration.
+### 007-G — Strategy/runtime/security closure
 
-Earlier Phase 005-D/E concrete technologies remain provisional implementation-planning evidence rather than current architecture requirements.
+[007-G architecture](architecture/phase-007-g-strategy-method-binding-dependency-trust-authorization-secrets-distributed-runtime-closure-foundation.md) establishes:
+
+- semantic Strategy/method identity distinct from implementation binding and package/runtime identity;
+- exact Attempt-scoped composite implementation/dependency closure;
+- no silent in-Attempt component substitution;
+- implementation-neutral retry only when the unchanged semantic commitment permits it and the new Attempt is independently attributable;
+- dependency requirement, resolution, identity/integrity, trust, compatibility and authorization as separate axes;
+- explicit provisioning separated from runtime and no hidden first-use acquisition/fallback;
+- third-party code loading/unsafe deserialization as trust boundaries;
+- network capability distinct from data-egress authorization;
+- current action authorization distinct from historical semantic commitment;
+- scoped runtime capabilities and use-time secret resolution without durable bearer credentials;
+- role-specific cluster/runtime closure including dynamic workers;
+- large state/model/artifact loading without universal driver broadcast;
+- topology/runtime limitations that cannot redefine committed topology semantics;
+- self-contained source-derived free-form text retained as a baseline requirement.
+
+Earlier Phase 005-D through 005-I concrete technologies/SPIs/package choices remain provisional implementation-planning evidence rather than current architecture requirements.
 
 ## Provisional executable scaffold
 
@@ -98,6 +106,6 @@ The complete supported baseline also retains source-derived/local free-form-text
 
 ## Current next boundary
 
-**007-G — Strategy/Method Binding, Dependency Trust, Authorization, Secrets & Distributed Runtime Closure Foundation** is the next eligible **design** subgroup.
+**007-H — Execution/Attempt, Idempotency, Fencing, Non-Regressing Recovery, Checkpoint, Cancellation & Admission Foundation** is the next eligible **design** subgroup.
 
 It requires an explicit proceed decision. Production implementation remains frozen independently of design progression.
