@@ -23,17 +23,19 @@ IMPLEMENTATION NEXT        NOT YET
 
 No implementation tranche is currently eligible.
 
-## Phase 008-A result
+## Phase 008 progress
 
-008-A completed the methodology-authority reset and established the canonical completion matrix. That work reinforces rather than relaxes the implementation suspension.
+008-A established the methodology-authority reset and conservative completion matrix.
 
-The matrix explicitly classifies implementation planning, source/tests/tooling/CI and the historical 007-K engineering-readiness result as evidence that may expose design misfits but cannot satisfy unfinished concept-design obligations.
+008-B then closed the current problem/purpose/actor/outcome traceability layer. It reconciled current topology/text-bearing structured-data scope, extended desired outcomes to O1-O16, and positively justified all eleven accepted concepts at the purpose level without changing the catalog.
+
+None of that changes implementation posture. State/action/OP completeness, independence/familiarity, deferred-candidate rediscovery, inclusion dependence, mapping, integrity, Jackson completion, architecture reconciliation, and whole-design readiness remain future design work.
 
 ## Superseded 007-K re-entry conclusion
 
-007-K previously approved a bounded R0 scaffold-reconciliation tranche. That engineering-readiness conclusion is suspended/superseded because the fuller methodology still has open concept-dependence, mapping, quality/misfit and current-state consolidation work.
+007-K previously approved a bounded R0 scaffold-reconciliation tranche. That engineering-readiness conclusion remains suspended/superseded because the full design program is incomplete.
 
-The architecture and scaffold observations from 007-K remain useful downstream evidence. They do not constitute permission to reconcile or extend executable implementation while design remains incomplete.
+The architecture and scaffold observations from 007-K remain useful downstream evidence. They do not constitute permission to reconcile or extend executable implementation now.
 
 ## Remaining design before implementation can become ready
 
@@ -47,7 +49,7 @@ The architecture and scaffold observations from 007-K remain useful downstream e
 014  Whole-Design Consolidation, Residual Debt Audit & Implementation-Readiness Decision
 ```
 
-Even a positive Phase 012 Jackson concept-design result does not reactivate implementation. Architecture must first be reconciled downstream in Phase 013 and the complete design must pass Phase 014.
+Even a positive Phase 012 result does not reactivate implementation. Architecture must first be reconciled in Phase 013 and the complete design must pass Phase 014.
 
 ## Historical implementation material
 
@@ -60,11 +62,11 @@ Retain as non-authoritative evidence:
 - existing tests, Import Linter contracts, lock/tooling and CI;
 - 007-K scaffold audit findings.
 
-Do not repair, expand or reinterpret this material merely to prepare for implementation while the design program is incomplete.
+Do not repair, expand or reinterpret this material merely to prepare for implementation while design remains incomplete.
 
 ## Current prohibition
 
-Until a positive Phase 014 readiness decision, do not add or expand production concept/domain behavior, public API implementation, persistence/data-plane schemas, runtime/model/security/platform adapters, Execution/recovery behavior, Evidence/Provenance/history implementation, benchmarks, or executable architecture restrictions intended to freeze unfinished design.
+Until a positive Phase 014 readiness decision, do not add or expand production concept/domain behavior, public API implementation, persistence/data-plane schemas, runtime/model/security/platform adapters, Execution/recovery behavior, Evidence/Provenance/history implementation, reference Strategies, benchmarks, or executable architecture restrictions intended to freeze unfinished design.
 
 Existing executable material may remain untouched as historical/provisional evidence.
 
@@ -84,4 +86,4 @@ If Phase 014 passes, a future **Phase 015 — Implementation Authority & Control
 
 The next work is design-only:
 
-**008-B — Problem, Purpose, Outcome & Concept-Justification Traceability Revalidation**.
+**008-C — Concept State Model, Identity, History & Invariant Normalization**.
