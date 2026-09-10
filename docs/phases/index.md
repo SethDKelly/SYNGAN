@@ -28,15 +28,29 @@ IMPLEMENTATION NEXT        NOT YET
 
 This posture remains fixed until the full design program reaches and passes Phase 014.
 
-Current authority: [Jackson Design Completion & Implementation Hold](../authority/jackson-design-completion-implementation-hold.md).
+Current authority:
 
-## Phase 008 — Individual Concept Design Normalization & Completeness — planned/current next
+- [Jackson Design Completion & Implementation Hold](../authority/jackson-design-completion-implementation-hold.md)
+- [Jackson Methodology Completion Matrix](../authority/jackson-methodology-completion-matrix.md)
+
+## Phase 008 — Individual Concept Design Normalization & Completeness — active
 
 [Phase 008](008/index.md) returns explicitly to Jackson concept design and normalizes the eleven accepted concepts against the current problem evidence and full purpose/OP/state/action/independence/familiarity rubric.
 
-008 is already divided into dependency-safe subgroups 008-A through 008-H.
+Current subgroup state:
 
-**Next:** 008-A — Methodology Authority Reset, Completion Matrix & Design-Only Guardrails.
+```text
+008-A  COMPLETE — methodology authority reset, completion matrix, design-only guardrails
+008-B  NEXT ELIGIBLE — problem/purpose/outcome/concept-justification traceability
+008-C  PLANNED
+008-D  PLANNED
+008-E  PLANNED
+008-F  PLANNED
+008-G  PLANNED
+008-H  PLANNED
+```
+
+008-A established the conservative completion ledger. Historical phase labels no longer count as current methodology closure by themselves.
 
 ## Phase 009 — Concept Dependence, Application Family, Composition & Synchronization Closure — planned
 
@@ -46,7 +60,7 @@ Detailed subgroups will be defined immediately before Phase 009 starts.
 
 ## Phase 010 — Concept Mapping, Interaction, Linguistic & Experience Alignment — planned
 
-Map concept state/actions/queries to the human and programmatic surfaces by which actors encounter the product, and reconcile the physical/interaction and linguistic mappings with the concept model without allowing interface convenience to redefine concepts.
+Map concept state/actions/queries to the human and programmatic surfaces by which actors encounter the product, and reconcile physical/interaction and linguistic mappings with the concept model without allowing interface convenience to redefine concepts.
 
 Detailed subgroups will be defined immediately before Phase 010 starts.
 
@@ -89,3 +103,7 @@ Phase 015 is a placeholder only. It is not active, not ready and not next unless
 ## Decomposition rule
 
 Only the current/next high-level design phase is decomposed in detail. Phases 009-014 must be subdivided immediately before they begin using all evidence from prior phases, preventing premature downstream structure from constraining unfinished design.
+
+## Current next boundary
+
+**008-B — Problem, Purpose, Outcome & Concept-Justification Traceability Revalidation** is the next eligible subgroup.
