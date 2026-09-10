@@ -43,7 +43,7 @@ No row in this matrix can change that posture by itself.
 
 ### Class A — current upstream design authority
 
-Methodology/cross-cutting authority, problem knowledge, accepted concept specifications, current [Concept State, Identity, History & Invariant Normalization](../concepts/state-identity-history-invariant-normalization.md), current [Concept Action, Query, Preconditions/Postconditions & Lifecycle Normalization](../concepts/action-query-lifecycle-normalization.md), current [Operational Principle, Purpose Fulfillment & Counterexample Normalization](../concepts/operational-principle-purpose-counterexample-normalization.md), accepted synchronizations, and later current dependence/mapping authorities.
+Methodology/cross-cutting authority, problem knowledge, accepted concept specifications, current [Concept State, Identity, History & Invariant Normalization](../concepts/state-identity-history-invariant-normalization.md), [Concept Action, Query, Preconditions/Postconditions & Lifecycle Normalization](../concepts/action-query-lifecycle-normalization.md), [Operational Principle, Purpose Fulfillment & Counterexample Normalization](../concepts/operational-principle-purpose-counterexample-normalization.md), [Concept Independence, Genericity, Familiarity & Reuse Normalization](../concepts/independence-genericity-familiarity-reuse-normalization.md), accepted synchronizations, and later current dependence/mapping authorities.
 
 ### Class B — supporting design evidence
 
@@ -67,51 +67,52 @@ Class C/D may reveal a misfit. They cannot silently define unfinished Class A be
 008-C  COMPLETE — state / identity / history / invariant normalization
 008-D  COMPLETE — actions / queries / preconditions / postconditions / lifecycle transitions
 008-E  COMPLETE — operational principles / purpose fulfillment / counterexamples
-008-F  NEXT ELIGIBLE — independence / genericity / familiarity / reuse
+008-F  COMPLETE — independence / genericity / familiarity / reuse
+008-G  NEXT ELIGIBLE — candidate rediscovery / missing-concept / boundary audit
 ```
 
-008-B established O1-O16 problem/outcome authority and positive purpose justification for all eleven concepts. 008-C established state/identity/history/invariant normalization. 008-D established the current action/query/transition authority without changing the catalog or synchronization count. 008-E revalidated and normalized the operational principle of every accepted concept and challenged each with falsifying counterexamples; all eleven pass without catalog change.
+008-B through 008-F now provide current individual-concept evidence for purpose, state, behavior, operational principle, independence, bounded genericity, naming/familiarity, reuse and accepted-concept boundary discipline. No catalog change has occurred through 008-F. Catalog finality remains explicitly open until 008-G/H.
 
 ## Jackson completion matrix
 
 | ID | Methodology obligation | Current evidence/result | Current state | Owning closure phase |
 |---|---|---|---|---|
 | A1 | Application problem, actors, needs, outcomes and environmental constraints | 008-B reconciled current problem, actors, O1-O16 and scale envelope | **CURRENTLY CLOSED** | 008-B; reopen on later misfit |
-| A2 | Distinct purpose/justification for every accepted concept | 008-B tested all eleven concepts and absence consequences | **CURRENTLY CLOSED** | 008-B; independence/familiarity still 008-F |
+| A2 | Distinct purpose/justification for every accepted concept | 008-B tested all eleven concepts and absence consequences | **CURRENTLY CLOSED** | 008-B; reopen on later misfit |
 | A3 | Problem/outcome → concept traceability and absence consequence | Canonical problem/concept traceability provides forward/reverse coverage | **CURRENTLY CLOSED** | 008-B |
-| B1 | Divergent candidate concept discovery | Phase 001-D evidence | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 008-G |
-| B2 | Candidate reduction/merger/subordination/defer/reject | Phase 001-E plus later reviews | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 008-G |
-| B3 | Independence and appropriate domain genericity | Strong prior evidence | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 008-F |
-| B4 | Explicit familiarity/reuse comparison | Not systematic across final catalog | **PARTIAL** | 008-F |
-| B5 | Missing-concept/god-concept/representation-leakage audit | Strong prior evidence; final current replay outstanding | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 008-G |
-| C1 | Concept name and distinct purpose | Purpose closed in 008-B; naming/familiarity still pending | **PARTIAL — PURPOSE CLOSED; NAME/FAMILIARITY PENDING** | 008-F |
-| C2 | Operational principle demonstrating purpose | 008-E normalized all eleven operational principles against current purposes/state/actions and ran falsifying counterexamples | **CURRENTLY CLOSED** | 008-E; reopen on later misfit |
-| C3 | Complete conceptual state model | 008-C normalized all eleven state shapes, identity units, historical immutability, current-use status and uncertainty semantics | **CURRENTLY CLOSED** | 008-C; reopen on later misfit |
-| C4 | Conceptual actions | 008-D normalized state-changing commands for every accepted concept and separated them from observation/handoff behavior | **CURRENTLY CLOSED** | 008-D; reopen on later misfit |
-| C5 | Conceptual queries/observations | 008-D established explicit query surfaces for every accepted concept and prohibited query-created shadow authority | **CURRENTLY CLOSED** | 008-D; mapping remains Phase 010 |
-| C6 | Preconditions/effects/postconditions sufficient for behavioral reasoning | 008-D establishes semantic preconditions, effects and postconditions for material commands across all eleven concepts | **CURRENTLY CLOSED** | 008-D; reopen on later misfit |
-| C7 | Invariants, lifecycle/history, unresolved/invalidated states | 008-C normalized state/history/invariants; 008-D closed command-driven lifecycle transitions, cancellation/recovery and non-success conditions | **CURRENTLY CLOSED** | 008-C/008-D; reopen on later misfit |
-| C8 | Explicit boundaries/non-responsibilities independent of representation | Strong prior evidence; 008-E counterexamples reinforce boundary discipline | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 008-F/008-G |
+| B1 | Divergent candidate concept discovery | Phase 001-D evidence; current full-evidence replay still required | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 008-G |
+| B2 | Candidate reduction/merger/subordination/defer/reject | Phase 001-E plus later candidate reviews; current rediscovery still required | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 008-G |
+| B3 | Independence and appropriate domain genericity | 008-F re-tested all eleven against purpose/state/behavior/OP authority and bounded genericity | **CURRENTLY CLOSED** | 008-F; reopen on later misfit |
+| B4 | Explicit familiarity/reuse comparison | 008-F compared familiar analogues/naming alternatives and tested conceptual reuse across current variation | **CURRENTLY CLOSED FOR INDIVIDUAL CONCEPTS** | 008-F; composed familiarity still 011 |
+| B5 | Missing-concept/god-concept/representation-leakage audit | Strong prior evidence and 008-F anti-god replay; current rejected/deferred candidate rediscovery still outstanding | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 008-G |
+| C1 | Concept name and distinct purpose | Purpose closed by 008-B; 008-F explicitly reviewed familiarity/naming and retained all eleven names | **CURRENTLY CLOSED** | 008-B/008-F; reopen on later misfit |
+| C2 | Operational principle demonstrating purpose | 008-E normalized all eleven OPs and ran falsifying counterexamples | **CURRENTLY CLOSED** | 008-E; reopen on later misfit |
+| C3 | Complete conceptual state model | 008-C normalized all eleven state shapes, identity units, history/current-use and uncertainty semantics | **CURRENTLY CLOSED** | 008-C; reopen on later misfit |
+| C4 | Conceptual actions | 008-D normalized state-changing commands for every accepted concept | **CURRENTLY CLOSED** | 008-D; reopen on later misfit |
+| C5 | Conceptual queries/observations | 008-D established explicit query surfaces and prohibited query-created shadow authority | **CURRENTLY CLOSED** | 008-D; mapping remains 010 |
+| C6 | Preconditions/effects/postconditions sufficient for behavioral reasoning | 008-D established semantic transition contracts across all eleven concepts | **CURRENTLY CLOSED** | 008-D; reopen on later misfit |
+| C7 | Invariants, lifecycle/history, unresolved/invalidated states | 008-C normalized state/history/invariants; 008-D closed transition/non-success semantics | **CURRENTLY CLOSED** | 008-C/008-D; reopen on later misfit |
+| C8 | Explicit boundaries/non-responsibilities independent of representation | 008-F revalidated accepted-concept boundaries and representation independence; rejected/deferred perimeter still requires 008-G | **CURRENTLY CLOSED FOR ACCEPTED CONCEPTS** | 008-F; perimeter/finality 008-G |
 | D1 | Jackson application inclusion-dependence graph | Existing dependency taxonomy is not inclusion dependence | **OPEN** | 009 |
 | D2 | Meaningful valid concept subsets/application family | Not systematically derived | **OPEN** | 009 |
 | D3 | Explanation/design ordering implied by inclusion dependence | Not derived | **OPEN** | 009 |
 | D4 | Product-scope consequences of adding/removing concepts | Full-product absence consequences exist; reduced-application consequences remain open | **PARTIAL** | 009 |
 | E1 | Explicit concept synchronizations | 008-D replayed all 15 as coordination of owned actions/queries; final composition/integrity replay remains | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 009 |
-| E2 | Singular state ownership across synchronizations | 008-D found no hidden action owner and normalized contextual-assessment ownership; composed closure remains | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 009 |
+| E2 | Singular state ownership across synchronizations | 008-D found no hidden action owner; composed closure remains | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 009 |
 | E3 | Composition burden/economy and hidden-coordinator avoidance | 008-D found no hidden coordinator action or need for SYNC-16; whole composition economy still pending | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 009 |
 | E4 | Composition synergy | Mostly implicit | **PARTIAL** | 009/011 |
-| E5 | Integrity under composition | Strong adversarial evidence but no final Jackson integrity closure | **PARTIAL TO STRONG** | 009/011 |
+| E5 | Integrity under composition | Strong prior/adversarial evidence but no final Jackson integrity closure | **PARTIAL TO STRONG** | 009/011 |
 | F1 | Concept action → human/programmatic interaction mapping | Phase 003 workflows exist; normalized map does not | **PARTIAL** | 010 |
 | F2 | Concept state/query → actor-visible view/inspection mapping | Strong visibility requirements; mapping incomplete | **PARTIAL** | 010 |
-| F3 | Linguistic mapping/vocabulary alignment | Strong terminology foundation; explicit actor-facing audit pending | **PARTIAL** | 010 |
+| F3 | Linguistic mapping/vocabulary alignment | Terminology and 008-F naming are strong; explicit actor-facing mapping remains | **PARTIAL TO STRONG** | 010 |
 | F4 | Physical/interaction mapping for SDK/notebook/CLI/API/report/UI | Partial | **PARTIAL** | 010 |
 | F5 | Human/programmatic semantic parity | Strong Phase 003 evidence | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 010 |
-| G1 | Specificity across final composed concept set | No purpose collision found in 008-B; final composed audit pending | **PARTIAL TO STRONG** | 011 |
-| G2 | Familiarity across final composed concept set | Not systematic | **PARTIAL** | 011 |
+| G1 | Specificity across final composed concept set | Purpose/individual-boundary evidence strong; final composed audit pending | **PARTIAL TO STRONG** | 011 |
+| G2 | Familiarity across final composed concept set | 008-F closes individual names/analogues; post-composition/mapping familiarity remains | **PARTIAL TO STRONG** | 011 |
 | G3 | Integrity across synchronizations/mappings | Strong evidence, no final decision | **PARTIAL TO STRONG** | 011 |
-| G4 | Synergy and simplicity/generic fitness | No dedicated final audit | **PARTIAL** | 011 |
-| G5 | Archetypal/exceptional/degraded/adversarial/recovery misfit analysis | Strong 006/007 evidence plus 008-E concept-level falsification; final post-008-010 replay still required | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 011 |
-| G6 | Future-scope/extensibility misfit analysis | Strong topology/text/privacy/runtime probes; 008-E confirms current OP scope fitness but final replay remains | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 011 |
+| G4 | Synergy and simplicity/generic fitness | Individual genericity closed; no dedicated final composition/synergy audit | **PARTIAL** | 011 |
+| G5 | Archetypal/exceptional/degraded/adversarial/recovery misfit analysis | Strong 006/007 evidence plus 008-E falsification; final post-008-010 replay required | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 011 |
+| G6 | Future-scope/extensibility misfit analysis | Strong topology/text/privacy/runtime probes; final replay remains | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 011 |
 | G7 | Explicit residual conceptual misfit register | No final post-mapping register | **PARTIAL** | 011/012 |
 | H1 | One current-state consolidated Jackson concept-design audit | Not yet possible | **OPEN** | 012 |
 | H2 | Explicit Jackson concept-design completion decision | Not yet performed | **OPEN** | 012 |
@@ -119,35 +120,24 @@ Class C/D may reveal a misfit. They cannot silently define unfinished Class A be
 | R2 | Whole design audited problem → concepts → dependence/sync → mapping/experience → architecture | Not yet possible | **OPEN** | 014 |
 | R3 | Implementation-readiness decision based on complete design | Historical 007-K decision superseded | **OPEN** | 014 |
 
-## 008-D behavioral-normalization finding
+## 008-F independence/genericity/familiarity finding
 
-The current concept model distinguishes:
+008-F explicitly establishes:
 
 ```text
-command/action         concept-owned state transition
-query/observation      state observation/derivation without mutation
-contextual assessment  consumer-owned context-specific result
-synchronization        coordination of already-owned behavior
-external interaction   later mapping/handoff, not automatic mutation
+independent concept != isolated concept
+conceptual reuse    != universal presence
+familiarity         != copying a neighboring product/object model
+genericity          != enterprise-wide infrastructure abstraction
 ```
 
-All eleven concepts have normalized actions/queries and material precondition/effect/postcondition contracts in the current cross-concept authority.
+All eleven accepted concepts retain distinct current purposes, state and behavior, and all are appropriately generic across the current product variation while remaining anchored to synthetic-data functionality.
 
-The fifteen accepted synchronizations can be expressed using those owned behaviors. No unnamed coordinator action, new concept or `SYNC-16` is required by 008-D.
+All eleven canonical names are retained. More conventional alternatives were rejected where they would import misleading assumptions, including `Schema`, `Synthesizer`, `Algorithm`, `Training`, `Fit`, `Model`, `Artifact`, `Sampling`, `Metric`, `Validation`, `Result`, `Run`, `Job`, and `Lineage`.
 
-## 008-E operational-principle finding
+The accepted catalog still rejects umbrella collapse through `Synthesizer`, `Model`, `Run`, `Quality`, `Metadata`, `Validation`, `Artifact`, or generic `Privacy` concepts.
 
-Each accepted concept now has a current operational principle that:
-
-- visibly demonstrates its own purpose through history;
-- can be expressed through its 008-D-owned behavior;
-- preserves collaborating concept boundaries;
-- remains intelligible without implementation technology;
-- has explicit falsifying counterexamples;
-- remains coherent under material negative/indeterminate or no-occurrence cases;
-- does not narrow current O15/O16 scope to one platform, algorithm or table shape.
-
-All eleven concepts pass. The audit found representation-heavy wording in several older examples, but no operational-principle defect requiring catalog change.
+No merge, split, rename, addition or removal is justified by 008-F. This does not pre-decide 008-G's deliberate candidate rediscovery.
 
 ## Current methodological verdict
 
@@ -157,7 +147,10 @@ CONCEPT PURPOSE JUSTIFICATION        CURRENTLY CLOSED
 CONCEPT STATE / IDENTITY / HISTORY   CURRENTLY CLOSED
 ACTION / QUERY / TRANSITION MODEL    CURRENTLY CLOSED
 OPERATIONAL PRINCIPLES               CURRENTLY CLOSED
-CATALOG INDEPENDENCE / FAMILIARITY   NOT YET CLOSED
+INDEPENDENCE / GENERICITY            CURRENTLY CLOSED
+INDIVIDUAL FAMILIARITY / NAMING      CURRENTLY CLOSED
+ACCEPTED-CONCEPT BOUNDARIES          CURRENTLY CLOSED
+CATALOG REDISCOVERY / FINALITY       NOT YET CLOSED
 JACKSON CONCEPT DESIGN COMPLETE      NO
 REPRESENTATION/ARCHITECTURE FINAL    NO — RETAINED, PENDING RECONCILIATION
 WHOLE DESIGN COMPLETE                NO
@@ -169,7 +162,6 @@ IMPLEMENTATION NEXT                  NOT YET
 ## Remaining Phase 008 dependency order
 
 ```text
-008-F  independence / genericity / familiarity / reuse
 008-G  deferred/rejected candidate rediscovery / missing concept / boundary audit
 008-H  Phase 008 consolidation / individual-concept completion decision
         ↓
@@ -188,9 +180,7 @@ IMPLEMENTATION NEXT                  NOT YET
 
 ## Stop/reopen discipline
 
-Use J0-J7 from Phase 008-A: editorial; local concept specification; purpose/boundary/catalog; dependence/composition/synchronization; mapping/experience; generic design-quality/misfit; architecture reconciliation; whole-design readiness.
-
-Always reopen the smallest affected upstream authority. Passing implementation tests or detailed architecture cannot veto a justified concept-design correction.
+Use J0-J7 from Phase 008-A. Always reopen the smallest affected upstream authority. Passing implementation tests or detailed architecture cannot veto a justified concept-design correction.
 
 ## Guardrails through Phase 014
 
