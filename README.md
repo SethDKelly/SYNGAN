@@ -14,6 +14,7 @@ Current architecture/design posture:
 - [`007-D Identity, Revision, Serialization, Resource/Handle & Programmatic-View Foundation`](docs/architecture/phase-007-d-identity-revision-serialization-resource-handle-programmatic-view-foundation.md)
 - [`007-E Control Persistence, Transactions, CAS, Outbox, Historical References & Migration Baseline`](docs/architecture/phase-007-e-control-persistence-transactions-cas-outbox-historical-reference-migration-baseline.md)
 - [`007-F Distributed Data-State, Structured Topology, Manifest, Candidate/Seal & Promotion Foundation`](docs/architecture/phase-007-f-distributed-data-state-structured-topology-manifest-candidate-seal-promotion-foundation.md)
+- [`007-G Strategy/Method Binding, Dependency Trust, Authorization, Secrets & Distributed Runtime Closure Foundation`](docs/architecture/phase-007-g-strategy-method-binding-dependency-trust-authorization-secrets-distributed-runtime-closure-foundation.md)
 - [`Phase 007 index`](docs/phases/007/index.md)
 
 ## Status
@@ -23,50 +24,58 @@ Current architecture/design posture:
 - **007-D — complete as architecture design**
 - **007-E — complete as architecture design**
 - **007-F — complete as architecture design**
-- **007-G — next eligible design subgroup, not started**
+- **007-G — complete as architecture design**
+- **007-H — next eligible design subgroup, not started**
 - **Production implementation expansion — frozen**
 
 Phase 006 historically concluded that design was complete enough to consider implementation. The project later reopened architecture design so existing source/tests do not prematurely harden unsettled representation choices.
 
 ## Current architecture results
 
-007-D separates logical identity, immutable semantic revision/commitment, mutable current-state version/freshness and representation schema version. Handles resolve/present authority; serialization is representation rather than write authority.
+007-D separates logical identity, immutable semantic revision/commitment, mutable current-state version/freshness and representation schema version.
 
-007-E establishes a technology-neutral persistence baseline around owner validation, atomic same-boundary coupled facts, durable reconcilable cross-boundary intent, stale-write conflict detection, material history, exact historical references, representation-oriented migration and regressive-recovery semantics.
+007-E establishes technology-neutral persistence, transaction, CAS, durable-intent, exact-history and migration/recovery boundaries.
 
-007-F establishes the distributed data-state foundation:
+007-F establishes the distributed data-state foundation: logical subject versus physical representation, bounded logical scopes, exact source-state/coordination strength, bounded manifests, candidate/seal separation and Generation-owned promotion.
+
+007-G establishes the executable realization/security/runtime foundation:
 
 ```text
-mutable selector/access
+semantic Strategy / method / activity commitment
         ↓
-exact logical data state
+implementation binding
         ↓
-open distributed candidate
+exact implementation + dependency closure
         ↓
-sealed immutable physical subject
+identity / integrity / trust / compatibility
         ↓
-owner validation
+current authorization + network/egress qualification
         ↓
-Generation promotion
+role-specific distributed runtime closure
         ↓
-one logical completed output
+immutable Attempt invocation
+        +
+current scoped capabilities / secret access
+        ↓
+physical runtime realization
 ```
 
 Important consequences include:
 
-- logical subjects and physical representations remain distinct;
-- single-table, time-series, multi-table shared-key and composite subjects use bounded logical scopes rather than one exclusive topology enum;
-- exact source-state claims separate identity, rereadability, integrity, retention and cross-scope coordination strength;
-- individually exact tables do not automatically imply a coherent multi-table snapshot;
-- manifests remain bounded roots over distributed/hierarchical/provider-native detail;
-- partial/scope-level candidate completion is never whole-output completion;
-- sealing creates an exact immutable physical subject but does not prove Constraints, privacy, fidelity or Generation completion;
-- required completion Evaluation binds the exact sealed subject;
-- promotion may reuse sealed distributed bytes rather than copying the full corpus;
-- later equivalent compaction/relocation can preserve logical output identity while the original promotion basis remains historical fact;
-- normal operation must not require full-corpus collection or driver-local enumeration of all distributed components.
+- semantic Strategy/method identity is not a plugin/package/model/runtime identity;
+- one binding may resolve multiple exact implementation/artifact components;
+- one Attempt cannot silently hot-swap a missing binding/dependency/model/service;
+- a later Attempt may use another compatible binding only when the unchanged semantic commitment permits that operational choice and history records the new realization;
+- dependency presence, exact identity, integrity/authenticity, trust/approval, compatibility and current authorization remain distinct;
+- explicit provisioning is separate from execution and missing runtime dependencies cannot trigger hidden installation/model-hub access/remote fallback;
+- network connectivity is not the same thing as data-egress permission;
+- live runtime capabilities and secret values do not become durable semantic authority;
+- driver readiness does not imply executor/worker readiness;
+- dynamic workers must inherit/prove the required role-specific closure before material work;
+- large Learned State/model/artifact loading cannot universally depend on driver broadcast;
+- implementation topology limitations cannot simplify or redefine committed topology semantics.
 
-Earlier Phase 005-D/E concrete choices such as PostgreSQL/SQLAlchemy/Alembic or a portable Parquet manifest profile remain possible implementation candidates, not current architecture requirements.
+Earlier concrete Phase 005 implementation choices remain possible candidates to reassess at implementation re-entry rather than current architecture requirements.
 
 ## Provisional executable scaffold
 
@@ -97,6 +106,6 @@ The complete supported baseline also requires source-derived/local free-form-tex
 
 ## Current next boundary
 
-**007-G — Strategy/Method Binding, Dependency Trust, Authorization, Secrets & Distributed Runtime Closure Foundation** is next eligible as a **design** subgroup.
+**007-H — Execution/Attempt, Idempotency, Fencing, Non-Regressing Recovery, Checkpoint, Cancellation & Admission Foundation** is next eligible as a **design** subgroup.
 
 An explicit proceed decision is required before it begins. Production implementation remains frozen independently of design progression.
