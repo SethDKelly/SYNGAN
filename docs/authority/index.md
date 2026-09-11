@@ -22,76 +22,64 @@ These documents define how SYNGAN design knowledge is created, interpreted, chan
 - [Problem Knowledge](../problem/index.md)
 - [Accepted Concept Catalog](../concepts/index.md)
 - [Phase 008 Individual-Concept Design Consolidation](../concepts/phase-008-individual-concept-consolidation.md)
-- [Accepted Synchronizations](../synchronizations/index.md)
 - [Concept Dependence & Application Family](../dependence/index.md)
-- [009-A Inclusion-Dependence Pairwise Inventory](../dependence/inclusion-dependence-pairwise-inventory.md)
-- [009-B Inclusion-Dependence Graph & Ordering](../dependence/inclusion-dependence-graph-ordering.md)
-- [009-C Application Family & Valid Subsets](../dependence/application-family-valid-subsets.md)
 - [009-D Contraction & Extension Consequences](../dependence/contraction-extension-consequences.md)
+- [Current Synchronization Authority](../synchronizations/index.md)
+- [009-E Synchronization Inventory Revalidation](../synchronizations/application-family-revalidation.md)
 
 ## Current posture
 
 ```text
-accepted concepts          11
-accepted synchronizations  15
-current desired outcomes   16
-Phase 008                  COMPLETE
-Phase 009                  ACTIVE
-009-A                      COMPLETE
-009-B                      COMPLETE
-009-C                      COMPLETE
-009-D                      COMPLETE
-009-E                      NEXT ELIGIBLE
-D1                         CURRENTLY CLOSED
-D2                         CURRENTLY CLOSED
-D3                         CURRENTLY CLOSED
-D4                         CURRENTLY CLOSED
-Jackson design completion  IN PROGRESS
-implementation readiness   NOT READY
-implementation start       NOT STARTED
-implementation next        NOT YET
+accepted concepts                    11
+historical synchronization IDs       15
+active synchronizations              13
+current desired outcomes             16
+Phase 008                            COMPLETE
+Phase 009                            ACTIVE
+009-A                                COMPLETE
+009-B                                COMPLETE
+009-C                                COMPLETE
+009-D                                COMPLETE
+009-E                                COMPLETE
+009-F                                NEXT ELIGIBLE
+D1-D4                                CURRENTLY CLOSED
+E1                                   CURRENTLY CLOSED
+E2-E3                                REVALIDATION REQUIRED
+Jackson design completion            IN PROGRESS
+implementation readiness             NOT READY
+implementation start                 NOT STARTED
+implementation next                  NOT YET
 ```
 
-## Dependence/application-family result
+## Current composition result
 
-009-A through 009-D now close the current D1-D4 obligations.
-
-The current design has:
+The historical fifteen synchronization IDs now have these current dispositions:
 
 ```text
-12 pairwise universal findings
- 9 direct universal edges
- 3 transitive universal findings
- 2 legitimate strongly connected components
+active required-relational            7
+active capability/occurrence          6
+retired concept-local                 1  SYNC-08
+reclassified cross-cutting contract   1  SYNC-15
+new synchronization                   0
+SYNC-16                               NOT JUSTIFIED
 ```
 
-Canonical kernels:
+`SYNC-08` semantics remain Generation-owned result lifecycle. `SYNC-15` semantics remain under the Reproducibility Contract. `SYNC-13` active internal scope is evidence-gated Generation consuming exact Evidence; external Evidence handoff is a later mapping/integration boundary.
 
-```text
-L-KERNEL = { Data Meaning, Synthesis Strategy, Learning, Learned State }
-G-KERNEL = { Data Meaning, Synthesis Strategy, Generation }
-E-KERNEL = { Evaluation Criterion, Evaluation, Evidence }
-```
-
-009-D additionally establishes systematic add/remove consequences and the boundary between ordinary family extension and future scope requiring fresh concept discovery.
-
-Removing a prerequisite forces dependent contraction; removing an optional capability concept narrows the product capability and does not transfer that concept's semantics into another owner.
-
-A coherent family member is not automatically a package, service, deployment profile, feature flag, product edition, or SKU.
+Historical IDs remain reserved.
 
 ## Architecture boundary
 
 The [Phase 007 Consolidated Architecture Contract](../architecture/phase-007-consolidated-architecture-contract.md) remains downstream evidence pending Phase 013 reconciliation.
 
-Architecture may expose a counterexample but cannot define dependence, family membership, or add/remove consequences from imports, services, persistence references, transaction order, deployment topology, runtime calls, or API nesting.
+Architecture may expose a counterexample but cannot define synchronization membership from imports, events, transactions, queues, persistence references, service calls, deployment topology, or runtime orchestration.
 
-The canonical concept graph/application family MUST NOT be mirrored mechanically into technical dependency or packaging structure.
+The active synchronization inventory MUST NOT be mirrored mechanically into technical topology.
 
 ## Remaining design sequence
 
 ```text
-009-E  synchronization inventory replay
-009-F  synchronization ownership / hidden coordinator
+009-F  synchronization trigger / pre-post / ownership / hidden coordinator
 009-G  composition economy / synergy / integrity
 009-H  Phase 009 consolidation / Phase 010 handoff
 010    concept mapping / interaction / language / experience
@@ -107,6 +95,6 @@ Phases 009-013 cannot make implementation ready. Only Phase 014 may set **READY 
 
 ## Current next boundary
 
-**009-E — Synchronization Inventory Revalidation Across the Application Family**.
+**009-F — Synchronization Trigger, Preconditions/Postconditions, State Ownership & Hidden-Coordinator Audit**.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
