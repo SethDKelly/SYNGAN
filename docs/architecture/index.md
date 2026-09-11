@@ -8,9 +8,7 @@ status: retained-pending-reconciliation
 
 ## Purpose
 
-This directory preserves SYNGAN representation/architecture design downstream of concept design.
-
-The architecture is substantial and valuable, but it is not current implementation authority and is not the next design work while the Jackson completion program remains active.
+Preserve SYNGAN representation/architecture design as downstream evidence while Jackson concept design remains active.
 
 Current governing authority: [Jackson Design Completion & Implementation Hold](../authority/jackson-design-completion-implementation-hold.md).
 
@@ -19,9 +17,9 @@ Current governing authority: [Jackson Design Completion & Implementation Hold](.
 ```text
 Jackson concept design       IN PROGRESS
 Phase 008                    COMPLETE
-individual concept design    COMPLETE ENOUGH FOR PHASE 009
 Phase 009                    ACTIVE
-009-A                        NEXT ELIGIBLE
+009-A                        COMPLETE
+009-B                        NEXT ELIGIBLE
 architecture corpus          RETAINED AS DOWNSTREAM DESIGN EVIDENCE
 architecture reconciliation  PLANNED FOR PHASE 013
 implementation readiness     NOT READY
@@ -29,47 +27,26 @@ implementation start         NOT STARTED
 implementation next          NOT YET
 ```
 
-## Relationship to current concept authority
+## Dependence boundary
 
-[Phase 008 Individual-Concept Design Consolidation](../concepts/phase-008-individual-concept-consolidation.md) is the consolidated upstream authority for the individual-concept foundation.
+The current [009-A Inclusion-Dependence Pairwise Inventory](../dependence/inclusion-dependence-pairwise-inventory.md) is upstream of architecture.
 
-Phase 009 now owns application inclusion dependence, application-family structure and composition/synchronization closure.
+Architecture must not reinterpret Jackson inclusion dependence from:
 
-## Phase 009 architecture boundary
-
-Architecture may expose a counterexample or feasibility pressure, but it cannot define Phase 009 answers by convenience.
-
-The following do **not** establish Jackson inclusion dependence by themselves:
-
-- package imports;
-- persistence references;
-- runtime service calls;
-- scheduler ordering;
+- package/module imports;
+- foreign keys or object references;
+- dataflow/service-call direction;
+- transaction ordering;
+- runtime scheduler dependencies;
 - deployment topology;
-- transaction/event ordering;
 - platform capability requirements;
-- storage/dataflow edges;
-- existing code object relationships.
+- existing API nesting.
 
-Likewise, an existing architecture mechanism does not prove a synchronization is necessary.
+009-A finds only 12 universal pairwise inclusion candidates across 110 directed non-self pairs, substantially fewer than the historical runtime/reference dependency relationships.
 
-The governing Phase 009 order is:
+The two pairwise mutual-dependence candidates—`Learning <-> Learned State` and `Evaluation <-> Evidence`—remain 009-B design questions. Architecture cannot resolve those cycles by collapsing concepts or choosing representation convenience.
 
-```text
-inclusion dependence
-  ↓
-application family / valid subsets
-  ↓
-synchronization inventory replay
-  ↓
-state ownership / hidden coordinator audit
-  ↓
-composition economy / synergy / integrity
-```
-
-The current fifteen synchronization IDs remain upstream concept-design evidence but are not final-composed until Phase 009 closes them.
-
-Current upstream catalog boundaries remain in force unless a genuine J2/J3 misfit proves otherwise, including Data Meaning/Constraint separation, Generation-owned output result semantics, Execution-owned Attempt/recovery history, external Use/Release authority, and non-concept treatment of architecture-shaped identity/security/runtime structures.
+Execution's one-of prerequisite across `{Learning, Generation, Evaluation}` and Provenance's non-binary subject prerequisite must likewise not be converted into false mandatory architecture edges.
 
 ## Phase 007 architecture status
 
@@ -79,17 +56,15 @@ It remains subject to Phase 013 reconciliation after Jackson concept design is c
 
 ## Authority rule during Phases 009-012
 
-Architecture may provide feasibility evidence, representation pressure, counterexamples and misfits. It may not veto upstream corrections, turn implementation roles into concepts, redefine accepted concept state/actions, define inclusion dependence from runtime/module structure, convert familiar implementation nouns into concept boundaries, or trigger implementation while design is incomplete.
+Architecture may provide feasibility evidence, representation pressure, counterexamples and misfits. It may not veto upstream corrections, turn implementation roles into concepts, define inclusion dependence from runtime/module structure, or trigger implementation while design is incomplete.
 
 ## Phase 013 obligation
 
-After a positive Phase 012 Jackson completion decision, Phase 013 must reconcile all retained architecture with the final concept/dependence/composition/mapping/experience authority. It may retain, revise or supersede architecture, but remains design-only.
+After a positive Phase 012 Jackson completion decision, Phase 013 must reconcile retained architecture with final concept/dependence/composition/mapping authority.
 
 ## Phase 014 gate
 
-Only after Phase 013 may Phase 014 decide whether the whole design is complete enough for implementation readiness.
-
-Until then:
+Only after Phase 013 may Phase 014 decide implementation readiness.
 
 ```text
 IMPLEMENTATION READINESS   NOT READY
@@ -99,4 +74,4 @@ IMPLEMENTATION NEXT        NOT YET
 
 ## Current next boundary
 
-**009-A — Inclusion-Dependence Semantics, Evidence Rules & Pairwise Relation Inventory**.
+**009-B — Inclusion-Dependence Graph, Roots, Cycles & Explanation Ordering**.
