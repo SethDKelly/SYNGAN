@@ -8,15 +8,15 @@ status: active
 
 ## Historical work through Phase 007
 
-- Phase 001 — Design Foundation & Concept Discovery: complete historical concept-discovery baseline.
-- Phase 002 — Concept Specification & Invariant Refinement: complete historical concept-specification baseline.
+- Phase 001 — Design Foundation & Concept Discovery: complete historical discovery baseline.
+- Phase 002 — Concept Specification & Invariant Refinement: complete historical specification baseline.
 - Phase 003 — Experience & Workflow Design: complete historical experience baseline.
-- Phase 004 — Representation & Architecture Design: retained historical/downstream architecture baseline.
+- Phase 004 — Representation & Architecture Design: retained downstream architecture baseline.
 - Phase 005 — Implementation Planning & Delivery Decomposition: planning/history only.
 - Phase 006 — Post-Planning Design Validation & Adversarial Refinement: historical design-refinement evidence.
-- Phase 007 — Design Continuation & Architecture Completion: retained architecture/design evidence.
+- Phase 007 — Design Continuation & Architecture Completion: retained downstream design evidence.
 
-Phase 007-K's implementation-reentry conclusion remains superseded by the fuller Jackson methodology completion program.
+Phase 007-K's implementation-reentry conclusion remains superseded.
 
 ## Current implementation posture
 
@@ -30,41 +30,37 @@ Only Phase 014 may change that posture after a positive whole-design completion 
 
 ## Phase 008 — Individual Concept Design Normalization & Completeness — complete
 
-Phase 008-A through 008-H are complete.
+Phase 008 exits with:
 
 ```text
 INDIVIDUAL CONCEPT DESIGN   COMPLETE ENOUGH FOR PHASE 009
 JACKSON CONCEPT DESIGN      NOT COMPLETE
 ```
 
-The accepted catalog remains eleven concepts and fifteen synchronization IDs with no Phase 008 catalog change.
-
 ## Phase 009 — Concept Dependence, Application Family, Composition & Synchronization Closure — active
 
-[Phase 009](009/index.md) entered through a dedicated start gate and dependency-safe decomposition.
-
 ```text
-009-A  NEXT ELIGIBLE — Inclusion-Dependence Semantics, Evidence Rules & Pairwise Relation Inventory
-009-B  PLANNED — Inclusion-Dependence Graph, Roots, Cycles & Explanation Ordering
-009-C  PLANNED — Application Family, Valid Concept Subsets & Minimal Coherent Variants
-009-D  PLANNED — Contraction, Extension, Concept Addition/Removal & Product-Scope Consequences
-009-E  PLANNED — Synchronization Inventory Revalidation Across the Application Family
-009-F  PLANNED — Synchronization Trigger, Preconditions/Postconditions, State Ownership & Hidden-Coordinator Audit
-009-G  PLANNED — Composition Economy, Coupling, Synergy & Integrity Closure
-009-H  PLANNED — Phase 009 Consolidation, Dependence/Composition Completion Decision & Phase 010 Handoff
+009-A  COMPLETE — inclusion-dependence semantics / pairwise relation inventory
+009-B  NEXT ELIGIBLE — canonical graph / roots / cycles / explanation ordering
+009-C  PLANNED — application family / valid subsets / minimal variants
+009-D  PLANNED — contraction / extension / add-remove consequences
+009-E  PLANNED — synchronization inventory replay
+009-F  PLANNED — synchronization trigger / ownership / hidden coordinator
+009-G  PLANNED — composition economy / synergy / integrity
+009-H  PLANNED — consolidation / Phase 010 handoff
 ```
 
-Phase 009 must not confuse Jackson inclusion dependence with ordinary reference, validation, production, operational/runtime, authority or provenance dependencies.
+009-A classifies all 110 directed non-self pairs without using implementation/runtime structure as authority. D1 is now partial: pairwise evidence is complete, but graph directness/transitivity and cycle treatment remain 009-B work.
 
 ## Later design phases
 
 ### Phase 010 — Concept Mapping, Interaction, Linguistic & Experience Alignment
 
-Planned. Will be decomposed immediately before entry.
+Planned. Decompose immediately before entry.
 
 ### Phase 011 — Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Design Validation
 
-Planned. Will be decomposed immediately before entry.
+Planned. Decompose immediately before entry.
 
 ### Phase 012 — Jackson Concept-Design Consolidation & Completion Decision
 
@@ -90,10 +86,6 @@ if the entire design passes.
 
 Placeholder only; not ready, not active and not next.
 
-## Decomposition rule
-
-Only the current high-level phase is decomposed in detail. Phases 010-014 remain high-level until their own entry points so premature downstream planning cannot constrain unfinished design.
-
 ## Current next boundary
 
-**009-A — Inclusion-Dependence Semantics, Evidence Rules & Pairwise Relation Inventory**.
+**009-B — Inclusion-Dependence Graph, Roots, Cycles & Explanation Ordering**.
