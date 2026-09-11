@@ -28,6 +28,7 @@ No row in this matrix changes that posture by itself.
 
 - **CURRENTLY CLOSED** — sufficiently established for the present design stage; later genuine misfit may reopen it.
 - **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** — substantial prior evidence exists but current closure is outstanding.
+- **PARTIAL TO STRONG** — substantial current closure evidence exists but one dedicated downstream audit remains.
 - **PARTIAL** — a material obligation remains open.
 - **OPEN** — no dedicated current-state closure yet.
 - **DOWNSTREAM / PENDING RECONCILIATION** — useful architecture exists but cannot become final before concept design completes.
@@ -60,10 +61,11 @@ Phase 008  COMPLETE — individual concept design complete enough for Phase 009
 Phase 009  ACTIVE
 009-A      COMPLETE — inclusion semantics / evidence rules / pairwise inventory
 009-B      COMPLETE — canonical graph / cycles / roots-leaves / explanation ordering
-009-C      NEXT ELIGIBLE — application family / valid subsets / minimal coherent variants
+009-C      COMPLETE — application family / valid subsets / minimal coherent variants
+009-D      NEXT ELIGIBLE — contraction / extension / add-remove consequences
 ```
 
-Current dependence result:
+Current dependence/application-family result:
 
 ```text
 pairwise directed relations              110 / 110 classified
@@ -72,9 +74,11 @@ direct universal graph edges               9
 transitive universal findings              3
 non-trivial strongly connected components  2
 unresolved graph-cycle defects              0
+D1 inclusion-dependence graph              CURRENTLY CLOSED
+D2 application family                      CURRENTLY CLOSED
+D3 explanation/design ordering             CURRENTLY CLOSED
+D4 add/remove consequences                 PARTIAL TO STRONG
 ```
-
-D1 and D3 are therefore currently closed. D2 remains open and D4 remains partial.
 
 ## Jackson completion matrix
 
@@ -96,11 +100,11 @@ D1 and D3 are therefore currently closed. D2 remains open and D4 remains partial
 | C6 | Preconditions/effects/postconditions | 008-D semantic transition contracts | **CURRENTLY CLOSED** | 008-D/H |
 | C7 | Invariants/lifecycle/history/unresolved/invalidated states | 008-C/D | **CURRENTLY CLOSED** | 008-C/D/H |
 | C8 | Explicit boundaries/non-responsibilities | 008-F accepted boundaries + 008-G perimeter + 008-H consolidation | **CURRENTLY CLOSED** | 008-F/G/H |
-| D1 | Jackson application inclusion-dependence graph | 009-A classified all directed pairs; 009-B reduced 12 universal findings to 9 direct edges, retained 3 transitive findings, resolved 2 legitimate SCCs, and established the acyclic condensed graph | **CURRENTLY CLOSED** | 009-A/009-B; reopen on 009-C/D misfit |
-| D2 | Meaningful valid concept subsets/application family | Canonical graph and side constraints now exist, but valid/minimal subsets are not systematically derived | **OPEN** | 009-C |
-| D3 | Explanation/design ordering implied by inclusion dependence | 009-B establishes strict prerequisite ordering plus layered explanation order and activity-before-result narrative order within SCCs | **CURRENTLY CLOSED** | 009-B; reopen on application-family misfit |
-| D4 | Product-scope consequences of adding/removing concepts | Full-product absence consequences + 009-A conditional evidence + 009-B graph/side constraints; systematic contraction/extension pending | **PARTIAL** | 009-C/009-D |
-| E1 | Explicit concept synchronizations | 15 current candidate rules; final application-family replay pending | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 009-E |
+| D1 | Jackson application inclusion-dependence graph | 009-A classified all directed pairs; 009-B reduced 12 universal findings to 9 direct edges, retained 3 transitive findings, resolved 2 legitimate SCCs, and established the acyclic condensed graph | **CURRENTLY CLOSED** | 009-A/B; reopen on later misfit |
+| D2 | Meaningful valid concept subsets/application family | 009-C defines a rule-based family from graph closure, Execution/Provenance side constraints, capability-conditional inclusion rules, canonical minima, combined variants, and representative invalid subsets | **CURRENTLY CLOSED** | 009-C; reopen on 009-D/E misfit |
+| D3 | Explanation/design ordering implied by inclusion dependence | 009-B establishes strict prerequisite ordering plus layered explanation order and activity-before-result narrative order within SCCs | **CURRENTLY CLOSED** | 009-B; reopen on family/mapping misfit |
+| D4 | Product-scope consequences of adding/removing concepts | 008-B absence effects + 009-A conditional evidence + 009-B graph + 009-C closure/minimum/invalid-subset rules now establish strong consequence evidence; systematic contraction/extension audit remains | **PARTIAL TO STRONG** | 009-C/009-D |
+| E1 | Explicit concept synchronizations | 15 current candidate rules; application-family replay pending | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 009-E |
 | E2 | Singular state ownership across synchronizations | 008-D/G strong evidence; composed replay pending | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 009-F |
 | E3 | Composition burden/economy and hidden-coordinator avoidance | 008-D/G strong evidence; application-family composition pending | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 009-F/G |
 | E4 | Composition synergy | Mostly implicit; Phase 009 portion pending | **PARTIAL** | 009-G/011 |
@@ -123,9 +127,9 @@ D1 and D3 are therefore currently closed. D2 remains open and D4 remains partial
 | R2 | Whole design audited problem → concepts → dependence/sync → mapping → architecture | Not yet possible | **OPEN** | 014 |
 | R3 | Implementation-readiness decision based on complete design | Historical 007-K decision superseded | **OPEN** | 014 |
 
-## 009-B dependence finding
+## Current application-family finding
 
-The current direct universal graph is:
+The universal graph remains:
 
 ```text
 Learning      -> Data Meaning
@@ -141,31 +145,43 @@ Evaluation    -> Evidence
 Evidence      -> Evaluation
 ```
 
-The transitive pairwise findings are:
-
-```text
-Learned State -> Data Meaning
-Learned State -> Synthesis Strategy
-Evidence      -> Evaluation Criterion
-```
-
-The two strongly connected inclusion components are:
+With strongly connected units:
 
 ```text
 L-CLUSTER = { Learning, Learned State }
 E-CLUSTER = { Evaluation, Evidence }
 ```
 
-They are accepted as legitimate application-level co-inclusion, not concept merges. The condensed graph is acyclic.
-
-Execution and Provenance retain non-binary prerequisites outside the universal graph:
+009-C defines coherent family membership through five rules:
 
 ```text
-Execution => Learning OR Generation OR Evaluation
-Provenance => at least one meaningful provenance-bearing relationship
+1. non-empty subset
+2. universal graph closure
+3. Execution => Learning OR Generation OR Evaluation
+4. Provenance => meaningful provenance-bearing relationship witness
+5. all claimed capability-specific prerequisites included
 ```
 
-009-C must combine graph closure with those side constraints.
+Canonical minima are:
+
+```text
+Authority-only:
+  { Data Meaning }
+  { Synthesis Strategy }
+  { Constraint }
+  { Evaluation Criterion }
+
+L-KERNEL:
+  { Data Meaning, Synthesis Strategy, Learning, Learned State }
+
+G-KERNEL:
+  { Data Meaning, Synthesis Strategy, Generation }
+
+E-KERNEL:
+  { Evaluation Criterion, Evaluation, Evidence }
+```
+
+Capability-conditioned variants include learned-state-assisted Generation, evaluation-gated Generation, Constraint-aware variants, Execution-bearing variants, and Provenance-bearing variants. Topology/text capability does not restore a new concept.
 
 ## Current methodological verdict
 
@@ -176,7 +192,8 @@ PHASE 009                            ACTIVE
 PAIRWISE INCLUSION INVENTORY         CURRENTLY CLOSED
 CANONICAL DEPENDENCE GRAPH           CURRENTLY CLOSED
 EXPLANATION / DESIGN ORDERING        CURRENTLY CLOSED
-APPLICATION FAMILY                   NOT YET CLOSED
+APPLICATION FAMILY                   CURRENTLY CLOSED
+ADD / REMOVE CONSEQUENCES            PARTIAL TO STRONG — 009-D NEXT
 COMPOSITION / SYNCHRONIZATION        NOT YET CLOSED
 JACKSON CONCEPT DESIGN COMPLETE      NO
 REPRESENTATION/ARCHITECTURE FINAL    NO — RETAINED, PENDING RECONCILIATION
@@ -188,8 +205,6 @@ IMPLEMENTATION NEXT                  NOT YET
 ## Current dependency order
 
 ```text
-009-C  application family / valid subsets / minimal coherent variants
-  ↓
 009-D  contraction / extension / add-remove consequences
   ↓
 009-E  synchronization inventory replay
@@ -203,12 +218,12 @@ IMPLEMENTATION NEXT                  NOT YET
 
 ## Guardrail
 
-Architecture/source/tests may expose counterexamples but cannot define inclusion dependence. Do not translate the conceptual graph mechanically into package/module dependencies, APIs, schemas, services, runtime call direction, or persistence structure.
+Architecture/source/tests may expose counterexamples but cannot define the application family. Do not translate concept subsets into package/module editions, APIs, schemas, services, deployment units, or implementation feature flags while design remains incomplete.
 
 Do not add production behavior, APIs, schemas, runtime/model/platform/security adapters, package-topology changes, reference algorithms, or executable architecture restrictions while design remains incomplete.
 
 ## Current next boundary
 
-**009-C — Application Family, Valid Concept Subsets & Minimal Coherent Variants** is next eligible.
+**009-D — Contraction, Extension, Concept Addition/Removal & Product-Scope Consequences** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
