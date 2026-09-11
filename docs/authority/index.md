@@ -17,85 +17,81 @@ These documents define how SYNGAN design knowledge is created, interpreted, chan
 - [Terminology Policy](terminology-policy.md)
 - [Source & Provenance Policy](source-provenance-policy.md)
 
-## Current upstream design authority
+## Current design authority chain
 
-- [Phase 008 Individual-Concept Design Consolidation](../concepts/phase-008-individual-concept-consolidation.md)
+- [Problem Knowledge](../problem/index.md)
 - [Accepted Concept Catalog](../concepts/index.md)
+- [Phase 008 Individual-Concept Design Consolidation](../concepts/phase-008-individual-concept-consolidation.md)
 - [Accepted Synchronizations](../synchronizations/index.md)
-- [Phase 009 Entry / Decomposition](../phases/009/009-entry-decomposition.md)
-- [Phase 009 Index](../phases/009/index.md)
-
-The individual Phase 008 normalization authorities remain current and are reachable from the concept catalog.
+- [Concept Dependence & Application Family](../dependence/index.md)
+- [009-A Inclusion-Dependence Pairwise Inventory](../dependence/inclusion-dependence-pairwise-inventory.md)
 
 ## Current posture
 
 ```text
 accepted concepts          11
 accepted synchronizations  15
-active ADRs                10
 current desired outcomes   16
 Phase 008                  COMPLETE
-individual concept design  COMPLETE ENOUGH FOR PHASE 009
 Phase 009                  ACTIVE
-009-A                      NEXT ELIGIBLE
+009-A                      COMPLETE
+009-B                      NEXT ELIGIBLE
+D1                         PARTIAL — GRAPH PENDING
+D2                         OPEN
+D3                         OPEN
+D4                         PARTIAL
 Jackson design completion  IN PROGRESS
 implementation readiness   NOT READY
 implementation start       NOT STARTED
 implementation next        NOT YET
 ```
 
-## Phase 009 authority boundary
+## 009-A authority result
 
-Phase 009 closes the remaining dependence/application-family and composition/synchronization obligations.
-
-Its start gate establishes the sequence:
+009-A distinguishes Jackson inclusion dependence from reference/validation/production/runtime/provenance relationships and classifies all 110 directed non-self concept pairs.
 
 ```text
-009-A  pairwise inclusion-dependence semantics/evidence
-009-B  canonical dependence graph / explanation ordering
-009-C  application family / valid subsets
-009-D  add-remove / contraction-extension consequences
-009-E  synchronization inventory replay
-009-F  trigger / pre-post / state ownership / hidden coordinator
-009-G  economy / coupling / synergy / integrity
-009-H  consolidation / Phase 010 handoff
+12 universal dependence candidates
+43 conditional/disjunctive relations
+55 non-dependent relations
+0 insufficient relations
 ```
 
-Phase 009 must not treat reference, validation, production, runtime, provenance, package or architecture dependency as Jackson inclusion dependence by default.
+The two mutual-dependence candidates are `Learning <-> Learned State` and `Evaluation <-> Evidence`. 009-B must decide graph/cycle representation without allowing implementation structure to decide the answer.
 
-The existing fifteen synchronization IDs are current candidates for composition closure, not immutable results.
+Execution has a one-of prerequisite across `{Learning, Generation, Evaluation}` and Provenance has a non-binary subject prerequisite; these are not universal pairwise graph edges.
 
-## Relationship to Phase 007 authority
+No concept or synchronization changed in 009-A.
 
-The [Phase 007 Consolidated Architecture Contract](../architecture/phase-007-consolidated-architecture-contract.md) remains downstream design evidence pending Phase 013 reconciliation.
+## Architecture boundary
 
-The historical 007-K implementation-reentry result remains superseded. Architecture may expose a concept misfit but cannot become upstream concept/dependence authority merely because it is detailed.
+The [Phase 007 Consolidated Architecture Contract](../architecture/phase-007-consolidated-architecture-contract.md) remains downstream evidence pending Phase 013 reconciliation.
+
+Architecture may expose a counterexample but cannot define inclusion dependence from imports, services, persistence references, transaction order, deployment topology, or runtime calls.
 
 ## Remaining design sequence
 
 ```text
-009    Concept Dependence, Application Family, Composition & Synchronization Closure — ACTIVE
-010    Concept Mapping, Interaction, Linguistic & Experience Alignment
-011    Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Validation
-012    Jackson Concept-Design Consolidation & Completion Decision
-013    Post-Concept Representation & Architecture Reconciliation
-014    Whole-Design Consolidation, Residual Debt Audit & Implementation-Readiness Decision
+009-B  dependence graph / roots / cycles / explanation ordering
+009-C  application family / valid subsets
+009-D  contraction / extension / add-remove consequences
+009-E  synchronization inventory replay
+009-F  synchronization ownership / hidden coordinator
+009-G  composition economy / synergy / integrity
+009-H  Phase 009 consolidation / Phase 010 handoff
+010    concept mapping / interaction / language / experience
+011    final concept-design quality / misfit
+012    Jackson concept-design completion decision
+013    representation / architecture reconciliation
+014    whole-design completion / implementation-readiness decision
 ```
 
-Phases 010-014 remain high-level until their own entry points.
+## Implementation-readiness rule
 
-## Cross-cutting authority retained
-
-Operational-recovery, runtime-distribution, enterprise-scale, privacy/disclosure and structured-topology contracts remain useful design evidence/authority subject to correction if Phase 009 or later mapping/misfit work exposes a genuine upstream issue.
-
-## Implementation-readiness transition rule
-
-Phases 009-013 cannot make implementation ready.
-
-Only Phase 014 may set **READY / NOT STARTED / NEXT**, and only after the whole design passes. A positive readiness result still requires a later explicit Phase 015 before implementation begins.
+Phases 009-013 cannot make implementation ready. Only Phase 014 may set **READY / NOT STARTED / NEXT** after the whole design passes, and Phase 015 is still required before implementation begins.
 
 ## Current next boundary
 
-**009-A — Inclusion-Dependence Semantics, Evidence Rules & Pairwise Relation Inventory**.
+**009-B — Inclusion-Dependence Graph, Roots, Cycles & Explanation Ordering**.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
