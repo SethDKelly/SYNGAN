@@ -8,7 +8,7 @@ status: active
 
 This directory contains the canonical concept specifications accepted in Phase 001 and refined through current Phase 008 authority.
 
-Cross-concept coordination remains authoritative under [Synchronizations](../synchronizations/index.md), while current inclusion-dependence/application-family work is governed by [Concept Dependence & Application Family](../dependence/index.md) and [Phase 009](../phases/009/index.md).
+Cross-concept coordination is governed by [Synchronizations](../synchronizations/index.md), while inclusion-dependence/application-family work is governed by [Concept Dependence & Application Family](../dependence/index.md) and [Phase 009](../phases/009/index.md).
 
 ## Current individual-concept authority
 
@@ -33,22 +33,21 @@ Cross-concept coordination remains authoritative under [Synchronizations](../syn
 10. [Execution](execution.md)
 11. [Provenance](provenance.md)
 
-## Current catalog state
+## Current catalog/composition state
 
 ```text
-accepted concepts          11
-accepted synchronizations  15
-missing current concept     NONE FOUND
-INDIVIDUAL CONCEPT DESIGN   COMPLETE ENOUGH FOR PHASE 009
-D1 dependence graph         CURRENTLY CLOSED
-D2 application family       CURRENTLY CLOSED
-D3 explanation ordering     CURRENTLY CLOSED
-D4 add/remove consequences  CURRENTLY CLOSED
+accepted concepts                    11
+historical synchronization IDs       15
+active synchronizations              13
+missing current concept              NONE FOUND
+INDIVIDUAL CONCEPT DESIGN            COMPLETE ENOUGH FOR PHASE 009
+D1-D4                                CURRENTLY CLOSED
+E1                                   CURRENTLY CLOSED
 ```
 
 Phase 008 found no unresolved J1 local concept-specification defect or J2 purpose/boundary/catalog defect.
 
-009-A through 009-D likewise find no reason to add, remove, merge, split, or rename a concept.
+009-A through 009-E likewise find no reason to add, remove, merge, split, or rename a concept.
 
 ## Core boundary results
 
@@ -78,48 +77,50 @@ G-KERNEL = { Data Meaning, Synthesis Strategy, Generation }
 E-KERNEL = { Evaluation Criterion, Evaluation, Evidence }
 ```
 
-Reusable authority-only family members include:
+Reusable authority-only family members include Data Meaning, Synthesis Strategy, Constraint and Evaluation Criterion independently.
+
+Execution is valid only with at least one Learning/Generation/Evaluation activity. Provenance is valid only with a meaningful provenance-bearing relationship/history witness.
+
+## Current synchronization result
+
+009-E confirms that concept independence and composition are cleaner with **13 active synchronizations**, not fifteen.
+
+### Active required-relational
 
 ```text
-{ Data Meaning }
-{ Synthesis Strategy }
-{ Constraint }
-{ Evaluation Criterion }
+SYNC-01  Data Meaning revision binding
+SYNC-02  Strategy selection and compatibility
+SYNC-05  Learning produces Learned State
+SYNC-06  Generation commitment and compatibility
+SYNC-09  Evaluation Criterion binding
+SYNC-10  Evaluation method compatibility
+SYNC-12  Evaluation produces Evidence
 ```
 
-Execution is valid only with at least one of Learning, Generation, or Evaluation. Provenance is valid only when there is a meaningful provenance-bearing relationship/history witness.
+### Active conditional
+
+```text
+SYNC-03  Constraint binding/handling
+SYNC-04  Learning operational realization
+SYNC-07  Generation operational realization
+SYNC-11  Evaluation operational realization
+SYNC-13  evidence-gated Generation/Evidence handoff
+SYNC-14  Provenance recording
+```
+
+`SYNC-08` is retired from active composition because synthetic output is Generation-owned result state. This reinforces rather than changes the existing catalog boundary: no standalone Output concept is introduced.
+
+`SYNC-15` is reclassified as the cross-cutting Reproducibility Contract. No standalone Reproducibility concept is introduced.
+
+No `SYNC-16` or missing concept is justified by the replay.
 
 ## Current contraction/extension result
 
 009-D confirms that concept optionality across the family does not weaken concept boundaries.
 
-### Forced dependent contraction
+Removing a prerequisite forces dependent contraction; removing Generation, Constraint, Execution, or Provenance can instead be capability-only contraction when remaining family rules are satisfied.
 
-```text
-remove Data Meaning or Synthesis Strategy
-  => current Learning + Learned State + Generation cannot remain
-
-remove Evaluation Criterion
-  => Evaluation + Evidence cannot remain
-```
-
-### SCC contraction
-
-```text
-remove Learning      => remove Learned State
-remove Learned State => remove Learning
-
-remove Evaluation => remove Evidence
-remove Evidence   => remove Evaluation
-```
-
-### Capability-only contraction
-
-Removing Generation, Constraint, Execution, or Provenance does not universally force another concept out, but the corresponding capability disappears and must not be hidden in another concept.
-
-### Ordinary extension
-
-Adding current concepts with their required closure is ordinary family extension. Learned-state-assisted Generation, evaluation-gated Generation, reusable Constraint support, durable Execution, typed Provenance/history, topology breadth, and text-bearing structured data all remain expressible with the current catalog.
+Ordinary extension uses current concepts plus closure/side constraints. Fresh discovery remains required when new scope introduces a genuinely independent purpose/state/action lifecycle.
 
 ## Future rediscovery triggers
 
@@ -132,20 +133,18 @@ The catalog is not permanently frozen. Fresh Jackson-style discovery remains req
 - arbitrary graph/recursive topology that creates independent relationship behavior beyond current structural semantics;
 - product-owned economic/resource allocation/budget/quota management.
 
-009-D makes this boundary explicit: ordinary composition uses existing concepts; a genuinely new independent purpose/state/action lifecycle reopens discovery.
-
 Implementation objects, IDs, tables, services, manifests or status enums do not themselves justify a concept.
 
 ## Authority rule
 
-The individual concept specifications plus current Phase 008 normalization/consolidation authorities remain upstream of Phase 009 dependence/composition and downstream architecture.
+The individual concept specifications plus current Phase 008 normalization/consolidation authorities remain upstream of Phase 009 composition and downstream architecture.
 
-No implementation resource or architecture dependency may redefine a concept boundary, dependence relation, family member, or contraction consequence merely because it exists.
+No implementation resource or architecture dependency may redefine a concept boundary or synchronization merely because it exists.
 
-A coherent application-family subset does not imply one package/module/service/deployment boundary.
+A synchronization does not imply one package/module/service/event/transaction boundary.
 
 ## Current next boundary
 
-**009-E — Synchronization Inventory Revalidation Across the Application Family**.
+**009-F — Synchronization Trigger, Preconditions/Postconditions, State Ownership & Hidden-Coordinator Audit**.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
