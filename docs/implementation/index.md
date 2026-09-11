@@ -29,36 +29,29 @@ No implementation tranche is eligible.
 ```text
 Phase 008                  COMPLETE
 Phase 009                  ACTIVE
-009-A                      COMPLETE — pairwise inclusion-dependence inventory
-009-B                      COMPLETE — canonical graph / SCCs / explanation ordering
-009-C                      COMPLETE — application family / valid subsets / minima
-009-D                      NEXT ELIGIBLE — contraction / extension consequences
+009-A                      COMPLETE
+009-B                      COMPLETE
+009-C                      COMPLETE
+009-D                      COMPLETE
+009-E                      NEXT ELIGIBLE
 D1                         CURRENTLY CLOSED
 D2                         CURRENTLY CLOSED
 D3                         CURRENTLY CLOSED
-D4                         PARTIAL TO STRONG
+D4                         CURRENTLY CLOSED
 Jackson concept design     IN PROGRESS
 ```
 
-## What 009-C established
+## What 009-D established
 
-009-C defines coherent concept-family members through graph closure, the Execution one-of rule, Provenance relationship-witness semantics, and capability-specific prerequisites.
+009-D closes the conceptual consequences of adding/removing current concepts and SCCs.
 
-Canonical kernels include:
-
-```text
-L-KERNEL = { Data Meaning, Synthesis Strategy, Learning, Learned State }
-G-KERNEL = { Data Meaning, Synthesis Strategy, Generation }
-E-KERNEL = { Evaluation Criterion, Evaluation, Evidence }
-```
-
-Authority-only contractions may contain Data Meaning, Synthesis Strategy, Constraint, or Evaluation Criterion independently.
+It determines when contraction forces dependent removal, when a capability simply disappears, when side constraints orphan Execution/Provenance, and when an extension is ordinary composition versus a future scope change requiring fresh concept discovery.
 
 This is concept-design authority only.
 
-## What 009-C does not authorize
+## What 009-D does not authorize
 
-The application family does **not** authorize:
+The application family and consequence matrix do **not** authorize:
 
 - package/module editions matching family subsets;
 - optional-install extras or dependency groups;
@@ -71,7 +64,7 @@ The application family does **not** authorize:
 - synchronization implementation;
 - repair of stale implementation tests.
 
-Concept-family membership is about coherent application functionality, not code topology.
+Removing a concept from a conceptual family member does not authorize deleting or moving code before architecture reconciliation. Adding a concept capability does not authorize creating an implementation module now.
 
 ## Superseded 007-K re-entry conclusion
 
@@ -82,7 +75,7 @@ Retained Phase 007 architecture/scaffold evidence cannot reactivate implementati
 ## Remaining design before implementation readiness can be decided
 
 ```text
-009-D..H  finish contraction/composition/synchronization design
+009-E..H  finish synchronization/composition design
 010       concept mapping / interaction / language / experience
 011       specificity / familiarity / integrity / synergy / misfit
 012       Jackson concept-design completion decision
@@ -94,12 +87,10 @@ Only a positive Phase 014 may make implementation **READY / NOT STARTED / NEXT**
 
 ## Current prohibition
 
-Until Phase 014 passes, do not add production concept/domain behavior, implementation APIs, persistence/data-plane schemas, model/runtime/security/platform adapters, Execution/recovery behavior, Evidence/Provenance implementations, reference Strategies, privacy mechanisms, benchmarks, package-topology changes, or executable architecture restrictions intended to freeze unfinished design.
-
-Do not turn 009-C family members into implementation modules or product editions.
+Until Phase 014 passes, do not add production concept/domain behavior, implementation APIs, persistence/data-plane schemas, model/runtime/security/platform adapters, Execution/recovery behavior, Evidence/Provenance implementations, reference Strategies, privacy mechanisms, benchmarks, package-topology changes, product-edition packaging, feature-flag decomposition, or executable architecture restrictions intended to freeze unfinished design.
 
 ## Current next boundary
 
 Design-only work:
 
-**009-D — Contraction, Extension, Concept Addition/Removal & Product-Scope Consequences**.
+**009-E — Synchronization Inventory Revalidation Across the Application Family**.
