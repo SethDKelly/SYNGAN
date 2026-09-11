@@ -10,15 +10,6 @@ This directory contains the canonical concept specifications accepted in Phase 0
 
 Cross-concept coordination is governed by [Synchronizations](../synchronizations/index.md), while inclusion-dependence/application-family work is governed by [Concept Dependence & Application Family](../dependence/index.md) and [Phase 009](../phases/009/index.md).
 
-## Current individual-concept authority
-
-- [Concept State, Identity, History & Invariant Normalization](state-identity-history-invariant-normalization.md)
-- [Concept Action, Query, Preconditions/Postconditions & Lifecycle Normalization](action-query-lifecycle-normalization.md)
-- [Operational Principle, Purpose Fulfillment & Counterexample Normalization](operational-principle-purpose-counterexample-normalization.md)
-- [Concept Independence, Genericity, Familiarity & Reuse Normalization](independence-genericity-familiarity-reuse-normalization.md)
-- [Catalog Perimeter Candidate Rediscovery, Missing-Concept & Boundary Audit](catalog-perimeter-candidate-rediscovery-boundary-audit.md)
-- [Phase 008 Individual-Concept Design Consolidation](phase-008-individual-concept-consolidation.md)
-
 ## Accepted concepts
 
 1. [Data Meaning](data-meaning.md)
@@ -36,18 +27,18 @@ Cross-concept coordination is governed by [Synchronizations](../synchronizations
 ## Current catalog/composition state
 
 ```text
-accepted concepts                    11
-historical synchronization IDs       15
-active synchronizations              13
-missing current concept              NONE FOUND
-INDIVIDUAL CONCEPT DESIGN            COMPLETE ENOUGH FOR PHASE 009
-D1-D4                                CURRENTLY CLOSED
-E1                                   CURRENTLY CLOSED
+accepted concepts                       11
+historical synchronization IDs          15
+active synchronizations                 13
+required-relational                      6
+capability/occurrence conditional        7
+missing current concept                 NONE FOUND
+D1-D4                                   CURRENTLY CLOSED
+E1                                      CURRENTLY CLOSED
+E2                                      CURRENTLY CLOSED
 ```
 
-Phase 008 found no unresolved J1 local concept-specification defect or J2 purpose/boundary/catalog defect.
-
-009-A through 009-E likewise find no reason to add, remove, merge, split, or rename a concept.
+No Phase 009 work through 009-F requires adding, removing, merging, splitting, or renaming a concept.
 
 ## Core boundary results
 
@@ -63,88 +54,106 @@ Evidence               != Provenance
 Execution              != Attempt != platform job
 ```
 
-Generation owns request/Condition and candidate-to-completed logical output semantics. Relationship remains Data Meaning-owned descriptive structure. Generic Privacy remains rejected pending fresh mechanism-specific discovery if future independent state/actions arise. Use/Release Decision remains external authority.
+Generation owns request/Condition and candidate-to-completed logical output semantics. Synthetic Output remains Generation-owned result state rather than a standalone concept.
 
-## Current application-family result
+## Current synchronization ownership result
 
-The accepted catalog composes into multiple coherent application subsets rather than one mandatory eleven-concept application.
+009-F strengthens concept independence by making cross-concept ownership singular.
 
-Canonical capability kernels are:
+### Consuming activities
 
-```text
-L-KERNEL = { Data Meaning, Synthesis Strategy, Learning, Learned State }
-G-KERNEL = { Data Meaning, Synthesis Strategy, Generation }
-E-KERNEL = { Evaluation Criterion, Evaluation, Evidence }
-```
+Learning, Generation and Evaluation own:
 
-Reusable authority-only family members include Data Meaning, Synthesis Strategy, Constraint and Evaluation Criterion independently.
+- exact reusable-authority/result bindings they commit to use;
+- contextual compatibility/applicability/sufficiency assessments controlling their own lifecycle.
 
-Execution is valid only with at least one Learning/Generation/Evaluation activity. Provenance is valid only with a meaningful provenance-bearing relationship/history witness.
+Reusable authorities are queried/bound, not mutated by consumers.
 
-## Current synchronization result
-
-009-E confirms that concept independence and composition are cleaner with **13 active synchronizations**, not fifteen.
-
-### Active required-relational
+### Durable result concepts
 
 ```text
-SYNC-01  Data Meaning revision binding
-SYNC-02  Strategy selection and compatibility
-SYNC-05  Learning produces Learned State
-SYNC-06  Generation commitment and compatibility
-SYNC-09  Evaluation Criterion binding
-SYNC-10  Evaluation method compatibility
-SYNC-12  Evaluation produces Evidence
+Learned State owns producing Learning identity
+Evidence owns producing Evaluation identity
 ```
 
-### Active conditional
+Producer activities own semantic completion. A reverse producer→result view may be derived instead of becoming duplicate mutable authority.
+
+### Execution
+
+Execution owns:
+
+- exact parent activity binding;
+- logical operational identity;
+- Attempt history;
+- retry/resume/recovery/cancellation/indeterminate operational state.
+
+Learning/Generation/Evaluation do not absorb those semantics when Execution is present or absent.
+
+### Provenance
+
+Provenance owns typed assertions only. It does not own the concept facts it relates.
+
+### Synchronization
+
+No synchronization owns canonical state.
+
+## SYNC-06 refinement and catalog boundary
+
+`SYNC-06` is now conditional Generation/Learned State reuse compatibility/binding.
+
+This reinforces existing boundaries:
 
 ```text
-SYNC-03  Constraint binding/handling
-SYNC-04  Learning operational realization
-SYNC-07  Generation operational realization
-SYNC-11  Evaluation operational realization
-SYNC-13  evidence-gated Generation/Evidence handoff
-SYNC-14  Provenance recording
+Generation owns reuse decision/binding
+Learned State owns intrinsic result/restrictions
 ```
 
-`SYNC-08` is retired from active composition because synthetic output is Generation-owned result state. This reinforces rather than changes the existing catalog boundary: no standalone Output concept is introduced.
+Direct Generation does not need Learned State and does not activate `SYNC-06`.
 
-`SYNC-15` is reclassified as the cross-cutting Reproducibility Contract. No standalone Reproducibility concept is introduced.
+No intermediary Model/Artifact/Compatibility concept is introduced.
 
-No `SYNC-16` or missing concept is justified by the replay.
+## Retired/reclassified IDs
 
-## Current contraction/extension result
+`SYNC-08` remains retired because output promotion is Generation-local behavior and Output remains non-conceptual under current scope.
 
-009-D confirms that concept optionality across the family does not weaken concept boundaries.
+`SYNC-15` remains the cross-cutting Reproducibility Contract; no Reproducibility concept/state owner is introduced.
 
-Removing a prerequisite forces dependent contraction; removing Generation, Constraint, Execution, or Provenance can instead be capability-only contraction when remaining family rules are satisfied.
+No `SYNC-16` is justified.
 
-Ordinary extension uses current concepts plus closure/side constraints. Fresh discovery remains required when new scope introduces a genuinely independent purpose/state/action lifecycle.
+## Hidden-coordinator finding
+
+009-F finds no missing concept behind synchronization for:
+
+- Compatibility / Validation / Readiness;
+- Workflow / Run;
+- Promotion / Artifact;
+- Quality / Approval;
+- Reproducibility;
+- Composition / Synchronization status.
+
+If later design actually requires independent purpose/state/actions for such a candidate, rediscovery must reopen rather than creating shadow infrastructure authority.
 
 ## Future rediscovery triggers
 
-The catalog is not permanently frozen. Fresh Jackson-style discovery remains required before materially expanded scope such as:
+Fresh Jackson-style discovery remains required before materially expanded scope such as:
 
 - composable formal privacy/accounting;
 - product-owned governance/release decisions;
 - independently reusable/negotiable request or cohort definitions;
 - independent synthetic-output publication/versioning/retirement/transformation lifecycle;
-- arbitrary graph/recursive topology that creates independent relationship behavior beyond current structural semantics;
+- arbitrary graph/recursive topology that creates independent relationship behavior;
 - product-owned economic/resource allocation/budget/quota management.
 
 Implementation objects, IDs, tables, services, manifests or status enums do not themselves justify a concept.
 
 ## Authority rule
 
-The individual concept specifications plus current Phase 008 normalization/consolidation authorities remain upstream of Phase 009 composition and downstream architecture.
+No implementation resource or architecture dependency may redefine concept ownership or synchronization merely because it exists.
 
-No implementation resource or architecture dependency may redefine a concept boundary or synchronization merely because it exists.
-
-A synchronization does not imply one package/module/service/event/transaction boundary.
+Synchronization trigger/precondition/postcondition semantics do not imply one package/module/service/event/transaction boundary.
 
 ## Current next boundary
 
-**009-F — Synchronization Trigger, Preconditions/Postconditions, State Ownership & Hidden-Coordinator Audit**.
+**009-G — Composition Economy, Coupling, Synergy & Integrity Closure**.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
