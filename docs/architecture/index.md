@@ -22,7 +22,8 @@ Phase 009                    ACTIVE
 009-B                        COMPLETE
 009-C                        COMPLETE
 009-D                        COMPLETE
-009-E                        NEXT ELIGIBLE
+009-E                        COMPLETE
+009-F                        NEXT ELIGIBLE
 architecture corpus          RETAINED AS DOWNSTREAM DESIGN EVIDENCE
 architecture reconciliation  PLANNED FOR PHASE 013
 implementation readiness     NOT READY
@@ -30,59 +31,58 @@ implementation start         NOT STARTED
 implementation next          NOT YET
 ```
 
-## Current upstream dependence/application-family authority
+## Current upstream authority
 
-- [009-A Pairwise Inclusion Inventory](../dependence/inclusion-dependence-pairwise-inventory.md)
-- [009-B Canonical Inclusion Graph & Ordering](../dependence/inclusion-dependence-graph-ordering.md)
-- [009-C Application Family & Valid Subsets](../dependence/application-family-valid-subsets.md)
+- [Concept Dependence & Application Family](../dependence/index.md)
 - [009-D Contraction & Extension Consequences](../dependence/contraction-extension-consequences.md)
+- [Current Synchronization Authority](../synchronizations/index.md)
+- [009-E Synchronization Inventory Revalidation](../synchronizations/application-family-revalidation.md)
 
-The current upstream design now closes D1-D4: inclusion dependence, application family, explanation ordering, and add/remove consequences.
+Current synchronization result:
 
-## Architecture must not infer technical topology from the family
+```text
+historical SYNC IDs                  15
+active cross-concept synchronizations 13
+retired concept-local               SYNC-08
+reclassified contract               SYNC-15
+new synchronization                 NONE
+```
 
-A coherent concept-family member, contraction, or extension is not automatically:
+## Architecture must not infer technical topology from synchronization
 
-- a package/module;
-- a service;
-- a database/schema boundary;
-- an aggregate/transaction boundary;
-- an installable extra;
-- a deployment profile;
-- a feature flag;
-- a product edition/SKU.
+A conceptual synchronization is not automatically:
 
-Architecture must not reinterpret application-family results from existing package imports, dataflow, scheduler dependencies, service calls, persistence references, or deployment topology.
+- a service or process boundary;
+- an event/message type;
+- a distributed transaction/saga;
+- a queue/topic;
+- an API call direction;
+- a schema/foreign-key edge;
+- a package/module dependency;
+- a runtime scheduler edge;
+- a deployment unit.
 
-## Consequence authority is not architecture mutation authority
+`SYNC-08` being retired from composition does not authorize deleting output-related implementation; its semantics remain Generation-owned. `SYNC-15` being reclassified does not weaken reproducibility requirements; they remain a cross-cutting contract.
 
-009-D may say that a concept disappears from one valid family member or is required by another capability. That does **not** authorize removing, splitting, or creating implementation components before Phase 013 reconciliation.
+## Current family boundaries remain upstream
 
-Likewise, ordinary family extension through existing concepts does not imply an implementation plug-in/package boundary.
-
-Fresh concept discovery triggers are conceptual scope warnings, not architecture backlog instructions.
-
-## Strongly connected components are not architecture mergers
-
-The current inclusion components remain:
+The inclusion components remain:
 
 ```text
 { Learning, Learned State }
 { Evaluation, Evidence }
 ```
 
-They express application-level co-inclusion while preserving distinct concept purposes and state/action ownership.
+They do not imply architecture mergers.
 
-Architecture must not infer from these cycles that either pair belongs in one service, one package, one schema, one aggregate, one transaction, or one object lifecycle.
-
-## Non-binary prerequisite boundary
+Execution and Provenance retain non-binary family semantics:
 
 ```text
 Execution => Learning OR Generation OR Evaluation
 Provenance => at least one meaningful provenance-bearing relationship
 ```
 
-These remain concept-family semantics, not generic Workflow/Metadata service mandates.
+These do not mandate generic Workflow/Metadata services.
 
 ## Phase 007 architecture status
 
@@ -92,9 +92,9 @@ It remains subject to Phase 013 reconciliation after Jackson concept design is c
 
 ## Authority rule during Phases 009-012
 
-Architecture may provide feasibility evidence, representation pressure, counterexamples and misfits. It may not veto upstream corrections, define application-family membership from runtime/module structure, or trigger implementation while design is incomplete.
+Architecture may provide feasibility evidence, representation pressure, counterexamples and misfits. It may not veto upstream corrections, define synchronization membership from runtime/module structure, or trigger implementation while design is incomplete.
 
-009-E now owns synchronization inventory replay across the completed family/consequence authority.
+009-F must now close trigger/precondition/postcondition/state-owner/hidden-coordinator design for the 13 active synchronizations before 009-G composition economy/integrity review.
 
 ## Phase 013 obligation
 
@@ -112,4 +112,4 @@ IMPLEMENTATION NEXT        NOT YET
 
 ## Current next boundary
 
-**009-E — Synchronization Inventory Revalidation Across the Application Family**.
+**009-F — Synchronization Trigger, Preconditions/Postconditions, State Ownership & Hidden-Coordinator Audit**.
