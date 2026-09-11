@@ -12,25 +12,21 @@ Start with:
 - `docs/authority/design-methodology.md`
 - `docs/authority/jackson-design-completion-implementation-hold.md`
 - `docs/authority/jackson-methodology-completion-matrix.md`
-- `docs/problem/index.md`
-- `docs/concepts/index.md`
 - `docs/concepts/phase-008-individual-concept-consolidation.md`
-- `docs/synchronizations/index.md`
-- `docs/phases/009/009-entry-decomposition.md`
+- `docs/dependence/index.md`
+- `docs/dependence/inclusion-dependence-pairwise-inventory.md`
 - `docs/phases/009/index.md`
-
-Phase 007 architecture is downstream evidence only until Phase 013 reconciliation.
 
 Current state:
 
 ```text
 accepted concepts          11
 accepted synchronizations  15
-current desired outcomes   16
 Phase 008                  COMPLETE
-individual concept design  COMPLETE ENOUGH FOR PHASE 009
 Phase 009                  ACTIVE
-009-A                      NEXT ELIGIBLE
+009-A                      COMPLETE
+009-B                      NEXT ELIGIBLE
+D1                         PARTIAL — PAIRWISE INVENTORY COMPLETE; GRAPH PENDING
 Jackson design completion  IN PROGRESS
 implementation readiness   NOT READY
 implementation start       NOT STARTED
@@ -39,113 +35,89 @@ implementation next        NOT YET
 
 ## Primary rule
 
-> **Complete the design before making implementation ready. Existing architecture, code, tests or implementation plans may expose misfits, but they may not veto upstream concept-design correction.**
+> **Complete the design before making implementation ready. Existing architecture, code, tests or plans may expose misfits, but they may not veto upstream concept-design correction.**
 
-## Phase 008 authority to preserve
+## 009-A authority to preserve
 
-Phase 008-A through 008-H provide current individual-concept authority for problem/purpose, state/history/invariants, actions/queries/transitions, operational principles, independence/genericity/familiarity/reuse, catalog perimeter and consolidation.
+Jackson inclusion dependence asks:
 
-The catalog remains eleven concepts. The fifteen synchronization IDs are the current Phase 009 starting set, not a final composition result.
+> If concept C1 is included in an application, does C1 make sense only if concept C2 is also included?
 
-Core distinctions include:
+It is not equivalent to reference, validation, production, runtime, provenance, synchronization, import, storage or service dependency.
 
-```text
-Data Meaning          != Constraint
-Synthesis Strategy    != implementation/plugin/runtime
-Learning              != Learned State
-Learning/Generation/
-Evaluation             != Execution
-Generation Condition  != Constraint
-Evaluation Criterion  != Evaluation != Evidence
-Evidence               != Provenance
-Execution              != Attempt != platform job
-```
-
-Generation currently owns completed logical synthetic-output result semantics. Relationship remains Data Meaning-owned descriptive structural semantics. Generic Privacy remains rejected; future mechanism-specific capabilities such as composable DP require fresh concept discovery before implementation. Use/Release Decision remains external authority.
-
-## Phase 009 active boundary
-
-Phase 009 is decomposed as:
+009-A classified all 110 directed non-self pairs:
 
 ```text
-009-A  Inclusion-Dependence Semantics, Evidence Rules & Pairwise Relation Inventory
-009-B  Inclusion-Dependence Graph, Roots, Cycles & Explanation Ordering
-009-C  Application Family, Valid Concept Subsets & Minimal Coherent Variants
-009-D  Contraction, Extension, Concept Addition/Removal & Product-Scope Consequences
-009-E  Synchronization Inventory Revalidation Across the Application Family
-009-F  Synchronization Trigger, Preconditions/Postconditions, State Ownership & Hidden-Coordinator Audit
-009-G  Composition Economy, Coupling, Synergy & Integrity Closure
-009-H  Phase 009 Consolidation, Dependence/Composition Completion Decision & Phase 010 Handoff
+D  12 universal dependence candidates
+C  43 conditional/disjunctive relations
+N  55 no universal dependence
+I   0 insufficient
 ```
 
-009-A is the only next eligible subgroup.
-
-## Inclusion-dependence rule
-
-For concepts `C1` and `C2` in an application variant:
-
-> **Does including C1 make sense only if C2 is also included?**
-
-Do not substitute any of the following for that question:
-
-- reference/binding;
-- contextual validation;
-- production/result establishment;
-- operational/runtime realization;
-- authority or authorization relation;
-- provenance/history relation;
-- import/package dependency;
-- service call/dataflow/storage relation.
-
-Historical Phase 001-G dependency taxonomy is supporting evidence only.
-
-## Phase 009 sequencing rule
-
-Do not replay synchronization closure before application-family structure exists.
-
-The required sequence is:
+Universal candidates are:
 
 ```text
-pairwise inclusion dependence
-  ↓
-canonical graph / explanation order
-  ↓
-valid application-family subsets
-  ↓
-add/remove / contraction-extension consequences
-  ↓
-synchronization inventory replay
-  ↓
-trigger / ownership / pre-post audit
-  ↓
-composition economy / synergy / integrity
-  ↓
-consolidation
+Learning      -> Data Meaning
+Learning      -> Synthesis Strategy
+Learning      -> Learned State
+Learned State -> Learning
+Learned State -> Data Meaning
+Learned State -> Synthesis Strategy
+Generation    -> Data Meaning
+Generation    -> Synthesis Strategy
+Evaluation    -> Evaluation Criterion
+Evaluation    -> Evidence
+Evidence      -> Evaluation Criterion
+Evidence      -> Evaluation
 ```
 
-The existing fifteen synchronizations may remain, become conditional/narrower, be removed as redundant, or expose a genuine missing coordination rule. Do not retain a synchronization solely for historical ID stability and do not invent `SYNC-16` for symmetry.
+009-A does **not** decide direct versus transitive edges.
 
-## Stop/reopen classes
+Two mutual-dependence candidates require 009-B analysis:
 
-Follow J0-J7 in the completion matrix. Reopen the smallest affected upstream authority for a real defect.
+```text
+Learning   <-> Learned State
+Evaluation <-> Evidence
+```
 
-For Phase 009:
+Do not merge these concepts merely because the pairwise relation is cyclic; Phase 008 independently established their purposes/boundaries.
 
-- J1 — reopen the smallest Phase 008 concept-specification authority;
-- J2 — reopen purpose/boundary/catalog authority as appropriate;
-- J3 — repair dependence/composition/synchronization within Phase 009 unless it proves a J1/J2 cause;
-- J4 — defer true mapping defects to Phase 010;
-- J5 — record final-quality issues for Phase 011 unless severe enough to invalidate Phase 009.
+Execution has a disjunctive one-of prerequisite across `{Learning, Generation, Evaluation}`. Provenance has a non-binary provenance-subject prerequisite. Do not flatten either into false universal graph edges.
+
+## Current 009-B boundary
+
+**009-B — Inclusion-Dependence Graph, Roots, Cycles & Explanation Ordering** is next eligible.
+
+009-B must determine:
+
+- direct versus transitive dependence;
+- treatment of the two mutual-dependence candidates;
+- representation of conditional/disjunctive prerequisites;
+- graph roots/leaves;
+- dependence-derived explanation/design ordering;
+- whether graph pressure exposes a J2 concept-boundary defect.
+
+Do not infer graph directness from file references, synchronizations, imports, package structure, APIs, persistence, or runtime topology.
+
+## Stop/reopen discipline
+
+Follow J0-J7 in the methodology matrix. Reopen the smallest affected upstream authority for a real defect.
+
+- J1 local concept defect → Phase 008 concept authority;
+- J2 purpose/boundary/catalog defect → Phase 008-B/F/G as appropriate;
+- J3 dependence/composition defect → repair in Phase 009 unless it proves an upstream cause.
 
 ## What agents may do now
 
-For 009-A, agents may perform design-only pairwise inclusion-dependence analysis using current concept purposes, absence consequences, operational principles and no-occurrence counterexamples.
+For 009-B, agents may use Phase 009-A pairwise evidence to derive the canonical inclusion graph, strongly connected clusters, direct/transitive reduction, roots/leaves and explanation ordering.
 
-Architecture/source/tests may be inspected only as feasibility or misfit evidence, not as authority over the dependence graph.
+Architecture/source/tests may be inspected only as counterexample/feasibility evidence, not graph authority.
 
 ## What agents must not do until Phase 014 passes
 
-Do not add production behavior, implementation APIs, persistence/data-plane schemas, Spark/runtime/model/platform/security adapters, recovery implementations, Evidence/Provenance implementations, reference Strategies, privacy mechanisms, runtime/build dependencies for future capability, package-topology changes, or executable architecture/fitness restrictions merely to freeze evolving design.
+Do not add production behavior, implementation APIs, persistence/data-plane schemas, Spark/runtime/model/platform/security adapters, recovery implementations, Evidence/Provenance implementations, reference Strategies, privacy mechanisms, runtime/build dependencies, package-topology changes, or executable architecture restrictions merely to freeze evolving design.
+
+Do not change module/package dependencies to mirror 009-A/009-B concept dependence.
 
 Do not repair stale implementation tests solely to make implementation appear ready.
 
@@ -157,10 +129,10 @@ Phases 009-013 retain:
 NOT READY / NOT STARTED / NOT YET
 ```
 
-Only Phase 014 may make the final whole-design readiness decision. Even then, implementation itself requires a later explicit Phase 015.
+Only Phase 014 may make the final whole-design readiness decision; implementation itself still requires Phase 015.
 
 ## Current next boundary
 
-**009-A — Inclusion-Dependence Semantics, Evidence Rules & Pairwise Relation Inventory**.
+**009-B — Inclusion-Dependence Graph, Roots, Cycles & Explanation Ordering**.
 
 Do not begin implementation work.
