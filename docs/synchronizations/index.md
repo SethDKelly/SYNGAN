@@ -22,9 +22,9 @@ SYNC-16                        NOT CURRENTLY JUSTIFIED
 
 The fifteen rules are the current Phase 009 starting set, not a final composition claim.
 
-## Relationship to current dependence authority
+## Relationship to current dependence/application-family authority
 
-009-A established the pairwise inclusion inventory and 009-B established the canonical direct/transitive graph.
+009-A established the pairwise inclusion inventory, 009-B established the canonical direct/transitive graph, and 009-C established the current application family.
 
 Current universal graph summary:
 
@@ -35,11 +35,21 @@ Current universal graph summary:
  2 legitimate strongly connected components
 ```
 
+Current family rule:
+
+```text
+valid family member
+  = non-empty graph-closed concept subset
+  + Execution one-of rule when Execution is present
+  + Provenance relationship witness when Provenance is present
+  + all capability-specific prerequisites
+```
+
 A synchronization does **not** prove an inclusion-dependence edge merely because two concepts coordinate.
 
-Likewise, a dependence edge does not itself prove that a synchronization is necessary. Dependence answers whether concepts must be included together; synchronization answers how already-independent concept behavior coordinates.
+Likewise, a dependence edge or valid family subset does not itself prove that a synchronization is necessary. Dependence answers whether concepts belong together; application-family analysis says which combinations are coherent; synchronization answers how included concept behavior coordinates.
 
-009-C/D must first derive the actual application family and contraction/extension consequences. Only after that may 009-E replay SYNC-01 through SYNC-15 across valid variants and decide whether each rule is universal when participants are present, application-family conditional, too broad, redundant, or missing a genuine coordination obligation.
+009-D must still close contraction/extension consequences. Only after that may 009-E replay SYNC-01 through SYNC-15 across the family and decide whether each rule is universal when participants are present, application-family conditional, too broad, redundant, or missing a genuine coordination obligation.
 
 ## Strongly connected component boundary
 
@@ -50,18 +60,23 @@ The current inclusion SCCs are:
 { Evaluation, Evidence }
 ```
 
-These SCCs do not imply synchronization/state-owner merger. Existing production synchronizations must still preserve separate activity/result state ownership when 009-E/F replay them.
+These SCCs do not imply synchronization/state-owner merger. Existing production synchronizations must preserve separate activity/result state ownership when 009-E/F replay them.
 
-## Non-binary application-family constraints
-
-Execution and Provenance demonstrate why synchronization replay remains downstream of 009-C:
+## Application-family constraints relevant to later synchronization replay
 
 ```text
 Execution => Learning OR Generation OR Evaluation
+
 Provenance => at least one meaningful provenance-bearing relationship
+
+learned-state-assisted Generation
+  => L-KERNEL + Generation
+
+evaluation-gated Generation
+  => G-KERNEL + E-KERNEL
 ```
 
-These cannot be represented correctly as universal pairwise edges and may make synchronization applicability conditional across variants.
+Optional Constraint support, durable operational lifecycle, and Provenance/history capability may make synchronization applicability conditional across variants.
 
 ## Historical dependency taxonomy retained as evidence
 
@@ -79,6 +94,8 @@ These are composition evidence, not Jackson inclusion dependence by themselves.
 ## Current catalog/topology boundary
 
 `Relationship` is not a standalone accepted concept. Structural relationship/order semantics remain Data Meaning; prescriptive topology validity remains Constraint; request-specific topology remains Generation.
+
+Text-bearing structured data likewise does not introduce a synchronization merely because a tokenizer/model/runtime representation exists.
 
 ## Core composition guardrails
 
@@ -98,8 +115,8 @@ These are composition evidence, not Jackson inclusion dependence by themselves.
 ```text
 009-A  COMPLETE — pairwise inclusion inventory
 009-B  COMPLETE — canonical graph / SCCs / ordering
-009-C  NEXT — application family / valid subsets
-009-D  contraction / extension
+009-C  COMPLETE — application family / valid subsets
+009-D  NEXT — contraction / extension / add-remove consequences
 009-E  synchronization inventory replay
 009-F  trigger / state ownership / hidden coordinator
 009-G  economy / synergy / integrity
@@ -108,6 +125,6 @@ These are composition evidence, not Jackson inclusion dependence by themselves.
 
 ## Current next boundary
 
-**009-C — Application Family, Valid Concept Subsets & Minimal Coherent Variants**.
+**009-D — Contraction, Extension, Concept Addition/Removal & Product-Scope Consequences**.
 
 The synchronization set remains unchanged until its explicit 009-E replay unless an earlier genuine J2/J3 defect requires reopening.
