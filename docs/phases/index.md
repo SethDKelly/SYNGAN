@@ -43,8 +43,8 @@ JACKSON CONCEPT DESIGN      NOT COMPLETE
 009-A  COMPLETE — inclusion-dependence semantics / pairwise relation inventory
 009-B  COMPLETE — canonical graph / roots / cycles / explanation ordering
 009-C  COMPLETE — application family / valid subsets / minimal coherent variants
-009-D  NEXT ELIGIBLE — contraction / extension / add-remove consequences
-009-E  PLANNED — synchronization inventory replay
+009-D  COMPLETE — contraction / extension / add-remove consequences
+009-E  NEXT ELIGIBLE — synchronization inventory replay
 009-F  PLANNED — synchronization trigger / ownership / hidden coordinator
 009-G  PLANNED — composition economy / synergy / integrity
 009-H  PLANNED — consolidation / Phase 010 handoff
@@ -56,12 +56,12 @@ Current methodology state:
 D1  CURRENTLY CLOSED
 D2  CURRENTLY CLOSED
 D3  CURRENTLY CLOSED
-D4  PARTIAL TO STRONG
+D4  CURRENTLY CLOSED
 ```
 
-009-C establishes the rule-defined application family, including authority-only contractions, Learning/Generation/Evaluation kernels, Execution/Provenance side constraints, capability-conditional extensions, topology/text probes, and representative invalid subsets.
+009-A through 009-D now close the dependence/application-family portion of Phase 009. The current family has a canonical graph, coherent valid subsets/minima, explicit non-binary constraints, and systematic contraction/extension consequences.
 
-009-D must now close the systematic contraction/extension consequences before synchronization replay begins.
+009-E must now replay the fifteen synchronization candidates against those family variants before detailed trigger/ownership normalization in 009-F.
 
 ## Later design phases
 
@@ -99,4 +99,4 @@ Placeholder only; not ready, not active and not next.
 
 ## Current next boundary
 
-**009-D — Contraction, Extension, Concept Addition/Removal & Product-Scope Consequences**.
+**009-E — Synchronization Inventory Revalidation Across the Application Family**.
