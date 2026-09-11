@@ -25,35 +25,40 @@ IMPLEMENTATION NEXT        NOT YET
 - [009-B — Inclusion-Dependence Graph, Roots, Cycles & Explanation Ordering](009-B-inclusion-dependence-graph-roots-cycles-explanation-ordering.md)
 - [009-C — Application Family, Valid Concept Subsets & Minimal Coherent Variants](009-C-application-family-valid-concept-subsets-minimal-coherent-variants.md)
 - [009-D — Contraction, Extension, Concept Addition/Removal & Product-Scope Consequences](009-D-contraction-extension-concept-addition-removal-product-scope-consequences.md)
+- [009-E — Synchronization Inventory Revalidation Across the Application Family](009-E-synchronization-inventory-revalidation-across-application-family.md)
 - [Current Concept Dependence & Application Family Authority](../../dependence/index.md)
-- [Accepted Synchronizations](../../synchronizations/index.md)
+- [Current Synchronization Authority](../../synchronizations/index.md)
 - [Jackson Methodology Completion Matrix](../../authority/jackson-methodology-completion-matrix.md)
 
 ## Current baseline
 
 ```text
-accepted concepts          11
-accepted synchronizations  15
-current desired outcomes   16
-Phase 008                  COMPLETE
-Phase 009                  ACTIVE
-009-A                      COMPLETE
-009-B                      COMPLETE
-009-C                      COMPLETE
-009-D                      COMPLETE
-009-E                      NEXT ELIGIBLE
-D1                         CURRENTLY CLOSED
-D2                         CURRENTLY CLOSED
-D3                         CURRENTLY CLOSED
-D4                         CURRENTLY CLOSED
-E1-E3                      STRONG EVIDENCE / REVALIDATION REQUIRED
-E4                         PARTIAL
-E5                         PARTIAL TO STRONG
+accepted concepts                    11
+historical synchronization IDs       15
+active synchronizations              13
+current desired outcomes             16
+Phase 008                            COMPLETE
+Phase 009                            ACTIVE
+009-A                                COMPLETE
+009-B                                COMPLETE
+009-C                                COMPLETE
+009-D                                COMPLETE
+009-E                                COMPLETE
+009-F                                NEXT ELIGIBLE
+D1                                   CURRENTLY CLOSED
+D2                                   CURRENTLY CLOSED
+D3                                   CURRENTLY CLOSED
+D4                                   CURRENTLY CLOSED
+E1                                   CURRENTLY CLOSED
+E2                                   STRONG EVIDENCE / REVALIDATION REQUIRED
+E3                                   STRONG EVIDENCE / REVALIDATION REQUIRED
+E4                                   PARTIAL
+E5                                   PARTIAL TO STRONG
 ```
 
 ## D1-D4 dependence/application-family result
 
-009-A through 009-D now close the current Jackson dependence/application-family obligations:
+009-A through 009-D close the current Jackson dependence/application-family obligations:
 
 ```text
 D1  canonical application inclusion-dependence graph
@@ -79,25 +84,49 @@ E-KERNEL = Evaluation Criterion + Evaluation + Evidence
 
 Execution and Provenance retain non-binary family prerequisites.
 
-## 009-D consequence result
+## 009-E synchronization inventory result
 
-Systematic contraction now distinguishes:
+The historical fifteen synchronization IDs replay into thirteen active cross-concept synchronizations:
 
 ```text
-closure-breaking prerequisites
-  Data Meaning / Strategy / Criterion
-
-SCC contraction
-  Learning <-> Learned State
-  Evaluation <-> Evidence
-
-capability-only contraction
-  Generation / Constraint / Execution / Provenance
+historical IDs                      15
+active synchronizations             13
+  required-relational                7
+  capability/occurrence conditional  6
+retired concept-local                1  SYNC-08
+reclassified cross-cutting contract  1  SYNC-15
+new synchronization                  0
+SYNC-16                              NOT JUSTIFIED
 ```
 
-Removing Data Meaning or Strategy prevents current Learning/Learned State and Generation from remaining. Removing Criterion prevents Evaluation/Evidence. Removing one SCC member removes the other. Constraint, Execution and Provenance can be removed without universal dependent removal, but their capabilities disappear and may not be hidden elsewhere.
+### Active required-relational
 
-Ordinary family extension adds accepted concepts with required closure. Fresh discovery is reserved for genuinely new independent functionality, including current explicit triggers such as formal composable privacy/accounting, product-owned release governance, reusable request/cohort lifecycle, independent output lifecycle, arbitrary graph-topology behavior, and product-owned resource/economic governance.
+```text
+SYNC-01  Data Meaning revision binding
+SYNC-02  Strategy selection and compatibility
+SYNC-05  Learning produces Learned State
+SYNC-06  Generation commitment and compatibility
+SYNC-09  Evaluation Criterion binding
+SYNC-10  Evaluation method compatibility
+SYNC-12  Evaluation produces Evidence
+```
+
+### Active capability/occurrence-conditional
+
+```text
+SYNC-03  Constraint binding and handling disposition
+SYNC-04  Learning operational realization
+SYNC-07  Generation operational realization
+SYNC-11  Evaluation operational realization
+SYNC-13  Generation/Evidence handoff for evidence-gated completion
+SYNC-14  Provenance recording at material transitions
+```
+
+`SYNC-08` is retired from the synchronization inventory because completed synthetic output is Generation-owned local result state, not a second accepted concept.
+
+`SYNC-15` is reclassified as the cross-cutting Reproducibility Contract rather than one distinct concept-to-concept synchronization.
+
+Historical IDs remain reserved and are not renumbered/reused.
 
 ## Subgroups
 
@@ -106,9 +135,9 @@ Ordinary family extension adds accepted concepts with required closure. Fresh di
 | **009-A** | Inclusion-Dependence Semantics, Evidence Rules & Pairwise Relation Inventory | **complete** |
 | **009-B** | Inclusion-Dependence Graph, Roots, Cycles & Explanation Ordering | **complete** |
 | **009-C** | Application Family, Valid Concept Subsets & Minimal Coherent Variants | **complete** |
-| **009-D** | [Contraction, Extension, Concept Addition/Removal & Product-Scope Consequences](009-D-contraction-extension-concept-addition-removal-product-scope-consequences.md) | **complete** |
-| **009-E** | **Synchronization Inventory Revalidation Across the Application Family** | **next eligible** |
-| **009-F** | Synchronization Trigger, Preconditions/Postconditions, State Ownership & Hidden-Coordinator Audit | planned |
+| **009-D** | Contraction, Extension, Concept Addition/Removal & Product-Scope Consequences | **complete** |
+| **009-E** | [Synchronization Inventory Revalidation Across the Application Family](009-E-synchronization-inventory-revalidation-across-application-family.md) | **complete** |
+| **009-F** | **Synchronization Trigger, Preconditions/Postconditions, State Ownership & Hidden-Coordinator Audit** | **next eligible** |
 | **009-G** | Composition Economy, Coupling, Synergy & Integrity Closure | planned |
 | **009-H** | Phase 009 Consolidation, Dependence/Composition Completion Decision & Phase 010 Handoff | planned |
 
@@ -123,30 +152,32 @@ Ordinary family extension adds accepted concepts with required closure. Fresh di
   ↓
 009-D COMPLETE
   ↓
-009-E NEXT
+009-E COMPLETE
   ↓
-009-F
+009-F NEXT
   ↓
 009-G
   ↓
 009-H
 ```
 
-## 009-E obligation
+## 009-F obligation
 
-009-E must replay SYNC-01 through SYNC-15 against the completed application family and contraction/extension authority.
+009-F must audit the **13 active synchronization rules** established by 009-E.
 
-For each rule it must decide whether it is:
+For each active rule it must normalize and test:
 
-- universal whenever its participating concepts/capability are present;
-- application-family conditional;
-- over-broad;
-- redundant with concept-local reference/query behavior;
-- under-specified;
-- unjustified;
-- or evidence that a genuinely new synchronization is required.
+- trigger/initiating conceptual action;
+- participating actions and queries;
+- preconditions;
+- effects/postconditions;
+- failure and indeterminate behavior;
+- exact historical binding where material;
+- one canonical state owner per fact;
+- whether any shadow state or hidden coordinator is implied;
+- whether application-family conditionality is represented explicitly.
 
-No synchronization may recreate semantics owned by a concept absent from a valid contraction.
+009-F must not resurrect `SYNC-08` or `SYNC-15` merely for historical symmetry.
 
 ## Phase 009 exit target
 
@@ -163,4 +194,4 @@ IMPLEMENTATION NEXT          NOT YET
 
 ## Current next boundary
 
-**009-E — Synchronization Inventory Revalidation Across the Application Family** is next eligible.
+**009-F — Synchronization Trigger, Preconditions/Postconditions, State Ownership & Hidden-Coordinator Audit** is next eligible.
