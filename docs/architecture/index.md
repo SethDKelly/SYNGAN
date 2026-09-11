@@ -18,14 +18,9 @@ Current governing authority: [Jackson Design Completion & Implementation Hold](.
 
 ```text
 Jackson concept design       IN PROGRESS
-Phase 008-A                  COMPLETE
-Phase 008-B                  COMPLETE
-Phase 008-C                  COMPLETE
-Phase 008-D                  COMPLETE
-Phase 008-E                  COMPLETE
-Phase 008-F                  COMPLETE
-Phase 008-G                  COMPLETE
-Phase 008-H                  NEXT ELIGIBLE
+Phase 008                    COMPLETE
+individual concept design    COMPLETE ENOUGH FOR PHASE 009
+Phase 009                    NEXT ELIGIBLE / NOT YET DECOMPOSED
 architecture corpus          RETAINED AS DOWNSTREAM DESIGN EVIDENCE
 architecture reconciliation  PLANNED FOR PHASE 013
 implementation readiness     NOT READY
@@ -35,27 +30,31 @@ implementation next          NOT YET
 
 ## Relationship to current concept authority
 
-Phase 008-B through 008-G now provide current individual-concept/catalog-perimeter authority for purpose, state/history, behavior, operational principles, independence, bounded genericity, naming/familiarity, reuse and excluded-candidate disposition.
+[Phase 008 Individual-Concept Design Consolidation](../concepts/phase-008-individual-concept-consolidation.md) is now the consolidated upstream authority for the individual-concept foundation.
 
-008-G explicitly re-tested architecture-shaped candidates such as Artifact/Dataset identity, authority epochs/fences, manifests/candidates/seals, runtime bindings, dependency-resolution records, AuthorizationDecision/CapabilityGrant/SecretRef, platform capability descriptors, telemetry/support records and storage/checkpoint/report structures.
+Phase 008 explicitly re-tested architecture-shaped candidates such as Artifact/Dataset identity, authority epochs/fences, manifests/candidates/seals, runtime bindings, dependency-resolution records, AuthorizationDecision/CapabilityGrant/SecretRef, platform capability descriptors, telemetry/support records and storage/checkpoint/report structures.
 
 They remain downstream realization or security/integration structures, not concepts merely because they are typed, durable or important to correctness.
 
-Where retained Phase 004/006/007 architecture uses those structures, it remains valuable evidence but cannot promote them into concept authority by existence.
-
-## Catalog-perimeter consequences for architecture
-
-Current architecture must continue to preserve these upstream boundaries until Phase 013 reconciliation:
+Current architecture must continue to preserve these upstream boundaries:
 
 - descriptive topology/relationship semantics belong to Data Meaning rather than a hidden Relationship resource owner;
 - candidate/completed synthetic output is Generation-owned result semantics rather than a generic Output/Artifact concept;
 - Attempt/checkpoint/recovery structures remain subordinate to Execution/domain continuity;
 - dependency/runtime/security records do not become Strategy, Provenance or new domain authority;
-- future composable DP would require fresh concept discovery before architecture/implementation;
+- future composable DP requires fresh concept discovery before architecture/implementation;
 - external Use/Release Decision must not become `approved` state on Generation or Evidence;
 - reports/views/exports are mapping/security concerns, not new domain concepts.
 
-008-H will consolidate the individual-concept stage. It does not reconcile architecture.
+## Phase 009 relationship
+
+Phase 009 must reason about **concept inclusion dependence and composition**, not architecture dependencies.
+
+Package imports, persistence references, runtime service calls, dataflow edges, transaction ordering, scheduler dependencies, deployment topology and platform capability requirements do not establish Jackson inclusion dependence by themselves.
+
+Architecture may expose a misfit during Phase 009, but it cannot define the application-family/dependence graph merely because one implementation arrangement already exists.
+
+The existing fifteen synchronizations are current concept-design authority/evidence, but Phase 009 must replay their composition, state ownership, economy and integrity under the actual inclusion-dependence/application-family model.
 
 ## Phase 007 architecture status
 
@@ -63,9 +62,9 @@ The [Phase 007 Consolidated Architecture Contract](phase-007-consolidated-archit
 
 It remains subject to Phase 013 reconciliation after Jackson concept design is completed in Phase 012.
 
-## Authority rule during Phases 008-012
+## Authority rule during Phases 009-012
 
-Architecture may provide feasibility evidence, representation pressure, counterexamples and misfits. It may not veto upstream corrections, turn implementation roles into concepts, redefine accepted concept state/actions, convert familiar implementation nouns into concept boundaries, or trigger implementation while design is incomplete.
+Architecture may provide feasibility evidence, representation pressure, counterexamples and misfits. It may not veto upstream corrections, turn implementation roles into concepts, redefine accepted concept state/actions, define inclusion dependence from runtime/module structure, convert familiar implementation nouns into concept boundaries, or trigger implementation while design is incomplete.
 
 ## Phase 013 obligation
 
@@ -85,4 +84,4 @@ IMPLEMENTATION NEXT        NOT YET
 
 ## Current next boundary
 
-**008-H — Phase 008 Consolidation, Individual-Concept Completeness Decision & Phase 009 Handoff**.
+**Phase 009 — Concept Dependence, Application Family, Composition & Synchronization Closure** is next eligible and not yet subdivided.
