@@ -17,12 +17,13 @@ These documents define how SYNGAN design knowledge is created, interpreted, chan
 - [Terminology Policy](terminology-policy.md)
 - [Source & Provenance Policy](source-provenance-policy.md)
 
-Current individual-concept normalization authority:
+Current individual-concept and catalog-perimeter authority:
 
 - [Concept State, Identity, History & Invariant Normalization](../concepts/state-identity-history-invariant-normalization.md)
 - [Concept Action, Query, Preconditions/Postconditions & Lifecycle Normalization](../concepts/action-query-lifecycle-normalization.md)
 - [Operational Principle, Purpose Fulfillment & Counterexample Normalization](../concepts/operational-principle-purpose-counterexample-normalization.md)
 - [Concept Independence, Genericity, Familiarity & Reuse Normalization](../concepts/independence-genericity-familiarity-reuse-normalization.md)
+- [Catalog Perimeter Candidate Rediscovery, Missing-Concept & Boundary Audit](../concepts/catalog-perimeter-candidate-rediscovery-boundary-audit.md)
 
 ## Current posture
 
@@ -38,7 +39,8 @@ Phase 008                  ACTIVE
 008-D                      COMPLETE
 008-E                      COMPLETE
 008-F                      COMPLETE
-008-G                      NEXT ELIGIBLE
+008-G                      COMPLETE
+008-H                      NEXT ELIGIBLE
 Jackson design completion  IN PROGRESS
 implementation readiness   NOT READY
 implementation start       NOT STARTED
@@ -47,13 +49,13 @@ implementation next        NOT YET
 
 ## Phase 008 results to date
 
-008-A established the fuller Jackson methodology rubric, completion matrix and design-only guardrails. 008-B closed current problem/purpose justification. 008-C closed conceptual state/history/invariants. 008-D closed command/query/transition behavior. 008-E closed current operational-principle completeness.
+008-A through 008-F close the present accepted-concept methodology obligations for problem/purpose, state/history, behavior, operational principles, independence, bounded genericity, naming/familiarity and reuse.
 
-008-F now closes accepted-concept independence and appropriate genericity, closes explicit familiarity/reuse review for individual concepts, completes C1 naming when combined with 008-B purpose closure, and closes accepted-concept boundary/non-responsibility review subject to 008-G perimeter rediscovery.
+008-G now closes the current catalog-perimeter discovery/disposition audit. It re-tests original exclusions, later recovery/resource/privacy/topology candidates and newly hypothesized candidates such as Synthetic Output, Source, Dependency, Authorization/Security state, Completion Basis and text-specific structures.
 
-All eleven concepts and all eleven names are retained. No merge, split, addition or removal was justified by 008-F.
+No candidate satisfies the current promotion burden. The catalog remains eleven concepts/fifteen synchronizations. Relationship remains Data Meaning-owned descriptive structure; generic Privacy remains rejected with a future mechanism-specific DP rediscovery trigger; Use/Release Decision remains external authority; Synthetic Output remains Generation-owned result state under current scope.
 
-The remaining Phase 008 design uncertainty is the catalog perimeter: rejected, subordinated, deferred, externalized and representation-classified candidates must be deliberately rediscovered before individual-concept completeness can be decided.
+The methodology matrix now marks B1, B2 and B5 currently closed and completes C8 across both accepted-concept and excluded-candidate boundaries. Phase 008 nevertheless remains open until 008-H performs the explicit consolidation and handoff decision.
 
 ## Relationship to Phase 007 authority
 
@@ -64,7 +66,6 @@ The historical 007-K implementation-reentry result remains superseded. Architect
 ## Remaining design sequence
 
 ```text
-008-G  Deferred/Rejected Candidate Rediscovery, Missing-Concept & Boundary Audit
 008-H  Phase 008 Consolidation & Phase 009 Handoff
 009    Concept Dependence, Application Family, Composition & Synchronization Closure
 010    Concept Mapping, Interaction, Linguistic & Experience Alignment
@@ -88,6 +89,6 @@ Only Phase 014 may set **READY / NOT STARTED / NEXT**, and only after the whole 
 
 ## Current next boundary
 
-**008-G — Deferred/Rejected Candidate Rediscovery, Missing-Concept & Boundary Audit**.
+**008-H — Phase 008 Consolidation, Individual-Concept Completeness Decision & Phase 009 Handoff**.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
