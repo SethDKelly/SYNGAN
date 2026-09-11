@@ -37,19 +37,19 @@ Only Phase 014 may change that posture after a positive whole-design completion 
 008-D  COMPLETE — actions / queries / preconditions / postconditions / lifecycle transitions
 008-E  COMPLETE — operational principles / purpose fulfillment / counterexamples
 008-F  COMPLETE — independence / genericity / familiarity / reuse
-008-G  NEXT ELIGIBLE — candidate rediscovery / missing-concept / boundaries
-008-H  PLANNED — Phase 008 consolidation and Phase 009 handoff
+008-G  COMPLETE — candidate rediscovery / missing-concept / boundaries
+008-H  NEXT ELIGIBLE — Phase 008 consolidation and Phase 009 handoff
 ```
 
-The current accepted concepts now have present-state normalization for purpose, state/history/invariants, actions/queries/transitions, operational principles, independence, bounded genericity, naming/familiarity and conceptual reuse.
+008-B through 008-F establish current accepted-concept closure evidence. 008-G now establishes current catalog-perimeter completeness evidence: original exclusions, later recovery/resource/privacy/topology candidates and new missing-candidate hypotheses were replayed without finding a current concept to restore or add.
 
-Phase 008 remains open because accepted-concept coherence is not the same as catalog completeness. 008-G must deliberately replay rejected/deferred/subordinate/external/representation-classified candidates before 008-H can make the individual-concept completion decision.
+Phase 008 remains active until 008-H consolidates the evidence and explicitly decides whether individual concept design is complete enough for Phase 009.
 
 ## Later design phases
 
 ### Phase 009 — Concept Dependence, Application Family, Composition & Synchronization Closure
 
-Planned. Will be decomposed immediately before entry using Phase 008 evidence.
+Planned. It will be decomposed immediately before entry using the completed Phase 008 evidence.
 
 ### Phase 010 — Concept Mapping, Interaction, Linguistic & Experience Alignment
 
@@ -89,4 +89,4 @@ Only the current high-level phase is decomposed in detail. Phases 009-014 are su
 
 ## Current next boundary
 
-**008-G — Deferred/Rejected Candidate Rediscovery, Missing-Concept & Boundary Audit**.
+**008-H — Phase 008 Consolidation, Individual-Concept Completeness Decision & Phase 009 Handoff**.
