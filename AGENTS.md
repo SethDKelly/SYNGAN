@@ -14,32 +14,33 @@ Start with:
 - `docs/authority/jackson-methodology-completion-matrix.md`
 - `docs/concepts/phase-008-individual-concept-consolidation.md`
 - `docs/dependence/index.md`
-- `docs/dependence/inclusion-dependence-pairwise-inventory.md`
-- `docs/dependence/inclusion-dependence-graph-ordering.md`
 - `docs/dependence/application-family-valid-subsets.md`
 - `docs/dependence/contraction-extension-consequences.md`
+- `docs/synchronizations/index.md`
+- `docs/synchronizations/application-family-revalidation.md`
 - `docs/phases/009/index.md`
 
 Current state:
 
 ```text
-accepted concepts          11
-accepted synchronizations  15
-Phase 008                  COMPLETE
-Phase 009                  ACTIVE
-009-A                      COMPLETE
-009-B                      COMPLETE
-009-C                      COMPLETE
-009-D                      COMPLETE
-009-E                      NEXT ELIGIBLE
-D1                         CURRENTLY CLOSED
-D2                         CURRENTLY CLOSED
-D3                         CURRENTLY CLOSED
-D4                         CURRENTLY CLOSED
-Jackson design completion  IN PROGRESS
-implementation readiness   NOT READY
-implementation start       NOT STARTED
-implementation next        NOT YET
+accepted concepts                    11
+historical synchronization IDs       15
+active synchronizations              13
+Phase 008                            COMPLETE
+Phase 009                            ACTIVE
+009-A                                COMPLETE
+009-B                                COMPLETE
+009-C                                COMPLETE
+009-D                                COMPLETE
+009-E                                COMPLETE
+009-F                                NEXT ELIGIBLE
+D1-D4                                CURRENTLY CLOSED
+E1                                   CURRENTLY CLOSED
+E2-E3                                REVALIDATION REQUIRED
+Jackson design completion            IN PROGRESS
+implementation readiness             NOT READY
+implementation start                 NOT STARTED
+implementation next                  NOT YET
 ```
 
 ## Primary rule
@@ -81,103 +82,98 @@ E-KERNEL = { Evaluation Criterion, Evaluation, Evidence }
 
 Execution is valid only with at least one Learning, Generation or Evaluation activity. Provenance is valid only where a meaningful typed relationship/history witness exists.
 
-## Current contraction/extension authority
+## Current synchronization inventory
 
-009-D closes systematic add/remove consequences.
+009-E supersedes the historical assumption that all fifteen `SYNC-*` IDs remain active composition rules.
 
-### Removing prerequisites
-
-```text
-remove Data Meaning or Strategy
-  => current Learning + Learned State + Generation cannot remain
-
-remove Evaluation Criterion
-  => Evaluation + Evidence cannot remain
-```
-
-### SCC contraction
+### Active required-relational
 
 ```text
-remove Learning      => remove Learned State
-remove Learned State => remove Learning
-
-remove Evaluation => remove Evidence
-remove Evidence   => remove Evaluation
+SYNC-01  Data Meaning revision binding
+SYNC-02  Strategy selection and compatibility
+SYNC-05  Learning produces Learned State
+SYNC-06  Generation commitment and compatibility
+SYNC-09  Evaluation Criterion binding
+SYNC-10  Evaluation method compatibility
+SYNC-12  Evaluation produces Evidence
 ```
 
-### Capability-only contraction
+### Active capability/occurrence conditional
 
 ```text
-remove Generation => no synthetic-output production
-remove Constraint => no reusable prescriptive-rule capability
-remove Execution  => no durable operational-realization capability
-remove Provenance => no typed provenance/history capability
+SYNC-03  Constraint binding and handling disposition
+SYNC-04  Learning operational realization
+SYNC-07  Generation operational realization
+SYNC-11  Evaluation operational realization
+SYNC-13  Generation/Evidence handoff for evidence-gated completion
+SYNC-14  Provenance recording at material transitions
 ```
 
-Do not move the removed concept's semantics into another concept to preserve a stale feature claim.
+Mere co-presence of concepts does not activate a conditional synchronization. The actual semantic relation must occur.
 
-### Ordinary extension
-
-Adding accepted concepts requires their current closure/side constraints. Examples:
+### Historical IDs not active synchronization authority
 
 ```text
-add Learning or Learned State => full L-KERNEL
-add Generation                => Data Meaning + Strategy + Generation
-add Evaluation or Evidence    => full E-KERNEL
-add Execution                 => at least one valid domain activity
-add Provenance                => meaningful relationship/history witness
+SYNC-08  RETIRED — Generation-local output candidate/completion/promotion behavior
+SYNC-15  RECLASSIFIED — cross-cutting Reproducibility Contract
 ```
 
-Topology breadth and text-bearing structured data remain variations of existing concepts.
+Do not reuse, renumber, or resurrect these IDs merely for symmetry.
 
-### Rediscovery boundary
+`SYNC-08` semantics remain required inside Generation behavior. `SYNC-15` semantics remain required under the Reproducibility Contract.
 
-Fresh concept discovery is required when new scope introduces a genuinely independent purpose/state/action lifecycle that current concepts cannot own cleanly. Current triggers include formal composable privacy/accounting, product-owned release governance, reusable request/cohort lifecycle, independent synthetic-output lifecycle, arbitrary graph relationship behavior, and product-owned resource/economic governance.
+`SYNC-13` active internal scope is Generation consuming exact Evidence for evidence-gated completion. External Evidence handoff is a later concept-mapping/integration concern, not an internal concept synchronization.
 
-An implementation object, table, service, ID or status value is not enough to create a concept.
+No `SYNC-16` is justified.
+
+## Contraction safety
+
+Synchronization disappears with the relation/capability whose concept owner is contracted.
+
+Do not use synchronization to recreate removed concept semantics:
+
+```text
+no Data Meaning => no hidden semantic default
+no Strategy     => no implicit synthesis algorithm authority
+no L-CLUSTER    => no fake Learned State production/reuse
+no Constraint   => no hidden reusable rule authority
+no E-CLUSTER    => no fake Evidence/evaluation-gated completion
+no Execution    => no retry/recovery/Attempt migration into domain activities
+no Provenance   => no shadow provenance concept/store
+```
 
 ## Critical interpretation
 
-A coherent concept subset or contraction/extension rule is not automatically:
+A concept synchronization is not automatically:
 
-- a package/module boundary;
-- an installable edition;
-- a deployable service set;
-- a feature-flag bundle;
-- a database/schema partition;
-- a transaction boundary;
-- a commercial SKU.
+- a service call;
+- an event or message;
+- a transaction;
+- a queue/topic;
+- an API endpoint;
+- a package/module dependency;
+- a schema foreign key;
+- a runtime workflow edge.
 
-Do not create implementation topology from the application-family model while design remains incomplete.
+Do not translate synchronization authority into implementation topology while design remains incomplete.
 
-## Current 009-E boundary
+## Current 009-F boundary
 
-**009-E — Synchronization Inventory Revalidation Across the Application Family** is next eligible.
+**009-F — Synchronization Trigger, Preconditions/Postconditions, State Ownership & Hidden-Coordinator Audit** is next eligible.
 
-009-E must replay SYNC-01 through SYNC-15 against the now-closed D1-D4 authority and classify each rule as universal-when-applicable, family-conditional, over-broad, redundant, under-specified, unjustified, or evidence for a genuinely missing synchronization.
+009-F must audit only the thirteen active rules from 009-E and normalize for each:
 
-A synchronization must not recreate semantics belonging to a concept absent from a valid contraction.
+- trigger / initiating conceptual action;
+- participating concept actions and queries;
+- preconditions;
+- effects/postconditions;
+- failure and indeterminate behavior;
+- exact historical binding where material;
+- canonical owner for each fact/state transition;
+- shadow-state or hidden-coordinator risk;
+- application-family conditionality.
 
-Do not perform 009-F's detailed trigger/precondition/postcondition/state-owner audit early except where necessary to classify the inventory; 009-F owns that normalization after the inventory is settled.
-
-## Explanation/design order
-
-Use prerequisite-first explanation where required:
-
-```text
-Data Meaning / Synthesis Strategy before Learning / Learned State
-Data Meaning / Synthesis Strategy before Generation
-Evaluation Criterion before Evaluation / Evidence
-```
-
-Within mutual components use narrative order:
-
-```text
-Learning before Learned State
-Evaluation before Evidence
-```
-
-This is not implementation ordering.
+Do not perform 009-G economy/synergy/integrity closure early except where a finding is necessary to identify a 009-F defect.
 
 ## Stop/reopen discipline
 
@@ -189,7 +185,9 @@ Follow J0-J7 in the methodology matrix. Reopen the smallest affected upstream au
 
 ## What agents may do now
 
-For 009-E, agents may replay and classify the current synchronization inventory across valid family variants and contractions, identify over-broad/redundant/missing coordination, and record whether synchronization IDs survive unchanged, narrow, or are removed/replaced.
+For 009-F, agents may normalize and adversarially audit the thirteen active synchronization rules for trigger, preconditions/postconditions, failure/indeterminate behavior, historical binding, singular state ownership, conditionality and hidden coordinator/shadow authority.
+
+Historical `core-synchronizations.md` is supporting source evidence. `application-family-revalidation.md` is the current inventory/scope authority.
 
 Architecture/source/tests may be inspected only as counterexample/feasibility evidence, not composition authority.
 
@@ -197,9 +195,7 @@ Architecture/source/tests may be inspected only as counterexample/feasibility ev
 
 Do not add production behavior, implementation APIs, persistence/data-plane schemas, Spark/runtime/model/platform/security adapters, recovery implementations, Evidence/Provenance implementations, reference Strategies, privacy mechanisms, runtime/build dependencies, package-topology changes, or executable architecture restrictions merely to freeze evolving design.
 
-Do not translate application-family subsets into package dependencies, product editions, deployment profiles, or feature flags.
-
-Do not repair stale implementation tests solely to make implementation appear ready.
+Do not implement synchronization as services/events/transactions or repair stale implementation tests solely to make implementation appear ready.
 
 ## Readiness rule
 
@@ -213,6 +209,6 @@ Only Phase 014 may make the final whole-design readiness decision; implementatio
 
 ## Current next boundary
 
-**009-E — Synchronization Inventory Revalidation Across the Application Family**.
+**009-F — Synchronization Trigger, Preconditions/Postconditions, State Ownership & Hidden-Coordinator Audit**.
 
 Do not begin implementation work.
