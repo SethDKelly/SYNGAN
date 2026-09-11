@@ -33,7 +33,7 @@ individual concept design                 ← Phase 008 COMPLETE
         ↓
 concept inclusion dependence / application family
         ↓
-composition / synchronization / integrity
+composition / synchronization / integrity ← Phase 009 ACTIVE
         ↓
 concept mapping / actor-visible experience
         ↓
@@ -50,54 +50,46 @@ implementation MAY become READY / NOT STARTED / NEXT
 
 Implementation is not part of Jackson concept design and must not be used to discover unfinished product semantics by accident.
 
-## Prior-work authority boundary
-
-Phases 001-003 contain substantial valid Jackson-style design evidence. Phases 004-007 contain valuable representation/architecture, implementation-planning and adversarial evidence. They remain downstream evidence, not proof of current Jackson completion.
-
-The historical 007-K implementation-reentry conclusion remains superseded.
-
 ## Phase 008 completion
 
-Phase 008-A through 008-H are complete.
-
-Current consolidation authority:
-
-- [Phase 008 Individual-Concept Design Consolidation](../concepts/phase-008-individual-concept-consolidation.md)
-
-The Phase 008 exit decision is:
+Phase 008-A through 008-H are complete under [Phase 008 Individual-Concept Design Consolidation](../concepts/phase-008-individual-concept-consolidation.md).
 
 ```text
 PHASE 008                   COMPLETE
 INDIVIDUAL CONCEPT DESIGN   COMPLETE ENOUGH FOR PHASE 009
-JACKSON CONCEPT DESIGN      NOT COMPLETE
-IMPLEMENTATION READINESS    NOT READY
-IMPLEMENTATION START        NOT STARTED
-IMPLEMENTATION NEXT         NOT YET
 ```
 
-Phase 008 closed current problem/purpose grounding, individual concept specifications, operational principles, independence/genericity/familiarity, and catalog-perimeter rediscovery without changing the eleven-concept catalog.
+The accepted catalog remains eleven concepts. The accepted synchronization IDs remain fifteen as the current Phase 009 starting set.
 
-The accepted synchronization set remains fifteen, but final composition/synchronization closure is still Phase 009 work.
+## Phase 009 active boundary
 
-## Current next design boundary
+Phase 009 has entered through [Phase 009 Entry / Decomposition](../phases/009/009-entry-decomposition.md).
 
-**Phase 009 — Concept Dependence, Application Family, Composition & Synchronization Closure** is next eligible.
+Its subgroup sequence is:
 
-Phase 009 must be subdivided immediately before entry using the completed Phase 008 evidence and the remaining D/E methodology rows. It must not derive its structure from implementation packages, runtime dependencies, or retained architecture topology.
+```text
+009-A  Inclusion-Dependence Semantics, Evidence Rules & Pairwise Relation Inventory
+009-B  Inclusion-Dependence Graph, Roots, Cycles & Explanation Ordering
+009-C  Application Family, Valid Concept Subsets & Minimal Coherent Variants
+009-D  Contraction, Extension, Concept Addition/Removal & Product-Scope Consequences
+009-E  Synchronization Inventory Revalidation Across the Application Family
+009-F  Synchronization Trigger, Preconditions/Postconditions, State Ownership & Hidden-Coordinator Audit
+009-G  Composition Economy, Coupling, Synergy & Integrity Closure
+009-H  Phase 009 Consolidation, Dependence/Composition Completion Decision & Phase 010 Handoff
+```
 
-Open Phase 009 obligations include:
+The current next eligible subgroup is **009-A**.
 
-- Jackson application inclusion-dependence graph;
-- meaningful valid concept subsets/application family;
-- dependence-derived explanation/design ordering;
-- reduced-application add/remove consequences;
-- final synchronization ownership/economy under composition;
-- composition synergy/integrity sufficient for handoff to later final quality review.
+Phase 009 must not derive inclusion dependence from package imports, service calls, runtime ordering, storage references, architecture topology, or the historical reference/validation/production/provenance dependency taxonomy.
+
+The governing application-level question is whether including one concept only makes sense when another concept is also included.
+
+The fifteen synchronization rules are not presumed final. Their current composition must be replayed only after the inclusion-dependence graph and valid application variants are established.
 
 ## Remaining design roadmap
 
 ```text
-009  Concept Dependence, Application Family, Composition & Synchronization Closure
+009  Concept Dependence, Application Family, Composition & Synchronization Closure — ACTIVE
 010  Concept Mapping, Interaction, Linguistic & Experience Alignment
 011  Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Design Validation
 012  Jackson Concept-Design Consolidation & Completion Decision
@@ -106,8 +98,6 @@ Open Phase 009 obligations include:
 ---
 015  Implementation Authority & Controlled Delivery — FUTURE ONLY
 ```
-
-Phases 009-014 remain design phases. Each is subdivided only immediately before it starts using current upstream evidence.
 
 ## Readiness transitions
 
@@ -133,6 +123,6 @@ Existing executable scaffold may remain untouched as historical/provisional evid
 
 ## Current next boundary
 
-**Phase 009 — Concept Dependence, Application Family, Composition & Synchronization Closure** is next eligible and not yet subdivided.
+**009-A — Inclusion-Dependence Semantics, Evidence Rules & Pairwise Relation Inventory**.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
