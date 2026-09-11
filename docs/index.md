@@ -38,6 +38,7 @@ Existing architecture, source or tests never become upstream concept-design auth
 - [009-A Inclusion-Dependence Pairwise Inventory](dependence/inclusion-dependence-pairwise-inventory.md)
 - [009-B Inclusion-Dependence Graph & Ordering](dependence/inclusion-dependence-graph-ordering.md)
 - [009-C Application Family & Valid Subsets](dependence/application-family-valid-subsets.md)
+- [009-D Contraction & Extension Consequences](dependence/contraction-extension-consequences.md)
 - [Phase 009](phases/009/index.md)
 
 ## Current state
@@ -53,30 +54,28 @@ Phase 009                  ACTIVE
 009-A                      COMPLETE
 009-B                      COMPLETE
 009-C                      COMPLETE
-009-D                      NEXT ELIGIBLE
+009-D                      COMPLETE
+009-E                      NEXT ELIGIBLE
 D1                         CURRENTLY CLOSED
 D2                         CURRENTLY CLOSED
 D3                         CURRENTLY CLOSED
-D4                         PARTIAL TO STRONG
+D4                         CURRENTLY CLOSED
 Jackson design completion  IN PROGRESS
 implementation readiness   NOT READY
 implementation start       NOT STARTED
 implementation next        NOT YET
 ```
 
-## Current application-family authority
+## Current dependence/application-family authority
 
-009-C defines the family through a rule system rather than one full-product-only concept set.
+009-A through 009-D now establish:
 
-A coherent family member is a non-empty subset that:
+- complete pairwise inclusion classification;
+- canonical direct/transitive inclusion graph and SCC treatment;
+- meaningful valid application subsets and minimal kernels;
+- systematic contraction/extension and add/remove consequences.
 
-1. is closed under the 009-B universal graph;
-2. satisfies `Execution => Learning OR Generation OR Evaluation` when Execution is present;
-3. supplies Provenance with an actual typed relationship/history witness when Provenance is present;
-4. contains every concept required by the capabilities it advertises;
-5. preserves Phase 008 concept purposes/boundaries.
-
-Canonical capability kernels are:
+Canonical kernels remain:
 
 ```text
 L-KERNEL = { Data Meaning, Synthesis Strategy, Learning, Learned State }
@@ -84,9 +83,32 @@ G-KERNEL = { Data Meaning, Synthesis Strategy, Generation }
 E-KERNEL = { Evaluation Criterion, Evaluation, Evidence }
 ```
 
-Authority-only contractions `{Data Meaning}`, `{Synthesis Strategy}`, `{Constraint}`, and `{Evaluation Criterion}` are also coherent design-family members.
+Execution requires at least one Learning/Generation/Evaluation activity. Provenance requires an actual meaningful typed relationship/history witness.
 
-A coherent subset is not automatically a deployable product edition or implementation module. Packaging remains downstream.
+009-D additionally establishes that removing a prerequisite forces dependent contraction, while removing optional capability concepts narrows the product claim rather than transferring their semantics elsewhere.
+
+Examples:
+
+```text
+remove Data Meaning or Strategy
+  => current Learning + Learned State + Generation cannot remain
+
+remove Criterion
+  => Evaluation + Evidence cannot remain
+
+remove Constraint
+  => reusable prescriptive-rule capability disappears
+
+remove Execution
+  => durable operational-realization capability disappears
+
+remove Provenance
+  => typed provenance/history capability disappears
+```
+
+Ordinary family extension uses accepted concepts plus required closure. New independent purpose/state/action lifecycles trigger fresh concept discovery instead.
+
+A coherent family member is not automatically a deployable product edition or implementation module.
 
 ## Phase 009 sequence
 
@@ -94,8 +116,8 @@ A coherent subset is not automatically a deployable product edition or implement
 009-A  COMPLETE — inclusion semantics / pairwise relation inventory
 009-B  COMPLETE — canonical graph / cycles / explanation ordering
 009-C  COMPLETE — application family / valid subsets / minimal coherent variants
-009-D  NEXT — contraction / extension / add-remove consequences
-009-E  synchronization inventory replay across application variants
+009-D  COMPLETE — contraction / extension / add-remove consequences
+009-E  NEXT — synchronization inventory replay across application variants
 009-F  trigger / pre-post / state ownership / hidden coordinator audit
 009-G  composition economy / coupling / synergy / integrity closure
 009-H  consolidation / Phase 010 handoff
@@ -124,12 +146,12 @@ IMPLEMENTATION START       NOT STARTED
 IMPLEMENTATION NEXT        NOT YET
 ```
 
-Do not translate the application-family model mechanically into packages, feature flags, services, schemas, deployment units, or product SKUs.
+Do not translate the application-family/consequence model mechanically into packages, feature flags, services, schemas, deployment units, or product SKUs.
 
 A positive Phase 012 still does not make implementation ready. Phase 013 must reconcile architecture; only a positive Phase 014 may make implementation **READY / NOT STARTED / NEXT**, and implementation itself still requires Phase 015.
 
 ## Current next boundary
 
-**009-D — Contraction, Extension, Concept Addition/Removal & Product-Scope Consequences** is next eligible.
+**009-E — Synchronization Inventory Revalidation Across the Application Family** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
