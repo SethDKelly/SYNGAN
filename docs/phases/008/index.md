@@ -26,13 +26,7 @@ IMPLEMENTATION NEXT         NOT YET
 - [Concept Design Methodology](../../authority/design-methodology.md)
 - [Jackson Design Completion & Implementation Hold](../../authority/jackson-design-completion-implementation-hold.md)
 - [Jackson Methodology Completion Matrix](../../authority/jackson-methodology-completion-matrix.md)
-- [Current Problem Knowledge](../../problem/index.md)
 - [Accepted Concept Catalog](../../concepts/index.md)
-- [Concept State, Identity, History & Invariant Normalization](../../concepts/state-identity-history-invariant-normalization.md)
-- [Concept Action, Query, Preconditions/Postconditions & Lifecycle Normalization](../../concepts/action-query-lifecycle-normalization.md)
-- [Operational Principle, Purpose Fulfillment & Counterexample Normalization](../../concepts/operational-principle-purpose-counterexample-normalization.md)
-- [Concept Independence, Genericity, Familiarity & Reuse Normalization](../../concepts/independence-genericity-familiarity-reuse-normalization.md)
-- [Catalog Perimeter Candidate Rediscovery, Missing-Concept & Boundary Audit](../../concepts/catalog-perimeter-candidate-rediscovery-boundary-audit.md)
 - [Phase 008 Individual-Concept Design Consolidation](../../concepts/phase-008-individual-concept-consolidation.md)
 
 ## Semantic baseline at exit
@@ -45,8 +39,6 @@ provisional concepts        0
 current desired outcomes   16
 catalog change in Phase 008 NONE
 ```
-
-Counts are evidence, not completion criteria.
 
 ## Subgroups
 
@@ -63,17 +55,7 @@ Counts are evidence, not completion criteria.
 
 ## Consolidated result
 
-Phase 008 supplies current closure for the individual-concept methodology layer:
-
-- problem/purpose/outcome grounding and concept justification;
-- candidate discovery/disposition and catalog-perimeter completeness;
-- concept names and distinct purposes;
-- state, identity, history, uncertainty and invariants;
-- actions, queries, contextual assessments and material transition contracts;
-- lifecycle/non-success semantics;
-- operational principles and counterexamples;
-- independence, bounded genericity, familiarity and reuse;
-- explicit boundaries/non-responsibilities independent of representation.
+Phase 008 supplies current closure for the individual-concept methodology layer: problem/purpose grounding, catalog discovery/disposition, concept names/purposes, state/history/invariants, actions/queries/transitions, operational principles, independence/genericity/familiarity/reuse, and explicit representation-independent boundaries.
 
 008-H found no unresolved J1 local concept-specification defect or J2 purpose/boundary/catalog defect.
 
@@ -97,7 +79,7 @@ Generation currently owns the completed logical synthetic-output result boundary
 
 ## What Phase 008 did not complete
 
-Phase 008 does not close:
+Phase 008 intentionally handed forward:
 
 - Jackson application inclusion dependence;
 - meaningful valid concept subsets/application family;
@@ -110,20 +92,22 @@ Phase 008 does not close:
 - representation/architecture reconciliation;
 - whole-design completion or implementation readiness.
 
-Those obligations remain intentionally downstream rather than being Phase 008 defects.
+## Phase 009 handoff status
 
-## Phase 009 handoff
+The Phase 008 handoff has now been consumed.
 
-**Phase 009 — Concept Dependence, Application Family, Composition & Synchronization Closure** is the next eligible high-level design phase.
+[Phase 009 — Concept Dependence, Application Family, Composition & Synchronization Closure](../009/index.md) is **ACTIVE** and has been decomposed through its entry gate.
 
-Phase 009 is intentionally **not subdivided here**. Immediately before Phase 009 starts, derive dependency-safe subgroups from the completed Phase 008 authority and remaining D/E rows of the methodology matrix.
+The first eligible subgroup is:
 
-Do not derive Phase 009 structure from implementation packages, runtime dependencies, or retained architecture topology. The existing reference/validation/production/operational/provenance dependency taxonomy is supporting evidence only and must not be mistaken for Jackson inclusion dependence.
+**009-A — Inclusion-Dependence Semantics, Evidence Rules & Pairwise Relation Inventory.**
+
+The Phase 009 decomposition follows the intended rule from 008-H: it was derived from the completed Phase 008 authority and remaining D/E methodology obligations rather than implementation packages/runtime dependencies.
 
 ## Subsequent design roadmap
 
 ```text
-009  Concept Dependence, Application Family, Composition & Synchronization Closure
+009  Concept Dependence, Application Family, Composition & Synchronization Closure — ACTIVE
 010  Concept Mapping, Interaction, Linguistic & Experience Alignment
 011  Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Design Validation
 012  Jackson Concept-Design Consolidation & Completion Decision
@@ -135,8 +119,6 @@ Do not derive Phase 009 structure from implementation packages, runtime dependen
 
 ## Current next boundary
 
-**Phase 009 — Concept Dependence, Application Family, Composition & Synchronization Closure** is **NEXT ELIGIBLE**.
-
-Its subgroups must be defined immediately before entry.
+**009-A — Inclusion-Dependence Semantics, Evidence Rules & Pairwise Relation Inventory**.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
