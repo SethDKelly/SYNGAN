@@ -17,6 +17,7 @@ Start with:
 - `docs/dependence/inclusion-dependence-pairwise-inventory.md`
 - `docs/dependence/inclusion-dependence-graph-ordering.md`
 - `docs/dependence/application-family-valid-subsets.md`
+- `docs/dependence/contraction-extension-consequences.md`
 - `docs/phases/009/index.md`
 
 Current state:
@@ -29,11 +30,12 @@ Phase 009                  ACTIVE
 009-A                      COMPLETE
 009-B                      COMPLETE
 009-C                      COMPLETE
-009-D                      NEXT ELIGIBLE
+009-D                      COMPLETE
+009-E                      NEXT ELIGIBLE
 D1                         CURRENTLY CLOSED
 D2                         CURRENTLY CLOSED
 D3                         CURRENTLY CLOSED
-D4                         PARTIAL TO STRONG
+D4                         CURRENTLY CLOSED
 Jackson design completion  IN PROGRESS
 implementation readiness   NOT READY
 implementation start       NOT STARTED
@@ -44,9 +46,7 @@ implementation next        NOT YET
 
 > **Complete the design before making implementation ready. Existing architecture, code, tests or plans may expose misfits, but they may not veto upstream concept-design correction.**
 
-## Current dependence graph
-
-Jackson inclusion dependence asks whether concept C1 can remain meaningfully included when concept C2 is absent. It is not ordinary reference, validation, production, runtime, provenance, import, storage, or service dependency.
+## Current dependence/application-family authority
 
 Current direct universal graph:
 
@@ -71,18 +71,6 @@ L-CLUSTER = { Learning, Learned State }
 E-CLUSTER = { Evaluation, Evidence }
 ```
 
-Do not merge concepts or technical modules merely because they share an inclusion component.
-
-## Current application-family rule
-
-A non-empty concept subset is a coherent current family member only if it:
-
-1. is closed under the universal graph;
-2. satisfies `Execution => Learning OR Generation OR Evaluation` when Execution is included;
-3. gives Provenance an actual meaningful typed relationship/history witness when Provenance is included;
-4. includes every concept required by the capabilities the variant explicitly claims;
-5. preserves the Phase 008 concept purposes and boundaries.
-
 Canonical kernels:
 
 ```text
@@ -91,32 +79,66 @@ G-KERNEL = { Data Meaning, Synthesis Strategy, Generation }
 E-KERNEL = { Evaluation Criterion, Evaluation, Evidence }
 ```
 
-Authority-only subsets `{Data Meaning}`, `{Synthesis Strategy}`, `{Constraint}`, and `{Evaluation Criterion}` are coherent design-family members.
+Execution is valid only with at least one Learning, Generation or Evaluation activity. Provenance is valid only where a meaningful typed relationship/history witness exists.
 
-## Capability conditions to preserve
+## Current contraction/extension authority
+
+009-D closes systematic add/remove consequences.
+
+### Removing prerequisites
 
 ```text
-learned-state-assisted Generation
-  => L-KERNEL + Generation
+remove Data Meaning or Strategy
+  => current Learning + Learned State + Generation cannot remain
 
-evaluation-gated Generation
-  => G-KERNEL + E-KERNEL
-
-reusable prescriptive-rule capability
-  => Constraint
-
-durable operational lifecycle
-  => Execution + at least one domain activity
-
-provenance/history capability
-  => Provenance + meaningful relationship witness
+remove Evaluation Criterion
+  => Evaluation + Evidence cannot remain
 ```
 
-Topology breadth and text-bearing structured data remain variations of existing concepts; do not restore Relationship, TimeSeries, Table, Text, Tokenizer, Vocabulary, or Language Model merely because an implementation may expose such objects.
+### SCC contraction
+
+```text
+remove Learning      => remove Learned State
+remove Learned State => remove Learning
+
+remove Evaluation => remove Evidence
+remove Evidence   => remove Evaluation
+```
+
+### Capability-only contraction
+
+```text
+remove Generation => no synthetic-output production
+remove Constraint => no reusable prescriptive-rule capability
+remove Execution  => no durable operational-realization capability
+remove Provenance => no typed provenance/history capability
+```
+
+Do not move the removed concept's semantics into another concept to preserve a stale feature claim.
+
+### Ordinary extension
+
+Adding accepted concepts requires their current closure/side constraints. Examples:
+
+```text
+add Learning or Learned State => full L-KERNEL
+add Generation                => Data Meaning + Strategy + Generation
+add Evaluation or Evidence    => full E-KERNEL
+add Execution                 => at least one valid domain activity
+add Provenance                => meaningful relationship/history witness
+```
+
+Topology breadth and text-bearing structured data remain variations of existing concepts.
+
+### Rediscovery boundary
+
+Fresh concept discovery is required when new scope introduces a genuinely independent purpose/state/action lifecycle that current concepts cannot own cleanly. Current triggers include formal composable privacy/accounting, product-owned release governance, reusable request/cohort lifecycle, independent synthetic-output lifecycle, arbitrary graph relationship behavior, and product-owned resource/economic governance.
+
+An implementation object, table, service, ID or status value is not enough to create a concept.
 
 ## Critical interpretation
 
-A **coherent concept subset is not automatically**:
+A coherent concept subset or contraction/extension rule is not automatically:
 
 - a package/module boundary;
 - an installable edition;
@@ -128,21 +150,15 @@ A **coherent concept subset is not automatically**:
 
 Do not create implementation topology from the application-family model while design remains incomplete.
 
-## Current 009-D boundary
+## Current 009-E boundary
 
-**009-D — Contraction, Extension, Concept Addition/Removal & Product-Scope Consequences** is next eligible.
+**009-E — Synchronization Inventory Revalidation Across the Application Family** is next eligible.
 
-009-D must use the current family rules to analyze systematically:
+009-E must replay SYNC-01 through SYNC-15 against the now-closed D1-D4 authority and classify each rule as universal-when-applicable, family-conditional, over-broad, redundant, under-specified, unjustified, or evidence for a genuinely missing synchronization.
 
-- what functionality is lost when each concept/component is removed;
-- which dependents must be removed/re-scoped as a consequence;
-- how L-CLUSTER/E-CLUSTER contract as units;
-- what happens to Execution/Provenance side constraints;
-- which additions are ordinary composition of existing concepts;
-- which future additions trigger fresh concept discovery under 008-G;
-- which capability claims become misleading after contraction.
+A synchronization must not recreate semantics belonging to a concept absent from a valid contraction.
 
-Do not perform synchronization replay early; 009-E owns that work after D4 closes.
+Do not perform 009-F's detailed trigger/precondition/postcondition/state-owner audit early except where necessary to classify the inventory; 009-F owns that normalization after the inventory is settled.
 
 ## Explanation/design order
 
@@ -161,7 +177,7 @@ Learning before Learned State
 Evaluation before Evidence
 ```
 
-Execution and Provenance are best explained after domain activities/results, but this is not an implementation ordering rule.
+This is not implementation ordering.
 
 ## Stop/reopen discipline
 
@@ -173,15 +189,15 @@ Follow J0-J7 in the methodology matrix. Reopen the smallest affected upstream au
 
 ## What agents may do now
 
-For 009-D, agents may analyze concept/component contraction and extension against the current application family, record capability consequences, and distinguish ordinary family composition from future-scope rediscovery triggers.
+For 009-E, agents may replay and classify the current synchronization inventory across valid family variants and contractions, identify over-broad/redundant/missing coordination, and record whether synchronization IDs survive unchanged, narrow, or are removed/replaced.
 
-Architecture/source/tests may be inspected only as counterexample/feasibility evidence, not family authority.
+Architecture/source/tests may be inspected only as counterexample/feasibility evidence, not composition authority.
 
 ## What agents must not do until Phase 014 passes
 
 Do not add production behavior, implementation APIs, persistence/data-plane schemas, Spark/runtime/model/platform/security adapters, recovery implementations, Evidence/Provenance implementations, reference Strategies, privacy mechanisms, runtime/build dependencies, package-topology changes, or executable architecture restrictions merely to freeze evolving design.
 
-Do not translate application-family subsets into package dependencies, product editions, deployment profiles, or feature flags yet.
+Do not translate application-family subsets into package dependencies, product editions, deployment profiles, or feature flags.
 
 Do not repair stale implementation tests solely to make implementation appear ready.
 
@@ -197,6 +213,6 @@ Only Phase 014 may make the final whole-design readiness decision; implementatio
 
 ## Current next boundary
 
-**009-D — Contraction, Extension, Concept Addition/Removal & Product-Scope Consequences**.
+**009-E — Synchronization Inventory Revalidation Across the Application Family**.
 
 Do not begin implementation work.
