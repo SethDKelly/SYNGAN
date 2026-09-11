@@ -42,26 +42,26 @@ JACKSON CONCEPT DESIGN      NOT COMPLETE
 ```text
 009-A  COMPLETE — inclusion-dependence semantics / pairwise relation inventory
 009-B  COMPLETE — canonical graph / roots / cycles / explanation ordering
-009-C  NEXT ELIGIBLE — application family / valid subsets / minimal variants
-009-D  PLANNED — contraction / extension / add-remove consequences
+009-C  COMPLETE — application family / valid subsets / minimal coherent variants
+009-D  NEXT ELIGIBLE — contraction / extension / add-remove consequences
 009-E  PLANNED — synchronization inventory replay
 009-F  PLANNED — synchronization trigger / ownership / hidden coordinator
 009-G  PLANNED — composition economy / synergy / integrity
 009-H  PLANNED — consolidation / Phase 010 handoff
 ```
 
-009-A classified all 110 directed non-self pairs. 009-B then reduced the 12 universal pairwise findings to 9 direct universal edges and 3 transitive findings, retained two legitimate strongly connected inclusion components, and established dependence-derived explanation ordering.
-
 Current methodology state:
 
 ```text
 D1  CURRENTLY CLOSED
-D2  OPEN
+D2  CURRENTLY CLOSED
 D3  CURRENTLY CLOSED
-D4  PARTIAL
+D4  PARTIAL TO STRONG
 ```
 
-009-C must now derive valid application-family subsets using both universal graph closure and non-binary/conditional prerequisites.
+009-C establishes the rule-defined application family, including authority-only contractions, Learning/Generation/Evaluation kernels, Execution/Provenance side constraints, capability-conditional extensions, topology/text probes, and representative invalid subsets.
+
+009-D must now close the systematic contraction/extension consequences before synchronization replay begins.
 
 ## Later design phases
 
@@ -99,4 +99,4 @@ Placeholder only; not ready, not active and not next.
 
 ## Current next boundary
 
-**009-C — Application Family, Valid Concept Subsets & Minimal Coherent Variants**.
+**009-D — Contraction, Extension, Concept Addition/Removal & Product-Scope Consequences**.
