@@ -32,10 +32,11 @@ No implementation tranche is eligible.
 008-D  COMPLETE — concept actions / queries / transition contracts
 008-E  COMPLETE — operational principles / purpose fulfillment / counterexamples
 008-F  COMPLETE — independence / genericity / familiarity / reuse
-008-G  NEXT ELIGIBLE — candidate rediscovery / missing concept / boundary audit
+008-G  COMPLETE — candidate rediscovery / missing concept / boundary audit
+008-H  NEXT ELIGIBLE — Phase 008 consolidation / Phase 009 handoff
 ```
 
-008-F is concept-design documentation only. It confirms the current eleven accepted concepts remain independently purposeful, appropriately generic and sufficiently familiar without changing any executable or architecture realization.
+008-G is concept-design documentation only. It revalidated rejected/deferred/subordinate/external/representation candidates and found no current catalog change. Future rediscovery triggers such as composable DP or product-owned release governance are not implementation authorization.
 
 ## Superseded 007-K re-entry conclusion
 
@@ -46,16 +47,16 @@ The Phase 007 architecture and scaffold observations remain useful evidence but 
 ## Remaining design before implementation readiness can be decided
 
 ```text
-008-G..H  finish individual concept design
-009       inclusion dependence / application family / composition / synchronization
-010       concept mapping / interaction / language / experience
-011       specificity / familiarity / integrity / synergy / misfit
-012       Jackson concept-design completion decision
-013       post-concept representation / architecture reconciliation
-014       whole-design completion / implementation-readiness decision
+008-H      consolidate individual concept design
+009        inclusion dependence / application family / composition / synchronization
+010        concept mapping / interaction / language / experience
+011        specificity / familiarity / integrity / synergy / misfit
+012        Jackson concept-design completion decision
+013        post-concept representation / architecture reconciliation
+014        whole-design completion / implementation-readiness decision
 ```
 
-Even a positive Phase 012 does not reactivate implementation. Only a positive Phase 014 may make implementation **READY / NOT STARTED / NEXT**.
+Even a positive 008-H or Phase 012 does not reactivate implementation. Only a positive Phase 014 may make implementation **READY / NOT STARTED / NEXT**.
 
 ## Historical implementation material
 
@@ -72,10 +73,10 @@ Do not repair or extend these merely to make the repository look ready while des
 
 ## Current prohibition
 
-Until Phase 014 passes, do not add production concept/domain behavior, implementation APIs, persistence/data-plane schemas, model/runtime/security/platform adapters, Execution/recovery behavior, Evidence/Provenance implementations, reference Strategies, benchmarks, or executable architecture restrictions intended to freeze unfinished design.
+Until Phase 014 passes, do not add production concept/domain behavior, implementation APIs, persistence/data-plane schemas, model/runtime/security/platform adapters, Execution/recovery behavior, Evidence/Provenance implementations, reference Strategies, privacy mechanisms, benchmarks, or executable architecture restrictions intended to freeze unfinished design.
 
 ## Current next boundary
 
 Design-only work:
 
-**008-G — Deferred/Rejected Candidate Rediscovery, Missing-Concept & Boundary Audit**.
+**008-H — Phase 008 Consolidation, Individual-Concept Completeness Decision & Phase 009 Handoff**.
