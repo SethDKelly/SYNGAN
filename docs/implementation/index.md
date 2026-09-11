@@ -28,11 +28,26 @@ No implementation tranche is eligible.
 ```text
 Phase 008                  COMPLETE
 individual concept design  COMPLETE ENOUGH FOR PHASE 009
-Phase 009                  NEXT ELIGIBLE / NOT YET DECOMPOSED
+Phase 009                  ACTIVE
+009-A                      NEXT ELIGIBLE
 Jackson concept design     IN PROGRESS
 ```
 
-008-H is design consolidation only. It did not reconcile or modify source, tests, package topology, persistence, runtime, APIs, dependencies, CI or architecture.
+Phase 009 entry/decomposition is design documentation only. It does not authorize source, tests, package topology, persistence, runtime, APIs, dependencies, CI, architecture execution, or feature implementation.
+
+## Phase 009 implementation boundary
+
+Phase 009 owns inclusion dependence, application family and composition/synchronization design.
+
+Implementation structures must not be used as shortcuts for these questions:
+
+- package/import dependence does not establish Jackson inclusion dependence;
+- service/runtime ordering does not establish application-family dependence;
+- storage references do not establish concept dependence;
+- existing code paths do not prove synchronization necessity;
+- architecture objects do not become concepts or hidden coordinators by convenience.
+
+The retained source/tests/scaffold may provide counterexample or feasibility evidence only.
 
 ## Superseded 007-K re-entry conclusion
 
@@ -43,7 +58,7 @@ The Phase 007 architecture and scaffold observations remain useful evidence but 
 ## Remaining design before implementation readiness can be decided
 
 ```text
-009  inclusion dependence / application family / composition / synchronization
+009  inclusion dependence / application family / composition / synchronization — ACTIVE
 010  concept mapping / interaction / language / experience
 011  specificity / familiarity / integrity / synergy / misfit
 012  Jackson concept-design completion decision
@@ -74,6 +89,4 @@ Until Phase 014 passes, do not add production concept/domain behavior, implement
 
 Design-only work:
 
-**Phase 009 — Concept Dependence, Application Family, Composition & Synchronization Closure**.
-
-Phase 009 must be subdivided immediately before entry using the completed Phase 008 authority.
+**009-A — Inclusion-Dependence Semantics, Evidence Rules & Pairwise Relation Inventory**.
