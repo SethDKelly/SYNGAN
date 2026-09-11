@@ -16,13 +16,14 @@ For concepts `C1` and `C2`, the governing question remains:
 
 > **If `C1` is included in an application, does including `C1` make sense only if `C2` is also included?**
 
-Application-family validity then asks whether a non-empty concept subset satisfies universal closure, non-binary prerequisites, and every capability-specific inclusion requirement it claims.
+Application-family validity asks whether a non-empty concept subset satisfies universal closure, non-binary prerequisites, and every capability-specific inclusion requirement it claims. Contraction/extension authority then determines what capability and family consequences follow when that subset changes.
 
 ## Current authority
 
 - [Inclusion-Dependence Semantics, Evidence Rules & Pairwise Relation Inventory](inclusion-dependence-pairwise-inventory.md) — 009-A pairwise authority.
 - [Inclusion-Dependence Graph, Strong Components & Explanation Ordering](inclusion-dependence-graph-ordering.md) — 009-B canonical graph/order authority.
-- [Application Family, Valid Concept Subsets & Minimal Coherent Variants](application-family-valid-subsets.md) — 009-C current application-family authority.
+- [Application Family, Valid Concept Subsets & Minimal Coherent Variants](application-family-valid-subsets.md) — 009-C application-family authority.
+- [Contraction, Extension, Concept Addition/Removal & Product-Scope Consequences](contraction-extension-consequences.md) — 009-D add/remove consequence authority.
 
 ## Current phase state
 
@@ -32,16 +33,17 @@ Phase 009                         ACTIVE
 009-A                             COMPLETE
 009-B                             COMPLETE
 009-C                             COMPLETE
-009-D                             NEXT ELIGIBLE
+009-D                             COMPLETE
+009-E                             NEXT ELIGIBLE
 D1 inclusion-dependence graph     CURRENTLY CLOSED
 D2 application family             CURRENTLY CLOSED
 D3 explanation/design ordering    CURRENTLY CLOSED
-D4 add/remove consequences        PARTIAL TO STRONG
+D4 add/remove consequences        CURRENTLY CLOSED
 ```
 
 ## Canonical graph result
 
-The 12 universal pairwise findings from 009-A reduce to 9 direct universal edges:
+The 12 universal pairwise findings reduce to 9 direct universal edges:
 
 ```text
 Learning      -> Data Meaning
@@ -57,7 +59,7 @@ Evaluation    -> Evidence
 Evidence      -> Evaluation
 ```
 
-Three pairwise findings are transitive rather than direct:
+Three accepted pairwise findings are transitive:
 
 ```text
 Learned State -> Data Meaning
@@ -65,7 +67,7 @@ Learned State -> Synthesis Strategy
 Evidence      -> Evaluation Criterion
 ```
 
-Two legitimate mutual inclusion components remain:
+Two legitimate SCCs remain:
 
 ```text
 L-CLUSTER = { Learning, Learned State }
@@ -74,153 +76,143 @@ E-CLUSTER = { Evaluation, Evidence }
 
 The condensed universal graph is acyclic.
 
-## Current application-family rule
+## Application-family rule
 
-A non-empty subset `S` is a coherent current family member only if it:
+A non-empty subset `S` is coherent only if it:
 
 1. is closed under the universal graph;
 2. satisfies `Execution => Learning OR Generation OR Evaluation` when Execution is present;
 3. gives Provenance at least one meaningful typed relationship/history witness when Provenance is present;
-4. contains all concepts required by every capability the variant advertises;
-5. preserves the accepted concept purposes and boundaries.
+4. contains all concepts required by every advertised capability;
+5. preserves accepted concept purposes/boundaries.
 
-Concept-family validity is not the same as product packaging or implementation modularity.
-
-## Canonical minimal variants
-
-### Authority-only
+Canonical capability kernels remain:
 
 ```text
-{ Data Meaning }
-{ Synthesis Strategy }
-{ Constraint }
-{ Evaluation Criterion }
+L-KERNEL = Data Meaning + Synthesis Strategy + Learning + Learned State
+G-KERNEL = Data Meaning + Synthesis Strategy + Generation
+E-KERNEL = Evaluation Criterion + Evaluation + Evidence
 ```
 
-### Learning capability
+Authority-only minima remain Data Meaning, Synthesis Strategy, Constraint and Evaluation Criterion.
+
+## Contraction authority
+
+009-D establishes systematic removal consequences.
+
+### Closure-breaking removals
 
 ```text
-L-KERNEL = {
-  Data Meaning,
-  Synthesis Strategy,
-  Learning,
-  Learned State
-}
+remove Data Meaning
+  => remove/re-scope Learning + Learned State + Generation
+
+remove Synthesis Strategy
+  => remove/re-scope Learning + Learned State + Generation
+
+remove Evaluation Criterion
+  => remove Evaluation + Evidence
 ```
 
-### Direct Generation capability
+### SCC removals
 
 ```text
-G-KERNEL = {
-  Data Meaning,
-  Synthesis Strategy,
-  Generation
-}
+remove Learning      => remove Learned State
+remove Learned State => remove Learning
+
+remove Evaluation => remove Evidence
+remove Evidence   => remove Evaluation
 ```
 
-### Evaluation capability
+### Capability-only contractions
 
 ```text
-E-KERNEL = {
-  Evaluation Criterion,
-  Evaluation,
-  Evidence
-}
+remove Generation  => synthetic-output capability disappears
+remove Constraint  => reusable prescriptive-rule capability disappears
+remove Execution   => durable operational-realization capability disappears
+remove Provenance  => typed provenance/history capability disappears
 ```
 
-### Execution-bearing minima
+These do not create permission to hide the removed concept's semantics inside another concept.
+
+## Extension authority
+
+Ordinary extension uses accepted concepts plus required closure:
 
 ```text
-GX-KERNEL = G-KERNEL + Execution
-LX-KERNEL = L-KERNEL + Execution
-EX-KERNEL = E-KERNEL + Execution
+add Learning or Learned State
+  => add full L-KERNEL closure
+
+add Generation
+  => add Data Meaning + Synthesis Strategy
+
+add Evaluation or Evidence
+  => add full E-KERNEL closure
+
+add Execution
+  => require at least one Learning / Generation / Evaluation activity
+
+add Provenance
+  => require a meaningful typed relationship/history witness
 ```
 
-Provenance has no single membership-only minimum because a valid Provenance variant depends on the relationship semantics being preserved.
+Adding Constraint, Data Meaning, Strategy or Criterion may be independent.
 
-## Capability-conditioned extensions
+Learned-state-assisted Generation, evaluation-gated Generation, reusable rule support, durable operational lifecycle, typed provenance, current topology breadth and text-bearing structured-data capability are ordinary family extensions when current concepts remain sufficient.
 
-Current family rules additionally preserve:
+## Rediscovery boundary
+
+Fresh concept discovery is required rather than ordinary extension when new scope creates an independent purpose/state/action lifecycle that the current catalog cannot own cleanly.
+
+Current explicit rediscovery triggers include:
+
+- composable formal privacy/accounting;
+- product-owned governance/use/release decisions;
+- independently reusable/negotiable request or cohort definitions;
+- independent synthetic-output publication/versioning/retirement/transformation lifecycle;
+- arbitrary recursive/graph topology with independent relationship behavior;
+- product-owned resource/budget/quota/economic governance.
+
+Implementation resources, IDs, tables, services or status values do not themselves create concepts.
+
+## Product-scope documentation rule
+
+A family member may be structurally coherent while losing a former advertised capability after contraction.
+
+Therefore later mapping/product documentation must track the actual family member and remove stale promises. Examples:
 
 ```text
-learned-state-assisted Generation
-  => L-KERNEL + Generation
-
-evaluation-gated Generation
-  => G-KERNEL + E-KERNEL
-
-reusable prescriptive-rule capability
-  => Constraint
-
-durable operational lifecycle
-  => Execution + at least one domain activity
-
-provenance/history capability
-  => Provenance + meaningful relationship witness
+no L-CLUSTER  => no learned-state-assisted claim
+no E-KERNEL   => no evaluation-backed/evaluation-gated claim
+no Constraint => no reusable prescriptive-rule claim
+no Execution  => no durable retry/recovery/cancellation claim
+no Provenance => no typed provenance traversal claim
 ```
 
-Topology breadth and text-bearing structured-data capability do not introduce new current concepts. They remain variations of Data Meaning/Strategy/Generation plus optional Learning/Constraint/Evaluation/Execution/Provenance as the capability requires.
-
-## Invalid subset examples
-
-```text
-{ Data Meaning, Synthesis Strategy, Learning }
-  invalid — missing Learned State
-
-{ Data Meaning, Synthesis Strategy, Learned State }
-  invalid — missing Learning
-
-{ Synthesis Strategy, Generation }
-  invalid — missing Data Meaning
-
-{ Evaluation Criterion, Evaluation }
-  invalid — missing Evidence
-
-{ Evaluation, Evidence }
-  invalid — missing Evaluation Criterion
-
-{ Execution }
-  invalid — no realizable activity
-
-{ Provenance }
-  invalid — no provenance-bearing relationship
-```
-
-A coherent subset can still be invalid for a stronger advertised capability; for example G-KERNEL is valid direct Generation but not learned-state-assisted Generation without L-KERNEL.
+Application-family validity remains distinct from product packaging or implementation modularity.
 
 ## Dependence-derived explanation ordering
 
-Strict prerequisite constraints remain:
+Prerequisite-first explanation remains authoritative:
 
 ```text
-Data Meaning before Learning / Learned State
-Synthesis Strategy before Learning / Learned State
-Data Meaning before Generation
-Synthesis Strategy before Generation
+Data Meaning / Synthesis Strategy before Learning / Learned State
+Data Meaning / Synthesis Strategy before Generation
 Evaluation Criterion before Evaluation / Evidence
 ```
 
-Recommended explanatory layers remain:
-
-```text
-Layer 0  Data Meaning / Synthesis Strategy / Constraint / Evaluation Criterion
-Layer 1  Learning / Learned State / Generation / Evaluation / Evidence
-Layer 2  Execution / Provenance
-```
-
-Within the mutual components:
+Within SCCs use narrative order:
 
 ```text
 Learning before Learned State
 Evaluation before Evidence
 ```
 
-This is an explanation/design order, not package/runtime/implementation order.
+This is not implementation order.
 
 ## Current next boundary
 
-**009-D — Contraction, Extension, Concept Addition/Removal & Product-Scope Consequences** is next.
+**009-E — Synchronization Inventory Revalidation Across the Application Family** is next.
 
-009-D must systematically use the family rules above to determine what is lost, forced out, or newly required when concepts/components are removed or added, and distinguish ordinary family extension from future scope that requires fresh concept discovery.
+009-E must replay SYNC-01 through SYNC-15 against the completed D1-D4 authority and decide which rules remain universal when participants are present, capability-conditional, over-broad, redundant, or incomplete.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
