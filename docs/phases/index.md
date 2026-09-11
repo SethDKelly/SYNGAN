@@ -30,31 +30,29 @@ Only Phase 014 may change that posture after a positive whole-design completion 
 
 ## Phase 008 — Individual Concept Design Normalization & Completeness — complete
 
-```text
-008-A  COMPLETE — methodology authority / completion matrix / guardrails
-008-B  COMPLETE — problem / purpose / outcome / concept justification
-008-C  COMPLETE — concept state / identity / history / invariants
-008-D  COMPLETE — actions / queries / preconditions / postconditions / lifecycle transitions
-008-E  COMPLETE — operational principles / purpose fulfillment / counterexamples
-008-F  COMPLETE — independence / genericity / familiarity / reuse
-008-G  COMPLETE — candidate rediscovery / missing-concept / boundaries
-008-H  COMPLETE — Phase 008 consolidation / Phase 009 handoff
-```
-
-Phase 008 exits with:
+Phase 008-A through 008-H are complete.
 
 ```text
 INDIVIDUAL CONCEPT DESIGN   COMPLETE ENOUGH FOR PHASE 009
 JACKSON CONCEPT DESIGN      NOT COMPLETE
 ```
 
-The accepted catalog remains eleven concepts and fifteen synchronizations with no Phase 008 catalog change.
+The accepted catalog remains eleven concepts and fifteen synchronization IDs with no Phase 008 catalog change.
 
-## Phase 009 — Concept Dependence, Application Family, Composition & Synchronization Closure — next eligible
+## Phase 009 — Concept Dependence, Application Family, Composition & Synchronization Closure — active
 
-Phase 009 is the next high-level design phase.
+[Phase 009](009/index.md) entered through a dedicated start gate and dependency-safe decomposition.
 
-It is intentionally not yet subdivided. Immediately before Phase 009 starts, derive dependency-safe subgroups from the completed Phase 008 authority and remaining methodology D/E obligations.
+```text
+009-A  NEXT ELIGIBLE — Inclusion-Dependence Semantics, Evidence Rules & Pairwise Relation Inventory
+009-B  PLANNED — Inclusion-Dependence Graph, Roots, Cycles & Explanation Ordering
+009-C  PLANNED — Application Family, Valid Concept Subsets & Minimal Coherent Variants
+009-D  PLANNED — Contraction, Extension, Concept Addition/Removal & Product-Scope Consequences
+009-E  PLANNED — Synchronization Inventory Revalidation Across the Application Family
+009-F  PLANNED — Synchronization Trigger, Preconditions/Postconditions, State Ownership & Hidden-Coordinator Audit
+009-G  PLANNED — Composition Economy, Coupling, Synergy & Integrity Closure
+009-H  PLANNED — Phase 009 Consolidation, Dependence/Composition Completion Decision & Phase 010 Handoff
+```
 
 Phase 009 must not confuse Jackson inclusion dependence with ordinary reference, validation, production, operational/runtime, authority or provenance dependencies.
 
@@ -94,8 +92,8 @@ Placeholder only; not ready, not active and not next.
 
 ## Decomposition rule
 
-Only the current high-level phase is decomposed in detail. Phases 009-014 are subdivided immediately before they start so premature downstream planning cannot constrain unfinished design.
+Only the current high-level phase is decomposed in detail. Phases 010-014 remain high-level until their own entry points so premature downstream planning cannot constrain unfinished design.
 
 ## Current next boundary
 
-**Phase 009 — Concept Dependence, Application Family, Composition & Synchronization Closure** is next eligible and not yet decomposed.
+**009-A — Inclusion-Dependence Semantics, Evidence Rules & Pairwise Relation Inventory**.
