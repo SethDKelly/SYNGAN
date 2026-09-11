@@ -6,7 +6,7 @@ status: active
 
 # SYNGAN Accepted Synchronizations
 
-This directory contains the current cross-concept coordination rules accepted historically and subject to current Phase 009 composition revalidation.
+This directory contains the current cross-concept coordination rules accepted historically and subject to Phase 009 composition revalidation.
 
 Concept specifications own their own purpose, state, actions, lifecycle and invariants. This layer owns coordination only where a meaningful transition crosses concept boundaries.
 
@@ -14,71 +14,69 @@ Concept specifications own their own purpose, state, actions, lifecycle and inva
 
 - [Core Synchronizations](core-synchronizations.md) — SYNC-01 through SYNC-15.
 
-Current count:
-
 ```text
 accepted synchronization IDs  15
 Phase 009 replay status        NOT YET CLOSED
 SYNC-16                        NOT CURRENTLY JUSTIFIED
 ```
 
-The fifteen rules are the **current Phase 009 starting set**, not a claim that final composition closure has already occurred.
+The fifteen rules are the current Phase 009 starting set, not a final composition claim.
 
-Phase 009 must replay the set after establishing Jackson inclusion dependence and valid application-family variants. A synchronization may remain universal when its participating concepts are present, become explicitly conditional, be narrowed, be removed as redundant with concept-local behavior/reference/query semantics, or expose a genuine missing coordination rule.
+## Relationship to 009-A
 
-Historical ID stability is not sufficient reason to retain a rule.
+[009-A](../phases/009/009-A-inclusion-dependence-semantics-evidence-rules-pairwise-relation-inventory.md) establishes that Jackson inclusion dependence is much sparser than this historical coordination/dependency structure.
 
-## Dependency taxonomy retained as evidence
+A synchronization does **not** prove an inclusion-dependence edge merely because two concepts coordinate.
+
+009-A changes no synchronization ID or rule.
+
+Its pairwise findings must first be converted into the canonical graph in 009-B, then into valid application-family variants in 009-C/D. Only after that may 009-E replay SYNC-01 through SYNC-15 and decide whether each rule is universal when participants are present, application-family conditional, too broad, redundant, or missing a genuine coordination obligation.
+
+## Historical dependency taxonomy retained as evidence
 
 The accepted historical model distinguishes:
 
-1. **Reference / binding** — bind stable state owned elsewhere.
-2. **Contextual validation** — assess another concept's authority for a local context.
-3. **Production** — semantic completion establishes a durable logical result.
-4. **Operational realization** — a domain activity coordinates with Execution while retaining semantic authority.
-5. **Historical/provenance recording** — material transitions record typed derivation/context.
-6. **Controlled handoff** — Evidence is consumed by Generation completion or authority outside the current SYNGAN concept boundary without transferring Evidence ownership.
+1. reference/binding;
+2. contextual validation;
+3. production/result establishment;
+4. operational realization;
+5. historical/provenance recording;
+6. controlled handoff.
 
-These relationships are useful composition evidence but are **not Jackson application inclusion dependence** merely because one concept refers to, validates, produces, realizes or records another.
+These are composition evidence, not Jackson inclusion dependence by themselves.
 
-## Current topology/catalog disposition
+## Current catalog/topology boundary
 
-The historical provisional `Relationship` question is resolved.
-
-**Relationship is not a standalone accepted concept.** Structural relationship/order semantics remain descriptive Data Meaning state under current Phase 008 authority; prescriptive topology validity remains Constraint; request-specific topology remains Generation.
-
-Phase 009 must preserve that boundary unless a genuine J2/J3 misfit proves otherwise.
+`Relationship` is not a standalone accepted concept. Structural relationship/order semantics remain Data Meaning; prescriptive topology validity remains Constraint; request-specific topology remains Generation.
 
 ## Core composition guardrails
 
-- state has one canonical concept owner;
-- historical activities bind stable revisions/identities rather than mutable upstream aliases;
-- compatibility is contextual validation, not globally mutable shared state;
-- Execution operational completion does not define domain semantic completion;
-- Attempt remains subordinate operational history;
-- exactly-once physical work is not required, but authoritative semantic result establishment must remain unambiguous;
-- restored/regressed persistence does not re-establish current mutation authority;
-- Evidence claim strength cannot exceed the producing method's support;
-- Provenance is high fan-in but low authority fan-out;
-- reproducibility is cross-cutting and inspectable rather than a standalone concept;
-- stable dataset/artifact references remain representation/integration obligations;
-- network/external dependencies remain explicit rather than hidden core prerequisites;
-- no synchronization may create shadow ownership or a hidden coordinator merely to simplify implementation.
+- one canonical state owner per material fact;
+- stable historical bindings rather than mutable aliases;
+- contextual compatibility rather than global pairwise state;
+- Execution completion does not define domain semantic completion;
+- Attempt remains subordinate Execution history;
+- authoritative semantic result establishment remains unambiguous;
+- Evidence claim strength cannot exceed method support;
+- Provenance remains high fan-in and low authority fan-out;
+- reproducibility remains cross-cutting rather than a standalone concept;
+- no hidden coordinator or shadow authority may be introduced merely for implementation convenience.
 
-## Phase 009 relationship
-
-The current Phase 009 order is:
+## Phase 009 sequence
 
 ```text
-inclusion dependence
-  ↓
-application family
-  ↓
-synchronization inventory replay
-  ↓
-trigger / ownership / pre-post audit
-  ↓
-composition economy / synergy / integrity
+009-A  COMPLETE — pairwise inclusion inventory
+009-B  NEXT — canonical graph / roots / cycles / ordering
+009-C  application family
+009-D  contraction / extension
+009-E  synchronization inventory replay
+009-F  trigger / state ownership / hidden coordinator
+009-G  economy / synergy / integrity
+009-H  consolidation
 ```
 
-Phase 009-A is the next eligible design subgroup. It does not yet modify this synchronization set.
+## Current next boundary
+
+**009-B — Inclusion-Dependence Graph, Roots, Cycles & Explanation Ordering**.
+
+The synchronization set remains unchanged until its explicit 009-E replay unless an earlier genuine J2/J3 defect requires reopening.
