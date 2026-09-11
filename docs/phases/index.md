@@ -30,8 +30,6 @@ Only Phase 014 may change that posture after a positive whole-design completion 
 
 ## Phase 008 — Individual Concept Design Normalization & Completeness — complete
 
-Phase 008 exits with:
-
 ```text
 INDIVIDUAL CONCEPT DESIGN   COMPLETE ENOUGH FOR PHASE 009
 JACKSON CONCEPT DESIGN      NOT COMPLETE
@@ -45,8 +43,8 @@ JACKSON CONCEPT DESIGN      NOT COMPLETE
 009-C  COMPLETE — application family / valid subsets / minimal coherent variants
 009-D  COMPLETE — contraction / extension / add-remove consequences
 009-E  COMPLETE — synchronization inventory replay
-009-F  NEXT ELIGIBLE — synchronization trigger / pre-post / ownership / hidden coordinator
-009-G  PLANNED — composition economy / synergy / integrity
+009-F  COMPLETE — trigger / pre-post / state ownership / hidden coordinator
+009-G  NEXT ELIGIBLE — composition economy / coupling / synergy / integrity
 009-H  PLANNED — consolidation / Phase 010 handoff
 ```
 
@@ -55,15 +53,17 @@ Current methodology state:
 ```text
 D1-D4  CURRENTLY CLOSED
 E1     CURRENTLY CLOSED
-E2     STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
-E3     STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
+E2     CURRENTLY CLOSED
+E3     PARTIAL TO STRONG
 E4     PARTIAL
-E5     PARTIAL TO STRONG
+E5     STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
 ```
 
-009-E reduces the historical fifteen synchronization IDs to thirteen active cross-concept rules. `SYNC-08` is retired from active composition because output promotion is Generation-owned local result behavior. `SYNC-15` is reclassified as the cross-cutting Reproducibility Contract. No `SYNC-16` is justified.
+009-F establishes singular canonical state ownership across the thirteen active synchronization rules and finds no hidden coordinator/shadow concept requirement.
 
-009-F must now normalize trigger, preconditions/postconditions, state ownership, failure/indeterminate behavior, historical binding and hidden-coordinator risk for the thirteen active rules.
+It also narrows `SYNC-06` to conditional Generation/Learned State reuse coordination, leaving direct Generation free of Learned State composition.
+
+009-G must now evaluate the normalized thirteen-rule set for economy, coupling, synergy and combined integrity.
 
 ## Later design phases
 
@@ -81,7 +81,7 @@ Planned. A positive result does not make implementation ready.
 
 ### Phase 013 — Post-Concept Representation & Architecture Reconciliation
 
-Planned. Reconcile retained Phase 004/006/007 architecture against completed concept design. Remains design-only.
+Planned. Reconcile retained architecture against completed concept design. Remains design-only.
 
 ### Phase 014 — Whole-Design Consolidation, Residual Debt Audit & Implementation-Readiness Decision
 
@@ -101,4 +101,4 @@ Placeholder only; not ready, not active and not next.
 
 ## Current next boundary
 
-**009-F — Synchronization Trigger, Preconditions/Postconditions, State Ownership & Hidden-Coordinator Audit**.
+**009-G — Composition Economy, Coupling, Synergy & Integrity Closure**.
