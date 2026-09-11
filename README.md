@@ -16,7 +16,8 @@ Current authority:
 - [`Current Problem Knowledge`](docs/problem/index.md)
 - [`Accepted Concept Catalog`](docs/concepts/index.md)
 - [`Phase 008 Individual-Concept Design Consolidation`](docs/concepts/phase-008-individual-concept-consolidation.md)
-- [`Phase 008`](docs/phases/008/index.md)
+- [`Accepted Synchronizations`](docs/synchronizations/index.md)
+- [`Phase 009`](docs/phases/009/index.md)
 
 ## Status
 
@@ -26,21 +27,42 @@ accepted synchronizations  15
 current desired outcomes   16
 Phase 008                  COMPLETE
 individual concept design  COMPLETE ENOUGH FOR PHASE 009
-Phase 009                  NEXT ELIGIBLE / NOT YET DECOMPOSED
+Phase 009                  ACTIVE
+009-A                      NEXT ELIGIBLE
 Jackson design completion  IN PROGRESS
 implementation readiness   NOT READY
 implementation start       NOT STARTED
 implementation next        NOT YET
 ```
 
-Phase 008-A through 008-H completed the current individual-concept design foundation. Purpose/justification, state/history/invariants, actions/queries/transitions, operational principles, independence/genericity/familiarity/reuse, and catalog-perimeter rediscovery all have current closure records.
+Phase 009 has entered through a design-only start gate and has been decomposed from the remaining Jackson dependence/composition obligations rather than from implementation dependencies.
 
-No current missing concept was found and the catalog remains eleven concepts/fifteen synchronizations. That synchronization count is not a final composition claim; Phase 009 must still revalidate the set under inclusion-dependence/application-family and composition analysis.
+The governing Phase 009 distinction is:
+
+```text
+Jackson inclusion dependence
+    != reference / validation / production / runtime / provenance dependency
+```
+
+The existing fifteen synchronizations are the current composition candidates. Phase 009 must replay them against the actual inclusion-dependence graph and valid application-family subsets before they can be treated as composition-closed.
+
+## Phase 009 subgroup sequence
+
+```text
+009-A  Inclusion-Dependence Semantics, Evidence Rules & Pairwise Relation Inventory
+009-B  Inclusion-Dependence Graph, Roots, Cycles & Explanation Ordering
+009-C  Application Family, Valid Concept Subsets & Minimal Coherent Variants
+009-D  Contraction, Extension, Concept Addition/Removal & Product-Scope Consequences
+009-E  Synchronization Inventory Revalidation Across the Application Family
+009-F  Synchronization Trigger, Preconditions/Postconditions, State Ownership & Hidden-Coordinator Audit
+009-G  Composition Economy, Coupling, Synergy & Integrity Closure
+009-H  Phase 009 Consolidation, Dependence/Composition Completion Decision & Phase 010 Handoff
+```
 
 ## Remaining design roadmap
 
 ```text
-009    Concept Dependence, Application Family, Composition & Synchronization Closure
+009    Concept Dependence, Application Family, Composition & Synchronization Closure — ACTIVE
 010    Concept Mapping, Interaction, Linguistic & Experience Alignment
 011    Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Design Validation
 012    Jackson Concept-Design Consolidation & Completion Decision
@@ -50,14 +72,12 @@ No current missing concept was found and the catalog remains eleven concepts/fif
 015    Implementation Authority & Controlled Delivery — FUTURE ONLY
 ```
 
-Phase 009 is next eligible but intentionally not subdivided yet. Its subgroups must be derived immediately before entry from the completed Phase 008 authority and remaining methodology D/E obligations.
-
 Phase 007 remains valuable architecture evidence, but its historical implementation-reentry conclusion is superseded. Architecture will be reconciled only after Jackson concept design closes.
 
 Only a positive Phase 014 may change implementation to **READY / NOT STARTED / NEXT**. A later explicit Phase 015 would still be required to begin implementation.
 
 ## Current next boundary
 
-**Phase 009 — Concept Dependence, Application Family, Composition & Synchronization Closure**.
+**009-A — Inclusion-Dependence Semantics, Evidence Rules & Pairwise Relation Inventory**.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
