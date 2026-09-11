@@ -26,6 +26,7 @@ These documents define how SYNGAN design knowledge is created, interpreted, chan
 - [Concept Dependence & Application Family](../dependence/index.md)
 - [009-A Inclusion-Dependence Pairwise Inventory](../dependence/inclusion-dependence-pairwise-inventory.md)
 - [009-B Inclusion-Dependence Graph & Ordering](../dependence/inclusion-dependence-graph-ordering.md)
+- [009-C Application Family & Valid Subsets](../dependence/application-family-valid-subsets.md)
 
 ## Current posture
 
@@ -37,53 +38,60 @@ Phase 008                  COMPLETE
 Phase 009                  ACTIVE
 009-A                      COMPLETE
 009-B                      COMPLETE
-009-C                      NEXT ELIGIBLE
+009-C                      COMPLETE
+009-D                      NEXT ELIGIBLE
 D1                         CURRENTLY CLOSED
-D2                         OPEN
+D2                         CURRENTLY CLOSED
 D3                         CURRENTLY CLOSED
-D4                         PARTIAL
+D4                         PARTIAL TO STRONG
 Jackson design completion  IN PROGRESS
 implementation readiness   NOT READY
 implementation start       NOT STARTED
 implementation next        NOT YET
 ```
 
-## Dependence result
+## Dependence/application-family result
 
-009-A classified all 110 directed non-self concept pairs. 009-B converts the 12 universal findings into the canonical graph:
-
-```text
-9 direct universal edges
-3 transitive universal findings
-2 non-trivial strongly connected components
-0 unresolved graph-cycle defects
-```
-
-The two strongly connected inclusion components are:
+009-A classified all 110 directed non-self concept pairs. 009-B reduced the 12 universal findings to 9 direct universal edges plus 3 transitive findings and accepted two legitimate strongly connected inclusion components:
 
 ```text
 { Learning, Learned State }
 { Evaluation, Evidence }
 ```
 
-They retain distinct purposes/state/action ownership and are not merge candidates merely because they are mutually required in the current application family.
+009-C then defines the current application family as non-empty graph-closed subsets that also satisfy:
 
-The condensed universal graph is acyclic.
+```text
+Execution => Learning OR Generation OR Evaluation
 
-Execution and Provenance retain non-binary prerequisites that belong to 009-C application-family analysis rather than universal pairwise edges.
+Provenance => at least one meaningful provenance-bearing relationship
+
+claimed capability => all capability-specific prerequisites included
+```
+
+Canonical kernels include:
+
+```text
+L-KERNEL = { Data Meaning, Synthesis Strategy, Learning, Learned State }
+G-KERNEL = { Data Meaning, Synthesis Strategy, Generation }
+E-KERNEL = { Evaluation Criterion, Evaluation, Evidence }
+```
+
+Authority-only `{Data Meaning}`, `{Synthesis Strategy}`, `{Constraint}`, and `{Evaluation Criterion}` subsets are also coherent family members.
+
+A coherent family member is not automatically a package, service, deployment profile, feature flag, product edition, or SKU.
 
 ## Architecture boundary
 
 The [Phase 007 Consolidated Architecture Contract](../architecture/phase-007-consolidated-architecture-contract.md) remains downstream evidence pending Phase 013 reconciliation.
 
-Architecture may expose a counterexample but cannot define inclusion dependence from imports, services, persistence references, transaction order, deployment topology, runtime calls, or API nesting.
+Architecture may expose a counterexample but cannot define dependence or family membership from imports, services, persistence references, transaction order, deployment topology, runtime calls, or API nesting.
 
-The canonical concept graph MUST NOT be mirrored mechanically into technical dependency structure.
+The canonical concept graph/application family MUST NOT be mirrored mechanically into technical dependency or packaging structure.
 
 ## Remaining design sequence
 
 ```text
-009-C  application family / valid subsets / minimal variants
 009-D  contraction / extension / add-remove consequences
 009-E  synchronization inventory replay
 009-F  synchronization ownership / hidden coordinator
@@ -102,6 +110,6 @@ Phases 009-013 cannot make implementation ready. Only Phase 014 may set **READY 
 
 ## Current next boundary
 
-**009-C — Application Family, Valid Concept Subsets & Minimal Coherent Variants**.
+**009-D — Contraction, Extension, Concept Addition/Removal & Product-Scope Consequences**.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
