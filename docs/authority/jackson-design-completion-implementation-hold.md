@@ -84,27 +84,36 @@ Established [Operational Principle, Purpose Fulfillment & Counterexample Normali
 
 ### 008-F — complete
 
-Established [Concept Independence, Genericity, Familiarity & Reuse Normalization](../concepts/independence-genericity-familiarity-reuse-normalization.md).
+Established [Concept Independence, Genericity, Familiarity & Reuse Normalization](../concepts/independence-genericity-familiarity-reuse-normalization.md). All eleven accepted concepts pass current independence, bounded-genericity, familiarity/naming and reuse review without catalog change.
 
-All eleven accepted concepts pass current independence and bounded-genericity review. All eleven canonical names are retained after explicit familiarity/analogue comparison, and conceptual reuse remains coherent across current algorithm, topology, scale and deployment variation without forcing every concept into every workflow.
+### 008-G — complete
 
-008-F explicitly establishes:
+Established [Catalog Perimeter Candidate Rediscovery, Missing-Concept & Boundary Audit](../concepts/catalog-perimeter-candidate-rediscovery-boundary-audit.md).
 
-```text
-independence != isolation
-reuse        != universal presence
-familiarity  != copying another product/object model
-genericity   != generic infrastructure
-```
+008-G replays every material rejected/subordinated/deferred/external/representation-classified candidate, later Phase 006 recovery/resource/privacy/topology candidates, and new missing-candidate hypotheses including Synthetic Output, Source, Dependency, Authorization/Security state, Platform Capability, Completion Basis, Checkpoint, Claim, Report/View/Export and text-specific structures.
 
-No accepted concept was added, removed, merged, split or renamed. This does not establish catalog finality: 008-G must now rediscover rejected/deferred/subordinate/external/representation-classified candidates from first principles.
+No candidate satisfies the current promotion burden. The catalog remains eleven concepts/fifteen synchronizations with no add/remove/restore/merge/split/rename.
+
+Important future rediscovery triggers remain explicit rather than being silently implemented: composable formal privacy, product-owned governance/release decisions, reusable request/cohort semantics, independent output lifecycle/publication, arbitrary graph topology and product-owned economic/resource management.
+
+008-G closes current candidate-discovery/disposition and catalog-perimeter obligations. It does **not** close Phase 008; consolidation remains mandatory.
 
 ## Remaining Phase 008 work
 
 ```text
-008-G  Deferred/Rejected Candidate Rediscovery, Missing-Concept & Boundary Audit
 008-H  Phase 008 Consolidation, Individual-Concept Completeness Decision & Phase 009 Handoff
 ```
+
+A positive 008-H may state only:
+
+```text
+INDIVIDUAL CONCEPT DESIGN   COMPLETE ENOUGH FOR PHASE 009
+IMPLEMENTATION READINESS    NOT READY
+IMPLEMENTATION START        NOT STARTED
+IMPLEMENTATION NEXT         NOT YET
+```
+
+It cannot declare Jackson concept design complete.
 
 ## Remaining design roadmap
 
@@ -139,12 +148,12 @@ That still does not start implementation; a later explicit Phase 015 implementat
 
 ## No executable design-by-accident
 
-Until Phase 014 passes, do not add production behavior, new executable architecture restrictions merely to crystallize hypotheses, package-topology changes anticipating future design, persistence schemas/migrations, runtime/model/platform/security adapters, public API implementation, reference algorithms, vertical slices, benchmarks, or repairs to stale implementation tests solely to create readiness.
+Until Phase 014 passes, do not add production behavior, new executable architecture restrictions merely to crystallize hypotheses, package-topology changes anticipating future design, persistence schemas/migrations, runtime/model/platform/security adapters, public API implementation, reference algorithms, vertical slices, benchmarks, privacy mechanisms, or repairs to stale implementation tests solely to create readiness.
 
 Existing executable scaffold may remain untouched as historical/provisional evidence.
 
 ## Current next boundary
 
-The next eligible work is **008-G — Deferred/Rejected Candidate Rediscovery, Missing-Concept & Boundary Audit**.
+The next eligible work is **008-H — Phase 008 Consolidation, Individual-Concept Completeness Decision & Phase 009 Handoff**.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
