@@ -29,26 +29,30 @@ No implementation tranche is eligible.
 Phase 008                  COMPLETE
 Phase 009                  ACTIVE
 009-A                      COMPLETE — pairwise inclusion-dependence inventory
-009-B                      NEXT ELIGIBLE — canonical graph / cycles / ordering
-D1                         PARTIAL — GRAPH PENDING
+009-B                      COMPLETE — canonical graph / SCCs / explanation ordering
+009-C                      NEXT ELIGIBLE — application family / valid subsets
+D1                         CURRENTLY CLOSED
+D2                         OPEN
+D3                         CURRENTLY CLOSED
 Jackson concept design     IN PROGRESS
 ```
 
-009-A is concept-design documentation only. It changes no executable behavior and does not use runtime/package architecture as dependence authority.
+009-B is concept-design documentation only. It changes no executable behavior and does not use runtime/package architecture as graph authority.
 
-## What 009-A does not authorize
+## What 009-B does not authorize
 
-The pairwise inventory does not authorize:
+The canonical inclusion-dependence graph does not authorize:
 
-- package dependency changes to mirror concept dependence;
+- package/module dependency changes to mirror concept edges;
+- module co-location or merging for the Learning/Learned State or Evaluation/Evidence SCCs;
 - schema/foreign-key changes;
-- API/module restructuring;
+- API/service restructuring;
 - runtime orchestration changes;
 - persistence or graph-store implementation;
 - synchronization implementation;
 - repair of stale implementation tests.
 
-The canonical graph itself is still 009-B design work and remains independent of implementation topology.
+Concept mutual inclusion does not imply one code module, one table, one service, one transaction, or one object lifecycle.
 
 ## Superseded 007-K re-entry conclusion
 
@@ -59,7 +63,7 @@ Retained Phase 007 architecture/scaffold evidence cannot reactivate implementati
 ## Remaining design before implementation readiness can be decided
 
 ```text
-009-B..H  complete dependence/application-family/composition design
+009-C..H  finish application-family/composition design
 010       concept mapping / interaction / language / experience
 011       specificity / familiarity / integrity / synergy / misfit
 012       Jackson concept-design completion decision
@@ -77,4 +81,4 @@ Until Phase 014 passes, do not add production concept/domain behavior, implement
 
 Design-only work:
 
-**009-B — Inclusion-Dependence Graph, Roots, Cycles & Explanation Ordering**.
+**009-C — Application Family, Valid Concept Subsets & Minimal Coherent Variants**.
