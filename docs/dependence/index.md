@@ -10,15 +10,16 @@ status: active
 
 This directory contains current Jackson-style **application inclusion-dependence** authority for SYNGAN.
 
-Inclusion dependence is intentionally distinct from reference, validation, production, operational/runtime, authority, provenance, import, persistence, or dataflow dependency.
+Inclusion dependence is distinct from reference, validation, production, operational/runtime, authority, provenance, import, persistence, or dataflow dependency.
 
-For concepts `C1` and `C2` in an application variant `A`, the governing question is:
+For concepts `C1` and `C2`, the governing question remains:
 
-> **If `C1` is included, does including `C1` make sense only if `C2` is also included?**
+> **If `C1` is included in an application, does including `C1` make sense only if `C2` is also included?**
 
 ## Current authority
 
-- [Inclusion-Dependence Semantics, Evidence Rules & Pairwise Relation Inventory](inclusion-dependence-pairwise-inventory.md) — Phase 009-A current pairwise authority.
+- [Inclusion-Dependence Semantics, Evidence Rules & Pairwise Relation Inventory](inclusion-dependence-pairwise-inventory.md) — 009-A pairwise authority.
+- [Inclusion-Dependence Graph, Strong Components & Explanation Ordering](inclusion-dependence-graph-ordering.md) — 009-B canonical graph/order authority.
 
 ## Current phase state
 
@@ -26,71 +27,103 @@ For concepts `C1` and `C2` in an application variant `A`, the governing question
 Phase 008                         COMPLETE
 Phase 009                         ACTIVE
 009-A                             COMPLETE
-009-B                             NEXT ELIGIBLE
-D1 inclusion-dependence graph     PARTIAL — PAIRWISE INVENTORY COMPLETE; GRAPH PENDING
+009-B                             COMPLETE
+009-C                             NEXT ELIGIBLE
+D1 inclusion-dependence graph     CURRENTLY CLOSED
 D2 application family             OPEN
-D3 explanation ordering           OPEN
+D3 explanation/design ordering    CURRENTLY CLOSED
 D4 add/remove consequences        PARTIAL
 ```
 
-009-A establishes the pairwise relation evidence needed by 009-B. It does **not** decide the canonical direct/transitive graph, cycle treatment, roots/leaves, explanation ordering, application-family subsets, or final composition.
+## Canonical graph result
 
-## Pairwise result summary
-
-The current universal inclusion-dependence candidates are:
+The 12 universal pairwise findings from 009-A reduce to 9 direct universal edges:
 
 ```text
 Learning      -> Data Meaning
 Learning      -> Synthesis Strategy
 Learning      -> Learned State
-
 Learned State -> Learning
-Learned State -> Data Meaning
-Learned State -> Synthesis Strategy
 
 Generation    -> Data Meaning
 Generation    -> Synthesis Strategy
 
 Evaluation    -> Evaluation Criterion
 Evaluation    -> Evidence
-
-Evidence      -> Evaluation Criterion
 Evidence      -> Evaluation
 ```
 
-These are pairwise inclusion findings only. 009-B must determine direct versus transitive edges and explicitly analyze the apparent mutual-dependence pairs `Learning <-> Learned State` and `Evaluation <-> Evidence` rather than treating a cycle as automatically valid or invalid.
-
-## Conditional/disjunctive relations
-
-Several relations are intentionally **not** universal graph edges even though particular application variants require them. Examples include:
-
-- learned-state-assisted Generation may require Learning/Learned State;
-- applicable prescriptive rules may require Constraint;
-- validation-gated Generation may require Criterion/Evaluation/Evidence;
-- operationally significant Learning/Generation/Evaluation may require Execution;
-- Execution requires one committed domain activity from `{Learning, Generation, Evaluation}`, but no one member of that set is universally required;
-- Provenance requires material canonical/external subjects to relate, but no one accepted concept is a universal pairwise prerequisite;
-- Criteria/Evaluation/Evidence may require Data Meaning, Constraint, Generation, or Learned State when their committed question/subject context refers to those authorities.
-
-These conditional/disjunctive requirements must remain visible for 009-B/009-C without being flattened into unconditional edges.
-
-## Historical dependency taxonomy
-
-The existing SYNGAN taxonomy remains useful supporting evidence:
+Three pairwise findings are transitive rather than direct:
 
 ```text
-reference / binding
-contextual validation
-production
-operational realization
-historical / provenance recording
-controlled handoff
+Learned State -> Data Meaning
+Learned State -> Synthesis Strategy
+Evidence      -> Evaluation Criterion
 ```
 
-It does not define Jackson inclusion dependence.
+## Strongly connected components
+
+Two legitimate mutual inclusion components remain:
+
+```text
+L-CLUSTER = { Learning, Learned State }
+E-CLUSTER = { Evaluation, Evidence }
+```
+
+They do not merge the concepts. Phase 008 already established distinct activity/result purposes and singular state/action ownership.
+
+The condensed universal graph is acyclic.
+
+## Non-binary constraints retained for 009-C
+
+Universal pairwise edges are not sufficient to derive valid application subsets.
+
+At minimum:
+
+```text
+Execution => Learning OR Generation OR Evaluation
+
+Provenance => at least one meaningful provenance-bearing relationship
+              involving current SYNGAN concept state/result/history
+```
+
+Additional conditional application-family rules include learned-state-assisted Generation, evaluation-gated Generation, optional Constraint support, and conditional durable Execution for operationally significant activities.
+
+These are side constraints, not false unconditional graph edges.
+
+## Dependence-derived explanation ordering
+
+Strict prerequisite constraints are:
+
+```text
+Data Meaning before Learning / Learned State
+Synthesis Strategy before Learning / Learned State
+Data Meaning before Generation
+Synthesis Strategy before Generation
+Evaluation Criterion before Evaluation / Evidence
+```
+
+Recommended explanatory layers are:
+
+```text
+Layer 0  Data Meaning / Synthesis Strategy / Constraint / Evaluation Criterion
+Layer 1  Learning / Learned State / Generation / Evaluation / Evidence
+Layer 2  Execution / Provenance
+```
+
+Within the mutual components, use narrative activity-before-result order:
+
+```text
+Learning before Learned State
+Evaluation before Evidence
+```
+
+This is an explanation/design order, not package/runtime/implementation order.
 
 ## Current next boundary
 
-**009-B — Inclusion-Dependence Graph, Roots, Cycles & Explanation Ordering** is next.
+**009-C — Application Family, Valid Concept Subsets & Minimal Coherent Variants** is next.
+
+009-C must derive valid and invalid subsets from both universal graph closure and the non-binary/conditional constraint layer.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
