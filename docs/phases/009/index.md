@@ -10,8 +10,6 @@ status: active
 
 Complete the Jackson application inclusion-dependence and composition layer after Phase 008 closed the individual-concept foundation.
 
-Phase 009 must determine which concepts require which others at the application level, derive meaningful product-family subsets and explanation ordering, then revalidate the synchronization set against those variants before closing composition ownership, economy, synergy and integrity.
-
 Phase 009 remains design-only.
 
 ```text
@@ -20,26 +18,27 @@ IMPLEMENTATION START       NOT STARTED
 IMPLEMENTATION NEXT        NOT YET
 ```
 
-## Entry authority
+## Current authority
 
 - [Phase 009 Entry / Decomposition](009-entry-decomposition.md)
+- [009-A — Inclusion-Dependence Semantics, Evidence Rules & Pairwise Relation Inventory](009-A-inclusion-dependence-semantics-evidence-rules-pairwise-relation-inventory.md)
+- [Current Concept Dependence Authority](../../dependence/index.md)
 - [Phase 008 Individual-Concept Design Consolidation](../../concepts/phase-008-individual-concept-consolidation.md)
-- [Concept Design Methodology](../../authority/design-methodology.md)
 - [Jackson Methodology Completion Matrix](../../authority/jackson-methodology-completion-matrix.md)
 - [Accepted Concept Catalog](../../concepts/index.md)
 - [Accepted Synchronizations](../../synchronizations/index.md)
 
-Historical 001-G dependency/composition analysis is supporting evidence only. Its reference/validation/production/operational/provenance taxonomy does not substitute for Jackson inclusion dependence.
-
-## Entry baseline
+## Current baseline
 
 ```text
 accepted concepts          11
 accepted synchronizations  15
 current desired outcomes   16
 Phase 008                  COMPLETE
-individual concept design  COMPLETE ENOUGH FOR PHASE 009
-D1                         OPEN
+Phase 009                  ACTIVE
+009-A                      COMPLETE
+009-B                      NEXT ELIGIBLE
+D1                         PARTIAL — PAIRWISE INVENTORY COMPLETE; GRAPH PENDING
 D2                         OPEN
 D3                         OPEN
 D4                         PARTIAL
@@ -48,12 +47,51 @@ E4                         PARTIAL
 E5                         PARTIAL TO STRONG
 ```
 
+## 009-A result
+
+009-A establishes the application-purpose inclusion test and classifies all 110 directed non-self concept pairs:
+
+```text
+D  universal inclusion dependence     12
+C  conditional/disjunctive            43
+N  no universal dependence            55
+I  insufficient                         0
+```
+
+Universal pairwise candidates are:
+
+```text
+Learning      -> Data Meaning
+Learning      -> Synthesis Strategy
+Learning      -> Learned State
+Learned State -> Learning
+Learned State -> Data Meaning
+Learned State -> Synthesis Strategy
+Generation    -> Data Meaning
+Generation    -> Synthesis Strategy
+Evaluation    -> Evaluation Criterion
+Evaluation    -> Evidence
+Evidence      -> Evaluation Criterion
+Evidence      -> Evaluation
+```
+
+009-A also identifies two mutual-dependence candidates requiring explicit graph treatment:
+
+```text
+Learning   <-> Learned State
+Evaluation <-> Evidence
+```
+
+Execution has a disjunctive one-of prerequisite across `{Learning, Generation, Evaluation}` rather than one universal pairwise dependency. Provenance likewise requires meaningful provenance-bearing subjects but no one accepted concept universally.
+
+No J1/J2 defect was found and no concept or synchronization changed.
+
 ## Subgroups
 
 | Group | Scope | Status |
 |---|---|---|
-| **009-A** | **Inclusion-Dependence Semantics, Evidence Rules & Pairwise Relation Inventory** | **next eligible** |
-| **009-B** | Inclusion-Dependence Graph, Roots, Cycles & Explanation Ordering | planned |
+| **009-A** | [Inclusion-Dependence Semantics, Evidence Rules & Pairwise Relation Inventory](009-A-inclusion-dependence-semantics-evidence-rules-pairwise-relation-inventory.md) | **complete** |
+| **009-B** | **Inclusion-Dependence Graph, Roots, Cycles & Explanation Ordering** | **next eligible** |
 | **009-C** | Application Family, Valid Concept Subsets & Minimal Coherent Variants | planned |
 | **009-D** | Contraction, Extension, Concept Addition/Removal & Product-Scope Consequences | planned |
 | **009-E** | Synchronization Inventory Revalidation Across the Application Family | planned |
@@ -64,9 +102,9 @@ E5                         PARTIAL TO STRONG
 ## Dependency order
 
 ```text
-009-A
+009-A COMPLETE
   ↓
-009-B
+009-B NEXT
   ↓
 009-C
   ↓
@@ -81,15 +119,18 @@ E5                         PARTIAL TO STRONG
 009-H
 ```
 
-Each subgroup may reopen the smallest affected upstream authority if it exposes a real misfit.
+## 009-B obligation
 
-## Governing inclusion-dependence question
+009-B must derive the canonical graph from the 009-A pairwise inventory. It owns:
 
-For concepts `C1` and `C2` in an application variant `A`:
+- direct versus transitive dependence;
+- mutual-dependence/cycle treatment;
+- graph roots/leaves;
+- representation of conditional/disjunctive prerequisites without false universal edges;
+- dependence-derived explanation/design ordering;
+- J2 reopening if graph pressure exposes a genuine boundary defect.
 
-> **If `C1` is included, does including `C1` make sense only if `C2` is also included?**
-
-This is not equivalent to reference, validation, production, runtime, import, provenance or synchronization dependency.
+It must not infer graph structure from package/runtime/architecture dependencies.
 
 ## Phase 009 exit target
 
@@ -106,6 +147,4 @@ IMPLEMENTATION NEXT          NOT YET
 
 ## Current next boundary
 
-**009-A — Inclusion-Dependence Semantics, Evidence Rules & Pairwise Relation Inventory** is the next eligible subgroup.
-
-009-A is not executed by the phase-entry/decomposition exercise.
+**009-B — Inclusion-Dependence Graph, Roots, Cycles & Explanation Ordering** is next eligible.
