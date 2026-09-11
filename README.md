@@ -19,6 +19,7 @@ Current authority includes:
 - [`009-A Inclusion-Dependence Pairwise Inventory`](docs/dependence/inclusion-dependence-pairwise-inventory.md)
 - [`009-B Inclusion-Dependence Graph & Ordering`](docs/dependence/inclusion-dependence-graph-ordering.md)
 - [`009-C Application Family & Valid Subsets`](docs/dependence/application-family-valid-subsets.md)
+- [`009-D Contraction & Extension Consequences`](docs/dependence/contraction-extension-consequences.md)
 - [`Phase 009`](docs/phases/009/index.md)
 
 ## Status
@@ -32,20 +33,21 @@ Phase 009                  ACTIVE
 009-A                      COMPLETE
 009-B                      COMPLETE
 009-C                      COMPLETE
-009-D                      NEXT ELIGIBLE
+009-D                      COMPLETE
+009-E                      NEXT ELIGIBLE
 D1                         CURRENTLY CLOSED
 D2                         CURRENTLY CLOSED
 D3                         CURRENTLY CLOSED
-D4                         PARTIAL TO STRONG
+D4                         CURRENTLY CLOSED
 Jackson design completion  IN PROGRESS
 implementation readiness   NOT READY
 implementation start       NOT STARTED
 implementation next        NOT YET
 ```
 
-009-C establishes that SYNGAN is a **family of coherent concept subsets**, not one mandatory eleven-concept application.
+009-A through 009-D now close the current Jackson dependence/application-family layer.
 
-Canonical capability minima include:
+Canonical capability kernels remain:
 
 ```text
 L-KERNEL = { Data Meaning, Synthesis Strategy, Learning, Learned State }
@@ -53,16 +55,15 @@ G-KERNEL = { Data Meaning, Synthesis Strategy, Generation }
 E-KERNEL = { Evaluation Criterion, Evaluation, Evidence }
 ```
 
-Reusable Data Meaning, Synthesis Strategy, Constraint, and Evaluation Criterion may also form coherent authority-only contractions.
+009-D establishes systematic contraction/extension consequences. Removing Data Meaning or Strategy prevents current Learning/Learned State and Generation from remaining; removing Criterion prevents Evaluation/Evidence; the Learning/Learned State and Evaluation/Evidence SCCs contract as units. Constraint, Execution, and Provenance can be removed without universal dependent removal, but their capabilities disappear and may not be hidden in other concepts.
 
-Execution remains valid only when at least one supported domain activity is included. Provenance remains valid only when there is an actual provenance-bearing relationship/history witness. Capability claims such as learned-state-assisted Generation or evaluation-gated Generation impose additional inclusion requirements without becoming universal pairwise graph edges.
+Ordinary extension adds accepted concepts with required closure. Fresh concept discovery remains mandatory for genuinely new independent functionality such as formal composable privacy/accounting, product-owned release governance, independently reusable requests/cohorts, independent synthetic-output lifecycle, arbitrary graph-topology behavior, or product-owned resource/economic governance.
 
-Topology breadth and text-bearing structured data remain expressible through the existing concept family; no Relationship, Text, Tokenizer, or Language Model concept is restored.
+The application-family model and consequence rules are design authority, not package/module/product-edition authority.
 
 ## Remaining design roadmap
 
 ```text
-009-D  contraction / extension / add-remove consequences
 009-E  synchronization inventory replay
 009-F  synchronization ownership / hidden coordinator
 009-G  composition economy / synergy / integrity
@@ -80,6 +81,6 @@ Only a positive Phase 014 may change implementation to **READY / NOT STARTED / N
 
 ## Current next boundary
 
-**009-D — Contraction, Extension, Concept Addition/Removal & Product-Scope Consequences**.
+**009-E — Synchronization Inventory Revalidation Across the Application Family**.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
