@@ -24,7 +24,8 @@ Phase 008-C                  COMPLETE
 Phase 008-D                  COMPLETE
 Phase 008-E                  COMPLETE
 Phase 008-F                  COMPLETE
-Phase 008-G                  NEXT ELIGIBLE
+Phase 008-G                  COMPLETE
+Phase 008-H                  NEXT ELIGIBLE
 architecture corpus          RETAINED AS DOWNSTREAM DESIGN EVIDENCE
 architecture reconciliation  PLANNED FOR PHASE 013
 implementation readiness     NOT READY
@@ -34,11 +35,27 @@ implementation next          NOT YET
 
 ## Relationship to current concept authority
 
-Phase 008-C through 008-F now provide current individual-concept authority for state/history, behavior, operational principles, independence, bounded genericity, familiarity/naming and conceptual reuse.
+Phase 008-B through 008-G now provide current individual-concept/catalog-perimeter authority for purpose, state/history, behavior, operational principles, independence, bounded genericity, naming/familiarity, reuse and excluded-candidate disposition.
 
-Where retained Phase 004/006/007 architecture uses more specific identity, persistence, fencing, manifests, runtime events, recovery mechanisms, distributed scans, accelerator assumptions, state machines, plugins, models, jobs or storage objects, those remain downstream realization hypotheses/evidence. Their existence does not prove that an excluded candidate should be a concept.
+008-G explicitly re-tested architecture-shaped candidates such as Artifact/Dataset identity, authority epochs/fences, manifests/candidates/seals, runtime bindings, dependency-resolution records, AuthorizationDecision/CapabilityGrant/SecretRef, platform capability descriptors, telemetry/support records and storage/checkpoint/report structures.
 
-008-G may use architecture to discover a genuine missing purpose/state/action boundary, but a class/table/file/job/manifest/API/runtime role is never sufficient by itself to promote a candidate.
+They remain downstream realization or security/integration structures, not concepts merely because they are typed, durable or important to correctness.
+
+Where retained Phase 004/006/007 architecture uses those structures, it remains valuable evidence but cannot promote them into concept authority by existence.
+
+## Catalog-perimeter consequences for architecture
+
+Current architecture must continue to preserve these upstream boundaries until Phase 013 reconciliation:
+
+- descriptive topology/relationship semantics belong to Data Meaning rather than a hidden Relationship resource owner;
+- candidate/completed synthetic output is Generation-owned result semantics rather than a generic Output/Artifact concept;
+- Attempt/checkpoint/recovery structures remain subordinate to Execution/domain continuity;
+- dependency/runtime/security records do not become Strategy, Provenance or new domain authority;
+- future composable DP would require fresh concept discovery before architecture/implementation;
+- external Use/Release Decision must not become `approved` state on Generation or Evidence;
+- reports/views/exports are mapping/security concerns, not new domain concepts.
+
+008-H will consolidate the individual-concept stage. It does not reconcile architecture.
 
 ## Phase 007 architecture status
 
@@ -68,4 +85,4 @@ IMPLEMENTATION NEXT        NOT YET
 
 ## Current next boundary
 
-**008-G — Deferred/Rejected Candidate Rediscovery, Missing-Concept & Boundary Audit**.
+**008-H — Phase 008 Consolidation, Individual-Concept Completeness Decision & Phase 009 Handoff**.
