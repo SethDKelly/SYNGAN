@@ -8,145 +8,59 @@ status: active
 
 ## Purpose
 
-Provide the current Phase 009-A authority for identifying **Jackson application inclusion dependence** among SYNGAN's eleven accepted concepts without confusing it with ordinary reference, validation, production, operational, provenance, import, storage, or runtime dependency.
+Provide the current Phase 009-A authority for identifying **Jackson application inclusion dependence** among SYNGAN's eleven accepted concepts without confusing it with reference, validation, production, operational, provenance, import, storage, or runtime dependency.
 
-This authority is a precursor to the canonical graph. It determines which directed concept pairs have sufficient evidence for universal inclusion dependence and which relations are non-dependent or only conditional/disjunctive.
+This document classifies every directed non-self concept pair as:
 
-It does **not** yet decide:
+- `D` — universal inclusion dependence;
+- `N` — no universal inclusion dependence;
+- `C` — conditional or disjunctive requirement rather than a universal pairwise edge;
+- `I` — insufficient evidence.
 
-- direct versus transitive graph edges;
-- cycle acceptance/rejection;
-- graph roots/leaves;
-- dependence-derived explanation ordering;
-- valid application-family subsets;
-- synchronization closure.
+009-A determines the pairwise relation inventory only. Direct versus transitive edges, cycle treatment, roots/leaves, and explanation ordering remain 009-B work.
 
-Those remain 009-B onward.
-
-## Governing authority
-
-- [Concept Design Methodology](../authority/design-methodology.md)
-- [Jackson Methodology Completion Matrix](../authority/jackson-methodology-completion-matrix.md)
-- [Phase 008 Individual-Concept Design Consolidation](../concepts/phase-008-individual-concept-consolidation.md)
-- [Concept-Justification Traceability](../problem/concept-justification-traceability.md)
-- the eleven accepted concept specifications
-- [Phase 009 Entry / Decomposition](../phases/009/009-entry-decomposition.md)
-
-Historical dependency/composition documents are evidence only and do not pre-decide this inventory.
-
----
-
-# 1. Inclusion-dependence semantics
-
-## 1.1 Governing question
+## Governing question
 
 For concepts `C1` and `C2` in an application variant `A`:
 
 > **If `C1` is included, does including `C1` make sense only if `C2` is also included?**
 
-The question concerns **application functionality** and purpose, not object references or implementation structure.
+`C1 -> C2` means the application cannot preserve `C1`'s current purpose while omitting `C2`.
 
-## 1.2 Direction
+## Inclusion versus occurrence
 
-`C1 -> C2` means:
+Concept inclusion is not the same as concept occurrence.
 
-> an application that includes `C1` cannot remain conceptually coherent with `C2` absent.
+Examples:
 
-The arrow therefore points from the dependent concept to the concept required for its purpose to make sense.
+- direct Generation can exist without any Learning/Learned State occurrence;
+- a Generation may bind zero reusable Constraints;
+- an Evaluation may concern Learned State or another subject rather than Generation output;
+- an activity may be realized locally without a durable Execution occurrence;
+- a reusable Criterion may be defined before any Evaluation exists.
 
-## 1.3 Inclusion versus occurrence
+A relation does not become universal merely because one workflow uses both concepts.
 
-A concept can be included in an application even when no occurrence of it exists in one particular workflow.
+## Evidence rules for `D`
 
-Therefore:
+A `D` finding requires all of the following:
 
-- direct Generation without Learning is evidence that Generation does not universally depend on Learning;
-- the fact that one Generation uses Learned State does not create universal `Generation -> Learned State` dependence;
-- the fact that one Evaluation concerns a Constraint does not create universal `Evaluation -> Constraint` dependence;
-- the fact that one activity happens to use durable Execution does not prove every application including that activity must include Execution.
+1. the row concept's current purpose cannot be fulfilled coherently with the column concept absent;
+2. the requirement follows from concept semantics, not architecture or implementation convenience;
+3. no accepted current counterexample preserves the row concept's purpose while omitting the column;
+4. the relation is more than reference, validation, production, runtime realization, provenance, or synchronization;
+5. the conclusion survives Phase 008's no-occurrence and boundary findings.
 
-Phase 009 reasons about **which concept capabilities the application includes**, not whether every concept has an instance in every workflow.
+The following are insufficient by themselves:
 
-## 1.4 Full-product justification is not inclusion dependence
+- storing another concept's identity;
+- querying or validating another concept;
+- being produced before/after another concept;
+- synchronizing with another concept;
+- package imports, service calls, storage references, or API parameters;
+- deployment of both concepts in the full product.
 
-Phase 008-B established why the complete current SYNGAN design benefits from all eleven concepts.
-
-That does not mean every reduced application variant must contain all eleven.
-
-A concept may be fully justified in the complete product and still be omittable from a coherent contraction.
-
----
-
-# 2. Classification vocabulary
-
-009-A uses four classifications.
-
-### `D` — DEPENDS
-
-Current evidence supports universal pairwise inclusion dependence.
-
-No coherent current application witness has been found in which the row concept remains meaningfully included while the column concept is absent.
-
-### `N` — DOES NOT DEPEND
-
-Current evidence supplies at least one coherent witness or purpose argument showing that the row concept can remain meaningfully included while the column concept is absent.
-
-`N` does not mean the concepts never interact.
-
-### `C` — CONDITIONAL / DISJUNCTIVE
-
-There is no universal pairwise edge, but the column concept becomes required under a specific supported capability/configuration, or the row concept has a one-of/disjunctive requirement in which the column is one valid member.
-
-`C` MUST NOT be turned into an unconditional graph edge in 009-B.
-
-### `I` — INSUFFICIENT
-
-Current evidence is insufficient to classify the pair safely.
-
-009-A exits with **no unresolved `I` classifications**. Graph directness and cycle treatment remain open, but the pairwise inclusion question itself is sufficiently classified.
-
----
-
-# 3. Evidence rules
-
-A universal `D` classification requires all of the following:
-
-1. the row concept's current purpose cannot be fulfilled coherently without the column concept being included;
-2. the requirement follows from current concept semantics rather than architecture convenience;
-3. no accepted current counterexample variant preserves the row concept while omitting the column;
-4. the relation is not merely a stable reference, validation, production, runtime, provenance, or synchronization relation;
-5. the requirement survives the Phase 008 no-occurrence cases and catalog boundaries.
-
-A single counterexample application variant is sufficient to reject a universal `D` claim, provided the counterexample preserves the row concept's purpose rather than silently weakening or redefining it.
-
-## 3.1 Evidence that is not enough
-
-The following do not establish `D` by themselves:
-
-- one concept stores another concept's ID;
-- one concept queries or validates another;
-- one concept is usually created before another;
-- a synchronization exists between the pair;
-- one concept produces another in one workflow;
-- a database foreign key, package import, service call, or API parameter connects them;
-- the complete product normally deploys both;
-- implementation would be simpler if both were always present.
-
-## 3.2 Conditional requirement discipline
-
-A conditional capability must remain visible as `C` when removing the target concept would remove only a particular supported variant rather than invalidate the row concept as a whole.
-
-For example:
-
-```text
-Generation -> Learned State   C
-```
-
-because learned-state-assisted Generation requires Learned State, while direct-generation Strategies are explicitly valid.
-
----
-
-# 4. Pairwise inventory
+## Pairwise matrix
 
 Abbreviations:
 
@@ -180,326 +94,174 @@ Legend: `D` depends, `N` does not universally depend, `C` conditional/disjunctiv
 | **EXE** | N | N | C | N | C | N | N | C | N | — | N |
 | **PRO** | C | C | C | C | C | C | C | C | C | C | — |
 
-The matrix is intentionally asymmetric.
-
----
-
-# 5. Universal dependence candidates
-
-009-A finds twelve directed universal inclusion-dependence candidates.
-
-## 5.1 Learning -> Data Meaning
-
-**Verdict: `D`.**
-
-Learning's purpose is to derive reusable source-informed state according to accepted source meaning and explicitly binds a Data Meaning revision at semantic commitment.
-
-Removing Data Meaning would force Learning either to rely on hidden source interpretation or to weaken its current purpose.
-
-No valid current Learning variant has been identified that can preserve Learning's accepted semantics while omitting Data Meaning entirely.
-
-## 5.2 Learning -> Synthesis Strategy
-
-**Verdict: `D`.**
-
-Learning derives state according to selected synthesis behavior and binds an exact Strategy/configuration revision.
-
-Without Synthesis Strategy, algorithm behavior and requirements would become implicit inside Learning, contradicting the accepted Strategy/Learning boundary.
-
-## 5.3 Learning -> Learned State
-
-**Verdict: `D`.**
-
-Learning exists to derive **reusable source-informed state**. Learned State is the accepted durable result concept that fulfills that purpose after Learning completes.
-
-An application that included Learning but had no Learned State concept would either make successful Learning purposeless or elevate checkpoints/model files into accidental result authority.
-
-The fact that failed/cancelled Learning establishes no Learned State does not defeat application inclusion dependence; occurrence cardinality and concept inclusion are different questions.
-
-## 5.4 Learned State -> Learning
-
-**Verdict: `D`.**
-
-Learned State is explicitly the durable logical result of successful Learning and preserves producing-Learning identity.
-
-Current scope does not permit externally imported reusable state to masquerade as Learned State with no Learning history.
-
-Therefore Learned State inclusion currently requires Learning inclusion.
-
-## 5.5 Learned State -> Data Meaning
-
-**Verdict: `D` at pairwise inclusion level; directness deferred to 009-B.**
-
-A valid Learned State inherits historically bound source/Data Meaning context from its producing Learning and must remain interpretable against that context.
-
-Because current Learned State cannot exist without Learning, and current Learning cannot preserve its purpose without Data Meaning, an application containing Learned State cannot coherently omit Data Meaning.
-
-009-B must determine whether this is represented as a direct edge or only as transitive closure through Learning.
-
-## 5.6 Learned State -> Synthesis Strategy
-
-**Verdict: `D` at pairwise inclusion level; directness deferred to 009-B.**
-
-Learned State preserves the Strategy/configuration identity under which it was derived and exposes Strategy-dependent reuse requirements/limitations.
-
-An application with Learned State but no Strategy authority would make the reusable state semantically uninterpretable as synthesis knowledge.
-
-009-B will determine direct versus transitive representation through Learning.
-
-## 5.7 Generation -> Data Meaning
-
-**Verdict: `D`.**
-
-Generation's accepted purpose is to fulfill a synthetic-data request under explicit semantic expectations. Its committed scope is represented through Data Meaning rather than hidden model/type assumptions.
-
-A Generation capability with no Data Meaning concept would contradict the current explicit-semantics product boundary.
-
-## 5.8 Generation -> Synthesis Strategy
-
-**Verdict: `D`.**
-
-Generation must use some synthesis behavior and binds a Strategy/configuration revision.
-
-Without Strategy, the synthesis algorithm/capability contract would become implicit inside Generation and collapse the accepted boundary between requested outcome and reusable synthesis behavior.
-
-## 5.9 Evaluation -> Evaluation Criterion
-
-**Verdict: `D`.**
-
-Evaluation exists to examine explicit Criteria. Without a Criterion concept, method availability would once again define the question being answered, directly violating Evaluation's accepted purpose and the question/examination boundary.
-
-## 5.10 Evaluation -> Evidence
-
-**Verdict: `D`.**
-
-Evaluation exists to produce inspectable Evidence. A completed Evaluation with no durable finding concept would reduce the examination to ephemeral metric/runtime output and fail its current purpose.
-
-Failure/cancellation producing no Evidence does not remove the application-level dependence.
-
-## 5.11 Evidence -> Evaluation Criterion
-
-**Verdict: `D` at pairwise inclusion level.**
-
-Evidence must preserve the exact Criterion revision answered. Without Criterion, the finding loses the question/standard needed to interpret what was established.
-
-009-B will determine whether this edge is direct in the canonical graph or partly represented through Evaluation.
-
-## 5.12 Evidence -> Evaluation
-
-**Verdict: `D`.**
-
-Evidence is the durable finding authority for what an Evaluation validly established and records its producing Evaluation.
-
-Current scope does not define Evidence as an independently authored claim disconnected from Evaluation.
-
----
-
-# 6. Mutual-dependence findings requiring 009-B cycle analysis
-
-Two pairings are mutually dependent under current pairwise semantics.
-
-## 6.1 Learning <-> Learned State
+Across the 110 directed non-self pairs:
 
 ```text
-Learning      -> Learned State   D
-Learned State -> Learning        D
+DEPENDS (D)                 12
+CONDITIONAL/DISJUNCTIVE     43
+DOES NOT DEPEND (N)         55
+INSUFFICIENT (I)             0
 ```
 
-This does **not** automatically imply that the concepts should be merged.
+The counts are diagnostic only. The important result is that universal inclusion dependence is substantially sparser than the historical SYNGAN dependency/synchronization graph.
 
-Phase 008 independently established their separate purposes, state, behavior, lifecycle, and reuse boundaries:
+## Universal dependence candidates
+
+### Learning -> Data Meaning — `D`
+
+Learning derives reusable source-informed state according to accepted source meaning and binds Data Meaning at commitment. Removing Data Meaning would force Learning to depend on hidden source interpretation and would weaken its accepted purpose.
+
+### Learning -> Synthesis Strategy — `D`
+
+Learning derives state according to selected synthesis behavior and binds Strategy/configuration. Without Strategy, algorithm semantics would collapse into Learning.
+
+### Learning -> Learned State — `D`
+
+Learning exists to derive reusable source-informed state. Learned State is the accepted durable result that fulfills that purpose after Learning completes. Omitting Learned State would make successful Learning purposeless or elevate checkpoints/model files into accidental result authority.
+
+### Learned State -> Learning — `D`
+
+Learned State is explicitly the durable logical result of successful Learning. Current scope does not permit an externally imported object with no Learning history to masquerade as Learned State.
+
+### Learned State -> Data Meaning — `D` at pairwise level
+
+A valid Learned State inherits exact source/Data Meaning context from its producing Learning. Since Learned State requires Learning and Learning requires Data Meaning, an application containing Learned State cannot coherently omit Data Meaning. 009-B decides whether this is a direct edge or transitive closure.
+
+### Learned State -> Synthesis Strategy — `D` at pairwise level
+
+Learned State preserves Strategy/configuration identity and Strategy-dependent reuse requirements. 009-B decides direct versus transitive representation through Learning.
+
+### Generation -> Data Meaning — `D`
+
+Generation's purpose requires explicit semantic expectations rather than hidden type/model assumptions. A Generation capability with no Data Meaning concept contradicts the current semantic boundary.
+
+### Generation -> Synthesis Strategy — `D`
+
+Generation must use some synthesis behavior and bind its Strategy/configuration. Without Strategy, reusable synthesis behavior would collapse into Generation.
+
+### Evaluation -> Evaluation Criterion — `D`
+
+Evaluation exists to examine explicit Criteria. Without Criterion, method availability would define the question and collapse the question/examination distinction.
+
+### Evaluation -> Evidence — `D`
+
+Evaluation exists to produce inspectable Evidence. A completed Evaluation with no durable finding concept would reduce the examination to ephemeral method/runtime output.
+
+### Evidence -> Evaluation Criterion — `D` at pairwise level
+
+Evidence must preserve the exact Criterion answered. Without Criterion, the finding loses the question/standard needed for interpretation. 009-B decides direct versus transitive graph representation.
+
+### Evidence -> Evaluation — `D`
+
+Evidence is what an Evaluation validly established and records its producing Evaluation. Current scope does not define independently authored Evidence disconnected from Evaluation.
+
+## Mutual-dependence candidates requiring 009-B cycle analysis
+
+Two pairs are mutually dependent at the pairwise level:
+
+```text
+Learning      <-> Learned State
+Evaluation    <-> Evidence
+```
+
+This does **not** automatically justify merging either pair. Phase 008 already established distinct purposes and state machines:
 
 ```text
 Learning      = derivation activity
 Learned State = reusable durable result
+
+Evaluation    = committed examination
+Evidence      = durable interpretable finding
 ```
 
-009-B must determine whether the canonical inclusion model represents them as:
+009-B must determine whether each becomes a legitimate strongly connected dependence cluster, a different direct/transitive representation, or evidence of an upstream J2 boundary defect.
 
-- a legitimate strongly connected concept cluster;
-- a direct mutual-dependence pair;
-- a cluster with one direct edge plus an application-family invariant;
-- or evidence of an upstream boundary issue requiring J2 reopening.
+## Conditional/disjunctive relations
 
-009-A does not pre-decide that graph representation.
+`C` relations are not universal graph edges.
 
-## 6.2 Evaluation <-> Evidence
+### Strategy conditions
 
-```text
-Evaluation -> Evidence    D
-Evidence   -> Evaluation  D
-```
+Synthesis Strategy may conditionally require:
 
-Again, Phase 008 already established independent purposes:
+- Data Meaning for Strategies whose behavior depends on explicit semantic roles;
+- Learning for Strategies that require reusable learned state;
+- Generation when the Strategy is exercised to synthesize output;
+- Constraint where Strategy capability/support semantics concern reusable rules.
 
-```text
-Evaluation = committed examination
-Evidence   = durable interpretable finding
-```
+Other valid Strategy configurations make these non-universal.
 
-009-B owns direct-cycle treatment. 009-A records only that neither concept's current purpose can be preserved in an application that permanently omits the other.
+### Learning conditions
 
-Evaluation Criterion is additionally required by both.
+Learning conditionally requires:
 
----
+- Constraint when applicable rules govern derivation;
+- Execution when operational significance requires a durable operational lifecycle.
 
-# 7. Conditional and disjunctive relation register
+Valid Learning can exist with no applicable reusable Constraint and, for trivial/local realization, without durable Execution.
 
-`C` relations are material to the application family but are **not** universal pairwise dependencies.
+### Learned State conditions
 
-## 7.1 Synthesis Strategy conditional relations
+Learned State conditionally references Constraint when its producing Learning bound applicable rules. Constraint is not universal to all Learned State.
 
-### Strategy -> Data Meaning — conditional
+### Generation conditions
 
-Some Strategy revisions require explicit semantic roles/properties while other Strategies may operate with minimal meaning requirements.
+Generation conditionally requires:
 
-Strategy authority can therefore exist without Data Meaning as a universal prerequisite, but particular Strategy capabilities may be unusable when Data Meaning is absent.
+- Learning/Learned State for learned-state-assisted Strategies;
+- Constraint when reusable rules apply;
+- Criterion/Evaluation/Evidence when completion requires evaluation-backed validation;
+- Execution for operationally significant realization.
 
-### Strategy -> Learning — conditional
+Direct Generation, unconstrained Generation, no-evaluation completion, and trivial/local realization provide accepted counterexamples to universal dependence.
 
-Strategies may require Learning, support it optionally, or support direct Generation with no reusable Learned State.
+### Constraint conditions
 
-The Strategy concept therefore does not universally depend on Learning.
+Constraint may conditionally require Data Meaning where a rule references semantic roles. Constraint may be used with Generation, but reusable rule definition can remain coherent without Generation being included.
 
-### Strategy -> Generation — conditional
+### Criterion conditions
 
-Strategy exists as reusable synthesis-behavior authority and can be defined/inspected independently, while actual synthesis use normally occurs through Generation.
+A Criterion may conditionally require Data Meaning, Learned State, Generation, or Constraint depending on the question/subject/reference context. Criterion does not universally require Evaluation or Evidence because reusable questions can exist before examination.
 
-A Strategy-authoring/capability application can remain coherent without Generation; an application intending to exercise synthesis output cannot.
+### Evaluation conditions
 
-### Strategy -> Constraint — conditional
+Evaluation universally requires Criterion/Evidence, but may conditionally require Data Meaning, Learned State, Generation, Constraint, or Execution depending on its subject and operational scale.
 
-A Strategy may declare Constraint support/limitations even when an application has no reusable Constraint authority in scope.
+### Evidence conditions
 
-Constraint is therefore capability-conditional rather than universally required by Strategy.
+Evidence universally requires Criterion/Evaluation, but may conditionally require Data Meaning, Learned State, Generation, Constraint, or Provenance depending on the finding's subject and traceability context.
 
-## 7.2 Learning conditional relations
+### Execution is disjunctive
 
-### Learning -> Constraint — conditional
-
-Learning binds applicable Constraints where such rules govern derivation, but valid Learning may have no applicable reusable Constraint.
-
-### Learning -> Execution — conditional
-
-Operationally significant Learning may require durable Execution. A trivial/local Learning realization need not fabricate an Execution merely to satisfy catalog symmetry.
-
-Therefore no universal `Learning -> Execution` edge exists.
-
-## 7.3 Learned State -> Constraint — conditional
-
-Learned State preserves Constraint context where its producing Learning bound applicable rules. A valid Learned State can also originate from Learning with no applicable reusable Constraint.
-
-## 7.4 Generation conditional relations
-
-### Generation -> Learning / Learned State — conditional
-
-Learned-state-assisted Generation may require both, while direct-generation Strategies explicitly provide a valid counterexample.
-
-Therefore neither relation is universal.
-
-### Generation -> Constraint — conditional
-
-A Generation may bind zero or more applicable reusable Constraints. Unconstrained Generation remains a valid current variant.
-
-### Generation -> Criterion / Evaluation / Evidence — conditional
-
-A Generation whose completion contract requires post-production validation may require the evaluation chain before semantic completion.
-
-Generation that has no mandatory evaluation-based completion condition remains valid, so these are not universal edges.
-
-### Generation -> Execution — conditional
-
-Large/distributed/operationally significant Generation may require durable Execution. Trivial/local Generation need not.
-
-## 7.5 Constraint conditional relations
-
-### Constraint -> Data Meaning — conditional
-
-Many rules require semantic subjects/roles supplied by Data Meaning, but a Constraint may be coherent for an explicitly identified logical scope/property without requiring broader semantic interpretation.
-
-### Constraint -> Generation — conditional
-
-Constraint's primary product use is to govern synthetic output, but reusable rule authoring can exist independently and Constraints can also be referenced by Learning/Evaluation contexts.
-
-Constraint therefore does not universally depend on Generation.
-
-## 7.6 Evaluation Criterion conditional relations
-
-Criterion may conditionally require the authority needed to state its particular question:
-
-- Data Meaning when the question depends on semantic interpretation;
-- Learned State when reusable learned state is the subject;
-- Generation when a Generation output/Condition is the subject;
-- Constraint when the question asks whether an exact rule is satisfied.
-
-No one of those concepts is universal to every Criterion.
-
-Criterion does **not** depend universally on Evaluation or Evidence; an application may support defining/reviewing reusable questions before any examination has occurred.
-
-## 7.7 Evaluation conditional relations
-
-Evaluation universally requires Criterion and Evidence, but its **subject/context** may conditionally require:
-
-- Data Meaning;
-- Learned State;
-- Generation;
-- Constraint.
-
-Evaluation may also require Execution when the examination is operationally significant.
-
-None of these subject/operational concepts is universal to all Evaluations.
-
-## 7.8 Evidence conditional relations
-
-Evidence universally requires Criterion and Evaluation.
-
-Its interpretive subject/context may additionally require Data Meaning, Learned State, Generation, or Constraint depending on what was evaluated.
-
-Evidence may link to Provenance for historical explanation/traceability, but its finding purpose can remain intelligible from its own stable Criterion/Evaluation/input references in a reduced application. Provenance is therefore conditional rather than universal.
-
-## 7.9 Execution has a disjunctive domain-activity prerequisite
-
-Execution cannot coherently exist as a generic scheduler/workflow concept.
-
-Under the current model it realizes one committed domain activity from:
+Execution is not a generic scheduler concept. It realizes one committed domain activity from:
 
 ```text
 { Learning, Generation, Evaluation }
 ```
 
-Therefore:
+Therefore each pairwise relation is `C`, not `D`:
 
 ```text
-Execution -> Learning    C
-Execution -> Generation  C
-Execution -> Evaluation  C
+Execution -> Learning
+Execution -> Generation
+Execution -> Evaluation
 ```
 
-No individual member is universal because Execution may realize either of the other supported activities.
+The stronger rule is a one-of inclusion requirement. 009-B/009-C must preserve that disjunction instead of inventing three unconditional edges or a generic Work concept.
 
-009-B/009-C must preserve this **one-of application-family condition** rather than inventing three unconditional edges or a new generic Work concept.
+### Provenance is disjunctive
 
-## 7.10 Provenance has a disjunctive subject prerequisite
+Provenance requires meaningful canonical/external subjects and a typed relationship worth recording, but no one accepted concept is universally required. It may explain different concepts in different application variants.
 
-Provenance records typed relationships among material canonical states/results and external identities.
+Therefore every pairwise `Provenance -> Cx` cell is `C`, not `D`.
 
-A Provenance-only application with no provenance-bearing SYNGAN concept would have no product purpose. However, no one accepted concept is universally required: Provenance can explain Data Meaning/Strategy bindings, Learning/Learned State derivation, Generation output, Evaluation/Evidence, Execution realization, and other supported histories.
+009-B/009-C must preserve the non-binary rule rather than flattening it into ten graph edges.
 
-Therefore every pairwise `Provenance -> Cx` relation is classified `C`, not `D`.
+## Counterexample witnesses
 
-009-B/009-C must represent the stronger non-binary rule:
+The following accepted witnesses reject several tempting universal edges:
 
-> Provenance inclusion requires at least one meaningful provenance-bearing SYNGAN subject/context and at least one relationship worth recording; it does not require any one specific accepted concept universally.
-
----
-
-# 8. Counterexample witness set
-
-The following witness variants reject several tempting but incorrect universal-dependence claims.
-
-## W1 — direct-generation variant
-
-Contains at least:
+### Direct-generation witness
 
 ```text
 Data Meaning
@@ -507,72 +269,37 @@ Synthesis Strategy
 Generation
 ```
 
-May omit:
+can be coherent without Learning/Learned State when a direct Strategy is selected.
 
-```text
-Learning
-Learned State
-Constraint
-Evaluation Criterion
-Evaluation
-Evidence
-Execution
-Provenance
-```
+### No-Constraint witness
 
-subject to the selected direct Strategy and deliberately reduced product outcomes.
+Generation and Learning may have no applicable reusable Constraint.
 
-This witnesses:
+### No-evaluation-gate witness
 
-- `Generation !-> Learning` universally;
-- `Generation !-> Learned State` universally;
-- no fabricated train-then-generate pipeline.
+Generation may complete without mandatory Criterion/Evaluation/Evidence handoff.
 
-Application-family validity of the complete subset is formally tested in 009-C; 009-A uses it only as accepted counterexample evidence from Phase 008.
+### Non-Generation Evaluation witness
 
-## W2 — generation without reusable Constraint
+Evaluation may examine Learned State or another supported subject/reference context, rejecting universal `Evaluation -> Generation`.
 
-A direct or learned Generation may have no applicable reusable prescriptive rule.
+### Criterion-before-Evaluation witness
 
-This witnesses `Generation !-> Constraint` universally.
+A reusable Criterion may be authored/reviewed before any Evaluation exists.
 
-## W3 — generation without evaluation-gated completion
+### Local/trivial realization witness
 
-A Generation may complete from its committed semantic/request conditions without requiring a Criterion/Evaluation/Evidence handoff.
+A semantically valid activity may be fulfilled without durable Execution when operational significance does not warrant it.
 
-This witnesses that those relations are conditional rather than universal.
+### Provenance-subject variation witness
 
-## W4 — evaluation of Learned State/reference rather than Generation output
+Provenance may explain different concept combinations in different variants, rejecting a universal pairwise dependency on any one concept.
 
-Evaluation can legitimately examine a Learned State or other supported subject/reference context.
+## Interpretation of `N`
 
-This rejects universal `Evaluation -> Generation` dependence.
+`N` means only that no universal pairwise inclusion dependence exists.
 
-## W5 — reusable Criterion definition before examination
-
-An application may define/review reusable Criteria before any Evaluation occurs.
-
-This rejects `Evaluation Criterion -> Evaluation` as universal.
-
-## W6 — local/trivial operational realization
-
-A semantically valid activity may be fulfilled without a durable long-running Execution identity when operational significance does not warrant one.
-
-This rejects universal activity -> Execution dependence.
-
-## W7 — Provenance with different subjects
-
-A provenance capability may explain Learning/Learned State in one application and Generation/Evidence in another.
-
-This rejects every proposed universal pairwise `Provenance -> specific concept` edge while preserving the disjunctive subject prerequisite.
-
----
-
-# 9. Negative-dependence interpretation
-
-Most `N` cells are intentional, not omissions.
-
-The current catalog contains several reusable authority concepts that are independently definable:
+Several reusable authority concepts can remain meaningfully included independently of a specific consumer:
 
 ```text
 Data Meaning
@@ -581,57 +308,28 @@ Constraint
 Evaluation Criterion
 ```
 
-Their usefulness may increase when consumer activities are included, but consumer presence is not universally required merely to define, inspect, revise, compare, or reuse the authority.
-
 Likewise:
 
-- Learning does not require Generation to be present;
-- Learned State does not require Generation to be present;
-- Evaluation/Evidence do not require Generation specifically because other subjects are valid;
-- domain activities do not require Provenance merely to preserve their own purpose;
-- Provenance does not become canonical state authority for the concepts it describes.
+- Learning does not universally require Generation;
+- Learned State does not universally require Generation;
+- Evaluation/Evidence do not universally require Generation as their subject;
+- domain activities do not universally require Provenance to preserve their own purpose;
+- Provenance does not become current-state authority for the concepts it describes.
 
----
+## 009-B handoff
 
-# 10. Pairwise result counts
-
-Across the 110 directed non-self pairs:
-
-```text
-DEPENDS (D)                12
-CONDITIONAL/DISJUNCTIVE    38
-DOES NOT DEPEND (N)        60
-INSUFFICIENT (I)            0
-```
-
-These counts are diagnostic only; they are not a design-quality target.
-
-The important result is that universal inclusion dependence is substantially **sparser** than the historical reference/validation/production/runtime relationship graph.
-
----
-
-# 11. 009-B graph handoff
-
-009-B must now convert this pairwise inventory into the canonical inclusion-dependence model.
-
-It must explicitly determine:
+009-B must now derive the canonical inclusion-dependence graph from this inventory and decide:
 
 1. which `D` relations are direct versus transitive;
-2. whether `Learning <-> Learned State` is a legitimate strongly connected cluster or exposes a boundary problem;
-3. whether `Evaluation <-> Evidence` is a legitimate strongly connected cluster or exposes a boundary problem;
-4. whether `Learned State -> Data Meaning/Strategy` and `Evidence -> Criterion` should appear as direct edges or only through transitive closure;
-5. how conditional/disjunctive relations are represented without being promoted to universal edges;
-6. graph roots/leaves;
-7. dependence-derived explanation ordering;
-8. whether any cycle or graph pressure triggers J2 reopening.
+2. treatment of `Learning <-> Learned State`;
+3. treatment of `Evaluation <-> Evidence`;
+4. whether Learned State's Data Meaning/Strategy dependence is direct or transitive through Learning;
+5. whether Evidence's Criterion dependence is direct or transitive through Evaluation;
+6. how conditional/disjunctive requirements are represented without becoming universal edges;
+7. roots/leaves and dependence-derived explanation ordering;
+8. whether any cycle pressure requires J2 reopening.
 
-009-B MUST NOT derive directness from file references, synchronization arrows, or implementation architecture.
-
----
-
-# 12. Methodology disposition
-
-009-A advances D1 but does not close it:
+## Methodology disposition
 
 ```text
 D1 JACKSON APPLICATION INCLUSION-DEPENDENCE GRAPH
@@ -647,19 +345,13 @@ D4 ADD/REMOVE CONSEQUENCES
    PARTIAL — FULL-PRODUCT ABSENCE + 009-A COUNTEREXAMPLES; 009-C/D PENDING
 ```
 
-No current J1/J2 defect is found by the pairwise audit.
+No J1/J2 defect is found by 009-A.
 
-No concept is added, removed, merged, split, or renamed.
+No concept or synchronization is added, removed, merged, split, renamed, or revised by this subgroup.
 
-No synchronization is added, removed, or revised by 009-A.
+## Implementation hold
 
----
-
-# 13. Implementation hold
-
-009-A is concept-design authority only.
-
-It introduces no production source, tests, dependencies, lockfiles, CI/workflows, package topology, persistence/data-plane schemas, runtime/model/platform/security adapters, public APIs, algorithms, privacy mechanisms, or architecture decisions.
+009-A is design authority only.
 
 ```text
 JACKSON CONCEPT DESIGN     NOT COMPLETE
