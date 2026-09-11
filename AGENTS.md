@@ -16,6 +16,7 @@ Start with:
 - `docs/dependence/index.md`
 - `docs/dependence/inclusion-dependence-pairwise-inventory.md`
 - `docs/dependence/inclusion-dependence-graph-ordering.md`
+- `docs/dependence/application-family-valid-subsets.md`
 - `docs/phases/009/index.md`
 
 Current state:
@@ -27,11 +28,12 @@ Phase 008                  COMPLETE
 Phase 009                  ACTIVE
 009-A                      COMPLETE
 009-B                      COMPLETE
-009-C                      NEXT ELIGIBLE
+009-C                      COMPLETE
+009-D                      NEXT ELIGIBLE
 D1                         CURRENTLY CLOSED
-D2                         OPEN
+D2                         CURRENTLY CLOSED
 D3                         CURRENTLY CLOSED
-D4                         PARTIAL
+D4                         PARTIAL TO STRONG
 Jackson design completion  IN PROGRESS
 implementation readiness   NOT READY
 implementation start       NOT STARTED
@@ -42,15 +44,11 @@ implementation next        NOT YET
 
 > **Complete the design before making implementation ready. Existing architecture, code, tests or plans may expose misfits, but they may not veto upstream concept-design correction.**
 
-## Current dependence authority
+## Current dependence graph
 
-Jackson inclusion dependence asks:
+Jackson inclusion dependence asks whether concept C1 can remain meaningfully included when concept C2 is absent. It is not ordinary reference, validation, production, runtime, provenance, import, storage, or service dependency.
 
-> If concept C1 is included in an application, does C1 make sense only if concept C2 is also included?
-
-It is not equivalent to reference, validation, production, runtime, provenance, synchronization, import, storage or service dependency.
-
-009-A classified all 110 directed non-self pairs. 009-B establishes the direct graph:
+Current direct universal graph:
 
 ```text
 Learning      -> Data Meaning
@@ -66,61 +64,85 @@ Evaluation    -> Evidence
 Evidence      -> Evaluation
 ```
 
-Three accepted pairwise findings are transitive rather than direct:
-
-```text
-Learned State -> Data Meaning
-Learned State -> Synthesis Strategy
-Evidence      -> Evaluation Criterion
-```
-
-## Strongly connected components
-
-Two legitimate mutual inclusion components are current authority:
+Current mutual inclusion components:
 
 ```text
 L-CLUSTER = { Learning, Learned State }
 E-CLUSTER = { Evaluation, Evidence }
 ```
 
-Do not merge these concepts. Mutual application inclusion does not transfer state/action ownership and does not imply one module, class, table, service, aggregate, or transaction.
+Do not merge concepts or technical modules merely because they share an inclusion component.
 
-The condensed universal graph is acyclic.
+## Current application-family rule
 
-## Non-binary constraints
+A non-empty concept subset is a coherent current family member only if it:
 
-Do not flatten these into unconditional edges:
+1. is closed under the universal graph;
+2. satisfies `Execution => Learning OR Generation OR Evaluation` when Execution is included;
+3. gives Provenance an actual meaningful typed relationship/history witness when Provenance is included;
+4. includes every concept required by the capabilities the variant explicitly claims;
+5. preserves the Phase 008 concept purposes and boundaries.
+
+Canonical kernels:
 
 ```text
-Execution => Learning OR Generation OR Evaluation
-
-Provenance => at least one meaningful provenance-bearing relationship
-              involving current SYNGAN concept state/result/history
+L-KERNEL = { Data Meaning, Synthesis Strategy, Learning, Learned State }
+G-KERNEL = { Data Meaning, Synthesis Strategy, Generation }
+E-KERNEL = { Evaluation Criterion, Evaluation, Evidence }
 ```
 
-Additional conditional rules include learned-state-assisted Generation, evaluation-gated Generation, optional Constraint support, and durable Execution for operationally significant activities.
+Authority-only subsets `{Data Meaning}`, `{Synthesis Strategy}`, `{Constraint}`, and `{Evaluation Criterion}` are coherent design-family members.
 
-## Current 009-C boundary
+## Capability conditions to preserve
 
-**009-C — Application Family, Valid Concept Subsets & Minimal Coherent Variants** is next eligible.
+```text
+learned-state-assisted Generation
+  => L-KERNEL + Generation
 
-009-C must derive valid and invalid subsets from both:
+evaluation-gated Generation
+  => G-KERNEL + E-KERNEL
 
-1. universal graph closure; and
-2. non-binary/conditional prerequisite rules.
+reusable prescriptive-rule capability
+  => Constraint
 
-At minimum test:
+durable operational lifecycle
+  => Execution + at least one domain activity
 
-- direct-generation-only capability;
-- learned-state-assisted Generation;
-- Evaluation/Evidence capability;
-- variants with/without reusable Constraint;
-- variants with durable Execution;
-- Provenance-bearing variants;
-- topology/text-bearing current-scope variants;
-- invalid subsets that violate SCC, universal closure, or side constraints.
+provenance/history capability
+  => Provenance + meaningful relationship witness
+```
 
-Graph closure by itself is not enough to validate Execution or Provenance subsets.
+Topology breadth and text-bearing structured data remain variations of existing concepts; do not restore Relationship, TimeSeries, Table, Text, Tokenizer, Vocabulary, or Language Model merely because an implementation may expose such objects.
+
+## Critical interpretation
+
+A **coherent concept subset is not automatically**:
+
+- a package/module boundary;
+- an installable edition;
+- a deployable service set;
+- a feature-flag bundle;
+- a database/schema partition;
+- a transaction boundary;
+- a commercial SKU.
+
+Do not create implementation topology from the application-family model while design remains incomplete.
+
+## Current 009-D boundary
+
+**009-D — Contraction, Extension, Concept Addition/Removal & Product-Scope Consequences** is next eligible.
+
+009-D must use the current family rules to analyze systematically:
+
+- what functionality is lost when each concept/component is removed;
+- which dependents must be removed/re-scoped as a consequence;
+- how L-CLUSTER/E-CLUSTER contract as units;
+- what happens to Execution/Provenance side constraints;
+- which additions are ordinary composition of existing concepts;
+- which future additions trigger fresh concept discovery under 008-G;
+- which capability claims become misleading after contraction.
+
+Do not perform synchronization replay early; 009-E owns that work after D4 closes.
 
 ## Explanation/design order
 
@@ -151,15 +173,15 @@ Follow J0-J7 in the methodology matrix. Reopen the smallest affected upstream au
 
 ## What agents may do now
 
-For 009-C, agents may enumerate and test application-family subsets using the current graph and side constraints, identify minimal coherent variants, and classify invalid subsets.
+For 009-D, agents may analyze concept/component contraction and extension against the current application family, record capability consequences, and distinguish ordinary family composition from future-scope rediscovery triggers.
 
-Architecture/source/tests may be inspected only as counterexample/feasibility evidence, not application-family authority.
+Architecture/source/tests may be inspected only as counterexample/feasibility evidence, not family authority.
 
 ## What agents must not do until Phase 014 passes
 
 Do not add production behavior, implementation APIs, persistence/data-plane schemas, Spark/runtime/model/platform/security adapters, recovery implementations, Evidence/Provenance implementations, reference Strategies, privacy mechanisms, runtime/build dependencies, package-topology changes, or executable architecture restrictions merely to freeze evolving design.
 
-Do not change module/package dependencies to mirror concept dependence or strongly connected components.
+Do not translate application-family subsets into package dependencies, product editions, deployment profiles, or feature flags yet.
 
 Do not repair stale implementation tests solely to make implementation appear ready.
 
@@ -175,6 +197,6 @@ Only Phase 014 may make the final whole-design readiness decision; implementatio
 
 ## Current next boundary
 
-**009-C — Application Family, Valid Concept Subsets & Minimal Coherent Variants**.
+**009-D — Contraction, Extension, Concept Addition/Removal & Product-Scope Consequences**.
 
 Do not begin implementation work.
