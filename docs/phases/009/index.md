@@ -23,7 +23,8 @@ IMPLEMENTATION NEXT        NOT YET
 - [Phase 009 Entry / Decomposition](009-entry-decomposition.md)
 - [009-A — Inclusion-Dependence Semantics, Evidence Rules & Pairwise Relation Inventory](009-A-inclusion-dependence-semantics-evidence-rules-pairwise-relation-inventory.md)
 - [009-B — Inclusion-Dependence Graph, Roots, Cycles & Explanation Ordering](009-B-inclusion-dependence-graph-roots-cycles-explanation-ordering.md)
-- [Current Concept Dependence Authority](../../dependence/index.md)
+- [009-C — Application Family, Valid Concept Subsets & Minimal Coherent Variants](009-C-application-family-valid-concept-subsets-minimal-coherent-variants.md)
+- [Current Concept Dependence & Application Family Authority](../../dependence/index.md)
 - [Phase 008 Individual-Concept Design Consolidation](../../concepts/phase-008-individual-concept-consolidation.md)
 - [Jackson Methodology Completion Matrix](../../authority/jackson-methodology-completion-matrix.md)
 - [Accepted Concept Catalog](../../concepts/index.md)
@@ -39,39 +40,54 @@ Phase 008                  COMPLETE
 Phase 009                  ACTIVE
 009-A                      COMPLETE
 009-B                      COMPLETE
-009-C                      NEXT ELIGIBLE
+009-C                      COMPLETE
+009-D                      NEXT ELIGIBLE
 D1                         CURRENTLY CLOSED
-D2                         OPEN
+D2                         CURRENTLY CLOSED
 D3                         CURRENTLY CLOSED
-D4                         PARTIAL
+D4                         PARTIAL TO STRONG
 E1-E3                      STRONG EVIDENCE / REVALIDATION REQUIRED
 E4                         PARTIAL
 E5                         PARTIAL TO STRONG
 ```
 
-## 009-A / 009-B dependence result
+## Dependence/application-family result
 
-009-A classified all 110 directed non-self pairs:
-
-```text
-D  universal inclusion dependence     12
-C  conditional/disjunctive            43
-N  no universal dependence            55
-I  insufficient                         0
-```
-
-009-B reduces the 12 universal pairwise findings to 9 direct universal edges and 3 transitive findings.
-
-Two legitimate strongly connected components remain:
+009-A classified all 110 directed non-self concept pairs. 009-B reduced the 12 universal pairwise findings to 9 direct universal edges and 3 transitive findings, retaining two legitimate strongly connected components:
 
 ```text
 L-CLUSTER = { Learning, Learned State }
 E-CLUSTER = { Evaluation, Evidence }
 ```
 
-The condensed universal graph is acyclic. No concept merge/split/rename is justified.
+009-C now defines the application family as non-empty concept subsets that:
 
-Execution and Provenance remain governed by non-binary application-family prerequisites rather than false unconditional edges.
+1. are closed under the canonical universal graph;
+2. satisfy the Execution one-of prerequisite when Execution is present;
+3. satisfy the Provenance semantic-witness prerequisite when Provenance is present;
+4. include every concept required by any capability the variant claims;
+5. preserve the Phase 008 concept purposes/boundaries.
+
+Canonical minima include:
+
+```text
+Authority-only:
+  { Data Meaning }
+  { Synthesis Strategy }
+  { Constraint }
+  { Evaluation Criterion }
+
+L-KERNEL:
+  { Data Meaning, Synthesis Strategy, Learning, Learned State }
+
+G-KERNEL:
+  { Data Meaning, Synthesis Strategy, Generation }
+
+E-KERNEL:
+  { Evaluation Criterion, Evaluation, Evidence }
+```
+
+Execution and Provenance remain governed by non-binary semantics rather than false unconditional graph edges.
 
 ## Subgroups
 
@@ -79,8 +95,8 @@ Execution and Provenance remain governed by non-binary application-family prereq
 |---|---|---|
 | **009-A** | [Inclusion-Dependence Semantics, Evidence Rules & Pairwise Relation Inventory](009-A-inclusion-dependence-semantics-evidence-rules-pairwise-relation-inventory.md) | **complete** |
 | **009-B** | [Inclusion-Dependence Graph, Roots, Cycles & Explanation Ordering](009-B-inclusion-dependence-graph-roots-cycles-explanation-ordering.md) | **complete** |
-| **009-C** | **Application Family, Valid Concept Subsets & Minimal Coherent Variants** | **next eligible** |
-| **009-D** | Contraction, Extension, Concept Addition/Removal & Product-Scope Consequences | planned |
+| **009-C** | [Application Family, Valid Concept Subsets & Minimal Coherent Variants](009-C-application-family-valid-concept-subsets-minimal-coherent-variants.md) | **complete** |
+| **009-D** | **Contraction, Extension, Concept Addition/Removal & Product-Scope Consequences** | **next eligible** |
 | **009-E** | Synchronization Inventory Revalidation Across the Application Family | planned |
 | **009-F** | Synchronization Trigger, Preconditions/Postconditions, State Ownership & Hidden-Coordinator Audit | planned |
 | **009-G** | Composition Economy, Coupling, Synergy & Integrity Closure | planned |
@@ -93,9 +109,9 @@ Execution and Provenance remain governed by non-binary application-family prereq
   ↓
 009-B COMPLETE
   ↓
-009-C NEXT
+009-C COMPLETE
   ↓
-009-D
+009-D NEXT
   ↓
 009-E
   ↓
@@ -106,16 +122,19 @@ Execution and Provenance remain governed by non-binary application-family prereq
 009-H
 ```
 
-## 009-C obligation
+## 009-D obligation
 
-009-C must derive meaningful valid concept subsets and minimal coherent variants from:
+009-D must systematically analyze contraction and extension across the family established in 009-C:
 
-1. closure under the 009-B canonical universal graph; and
-2. non-binary/conditional application-family constraints.
+- capability loss when a concept/component is removed;
+- dependent removals/re-scoping forced by graph closure;
+- strongly connected component removal semantics;
+- ordinary family extension versus fresh concept-discovery triggers;
+- side-constraint effects for Execution and Provenance;
+- misleading capability claims after contraction;
+- explanation/documentation consequences of narrower family members.
 
-Graph closure alone is not sufficient for Execution or Provenance.
-
-At minimum 009-C must test direct-generation, learned-state-assisted, evaluation-focused, Constraint-light, Execution-bearing, Provenance-bearing, topology/text-bearing, and invalid-closure variants.
+009-D must close D4 without changing implementation.
 
 ## Phase 009 exit target
 
@@ -132,4 +151,4 @@ IMPLEMENTATION NEXT          NOT YET
 
 ## Current next boundary
 
-**009-C — Application Family, Valid Concept Subsets & Minimal Coherent Variants** is next eligible.
+**009-D — Contraction, Extension, Concept Addition/Removal & Product-Scope Consequences** is next eligible.
