@@ -8,7 +8,7 @@ status: active
 
 This directory contains the canonical concept specifications accepted in Phase 001 and refined through current Phase 008 authority.
 
-Cross-concept coordination remains authoritative under [Synchronizations](../synchronizations/index.md), while current inclusion-dependence work is governed by [Concept Dependence & Application Family](../dependence/index.md) and [Phase 009](../phases/009/index.md).
+Cross-concept coordination remains authoritative under [Synchronizations](../synchronizations/index.md), while current inclusion-dependence/application-family work is governed by [Concept Dependence & Application Family](../dependence/index.md) and [Phase 009](../phases/009/index.md).
 
 ## Current individual-concept authority
 
@@ -44,6 +44,8 @@ INDIVIDUAL CONCEPT DESIGN   COMPLETE ENOUGH FOR PHASE 009
 
 Phase 008 found no unresolved J1 local concept-specification defect or J2 purpose/boundary/catalog defect.
 
+009-A/009-B likewise find no reason to add, remove, merge, split, or rename a concept.
+
 ## Core boundary results
 
 ```text
@@ -60,25 +62,38 @@ Execution              != Attempt != platform job
 
 Generation owns request/Condition and candidate-to-completed logical output semantics. Relationship remains Data Meaning-owned descriptive structure. Generic Privacy remains rejected pending fresh mechanism-specific discovery if future independent state/actions arise. Use/Release Decision remains external authority.
 
-## 009-A inclusion-dependence result
+## Current inclusion-dependence result
 
-009-A asks a different question from Phase 008 independence: if one concept is included in an application, must another also be included for the first concept's purpose to make sense?
-
-The current [pairwise inventory](../dependence/inclusion-dependence-pairwise-inventory.md) finds twelve universal pairwise candidates:
+009-A classified pairwise application inclusion. 009-B now establishes the direct universal graph:
 
 ```text
-Learning      -> Data Meaning / Synthesis Strategy / Learned State
-Learned State -> Learning / Data Meaning / Synthesis Strategy
-Generation    -> Data Meaning / Synthesis Strategy
-Evaluation    -> Evaluation Criterion / Evidence
-Evidence      -> Evaluation Criterion / Evaluation
+Learning      -> Data Meaning
+Learning      -> Synthesis Strategy
+Learning      -> Learned State
+Learned State -> Learning
+
+Generation    -> Data Meaning
+Generation    -> Synthesis Strategy
+
+Evaluation    -> Evaluation Criterion
+Evaluation    -> Evidence
+Evidence      -> Evaluation
 ```
 
-This does not merge concepts. `Learning <-> Learned State` and `Evaluation <-> Evidence` remain distinct activity/result concepts and are explicit 009-B cycle questions.
+The pairwise findings `Learned State -> Data Meaning`, `Learned State -> Synthesis Strategy`, and `Evidence -> Evaluation Criterion` are transitive rather than direct.
 
-Execution and Provenance have conditional/disjunctive prerequisites rather than one universal pairwise dependency.
+Two legitimate application-inclusion SCCs remain:
 
-009-A makes no catalog change.
+```text
+{ Learning, Learned State }
+{ Evaluation, Evidence }
+```
+
+This does **not** weaken Phase 008 independence. Independence concerns whether each concept is understandable/behaviorally coherent on its own; inclusion dependence concerns whether the current SYNGAN application family has a reason to include one without the other.
+
+The SCCs do not merge state/actions or authorize technical co-location.
+
+Execution and Provenance retain non-binary application-family prerequisites rather than universal pairwise edges.
 
 ## Future rediscovery triggers
 
@@ -92,6 +107,6 @@ No implementation resource or architecture dependency may redefine a concept bou
 
 ## Current next boundary
 
-**009-B — Inclusion-Dependence Graph, Roots, Cycles & Explanation Ordering**.
+**009-C — Application Family, Valid Concept Subsets & Minimal Coherent Variants**.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
