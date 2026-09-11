@@ -41,8 +41,8 @@ JACKSON CONCEPT DESIGN      NOT COMPLETE
 
 ```text
 009-A  COMPLETE — inclusion-dependence semantics / pairwise relation inventory
-009-B  NEXT ELIGIBLE — canonical graph / roots / cycles / explanation ordering
-009-C  PLANNED — application family / valid subsets / minimal variants
+009-B  COMPLETE — canonical graph / roots / cycles / explanation ordering
+009-C  NEXT ELIGIBLE — application family / valid subsets / minimal variants
 009-D  PLANNED — contraction / extension / add-remove consequences
 009-E  PLANNED — synchronization inventory replay
 009-F  PLANNED — synchronization trigger / ownership / hidden coordinator
@@ -50,7 +50,18 @@ JACKSON CONCEPT DESIGN      NOT COMPLETE
 009-H  PLANNED — consolidation / Phase 010 handoff
 ```
 
-009-A classifies all 110 directed non-self pairs without using implementation/runtime structure as authority. D1 is now partial: pairwise evidence is complete, but graph directness/transitivity and cycle treatment remain 009-B work.
+009-A classified all 110 directed non-self pairs. 009-B then reduced the 12 universal pairwise findings to 9 direct universal edges and 3 transitive findings, retained two legitimate strongly connected inclusion components, and established dependence-derived explanation ordering.
+
+Current methodology state:
+
+```text
+D1  CURRENTLY CLOSED
+D2  OPEN
+D3  CURRENTLY CLOSED
+D4  PARTIAL
+```
+
+009-C must now derive valid application-family subsets using both universal graph closure and non-binary/conditional prerequisites.
 
 ## Later design phases
 
@@ -88,4 +99,4 @@ Placeholder only; not ready, not active and not next.
 
 ## Current next boundary
 
-**009-B — Inclusion-Dependence Graph, Roots, Cycles & Explanation Ordering**.
+**009-C — Application Family, Valid Concept Subsets & Minimal Coherent Variants**.
