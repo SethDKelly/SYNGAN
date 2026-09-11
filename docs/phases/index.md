@@ -28,7 +28,7 @@ IMPLEMENTATION NEXT        NOT YET
 
 Only Phase 014 may change that posture after a positive whole-design completion audit.
 
-## Phase 008 — Individual Concept Design Normalization & Completeness — active
+## Phase 008 — Individual Concept Design Normalization & Completeness — complete
 
 ```text
 008-A  COMPLETE — methodology authority / completion matrix / guardrails
@@ -38,18 +38,27 @@ Only Phase 014 may change that posture after a positive whole-design completion 
 008-E  COMPLETE — operational principles / purpose fulfillment / counterexamples
 008-F  COMPLETE — independence / genericity / familiarity / reuse
 008-G  COMPLETE — candidate rediscovery / missing-concept / boundaries
-008-H  NEXT ELIGIBLE — Phase 008 consolidation and Phase 009 handoff
+008-H  COMPLETE — Phase 008 consolidation / Phase 009 handoff
 ```
 
-008-B through 008-F establish current accepted-concept closure evidence. 008-G now establishes current catalog-perimeter completeness evidence: original exclusions, later recovery/resource/privacy/topology candidates and new missing-candidate hypotheses were replayed without finding a current concept to restore or add.
+Phase 008 exits with:
 
-Phase 008 remains active until 008-H consolidates the evidence and explicitly decides whether individual concept design is complete enough for Phase 009.
+```text
+INDIVIDUAL CONCEPT DESIGN   COMPLETE ENOUGH FOR PHASE 009
+JACKSON CONCEPT DESIGN      NOT COMPLETE
+```
+
+The accepted catalog remains eleven concepts and fifteen synchronizations with no Phase 008 catalog change.
+
+## Phase 009 — Concept Dependence, Application Family, Composition & Synchronization Closure — next eligible
+
+Phase 009 is the next high-level design phase.
+
+It is intentionally not yet subdivided. Immediately before Phase 009 starts, derive dependency-safe subgroups from the completed Phase 008 authority and remaining methodology D/E obligations.
+
+Phase 009 must not confuse Jackson inclusion dependence with ordinary reference, validation, production, operational/runtime, authority or provenance dependencies.
 
 ## Later design phases
-
-### Phase 009 — Concept Dependence, Application Family, Composition & Synchronization Closure
-
-Planned. It will be decomposed immediately before entry using the completed Phase 008 evidence.
 
 ### Phase 010 — Concept Mapping, Interaction, Linguistic & Experience Alignment
 
@@ -89,4 +98,4 @@ Only the current high-level phase is decomposed in detail. Phases 009-014 are su
 
 ## Current next boundary
 
-**008-H — Phase 008 Consolidation, Individual-Concept Completeness Decision & Phase 009 Handoff**.
+**Phase 009 — Concept Dependence, Application Family, Composition & Synchronization Closure** is next eligible and not yet decomposed.
