@@ -36,6 +36,7 @@ Existing architecture, source or tests never become upstream concept-design auth
 - [Concept Action, Query, Preconditions/Postconditions & Lifecycle Normalization](concepts/action-query-lifecycle-normalization.md)
 - [Operational Principle, Purpose Fulfillment & Counterexample Normalization](concepts/operational-principle-purpose-counterexample-normalization.md)
 - [Concept Independence, Genericity, Familiarity & Reuse Normalization](concepts/independence-genericity-familiarity-reuse-normalization.md)
+- [Catalog Perimeter Candidate Rediscovery, Missing-Concept & Boundary Audit](concepts/catalog-perimeter-candidate-rediscovery-boundary-audit.md)
 - [Phase 008](phases/008/index.md)
 
 ## Current state
@@ -52,7 +53,8 @@ Phase 008                  ACTIVE
 008-D                      COMPLETE
 008-E                      COMPLETE
 008-F                      COMPLETE
-008-G                      NEXT ELIGIBLE
+008-G                      COMPLETE
+008-H                      NEXT ELIGIBLE
 Jackson design completion  IN PROGRESS
 implementation readiness   NOT READY
 implementation start       NOT STARTED
@@ -61,19 +63,13 @@ implementation next        NOT YET
 
 ## Phase 008 progress
 
-008-A established the fuller methodology completion ledger and design-only guardrails.
+008-A through 008-F established current methodology guardrails and revalidated the accepted concepts' purpose, state/history, behavior, operational principles, independence, bounded genericity, naming/familiarity and reuse.
 
-008-B reconciled current problem scope, established O1-O16 and current problem/outcome → concept justification traceability.
+008-G then challenged the catalog perimeter. It replayed original exclusions, later recovery/resource/privacy/topology candidates and new missing-candidate hypotheses such as Synthetic Output, Source, Dependency, Authorization/Security state, Platform Capability, Completion Basis, Checkpoint, Claim and text-specific structures.
 
-008-C normalized state, identity, history, uncertainty and invariants across all eleven concepts.
+No candidate currently meets the promotion burden. The catalog remains eleven concepts and fifteen synchronizations. Relationship remains Data Meaning-owned descriptive structure; generic Privacy remains rejected with a future mechanism-specific DP rediscovery trigger; Use/Release Decision remains external; Synthetic Output remains Generation-owned result state under current scope.
 
-008-D normalized conceptual commands, queries, contextual assessments and lifecycle-transition ownership; all fifteen synchronizations can be expressed through owned behavior without a hidden coordinator or `SYNC-16`.
-
-008-E revalidated every operational principle against current purpose/state/action authority and falsifying counterexamples; all eleven pass.
-
-008-F revalidated independence, bounded genericity, familiarity/naming and conceptual reuse. All eleven concepts pass; all eleven names are retained; no merge, split, addition or removal is justified by accepted-concept evidence.
-
-The remaining Phase 008 uncertainty is now deliberately concentrated at the **catalog perimeter**: 008-G must rediscover rejected/deferred/subordinate/external/representation-classified candidates from first principles before 008-H may decide individual-concept completeness.
+Phase 008 is **not yet closed**. 008-H must consolidate the complete 008-A through 008-G evidence and make the explicit individual-concept completion/handoff decision.
 
 ## Corrected interpretation of Phase 007
 
@@ -82,7 +78,6 @@ Phase 007 remains valuable downstream architecture evidence. Its historical impl
 ## Remaining design roadmap
 
 ```text
-008-G  Deferred/Rejected Candidate Rediscovery, Missing-Concept & Boundary Audit
 008-H  Phase 008 Consolidation & Phase 009 Handoff
 009    Concept Dependence, Application Family, Composition & Synchronization Closure
 010    Concept Mapping, Interaction, Linguistic & Experience Alignment
@@ -112,6 +107,6 @@ The retained 007-B/007-C source/tests/tooling/CI remain historical/provisional e
 
 ## Current next boundary
 
-**008-G — Deferred/Rejected Candidate Rediscovery, Missing-Concept & Boundary Audit** is next.
+**008-H — Phase 008 Consolidation, Individual-Concept Completeness Decision & Phase 009 Handoff** is next.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
