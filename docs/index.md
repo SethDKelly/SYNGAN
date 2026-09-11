@@ -34,7 +34,8 @@ Existing architecture, source or tests never become upstream concept-design auth
 - [Accepted Concept Catalog](concepts/index.md)
 - [Phase 008 Individual-Concept Design Consolidation](concepts/phase-008-individual-concept-consolidation.md)
 - [Accepted Synchronizations](synchronizations/index.md)
-- [Phase 009 Entry / Decomposition](phases/009/009-entry-decomposition.md)
+- [Concept Dependence & Application Family](dependence/index.md)
+- [009-A Inclusion-Dependence Pairwise Inventory](dependence/inclusion-dependence-pairwise-inventory.md)
 - [Phase 009](phases/009/index.md)
 
 ## Current state
@@ -47,26 +48,44 @@ current desired outcomes   16
 Phase 008                  COMPLETE
 individual concept design  COMPLETE ENOUGH FOR PHASE 009
 Phase 009                  ACTIVE
-009-A                      NEXT ELIGIBLE
+009-A                      COMPLETE
+009-B                      NEXT ELIGIBLE
+D1                         PARTIAL — PAIRWISE INVENTORY COMPLETE; GRAPH PENDING
 Jackson design completion  IN PROGRESS
 implementation readiness   NOT READY
 implementation start       NOT STARTED
 implementation next        NOT YET
 ```
 
-## Phase 009 entry result
+## 009-A result
 
-Phase 009 is now active. Its entry gate derived eight dependency-safe design subgroups from the remaining methodology D/E obligations.
+009-A classifies all 110 directed non-self concept pairs under the Jackson application-purpose inclusion test.
 
-The phase must first establish Jackson application inclusion dependence and application-family structure, then replay synchronization/composition against those variants. Historical reference/validation/production/operational/provenance dependency relations remain evidence only and do not establish inclusion dependence by themselves.
+```text
+D  universal inclusion dependence     12
+C  conditional/disjunctive            43
+N  no universal dependence            55
+I  insufficient                         0
+```
 
-The current synchronization count of fifteen is therefore a starting composition set, not a final Phase 009 conclusion.
+The result confirms that inclusion dependence is materially sparser than SYNGAN's historical reference/validation/production/runtime/provenance relationship graph.
+
+Two pairwise mutual-dependence candidates are explicit for 009-B analysis:
+
+```text
+Learning   <-> Learned State
+Evaluation <-> Evidence
+```
+
+Execution has a one-of domain-activity prerequisite across `{Learning, Generation, Evaluation}` and Provenance has a non-binary provenance-subject prerequisite. Neither should be flattened into false universal edges.
+
+No concept or synchronization changed in 009-A.
 
 ## Phase 009 sequence
 
 ```text
-009-A  inclusion-dependence semantics / pairwise relation inventory
-009-B  canonical dependence graph / roots / cycles / explanation ordering
+009-A  COMPLETE — inclusion semantics / pairwise relation inventory
+009-B  NEXT — canonical dependence graph / roots / cycles / explanation ordering
 009-C  application family / valid subsets / minimal coherent variants
 009-D  contraction / extension / add-remove consequences
 009-E  synchronization inventory replay across application variants
@@ -74,10 +93,6 @@ The current synchronization count of fifteen is therefore a starting composition
 009-G  composition economy / coupling / synergy / integrity closure
 009-H  consolidation / Phase 010 handoff
 ```
-
-## Corrected interpretation of Phase 007
-
-Phase 007 remains valuable downstream architecture evidence. Its historical implementation-reentry conclusion is superseded because the full Jackson design program remains incomplete. Phase 013 will reconcile that architecture after concept design closes.
 
 ## Remaining design roadmap
 
@@ -102,14 +117,10 @@ IMPLEMENTATION START       NOT STARTED
 IMPLEMENTATION NEXT        NOT YET
 ```
 
-A positive Phase 012 still does not make implementation ready. Phase 013 must reconcile architecture, and only a positive Phase 014 whole-design decision may change readiness to **READY / NOT STARTED / NEXT**. Implementation itself would still require a later explicit Phase 015.
-
-## Historical executable scaffold
-
-The retained 007-B/007-C source/tests/tooling/CI remain historical/provisional evidence and are not repaired or extended merely to manufacture readiness during design.
+A positive Phase 012 still does not make implementation ready. Phase 013 must reconcile architecture; only a positive Phase 014 may make implementation **READY / NOT STARTED / NEXT**, and implementation itself still requires Phase 015.
 
 ## Current next boundary
 
-**009-A — Inclusion-Dependence Semantics, Evidence Rules & Pairwise Relation Inventory** is next eligible.
+**009-B — Inclusion-Dependence Graph, Roots, Cycles & Explanation Ordering** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
