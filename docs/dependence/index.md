@@ -8,22 +8,21 @@ status: active
 
 ## Purpose
 
-This directory contains current Jackson-style **application inclusion-dependence and application-family** authority for SYNGAN.
+This directory contains current Jackson-style application inclusion-dependence and application-family authority for SYNGAN.
 
-Inclusion dependence is distinct from reference, validation, production, operational/runtime, authority, provenance, import, persistence, or dataflow dependency.
+Inclusion dependence is distinct from reference, validation, production, operational/runtime, provenance, import, persistence, synchronization, or dataflow dependency.
 
 For concepts `C1` and `C2`, the governing question remains:
 
 > **If `C1` is included in an application, does including `C1` make sense only if `C2` is also included?**
 
-Application-family validity asks whether a non-empty concept subset satisfies universal closure, non-binary prerequisites, and every capability-specific inclusion requirement it claims. Contraction/extension authority then determines what capability and family consequences follow when that subset changes.
-
 ## Current authority
 
-- [Inclusion-Dependence Semantics, Evidence Rules & Pairwise Relation Inventory](inclusion-dependence-pairwise-inventory.md) — 009-A pairwise authority.
-- [Inclusion-Dependence Graph, Strong Components & Explanation Ordering](inclusion-dependence-graph-ordering.md) — 009-B canonical graph/order authority.
-- [Application Family, Valid Concept Subsets & Minimal Coherent Variants](application-family-valid-subsets.md) — 009-C application-family authority.
-- [Contraction, Extension, Concept Addition/Removal & Product-Scope Consequences](contraction-extension-consequences.md) — 009-D add/remove consequence authority.
+- [Inclusion-Dependence Semantics, Evidence Rules & Pairwise Relation Inventory](inclusion-dependence-pairwise-inventory.md) — 009-A.
+- [Inclusion-Dependence Graph, Strong Components & Explanation Ordering](inclusion-dependence-graph-ordering.md) — 009-B.
+- [Application Family, Valid Concept Subsets & Minimal Coherent Variants](application-family-valid-subsets.md) — 009-C.
+- [Contraction, Extension, Concept Addition/Removal & Product-Scope Consequences](contraction-extension-consequences.md) — 009-D.
+- [Current Synchronization Authority](../synchronizations/index.md) — downstream Phase 009 composition authority now beginning from the closed D1-D4 result.
 
 ## Current phase state
 
@@ -34,11 +33,13 @@ Phase 009                         ACTIVE
 009-B                             COMPLETE
 009-C                             COMPLETE
 009-D                             COMPLETE
-009-E                             NEXT ELIGIBLE
+009-E                             COMPLETE
+009-F                             NEXT ELIGIBLE
 D1 inclusion-dependence graph     CURRENTLY CLOSED
 D2 application family             CURRENTLY CLOSED
 D3 explanation/design ordering    CURRENTLY CLOSED
 D4 add/remove consequences        CURRENTLY CLOSED
+E1 synchronization inventory      CURRENTLY CLOSED
 ```
 
 ## Canonical graph result
@@ -94,99 +95,50 @@ G-KERNEL = Data Meaning + Synthesis Strategy + Generation
 E-KERNEL = Evaluation Criterion + Evaluation + Evidence
 ```
 
-Authority-only minima remain Data Meaning, Synthesis Strategy, Constraint and Evaluation Criterion.
+## Contraction/extension authority
 
-## Contraction authority
-
-009-D establishes systematic removal consequences.
-
-### Closure-breaking removals
+009-D closes product-scope consequences.
 
 ```text
-remove Data Meaning
-  => remove/re-scope Learning + Learned State + Generation
-
-remove Synthesis Strategy
-  => remove/re-scope Learning + Learned State + Generation
+remove Data Meaning or Synthesis Strategy
+  => Learning + Learned State + Generation cannot remain
 
 remove Evaluation Criterion
-  => remove Evaluation + Evidence
+  => Evaluation + Evidence cannot remain
+
+remove one member of L-CLUSTER or E-CLUSTER
+  => remove its mutual-inclusion partner
 ```
 
-### SCC removals
+Removing Generation, Constraint, Execution or Provenance may be capability-only contraction when remaining family rules remain satisfied.
+
+Ordinary extension uses accepted concepts plus required closure/side constraints. Fresh discovery is reserved for genuinely new independent purpose/state/action lifecycles.
+
+## Handoff into composition
+
+009-E now establishes the current synchronization inventory over this family:
 
 ```text
-remove Learning      => remove Learned State
-remove Learned State => remove Learning
-
-remove Evaluation => remove Evidence
-remove Evidence   => remove Evaluation
+historical synchronization IDs       15
+active synchronizations              13
+retired concept-local                SYNC-08
+reclassified cross-cutting contract  SYNC-15
+new synchronization                  NONE
 ```
 
-### Capability-only contractions
+This result does not alter D1-D4.
 
-```text
-remove Generation  => synthetic-output capability disappears
-remove Constraint  => reusable prescriptive-rule capability disappears
-remove Execution   => durable operational-realization capability disappears
-remove Provenance  => typed provenance/history capability disappears
-```
+Important consequences for later dependence reasoning:
 
-These do not create permission to hide the removed concept's semantics inside another concept.
-
-## Extension authority
-
-Ordinary extension uses accepted concepts plus required closure:
-
-```text
-add Learning or Learned State
-  => add full L-KERNEL closure
-
-add Generation
-  => add Data Meaning + Synthesis Strategy
-
-add Evaluation or Evidence
-  => add full E-KERNEL closure
-
-add Execution
-  => require at least one Learning / Generation / Evaluation activity
-
-add Provenance
-  => require a meaningful typed relationship/history witness
-```
-
-Adding Constraint, Data Meaning, Strategy or Criterion may be independent.
-
-Learned-state-assisted Generation, evaluation-gated Generation, reusable rule support, durable operational lifecycle, typed provenance, current topology breadth and text-bearing structured-data capability are ordinary family extensions when current concepts remain sufficient.
-
-## Rediscovery boundary
-
-Fresh concept discovery is required rather than ordinary extension when new scope creates an independent purpose/state/action lifecycle that the current catalog cannot own cleanly.
-
-Current explicit rediscovery triggers include:
-
-- composable formal privacy/accounting;
-- product-owned governance/use/release decisions;
-- independently reusable/negotiable request or cohort definitions;
-- independent synthetic-output publication/versioning/retirement/transformation lifecycle;
-- arbitrary recursive/graph topology with independent relationship behavior;
-- product-owned resource/budget/quota/economic governance.
-
-Implementation resources, IDs, tables, services or status values do not themselves create concepts.
+- a synchronization never creates an inclusion-dependence edge by itself;
+- `SYNC-08` retirement does not change Generation's purpose or family closure because output completion was already Generation-owned local result behavior;
+- `SYNC-15` reclassification does not create/remove a concept because reproducibility remains a cross-cutting contract;
+- active conditional synchronization does not mean the participating concepts are universally co-required across all family members;
+- no `SYNC-16` is needed to preserve family coherence.
 
 ## Product-scope documentation rule
 
-A family member may be structurally coherent while losing a former advertised capability after contraction.
-
-Therefore later mapping/product documentation must track the actual family member and remove stale promises. Examples:
-
-```text
-no L-CLUSTER  => no learned-state-assisted claim
-no E-KERNEL   => no evaluation-backed/evaluation-gated claim
-no Constraint => no reusable prescriptive-rule claim
-no Execution  => no durable retry/recovery/cancellation claim
-no Provenance => no typed provenance traversal claim
-```
+A family member may be structurally coherent while losing a former advertised capability after contraction. Later mapping/product documentation must track the actual family member and remove stale promises.
 
 Application-family validity remains distinct from product packaging or implementation modularity.
 
@@ -211,8 +163,8 @@ This is not implementation order.
 
 ## Current next boundary
 
-**009-E — Synchronization Inventory Revalidation Across the Application Family** is next.
+**009-F — Synchronization Trigger, Preconditions/Postconditions, State Ownership & Hidden-Coordinator Audit** is next.
 
-009-E must replay SYNC-01 through SYNC-15 against the completed D1-D4 authority and decide which rules remain universal when participants are present, capability-conditional, over-broad, redundant, or incomplete.
+Dependence/application-family authority remains reopenable only if later composition reveals a genuine J2/J3 misfit.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
