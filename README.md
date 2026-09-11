@@ -8,15 +8,15 @@ SYNGAN follows Daniel Jackson-style concept design and explicitly requires the f
 
 Start with [`docs/index.md`](docs/index.md).
 
-Current authority:
+Current authority includes:
 
 - [`Concept Design Methodology`](docs/authority/design-methodology.md)
 - [`Jackson Design Completion & Implementation Hold`](docs/authority/jackson-design-completion-implementation-hold.md)
 - [`Jackson Methodology Completion Matrix`](docs/authority/jackson-methodology-completion-matrix.md)
-- [`Current Problem Knowledge`](docs/problem/index.md)
 - [`Accepted Concept Catalog`](docs/concepts/index.md)
 - [`Phase 008 Individual-Concept Design Consolidation`](docs/concepts/phase-008-individual-concept-consolidation.md)
-- [`Accepted Synchronizations`](docs/synchronizations/index.md)
+- [`Concept Dependence & Application Family`](docs/dependence/index.md)
+- [`009-A Inclusion-Dependence Pairwise Inventory`](docs/dependence/inclusion-dependence-pairwise-inventory.md)
 - [`Phase 009`](docs/phases/009/index.md)
 
 ## Status
@@ -26,38 +26,28 @@ accepted concepts          11
 accepted synchronizations  15
 current desired outcomes   16
 Phase 008                  COMPLETE
-individual concept design  COMPLETE ENOUGH FOR PHASE 009
 Phase 009                  ACTIVE
-009-A                      NEXT ELIGIBLE
+009-A                      COMPLETE
+009-B                      NEXT ELIGIBLE
+D1                         PARTIAL — PAIRWISE INVENTORY COMPLETE; GRAPH PENDING
 Jackson design completion  IN PROGRESS
 implementation readiness   NOT READY
 implementation start       NOT STARTED
 implementation next        NOT YET
 ```
 
-Phase 009 has entered through a design-only start gate and has been decomposed from the remaining Jackson dependence/composition obligations rather than from implementation dependencies.
+009-A establishes the purpose-based inclusion-dependence test and classifies all 110 directed non-self concept pairs. Only 12 are current universal-dependence candidates; 43 are conditional/disjunctive and 55 are non-dependent.
 
-The governing Phase 009 distinction is:
-
-```text
-Jackson inclusion dependence
-    != reference / validation / production / runtime / provenance dependency
-```
-
-The existing fifteen synchronizations are the current composition candidates. Phase 009 must replay them against the actual inclusion-dependence graph and valid application-family subsets before they can be treated as composition-closed.
-
-## Phase 009 subgroup sequence
+Two mutual-dependence candidates now require explicit 009-B graph analysis:
 
 ```text
-009-A  Inclusion-Dependence Semantics, Evidence Rules & Pairwise Relation Inventory
-009-B  Inclusion-Dependence Graph, Roots, Cycles & Explanation Ordering
-009-C  Application Family, Valid Concept Subsets & Minimal Coherent Variants
-009-D  Contraction, Extension, Concept Addition/Removal & Product-Scope Consequences
-009-E  Synchronization Inventory Revalidation Across the Application Family
-009-F  Synchronization Trigger, Preconditions/Postconditions, State Ownership & Hidden-Coordinator Audit
-009-G  Composition Economy, Coupling, Synergy & Integrity Closure
-009-H  Phase 009 Consolidation, Dependence/Composition Completion Decision & Phase 010 Handoff
+Learning   <-> Learned State
+Evaluation <-> Evidence
 ```
+
+Execution and Provenance also expose non-binary prerequisites that must not be flattened into false universal graph edges.
+
+No concept or synchronization changed in 009-A.
 
 ## Remaining design roadmap
 
@@ -72,12 +62,10 @@ The existing fifteen synchronizations are the current composition candidates. Ph
 015    Implementation Authority & Controlled Delivery — FUTURE ONLY
 ```
 
-Phase 007 remains valuable architecture evidence, but its historical implementation-reentry conclusion is superseded. Architecture will be reconciled only after Jackson concept design closes.
-
 Only a positive Phase 014 may change implementation to **READY / NOT STARTED / NEXT**. A later explicit Phase 015 would still be required to begin implementation.
 
 ## Current next boundary
 
-**009-A — Inclusion-Dependence Semantics, Evidence Rules & Pairwise Relation Inventory**.
+**009-B — Inclusion-Dependence Graph, Roots, Cycles & Explanation Ordering**.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
