@@ -36,6 +36,7 @@ Existing architecture, source or tests never become upstream concept-design auth
 - [Accepted Synchronizations](synchronizations/index.md)
 - [Concept Dependence & Application Family](dependence/index.md)
 - [009-A Inclusion-Dependence Pairwise Inventory](dependence/inclusion-dependence-pairwise-inventory.md)
+- [009-B Inclusion-Dependence Graph & Ordering](dependence/inclusion-dependence-graph-ordering.md)
 - [Phase 009](phases/009/index.md)
 
 ## Current state
@@ -49,44 +50,51 @@ Phase 008                  COMPLETE
 individual concept design  COMPLETE ENOUGH FOR PHASE 009
 Phase 009                  ACTIVE
 009-A                      COMPLETE
-009-B                      NEXT ELIGIBLE
-D1                         PARTIAL — PAIRWISE INVENTORY COMPLETE; GRAPH PENDING
+009-B                      COMPLETE
+009-C                      NEXT ELIGIBLE
+D1                         CURRENTLY CLOSED
+D2                         OPEN
+D3                         CURRENTLY CLOSED
+D4                         PARTIAL
 Jackson design completion  IN PROGRESS
 implementation readiness   NOT READY
 implementation start       NOT STARTED
 implementation next        NOT YET
 ```
 
-## 009-A result
+## 009-B result
 
-009-A classifies all 110 directed non-self concept pairs under the Jackson application-purpose inclusion test.
-
-```text
-D  universal inclusion dependence     12
-C  conditional/disjunctive            43
-N  no universal dependence            55
-I  insufficient                         0
-```
-
-The result confirms that inclusion dependence is materially sparser than SYNGAN's historical reference/validation/production/runtime/provenance relationship graph.
-
-Two pairwise mutual-dependence candidates are explicit for 009-B analysis:
+009-B converts the complete 009-A pairwise inventory into the canonical direct/transitive application inclusion-dependence graph.
 
 ```text
-Learning   <-> Learned State
-Evaluation <-> Evidence
+pairwise universal findings             12
+direct universal graph edges             9
+transitive universal findings            3
+non-trivial strongly connected components 2
+unresolved graph-cycle defects            0
 ```
 
-Execution has a one-of domain-activity prerequisite across `{Learning, Generation, Evaluation}` and Provenance has a non-binary provenance-subject prerequisite. Neither should be flattened into false universal edges.
+The two legitimate mutual inclusion components are:
 
-No concept or synchronization changed in 009-A.
+```text
+L-CLUSTER = { Learning, Learned State }
+E-CLUSTER = { Evaluation, Evidence }
+```
+
+They remain distinct concepts with independent state/action ownership. The condensed universal graph is acyclic.
+
+Execution and Provenance remain governed by non-binary application-family prerequisites rather than false unconditional edges.
+
+Dependence-derived explanation ordering is also current: prerequisites precede dependents, while `Learning → Learned State` and `Evaluation → Evidence` are used as narrative orders inside their mutual components.
+
+No concept or synchronization changed in 009-B.
 
 ## Phase 009 sequence
 
 ```text
 009-A  COMPLETE — inclusion semantics / pairwise relation inventory
-009-B  NEXT — canonical dependence graph / roots / cycles / explanation ordering
-009-C  application family / valid subsets / minimal coherent variants
+009-B  COMPLETE — canonical graph / roots / cycles / explanation ordering
+009-C  NEXT — application family / valid subsets / minimal coherent variants
 009-D  contraction / extension / add-remove consequences
 009-E  synchronization inventory replay across application variants
 009-F  trigger / pre-post / state ownership / hidden coordinator audit
@@ -119,8 +127,10 @@ IMPLEMENTATION NEXT        NOT YET
 
 A positive Phase 012 still does not make implementation ready. Phase 013 must reconcile architecture; only a positive Phase 014 may make implementation **READY / NOT STARTED / NEXT**, and implementation itself still requires Phase 015.
 
+The inclusion-dependence graph must not be mirrored mechanically into packages, schemas, APIs, services, persistence, or runtime call direction.
+
 ## Current next boundary
 
-**009-B — Inclusion-Dependence Graph, Roots, Cycles & Explanation Ordering** is next eligible.
+**009-C — Application Family, Valid Concept Subsets & Minimal Coherent Variants** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
