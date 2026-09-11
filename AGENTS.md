@@ -18,6 +18,7 @@ Start with:
 - `docs/concepts/action-query-lifecycle-normalization.md`
 - `docs/concepts/operational-principle-purpose-counterexample-normalization.md`
 - `docs/concepts/independence-genericity-familiarity-reuse-normalization.md`
+- `docs/concepts/catalog-perimeter-candidate-rediscovery-boundary-audit.md`
 - `docs/phases/008/index.md`
 
 Phase 007 architecture is downstream evidence only until Phase 013 reconciliation.
@@ -35,7 +36,8 @@ Phase 008                  ACTIVE
 008-D                      COMPLETE
 008-E                      COMPLETE
 008-F                      COMPLETE
-008-G                      NEXT ELIGIBLE
+008-G                      COMPLETE
+008-H                      NEXT ELIGIBLE
 Jackson design completion  IN PROGRESS
 implementation readiness   NOT READY
 implementation start       NOT STARTED
@@ -48,7 +50,7 @@ implementation next        NOT YET
 
 ## Current individual-concept authority
 
-Phase 008 has current authority for:
+Phase 008 now has current authority for:
 
 ```text
 008-B  purpose / justification
@@ -56,6 +58,7 @@ Phase 008 has current authority for:
 008-D  actions / queries / transitions
 008-E  operational principles / counterexamples
 008-F  independence / genericity / familiarity / reuse
+008-G  rejected/deferred candidate rediscovery / catalog perimeter
 ```
 
 008-F establishes:
@@ -67,7 +70,33 @@ familiarity  != copying another product/object model
 genericity   != generic infrastructure
 ```
 
-All eleven accepted concepts pass the current independence/genericity/familiarity/reuse review and all eleven names are retained. That is **not** catalog finality.
+008-G establishes that a useful/durable/typed/identified architecture object is not a concept unless it has an independent current product purpose, state/history, owned behavior, operational principle and clean boundary.
+
+Current catalog result:
+
+```text
+accepted concepts          11
+restored concepts           0
+new concepts                0
+missing current concept     NONE FOUND
+```
+
+Important 008-G dispositions to preserve:
+
+- Generation Request / Condition remain Generation-owned;
+- Attempt / Checkpoint remain Execution-owned/subordinate;
+- Artifact/Dataset identity remains representation/integration;
+- Reproducibility remains cross-cutting;
+- Relationship remains Data Meaning-owned descriptive structure;
+- generic Privacy remains rejected; future composable DP requires fresh mechanism-specific concept discovery;
+- Use / Release Decision remains external authority;
+- Resource/Admission/Backpressure/Approximation/DegradedMode/Cost remain owner-specific, cross-cutting or deployment policy;
+- Synthetic Output remains Generation-owned result state until independent output lifecycle functionality exists;
+- Source/Dependency/Authorization/Secret/Platform Capability remain context/security/architecture rather than synthetic-data concepts;
+- Text/Tokenizer/Language Model and topology-mode words do not become concepts merely because implementations may represent them;
+- umbrella terms such as Model, Run, Quality, Metadata, Validation, Artifact, Synthesizer and Policy must not erase accepted boundaries.
+
+Future rediscovery triggers are not implementation permission.
 
 ## Current Phase 008 boundary
 
@@ -78,28 +107,22 @@ All eleven accepted concepts pass the current independence/genericity/familiarit
 008-D  COMPLETE — Concept Action, Query, Preconditions/Postconditions & Lifecycle Closure
 008-E  COMPLETE — Operational Principle Completeness, Purpose Fulfillment & Counterexample Review
 008-F  COMPLETE — Independence, Genericity, Familiarity & Reuse Revalidation
-008-G  NEXT ELIGIBLE — Deferred/Rejected Candidate Rediscovery, Missing-Concept & Boundary Audit
-008-H  PLANNED — Phase 008 Consolidation & Phase 009 Handoff
+008-G  COMPLETE — Deferred/Rejected Candidate Rediscovery, Missing-Concept & Boundary Audit
+008-H  NEXT ELIGIBLE — Phase 008 Consolidation, Individual-Concept Completeness Decision & Phase 009 Handoff
 ```
 
-008-G must deliberately re-evaluate every rejected, subordinated, deferred, externalized or representation-classified candidate using the **current** 008-B through 008-F criteria. Do not merely restate Phase 001 dispositions.
+008-H must consolidate rather than invent new downstream work. It must verify that all individual-concept obligations are currently closed with no unresolved J1/J2 blocker, record any residual reopen trigger/debt, and decide only whether the individual-concept foundation is complete enough for Phase 009.
 
-A candidate may become accepted only if it now has a distinct problem-facing purpose, meaningful state/history, concept-owned actions/queries, an operational principle, independence, appropriate genericity and a clean authority boundary. A class/table/file/job/API/manifest/runtime role is not sufficient evidence.
+A positive 008-H may state only:
 
-Candidates explicitly requiring rediscovery include at least:
+```text
+INDIVIDUAL CONCEPT DESIGN   COMPLETE ENOUGH FOR PHASE 009
+IMPLEMENTATION READINESS    NOT READY
+IMPLEMENTATION START        NOT STARTED
+IMPLEMENTATION NEXT         NOT YET
+```
 
-- Generation Request and Condition;
-- Attempt / Checkpoint / Retry / cancellation-related candidates;
-- Dataset / Artifact identity;
-- Reproducibility;
-- mechanism-specific privacy state/guarantee;
-- Relationship / topology-related candidates;
-- Use / Release Decision;
-- Source Characterization / Profile;
-- Resource / Admission / Backpressure / Approximation / Degraded Mode / Cost / Quota-like candidates;
-- umbrella terms such as Validation, Metric, Quality, Model, Metadata, Run, Artifact and Synthesizer.
-
-Do not promote any candidate for catalog symmetry or because retained architecture already has an object for it.
+Do not subdivide Phase 009 until 008-H positively hands off. When Phase 009 becomes eligible, divide it immediately before entry using the final Phase 008 evidence.
 
 ## Jackson distinctions to preserve
 
@@ -117,13 +140,13 @@ Follow J0-J7 in the completion matrix. Reopen the smallest affected upstream aut
 
 ## What agents may do now
 
-For 008-G, agents may inspect historical discovery and later design evidence, re-run candidate criteria, refine the catalog or boundaries when genuinely justified, and record why candidates remain rejected/subordinate/deferred/external/representation-only.
+For 008-H, agents may inspect and consolidate Phase 008 evidence, identify conflicts/residual gaps and reopen the smallest affected 008 subgroup if a genuine blocker is found.
 
 Architecture/source/tests may be inspected only as feasibility or misfit evidence, not as authority over unfinished concepts.
 
 ## What agents must not do until Phase 014 passes
 
-Do not add production behavior, implementation APIs, persistence/data-plane schemas, Spark/runtime/model/platform/security adapters, recovery implementations, Evidence/Provenance implementations, reference Strategies, runtime/build dependencies for future capability, package-topology changes, or executable architecture/fitness restrictions merely to freeze evolving design.
+Do not add production behavior, implementation APIs, persistence/data-plane schemas, Spark/runtime/model/platform/security adapters, recovery implementations, Evidence/Provenance implementations, reference Strategies, privacy mechanisms, runtime/build dependencies for future capability, package-topology changes, or executable architecture/fitness restrictions merely to freeze evolving design.
 
 Do not repair stale implementation tests solely to make implementation appear ready.
 
@@ -139,6 +162,6 @@ Only Phase 014 may make the final whole-design readiness decision. Even then, im
 
 ## Current next boundary
 
-**008-G — Deferred/Rejected Candidate Rediscovery, Missing-Concept & Boundary Audit**.
+**008-H — Phase 008 Consolidation, Individual-Concept Completeness Decision & Phase 009 Handoff**.
 
 Do not begin implementation work.
