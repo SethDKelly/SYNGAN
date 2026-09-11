@@ -35,7 +35,9 @@ application family                        ← 009-C COMPLETE
         ↓
 contraction / extension consequences      ← 009-D COMPLETE
         ↓
-composition / synchronization / integrity ← 009-E/F/G/H REMAIN
+explicit synchronization inventory        ← 009-E COMPLETE
+        ↓
+synchronization ownership / integrity     ← 009-F/G/H REMAIN
         ↓
 concept mapping / actor-visible experience
         ↓
@@ -57,51 +59,52 @@ implementation MAY become READY / NOT STARTED / NEXT
 009-B  COMPLETE — canonical graph / SCCs / explanation ordering
 009-C  COMPLETE — application family / valid subsets / minimal coherent variants
 009-D  COMPLETE — contraction / extension / add-remove consequences
-009-E  NEXT ELIGIBLE — synchronization inventory replay
+009-E  COMPLETE — synchronization inventory replay
+009-F  NEXT ELIGIBLE — trigger / pre-post / ownership / hidden coordinator
 ```
 
-Current dependence/application-family status:
+Current methodology status:
 
 ```text
-D1  CURRENTLY CLOSED
-D2  CURRENTLY CLOSED
-D3  CURRENTLY CLOSED
-D4  CURRENTLY CLOSED
+D1-D4  CURRENTLY CLOSED
+E1     CURRENTLY CLOSED
+E2     STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
+E3     STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
+E4     PARTIAL
+E5     PARTIAL TO STRONG
 ```
 
-## 009-D boundary
+## 009-E synchronization boundary
 
-009-D establishes how current family members contract and extend without changing concept authority.
-
-Key rules include:
+009-E establishes:
 
 ```text
-remove Data Meaning or Strategy
-  => current Learning + Learned State + Generation cannot remain
-
-remove Criterion
-  => Evaluation + Evidence cannot remain
-
-remove one member of L-CLUSTER or E-CLUSTER
-  => remove its mutual-inclusion partner
+historical synchronization IDs       15
+active synchronizations              13
+retired concept-local                SYNC-08
+reclassified cross-cutting contract  SYNC-15
+new synchronization                  NONE
+SYNC-16                              NOT JUSTIFIED
 ```
 
-Constraint, Execution and Provenance may be removed without universal dependent removal, but their distinct capabilities disappear and must not be recreated as hidden state in other concepts.
+`SYNC-08` remains required Generation-owned output candidate/completion/promotion behavior but is not cross-concept synchronization.
 
-Ordinary extension adds accepted concepts plus required closure. Fresh discovery remains required for genuinely new independent functionality.
+`SYNC-15` remains the Reproducibility Contract rather than one active synchronization/state owner.
+
+No current rule may be translated into a service, event, transaction, queue, schema or runtime call graph merely because it is an active synchronization.
 
 ## Architecture/executable boundary
 
 Phase 004/006/007 architecture and the retained executable scaffold remain downstream evidence.
 
-They may expose a genuine counterexample but cannot define dependence, application-family validity, or contraction/extension consequences from package imports, persistence references, service/dataflow direction, runtime orchestration, deployment topology, or existing API/object nesting.
+They may expose a genuine counterexample but cannot define synchronization membership from package imports, persistence references, service/dataflow direction, event topology, transaction ordering, runtime orchestration, deployment topology, or existing API/object nesting.
 
-Do not restructure implementation to mirror the inclusion graph, SCCs, kernels, family members, or contraction/extension patterns while the full design remains incomplete.
+Do not restructure implementation to mirror the synchronization inventory while the full design remains incomplete.
 
 ## Remaining design roadmap
 
 ```text
-009-E..H  finish synchronization/composition design
+009-F..H  finish synchronization ownership/economy/integrity design
 010       concept mapping / interaction / language / experience
 011       specificity / familiarity / integrity / synergy / misfit
 012       Jackson concept-design completion decision
@@ -129,10 +132,10 @@ Implementation itself still requires later explicit Phase 015 authority.
 
 ## No executable design-by-accident
 
-Until Phase 014 passes, do not add production behavior, executable architecture restrictions merely to crystallize hypotheses, package-topology changes anticipating design, persistence schemas/migrations, runtime/model/platform/security adapters, public API implementation, reference algorithms, vertical slices, benchmarks, privacy mechanisms, product-edition packaging, feature-flag decomposition, or stale-test repair solely to manufacture readiness.
+Until Phase 014 passes, do not add production behavior, executable architecture restrictions merely to crystallize hypotheses, package-topology changes anticipating design, persistence schemas/migrations, runtime/model/platform/security adapters, public API implementation, reference algorithms, vertical slices, benchmarks, privacy mechanisms, product-edition packaging, event/service decomposition, or stale-test repair solely to manufacture readiness.
 
 ## Current next boundary
 
-**009-E — Synchronization Inventory Revalidation Across the Application Family**.
+**009-F — Synchronization Trigger, Preconditions/Postconditions, State Ownership & Hidden-Coordinator Audit**.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
