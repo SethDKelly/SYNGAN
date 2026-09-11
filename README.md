@@ -14,63 +14,67 @@ Current authority includes:
 - [`Jackson Design Completion & Implementation Hold`](docs/authority/jackson-design-completion-implementation-hold.md)
 - [`Jackson Methodology Completion Matrix`](docs/authority/jackson-methodology-completion-matrix.md)
 - [`Accepted Concept Catalog`](docs/concepts/index.md)
-- [`Phase 008 Individual-Concept Design Consolidation`](docs/concepts/phase-008-individual-concept-consolidation.md)
 - [`Concept Dependence & Application Family`](docs/dependence/index.md)
-- [`009-D Contraction & Extension Consequences`](docs/dependence/contraction-extension-consequences.md)
 - [`Current Synchronization Authority`](docs/synchronizations/index.md)
 - [`009-E Synchronization Inventory Revalidation`](docs/synchronizations/application-family-revalidation.md)
+- [`009-F Trigger & Ownership Normalization`](docs/synchronizations/trigger-ownership-normalization.md)
 - [`Phase 009`](docs/phases/009/index.md)
 
 ## Status
 
 ```text
-accepted concepts                    11
-historical synchronization IDs       15
-active synchronizations              13
-current desired outcomes             16
-Phase 008                            COMPLETE
-Phase 009                            ACTIVE
-009-A                                COMPLETE
-009-B                                COMPLETE
-009-C                                COMPLETE
-009-D                                COMPLETE
-009-E                                COMPLETE
-009-F                                NEXT ELIGIBLE
-D1-D4                                CURRENTLY CLOSED
-E1                                   CURRENTLY CLOSED
-E2-E3                                REVALIDATION REQUIRED
-Jackson design completion            IN PROGRESS
-implementation readiness             NOT READY
-implementation start                 NOT STARTED
-implementation next                  NOT YET
+accepted concepts                       11
+historical synchronization IDs          15
+active synchronizations                 13
+required-relational                      6
+capability/occurrence conditional        7
+current desired outcomes                16
+Phase 008                               COMPLETE
+Phase 009                               ACTIVE
+009-A                                   COMPLETE
+009-B                                   COMPLETE
+009-C                                   COMPLETE
+009-D                                   COMPLETE
+009-E                                   COMPLETE
+009-F                                   COMPLETE
+009-G                                   NEXT ELIGIBLE
+D1-D4                                   CURRENTLY CLOSED
+E1                                      CURRENTLY CLOSED
+E2                                      CURRENTLY CLOSED
+E3                                      PARTIAL TO STRONG
+E4                                      PARTIAL
+E5                                      STRONG EVIDENCE / REVALIDATION REQUIRED
+Jackson design completion               IN PROGRESS
+implementation readiness                NOT READY
+implementation start                    NOT STARTED
+implementation next                     NOT YET
 ```
 
-009-A through 009-D close the current Jackson dependence/application-family layer. 009-E now closes the explicit synchronization inventory.
+009-F now establishes explicit trigger/precondition/postcondition/state-owner contracts for all thirteen active synchronization rules.
 
-The historical fifteen synchronization IDs reduce to thirteen active cross-concept rules:
+Key ownership results:
 
 ```text
-required-relational active rules      7
-capability/occurrence conditional     6
-retired concept-local                 1  SYNC-08
-reclassified cross-cutting contract   1  SYNC-15
-new synchronization                   0
-SYNC-16                               NOT JUSTIFIED
+consumer binding / contextual assessment -> consuming activity
+Learned State producer identity            -> Learned State
+Evidence producer identity                 -> Evidence
+Execution parent binding / Attempts        -> Execution
+Provenance typed assertions                -> Provenance
+synchronization-owned state                -> NONE
 ```
 
-`SYNC-08` remains semantically important, but completed-output candidate/promotion behavior is Generation-owned result lifecycle rather than cross-concept composition.
+`SYNC-06` is narrowed to conditional **Generation / Learned State reuse compatibility and exact basis binding**. Direct Generation does not activate it. The active count remains thirteen.
 
-`SYNC-15` remains fully authoritative through the Reproducibility Contract, but reproducibility is a cross-cutting contract rather than a standalone synchronization/state owner.
+`SYNC-08` remains retired as Generation-local output-result behavior. `SYNC-15` remains reclassified under the cross-cutting Reproducibility Contract. No `SYNC-16` is justified.
 
-`SYNC-13` remains active only for the conditional Generation/Evidence relation used by evidence-gated completion; external Evidence handoff is a later mapping/integration boundary.
+The hidden-coordinator audit finds no need for a generic Compatibility, Workflow/Run, Promotion, Quality/Approval, Reproducibility, or Composition state owner.
 
-The synchronization inventory is design authority, not service/event/transaction/module topology.
+These are conceptual synchronization contracts, not event/service/transaction/package topology.
 
 ## Remaining design roadmap
 
 ```text
-009-F  synchronization trigger / pre-post / ownership / hidden coordinator
-009-G  composition economy / synergy / integrity
+009-G  composition economy / coupling / synergy / integrity closure
 009-H  Phase 009 consolidation / Phase 010 handoff
 010    Concept Mapping, Interaction, Linguistic & Experience Alignment
 011    Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Design Validation
@@ -85,6 +89,6 @@ Only a positive Phase 014 may change implementation to **READY / NOT STARTED / N
 
 ## Current next boundary
 
-**009-F — Synchronization Trigger, Preconditions/Postconditions, State Ownership & Hidden-Coordinator Audit**.
+**009-G — Composition Economy, Coupling, Synergy & Integrity Closure**.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
