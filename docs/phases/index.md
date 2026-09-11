@@ -44,8 +44,8 @@ JACKSON CONCEPT DESIGN      NOT COMPLETE
 009-B  COMPLETE — canonical graph / roots / cycles / explanation ordering
 009-C  COMPLETE — application family / valid subsets / minimal coherent variants
 009-D  COMPLETE — contraction / extension / add-remove consequences
-009-E  NEXT ELIGIBLE — synchronization inventory replay
-009-F  PLANNED — synchronization trigger / ownership / hidden coordinator
+009-E  COMPLETE — synchronization inventory replay
+009-F  NEXT ELIGIBLE — synchronization trigger / pre-post / ownership / hidden coordinator
 009-G  PLANNED — composition economy / synergy / integrity
 009-H  PLANNED — consolidation / Phase 010 handoff
 ```
@@ -53,15 +53,17 @@ JACKSON CONCEPT DESIGN      NOT COMPLETE
 Current methodology state:
 
 ```text
-D1  CURRENTLY CLOSED
-D2  CURRENTLY CLOSED
-D3  CURRENTLY CLOSED
-D4  CURRENTLY CLOSED
+D1-D4  CURRENTLY CLOSED
+E1     CURRENTLY CLOSED
+E2     STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
+E3     STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
+E4     PARTIAL
+E5     PARTIAL TO STRONG
 ```
 
-009-A through 009-D now close the dependence/application-family portion of Phase 009. The current family has a canonical graph, coherent valid subsets/minima, explicit non-binary constraints, and systematic contraction/extension consequences.
+009-E reduces the historical fifteen synchronization IDs to thirteen active cross-concept rules. `SYNC-08` is retired from active composition because output promotion is Generation-owned local result behavior. `SYNC-15` is reclassified as the cross-cutting Reproducibility Contract. No `SYNC-16` is justified.
 
-009-E must now replay the fifteen synchronization candidates against those family variants before detailed trigger/ownership normalization in 009-F.
+009-F must now normalize trigger, preconditions/postconditions, state ownership, failure/indeterminate behavior, historical binding and hidden-coordinator risk for the thirteen active rules.
 
 ## Later design phases
 
@@ -99,4 +101,4 @@ Placeholder only; not ready, not active and not next.
 
 ## Current next boundary
 
-**009-E — Synchronization Inventory Revalidation Across the Application Family**.
+**009-F — Synchronization Trigger, Preconditions/Postconditions, State Ownership & Hidden-Coordinator Audit**.
