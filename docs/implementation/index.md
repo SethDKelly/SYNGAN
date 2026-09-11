@@ -15,6 +15,7 @@ Current authority:
 - [Jackson Design Completion & Implementation Hold](../authority/jackson-design-completion-implementation-hold.md)
 - [Jackson Methodology Completion Matrix](../authority/jackson-methodology-completion-matrix.md)
 - [Concept Dependence & Application Family](../dependence/index.md)
+- [Current Synchronization Authority](../synchronizations/index.md)
 
 ```text
 IMPLEMENTATION READINESS   NOT READY
@@ -33,38 +34,47 @@ Phase 009                  ACTIVE
 009-B                      COMPLETE
 009-C                      COMPLETE
 009-D                      COMPLETE
-009-E                      NEXT ELIGIBLE
-D1                         CURRENTLY CLOSED
-D2                         CURRENTLY CLOSED
-D3                         CURRENTLY CLOSED
-D4                         CURRENTLY CLOSED
+009-E                      COMPLETE
+009-F                      NEXT ELIGIBLE
+D1-D4                      CURRENTLY CLOSED
+E1                         CURRENTLY CLOSED
+E2-E3                      REVALIDATION REQUIRED
 Jackson concept design     IN PROGRESS
 ```
 
-## What 009-D established
+## What 009-E established
 
-009-D closes the conceptual consequences of adding/removing current concepts and SCCs.
+The historical synchronization inventory is now revalidated against the application family:
 
-It determines when contraction forces dependent removal, when a capability simply disappears, when side constraints orphan Execution/Provenance, and when an extension is ordinary composition versus a future scope change requiring fresh concept discovery.
+```text
+historical synchronization IDs       15
+active synchronizations              13
+retired concept-local                SYNC-08
+reclassified cross-cutting contract  SYNC-15
+new synchronization                  NONE
+```
+
+`SYNC-08` remains Generation-owned result semantics. `SYNC-15` remains the Reproducibility Contract. `SYNC-13` active internal scope is evidence-gated Generation consuming Evidence; external Evidence handoff is deferred to concept mapping.
 
 This is concept-design authority only.
 
-## What 009-D does not authorize
+## What 009-E does not authorize
 
-The application family and consequence matrix do **not** authorize:
+The synchronization inventory does **not** authorize:
 
-- package/module editions matching family subsets;
-- optional-install extras or dependency groups;
-- service/deployment decomposition;
-- feature flags reflecting concept inclusion;
-- database/schema partitioning;
-- API restructuring;
-- runtime orchestration variants;
-- product SKUs or commercial editions;
-- synchronization implementation;
+- services matching synchronization IDs;
+- event/message types matching synchronization IDs;
+- distributed transactions or sagas;
+- queue/topic topology;
+- API call direction;
+- package/module dependencies;
+- schema/foreign-key design;
+- runtime orchestration graphs;
+- product feature flags or deployment profiles;
+- implementation of Execution, Evidence or Provenance;
 - repair of stale implementation tests.
 
-Removing a concept from a conceptual family member does not authorize deleting or moving code before architecture reconciliation. Adding a concept capability does not authorize creating an implementation module now.
+A conceptual synchronization may later map to no event, one interaction, several interactions, or a representation-specific mechanism chosen only after completed design/architecture reconciliation.
 
 ## Superseded 007-K re-entry conclusion
 
@@ -75,7 +85,7 @@ Retained Phase 007 architecture/scaffold evidence cannot reactivate implementati
 ## Remaining design before implementation readiness can be decided
 
 ```text
-009-E..H  finish synchronization/composition design
+009-F..H  finish synchronization ownership/economy/integrity design
 010       concept mapping / interaction / language / experience
 011       specificity / familiarity / integrity / synergy / misfit
 012       Jackson concept-design completion decision
@@ -87,10 +97,12 @@ Only a positive Phase 014 may make implementation **READY / NOT STARTED / NEXT**
 
 ## Current prohibition
 
-Until Phase 014 passes, do not add production concept/domain behavior, implementation APIs, persistence/data-plane schemas, model/runtime/security/platform adapters, Execution/recovery behavior, Evidence/Provenance implementations, reference Strategies, privacy mechanisms, benchmarks, package-topology changes, product-edition packaging, feature-flag decomposition, or executable architecture restrictions intended to freeze unfinished design.
+Until Phase 014 passes, do not add production concept/domain behavior, implementation APIs, persistence/data-plane schemas, model/runtime/security/platform adapters, Execution/recovery behavior, Evidence/Provenance implementations, reference Strategies, privacy mechanisms, benchmarks, package-topology changes, event/service decomposition, or executable architecture restrictions intended to freeze unfinished design.
+
+Do not turn active synchronization rules into implementation components.
 
 ## Current next boundary
 
 Design-only work:
 
-**009-E — Synchronization Inventory Revalidation Across the Application Family**.
+**009-F — Synchronization Trigger, Preconditions/Postconditions, State Ownership & Hidden-Coordinator Audit**.
