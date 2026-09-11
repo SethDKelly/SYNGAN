@@ -15,7 +15,9 @@ Start with:
 - `docs/problem/index.md`
 - `docs/concepts/index.md`
 - `docs/concepts/phase-008-individual-concept-consolidation.md`
-- `docs/phases/008/index.md`
+- `docs/synchronizations/index.md`
+- `docs/phases/009/009-entry-decomposition.md`
+- `docs/phases/009/index.md`
 
 Phase 007 architecture is downstream evidence only until Phase 013 reconciliation.
 
@@ -27,7 +29,8 @@ accepted synchronizations  15
 current desired outcomes   16
 Phase 008                  COMPLETE
 individual concept design  COMPLETE ENOUGH FOR PHASE 009
-Phase 009                  NEXT ELIGIBLE / NOT YET DECOMPOSED
+Phase 009                  ACTIVE
+009-A                      NEXT ELIGIBLE
 Jackson design completion  IN PROGRESS
 implementation readiness   NOT READY
 implementation start       NOT STARTED
@@ -40,19 +43,9 @@ implementation next        NOT YET
 
 ## Phase 008 authority to preserve
 
-Phase 008-A through 008-H provide current authority for:
+Phase 008-A through 008-H provide current individual-concept authority for problem/purpose, state/history/invariants, actions/queries/transitions, operational principles, independence/genericity/familiarity/reuse, catalog perimeter and consolidation.
 
-```text
-problem / purpose / outcomes / concept justification
-concept state / identity / history / invariants
-concept actions / queries / transition contracts
-operational principles / counterexamples
-independence / genericity / familiarity / reuse
-candidate rediscovery / catalog perimeter
-individual-concept consolidation
-```
-
-The catalog remains eleven concepts/fifteen synchronizations with no Phase 008 add/remove/restore/merge/split/rename.
+The catalog remains eleven concepts. The fifteen synchronization IDs are the current Phase 009 starting set, not a final composition result.
 
 Core distinctions include:
 
@@ -68,60 +61,87 @@ Evidence               != Provenance
 Execution              != Attempt != platform job
 ```
 
-Generation currently owns the completed logical synthetic-output result boundary. Relationship remains Data Meaning-owned descriptive structural semantics. Generic Privacy remains rejected; future mechanism-specific capabilities such as composable DP require fresh concept discovery before implementation. Use/Release Decision remains external authority.
+Generation currently owns completed logical synthetic-output result semantics. Relationship remains Data Meaning-owned descriptive structural semantics. Generic Privacy remains rejected; future mechanism-specific capabilities such as composable DP require fresh concept discovery before implementation. Use/Release Decision remains external authority.
 
-## Current Phase 009 boundary
+## Phase 009 active boundary
 
-**Phase 009 — Concept Dependence, Application Family, Composition & Synchronization Closure** is next eligible.
+Phase 009 is decomposed as:
 
-Phase 009 has not yet been subdivided. Immediately before Phase 009 begins, derive dependency-safe subgroups from the completed Phase 008 authority and remaining methodology D/E obligations.
+```text
+009-A  Inclusion-Dependence Semantics, Evidence Rules & Pairwise Relation Inventory
+009-B  Inclusion-Dependence Graph, Roots, Cycles & Explanation Ordering
+009-C  Application Family, Valid Concept Subsets & Minimal Coherent Variants
+009-D  Contraction, Extension, Concept Addition/Removal & Product-Scope Consequences
+009-E  Synchronization Inventory Revalidation Across the Application Family
+009-F  Synchronization Trigger, Preconditions/Postconditions, State Ownership & Hidden-Coordinator Audit
+009-G  Composition Economy, Coupling, Synergy & Integrity Closure
+009-H  Phase 009 Consolidation, Dependence/Composition Completion Decision & Phase 010 Handoff
+```
 
-Phase 009 must explicitly distinguish:
+009-A is the only next eligible subgroup.
 
-- **Jackson inclusion dependence** — including concept C1 only makes sense if C2 is also included;
-- reference dependency;
-- validation/compatibility dependency;
-- production/result-establishment dependency;
-- operational/runtime realization dependency;
-- authority dependency;
-- provenance/historical relationship.
+## Inclusion-dependence rule
 
-Existing non-Jackson dependency taxonomies are supporting evidence only.
+For concepts `C1` and `C2` in an application variant:
 
-At minimum Phase 009 must close or deliberately hand forward:
+> **Does including C1 make sense only if C2 is also included?**
 
-- D1 — application inclusion-dependence graph;
-- D2 — meaningful valid concept subsets/application family;
-- D3 — dependence-derived explanation/design ordering;
-- D4 — reduced-application add/remove consequences;
-- E1-E3 — synchronization ownership/economy/hidden-coordinator closure;
-- the Phase 009 portion of E4/E5 — composition synergy/integrity.
+Do not substitute any of the following for that question:
 
-Do not assume the existing fifteen synchronizations are final merely because 008-D can express them using owned actions/queries. Phase 009 must replay composition under the actual application-family/dependence model.
+- reference/binding;
+- contextual validation;
+- production/result establishment;
+- operational/runtime realization;
+- authority or authorization relation;
+- provenance/history relation;
+- import/package dependency;
+- service call/dataflow/storage relation.
 
-Do not introduce a new concept or hidden coordinator merely to make composition convenient. A genuine J2/J3 misfit must reopen the smallest affected upstream authority.
+Historical Phase 001-G dependency taxonomy is supporting evidence only.
 
-## Jackson distinctions to preserve
+## Phase 009 sequencing rule
 
-- purpose explains why a concept exists;
-- operational principles demonstrate purpose but do not replace complete state/action specification;
-- actions/queries define conceptual behavior independent of interface mechanisms;
-- synchronizations compose independently defined concepts without transferring state ownership;
-- concept dependence means application inclusion dependence, not import/reference/runtime dependency;
-- concept mapping is downstream of concept behavior and must preserve it;
-- specificity, familiarity and integrity are design criteria, not implementation metrics.
+Do not replay synchronization closure before application-family structure exists.
+
+The required sequence is:
+
+```text
+pairwise inclusion dependence
+  ↓
+canonical graph / explanation order
+  ↓
+valid application-family subsets
+  ↓
+add/remove / contraction-extension consequences
+  ↓
+synchronization inventory replay
+  ↓
+trigger / ownership / pre-post audit
+  ↓
+composition economy / synergy / integrity
+  ↓
+consolidation
+```
+
+The existing fifteen synchronizations may remain, become conditional/narrower, be removed as redundant, or expose a genuine missing coordination rule. Do not retain a synchronization solely for historical ID stability and do not invent `SYNC-16` for symmetry.
 
 ## Stop/reopen classes
 
-Follow J0-J7 in the completion matrix. Reopen the smallest affected upstream authority for a real defect; do not patch a conceptual defect only in architecture/code/tests.
+Follow J0-J7 in the completion matrix. Reopen the smallest affected upstream authority for a real defect.
+
+For Phase 009:
+
+- J1 — reopen the smallest Phase 008 concept-specification authority;
+- J2 — reopen purpose/boundary/catalog authority as appropriate;
+- J3 — repair dependence/composition/synchronization within Phase 009 unless it proves a J1/J2 cause;
+- J4 — defer true mapping defects to Phase 010;
+- J5 — record final-quality issues for Phase 011 unless severe enough to invalidate Phase 009.
 
 ## What agents may do now
 
-Before starting Phase 009, agents may inspect the completed Phase 008 authority and remaining D/E methodology obligations to define dependency-safe Phase 009 subgroups.
+For 009-A, agents may perform design-only pairwise inclusion-dependence analysis using current concept purposes, absence consequences, operational principles and no-occurrence counterexamples.
 
-Once Phase 009 is explicitly entered, agents may perform design-only inclusion-dependence, application-family, composition and synchronization analysis within those subgroups.
-
-Architecture/source/tests may be inspected only as feasibility or misfit evidence, not as authority over unfinished design.
+Architecture/source/tests may be inspected only as feasibility or misfit evidence, not as authority over the dependence graph.
 
 ## What agents must not do until Phase 014 passes
 
@@ -141,6 +161,6 @@ Only Phase 014 may make the final whole-design readiness decision. Even then, im
 
 ## Current next boundary
 
-**Phase 009 — Concept Dependence, Application Family, Composition & Synchronization Closure**.
+**009-A — Inclusion-Dependence Semantics, Evidence Rules & Pairwise Relation Inventory**.
 
-Define its subgroups immediately before entry. Do not begin implementation work.
+Do not begin implementation work.
