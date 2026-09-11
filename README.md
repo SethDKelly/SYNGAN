@@ -19,6 +19,7 @@ Current authority:
 - [`Concept Action, Query, Preconditions/Postconditions & Lifecycle Normalization`](docs/concepts/action-query-lifecycle-normalization.md)
 - [`Operational Principle, Purpose Fulfillment & Counterexample Normalization`](docs/concepts/operational-principle-purpose-counterexample-normalization.md)
 - [`Concept Independence, Genericity, Familiarity & Reuse Normalization`](docs/concepts/independence-genericity-familiarity-reuse-normalization.md)
+- [`Catalog Perimeter Candidate Rediscovery, Missing-Concept & Boundary Audit`](docs/concepts/catalog-perimeter-candidate-rediscovery-boundary-audit.md)
 - [`Phase 008`](docs/phases/008/index.md)
 
 ## Status
@@ -34,21 +35,23 @@ Phase 008                  ACTIVE
 008-D                      COMPLETE
 008-E                      COMPLETE
 008-F                      COMPLETE
-008-G                      NEXT ELIGIBLE
+008-G                      COMPLETE
+008-H                      NEXT ELIGIBLE
 Jackson design completion  IN PROGRESS
 implementation readiness   NOT READY
 implementation start       NOT STARTED
 implementation next        NOT YET
 ```
 
-008-F completes the current accepted-concept independence, bounded-genericity, familiarity/naming and conceptual-reuse review. All eleven concepts pass and all eleven names are retained. More conventional terms such as `Schema`, `Model`, `Run`, `Metric`, `Validation`, `Result`, `Lineage`, `Training`, `Sampling` and `Synthesizer` remain non-canonical where they would import misleading authority or representation assumptions.
+008-G completes the current catalog-perimeter rediscovery. Original exclusions, later recovery/resource/privacy/topology candidates, and newly hypothesized candidates such as Synthetic Output, Source, Dependency, Authorization/Security state, Completion Basis and text-specific structures were re-tested from first principles.
 
-This does not complete the concept catalog. 008-G must now deliberately rediscover rejected, subordinated, deferred, externalized and representation-classified candidates using the full current 008-B through 008-F evidence. Only after that may 008-H decide whether the individual-concept foundation is complete enough for Phase 009.
+No candidate currently justifies promotion. The catalog remains eleven concepts and fifteen synchronizations. Relationship remains Data Meaning-owned descriptive structure; generic Privacy remains rejected with future mechanism-specific rediscovery required for composable DP; Use/Release Decision remains external authority; Synthetic Output remains Generation-owned result state under current scope.
+
+This still does not complete Phase 008. **008-H must consolidate 008-A through 008-G and make the explicit individual-concept completeness / Phase 009 handoff decision.**
 
 ## Remaining design roadmap
 
 ```text
-008-G  Deferred/Rejected Candidate Rediscovery, Missing-Concept & Boundary Audit
 008-H  Phase 008 Consolidation & Phase 009 Handoff
 009    Concept Dependence, Application Family, Composition & Synchronization Closure
 010    Concept Mapping, Interaction, Linguistic & Experience Alignment
@@ -66,6 +69,6 @@ Only a positive Phase 014 may change implementation to **READY / NOT STARTED / N
 
 ## Current next boundary
 
-**008-G — Deferred/Rejected Candidate Rediscovery, Missing-Concept & Boundary Audit**.
+**008-H — Phase 008 Consolidation, Individual-Concept Completeness Decision & Phase 009 Handoff**.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
