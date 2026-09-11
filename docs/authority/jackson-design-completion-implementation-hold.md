@@ -29,11 +29,13 @@ problem / purpose / actors / outcomes
         ↓
 individual concept design                 ← Phase 008 COMPLETE
         ↓
-concept inclusion dependence / application family  ← 009-A/B/C COMPLETE
+concept inclusion dependence              ← 009-A/B COMPLETE
         ↓
-contraction / extension consequences      ← 009-D NEXT
+application family                        ← 009-C COMPLETE
         ↓
-composition / synchronization / integrity
+contraction / extension consequences      ← 009-D COMPLETE
+        ↓
+composition / synchronization / integrity ← 009-E/F/G/H REMAIN
         ↓
 concept mapping / actor-visible experience
         ↓
@@ -48,68 +50,58 @@ whole-design completion / readiness gate
 implementation MAY become READY / NOT STARTED / NEXT
 ```
 
-## Phase 008 completion
-
-Phase 008 closed with:
-
-```text
-PHASE 008                   COMPLETE
-INDIVIDUAL CONCEPT DESIGN   COMPLETE ENOUGH FOR PHASE 009
-JACKSON CONCEPT DESIGN      NOT COMPLETE
-```
-
-## Phase 009 progress
-
-Phase 009 is active.
+## Current Phase 009 status
 
 ```text
 009-A  COMPLETE — inclusion-dependence semantics / pairwise inventory
-009-B  COMPLETE — canonical graph / SCCs / roots-leaves / explanation ordering
+009-B  COMPLETE — canonical graph / SCCs / explanation ordering
 009-C  COMPLETE — application family / valid subsets / minimal coherent variants
-009-D  NEXT ELIGIBLE — contraction / extension / add-remove consequences
+009-D  COMPLETE — contraction / extension / add-remove consequences
+009-E  NEXT ELIGIBLE — synchronization inventory replay
 ```
 
-Current dependence status:
+Current dependence/application-family status:
 
 ```text
 D1  CURRENTLY CLOSED
 D2  CURRENTLY CLOSED
 D3  CURRENTLY CLOSED
-D4  PARTIAL TO STRONG
+D4  CURRENTLY CLOSED
 ```
 
-## Current application-family rule
+## 009-D boundary
 
-A coherent current family member is a non-empty subset that:
+009-D establishes how current family members contract and extend without changing concept authority.
 
-1. is closed under the canonical universal graph;
-2. satisfies the Execution one-of prerequisite when Execution is present;
-3. supplies a meaningful provenance-bearing relationship/history witness when Provenance is present;
-4. contains all concepts required by every capability it claims;
-5. preserves accepted concept purposes/boundaries.
-
-Canonical kernels include:
+Key rules include:
 
 ```text
-L-KERNEL = { Data Meaning, Synthesis Strategy, Learning, Learned State }
-G-KERNEL = { Data Meaning, Synthesis Strategy, Generation }
-E-KERNEL = { Evaluation Criterion, Evaluation, Evidence }
+remove Data Meaning or Strategy
+  => current Learning + Learned State + Generation cannot remain
+
+remove Criterion
+  => Evaluation + Evidence cannot remain
+
+remove one member of L-CLUSTER or E-CLUSTER
+  => remove its mutual-inclusion partner
 ```
 
-This application-family model does **not** authorize product/package editions or technical decomposition.
+Constraint, Execution and Provenance may be removed without universal dependent removal, but their distinct capabilities disappear and must not be recreated as hidden state in other concepts.
+
+Ordinary extension adds accepted concepts plus required closure. Fresh discovery remains required for genuinely new independent functionality.
 
 ## Architecture/executable boundary
 
 Phase 004/006/007 architecture and the retained executable scaffold remain downstream evidence.
 
-They may expose a genuine counterexample but cannot define dependence/application-family validity from package imports, persistence references, service/dataflow direction, runtime orchestration, deployment topology, or existing API/object nesting.
+They may expose a genuine counterexample but cannot define dependence, application-family validity, or contraction/extension consequences from package imports, persistence references, service/dataflow direction, runtime orchestration, deployment topology, or existing API/object nesting.
 
-Do not restructure implementation to mirror the inclusion graph, SCCs, kernels, or family members while the full design remains incomplete.
+Do not restructure implementation to mirror the inclusion graph, SCCs, kernels, family members, or contraction/extension patterns while the full design remains incomplete.
 
 ## Remaining design roadmap
 
 ```text
-009-D..H  finish contraction/composition/synchronization design
+009-E..H  finish synchronization/composition design
 010       concept mapping / interaction / language / experience
 011       specificity / familiarity / integrity / synergy / misfit
 012       Jackson concept-design completion decision
@@ -137,10 +129,10 @@ Implementation itself still requires later explicit Phase 015 authority.
 
 ## No executable design-by-accident
 
-Until Phase 014 passes, do not add production behavior, executable architecture restrictions merely to crystallize hypotheses, package-topology changes anticipating design, persistence schemas/migrations, runtime/model/platform/security adapters, public API implementation, reference algorithms, vertical slices, benchmarks, privacy mechanisms, product-edition packaging, or stale-test repair solely to manufacture readiness.
+Until Phase 014 passes, do not add production behavior, executable architecture restrictions merely to crystallize hypotheses, package-topology changes anticipating design, persistence schemas/migrations, runtime/model/platform/security adapters, public API implementation, reference algorithms, vertical slices, benchmarks, privacy mechanisms, product-edition packaging, feature-flag decomposition, or stale-test repair solely to manufacture readiness.
 
 ## Current next boundary
 
-**009-D — Contraction, Extension, Concept Addition/Removal & Product-Scope Consequences**.
+**009-E — Synchronization Inventory Revalidation Across the Application Family**.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
