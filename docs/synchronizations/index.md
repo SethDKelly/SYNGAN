@@ -22,15 +22,46 @@ SYNC-16                        NOT CURRENTLY JUSTIFIED
 
 The fifteen rules are the current Phase 009 starting set, not a final composition claim.
 
-## Relationship to 009-A
+## Relationship to current dependence authority
 
-[009-A](../phases/009/009-A-inclusion-dependence-semantics-evidence-rules-pairwise-relation-inventory.md) establishes that Jackson inclusion dependence is much sparser than this historical coordination/dependency structure.
+009-A established the pairwise inclusion inventory and 009-B established the canonical direct/transitive graph.
+
+Current universal graph summary:
+
+```text
+12 pairwise universal findings
+ 9 direct universal graph edges
+ 3 transitive universal findings
+ 2 legitimate strongly connected components
+```
 
 A synchronization does **not** prove an inclusion-dependence edge merely because two concepts coordinate.
 
-009-A changes no synchronization ID or rule.
+Likewise, a dependence edge does not itself prove that a synchronization is necessary. Dependence answers whether concepts must be included together; synchronization answers how already-independent concept behavior coordinates.
 
-Its pairwise findings must first be converted into the canonical graph in 009-B, then into valid application-family variants in 009-C/D. Only after that may 009-E replay SYNC-01 through SYNC-15 and decide whether each rule is universal when participants are present, application-family conditional, too broad, redundant, or missing a genuine coordination obligation.
+009-C/D must first derive the actual application family and contraction/extension consequences. Only after that may 009-E replay SYNC-01 through SYNC-15 across valid variants and decide whether each rule is universal when participants are present, application-family conditional, too broad, redundant, or missing a genuine coordination obligation.
+
+## Strongly connected component boundary
+
+The current inclusion SCCs are:
+
+```text
+{ Learning, Learned State }
+{ Evaluation, Evidence }
+```
+
+These SCCs do not imply synchronization/state-owner merger. Existing production synchronizations must still preserve separate activity/result state ownership when 009-E/F replay them.
+
+## Non-binary application-family constraints
+
+Execution and Provenance demonstrate why synchronization replay remains downstream of 009-C:
+
+```text
+Execution => Learning OR Generation OR Evaluation
+Provenance => at least one meaningful provenance-bearing relationship
+```
+
+These cannot be represented correctly as universal pairwise edges and may make synchronization applicability conditional across variants.
 
 ## Historical dependency taxonomy retained as evidence
 
@@ -66,8 +97,8 @@ These are composition evidence, not Jackson inclusion dependence by themselves.
 
 ```text
 009-A  COMPLETE — pairwise inclusion inventory
-009-B  NEXT — canonical graph / roots / cycles / ordering
-009-C  application family
+009-B  COMPLETE — canonical graph / SCCs / ordering
+009-C  NEXT — application family / valid subsets
 009-D  contraction / extension
 009-E  synchronization inventory replay
 009-F  trigger / state ownership / hidden coordinator
@@ -77,6 +108,6 @@ These are composition evidence, not Jackson inclusion dependence by themselves.
 
 ## Current next boundary
 
-**009-B — Inclusion-Dependence Graph, Roots, Cycles & Explanation Ordering**.
+**009-C — Application Family, Valid Concept Subsets & Minimal Coherent Variants**.
 
 The synchronization set remains unchanged until its explicit 009-E replay unless an earlier genuine J2/J3 defect requires reopening.
