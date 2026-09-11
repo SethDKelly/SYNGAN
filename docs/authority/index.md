@@ -25,6 +25,7 @@ These documents define how SYNGAN design knowledge is created, interpreted, chan
 - [Accepted Synchronizations](../synchronizations/index.md)
 - [Concept Dependence & Application Family](../dependence/index.md)
 - [009-A Inclusion-Dependence Pairwise Inventory](../dependence/inclusion-dependence-pairwise-inventory.md)
+- [009-B Inclusion-Dependence Graph & Ordering](../dependence/inclusion-dependence-graph-ordering.md)
 
 ## Current posture
 
@@ -35,10 +36,11 @@ current desired outcomes   16
 Phase 008                  COMPLETE
 Phase 009                  ACTIVE
 009-A                      COMPLETE
-009-B                      NEXT ELIGIBLE
-D1                         PARTIAL — GRAPH PENDING
+009-B                      COMPLETE
+009-C                      NEXT ELIGIBLE
+D1                         CURRENTLY CLOSED
 D2                         OPEN
-D3                         OPEN
+D3                         CURRENTLY CLOSED
 D4                         PARTIAL
 Jackson design completion  IN PROGRESS
 implementation readiness   NOT READY
@@ -46,34 +48,42 @@ implementation start       NOT STARTED
 implementation next        NOT YET
 ```
 
-## 009-A authority result
+## Dependence result
 
-009-A distinguishes Jackson inclusion dependence from reference/validation/production/runtime/provenance relationships and classifies all 110 directed non-self concept pairs.
+009-A classified all 110 directed non-self concept pairs. 009-B converts the 12 universal findings into the canonical graph:
 
 ```text
-12 universal dependence candidates
-43 conditional/disjunctive relations
-55 non-dependent relations
-0 insufficient relations
+9 direct universal edges
+3 transitive universal findings
+2 non-trivial strongly connected components
+0 unresolved graph-cycle defects
 ```
 
-The two mutual-dependence candidates are `Learning <-> Learned State` and `Evaluation <-> Evidence`. 009-B must decide graph/cycle representation without allowing implementation structure to decide the answer.
+The two strongly connected inclusion components are:
 
-Execution has a one-of prerequisite across `{Learning, Generation, Evaluation}` and Provenance has a non-binary subject prerequisite; these are not universal pairwise graph edges.
+```text
+{ Learning, Learned State }
+{ Evaluation, Evidence }
+```
 
-No concept or synchronization changed in 009-A.
+They retain distinct purposes/state/action ownership and are not merge candidates merely because they are mutually required in the current application family.
+
+The condensed universal graph is acyclic.
+
+Execution and Provenance retain non-binary prerequisites that belong to 009-C application-family analysis rather than universal pairwise edges.
 
 ## Architecture boundary
 
 The [Phase 007 Consolidated Architecture Contract](../architecture/phase-007-consolidated-architecture-contract.md) remains downstream evidence pending Phase 013 reconciliation.
 
-Architecture may expose a counterexample but cannot define inclusion dependence from imports, services, persistence references, transaction order, deployment topology, or runtime calls.
+Architecture may expose a counterexample but cannot define inclusion dependence from imports, services, persistence references, transaction order, deployment topology, runtime calls, or API nesting.
+
+The canonical concept graph MUST NOT be mirrored mechanically into technical dependency structure.
 
 ## Remaining design sequence
 
 ```text
-009-B  dependence graph / roots / cycles / explanation ordering
-009-C  application family / valid subsets
+009-C  application family / valid subsets / minimal variants
 009-D  contraction / extension / add-remove consequences
 009-E  synchronization inventory replay
 009-F  synchronization ownership / hidden coordinator
@@ -92,6 +102,6 @@ Phases 009-013 cannot make implementation ready. Only Phase 014 may set **READY 
 
 ## Current next boundary
 
-**009-B — Inclusion-Dependence Graph, Roots, Cycles & Explanation Ordering**.
+**009-C — Application Family, Valid Concept Subsets & Minimal Coherent Variants**.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
