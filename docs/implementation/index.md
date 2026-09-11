@@ -10,13 +10,6 @@ status: suspended
 
 Implementation planning and retained executable scaffold remain historical/downstream evidence only.
 
-Current authority:
-
-- [Jackson Design Completion & Implementation Hold](../authority/jackson-design-completion-implementation-hold.md)
-- [Jackson Methodology Completion Matrix](../authority/jackson-methodology-completion-matrix.md)
-- [Concept Dependence & Application Family](../dependence/index.md)
-- [Current Synchronization Authority](../synchronizations/index.md)
-
 ```text
 IMPLEMENTATION READINESS   NOT READY
 IMPLEMENTATION START       NOT STARTED
@@ -28,81 +21,71 @@ No implementation tranche is eligible.
 ## Current design progress
 
 ```text
-Phase 008                  COMPLETE
 Phase 009                  ACTIVE
-009-A                      COMPLETE
-009-B                      COMPLETE
-009-C                      COMPLETE
-009-D                      COMPLETE
 009-E                      COMPLETE
-009-F                      NEXT ELIGIBLE
+009-F                      COMPLETE
+009-G                      NEXT ELIGIBLE
 D1-D4                      CURRENTLY CLOSED
 E1                         CURRENTLY CLOSED
-E2-E3                      REVALIDATION REQUIRED
+E2                         CURRENTLY CLOSED
+E3                         PARTIAL TO STRONG
+E4                         PARTIAL
+E5                         STRONG EVIDENCE / REVALIDATION REQUIRED
 Jackson concept design     IN PROGRESS
 ```
 
-## What 009-E established
+## What 009-F established
 
-The historical synchronization inventory is now revalidated against the application family:
+The thirteen active synchronizations now have explicit conceptual triggers, preconditions/postconditions, failure/indeterminate behavior and singular state ownership.
 
 ```text
-historical synchronization IDs       15
-active synchronizations              13
-retired concept-local                SYNC-08
-reclassified cross-cutting contract  SYNC-15
-new synchronization                  NONE
+consumer bindings/assessments -> consuming activity
+producer identity              -> Learned State / Evidence
+Execution parent + Attempts    -> Execution
+Provenance assertions          -> Provenance
+synchronization state          -> NONE
 ```
 
-`SYNC-08` remains Generation-owned result semantics. `SYNC-15` remains the Reproducibility Contract. `SYNC-13` active internal scope is evidence-gated Generation consuming Evidence; external Evidence handoff is deferred to concept mapping.
+`SYNC-06` is conditional Generation/Learned State reuse coordination; direct Generation does not activate it.
 
-This is concept-design authority only.
+No hidden Compatibility, Workflow/Run, Promotion, Quality/Approval, Reproducibility, or Composition concept/state owner is required.
 
-## What 009-E does not authorize
+## What 009-F does not authorize
 
-The synchronization inventory does **not** authorize:
+The normalized synchronization contracts do **not** authorize:
 
 - services matching synchronization IDs;
-- event/message types matching synchronization IDs;
+- event/message definitions;
 - distributed transactions or sagas;
-- queue/topic topology;
+- queues/topics;
+- workflow engines;
 - API call direction;
+- database/schema/foreign-key design;
 - package/module dependencies;
-- schema/foreign-key design;
+- locks or exactly-once mechanisms;
 - runtime orchestration graphs;
-- product feature flags or deployment profiles;
-- implementation of Execution, Evidence or Provenance;
-- repair of stale implementation tests.
-
-A conceptual synchronization may later map to no event, one interaction, several interactions, or a representation-specific mechanism chosen only after completed design/architecture reconciliation.
-
-## Superseded 007-K re-entry conclusion
-
-007-K's bounded engineering-reentry result remains historical/superseded because the fuller Jackson design program is incomplete.
-
-Retained Phase 007 architecture/scaffold evidence cannot reactivate implementation.
+- implementation of Execution/Evidence/Provenance;
+- stale-test repair for readiness optics.
 
 ## Remaining design before implementation readiness can be decided
 
 ```text
-009-F..H  finish synchronization ownership/economy/integrity design
-010       concept mapping / interaction / language / experience
-011       specificity / familiarity / integrity / synergy / misfit
-012       Jackson concept-design completion decision
-013       representation / architecture reconciliation
-014       whole-design completion / implementation-readiness decision
+009-G/H  finish composition closure / consolidation
+010      concept mapping / interaction / language / experience
+011      specificity / familiarity / integrity / synergy / misfit
+012      Jackson concept-design completion decision
+013      representation / architecture reconciliation
+014      whole-design completion / implementation-readiness decision
 ```
 
 Only a positive Phase 014 may make implementation **READY / NOT STARTED / NEXT**.
 
 ## Current prohibition
 
-Until Phase 014 passes, do not add production concept/domain behavior, implementation APIs, persistence/data-plane schemas, model/runtime/security/platform adapters, Execution/recovery behavior, Evidence/Provenance implementations, reference Strategies, privacy mechanisms, benchmarks, package-topology changes, event/service decomposition, or executable architecture restrictions intended to freeze unfinished design.
-
-Do not turn active synchronization rules into implementation components.
+Until Phase 014 passes, do not add production domain behavior, implementation APIs, persistence/data-plane schemas, model/runtime/security/platform adapters, synchronization mechanisms, event/service decomposition, package-topology changes, privacy mechanisms, or executable architecture restrictions intended to freeze unfinished design.
 
 ## Current next boundary
 
 Design-only work:
 
-**009-F — Synchronization Trigger, Preconditions/Postconditions, State Ownership & Hidden-Coordinator Audit**.
+**009-G — Composition Economy, Coupling, Synergy & Integrity Closure**.
