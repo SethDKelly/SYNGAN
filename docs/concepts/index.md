@@ -10,12 +10,13 @@ This directory contains the canonical concept specifications accepted in Phase 0
 
 The catalog remains authoritative for concept purpose, owned state/actions, lifecycle semantics, invariants and boundaries. Cross-concept coordination is authoritative under [Synchronizations](../synchronizations/index.md).
 
-Current cross-concept normalization is governed by:
+Current individual-concept and catalog-perimeter normalization is governed by:
 
 - [Concept State, Identity, History & Invariant Normalization](state-identity-history-invariant-normalization.md);
 - [Concept Action, Query, Preconditions/Postconditions & Lifecycle Normalization](action-query-lifecycle-normalization.md);
 - [Operational Principle, Purpose Fulfillment & Counterexample Normalization](operational-principle-purpose-counterexample-normalization.md);
-- [Concept Independence, Genericity, Familiarity & Reuse Normalization](independence-genericity-familiarity-reuse-normalization.md).
+- [Concept Independence, Genericity, Familiarity & Reuse Normalization](independence-genericity-familiarity-reuse-normalization.md);
+- [Catalog Perimeter Candidate Rediscovery, Missing-Concept & Boundary Audit](catalog-perimeter-candidate-rediscovery-boundary-audit.md).
 
 ## Accepted concepts
 
@@ -35,115 +36,143 @@ Current cross-concept normalization is governed by:
 
 The accepted catalog remains **eleven concepts**.
 
-Phase 008-B revalidated a distinct current problem-facing purpose for every accepted concept. Phase 008-C normalized state/identity/history/invariants. Phase 008-D normalized actions, queries, contextual-assessment ownership and lifecycle transitions. Phase 008-E revalidated each operational principle. Phase 008-F now revalidates independence, bounded genericity, familiarity/naming and conceptual reuse for every accepted concept.
+Phase 008-B through 008-F revalidated the accepted concepts themselves. Phase 008-G then revalidated the catalog perimeter by deliberately reconsidering rejected, subordinated, deferred, externalized and representation-classified candidates plus newly hypothesized missing concepts.
 
-No concept has been added, removed, merged, split or renamed through 008-F.
+Current result:
 
-Catalog finality is **not** yet claimed: 008-G still owns deliberate deferred/rejected candidate rediscovery and missing-concept/perimeter-boundary review; 008-H owns Phase 008 consolidation.
+```text
+accepted concepts          11
+accepted synchronizations  15
+restored concepts           0
+new concepts                0
+renamed concepts            0
+merged concepts             0
+split concepts              0
+missing current concept     NONE FOUND
+```
+
+Phase 008 still awaits 008-H consolidation before individual-concept design can be declared complete enough for Phase 009.
 
 ## Current individual-concept closure
 
-The current catalog now has dedicated present-state authority for:
+Dedicated current authority now exists for:
 
 ```text
-purpose / justification               008-B
-state / identity / history / invariants 008-C
-actions / queries / transitions       008-D
-operational principles / counterexamples 008-E
+purpose / justification                         008-B
+state / identity / history / invariants         008-C
+actions / queries / transitions                 008-D
+operational principles / counterexamples        008-E
 independence / genericity / familiarity / reuse 008-F
+catalog perimeter / missing-concept discovery   008-G
 ```
 
-These are individual-concept results only. Jackson inclusion dependence, application family, final composition/synchronization, mapping and final whole-concept quality remain later work.
+These remain individual-concept/catalog results. Jackson inclusion dependence, application family, final composition/synchronization, concept mapping and final whole-concept quality remain later work.
 
-## Phase 008-F independence and familiarity result
+## Catalog-perimeter result
 
-008-F explicitly distinguishes:
+008-G applies a strict promotion burden: usefulness, durability, identity or implementation importance alone do not make something a concept. Promotion requires a distinct current product-facing purpose, independent state/history and behavior, an operational principle, clean authority boundary, appropriate genericity, current O1-O16 need and acceptable synchronization economy.
+
+The original exclusions remain correctly classified:
+
+- **Generation Request** and **Condition** — subordinate to Generation;
+- **Attempt** and **Checkpoint** — subordinate to Execution/recovery behavior;
+- **Artifact Identity** and **Dataset Identity** — representation/integration obligations;
+- **Reproducibility Contract** — cross-cutting contract assembled from accepted concept state;
+- **Privacy Objective / Guarantee** — generic candidate rejected; future mechanism-specific discovery required for capabilities such as composable DP;
+- **Relationship** — descriptive structural semantics owned by Data Meaning, with validity rules in Constraint and request scope in Generation;
+- **Use / Release Decision** — external organizational authority;
+- **Source Characterization / Profile** — supporting observation/method.
+
+Later Phase 006 candidates also remain non-concepts under current scope: ControlPlaneIncarnation/AuthorityEpoch, Recovery/DR, Historical Fork, Resource/Capacity, Admission/Queue/Backpressure, Approximation, Degraded Mode, Cost/Budget/Quota, Disclosure Risk/Memorization, Redaction/Disclosure Decision and topology-mode vocabulary.
+
+## New missing-candidate probes
+
+008-G also tests candidates not present in the original twenty.
+
+### Synthetic Output / Output
+
+This is the strongest new challenge because completed output may outlive Generation and be referenced by Evaluation/Provenance.
+
+It is **not** promoted. Current SYNGAN gives output no independent state-changing lifecycle beyond Generation's candidate/completed-result authority. Availability, storage, retention and export authorization remain integration/security concerns. Future independent publication/versioning/retirement/transformation/release-management scope would trigger rediscovery.
+
+### Source / Source Dataset
+
+Remains an externally referenced subject. SYNGAN binds exact source state where required but does not own generic source catalog/lifecycle functionality.
+
+### Dependency / External Artifact / Knowledge Dependency
+
+Remains Strategy declaration plus Execution/runtime/security resolution and Provenance attribution. Resolver/manifests are architecture.
+
+### Authorization / Capability / Permission / Secret / Credential
+
+Remain security/platform authority or representation, not synthetic-data domain concepts. Organizational release/use approval remains separately external.
+
+### Platform Capability / Compatibility
+
+Remains contextual Strategy/Execution input plus architecture mapping.
+
+### Completion Basis / Promotion / Seal / Candidate
+
+Remain result-establishment semantics owned by Generation/Evaluation and downstream architecture mechanisms.
+
+### Claim / Finding
+
+Remain Evidence state unless future scope introduces independently authored/contested claims outside Evaluation findings.
+
+### Report / View / Export
+
+Remain concept mapping/security views; Phase 010 owns actor-facing mapping.
+
+### Text / Tokenizer / Vocabulary / Language Model
+
+Current O16 text-bearing structured-data capability fits Data Meaning, Strategy, optional Learning/Learned State, Generation and Evaluation/Evidence. Tokenizers/models are Strategy/runtime dependencies, not new core concepts.
+
+## Relationship and topology authority
+
+The current structured-data target includes single-table, time-series, multi-table shared-key and legitimate composite structured topology.
+
+[006-G](../phases/006/006-G-structured-data-topology-single-table-time-series-multi-table-relationship-concept-extensibility-audit.md) and 008-G agree that a standalone Relationship concept is not justified. Structural relationship/order meaning is explicit Data Meaning state; prescriptive referential/cardinality/temporal rules remain Constraint; requested scope/horizon/quantity remain Generation; Strategy owns support; Evaluation/Evidence owns findings.
+
+A convenience topology selector may exist later, but cannot become semantic authority.
+
+## Future rediscovery triggers
+
+The catalog is not frozen forever. Explicit triggers include:
+
+- composable formal privacy/accounting capability such as differential privacy;
+- product-owned governance/release-decision management;
+- independently reusable request/cohort definitions;
+- independent synthetic-output publication/versioning/retirement/transformation lifecycle;
+- arbitrary graph/recursive topology beyond the present structural-meaning boundary;
+- product-owned economic/resource allocation/budget management.
+
+A trigger requires fresh Jackson-style concept discovery before implementation.
+
+## Anti-god-concept boundary
+
+The following remain useful vocabulary but not accepted concept replacements:
 
 ```text
-independence != isolation
-reuse        != universal presence
-familiarity  != copying a neighboring object model
-genericity   != generic infrastructure
+Metadata
+Model
+Run
+Quality
+Validation
+Synthesizer
+Artifact
+Policy
 ```
 
-All eleven concepts pass current independence review. Creation or synchronization relationships do not collapse purpose/state ownership: Learning and Learned State remain activity/result; Evaluation and Evidence remain examination/finding; Execution remains operational realization rather than domain completion; Provenance remains typed historical-relationship authority despite high fan-in.
-
-All eleven concepts are generic enough for the current product variation while remaining bounded to synthetic-data purposes. They do not become enterprise-wide metadata, workflow, policy, artifact, model-registry, evidence, observability or lineage systems.
-
-All eleven names are retained after explicit familiarity review. Several familiar alternatives remain intentionally non-canonical because they would import misleading assumptions:
-
-- `Schema` / `Metadata` for Data Meaning;
-- `Synthesizer` / `Algorithm` for Synthesis Strategy;
-- `Training` / `Fit` for Learning;
-- `Model` / `Artifact` for Learned State;
-- `Sampling` for Generation;
-- `Metric` for Evaluation Criterion;
-- `Validation` for Evaluation;
-- `Result` for Evidence;
-- `Run` / `Job` for Execution;
-- `Lineage` for Provenance.
-
-Those terms may still appear in future concept mappings or compatibility surfaces where their local meaning is clear, but they cannot silently redefine the accepted concepts.
-
-## Current topology/text interpretation
-
-The present structured-data target includes single-table, time-series and multi-table shared-key generation with legitimate composite structured topology representable, plus source-derived/local text-bearing structured fields under the current capability boundary.
-
-008-C through 008-F show that this variation fits the current state, behavior, operational-principle and genericity model without a new concept at those stages. This remains subject to the deliberate 008-G candidate rediscovery audit.
-
-## High-risk boundary results
-
-The following distinctions continue to pass current individual-concept review:
-
-```text
-Data Meaning          != Constraint
-Synthesis Strategy    != Learning / Generation / implementation plugin
-Learning              != Learned State
-Learning/Generation/
-Evaluation             != Execution
-Generation Condition  != Constraint
-Evaluation Criterion  != Evaluation != Evidence
-Evidence               != Provenance
-Execution              != Attempt != platform job
-```
-
-008-F also continues to reject umbrella collapse through `Synthesizer`, `Model`, `Run`, `Quality`, `Metadata`, `Validation`, `Artifact`, or generic `Privacy` as replacements for the accepted concept boundaries.
-
-## Relationship candidate disposition
-
-[006-G — Structured-Data Topology: Single-Table, Time-Series & Multi-Table Relationship Concept/Extensibility Audit](../phases/006/006-G-structured-data-topology-single-table-time-series-multi-table-relationship-concept-extensibility-audit.md) resolved the previously reopened `Relationship` candidate.
-
-**Relationship is not a standalone accepted concept under the current catalog.** Material structural relationship semantics are currently subordinate descriptive state owned by Data Meaning under the canonical [Structured-Data Topology & Relationship Semantics Contract](../authority/structured-data-topology-relationship-semantics-contract.md).
-
-This disposition is not considered final until 008-G deliberately replays the candidate against all current evidence.
-
-## Historical consolidation
-
-[002-H — Cross-Concept Invariant, Synchronization & Phase 002 Consolidation Review](../phases/002/002-H-cross-concept-invariant-synchronization-consolidation-review.md) confirmed that the eleven-concept model was coherent at the Phase 002 exit.
-
-Phase 006 later revalidated the catalog against recovery, runtime-distribution, scale, privacy and structured-topology evidence. Phase 008 now replaces reliance on those historical completion labels with current normalized concept authority.
+They must not collapse accepted distinctions among Data Meaning, Constraint, Strategy, Learning/Learned State, Generation, Criterion/Evaluation/Evidence, Execution and Provenance.
 
 ## Authority rule
 
-The individual concept specifications plus current Phase 008 cross-concept normalization authorities and active cross-cutting authority under `docs/authority/` supersede provisional concept statements under `docs/discovery/` unless later explicit design authority accepts a revision.
+The individual concept specifications plus current Phase 008 normalization/catalog authorities and active cross-cutting authority under `docs/authority/` supersede provisional concept statements under `docs/discovery/` unless later explicit design authority accepts a revision.
 
-No Python class, Spark API, PyTorch object, storage format, job type, package module, database, function parameter, UI element, UUID scheme, manifest, event-store representation or persistence layout is implied by one concept document or normalization authority.
+No Python class, Spark API, storage format, package module, database, UI element, UUID scheme, manifest, fence, dependency record, security token, report or persistence layout is implied merely because a concept or excluded candidate needs a representation later.
 
-## Deferred/non-concept responsibilities
+## Current next boundary
 
-The following remain intentionally outside the accepted standalone concept catalog **pending 008-G rediscovery**:
+**008-H — Phase 008 Consolidation, Individual-Concept Completeness Decision & Phase 009 Handoff**.
 
-- Generation Request and Condition — subordinate to Generation;
-- Attempt, Checkpoint, Retry, and cancellation realization — subordinate to Execution/domain lifecycle semantics;
-- stable dataset/artifact identity — representation/integration obligation under the current model;
-- reproducibility — cross-cutting [Reproducibility Contract](../authority/reproducibility-contract.md);
-- lineage — derivational subset of Provenance;
-- privacy objectives/guarantees — mechanism-specific future discovery; formal composable DP remains deferred and requires concept rediscovery before implementation;
-- Relationship — currently Data Meaning-owned structural relationship semantics;
-- Use / Release Decision — external authority boundary;
-- Source Characterization/Profile — supporting observation/method;
-- `GenerationMode`, `DataTopologyMode`, `Series`, `Sequence`, `TimeSeries`, `Table`, and generic `Dataset` — not accepted concepts merely because a later API may represent those variations;
-- Resource, Backpressure, Approximation, DegradedMode, Cost and Quota — cross-cutting/operational policy or owner-specific semantics under current evidence;
-- Validation, Metric, Quality, Model, Metadata, Run, Artifact, and Synthesizer — umbrella/compatibility terms that must not silently become god-concepts.
-
-008-G must retest these dispositions from first principles rather than merely reaffirming Phase 001 decisions.
+Implementation remains **NOT READY / NOT STARTED / NOT YET**.
