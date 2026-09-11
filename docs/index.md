@@ -37,6 +37,7 @@ Existing architecture, source or tests never become upstream concept-design auth
 - [Operational Principle, Purpose Fulfillment & Counterexample Normalization](concepts/operational-principle-purpose-counterexample-normalization.md)
 - [Concept Independence, Genericity, Familiarity & Reuse Normalization](concepts/independence-genericity-familiarity-reuse-normalization.md)
 - [Catalog Perimeter Candidate Rediscovery, Missing-Concept & Boundary Audit](concepts/catalog-perimeter-candidate-rediscovery-boundary-audit.md)
+- [Phase 008 Individual-Concept Design Consolidation](concepts/phase-008-individual-concept-consolidation.md)
 - [Phase 008](phases/008/index.md)
 
 ## Current state
@@ -46,30 +47,38 @@ accepted concepts          11
 accepted synchronizations  15
 active ADRs                10
 current desired outcomes   16
-Phase 008                  ACTIVE
-008-A                      COMPLETE
-008-B                      COMPLETE
-008-C                      COMPLETE
-008-D                      COMPLETE
-008-E                      COMPLETE
-008-F                      COMPLETE
-008-G                      COMPLETE
-008-H                      NEXT ELIGIBLE
+Phase 008                  COMPLETE
+individual concept design  COMPLETE ENOUGH FOR PHASE 009
+Phase 009                  NEXT ELIGIBLE / NOT YET DECOMPOSED
 Jackson design completion  IN PROGRESS
 implementation readiness   NOT READY
 implementation start       NOT STARTED
 implementation next        NOT YET
 ```
 
-## Phase 008 progress
+## Phase 008 result
 
-008-A through 008-F established current methodology guardrails and revalidated the accepted concepts' purpose, state/history, behavior, operational principles, independence, bounded genericity, naming/familiarity and reuse.
+Phase 008-A through 008-H are complete.
 
-008-G then challenged the catalog perimeter. It replayed original exclusions, later recovery/resource/privacy/topology candidates and new missing-candidate hypotheses such as Synthetic Output, Source, Dependency, Authorization/Security state, Platform Capability, Completion Basis, Checkpoint, Claim and text-specific structures.
+The phase established current problem/purpose justification, individual concept state/history/invariants, actions/queries/transitions, operational principles, independence/genericity/familiarity/reuse, catalog-perimeter rediscovery, and a final individual-concept consolidation.
 
-No candidate currently meets the promotion burden. The catalog remains eleven concepts and fifteen synchronizations. Relationship remains Data Meaning-owned descriptive structure; generic Privacy remains rejected with a future mechanism-specific DP rediscovery trigger; Use/Release Decision remains external; Synthetic Output remains Generation-owned result state under current scope.
+No unresolved J1/J2 blocker remains. The accepted catalog remains eleven concepts and fifteen synchronizations with no add/remove/restore/merge/split/rename.
 
-Phase 008 is **not yet closed**. 008-H must consolidate the complete 008-A through 008-G evidence and make the explicit individual-concept completion/handoff decision.
+The correct exit statement is:
+
+```text
+INDIVIDUAL CONCEPT DESIGN   COMPLETE ENOUGH FOR PHASE 009
+```
+
+This does **not** mean Jackson concept design is complete.
+
+## Current design frontier
+
+**Phase 009 — Concept Dependence, Application Family, Composition & Synchronization Closure** is next eligible.
+
+It is intentionally not yet subdivided. Immediately before entry, derive dependency-safe subgroups from the remaining D/E methodology obligations and final Phase 008 evidence.
+
+Phase 009 must distinguish Jackson inclusion dependence from ordinary reference, validation, production, runtime, authority, and provenance dependencies.
 
 ## Corrected interpretation of Phase 007
 
@@ -78,7 +87,6 @@ Phase 007 remains valuable downstream architecture evidence. Its historical impl
 ## Remaining design roadmap
 
 ```text
-008-H  Phase 008 Consolidation & Phase 009 Handoff
 009    Concept Dependence, Application Family, Composition & Synchronization Closure
 010    Concept Mapping, Interaction, Linguistic & Experience Alignment
 011    Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Design Validation
@@ -91,7 +99,7 @@ Phase 007 remains valuable downstream architecture evidence. Its historical impl
 
 ## Implementation status rule
 
-Through Phases 008-014:
+Through Phases 009-014:
 
 ```text
 IMPLEMENTATION READINESS   NOT READY
@@ -107,6 +115,8 @@ The retained 007-B/007-C source/tests/tooling/CI remain historical/provisional e
 
 ## Current next boundary
 
-**008-H — Phase 008 Consolidation, Individual-Concept Completeness Decision & Phase 009 Handoff** is next.
+**Phase 009 — Concept Dependence, Application Family, Composition & Synchronization Closure** is next eligible.
+
+Its subgroup structure must be defined immediately before Phase 009 begins.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
