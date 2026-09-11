@@ -20,7 +20,8 @@ Current governing authority: [Jackson Design Completion & Implementation Hold](.
 Jackson concept design       IN PROGRESS
 Phase 008                    COMPLETE
 individual concept design    COMPLETE ENOUGH FOR PHASE 009
-Phase 009                    NEXT ELIGIBLE / NOT YET DECOMPOSED
+Phase 009                    ACTIVE
+009-A                        NEXT ELIGIBLE
 architecture corpus          RETAINED AS DOWNSTREAM DESIGN EVIDENCE
 architecture reconciliation  PLANNED FOR PHASE 013
 implementation readiness     NOT READY
@@ -30,31 +31,45 @@ implementation next          NOT YET
 
 ## Relationship to current concept authority
 
-[Phase 008 Individual-Concept Design Consolidation](../concepts/phase-008-individual-concept-consolidation.md) is now the consolidated upstream authority for the individual-concept foundation.
+[Phase 008 Individual-Concept Design Consolidation](../concepts/phase-008-individual-concept-consolidation.md) is the consolidated upstream authority for the individual-concept foundation.
 
-Phase 008 explicitly re-tested architecture-shaped candidates such as Artifact/Dataset identity, authority epochs/fences, manifests/candidates/seals, runtime bindings, dependency-resolution records, AuthorizationDecision/CapabilityGrant/SecretRef, platform capability descriptors, telemetry/support records and storage/checkpoint/report structures.
+Phase 009 now owns application inclusion dependence, application-family structure and composition/synchronization closure.
 
-They remain downstream realization or security/integration structures, not concepts merely because they are typed, durable or important to correctness.
+## Phase 009 architecture boundary
 
-Current architecture must continue to preserve these upstream boundaries:
+Architecture may expose a counterexample or feasibility pressure, but it cannot define Phase 009 answers by convenience.
 
-- descriptive topology/relationship semantics belong to Data Meaning rather than a hidden Relationship resource owner;
-- candidate/completed synthetic output is Generation-owned result semantics rather than a generic Output/Artifact concept;
-- Attempt/checkpoint/recovery structures remain subordinate to Execution/domain continuity;
-- dependency/runtime/security records do not become Strategy, Provenance or new domain authority;
-- future composable DP requires fresh concept discovery before architecture/implementation;
-- external Use/Release Decision must not become `approved` state on Generation or Evidence;
-- reports/views/exports are mapping/security concerns, not new domain concepts.
+The following do **not** establish Jackson inclusion dependence by themselves:
 
-## Phase 009 relationship
+- package imports;
+- persistence references;
+- runtime service calls;
+- scheduler ordering;
+- deployment topology;
+- transaction/event ordering;
+- platform capability requirements;
+- storage/dataflow edges;
+- existing code object relationships.
 
-Phase 009 must reason about **concept inclusion dependence and composition**, not architecture dependencies.
+Likewise, an existing architecture mechanism does not prove a synchronization is necessary.
 
-Package imports, persistence references, runtime service calls, dataflow edges, transaction ordering, scheduler dependencies, deployment topology and platform capability requirements do not establish Jackson inclusion dependence by themselves.
+The governing Phase 009 order is:
 
-Architecture may expose a misfit during Phase 009, but it cannot define the application-family/dependence graph merely because one implementation arrangement already exists.
+```text
+inclusion dependence
+  ↓
+application family / valid subsets
+  ↓
+synchronization inventory replay
+  ↓
+state ownership / hidden coordinator audit
+  ↓
+composition economy / synergy / integrity
+```
 
-The existing fifteen synchronizations are current concept-design authority/evidence, but Phase 009 must replay their composition, state ownership, economy and integrity under the actual inclusion-dependence/application-family model.
+The current fifteen synchronization IDs remain upstream concept-design evidence but are not final-composed until Phase 009 closes them.
+
+Current upstream catalog boundaries remain in force unless a genuine J2/J3 misfit proves otherwise, including Data Meaning/Constraint separation, Generation-owned output result semantics, Execution-owned Attempt/recovery history, external Use/Release authority, and non-concept treatment of architecture-shaped identity/security/runtime structures.
 
 ## Phase 007 architecture status
 
@@ -84,4 +99,4 @@ IMPLEMENTATION NEXT        NOT YET
 
 ## Current next boundary
 
-**Phase 009 — Concept Dependence, Application Family, Composition & Synchronization Closure** is next eligible and not yet subdivided.
+**009-A — Inclusion-Dependence Semantics, Evidence Rules & Pairwise Relation Inventory**.
