@@ -62,34 +62,35 @@ Phase 009 is active.
 
 ```text
 009-A  COMPLETE — inclusion-dependence semantics / pairwise inventory
-009-B  NEXT ELIGIBLE — graph / roots / cycles / explanation ordering
+009-B  COMPLETE — canonical graph / SCCs / roots-leaves / explanation ordering
+009-C  NEXT ELIGIBLE — application family / valid subsets / minimal coherent variants
 ```
 
-009-A establishes that the Jackson inclusion relation is materially sparser than historical reference/runtime dependencies:
+Current dependence status:
 
 ```text
-12 universal pairwise candidates
-43 conditional/disjunctive relations
-55 non-dependent relations
-0 insufficient relations
+D1  CURRENTLY CLOSED
+D2  OPEN
+D3  CURRENTLY CLOSED
+D4  PARTIAL
 ```
 
-The pairwise inventory is not the canonical graph. 009-B must still determine direct/transitive edges and cycle treatment.
-
-The two pairwise mutual-dependence candidates are:
+009-B establishes 9 direct universal edges from the 12 pairwise universal findings and accepts two legitimate strongly connected application-inclusion components:
 
 ```text
-Learning   <-> Learned State
-Evaluation <-> Evidence
+{ Learning, Learned State }
+{ Evaluation, Evidence }
 ```
 
-Execution's one-of prerequisite across `{Learning, Generation, Evaluation}` and Provenance's non-binary subject prerequisite must not be converted into false universal edges or implementation module requirements.
+These cycles do not merge concept state/action ownership and do not authorize technical co-location.
+
+Execution and Provenance retain non-binary prerequisites that 009-C must combine with graph closure when deriving valid application subsets.
 
 ## Architecture/executable boundary
 
 Phase 004/006/007 architecture and the retained executable scaffold remain downstream evidence.
 
-They may expose a genuine counterexample but cannot define inclusion dependence from:
+They may expose a genuine counterexample but cannot define inclusion dependence or application-family validity from:
 
 - package imports;
 - persistence references;
@@ -98,12 +99,12 @@ They may expose a genuine counterexample but cannot define inclusion dependence 
 - deployment topology;
 - existing API/object nesting.
 
-Do not restructure implementation to mirror 009-A or future 009-B dependence results while the full design remains incomplete.
+Do not restructure implementation to mirror the inclusion graph or SCCs while the full design remains incomplete.
 
 ## Remaining design roadmap
 
 ```text
-009-B..H  finish dependence/application-family/composition design
+009-C..H  finish application-family/composition design
 010       concept mapping / interaction / language / experience
 011       specificity / familiarity / integrity / synergy / misfit
 012       Jackson concept-design completion decision
@@ -135,6 +136,6 @@ Until Phase 014 passes, do not add production behavior, executable architecture 
 
 ## Current next boundary
 
-**009-B — Inclusion-Dependence Graph, Roots, Cycles & Explanation Ordering**.
+**009-C — Application Family, Valid Concept Subsets & Minimal Coherent Variants**.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
