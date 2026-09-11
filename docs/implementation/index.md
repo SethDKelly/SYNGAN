@@ -27,66 +27,54 @@ No implementation tranche is eligible.
 
 ```text
 Phase 008                  COMPLETE
-individual concept design  COMPLETE ENOUGH FOR PHASE 009
 Phase 009                  ACTIVE
-009-A                      NEXT ELIGIBLE
+009-A                      COMPLETE — pairwise inclusion-dependence inventory
+009-B                      NEXT ELIGIBLE — canonical graph / cycles / ordering
+D1                         PARTIAL — GRAPH PENDING
 Jackson concept design     IN PROGRESS
 ```
 
-Phase 009 entry/decomposition is design documentation only. It does not authorize source, tests, package topology, persistence, runtime, APIs, dependencies, CI, architecture execution, or feature implementation.
+009-A is concept-design documentation only. It changes no executable behavior and does not use runtime/package architecture as dependence authority.
 
-## Phase 009 implementation boundary
+## What 009-A does not authorize
 
-Phase 009 owns inclusion dependence, application family and composition/synchronization design.
+The pairwise inventory does not authorize:
 
-Implementation structures must not be used as shortcuts for these questions:
+- package dependency changes to mirror concept dependence;
+- schema/foreign-key changes;
+- API/module restructuring;
+- runtime orchestration changes;
+- persistence or graph-store implementation;
+- synchronization implementation;
+- repair of stale implementation tests.
 
-- package/import dependence does not establish Jackson inclusion dependence;
-- service/runtime ordering does not establish application-family dependence;
-- storage references do not establish concept dependence;
-- existing code paths do not prove synchronization necessity;
-- architecture objects do not become concepts or hidden coordinators by convenience.
-
-The retained source/tests/scaffold may provide counterexample or feasibility evidence only.
+The canonical graph itself is still 009-B design work and remains independent of implementation topology.
 
 ## Superseded 007-K re-entry conclusion
 
 007-K's bounded engineering-reentry result remains historical/superseded because the fuller Jackson design program is incomplete.
 
-The Phase 007 architecture and scaffold observations remain useful evidence but do not authorize executable reconciliation or feature work.
+Retained Phase 007 architecture/scaffold evidence cannot reactivate implementation.
 
 ## Remaining design before implementation readiness can be decided
 
 ```text
-009  inclusion dependence / application family / composition / synchronization — ACTIVE
-010  concept mapping / interaction / language / experience
-011  specificity / familiarity / integrity / synergy / misfit
-012  Jackson concept-design completion decision
-013  post-concept representation / architecture reconciliation
-014  whole-design completion / implementation-readiness decision
+009-B..H  complete dependence/application-family/composition design
+010       concept mapping / interaction / language / experience
+011       specificity / familiarity / integrity / synergy / misfit
+012       Jackson concept-design completion decision
+013       representation / architecture reconciliation
+014       whole-design completion / implementation-readiness decision
 ```
 
-Even a positive Phase 012 does not reactivate implementation. Only a positive Phase 014 may make implementation **READY / NOT STARTED / NEXT**.
-
-## Historical implementation material
-
-Retain without treating as current design authority:
-
-- Phase 005 implementation plans;
-- Phase 006 implementation-planning reconciliation;
-- 007-A/B/C bootstrap/scaffold work;
-- current `src/syngan` skeleton;
-- tests, Import Linter, tooling, lockfiles and CI;
-- historical 007-K scaffold/readiness findings.
-
-Do not repair or extend these merely to make the repository look ready while design remains incomplete.
+Only a positive Phase 014 may make implementation **READY / NOT STARTED / NEXT**.
 
 ## Current prohibition
 
-Until Phase 014 passes, do not add production concept/domain behavior, implementation APIs, persistence/data-plane schemas, model/runtime/security/platform adapters, Execution/recovery behavior, Evidence/Provenance implementations, reference Strategies, privacy mechanisms, benchmarks, or executable architecture restrictions intended to freeze unfinished design.
+Until Phase 014 passes, do not add production concept/domain behavior, implementation APIs, persistence/data-plane schemas, model/runtime/security/platform adapters, Execution/recovery behavior, Evidence/Provenance implementations, reference Strategies, privacy mechanisms, benchmarks, package-topology changes, or executable architecture restrictions intended to freeze unfinished design.
 
 ## Current next boundary
 
 Design-only work:
 
-**009-A — Inclusion-Dependence Semantics, Evidence Rules & Pairwise Relation Inventory**.
+**009-B — Inclusion-Dependence Graph, Roots, Cycles & Explanation Ordering**.
