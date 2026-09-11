@@ -17,6 +17,7 @@ Current authority includes:
 - [`Phase 008 Individual-Concept Design Consolidation`](docs/concepts/phase-008-individual-concept-consolidation.md)
 - [`Concept Dependence & Application Family`](docs/dependence/index.md)
 - [`009-A Inclusion-Dependence Pairwise Inventory`](docs/dependence/inclusion-dependence-pairwise-inventory.md)
+- [`009-B Inclusion-Dependence Graph & Ordering`](docs/dependence/inclusion-dependence-graph-ordering.md)
 - [`Phase 009`](docs/phases/009/index.md)
 
 ## Status
@@ -28,31 +29,40 @@ current desired outcomes   16
 Phase 008                  COMPLETE
 Phase 009                  ACTIVE
 009-A                      COMPLETE
-009-B                      NEXT ELIGIBLE
-D1                         PARTIAL — PAIRWISE INVENTORY COMPLETE; GRAPH PENDING
+009-B                      COMPLETE
+009-C                      NEXT ELIGIBLE
+D1                         CURRENTLY CLOSED
+D2                         OPEN
+D3                         CURRENTLY CLOSED
+D4                         PARTIAL
 Jackson design completion  IN PROGRESS
 implementation readiness   NOT READY
 implementation start       NOT STARTED
 implementation next        NOT YET
 ```
 
-009-A establishes the purpose-based inclusion-dependence test and classifies all 110 directed non-self concept pairs. Only 12 are current universal-dependence candidates; 43 are conditional/disjunctive and 55 are non-dependent.
+009-B establishes the current canonical application inclusion-dependence graph. The 12 universal pairwise findings reduce to 9 direct edges and 3 transitive findings.
 
-Two mutual-dependence candidates now require explicit 009-B graph analysis:
+Two legitimate strongly connected inclusion components remain:
 
 ```text
 Learning   <-> Learned State
 Evaluation <-> Evidence
 ```
 
-Execution and Provenance also expose non-binary prerequisites that must not be flattened into false universal graph edges.
+These cycles do not merge the concepts; they express application-family co-inclusion while preserving distinct activity/result purposes and ownership.
 
-No concept or synchronization changed in 009-A.
+The condensed graph is acyclic. Execution and Provenance retain non-binary prerequisites that must be handled by 009-C rather than flattened into false unconditional edges.
 
 ## Remaining design roadmap
 
 ```text
-009    Concept Dependence, Application Family, Composition & Synchronization Closure — ACTIVE
+009-C  application family / valid subsets / minimal coherent variants
+009-D  contraction / extension / add-remove consequences
+009-E  synchronization inventory replay
+009-F  synchronization ownership / hidden coordinator
+009-G  composition economy / synergy / integrity
+009-H  Phase 009 consolidation / Phase 010 handoff
 010    Concept Mapping, Interaction, Linguistic & Experience Alignment
 011    Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Design Validation
 012    Jackson Concept-Design Consolidation & Completion Decision
@@ -66,6 +76,6 @@ Only a positive Phase 014 may change implementation to **READY / NOT STARTED / N
 
 ## Current next boundary
 
-**009-B — Inclusion-Dependence Graph, Roots, Cycles & Explanation Ordering**.
+**009-C — Application Family, Valid Concept Subsets & Minimal Coherent Variants**.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
