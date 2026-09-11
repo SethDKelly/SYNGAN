@@ -26,17 +26,13 @@ No implementation tranche is eligible.
 ## Current design progress
 
 ```text
-008-A  COMPLETE — methodology reset / matrix / guardrails
-008-B  COMPLETE — problem / purpose / concept justification
-008-C  COMPLETE — concept state / identity / history / invariants
-008-D  COMPLETE — concept actions / queries / transition contracts
-008-E  COMPLETE — operational principles / purpose fulfillment / counterexamples
-008-F  COMPLETE — independence / genericity / familiarity / reuse
-008-G  COMPLETE — candidate rediscovery / missing concept / boundary audit
-008-H  NEXT ELIGIBLE — Phase 008 consolidation / Phase 009 handoff
+Phase 008                  COMPLETE
+individual concept design  COMPLETE ENOUGH FOR PHASE 009
+Phase 009                  NEXT ELIGIBLE / NOT YET DECOMPOSED
+Jackson concept design     IN PROGRESS
 ```
 
-008-G is concept-design documentation only. It revalidated rejected/deferred/subordinate/external/representation candidates and found no current catalog change. Future rediscovery triggers such as composable DP or product-owned release governance are not implementation authorization.
+008-H is design consolidation only. It did not reconcile or modify source, tests, package topology, persistence, runtime, APIs, dependencies, CI or architecture.
 
 ## Superseded 007-K re-entry conclusion
 
@@ -47,16 +43,15 @@ The Phase 007 architecture and scaffold observations remain useful evidence but 
 ## Remaining design before implementation readiness can be decided
 
 ```text
-008-H      consolidate individual concept design
-009        inclusion dependence / application family / composition / synchronization
-010        concept mapping / interaction / language / experience
-011        specificity / familiarity / integrity / synergy / misfit
-012        Jackson concept-design completion decision
-013        post-concept representation / architecture reconciliation
-014        whole-design completion / implementation-readiness decision
+009  inclusion dependence / application family / composition / synchronization
+010  concept mapping / interaction / language / experience
+011  specificity / familiarity / integrity / synergy / misfit
+012  Jackson concept-design completion decision
+013  post-concept representation / architecture reconciliation
+014  whole-design completion / implementation-readiness decision
 ```
 
-Even a positive 008-H or Phase 012 does not reactivate implementation. Only a positive Phase 014 may make implementation **READY / NOT STARTED / NEXT**.
+Even a positive Phase 012 does not reactivate implementation. Only a positive Phase 014 may make implementation **READY / NOT STARTED / NEXT**.
 
 ## Historical implementation material
 
@@ -79,4 +74,6 @@ Until Phase 014 passes, do not add production concept/domain behavior, implement
 
 Design-only work:
 
-**008-H — Phase 008 Consolidation, Individual-Concept Completeness Decision & Phase 009 Handoff**.
+**Phase 009 — Concept Dependence, Application Family, Composition & Synchronization Closure**.
+
+Phase 009 must be subdivided immediately before entry using the completed Phase 008 authority.
