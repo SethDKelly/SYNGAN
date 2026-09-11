@@ -43,7 +43,7 @@ No row in this matrix can change that posture by itself.
 
 ### Class A — current upstream design authority
 
-Methodology/cross-cutting authority, problem knowledge, accepted concept specifications, current [Concept State, Identity, History & Invariant Normalization](../concepts/state-identity-history-invariant-normalization.md), [Concept Action, Query, Preconditions/Postconditions & Lifecycle Normalization](../concepts/action-query-lifecycle-normalization.md), [Operational Principle, Purpose Fulfillment & Counterexample Normalization](../concepts/operational-principle-purpose-counterexample-normalization.md), [Concept Independence, Genericity, Familiarity & Reuse Normalization](../concepts/independence-genericity-familiarity-reuse-normalization.md), accepted synchronizations, and later current dependence/mapping authorities.
+Methodology/cross-cutting authority, problem knowledge, accepted concept specifications, current [Concept State, Identity, History & Invariant Normalization](../concepts/state-identity-history-invariant-normalization.md), [Concept Action, Query, Preconditions/Postconditions & Lifecycle Normalization](../concepts/action-query-lifecycle-normalization.md), [Operational Principle, Purpose Fulfillment & Counterexample Normalization](../concepts/operational-principle-purpose-counterexample-normalization.md), [Concept Independence, Genericity, Familiarity & Reuse Normalization](../concepts/independence-genericity-familiarity-reuse-normalization.md), [Catalog Perimeter Candidate Rediscovery, Missing-Concept & Boundary Audit](../concepts/catalog-perimeter-candidate-rediscovery-boundary-audit.md), accepted synchronizations, and later current dependence/mapping authorities.
 
 ### Class B — supporting design evidence
 
@@ -68,10 +68,11 @@ Class C/D may reveal a misfit. They cannot silently define unfinished Class A be
 008-D  COMPLETE — actions / queries / preconditions / postconditions / lifecycle transitions
 008-E  COMPLETE — operational principles / purpose fulfillment / counterexamples
 008-F  COMPLETE — independence / genericity / familiarity / reuse
-008-G  NEXT ELIGIBLE — candidate rediscovery / missing-concept / boundary audit
+008-G  COMPLETE — candidate rediscovery / missing-concept / boundary audit
+008-H  NEXT ELIGIBLE — Phase 008 consolidation / individual-concept completion decision
 ```
 
-008-B through 008-F now provide current individual-concept evidence for purpose, state, behavior, operational principle, independence, bounded genericity, naming/familiarity, reuse and accepted-concept boundary discipline. No catalog change has occurred through 008-F. Catalog finality remains explicitly open until 008-G/H.
+008-B through 008-G now provide current individual-concept evidence for purpose, state, behavior, operational principle, independence, bounded genericity, naming/familiarity, reuse, accepted-concept boundaries, rejected/deferred candidate disposition and catalog-perimeter completeness. No catalog change has occurred. Phase 008 remains open until 008-H performs the explicit consolidation and handoff decision.
 
 ## Jackson completion matrix
 
@@ -80,11 +81,11 @@ Class C/D may reveal a misfit. They cannot silently define unfinished Class A be
 | A1 | Application problem, actors, needs, outcomes and environmental constraints | 008-B reconciled current problem, actors, O1-O16 and scale envelope | **CURRENTLY CLOSED** | 008-B; reopen on later misfit |
 | A2 | Distinct purpose/justification for every accepted concept | 008-B tested all eleven concepts and absence consequences | **CURRENTLY CLOSED** | 008-B; reopen on later misfit |
 | A3 | Problem/outcome → concept traceability and absence consequence | Canonical problem/concept traceability provides forward/reverse coverage | **CURRENTLY CLOSED** | 008-B |
-| B1 | Divergent candidate concept discovery | Phase 001-D evidence; current full-evidence replay still required | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 008-G |
-| B2 | Candidate reduction/merger/subordination/defer/reject | Phase 001-E plus later candidate reviews; current rediscovery still required | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 008-G |
+| B1 | Divergent candidate concept discovery | 008-G replayed original, later and newly hypothesized candidates under current O1-O16 evidence | **CURRENTLY CLOSED** | 008-G; reopen on later scope/misfit |
+| B2 | Candidate reduction/merger/subordination/defer/reject | 008-G revalidated every material exclusion and current future-trigger disposition; no restoration required | **CURRENTLY CLOSED** | 008-G; reopen on later scope/misfit |
 | B3 | Independence and appropriate domain genericity | 008-F re-tested all eleven against purpose/state/behavior/OP authority and bounded genericity | **CURRENTLY CLOSED** | 008-F; reopen on later misfit |
 | B4 | Explicit familiarity/reuse comparison | 008-F compared familiar analogues/naming alternatives and tested conceptual reuse across current variation | **CURRENTLY CLOSED FOR INDIVIDUAL CONCEPTS** | 008-F; composed familiarity still 011 |
-| B5 | Missing-concept/god-concept/representation-leakage audit | Strong prior evidence and 008-F anti-god replay; current rejected/deferred candidate rediscovery still outstanding | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 008-G |
+| B5 | Missing-concept/god-concept/representation-leakage audit | 008-G tested original/later exclusions, new Output/Source/Dependency/Security/Text candidates, umbrella terms and representation mechanisms | **CURRENTLY CLOSED** | 008-G; reopen on later scope/misfit |
 | C1 | Concept name and distinct purpose | Purpose closed by 008-B; 008-F explicitly reviewed familiarity/naming and retained all eleven names | **CURRENTLY CLOSED** | 008-B/008-F; reopen on later misfit |
 | C2 | Operational principle demonstrating purpose | 008-E normalized all eleven OPs and ran falsifying counterexamples | **CURRENTLY CLOSED** | 008-E; reopen on later misfit |
 | C3 | Complete conceptual state model | 008-C normalized all eleven state shapes, identity units, history/current-use and uncertainty semantics | **CURRENTLY CLOSED** | 008-C; reopen on later misfit |
@@ -92,14 +93,14 @@ Class C/D may reveal a misfit. They cannot silently define unfinished Class A be
 | C5 | Conceptual queries/observations | 008-D established explicit query surfaces and prohibited query-created shadow authority | **CURRENTLY CLOSED** | 008-D; mapping remains 010 |
 | C6 | Preconditions/effects/postconditions sufficient for behavioral reasoning | 008-D established semantic transition contracts across all eleven concepts | **CURRENTLY CLOSED** | 008-D; reopen on later misfit |
 | C7 | Invariants, lifecycle/history, unresolved/invalidated states | 008-C normalized state/history/invariants; 008-D closed transition/non-success semantics | **CURRENTLY CLOSED** | 008-C/008-D; reopen on later misfit |
-| C8 | Explicit boundaries/non-responsibilities independent of representation | 008-F revalidated accepted-concept boundaries and representation independence; rejected/deferred perimeter still requires 008-G | **CURRENTLY CLOSED FOR ACCEPTED CONCEPTS** | 008-F; perimeter/finality 008-G |
+| C8 | Explicit boundaries/non-responsibilities independent of representation | 008-F closed accepted-concept boundaries; 008-G closed the rejected/deferred/representation perimeter and explicit reopen triggers | **CURRENTLY CLOSED** | 008-F/008-G; reopen on later misfit |
 | D1 | Jackson application inclusion-dependence graph | Existing dependency taxonomy is not inclusion dependence | **OPEN** | 009 |
 | D2 | Meaningful valid concept subsets/application family | Not systematically derived | **OPEN** | 009 |
 | D3 | Explanation/design ordering implied by inclusion dependence | Not derived | **OPEN** | 009 |
 | D4 | Product-scope consequences of adding/removing concepts | Full-product absence consequences exist; reduced-application consequences remain open | **PARTIAL** | 009 |
 | E1 | Explicit concept synchronizations | 008-D replayed all 15 as coordination of owned actions/queries; final composition/integrity replay remains | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 009 |
-| E2 | Singular state ownership across synchronizations | 008-D found no hidden action owner; composed closure remains | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 009 |
-| E3 | Composition burden/economy and hidden-coordinator avoidance | 008-D found no hidden coordinator action or need for SYNC-16; whole composition economy still pending | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 009 |
+| E2 | Singular state ownership across synchronizations | 008-D found no hidden action owner; 008-G found no hidden candidate state owner; composed closure remains | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 009 |
+| E3 | Composition burden/economy and hidden-coordinator avoidance | 008-D found no hidden coordinator action or need for SYNC-16; 008-G found no excluded concept required by existing coordination | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 009 |
 | E4 | Composition synergy | Mostly implicit | **PARTIAL** | 009/011 |
 | E5 | Integrity under composition | Strong prior/adversarial evidence but no final Jackson integrity closure | **PARTIAL TO STRONG** | 009/011 |
 | F1 | Concept action → human/programmatic interaction mapping | Phase 003 workflows exist; normalized map does not | **PARTIAL** | 010 |
@@ -110,9 +111,9 @@ Class C/D may reveal a misfit. They cannot silently define unfinished Class A be
 | G1 | Specificity across final composed concept set | Purpose/individual-boundary evidence strong; final composed audit pending | **PARTIAL TO STRONG** | 011 |
 | G2 | Familiarity across final composed concept set | 008-F closes individual names/analogues; post-composition/mapping familiarity remains | **PARTIAL TO STRONG** | 011 |
 | G3 | Integrity across synchronizations/mappings | Strong evidence, no final decision | **PARTIAL TO STRONG** | 011 |
-| G4 | Synergy and simplicity/generic fitness | Individual genericity closed; no dedicated final composition/synergy audit | **PARTIAL** | 011 |
-| G5 | Archetypal/exceptional/degraded/adversarial/recovery misfit analysis | Strong 006/007 evidence plus 008-E falsification; final post-008-010 replay required | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 011 |
-| G6 | Future-scope/extensibility misfit analysis | Strong topology/text/privacy/runtime probes; final replay remains | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 011 |
+| G4 | Synergy and simplicity/generic fitness | Individual genericity/catalog perimeter closed; no dedicated final composition/synergy audit | **PARTIAL TO STRONG** | 011 |
+| G5 | Archetypal/exceptional/degraded/adversarial/recovery misfit analysis | Strong 006/007 evidence plus 008-E/008-G falsification; final post-008-010 replay required | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 011 |
+| G6 | Future-scope/extensibility misfit analysis | 008-G records explicit future rediscovery triggers; final post-composition/mapping replay remains | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 011 |
 | G7 | Explicit residual conceptual misfit register | No final post-mapping register | **PARTIAL** | 011/012 |
 | H1 | One current-state consolidated Jackson concept-design audit | Not yet possible | **OPEN** | 012 |
 | H2 | Explicit Jackson concept-design completion decision | Not yet performed | **OPEN** | 012 |
@@ -122,22 +123,28 @@ Class C/D may reveal a misfit. They cannot silently define unfinished Class A be
 
 ## 008-F independence/genericity/familiarity finding
 
-008-F explicitly establishes:
+008-F establishes that all eleven accepted concepts remain independently purposeful, appropriately generic across current product variation and familiar enough under explicit alternative-name comparison. It distinguishes independence from isolation and conceptual reuse from universal presence.
+
+No merge, split, rename, addition or removal was justified.
+
+## 008-G catalog-perimeter finding
+
+008-G deliberately re-tests what is *not* in the catalog.
+
+It replays the original Phase 001 exclusions, later Phase 006 recovery/resource/privacy/topology candidates, and new candidate hypotheses including Synthetic Output, Source, Dependency, Authorization/Security state, Platform Capability, Completion Basis, Checkpoint, Claim, Report/View/Export and text-specific structures.
+
+The result is:
 
 ```text
-independent concept != isolated concept
-conceptual reuse    != universal presence
-familiarity         != copying a neighboring product/object model
-genericity          != enterprise-wide infrastructure abstraction
+accepted concepts          11
+restored concepts           0
+newly discovered concepts   0
+missing current concept     NONE FOUND
 ```
 
-All eleven accepted concepts retain distinct current purposes, state and behavior, and all are appropriately generic across the current product variation while remaining anchored to synthetic-data functionality.
+The strongest new challenge, Synthetic Output, remains Generation-owned result state because current SYNGAN gives it no independent state-changing lifecycle after semantic completion. Relationship remains descriptive Data Meaning state despite O15. Generic Privacy remains rejected, while a future composable DP capability retains an explicit mechanism-specific concept-discovery trigger. Use/Release Decision remains external product authority. Resource/recovery/security/runtime structures remain owner-specific, cross-cutting or representational rather than domain concepts.
 
-All eleven canonical names are retained. More conventional alternatives were rejected where they would import misleading assumptions, including `Schema`, `Synthesizer`, `Algorithm`, `Training`, `Fit`, `Model`, `Artifact`, `Sampling`, `Metric`, `Validation`, `Result`, `Run`, `Job`, and `Lineage`.
-
-The accepted catalog still rejects umbrella collapse through `Synthesizer`, `Model`, `Run`, `Quality`, `Metadata`, `Validation`, `Artifact`, or generic `Privacy` concepts.
-
-No merge, split, rename, addition or removal is justified by 008-F. This does not pre-decide 008-G's deliberate candidate rediscovery.
+The catalog is therefore sufficiently revalidated for 008-H consolidation, without becoming permanently frozen against future scope or later misfit.
 
 ## Current methodological verdict
 
@@ -149,8 +156,9 @@ ACTION / QUERY / TRANSITION MODEL    CURRENTLY CLOSED
 OPERATIONAL PRINCIPLES               CURRENTLY CLOSED
 INDEPENDENCE / GENERICITY            CURRENTLY CLOSED
 INDIVIDUAL FAMILIARITY / NAMING      CURRENTLY CLOSED
-ACCEPTED-CONCEPT BOUNDARIES          CURRENTLY CLOSED
-CATALOG REDISCOVERY / FINALITY       NOT YET CLOSED
+CONCEPT / CATALOG BOUNDARIES         CURRENTLY CLOSED
+CATALOG REDISCOVERY                  CURRENTLY CLOSED
+PHASE 008 CONSOLIDATION              NOT YET PERFORMED
 JACKSON CONCEPT DESIGN COMPLETE      NO
 REPRESENTATION/ARCHITECTURE FINAL    NO — RETAINED, PENDING RECONCILIATION
 WHOLE DESIGN COMPLETE                NO
@@ -162,7 +170,6 @@ IMPLEMENTATION NEXT                  NOT YET
 ## Remaining Phase 008 dependency order
 
 ```text
-008-G  deferred/rejected candidate rediscovery / missing concept / boundary audit
 008-H  Phase 008 consolidation / individual-concept completion decision
         ↓
 009  inclusion dependence / application family / composition / synchronization
@@ -188,6 +195,6 @@ Do not add production behavior, expand implementation APIs, add persistence/data
 
 ## Completion discipline
 
-Phase 008 cannot declare Jackson concept design complete. Phase 012 may close Jackson concept design but cannot make implementation ready. Phase 013 reconciles architecture but cannot make implementation ready. Only Phase 014 may make implementation **READY / NOT STARTED / NEXT** after the whole design passes.
+Phase 008 cannot declare Jackson concept design complete. A positive 008-H may only declare individual concept design complete enough for Phase 009. Phase 012 may close Jackson concept design but cannot make implementation ready. Phase 013 reconciles architecture but cannot make implementation ready. Only Phase 014 may make implementation **READY / NOT STARTED / NEXT** after the whole design passes.
 
 Until then implementation remains **NOT READY / NOT STARTED / NOT YET**.
