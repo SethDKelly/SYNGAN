@@ -6,135 +6,168 @@ status: active
 
 # SYNGAN Accepted Synchronizations
 
-This directory contains the current cross-concept coordination rules accepted historically and subject to Phase 009 composition revalidation.
+This directory contains current cross-concept composition authority for SYNGAN.
 
-Concept specifications own their own purpose, state, actions, lifecycle and invariants. This layer owns coordination only where a meaningful transition crosses concept boundaries.
+Concept specifications own their own purpose, state, actions, lifecycle and invariants. Synchronization exists only where already-owned behavior/state effects must coordinate across accepted concept boundaries.
 
-## Current synchronization set
+## Current authority
 
-- [Core Synchronizations](core-synchronizations.md) — SYNC-01 through SYNC-15.
+- [Synchronization Inventory Revalidation Across the Application Family](application-family-revalidation.md) — **current Phase 009-E inventory/scope authority**.
+- [Core Synchronizations](core-synchronizations.md) — historical detailed SYNC-01 through SYNC-15 rule text and supporting source evidence; inventory membership/scope is superseded where 009-E says otherwise.
 
-```text
-accepted synchronization IDs  15
-Phase 009 replay status        NEXT — 009-E
-SYNC-16                        NOT CURRENTLY JUSTIFIED
-```
-
-The fifteen rules are the current Phase 009 candidate set, not yet a final composition claim.
-
-## Dependence/application-family authority now complete for replay
-
-009-A through 009-D currently close all D obligations:
+## Current synchronization inventory
 
 ```text
-D1  canonical inclusion-dependence graph       CURRENTLY CLOSED
-D2  application family / valid subsets          CURRENTLY CLOSED
-D3  explanation/design ordering                 CURRENTLY CLOSED
-D4  add/remove product-scope consequences       CURRENTLY CLOSED
+accepted concepts                    11
+historical synchronization IDs       15
+active cross-concept synchronizations 13
+retired concept-local IDs             1  (SYNC-08)
+reclassified contract IDs             1  (SYNC-15)
+new synchronization IDs               0
+SYNC-16                               NOT JUSTIFIED
+E1                                    CURRENTLY CLOSED
 ```
 
-009-E can therefore replay synchronizations against current family authority without assuming the full eleven-concept set is always present.
+Historical IDs remain reserved and are never reused.
 
-## Current family basis
+## Active — required relational
 
-Canonical kernels remain:
+These are required whenever the named semantic relation occurs:
 
 ```text
-L-KERNEL = Data Meaning + Synthesis Strategy + Learning + Learned State
-G-KERNEL = Data Meaning + Synthesis Strategy + Generation
-E-KERNEL = Evaluation Criterion + Evaluation + Evidence
+SYNC-01  Data Meaning revision binding
+SYNC-02  Strategy selection and compatibility
+SYNC-05  Learning produces Learned State
+SYNC-06  Generation commitment and compatibility
+SYNC-09  Evaluation Criterion binding
+SYNC-10  Evaluation method compatibility
+SYNC-12  Evaluation produces Evidence
 ```
 
-Side constraints remain:
+## Active — capability / occurrence conditional
+
+These are genuine cross-concept synchronizations, but mere co-presence of concepts does not activate them:
 
 ```text
-Execution => Learning OR Generation OR Evaluation
-Provenance => meaningful provenance-bearing relationship witness
+SYNC-03  Constraint binding and handling disposition
+SYNC-04  Learning operational realization
+SYNC-07  Generation operational realization
+SYNC-11  Evaluation operational realization
+SYNC-13  Generation/Evidence handoff for evidence-gated completion
+SYNC-14  Provenance recording at material transitions
 ```
-
-Capability-conditioned extensions include learned-state-assisted Generation, evaluation-gated Generation, reusable Constraint support, durable Execution, and Provenance/history.
-
-## Contraction consequences relevant to replay
-
-009-D establishes that a synchronization must not simulate semantics belonging to a concept removed from a contracted family member.
 
 Examples:
 
-```text
-no L-CLUSTER
-  => no Learning/Learned State production/reuse coordination
+- Constraint-light variants do not activate `SYNC-03`;
+- Execution may realize Learning, Generation, Evaluation, or several at different times; only the actual parent/Execution relation activates the corresponding `SYNC-04/07/11`;
+- direct/non-gated Generation does not activate `SYNC-13`;
+- Provenance membership does not create arbitrary all-to-all `SYNC-14` relationships.
 
-no E-KERNEL
-  => no Evaluation/Evidence coordination or evaluation-gated completion
+## SYNC-08 — retired from active synchronization inventory
 
-no Constraint
-  => no synchronization may recreate reusable prescriptive-rule authority elsewhere
+`SYNC-08 — Generation produces synthetic output reference` remains a reserved historical ID, but output candidate/completion/promotion behavior is now explicitly recognized as **Generation-owned local lifecycle/result behavior**.
 
-no Execution
-  => no synchronization may smuggle Attempt/retry/recovery ownership into domain activities
+Synthetic Output is not a standalone accepted concept. There is no independent `Output.Establish` action to synchronize with `Generation.Complete`.
 
-no Provenance
-  => no synchronization may create a shadow provenance store
-```
+The substantive semantics remain required under Generation behavior, including:
 
-Removing Data Meaning or Strategy also removes current Learning/Learned State and Generation capability; removing Criterion removes Evaluation/Evidence.
+- candidate versus completed distinction;
+- whole-logical-scope completion;
+- zero-or-one authoritative completed result;
+- no promotion from physical completion alone;
+- required validation/Evidence completion barriers;
+- single semantic promotion across retry/recovery;
+- stable result identity.
 
-## 009-E replay question
+Applicable Evidence and Provenance composition remains governed by `SYNC-13` and `SYNC-14`.
 
-For each SYNC-01 through SYNC-15, 009-E must decide whether the current rule is:
+## SYNC-15 — reclassified as cross-cutting contract
 
-1. **universal when its participating concepts/capability are present**;
-2. **application-family conditional** — valid only for a narrower capability variant;
-3. **over-broad** — currently claims coordination in variants where the purpose is absent;
-4. **redundant** — ordinary reference/query/local behavior already suffices;
-5. **under-specified** — a genuine coordination obligation exists but the rule needs narrower/clearer semantics;
-6. **unjustified** — should be removed;
-7. evidence that a **new synchronization** is genuinely required.
+`SYNC-15 — Reproducibility-relevant commitment snapshot` remains a reserved historical ID but is no longer counted as one active concept synchronization.
 
-Historical ID stability is not sufficient reason to retain a rule, and catalog symmetry is not sufficient reason to create `SYNC-16`.
+Reproducibility remains governed by the [Reproducibility Contract](../authority/reproducibility-contract.md).
 
-## Synchronization versus dependence
+Its required facts are assembled from exact concept bindings, immutable commitments/history, production relations, optional Execution history and optional Provenance relations. No standalone Reproducibility concept/state owner is introduced.
 
-A synchronization does **not** prove inclusion dependence merely because two concepts coordinate.
+## SYNC-13 current scope
 
-Likewise, dependence or co-inclusion does not prove a synchronization is necessary. Dependence answers whether concepts belong together; application-family/contraction authority identifies valid product scopes; synchronization answers how already-owned behavior coordinates within those scopes.
+009-E narrows the active internal synchronization scope of `SYNC-13` to the conditional Generation/Evidence relation used when Generation completion is evidence-gated.
 
-## Strongly connected component boundary
+Evidence exposure to external actors/systems remains important but is not itself cross-concept synchronization inside the accepted catalog. It remains an Evidence/mapping/integration boundary for Phase 010.
 
-Current inclusion SCCs remain:
+## Application-family replay result
+
+Canonical kernels now have these core active synchronization relations:
 
 ```text
-{ Learning, Learned State }
-{ Evaluation, Evidence }
+L-KERNEL
+  SYNC-01  Data Meaning binding
+  SYNC-02  Strategy compatibility/binding
+  SYNC-05  Learning -> Learned State
+
+G-KERNEL
+  SYNC-01  Data Meaning binding
+  SYNC-02  Strategy compatibility
+  SYNC-06  Generation commitment/binding
+
+E-KERNEL
+  SYNC-09  Criterion binding
+  SYNC-10  method/Criterion compatibility
+  SYNC-12  Evaluation -> Evidence
 ```
 
-These do not merge state owners. Any production/result synchronization across each pair must preserve distinct activity/result ownership.
+Optional Constraint, Execution, evidence-gated completion and Provenance capabilities activate their corresponding conditional synchronization rules only when the actual relation occurs.
 
-## Historical dependency taxonomy retained as evidence
+## Contraction safety
 
-The accepted historical model distinguishes:
+A synchronization disappears with the relation/capability whose owner is contracted.
 
-1. reference/binding;
-2. contextual validation;
-3. production/result establishment;
-4. operational realization;
-5. historical/provenance recording;
-6. controlled handoff.
+No synchronization may recreate semantics belonging to a removed concept:
 
-These remain evidence for composition but are not themselves proof that a synchronization is required.
+```text
+no Data Meaning   => no hidden semantic default
+no Strategy       => no implicit synthesis algorithm authority
+no L-CLUSTER      => no fake Learned State production/reuse
+no Constraint     => no hidden reusable rule authority
+no E-CLUSTER      => no fake Evidence or evaluation-gated completion
+no Execution      => no retry/recovery/Attempt migration into domain activities
+no Provenance     => no shadow provenance concept/store
+```
 
-## Core composition guardrails
+## Missing-synchronization verdict
+
+009-E finds no missing coordination rule for direct Generation, learned-state-assisted Generation, evaluation-gated Generation, Constraint-light variants, Execution-bearing variants, Provenance-bearing variants, topology breadth, text-bearing structured data, or reproducibility.
+
+```text
+new synchronization required  NONE FOUND
+SYNC-16                      NOT JUSTIFIED
+```
+
+## Current methodology state
+
+```text
+D1-D4  CURRENTLY CLOSED
+E1     CURRENTLY CLOSED
+E2     STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
+E3     STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
+E4     PARTIAL
+E5     PARTIAL TO STRONG
+```
+
+009-F must now audit trigger, participating actions/queries, preconditions/postconditions, failure/indeterminate behavior, historical binding, singular state ownership and hidden-coordinator risk for the **13 active rules**.
+
+## Composition guardrails
 
 - one canonical state owner per material fact;
-- stable historical bindings rather than mutable aliases;
-- contextual compatibility rather than global pairwise state;
-- Execution completion does not define domain semantic completion;
-- Attempt remains subordinate Execution history;
-- authoritative semantic result establishment remains unambiguous;
-- Evidence claim strength cannot exceed method support;
-- Provenance remains high fan-in and low authority fan-out;
-- reproducibility remains cross-cutting rather than a standalone concept;
-- no hidden coordinator or shadow authority may be introduced merely for implementation convenience.
+- reusable authorities are queried/bound, not mutated by consumers;
+- contextual compatibility belongs to the consuming activity;
+- activity/result SCCs do not merge state ownership;
+- Execution completion does not establish domain semantic completion;
+- Evidence does not own Generation completion or external approval;
+- Provenance records established relationships but cannot fabricate upstream facts;
+- cross-cutting contracts do not become unnamed shadow concepts;
+- historical ID stability does not override synchronization economy.
 
 ## Phase 009 sequence
 
@@ -143,14 +176,14 @@ These remain evidence for composition but are not themselves proof that a synchr
 009-B  COMPLETE — canonical graph / SCCs / ordering
 009-C  COMPLETE — application family / valid subsets
 009-D  COMPLETE — contraction / extension / add-remove consequences
-009-E  NEXT — synchronization inventory replay
-009-F  trigger / state ownership / hidden coordinator
+009-E  COMPLETE — synchronization inventory replay
+009-F  NEXT — trigger / pre-post / state ownership / hidden coordinator
 009-G  economy / synergy / integrity
 009-H  consolidation
 ```
 
 ## Current next boundary
 
-**009-E — Synchronization Inventory Revalidation Across the Application Family**.
+**009-F — Synchronization Trigger, Preconditions/Postconditions, State Ownership & Hidden-Coordinator Audit** is next eligible.
 
-The synchronization count remains 15 until 009-E explicitly revalidates the inventory.
+Implementation remains **NOT READY / NOT STARTED / NOT YET**.
