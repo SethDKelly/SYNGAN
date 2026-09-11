@@ -10,9 +10,7 @@ status: active
 
 Maintain the correct design-to-implementation boundary while SYNGAN completes the full Daniel Jackson-style design program.
 
-This authority supersedes the implementation-reentry readiness conclusion of 007-K while retaining Phase 007 architecture as downstream design evidence. The repository must complete Jackson concept design, reconcile representation/architecture against that completed design, and pass the whole-design audit before implementation can become ready.
-
-Current methodology status is tracked by the [Jackson Methodology Completion Matrix](jackson-methodology-completion-matrix.md).
+This authority supersedes the historical 007-K implementation-reentry conclusion while retaining Phase 007 architecture as downstream evidence.
 
 ## Current implementation status
 
@@ -22,7 +20,7 @@ IMPLEMENTATION START       NOT STARTED
 IMPLEMENTATION NEXT        NOT YET
 ```
 
-No intermediate phase, subgroup, architecture document, implementation plan, scaffold, test result, or prior readiness finding may change implementation status by implication.
+No intermediate phase, subgroup, architecture document, implementation plan, scaffold, test result, or prior readiness finding may change this posture by implication.
 
 ## Methodology boundary
 
@@ -31,9 +29,9 @@ problem / purpose / actors / outcomes
         ↓
 individual concept design                 ← Phase 008 COMPLETE
         ↓
-concept inclusion dependence / application family
+concept inclusion dependence / application family  ← Phase 009 ACTIVE
         ↓
-composition / synchronization / integrity ← Phase 009 ACTIVE
+composition / synchronization / integrity
         ↓
 concept mapping / actor-visible experience
         ↓
@@ -48,62 +46,78 @@ whole-design completion / readiness gate
 implementation MAY become READY / NOT STARTED / NEXT
 ```
 
-Implementation is not part of Jackson concept design and must not be used to discover unfinished product semantics by accident.
-
 ## Phase 008 completion
 
-Phase 008-A through 008-H are complete under [Phase 008 Individual-Concept Design Consolidation](../concepts/phase-008-individual-concept-consolidation.md).
+Phase 008 closed with:
 
 ```text
 PHASE 008                   COMPLETE
 INDIVIDUAL CONCEPT DESIGN   COMPLETE ENOUGH FOR PHASE 009
+JACKSON CONCEPT DESIGN      NOT COMPLETE
 ```
 
-The accepted catalog remains eleven concepts. The accepted synchronization IDs remain fifteen as the current Phase 009 starting set.
+## Phase 009 progress
 
-## Phase 009 active boundary
-
-Phase 009 has entered through [Phase 009 Entry / Decomposition](../phases/009/009-entry-decomposition.md).
-
-Its subgroup sequence is:
+Phase 009 is active.
 
 ```text
-009-A  Inclusion-Dependence Semantics, Evidence Rules & Pairwise Relation Inventory
-009-B  Inclusion-Dependence Graph, Roots, Cycles & Explanation Ordering
-009-C  Application Family, Valid Concept Subsets & Minimal Coherent Variants
-009-D  Contraction, Extension, Concept Addition/Removal & Product-Scope Consequences
-009-E  Synchronization Inventory Revalidation Across the Application Family
-009-F  Synchronization Trigger, Preconditions/Postconditions, State Ownership & Hidden-Coordinator Audit
-009-G  Composition Economy, Coupling, Synergy & Integrity Closure
-009-H  Phase 009 Consolidation, Dependence/Composition Completion Decision & Phase 010 Handoff
+009-A  COMPLETE — inclusion-dependence semantics / pairwise inventory
+009-B  NEXT ELIGIBLE — graph / roots / cycles / explanation ordering
 ```
 
-The current next eligible subgroup is **009-A**.
+009-A establishes that the Jackson inclusion relation is materially sparser than historical reference/runtime dependencies:
 
-Phase 009 must not derive inclusion dependence from package imports, service calls, runtime ordering, storage references, architecture topology, or the historical reference/validation/production/provenance dependency taxonomy.
+```text
+12 universal pairwise candidates
+43 conditional/disjunctive relations
+55 non-dependent relations
+0 insufficient relations
+```
 
-The governing application-level question is whether including one concept only makes sense when another concept is also included.
+The pairwise inventory is not the canonical graph. 009-B must still determine direct/transitive edges and cycle treatment.
 
-The fifteen synchronization rules are not presumed final. Their current composition must be replayed only after the inclusion-dependence graph and valid application variants are established.
+The two pairwise mutual-dependence candidates are:
+
+```text
+Learning   <-> Learned State
+Evaluation <-> Evidence
+```
+
+Execution's one-of prerequisite across `{Learning, Generation, Evaluation}` and Provenance's non-binary subject prerequisite must not be converted into false universal edges or implementation module requirements.
+
+## Architecture/executable boundary
+
+Phase 004/006/007 architecture and the retained executable scaffold remain downstream evidence.
+
+They may expose a genuine counterexample but cannot define inclusion dependence from:
+
+- package imports;
+- persistence references;
+- service/dataflow direction;
+- runtime orchestration;
+- deployment topology;
+- existing API/object nesting.
+
+Do not restructure implementation to mirror 009-A or future 009-B dependence results while the full design remains incomplete.
 
 ## Remaining design roadmap
 
 ```text
-009  Concept Dependence, Application Family, Composition & Synchronization Closure — ACTIVE
-010  Concept Mapping, Interaction, Linguistic & Experience Alignment
-011  Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Design Validation
-012  Jackson Concept-Design Consolidation & Completion Decision
-013  Post-Concept Representation & Architecture Reconciliation
-014  Whole-Design Consolidation, Residual Debt Audit & Implementation-Readiness Decision
+009-B..H  finish dependence/application-family/composition design
+010       concept mapping / interaction / language / experience
+011       specificity / familiarity / integrity / synergy / misfit
+012       Jackson concept-design completion decision
+013       representation / architecture reconciliation
+014       whole-design completion / implementation-readiness decision
 ---
-015  Implementation Authority & Controlled Delivery — FUTURE ONLY
+015       implementation authority / controlled delivery — FUTURE ONLY
 ```
 
 ## Readiness transitions
 
 Through Phases 009-013 implementation remains **NOT READY / NOT STARTED / NOT YET**.
 
-Even if Phase 012 closes Jackson concept design, Phase 013 must reconcile downstream architecture. Only Phase 014 may make the final whole-design readiness decision.
+Even a positive Phase 012 does not make implementation ready. Phase 013 must reconcile architecture. Only Phase 014 may make the final whole-design readiness decision.
 
 A positive Phase 014 may set only:
 
@@ -113,16 +127,14 @@ IMPLEMENTATION START       NOT STARTED
 IMPLEMENTATION NEXT        NEXT
 ```
 
-That still does not start implementation; a later explicit Phase 015 implementation-authority phase would be required.
+Implementation itself still requires later explicit Phase 015 authority.
 
 ## No executable design-by-accident
 
-Until Phase 014 passes, do not add production behavior, executable architecture restrictions merely to crystallize hypotheses, package-topology changes anticipating future design, persistence schemas/migrations, runtime/model/platform/security adapters, public API implementation, reference algorithms, vertical slices, benchmarks, privacy mechanisms, or repairs to stale implementation tests solely to create readiness.
-
-Existing executable scaffold may remain untouched as historical/provisional evidence.
+Until Phase 014 passes, do not add production behavior, executable architecture restrictions merely to crystallize hypotheses, package-topology changes anticipating design, persistence schemas/migrations, runtime/model/platform/security adapters, public API implementation, reference algorithms, vertical slices, benchmarks, privacy mechanisms, or stale-test repair solely to manufacture readiness.
 
 ## Current next boundary
 
-**009-A — Inclusion-Dependence Semantics, Evidence Rules & Pairwise Relation Inventory**.
+**009-B — Inclusion-Dependence Graph, Roots, Cycles & Explanation Ordering**.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
