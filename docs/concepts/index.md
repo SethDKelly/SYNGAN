@@ -8,7 +8,7 @@ status: active
 
 This directory contains the canonical concept specifications accepted in Phase 001 and refined through current Phase 008 authority.
 
-Cross-concept coordination remains authoritative under [Synchronizations](../synchronizations/index.md), with current dependence/composition work governed by [Phase 009](../phases/009/index.md).
+Cross-concept coordination remains authoritative under [Synchronizations](../synchronizations/index.md), while current inclusion-dependence work is governed by [Concept Dependence & Application Family](../dependence/index.md) and [Phase 009](../phases/009/index.md).
 
 ## Current individual-concept authority
 
@@ -33,24 +33,16 @@ Cross-concept coordination remains authoritative under [Synchronizations](../syn
 10. [Execution](execution.md)
 11. [Provenance](provenance.md)
 
-## Phase 008 completion result
+## Current catalog state
 
 ```text
 accepted concepts          11
 accepted synchronizations  15
-restored concepts           0
-new concepts                0
-removed concepts            0
-renamed concepts            0
-merged concepts             0
-split concepts              0
 missing current concept     NONE FOUND
 INDIVIDUAL CONCEPT DESIGN   COMPLETE ENOUGH FOR PHASE 009
 ```
 
-No unresolved J1 local concept-specification defect or J2 purpose/boundary/catalog defect remained at the Phase 008 exit.
-
-This is not a claim that Jackson concept design is complete. Phase 009 is now active and must derive inclusion dependence/application-family structure and close composition/synchronization against that structure.
+Phase 008 found no unresolved J1 local concept-specification defect or J2 purpose/boundary/catalog defect.
 
 ## Core boundary results
 
@@ -66,47 +58,40 @@ Evidence               != Provenance
 Execution              != Attempt != platform job
 ```
 
-Generation currently owns request/Condition and candidate-to-completed logical output semantics. A separate Output concept is not justified under current scope.
+Generation owns request/Condition and candidate-to-completed logical output semantics. Relationship remains Data Meaning-owned descriptive structure. Generic Privacy remains rejected pending fresh mechanism-specific discovery if future independent state/actions arise. Use/Release Decision remains external authority.
 
-Relationship remains Data Meaning-owned descriptive structural semantics; prescriptive referential/cardinality/temporal validity remains Constraint; request-specific topology scope/horizon/quantity remains Generation.
+## 009-A inclusion-dependence result
 
-## Current non-concept dispositions
+009-A asks a different question from Phase 008 independence: if one concept is included in an application, must another also be included for the first concept's purpose to make sense?
 
-The following remain intentionally outside the standalone catalog under current evidence:
+The current [pairwise inventory](../dependence/inclusion-dependence-pairwise-inventory.md) finds twelve universal pairwise candidates:
 
-- Generation Request and Condition — Generation-owned;
-- Attempt and Checkpoint — Execution-owned/subordinate;
-- Artifact/Dataset identity — representation/integration;
-- reproducibility — cross-cutting contract;
-- generic Privacy — rejected; future mechanism-specific discovery required where independent state/actions arise;
-- Relationship — Data Meaning-owned descriptive semantics;
-- Use / Release Decision — external authority;
-- Source Characterization/Profile — supporting observation/method;
-- Resource/Admission/Backpressure/Approximation/DegradedMode/Cost — owner-specific, cross-cutting, operational or deployment policy;
-- Source/Dependency/Authorization/Secret/Platform Capability — referenced context, security authority or architecture;
-- TimeSeries/Series/Sequence/Table/Text/Tokenizer/Language Model/GenerationMode/DataTopologyMode — vocabulary or representation, not current concepts;
-- Metadata/Model/Run/Quality/Validation/Synthesizer/Artifact/Policy — umbrella terms that must not erase accepted boundaries.
+```text
+Learning      -> Data Meaning / Synthesis Strategy / Learned State
+Learned State -> Learning / Data Meaning / Synthesis Strategy
+Generation    -> Data Meaning / Synthesis Strategy
+Evaluation    -> Evaluation Criterion / Evidence
+Evidence      -> Evaluation Criterion / Evaluation
+```
+
+This does not merge concepts. `Learning <-> Learned State` and `Evaluation <-> Evidence` remain distinct activity/result concepts and are explicit 009-B cycle questions.
+
+Execution and Provenance have conditional/disjunctive prerequisites rather than one universal pairwise dependency.
+
+009-A makes no catalog change.
 
 ## Future rediscovery triggers
 
 The catalog is not permanently frozen. Fresh Jackson-style discovery is required before implementing materially expanded scope such as composable formal privacy/accounting, product-owned governance/release decisions, reusable request/cohort definitions, independent output lifecycle, arbitrary graph/recursive topology, or product-owned economic/resource management.
 
-## Phase 009 handoff rule
-
-Phase 009 must preserve the Phase 008 individual-concept boundaries while asking a different question: which accepted concepts require which others to be included for their **application purpose** to make sense?
-
-Reference, validation, production, runtime and provenance relations do not answer that question automatically.
-
-The current fifteen synchronization IDs are starting composition evidence, not a final Phase 009 result.
-
 ## Authority rule
 
-The individual concept specifications plus the current Phase 008 normalization/consolidation authorities supersede provisional statements under `docs/discovery/` unless later explicit design authority accepts a revision.
+The individual concept specifications plus current Phase 008 normalization/consolidation authorities remain upstream of Phase 009 dependence/composition and downstream architecture.
 
-No Python class, Spark API, storage format, package module, database, UI element, UUID scheme, manifest, fence, dependency record, credential, report or persistence layout becomes concept authority merely because a concept needs representation later.
+No implementation resource or architecture dependency may redefine a concept boundary or dependence relation merely because it exists.
 
 ## Current next boundary
 
-**009-A — Inclusion-Dependence Semantics, Evidence Rules & Pairwise Relation Inventory**.
+**009-B — Inclusion-Dependence Graph, Roots, Cycles & Explanation Ordering**.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
