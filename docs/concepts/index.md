@@ -8,7 +8,7 @@ status: active
 
 This directory contains the canonical concept specifications accepted in Phase 001 and refined through current Phase 008 authority.
 
-Cross-concept coordination remains authoritative under [Synchronizations](../synchronizations/index.md), but final composition/synchronization closure is still Phase 009 work.
+Cross-concept coordination remains authoritative under [Synchronizations](../synchronizations/index.md), with current dependence/composition work governed by [Phase 009](../phases/009/index.md).
 
 ## Current individual-concept authority
 
@@ -48,11 +48,9 @@ missing current concept     NONE FOUND
 INDIVIDUAL CONCEPT DESIGN   COMPLETE ENOUGH FOR PHASE 009
 ```
 
-Phase 008 consolidated current authority for purpose/justification, state/history/invariants, actions/queries/transitions, operational principles/counterexamples, independence/genericity/familiarity/reuse, and catalog-perimeter completeness.
+No unresolved J1 local concept-specification defect or J2 purpose/boundary/catalog defect remained at the Phase 008 exit.
 
-No unresolved J1 local concept-specification defect or J2 purpose/boundary/catalog defect remains at the Phase 008 exit.
-
-This is not a claim that Jackson concept design is complete. Inclusion dependence, application-family structure, final composition/synchronization, mapping and final design-quality closure remain downstream.
+This is not a claim that Jackson concept design is complete. Phase 009 is now active and must derive inclusion dependence/application-family structure and close composition/synchronization against that structure.
 
 ## Core boundary results
 
@@ -91,25 +89,24 @@ The following remain intentionally outside the standalone catalog under current 
 
 ## Future rediscovery triggers
 
-The catalog is not permanently frozen. Fresh Jackson-style discovery is required before implementing materially expanded scope such as:
+The catalog is not permanently frozen. Fresh Jackson-style discovery is required before implementing materially expanded scope such as composable formal privacy/accounting, product-owned governance/release decisions, reusable request/cohort definitions, independent output lifecycle, arbitrary graph/recursive topology, or product-owned economic/resource management.
 
-- composable formal privacy/accounting capability;
-- product-owned governance/release-decision management;
-- independently reusable request/cohort definitions;
-- independent synthetic-output publication/versioning/retirement/transformation lifecycle;
-- arbitrary graph/recursive topology beyond current structural semantics;
-- product-owned economic/resource allocation/budget management.
+## Phase 009 handoff rule
+
+Phase 009 must preserve the Phase 008 individual-concept boundaries while asking a different question: which accepted concepts require which others to be included for their **application purpose** to make sense?
+
+Reference, validation, production, runtime and provenance relations do not answer that question automatically.
+
+The current fifteen synchronization IDs are starting composition evidence, not a final Phase 009 result.
 
 ## Authority rule
 
-The individual concept specifications plus the current Phase 008 normalization and consolidation authorities supersede provisional statements under `docs/discovery/` unless later explicit design authority accepts a revision.
+The individual concept specifications plus the current Phase 008 normalization/consolidation authorities supersede provisional statements under `docs/discovery/` unless later explicit design authority accepts a revision.
 
 No Python class, Spark API, storage format, package module, database, UI element, UUID scheme, manifest, fence, dependency record, credential, report or persistence layout becomes concept authority merely because a concept needs representation later.
 
 ## Current next boundary
 
-**Phase 009 — Concept Dependence, Application Family, Composition & Synchronization Closure** is next eligible.
-
-Phase 009 must be subdivided immediately before entry using the completed Phase 008 authority.
+**009-A — Inclusion-Dependence Semantics, Evidence Rules & Pairwise Relation Inventory**.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
