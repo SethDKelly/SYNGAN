@@ -40,11 +40,14 @@ accepted concepts          11
 accepted synchronizations  15
 missing current concept     NONE FOUND
 INDIVIDUAL CONCEPT DESIGN   COMPLETE ENOUGH FOR PHASE 009
+D1 dependence graph         CURRENTLY CLOSED
+D2 application family       CURRENTLY CLOSED
+D3 explanation ordering     CURRENTLY CLOSED
 ```
 
 Phase 008 found no unresolved J1 local concept-specification defect or J2 purpose/boundary/catalog defect.
 
-009-A/009-B likewise find no reason to add, remove, merge, split, or rename a concept.
+009-A/B/C likewise find no reason to add, remove, merge, split, or rename a concept.
 
 ## Core boundary results
 
@@ -62,9 +65,7 @@ Execution              != Attempt != platform job
 
 Generation owns request/Condition and candidate-to-completed logical output semantics. Relationship remains Data Meaning-owned descriptive structure. Generic Privacy remains rejected pending fresh mechanism-specific discovery if future independent state/actions arise. Use/Release Decision remains external authority.
 
-## Current inclusion-dependence result
-
-009-A classified pairwise application inclusion. 009-B now establishes the direct universal graph:
+## Current inclusion-dependence graph
 
 ```text
 Learning      -> Data Meaning
@@ -89,24 +90,58 @@ Two legitimate application-inclusion SCCs remain:
 { Evaluation, Evidence }
 ```
 
-This does **not** weaken Phase 008 independence. Independence concerns whether each concept is understandable/behaviorally coherent on its own; inclusion dependence concerns whether the current SYNGAN application family has a reason to include one without the other.
+This does **not** weaken Phase 008 independence. Independence concerns whether each concept is understandable/behaviorally coherent on its own; inclusion dependence concerns whether the current application family has a reason to include one without the other.
 
-The SCCs do not merge state/actions or authorize technical co-location.
+## Current application-family result
 
-Execution and Provenance retain non-binary application-family prerequisites rather than universal pairwise edges.
+009-C establishes that the accepted catalog composes into multiple coherent application subsets rather than one mandatory eleven-concept application.
+
+Canonical capability kernels are:
+
+```text
+L-KERNEL = { Data Meaning, Synthesis Strategy, Learning, Learned State }
+G-KERNEL = { Data Meaning, Synthesis Strategy, Generation }
+E-KERNEL = { Evaluation Criterion, Evaluation, Evidence }
+```
+
+Reusable authority-only family members also include:
+
+```text
+{ Data Meaning }
+{ Synthesis Strategy }
+{ Constraint }
+{ Evaluation Criterion }
+```
+
+Execution is valid only with at least one of Learning, Generation, or Evaluation. Provenance is valid only when there is a meaningful provenance-bearing relationship/history witness.
+
+Capability claims can require larger subsets without changing universal dependence. Examples include learned-state-assisted Generation, evaluation-gated Generation, reusable Constraint support, durable Execution, and Provenance/history capability.
+
+Topology/time-series/multi-table/text-bearing structured-data variants do not add current concepts merely because their representation differs.
 
 ## Future rediscovery triggers
 
-The catalog is not permanently frozen. Fresh Jackson-style discovery is required before implementing materially expanded scope such as composable formal privacy/accounting, product-owned governance/release decisions, reusable request/cohort definitions, independent output lifecycle, arbitrary graph/recursive topology, or product-owned economic/resource management.
+The catalog is not permanently frozen. Fresh Jackson-style discovery is required before implementing materially expanded scope such as:
+
+- composable formal privacy/accounting;
+- product-owned governance/release decisions;
+- independently reusable request/cohort definitions;
+- independent synthetic-output publication/versioning/retirement/transformation lifecycle;
+- arbitrary graph/recursive topology beyond current structural semantics;
+- product-owned economic/resource allocation/budget management.
+
+009-D must distinguish these rediscovery triggers from ordinary extension by adding existing concepts to a coherent family member.
 
 ## Authority rule
 
 The individual concept specifications plus current Phase 008 normalization/consolidation authorities remain upstream of Phase 009 dependence/composition and downstream architecture.
 
-No implementation resource or architecture dependency may redefine a concept boundary or dependence relation merely because it exists.
+No implementation resource or architecture dependency may redefine a concept boundary, dependence relation, or family member merely because it exists.
+
+A coherent application-family subset does not imply one package/module/service/deployment boundary.
 
 ## Current next boundary
 
-**009-C — Application Family, Valid Concept Subsets & Minimal Coherent Variants**.
+**009-D — Contraction, Extension, Concept Addition/Removal & Product-Scope Consequences**.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
