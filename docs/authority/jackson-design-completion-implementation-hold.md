@@ -29,7 +29,9 @@ problem / purpose / actors / outcomes
         ↓
 individual concept design                 ← Phase 008 COMPLETE
         ↓
-concept inclusion dependence / application family  ← Phase 009 ACTIVE
+concept inclusion dependence / application family  ← 009-A/B/C COMPLETE
+        ↓
+contraction / extension consequences      ← 009-D NEXT
         ↓
 composition / synchronization / integrity
         ↓
@@ -63,48 +65,51 @@ Phase 009 is active.
 ```text
 009-A  COMPLETE — inclusion-dependence semantics / pairwise inventory
 009-B  COMPLETE — canonical graph / SCCs / roots-leaves / explanation ordering
-009-C  NEXT ELIGIBLE — application family / valid subsets / minimal coherent variants
+009-C  COMPLETE — application family / valid subsets / minimal coherent variants
+009-D  NEXT ELIGIBLE — contraction / extension / add-remove consequences
 ```
 
 Current dependence status:
 
 ```text
 D1  CURRENTLY CLOSED
-D2  OPEN
+D2  CURRENTLY CLOSED
 D3  CURRENTLY CLOSED
-D4  PARTIAL
+D4  PARTIAL TO STRONG
 ```
 
-009-B establishes 9 direct universal edges from the 12 pairwise universal findings and accepts two legitimate strongly connected application-inclusion components:
+## Current application-family rule
+
+A coherent current family member is a non-empty subset that:
+
+1. is closed under the canonical universal graph;
+2. satisfies the Execution one-of prerequisite when Execution is present;
+3. supplies a meaningful provenance-bearing relationship/history witness when Provenance is present;
+4. contains all concepts required by every capability it claims;
+5. preserves accepted concept purposes/boundaries.
+
+Canonical kernels include:
 
 ```text
-{ Learning, Learned State }
-{ Evaluation, Evidence }
+L-KERNEL = { Data Meaning, Synthesis Strategy, Learning, Learned State }
+G-KERNEL = { Data Meaning, Synthesis Strategy, Generation }
+E-KERNEL = { Evaluation Criterion, Evaluation, Evidence }
 ```
 
-These cycles do not merge concept state/action ownership and do not authorize technical co-location.
-
-Execution and Provenance retain non-binary prerequisites that 009-C must combine with graph closure when deriving valid application subsets.
+This application-family model does **not** authorize product/package editions or technical decomposition.
 
 ## Architecture/executable boundary
 
 Phase 004/006/007 architecture and the retained executable scaffold remain downstream evidence.
 
-They may expose a genuine counterexample but cannot define inclusion dependence or application-family validity from:
+They may expose a genuine counterexample but cannot define dependence/application-family validity from package imports, persistence references, service/dataflow direction, runtime orchestration, deployment topology, or existing API/object nesting.
 
-- package imports;
-- persistence references;
-- service/dataflow direction;
-- runtime orchestration;
-- deployment topology;
-- existing API/object nesting.
-
-Do not restructure implementation to mirror the inclusion graph or SCCs while the full design remains incomplete.
+Do not restructure implementation to mirror the inclusion graph, SCCs, kernels, or family members while the full design remains incomplete.
 
 ## Remaining design roadmap
 
 ```text
-009-C..H  finish application-family/composition design
+009-D..H  finish contraction/composition/synchronization design
 010       concept mapping / interaction / language / experience
 011       specificity / familiarity / integrity / synergy / misfit
 012       Jackson concept-design completion decision
@@ -132,10 +137,10 @@ Implementation itself still requires later explicit Phase 015 authority.
 
 ## No executable design-by-accident
 
-Until Phase 014 passes, do not add production behavior, executable architecture restrictions merely to crystallize hypotheses, package-topology changes anticipating design, persistence schemas/migrations, runtime/model/platform/security adapters, public API implementation, reference algorithms, vertical slices, benchmarks, privacy mechanisms, or stale-test repair solely to manufacture readiness.
+Until Phase 014 passes, do not add production behavior, executable architecture restrictions merely to crystallize hypotheses, package-topology changes anticipating design, persistence schemas/migrations, runtime/model/platform/security adapters, public API implementation, reference algorithms, vertical slices, benchmarks, privacy mechanisms, product-edition packaging, or stale-test repair solely to manufacture readiness.
 
 ## Current next boundary
 
-**009-C — Application Family, Valid Concept Subsets & Minimal Coherent Variants**.
+**009-D — Contraction, Extension, Concept Addition/Removal & Product-Scope Consequences**.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
