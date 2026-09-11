@@ -18,6 +18,7 @@ Current authority includes:
 - [`Concept Dependence & Application Family`](docs/dependence/index.md)
 - [`009-A Inclusion-Dependence Pairwise Inventory`](docs/dependence/inclusion-dependence-pairwise-inventory.md)
 - [`009-B Inclusion-Dependence Graph & Ordering`](docs/dependence/inclusion-dependence-graph-ordering.md)
+- [`009-C Application Family & Valid Subsets`](docs/dependence/application-family-valid-subsets.md)
 - [`Phase 009`](docs/phases/009/index.md)
 
 ## Status
@@ -30,34 +31,37 @@ Phase 008                  COMPLETE
 Phase 009                  ACTIVE
 009-A                      COMPLETE
 009-B                      COMPLETE
-009-C                      NEXT ELIGIBLE
+009-C                      COMPLETE
+009-D                      NEXT ELIGIBLE
 D1                         CURRENTLY CLOSED
-D2                         OPEN
+D2                         CURRENTLY CLOSED
 D3                         CURRENTLY CLOSED
-D4                         PARTIAL
+D4                         PARTIAL TO STRONG
 Jackson design completion  IN PROGRESS
 implementation readiness   NOT READY
 implementation start       NOT STARTED
 implementation next        NOT YET
 ```
 
-009-B establishes the current canonical application inclusion-dependence graph. The 12 universal pairwise findings reduce to 9 direct edges and 3 transitive findings.
+009-C establishes that SYNGAN is a **family of coherent concept subsets**, not one mandatory eleven-concept application.
 
-Two legitimate strongly connected inclusion components remain:
+Canonical capability minima include:
 
 ```text
-Learning   <-> Learned State
-Evaluation <-> Evidence
+L-KERNEL = { Data Meaning, Synthesis Strategy, Learning, Learned State }
+G-KERNEL = { Data Meaning, Synthesis Strategy, Generation }
+E-KERNEL = { Evaluation Criterion, Evaluation, Evidence }
 ```
 
-These cycles do not merge the concepts; they express application-family co-inclusion while preserving distinct activity/result purposes and ownership.
+Reusable Data Meaning, Synthesis Strategy, Constraint, and Evaluation Criterion may also form coherent authority-only contractions.
 
-The condensed graph is acyclic. Execution and Provenance retain non-binary prerequisites that must be handled by 009-C rather than flattened into false unconditional edges.
+Execution remains valid only when at least one supported domain activity is included. Provenance remains valid only when there is an actual provenance-bearing relationship/history witness. Capability claims such as learned-state-assisted Generation or evaluation-gated Generation impose additional inclusion requirements without becoming universal pairwise graph edges.
+
+Topology breadth and text-bearing structured data remain expressible through the existing concept family; no Relationship, Text, Tokenizer, or Language Model concept is restored.
 
 ## Remaining design roadmap
 
 ```text
-009-C  application family / valid subsets / minimal coherent variants
 009-D  contraction / extension / add-remove consequences
 009-E  synchronization inventory replay
 009-F  synchronization ownership / hidden coordinator
@@ -76,6 +80,6 @@ Only a positive Phase 014 may change implementation to **READY / NOT STARTED / N
 
 ## Current next boundary
 
-**009-C — Application Family, Valid Concept Subsets & Minimal Coherent Variants**.
+**009-D — Contraction, Extension, Concept Addition/Removal & Product-Scope Consequences**.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
