@@ -20,7 +20,9 @@ Phase 008                    COMPLETE
 Phase 009                    COMPLETE
 D1-D4                        CURRENTLY CLOSED
 E1-E5                        CURRENTLY CLOSED
-Phase 010                    NEXT ELIGIBLE
+Phase 010                    ACTIVE
+Phase 010 decomposition      COMPLETE
+010-A                        NEXT ELIGIBLE
 architecture corpus          RETAINED AS DOWNSTREAM DESIGN EVIDENCE
 architecture reconciliation  PLANNED FOR PHASE 013
 implementation readiness     NOT READY
@@ -33,39 +35,30 @@ implementation next          NOT YET
 - [Phase 009 Consolidation](../authority/phase-009-dependence-composition-consolidation.md)
 - [Concept Dependence & Application Family](../dependence/index.md)
 - [Synchronization Authority](../synchronizations/index.md)
-
-Phase 009 is now complete enough for Phase 010 concept mapping.
+- [Concept Mapping Authority](../mapping/index.md)
+- [Phase 010 Entry & Decomposition](../phases/010/010-entry-decomposition.md)
 
 ## Completed Phase 009 is not architecture authority
 
-The current design includes:
+The current design includes application-family kernels/SCCs, thirteen active synchronization rules, conceptual composition planes, occurrence-scoped exact bindings, staged evidence-gated Generation and positive composition synergies.
 
-- application-family kernels and SCCs;
-- 13 active synchronization rules;
-- five conceptual composition planes;
-- occurrence-scoped exact bindings;
-- staged evidence-gated Generation;
-- positive composition synergies.
+Architecture MUST NOT translate those directly into services, packages, schemas, aggregates, transactions, events, APIs, deployment units, workflow edges or observer/subscription infrastructure.
 
-Architecture MUST NOT translate those directly into:
+## Active Phase 010 is also upstream design
 
-- services/processes;
-- packages/modules;
-- databases/schemas;
-- aggregates/transactions/sagas;
-- event/message topics;
-- APIs/call direction;
-- deployment units;
-- workflow/scheduler edges;
-- observer/subscription infrastructure.
+Phase 010 maps concept actions/state/queries into actor-visible and programmatic semantics.
 
-The 009-G/009-H non-propagation rule is especially important: exact historical binding does not require live runtime subscription to future changes of the referenced concept.
+Candidate surface families may include SDK/API automation, notebooks, CLI/operations, reports/history, graphical UI and operator/admin interaction. Those are mapping lenses, not selected architecture components.
 
-## Phase 010 remains upstream of architecture reconciliation
+Architecture may supply feasibility/counterexample evidence, but it may not preempt mapping by turning retained Phase 003/004/006/007 classes, endpoints, resources, commands, pages or runtime structures into mapping authority.
 
-Phase 010 will define concept-to-human/programmatic mapping and may expose additional representation pressure.
+In particular:
 
-Architecture may supply feasibility/counterexample evidence, but it may not preempt Phase 010 by turning retained Phase 003/004/006/007 interfaces or runtime structures into mapping authority.
+- one mapped concept action does not imply one API method/endpoint/button;
+- one inspection obligation does not imply one schema/view/table;
+- one application-family variant does not imply a package/SKU/deployment profile;
+- human/programmatic parity does not imply identical physical interfaces;
+- historical exact bindings do not imply live subscription infrastructure.
 
 ## Phase 007 architecture status
 
@@ -89,6 +82,6 @@ IMPLEMENTATION NEXT        NOT YET
 
 ## Current next boundary
 
-**Phase 010 — Concept Mapping, Interaction, Linguistic & Experience Alignment** is next eligible.
+**010-A — Mapping Authority, Coverage Model, Actor/Surface Taxonomy & Evidence Baseline** is next eligible.
 
-Decompose Phase 010 immediately before entry. Architecture reconciliation remains deferred to Phase 013.
+Architecture reconciliation remains deferred to Phase 013.
