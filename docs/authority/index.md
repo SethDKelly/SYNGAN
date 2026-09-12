@@ -26,7 +26,8 @@ These documents define how SYNGAN design knowledge is created, interpreted, chan
 - [Concept Dependence & Application Family](../dependence/index.md)
 - [Synchronization Authority](../synchronizations/index.md)
 - [Phase 009 Consolidation](phase-009-dependence-composition-consolidation.md)
-- Phase 010 mapping authority — **next to be created after decomposition/entry**
+- [Concept Mapping Authority](../mapping/index.md)
+- [Phase 010](../phases/010/index.md)
 
 ## Current posture
 
@@ -37,22 +38,25 @@ historical synchronization IDs       15
 active synchronizations              13
 Phase 008                            COMPLETE
 Phase 009                            COMPLETE
-009-A..009-H                         COMPLETE
 D1-D4                                CURRENTLY CLOSED
 E1-E5                                CURRENTLY CLOSED
-Phase 010                            NEXT ELIGIBLE
-Phase 010 decomposition              NOT YET PERFORMED
+Phase 010                            ACTIVE
+Phase 010 decomposition              COMPLETE
+010-A                                NEXT ELIGIBLE
+F1                                   PARTIAL
+F2                                   PARTIAL
+F3                                   PARTIAL TO STRONG
+F4                                   PARTIAL
+F5                                   STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
 Jackson design completion            IN PROGRESS
 implementation readiness             NOT READY
 implementation start                 NOT STARTED
 implementation next                  NOT YET
 ```
 
-## Phase 009 consolidated result
+## Completed Phase 009 result
 
 Phase 009 closes the current dependence/application-family/composition layer without changing the eleven-concept catalog.
-
-Canonical kernels remain:
 
 ```text
 L-KERNEL = { Data Meaning, Synthesis Strategy, Learning, Learned State }
@@ -71,9 +75,22 @@ new synchronization                   NONE
 SYNC-16                               NOT JUSTIFIED
 ```
 
-Current composition rules include singular state ownership, relation-local/occurrence-local activation, occurrence-scoped historical bindings rather than permanent reactive subscriptions, positive explicit synergies, and no combined-activation authority cycle.
+Singular ownership, relation/occurrence-local activation and occurrence-scoped historical bindings remain upstream constraints on mapping.
 
-## Phase 010 handoff boundary
+## Active Phase 010 mapping boundary
+
+Phase 010 is now decomposed into a strict mapping sequence:
+
+```text
+010-A  mapping authority / coverage / actor-surface taxonomy / evidence baseline
+010-B  action -> actor intent / interaction mapping
+010-C  state/query/history -> inspection mapping
+010-D  linguistic / vocabulary / typed status / disclosure semantics
+010-E  physical interaction across candidate surface families
+010-F  application-family workflow composition / progressive disclosure
+010-G  human-programmatic parity / degraded-recovery-scale mapping misfit
+010-H  mapping consolidation / Phase 011 handoff
+```
 
 Phase 010 must preserve:
 
@@ -87,20 +104,21 @@ Phase 010 must preserve:
 - Provenance relationship authority versus source-fact authority;
 - exact historical binding inspectability;
 - occurrence-scoped/non-propagating synchronization;
+- typed disclosure/history semantics;
 - human/programmatic semantic parity.
 
-Phase 010 may expose a genuine upstream misfit, but must reopen the smallest affected authority rather than simplifying away conceptual distinctions.
+Phase 003/006 experience material remains supporting evidence and must be replayed against current Phase 008/009 authority.
 
 ## Architecture boundary
 
 The [Phase 007 Consolidated Architecture Contract](../architecture/phase-007-consolidated-architecture-contract.md) remains downstream evidence pending Phase 013 reconciliation.
 
-Phase 009 completion does not prescribe imports, events, transactions, queues, schemas, services, packages, deployment topology, runtime orchestration, or observer/subscription mechanisms.
+Concept mapping may identify interaction obligations and candidate surface families but does not prescribe imports, concrete APIs, widgets, events, transactions, queues, schemas, services, packages, deployment topology, runtime orchestration, or observer/subscription mechanisms.
 
 ## Remaining design sequence
 
 ```text
-010    concept mapping / interaction / language / experience
+010    concept mapping / interaction / language / experience — ACTIVE
 011    final concept-design quality / misfit
 012    Jackson concept-design completion decision
 013    representation / architecture reconciliation
@@ -113,6 +131,6 @@ Only Phase 014 may set **READY / NOT STARTED / NEXT** after the whole design pas
 
 ## Current next boundary
 
-**Phase 010 — Concept Mapping, Interaction, Linguistic & Experience Alignment** is next eligible.
+**010-A — Mapping Authority, Coverage Model, Actor/Surface Taxonomy & Evidence Baseline** is next eligible.
 
-Decompose Phase 010 immediately before entry. Implementation remains **NOT READY / NOT STARTED / NOT YET**.
+Implementation remains **NOT READY / NOT STARTED / NOT YET**.
