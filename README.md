@@ -16,65 +16,66 @@ Current authority includes:
 - [`Accepted Concept Catalog`](docs/concepts/index.md)
 - [`Concept Dependence & Application Family`](docs/dependence/index.md)
 - [`Current Synchronization Authority`](docs/synchronizations/index.md)
-- [`009-E Synchronization Inventory Revalidation`](docs/synchronizations/application-family-revalidation.md)
-- [`009-F Trigger & Ownership Normalization`](docs/synchronizations/trigger-ownership-normalization.md)
+- [`009-F Trigger / Ownership Normalization`](docs/synchronizations/trigger-ownership-normalization.md)
+- [`009-G Composition Economy / Synergy / Integrity`](docs/synchronizations/composition-economy-synergy-integrity.md)
 - [`Phase 009`](docs/phases/009/index.md)
 
 ## Status
 
 ```text
-accepted concepts                       11
-historical synchronization IDs          15
-active synchronizations                 13
-required-relational                      6
-capability/occurrence conditional        7
-current desired outcomes                16
-Phase 008                               COMPLETE
-Phase 009                               ACTIVE
-009-A                                   COMPLETE
-009-B                                   COMPLETE
-009-C                                   COMPLETE
-009-D                                   COMPLETE
-009-E                                   COMPLETE
-009-F                                   COMPLETE
-009-G                                   NEXT ELIGIBLE
-D1-D4                                   CURRENTLY CLOSED
-E1                                      CURRENTLY CLOSED
-E2                                      CURRENTLY CLOSED
-E3                                      PARTIAL TO STRONG
-E4                                      PARTIAL
-E5                                      STRONG EVIDENCE / REVALIDATION REQUIRED
-Jackson design completion               IN PROGRESS
-implementation readiness                NOT READY
-implementation start                    NOT STARTED
-implementation next                     NOT YET
+accepted concepts                    11
+historical synchronization IDs       15
+active synchronizations              13
+current desired outcomes             16
+Phase 008                            COMPLETE
+Phase 009                            ACTIVE
+009-A                                COMPLETE
+009-B                                COMPLETE
+009-C                                COMPLETE
+009-D                                COMPLETE
+009-E                                COMPLETE
+009-F                                COMPLETE
+009-G                                COMPLETE
+009-H                                NEXT ELIGIBLE
+D1-D4                                CURRENTLY CLOSED
+E1-E5                                CURRENTLY CLOSED
+Jackson design completion            IN PROGRESS
+implementation readiness             NOT READY
+implementation start                 NOT STARTED
+implementation next                  NOT YET
 ```
 
-009-F now establishes explicit trigger/precondition/postcondition/state-owner contracts for all thirteen active synchronization rules.
-
-Key ownership results:
+009-G closes the current Phase 009 composition-economy, synergy and combined-integrity obligations without changing the synchronization inventory.
 
 ```text
-consumer binding / contextual assessment -> consuming activity
-Learned State producer identity            -> Learned State
-Evidence producer identity                 -> Evidence
-Execution parent binding / Attempts        -> Execution
-Provenance typed assertions                -> Provenance
-synchronization-owned state                -> NONE
+active required-relational            6
+active capability/occurrence          7
+retired concept-local                 1  SYNC-08
+reclassified cross-cutting contract   1  SYNC-15
+new synchronization                   0
+SYNC-16                               NOT JUSTIFIED
 ```
 
-`SYNC-06` is narrowed to conditional **Generation / Learned State reuse compatibility and exact basis binding**. Direct Generation does not activate it. The active count remains thirteen.
+The thirteen active rules remain economical because they are relation-local and occurrence-local rather than universal across the full product. Authority-only variants need no cross-concept synchronization; direct Generation requires only Data Meaning and Strategy coordination; learned-state reuse, Evidence gating, Execution, Constraint and Provenance add only their own semantic relations.
 
-`SYNC-08` remains retired as Generation-local output-result behavior. `SYNC-15` remains reclassified under the cross-cutting Reproducibility Contract. No `SYNC-16` is justified.
+009-G also makes explicit that synchronization is **not a permanent reactive subscription**. Later Meaning/Strategy/Constraint/Learned-State/Criterion/Evidence/Provenance changes do not silently rewrite exact historical bindings or completed activities.
 
-The hidden-coordinator audit finds no need for a generic Compatibility, Workflow/Run, Promotion, Quality/Approval, Reproducibility, or Composition state owner.
+Positive current composition synergies include reusable `Learning -> Learned State -> Generation`, evidence-gated Generation, reusable Constraint validation, shared Execution operational lifecycle, and exact bindings plus Provenance for end-to-end explanation.
 
-These are conceptual synchronization contracts, not event/service/transaction/package topology.
+Evaluation-gated Generation is staged feedback rather than circular authority:
+
+```text
+Generation candidate
+  -> Evaluation
+  -> Evidence
+  -> Generation-owned completion decision
+```
+
+The synchronization model remains conceptual authority only. It does not prescribe events, transactions, services, packages, queues, schemas or runtime orchestration.
 
 ## Remaining design roadmap
 
 ```text
-009-G  composition economy / coupling / synergy / integrity closure
 009-H  Phase 009 consolidation / Phase 010 handoff
 010    Concept Mapping, Interaction, Linguistic & Experience Alignment
 011    Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Design Validation
@@ -89,6 +90,6 @@ Only a positive Phase 014 may change implementation to **READY / NOT STARTED / N
 
 ## Current next boundary
 
-**009-G — Composition Economy, Coupling, Synergy & Integrity Closure**.
+**009-H — Phase 009 Consolidation, Dependence/Composition Completion Decision & Phase 010 Handoff**.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
