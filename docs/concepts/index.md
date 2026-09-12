@@ -8,7 +8,7 @@ status: active
 
 This directory contains the canonical concept specifications accepted in Phase 001 and normalized through Phase 008.
 
-Cross-concept dependence/composition is now consolidated by [Phase 009 Dependence, Application Family & Composition Consolidation](../authority/phase-009-dependence-composition-consolidation.md).
+Cross-concept dependence/composition is consolidated by [Phase 009 Dependence, Application Family & Composition Consolidation](../authority/phase-009-dependence-composition-consolidation.md). Current mapping work is governed by [Concept Mapping Authority](../mapping/index.md).
 
 ## Current individual-concept authority
 
@@ -44,12 +44,14 @@ Phase 008                            COMPLETE
 Phase 009                            COMPLETE
 D1-D4                                CURRENTLY CLOSED
 E1-E5                                CURRENTLY CLOSED
-Phase 010                            NEXT ELIGIBLE
+Phase 010                            ACTIVE
+Phase 010 decomposition              COMPLETE
+010-A                                NEXT ELIGIBLE
 ```
 
 Phase 009 found no reason to add, remove, merge, split, or rename a concept.
 
-## Core boundaries handed to Phase 010
+## Core boundaries mapping must preserve
 
 ```text
 Data Meaning          != Constraint
@@ -73,7 +75,7 @@ G-KERNEL = { Data Meaning, Synthesis Strategy, Generation }
 E-KERNEL = { Evaluation Criterion, Evaluation, Evidence }
 ```
 
-Direct Generation remains valid without Learning/Learned State. Evaluation/Evidence are not universal prerequisites for Generation. Constraint, Execution, and Provenance remain capability-conditional.
+Direct Generation remains valid without Learning/Learned State. Evaluation/Evidence are not universal prerequisites for Generation. Constraint, Execution and Provenance remain capability-conditional.
 
 ## Synchronization result
 
@@ -90,11 +92,13 @@ SYNC-16                               NOT JUSTIFIED
 
 No hidden Compatibility, Workflow/Run, Artifact/Promotion, Approval/Quality, Reproducibility, or Composition concept is required.
 
-## Phase 010 mapping implications
+## Active Phase 010 mapping implications
 
-Phase 010 must map accepted concepts without collapsing their distinct purposes merely for interface convenience.
+Phase 010 must map accepted concepts without collapsing their distinct purposes for interface convenience.
 
-In particular it must preserve:
+Current sequence begins with 010-A coverage/actor/surface authority, then maps actions, state/query inspection, language, physical interactions, application-family workflows and semantic parity.
+
+In particular mapping must preserve:
 
 - Learning/Generation/Evaluation distinction;
 - Learned State/Generation output/Evidence distinction;
@@ -104,9 +108,11 @@ In particular it must preserve:
 - Evidence observation versus approval/release authority;
 - Provenance relationships versus source facts;
 - application-family optionality;
-- exact historical bindings and current-versus-historical status.
+- exact historical bindings and current-versus-historical status;
+- occurrence-scoped synchronization;
+- typed disclosure/history/uncertainty semantics.
 
-If a concept cannot be mapped intelligibly without violating its purpose/boundaries, Phase 010 should record a genuine upstream misfit rather than erase the distinction.
+If a concept cannot be mapped intelligibly without violating purpose/boundaries, Phase 010 must record a genuine upstream misfit rather than erase the distinction.
 
 ## Future rediscovery triggers
 
@@ -123,12 +129,12 @@ Implementation objects, IDs, tables, services, manifests or status enums do not 
 
 ## Authority rule
 
-No implementation resource, architecture dependency, or future mapping convenience may redefine concept boundaries merely because it exists.
+No implementation resource, architecture dependency, or mapping convenience may redefine concept boundaries merely because it exists.
 
 Similarity of implementation mechanics does not justify concept merger.
 
 ## Current next boundary
 
-**Phase 010 — Concept Mapping, Interaction, Linguistic & Experience Alignment** is next eligible.
+**010-A — Mapping Authority, Coverage Model, Actor/Surface Taxonomy & Evidence Baseline** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
