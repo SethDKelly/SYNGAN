@@ -15,68 +15,52 @@ Current authority includes:
 - [`Jackson Methodology Completion Matrix`](docs/authority/jackson-methodology-completion-matrix.md)
 - [`Accepted Concept Catalog`](docs/concepts/index.md)
 - [`Concept Dependence & Application Family`](docs/dependence/index.md)
-- [`Current Synchronization Authority`](docs/synchronizations/index.md)
-- [`009-F Trigger / Ownership Normalization`](docs/synchronizations/trigger-ownership-normalization.md)
-- [`009-G Composition Economy / Synergy / Integrity`](docs/synchronizations/composition-economy-synergy-integrity.md)
+- [`Synchronization Authority`](docs/synchronizations/index.md)
+- [`Phase 009 Consolidation`](docs/authority/phase-009-dependence-composition-consolidation.md)
 - [`Phase 009`](docs/phases/009/index.md)
 
 ## Status
 
 ```text
 accepted concepts                    11
+current desired outcomes             16
 historical synchronization IDs       15
 active synchronizations              13
-current desired outcomes             16
 Phase 008                            COMPLETE
-Phase 009                            ACTIVE
-009-A                                COMPLETE
-009-B                                COMPLETE
-009-C                                COMPLETE
-009-D                                COMPLETE
-009-E                                COMPLETE
-009-F                                COMPLETE
-009-G                                COMPLETE
-009-H                                NEXT ELIGIBLE
+Phase 009                            COMPLETE
+009-A..009-H                         COMPLETE
 D1-D4                                CURRENTLY CLOSED
 E1-E5                                CURRENTLY CLOSED
+Phase 010                            NEXT ELIGIBLE
+Phase 010 decomposition              NOT YET PERFORMED
 Jackson design completion            IN PROGRESS
 implementation readiness             NOT READY
 implementation start                 NOT STARTED
 implementation next                  NOT YET
 ```
 
-009-G closes the current Phase 009 composition-economy, synergy and combined-integrity obligations without changing the synchronization inventory.
+Phase 009 now closes the current dependence/application-family/composition layer and hands one consolidated authority forward to Phase 010.
+
+Current synchronization inventory remains:
 
 ```text
-active required-relational            6
-active capability/occurrence          7
-retired concept-local                 1  SYNC-08
-reclassified cross-cutting contract   1  SYNC-15
-new synchronization                   0
+required-relational                    6
+capability/occurrence conditional      7
+retired concept-local                 SYNC-08
+reclassified cross-cutting contract   SYNC-15
+new synchronization                   NONE
 SYNC-16                               NOT JUSTIFIED
 ```
 
-The thirteen active rules remain economical because they are relation-local and occurrence-local rather than universal across the full product. Authority-only variants need no cross-concept synchronization; direct Generation requires only Data Meaning and Strategy coordination; learned-state reuse, Evidence gating, Execution, Constraint and Provenance add only their own semantic relations.
+The current design preserves multiple coherent application variants rather than requiring one monolithic full-suite workflow. Synchronization is relation/occurrence-local, owns no canonical state, and exact historical bindings are not permanent reactive subscriptions.
 
-009-G also makes explicit that synchronization is **not a permanent reactive subscription**. Later Meaning/Strategy/Constraint/Learned-State/Criterion/Evidence/Provenance changes do not silently rewrite exact historical bindings or completed activities.
+Phase 010 must map the current concepts into human/programmatic interaction and language without collapsing distinctions such as Learning vs Generation vs Evaluation, semantic vs operational completion, Evidence vs approval, or Provenance vs source-fact authority.
 
-Positive current composition synergies include reusable `Learning -> Learned State -> Generation`, evidence-gated Generation, reusable Constraint validation, shared Execution operational lifecycle, and exact bindings plus Provenance for end-to-end explanation.
-
-Evaluation-gated Generation is staged feedback rather than circular authority:
-
-```text
-Generation candidate
-  -> Evaluation
-  -> Evidence
-  -> Generation-owned completion decision
-```
-
-The synchronization model remains conceptual authority only. It does not prescribe events, transactions, services, packages, queues, schemas or runtime orchestration.
+The completed Phase 009 result remains conceptual design authority only. It does not prescribe events, transactions, services, packages, queues, schemas, APIs, runtime orchestration, or observer/subscription infrastructure.
 
 ## Remaining design roadmap
 
 ```text
-009-H  Phase 009 consolidation / Phase 010 handoff
 010    Concept Mapping, Interaction, Linguistic & Experience Alignment
 011    Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Design Validation
 012    Jackson Concept-Design Consolidation & Completion Decision
@@ -90,6 +74,6 @@ Only a positive Phase 014 may change implementation to **READY / NOT STARTED / N
 
 ## Current next boundary
 
-**009-H — Phase 009 Consolidation, Dependence/Composition Completion Decision & Phase 010 Handoff**.
+**Phase 010 — Concept Mapping, Interaction, Linguistic & Experience Alignment** is next eligible.
 
-Implementation remains **NOT READY / NOT STARTED / NOT YET**.
+Per roadmap discipline, Phase 010 should be decomposed immediately before entry.
