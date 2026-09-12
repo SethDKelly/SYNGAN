@@ -10,7 +10,7 @@ status: active
 
 Maintain the correct design-to-implementation boundary while SYNGAN completes the full Daniel Jackson-style design program.
 
-This authority supersedes historical implementation-reentry conclusions while retaining prior architecture as downstream evidence.
+This authority supersedes the historical 007-K implementation-reentry conclusion while retaining Phase 007 architecture as downstream evidence.
 
 ## Current implementation status
 
@@ -37,11 +37,11 @@ contraction / extension consequences      ← 009-D COMPLETE
         ↓
 explicit synchronization inventory        ← 009-E COMPLETE
         ↓
-synchronization trigger / ownership       ← 009-F COMPLETE
+synchronization ownership                 ← 009-F COMPLETE
         ↓
-composition economy / synergy / integrity ← 009-G NEXT
+composition economy / synergy / integrity ← 009-G COMPLETE
         ↓
-Phase 009 consolidation
+Phase 009 consolidation                   ← 009-H NEXT
         ↓
 concept mapping / actor-visible experience
         ↓
@@ -63,69 +63,63 @@ implementation MAY become READY / NOT STARTED / NEXT
 009-B  COMPLETE
 009-C  COMPLETE
 009-D  COMPLETE
-009-E  COMPLETE — synchronization inventory replay
-009-F  COMPLETE — trigger / pre-post / ownership / hidden coordinator
-009-G  NEXT ELIGIBLE — economy / coupling / synergy / integrity
+009-E  COMPLETE
+009-F  COMPLETE
+009-G  COMPLETE
+009-H  NEXT ELIGIBLE — consolidation / Phase 010 handoff
 ```
 
 Current methodology status:
 
 ```text
 D1-D4  CURRENTLY CLOSED
-E1     CURRENTLY CLOSED
-E2     CURRENTLY CLOSED
-E3     PARTIAL TO STRONG
-E4     PARTIAL
-E5     STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
+E1-E5  CURRENTLY CLOSED
 ```
 
-## 009-F composition boundary
+Phase 009 itself is not complete until 009-H performs the consolidated exit decision.
 
-Current synchronization inventory:
+## Current synchronization/composition boundary
 
 ```text
-historical IDs                         15
-active synchronizations                13
-required-relational                     6
-capability/occurrence conditional       7
-SYNC-08                                 retired
-SYNC-15                                 reclassified
-SYNC-16                                 not justified
+historical synchronization IDs       15
+active synchronizations              13
+retired concept-local                SYNC-08
+reclassified cross-cutting contract  SYNC-15
+new synchronization                  NONE
+SYNC-16                              NOT JUSTIFIED
 ```
 
-009-F additionally establishes:
+009-F/G establish that:
 
-```text
-consumer exact bindings/assessments -> consuming activity
-producer identity                    -> Learned State / Evidence
-operational parent + Attempt state   -> Execution
-typed relationship assertions       -> Provenance
-synchronization-owned state         -> NONE
-```
-
-`SYNC-06` is now conditional Generation/Learned State reuse coordination; direct Generation does not activate it.
-
-No generic Compatibility, Workflow/Run, Promotion, Quality/Approval, Reproducibility, or Composition coordinator is current concept authority.
+- synchronization owns no state;
+- optional relations activate only when their capability/occurrence exists;
+- exact historical bindings are occurrence-scoped and do not create permanent reactive subscriptions;
+- direct Generation remains valid without Learning/Learned State or Evaluation/Evidence;
+- Execution cannot establish domain semantic completion;
+- Evidence cannot establish Generation completion or external approval;
+- Provenance cannot establish upstream source facts;
+- evaluation-gated Generation is staged candidate → Evaluation → Evidence → Generation completion reasoning, not circular authority;
+- no generic coordinator concept is required.
 
 ## Architecture/executable boundary
 
-Phase 004/006/007 architecture and retained executable scaffold remain downstream evidence.
+Phase 004/006/007 architecture and the retained executable scaffold remain downstream evidence.
 
-They may expose a genuine counterexample but cannot define synchronization triggers or state ownership from package imports, persistence references, event topology, transaction ordering, service/dataflow direction, runtime orchestration, or deployment topology.
+They may expose a genuine counterexample but cannot define synchronization/composition authority from package imports, persistence references, service/dataflow direction, event topology, transaction ordering, runtime orchestration, deployment topology, or existing API/object nesting.
 
-Do not implement the 009-F contracts as events, transactions, queues, sagas, services, workflow-engine edges, database foreign keys, package dependencies, or distributed locks merely because those mechanisms could realize them.
+Do not restructure implementation to mirror concepts, synchronization IDs, composition planes, application-family kernels, or synergy paths while the full design remains incomplete.
 
 ## Remaining design roadmap
 
 ```text
-009-G/H  finish composition closure / consolidation
-010      concept mapping / interaction / language / experience
-011      specificity / familiarity / integrity / synergy / misfit
-012      Jackson concept-design completion decision
-013      representation / architecture reconciliation
-014      whole-design completion / implementation-readiness decision
+009-H     Phase 009 consolidation / Phase 010 handoff
+010       concept mapping / interaction / language / experience
+011       specificity / familiarity / integrity / synergy / misfit
+012       Jackson concept-design completion decision
+013       representation / architecture reconciliation
+014       whole-design completion / implementation-readiness decision
 ---
-015      implementation authority / controlled delivery — FUTURE ONLY
+015       implementation authority / controlled delivery — FUTURE ONLY
 ```
 
 ## Readiness transitions
@@ -134,12 +128,22 @@ Through Phases 009-013 implementation remains **NOT READY / NOT STARTED / NOT YE
 
 Even a positive Phase 012 does not make implementation ready. Phase 013 must reconcile architecture. Only Phase 014 may make the final whole-design readiness decision.
 
+A positive Phase 014 may set only:
+
+```text
+IMPLEMENTATION READINESS   READY
+IMPLEMENTATION START       NOT STARTED
+IMPLEMENTATION NEXT        NEXT
+```
+
+Implementation itself still requires later explicit Phase 015 authority.
+
 ## No executable design-by-accident
 
-Until Phase 014 passes, do not add production behavior, package-topology changes anticipating synchronization design, persistence schemas/migrations, runtime/model/platform/security adapters, public API implementation, event/service decomposition, workflow engines, reference algorithms, vertical slices, benchmarks, privacy mechanisms, product-edition packaging, or stale-test repair solely to manufacture readiness.
+Until Phase 014 passes, do not add production behavior, executable architecture restrictions merely to crystallize hypotheses, package-topology changes anticipating design, persistence schemas/migrations, runtime/model/platform/security adapters, public API implementation, reference algorithms, vertical slices, benchmarks, privacy mechanisms, product-edition packaging, event/service decomposition, synchronization transactions, or stale-test repair solely to manufacture readiness.
 
 ## Current next boundary
 
-**009-G — Composition Economy, Coupling, Synergy & Integrity Closure**.
+**009-H — Phase 009 Consolidation, Dependence/Composition Completion Decision & Phase 010 Handoff**.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
