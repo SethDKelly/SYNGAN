@@ -12,9 +12,10 @@ Concept specifications own purpose, state, actions, lifecycle and invariants. Sy
 
 ## Current authority
 
-- [Synchronization Trigger, Preconditions/Postconditions, State Ownership & Hidden-Coordinator Audit](trigger-ownership-normalization.md) — **current Phase 009-F detailed synchronization authority**.
-- [Synchronization Inventory Revalidation Across the Application Family](application-family-revalidation.md) — Phase 009-E inventory/scope authority, superseded by 009-F where `SYNC-06` classification/scope is refined.
-- [Core Synchronizations](core-synchronizations.md) — historical detailed SYNC-01 through SYNC-15 source evidence; current membership/scope/ownership follows 009-E/F authority.
+- [Composition Economy, Coupling, Synergy & Integrity Closure](composition-economy-synergy-integrity.md) — **current Phase 009-G whole-composition authority**.
+- [Synchronization Trigger, Preconditions/Postconditions, State Ownership & Hidden-Coordinator Audit](trigger-ownership-normalization.md) — Phase 009-F detailed trigger/ownership authority.
+- [Synchronization Inventory Revalidation Across the Application Family](application-family-revalidation.md) — Phase 009-E inventory/scope authority, superseded where 009-F/G refine scope/classification.
+- [Core Synchronizations](core-synchronizations.md) — historical SYNC-01 through SYNC-15 source evidence; current membership/scope/ownership follows 009-E/F/G.
 
 ## Current synchronization inventory
 
@@ -55,186 +56,147 @@ SYNC-13  Generation / Evidence evidence-gated completion handoff
 SYNC-14  Provenance recording at material transitions
 ```
 
-### 009-F refinement of SYNC-06
-
-Detailed ownership replay found that the historical broader `Generation commitment and compatibility` rule overlapped existing coordination:
-
-```text
-Data Meaning  -> SYNC-01
-Strategy      -> SYNC-02
-Constraint    -> SYNC-03 when applicable
-```
-
-The unique accepted-concept relation remaining under `SYNC-06` is Generation's optional Learned State reuse.
-
-Therefore direct Generation does **not** activate `SYNC-06`; learned-state-assisted Generation does.
-
-The active set remains thirteen.
+`SYNC-06` remains the 009-F-narrowed Generation/Learned State relation; direct Generation does not activate it.
 
 ## Canonical ownership rules
 
-### Consumer-owned bindings and assessments
-
-Learning, Generation and Evaluation own:
-
-- exact reusable-authority/result references they commit to use;
-- contextual compatibility/applicability/sufficiency decisions controlling their own lifecycle.
-
-Referenced concepts retain intrinsic content/status and are not mutated by selection.
-
-### Result-owned producer identity
-
 ```text
-Learned State owns producing Learning identity
-Evidence owns producing Evaluation identity
+consumer exact bindings + contextual assessments
+  -> Learning / Generation / Evaluation
+
+producing Learning identity
+  -> Learned State
+
+producing Evaluation identity
+  -> Evidence
+
+Execution parent binding + Attempts/retry/recovery
+  -> Execution
+
+Provenance typed relationship assertions
+  -> Provenance
+
+synchronization-owned canonical state
+  -> NONE
 ```
 
-Producer concepts own semantic completion; reverse result lookup may be derived rather than stored as a second authority.
+## Five composition planes
 
-### Execution-owned operational relation
-
-Execution owns:
-
-- exact parent Learning/Generation/Evaluation identity;
-- logical operational realization identity;
-- Attempts;
-- retry/resume/recovery/cancellation/indeterminate operational state.
-
-Parent activities retain semantic lifecycle and do not duplicate Execution state.
-
-### Provenance-owned relationship assertions
-
-Provenance owns typed historical relationship assertions only. It cannot establish or mutate the facts it references.
-
-### Synchronization-owned state
+009-G shows that the thirteen rules form five mostly orthogonal coordination planes rather than one all-to-all synchronization graph:
 
 ```text
-NONE
+A  reusable-authority binding / contextual assessment
+   SYNC-01, SYNC-02, SYNC-03, SYNC-09, SYNC-10
+
+B  activity/result establishment
+   SYNC-05, SYNC-12
+
+C  reuse / completion gating
+   SYNC-06, SYNC-13
+
+D  operational realization
+   SYNC-04, SYNC-07, SYNC-11
+
+E  historical relationship explanation
+   SYNC-14
 ```
 
-No canonical `Synchronization.status`, `Composition.status`, pairwise compatibility cache, generic promotion state or hidden coordination state exists.
+These planes are conceptual, not implementation modules/services.
 
-## Normalized trigger patterns
+## Economy result
 
-### Binding / contextual validation
+009-G finds no further current synchronization to add, remove or merge.
+
+Important economy findings:
+
+- authority-only family members require no cross-concept synchronization;
+- L-KERNEL requires only `SYNC-01`, `SYNC-02`, `SYNC-05`;
+- direct G-KERNEL requires only `SYNC-01`, `SYNC-02`;
+- E-KERNEL requires only `SYNC-09`, `SYNC-10`, `SYNC-12`;
+- learned-state-assisted Generation adds only `SYNC-06`;
+- evaluation-gated Generation adds only `SYNC-13`;
+- Constraint, Execution and Provenance add only occurrence-specific coordination;
+- the full eleven-concept variant can exercise all thirteen rule types across a lifecycle, but no one action is coupled to all thirteen.
+
+### Why structurally similar rules remain separate
+
+- `SYNC-09` and `SYNC-10` share Evaluation/Criterion but coordinate different actions: method sufficiency versus exact commitment binding.
+- `SYNC-04`, `SYNC-07`, `SYNC-11` share an Execution pattern but preserve different Learning/Generation/Evaluation semantic contracts; one generic Activity rule would invent an umbrella concept or hide parent-type semantics.
+- `SYNC-05` and `SYNC-12` share an activity/result pattern but Learned State and Evidence have different purposes/cardinalities/lifecycles.
+- `SYNC-14` remains one generic typed Provenance relation specifically to avoid pairwise provenance synchronization proliferation.
+
+## Occurrence-scoped / non-propagation rule
+
+A synchronization coordinates one conceptual occurrence/relation. It does **not** create a permanent reactive subscription across concepts.
+
+Therefore later revision/status change does not silently rewrite exact historical bindings:
+
+- newer Data Meaning does not reinterpret committed work;
+- Strategy retirement does not rewrite historical activities;
+- Constraint revision does not rewrite prior bindings;
+- Learned State retirement does not mutate prior Generation history;
+- Criterion revision does not reinterpret historical Evidence;
+- Evidence invalidation changes current reliance but does not silently rewrite a historical Generation transition;
+- Provenance correction does not rewrite source facts.
+
+This materially limits composition burden and prevents hidden shared-state maintenance.
+
+## Positive composition synergies
+
+009-G records explicit positive synergy in:
+
+1. **Reusable learned synthesis** — `Learning -> Learned State -> Generation` through `SYNC-05` + `SYNC-06`.
+2. **Evidence-gated Generation** — candidate Generation can be independently evaluated and completed only after sufficient Evidence through `SYNC-09/10/12/13`.
+3. **Constraint + Evaluation/Evidence + Generation** — reusable rules can be demonstrated without turning enforcement into proof or Evidence into completion authority.
+4. **Execution sidecar reuse** — one operational concept supplies durable Attempt/retry/recovery semantics to Learning/Generation/Evaluation without contaminating their semantic lifecycles.
+5. **Exact bindings + Provenance** — end-to-end typed historical explanation emerges without copying domain state into Provenance.
+6. **Direct and learned Generation coexistence** — Learning/Learned State are included only where actually useful.
+
+Not every synchronization is claimed to be synergistic; many intentionally provide additive binding/integrity support.
+
+## Combined-activation integrity result
+
+009-G passes the current multi-synchronization integrity scenarios:
+
+- Learning + Execution + Learned State + Provenance;
+- learned-state-assisted Generation + Execution;
+- evaluation-gated Generation;
+- Constraint `validated later` + Evaluation/Evidence + Generation completion;
+- operational success with semantic failure/pending state;
+- later Evidence invalidation after historical use;
+- Provenance high fan-in;
+- Reproducibility overlay.
+
+### Staged feedback, not circular authority
+
+Evaluation-gated Generation follows:
 
 ```text
-SYNC-01  activity semantic commitment using Data Meaning
-SYNC-02  Learning/Generation validation + commitment using Strategy
-SYNC-03  activity validation when reusable Constraint participates
-SYNC-06  Generation validation/commitment using Learned State
-SYNC-09  Evaluation commitment using Criterion
-SYNC-10  Evaluation method/context validation against Criterion
-SYNC-13  Generation completion-basis evaluation using Evidence
+Generation candidate
+  -> Evaluation
+  -> Evidence
+  -> Generation completion basis
 ```
 
-The consuming activity owns the exact binding and contextual assessment.
+Evaluation requires identifiable candidate state, not an already completed Generation. Evidence never owns `Generation.Complete`. Therefore the composition has no completion deadlock/circular authority.
 
-### Operational realization
+## Over/under-synchronization result
+
+Current authority does **not** force:
+
+- Execution for every activity;
+- Constraint for every activity;
+- Evaluation for every Generation;
+- Learning for every Generation;
+- Provenance for every possible pair/state;
+- reactive downstream mutation after every revision/invalidation.
+
+No missing synchronization is found for Constraint/Condition-derived Criteria, later authority/result status changes, external approval, reproducibility, dependency/security policy, or topology/text behavior.
 
 ```text
-SYNC-04  Learning.InitiateRealization   <-> Execution.Prepare(parent=Learning)
-SYNC-07  Generation.InitiateFulfillment <-> Execution.Prepare(parent=Generation)
-SYNC-11  Evaluation.Initiate            <-> Execution.Prepare(parent=Evaluation)
+missing synchronization  NONE FOUND
+SYNC-16                  NOT JUSTIFIED
 ```
-
-Execution owns operational state. Execution completion never establishes domain semantic completion.
-
-### Activity/result production
-
-```text
-SYNC-05  Learning.Complete   <-> LearnedState.Establish
-SYNC-12  Evaluation.Complete <-> Evidence.Establish
-```
-
-The producer owns semantic completion; the result concept owns established result/finding state and producer identity.
-
-### Provenance
-
-```text
-SYNC-14  established material owner fact <-> Provenance.RecordTypedRelationship
-```
-
-Provenance cannot fabricate upstream facts.
-
-## Family replay after 009-F
-
-### L-KERNEL
-
-Required:
-
-```text
-SYNC-01
-SYNC-02
-SYNC-05
-```
-
-Optional: `SYNC-03`, `SYNC-04`, `SYNC-14`.
-
-### Direct G-KERNEL
-
-Required:
-
-```text
-SYNC-01
-SYNC-02
-```
-
-Generation output promotion remains concept-local (`SYNC-08` stays retired).
-
-Optional: `SYNC-03`, `SYNC-07`, `SYNC-13`, `SYNC-14`.
-
-`SYNC-06` is absent.
-
-### Learned-state-assisted Generation
-
-Adds:
-
-```text
-SYNC-06
-```
-
-### E-KERNEL
-
-Required:
-
-```text
-SYNC-09
-SYNC-10
-SYNC-12
-```
-
-Optional: `SYNC-03`, `SYNC-11`, `SYNC-14`.
-
-### Evaluation-gated Generation
-
-Adds `SYNC-13` for the exact Generation/Evidence completion relation.
-
-## Hidden-coordinator verdict
-
-009-F finds no need for:
-
-- generic Compatibility/Validation/Readiness authority;
-- Workflow/Run coordinator owning domain completion;
-- Result Promotion/Artifact coordinator;
-- Quality/Approval coordinator;
-- coordinator above Provenance;
-- Reproducibility state owner;
-- generic Synchronization/Composition state owner.
-
-Authorization/security remains an external/security authority used as a precondition where applicable, not an unnamed SYNGAN domain concept.
-
-## Retired / reclassified IDs
-
-### SYNC-08
-
-Remains retired as Generation-local candidate/completion/output behavior. No second accepted result owner exists.
-
-### SYNC-15
-
-Remains reclassified under the cross-cutting [Reproducibility Contract](../authority/reproducibility-contract.md). No unique synchronization state/action exists.
-
-Neither ID is resurrected or reused.
 
 ## Current methodology state
 
@@ -242,24 +204,28 @@ Neither ID is resurrected or reused.
 D1-D4  CURRENTLY CLOSED
 E1     CURRENTLY CLOSED
 E2     CURRENTLY CLOSED
-E3     PARTIAL TO STRONG — hidden coordinator closed; economy/burden pending 009-G
-E4     PARTIAL
-E5     STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
+E3     CURRENTLY CLOSED
+E4     CURRENTLY CLOSED
+E5     CURRENTLY CLOSED
 ```
+
+Phase 011 still owns broader post-mapping quality/misfit review and may reopen a genuine issue. The dedicated Phase 009 composition obligations are currently closed.
 
 ## Composition guardrails
 
 - one canonical state owner per material fact;
 - synchronization owns no state;
-- reusable authorities are queried/bound, not mutated by consumers;
-- contextual assessment belongs to the consuming activity;
-- result concepts own result/finding state and producer identity;
-- Execution owns operational parent binding and Attempt state;
+- concept behavior remains authoritative under synchronization;
+- reusable authorities are bound, not mutated;
+- contextual assessments remain activity-owned;
 - semantic and operational completion remain distinct;
-- Evidence never owns Generation completion or external approval;
-- Provenance remains high fan-in and low authority fan-out;
-- no synchronization recreates a concept removed by a valid family contraction;
-- cross-cutting contracts remain contracts rather than shadow concepts.
+- result authority never follows from physical existence alone;
+- Evidence never becomes approval or Generation completion authority;
+- Provenance never becomes source-fact authority;
+- optional concepts/synchronizations remain optional unless a capability explicitly requires them;
+- synchronization is occurrence-scoped, not permanently reactive;
+- no generic Activity/Artifact umbrella is introduced merely to reduce rule count;
+- conceptual synchronization does not prescribe events, transactions, services, packages, queues or runtime call direction.
 
 ## Phase 009 sequence
 
@@ -268,14 +234,14 @@ E5     STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
 009-B  COMPLETE
 009-C  COMPLETE
 009-D  COMPLETE
-009-E  COMPLETE — inventory replay
-009-F  COMPLETE — trigger / pre-post / ownership / hidden coordinator
-009-G  NEXT — economy / coupling / synergy / integrity closure
-009-H  consolidation
+009-E  COMPLETE
+009-F  COMPLETE
+009-G  COMPLETE — economy / coupling / synergy / integrity
+009-H  NEXT — consolidation / Phase 010 handoff
 ```
 
 ## Current next boundary
 
-**009-G — Composition Economy, Coupling, Synergy & Integrity Closure** is next eligible.
+**009-H — Phase 009 Consolidation, Dependence/Composition Completion Decision & Phase 010 Handoff** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
