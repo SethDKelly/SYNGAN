@@ -29,21 +29,11 @@ problem / purpose / actors / outcomes
         ↓
 individual concept design                 ← Phase 008 COMPLETE
         ↓
-concept inclusion dependence              ← 009-A/B COMPLETE
+concept dependence / application family   ← Phase 009 COMPLETE
         ↓
-application family                        ← 009-C COMPLETE
+synchronization / composition             ← Phase 009 COMPLETE
         ↓
-contraction / extension consequences      ← 009-D COMPLETE
-        ↓
-explicit synchronization inventory        ← 009-E COMPLETE
-        ↓
-synchronization ownership                 ← 009-F COMPLETE
-        ↓
-composition economy / synergy / integrity ← 009-G COMPLETE
-        ↓
-Phase 009 consolidation                   ← 009-H NEXT
-        ↓
-concept mapping / actor-visible experience
+concept mapping / actor-visible experience ← Phase 010 NEXT
         ↓
 whole concept-design quality / misfit validation
         ↓
@@ -56,63 +46,59 @@ whole-design completion / readiness gate
 implementation MAY become READY / NOT STARTED / NEXT
 ```
 
-## Current Phase 009 status
+## Current design status
 
 ```text
-009-A  COMPLETE
-009-B  COMPLETE
-009-C  COMPLETE
-009-D  COMPLETE
-009-E  COMPLETE
-009-F  COMPLETE
-009-G  COMPLETE
-009-H  NEXT ELIGIBLE — consolidation / Phase 010 handoff
+Phase 008  COMPLETE
+Phase 009  COMPLETE
+009-A..H  COMPLETE
+D1-D4     CURRENTLY CLOSED
+E1-E5     CURRENTLY CLOSED
+Phase 010 NEXT ELIGIBLE — decompose immediately before entry
 ```
 
-Current methodology status:
+Phase 009 exits with:
 
 ```text
-D1-D4  CURRENTLY CLOSED
-E1-E5  CURRENTLY CLOSED
+DEPENDENCE / COMPOSITION   COMPLETE ENOUGH FOR PHASE 010
+JACKSON CONCEPT DESIGN     NOT COMPLETE
 ```
 
-Phase 009 itself is not complete until 009-H performs the consolidated exit decision.
+## Phase 009 authority boundary
 
-## Current synchronization/composition boundary
+Current Phase 009 consolidation: [Phase 009 Dependence, Application Family & Composition Consolidation](phase-009-dependence-composition-consolidation.md).
 
-```text
-historical synchronization IDs       15
-active synchronizations              13
-retired concept-local                SYNC-08
-reclassified cross-cutting contract  SYNC-15
-new synchronization                  NONE
-SYNC-16                              NOT JUSTIFIED
-```
+It establishes:
 
-009-F/G establish that:
+- eleven accepted concepts;
+- a coherent application family rather than one mandatory full-suite product;
+- current contraction/extension rules;
+- 15 historical synchronization IDs / 13 active cross-concept rules;
+- `SYNC-08` retired, `SYNC-15` reclassified, `SYNC-06` conditional;
+- singular state ownership and no synchronization-owned state;
+- occurrence-scoped/non-reactive historical bindings;
+- no hidden coordinator concept;
+- current composition economy, synergy and combined-activation integrity.
 
-- synchronization owns no state;
-- optional relations activate only when their capability/occurrence exists;
-- exact historical bindings are occurrence-scoped and do not create permanent reactive subscriptions;
-- direct Generation remains valid without Learning/Learned State or Evaluation/Evidence;
-- Execution cannot establish domain semantic completion;
-- Evidence cannot establish Generation completion or external approval;
-- Provenance cannot establish upstream source facts;
-- evaluation-gated Generation is staged candidate → Evaluation → Evidence → Generation completion reasoning, not circular authority;
-- no generic coordinator concept is required.
+## Phase 010 is mapping, not implementation
+
+Phase 010 must map concept actions/state/queries into human/programmatic interaction, language, and experience while preserving current semantics.
+
+Phase 010 must not be interpreted as permission to finalize APIs, schemas, service topology, persistence, deployment or executable workflow.
+
+Mapping may reveal a genuine upstream design misfit. If so, reopen the smallest affected authority under J0-J7.
 
 ## Architecture/executable boundary
 
 Phase 004/006/007 architecture and the retained executable scaffold remain downstream evidence.
 
-They may expose a genuine counterexample but cannot define synchronization/composition authority from package imports, persistence references, service/dataflow direction, event topology, transaction ordering, runtime orchestration, deployment topology, or existing API/object nesting.
+They may expose a genuine counterexample but cannot define current concept, dependence, family, synchronization, mapping, or completion authority from package imports, persistence references, service/dataflow direction, event topology, transaction ordering, runtime orchestration, deployment topology, or existing API/object nesting.
 
-Do not restructure implementation to mirror concepts, synchronization IDs, composition planes, application-family kernels, or synergy paths while the full design remains incomplete.
+Do not restructure implementation to mirror concepts, synchronization IDs, composition planes, application-family kernels, synergy paths, or future Phase 010 mappings while the full design remains incomplete.
 
 ## Remaining design roadmap
 
 ```text
-009-H     Phase 009 consolidation / Phase 010 handoff
 010       concept mapping / interaction / language / experience
 011       specificity / familiarity / integrity / synergy / misfit
 012       Jackson concept-design completion decision
@@ -124,7 +110,7 @@ Do not restructure implementation to mirror concepts, synchronization IDs, compo
 
 ## Readiness transitions
 
-Through Phases 009-013 implementation remains **NOT READY / NOT STARTED / NOT YET**.
+Through Phases 010-013 implementation remains **NOT READY / NOT STARTED / NOT YET**.
 
 Even a positive Phase 012 does not make implementation ready. Phase 013 must reconcile architecture. Only Phase 014 may make the final whole-design readiness decision.
 
@@ -140,10 +126,12 @@ Implementation itself still requires later explicit Phase 015 authority.
 
 ## No executable design-by-accident
 
-Until Phase 014 passes, do not add production behavior, executable architecture restrictions merely to crystallize hypotheses, package-topology changes anticipating design, persistence schemas/migrations, runtime/model/platform/security adapters, public API implementation, reference algorithms, vertical slices, benchmarks, privacy mechanisms, product-edition packaging, event/service decomposition, synchronization transactions, or stale-test repair solely to manufacture readiness.
+Until Phase 014 passes, do not add production behavior, executable architecture restrictions merely to crystallize hypotheses, package-topology changes anticipating design, persistence schemas/migrations, runtime/model/platform/security adapters, public API implementation, reference algorithms, vertical slices, benchmarks, privacy mechanisms, product-edition packaging, event/service decomposition, synchronization transactions, observer/subscription infrastructure, or stale-test repair solely to manufacture readiness.
 
 ## Current next boundary
 
-**009-H — Phase 009 Consolidation, Dependence/Composition Completion Decision & Phase 010 Handoff**.
+**Phase 010 — Concept Mapping, Interaction, Linguistic & Experience Alignment** is next eligible.
+
+Per roadmap discipline, decompose Phase 010 immediately before entry.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
