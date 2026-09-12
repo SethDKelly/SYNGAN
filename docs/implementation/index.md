@@ -14,8 +14,7 @@ Current authority:
 
 - [Jackson Design Completion & Implementation Hold](../authority/jackson-design-completion-implementation-hold.md)
 - [Jackson Methodology Completion Matrix](../authority/jackson-methodology-completion-matrix.md)
-- [Concept Dependence & Application Family](../dependence/index.md)
-- [Current Synchronization Authority](../synchronizations/index.md)
+- [Phase 009 Consolidation](../authority/phase-009-dependence-composition-consolidation.md)
 
 ```text
 IMPLEMENTATION READINESS   NOT READY
@@ -29,50 +28,52 @@ No implementation tranche is eligible.
 
 ```text
 Phase 008                  COMPLETE
-Phase 009                  ACTIVE
-009-A..009-G               COMPLETE
-009-H                      NEXT ELIGIBLE
+Phase 009                  COMPLETE
 D1-D4                      CURRENTLY CLOSED
 E1-E5                      CURRENTLY CLOSED
+Phase 010                  NEXT ELIGIBLE
 Jackson concept design     IN PROGRESS
 ```
 
-## What 009-G established
+## What Phase 009 completion establishes
 
-The thirteen active synchronization rules now pass current Phase 009 economy, coupling, synergy, and combined-integrity review.
+The dependence/application-family/composition design is complete enough to begin concept mapping.
 
-Key design results:
+It establishes:
 
-- synchronization burden is relation/occurrence-local rather than full-suite universal;
-- no additional synchronization is added/removed/merged;
-- `SYNC-06` remains conditional Learned State reuse;
-- exact historical bindings are not permanent reactive subscriptions;
-- evaluation-gated Generation is staged candidate → Evaluation → Evidence → Generation completion reasoning, not circular completion authority;
-- Execution cannot establish domain semantic completion;
-- Evidence cannot become approval/completion authority;
-- Provenance cannot become source-fact authority;
-- no hidden coordinator concept is required.
+- eleven accepted concepts;
+- multiple coherent application-family variants;
+- current contraction/extension consequences;
+- 15 historical synchronization IDs / 13 active rules;
+- singular state ownership;
+- relation/occurrence-local coupling;
+- occurrence-scoped historical bindings rather than live subscriptions;
+- positive composition synergy;
+- no combined-activation completion cycle or hidden coordinator.
 
-This is concept-design authority only.
+This remains concept-design authority only.
 
-## What composition closure does not authorize
+## What Phase 009 completion does not authorize
 
-009-G does **not** authorize:
+It does **not** authorize:
 
+- packages/modules matching concepts or family members;
 - services matching concepts or synchronization IDs;
 - event/message types matching synchronization IDs;
-- transactions/sagas for each synchronization;
-- queues/topics;
+- transactions/sagas/queues/topics;
 - API call direction;
-- package/module dependencies;
 - schema/foreign-key design;
 - observer/subscription infrastructure for historical bindings;
 - runtime orchestration graphs;
 - implementation of Execution, Evidence or Provenance;
-- product feature flags or deployment profiles;
+- product editions/feature flags/deployment profiles;
 - repair of stale implementation tests.
 
-The five composition planes are conceptual groupings, not architecture layers.
+## Phase 010 remains design-only
+
+Phase 010 maps concept actions/state/queries into human/programmatic interaction and language.
+
+A concept mapping is not automatically a public API contract, implementation class, database schema, service endpoint, UI component hierarchy, or runtime workflow.
 
 ## Superseded 007-K re-entry conclusion
 
@@ -83,7 +84,6 @@ Retained Phase 007 architecture/scaffold evidence cannot reactivate implementati
 ## Remaining design before implementation readiness can be decided
 
 ```text
-009-H     Phase 009 consolidation / Phase 010 handoff
 010       concept mapping / interaction / language / experience
 011       specificity / familiarity / integrity / synergy / misfit
 012       Jackson concept-design completion decision
@@ -95,12 +95,12 @@ Only a positive Phase 014 may make implementation **READY / NOT STARTED / NEXT**
 
 ## Current prohibition
 
-Until Phase 014 passes, do not add production concept/domain behavior, implementation APIs, persistence/data-plane schemas, model/runtime/security/platform adapters, Execution/recovery behavior, Evidence/Provenance implementations, reference Strategies, privacy mechanisms, benchmarks, package-topology changes, event/service decomposition, synchronization transactions, or executable architecture restrictions intended to freeze unfinished design.
-
-Do not turn composition synergy paths into implementation pipelines before architecture reconciliation.
+Until Phase 014 passes, do not add production concept/domain behavior, implementation APIs, persistence/data-plane schemas, model/runtime/security/platform adapters, Execution/recovery behavior, Evidence/Provenance implementations, reference Strategies, privacy mechanisms, benchmarks, package-topology changes, event/service decomposition, synchronization transactions, mapping-driven public API implementation, or executable architecture restrictions intended to freeze unfinished design.
 
 ## Current next boundary
 
 Design-only work:
 
-**009-H — Phase 009 Consolidation, Dependence/Composition Completion Decision & Phase 010 Handoff**.
+**Phase 010 — Concept Mapping, Interaction, Linguistic & Experience Alignment**.
+
+Decompose Phase 010 immediately before entry.
