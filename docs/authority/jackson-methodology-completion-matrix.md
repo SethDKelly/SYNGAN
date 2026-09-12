@@ -65,7 +65,8 @@ Phase 009  ACTIVE
 009-D      COMPLETE — contraction / extension / add-remove consequences
 009-E      COMPLETE — synchronization inventory replay
 009-F      COMPLETE — trigger / pre-post / ownership / hidden coordinator
-009-G      NEXT ELIGIBLE — composition economy / coupling / synergy / integrity
+009-G      COMPLETE — composition economy / coupling / synergy / integrity
+009-H      NEXT ELIGIBLE — Phase 009 consolidation / Phase 010 handoff
 ```
 
 Current dependence/application-family result:
@@ -90,7 +91,7 @@ new synchronization IDs                  0
 SYNC-16                                  NOT JUSTIFIED
 ```
 
-`SYNC-06` is currently normalized as conditional Generation/Learned State reuse compatibility/binding; direct Generation does not activate it.
+`SYNC-06` remains conditional Generation/Learned State reuse compatibility/binding; direct Generation does not activate it.
 
 ## Jackson completion matrix
 
@@ -116,11 +117,11 @@ SYNC-16                                  NOT JUSTIFIED
 | D2 | Meaningful valid concept subsets/application family | 009-C defines graph-closed family plus Execution/Provenance side constraints and capability-specific requirements | **CURRENTLY CLOSED** | 009-C |
 | D3 | Explanation/design ordering implied by inclusion dependence | 009-B establishes prerequisite and layered explanation ordering | **CURRENTLY CLOSED** | 009-B |
 | D4 | Product-scope consequences of adding/removing concepts | 009-D audits every concept/SCC removal/addition, side-constraint orphaning, capability narrowing and rediscovery boundary | **CURRENTLY CLOSED** | 009-D |
-| E1 | Explicit concept synchronizations | 009-E replayed historical SYNC-01..15; 13 remain active, SYNC-08 retired, SYNC-15 reclassified; 009-F narrows SYNC-06 without membership change | **CURRENTLY CLOSED** | 009-E/F; reopen on later misfit |
-| E2 | Singular state ownership across synchronizations | 009-F normalizes all 13 active triggers/pre-postconditions and assigns consumer bindings/assessments, result producer identity, Execution realization state and Provenance assertions to one canonical owner; synchronization owns no state | **CURRENTLY CLOSED** | 009-F; reopen on 009-G/011 misfit |
-| E3 | Composition burden/economy and hidden-coordinator avoidance | 009-F finds no hidden Compatibility/Workflow/Promotion/Approval/Reproducibility/Composition coordinator and no canonical shadow pairwise state; total synchronization burden/economy still requires composed-set analysis | **PARTIAL TO STRONG** | 009-F/009-G |
-| E4 | Composition synergy | Individual/family composition suggests useful synergy but explicit composed-set synergy audit remains | **PARTIAL** | 009-G/011 |
-| E5 | Integrity under composition | 009-F verifies trigger/ownership/failure integrity across each active rule with no authority inversion; combined multi-sync integrity/economy still pending 009-G and final quality review 011 | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 009-F/009-G/011 |
+| E1 | Explicit concept synchronizations | 009-E replayed historical SYNC-01..15; 13 remain active, SYNC-08 retired, SYNC-15 reclassified; 009-F narrows SYNC-06 without membership change; 009-G finds no further add/remove/merge need | **CURRENTLY CLOSED** | 009-E/F/G; reopen on later misfit |
+| E2 | Singular state ownership across synchronizations | 009-F assigns every binding/result/operational/provenance fact to one canonical owner; 009-G confirms ownership survives combined activation | **CURRENTLY CLOSED** | 009-F/G; reopen on later misfit |
+| E3 | Composition burden/economy and hidden-coordinator avoidance | 009-F eliminates hidden coordinator/shadow state; 009-G shows relation-local/occurrence-local activation, variant-sized burden, justified structurally similar rules, generic typed Provenance rather than pairwise explosion, and no perpetual reactive subscription | **CURRENTLY CLOSED** | 009-F/G; reopen on later misfit |
+| E4 | Composition synergy | 009-G demonstrates positive synergy for reusable learned synthesis, evidence-gated Generation, reusable Constraint validation, Execution sidecar reuse, exact bindings + Provenance, and direct/learned Generation coexistence without using synergy to justify every basic binding | **CURRENTLY CLOSED** | 009-G; broader post-mapping quality revalidation 011 |
+| E5 | Integrity under composition | 009-G replays multi-sync Learning, Generation, Evaluation/Evidence, Execution, Constraint, Provenance and reproducibility scenarios; staged evidence feedback has no authority/deadlock cycle, optional capabilities remain optional, and no concept purpose/behavior is overridden | **CURRENTLY CLOSED** | 009-F/G; broader post-mapping integrity revalidation 011 |
 | F1 | Concept action → human/programmatic interaction mapping | Phase 003 workflows; normalized map absent | **PARTIAL** | 010 |
 | F2 | Concept state/query → actor-visible inspection mapping | Strong visibility requirements; mapping incomplete | **PARTIAL** | 010 |
 | F3 | Linguistic mapping/vocabulary alignment | Terminology/008-F strong; explicit actor mapping pending | **PARTIAL TO STRONG** | 010 |
@@ -128,40 +129,70 @@ SYNC-16                                  NOT JUSTIFIED
 | F5 | Human/programmatic semantic parity | Strong Phase 003 evidence; current replay pending | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 010 |
 | G1 | Specificity across final composed set | Individual evidence strong; composed audit pending | **PARTIAL TO STRONG** | 011 |
 | G2 | Familiarity across final composed set | Individual names closed; post-composition/mapping review pending | **PARTIAL TO STRONG** | 011 |
-| G3 | Integrity across synchronizations/mappings | Strong evidence; no final post-mapping decision | **PARTIAL TO STRONG** | 011 |
-| G4 | Synergy and simplicity/generic fitness | Individual genericity closed; final composition/mapping audit pending | **PARTIAL TO STRONG** | 011 |
+| G3 | Integrity across synchronizations/mappings | 009-G closes synchronization integrity; final post-mapping design-quality replay remains | **PARTIAL TO STRONG** | 011 |
+| G4 | Synergy and simplicity/generic fitness | 009-G demonstrates current composition synergy/economy; final post-mapping quality replay remains | **PARTIAL TO STRONG** | 011 |
 | G5 | Archetypal/exceptional/degraded/adversarial/recovery misfit | Strong 006/007 + 008 evidence; final replay pending | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 011 |
-| G6 | Future-scope/extensibility misfit | 008-G future triggers + 009-D extension/rediscovery boundary recorded; final replay pending | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 011 |
+| G6 | Future-scope/extensibility misfit | 008-G future triggers + 009-D extension/rediscovery boundary + 009-G later Evidence/output-lifecycle boundary recorded; final replay pending | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 011 |
 | G7 | Explicit residual conceptual misfit register | No final post-mapping register | **PARTIAL** | 011/012 |
-| H1 | One current-state consolidated Jackson concept-design audit | Individual consolidation exists; 009-011 remain | **OPEN** | 012 |
+| H1 | One current-state consolidated Jackson concept-design audit | Individual consolidation exists; Phase 009 consolidation remains next, then 010-011 | **OPEN** | 012 |
 | H2 | Explicit Jackson concept-design completion decision | Not yet performed | **OPEN** | 012 |
 | R1 | Architecture reconciled downstream to completed concept design | Extensive retained architecture exists | **DOWNSTREAM / PENDING RECONCILIATION** | 013 |
 | R2 | Whole design audited problem → concepts → dependence/sync → mapping → architecture | Not yet possible | **OPEN** | 014 |
 | R3 | Implementation-readiness decision based on complete design | Historical 007-K decision superseded | **OPEN** | 014 |
 
-## Current 009-F ownership result
+## Current 009-G composition result
+
+### Economy
 
 ```text
-consumer exact binding / contextual assessment
-  -> consuming activity
-
-Learned State producer identity
-  -> Learned State
-
-Evidence producer identity
-  -> Evidence
-
-Execution parent binding / Attempts / retry / recovery
-  -> Execution
-
-Provenance typed assertions
-  -> Provenance
-
-synchronization-owned canonical state
-  -> NONE
+active synchronization added        0
+active synchronization removed      0
+active synchronization merged       0
+additional scope correction          0
+missing synchronization             NONE
 ```
 
-Operational completion cannot establish domain semantic completion. Evidence cannot establish Generation completion or external approval. Provenance cannot fabricate source facts. Reproducibility remains a cross-cutting assessment/contract rather than mutable coordinator state.
+Economy comes from relation-local/occurrence-local activation, not from collapsing distinct concept relations.
+
+Core variant burden remains intentionally small:
+
+```text
+L-KERNEL        SYNC-01, SYNC-02, SYNC-05
+Direct G-KERNEL SYNC-01, SYNC-02
+E-KERNEL        SYNC-09, SYNC-10, SYNC-12
+```
+
+Learned-state-assisted Generation adds `SYNC-06`; evidence-gated Generation adds `SYNC-13`; Constraint/Execution/Provenance add only relation-specific rules.
+
+### Non-propagation
+
+Exact bindings are historical occurrence relations, not permanent subscriptions. Later revisions/status changes do not silently mutate already committed/completed concept history.
+
+### Synergy
+
+Current explicit positive synergies include:
+
+```text
+Learning -> Learned State -> Generation
+Generation candidate -> Evaluation -> Evidence -> Generation completion
+Constraint -> Evaluation/Evidence -> Generation completion
+Learning/Generation/Evaluation -> reusable Execution operational lifecycle
+exact bindings + Provenance -> end-to-end historical explanation
+direct + learned Generation coexist without fabricated Learning
+```
+
+### Integrity
+
+Evaluation-gated Generation is staged feedback, not circular authority:
+
+```text
+candidate Generation
+  -> Evaluation
+  -> Evidence
+  -> Generation-owned completion decision
+```
+
+Evaluation requires candidate identity, not completed Generation. Execution cannot establish semantic completion. Evidence cannot approve/release or complete Generation. Provenance cannot fabricate source facts.
 
 ## Current methodological verdict
 
@@ -171,10 +202,10 @@ INDIVIDUAL CONCEPT DESIGN            COMPLETE ENOUGH FOR PHASE 009
 D1-D4 DEPENDENCE / FAMILY            CURRENTLY CLOSED
 E1 SYNCHRONIZATION INVENTORY         CURRENTLY CLOSED
 E2 SINGULAR STATE OWNERSHIP          CURRENTLY CLOSED
-E3 HIDDEN COORDINATOR                CURRENTLY CLOSED FOR 009-F PORTION
-E3 BURDEN / ECONOMY                  PENDING 009-G
-E4 COMPOSITION SYNERGY               PARTIAL
-E5 COMPOSITION INTEGRITY             STRONG EVIDENCE / REVALIDATION REQUIRED
+E3 BURDEN / ECONOMY                  CURRENTLY CLOSED
+E4 COMPOSITION SYNERGY               CURRENTLY CLOSED
+E5 COMPOSITION INTEGRITY             CURRENTLY CLOSED
+PHASE 009 CONSOLIDATION              NEXT — 009-H
 JACKSON CONCEPT DESIGN COMPLETE      NO
 REPRESENTATION/ARCHITECTURE FINAL    NO — PENDING PHASE 013 RECONCILIATION
 IMPLEMENTATION READINESS             NOT READY
@@ -185,19 +216,17 @@ IMPLEMENTATION NEXT                  NOT YET
 ## Current dependency order
 
 ```text
-009-G  composition economy / coupling / synergy / integrity closure
-  ↓
 009-H  Phase 009 consolidation / Phase 010 handoff
 ```
 
 ## Guardrail
 
-The 009-F contracts do not prescribe transactions, events, workflow engines, services, persistence joins, foreign keys, sagas, queues, locks, APIs or exactly-once execution.
+The Phase 009 composition model does not prescribe transactions, events, workflow engines, services, persistence joins, foreign keys, sagas, queues, locks, APIs, packages, deployment units or exactly-once execution.
 
-Architecture/source/tests may expose counterexamples but cannot redefine current synchronization ownership while Jackson design remains incomplete.
+Phase 010 mapping and Phase 011 final design-quality/misfit review may expose a genuine issue and reopen the smallest affected authority. Their existence is not a reason to leave the dedicated E1-E5 composition obligations open after current closure.
 
 ## Current next boundary
 
-**009-G — Composition Economy, Coupling, Synergy & Integrity Closure** is next eligible.
+**009-H — Phase 009 Consolidation, Dependence/Composition Completion Decision & Phase 010 Handoff** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
