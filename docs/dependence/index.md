@@ -23,6 +23,7 @@ For concepts `C1` and `C2`, the governing question is:
 - [Application Family & Valid Subsets](application-family-valid-subsets.md) — 009-C.
 - [Contraction / Extension Consequences](contraction-extension-consequences.md) — 009-D.
 - [Phase 009 Consolidation](../authority/phase-009-dependence-composition-consolidation.md) — current cross-layer handoff authority.
+- [Concept Mapping Authority](../mapping/index.md) — current downstream consumer of this authority.
 
 ## Current phase state
 
@@ -35,7 +36,9 @@ D2 application family             CURRENTLY CLOSED
 D3 explanation/design ordering    CURRENTLY CLOSED
 D4 add/remove consequences        CURRENTLY CLOSED
 E1-E5 composition                 CURRENTLY CLOSED
-Phase 010                         NEXT ELIGIBLE
+Phase 010                         ACTIVE
+Phase 010 decomposition           COMPLETE
+010-A                             NEXT ELIGIBLE
 ```
 
 ## Canonical graph result
@@ -110,7 +113,7 @@ Ordinary extension uses accepted concepts plus required closure/side conditions.
 
 ## Composition consistency
 
-Phase 009-E through 009-H confirm that synchronization does not alter the D1-D4 family semantics.
+Phase 009-E through 009-H confirm that synchronization does not alter D1-D4 family semantics.
 
 In particular:
 
@@ -122,9 +125,26 @@ In particular:
 - similarity of synchronization pattern does not imply concept merger or inclusion dependence;
 - exact historical binding is occurrence-scoped and does not create permanent inclusion/reactive dependence on future revisions.
 
+## Active Phase 010 mapping obligations
+
+Phase 010 must preserve valid reduced family members rather than exposing the full eleven-concept design as one mandatory workflow.
+
+010-A must therefore establish application-family applicability tags in the mapping coverage model so later action/state/surface mappings can identify whether a concept or interaction is:
+
+```text
+universally required within a mapped family member
+capability-conditional
+occurrence-conditional
+not applicable to that family member
+```
+
+Later workflow composition in 010-F must replay authority-only, L-KERNEL, direct G-KERNEL, learned Generation, E-KERNEL, evaluation-gated Generation, Constraint-aware, Execution-bearing, Provenance-bearing and full-composition variants.
+
+Mapping may expose a genuine dependence/family misfit. If so, reopen the smallest affected Phase 009 authority rather than deriving dependence from interface or implementation structure.
+
 ## Product-scope documentation rule
 
-A family member may remain coherent while losing a former advertised capability after contraction. Phase 010 mapping must therefore describe the actual included concepts/capabilities and remove stale promises.
+A family member may remain coherent while losing a former advertised capability after contraction. Mapping must therefore describe the actual included concepts/capabilities and remove stale promises.
 
 Application-family validity remains distinct from product packaging or implementation modularity.
 
@@ -145,14 +165,8 @@ Evaluation before Evidence
 
 This is explanation/design order, not implementation order.
 
-## Phase 010 handoff
-
-Concept mapping must preserve valid reduced family members rather than exposing the full eleven-concept design as one mandatory workflow.
-
-Mapping may expose a genuine dependence/family misfit. If so, reopen the smallest affected Phase 009 authority rather than deriving dependence from interface or implementation structure.
-
 ## Current next boundary
 
-**Phase 010 — Concept Mapping, Interaction, Linguistic & Experience Alignment** is next eligible.
+**010-A — Mapping Authority, Coverage Model, Actor/Surface Taxonomy & Evidence Baseline** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
