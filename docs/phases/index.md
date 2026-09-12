@@ -30,8 +30,6 @@ Only Phase 014 may change that posture after a positive whole-design completion 
 
 ## Phase 008 — Individual Concept Design Normalization & Completeness — complete
 
-Phase 008 exits with:
-
 ```text
 INDIVIDUAL CONCEPT DESIGN   COMPLETE ENOUGH FOR CURRENT PROGRAM
 JACKSON CONCEPT DESIGN      NOT COMPLETE
@@ -40,14 +38,14 @@ JACKSON CONCEPT DESIGN      NOT COMPLETE
 ## Phase 009 — Concept Dependence, Application Family, Composition & Synchronization Closure — complete
 
 ```text
-009-A  COMPLETE — inclusion-dependence semantics / pairwise inventory
-009-B  COMPLETE — canonical graph / roots / cycles / ordering
-009-C  COMPLETE — application family / valid subsets / minima
-009-D  COMPLETE — contraction / extension / add-remove consequences
-009-E  COMPLETE — synchronization inventory replay
-009-F  COMPLETE — trigger / pre-post / ownership / hidden coordinator
-009-G  COMPLETE — composition economy / coupling / synergy / integrity
-009-H  COMPLETE — Phase 009 consolidation / Phase 010 handoff
+009-A  COMPLETE
+009-B  COMPLETE
+009-C  COMPLETE
+009-D  COMPLETE
+009-E  COMPLETE
+009-F  COMPLETE
+009-G  COMPLETE
+009-H  COMPLETE
 ```
 
 Final Phase 009 methodology state:
@@ -57,24 +55,32 @@ D1-D4  CURRENTLY CLOSED
 E1-E5  CURRENTLY CLOSED
 ```
 
-Phase 009 exits positively:
-
-```text
-PHASE 009                    COMPLETE
-DEPENDENCE / COMPOSITION     COMPLETE ENOUGH FOR PHASE 010
-UNRESOLVED J1/J2/J3 BLOCKER  NONE FOUND
-JACKSON CONCEPT DESIGN       NOT COMPLETE
-```
-
 Current consolidated authority: [Phase 009 Dependence, Application Family & Composition Consolidation](../authority/phase-009-dependence-composition-consolidation.md).
 
-## Phase 010 — Concept Mapping, Interaction, Linguistic & Experience Alignment — next eligible
+## Phase 010 — Concept Mapping, Interaction, Linguistic & Experience Alignment — active
 
-Phase 010 is **not yet decomposed or started**.
+Phase 010 entry/decomposition is complete and the phase is active.
 
-Per roadmap discipline, decompose it immediately before entry using the completed Phase 009 handoff.
+Current authority:
 
-Phase 010 owns current methodology obligations F1-F5:
+- [Phase 010 Index](010/index.md)
+- [Phase 010 Entry & Decomposition](010/010-entry-decomposition.md)
+- [Concept Mapping Authority](../mapping/index.md)
+
+Current sequence:
+
+```text
+010-A  NEXT — mapping authority / coverage / actor-surface taxonomy / evidence baseline
+010-B  action -> actor intent / interaction mapping
+010-C  state/query/history -> inspection mapping
+010-D  linguistic / vocabulary / typed status / disclosure semantics
+010-E  physical interaction across candidate surface families
+010-F  application-family workflow composition / progressive disclosure
+010-G  human-programmatic parity / degraded-recovery-scale mapping misfit
+010-H  mapping consolidation / Phase 011 handoff
+```
+
+Phase 010 owns:
 
 ```text
 F1  concept action -> human/programmatic interaction mapping
@@ -84,7 +90,7 @@ F4  physical/interaction mapping across relevant surfaces
 F5  human/programmatic semantic parity
 ```
 
-Mapping must preserve application-family optionality, singular state ownership, conditional synchronization, candidate/completed distinctions, semantic/operational completion, Evidence/approval boundaries, Provenance/source ownership, exact historical bindings, and current-versus-historical status semantics.
+Mapping must preserve application-family optionality, singular state ownership, conditional synchronization, candidate/completed distinctions, semantic/operational completion, Evidence/approval boundaries, Provenance/source ownership, exact historical bindings, typed disclosure/history semantics, and enterprise-scale bounded inspection.
 
 ## Later design phases
 
@@ -118,6 +124,6 @@ Placeholder only; not ready, not active and not next.
 
 ## Current next boundary
 
-**Phase 010 — Concept Mapping, Interaction, Linguistic & Experience Alignment** is next eligible.
+**010-A — Mapping Authority, Coverage Model, Actor/Surface Taxonomy & Evidence Baseline** is next eligible.
 
-The next design action is Phase 010 entry/decomposition.
+Implementation remains **NOT READY / NOT STARTED / NOT YET**.
