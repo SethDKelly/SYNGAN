@@ -27,13 +27,13 @@ No intermediate phase, subgroup, architecture document, implementation plan, sca
 ```text
 problem / purpose / actors / outcomes
         ↓
-individual concept design                 ← Phase 008 COMPLETE
+individual concept design                  ← Phase 008 COMPLETE
         ↓
-concept dependence / application family   ← Phase 009 COMPLETE
+concept dependence / application family    ← Phase 009 COMPLETE
         ↓
-synchronization / composition             ← Phase 009 COMPLETE
+synchronization / composition              ← Phase 009 COMPLETE
         ↓
-concept mapping / actor-visible experience ← Phase 010 NEXT
+concept mapping / actor-visible experience ← Phase 010 ACTIVE
         ↓
 whole concept-design quality / misfit validation
         ↓
@@ -49,12 +49,18 @@ implementation MAY become READY / NOT STARTED / NEXT
 ## Current design status
 
 ```text
-Phase 008  COMPLETE
-Phase 009  COMPLETE
-009-A..H  COMPLETE
-D1-D4     CURRENTLY CLOSED
-E1-E5     CURRENTLY CLOSED
-Phase 010 NEXT ELIGIBLE — decompose immediately before entry
+Phase 008                  COMPLETE
+Phase 009                  COMPLETE
+D1-D4                      CURRENTLY CLOSED
+E1-E5                      CURRENTLY CLOSED
+Phase 010                  ACTIVE
+Phase 010 decomposition    COMPLETE
+010-A                      NEXT ELIGIBLE
+F1                         PARTIAL
+F2                         PARTIAL
+F3                         PARTIAL TO STRONG
+F4                         PARTIAL
+F5                         STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
 ```
 
 Phase 009 exits with:
@@ -64,29 +70,40 @@ DEPENDENCE / COMPOSITION   COMPLETE ENOUGH FOR PHASE 010
 JACKSON CONCEPT DESIGN     NOT COMPLETE
 ```
 
-## Phase 009 authority boundary
+## Phase 010 mapping boundary
 
-Current Phase 009 consolidation: [Phase 009 Dependence, Application Family & Composition Consolidation](phase-009-dependence-composition-consolidation.md).
+Phase 010 is now decomposed into the dependency-safe sequence recorded in [Phase 010 Entry & Decomposition](../phases/010/010-entry-decomposition.md) and [Concept Mapping Authority](../mapping/index.md).
 
-It establishes:
+Current next design work is:
 
-- eleven accepted concepts;
-- a coherent application family rather than one mandatory full-suite product;
-- current contraction/extension rules;
-- 15 historical synchronization IDs / 13 active cross-concept rules;
-- `SYNC-08` retired, `SYNC-15` reclassified, `SYNC-06` conditional;
-- singular state ownership and no synchronization-owned state;
-- occurrence-scoped/non-reactive historical bindings;
-- no hidden coordinator concept;
-- current composition economy, synergy and combined-activation integrity.
+```text
+010-A  mapping authority / coverage / actor-surface taxonomy / evidence baseline
+```
 
-## Phase 010 is mapping, not implementation
+Later mapping groups proceed through action mapping, inspection mapping, linguistic mapping, physical interaction mapping, application-family workflow composition, semantic-parity/misfit replay, and consolidation.
 
-Phase 010 must map concept actions/state/queries into human/programmatic interaction, language, and experience while preserving current semantics.
+Phase 010 may describe interaction responsibilities for SDK/API, notebook, CLI, report/history, graphical and operator/admin surfaces. It does **not** authorize concrete public APIs, classes, endpoints, commands, widgets, schemas, packages, services, storage or runtime mechanisms.
 
-Phase 010 must not be interpreted as permission to finalize APIs, schemas, service topology, persistence, deployment or executable workflow.
+Historical Phase 003/006 experience material remains evidence and must be normalized against current Phase 008/009 semantics before F1-F5 are closed.
 
-Mapping may reveal a genuine upstream design misfit. If so, reopen the smallest affected authority under J0-J7.
+## Mapping invariants under the hold
+
+Mapping must preserve:
+
+- application-family optionality;
+- current concept boundaries and singular state ownership;
+- direct versus learned-state-assisted Generation;
+- candidate/non-final versus authoritative result distinctions;
+- semantic versus operational completion;
+- Criterion/Evaluation/Evidence separation;
+- Evidence versus external approval/release/privacy claims;
+- Provenance relationship authority versus source-fact ownership;
+- exact historical bindings and current-versus-historical status;
+- occurrence-scoped/non-reactive synchronization;
+- typed disclosure/history/uncertainty states;
+- human/programmatic semantic parity.
+
+If mapping exposes a real conceptual misfit, reopen only the smallest affected upstream authority under J0-J7. Do not simplify the interface by erasing the distinction.
 
 ## Architecture/executable boundary
 
@@ -94,12 +111,12 @@ Phase 004/006/007 architecture and the retained executable scaffold remain downs
 
 They may expose a genuine counterexample but cannot define current concept, dependence, family, synchronization, mapping, or completion authority from package imports, persistence references, service/dataflow direction, event topology, transaction ordering, runtime orchestration, deployment topology, or existing API/object nesting.
 
-Do not restructure implementation to mirror concepts, synchronization IDs, composition planes, application-family kernels, synergy paths, or future Phase 010 mappings while the full design remains incomplete.
+Do not restructure implementation to mirror concepts, synchronization IDs, composition planes, application-family kernels, synergy paths, or Phase 010 mappings while the full design remains incomplete.
 
 ## Remaining design roadmap
 
 ```text
-010       concept mapping / interaction / language / experience
+010       concept mapping / interaction / language / experience — ACTIVE
 011       specificity / familiarity / integrity / synergy / misfit
 012       Jackson concept-design completion decision
 013       representation / architecture reconciliation
@@ -130,8 +147,6 @@ Until Phase 014 passes, do not add production behavior, executable architecture 
 
 ## Current next boundary
 
-**Phase 010 — Concept Mapping, Interaction, Linguistic & Experience Alignment** is next eligible.
-
-Per roadmap discipline, decompose Phase 010 immediately before entry.
+**010-A — Mapping Authority, Coverage Model, Actor/Surface Taxonomy & Evidence Baseline** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
