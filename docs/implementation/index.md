@@ -15,6 +15,8 @@ Current authority:
 - [Jackson Design Completion & Implementation Hold](../authority/jackson-design-completion-implementation-hold.md)
 - [Jackson Methodology Completion Matrix](../authority/jackson-methodology-completion-matrix.md)
 - [Phase 009 Consolidation](../authority/phase-009-dependence-composition-consolidation.md)
+- [Concept Mapping Authority](../mapping/index.md)
+- [Phase 010](../phases/010/index.md)
 
 ```text
 IMPLEMENTATION READINESS   NOT READY
@@ -31,49 +33,50 @@ Phase 008                  COMPLETE
 Phase 009                  COMPLETE
 D1-D4                      CURRENTLY CLOSED
 E1-E5                      CURRENTLY CLOSED
-Phase 010                  NEXT ELIGIBLE
+Phase 010                  ACTIVE
+Phase 010 decomposition    COMPLETE
+010-A                      NEXT ELIGIBLE
 Jackson concept design     IN PROGRESS
 ```
 
-## What Phase 009 completion establishes
+## Active Phase 010 remains design-only
 
-The dependence/application-family/composition design is complete enough to begin concept mapping.
+Phase 010 maps concept actions/state/queries into human/programmatic interaction, language and candidate surface families.
 
-It establishes:
+It now has a strict design sequence from mapping authority/coverage through action mapping, inspection mapping, language, physical interaction mapping, application-family workflow composition, parity/misfit replay and consolidation.
 
-- eleven accepted concepts;
-- multiple coherent application-family variants;
-- current contraction/extension consequences;
-- 15 historical synchronization IDs / 13 active rules;
-- singular state ownership;
-- relation/occurrence-local coupling;
-- occurrence-scoped historical bindings rather than live subscriptions;
-- positive composition synergy;
-- no combined-activation completion cycle or hidden coordinator.
+A concept mapping is not automatically:
 
-This remains concept-design authority only.
+- a public API contract;
+- implementation class/method;
+- database schema;
+- service endpoint;
+- CLI command;
+- UI component/page;
+- event/message;
+- transaction/saga;
+- package/module;
+- runtime workflow;
+- observer/subscription mechanism.
 
-## What Phase 009 completion does not authorize
+Phase 003/006 workflow documents remain evidence. They do not authorize implementing their historical interaction shapes before current Phase 010 mapping is complete.
 
-It does **not** authorize:
+## Mapping-driven implementation prohibitions
 
-- packages/modules matching concepts or family members;
-- services matching concepts or synchronization IDs;
-- event/message types matching synchronization IDs;
-- transactions/sagas/queues/topics;
-- API call direction;
-- schema/foreign-key design;
-- observer/subscription infrastructure for historical bindings;
-- runtime orchestration graphs;
-- implementation of Execution, Evidence or Provenance;
-- product editions/feature flags/deployment profiles;
-- repair of stale implementation tests.
+Do not convert:
 
-## Phase 010 remains design-only
+```text
+concept action            -> one API method/endpoint
+concept state/query       -> one database view/schema
+concept                   -> one service/package
+application-family member -> one SKU/deployment profile
+synchronization           -> one event/transaction
+mapping surface family    -> mandatory product surface
+```
 
-Phase 010 maps concept actions/state/queries into human/programmatic interaction and language.
+without later representation/architecture authority.
 
-A concept mapping is not automatically a public API contract, implementation class, database schema, service endpoint, UI component hierarchy, or runtime workflow.
+Human/programmatic semantic parity likewise does not require identical physical interfaces.
 
 ## Superseded 007-K re-entry conclusion
 
@@ -84,7 +87,7 @@ Retained Phase 007 architecture/scaffold evidence cannot reactivate implementati
 ## Remaining design before implementation readiness can be decided
 
 ```text
-010       concept mapping / interaction / language / experience
+010       concept mapping / interaction / language / experience — ACTIVE
 011       specificity / familiarity / integrity / synergy / misfit
 012       Jackson concept-design completion decision
 013       representation / architecture reconciliation
@@ -101,6 +104,4 @@ Until Phase 014 passes, do not add production concept/domain behavior, implement
 
 Design-only work:
 
-**Phase 010 — Concept Mapping, Interaction, Linguistic & Experience Alignment**.
-
-Decompose Phase 010 immediately before entry.
+**010-A — Mapping Authority, Coverage Model, Actor/Surface Taxonomy & Evidence Baseline**.
