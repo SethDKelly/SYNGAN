@@ -38,7 +38,7 @@ No row in this matrix changes that posture by itself.
 
 ### Class A — current upstream design authority
 
-Methodology, problem knowledge, accepted concepts, Phase 008 normalization/consolidation, the [Phase 009 Consolidation](phase-009-dependence-composition-consolidation.md), current [Concept Dependence & Application Family](../dependence/index.md), current [Synchronization Authority](../synchronizations/index.md), and later Phase 010 mapping authority.
+Methodology, problem knowledge, accepted concepts, Phase 008 normalization/consolidation, the [Phase 009 Consolidation](phase-009-dependence-composition-consolidation.md), current [Concept Dependence & Application Family](../dependence/index.md), current [Synchronization Authority](../synchronizations/index.md), and current [Concept Mapping Authority](../mapping/index.md).
 
 ### Class B — supporting design evidence
 
@@ -57,10 +57,12 @@ Class C/D may reveal a misfit but cannot silently define unfinished Class A beha
 ## Current phase progress
 
 ```text
-Phase 008  COMPLETE — individual concept design complete enough for Phase 009
+Phase 008  COMPLETE — individual concept design complete enough for current program
 Phase 009  COMPLETE — dependence / application family / composition complete enough for Phase 010
 009-A..H  COMPLETE
-Phase 010  NEXT ELIGIBLE — decompose immediately before entry
+Phase 010  ACTIVE — concept mapping / interaction / linguistic / experience alignment
+010 entry  COMPLETE — dependency-safe decomposition established
+010-A      NEXT ELIGIBLE — mapping authority / coverage / actor-surface taxonomy / evidence baseline
 ```
 
 Current Phase 009 result:
@@ -75,6 +77,17 @@ capability/occurrence conditional        7
 D1-D4                                   CURRENTLY CLOSED
 E1-E5                                   CURRENTLY CLOSED
 unresolved J1/J2/J3 blocker             NONE FOUND
+```
+
+Current Phase 010 entry result:
+
+```text
+Phase 010 decomposition                 COMPLETE
+F1                                      PARTIAL
+F2                                      PARTIAL
+F3                                      PARTIAL TO STRONG
+F4                                      PARTIAL
+F5                                      STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
 ```
 
 ## Jackson completion matrix
@@ -106,11 +119,11 @@ unresolved J1/J2/J3 blocker             NONE FOUND
 | E3 | Composition burden/economy and hidden-coordinator avoidance | 009-F rejects hidden coordinator/shadow state; 009-G establishes relation/occurrence-local burden, justified rule separation, generic typed Provenance and non-propagation; 009-H consolidates | **CURRENTLY CLOSED** | 009-F/G/H |
 | E4 | Composition synergy | 009-G demonstrates positive reusable learned synthesis, evidence-gated Generation, reusable Constraint validation, shared Execution, exact bindings + Provenance, direct/learned coexistence; 009-H confirms no purpose collapse | **CURRENTLY CLOSED** | 009-G/H; broader post-mapping review 011 |
 | E5 | Integrity under composition | 009-G passes multi-sync Learning/Generation/Evaluation/Execution/Constraint/Provenance/reproducibility scenarios; 009-H confirms no residual J3 blocker | **CURRENTLY CLOSED** | 009-F/G/H; broader post-mapping review 011 |
-| F1 | Concept action → human/programmatic interaction mapping | Phase 003 workflows exist but no normalized current mapping yet; Phase 009 handoff now defines mapping constraints | **PARTIAL** | 010 |
-| F2 | Concept state/query → actor-visible inspection mapping | Strong visibility/history requirements exist; normalized mapping remains incomplete | **PARTIAL** | 010 |
-| F3 | Linguistic mapping/vocabulary alignment | Terminology/008-F strong; explicit actor/programmatic mapping remains | **PARTIAL TO STRONG** | 010 |
-| F4 | Physical/interaction mapping for SDK/notebook/CLI/API/report/UI | Historical Phase 003 evidence exists; current normalized mapping incomplete | **PARTIAL** | 010 |
-| F5 | Human/programmatic semantic parity | Strong prior evidence; current replay against completed Phase 009 authority remains | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 010 |
+| F1 | Concept action → human/programmatic interaction mapping | Phase 003 workflows exist; Phase 010 entry now defines current mapping discipline/coverage sequence but normalized action mapping remains to be produced | **PARTIAL** | 010-B, consolidated 010-H |
+| F2 | Concept state/query → actor-visible inspection mapping | Strong Phase 003/006 visibility/history requirements exist; Phase 010 entry defines current inspection-mapping scope but normalized map remains incomplete | **PARTIAL** | 010-C, consolidated 010-H |
+| F3 | Linguistic mapping/vocabulary alignment | Terminology/008-F evidence is strong; 010-D will reconcile current actor/programmatic vocabulary, typed statuses and disclosure language | **PARTIAL TO STRONG** | 010-D, consolidated 010-H |
+| F4 | Physical/interaction mapping for SDK/notebook/CLI/API/report/UI | Historical Phase 003 evidence exists; 010-E will map normalized semantics to current candidate surface families without selecting implementation | **PARTIAL** | 010-E/F, consolidated 010-H |
+| F5 | Human/programmatic semantic parity | Strong prior evidence exists; 010-G will replay parity against completed Phase 009 authority and difficult/degraded/recovery/scale cases | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 010-G/H |
 | G1 | Specificity across final composed set | Individual + Phase 009 evidence strong; post-mapping audit pending | **PARTIAL TO STRONG** | 011 |
 | G2 | Familiarity across final composed set | Individual names closed; post-composition/mapping review pending | **PARTIAL TO STRONG** | 011 |
 | G3 | Integrity across synchronizations/mappings | Phase 009 synchronization integrity closed; final post-mapping design-quality replay remains | **PARTIAL TO STRONG** | 011 |
@@ -142,6 +155,25 @@ It establishes the upstream contract Phase 010 must preserve, including:
 - Evidence-versus-approval and Provenance-versus-source boundaries;
 - application-family optionality and rediscovery triggers.
 
+## Phase 010 entry authority
+
+Phase 010 begins from [Phase 010 Entry & Decomposition](../phases/010/010-entry-decomposition.md) and [Concept Mapping Authority](../mapping/index.md).
+
+The strict subgroup sequence is:
+
+```text
+010-A  mapping authority / coverage / actor-surface taxonomy / evidence baseline
+010-B  concept action -> actor intent / interaction
+010-C  state/query/history -> inspection
+010-D  linguistic / vocabulary / typed status / disclosure semantics
+010-E  physical interaction across candidate surface families
+010-F  application-family workflow composition / progressive disclosure
+010-G  human-programmatic parity / degraded-recovery-scale mapping misfit
+010-H  mapping consolidation / Phase 011 handoff
+```
+
+No subgroup may treat one preferred UI/API shape as concept authority.
+
 ## Current methodological verdict
 
 ```text
@@ -150,7 +182,9 @@ INDIVIDUAL CONCEPT DESIGN            COMPLETE ENOUGH FOR CURRENT PROGRAM
 PHASE 009                            COMPLETE
 D1-D4 DEPENDENCE / FAMILY            CURRENTLY CLOSED
 E1-E5 COMPOSITION                    CURRENTLY CLOSED
-PHASE 010 MAPPING                    NEXT ELIGIBLE
+PHASE 010                            ACTIVE
+PHASE 010 DECOMPOSITION              COMPLETE
+010-A                                NEXT ELIGIBLE
 JACKSON CONCEPT DESIGN COMPLETE      NO
 REPRESENTATION/ARCHITECTURE FINAL    NO — PENDING PHASE 013 RECONCILIATION
 IMPLEMENTATION READINESS             NOT READY
@@ -161,8 +195,7 @@ IMPLEMENTATION NEXT                  NOT YET
 ## Current dependency order
 
 ```text
-010  Concept Mapping, Interaction, Linguistic & Experience Alignment
-     — decompose immediately before entry
+010-A -> 010-B -> 010-C -> 010-D -> 010-E -> 010-F -> 010-G -> 010-H
   ↓
 011  Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Design Validation
   ↓
@@ -175,14 +208,12 @@ IMPLEMENTATION NEXT                  NOT YET
 
 ## Guardrail
 
-Phase 009 completion does not prescribe transactions, events, workflow engines, services, schemas, persistence joins, foreign keys, queues, locks, APIs, packages, deployment units, observer/subscription infrastructure, or exactly-once execution.
+Phase 010 concept mapping may expose a genuine upstream misfit, but interface convenience is not evidence to redefine a concept. Mapping also does not prescribe transactions, events, workflow engines, services, schemas, persistence joins, foreign keys, queues, locks, concrete APIs, packages, deployment units, observer/subscription infrastructure, or exactly-once execution.
 
-Phase 010 mapping may expose a genuine upstream misfit. If so, reopen only the smallest affected authority under J0-J7.
+If a genuine mapping misfit is found, reopen only the smallest affected authority under J0-J7.
 
 ## Current next boundary
 
-**Phase 010 — Concept Mapping, Interaction, Linguistic & Experience Alignment** is next eligible.
-
-Per roadmap discipline, decompose Phase 010 immediately before entry rather than assuming a subgroup structure in advance.
+**010-A — Mapping Authority, Coverage Model, Actor/Surface Taxonomy & Evidence Baseline** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
