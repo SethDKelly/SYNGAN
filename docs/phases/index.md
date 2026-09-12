@@ -33,11 +33,11 @@ Only Phase 014 may change that posture after a positive whole-design completion 
 Phase 008 exits with:
 
 ```text
-INDIVIDUAL CONCEPT DESIGN   COMPLETE ENOUGH FOR PHASE 009
+INDIVIDUAL CONCEPT DESIGN   COMPLETE ENOUGH FOR CURRENT PROGRAM
 JACKSON CONCEPT DESIGN      NOT COMPLETE
 ```
 
-## Phase 009 — Concept Dependence, Application Family, Composition & Synchronization Closure — active
+## Phase 009 — Concept Dependence, Application Family, Composition & Synchronization Closure — complete
 
 ```text
 009-A  COMPLETE — inclusion-dependence semantics / pairwise inventory
@@ -47,27 +47,46 @@ JACKSON CONCEPT DESIGN      NOT COMPLETE
 009-E  COMPLETE — synchronization inventory replay
 009-F  COMPLETE — trigger / pre-post / ownership / hidden coordinator
 009-G  COMPLETE — composition economy / coupling / synergy / integrity
-009-H  NEXT ELIGIBLE — Phase 009 consolidation / Phase 010 handoff
+009-H  COMPLETE — Phase 009 consolidation / Phase 010 handoff
 ```
 
-Current methodology state:
+Final Phase 009 methodology state:
 
 ```text
 D1-D4  CURRENTLY CLOSED
 E1-E5  CURRENTLY CLOSED
 ```
 
-009-G confirms that the thirteen active synchronization rules are relation-local, economical without forced merging, positively synergistic in several key product capabilities, and integral under combined activation.
+Phase 009 exits positively:
 
-No synchronization is added/removed/merged by 009-G and no `SYNC-16` is justified.
+```text
+PHASE 009                    COMPLETE
+DEPENDENCE / COMPOSITION     COMPLETE ENOUGH FOR PHASE 010
+UNRESOLVED J1/J2/J3 BLOCKER  NONE FOUND
+JACKSON CONCEPT DESIGN       NOT COMPLETE
+```
 
-Phase 009 is **not yet complete** until 009-H performs the consolidated exit review and handoff.
+Current consolidated authority: [Phase 009 Dependence, Application Family & Composition Consolidation](../authority/phase-009-dependence-composition-consolidation.md).
+
+## Phase 010 — Concept Mapping, Interaction, Linguistic & Experience Alignment — next eligible
+
+Phase 010 is **not yet decomposed or started**.
+
+Per roadmap discipline, decompose it immediately before entry using the completed Phase 009 handoff.
+
+Phase 010 owns current methodology obligations F1-F5:
+
+```text
+F1  concept action -> human/programmatic interaction mapping
+F2  concept state/query -> actor-visible inspection mapping
+F3  linguistic mapping / vocabulary alignment
+F4  physical/interaction mapping across relevant surfaces
+F5  human/programmatic semantic parity
+```
+
+Mapping must preserve application-family optionality, singular state ownership, conditional synchronization, candidate/completed distinctions, semantic/operational completion, Evidence/approval boundaries, Provenance/source ownership, exact historical bindings, and current-versus-historical status semantics.
 
 ## Later design phases
-
-### Phase 010 — Concept Mapping, Interaction, Linguistic & Experience Alignment
-
-Planned. Decompose immediately before entry using the completed Phase 009 handoff.
 
 ### Phase 011 — Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Design Validation
 
@@ -99,4 +118,6 @@ Placeholder only; not ready, not active and not next.
 
 ## Current next boundary
 
-**009-H — Phase 009 Consolidation, Dependence/Composition Completion Decision & Phase 010 Handoff**.
+**Phase 010 — Concept Mapping, Interaction, Linguistic & Experience Alignment** is next eligible.
+
+The next design action is Phase 010 entry/decomposition.
