@@ -16,10 +16,12 @@ Current governing authority: [Jackson Design Completion & Implementation Hold](.
 
 ```text
 Jackson concept design       IN PROGRESS
+Phase 008                    COMPLETE
 Phase 009                    ACTIVE
-009-E                        COMPLETE
-009-F                        COMPLETE
-009-G                        NEXT ELIGIBLE
+009-A..009-G                 COMPLETE
+009-H                        NEXT ELIGIBLE
+D1-D4                        CURRENTLY CLOSED
+E1-E5                        CURRENTLY CLOSED
 architecture corpus          RETAINED AS DOWNSTREAM DESIGN EVIDENCE
 architecture reconciliation  PLANNED FOR PHASE 013
 implementation readiness     NOT READY
@@ -27,69 +29,100 @@ implementation start         NOT STARTED
 implementation next          NOT YET
 ```
 
-## Current upstream composition authority
+## Current upstream authority
 
+- [Concept Dependence & Application Family](../dependence/index.md)
 - [Current Synchronization Authority](../synchronizations/index.md)
 - [009-F Trigger / Ownership Normalization](../synchronizations/trigger-ownership-normalization.md)
+- [009-G Composition Economy / Synergy / Integrity](../synchronizations/composition-economy-synergy-integrity.md)
 
 Current synchronization result:
 
 ```text
-historical IDs                         15
-active synchronizations                13
-required-relational                     6
-capability/occurrence conditional       7
-SYNC-08                                 retired
-SYNC-15                                 reclassified
+historical SYNC IDs                  15
+active cross-concept synchronizations 13
+retired concept-local               SYNC-08
+reclassified contract               SYNC-15
+new synchronization                 NONE
 ```
 
-## Architecture must not infer technical topology from synchronization
+## Composition planes are not architecture layers
 
-009-F conceptual triggers/preconditions/postconditions do not imply:
-
-- event/message types;
-- service/process boundaries;
-- distributed transactions/sagas;
-- queues/topics;
-- API direction;
-- schema/foreign-key edges;
-- package/module dependencies;
-- workflow-engine edges;
-- deployment units;
-- locks or exactly-once execution.
-
-### Ownership is semantic, not storage placement
-
-009-F establishes semantic owners:
+009-G describes five conceptual coordination planes:
 
 ```text
-consumer binding/assessment -> consuming activity
-producer identity            -> Learned State / Evidence
-operational parent/Attempts  -> Execution
-provenance assertions        -> Provenance
+reusable authority binding
+activity/result establishment
+reuse / completion gating
+operational realization
+historical relationship explanation
 ```
 
-This does not require one table, aggregate, service, transaction, or database per owner.
+Architecture MUST NOT interpret these as five services, packages, databases, event topics, transaction domains, deployment tiers, or runtime layers.
 
-### SYNC-06 refinement
+Likewise, positive composition paths such as:
 
-`SYNC-06` is conditional Generation/Learned State reuse coordination. Architecture must not infer that all Generation depends technically on Learning/Learned State.
+```text
+Learning -> Learned State -> Generation
+Generation candidate -> Evaluation -> Evidence -> Generation completion
+activity -> Execution
+owner facts -> Provenance
+```
 
-Direct Generation remains a first-class current family variant.
+are conceptual behavior relationships, not prescribed call graphs.
+
+## Synchronization is not an implementation mechanism
+
+A conceptual synchronization is not automatically:
+
+- a service/process boundary;
+- event/message type;
+- distributed transaction or saga;
+- queue/topic;
+- API call direction;
+- schema/foreign-key edge;
+- package/module dependency;
+- scheduler edge;
+- deployment unit;
+- observer/subscription mechanism.
+
+The 009-G occurrence-scoped/non-propagation rule is especially important: exact historical binding does not require live runtime subscription to all future changes of the referenced concept.
+
+## Current family boundaries remain upstream
+
+```text
+L-CLUSTER = { Learning, Learned State }
+E-CLUSTER = { Evaluation, Evidence }
+```
+
+These do not imply architecture mergers.
+
+```text
+Execution => Learning OR Generation OR Evaluation
+Provenance => meaningful provenance-bearing relationship
+```
+
+These do not mandate generic Workflow/Metadata services.
 
 ## Phase 007 architecture status
 
 The [Phase 007 Consolidated Architecture Contract](phase-007-consolidated-architecture-contract.md) remains the strongest retained architecture synthesis through 007-J.
 
-It remains subject to Phase 013 reconciliation after Jackson concept design completes.
+It remains subject to Phase 013 reconciliation after Jackson concept design is completed in Phase 012.
 
 ## Authority rule during Phases 009-012
 
-Architecture may expose feasibility pressure or counterexamples. It may not veto upstream concept/composition correction, define synchronization ownership from existing runtime shape, or trigger implementation while design remains incomplete.
+Architecture may provide feasibility evidence, representation pressure, counterexamples and misfits. It may not veto upstream corrections, define synchronization membership from runtime/module structure, or trigger implementation while design is incomplete.
 
-009-G now owns composition economy/coupling/synergy/integrity review.
+009-H must now consolidate Phase 009; it is not an architecture-reconciliation phase.
+
+## Phase 013 obligation
+
+After a positive Phase 012 Jackson completion decision, Phase 013 must reconcile retained architecture with final concept/dependence/application-family/composition/mapping authority.
 
 ## Phase 014 gate
+
+Only after Phase 013 may Phase 014 decide implementation readiness.
 
 ```text
 IMPLEMENTATION READINESS   NOT READY
@@ -99,4 +132,4 @@ IMPLEMENTATION NEXT        NOT YET
 
 ## Current next boundary
 
-**009-G — Composition Economy, Coupling, Synergy & Integrity Closure**.
+**009-H — Phase 009 Consolidation, Dependence/Composition Completion Decision & Phase 010 Handoff**.
