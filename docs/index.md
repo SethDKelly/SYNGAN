@@ -14,8 +14,8 @@ This directory is the canonical knowledge bundle for SYNGAN.
 ```text
 methodology / design authority
   > problem knowledge
-  > concepts / synchronizations
-  > concept dependence / application family / composition
+  > concepts
+  > dependence / application family / synchronization / composition
   > concept mapping / experience
   > representation / architecture design
   > implementation planning history
@@ -33,43 +33,36 @@ Existing architecture, source or tests never become upstream concept-design auth
 - [Current Problem Knowledge](problem/index.md)
 - [Accepted Concept Catalog](concepts/index.md)
 - [Concept Dependence & Application Family](dependence/index.md)
-- [Current Synchronization Authority](synchronizations/index.md)
-- [009-F Trigger / Ownership Normalization](synchronizations/trigger-ownership-normalization.md)
-- [009-G Composition Economy / Synergy / Integrity](synchronizations/composition-economy-synergy-integrity.md)
-- [Phase 009](phases/009/index.md)
+- [Synchronization Authority](synchronizations/index.md)
+- [Phase 009 Consolidation](authority/phase-009-dependence-composition-consolidation.md)
+- [Phase 009 Record](phases/009/index.md)
 
 ## Current state
 
 ```text
 accepted concepts                    11
+current desired outcomes             16
 historical synchronization IDs       15
 active synchronizations              13
 active ADRs                          10
-current desired outcomes             16
 Phase 008                            COMPLETE
-individual concept design            COMPLETE ENOUGH FOR PHASE 009
-Phase 009                            ACTIVE
-009-A                                COMPLETE
-009-B                                COMPLETE
-009-C                                COMPLETE
-009-D                                COMPLETE
-009-E                                COMPLETE
-009-F                                COMPLETE
-009-G                                COMPLETE
-009-H                                NEXT ELIGIBLE
+Phase 009                            COMPLETE
+009-A..009-H                         COMPLETE
 D1-D4                                CURRENTLY CLOSED
 E1-E5                                CURRENTLY CLOSED
+Phase 010                            NEXT ELIGIBLE
+Phase 010 decomposition              NOT YET PERFORMED
 Jackson design completion            IN PROGRESS
 implementation readiness             NOT READY
 implementation start                 NOT STARTED
 implementation next                  NOT YET
 ```
 
-## Current dependence / application-family authority
+## Completed Phase 009 authority
 
-009-A through 009-D establish the current inclusion-dependence graph, valid application family, explanation order, and contraction/extension consequences.
+Phase 009 now provides one consolidated dependence/application-family/composition contract for Phase 010.
 
-Canonical kernels remain:
+### Application family
 
 ```text
 L-KERNEL = { Data Meaning, Synthesis Strategy, Learning, Learned State }
@@ -77,11 +70,11 @@ G-KERNEL = { Data Meaning, Synthesis Strategy, Generation }
 E-KERNEL = { Evaluation Criterion, Evaluation, Evidence }
 ```
 
-Execution requires at least one Learning/Generation/Evaluation activity. Provenance requires an actual meaningful typed relationship/history witness.
+Execution requires at least one Learning/Generation/Evaluation activity. Provenance requires a meaningful typed relationship/history witness.
 
-## Current synchronization / composition authority
+The full eleven-concept application is coherent but is not mandatory for every valid family member.
 
-The historical fifteen synchronization IDs now resolve to thirteen active cross-concept rules:
+### Synchronization inventory
 
 ```text
 required-relational                    6
@@ -92,65 +85,43 @@ new synchronization                   NONE
 SYNC-16                               NOT JUSTIFIED
 ```
 
-009-F establishes singular state ownership and no hidden coordinator. 009-G then closes the composed-set economy, synergy and integrity audit.
+`SYNC-06` remains conditional Generation/Learned State reuse.
 
-### Economy
+### Ownership / economy / integrity
 
-The design is intentionally relation-local:
+- synchronization owns no canonical state;
+- consumer activities own exact bindings and contextual assessments;
+- Learned State and Evidence own producer identity;
+- Execution owns operational realization/Attempt state;
+- Provenance owns typed relationship assertions;
+- conditional rules activate only when their actual semantic relationship exists;
+- historical bindings are occurrence-scoped rather than permanent reactive subscriptions;
+- direct Generation remains valid without fabricated Learning/Learned State;
+- non-gated Generation remains valid without Evaluation/Evidence;
+- evaluation-gated Generation is staged candidate → Evaluation → Evidence → Generation completion reasoning, not circular authority;
+- no hidden coordinator concept is required.
 
-```text
-L-KERNEL        -> SYNC-01, 02, 05
-Direct G-KERNEL -> SYNC-01, 02
-E-KERNEL        -> SYNC-09, 10, 12
-```
+## Phase 010 handoff
 
-Learned-state-assisted Generation adds `SYNC-06`; evidence-gated Generation adds `SYNC-13`; Constraint/Execution/Provenance add only occurrence-specific relations.
+Phase 010 owns concept mapping, interaction, language, and experience. It must preserve current Phase 008/009 semantics while making them actor-visible and programmatically usable.
 
-### Occurrence-scoped synchronization
+Key mapping constraints include:
 
-Exact historical bindings do not create permanent reactive subscriptions. Later revisions/status changes do not silently rewrite committed/completed history.
+- do not collapse Learning/Generation/Evaluation into a generic `run`;
+- do not collapse Learned State/Generation output/Evidence into a generic `artifact`;
+- preserve candidate/awaiting-validation/completed Generation distinctions;
+- preserve operational versus semantic completion;
+- preserve Criterion/Evaluation/Evidence and Evidence/approval boundaries;
+- preserve Provenance relationship authority versus source-fact ownership;
+- preserve exact historical bindings and current-versus-historical status distinctions;
+- preserve valid reduced application-family variants;
+- maintain human/programmatic semantic parity.
 
-### Synergy
-
-Current positive composition synergies include:
-
-- reusable Learning → Learned State → Generation;
-- evidence-gated Generation;
-- reusable Constraint + Evaluation/Evidence + Generation;
-- one Execution concept providing operational lifecycle to three domain activities without owning semantic completion;
-- exact bindings + Provenance producing end-to-end explanation;
-- direct and learned Generation coexisting without fabricated Learning.
-
-### Integrity
-
-Evaluation-gated Generation is staged feedback, not a completion cycle:
-
-```text
-Generation candidate
-  -> Evaluation
-  -> Evidence
-  -> Generation-owned completion decision
-```
-
-Execution cannot establish domain semantic completion. Evidence cannot become approval authority. Provenance cannot fabricate source facts. Optional capabilities remain optional.
-
-## Phase 009 sequence
-
-```text
-009-A  COMPLETE
-009-B  COMPLETE
-009-C  COMPLETE
-009-D  COMPLETE
-009-E  COMPLETE
-009-F  COMPLETE
-009-G  COMPLETE
-009-H  NEXT — consolidation / Phase 010 handoff
-```
+Phase 010 may expose a genuine upstream misfit and reopen the smallest affected authority. It must not hide a design problem merely to make an interface simpler.
 
 ## Remaining design roadmap
 
 ```text
-009    Concept Dependence, Application Family, Composition & Synchronization Closure — ACTIVE
 010    Concept Mapping, Interaction, Linguistic & Experience Alignment
 011    Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Design Validation
 012    Jackson Concept-Design Consolidation & Completion Decision
@@ -162,7 +133,7 @@ Execution cannot establish domain semantic completion. Evidence cannot become ap
 
 ## Implementation status rule
 
-Through Phases 009-014:
+Through Phases 010-014:
 
 ```text
 IMPLEMENTATION READINESS   NOT READY
@@ -170,12 +141,12 @@ IMPLEMENTATION START       NOT STARTED
 IMPLEMENTATION NEXT        NOT YET
 ```
 
-Do not translate application-family or synchronization/composition authority mechanically into packages, feature flags, services, schemas, transactions, event buses, deployment units, or product SKUs.
+Do not translate concept, application-family, synchronization, composition, or mapping authority mechanically into packages, services, schemas, transactions, event buses, deployment units, APIs, or product SKUs.
 
 A positive Phase 012 still does not make implementation ready. Phase 013 must reconcile architecture; only a positive Phase 014 may make implementation **READY / NOT STARTED / NEXT**, and implementation itself still requires Phase 015.
 
 ## Current next boundary
 
-**009-H — Phase 009 Consolidation, Dependence/Composition Completion Decision & Phase 010 Handoff** is next eligible.
+**Phase 010 — Concept Mapping, Interaction, Linguistic & Experience Alignment** is next eligible.
 
-Implementation remains **NOT READY / NOT STARTED / NOT YET**.
+Per roadmap discipline, decompose Phase 010 immediately before entry.
