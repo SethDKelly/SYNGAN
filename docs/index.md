@@ -34,83 +34,105 @@ Existing architecture, source or tests never become upstream concept-design auth
 - [Accepted Concept Catalog](concepts/index.md)
 - [Concept Dependence & Application Family](dependence/index.md)
 - [Current Synchronization Authority](synchronizations/index.md)
-- [009-E Synchronization Inventory Revalidation](synchronizations/application-family-revalidation.md)
 - [009-F Trigger / Ownership Normalization](synchronizations/trigger-ownership-normalization.md)
+- [009-G Composition Economy / Synergy / Integrity](synchronizations/composition-economy-synergy-integrity.md)
 - [Phase 009](phases/009/index.md)
 
 ## Current state
 
 ```text
-accepted concepts                       11
-historical synchronization IDs          15
-active synchronizations                 13
-required-relational                      6
-capability/occurrence conditional        7
-active ADRs                             10
-current desired outcomes                16
-Phase 008                               COMPLETE
-Phase 009                               ACTIVE
-009-A                                   COMPLETE
-009-B                                   COMPLETE
-009-C                                   COMPLETE
-009-D                                   COMPLETE
-009-E                                   COMPLETE
-009-F                                   COMPLETE
-009-G                                   NEXT ELIGIBLE
-D1-D4                                   CURRENTLY CLOSED
-E1                                      CURRENTLY CLOSED
-E2                                      CURRENTLY CLOSED
-E3                                      PARTIAL TO STRONG
-E4                                      PARTIAL
-E5                                      STRONG EVIDENCE / REVALIDATION REQUIRED
-Jackson design completion               IN PROGRESS
-implementation readiness                NOT READY
-implementation start                    NOT STARTED
-implementation next                     NOT YET
+accepted concepts                    11
+historical synchronization IDs       15
+active synchronizations              13
+active ADRs                          10
+current desired outcomes             16
+Phase 008                            COMPLETE
+individual concept design            COMPLETE ENOUGH FOR PHASE 009
+Phase 009                            ACTIVE
+009-A                                COMPLETE
+009-B                                COMPLETE
+009-C                                COMPLETE
+009-D                                COMPLETE
+009-E                                COMPLETE
+009-F                                COMPLETE
+009-G                                COMPLETE
+009-H                                NEXT ELIGIBLE
+D1-D4                                CURRENTLY CLOSED
+E1-E5                                CURRENTLY CLOSED
+Jackson design completion            IN PROGRESS
+implementation readiness             NOT READY
+implementation start                 NOT STARTED
+implementation next                  NOT YET
 ```
 
-## Current synchronization authority
+## Current dependence / application-family authority
 
-009-E determines active inventory membership. 009-F now supplies detailed trigger/precondition/postcondition/state-owner authority.
+009-A through 009-D establish the current inclusion-dependence graph, valid application family, explanation order, and contraction/extension consequences.
 
-Canonical ownership:
+Canonical kernels remain:
 
 ```text
-activity exact bindings + contextual assessments
-  -> Learning / Generation / Evaluation
+L-KERNEL = { Data Meaning, Synthesis Strategy, Learning, Learned State }
+G-KERNEL = { Data Meaning, Synthesis Strategy, Generation }
+E-KERNEL = { Evaluation Criterion, Evaluation, Evidence }
+```
 
-Learned State producer identity
-  -> Learned State
+Execution requires at least one Learning/Generation/Evaluation activity. Provenance requires an actual meaningful typed relationship/history witness.
 
-Evidence producer identity
+## Current synchronization / composition authority
+
+The historical fifteen synchronization IDs now resolve to thirteen active cross-concept rules:
+
+```text
+required-relational                    6
+capability/occurrence conditional      7
+retired concept-local                 SYNC-08
+reclassified cross-cutting contract   SYNC-15
+new synchronization                   NONE
+SYNC-16                               NOT JUSTIFIED
+```
+
+009-F establishes singular state ownership and no hidden coordinator. 009-G then closes the composed-set economy, synergy and integrity audit.
+
+### Economy
+
+The design is intentionally relation-local:
+
+```text
+L-KERNEL        -> SYNC-01, 02, 05
+Direct G-KERNEL -> SYNC-01, 02
+E-KERNEL        -> SYNC-09, 10, 12
+```
+
+Learned-state-assisted Generation adds `SYNC-06`; evidence-gated Generation adds `SYNC-13`; Constraint/Execution/Provenance add only occurrence-specific relations.
+
+### Occurrence-scoped synchronization
+
+Exact historical bindings do not create permanent reactive subscriptions. Later revisions/status changes do not silently rewrite committed/completed history.
+
+### Synergy
+
+Current positive composition synergies include:
+
+- reusable Learning → Learned State → Generation;
+- evidence-gated Generation;
+- reusable Constraint + Evaluation/Evidence + Generation;
+- one Execution concept providing operational lifecycle to three domain activities without owning semantic completion;
+- exact bindings + Provenance producing end-to-end explanation;
+- direct and learned Generation coexisting without fabricated Learning.
+
+### Integrity
+
+Evaluation-gated Generation is staged feedback, not a completion cycle:
+
+```text
+Generation candidate
+  -> Evaluation
   -> Evidence
-
-Execution parent binding + Attempts/retry/recovery
-  -> Execution
-
-Provenance relationship assertions
-  -> Provenance
-
-synchronization-owned state
-  -> NONE
+  -> Generation-owned completion decision
 ```
 
-`SYNC-06` is now conditional and limited to Generation/Learned State reuse. Direct Generation does not activate it.
-
-`SYNC-08` remains retired as Generation-local result behavior. `SYNC-15` remains the Reproducibility Contract. No `SYNC-16` is justified.
-
-No generic Compatibility, Workflow/Run, Promotion, Quality/Approval, Reproducibility, or Composition coordinator is required.
-
-## Current family replay
-
-```text
-L-KERNEL required: SYNC-01, SYNC-02, SYNC-05
-G-KERNEL direct required: SYNC-01, SYNC-02
-learned-state-assisted Generation adds: SYNC-06
-E-KERNEL required: SYNC-09, SYNC-10, SYNC-12
-```
-
-Constraint, Execution, Evidence-gating, and Provenance synchronization remains conditional on the actual relation/capability.
+Execution cannot establish domain semantic completion. Evidence cannot become approval authority. Provenance cannot fabricate source facts. Optional capabilities remain optional.
 
 ## Phase 009 sequence
 
@@ -119,10 +141,10 @@ Constraint, Execution, Evidence-gating, and Provenance synchronization remains c
 009-B  COMPLETE
 009-C  COMPLETE
 009-D  COMPLETE
-009-E  COMPLETE — inventory replay
-009-F  COMPLETE — trigger / pre-post / ownership / hidden coordinator
-009-G  NEXT — economy / coupling / synergy / integrity
-009-H  consolidation / Phase 010 handoff
+009-E  COMPLETE
+009-F  COMPLETE
+009-G  COMPLETE
+009-H  NEXT — consolidation / Phase 010 handoff
 ```
 
 ## Remaining design roadmap
@@ -148,10 +170,12 @@ IMPLEMENTATION START       NOT STARTED
 IMPLEMENTATION NEXT        NOT YET
 ```
 
-Do not translate synchronization semantics into transactions, event buses, services, queues, schemas, package dependencies, workflow engines, or deployment topology while design remains incomplete.
+Do not translate application-family or synchronization/composition authority mechanically into packages, feature flags, services, schemas, transactions, event buses, deployment units, or product SKUs.
+
+A positive Phase 012 still does not make implementation ready. Phase 013 must reconcile architecture; only a positive Phase 014 may make implementation **READY / NOT STARTED / NEXT**, and implementation itself still requires Phase 015.
 
 ## Current next boundary
 
-**009-G — Composition Economy, Coupling, Synergy & Integrity Closure** is next eligible.
+**009-H — Phase 009 Consolidation, Dependence/Composition Completion Decision & Phase 010 Handoff** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
