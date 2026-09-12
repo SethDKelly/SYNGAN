@@ -17,6 +17,7 @@ Concept specifications own purpose, state, actions, lifecycle and invariants. Sy
 - [Synchronization Trigger, Preconditions/Postconditions, State Ownership & Hidden-Coordinator Audit](trigger-ownership-normalization.md) — 009-F detailed trigger/ownership authority.
 - [Synchronization Inventory Revalidation Across the Application Family](application-family-revalidation.md) — 009-E inventory/scope authority, superseded where 009-F/G refine scope/classification.
 - [Core Synchronizations](core-synchronizations.md) — historical source evidence; current membership/scope follows 009-E/F/G/H.
+- [Concept Mapping Authority](../mapping/index.md) — current downstream consumer of synchronization semantics.
 
 ## Current synchronization inventory
 
@@ -111,26 +112,7 @@ No active rule is added, removed, merged, or further narrowed at Phase 009 exit.
 
 A synchronization coordinates one conceptual occurrence/relation. It does not create a permanent reactive subscription.
 
-Therefore later revision/status changes do not silently rewrite exact historical bindings:
-
-- newer Data Meaning does not reinterpret committed work;
-- Strategy retirement does not rewrite historical activities;
-- Constraint revision does not rewrite prior bindings;
-- Learned State retirement does not mutate prior Generation history;
-- Criterion revision does not reinterpret historical Evidence;
-- Evidence invalidation changes current reliance but does not silently rewrite historical Generation completion;
-- Provenance correction does not rewrite source facts.
-
-## Positive composition synergy
-
-Current explicit synergies include:
-
-1. reusable `Learning -> Learned State -> Generation`;
-2. evidence-gated Generation;
-3. reusable Constraint + Evaluation/Evidence + Generation;
-4. shared Execution operational lifecycle across Learning/Generation/Evaluation;
-5. exact bindings + Provenance for end-to-end historical explanation;
-6. direct and learned Generation coexistence without fabricated Learning.
+Later revision/status changes therefore do not silently rewrite exact historical bindings.
 
 ## Combined-activation integrity
 
@@ -160,17 +142,21 @@ Remains reclassified under the cross-cutting Reproducibility Contract. No standa
 ## Current methodology state
 
 ```text
-Phase 009  COMPLETE
-D1-D4      CURRENTLY CLOSED
-E1-E5      CURRENTLY CLOSED
-Phase 010  NEXT ELIGIBLE
+Phase 009                 COMPLETE
+D1-D4                     CURRENTLY CLOSED
+E1-E5                     CURRENTLY CLOSED
+Phase 010                 ACTIVE
+Phase 010 decomposition   COMPLETE
+010-A                     NEXT ELIGIBLE
 ```
 
-## Phase 010 handoff
+## Active Phase 010 mapping implications
 
-Concept mapping must expose the distinctions synchronization preserves without turning them into hidden implementation machinery.
+Concept mapping must expose the distinctions synchronization preserves without turning them into implementation machinery.
 
-In particular Phase 010 must preserve:
+010-A must make synchronization applicability/ownership available to the coverage model so later mappings can distinguish required-relational from capability/occurrence-conditional coordination.
+
+Later mapping must preserve:
 
 - semantic versus operational completion;
 - candidate versus completed Generation output;
@@ -179,7 +165,10 @@ In particular Phase 010 must preserve:
 - Provenance relation versus source ownership;
 - conditional synchronization activation;
 - current status versus historical binding truth;
+- occurrence-scoped/non-reactive coordination;
 - human/programmatic semantic parity.
+
+No surface should expose a generic synchronization-owned `status`, `validation`, `quality`, `workflow` or `approval` state.
 
 ## Composition guardrails
 
@@ -197,6 +186,6 @@ In particular Phase 010 must preserve:
 
 ## Current next boundary
 
-**Phase 010 — Concept Mapping, Interaction, Linguistic & Experience Alignment** is next eligible.
+**010-A — Mapping Authority, Coverage Model, Actor/Surface Taxonomy & Evidence Baseline** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
