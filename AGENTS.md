@@ -12,31 +12,26 @@ Start with:
 - `docs/authority/design-methodology.md`
 - `docs/authority/jackson-design-completion-implementation-hold.md`
 - `docs/authority/jackson-methodology-completion-matrix.md`
-- `docs/concepts/phase-008-individual-concept-consolidation.md`
+- `docs/authority/phase-009-dependence-composition-consolidation.md`
+- `docs/concepts/index.md`
 - `docs/dependence/index.md`
 - `docs/synchronizations/index.md`
-- `docs/synchronizations/trigger-ownership-normalization.md`
-- `docs/synchronizations/composition-economy-synergy-integrity.md`
 - `docs/phases/009/index.md`
 
 Current state:
 
 ```text
 accepted concepts                    11
+current desired outcomes             16
 historical synchronization IDs       15
 active synchronizations              13
 Phase 008                            COMPLETE
-Phase 009                            ACTIVE
-009-A                                COMPLETE
-009-B                                COMPLETE
-009-C                                COMPLETE
-009-D                                COMPLETE
-009-E                                COMPLETE
-009-F                                COMPLETE
-009-G                                COMPLETE
-009-H                                NEXT ELIGIBLE
+Phase 009                            COMPLETE
+009-A..009-H                         COMPLETE
 D1-D4                                CURRENTLY CLOSED
 E1-E5                                CURRENTLY CLOSED
+Phase 010                            NEXT ELIGIBLE
+Phase 010 decomposition              NOT YET PERFORMED
 Jackson design completion            IN PROGRESS
 implementation readiness             NOT READY
 implementation start                 NOT STARTED
@@ -47,42 +42,31 @@ implementation next                  NOT YET
 
 > **Complete the design before making implementation ready. Existing architecture, code, tests or plans may expose misfits, but they may not veto upstream concept-design correction.**
 
-## Current synchronization inventory
+## Phase 009 consolidated authority
 
-### Required relational
+Phase 009 is complete enough for Phase 010.
 
-```text
-SYNC-01  Data Meaning revision binding
-SYNC-02  Strategy selection and compatibility
-SYNC-05  Learning produces Learned State
-SYNC-09  Evaluation Criterion binding
-SYNC-10  Evaluation method compatibility
-SYNC-12  Evaluation produces Evidence
-```
-
-### Capability / occurrence conditional
+Current application-family kernels:
 
 ```text
-SYNC-03  Constraint binding and handling disposition
-SYNC-04  Learning operational realization
-SYNC-06  Generation / Learned State reuse compatibility and exact basis binding
-SYNC-07  Generation operational realization
-SYNC-11  Evaluation operational realization
-SYNC-13  Generation / Evidence evidence-gated completion handoff
-SYNC-14  Provenance recording at material transitions
+L-KERNEL = { Data Meaning, Synthesis Strategy, Learning, Learned State }
+G-KERNEL = { Data Meaning, Synthesis Strategy, Generation }
+E-KERNEL = { Evaluation Criterion, Evaluation, Evidence }
 ```
 
-Historical IDs:
+Current synchronization inventory:
 
 ```text
-SYNC-08  RETIRED — Generation-local output candidate/completion/promotion
-SYNC-15  RECLASSIFIED — cross-cutting Reproducibility Contract
-SYNC-16  NOT JUSTIFIED
+required-relational                    6
+capability/occurrence conditional      7
+SYNC-08                                RETIRED — Generation-local output lifecycle
+SYNC-15                                RECLASSIFIED — Reproducibility Contract
+SYNC-16                                NOT JUSTIFIED
 ```
 
-Do not reuse or resurrect reserved IDs for symmetry.
+`SYNC-06` remains conditional Generation/Learned State reuse.
 
-## Canonical cross-sync ownership
+Canonical cross-sync ownership:
 
 ```text
 consumer exact binding / contextual assessment
@@ -104,29 +88,7 @@ synchronization-owned canonical state
   -> NONE
 ```
 
-## Current whole-composition rule
-
-009-G closes economy, coupling, synergy and combined integrity for the current Phase 009 composition.
-
-### Relation-local activation
-
-Mere co-presence of concepts does not activate a conditional synchronization. The actual semantic relation must occur.
-
-Core variant burden remains:
-
-```text
-L-KERNEL        SYNC-01, SYNC-02, SYNC-05
-Direct G-KERNEL SYNC-01, SYNC-02
-E-KERNEL        SYNC-09, SYNC-10, SYNC-12
-```
-
-Learned-state-assisted Generation adds `SYNC-06`; evidence-gated Generation adds `SYNC-13`; Constraint/Execution/Provenance add only occurrence-specific relations.
-
-### Synchronization is occurrence-scoped, not a live subscription
-
-Do **not** infer automatic retroactive propagation from an exact historical binding.
-
-Examples:
+Synchronization is occurrence-scoped, not a permanent live subscription.
 
 ```text
 new Data Meaning revision  != rewrite committed activity
@@ -135,99 +97,98 @@ Constraint revision        != rewrite prior binding
 Learned State retirement   != mutate prior Generation history
 Criterion revision         != reinterpret historical Evidence
 Evidence invalidation      != silently rewrite historical Generation completion
-Provenance correction      != rewrite source concept history
+Provenance correction      != rewrite source history
 ```
 
-Future/current-use decisions may respond under their own owner rules, but synchronization does not maintain hidden shared state across all later changes.
+## Critical application-family rules
 
-### Staged evidence feedback
+- direct Generation is valid without Learning/Learned State;
+- non-gated Generation is valid without Evaluation/Evidence;
+- Constraint remains optional unless reusable prescriptive-rule capability is claimed;
+- Execution remains optional unless durable operational realization is claimed;
+- Provenance remains optional unless typed cross-concept history capability is claimed;
+- SCC co-inclusion does not imply concept or architecture merger;
+- conditional synchronization does not create universal inclusion dependence.
 
-Evaluation-gated Generation is valid staged composition:
+## Current Phase 010 boundary
+
+**Phase 010 — Concept Mapping, Interaction, Linguistic & Experience Alignment** is next eligible.
+
+Do not execute Phase 010 before first decomposing it into dependency-safe design subgroups using the completed Phase 009 handoff.
+
+Phase 010 owns:
 
 ```text
-Generation candidate
-  -> Evaluation
-  -> Evidence
-  -> Generation-owned completion decision
+F1  concept action -> human/programmatic interaction mapping
+F2  concept state/query -> actor-visible inspection mapping
+F3  linguistic mapping / vocabulary alignment
+F4  physical/interaction mapping across relevant surfaces
+F5  human/programmatic semantic parity
 ```
 
-Evaluation requires identifiable candidate state, not an already completed Generation. Evidence never owns `Generation.Complete`.
+## Phase 010 mapping guardrails
 
-## Positive synergies to preserve
+Mapping MUST preserve current semantics and must not collapse:
 
-- `Learning -> Learned State -> Generation` enables reusable learned synthesis without hidden Learned State mutation.
-- Evidence-gated Generation lets independent Evaluation/Evidence strengthen Generation completion without collapsing their authorities.
-- Constraint + Evaluation/Evidence + Generation makes reusable rule validation explicit without treating enforcement as proof.
-- Execution supplies durable operational lifecycle across Learning/Generation/Evaluation while preserving semantic completion ownership.
-- exact bindings + Provenance provide cross-concept historical explanation without shadow copies.
-- direct and learned Generation coexist without fabricated Learning occurrences.
+```text
+Learning / Generation / Evaluation -> generic Run
+Learned State / Generation output / Evidence -> generic Artifact
+Data Meaning / Constraint -> generic Rule or Schema
+Evaluation Criterion / Evaluation / Evidence -> generic Metric
+Execution / domain activity -> generic Job
+Evidence / external decision -> generic Approval status
+Provenance / source fact -> generic History owner
+```
 
-Do not force every synchronization to be synergistic; basic bindings may be intentionally additive/integrity-preserving.
+Mapping must preserve:
 
-## Economy rules
+- application-family optionality;
+- direct vs learned Generation;
+- partial/candidate/awaiting-validation/completed Generation state;
+- semantic vs operational completion;
+- Criterion/Evaluation/Evidence distinctions;
+- Evidence vs approval/release/privacy guarantee;
+- Provenance relationship authority vs source ownership;
+- exact historical binding inspectability;
+- current status vs historical status;
+- occurrence-scoped synchronization;
+- human/programmatic semantic parity.
 
-Do not merge concept synchronizations merely to reduce the numeric rule count.
+A concise representation is allowed. Semantic distinctions must remain recoverable and actor-understandable.
 
-In particular:
-
-- keep `SYNC-09` and `SYNC-10` distinct: method sufficiency and exact Criterion commitment are different actions;
-- keep `SYNC-04`, `SYNC-07`, `SYNC-11` distinct: a generic Activity umbrella is not an accepted concept and parent semantic contracts differ;
-- keep `SYNC-05` and `SYNC-12` distinct: Learned State and Evidence have different result semantics/cardinalities;
-- keep one generic typed `SYNC-14` rather than inventing pair-specific Provenance synchronizations.
-
-No new `SYNC-16` is currently justified.
+If mapping exposes a genuine concept/dependence/composition misfit, reopen the smallest affected upstream authority under J0-J7 rather than papering over the distinction.
 
 ## Critical interpretation
 
-A concept synchronization is not automatically:
+A concept, synchronization, mapping, composition plane, or synergy path is not automatically:
 
 - a service call;
-- an event or message;
-- a transaction or saga;
+- an event/message;
+- a transaction/saga;
 - a queue/topic;
 - an API endpoint;
 - a package/module dependency;
 - a schema foreign key;
-- a runtime workflow edge;
+- a workflow edge;
 - a deployment unit;
-- a permanent observer/subscription mechanism.
+- an observer/subscription mechanism.
 
-Do not translate synchronization authority into implementation topology while design remains incomplete.
-
-## Current 009-H boundary
-
-**009-H — Phase 009 Consolidation, Dependence/Composition Completion Decision & Phase 010 Handoff** is next eligible.
-
-009-H must consolidate, not redesign by default.
-
-It must verify:
-
-- D1-D4 and E1-E5 authority is internally consistent;
-- concept count remains 11;
-- historical SYNC IDs remain 15 with 13 active rules;
-- `SYNC-08`/`SYNC-15` dispositions and `SYNC-06` narrowing are propagated consistently;
-- no stale candidate/next-state wording remains in active Phase 009 authority;
-- no residual J1/J2/J3 blocker exists;
-- Phase 010 receives a clear dependence/application-family/composition handoff;
-- implementation remains **NOT READY / NOT STARTED / NOT YET**.
-
-009-H may declare Phase 009 dependence/composition **complete enough for Phase 010**. It may not declare Jackson concept design complete.
+Do not translate current design authority directly into implementation topology.
 
 ## Stop/reopen discipline
 
-Follow J0-J7 in the methodology matrix. Reopen the smallest affected upstream authority for a real defect.
-
 - J1 local concept defect → Phase 008 concept authority;
 - J2 purpose/boundary/catalog defect → Phase 008-B/F/G as appropriate;
-- J3 dependence/composition defect → Phase 009 authority.
+- J3 dependence/composition defect → Phase 009 authority;
+- mapping defect that does not prove an upstream issue → Phase 010.
 
 Do not reopen completed authority merely to align with existing implementation structure.
 
 ## What agents may do now
 
-For 009-H, agents may consolidate and reconcile current Phase 009 design documents, verify counts/status/authority consistency, identify any residual D/E contradiction, and prepare the Phase 010 handoff.
+Agents may decompose Phase 010 immediately before entry and then perform design-only concept mapping work.
 
-Architecture/source/tests may be inspected only as counterexample/feasibility evidence, not composition authority.
+Architecture/source/tests may be inspected only as counterexample/feasibility evidence, not as upstream concept/mapping authority.
 
 ## What agents must not do until Phase 014 passes
 
@@ -237,7 +198,7 @@ Do not repair stale implementation tests solely to make implementation appear re
 
 ## Readiness rule
 
-Phases 009-013 retain:
+Phases 010-013 retain:
 
 ```text
 NOT READY / NOT STARTED / NOT YET
@@ -247,6 +208,6 @@ Only Phase 014 may make the final whole-design readiness decision; implementatio
 
 ## Current next boundary
 
-**009-H — Phase 009 Consolidation, Dependence/Composition Completion Decision & Phase 010 Handoff**.
+**Phase 010 — Concept Mapping, Interaction, Linguistic & Experience Alignment**.
 
-Do not begin implementation work.
+Decompose immediately before entry. Do not begin implementation work.
