@@ -8,7 +8,7 @@ status: active
 
 This directory contains the canonical concept specifications accepted in Phase 001 and normalized through Phase 008.
 
-Cross-concept coordination is governed by [Synchronizations](../synchronizations/index.md); inclusion dependence/application-family authority is governed by [Concept Dependence & Application Family](../dependence/index.md).
+Cross-concept dependence/composition is now consolidated by [Phase 009 Dependence, Application Family & Composition Consolidation](../authority/phase-009-dependence-composition-consolidation.md).
 
 ## Current individual-concept authority
 
@@ -40,14 +40,16 @@ accepted concepts                    11
 historical synchronization IDs       15
 active synchronizations              13
 missing current concept              NONE FOUND
-INDIVIDUAL CONCEPT DESIGN            COMPLETE ENOUGH FOR PHASE 009
+Phase 008                            COMPLETE
+Phase 009                            COMPLETE
 D1-D4                                CURRENTLY CLOSED
 E1-E5                                CURRENTLY CLOSED
+Phase 010                            NEXT ELIGIBLE
 ```
 
-No Phase 009 subgroup through 009-G finds a reason to add, remove, merge, split, or rename a concept.
+Phase 009 found no reason to add, remove, merge, split, or rename a concept.
 
-## Core boundary results
+## Core boundaries handed to Phase 010
 
 ```text
 Data Meaning          != Constraint
@@ -61,11 +63,9 @@ Evidence               != Provenance
 Execution              != Attempt != platform job
 ```
 
-Generation owns request/Condition and candidate-to-completed logical output semantics. Relationship remains Data Meaning-owned descriptive structure. Generic Privacy remains rejected pending fresh mechanism-specific discovery. Use/Release Decision remains external authority.
+Generation owns request/Condition and candidate-to-completed logical output semantics. Synthetic Output is not a separate accepted concept. Reproducibility remains a cross-cutting contract. Generic Privacy remains deferred pending mechanism-specific discovery. Use/Release Decision remains external authority.
 
 ## Application-family result
-
-Canonical kernels remain:
 
 ```text
 L-KERNEL = { Data Meaning, Synthesis Strategy, Learning, Learned State }
@@ -73,11 +73,9 @@ G-KERNEL = { Data Meaning, Synthesis Strategy, Generation }
 E-KERNEL = { Evaluation Criterion, Evaluation, Evidence }
 ```
 
-Reusable authority-only family members include Data Meaning, Synthesis Strategy, Constraint and Evaluation Criterion independently.
+Direct Generation remains valid without Learning/Learned State. Evaluation/Evidence are not universal prerequisites for Generation. Constraint, Execution, and Provenance remain capability-conditional.
 
-Execution is valid only with at least one Learning/Generation/Evaluation activity. Provenance is valid only with a meaningful provenance-bearing relationship/history witness.
-
-## Current synchronization result
+## Synchronization result
 
 ```text
 required-relational active rules      6
@@ -88,60 +86,49 @@ new synchronization                   NONE
 SYNC-16                               NOT JUSTIFIED
 ```
 
-`SYNC-08` retirement reinforces the existing boundary that synthetic output is Generation-owned result state, not an independent Output concept.
-
-`SYNC-15` reclassification reinforces the existing boundary that Reproducibility is a cross-cutting contract, not an independent concept.
-
-`SYNC-06` is conditional Generation/Learned State reuse, not a general Generation umbrella.
-
-## Composition economy and integrity result
-
-009-G finds no reason to merge concepts merely because synchronizations share patterns.
-
-Examples:
-
-- `SYNC-04/07/11` remain distinct because Learning, Generation and Evaluation have different semantic completion contracts; their common Execution pattern does not justify a generic Activity concept.
-- `SYNC-05/12` remain distinct because Learned State and Evidence have different purposes/cardinalities/lifecycles; their common activity/result shape does not justify a generic Artifact concept.
-- `SYNC-09/10` remain distinct because Criterion binding and method sufficiency are different Evaluation actions.
-
-Synchronization is occurrence-scoped, not a permanent reactive subscription. Later changes to a bound concept do not silently rewrite historical activity state.
-
-The current composition also demonstrates positive synergy without purpose collapse:
-
-```text
-Learning -> Learned State -> Generation
-evidence-gated Generation
-Constraint + Evaluation/Evidence + Generation
-shared Execution operational lifecycle
-exact bindings + Provenance
-direct + learned Generation variants
-```
+`SYNC-06` remains conditional Generation/Learned State reuse.
 
 No hidden Compatibility, Workflow/Run, Artifact/Promotion, Approval/Quality, Reproducibility, or Composition concept is required.
 
+## Phase 010 mapping implications
+
+Phase 010 must map accepted concepts without collapsing their distinct purposes merely for interface convenience.
+
+In particular it must preserve:
+
+- Learning/Generation/Evaluation distinction;
+- Learned State/Generation output/Evidence distinction;
+- Data Meaning/Constraint/Condition distinction;
+- Criterion/Evaluation/Evidence distinction;
+- Execution operational state versus domain semantic state;
+- Evidence observation versus approval/release authority;
+- Provenance relationships versus source facts;
+- application-family optionality;
+- exact historical bindings and current-versus-historical status.
+
+If a concept cannot be mapped intelligibly without violating its purpose/boundaries, Phase 010 should record a genuine upstream misfit rather than erase the distinction.
+
 ## Future rediscovery triggers
 
-The catalog is not permanently frozen. Fresh Jackson-style discovery remains required before materially expanded scope such as:
+Fresh discovery remains required before materially expanded scope such as:
 
 - composable formal privacy/accounting;
 - product-owned governance/release decisions;
 - independently reusable/negotiable request or cohort definitions;
 - independent synthetic-output publication/versioning/retirement/transformation/current-use lifecycle;
-- arbitrary graph/recursive topology that creates independent relationship behavior beyond current structural semantics;
+- arbitrary graph/recursive topology with independent relationship behavior;
 - product-owned economic/resource allocation/budget/quota management.
-
-009-G specifically preserves the independent-output-lifecycle trigger rather than inventing retroactive `Evidence -> completed Generation` mutation when later Evidence becomes stale/invalidated.
 
 Implementation objects, IDs, tables, services, manifests or status enums do not themselves justify a concept.
 
 ## Authority rule
 
-No implementation resource or architecture dependency may redefine concept boundaries or synchronization merely because it exists.
+No implementation resource, architecture dependency, or future mapping convenience may redefine concept boundaries merely because it exists.
 
-Similarity of implementation mechanics does not justify concept merger; similarity of synchronization pattern does not justify an umbrella concept.
+Similarity of implementation mechanics does not justify concept merger.
 
 ## Current next boundary
 
-**009-H — Phase 009 Consolidation, Dependence/Composition Completion Decision & Phase 010 Handoff**.
+**Phase 010 — Concept Mapping, Interaction, Linguistic & Experience Alignment** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
