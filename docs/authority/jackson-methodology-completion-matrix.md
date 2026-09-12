@@ -38,7 +38,7 @@ No row in this matrix changes that posture by itself.
 
 ### Class A — current upstream design authority
 
-Methodology, problem knowledge, accepted concepts, Phase 008 normalization/consolidation, current [Concept Dependence & Application Family](../dependence/index.md), current [Synchronization Authority](../synchronizations/index.md), and later current mapping authorities.
+Methodology, problem knowledge, accepted concepts, Phase 008 normalization/consolidation, the [Phase 009 Consolidation](phase-009-dependence-composition-consolidation.md), current [Concept Dependence & Application Family](../dependence/index.md), current [Synchronization Authority](../synchronizations/index.md), and later Phase 010 mapping authority.
 
 ### Class B — supporting design evidence
 
@@ -58,40 +58,24 @@ Class C/D may reveal a misfit but cannot silently define unfinished Class A beha
 
 ```text
 Phase 008  COMPLETE — individual concept design complete enough for Phase 009
-Phase 009  ACTIVE
-009-A      COMPLETE — inclusion semantics / pairwise inventory
-009-B      COMPLETE — canonical graph / cycles / explanation ordering
-009-C      COMPLETE — application family / valid subsets / minima
-009-D      COMPLETE — contraction / extension / add-remove consequences
-009-E      COMPLETE — synchronization inventory replay
-009-F      COMPLETE — trigger / pre-post / ownership / hidden coordinator
-009-G      COMPLETE — composition economy / coupling / synergy / integrity
-009-H      NEXT ELIGIBLE — Phase 009 consolidation / Phase 010 handoff
+Phase 009  COMPLETE — dependence / application family / composition complete enough for Phase 010
+009-A..H  COMPLETE
+Phase 010  NEXT ELIGIBLE — decompose immediately before entry
 ```
 
-Current dependence/application-family result:
+Current Phase 009 result:
 
 ```text
-D1 inclusion-dependence graph          CURRENTLY CLOSED
-D2 application family                  CURRENTLY CLOSED
-D3 explanation/design ordering         CURRENTLY CLOSED
-D4 add/remove consequences             CURRENTLY CLOSED
-```
-
-Current synchronization result:
-
-```text
+accepted concepts                       11
+current desired outcomes                16
 historical synchronization IDs          15
 active synchronizations                 13
 required-relational                      6
 capability/occurrence conditional        7
-retired concept-local IDs                1  (SYNC-08)
-reclassified contract IDs                1  (SYNC-15)
-new synchronization IDs                  0
-SYNC-16                                  NOT JUSTIFIED
+D1-D4                                   CURRENTLY CLOSED
+E1-E5                                   CURRENTLY CLOSED
+unresolved J1/J2/J3 blocker             NONE FOUND
 ```
-
-`SYNC-06` remains conditional Generation/Learned State reuse compatibility/binding; direct Generation does not activate it.
 
 ## Jackson completion matrix
 
@@ -113,99 +97,60 @@ SYNC-16                                  NOT JUSTIFIED
 | C6 | Preconditions/effects/postconditions | 008-D semantic transition contracts | **CURRENTLY CLOSED** | 008-D/H |
 | C7 | Invariants/lifecycle/history/unresolved/invalidated states | 008-C/D | **CURRENTLY CLOSED** | 008-C/D/H |
 | C8 | Explicit boundaries/non-responsibilities | 008-F accepted boundaries + 008-G perimeter + 008-H consolidation | **CURRENTLY CLOSED** | 008-F/G/H |
-| D1 | Jackson application inclusion-dependence graph | 009-A classified all directed pairs; 009-B reduced universal findings to canonical direct/transitive graph and resolved SCCs | **CURRENTLY CLOSED** | 009-A/B |
-| D2 | Meaningful valid concept subsets/application family | 009-C defines graph-closed family plus Execution/Provenance side constraints and capability-specific requirements | **CURRENTLY CLOSED** | 009-C |
-| D3 | Explanation/design ordering implied by inclusion dependence | 009-B establishes prerequisite and layered explanation ordering | **CURRENTLY CLOSED** | 009-B |
-| D4 | Product-scope consequences of adding/removing concepts | 009-D audits every concept/SCC removal/addition, side-constraint orphaning, capability narrowing and rediscovery boundary | **CURRENTLY CLOSED** | 009-D |
-| E1 | Explicit concept synchronizations | 009-E replayed historical SYNC-01..15; 13 remain active, SYNC-08 retired, SYNC-15 reclassified; 009-F narrows SYNC-06 without membership change; 009-G finds no further add/remove/merge need | **CURRENTLY CLOSED** | 009-E/F/G; reopen on later misfit |
-| E2 | Singular state ownership across synchronizations | 009-F assigns every binding/result/operational/provenance fact to one canonical owner; 009-G confirms ownership survives combined activation | **CURRENTLY CLOSED** | 009-F/G; reopen on later misfit |
-| E3 | Composition burden/economy and hidden-coordinator avoidance | 009-F eliminates hidden coordinator/shadow state; 009-G shows relation-local/occurrence-local activation, variant-sized burden, justified structurally similar rules, generic typed Provenance rather than pairwise explosion, and no perpetual reactive subscription | **CURRENTLY CLOSED** | 009-F/G; reopen on later misfit |
-| E4 | Composition synergy | 009-G demonstrates positive synergy for reusable learned synthesis, evidence-gated Generation, reusable Constraint validation, Execution sidecar reuse, exact bindings + Provenance, and direct/learned Generation coexistence without using synergy to justify every basic binding | **CURRENTLY CLOSED** | 009-G; broader post-mapping quality revalidation 011 |
-| E5 | Integrity under composition | 009-G replays multi-sync Learning, Generation, Evaluation/Evidence, Execution, Constraint, Provenance and reproducibility scenarios; staged evidence feedback has no authority/deadlock cycle, optional capabilities remain optional, and no concept purpose/behavior is overridden | **CURRENTLY CLOSED** | 009-F/G; broader post-mapping integrity revalidation 011 |
-| F1 | Concept action → human/programmatic interaction mapping | Phase 003 workflows; normalized map absent | **PARTIAL** | 010 |
-| F2 | Concept state/query → actor-visible inspection mapping | Strong visibility requirements; mapping incomplete | **PARTIAL** | 010 |
-| F3 | Linguistic mapping/vocabulary alignment | Terminology/008-F strong; explicit actor mapping pending | **PARTIAL TO STRONG** | 010 |
-| F4 | Physical/interaction mapping for SDK/notebook/CLI/API/report/UI | Partial | **PARTIAL** | 010 |
-| F5 | Human/programmatic semantic parity | Strong Phase 003 evidence; current replay pending | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 010 |
-| G1 | Specificity across final composed set | Individual evidence strong; composed audit pending | **PARTIAL TO STRONG** | 011 |
+| D1 | Jackson application inclusion-dependence graph | 009-A/B classify all directed pairs, establish direct/transitive graph and resolve SCCs; 009-H confirms composition introduces no new universal dependence | **CURRENTLY CLOSED** | 009-A/B/H; reopen on genuine later misfit |
+| D2 | Meaningful valid concept subsets/application family | 009-C defines graph-closed family plus Execution/Provenance side conditions; 009-H confirms conditional synchronization does not collapse family optionality | **CURRENTLY CLOSED** | 009-C/H |
+| D3 | Explanation/design ordering implied by inclusion dependence | 009-B establishes prerequisite and SCC narrative order; 009-H retains it as explanation order rather than runtime order | **CURRENTLY CLOSED** | 009-B/H |
+| D4 | Product-scope consequences of adding/removing concepts | 009-D audits concept/SCC contraction, capability narrowing, extension and rediscovery boundary; 009-H confirms composition never recreates omitted concept semantics | **CURRENTLY CLOSED** | 009-D/H |
+| E1 | Explicit concept synchronizations | 009-E/F/G settle 13 active rules from 15 historical IDs; SYNC-08 retired, SYNC-15 reclassified, SYNC-06 conditional, no SYNC-16; 009-H reconciles counts and scope | **CURRENTLY CLOSED** | 009-E/F/G/H |
+| E2 | Singular state ownership across synchronizations | 009-F assigns one canonical owner per binding/result/operational/provenance fact; 009-G/H confirm combined activation preserves ownership | **CURRENTLY CLOSED** | 009-F/G/H |
+| E3 | Composition burden/economy and hidden-coordinator avoidance | 009-F rejects hidden coordinator/shadow state; 009-G establishes relation/occurrence-local burden, justified rule separation, generic typed Provenance and non-propagation; 009-H consolidates | **CURRENTLY CLOSED** | 009-F/G/H |
+| E4 | Composition synergy | 009-G demonstrates positive reusable learned synthesis, evidence-gated Generation, reusable Constraint validation, shared Execution, exact bindings + Provenance, direct/learned coexistence; 009-H confirms no purpose collapse | **CURRENTLY CLOSED** | 009-G/H; broader post-mapping review 011 |
+| E5 | Integrity under composition | 009-G passes multi-sync Learning/Generation/Evaluation/Execution/Constraint/Provenance/reproducibility scenarios; 009-H confirms no residual J3 blocker | **CURRENTLY CLOSED** | 009-F/G/H; broader post-mapping review 011 |
+| F1 | Concept action → human/programmatic interaction mapping | Phase 003 workflows exist but no normalized current mapping yet; Phase 009 handoff now defines mapping constraints | **PARTIAL** | 010 |
+| F2 | Concept state/query → actor-visible inspection mapping | Strong visibility/history requirements exist; normalized mapping remains incomplete | **PARTIAL** | 010 |
+| F3 | Linguistic mapping/vocabulary alignment | Terminology/008-F strong; explicit actor/programmatic mapping remains | **PARTIAL TO STRONG** | 010 |
+| F4 | Physical/interaction mapping for SDK/notebook/CLI/API/report/UI | Historical Phase 003 evidence exists; current normalized mapping incomplete | **PARTIAL** | 010 |
+| F5 | Human/programmatic semantic parity | Strong prior evidence; current replay against completed Phase 009 authority remains | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 010 |
+| G1 | Specificity across final composed set | Individual + Phase 009 evidence strong; post-mapping audit pending | **PARTIAL TO STRONG** | 011 |
 | G2 | Familiarity across final composed set | Individual names closed; post-composition/mapping review pending | **PARTIAL TO STRONG** | 011 |
-| G3 | Integrity across synchronizations/mappings | 009-G closes synchronization integrity; final post-mapping design-quality replay remains | **PARTIAL TO STRONG** | 011 |
-| G4 | Synergy and simplicity/generic fitness | 009-G demonstrates current composition synergy/economy; final post-mapping quality replay remains | **PARTIAL TO STRONG** | 011 |
-| G5 | Archetypal/exceptional/degraded/adversarial/recovery misfit | Strong 006/007 + 008 evidence; final replay pending | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 011 |
-| G6 | Future-scope/extensibility misfit | 008-G future triggers + 009-D extension/rediscovery boundary + 009-G later Evidence/output-lifecycle boundary recorded; final replay pending | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 011 |
+| G3 | Integrity across synchronizations/mappings | Phase 009 synchronization integrity closed; final post-mapping design-quality replay remains | **PARTIAL TO STRONG** | 011 |
+| G4 | Synergy and simplicity/generic fitness | Phase 009 synergy/economy closed; final post-mapping quality replay remains | **PARTIAL TO STRONG** | 011 |
+| G5 | Archetypal/exceptional/degraded/adversarial/recovery misfit | Strong 006/007 + 008 + 009 evidence; final replay pending | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 011 |
+| G6 | Future-scope/extensibility misfit | 008-G rediscovery triggers + 009-D extension boundary + 009-G non-propagation/output-lifecycle boundary recorded; final replay pending | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 011 |
 | G7 | Explicit residual conceptual misfit register | No final post-mapping register | **PARTIAL** | 011/012 |
-| H1 | One current-state consolidated Jackson concept-design audit | Individual consolidation exists; Phase 009 consolidation remains next, then 010-011 | **OPEN** | 012 |
+| H1 | One current-state consolidated Jackson concept-design audit | Phase 008 and Phase 009 now separately consolidated; Phase 010/011 still incomplete | **OPEN** | 012 |
 | H2 | Explicit Jackson concept-design completion decision | Not yet performed | **OPEN** | 012 |
 | R1 | Architecture reconciled downstream to completed concept design | Extensive retained architecture exists | **DOWNSTREAM / PENDING RECONCILIATION** | 013 |
 | R2 | Whole design audited problem → concepts → dependence/sync → mapping → architecture | Not yet possible | **OPEN** | 014 |
 | R3 | Implementation-readiness decision based on complete design | Historical 007-K decision superseded | **OPEN** | 014 |
 
-## Current 009-G composition result
+## Phase 009 consolidated authority
 
-### Economy
+The canonical Phase 009 result is [Phase 009 Dependence, Application Family & Composition Consolidation](phase-009-dependence-composition-consolidation.md).
 
-```text
-active synchronization added        0
-active synchronization removed      0
-active synchronization merged       0
-additional scope correction          0
-missing synchronization             NONE
-```
+It establishes the upstream contract Phase 010 must preserve, including:
 
-Economy comes from relation-local/occurrence-local activation, not from collapsing distinct concept relations.
-
-Core variant burden remains intentionally small:
-
-```text
-L-KERNEL        SYNC-01, SYNC-02, SYNC-05
-Direct G-KERNEL SYNC-01, SYNC-02
-E-KERNEL        SYNC-09, SYNC-10, SYNC-12
-```
-
-Learned-state-assisted Generation adds `SYNC-06`; evidence-gated Generation adds `SYNC-13`; Constraint/Execution/Provenance add only relation-specific rules.
-
-### Non-propagation
-
-Exact bindings are historical occurrence relations, not permanent subscriptions. Later revisions/status changes do not silently mutate already committed/completed concept history.
-
-### Synergy
-
-Current explicit positive synergies include:
-
-```text
-Learning -> Learned State -> Generation
-Generation candidate -> Evaluation -> Evidence -> Generation completion
-Constraint -> Evaluation/Evidence -> Generation completion
-Learning/Generation/Evaluation -> reusable Execution operational lifecycle
-exact bindings + Provenance -> end-to-end historical explanation
-direct + learned Generation coexist without fabricated Learning
-```
-
-### Integrity
-
-Evaluation-gated Generation is staged feedback, not circular authority:
-
-```text
-candidate Generation
-  -> Evaluation
-  -> Evidence
-  -> Generation-owned completion decision
-```
-
-Evaluation requires candidate identity, not completed Generation. Execution cannot establish semantic completion. Evidence cannot approve/release or complete Generation. Provenance cannot fabricate source facts.
+- eleven accepted concepts and their current boundaries;
+- D1-D4 dependence/application-family semantics;
+- E1-E5 synchronization/composition semantics;
+- 15 historical synchronization IDs / 13 active rules;
+- `SYNC-08` retired, `SYNC-15` reclassified, `SYNC-06` conditional;
+- singular state ownership and no synchronization-owned state;
+- occurrence-scoped/non-reactive historical bindings;
+- candidate-versus-completed result semantics;
+- semantic-versus-operational completion separation;
+- Evidence-versus-approval and Provenance-versus-source boundaries;
+- application-family optionality and rediscovery triggers.
 
 ## Current methodological verdict
 
 ```text
 PROBLEM / PURPOSE GROUNDING          CURRENTLY CLOSED
-INDIVIDUAL CONCEPT DESIGN            COMPLETE ENOUGH FOR PHASE 009
+INDIVIDUAL CONCEPT DESIGN            COMPLETE ENOUGH FOR CURRENT PROGRAM
+PHASE 009                            COMPLETE
 D1-D4 DEPENDENCE / FAMILY            CURRENTLY CLOSED
-E1 SYNCHRONIZATION INVENTORY         CURRENTLY CLOSED
-E2 SINGULAR STATE OWNERSHIP          CURRENTLY CLOSED
-E3 BURDEN / ECONOMY                  CURRENTLY CLOSED
-E4 COMPOSITION SYNERGY               CURRENTLY CLOSED
-E5 COMPOSITION INTEGRITY             CURRENTLY CLOSED
-PHASE 009 CONSOLIDATION              NEXT — 009-H
+E1-E5 COMPOSITION                    CURRENTLY CLOSED
+PHASE 010 MAPPING                    NEXT ELIGIBLE
 JACKSON CONCEPT DESIGN COMPLETE      NO
 REPRESENTATION/ARCHITECTURE FINAL    NO — PENDING PHASE 013 RECONCILIATION
 IMPLEMENTATION READINESS             NOT READY
@@ -216,17 +161,28 @@ IMPLEMENTATION NEXT                  NOT YET
 ## Current dependency order
 
 ```text
-009-H  Phase 009 consolidation / Phase 010 handoff
+010  Concept Mapping, Interaction, Linguistic & Experience Alignment
+     — decompose immediately before entry
+  ↓
+011  Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Design Validation
+  ↓
+012  Jackson Concept-Design Consolidation & Completion Decision
+  ↓
+013  Post-Concept Representation & Architecture Reconciliation
+  ↓
+014  Whole-Design Consolidation / Implementation-Readiness Decision
 ```
 
 ## Guardrail
 
-The Phase 009 composition model does not prescribe transactions, events, workflow engines, services, persistence joins, foreign keys, sagas, queues, locks, APIs, packages, deployment units or exactly-once execution.
+Phase 009 completion does not prescribe transactions, events, workflow engines, services, schemas, persistence joins, foreign keys, queues, locks, APIs, packages, deployment units, observer/subscription infrastructure, or exactly-once execution.
 
-Phase 010 mapping and Phase 011 final design-quality/misfit review may expose a genuine issue and reopen the smallest affected authority. Their existence is not a reason to leave the dedicated E1-E5 composition obligations open after current closure.
+Phase 010 mapping may expose a genuine upstream misfit. If so, reopen only the smallest affected authority under J0-J7.
 
 ## Current next boundary
 
-**009-H — Phase 009 Consolidation, Dependence/Composition Completion Decision & Phase 010 Handoff** is next eligible.
+**Phase 010 — Concept Mapping, Interaction, Linguistic & Experience Alignment** is next eligible.
+
+Per roadmap discipline, decompose Phase 010 immediately before entry rather than assuming a subgroup structure in advance.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
