@@ -17,27 +17,24 @@ Current authority includes:
 - [`Concept Dependence & Application Family`](docs/dependence/index.md)
 - [`Synchronization Authority`](docs/synchronizations/index.md)
 - [`Concept Mapping Authority`](docs/mapping/index.md)
-- [`010-A Mapping Control Authority`](docs/mapping/mapping-authority-coverage-actor-surface-evidence-baseline.md)
 - [`010-B Concept Action Mapping`](docs/mapping/concept-action-actor-intent-interaction-mapping.md)
+- [`010-C Inspection Mapping`](docs/mapping/concept-state-query-history-explanation-inspection-mapping.md)
 - [`Phase 010`](docs/phases/010/index.md)
 
 ## Status
 
 ```text
 accepted concepts                    11
-current desired outcomes             16
-historical synchronization IDs       15
 active synchronizations              13
 Phase 008                            COMPLETE
 Phase 009                            COMPLETE
-D1-D4                                CURRENTLY CLOSED
-E1-E5                                CURRENTLY CLOSED
 Phase 010                            ACTIVE
 010-A                                COMPLETE
 010-B                                COMPLETE
-010-C                                NEXT ELIGIBLE
+010-C                                COMPLETE
+010-D                                NEXT ELIGIBLE
 F1                                   CURRENTLY CLOSED
-F2                                   PARTIAL
+F2                                   CURRENTLY CLOSED
 F3                                   PARTIAL TO STRONG
 F4                                   PARTIAL
 F5                                   STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
@@ -47,11 +44,20 @@ implementation start                 NOT STARTED
 implementation next                  NOT YET
 ```
 
-010-B maps all **66 normalized state-changing command groups** to actor intent and surface-neutral interaction obligations. Conceptual commands are not automatically buttons, endpoints or CLI commands; synchronized/system-established transitions remain observable without requiring direct controls.
+Current semantic mapping coverage is:
 
-The action map preserves reduced application-family variants, activity-owned validation/readiness, semantic-versus-operational state, candidate-versus-authoritative result, Evidence-versus-approval boundaries, Provenance-versus-source ownership, exact historical truth and conditional Execution/Provenance capabilities.
+```text
+normalized command groups               66 / 66 SEMANTICALLY MAPPED
+normalized query groups                 52 / 52 SEMANTICALLY MAPPED
+lifecycle/history envelopes             11 / 11 SEMANTICALLY MAPPED
+cross-concept explanation patterns       5
+```
 
-No concept or synchronization was added or reopened during 010-B.
+The 010-C inspection rule is: **inspection exposes owned or validly derived truth; it does not create a second owner for that truth**.
+
+Current mapping therefore preserves current versus exact historical state, semantic versus operational state, candidate/intermediate versus authoritative result, Evidence claim-strength versus approval, Provenance relationships versus source facts, typed disclosure/history-quality distinctions, application-family optionality and bounded enterprise-scale inspection.
+
+010-D now owns linguistic alignment. It must choose safe actor/programmatic vocabulary for these mapped semantics without turning mapping categories into universal runtime enums or implementation schemas.
 
 ## Remaining design roadmap
 
@@ -69,6 +75,6 @@ Only a positive Phase 014 may change implementation to **READY / NOT STARTED / N
 
 ## Current next boundary
 
-**010-C — Concept State, Query, History & Explanation → Inspection Mapping** is next eligible.
+**010-D — Linguistic Mapping, Vocabulary, Typed Status & Disclosure Semantics** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
