@@ -21,8 +21,8 @@ Phase 009                    COMPLETE
 D1-D4                        CURRENTLY CLOSED
 E1-E5                        CURRENTLY CLOSED
 Phase 010                    ACTIVE
-Phase 010 decomposition      COMPLETE
-010-A                        NEXT ELIGIBLE
+010-A                        COMPLETE
+010-B                        NEXT ELIGIBLE
 architecture corpus          RETAINED AS DOWNSTREAM DESIGN EVIDENCE
 architecture reconciliation  PLANNED FOR PHASE 013
 implementation readiness     NOT READY
@@ -36,29 +36,42 @@ implementation next          NOT YET
 - [Concept Dependence & Application Family](../dependence/index.md)
 - [Synchronization Authority](../synchronizations/index.md)
 - [Concept Mapping Authority](../mapping/index.md)
-- [Phase 010 Entry & Decomposition](../phases/010/010-entry-decomposition.md)
+- [010-A Mapping Control Authority](../mapping/mapping-authority-coverage-actor-surface-evidence-baseline.md)
 
-## Completed Phase 009 is not architecture authority
+## Mapping authority is not architecture authority
 
-The current design includes application-family kernels/SCCs, thirteen active synchronization rules, conceptual composition planes, occurrence-scoped exact bindings, staged evidence-gated Generation and positive composition synergies.
+010-A establishes actor roles, surface-family lenses, application-family applicability tags, coverage dimensions and a nineteen-field mapping schema.
 
-Architecture MUST NOT translate those directly into services, packages, schemas, aggregates, transactions, events, APIs, deployment units, workflow edges or observer/subscription infrastructure.
+Architecture MUST NOT translate those directly into:
 
-## Active Phase 010 is also upstream design
-
-Phase 010 maps concept actions/state/queries into actor-visible and programmatic semantics.
-
-Candidate surface families may include SDK/API automation, notebooks, CLI/operations, reports/history, graphical UI and operator/admin interaction. Those are mapping lenses, not selected architecture components.
-
-Architecture may supply feasibility/counterexample evidence, but it may not preempt mapping by turning retained Phase 003/004/006/007 classes, endpoints, resources, commands, pages or runtime structures into mapping authority.
+- service/process boundaries;
+- packages/modules;
+- schemas/tables/resources;
+- endpoint shapes;
+- UI component trees;
+- event/message types;
+- aggregates/transactions/sagas;
+- deployment units;
+- workflow engine states;
+- observer/subscription infrastructure.
 
 In particular:
 
-- one mapped concept action does not imply one API method/endpoint/button;
-- one inspection obligation does not imply one schema/view/table;
-- one application-family variant does not imply a package/SKU/deployment profile;
-- human/programmatic parity does not imply identical physical interfaces;
-- historical exact bindings do not imply live subscription infrastructure.
+```text
+mapping record != public resource schema
+actor role != permission role
+surface family != architecture component
+application-family tag != SKU/package/deployment profile
+coverage state != runtime status
+```
+
+## 010-B boundary
+
+010-B maps normalized state-changing concept actions to actor intent and **surface-neutral** interaction obligations.
+
+Architecture must not preempt that work by selecting methods, routes, commands, buttons, events or transactions as if they were the conceptual action itself.
+
+Existing architecture/source may expose counterexamples or feasibility pressure only.
 
 ## Phase 007 architecture status
 
@@ -82,6 +95,6 @@ IMPLEMENTATION NEXT        NOT YET
 
 ## Current next boundary
 
-**010-A — Mapping Authority, Coverage Model, Actor/Surface Taxonomy & Evidence Baseline** is next eligible.
+**010-B — Concept Action → Actor Intent & Interaction Mapping** is next eligible.
 
 Architecture reconciliation remains deferred to Phase 013.
