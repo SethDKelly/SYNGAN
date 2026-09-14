@@ -22,7 +22,9 @@ D1-D4                        CURRENTLY CLOSED
 E1-E5                        CURRENTLY CLOSED
 Phase 010                    ACTIVE
 010-A                        COMPLETE
-010-B                        NEXT ELIGIBLE
+010-B                        COMPLETE
+010-C                        NEXT ELIGIBLE
+F1                           CURRENTLY CLOSED
 architecture corpus          RETAINED AS DOWNSTREAM DESIGN EVIDENCE
 architecture reconciliation  PLANNED FOR PHASE 013
 implementation readiness     NOT READY
@@ -30,48 +32,34 @@ implementation start         NOT STARTED
 implementation next          NOT YET
 ```
 
-## Current upstream authority
+## Current upstream mapping authority
 
-- [Phase 009 Consolidation](../authority/phase-009-dependence-composition-consolidation.md)
-- [Concept Dependence & Application Family](../dependence/index.md)
-- [Synchronization Authority](../synchronizations/index.md)
 - [Concept Mapping Authority](../mapping/index.md)
 - [010-A Mapping Control Authority](../mapping/mapping-authority-coverage-actor-surface-evidence-baseline.md)
+- [010-B Concept Action Mapping](../mapping/concept-action-actor-intent-interaction-mapping.md)
 
-## Mapping authority is not architecture authority
+010-B establishes 66 surface-neutral semantic action mappings.
 
-010-A establishes actor roles, surface-family lenses, application-family applicability tags, coverage dimensions and a nineteen-field mapping schema.
-
-Architecture MUST NOT translate those directly into:
-
-- service/process boundaries;
-- packages/modules;
-- schemas/tables/resources;
-- endpoint shapes;
-- UI component trees;
-- event/message types;
-- aggregates/transactions/sagas;
-- deployment units;
-- workflow engine states;
-- observer/subscription infrastructure.
-
-In particular:
+Architecture MUST NOT translate that inventory mechanically into:
 
 ```text
-mapping record != public resource schema
-actor role != permission role
-surface family != architecture component
-application-family tag != SKU/package/deployment profile
-coverage state != runtime status
+one command mapping -> one method/endpoint
+one concept action  -> one event/message
+one lifecycle       -> one status enum/table
+one concept         -> one service/package
+one actor role      -> one UI persona/ACL role
+one surface family -> one mandatory product component
 ```
 
-## 010-B boundary
+System-established actions may have no direct physical control. Conversely, one conceptual action may require several physical interactions later.
 
-010-B maps normalized state-changing concept actions to actor intent and **surface-neutral** interaction obligations.
+## 010-C remains upstream design
 
-Architecture must not preempt that work by selecting methods, routes, commands, buttons, events or transactions as if they were the conceptual action itself.
+010-C will map state/query/history/explanation into actor/programmatic inspection obligations.
 
-Existing architecture/source may expose counterexamples or feasibility pressure only.
+Architecture may provide feasibility/counterexample evidence but must not preempt that work by treating current database tables, public resources, telemetry objects, graph structures, dashboards or platform job APIs as canonical inspection mappings.
+
+A composed inspection view may join several concept-owned facts for comprehension while canonical ownership remains upstream.
 
 ## Phase 007 architecture status
 
@@ -95,6 +83,6 @@ IMPLEMENTATION NEXT        NOT YET
 
 ## Current next boundary
 
-**010-B — Concept Action → Actor Intent & Interaction Mapping** is next eligible.
+**010-C — Concept State, Query, History & Explanation → Inspection Mapping** is next eligible.
 
 Architecture reconciliation remains deferred to Phase 013.
