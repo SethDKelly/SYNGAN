@@ -54,8 +54,8 @@ Phase 009                  COMPLETE
 D1-D4                      CURRENTLY CLOSED
 E1-E5                      CURRENTLY CLOSED
 Phase 010                  ACTIVE
-Phase 010 decomposition    COMPLETE
-010-A                      NEXT ELIGIBLE
+010-A                      COMPLETE
+010-B                      NEXT ELIGIBLE
 F1                         PARTIAL
 F2                         PARTIAL
 F3                         PARTIAL TO STRONG
@@ -63,28 +63,48 @@ F4                         PARTIAL
 F5                         STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
 ```
 
-Phase 009 exits with:
+## 010-A mapping-control boundary
+
+010-A establishes the current mapping-control authority:
+
+- nineteen-field semantic mapping schema;
+- twelve coverage dimensions;
+- seven actor-role lenses;
+- seven candidate surface families;
+- ten application-family applicability tags;
+- typed temporal/disclosure/history-quality/scale annotations;
+- Phase 003/006 evidence-adoption rules;
+- explicit mapping-misfit reopening discipline.
+
+These structures are **documentation/design controls only**.
+
+Do not infer:
 
 ```text
-DEPENDENCE / COMPOSITION   COMPLETE ENOUGH FOR PHASE 010
-JACKSON CONCEPT DESIGN     NOT COMPLETE
+mapping record field      -> API/resource/schema field
+actor role                -> authentication/authorization role
+surface family            -> architecture component
+family applicability tag  -> SKU/package/feature flag/deployment profile
+mapping coverage status   -> runtime/domain status enum
 ```
 
-## Phase 010 mapping boundary
+## 010-B mapping boundary
 
-Phase 010 is now decomposed into the dependency-safe sequence recorded in [Phase 010 Entry & Decomposition](../phases/010/010-entry-decomposition.md) and [Concept Mapping Authority](../mapping/index.md).
+010-B will map normalized state-changing concept actions to actor intent and surface-neutral interaction obligations.
 
-Current next design work is:
+A mapped action does not authorize or prescribe:
 
-```text
-010-A  mapping authority / coverage / actor-surface taxonomy / evidence baseline
-```
+- one public method;
+- one endpoint;
+- one CLI command;
+- one UI control;
+- one event/message;
+- one transaction;
+- one handler/service call.
 
-Later mapping groups proceed through action mapping, inspection mapping, linguistic mapping, physical interaction mapping, application-family workflow composition, semantic-parity/misfit replay, and consolidation.
+Final vocabulary and physical interaction mapping remain 010-D/E.
 
-Phase 010 may describe interaction responsibilities for SDK/API, notebook, CLI, report/history, graphical and operator/admin surfaces. It does **not** authorize concrete public APIs, classes, endpoints, commands, widgets, schemas, packages, services, storage or runtime mechanisms.
-
-Historical Phase 003/006 experience material remains evidence and must be normalized against current Phase 008/009 semantics before F1-F5 are closed.
+Historical Phase 003/006 experience evidence remains subordinate to current Phase 008/009/010 authority.
 
 ## Mapping invariants under the hold
 
@@ -101,6 +121,7 @@ Mapping must preserve:
 - exact historical bindings and current-versus-historical status;
 - occurrence-scoped/non-reactive synchronization;
 - typed disclosure/history/uncertainty states;
+- enterprise-scale boundedness;
 - human/programmatic semantic parity.
 
 If mapping exposes a real conceptual misfit, reopen only the smallest affected upstream authority under J0-J7. Do not simplify the interface by erasing the distinction.
@@ -111,12 +132,12 @@ Phase 004/006/007 architecture and the retained executable scaffold remain downs
 
 They may expose a genuine counterexample but cannot define current concept, dependence, family, synchronization, mapping, or completion authority from package imports, persistence references, service/dataflow direction, event topology, transaction ordering, runtime orchestration, deployment topology, or existing API/object nesting.
 
-Do not restructure implementation to mirror concepts, synchronization IDs, composition planes, application-family kernels, synergy paths, or Phase 010 mappings while the full design remains incomplete.
+Do not restructure implementation to mirror concepts, synchronization IDs, composition planes, application-family kernels, mapping records, actor/surface taxonomies, or coverage states while the full design remains incomplete.
 
 ## Remaining design roadmap
 
 ```text
-010       concept mapping / interaction / language / experience — ACTIVE
+010-B..H  remaining concept mapping / interaction / language / experience work
 011       specificity / familiarity / integrity / synergy / misfit
 012       Jackson concept-design completion decision
 013       representation / architecture reconciliation
@@ -143,10 +164,10 @@ Implementation itself still requires later explicit Phase 015 authority.
 
 ## No executable design-by-accident
 
-Until Phase 014 passes, do not add production behavior, executable architecture restrictions merely to crystallize hypotheses, package-topology changes anticipating design, persistence schemas/migrations, runtime/model/platform/security adapters, public API implementation, reference algorithms, vertical slices, benchmarks, privacy mechanisms, product-edition packaging, event/service decomposition, synchronization transactions, observer/subscription infrastructure, or stale-test repair solely to manufacture readiness.
+Until Phase 014 passes, do not add production behavior, executable architecture restrictions merely to crystallize hypotheses, package-topology changes anticipating design, persistence schemas/migrations, runtime/model/platform/security adapters, public API implementation, reference algorithms, vertical slices, benchmarks, privacy mechanisms, product-edition packaging, event/service decomposition, synchronization transactions, observer/subscription infrastructure, mapping-schema implementation, or stale-test repair solely to manufacture readiness.
 
 ## Current next boundary
 
-**010-A — Mapping Authority, Coverage Model, Actor/Surface Taxonomy & Evidence Baseline** is next eligible.
+**010-B — Concept Action → Actor Intent & Interaction Mapping** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
