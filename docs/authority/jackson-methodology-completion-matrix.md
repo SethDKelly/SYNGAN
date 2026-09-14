@@ -38,7 +38,7 @@ No row in this matrix changes that posture by itself.
 
 ### Class A — current upstream design authority
 
-Methodology, problem knowledge, accepted concepts, Phase 008 normalization/consolidation, [Phase 009 Consolidation](phase-009-dependence-composition-consolidation.md), current dependence/synchronization authority, and current [Concept Mapping Authority](../mapping/index.md), including the [010-A mapping-control authority](../mapping/mapping-authority-coverage-actor-surface-evidence-baseline.md).
+Methodology, problem knowledge, accepted concepts, Phase 008 normalization/consolidation, Phase 009 consolidation/dependence/composition, current [Concept Mapping Authority](../mapping/index.md), the [010-A mapping-control authority](../mapping/mapping-authority-coverage-actor-surface-evidence-baseline.md), and the [010-B action-mapping authority](../mapping/concept-action-actor-intent-interaction-mapping.md).
 
 ### Class B — supporting design evidence
 
@@ -57,16 +57,17 @@ Class C/D may reveal a misfit but cannot silently define unfinished Class A beha
 ## Current phase progress
 
 ```text
-Phase 008  COMPLETE — individual concept design complete enough for current program
-Phase 009  COMPLETE — dependence / application family / composition complete enough for Phase 010
+Phase 008  COMPLETE
+Phase 009  COMPLETE
 009-A..H  COMPLETE
-Phase 010  ACTIVE — concept mapping / interaction / linguistic / experience alignment
-010 entry  COMPLETE — dependency-safe decomposition established
+Phase 010  ACTIVE
+010 entry  COMPLETE
 010-A      COMPLETE — mapping authority / coverage / actor-surface taxonomy / evidence baseline
-010-B      NEXT ELIGIBLE — concept action -> actor intent / interaction mapping
+010-B      COMPLETE — 66 / 66 normalized concept command groups semantically mapped
+010-C      NEXT ELIGIBLE — state/query/history/explanation -> inspection mapping
 ```
 
-Current Phase 010 foundation:
+Current Phase 010 foundation/action result:
 
 ```text
 accepted concepts                       11
@@ -75,6 +76,8 @@ surface families adopted                 7
 application-family applicability tags   10
 mapping coverage dimensions             12
 canonical mapping fields                19
+normalized command groups               66
+semantically mapped command groups       66
 Phase 003/006 evidence baseline         ESTABLISHED
 ```
 
@@ -83,12 +86,14 @@ Current methodology states:
 ```text
 D1-D4  CURRENTLY CLOSED
 E1-E5  CURRENTLY CLOSED
-F1     PARTIAL
+F1     CURRENTLY CLOSED
 F2     PARTIAL
 F3     PARTIAL TO STRONG
 F4     PARTIAL
 F5     STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
 ```
+
+F1 is closed at the surface-neutral semantic mapping layer required by the methodology. Physical surface realization remains a distinct F4 obligation, and 010-H will revalidate F1 together with the rest of Phase 010.
 
 ## Jackson completion matrix
 
@@ -119,11 +124,11 @@ F5     STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
 | E3 | Composition burden/economy and hidden-coordinator avoidance | 009-F/G establish no hidden coordinator, local burden, non-propagation | **CURRENTLY CLOSED** | 009-F/G/H |
 | E4 | Composition synergy | 009-G demonstrates positive learned/gated/Constraint/Execution/Provenance/direct-generation synergies | **CURRENTLY CLOSED** | 009-G/H; 011 revalidation |
 | E5 | Integrity under composition | 009-G/H pass combined activation with no residual J3 blocker | **CURRENTLY CLOSED** | 009-F/G/H; 011 revalidation |
-| F1 | Concept action → human/programmatic interaction mapping | 010-A establishes canonical mapping schema, action-coverage dimension and all eleven concept sources; individual action mappings remain pending | **PARTIAL** | 010-B; consolidate 010-H |
-| F2 | Concept state/query → actor-visible inspection mapping | 010-A establishes query/state/history coverage, temporal/disclosure/history-quality annotations and source inventory; mappings remain pending | **PARTIAL** | 010-C; consolidate 010-H |
-| F3 | Linguistic mapping/vocabulary alignment | Current terminology/semantic distinctions plus 010-A linguistic-risk/evidence classification are strong; explicit current vocabulary mapping remains | **PARTIAL TO STRONG** | 010-D/H |
-| F4 | Physical/interaction mapping for SDK/notebook/CLI/API/report/UI | 010-A establishes seven surface-family lenses and mapping-vs-implementation boundary; semantic mappings must exist before physical mapping | **PARTIAL** | 010-E/F/H |
-| F5 | Human/programmatic semantic parity | Phase 003/006 parity evidence retained; 010-A establishes parity coverage and difficult-condition ledger; current replay remains | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 010-G/H |
+| F1 | Concept action → human/programmatic interaction mapping | 010-B maps all 66 normalized command groups to actor intent, interaction obligation, precondition/result/non-success semantics, family applicability, synchronization relevance and cross-cutting annotations; no action remains source-only | **CURRENTLY CLOSED** | 010-B; revalidate 010-H |
+| F2 | Concept state/query → actor-visible inspection mapping | 010-A establishes query/state/history coverage and annotations; normalized inspection mappings remain pending | **PARTIAL** | 010-C; consolidate 010-H |
+| F3 | Linguistic mapping/vocabulary alignment | Current terminology/semantic distinctions plus 010-A linguistic-risk classification are strong; explicit current vocabulary mapping remains | **PARTIAL TO STRONG** | 010-D/H |
+| F4 | Physical/interaction mapping for SDK/notebook/CLI/API/report/UI | 010-A establishes seven surface lenses; 010-B supplies surface-neutral action obligations; physical realization remains pending | **PARTIAL** | 010-E/F/H |
+| F5 | Human/programmatic semantic parity | Phase 003/006 parity evidence retained; 010-A establishes parity coverage; difficult-condition replay remains | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 010-G/H |
 | G1 | Specificity across final composed set | Individual + Phase 009 evidence strong; post-mapping audit pending | **PARTIAL TO STRONG** | 011 |
 | G2 | Familiarity across final composed set | Individual naming closed; post-mapping review pending | **PARTIAL TO STRONG** | 011 |
 | G3 | Integrity across synchronizations/mappings | Phase 009 sync integrity closed; post-mapping replay pending | **PARTIAL TO STRONG** | 011 |
@@ -139,34 +144,30 @@ F5     STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
 
 ## 010-A mapping-control authority
 
-[Mapping Authority, Coverage Model, Actor/Surface Taxonomy & Evidence Baseline](../mapping/mapping-authority-coverage-actor-surface-evidence-baseline.md) now governs all later Phase 010 mapping records.
+The 010-A mapping-control authority continues to govern record schema, coverage accounting, actor/surface taxonomy, family applicability, history/disclosure/scale annotation and evidence normalization.
 
-Important current rules:
+## 010-B semantic action authority
 
-- every record identifies one concept owner even when views compose several concepts;
-- actor intent does not create a Workflow/Validation/Quality/Approval owner;
-- application-family applicability is explicit;
-- synchronization relevance preserves both concept owners but never creates synchronization-owned state;
-- temporal orientation preserves proposed/current/historical/reconstructed distinctions;
-- disclosure and historical-knowledge states are typed when material;
-- scale/boundedness is part of mapping completeness;
-- mapping status is documentation coverage, not runtime status;
-- Phase 003/006 evidence is adopted only where still consistent with Phase 008/009 authority.
-
-## Phase 003/006 evidence normalization
-
-010-A retains the strong experience principles while superseding/normalizing stale assumptions:
+[Concept Action → Actor Intent & Interaction Mapping](../mapping/concept-action-actor-intent-interaction-mapping.md) establishes:
 
 ```text
-15 historical SYNC IDs != 15 active synchronization rules
-SYNC-08 retired; output lifecycle is Generation-owned
-SYNC-15 reclassified; Reproducibility is cross-cutting
-Learning not universal for Generation
-Evaluation/Evidence not universal for Generation
-Execution not universal
-Provenance not universal
-Readiness/Validation not global concept owners
+normalized command groups     66
+semantically mapped           66
+blocked by mapping misfit      0
+new concept                    0
+new synchronization            0
 ```
+
+Key findings:
+
+- conceptual command does not mean direct user control;
+- result-establishment actions may be system/synchronization-established but must remain observable;
+- validation/readiness stays activity-owned and contextual;
+- cancellation request remains distinct from terminal cancellation;
+- Execution operations do not become parent-domain actions;
+- candidate/diagnostic material remains non-authoritative until owner semantics establish result authority;
+- future-use status changes do not rewrite historical uses;
+- direct/evaluation-focused/Execution-light/Provenance-light family members remain honest.
 
 ## Current methodological verdict
 
@@ -178,7 +179,9 @@ D1-D4 DEPENDENCE / FAMILY            CURRENTLY CLOSED
 E1-E5 COMPOSITION                    CURRENTLY CLOSED
 PHASE 010                            ACTIVE
 010-A                                COMPLETE
-010-B                                NEXT ELIGIBLE
+010-B                                COMPLETE
+F1                                   CURRENTLY CLOSED
+010-C                                NEXT ELIGIBLE
 JACKSON CONCEPT DESIGN COMPLETE      NO
 REPRESENTATION/ARCHITECTURE FINAL    NO — PENDING PHASE 013 RECONCILIATION
 IMPLEMENTATION READINESS             NOT READY
@@ -189,7 +192,7 @@ IMPLEMENTATION NEXT                  NOT YET
 ## Current dependency order
 
 ```text
-010-B -> 010-C -> 010-D -> 010-E -> 010-F -> 010-G -> 010-H
+010-C -> 010-D -> 010-E -> 010-F -> 010-G -> 010-H
   ↓
 011  Specificity / Familiarity / Integrity / Synergy / Misfit
   ↓
@@ -208,6 +211,6 @@ If a genuine mapping misfit is found, reopen only the smallest affected authorit
 
 ## Current next boundary
 
-**010-B — Concept Action → Actor Intent & Interaction Mapping** is next eligible.
+**010-C — Concept State, Query, History & Explanation → Inspection Mapping** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
