@@ -14,8 +14,9 @@ Start with:
 - `docs/authority/jackson-methodology-completion-matrix.md`
 - `docs/authority/phase-009-dependence-composition-consolidation.md`
 - `docs/mapping/index.md`
+- `docs/mapping/mapping-authority-coverage-actor-surface-evidence-baseline.md`
 - `docs/phases/010/index.md`
-- `docs/phases/010/010-entry-decomposition.md`
+- `docs/phases/010/010-A-mapping-authority-coverage-model-actor-surface-taxonomy-evidence-baseline.md`
 - `docs/experience/phase-003-consolidated-experience-contract.md`
 - `docs/experience/phase-006-recovery-security-degraded-history-topology-experience-contract.md`
 
@@ -31,8 +32,8 @@ Phase 009                            COMPLETE
 D1-D4                                CURRENTLY CLOSED
 E1-E5                                CURRENTLY CLOSED
 Phase 010                            ACTIVE
-Phase 010 decomposition              COMPLETE
-010-A                                NEXT ELIGIBLE
+010-A                                COMPLETE
+010-B                                NEXT ELIGIBLE
 F1                                   PARTIAL
 F2                                   PARTIAL
 F3                                   PARTIAL TO STRONG
@@ -80,11 +81,100 @@ Critical upstream rules:
 - Provenance owns typed relationships, not source facts;
 - synchronization is occurrence-scoped, not a permanent reactive subscription.
 
+## 010-A mapping-control authority
+
+010-A is complete and governs all later mapping work.
+
+Every mapping record must preserve, where material:
+
+```text
+concept owner
+conceptual action/query/state subject
+actor intent / need
+surface-neutral interaction / inspection obligation
+semantic precondition and result semantics
+non-success / uncertainty semantics
+application-family applicability
+synchronization relevance
+temporal orientation
+disclosure state
+historical-knowledge state
+scale / boundedness
+candidate surface families
+linguistic risk
+evidence source
+coverage status
+misfit / reopen note
+```
+
+The controlled mapping progression is:
+
+```text
+SOURCE IDENTIFIED
+  -> SEMANTICALLY MAPPED
+  -> LINGUISTICALLY ALIGNED
+  -> SURFACE-MAPPED
+  -> FAMILY-REPLAYED
+  -> PARITY-VALIDATED
+```
+
+`BLOCKED BY MISFIT` remains explicit when honest mapping is impossible.
+
+These are documentation/mapping states, not runtime/domain states.
+
+## Actor and surface taxonomies
+
+Actor roles:
+
+```text
+A1 Data Practitioner
+A2 Synthetic Data Consumer
+A3 Data Owner / Steward
+A4 Privacy / Risk / Governance Reviewer
+A5 Platform Operator
+A6 Library Maintainer
+A7 Synthesizer / Extension Author
+```
+
+Surface families:
+
+```text
+S1 SDK / API automation
+S2 notebook / interactive analysis
+S3 CLI / operational interaction
+S4 report / history / review artifact
+S5 graphical UI
+S6 operator / admin surface
+S7 external integration / handoff
+```
+
+Actor roles are need/viewpoint categories, not permission models. Surface families are mapping lenses, not architecture components.
+
+## Application-family mapping tags
+
+Use the current tags rather than assuming full-suite workflow:
+
+```text
+AF-AUTH  authority-only usage
+AF-L     L-KERNEL
+AF-GD    direct Generation
+AF-GL    learned-state-assisted Generation
+AF-E     E-KERNEL / evaluation-focused use
+AF-GE    evidence-gated Generation
+AF-C     reusable Constraint present
+AF-X     durable Execution present
+AF-P     Provenance present
+AF-FULL  full eleven-concept composition
+AF-EXT   external integration/handoff
+```
+
+Do not turn these into product SKUs, packages, deployment profiles or feature flags.
+
 ## Active Phase 010 sequence
 
 ```text
-010-A  NEXT — mapping authority / coverage / actor-surface taxonomy / evidence baseline
-010-B  action -> actor intent / interaction mapping
+010-A  COMPLETE — mapping authority / coverage / actor-surface taxonomy / evidence baseline
+010-B  NEXT — action -> actor intent / interaction mapping
 010-C  state/query/history -> inspection mapping
 010-D  linguistic / vocabulary / typed status / disclosure semantics
 010-E  physical interaction across candidate surface families
@@ -93,22 +183,23 @@ Critical upstream rules:
 010-H  mapping consolidation / Phase 011 handoff
 ```
 
-The sequence is dependency-safe and strict by default.
+The sequence is strict by default.
 
-## Mapping discipline
+## 010-B discipline
 
-Use this order:
+010-B maps every normalized state-changing action to actor intent and **surface-neutral** interaction obligations.
 
-```text
-concept semantics
-  -> surface-neutral actor intent / inspection obligation
-  -> linguistic mapping
-  -> candidate physical interaction mapping
-  -> application-family workflow composition
-  -> human/programmatic parity and misfit audit
-```
+It may advance an action from `SOURCE IDENTIFIED` to `SEMANTICALLY MAPPED` only when the record preserves:
 
-Do not begin from preferred classes, endpoints, commands, widgets, reports, pages or implementation resource types.
+- canonical concept owner;
+- current precondition/effect/postcondition semantics;
+- principal/secondary actor needs;
+- application-family applicability;
+- synchronization relevance without synchronization-owned controls;
+- temporal/disclosure/history/scale annotations where material;
+- explicit non-success/indeterminate behavior.
+
+010-B must not yet choose final actor-facing terminology or concrete controls/endpoints. Those belong to 010-D/E.
 
 ## Concept distinctions mapping must preserve
 
@@ -140,7 +231,20 @@ Also preserve:
 
 Phase 003 and Phase 006 experience documents are strong supporting evidence, not automatically complete current F1-F5 mapping authority.
 
-Replay them against Phase 008 normalized concepts and Phase 009 application-family/composition authority. If older workflow wording conflicts with current concept ownership or synchronization scope, current upstream authority wins and the stale experience statement must be reconciled in Phase 010.
+010-A has already normalized stale assumptions:
+
+```text
+15 historical SYNC IDs != 15 active rules
+SYNC-08 is retired
+SYNC-15 is reclassified
+Learning is not universal for Generation
+Evaluation/Evidence are not universal for Generation
+Execution is not universal
+Provenance is not universal
+Readiness/Validation are not global concept owners
+```
+
+Current Phase 008/009 authority wins where older workflow wording conflicts.
 
 ## Mapping misfit rule
 
@@ -179,11 +283,9 @@ Do not translate current mapping work into implementation topology.
 - J3 dependence/composition defect → Phase 009 authority;
 - mapping defect that does not prove an upstream issue → Phase 010.
 
-Do not reopen completed authority merely to align with existing implementation structure.
-
 ## What agents may do now
 
-For 010-A, agents may establish mapping-unit schema, coverage rules, actor-role mapping needs, surface-family taxonomy, evidence adoption/staleness register, application-family tags, history/disclosure/scale annotations and mapping-misfit rules.
+For 010-B, agents may enumerate normalized concept actions and create surface-neutral actor-intent interaction mappings under the 010-A schema.
 
 Architecture/source/tests may be inspected only as counterexample/feasibility evidence, not upstream mapping authority.
 
@@ -205,6 +307,6 @@ Only Phase 014 may make the final whole-design readiness decision; implementatio
 
 ## Current next boundary
 
-**010-A — Mapping Authority, Coverage Model, Actor/Surface Taxonomy & Evidence Baseline**.
+**010-B — Concept Action → Actor Intent & Interaction Mapping**.
 
 Do not begin implementation work.
