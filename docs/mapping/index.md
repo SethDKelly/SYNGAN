@@ -12,7 +12,7 @@ This directory contains current Jackson-style concept mapping authority for SYNG
 
 Concept mapping translates accepted concept actions, state, queries, history and composition into actor-visible and programmatic interaction semantics. It is downstream of concept/dependence/composition authority and upstream of representation/architecture.
 
-A mapping may describe what an actor must be able to do, see, distinguish, inspect or understand. It does not by itself select classes, endpoints, commands, widgets, schemas, services, packages, storage or runtime mechanisms.
+A mapping describes what actors/programmatic consumers must be able to do, see, distinguish, inspect or understand. It does not by itself select classes, endpoints, commands, widgets, schemas, services, packages, storage or runtime mechanisms.
 
 ## Current phase
 
@@ -20,7 +20,8 @@ A mapping may describe what an actor must be able to do, see, distinguish, inspe
 Phase 009                    COMPLETE
 Phase 010                    ACTIVE
 Phase 010 decomposition      COMPLETE
-010-A                        NEXT ELIGIBLE
+010-A                        COMPLETE
+010-B                        NEXT ELIGIBLE
 F1                           PARTIAL
 F2                           PARTIAL
 F3                           PARTIAL TO STRONG
@@ -32,81 +33,182 @@ implementation start         NOT STARTED
 implementation next          NOT YET
 ```
 
-## Current governing inputs
+## Current mapping authority
 
-- [Concept Design Methodology](../authority/design-methodology.md)
-- [Phase 009 Dependence, Application Family & Composition Consolidation](../authority/phase-009-dependence-composition-consolidation.md)
+- [Mapping Authority, Coverage Model, Actor/Surface Taxonomy & Evidence Baseline](mapping-authority-coverage-actor-surface-evidence-baseline.md) — **current Phase 010-A control authority**.
+- [Phase 010 Entry & Decomposition](../phases/010/010-entry-decomposition.md)
+- [Phase 009 Consolidation](../authority/phase-009-dependence-composition-consolidation.md)
 - [Accepted Concept Catalog](../concepts/index.md)
-- [Current Synchronization Authority](../synchronizations/index.md)
 - [Actors & Needs](../problem/actors.md)
 - [Domain Terminology](../terminology/index.md)
-- [Phase 003 Consolidated Experience Contract](../experience/phase-003-consolidated-experience-contract.md)
-- [Phase 006 Recovery/Security/Degraded/History/Topology Experience Contract](../experience/phase-006-recovery-security-degraded-history-topology-experience-contract.md)
-- [Phase 010 Entry & Decomposition](../phases/010/010-entry-decomposition.md)
+- [Phase 003 Consolidated Experience Contract](../experience/phase-003-consolidated-experience-contract.md) — retained mapping evidence.
+- [Phase 006 Experience Refinement](../experience/phase-006-recovery-security-degraded-history-topology-experience-contract.md) — retained mapping evidence.
 
-## Mapping discipline
+## 010-A mapping-control result
 
-Current mapping work must proceed in three layers:
+010-A establishes:
 
 ```text
-1. surface-neutral semantic mapping
-   concept action/state/query -> actor intent / inspection obligation
-
-2. linguistic mapping
-   concept meaning -> actor/programmatic vocabulary and typed status language
-
-3. physical/interaction mapping
-   semantic mapping -> candidate SDK/notebook/CLI/API/report/UI/operator interaction
+accepted concepts                       11
+actor roles adopted                      7
+surface families adopted                 7
+application-family applicability tags   10
+mapping coverage dimensions             12
+canonical mapping fields                19
+Phase 003/006 evidence baseline         ESTABLISHED
 ```
 
-Only after those layers exist may Phase 010 evaluate application-family workflow composition and human/programmatic semantic parity.
+All eleven concepts are currently `SOURCE IDENTIFIED`. Detailed action mappings begin in 010-B; query/state mappings begin in 010-C.
 
-## Surface families
+## Mapping-record authority
 
-Phase 010 may reason about these surface families without choosing their implementation:
+A current mapping record must preserve, where material:
 
-- SDK/API automation;
-- notebook-oriented interaction;
-- CLI/operational interaction;
-- reports/history/review artifacts;
-- graphical UI where useful;
-- operator/admin interaction;
-- external integration/handoff where current scope requires it.
+- concept owner and conceptual subject;
+- actor intent/need;
+- surface-neutral interaction or inspection obligation;
+- semantic preconditions and success/non-success semantics;
+- application-family applicability;
+- synchronization relevance without synchronization-owned state;
+- temporal orientation;
+- disclosure and historical-knowledge state;
+- scale/boundedness;
+- candidate surface families;
+- vocabulary risk;
+- evidence source;
+- mapping coverage status;
+- misfit/reopen note.
 
-These categories are mapping lenses, not mandatory product editions or architecture components.
+This schema is documentation/design authority, not a public API/resource schema.
 
-## Upstream invariants mapping must preserve
+## Coverage model
 
-1. the eleven accepted concepts remain distinct;
-2. application-family subsets remain honest and optional capabilities remain optional;
-3. synchronization is relation/occurrence-scoped rather than permanent reactive subscription;
-4. synchronization owns no canonical state;
-5. exact bindings remain historical and inspectable;
-6. semantic and operational completion remain distinct;
-7. physical existence does not imply semantic result authority;
-8. Evidence remains finding authority, not approval/release authority;
-9. Provenance remains relationship authority, not source-fact authority;
-10. current status and historical bound status may legitimately differ;
-11. disclosure and historical-knowledge states remain typed where material;
-12. mapping must remain viable at enterprise scale without ordinary full local materialization.
+Phase 010 tracks twelve dimensions:
 
-## Retained experience evidence
+```text
+COV-A  action coverage
+COV-Q  query / observation coverage
+COV-S  lifecycle / state-distinction coverage
+COV-H  historical / exact-binding coverage
+COV-X  synchronization visibility
+COV-R  actor relevance
+COV-L  linguistic coverage
+COV-P  physical/surface interaction coverage
+COV-F  application-family variant coverage
+COV-D  disclosure / uncertainty / history-quality coverage
+COV-E  enterprise-scale boundedness
+COV-Y  human/programmatic semantic parity
+```
 
-Phase 003 and Phase 006 contain substantial workflow evidence, but Phase 010 must replay that evidence against the normalized Phase 008 concept model and completed Phase 009 application-family/composition model.
+Controlled mapping states are:
 
-Historical workflow documents therefore remain supporting evidence rather than automatically complete F1-F5 mapping authority.
+```text
+SOURCE IDENTIFIED
+SEMANTICALLY MAPPED
+LINGUISTICALLY ALIGNED
+SURFACE-MAPPED
+FAMILY-REPLAYED
+PARITY-VALIDATED
+BLOCKED BY MISFIT
+```
 
-## Misfit rule
+These are documentation coverage states, not runtime/domain statuses.
 
-If an accepted concept/action/query cannot be mapped intelligibly without violating its purpose, ownership, application-family or synchronization semantics, Phase 010 must record a real mapping misfit and reopen the smallest affected upstream authority under the J0-J7 discipline.
+## Actor taxonomy
 
-It must not solve the problem by inventing a generic `Run`, `Artifact`, `Metric`, `Validation`, `Quality`, `Workflow`, `History` or `Approval` authority unless fresh concept discovery independently justifies one.
+```text
+A1  Data Practitioner
+A2  Synthetic Data Consumer
+A3  Data Owner / Steward
+A4  Privacy / Risk / Governance Reviewer
+A5  Platform Operator
+A6  Library Maintainer
+A7  Synthesizer / Extension Author
+```
+
+Actor roles describe needs/viewpoints, not authorization principals or product personas.
+
+## Surface taxonomy
+
+```text
+S1  SDK / API automation
+S2  notebook / interactive analysis
+S3  CLI / operational interaction
+S4  report / history / review artifact
+S5  graphical UI
+S6  operator / admin surface
+S7  external integration / handoff
+```
+
+These are mapping lenses, not mandatory architecture components.
+
+## Application-family applicability
+
+```text
+AF-AUTH   authority-only usage
+AF-L      L-KERNEL
+AF-GD     direct G-KERNEL
+AF-GL     learned-state-assisted Generation
+AF-E      E-KERNEL / evaluation-focused usage
+AF-GE     evidence-gated Generation
+AF-C      reusable Constraint relation present
+AF-X      durable Execution relation present
+AF-P      Provenance relation/history capability present
+AF-FULL   full eleven-concept composition
+AF-EXT    external handoff/integration boundary
+```
+
+Optional capabilities remain optional. Applicability tags are not SKUs, packages, deployment profiles or feature flags.
+
+## Retained experience evidence after 010-A
+
+Current in substance:
+
+- preparation/readiness as contextual assessment;
+- semantic commitment/exact bindings;
+- operational versus semantic lifecycle;
+- physical versus authoritative result;
+- retry/cancellation/recovery distinctions;
+- Criterion/Evaluation/Evidence and Evidence/external-decision distinctions;
+- historical/current separation;
+- relational Provenance;
+- qualified Reproducibility;
+- typed disclosure/history states;
+- enterprise-scale bounded experience;
+- anti-god-concept guardrails.
+
+Normalized/superseded assumptions:
+
+```text
+15 historical SYNC IDs != 15 active synchronization rules
+SYNC-08 is retired; Generation owns output result lifecycle
+SYNC-15 is reclassified; Reproducibility is cross-cutting
+Learning is not universal for Generation
+Evaluation/Evidence are not universal for Generation
+Execution is not universal
+Provenance is not universal
+Readiness/Validation do not become global concept owners
+```
+
+## Core mapping guardrails
+
+- upstream semantics win;
+- mapping is not implementation representation;
+- concept distinctions remain recoverable;
+- semantic and operational completion remain separate;
+- candidate/intermediate material is not authoritative result by physical existence;
+- exact historical binding is inspectable and non-reactive by default;
+- Evidence remains finding authority, not approval/release authority;
+- Provenance remains relationship authority, not source-fact authority;
+- disclosure/history-quality states remain typed where material;
+- ordinary inspection remains bounded at enterprise scale;
+- human/programmatic parity means equivalent material semantics, not identical ergonomics.
 
 ## Phase 010 sequence
 
 ```text
-010-A  NEXT — mapping authority / coverage / actor-surface taxonomy
-010-B  action -> interaction mapping
+010-A  COMPLETE — mapping authority / coverage / actor-surface taxonomy / evidence baseline
+010-B  NEXT — action -> actor intent / interaction mapping
 010-C  state/query/history -> inspection mapping
 010-D  linguistic / vocabulary / typed status mapping
 010-E  physical / interaction surface mapping
@@ -117,4 +219,6 @@ It must not solve the problem by inventing a generic `Run`, `Artifact`, `Metric`
 
 ## Current next boundary
 
-**010-A — Mapping Authority, Coverage Model, Actor/Surface Taxonomy & Evidence Baseline** is next eligible.
+**010-B — Concept Action → Actor Intent & Interaction Mapping** is next eligible.
+
+Implementation remains **NOT READY / NOT STARTED / NOT YET**.
