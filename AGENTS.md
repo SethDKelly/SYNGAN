@@ -16,13 +16,13 @@ Start with:
 - `docs/mapping/index.md`
 - `docs/mapping/mapping-authority-coverage-actor-surface-evidence-baseline.md`
 - `docs/mapping/concept-action-actor-intent-interaction-mapping.md`
+- `docs/mapping/concept-state-query-history-explanation-inspection-mapping.md`
 - `docs/phases/010/index.md`
 
 Current state:
 
 ```text
 accepted concepts                    11
-historical synchronization IDs       15
 active synchronizations              13
 Phase 008                            COMPLETE
 Phase 009                            COMPLETE
@@ -31,9 +31,10 @@ E1-E5                                CURRENTLY CLOSED
 Phase 010                            ACTIVE
 010-A                                COMPLETE
 010-B                                COMPLETE
-010-C                                NEXT ELIGIBLE
+010-C                                COMPLETE
+010-D                                NEXT ELIGIBLE
 F1                                   CURRENTLY CLOSED
-F2                                   PARTIAL
+F2                                   CURRENTLY CLOSED
 F3                                   PARTIAL TO STRONG
 F4                                   PARTIAL
 F5                                   STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
@@ -46,92 +47,92 @@ implementation next                  NOT YET
 
 > **Complete the design before making implementation ready. Existing architecture, code, tests or plans may expose misfits, but they may not veto upstream concept-design correction.**
 
-## Phase 009 upstream authority
+## Current mapping authority
 
-Current application-family kernels remain:
+010-A defines the mapping schema/coverage/actor/surface/family/evidence model.
 
-```text
-L-KERNEL = { Data Meaning, Synthesis Strategy, Learning, Learned State }
-G-KERNEL = { Data Meaning, Synthesis Strategy, Generation }
-E-KERNEL = { Evaluation Criterion, Evaluation, Evidence }
-```
+010-B maps all 66 normalized command groups to actor intent and surface-neutral interaction obligations.
 
-Direct Generation is valid without Learning/Learned State. Non-gated Generation is valid without Evaluation/Evidence. Constraint, Execution and Provenance remain capability-conditional.
-
-Synchronization owns no canonical state. Historical exact bindings are occurrence-scoped rather than live subscriptions.
-
-## 010-A mapping-control authority
-
-All current mapping records use the 010-A control model: concept owner, conceptual subject, actor intent, semantic interaction/inspection obligation, precondition/result/non-success semantics, family applicability, sync relevance, temporal/disclosure/history/scale annotations, candidate surface families, vocabulary risk, evidence, coverage status and misfit note.
-
-The seven actor lenses and seven surface families are design lenses—not authorization roles, product personas, services or required product surfaces.
-
-## 010-B action-mapping authority
-
-010-B maps all normalized command groups:
+010-C maps all 52 normalized query groups, all 11 lifecycle/history envelopes and five cross-concept explanation patterns to surface-neutral inspection obligations.
 
 ```text
-normalized command groups     66
-semantically mapped           66
-blocked by misfit              0
+commands                         66 / 66 SEMANTICALLY MAPPED
+queries                          52 / 52 SEMANTICALLY MAPPED
+lifecycle/history envelopes      11 / 11 SEMANTICALLY MAPPED
+F1                               CURRENTLY CLOSED
+F2                               CURRENTLY CLOSED
 ```
 
-Important rules:
+## Inspection discipline
 
-- conceptual command != one API method/endpoint/button/CLI command;
-- system-established transitions may be observable without direct actor controls;
-- `LearnedState.Establish` and `Evidence.Establish` preserve producer/result dual authority;
-- validation/readiness remains owned contextually by Learning/Generation/Evaluation;
-- cancellation request != terminal cancellation;
-- Attempt outcome != parent semantic outcome;
-- Execution completion != Learning/Generation/Evaluation completion;
-- Generation candidate != completed output;
-- Evaluation completion != favorable Evidence;
-- Evidence != approval/release/privacy guarantee;
-- Provenance assertion != source fact;
-- current/future-use status changes do not rewrite historical bindings;
-- `SYNC-08` remains retired and `SYNC-15` remains reclassified.
+> **Inspection exposes owned or validly derived truth; it does not create a second owner for that truth.**
+
+Do not turn a combined view, cache, report, dashboard, history index, graph traversal or status summary into new canonical domain state.
+
+Preserve:
+
+- current versus exact historical state;
+- semantic versus operational state;
+- candidate/checkpoint/diagnostic versus authoritative result;
+- exact Meaning/Strategy/Constraint/Learned State/Criterion/Evidence bindings;
+- Evidence finding/strength/uncertainty/limitations/current applicability;
+- Provenance relationship assertions versus referenced source facts;
+- directly retained versus reconstructed/partial/unavailable/indeterminate history;
+- visible/redacted/withheld/unavailable/unknown/absent disclosure distinctions;
+- bounded enterprise-scale inspection;
+- application-family optionality.
 
 ## Current Phase 010 sequence
 
 ```text
-010-A  COMPLETE — mapping authority / coverage / actor-surface taxonomy / evidence baseline
-010-B  COMPLETE — concept action -> actor intent / interaction mapping
-010-C  NEXT — state/query/history/explanation -> inspection mapping
-010-D  linguistic / vocabulary / typed status / disclosure semantics
+010-A  COMPLETE — mapping control / coverage / actor-surface taxonomy / evidence baseline
+010-B  COMPLETE — action -> actor intent / interaction mapping
+010-C  COMPLETE — state/query/history/explanation -> inspection mapping
+010-D  NEXT — linguistic / vocabulary / typed status / disclosure semantics
 010-E  physical interaction across candidate surface families
 010-F  application-family workflow composition / progressive disclosure
 010-G  human-programmatic parity / degraded-recovery-scale mapping misfit
 010-H  mapping consolidation / Phase 011 handoff
 ```
 
-## 010-C discipline
+## 010-D discipline
 
-010-C must map concept-owned state, queries, history and explanation obligations to actor/programmatic inspection semantics.
+010-D must align vocabulary and typed status/disclosure language across actors and programmatic surfaces without changing mapped semantics.
 
-Do not begin from database columns, resource JSON, UI dashboards, platform job objects or graph schemas.
+Pay particular attention to overloaded or risky words such as:
 
-010-C must preserve at least:
+```text
+model
+run
+job
+artifact
+metric
+validation
+valid
+passed
+ready
+quality
+safe
+private
+reproducible
+history
+current
+complete
+```
 
-- current versus historical/as-bound state;
-- exact Meaning/Strategy/Constraint/Learned State/Criterion/Evidence bindings;
-- semantic lifecycle versus Execution/Attempt state;
-- candidate/checkpoint/diagnostic versus authoritative result;
-- Evidence Criterion/method/scope/strength/uncertainty/limitations/applicability;
-- Provenance relationship assertions versus source truth;
-- absent/unknown/unavailable/withheld/redacted distinctions;
-- directly established versus reconstructed/partial/unknown history;
-- bounded enterprise-scale inspection and drill-down.
+Do not use one generic status vocabulary to erase concept-owner differences.
+
+010-C semantic categories such as `DIRECT`, `RECONSTRUCTED`, `PARTIAL`, `WITHHELD`, `UNKNOWN` or `ABSENT` are mapping distinctions awaiting linguistic alignment. They are not permission to create public/runtime enums.
 
 ## Mapping misfit rule
 
-If an accepted concept/action/query cannot be mapped intelligibly without violating purpose, ownership, application-family or synchronization semantics:
+If a mapping cannot be expressed intelligibly without violating purpose, ownership, application-family or synchronization semantics:
 
 1. record the concrete mapping misfit;
 2. identify whether it is local to Phase 010 or proves an upstream defect;
 3. reopen only the smallest affected authority under J0-J7.
 
-Do not invent generic Workflow, Run, Artifact, Metric, Validation, Quality, History or Approval authority merely to simplify a surface.
+Do not invent generic Workflow, Run, Artifact, Metric, Validation, Quality, History, Status, Lineage or Approval authority merely to simplify a surface.
 
 ## Critical interpretation
 
@@ -142,12 +143,14 @@ A concept mapping is not automatically:
 - CLI command;
 - UI widget/page;
 - report format;
+- database/materialized view;
+- cache/search index;
+- graph database;
 - service call;
 - event/message;
 - transaction/saga;
 - queue/topic;
 - package/module dependency;
-- schema foreign key;
 - runtime workflow edge;
 - deployment unit.
 
@@ -160,13 +163,13 @@ A concept mapping is not automatically:
 
 ## What agents may do now
 
-Agents may perform design-only 010-C inspection mapping using current concept state/query/history authority and the 010-A/010-B mapping foundation.
+Agents may perform design-only 010-D linguistic mapping using current action/inspection mappings and terminology authority.
 
 Architecture/source/tests may be inspected only as counterexample/feasibility evidence, not upstream mapping authority.
 
 ## What agents must not do until Phase 014 passes
 
-Do not add production behavior, concrete implementation APIs, persistence/data-plane schemas, Spark/runtime/model/platform/security adapters, recovery implementations, Evidence/Provenance implementations, reference Strategies, privacy mechanisms, runtime/build dependencies, package-topology changes, event/service decomposition, or executable architecture restrictions merely to freeze evolving design.
+Do not add production behavior, implementation APIs, persistence/data-plane schemas, query endpoints, dashboards/materialized views, graph/search technologies, Spark/runtime/model/platform/security adapters, recovery implementations, Evidence/Provenance implementations, reference Strategies, privacy mechanisms, runtime/build dependencies, package-topology changes, event/service decomposition, or executable architecture restrictions merely to freeze evolving design.
 
 ## Readiness rule
 
@@ -180,4 +183,4 @@ Only Phase 014 may make the final whole-design readiness decision; implementatio
 
 ## Current next boundary
 
-**010-C — Concept State, Query, History & Explanation → Inspection Mapping**.
+**010-D — Linguistic Mapping, Vocabulary, Typed Status & Disclosure Semantics**.
