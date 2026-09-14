@@ -22,9 +22,10 @@ Phase 010                    ACTIVE
 Phase 010 decomposition      COMPLETE
 010-A                        COMPLETE
 010-B                        COMPLETE
-010-C                        NEXT ELIGIBLE
-F1                           CURRENTLY CLOSED FOR SEMANTIC ACTION MAPPING
-F2                           PARTIAL
+010-C                        COMPLETE
+010-D                        NEXT ELIGIBLE
+F1                           CURRENTLY CLOSED
+F2                           CURRENTLY CLOSED
 F3                           PARTIAL TO STRONG
 F4                           PARTIAL
 F5                           STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
@@ -37,7 +38,8 @@ implementation next          NOT YET
 ## Current mapping authority
 
 - [Mapping Authority, Coverage Model, Actor/Surface Taxonomy & Evidence Baseline](mapping-authority-coverage-actor-surface-evidence-baseline.md) — 010-A control authority.
-- [Concept Action → Actor Intent & Interaction Mapping](concept-action-actor-intent-interaction-mapping.md) — **010-B current semantic action-mapping authority**.
+- [Concept Action → Actor Intent & Interaction Mapping](concept-action-actor-intent-interaction-mapping.md) — 010-B semantic action authority.
+- [Concept State, Query, History & Explanation → Inspection Mapping](concept-state-query-history-explanation-inspection-mapping.md) — **010-C current semantic inspection authority**.
 - [Phase 010 Entry & Decomposition](../phases/010/010-entry-decomposition.md)
 - [Phase 009 Consolidation](../authority/phase-009-dependence-composition-consolidation.md)
 - [Accepted Concept Catalog](../concepts/index.md)
@@ -45,145 +47,208 @@ implementation next          NOT YET
 - [Domain Terminology](../terminology/index.md)
 - Phase 003/006 experience documents — retained mapping evidence.
 
-## 010-A control model
+## Current semantic mapping coverage
 
-010-A established:
+### Actions — F1
 
-```text
-accepted concepts                       11
-actor roles adopted                      7
-surface families adopted                 7
-application-family applicability tags   10
-mapping coverage dimensions             12
-canonical mapping fields                19
-Phase 003/006 evidence baseline         ESTABLISHED
-```
-
-Controlled mapping states remain:
+010-B maps all normalized command groups:
 
 ```text
-SOURCE IDENTIFIED
-SEMANTICALLY MAPPED
-LINGUISTICALLY ALIGNED
-SURFACE-MAPPED
-FAMILY-REPLAYED
-PARITY-VALIDATED
-BLOCKED BY MISFIT
+normalized command groups     66
+semantically mapped           66
+blocked by mapping misfit      0
 ```
 
-These are documentation coverage states, not runtime/domain states.
+F1 is currently closed at the surface-neutral semantic action-mapping layer.
 
-## 010-B action mapping result
+### Inspection — F2
 
-010-B maps all normalized command groups from Phase 008-D:
+010-C maps all normalized query/observation groups and material lifecycle/history envelopes:
 
 ```text
-Data Meaning             7 / 7
-Synthesis Strategy       4 / 4
-Learning                 8 / 8
-Learned State            4 / 4
-Generation              11 / 11
-Constraint               4 / 4
-Evaluation Criterion     4 / 4
-Evaluation               8 / 8
-Evidence                 3 / 3
-Execution                11 / 11
-Provenance               2 / 2
-                         ------
-TOTAL                    66 / 66  SEMANTICALLY MAPPED
+normalized query groups                 52
+semantically mapped query groups        52
+lifecycle/history envelopes             11 / 11
+cross-concept explanation patterns       5
+blocked by mapping misfit                0
 ```
 
-F1 therefore has current surface-neutral semantic action coverage across the whole accepted catalog.
+F2 is currently closed at the surface-neutral semantic inspection-mapping layer.
 
-This does **not** mean every conceptual command becomes a direct user control. System-established/synchronized transitions such as `LearnedState.Establish`, `Evidence.Establish`, `Execution.RecordAttemptOutcome`, and `Provenance.RecordTypedRelationship` may be observable without having a dedicated button/endpoint.
+## 010-C inspection authority
 
-## Action-mapping invariants
+The governing rule is:
 
-Current action mapping preserves:
+> **Inspection exposes owned or validly derived truth; it does not create a second owner for that truth.**
 
-- semantic commitment versus operational start;
-- cancellation request versus terminal cancellation;
-- Attempt outcome versus parent semantic outcome;
-- candidate output versus completed Generation output;
-- Evaluation completion versus favorable Evidence;
-- Evidence versus approval/release/privacy guarantee;
-- reusable-authority effectiveness versus consumer compatibility;
-- future-use status versus historical bound truth;
-- Provenance relationship assertions versus source facts;
-- activity-owned validation/readiness rather than global mutable readiness.
+A combined dashboard/report/history/explanation may compose facts from multiple concepts, but each fact remains attributable to its canonical owner.
 
-No global Workflow, Run, Artifact, Validation, Quality, Compatibility, Readiness or Approval owner is introduced.
+No standalone Dashboard, Status, History, Explanation, Lineage, Artifact, Result, Approval or Inspection concept is introduced.
 
-## Application-family preservation
+## Current-versus-historical rule
 
-The action map remains conditional by actual family membership/capability.
-
-```text
-authority-only use              remains valid
-direct Generation               requires no fabricated Learning/Learned State
-learned Generation              adds actual Learning/Learned State semantics
-evaluation-focused use          remains valid without Generation
-evidence-gated Generation       preserves Generation completion ownership
-Execution-bearing variants      add Execution actions only under AF-X
-Provenance-bearing variants     add Provenance actions only under AF-P
-```
-
-The full eleven-concept workflow is not a universal mapping template.
-
-## Synchronization visibility
-
-Synchronization relevance is expressed through concept-owned actions; there is no mapped “execute synchronization” action.
+Inspection must support current and historical truth simultaneously.
 
 Examples:
 
 ```text
-Learning.Commit                    -> SYNC-01 / 02 / optional 03
-Learning.InitiateRealization       -> SYNC-04
-Learning.Complete                  -> SYNC-05
-Generation.Commit                  -> SYNC-01 / 02 / optional 03 / 06
-Generation.InitiateFulfillment     -> SYNC-07
-Generation.EvaluateCompletionBasis -> optional SYNC-13
-Evaluation.Commit                  -> SYNC-09
-Evaluation.ValidateMethodContext   -> SYNC-10
-Evaluation.Initiate                -> SYNC-11
-Evaluation.Complete                -> SYNC-12
-Provenance.RecordTypedRelationship -> SYNC-14
+historical Generation bound Strategy S17
++ S17 is currently retired
+
+historical Generation relied on Evidence E9
++ E9 is currently stale/inapplicable/invalidated for new reliance
+
+historical Learning bound Data Meaning M4
++ M6 is currently effective
 ```
 
-`SYNC-08` remains retired and `SYNC-15` remains reclassified.
+Current status does not rewrite historical binding truth.
 
-## Current coverage position
+## Semantic / operational inspection
 
-For action subjects:
+Where Execution exists, inspection must keep separately recoverable:
 
 ```text
-SOURCE IDENTIFIED -> SEMANTICALLY MAPPED
+parent Learning / Generation / Evaluation semantic state
+Execution operational state
+Attempt history
+retry / resume / recovery / cancellation eligibility
 ```
 
-Queries, state, history and explanation remain for 010-C. No action is yet claimed linguistically aligned, surface-mapped, family-replayed or parity-validated.
+`Execution.completed` never becomes parent semantic completion through display or query convenience.
 
-## Core mapping guardrails
+## Candidate / finality inspection
 
-- upstream semantics win;
-- mapping is not implementation representation;
-- application-family optionality remains visible;
-- synchronization owns no state/control;
-- semantic and operational completion remain distinct;
-- candidate/intermediate material is not authoritative result by physical existence;
-- exact historical binding is inspectable and non-reactive by default;
-- Evidence remains finding authority, not approval/release authority;
-- Provenance remains relationship authority, not source-fact authority;
-- disclosure/history-quality states remain typed where material;
-- ordinary inspection remains bounded at enterprise scale;
-- human/programmatic parity means equivalent material semantics, not identical ergonomics.
+Generation inspection must preserve:
+
+```text
+partial material
+candidate material
+candidate complete / awaiting required validation
+completion-basis result
+completed authoritative logical output
+failed/cancelled non-promoted material
+```
+
+Physical existence does not establish finality.
+
+## Evidence inspection
+
+Evidence interpretation requires enough context to preserve claim strength:
+
+```text
+finding
+Criterion
+subject / reference
+method
+scope / coverage
+claim strength
+uncertainty
+limitations
+current applicability
+```
+
+Evidence remains finding authority rather than approval/release/privacy-guarantee authority.
+
+## Provenance / explanation inspection
+
+Provenance may support typed traversal and historical explanation while remaining relationship authority rather than source-fact authority.
+
+Current derived explanation patterns include:
+
+```text
+EX-01  historical Learning
+EX-02  historical Generation
+EX-03  Evidence
+EX-04  current-versus-historical divergence
+EX-05  incomplete/reconstructed history
+```
+
+These are derived mapping compositions, not new canonical aggregate state.
+
+## Disclosure and history quality
+
+Inspection must preserve material distinctions among:
+
+```text
+visible
+redacted / authorized summary
+withheld
+unavailable
+unknown
+absent
+```
+
+History/explanation must also preserve, where material:
+
+```text
+DIRECT
+RECONSTRUCTED
+PARTIAL
+UNAVAILABLE
+INDETERMINATE
+```
+
+These are current mapping-level semantic categories pending 010-D linguistic alignment, not public/runtime enums.
+
+## Enterprise-scale boundedness
+
+Routine inspection is metadata/reference/summary-first.
+
+Current rules require:
+
+- bulk source/output/Learned-State contents remain separate from concept-state inspection;
+- Attempt/log/telemetry drill-down remains bounded;
+- Provenance traversal remains bounded;
+- large Evidence support artifacts may be referenced rather than loaded into routine views.
+
+No concrete query/pagination/storage technology is selected.
+
+## Application-family preservation
+
+Inspection remains conditional on actual family membership:
+
+```text
+authority-only use           independently inspectable
+L-KERNEL                     no fabricated Generation/Evaluation/Execution/Provenance
+direct Generation            no fabricated Learning/Learned State
+learned Generation           adds actual learned-state history only
+E-KERNEL                     coherent without Generation
+evidence-gated Generation    composes exact Evidence while preserving ownership
+AF-X                         Execution inspection only when Execution exists
+AF-P                         Provenance traversal only when Provenance exists
+AF-FULL                      may compose all views without a combined state owner
+```
+
+## Coverage progression
+
+Current semantic subjects have advanced:
+
+```text
+actions                     SEMANTICALLY MAPPED
+queries/observations        SEMANTICALLY MAPPED
+lifecycle/history envelopes SEMANTICALLY MAPPED
+explanation patterns        SEMANTICALLY MAPPED
+```
+
+They are not yet universally:
+
+```text
+LINGUISTICALLY ALIGNED
+SURFACE-MAPPED
+FAMILY-REPLAYED at workflow level
+PARITY-VALIDATED
+```
+
+Those obligations remain 010-D through 010-G.
 
 ## Phase 010 sequence
 
 ```text
 010-A  COMPLETE — mapping authority / coverage / actor-surface taxonomy / evidence baseline
 010-B  COMPLETE — concept action -> actor intent / interaction mapping
-010-C  NEXT — state/query/history/explanation -> inspection mapping
-010-D  linguistic / vocabulary / typed status mapping
+010-C  COMPLETE — state/query/history/explanation -> inspection mapping
+010-D  NEXT — linguistic / vocabulary / typed status / disclosure semantics
 010-E  physical / interaction surface mapping
 010-F  application-family workflow composition / progressive disclosure
 010-G  human-programmatic parity / degraded-recovery-scale misfit audit
@@ -192,6 +257,6 @@ Queries, state, history and explanation remain for 010-C. No action is yet claim
 
 ## Current next boundary
 
-**010-C — Concept State, Query, History & Explanation → Inspection Mapping** is next eligible.
+**010-D — Linguistic Mapping, Vocabulary, Typed Status & Disclosure Semantics** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
