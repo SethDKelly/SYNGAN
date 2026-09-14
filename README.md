@@ -16,9 +16,9 @@ Current authority includes:
 - [`Accepted Concept Catalog`](docs/concepts/index.md)
 - [`Concept Dependence & Application Family`](docs/dependence/index.md)
 - [`Synchronization Authority`](docs/synchronizations/index.md)
-- [`Phase 009 Consolidation`](docs/authority/phase-009-dependence-composition-consolidation.md)
 - [`Concept Mapping Authority`](docs/mapping/index.md)
 - [`010-A Mapping Control Authority`](docs/mapping/mapping-authority-coverage-actor-surface-evidence-baseline.md)
+- [`010-B Concept Action Mapping`](docs/mapping/concept-action-actor-intent-interaction-mapping.md)
 - [`Phase 010`](docs/phases/010/index.md)
 
 ## Status
@@ -33,10 +33,10 @@ Phase 009                            COMPLETE
 D1-D4                                CURRENTLY CLOSED
 E1-E5                                CURRENTLY CLOSED
 Phase 010                            ACTIVE
-Phase 010 decomposition              COMPLETE
 010-A                                COMPLETE
-010-B                                NEXT ELIGIBLE
-F1                                   PARTIAL
+010-B                                COMPLETE
+010-C                                NEXT ELIGIBLE
+F1                                   CURRENTLY CLOSED
 F2                                   PARTIAL
 F3                                   PARTIAL TO STRONG
 F4                                   PARTIAL
@@ -47,34 +47,11 @@ implementation start                 NOT STARTED
 implementation next                  NOT YET
 ```
 
-010-A establishes the current mapping-control model:
+010-B maps all **66 normalized state-changing command groups** to actor intent and surface-neutral interaction obligations. Conceptual commands are not automatically buttons, endpoints or CLI commands; synchronized/system-established transitions remain observable without requiring direct controls.
 
-```text
-actor roles                             7
-surface families                        7
-application-family applicability tags  10
-mapping coverage dimensions            12
-canonical mapping fields               19
-```
+The action map preserves reduced application-family variants, activity-owned validation/readiness, semantic-versus-operational state, candidate-versus-authoritative result, Evidence-versus-approval boundaries, Provenance-versus-source ownership, exact historical truth and conditional Execution/Provenance capabilities.
 
-Every later mapping must identify a canonical concept owner, actor intent, surface-neutral interaction/inspection obligation, family applicability, temporal orientation, disclosure/history-quality constraints, scale/boundedness, evidence source, and explicit mapping status.
-
-Current coverage progression:
-
-```text
-SOURCE IDENTIFIED
-  -> SEMANTICALLY MAPPED
-  -> LINGUISTICALLY ALIGNED
-  -> SURFACE-MAPPED
-  -> FAMILY-REPLAYED
-  -> PARITY-VALIDATED
-```
-
-`BLOCKED BY MISFIT` remains explicit when a concept cannot be mapped honestly without reopening upstream authority.
-
-Phase 003/006 experience documents remain strong evidence, but 010-A normalizes stale assumptions: there are 15 historical synchronization IDs but 13 active rules; `SYNC-08` is retired; `SYNC-15` is reclassified; and Learning, Evaluation/Evidence, Execution and Provenance are conditional rather than universal workflow requirements.
-
-Phase 010 may identify candidate SDK/API, notebook, CLI, report/history, graphical and operator/admin interaction forms. It does not choose concrete endpoints, classes, widgets, packages, storage, services, event topology or runtime mechanisms.
+No concept or synchronization was added or reopened during 010-B.
 
 ## Remaining design roadmap
 
@@ -92,6 +69,6 @@ Only a positive Phase 014 may change implementation to **READY / NOT STARTED / N
 
 ## Current next boundary
 
-**010-B — Concept Action → Actor Intent & Interaction Mapping** is next eligible.
+**010-C — Concept State, Query, History & Explanation → Inspection Mapping** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
