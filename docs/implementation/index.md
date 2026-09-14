@@ -16,7 +16,7 @@ Current authority:
 - [Jackson Methodology Completion Matrix](../authority/jackson-methodology-completion-matrix.md)
 - [Phase 009 Consolidation](../authority/phase-009-dependence-composition-consolidation.md)
 - [Concept Mapping Authority](../mapping/index.md)
-- [Phase 010](../phases/010/index.md)
+- [010-A Mapping Control Authority](../mapping/mapping-authority-coverage-actor-surface-evidence-baseline.md)
 
 ```text
 IMPLEMENTATION READINESS   NOT READY
@@ -34,49 +34,43 @@ Phase 009                  COMPLETE
 D1-D4                      CURRENTLY CLOSED
 E1-E5                      CURRENTLY CLOSED
 Phase 010                  ACTIVE
-Phase 010 decomposition    COMPLETE
-010-A                      NEXT ELIGIBLE
+010-A                      COMPLETE
+010-B                      NEXT ELIGIBLE
 Jackson concept design     IN PROGRESS
 ```
 
-## Active Phase 010 remains design-only
+## What 010-A established
 
-Phase 010 maps concept actions/state/queries into human/programmatic interaction, language and candidate surface families.
+010-A defines the Phase 010 mapping-control model:
 
-It now has a strict design sequence from mapping authority/coverage through action mapping, inspection mapping, language, physical interaction mapping, application-family workflow composition, parity/misfit replay and consolidation.
+- nineteen-field semantic mapping record;
+- twelve coverage dimensions;
+- seven actor-role lenses;
+- seven candidate surface families;
+- application-family applicability tags;
+- typed temporal/disclosure/history-quality/scale annotations;
+- evidence-adoption rules for Phase 003/006;
+- explicit `BLOCKED BY MISFIT` reopening discipline.
 
-A concept mapping is not automatically:
+These are design documentation structures, not implementation resources.
 
-- a public API contract;
-- implementation class/method;
-- database schema;
-- service endpoint;
-- CLI command;
-- UI component/page;
-- event/message;
-- transaction/saga;
-- package/module;
-- runtime workflow;
-- observer/subscription mechanism.
-
-Phase 003/006 workflow documents remain evidence. They do not authorize implementing their historical interaction shapes before current Phase 010 mapping is complete.
-
-## Mapping-driven implementation prohibitions
-
-Do not convert:
+Do not implement:
 
 ```text
-concept action            -> one API method/endpoint
-concept state/query       -> one database view/schema
-concept                   -> one service/package
-application-family member -> one SKU/deployment profile
-synchronization           -> one event/transaction
-mapping surface family    -> mandatory product surface
+mapping record field      -> serialized resource field
+actor role                -> authorization role
+surface family            -> mandatory product component
+family applicability tag  -> feature flag / package / SKU
+mapping coverage state    -> runtime status enum
 ```
 
-without later representation/architecture authority.
+## 010-B remains design-only
 
-Human/programmatic semantic parity likewise does not require identical physical interfaces.
+010-B will map normalized state-changing concept actions to actor intent and surface-neutral interaction obligations.
+
+A mapped action is not automatically a public API method, endpoint, command, button, event, transaction, handler or service call.
+
+Final linguistic expression and physical interaction mapping remain later Phase 010 work.
 
 ## Superseded 007-K re-entry conclusion
 
@@ -87,7 +81,7 @@ Retained Phase 007 architecture/scaffold evidence cannot reactivate implementati
 ## Remaining design before implementation readiness can be decided
 
 ```text
-010       concept mapping / interaction / language / experience — ACTIVE
+010-B..H  remaining mapping work
 011       specificity / familiarity / integrity / synergy / misfit
 012       Jackson concept-design completion decision
 013       representation / architecture reconciliation
@@ -104,4 +98,4 @@ Until Phase 014 passes, do not add production concept/domain behavior, implement
 
 Design-only work:
 
-**010-A — Mapping Authority, Coverage Model, Actor/Surface Taxonomy & Evidence Baseline**.
+**010-B — Concept Action → Actor Intent & Interaction Mapping**.
