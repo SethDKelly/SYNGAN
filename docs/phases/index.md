@@ -39,8 +39,8 @@ JACKSON CONCEPT DESIGN      NOT COMPLETE
 
 ```text
 009-A..009-H  COMPLETE
-D1-D4          CURRENTLY CLOSED
-E1-E5          CURRENTLY CLOSED
+D1-D4         CURRENTLY CLOSED
+E1-E5         CURRENTLY CLOSED
 ```
 
 Current consolidated authority: [Phase 009 Dependence, Application Family & Composition Consolidation](../authority/phase-009-dependence-composition-consolidation.md).
@@ -51,16 +51,16 @@ Current authority:
 
 - [Phase 010 Index](010/index.md)
 - [Phase 010 Entry & Decomposition](010/010-entry-decomposition.md)
-- [010-A Phase Record](010/010-A-mapping-authority-coverage-model-actor-surface-taxonomy-evidence-baseline.md)
+- [010-A](010/010-A-mapping-authority-coverage-model-actor-surface-taxonomy-evidence-baseline.md)
+- [010-B](010/010-B-concept-action-actor-intent-interaction-mapping.md)
 - [Concept Mapping Authority](../mapping/index.md)
-- [010-A Mapping Control Authority](../mapping/mapping-authority-coverage-actor-surface-evidence-baseline.md)
 
 Current sequence:
 
 ```text
 010-A  COMPLETE — mapping authority / coverage / actor-surface taxonomy / evidence baseline
-010-B  NEXT — action -> actor intent / interaction mapping
-010-C  state/query/history -> inspection mapping
+010-B  COMPLETE — concept action -> actor intent / interaction mapping
+010-C  NEXT — state/query/history/explanation -> inspection mapping
 010-D  linguistic / vocabulary / typed status / disclosure semantics
 010-E  physical interaction across candidate surface families
 010-F  application-family workflow composition / progressive disclosure
@@ -68,38 +68,17 @@ Current sequence:
 010-H  mapping consolidation / Phase 011 handoff
 ```
 
-010-A establishes:
+Current methodology state:
 
 ```text
-actor roles                             7
-surface families                        7
-application-family applicability tags  10
-coverage dimensions                    12
-canonical mapping fields               19
-Phase 003/006 evidence baseline        ESTABLISHED
-```
-
-All eleven accepted concepts are `SOURCE IDENTIFIED` for current mapping. Detailed action mappings begin in 010-B.
-
-Phase 010 owns:
-
-```text
-F1  concept action -> human/programmatic interaction mapping
-F2  concept state/query -> actor-visible inspection mapping
-F3  linguistic mapping / vocabulary alignment
-F4  physical/interaction mapping across relevant surfaces
-F5  human/programmatic semantic parity
-```
-
-Current F states remain conservative:
-
-```text
-F1  PARTIAL
+F1  CURRENTLY CLOSED
 F2  PARTIAL
 F3  PARTIAL TO STRONG
 F4  PARTIAL
 F5  STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
 ```
+
+010-B maps 66/66 normalized command groups without adding a concept, synchronization or mandatory full-suite workflow.
 
 ## Later design phases
 
@@ -133,6 +112,6 @@ Placeholder only; not ready, not active and not next.
 
 ## Current next boundary
 
-**010-B — Concept Action → Actor Intent & Interaction Mapping** is next eligible.
+**010-C — Concept State, Query, History & Explanation → Inspection Mapping** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
