@@ -28,40 +28,35 @@ Cross-concept dependence/composition is consolidated by [Phase 009 Dependence, A
 
 ```text
 accepted concepts                    11
-historical synchronization IDs       15
 active synchronizations              13
 Phase 008                            COMPLETE
 Phase 009                            COMPLETE
 Phase 010                            ACTIVE
 010-A                                COMPLETE
 010-B                                COMPLETE
-010-C                                NEXT ELIGIBLE
+010-C                                COMPLETE
+010-D                                NEXT ELIGIBLE
 F1 semantic action mapping           CURRENTLY CLOSED
+F2 semantic inspection mapping       CURRENTLY CLOSED
 ```
 
-Phase 009 found no reason to add, remove, merge, split or rename a concept. 010-B finds no mapping reason to reopen that conclusion.
+Phase 009 found no reason to add, remove, merge, split or rename a concept. 010-B/010-C find no mapping reason to reopen that conclusion.
 
-## Normalized action-mapping coverage
+## Current semantic mapping coverage
 
-Current 010-B authority maps every normalized command group from [Concept Action, Query, Preconditions/Postconditions & Lifecycle Normalization](action-query-lifecycle-normalization.md):
+[010-B Action Mapping](../mapping/concept-action-actor-intent-interaction-mapping.md):
 
 ```text
-Data Meaning             7 / 7
-Synthesis Strategy       4 / 4
-Learning                 8 / 8
-Learned State            4 / 4
-Generation              11 / 11
-Constraint               4 / 4
-Evaluation Criterion     4 / 4
-Evaluation               8 / 8
-Evidence                 3 / 3
-Execution                11 / 11
-Provenance               2 / 2
-                         ------
-TOTAL                    66 / 66  SEMANTICALLY MAPPED
+66 / 66 normalized command groups  SEMANTICALLY MAPPED
 ```
 
-The canonical mapping is [Concept Action → Actor Intent & Interaction Mapping](../mapping/concept-action-actor-intent-interaction-mapping.md).
+[010-C Inspection Mapping](../mapping/concept-state-query-history-explanation-inspection-mapping.md):
+
+```text
+52 / 52 normalized query groups        SEMANTICALLY MAPPED
+11 / 11 lifecycle/history envelopes    SEMANTICALLY MAPPED
+5 explanation patterns                 SEMANTICALLY MAPPED
+```
 
 ## Core boundaries mapping preserves
 
@@ -79,17 +74,24 @@ Execution              != Attempt != platform job
 
 Generation owns request/Condition and candidate-to-completed logical output semantics. Synthetic Output is not a separate concept. Reproducibility remains cross-cutting. Generic Privacy remains deferred pending mechanism-specific discovery. Use/Release Decision remains external authority.
 
-## Important 010-B findings
+## 010-C inspection implications
 
-- a conceptual command is not automatically one physical control;
-- system-established actions remain semantically visible without requiring dedicated user gestures;
-- Learning/Generation/Evaluation own contextual validation/readiness;
-- Learned State/Evidence result establishment remains distinct from producer completion;
-- Execution owns Attempt/retry/recovery/cancellation operations, not parent semantic completion;
-- Generation candidate state remains Generation-local and does not resurrect `SYNC-08`;
-- Evidence remains a finding, not approval/release/privacy authority;
-- Provenance remains relation authority, not source-state authority;
-- current/future-use status changes do not rewrite exact historical bindings.
+Inspection does not create duplicate state ownership.
+
+Current mappings preserve:
+
+- current status versus exact historical bound truth;
+- revisioned authority history without retroactive rewrite;
+- proposed/committed/terminal activity state;
+- durable result current-use status versus immutable historical result content;
+- Generation partial/candidate/awaiting-validation/completed distinctions;
+- Execution/Attempt operational history versus parent semantic state;
+- Evidence finding/context/strength/limitations/current applicability;
+- Provenance assertions/corrections versus referenced source facts;
+- disclosure and historical-knowledge quality distinctions;
+- bounded enterprise-scale inspection.
+
+No standalone Dashboard, Status, History, Explanation, Lineage, Artifact, Result, Approval or Inspection concept is justified.
 
 ## Application-family result
 
@@ -101,18 +103,20 @@ E-KERNEL = { Evaluation Criterion, Evaluation, Evidence }
 
 Direct Generation remains valid without Learning/Learned State. Evaluation/Evidence are not universal prerequisites for Generation. Constraint, Execution and Provenance remain capability-conditional.
 
-## 010-C handoff
+Inspection follows the same optionality: absent capabilities do not produce fabricated relationships or empty mandatory panels/workflow steps.
 
-010-C must map current concept state, queries, history and explanation obligations to actor/programmatic inspection.
+## 010-D handoff
 
-It must preserve exact historical bindings, semantic-versus-operational state, candidate-versus-authoritative results, Evidence scope/strength/limitations/applicability, Provenance relations versus source facts, typed disclosure/history quality and bounded enterprise-scale inspection.
+010-D must establish actor/programmatic linguistic mapping over the now-complete surface-neutral action and inspection semantics.
+
+It must preserve concept-owner-specific lifecycle language and qualify overloaded ecosystem terms rather than flattening all state into a generic status vocabulary.
 
 ## Authority rule
 
-No implementation resource, architecture dependency or mapping convenience may redefine concept boundaries merely because it exists. Similarity of implementation mechanics does not justify concept merger.
+No implementation resource, architecture dependency, dashboard/report convenience, query schema or mapping vocabulary may redefine concept boundaries merely because it exists. Similarity of implementation mechanics does not justify concept merger.
 
 ## Current next boundary
 
-**010-C — Concept State, Query, History & Explanation → Inspection Mapping** is next eligible.
+**010-D — Linguistic Mapping, Vocabulary, Typed Status & Disclosure Semantics** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
