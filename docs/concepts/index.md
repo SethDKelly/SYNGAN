@@ -8,7 +8,7 @@ status: active
 
 This directory contains the canonical concept specifications accepted in Phase 001 and normalized through Phase 008.
 
-Cross-concept dependence/composition is consolidated by [Phase 009 Dependence, Application Family & Composition Consolidation](../authority/phase-009-dependence-composition-consolidation.md). Current mapping work is governed by [Concept Mapping Authority](../mapping/index.md).
+Cross-concept dependence/composition is consolidated by [Phase 009 Dependence, Application Family & Composition Consolidation](../authority/phase-009-dependence-composition-consolidation.md). Current mapping work is governed by [Concept Mapping Authority](../mapping/index.md) and the [010-A Mapping Control Authority](../mapping/mapping-authority-coverage-actor-surface-evidence-baseline.md).
 
 ## Current individual-concept authority
 
@@ -45,11 +45,11 @@ Phase 009                            COMPLETE
 D1-D4                                CURRENTLY CLOSED
 E1-E5                                CURRENTLY CLOSED
 Phase 010                            ACTIVE
-Phase 010 decomposition              COMPLETE
-010-A                                NEXT ELIGIBLE
+010-A                                COMPLETE
+010-B                                NEXT ELIGIBLE
 ```
 
-Phase 009 found no reason to add, remove, merge, split, or rename a concept.
+Phase 009 found no reason to add, remove, merge, split, or rename a concept. 010-A likewise finds no mapping-foundation evidence requiring catalog change.
 
 ## Core boundaries mapping must preserve
 
@@ -67,6 +67,30 @@ Execution              != Attempt != platform job
 
 Generation owns request/Condition and candidate-to-completed logical output semantics. Synthetic Output is not a separate accepted concept. Reproducibility remains a cross-cutting contract. Generic Privacy remains deferred pending mechanism-specific discovery. Use/Release Decision remains external authority.
 
+## Current mapping source status
+
+010-A identifies action/query/state sources for all eleven concepts without claiming they are already mapped.
+
+Current status:
+
+```text
+Data Meaning          SOURCE IDENTIFIED
+Synthesis Strategy    SOURCE IDENTIFIED
+Learning              SOURCE IDENTIFIED
+Learned State         SOURCE IDENTIFIED
+Generation            SOURCE IDENTIFIED
+Constraint            SOURCE IDENTIFIED
+Evaluation Criterion  SOURCE IDENTIFIED
+Evaluation            SOURCE IDENTIFIED
+Evidence              SOURCE IDENTIFIED
+Execution             SOURCE IDENTIFIED
+Provenance            SOURCE IDENTIFIED
+```
+
+010-B must advance normalized **state-changing actions** to `SEMANTICALLY MAPPED` only after actor intent, family applicability, semantic preconditions/results and relevant history/disclosure/scale constraints are explicit.
+
+010-C separately owns query/state/history inspection mapping.
+
 ## Application-family result
 
 ```text
@@ -76,6 +100,8 @@ E-KERNEL = { Evaluation Criterion, Evaluation, Evidence }
 ```
 
 Direct Generation remains valid without Learning/Learned State. Evaluation/Evidence are not universal prerequisites for Generation. Constraint, Execution and Provenance remain capability-conditional.
+
+010-A preserves that optionality through explicit mapping applicability tags rather than one mandatory workflow.
 
 ## Synchronization result
 
@@ -92,27 +118,17 @@ SYNC-16                               NOT JUSTIFIED
 
 No hidden Compatibility, Workflow/Run, Artifact/Promotion, Approval/Quality, Reproducibility, or Composition concept is required.
 
-## Active Phase 010 mapping implications
+## Mapping misfit rule
 
-Phase 010 must map accepted concepts without collapsing their distinct purposes for interface convenience.
+If an action/query/state cannot be mapped intelligibly without violating purpose/boundaries, Phase 010 must record a concrete misfit and reopen the smallest affected authority when warranted.
 
-Current sequence begins with 010-A coverage/actor/surface authority, then maps actions, state/query inspection, language, physical interactions, application-family workflows and semantic parity.
+Do not create a new concept merely because:
 
-In particular mapping must preserve:
-
-- Learning/Generation/Evaluation distinction;
-- Learned State/Generation output/Evidence distinction;
-- Data Meaning/Constraint/Condition distinction;
-- Criterion/Evaluation/Evidence distinction;
-- Execution operational state versus domain semantic state;
-- Evidence observation versus approval/release authority;
-- Provenance relationships versus source facts;
-- application-family optionality;
-- exact historical bindings and current-versus-historical status;
-- occurrence-scoped synchronization;
-- typed disclosure/history/uncertainty semantics.
-
-If a concept cannot be mapped intelligibly without violating purpose/boundaries, Phase 010 must record a genuine upstream misfit rather than erase the distinction.
+- several actions share a UI/API interaction pattern;
+- several views share a status label;
+- several concepts appear on one dashboard/report;
+- one physical resource contains state from several concepts;
+- one actor wants a cross-concept workflow summary.
 
 ## Future rediscovery triggers
 
@@ -127,14 +143,8 @@ Fresh discovery remains required before materially expanded scope such as:
 
 Implementation objects, IDs, tables, services, manifests or status enums do not themselves justify a concept.
 
-## Authority rule
-
-No implementation resource, architecture dependency, or mapping convenience may redefine concept boundaries merely because it exists.
-
-Similarity of implementation mechanics does not justify concept merger.
-
 ## Current next boundary
 
-**010-A — Mapping Authority, Coverage Model, Actor/Surface Taxonomy & Evidence Baseline** is next eligible.
+**010-B — Concept Action → Actor Intent & Interaction Mapping** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
