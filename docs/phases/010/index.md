@@ -24,16 +24,13 @@ IMPLEMENTATION NEXT        NOT YET
 
 - [Phase 010 Entry & Decomposition](010-entry-decomposition.md)
 - [010-A — Mapping Authority, Coverage Model, Actor/Surface Taxonomy & Evidence Baseline](010-A-mapping-authority-coverage-model-actor-surface-taxonomy-evidence-baseline.md)
+- [010-B — Concept Action → Actor Intent & Interaction Mapping](010-B-concept-action-actor-intent-interaction-mapping.md)
 - [Current Mapping Authority](../../mapping/index.md)
 - [010-A Mapping Control Authority](../../mapping/mapping-authority-coverage-actor-surface-evidence-baseline.md)
+- [010-B Action Mapping Authority](../../mapping/concept-action-actor-intent-interaction-mapping.md)
 - [Phase 009 Consolidation](../../authority/phase-009-dependence-composition-consolidation.md)
-- [Concept Design Methodology](../../authority/design-methodology.md)
-- [Jackson Methodology Completion Matrix](../../authority/jackson-methodology-completion-matrix.md)
 
-Retained supporting evidence:
-
-- [Phase 003 Consolidated Experience Contract](../../experience/phase-003-consolidated-experience-contract.md)
-- [Phase 006 Experience Refinement Contract](../../experience/phase-006-recovery-security-degraded-history-topology-experience-contract.md)
+Retained Phase 003/006 experience documents remain supporting evidence rather than higher mapping authority.
 
 ## Methodology rows owned by Phase 010
 
@@ -45,7 +42,7 @@ F4  physical/interaction mapping across relevant surfaces
 F5  human/programmatic semantic parity
 ```
 
-## Current baseline after 010-A
+## Current state after 010-B
 
 ```text
 accepted concepts                       11
@@ -57,8 +54,9 @@ Phase 009                               COMPLETE
 Phase 010                               ACTIVE
 Phase 010 decomposition                 COMPLETE
 010-A                                   COMPLETE
-010-B                                   NEXT ELIGIBLE
-F1                                      PARTIAL
+010-B                                   COMPLETE
+010-C                                   NEXT ELIGIBLE
+F1                                      CURRENTLY CLOSED FOR SEMANTIC ACTION MAPPING
 F2                                      PARTIAL
 F3                                      PARTIAL TO STRONG
 F4                                      PARTIAL
@@ -69,90 +67,53 @@ implementation start                    NOT STARTED
 implementation next                     NOT YET
 ```
 
-## 010-A control model
+## 010-A control result
 
-010-A establishes:
+010-A established nineteen mapping fields, twelve coverage dimensions, seven actor lenses, seven surface-family lenses, explicit application-family applicability tags, typed history/disclosure/scale annotations and an evidence-normalization baseline.
 
-```text
-actor roles adopted                      7
-surface families adopted                 7
-application-family applicability tags   10
-mapping coverage dimensions             12
-canonical mapping fields                19
-Phase 003/006 evidence baseline         ESTABLISHED
-```
+## 010-B action result
 
-All eleven concepts have source authority identified for current mapping. None is prematurely marked fully mapped.
-
-### Mapping coverage states
+010-B maps every normalized state-changing command group:
 
 ```text
-SOURCE IDENTIFIED
-SEMANTICALLY MAPPED
-LINGUISTICALLY ALIGNED
-SURFACE-MAPPED
-FAMILY-REPLAYED
-PARITY-VALIDATED
-BLOCKED BY MISFIT
+Data Meaning             7 / 7
+Synthesis Strategy       4 / 4
+Learning                 8 / 8
+Learned State            4 / 4
+Generation              11 / 11
+Constraint               4 / 4
+Evaluation Criterion     4 / 4
+Evaluation               8 / 8
+Evidence                 3 / 3
+Execution                11 / 11
+Provenance               2 / 2
+                         ------
+TOTAL                    66 / 66
 ```
 
-These are documentation/mapping coverage states only.
+All 66 action subjects are now `SEMANTICALLY MAPPED`.
 
-### Applicability tags
+Important mapping outcomes:
 
-```text
-AF-AUTH  authority-only usage
-AF-L     L-KERNEL
-AF-GD    direct Generation
-AF-GL    learned-state-assisted Generation
-AF-E     E-KERNEL / evaluation-focused use
-AF-GE    evidence-gated Generation
-AF-C     reusable Constraint present
-AF-X     durable Execution present
-AF-P     Provenance present
-AF-FULL  full eleven-concept composition
-AF-EXT   external integration/handoff
-```
-
-Optional capabilities must remain optional in every later mapping subgroup.
-
-## 010-A evidence replay result
-
-Current Phase 003/006 evidence retained includes:
-
-- preparation/readiness as contextual assessment;
-- semantic commitment and exact historical binding;
-- operational versus semantic state;
-- non-final versus authoritative result;
-- retry/cancellation/recovery distinctions;
-- Criterion/Evaluation/Evidence and Evidence/external-decision separation;
-- historical/current separation;
-- relational Provenance;
-- qualified Reproducibility;
-- typed disclosure/history states;
-- enterprise-scale bounded interaction;
-- anti-god-concept guardrails.
-
-Stale assumptions are explicitly normalized:
-
-```text
-15 historical SYNC IDs != 15 active synchronization rules
-SYNC-08 retired; Generation owns output lifecycle
-SYNC-15 reclassified; Reproducibility is cross-cutting
-Learning not universal for Generation
-Evaluation/Evidence not universal for Generation
-Execution not universal
-Provenance not universal
-Readiness/Validation not global concept owners
-```
+- conceptual command does not imply direct user control;
+- system-established result transitions remain actor/programmatically observable;
+- synchronization relevance is expressed through concept-owned actions rather than synchronization controls;
+- direct Generation remains valid without Learning/Learned State;
+- evaluation-focused use remains valid without Generation;
+- Execution/Provenance actions remain capability-conditional;
+- Validation/Readiness remain contextual activity assessments rather than global owners;
+- cancellation request and terminal cancellation remain distinct;
+- operational and semantic success/failure remain distinct;
+- `SYNC-08` is not resurrected;
+- no new concept or synchronization is required.
 
 ## Subgroups
 
 | Group | Scope | Status |
 |---|---|---|
 | **010-A** | [Mapping Authority, Coverage Model, Actor/Surface Taxonomy & Evidence Baseline](010-A-mapping-authority-coverage-model-actor-surface-taxonomy-evidence-baseline.md) | **complete** |
-| **010-B** | **Concept Action → Actor Intent & Interaction Mapping** | **next eligible** |
-| **010-C** | Concept State, Query, History & Explanation → Inspection Mapping | planned |
+| **010-B** | [Concept Action → Actor Intent & Interaction Mapping](010-B-concept-action-actor-intent-interaction-mapping.md) | **complete** |
+| **010-C** | **Concept State, Query, History & Explanation → Inspection Mapping** | **next eligible** |
 | **010-D** | Linguistic Mapping, Vocabulary, Typed Status & Disclosure Semantics | planned |
 | **010-E** | Physical / Interaction Mapping Across SDK, Notebook, CLI, API, Report, UI & Operator Surfaces | planned |
 | **010-F** | Application-Family Workflow Composition, Optional-Capability Experience & Progressive Disclosure | planned |
@@ -164,9 +125,9 @@ Readiness/Validation not global concept owners
 ```text
 010-A COMPLETE
   ↓
-010-B NEXT
+010-B COMPLETE
   ↓
-010-C
+010-C NEXT
   ↓
 010-D
   ↓
@@ -179,33 +140,27 @@ Readiness/Validation not global concept owners
 010-H
 ```
 
-## Core mapping guardrails
+## Current coverage state
 
-Phase 010 must preserve at least:
+```text
+action subjects                SEMANTICALLY MAPPED
+query/state/history subjects   SOURCE IDENTIFIED — 010-C
+linguistic alignment           pending 010-D
+physical surface mapping       pending 010-E
+family replay                  pending 010-F
+parity/difficult-condition     pending 010-G
+```
 
-- eleven accepted concept boundaries;
-- Phase 009 application-family optionality;
-- direct versus learned-state-assisted Generation;
-- semantic versus operational completion;
-- non-final candidate/checkpoint/diagnostic versus authoritative result distinctions;
-- Criterion/Evaluation/Evidence separation;
-- Evidence versus external approval/release/privacy claims;
-- Provenance relationship authority versus source-fact authority;
-- exact historical bindings and occurrence-scoped/non-reactive synchronization;
-- truthful absent/unknown/unavailable/withheld/redacted distinctions;
-- enterprise-scale bounded inspection;
-- equivalent material semantics across human and programmatic surfaces.
+## Core guardrails
 
-Mapping may compose several concepts for comprehension but cannot create a new canonical owner for the composed view.
+Phase 010 must preserve eleven concept boundaries, Phase 009 family optionality, direct versus learned Generation, semantic versus operational completion, non-final versus authoritative result distinctions, Criterion/Evaluation/Evidence separation, Evidence versus external decisions, Provenance versus source ownership, exact historical bindings, occurrence-scoped synchronization, truthful disclosure/history states and bounded enterprise-scale inspection.
 
 ## Representation boundary
 
-Phase 010 may identify candidate interaction forms for SDK/API, notebook, CLI, reports/history, UI and operator/admin surfaces.
-
-It does not choose public class hierarchies, endpoint/resource schemas, concrete CLI syntax, widgets/pages, package/module boundaries, persistence/storage, service/event topology, runtime call graphs or deployment mechanisms.
+No 010-A/010-B mapping record is a commitment to a public class, API route, CLI verb, widget, schema, service, event, transaction, queue, package, runtime workflow or deployment mechanism.
 
 ## Current next boundary
 
-**010-B — Concept Action → Actor Intent & Interaction Mapping** is next eligible.
+**010-C — Concept State, Query, History & Explanation → Inspection Mapping** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
