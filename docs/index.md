@@ -36,6 +36,7 @@ Existing architecture, source or tests never become upstream concept-design auth
 - [Synchronization Authority](synchronizations/index.md)
 - [Phase 009 Consolidation](authority/phase-009-dependence-composition-consolidation.md)
 - [Concept Mapping Authority](mapping/index.md)
+- [010-A Mapping Control Authority](mapping/mapping-authority-coverage-actor-surface-evidence-baseline.md)
 - [Phase 010](phases/010/index.md)
 
 ## Current state
@@ -48,12 +49,12 @@ active synchronizations              13
 active ADRs                          10
 Phase 008                            COMPLETE
 Phase 009                            COMPLETE
-009-A..009-H                         COMPLETE
 D1-D4                                CURRENTLY CLOSED
 E1-E5                                CURRENTLY CLOSED
 Phase 010                            ACTIVE
 Phase 010 decomposition              COMPLETE
-010-A                                NEXT ELIGIBLE
+010-A                                COMPLETE
+010-B                                NEXT ELIGIBLE
 F1                                   PARTIAL
 F2                                   PARTIAL
 F3                                   PARTIAL TO STRONG
@@ -67,7 +68,7 @@ implementation next                  NOT YET
 
 ## Completed Phase 009 authority
 
-Phase 009 provides one consolidated dependence/application-family/composition contract for current mapping work.
+Phase 009 provides the current dependence/application-family/composition contract for mapping work.
 
 ```text
 L-KERNEL = { Data Meaning, Synthesis Strategy, Learning, Learned State }
@@ -92,13 +93,61 @@ Synchronization owns no canonical state, conditional rules activate only on actu
 
 ## Active Phase 010 mapping program
 
-Phase 010 translates the current concepts into actor-visible and programmatic interaction semantics without choosing implementation representation.
+010-A now supplies one control model for every later mapping record.
+
+```text
+actor roles                             7
+surface families                        7
+application-family applicability tags  10
+coverage dimensions                    12
+canonical mapping fields               19
+```
+
+Every current mapping must preserve, where material:
+
+- a canonical concept owner;
+- actor intent and surface-neutral interaction/inspection obligation;
+- semantic preconditions and success/non-success semantics;
+- application-family applicability and synchronization relevance;
+- proposed/current/historical/reconstructed temporal orientation;
+- typed disclosure and historical-knowledge state;
+- scale/boundedness;
+- candidate surface families and vocabulary risk;
+- evidence traceability and explicit misfit/reopen status.
+
+The controlled mapping-coverage progression is:
+
+```text
+SOURCE IDENTIFIED
+  -> SEMANTICALLY MAPPED
+  -> LINGUISTICALLY ALIGNED
+  -> SURFACE-MAPPED
+  -> FAMILY-REPLAYED
+  -> PARITY-VALIDATED
+```
+
+`BLOCKED BY MISFIT` remains explicit when an honest mapping cannot be completed.
+
+### Evidence normalization
+
+Phase 003/006 experience evidence remains strong, but 010-A explicitly normalizes stale assumptions:
+
+```text
+15 historical SYNC IDs != 15 active synchronization rules
+SYNC-08 is retired; Generation owns output lifecycle
+SYNC-15 is reclassified; Reproducibility is cross-cutting
+Learning is not universal for Generation
+Evaluation/Evidence are not universal for Generation
+Execution is not universal
+Provenance is not universal
+Readiness/Validation are not global concept owners
+```
 
 Current strict sequence:
 
 ```text
-010-A  mapping authority / coverage / actor-surface taxonomy / evidence baseline
-010-B  action -> actor intent / interaction mapping
+010-A  COMPLETE — mapping control model / evidence baseline
+010-B  NEXT — action -> actor intent / interaction mapping
 010-C  state/query/history -> inspection mapping
 010-D  linguistic / vocabulary / typed status / disclosure semantics
 010-E  physical interaction across candidate surface families
@@ -107,25 +156,7 @@ Current strict sequence:
 010-H  mapping consolidation / Phase 011 handoff
 ```
 
-Phase 003 and Phase 006 experience contracts remain strong supporting evidence, but current F1-F5 closure requires replay against the normalized Phase 008 concept design and completed Phase 009 application-family/composition model.
-
-Mapping must preserve:
-
-- valid reduced application-family variants rather than one full-suite path;
-- Learning/Generation/Evaluation distinctions;
-- direct versus learned Generation;
-- candidate/awaiting-validation/completed Generation distinctions;
-- semantic versus operational completion;
-- Criterion/Evaluation/Evidence separation;
-- Evidence versus approval/release/privacy boundaries;
-- Provenance relationships versus source-fact ownership;
-- exact historical bindings and current-versus-historical status;
-- occurrence-scoped synchronization;
-- typed disclosure/history/uncertainty states;
-- bounded enterprise-scale inspection;
-- materially equivalent human/programmatic semantics.
-
-Phase 010 may expose a genuine upstream misfit and reopen the smallest affected authority. It must not hide a design problem merely to simplify a surface.
+Mapping may expose a genuine upstream misfit and reopen the smallest affected authority. It must not hide a design problem merely to simplify a surface.
 
 ## Remaining design roadmap
 
@@ -151,8 +182,6 @@ IMPLEMENTATION NEXT        NOT YET
 
 Do not translate concept, application-family, synchronization, composition, or mapping authority mechanically into packages, services, schemas, transactions, event buses, deployment units, concrete APIs, or product SKUs.
 
-A positive Phase 012 still does not make implementation ready. Phase 013 must reconcile architecture; only a positive Phase 014 may make implementation **READY / NOT STARTED / NEXT**, and implementation itself still requires Phase 015.
-
 ## Current next boundary
 
-**010-A — Mapping Authority, Coverage Model, Actor/Surface Taxonomy & Evidence Baseline** is next eligible.
+**010-B — Concept Action → Actor Intent & Interaction Mapping** is next eligible.
