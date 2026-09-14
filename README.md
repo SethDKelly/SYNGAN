@@ -18,6 +18,7 @@ Current authority includes:
 - [`Synchronization Authority`](docs/synchronizations/index.md)
 - [`Phase 009 Consolidation`](docs/authority/phase-009-dependence-composition-consolidation.md)
 - [`Concept Mapping Authority`](docs/mapping/index.md)
+- [`010-A Mapping Control Authority`](docs/mapping/mapping-authority-coverage-actor-surface-evidence-baseline.md)
 - [`Phase 010`](docs/phases/010/index.md)
 
 ## Status
@@ -29,12 +30,12 @@ historical synchronization IDs       15
 active synchronizations              13
 Phase 008                            COMPLETE
 Phase 009                            COMPLETE
-009-A..009-H                         COMPLETE
 D1-D4                                CURRENTLY CLOSED
 E1-E5                                CURRENTLY CLOSED
 Phase 010                            ACTIVE
 Phase 010 decomposition              COMPLETE
-010-A                                NEXT ELIGIBLE
+010-A                                COMPLETE
+010-B                                NEXT ELIGIBLE
 F1                                   PARTIAL
 F2                                   PARTIAL
 F3                                   PARTIAL TO STRONG
@@ -46,24 +47,34 @@ implementation start                 NOT STARTED
 implementation next                  NOT YET
 ```
 
-Phase 010 now has a dependency-safe mapping sequence:
+010-A establishes the current mapping-control model:
 
 ```text
-010-A  mapping authority / coverage / actor-surface taxonomy / evidence baseline
-010-B  action -> actor intent / interaction mapping
-010-C  state/query/history -> inspection mapping
-010-D  linguistic / vocabulary / typed status / disclosure semantics
-010-E  physical interaction across candidate surface families
-010-F  application-family workflow composition / progressive disclosure
-010-G  human-programmatic parity / degraded-recovery-scale mapping misfit
-010-H  mapping consolidation / Phase 011 handoff
+actor roles                             7
+surface families                        7
+application-family applicability tags  10
+mapping coverage dimensions            12
+canonical mapping fields               19
 ```
 
-Phase 003/006 experience documents are retained as strong evidence, but Phase 010 must replay them against the normalized Phase 008 concept design and completed Phase 009 application-family/composition authority rather than assuming historical workflows are automatically complete current mappings.
+Every later mapping must identify a canonical concept owner, actor intent, surface-neutral interaction/inspection obligation, family applicability, temporal orientation, disclosure/history-quality constraints, scale/boundedness, evidence source, and explicit mapping status.
 
-Mapping must preserve multiple coherent application variants rather than presenting one mandatory full-suite workflow. It must also preserve semantic versus operational completion, candidate/non-final versus authoritative results, Criterion/Evaluation/Evidence separation, Evidence versus approval/release authority, Provenance versus source-fact authority, exact historical bindings and occurrence-scoped synchronization.
+Current coverage progression:
 
-Phase 010 may identify candidate SDK/API, notebook, CLI, report/history, graphical and operator/admin interaction forms. It does not yet choose concrete endpoints, classes, widgets, packages, storage, services, event topology or runtime mechanisms.
+```text
+SOURCE IDENTIFIED
+  -> SEMANTICALLY MAPPED
+  -> LINGUISTICALLY ALIGNED
+  -> SURFACE-MAPPED
+  -> FAMILY-REPLAYED
+  -> PARITY-VALIDATED
+```
+
+`BLOCKED BY MISFIT` remains explicit when a concept cannot be mapped honestly without reopening upstream authority.
+
+Phase 003/006 experience documents remain strong evidence, but 010-A normalizes stale assumptions: there are 15 historical synchronization IDs but 13 active rules; `SYNC-08` is retired; `SYNC-15` is reclassified; and Learning, Evaluation/Evidence, Execution and Provenance are conditional rather than universal workflow requirements.
+
+Phase 010 may identify candidate SDK/API, notebook, CLI, report/history, graphical and operator/admin interaction forms. It does not choose concrete endpoints, classes, widgets, packages, storage, services, event topology or runtime mechanisms.
 
 ## Remaining design roadmap
 
@@ -81,6 +92,6 @@ Only a positive Phase 014 may change implementation to **READY / NOT STARTED / N
 
 ## Current next boundary
 
-**010-A — Mapping Authority, Coverage Model, Actor/Surface Taxonomy & Evidence Baseline** is next eligible.
+**010-B — Concept Action → Actor Intent & Interaction Mapping** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
