@@ -37,6 +37,7 @@ Existing architecture, source or tests never become upstream concept-design auth
 - [Phase 009 Consolidation](authority/phase-009-dependence-composition-consolidation.md)
 - [Concept Mapping Authority](mapping/index.md)
 - [010-A Mapping Control Authority](mapping/mapping-authority-coverage-actor-surface-evidence-baseline.md)
+- [010-B Concept Action Mapping](mapping/concept-action-actor-intent-interaction-mapping.md)
 - [Phase 010](phases/010/index.md)
 
 ## Current state
@@ -46,7 +47,6 @@ accepted concepts                    11
 current desired outcomes             16
 historical synchronization IDs       15
 active synchronizations              13
-active ADRs                          10
 Phase 008                            COMPLETE
 Phase 009                            COMPLETE
 D1-D4                                CURRENTLY CLOSED
@@ -54,8 +54,9 @@ E1-E5                                CURRENTLY CLOSED
 Phase 010                            ACTIVE
 Phase 010 decomposition              COMPLETE
 010-A                                COMPLETE
-010-B                                NEXT ELIGIBLE
-F1                                   PARTIAL
+010-B                                COMPLETE
+010-C                                NEXT ELIGIBLE
+F1                                   CURRENTLY CLOSED
 F2                                   PARTIAL
 F3                                   PARTIAL TO STRONG
 F4                                   PARTIAL
@@ -66,89 +67,40 @@ implementation start                 NOT STARTED
 implementation next                  NOT YET
 ```
 
-## Completed Phase 009 authority
+## Current mapping program
 
-Phase 009 provides the current dependence/application-family/composition contract for mapping work.
+010-A established the mapping schema, coverage model, actor/surface taxonomy, application-family tags and evidence baseline.
+
+010-B now establishes complete surface-neutral semantic mapping for all normalized state-changing actions:
 
 ```text
-L-KERNEL = { Data Meaning, Synthesis Strategy, Learning, Learned State }
-G-KERNEL = { Data Meaning, Synthesis Strategy, Generation }
-E-KERNEL = { Evaluation Criterion, Evaluation, Evidence }
+normalized command groups     66
+semantically mapped           66
+blocked by mapping misfit      0
 ```
 
-The full eleven-concept application is coherent but is not mandatory for every valid family member.
+The action map does not equate conceptual commands with buttons/endpoints. System-established actions such as Learned State/Evidence establishment, Attempt outcome recording and Provenance relationship recording remain observable without requiring direct user controls.
 
-Current synchronization disposition remains:
+The map preserves:
 
-```text
-required-relational                    6
-capability/occurrence conditional      7
-retired concept-local                 SYNC-08
-reclassified cross-cutting contract   SYNC-15
-new synchronization                   NONE
-SYNC-16                               NOT JUSTIFIED
-```
+- valid reduced application-family variants;
+- direct versus learned Generation;
+- activity-owned compatibility/readiness;
+- semantic commitment versus operational realization;
+- candidate versus authoritative result;
+- cancellation request versus terminal cancellation;
+- Evaluation success versus favorable Evidence;
+- Evidence versus approval/release/privacy authority;
+- Provenance relation versus source-fact ownership;
+- current/future-use status versus exact historical truth;
+- conditional Execution and Provenance capabilities.
 
-Synchronization owns no canonical state, conditional rules activate only on actual semantic relationships, and historical exact bindings are occurrence-scoped rather than permanent reactive subscriptions.
-
-## Active Phase 010 mapping program
-
-010-A now supplies one control model for every later mapping record.
-
-```text
-actor roles                             7
-surface families                        7
-application-family applicability tags  10
-coverage dimensions                    12
-canonical mapping fields               19
-```
-
-Every current mapping must preserve, where material:
-
-- a canonical concept owner;
-- actor intent and surface-neutral interaction/inspection obligation;
-- semantic preconditions and success/non-success semantics;
-- application-family applicability and synchronization relevance;
-- proposed/current/historical/reconstructed temporal orientation;
-- typed disclosure and historical-knowledge state;
-- scale/boundedness;
-- candidate surface families and vocabulary risk;
-- evidence traceability and explicit misfit/reopen status.
-
-The controlled mapping-coverage progression is:
+## Current Phase 010 sequence
 
 ```text
-SOURCE IDENTIFIED
-  -> SEMANTICALLY MAPPED
-  -> LINGUISTICALLY ALIGNED
-  -> SURFACE-MAPPED
-  -> FAMILY-REPLAYED
-  -> PARITY-VALIDATED
-```
-
-`BLOCKED BY MISFIT` remains explicit when an honest mapping cannot be completed.
-
-### Evidence normalization
-
-Phase 003/006 experience evidence remains strong, but 010-A explicitly normalizes stale assumptions:
-
-```text
-15 historical SYNC IDs != 15 active synchronization rules
-SYNC-08 is retired; Generation owns output lifecycle
-SYNC-15 is reclassified; Reproducibility is cross-cutting
-Learning is not universal for Generation
-Evaluation/Evidence are not universal for Generation
-Execution is not universal
-Provenance is not universal
-Readiness/Validation are not global concept owners
-```
-
-Current strict sequence:
-
-```text
-010-A  COMPLETE — mapping control model / evidence baseline
-010-B  NEXT — action -> actor intent / interaction mapping
-010-C  state/query/history -> inspection mapping
+010-A  COMPLETE — mapping authority / coverage / actor-surface taxonomy / evidence baseline
+010-B  COMPLETE — action -> actor intent / interaction mapping
+010-C  NEXT — state/query/history/explanation -> inspection mapping
 010-D  linguistic / vocabulary / typed status / disclosure semantics
 010-E  physical interaction across candidate surface families
 010-F  application-family workflow composition / progressive disclosure
@@ -156,19 +108,7 @@ Current strict sequence:
 010-H  mapping consolidation / Phase 011 handoff
 ```
 
-Mapping may expose a genuine upstream misfit and reopen the smallest affected authority. It must not hide a design problem merely to simplify a surface.
-
-## Remaining design roadmap
-
-```text
-010    Concept Mapping, Interaction, Linguistic & Experience Alignment — ACTIVE
-011    Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Design Validation
-012    Jackson Concept-Design Consolidation & Completion Decision
-013    Post-Concept Representation & Architecture Reconciliation
-014    Whole-Design Consolidation, Residual Debt Audit & Implementation-Readiness Decision
----
-015    Implementation Authority & Controlled Delivery — FUTURE ONLY
-```
+Phase 003/006 experience documents remain supporting evidence and are normalized against Phase 008/009/010 current authority.
 
 ## Implementation status rule
 
@@ -180,8 +120,10 @@ IMPLEMENTATION START       NOT STARTED
 IMPLEMENTATION NEXT        NOT YET
 ```
 
-Do not translate concept, application-family, synchronization, composition, or mapping authority mechanically into packages, services, schemas, transactions, event buses, deployment units, concrete APIs, or product SKUs.
+Do not translate concepts, application-family variants, synchronization IDs or mapping records mechanically into packages, services, schemas, transactions, events, APIs, UI components, deployment units or product SKUs.
+
+Only a positive Phase 014 may make implementation **READY / NOT STARTED / NEXT**; implementation itself still requires Phase 015.
 
 ## Current next boundary
 
-**010-B — Concept Action → Actor Intent & Interaction Mapping** is next eligible.
+**010-C — Concept State, Query, History & Explanation → Inspection Mapping** is next eligible.
