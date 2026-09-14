@@ -14,11 +14,12 @@ During active Phase 010, these documents are strong supporting mapping evidence,
 
 ```text
 010-A  COMPLETE — mapping control / actor-surface / evidence baseline
-010-B  COMPLETE — 66 / 66 normalized command groups semantically mapped
-010-C  NEXT — state/query/history/explanation inspection mapping
+010-B  COMPLETE — 66 / 66 command groups semantically mapped
+010-C  COMPLETE — 52 / 52 query groups + 11 / 11 lifecycle/history envelopes mapped
+010-D  NEXT — linguistic / vocabulary / typed status / disclosure semantics
 ```
 
-F1 is currently closed at the surface-neutral semantic action layer. The historical workflow corpus remains useful for 010-C because it contains strong inspection/history/recovery/disclosure evidence, but that evidence must remain subordinate to current Phase 008/009/010 ownership and application-family authority.
+F1 and F2 are currently closed at the surface-neutral semantic mapping layer.
 
 ## Retained experience model
 
@@ -46,11 +47,11 @@ disclosure state
 historical-knowledge state
 ```
 
-These are mapping obligations, not new concepts or one universal status enum.
+These remain mapping obligations, not new concepts or one universal status enum.
 
-## 010-B action-mapping alignment
+## Current action and inspection alignment
 
-The current action map confirms historical experience principles including:
+The current mapping authority preserves:
 
 - reviewable proposal versus semantic commitment;
 - contextual readiness rather than global Readiness state;
@@ -61,9 +62,12 @@ The current action map confirms historical experience principles including:
 - Evaluation success versus favorable Evidence;
 - Evidence versus external decision authority;
 - future-use status changes versus historical truth;
-- relational Provenance rather than copied owner state.
+- relational Provenance rather than copied owner state;
+- current versus exact historical inspection;
+- directly retained versus reconstructed/partial/unknown history;
+- bounded enterprise-scale summary/drill-down.
 
-It also preserves current Phase 009 corrections:
+Current Phase 009 corrections remain authoritative:
 
 ```text
 SYNC-08 retired — Generation owns output lifecycle
@@ -74,9 +78,9 @@ Execution not universal
 Provenance not universal
 ```
 
-## 010-C inspection obligations
+## 010-C inspection result
 
-Current inspection mapping must verify that actors/programmatic consumers can distinguish and inspect, where relevant:
+Actors/programmatic consumers must be able to inspect, where relevant:
 
 - proposed/current/committed/historical owner state;
 - exact revisions/bindings used by committed work;
@@ -87,9 +91,19 @@ Current inspection mapping must verify that actors/programmatic consumers can di
 - Evidence claim strength and current applicability;
 - Provenance relationship assertions versus source facts;
 - current versus historical/future-use status;
-- absent/unknown/unavailable/withheld/redacted disclosure states;
-- canonical/reconstructed/partial/unavailable/unknown history quality;
+- visible/redacted/withheld/unavailable/unknown/absent disclosure semantics;
+- direct/reconstructed/partial/unavailable/indeterminate history quality;
 - bounded enterprise-scale summaries plus legitimate drill-down.
+
+Composed views may explain several concepts together but remain derived; they do not become a new canonical owner.
+
+## 010-D language handoff
+
+010-D must now align vocabulary over these mapped semantics.
+
+It should preserve owner-qualified lifecycle language and distinguish terms that are often overloaded in data/ML/operations ecosystems, including `model`, `run`, `job`, `artifact`, `metric`, `validation`, `ready`, `passed`, `safe`, `private`, `reproducible`, `history`, and `complete`.
+
+The current disclosure/history labels are semantic categories, not final public wording or runtime enums.
 
 ## Authority boundary
 
@@ -106,8 +120,8 @@ An experience view may compose several concepts for comprehension but must not c
 
 ## Representation boundary
 
-These documents do not decide whether experience is implemented through Python resources/builders, notebooks, CLI, REST/SDK, web UI, Spark extensions, managed-platform integrations or another surface.
+These documents do not decide whether experience is implemented through Python resources/builders, notebooks, CLI, REST/SDK, web UI, Spark extensions, managed-platform integrations, databases, dashboards, graph stores or another surface.
 
 ## Current next boundary
 
-**010-C — Concept State, Query, History & Explanation → Inspection Mapping** is next eligible.
+**010-D — Linguistic Mapping, Vocabulary, Typed Status & Disclosure Semantics** is next eligible.
