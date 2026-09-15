@@ -22,6 +22,22 @@ The framework must allow useful supported synthesis work to remain conceptually 
 
 The purpose is broader than implementing one GAN algorithm or one train-then-sample workflow. CTGAN and related methods are candidate synthesis techniques, but SYNGAN's purpose is Spark-scale synthetic structured-data generation with method-neutral semantics, not allegiance to a particular model family, runtime, or managed platform.
 
+## Product form and platform agnosticism
+
+SYNGAN is primarily a **deployable Python/Spark framework package**, not a standalone application product.
+
+Its primary interaction is expected to occur through package/programmatic contracts embedded in Spark-capable environments, including notebook and automated job/pipeline use. A hosting environment may provide notebooks, scheduling, authentication, cluster/job administration, logs, dashboards, catalogs, storage browsers, or other application shell concerns without those facilities becoming SYNGAN-owned product semantics.
+
+For this project:
+
+> **Platform agnosticism means agnostic across compliant Spark-capable hosting and infrastructure platforms.**
+
+It does not mean that SYNGAN is currently required to abstract over every non-Spark dataframe or distributed-compute model. Spark/PySpark remains the required processing environment in the current problem scope.
+
+A compliant host or adapter may optimize execution or presentation, but it must not redefine SYNGAN concept ownership, semantic lifecycle, Evidence strength, Execution identity, historical truth, or other framework semantics.
+
+Graphical UI, standalone service/API deployment, CLI, report rendering, and dedicated operator/admin applications are optional representations or integrations unless a later independently justified requirement makes one mandatory. They are not the defining product form.
+
 ## Why a dedicated framework is needed
 
 The problem includes several interacting pressures:
@@ -81,6 +97,8 @@ SYNGAN is not currently defined as:
 - a Databricks-only package;
 - a PyTorch-only package;
 - a framework whose public abstraction must mirror Spark ML `Estimator`/`Model`;
+- a standalone graphical application or mandatory web UI;
+- a mandatory network service/API deployment;
 - a general system for unstructured image, audio, document, or free-standing text generation;
 - a real-time synthetic-data serving platform;
 - a promise that every synthesis method must consume every training row directly;
