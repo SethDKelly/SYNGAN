@@ -10,7 +10,7 @@ status: active
 
 Provide the current conservative completion ledger for SYNGAN's Daniel Jackson-style concept-design program.
 
-Historical phase labels, architecture, implementation plans, source, tests, and prior engineering-readiness findings are evidence only. They do not prove current design completion.
+Historical architecture, implementation plans, source, tests and prior engineering-readiness findings are evidence only. They do not prove current design completion.
 
 ## Controlling implementation posture
 
@@ -22,12 +22,10 @@ IMPLEMENTATION START       NOT STARTED
 IMPLEMENTATION NEXT        NOT YET
 ```
 
-No row in this matrix changes that posture by itself.
-
 ## Completion-state vocabulary
 
 - **CURRENTLY CLOSED** — sufficiently established for the present design stage; later genuine misfit may reopen it.
-- **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** — substantial evidence exists but a dedicated later closure remains.
+- **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** — substantial evidence exists but dedicated later closure remains.
 - **PARTIAL TO STRONG** — substantial current closure evidence exists but one bounded downstream audit remains.
 - **PARTIAL** — a material obligation remains open.
 - **OPEN** — no dedicated current-state closure yet.
@@ -38,7 +36,13 @@ No row in this matrix changes that posture by itself.
 
 ### Class A — current upstream design authority
 
-Methodology, problem knowledge, accepted concepts, Phase 008 normalization/consolidation, Phase 009 consolidation/dependence/composition, current [Concept Mapping Authority](../mapping/index.md), [010-A mapping control](../mapping/mapping-authority-coverage-actor-surface-evidence-baseline.md), [010-B action mapping](../mapping/concept-action-actor-intent-interaction-mapping.md), [010-C inspection mapping](../mapping/concept-state-query-history-explanation-inspection-mapping.md), and [010-D linguistic mapping](../mapping/linguistic-mapping-vocabulary-typed-status-disclosure-semantics.md).
+Methodology, problem knowledge, accepted concepts, Phase 008 normalization, Phase 009 dependence/composition, and current Phase 010 mapping authority through:
+
+- [010-A mapping control](../mapping/mapping-authority-coverage-actor-surface-evidence-baseline.md)
+- [010-B action mapping](../mapping/concept-action-actor-intent-interaction-mapping.md)
+- [010-C inspection mapping](../mapping/concept-state-query-history-explanation-inspection-mapping.md)
+- [010-D linguistic mapping](../mapping/linguistic-mapping-vocabulary-typed-status-disclosure-semantics.md)
+- [010-E package/host physical mapping](../mapping/package-notebook-automation-host-platform-interaction-mapping.md)
 
 ### Class B — supporting design evidence
 
@@ -50,9 +54,7 @@ Phase 004/006/007 architecture remains valuable but pending Phase 013 reconcilia
 
 ### Class D — historical implementation/executable evidence
 
-Phase 005 implementation plans, 007-A/B/C scaffold authority, current `src/`, tests, tooling, lockfiles, CI, and historical 007-K implementation-reentry findings.
-
-Class C/D may reveal a misfit but cannot silently define unfinished Class A behavior.
+Phase 005 implementation plans, 007-A/B/C scaffold authority, current source/tests/tooling/CI and historical 007-K implementation-reentry findings.
 
 ## Current phase progress
 
@@ -61,12 +63,12 @@ Phase 008  COMPLETE
 Phase 009  COMPLETE
 009-A..H  COMPLETE
 Phase 010  ACTIVE
-010 entry  COMPLETE
 010-A      COMPLETE — mapping control / coverage / actor-surface taxonomy / evidence baseline
-010-B      COMPLETE — 66 / 66 normalized concept command groups semantically mapped
-010-C      COMPLETE — 52 / 52 normalized query groups + 11 / 11 lifecycle/history envelopes semantically mapped
+010-B      COMPLETE — 66 / 66 command groups semantically mapped
+010-C      COMPLETE — 52 / 52 query groups + 11 / 11 lifecycle/history envelopes mapped
 010-D      COMPLETE — vocabulary / typed status / disclosure / history-quality language aligned
-010-E      NEXT ELIGIBLE — physical interaction mapping across candidate surface families
+010-E      COMPLETE — package/notebook/automation/host physical responsibility mapped
+010-F      NEXT ELIGIBLE — application-family workflow composition / progressive disclosure
 ```
 
 Current Phase 010 result:
@@ -76,12 +78,13 @@ accepted concepts                        11
 normalized command groups                66 / 66 SEMANTICALLY MAPPED
 normalized query groups                  52 / 52 SEMANTICALLY MAPPED
 lifecycle/history envelopes              11 / 11 SEMANTICALLY MAPPED
-cross-concept explanation patterns        5
 accepted concept names                   11 / 11 LINGUISTICALLY ALIGNED
+command physical responsibility          66 / 66 MAPPED
+query physical responsibility            52 / 52 MAPPED
 F1                                       CURRENTLY CLOSED
 F2                                       CURRENTLY CLOSED
 F3                                       CURRENTLY CLOSED
-F4                                       PARTIAL
+F4                                       PARTIAL TO STRONG
 F5                                       STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
 ```
 
@@ -89,7 +92,7 @@ F5                                       STRONG EVIDENCE / CURRENT REVALIDATION 
 
 | ID | Methodology obligation | Current evidence/result | Current state | Owning closure phase |
 |---|---|---|---|---|
-| A1 | Application problem, actors, needs, outcomes, environmental constraints | 008-B reconciled actors/O1-O16/scale; 008-H consolidated | **CURRENTLY CLOSED** | 008-B/H |
+| A1 | Application problem, actors, needs, outcomes, environmental constraints | 008-B reconciled actors/outcomes/scale; package product form and Spark-host agnosticism clarified before 010-E | **CURRENTLY CLOSED** | 008-B/H; current problem authority |
 | A2 | Distinct purpose/justification for every accepted concept | 008-B tested all eleven and absence consequences | **CURRENTLY CLOSED** | 008-B/H |
 | A3 | Problem/outcome → concept traceability | Canonical concept-justification traceability | **CURRENTLY CLOSED** | 008-B/H |
 | B1 | Divergent candidate concept discovery | 008-G replayed original/later/new candidates | **CURRENTLY CLOSED** | 008-G/H |
@@ -109,21 +112,21 @@ F5                                       STRONG EVIDENCE / CURRENT REVALIDATION 
 | D2 | Meaningful valid concept subsets/application family | 009-C family + side conditions; 009-H preserves optionality | **CURRENTLY CLOSED** | 009-C/H |
 | D3 | Explanation/design ordering implied by inclusion dependence | 009-B prerequisite/SCC narrative ordering | **CURRENTLY CLOSED** | 009-B/H |
 | D4 | Product-scope consequences of adding/removing concepts | 009-D contraction/extension/rediscovery; 009-H consolidated | **CURRENTLY CLOSED** | 009-D/H |
-| E1 | Explicit concept synchronizations | 13 active from 15 historical IDs; SYNC-08 retired, SYNC-15 reclassified, SYNC-06 conditional, no SYNC-16 | **CURRENTLY CLOSED** | 009-E/F/G/H |
-| E2 | Singular state ownership across synchronizations | 009-F assigns canonical owners; 009-G/H replay integrity | **CURRENTLY CLOSED** | 009-F/G/H |
-| E3 | Composition burden/economy and hidden-coordinator avoidance | 009-F/G establish no hidden coordinator, local burden and non-propagation | **CURRENTLY CLOSED** | 009-F/G/H |
-| E4 | Composition synergy | 009-G demonstrates positive learned/gated/Constraint/Execution/Provenance/direct-generation synergies | **CURRENTLY CLOSED** | 009-G/H; 011 revalidation |
-| E5 | Integrity under composition | 009-G/H pass combined activation with no residual J3 blocker | **CURRENTLY CLOSED** | 009-F/G/H; 011 revalidation |
+| E1 | Explicit concept synchronizations | 13 active from 15 historical IDs; no hidden new synchronization required by mapping | **CURRENTLY CLOSED** | 009-E/F/G/H |
+| E2 | Singular state ownership across synchronizations | 009-F ownership survives 010-B through 010-E mapping | **CURRENTLY CLOSED** | 009-F/G/H |
+| E3 | Composition burden/economy and hidden-coordinator avoidance | No generic workflow/status/UI coordinator introduced | **CURRENTLY CLOSED** | 009-F/G/H |
+| E4 | Composition synergy | Phase 009 synergy evidence remains intact | **CURRENTLY CLOSED** | 009-G/H; 011 revalidation |
+| E5 | Integrity under composition | Phase 009 combined activation remains intact | **CURRENTLY CLOSED** | 009-F/G/H; 011 revalidation |
 | F1 | Concept action → human/programmatic interaction mapping | 010-B maps all 66 command groups to actor intent and surface-neutral interaction obligations | **CURRENTLY CLOSED** | 010-B; revalidate 010-H |
-| F2 | Concept state/query → actor-visible inspection mapping | 010-C maps all 52 queries, 11 lifecycle/history envelopes, explanation, disclosure/history-quality and scale obligations | **CURRENTLY CLOSED** | 010-C; revalidate 010-H |
-| F3 | Linguistic mapping/vocabulary alignment | 010-D aligns all eleven concept names, establishes owner-qualified typed status grammar, disclosure/history language and ecosystem alias discipline without renaming concepts or adding a generic status owner | **CURRENTLY CLOSED** | 010-D; revalidate 010-H |
-| F4 | Physical/interaction mapping for SDK/notebook/CLI/API/report/UI | Seven surface lenses plus complete action/inspection/linguistic obligations now exist; physical realization remains pending | **PARTIAL** | 010-E/F/H |
-| F5 | Human/programmatic semantic parity | Phase 003/006 parity evidence retained; current semantic and linguistic mappings exist; difficult-condition cross-surface replay remains | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 010-G/H |
+| F2 | Concept state/query → actor-visible inspection mapping | 010-C maps all 52 query groups, history/explanation/disclosure/scale obligations | **CURRENTLY CLOSED** | 010-C; revalidate 010-H |
+| F3 | Linguistic mapping/vocabulary alignment | 010-D aligns owner-qualified vocabulary, typed status, disclosure/history and ecosystem aliases | **CURRENTLY CLOSED** | 010-D; revalidate 010-H |
+| F4 | Physical/interaction mapping across relevant surfaces | 010-E maps all 66 actions and 52 queries to package/notebook/automation/host responsibilities; CLI/report/UI/service remain optional; family workflow composition still pending | **PARTIAL TO STRONG** | 010-E/F/H |
+| F5 | Human/programmatic semantic parity | Strong retained evidence; package/host physical mappings now exist; difficult-condition replay remains | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 010-G/H |
 | G1 | Specificity across final composed set | Individual + Phase 009/010 evidence strong; post-mapping audit pending | **PARTIAL TO STRONG** | 011 |
-| G2 | Familiarity across final composed set | Individual naming plus 010-D alias discipline closed; composed review pending | **PARTIAL TO STRONG** | 011 |
+| G2 | Familiarity across final composed set | Individual naming + 010-D alias discipline closed; composed review pending | **PARTIAL TO STRONG** | 011 |
 | G3 | Integrity across synchronizations/mappings | Phase 009 sync integrity closed; post-mapping replay pending | **PARTIAL TO STRONG** | 011 |
 | G4 | Synergy and simplicity/generic fitness | Phase 009 synergy/economy closed; post-mapping quality replay pending | **PARTIAL TO STRONG** | 011 |
-| G5 | Archetypal/exceptional/degraded/adversarial/recovery misfit | Strong 006/007/008/009 evidence; final replay pending | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 011 |
+| G5 | Archetypal/exceptional/degraded/adversarial/recovery misfit | Strong prior evidence; final replay pending | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 011 |
 | G6 | Future-scope/extensibility misfit | Rediscovery/extension/non-propagation boundaries recorded; final replay pending | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 011 |
 | G7 | Explicit residual conceptual misfit register | No final post-mapping register | **PARTIAL** | 011/012 |
 | H1 | One current-state consolidated Jackson concept-design audit | Phase 008/009 consolidated; Phase 010/011 incomplete | **OPEN** | 012 |
@@ -132,37 +135,31 @@ F5                                       STRONG EVIDENCE / CURRENT REVALIDATION 
 | R2 | Whole design audited problem → concepts → dependence/sync → mapping → architecture | Not yet possible | **OPEN** | 014 |
 | R3 | Implementation-readiness decision based on complete design | Historical 007-K decision superseded | **OPEN** | 014 |
 
-## 010-D linguistic authority
+## 010-E physical-interaction authority
 
-[Linguistic Mapping, Vocabulary, Typed Status & Disclosure Semantics](../mapping/linguistic-mapping-vocabulary-typed-status-disclosure-semantics.md) establishes:
+[Package, Notebook, Automation, Host-Platform & Optional Presentation Interaction Mapping](../mapping/package-notebook-automation-host-platform-interaction-mapping.md) establishes:
 
 ```text
-11 / 11 concept names                      ALIGNED
-owner-qualified lifecycle language          ESTABLISHED
-revision/current-use language                TYPED
-contextual assessment language               TYPED
-Execution/Attempt operational language       TYPED
-Generation material-finality language        TYPED
-Evidence finding/claim-strength language     TYPED
-Constraint handling/satisfaction language    TYPED
-disclosure semantics                         TYPED
-history-quality semantics                    TYPED
-high-risk ecosystem aliases                  QUALIFIED
-concept rename                               NONE
-new concept                                  NONE
-new synchronization                          NONE
+package / SDK contract                    PRIMARY / REQUIRED
+notebook interaction                      PRIMARY HUMAN-PROGRAMMATIC HOST
+automated job / pipeline                  PRIMARY PROGRAMMATIC HOST
+CLI                                       OPTIONAL
+report / exported review                  OPTIONAL
+rich / graphical UI                       OPTIONAL
+host operator/admin presentation          HOST INTEGRATION RESPONSIBILITY
+external handoff                          BOUNDARY
 ```
 
 Key findings:
 
-- one generic status vocabulary would destroy owner-specific meaning and is rejected;
-- semantic completion remains distinct from operational completion and materialization;
-- Evaluation completion remains distinct from favorable Evidence;
-- Constraint handling remains distinct from actual satisfaction Evidence;
-- superseded, retired, restricted, stale/inapplicable and invalidated remain materially different;
-- disclosure state remains distinct from underlying truth and history quality;
-- history may be directly retained, reconstructed, partial, unavailable or indeterminate;
-- familiar ecosystem terms can be retained as qualified aliases without redefining concepts.
+- SYNGAN is a deployable Python/Spark package, not a standalone application;
+- platform agnosticism means agnostic across compliant Spark-capable hosting/infrastructure platforms;
+- `API` means the package/programmatic contract by default, not a required network service;
+- no mapped concept requires a dedicated graphical UI, network service or CLI;
+- host-native job/cluster/log/admin UI remains host authority while SYNGAN exposes semantic/Execution correlations;
+- all 66 actions and 52 queries have physical package/host responsibility;
+- ordinary interaction remains bounded and does not require local materialization of enterprise-scale payloads;
+- no concept, synchronization or hidden UI/workflow coordinator is added.
 
 ## Current methodological verdict
 
@@ -177,10 +174,12 @@ PHASE 010                            ACTIVE
 010-B                                COMPLETE
 010-C                                COMPLETE
 010-D                                COMPLETE
+010-E                                COMPLETE
 F1                                   CURRENTLY CLOSED
 F2                                   CURRENTLY CLOSED
 F3                                   CURRENTLY CLOSED
-010-E                                NEXT ELIGIBLE
+F4                                   PARTIAL TO STRONG
+010-F                                NEXT ELIGIBLE
 JACKSON CONCEPT DESIGN COMPLETE      NO
 REPRESENTATION/ARCHITECTURE FINAL    NO — PENDING PHASE 013 RECONCILIATION
 IMPLEMENTATION READINESS             NOT READY
@@ -191,7 +190,7 @@ IMPLEMENTATION NEXT                  NOT YET
 ## Current dependency order
 
 ```text
-010-E -> 010-F -> 010-G -> 010-H
+010-F -> 010-G -> 010-H
   ↓
 011  Specificity / Familiarity / Integrity / Synergy / Misfit
   ↓
@@ -204,12 +203,12 @@ IMPLEMENTATION NEXT                  NOT YET
 
 ## Guardrail
 
-Phase 010 mapping may expose a genuine upstream misfit, but interface convenience is not evidence to redefine a concept. Mapping does not prescribe transactions, events, workflow engines, services, schemas, persistence joins, foreign keys, queues, locks, concrete APIs, packages, deployment units, observer/subscription infrastructure, exactly-once execution, dashboards, materialized views, query endpoints, caches, search indexes or graph databases.
+Phase 010 mapping may expose a genuine upstream misfit, but interface convenience is not evidence to redefine a concept. Mapping does not prescribe framework classes, endpoints, services, schemas, packages, deployment units, workflow engines, dashboards, materialized views, graph/search technology or host-specific runtime adapters.
 
 If a genuine mapping misfit is found, reopen only the smallest affected authority under J0-J7.
 
 ## Current next boundary
 
-**010-E — Physical / Interaction Mapping Across SDK, Notebook, CLI, API, Report, UI & Operator Surfaces** is next eligible.
+**010-F — Application-Family Workflow Composition, Optional-Capability Experience & Progressive Disclosure** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
