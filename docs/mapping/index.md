@@ -24,11 +24,12 @@ Phase 010                    ACTIVE
 010-C                        COMPLETE
 010-D                        COMPLETE
 010-E                        COMPLETE
-010-F                        NEXT ELIGIBLE
+010-F                        COMPLETE
+010-G                        NEXT ELIGIBLE
 F1                           CURRENTLY CLOSED
 F2                           CURRENTLY CLOSED
 F3                           CURRENTLY CLOSED
-F4                           PARTIAL TO STRONG
+F4                           CURRENTLY CLOSED
 F5                           STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
 Jackson concept design       NOT COMPLETE
 implementation readiness     NOT READY
@@ -42,7 +43,8 @@ implementation next          NOT YET
 - [010-B Concept Action → Actor Intent & Interaction Mapping](concept-action-actor-intent-interaction-mapping.md)
 - [010-C Concept State, Query, History & Explanation → Inspection Mapping](concept-state-query-history-explanation-inspection-mapping.md)
 - [010-D Linguistic Mapping, Vocabulary, Typed Status & Disclosure Semantics](linguistic-mapping-vocabulary-typed-status-disclosure-semantics.md)
-- [010-E Package, Notebook, Automation, Host-Platform & Optional Presentation Interaction Mapping](package-notebook-automation-host-platform-interaction-mapping.md) — **current physical/surface responsibility authority**
+- [010-E Package, Notebook, Automation, Host-Platform & Optional Presentation Interaction Mapping](package-notebook-automation-host-platform-interaction-mapping.md)
+- [010-F Application-Family Workflow Composition, Optional-Capability Experience & Progressive Disclosure](application-family-workflow-composition-progressive-disclosure.md) — **current family/workflow composition authority**
 
 ## Current mapping coverage
 
@@ -54,6 +56,7 @@ implementation next          NOT YET
 11 / 11 accepted concept names            LINGUISTICALLY ALIGNED
 66 / 66 command groups                    PHYSICAL RESPONSIBILITY MAPPED
 52 / 52 query groups                      PHYSICAL RESPONSIBILITY MAPPED
+10 / 10 required family/capability replays PASS
 ```
 
 ## Core mapping rules
@@ -64,60 +67,60 @@ implementation next          NOT YET
 
 > **Physical interaction may adapt to the host, but it may not redefine SYNGAN semantics.**
 
+> **Concept inclusion defines available capability; it does not require every included concept to be re-executed in every invocation.**
+
 ## Product form
 
 SYNGAN is a deployable Python/Spark framework package.
 
-Its current product-form rule is:
-
 > **SYNGAN is agnostic across compliant Spark-capable hosting and infrastructure platforms.**
 
-010-E therefore resolves the interaction hierarchy as:
+Primary interaction remains:
 
 ```text
-P1  Python package / SDK contract              PRIMARY / REQUIRED
-P2  notebook / interactive package use        PRIMARY HUMAN-PROGRAMMATIC HOST
-P3  embedded job / pipeline / automation      PRIMARY PROGRAMMATIC HOST
-P4  CLI adapter                               OPTIONAL
-P5  report / exported review                  OPTIONAL
-P6  rich / graphical presentation             OPTIONAL HOST/COMPANION PRESENTATION
-P7  host-platform / operator integration      HOST INTEGRATION RESPONSIBILITY
-P8  external integration / handoff            EXTERNAL BOUNDARY
+P1  Python package / SDK contract
+P2  notebook / interactive package use
+P3  embedded job / pipeline / automation
 ```
 
-The earlier 010-A S1-S7 taxonomy remains candidate-surface evidence, not a requirement to ship seven peer interfaces.
+CLI, reports, rich/graphical presentation, network service exposure and dedicated operator/admin applications remain optional adapters or host integrations.
 
-`API` means the programmatic package contract by default. A network service/API is optional. A standalone graphical application is not required. Host platforms ordinarily own authentication shells, job/cluster administration, detailed telemetry, storage browsing and infrastructure UI.
+## Application-family composition result
 
-## Typed linguistic dimensions
-
-SYNGAN keeps distinct:
+010-F replays and passes:
 
 ```text
-revision/current-use status
-semantic activity lifecycle
-contextual assessment
-Execution/Attempt operational lifecycle
-Generation material finality
-Evidence finding / claim strength
-Constraint handling / applicability
-Disclosure state
-historical-knowledge quality
+authority-only use
+L-KERNEL
+direct G-KERNEL
+learned-state-assisted Generation
+E-KERNEL / evaluation-focused use
+evaluation-gated Generation
+Constraint-aware variants
+Execution-bearing versus Execution-light variants
+Provenance-bearing versus Provenance-light variants
+full eleven-concept composition
 ```
 
-No global Status, Validation, Quality, Approval, History, Artifact, Run or Lineage authority is introduced.
+Optional concepts do not create empty mandatory steps. Direct Generation does not fabricate Learning/Learned State. Existing Learned State can be reused without new Learning. Generation does not require Evaluation/Evidence unless an explicit evidence-gating capability requires it. Execution and Provenance remain capability-conditional.
 
-## Enterprise-scale boundedness
+The full eleven-concept family member is coherent but does not become an eleven-stage wizard.
 
-Routine interaction remains reference/summary-first. Bulk source/output data, Learned State payloads, detailed diagnostics and other large material remain distributed or separately referenced where scale requires it.
+## Progressive disclosure
 
-Notebook/report/UI convenience may not introduce a mandatory driver-local materialization boundary.
+010-F establishes semantic disclosure depths:
 
-## Application-family preservation
+```text
+D0  task intent / immediate semantic action
+D1  material semantic basis
+D2  optional capability detail
+D3  historical / explanatory depth
+D4  distributed / host operational drill-down
+```
 
-Optional concepts do not appear as mandatory empty workflow steps. Direct Generation does not fabricate Learning/Learned State. Execution and Provenance interaction appears only when those capabilities exist.
+These are presentation obligations, not screens, endpoints, API tiers or persistence layers.
 
-010-F now owns full workflow replay and progressive disclosure across the actual Phase 009 application family.
+Routine interaction remains bounded/reference-first. Deep Execution diagnostics, Evidence support material, Provenance traversal and host telemetry are available on demand rather than becoming ordinary package-flow clutter.
 
 ## Phase 010 sequence
 
@@ -127,13 +130,13 @@ Optional concepts do not appear as mandatory empty workflow steps. Direct Genera
 010-C  COMPLETE — state/query/history/explanation -> inspection mapping
 010-D  COMPLETE — linguistic / vocabulary / typed status / disclosure semantics
 010-E  COMPLETE — package/notebook/automation/host physical interaction mapping
-010-F  NEXT — application-family workflow composition / progressive disclosure
-010-G  human-programmatic parity / degraded-recovery-scale mapping misfit
+010-F  COMPLETE — application-family workflow composition / progressive disclosure
+010-G  NEXT — human-programmatic parity / degraded-recovery-scale mapping misfit audit
 010-H  consolidation / Phase 011 handoff
 ```
 
 ## Current next boundary
 
-**010-F — Application-Family Workflow Composition, Optional-Capability Experience & Progressive Disclosure** is next eligible.
+**010-G — Human/Programmatic Semantic Parity, Degraded/Recovery/Scale & Mapping-Misfit Audit** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
