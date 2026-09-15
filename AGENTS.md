@@ -9,15 +9,16 @@ These instructions apply repository-wide to automated coding/documentation agent
 Start with:
 
 - `docs/index.md`
+- `docs/problem/problem-purpose.md`
 - `docs/authority/design-methodology.md`
 - `docs/authority/jackson-design-completion-implementation-hold.md`
 - `docs/authority/jackson-methodology-completion-matrix.md`
 - `docs/authority/phase-009-dependence-composition-consolidation.md`
 - `docs/mapping/index.md`
-- `docs/mapping/mapping-authority-coverage-actor-surface-evidence-baseline.md`
 - `docs/mapping/concept-action-actor-intent-interaction-mapping.md`
 - `docs/mapping/concept-state-query-history-explanation-inspection-mapping.md`
 - `docs/mapping/linguistic-mapping-vocabulary-typed-status-disclosure-semantics.md`
+- `docs/mapping/package-notebook-automation-host-platform-interaction-mapping.md`
 - `docs/phases/010/index.md`
 
 Current state:
@@ -27,18 +28,17 @@ accepted concepts                    11
 active synchronizations              13
 Phase 008                            COMPLETE
 Phase 009                            COMPLETE
-D1-D4                                CURRENTLY CLOSED
-E1-E5                                CURRENTLY CLOSED
 Phase 010                            ACTIVE
 010-A                                COMPLETE
 010-B                                COMPLETE
 010-C                                COMPLETE
 010-D                                COMPLETE
-010-E                                NEXT ELIGIBLE
+010-E                                COMPLETE
+010-F                                NEXT ELIGIBLE
 F1                                   CURRENTLY CLOSED
 F2                                   CURRENTLY CLOSED
 F3                                   CURRENTLY CLOSED
-F4                                   PARTIAL
+F4                                   PARTIAL TO STRONG
 F5                                   STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
 implementation readiness             NOT READY
 implementation start                 NOT STARTED
@@ -49,72 +49,56 @@ implementation next                  NOT YET
 
 > **Complete the design before making implementation ready. Existing architecture, code, tests or plans may expose misfits, but they may not veto upstream concept-design correction.**
 
-## Current mapping authority
+## Product-form rule
 
-010-A defines the mapping schema/coverage/actor/surface/family/evidence model.
+SYNGAN is a deployable Python/Spark framework package, not a standalone application product.
 
-010-B maps all 66 normalized command groups to actor intent and surface-neutral interaction obligations.
+> **Platform agnosticism means agnostic across compliant Spark-capable hosting and infrastructure platforms.**
 
-010-C maps all 52 normalized query groups, all 11 lifecycle/history envelopes and five cross-concept explanation patterns to surface-neutral inspection obligations.
+Spark/PySpark remains the required processing environment in current scope.
 
-010-D establishes the linguistic contract for owner-qualified vocabulary, typed status dimensions, disclosure, history quality and high-risk ecosystem aliases.
+Treat these as primary interaction roles:
 
 ```text
-commands                         66 / 66 SEMANTICALLY MAPPED
-queries                          52 / 52 SEMANTICALLY MAPPED
-lifecycle/history envelopes      11 / 11 SEMANTICALLY MAPPED
-concept names                    11 / 11 LINGUISTICALLY ALIGNED
-F1                               CURRENTLY CLOSED
-F2                               CURRENTLY CLOSED
-F3                               CURRENTLY CLOSED
+P1  Python package / SDK contract
+P2  notebook / interactive package use
+P3  embedded job / pipeline / automation
 ```
 
-## Inspection discipline
+Treat these as conditional/optional:
+
+```text
+P4  CLI adapter
+P5  report / exported review
+P6  rich / graphical presentation
+P7  host-platform / operator integration
+P8  external integration / handoff
+```
+
+Do not assume SYNGAN owns a web application shell, authentication UI, job/cluster dashboard, log viewer, storage browser, admin console or mandatory network service/API.
+
+## Current mapping authority
+
+```text
+66 / 66 commands                         SEMANTICALLY MAPPED
+52 / 52 queries                          SEMANTICALLY MAPPED
+11 / 11 lifecycle/history envelopes      SEMANTICALLY MAPPED
+11 / 11 concept names                    LINGUISTICALLY ALIGNED
+66 / 66 commands                         PHYSICAL RESPONSIBILITY MAPPED
+52 / 52 queries                          PHYSICAL RESPONSIBILITY MAPPED
+```
+
+010-E proves that all current semantics are encounterable through package/host interactions without requiring standalone UI/service/CLI delivery.
+
+## Inspection and linguistic discipline
 
 > **Inspection exposes owned or validly derived truth; it does not create a second owner for that truth.**
 
-Do not turn a combined view, cache, report, dashboard, history index, graph traversal or status summary into new canonical domain state.
-
-Preserve current versus historical truth, semantic versus operational state, candidate versus authoritative result, exact bindings, Evidence claim strength, Provenance relationship authority, disclosure/history-quality distinctions, scale boundedness and application-family optionality.
-
-## Linguistic discipline
-
 > **Words may simplify presentation, but they may not erase ownership, semantic dimension, historical scope, uncertainty or disclosure meaning.**
 
-Do not invent a universal status vocabulary.
+Keep distinct semantic lifecycle, current-use state, contextual assessment, Execution/Attempt state, Generation material finality, Evidence finding/claim strength, Constraint handling, disclosure and history quality.
 
-Keep distinct:
-
-```text
-revision/current-use status
-semantic activity lifecycle
-contextual assessment
-Execution/Attempt operational lifecycle
-Generation material finality
-Evidence finding / claim strength
-Constraint handling / applicability
-Disclosure state
-historical-knowledge quality
-```
-
-Use owner-qualified wording where ambiguity matters, for example:
-
-```text
-Generation completed
-Execution completed operationally
-Evaluation completed
-Generation compatibility: indeterminate
-Constraint handling: validated later
-Evidence finding: violated
-```
-
-High-risk words such as `model`, `run`, `job`, `artifact`, `metric`, `validation`, `valid`, `passed`, `ready`, `quality`, `safe`, `private`, `reproducible`, `history`, `current`, `latest` and `complete` require qualification when ambiguity affects meaning.
-
-Disclosure categories are `visible`, `authorized summary/redacted`, `withheld`, `unavailable`, `unknown`, and `absent`; `not applicable` is separate.
-
-History-quality language is `directly retained`, `reconstructed`, `partial/incomplete`, `history unavailable`, and `history indeterminate`.
-
-These are semantic distinctions, not permission to create public/runtime enums.
+Do not invent a universal status, validation, quality, history, run, artifact, lineage or approval owner.
 
 ## Current Phase 010 sequence
 
@@ -123,26 +107,21 @@ These are semantic distinctions, not permission to create public/runtime enums.
 010-B  COMPLETE — action -> actor intent / interaction mapping
 010-C  COMPLETE — state/query/history/explanation -> inspection mapping
 010-D  COMPLETE — linguistic / vocabulary / typed status / disclosure semantics
-010-E  NEXT — physical interaction across candidate surface families
-010-F  application-family workflow composition / progressive disclosure
+010-E  COMPLETE — package/notebook/automation/host physical interaction mapping
+010-F  NEXT — application-family workflow composition / progressive disclosure
 010-G  human-programmatic parity / degraded-recovery-scale mapping misfit
 010-H  mapping consolidation / Phase 011 handoff
 ```
 
-## 010-E discipline
+## 010-F discipline
 
-010-E may map established semantic obligations into candidate SDK/API, notebook, CLI, report/history/review, graphical UI, operator/admin and external-handoff interaction forms.
+010-F must compose the already-mapped semantics through valid Phase 009 application-family workflows without turning the full eleven-concept suite into one mandatory package flow.
 
-It may define interaction responsibility, sequencing, progressive disclosure and inspectability.
+It must replay at least authority-only, L-KERNEL, direct G-KERNEL, learned-state-assisted Generation, E-KERNEL, evidence-gated Generation, Constraint-bearing, Execution-bearing/light, Provenance-bearing/light and full composition variants.
 
-It must not:
+Package/notebook/automation are the primary workflow hosts. Optional CLI/report/graphical surfaces may support the same semantics but must not become prerequisites.
 
-- redefine concept ownership or lifecycle;
-- flatten the typed linguistic dimensions established by 010-D;
-- choose implementation classes/routes/widgets/storage/transport;
-- make optional concepts mandatory workflow steps;
-- equate physical materialization/platform success with semantic completion;
-- turn compatibility aliases into canonical domain meaning.
+Progressive disclosure should keep ordinary package interaction concise while preserving access to exact bindings, Evidence limitations, historical truth, Execution diagnostics and Provenance when relevant.
 
 ## Mapping misfit rule
 
@@ -152,22 +131,9 @@ If a mapping cannot be expressed intelligibly without violating purpose, ownersh
 2. identify whether it is local to Phase 010 or proves an upstream defect;
 3. reopen only the smallest affected authority under J0-J7.
 
-Do not invent generic Workflow, Run, Artifact, Metric, Validation, Quality, History, Status, Lineage or Approval authority merely to simplify a surface.
-
-## Critical interpretation
-
-A concept mapping is not automatically a public class/method, endpoint/resource schema, CLI command, UI widget/page, report format, database/materialized view, cache/search index, graph database, service call, event/message, transaction/saga, queue/topic, package/module dependency, runtime workflow edge or deployment unit.
-
-## Stop/reopen discipline
-
-- J1 local concept defect → Phase 008 concept authority;
-- J2 purpose/boundary/catalog defect → Phase 008-B/F/G as appropriate;
-- J3 dependence/composition defect → Phase 009 authority;
-- mapping defect without upstream proof → Phase 010.
-
 ## What agents may do now
 
-Agents may perform design-only 010-E physical/interaction mapping using current action, inspection and linguistic authority.
+Agents may perform design-only 010-F application-family workflow composition and progressive-disclosure analysis using current action, inspection, linguistic and package/host physical mapping authority.
 
 Architecture/source/tests may be inspected only as counterexample/feasibility evidence, not upstream mapping authority.
 
@@ -187,4 +153,4 @@ Only Phase 014 may make the final whole-design readiness decision; implementatio
 
 ## Current next boundary
 
-**010-E — Physical / Interaction Mapping Across SDK, Notebook, CLI, API, Report, UI & Operator Surfaces**.
+**010-F — Application-Family Workflow Composition, Optional-Capability Experience & Progressive Disclosure**.
