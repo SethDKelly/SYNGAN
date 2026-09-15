@@ -2,6 +2,12 @@
 
 SYNGAN is a design-first synthetic-data generation framework intended for Spark-scale workloads.
 
+SYNGAN is designed as a **deployable Python/Spark package** whose platform promise is:
+
+> **Agnostic across compliant Spark-capable hosting and infrastructure platforms.**
+
+It is not defined as a standalone UI application. Package, notebook and automated job/pipeline use are primary; CLI, reports, graphical presentation and standalone service/API exposure are optional adapters or integrations.
+
 SYNGAN follows Daniel Jackson-style concept design and explicitly requires the full design program to complete before implementation can become ready.
 
 ## Documentation
@@ -10,15 +16,15 @@ Start with [`docs/index.md`](docs/index.md).
 
 Current authority includes:
 
+- [`Problem & Purpose`](docs/problem/problem-purpose.md)
 - [`Concept Design Methodology`](docs/authority/design-methodology.md)
-- [`Jackson Design Completion & Implementation Hold`](docs/authority/jackson-design-completion-implementation-hold.md)
 - [`Jackson Methodology Completion Matrix`](docs/authority/jackson-methodology-completion-matrix.md)
 - [`Accepted Concept Catalog`](docs/concepts/index.md)
 - [`Concept Dependence & Application Family`](docs/dependence/index.md)
 - [`Synchronization Authority`](docs/synchronizations/index.md)
 - [`Concept Mapping Authority`](docs/mapping/index.md)
-- [`010-B Concept Action Mapping`](docs/mapping/concept-action-actor-intent-interaction-mapping.md)
-- [`010-C Inspection Mapping`](docs/mapping/concept-state-query-history-explanation-inspection-mapping.md)
+- [`010-D Linguistic Mapping`](docs/mapping/linguistic-mapping-vocabulary-typed-status-disclosure-semantics.md)
+- [`010-E Package/Host Physical Interaction Mapping`](docs/mapping/package-notebook-automation-host-platform-interaction-mapping.md)
 - [`Phase 010`](docs/phases/010/index.md)
 
 ## Status
@@ -32,11 +38,13 @@ Phase 010                            ACTIVE
 010-A                                COMPLETE
 010-B                                COMPLETE
 010-C                                COMPLETE
-010-D                                NEXT ELIGIBLE
+010-D                                COMPLETE
+010-E                                COMPLETE
+010-F                                NEXT ELIGIBLE
 F1                                   CURRENTLY CLOSED
 F2                                   CURRENTLY CLOSED
-F3                                   PARTIAL TO STRONG
-F4                                   PARTIAL
+F3                                   CURRENTLY CLOSED
+F4                                   PARTIAL TO STRONG
 F5                                   STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
 Jackson design completion            IN PROGRESS
 implementation readiness             NOT READY
@@ -44,20 +52,18 @@ implementation start                 NOT STARTED
 implementation next                  NOT YET
 ```
 
-Current semantic mapping coverage is:
+Current mapping coverage is:
 
 ```text
-normalized command groups               66 / 66 SEMANTICALLY MAPPED
-normalized query groups                 52 / 52 SEMANTICALLY MAPPED
-lifecycle/history envelopes             11 / 11 SEMANTICALLY MAPPED
-cross-concept explanation patterns       5
+66 / 66 command groups                    SEMANTICALLY MAPPED
+52 / 52 query groups                      SEMANTICALLY MAPPED
+11 / 11 lifecycle/history envelopes       SEMANTICALLY MAPPED
+11 / 11 concept names                     LINGUISTICALLY ALIGNED
+66 / 66 command groups                    PHYSICAL RESPONSIBILITY MAPPED
+52 / 52 query groups                      PHYSICAL RESPONSIBILITY MAPPED
 ```
 
-The 010-C inspection rule is: **inspection exposes owned or validly derived truth; it does not create a second owner for that truth**.
-
-Current mapping therefore preserves current versus exact historical state, semantic versus operational state, candidate/intermediate versus authoritative result, Evidence claim-strength versus approval, Provenance relationships versus source facts, typed disclosure/history-quality distinctions, application-family optionality and bounded enterprise-scale inspection.
-
-010-D now owns linguistic alignment. It must choose safe actor/programmatic vocabulary for these mapped semantics without turning mapping categories into universal runtime enums or implementation schemas.
+010-E establishes package/notebook/automation as primary interaction surfaces and treats CLI/report/UI/operator presentation as optional or host-owned where appropriate. A standalone network service, graphical application or dedicated admin console is not required for semantic completeness.
 
 ## Remaining design roadmap
 
@@ -75,6 +81,6 @@ Only a positive Phase 014 may change implementation to **READY / NOT STARTED / N
 
 ## Current next boundary
 
-**010-D — Linguistic Mapping, Vocabulary, Typed Status & Disclosure Semantics** is next eligible.
+**010-F — Application-Family Workflow Composition, Optional-Capability Experience & Progressive Disclosure** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
