@@ -19,6 +19,7 @@ Start with:
 - `docs/mapping/concept-state-query-history-explanation-inspection-mapping.md`
 - `docs/mapping/linguistic-mapping-vocabulary-typed-status-disclosure-semantics.md`
 - `docs/mapping/package-notebook-automation-host-platform-interaction-mapping.md`
+- `docs/mapping/application-family-workflow-composition-progressive-disclosure.md`
 - `docs/phases/010/index.md`
 
 Current state:
@@ -34,11 +35,12 @@ Phase 010                            ACTIVE
 010-C                                COMPLETE
 010-D                                COMPLETE
 010-E                                COMPLETE
-010-F                                NEXT ELIGIBLE
+010-F                                COMPLETE
+010-G                                NEXT ELIGIBLE
 F1                                   CURRENTLY CLOSED
 F2                                   CURRENTLY CLOSED
 F3                                   CURRENTLY CLOSED
-F4                                   PARTIAL TO STRONG
+F4                                   CURRENTLY CLOSED
 F5                                   STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
 implementation readiness             NOT READY
 implementation start                 NOT STARTED
@@ -57,7 +59,7 @@ SYNGAN is a deployable Python/Spark framework package, not a standalone applicat
 
 Spark/PySpark remains the required processing environment in current scope.
 
-Treat these as primary interaction roles:
+Primary interaction roles:
 
 ```text
 P1  Python package / SDK contract
@@ -65,7 +67,7 @@ P2  notebook / interactive package use
 P3  embedded job / pipeline / automation
 ```
 
-Treat these as conditional/optional:
+Conditional/optional roles:
 
 ```text
 P4  CLI adapter
@@ -77,7 +79,7 @@ P8  external integration / handoff
 
 Do not assume SYNGAN owns a web application shell, authentication UI, job/cluster dashboard, log viewer, storage browser, admin console or mandatory network service/API.
 
-## Current mapping authority
+## Mapping and family-composition authority
 
 ```text
 66 / 66 commands                         SEMANTICALLY MAPPED
@@ -86,9 +88,38 @@ Do not assume SYNGAN owns a web application shell, authentication UI, job/cluste
 11 / 11 concept names                    LINGUISTICALLY ALIGNED
 66 / 66 commands                         PHYSICAL RESPONSIBILITY MAPPED
 52 / 52 queries                          PHYSICAL RESPONSIBILITY MAPPED
+10 / 10 family/capability replays        PASS
 ```
 
-010-E proves that all current semantics are encounterable through package/host interactions without requiring standalone UI/service/CLI delivery.
+010-F establishes:
+
+> **Concept inclusion defines available capability; it does not require every included concept to be re-executed in every invocation.**
+
+Preserve these consequences:
+
+- direct Generation does not fabricate Learning/Learned State;
+- learned-state-assisted Generation may reuse an existing Learned State without new Learning;
+- reusable Data Meaning, Strategy, Constraint and Criterion revisions may be selected rather than recreated;
+- Evaluation/Evidence are not universal Generation steps;
+- Execution is an optional operational lane, not domain completion;
+- Provenance is optional historical/relationship capability, not a mandatory final gate;
+- the full eleven-concept set is not an eleven-stage wizard.
+
+## Progressive-disclosure discipline
+
+Use the 010-F semantic depths conceptually:
+
+```text
+D0  task intent / immediate semantic action
+D1  material semantic basis
+D2  optional capability detail
+D3  historical / explanatory depth
+D4  distributed / host operational drill-down
+```
+
+These are not UI screens, API tiers, classes or persistence layers.
+
+Ordinary package/notebook interaction should remain concise and bounded while preserving on-demand access to exact bindings, Evidence limitations, Execution diagnostics, Provenance and historical truth.
 
 ## Inspection and linguistic discipline
 
@@ -96,9 +127,9 @@ Do not assume SYNGAN owns a web application shell, authentication UI, job/cluste
 
 > **Words may simplify presentation, but they may not erase ownership, semantic dimension, historical scope, uncertainty or disclosure meaning.**
 
-Keep distinct semantic lifecycle, current-use state, contextual assessment, Execution/Attempt state, Generation material finality, Evidence finding/claim strength, Constraint handling, disclosure and history quality.
+Keep semantic lifecycle, current-use state, contextual assessment, Execution/Attempt state, Generation material finality, Evidence finding/claim strength, Constraint handling, disclosure and history quality distinct.
 
-Do not invent a universal status, validation, quality, history, run, artifact, lineage or approval owner.
+Do not invent a universal status, validation, quality, history, run, artifact, lineage, workflow or approval owner.
 
 ## Current Phase 010 sequence
 
@@ -108,20 +139,30 @@ Do not invent a universal status, validation, quality, history, run, artifact, l
 010-C  COMPLETE — state/query/history/explanation -> inspection mapping
 010-D  COMPLETE — linguistic / vocabulary / typed status / disclosure semantics
 010-E  COMPLETE — package/notebook/automation/host physical interaction mapping
-010-F  NEXT — application-family workflow composition / progressive disclosure
-010-G  human-programmatic parity / degraded-recovery-scale mapping misfit
+010-F  COMPLETE — application-family workflow composition / progressive disclosure
+010-G  NEXT — human-programmatic parity / degraded-recovery-scale mapping misfit audit
 010-H  mapping consolidation / Phase 011 handoff
 ```
 
-## 010-F discipline
+## 010-G discipline
 
-010-F must compose the already-mapped semantics through valid Phase 009 application-family workflows without turning the full eleven-concept suite into one mandatory package flow.
+010-G must replay current mappings across human and programmatic interaction under normal and difficult conditions.
 
-It must replay at least authority-only, L-KERNEL, direct G-KERNEL, learned-state-assisted Generation, E-KERNEL, evidence-gated Generation, Constraint-bearing, Execution-bearing/light, Provenance-bearing/light and full composition variants.
+It must test at least:
 
-Package/notebook/automation are the primary workflow hosts. Optional CLI/report/graphical surfaces may support the same semantics but must not become prerequisites.
+- semantic parity between notebook/human and package/automation interaction;
+- recovery, retry/resume/cancellation and authority continuity;
+- unknown/indeterminate operational state;
+- dependency/runtime/resource degradation;
+- disclosure/withholding/security-facing responses;
+- current versus reconstructed/partial/unavailable history;
+- later Evidence staleness/invalidation without rewriting historical use;
+- topology and text-bearing structured-data cases;
+- enterprise-scale bounded inspection;
+- extension-author and platform-operator needs;
+- whether any mapping requires concept collapse, hidden authority or new independent lifecycle.
 
-Progressive disclosure should keep ordinary package interaction concise while preserving access to exact bindings, Evidence limitations, historical truth, Execution diagnostics and Provenance when relevant.
+Do not “solve” difficult conditions by adding a generic Workflow, Status, Validation, Quality, Dashboard, Run, Artifact, Lineage or Approval owner.
 
 ## Mapping misfit rule
 
@@ -133,7 +174,7 @@ If a mapping cannot be expressed intelligibly without violating purpose, ownersh
 
 ## What agents may do now
 
-Agents may perform design-only 010-F application-family workflow composition and progressive-disclosure analysis using current action, inspection, linguistic and package/host physical mapping authority.
+Agents may perform design-only 010-G parity, degraded/recovery/scale and mapping-misfit analysis using current mapping/family composition authority.
 
 Architecture/source/tests may be inspected only as counterexample/feasibility evidence, not upstream mapping authority.
 
@@ -153,4 +194,4 @@ Only Phase 014 may make the final whole-design readiness decision; implementatio
 
 ## Current next boundary
 
-**010-F — Application-Family Workflow Composition, Optional-Capability Experience & Progressive Disclosure**.
+**010-G — Human/Programmatic Semantic Parity, Degraded/Recovery/Scale & Mapping-Misfit Audit**.
