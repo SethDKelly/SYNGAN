@@ -26,14 +26,13 @@ IMPLEMENTATION NEXT        NOT YET
 - [010-A — Mapping Authority, Coverage Model, Actor/Surface Taxonomy & Evidence Baseline](010-A-mapping-authority-coverage-model-actor-surface-taxonomy-evidence-baseline.md)
 - [010-B — Concept Action → Actor Intent & Interaction Mapping](010-B-concept-action-actor-intent-interaction-mapping.md)
 - [010-C — Concept State, Query, History & Explanation → Inspection Mapping](010-C-concept-state-query-history-explanation-inspection-mapping.md)
+- [010-D — Linguistic Mapping, Vocabulary, Typed Status & Disclosure Semantics](010-D-linguistic-mapping-vocabulary-typed-status-disclosure-semantics.md)
 - [Current Mapping Authority](../../mapping/index.md)
-- [010-A Mapping Control Authority](../../mapping/mapping-authority-coverage-actor-surface-evidence-baseline.md)
-- [010-B Action Mapping Authority](../../mapping/concept-action-actor-intent-interaction-mapping.md)
-- [010-C Inspection Mapping Authority](../../mapping/concept-state-query-history-explanation-inspection-mapping.md)
+- [010-D Linguistic Authority](../../mapping/linguistic-mapping-vocabulary-typed-status-disclosure-semantics.md)
 - [Phase 009 Consolidation](../../authority/phase-009-dependence-composition-consolidation.md)
 - [Jackson Methodology Completion Matrix](../../authority/jackson-methodology-completion-matrix.md)
 
-## Current baseline after 010-C
+## Current baseline after 010-D
 
 ```text
 accepted concepts                       11
@@ -41,14 +40,16 @@ normalized command groups               66 / 66 SEMANTICALLY MAPPED
 normalized query groups                 52 / 52 SEMANTICALLY MAPPED
 lifecycle/history envelopes             11 / 11 SEMANTICALLY MAPPED
 cross-concept explanation patterns       5
+accepted concept names                  11 / 11 LINGUISTICALLY ALIGNED
 Phase 010                               ACTIVE
 010-A                                   COMPLETE
 010-B                                   COMPLETE
 010-C                                   COMPLETE
-010-D                                   NEXT ELIGIBLE
+010-D                                   COMPLETE
+010-E                                   NEXT ELIGIBLE
 F1                                      CURRENTLY CLOSED
 F2                                      CURRENTLY CLOSED
-F3                                      PARTIAL TO STRONG
+F3                                      CURRENTLY CLOSED
 F4                                      PARTIAL
 F5                                      STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
 Jackson concept design                  NOT COMPLETE
@@ -57,50 +58,58 @@ implementation start                    NOT STARTED
 implementation next                     NOT YET
 ```
 
-## 010-C inspection result
+## 010-D linguistic result
 
-The current inspection rule is:
+SYNGAN does not use one global status vocabulary.
 
-> **Inspection exposes owned or validly derived truth; it does not create a second owner for that truth.**
+010-D establishes typed linguistic dimensions for:
 
-Current inspection authority therefore preserves:
+```text
+revision/current-use status
+semantic activity lifecycle
+contextual assessment
+Execution/Attempt operational lifecycle
+Generation material finality
+Evidence finding / claim strength
+Constraint handling / applicability
+Disclosure state
+historical-knowledge quality
+```
 
-- current versus exact historical state;
-- semantic versus operational lifecycle;
-- candidate/intermediate versus authoritative result;
-- exact bindings and revisions;
-- Evidence claim strength/uncertainty/limitations/current applicability;
-- Provenance relationships versus referenced source facts;
-- disclosure state;
-- history-quality state;
-- bounded enterprise-scale inspection.
+Owner-qualified language is required where ambiguity matters. `Generation completed` and `Execution completed operationally` are therefore different claims; `Evaluation completed` does not mean the evaluated subject passed.
 
-Derived explanation views may compose several concepts, but no combined Dashboard/Status/History/Explanation/Lineage owner is introduced.
+## Current disclosure/history semantics
 
-## Current disclosure/history semantic categories
-
-010-C requires material ability to distinguish:
+Disclosure:
 
 ```text
 visible
-redacted / authorized summary
+authorized summary / redacted
 withheld
 unavailable
 unknown
 absent
 ```
 
-and history quality such as:
+`not applicable` is separate from absence.
+
+History quality:
 
 ```text
-DIRECT
-RECONSTRUCTED
-PARTIAL
-UNAVAILABLE
-INDETERMINATE
+directly retained
+reconstructed
+partial / incomplete
+history unavailable
+history indeterminate
 ```
 
-These labels are mapping placeholders only. 010-D owns actor/programmatic linguistic alignment and final wording discipline.
+These remain semantic descriptors, not required implementation enums.
+
+## Vocabulary discipline
+
+High-risk words such as model, run, job, artifact, metric, validation, valid, passed, ready, quality, safe, private, reproducible, history, current and complete require qualification when ambiguity affects meaning.
+
+Compatibility words may still be used later if their mapping to canonical SYNGAN semantics is explicit.
 
 ## Subgroups
 
@@ -109,8 +118,8 @@ These labels are mapping placeholders only. 010-D owns actor/programmatic lingui
 | **010-A** | Mapping Authority, Coverage Model, Actor/Surface Taxonomy & Evidence Baseline | **complete** |
 | **010-B** | Concept Action → Actor Intent & Interaction Mapping | **complete** |
 | **010-C** | Concept State, Query, History & Explanation → Inspection Mapping | **complete** |
-| **010-D** | **Linguistic Mapping, Vocabulary, Typed Status & Disclosure Semantics** | **next eligible** |
-| **010-E** | Physical / Interaction Mapping Across SDK, Notebook, CLI, API, Report, UI & Operator Surfaces | planned |
+| **010-D** | Linguistic Mapping, Vocabulary, Typed Status & Disclosure Semantics | **complete** |
+| **010-E** | **Physical / Interaction Mapping Across SDK, Notebook, CLI, API, Report, UI & Operator Surfaces** | **next eligible** |
 | **010-F** | Application-Family Workflow Composition, Optional-Capability Experience & Progressive Disclosure | planned |
 | **010-G** | Human/Programmatic Semantic Parity, Degraded/Recovery/Scale & Mapping-Misfit Audit | planned |
 | **010-H** | Phase 010 Consolidation, F1-F5 Completion Decision & Phase 011 Handoff | planned |
@@ -124,9 +133,9 @@ These labels are mapping placeholders only. 010-D owns actor/programmatic lingui
   ↓
 010-C COMPLETE
   ↓
-010-D NEXT
+010-D COMPLETE
   ↓
-010-E
+010-E NEXT
   ↓
 010-F
   ↓
@@ -158,6 +167,6 @@ Phase 010 does not choose public class hierarchies, endpoint/resource schemas, c
 
 ## Current next boundary
 
-**010-D — Linguistic Mapping, Vocabulary, Typed Status & Disclosure Semantics** is next eligible.
+**010-E — Physical / Interaction Mapping Across SDK, Notebook, CLI, API, Report, UI & Operator Surfaces** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
