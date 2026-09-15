@@ -39,6 +39,7 @@ Existing architecture, source or tests never become upstream concept-design auth
 - [010-A Mapping Control Authority](mapping/mapping-authority-coverage-actor-surface-evidence-baseline.md)
 - [010-B Concept Action Mapping](mapping/concept-action-actor-intent-interaction-mapping.md)
 - [010-C Inspection Mapping](mapping/concept-state-query-history-explanation-inspection-mapping.md)
+- [010-D Linguistic Mapping](mapping/linguistic-mapping-vocabulary-typed-status-disclosure-semantics.md)
 - [Phase 010](phases/010/index.md)
 
 ## Current state
@@ -54,10 +55,11 @@ Phase 010                            ACTIVE
 010-A                                COMPLETE
 010-B                                COMPLETE
 010-C                                COMPLETE
-010-D                                NEXT ELIGIBLE
+010-D                                COMPLETE
+010-E                                NEXT ELIGIBLE
 F1                                   CURRENTLY CLOSED
 F2                                   CURRENTLY CLOSED
-F3                                   PARTIAL TO STRONG
+F3                                   CURRENTLY CLOSED
 F4                                   PARTIAL
 F5                                   STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
 Jackson design completion            IN PROGRESS
@@ -68,32 +70,36 @@ implementation next                  NOT YET
 
 ## Current mapping program
 
-Current semantic coverage is:
-
 ```text
 normalized command groups               66 / 66 SEMANTICALLY MAPPED
 normalized query groups                 52 / 52 SEMANTICALLY MAPPED
 lifecycle/history envelopes             11 / 11 SEMANTICALLY MAPPED
 cross-concept explanation patterns       5
+accepted concept names                  11 / 11 LINGUISTICALLY ALIGNED
 mapping blockers                         0
 ```
 
 010-C establishes that inspection exposes owned or validly derived truth without creating duplicate canonical state.
 
-Current mapping preserves:
+010-D establishes that language may simplify presentation but may not erase ownership, semantic dimension, historical scope, uncertainty or disclosure meaning.
 
-- current versus exact historical state;
-- semantic versus operational state;
-- candidate/intermediate versus authoritative result;
-- exact bindings/revisions;
-- Evidence finding/strength/uncertainty/limitations versus approval authority;
-- Provenance relationship assertions versus referenced source facts;
-- disclosure states such as visible/redacted/withheld/unavailable/unknown/absent;
-- directly retained versus reconstructed/partial/unavailable/indeterminate history;
-- bounded enterprise-scale inspection;
-- application-family optionality.
+SYNGAN therefore keeps distinct:
 
-Derived explanation views may compose several concepts, but no Dashboard/Status/History/Explanation/Lineage aggregate becomes canonical state.
+- revision/current-use status;
+- semantic activity lifecycle;
+- contextual assessment;
+- Execution/Attempt operational lifecycle;
+- Generation material finality;
+- Evidence finding/claim strength;
+- Constraint handling/applicability;
+- disclosure state;
+- historical-knowledge quality.
+
+Current disclosure meanings are visible, authorized-summary/redacted, withheld, unavailable, unknown and absent; `not applicable` is separate.
+
+History-quality language is directly retained, reconstructed, partial/incomplete, history unavailable and history indeterminate.
+
+No Dashboard/Status/History/Explanation/Lineage/Validation/Quality aggregate becomes canonical state merely because a surface composes it.
 
 ## Current Phase 010 sequence
 
@@ -101,8 +107,8 @@ Derived explanation views may compose several concepts, but no Dashboard/Status/
 010-A  COMPLETE — mapping control / coverage / actor-surface taxonomy / evidence baseline
 010-B  COMPLETE — action -> actor intent / interaction mapping
 010-C  COMPLETE — state/query/history/explanation -> inspection mapping
-010-D  NEXT — linguistic / vocabulary / typed status / disclosure semantics
-010-E  physical interaction across candidate surface families
+010-D  COMPLETE — linguistic / vocabulary / typed status / disclosure semantics
+010-E  NEXT — physical interaction across candidate surface families
 010-F  application-family workflow composition / progressive disclosure
 010-G  human-programmatic parity / degraded-recovery-scale mapping misfit
 010-H  mapping consolidation / Phase 011 handoff
@@ -120,10 +126,10 @@ IMPLEMENTATION START       NOT STARTED
 IMPLEMENTATION NEXT        NOT YET
 ```
 
-Do not translate concepts, application-family variants, synchronization IDs, action/inspection mappings, disclosure/history categories or explanation patterns mechanically into packages, services, schemas, views, transactions, events, APIs, UI components, deployment units, runtime enums or product SKUs.
+Do not translate concepts, application-family variants, synchronization IDs, action/inspection mappings, typed linguistic dimensions, disclosure/history categories or explanation patterns mechanically into packages, services, schemas, views, transactions, events, APIs, UI components, deployment units, runtime enums or product SKUs.
 
 Only a positive Phase 014 may make implementation **READY / NOT STARTED / NEXT**; implementation itself still requires Phase 015.
 
 ## Current next boundary
 
-**010-D — Linguistic Mapping, Vocabulary, Typed Status & Disclosure Semantics** is next eligible.
+**010-E — Physical / Interaction Mapping Across SDK, Notebook, CLI, API, Report, UI & Operator Surfaces** is next eligible.
