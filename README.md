@@ -25,6 +25,7 @@ Current authority includes:
 - [`Concept Mapping Authority`](docs/mapping/index.md)
 - [`010-D Linguistic Mapping`](docs/mapping/linguistic-mapping-vocabulary-typed-status-disclosure-semantics.md)
 - [`010-E Package/Host Physical Interaction Mapping`](docs/mapping/package-notebook-automation-host-platform-interaction-mapping.md)
+- [`010-F Application-Family Workflow Composition`](docs/mapping/application-family-workflow-composition-progressive-disclosure.md)
 - [`Phase 010`](docs/phases/010/index.md)
 
 ## Status
@@ -40,11 +41,12 @@ Phase 010                            ACTIVE
 010-C                                COMPLETE
 010-D                                COMPLETE
 010-E                                COMPLETE
-010-F                                NEXT ELIGIBLE
+010-F                                COMPLETE
+010-G                                NEXT ELIGIBLE
 F1                                   CURRENTLY CLOSED
 F2                                   CURRENTLY CLOSED
 F3                                   CURRENTLY CLOSED
-F4                                   PARTIAL TO STRONG
+F4                                   CURRENTLY CLOSED
 F5                                   STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
 Jackson design completion            IN PROGRESS
 implementation readiness             NOT READY
@@ -61,9 +63,12 @@ Current mapping coverage is:
 11 / 11 concept names                     LINGUISTICALLY ALIGNED
 66 / 66 command groups                    PHYSICAL RESPONSIBILITY MAPPED
 52 / 52 query groups                      PHYSICAL RESPONSIBILITY MAPPED
+10 / 10 required family/capability replays PASS
 ```
 
 010-E establishes package/notebook/automation as primary interaction surfaces and treats CLI/report/UI/operator presentation as optional or host-owned where appropriate. A standalone network service, graphical application or dedicated admin console is not required for semantic completeness.
+
+010-F establishes that concept inclusion defines available capability rather than forcing every included concept to be re-executed in every invocation. Existing Learned State and reusable authority revisions may be selected rather than recreated; optional capabilities create no empty mandatory steps; and the full eleven-concept family member is not an eleven-stage wizard.
 
 ## Remaining design roadmap
 
@@ -81,6 +86,6 @@ Only a positive Phase 014 may change implementation to **READY / NOT STARTED / N
 
 ## Current next boundary
 
-**010-F — Application-Family Workflow Composition, Optional-Capability Experience & Progressive Disclosure** is next eligible.
+**010-G — Human/Programmatic Semantic Parity, Degraded/Recovery/Scale & Mapping-Misfit Audit** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
