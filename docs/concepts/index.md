@@ -37,14 +37,15 @@ Phase 010                            ACTIVE
 010-C                                COMPLETE
 010-D                                COMPLETE
 010-E                                COMPLETE
-010-F                                NEXT ELIGIBLE
+010-F                                COMPLETE
+010-G                                NEXT ELIGIBLE
 F1 semantic action mapping           CURRENTLY CLOSED
 F2 semantic inspection mapping       CURRENTLY CLOSED
 F3 linguistic mapping                CURRENTLY CLOSED
-F4 physical mapping                  PARTIAL TO STRONG
+F4 physical/family mapping           CURRENTLY CLOSED
 ```
 
-Phase 009 found no reason to add, remove, merge, split or rename a concept. 010-B through 010-E find no mapping reason to reopen that conclusion.
+Phase 009 found no reason to add, remove, merge, split or rename a concept. 010-B through 010-F find no mapping or family-composition reason to reopen that conclusion.
 
 ## Current mapping coverage
 
@@ -55,6 +56,7 @@ Phase 009 found no reason to add, remove, merge, split or rename a concept. 010-
 11 / 11 accepted concept names          LINGUISTICALLY ALIGNED
 66 / 66 command groups                  PHYSICAL RESPONSIBILITY MAPPED
 52 / 52 query groups                    PHYSICAL RESPONSIBILITY MAPPED
+10 / 10 family/capability replays       PASS
 ```
 
 ## Core boundaries mapping preserves
@@ -75,17 +77,9 @@ Generation owns request/Condition and candidate-to-completed logical output sema
 
 ## Package product-form implications
 
-010-E confirms that concept completeness is provided through the Python/Spark package contract rather than through a required standalone application.
+Concept completeness is provided through the Python/Spark package contract rather than through a required standalone application.
 
-Primary physical interaction is:
-
-```text
-Python package / SDK
-notebook / interactive package use
-embedded job / pipeline / automation
-```
-
-CLI, reports, rich/graphical presentation and standalone service/API exposure are optional adapters or representations. Host platforms ordinarily own infrastructure administration UI while SYNGAN preserves its own Execution/Attempt and semantic authority through stable package contracts and correlations.
+Primary physical interaction is package/SDK, notebook and embedded automation. CLI, reports, rich/graphical presentation and standalone service/API exposure are optional adapters or representations. Host platforms ordinarily own infrastructure administration UI while SYNGAN preserves its own Execution/Attempt and semantic authority through stable package contracts and correlations.
 
 This product-form mapping does not change any concept boundary.
 
@@ -99,14 +93,16 @@ E-KERNEL = { Evaluation Criterion, Evaluation, Evidence }
 
 Direct Generation remains valid without Learning/Learned State. Evaluation/Evidence are not universal prerequisites for Generation. Constraint, Execution and Provenance remain capability-conditional.
 
-010-F must now compose package/notebook/automation interaction through these valid family members without making optional concepts or optional presentation surfaces mandatory.
+010-F adds the interaction rule:
 
-## Authority rule
+> **Concept inclusion defines available capability; it does not require every included concept to be re-executed in every invocation.**
 
-No implementation resource, architecture dependency, dashboard/report convenience, query schema or mapping vocabulary may redefine concept boundaries merely because it exists. Similarity of implementation mechanics or labels does not justify concept merger.
+Therefore an existing Learned State may be reused without new Learning; reusable authorities may be selected rather than recreated; absent optional concepts do not become failed/unknown/unavailable placeholders; and the full eleven-concept family member does not become a mandatory eleven-stage workflow.
+
+No Workflow, Status, Dashboard, Approval or other aggregate concept is added by composition convenience.
 
 ## Current next boundary
 
-**010-F — Application-Family Workflow Composition, Optional-Capability Experience & Progressive Disclosure** is next eligible.
+**010-G — Human/Programmatic Semantic Parity, Degraded/Recovery/Scale & Mapping-Misfit Audit** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
