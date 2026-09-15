@@ -40,6 +40,7 @@ Existing architecture, source or tests never become upstream concept-design auth
 - [010-C Inspection Mapping](mapping/concept-state-query-history-explanation-inspection-mapping.md)
 - [010-D Linguistic Mapping](mapping/linguistic-mapping-vocabulary-typed-status-disclosure-semantics.md)
 - [010-E Package/Host Physical Interaction Mapping](mapping/package-notebook-automation-host-platform-interaction-mapping.md)
+- [010-F Application-Family Workflow Composition](mapping/application-family-workflow-composition-progressive-disclosure.md)
 - [Phase 010](phases/010/index.md)
 
 ## Current state
@@ -55,11 +56,12 @@ Phase 010                            ACTIVE
 010-C                                COMPLETE
 010-D                                COMPLETE
 010-E                                COMPLETE
-010-F                                NEXT ELIGIBLE
+010-F                                COMPLETE
+010-G                                NEXT ELIGIBLE
 F1                                   CURRENTLY CLOSED
 F2                                   CURRENTLY CLOSED
 F3                                   CURRENTLY CLOSED
-F4                                   PARTIAL TO STRONG
+F4                                   CURRENTLY CLOSED
 F5                                   STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
 Jackson design completion            IN PROGRESS
 implementation readiness             NOT READY
@@ -86,22 +88,22 @@ Primary interaction is package/notebook/automation. CLI, reports, rich graphical
 11 / 11 accepted concept names            LINGUISTICALLY ALIGNED
 66 / 66 command groups                    PHYSICAL RESPONSIBILITY MAPPED
 52 / 52 query groups                      PHYSICAL RESPONSIBILITY MAPPED
+10 / 10 required family/capability replays PASS
 ```
 
-Physical interaction roles are:
+010-F confirms that concept inclusion defines available capability rather than forcing every concept to be executed in every invocation. Existing reusable authority/results may be selected rather than recreated, and the full concept set is not one mandatory wizard.
+
+Progressive disclosure is semantic:
 
 ```text
-P1  Python package / SDK contract              PRIMARY
-P2  notebook / interactive package use        PRIMARY
-P3  embedded job / pipeline / automation      PRIMARY
-P4  CLI adapter                               OPTIONAL
-P5  report / exported review                  OPTIONAL
-P6  rich / graphical presentation             OPTIONAL
-P7  host-platform / operator integration      HOST RESPONSIBILITY
-P8  external integration / handoff            BOUNDARY
+D0  immediate task / semantic action
+D1  material semantic basis
+D2  optional capability detail
+D3  history / explanation
+D4  distributed / host operational drill-down
 ```
 
-Routine interaction remains bounded and reference/summary-first. Optional presentation must not require enterprise-scale source/output/telemetry materialization in local memory.
+These levels do not prescribe UI architecture.
 
 ## Current Phase 010 sequence
 
@@ -111,8 +113,8 @@ Routine interaction remains bounded and reference/summary-first. Optional presen
 010-C  COMPLETE — state/query/history/explanation -> inspection mapping
 010-D  COMPLETE — linguistic / vocabulary / typed status / disclosure semantics
 010-E  COMPLETE — package/notebook/automation/host physical interaction mapping
-010-F  NEXT — application-family workflow composition / progressive disclosure
-010-G  human-programmatic parity / degraded-recovery-scale mapping misfit
+010-F  COMPLETE — application-family workflow composition / progressive disclosure
+010-G  NEXT — human-programmatic parity / degraded-recovery-scale mapping misfit audit
 010-H  mapping consolidation / Phase 011 handoff
 ```
 
@@ -126,10 +128,10 @@ IMPLEMENTATION START       NOT STARTED
 IMPLEMENTATION NEXT        NOT YET
 ```
 
-Do not translate concepts or mapping roles mechanically into packages, services, schemas, endpoints, UI components, deployment units, runtime enums or product SKUs.
+Do not translate concepts, family variants or mapping roles mechanically into packages, services, schemas, endpoints, UI components, workflow engines, deployment units, runtime enums or product SKUs.
 
 Only a positive Phase 014 may make implementation **READY / NOT STARTED / NEXT**; implementation itself still requires Phase 015.
 
 ## Current next boundary
 
-**010-F — Application-Family Workflow Composition, Optional-Capability Experience & Progressive Disclosure** is next eligible.
+**010-G — Human/Programmatic Semantic Parity, Degraded/Recovery/Scale & Mapping-Misfit Audit** is next eligible.
