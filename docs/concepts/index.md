@@ -35,27 +35,23 @@ Phase 010                            ACTIVE
 010-A                                COMPLETE
 010-B                                COMPLETE
 010-C                                COMPLETE
-010-D                                NEXT ELIGIBLE
+010-D                                COMPLETE
+010-E                                NEXT ELIGIBLE
 F1 semantic action mapping           CURRENTLY CLOSED
 F2 semantic inspection mapping       CURRENTLY CLOSED
+F3 linguistic mapping                CURRENTLY CLOSED
 ```
 
-Phase 009 found no reason to add, remove, merge, split or rename a concept. 010-B/010-C find no mapping reason to reopen that conclusion.
+Phase 009 found no reason to add, remove, merge, split or rename a concept. 010-B through 010-D find no mapping reason to reopen that conclusion.
 
-## Current semantic mapping coverage
-
-[010-B Action Mapping](../mapping/concept-action-actor-intent-interaction-mapping.md):
+## Current mapping coverage
 
 ```text
-66 / 66 normalized command groups  SEMANTICALLY MAPPED
-```
-
-[010-C Inspection Mapping](../mapping/concept-state-query-history-explanation-inspection-mapping.md):
-
-```text
-52 / 52 normalized query groups        SEMANTICALLY MAPPED
-11 / 11 lifecycle/history envelopes    SEMANTICALLY MAPPED
-5 explanation patterns                 SEMANTICALLY MAPPED
+66 / 66 normalized command groups       SEMANTICALLY MAPPED
+52 / 52 normalized query groups         SEMANTICALLY MAPPED
+11 / 11 lifecycle/history envelopes     SEMANTICALLY MAPPED
+5 explanation patterns                  SEMANTICALLY MAPPED
+11 / 11 accepted concept names          LINGUISTICALLY ALIGNED
 ```
 
 ## Core boundaries mapping preserves
@@ -74,24 +70,33 @@ Execution              != Attempt != platform job
 
 Generation owns request/Condition and candidate-to-completed logical output semantics. Synthetic Output is not a separate concept. Reproducibility remains cross-cutting. Generic Privacy remains deferred pending mechanism-specific discovery. Use/Release Decision remains external authority.
 
-## 010-C inspection implications
+## Linguistic implications
 
-Inspection does not create duplicate state ownership.
+010-D confirms that concept boundaries cannot be flattened by generic vocabulary.
 
-Current mappings preserve:
+There is no universal `status`, `validation`, `quality`, `run`, `artifact`, `metric` or `approval` concept.
 
-- current status versus exact historical bound truth;
-- revisioned authority history without retroactive rewrite;
-- proposed/committed/terminal activity state;
-- durable result current-use status versus immutable historical result content;
-- Generation partial/candidate/awaiting-validation/completed distinctions;
-- Execution/Attempt operational history versus parent semantic state;
-- Evidence finding/context/strength/limitations/current applicability;
-- Provenance assertions/corrections versus referenced source facts;
-- disclosure and historical-knowledge quality distinctions;
-- bounded enterprise-scale inspection.
+Owner-qualified language must preserve distinct dimensions such as semantic lifecycle, operational lifecycle, current-use eligibility, contextual compatibility, candidate/finality, Evidence finding/claim strength, Constraint handling, disclosure and historical-knowledge quality.
 
-No standalone Dashboard, Status, History, Explanation, Lineage, Artifact, Result, Approval or Inspection concept is justified.
+Examples:
+
+```text
+Generation completed
+!= Execution completed operationally
+
+Evaluation completed
+!= subject passed
+
+Constraint handling: enforced
+!= Evidence finding: satisfied
+
+superseded
+!= retired
+!= invalidated
+!= stale
+```
+
+High-risk ecosystem terms such as model, run, job, artifact, metric, metadata, validation, quality and sample remain compatibility/representation vocabulary unless explicitly mapped to canonical semantics.
 
 ## Application-family result
 
@@ -103,20 +108,20 @@ E-KERNEL = { Evaluation Criterion, Evaluation, Evidence }
 
 Direct Generation remains valid without Learning/Learned State. Evaluation/Evidence are not universal prerequisites for Generation. Constraint, Execution and Provenance remain capability-conditional.
 
-Inspection follows the same optionality: absent capabilities do not produce fabricated relationships or empty mandatory panels/workflow steps.
+Mapping follows the same optionality: absent capabilities do not produce fabricated relationships, failed states or empty mandatory panels/workflow steps.
 
-## 010-D handoff
+## 010-E handoff
 
-010-D must establish actor/programmatic linguistic mapping over the now-complete surface-neutral action and inspection semantics.
+010-E may now map the complete action/inspection/linguistic semantics into candidate physical interaction forms across SDK/API, notebook, CLI, report/history/review, UI, operator/admin and external-handoff surfaces.
 
-It must preserve concept-owner-specific lifecycle language and qualify overloaded ecosystem terms rather than flattening all state into a generic status vocabulary.
+It must preserve the typed vocabulary established by 010-D and may not turn surface convenience into concept authority.
 
 ## Authority rule
 
-No implementation resource, architecture dependency, dashboard/report convenience, query schema or mapping vocabulary may redefine concept boundaries merely because it exists. Similarity of implementation mechanics does not justify concept merger.
+No implementation resource, architecture dependency, dashboard/report convenience, query schema or mapping vocabulary may redefine concept boundaries merely because it exists. Similarity of implementation mechanics or labels does not justify concept merger.
 
 ## Current next boundary
 
-**010-D — Linguistic Mapping, Vocabulary, Typed Status & Disclosure Semantics** is next eligible.
+**010-E — Physical / Interaction Mapping Across SDK, Notebook, CLI, API, Report, UI & Operator Surfaces** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
