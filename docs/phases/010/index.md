@@ -27,30 +27,32 @@ IMPLEMENTATION NEXT        NOT YET
 - [010-B — Concept Action → Actor Intent & Interaction Mapping](010-B-concept-action-actor-intent-interaction-mapping.md)
 - [010-C — Concept State, Query, History & Explanation → Inspection Mapping](010-C-concept-state-query-history-explanation-inspection-mapping.md)
 - [010-D — Linguistic Mapping, Vocabulary, Typed Status & Disclosure Semantics](010-D-linguistic-mapping-vocabulary-typed-status-disclosure-semantics.md)
+- [010-E — Package, Notebook, Automation, Host-Platform & Optional Presentation Interaction Mapping](010-E-package-notebook-automation-host-platform-interaction-mapping.md)
 - [Current Mapping Authority](../../mapping/index.md)
-- [010-D Linguistic Authority](../../mapping/linguistic-mapping-vocabulary-typed-status-disclosure-semantics.md)
-- [Phase 009 Consolidation](../../authority/phase-009-dependence-composition-consolidation.md)
+- [010-E Physical Interaction Authority](../../mapping/package-notebook-automation-host-platform-interaction-mapping.md)
 - [Jackson Methodology Completion Matrix](../../authority/jackson-methodology-completion-matrix.md)
 
-## Current baseline after 010-D
+## Current baseline after 010-E
 
 ```text
 accepted concepts                       11
 normalized command groups               66 / 66 SEMANTICALLY MAPPED
 normalized query groups                 52 / 52 SEMANTICALLY MAPPED
 lifecycle/history envelopes             11 / 11 SEMANTICALLY MAPPED
-cross-concept explanation patterns       5
 accepted concept names                  11 / 11 LINGUISTICALLY ALIGNED
+command physical responsibility         66 / 66 MAPPED
+query physical responsibility           52 / 52 MAPPED
 Phase 010                               ACTIVE
 010-A                                   COMPLETE
 010-B                                   COMPLETE
 010-C                                   COMPLETE
 010-D                                   COMPLETE
-010-E                                   NEXT ELIGIBLE
+010-E                                   COMPLETE
+010-F                                   NEXT ELIGIBLE
 F1                                      CURRENTLY CLOSED
 F2                                      CURRENTLY CLOSED
 F3                                      CURRENTLY CLOSED
-F4                                      PARTIAL
+F4                                      PARTIAL TO STRONG
 F5                                      STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
 Jackson concept design                  NOT COMPLETE
 implementation readiness                NOT READY
@@ -58,58 +60,46 @@ implementation start                    NOT STARTED
 implementation next                     NOT YET
 ```
 
-## 010-D linguistic result
+## Package product-form result
 
-SYNGAN does not use one global status vocabulary.
+SYNGAN is a deployable Python/Spark framework package whose platform promise is:
 
-010-D establishes typed linguistic dimensions for:
+> **Agnostic across compliant Spark-capable hosting and infrastructure platforms.**
 
-```text
-revision/current-use status
-semantic activity lifecycle
-contextual assessment
-Execution/Attempt operational lifecycle
-Generation material finality
-Evidence finding / claim strength
-Constraint handling / applicability
-Disclosure state
-historical-knowledge quality
-```
-
-Owner-qualified language is required where ambiguity matters. `Generation completed` and `Execution completed operationally` are therefore different claims; `Evaluation completed` does not mean the evaluated subject passed.
-
-## Current disclosure/history semantics
-
-Disclosure:
+Primary interaction:
 
 ```text
-visible
-authorized summary / redacted
-withheld
-unavailable
-unknown
-absent
+P1  Python package / SDK contract
+P2  notebook / interactive package use
+P3  embedded job / pipeline / automation
 ```
 
-`not applicable` is separate from absence.
-
-History quality:
+Conditional/optional interaction:
 
 ```text
-directly retained
-reconstructed
-partial / incomplete
-history unavailable
-history indeterminate
+P4  CLI adapter
+P5  report / exported review
+P6  rich / graphical presentation
+P7  host-platform / operator integration
+P8  external integration / handoff
 ```
 
-These remain semantic descriptors, not required implementation enums.
+A standalone web application, network service/API, dedicated operator/admin console or CLI is not required for SYNGAN semantic completeness.
 
-## Vocabulary discipline
+## 010-E result
 
-High-risk words such as model, run, job, artifact, metric, validation, valid, passed, ready, quality, safe, private, reproducible, history, current and complete require qualification when ambiguity affects meaning.
+010-E establishes complete individual physical responsibility mapping:
 
-Compatibility words may still be used later if their mapping to canonical SYNGAN semantics is explicit.
+```text
+66 / 66 action groups               PACKAGE/HOST INTERACTION RESPONSIBILITY MAPPED
+52 / 52 query groups                PACKAGE/HOST INSPECTION RESPONSIBILITY MAPPED
+11 / 11 lifecycle/history envelopes PHYSICALLY ENCOUNTERABLE
+5 explanation patterns              PHYSICALLY ENCOUNTERABLE
+```
+
+The earlier 010-A S1-S7 surface taxonomy is treated as candidate surface evidence rather than seven peer deliverables.
+
+Host environments ordinarily own infrastructure-facing UI such as authentication shells, job/cluster administration, detailed telemetry and storage browsing. SYNGAN owns its semantic package contracts and host correlations without duplicating host authority.
 
 ## Subgroups
 
@@ -119,8 +109,8 @@ Compatibility words may still be used later if their mapping to canonical SYNGAN
 | **010-B** | Concept Action → Actor Intent & Interaction Mapping | **complete** |
 | **010-C** | Concept State, Query, History & Explanation → Inspection Mapping | **complete** |
 | **010-D** | Linguistic Mapping, Vocabulary, Typed Status & Disclosure Semantics | **complete** |
-| **010-E** | **Physical / Interaction Mapping Across SDK, Notebook, CLI, API, Report, UI & Operator Surfaces** | **next eligible** |
-| **010-F** | Application-Family Workflow Composition, Optional-Capability Experience & Progressive Disclosure | planned |
+| **010-E** | Package, Notebook, Automation, Host-Platform & Optional Presentation Interaction Mapping | **complete** |
+| **010-F** | **Application-Family Workflow Composition, Optional-Capability Experience & Progressive Disclosure** | **next eligible** |
 | **010-G** | Human/Programmatic Semantic Parity, Degraded/Recovery/Scale & Mapping-Misfit Audit | planned |
 | **010-H** | Phase 010 Consolidation, F1-F5 Completion Decision & Phase 011 Handoff | planned |
 
@@ -135,9 +125,9 @@ Compatibility words may still be used later if their mapping to canonical SYNGAN
   ↓
 010-D COMPLETE
   ↓
-010-E NEXT
+010-E COMPLETE
   ↓
-010-F
+010-F NEXT
   ↓
 010-G
   ↓
@@ -149,6 +139,8 @@ Compatibility words may still be used later if their mapping to canonical SYNGAN
 Phase 010 must preserve:
 
 - eleven accepted concept boundaries;
+- package-first product form;
+- Spark-host platform agnosticism;
 - application-family optionality;
 - direct versus learned-state-assisted Generation;
 - semantic versus operational completion;
@@ -158,15 +150,15 @@ Phase 010 must preserve:
 - Provenance relationship authority versus source-fact authority;
 - exact historical bindings and occurrence-scoped/non-reactive synchronization;
 - truthful disclosure/history-quality distinctions;
-- enterprise-scale bounded inspection;
+- enterprise-scale bounded interaction;
 - equivalent material semantics across human and programmatic surfaces.
 
 ## Representation boundary
 
-Phase 010 does not choose public class hierarchies, endpoint/resource schemas, concrete CLI syntax, UI pages/widgets, database/materialized views, graph technology, search indexes, log stores, packages, services, event topology, runtime call graphs or deployment mechanisms.
+Phase 010 does not choose public class hierarchies, function signatures, endpoint/resource schemas, CLI syntax, UI pages/widgets, package/module layout, database/materialized views, graph/search technology, services, event topology, runtime call graphs or deployment mechanisms.
 
 ## Current next boundary
 
-**010-E — Physical / Interaction Mapping Across SDK, Notebook, CLI, API, Report, UI & Operator Surfaces** is next eligible.
+**010-F — Application-Family Workflow Composition, Optional-Capability Experience & Progressive Disclosure** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
