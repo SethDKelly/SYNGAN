@@ -38,7 +38,7 @@ No row in this matrix changes that posture by itself.
 
 ### Class A — current upstream design authority
 
-Methodology, problem knowledge, accepted concepts, Phase 008 normalization/consolidation, Phase 009 consolidation/dependence/composition, current [Concept Mapping Authority](../mapping/index.md), the [010-A mapping-control authority](../mapping/mapping-authority-coverage-actor-surface-evidence-baseline.md), [010-B action-mapping authority](../mapping/concept-action-actor-intent-interaction-mapping.md), and [010-C inspection-mapping authority](../mapping/concept-state-query-history-explanation-inspection-mapping.md).
+Methodology, problem knowledge, accepted concepts, Phase 008 normalization/consolidation, Phase 009 consolidation/dependence/composition, current [Concept Mapping Authority](../mapping/index.md), [010-A mapping control](../mapping/mapping-authority-coverage-actor-surface-evidence-baseline.md), [010-B action mapping](../mapping/concept-action-actor-intent-interaction-mapping.md), [010-C inspection mapping](../mapping/concept-state-query-history-explanation-inspection-mapping.md), and [010-D linguistic mapping](../mapping/linguistic-mapping-vocabulary-typed-status-disclosure-semantics.md).
 
 ### Class B — supporting design evidence
 
@@ -65,7 +65,8 @@ Phase 010  ACTIVE
 010-A      COMPLETE — mapping control / coverage / actor-surface taxonomy / evidence baseline
 010-B      COMPLETE — 66 / 66 normalized concept command groups semantically mapped
 010-C      COMPLETE — 52 / 52 normalized query groups + 11 / 11 lifecycle/history envelopes semantically mapped
-010-D      NEXT ELIGIBLE — linguistic mapping / vocabulary / typed status / disclosure semantics
+010-D      COMPLETE — vocabulary / typed status / disclosure / history-quality language aligned
+010-E      NEXT ELIGIBLE — physical interaction mapping across candidate surface families
 ```
 
 Current Phase 010 result:
@@ -76,9 +77,10 @@ normalized command groups                66 / 66 SEMANTICALLY MAPPED
 normalized query groups                  52 / 52 SEMANTICALLY MAPPED
 lifecycle/history envelopes              11 / 11 SEMANTICALLY MAPPED
 cross-concept explanation patterns        5
+accepted concept names                   11 / 11 LINGUISTICALLY ALIGNED
 F1                                       CURRENTLY CLOSED
 F2                                       CURRENTLY CLOSED
-F3                                       PARTIAL TO STRONG
+F3                                       CURRENTLY CLOSED
 F4                                       PARTIAL
 F5                                       STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
 ```
@@ -112,13 +114,13 @@ F5                                       STRONG EVIDENCE / CURRENT REVALIDATION 
 | E3 | Composition burden/economy and hidden-coordinator avoidance | 009-F/G establish no hidden coordinator, local burden and non-propagation | **CURRENTLY CLOSED** | 009-F/G/H |
 | E4 | Composition synergy | 009-G demonstrates positive learned/gated/Constraint/Execution/Provenance/direct-generation synergies | **CURRENTLY CLOSED** | 009-G/H; 011 revalidation |
 | E5 | Integrity under composition | 009-G/H pass combined activation with no residual J3 blocker | **CURRENTLY CLOSED** | 009-F/G/H; 011 revalidation |
-| F1 | Concept action → human/programmatic interaction mapping | 010-B maps all 66 normalized command groups to actor intent, surface-neutral interaction obligations, family/sync/history/scale annotations; no action remains source-only | **CURRENTLY CLOSED** | 010-B; revalidate 010-H |
-| F2 | Concept state/query → actor-visible inspection mapping | 010-C maps all 52 normalized queries, all 11 lifecycle/history envelopes, current-vs-historical truth, explanation, disclosure/history-quality and scale obligations; no query remains source-only | **CURRENTLY CLOSED** | 010-C; revalidate 010-H |
-| F3 | Linguistic mapping/vocabulary alignment | Terminology/semantic distinctions plus 010-A risks and 010-C typed disclosure/history categories provide strong inputs; explicit current actor/programmatic vocabulary mapping remains | **PARTIAL TO STRONG** | 010-D/H |
-| F4 | Physical/interaction mapping for SDK/notebook/CLI/API/report/UI | Seven surface lenses plus complete surface-neutral action/inspection obligations now exist; physical realization remains pending | **PARTIAL** | 010-E/F/H |
-| F5 | Human/programmatic semantic parity | Phase 003/006 parity evidence retained; current action/inspection semantics now mapped; difficult-condition cross-surface replay remains | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 010-G/H |
-| G1 | Specificity across final composed set | Individual + Phase 009 evidence strong; post-mapping audit pending | **PARTIAL TO STRONG** | 011 |
-| G2 | Familiarity across final composed set | Individual naming closed; post-mapping review pending | **PARTIAL TO STRONG** | 011 |
+| F1 | Concept action → human/programmatic interaction mapping | 010-B maps all 66 command groups to actor intent and surface-neutral interaction obligations | **CURRENTLY CLOSED** | 010-B; revalidate 010-H |
+| F2 | Concept state/query → actor-visible inspection mapping | 010-C maps all 52 queries, 11 lifecycle/history envelopes, explanation, disclosure/history-quality and scale obligations | **CURRENTLY CLOSED** | 010-C; revalidate 010-H |
+| F3 | Linguistic mapping/vocabulary alignment | 010-D aligns all eleven concept names, establishes owner-qualified typed status grammar, disclosure/history language and ecosystem alias discipline without renaming concepts or adding a generic status owner | **CURRENTLY CLOSED** | 010-D; revalidate 010-H |
+| F4 | Physical/interaction mapping for SDK/notebook/CLI/API/report/UI | Seven surface lenses plus complete action/inspection/linguistic obligations now exist; physical realization remains pending | **PARTIAL** | 010-E/F/H |
+| F5 | Human/programmatic semantic parity | Phase 003/006 parity evidence retained; current semantic and linguistic mappings exist; difficult-condition cross-surface replay remains | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 010-G/H |
+| G1 | Specificity across final composed set | Individual + Phase 009/010 evidence strong; post-mapping audit pending | **PARTIAL TO STRONG** | 011 |
+| G2 | Familiarity across final composed set | Individual naming plus 010-D alias discipline closed; composed review pending | **PARTIAL TO STRONG** | 011 |
 | G3 | Integrity across synchronizations/mappings | Phase 009 sync integrity closed; post-mapping replay pending | **PARTIAL TO STRONG** | 011 |
 | G4 | Synergy and simplicity/generic fitness | Phase 009 synergy/economy closed; post-mapping quality replay pending | **PARTIAL TO STRONG** | 011 |
 | G5 | Archetypal/exceptional/degraded/adversarial/recovery misfit | Strong 006/007/008/009 evidence; final replay pending | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 011 |
@@ -130,35 +132,37 @@ F5                                       STRONG EVIDENCE / CURRENT REVALIDATION 
 | R2 | Whole design audited problem → concepts → dependence/sync → mapping → architecture | Not yet possible | **OPEN** | 014 |
 | R3 | Implementation-readiness decision based on complete design | Historical 007-K decision superseded | **OPEN** | 014 |
 
-## 010-B semantic action authority
+## 010-D linguistic authority
 
-[Concept Action → Actor Intent & Interaction Mapping](../mapping/concept-action-actor-intent-interaction-mapping.md) establishes complete current surface-neutral action coverage while preserving concept ownership, application-family optionality and synchronization boundaries.
-
-## 010-C semantic inspection authority
-
-[Concept State, Query, History & Explanation → Inspection Mapping](../mapping/concept-state-query-history-explanation-inspection-mapping.md) establishes:
+[Linguistic Mapping, Vocabulary, Typed Status & Disclosure Semantics](../mapping/linguistic-mapping-vocabulary-typed-status-disclosure-semantics.md) establishes:
 
 ```text
-normalized query groups                52
-semantically mapped                    52
-lifecycle/history envelopes            11 / 11
-cross-concept explanation patterns      5
-blocked by mapping misfit               0
-new concept                             0
-new synchronization                     0
+11 / 11 concept names                      ALIGNED
+owner-qualified lifecycle language          ESTABLISHED
+revision/current-use language                TYPED
+contextual assessment language               TYPED
+Execution/Attempt operational language       TYPED
+Generation material-finality language        TYPED
+Evidence finding/claim-strength language     TYPED
+Constraint handling/satisfaction language    TYPED
+disclosure semantics                         TYPED
+history-quality semantics                    TYPED
+high-risk ecosystem aliases                  QUALIFIED
+concept rename                               NONE
+new concept                                  NONE
+new synchronization                          NONE
 ```
 
 Key findings:
 
-- inspection never becomes duplicate canonical state;
-- current status and historical bound truth may differ and remain simultaneously inspectable;
-- semantic and operational states remain orthogonal;
-- candidate/intermediate material remains visibly non-final;
-- Evidence retains claim-strength/uncertainty/limitations context and never becomes approval;
-- Provenance traversal/explanation remains relationship authority, not source-fact authority;
-- disclosure state and historical-knowledge quality remain semantically typed;
-- ordinary inspection remains bounded at enterprise scale;
-- no Dashboard/History/Status/Explanation/Lineage coordinator concept is required.
+- one generic status vocabulary would destroy owner-specific meaning and is rejected;
+- semantic completion remains distinct from operational completion and materialization;
+- Evaluation completion remains distinct from favorable Evidence;
+- Constraint handling remains distinct from actual satisfaction Evidence;
+- superseded, retired, restricted, stale/inapplicable and invalidated remain materially different;
+- disclosure state remains distinct from underlying truth and history quality;
+- history may be directly retained, reconstructed, partial, unavailable or indeterminate;
+- familiar ecosystem terms can be retained as qualified aliases without redefining concepts.
 
 ## Current methodological verdict
 
@@ -172,9 +176,11 @@ PHASE 010                            ACTIVE
 010-A                                COMPLETE
 010-B                                COMPLETE
 010-C                                COMPLETE
+010-D                                COMPLETE
 F1                                   CURRENTLY CLOSED
 F2                                   CURRENTLY CLOSED
-010-D                                NEXT ELIGIBLE
+F3                                   CURRENTLY CLOSED
+010-E                                NEXT ELIGIBLE
 JACKSON CONCEPT DESIGN COMPLETE      NO
 REPRESENTATION/ARCHITECTURE FINAL    NO — PENDING PHASE 013 RECONCILIATION
 IMPLEMENTATION READINESS             NOT READY
@@ -185,7 +191,7 @@ IMPLEMENTATION NEXT                  NOT YET
 ## Current dependency order
 
 ```text
-010-D -> 010-E -> 010-F -> 010-G -> 010-H
+010-E -> 010-F -> 010-G -> 010-H
   ↓
 011  Specificity / Familiarity / Integrity / Synergy / Misfit
   ↓
@@ -204,6 +210,6 @@ If a genuine mapping misfit is found, reopen only the smallest affected authorit
 
 ## Current next boundary
 
-**010-D — Linguistic Mapping, Vocabulary, Typed Status & Disclosure Semantics** is next eligible.
+**010-E — Physical / Interaction Mapping Across SDK, Notebook, CLI, API, Report, UI & Operator Surfaces** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
