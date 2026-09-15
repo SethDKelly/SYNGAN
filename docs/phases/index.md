@@ -52,7 +52,9 @@ Current authority:
 - [010-A](010/010-A-mapping-authority-coverage-model-actor-surface-taxonomy-evidence-baseline.md)
 - [010-B](010/010-B-concept-action-actor-intent-interaction-mapping.md)
 - [010-C](010/010-C-concept-state-query-history-explanation-inspection-mapping.md)
+- [010-D](010/010-D-linguistic-mapping-vocabulary-typed-status-disclosure-semantics.md)
 - [Concept Mapping Authority](../mapping/index.md)
+- [Linguistic Mapping Authority](../mapping/linguistic-mapping-vocabulary-typed-status-disclosure-semantics.md)
 
 Current sequence:
 
@@ -60,8 +62,8 @@ Current sequence:
 010-A  COMPLETE — mapping control / coverage / actor-surface taxonomy / evidence baseline
 010-B  COMPLETE — concept action -> actor intent / interaction mapping
 010-C  COMPLETE — state/query/history/explanation -> inspection mapping
-010-D  NEXT — linguistic / vocabulary / typed status / disclosure semantics
-010-E  physical interaction across candidate surface families
+010-D  COMPLETE — linguistic / vocabulary / typed status / disclosure semantics
+010-E  NEXT — physical interaction across candidate surface families
 010-F  application-family workflow composition / progressive disclosure
 010-G  human-programmatic parity / degraded-recovery-scale mapping misfit
 010-H  mapping consolidation / Phase 011 handoff
@@ -72,21 +74,22 @@ Current methodology state:
 ```text
 F1  CURRENTLY CLOSED
 F2  CURRENTLY CLOSED
-F3  PARTIAL TO STRONG
+F3  CURRENTLY CLOSED
 F4  PARTIAL
 F5  STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
 ```
 
-Current semantic mapping coverage:
+Current mapping coverage:
 
 ```text
 66 / 66 command groups               SEMANTICALLY MAPPED
 52 / 52 query groups                 SEMANTICALLY MAPPED
 11 / 11 lifecycle/history envelopes  SEMANTICALLY MAPPED
 5 explanation patterns               SEMANTICALLY MAPPED
+11 / 11 accepted concept names       LINGUISTICALLY ALIGNED
 ```
 
-No concept, synchronization or mandatory full-suite workflow was added by 010-B/010-C.
+010-D adds no concept, synchronization, concept rename or global Status/Validation/Quality owner. It establishes typed vocabulary for current-use state, semantic lifecycle, contextual assessment, operational lifecycle, material finality, Evidence claim strength, Constraint handling, disclosure and history quality.
 
 ## Later design phases
 
@@ -120,6 +123,6 @@ Placeholder only; not ready, not active and not next.
 
 ## Current next boundary
 
-**010-D — Linguistic Mapping, Vocabulary, Typed Status & Disclosure Semantics** is next eligible.
+**010-E — Physical / Interaction Mapping Across SDK, Notebook, CLI, API, Report, UI & Operator Surfaces** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
