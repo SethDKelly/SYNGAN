@@ -29,11 +29,12 @@ IMPLEMENTATION NEXT        NOT YET
 - [010-D — Linguistic Mapping, Vocabulary, Typed Status & Disclosure Semantics](010-D-linguistic-mapping-vocabulary-typed-status-disclosure-semantics.md)
 - [010-E — Package, Notebook, Automation, Host-Platform & Optional Presentation Interaction Mapping](010-E-package-notebook-automation-host-platform-interaction-mapping.md)
 - [010-F — Application-Family Workflow Composition, Optional-Capability Experience & Progressive Disclosure](010-F-application-family-workflow-composition-optional-capability-experience-progressive-disclosure.md)
+- [010-G — Human/Programmatic Semantic Parity, Degraded/Recovery/Scale & Mapping-Misfit Audit](010-G-human-programmatic-semantic-parity-degraded-recovery-scale-mapping-misfit-audit.md)
 - [Current Mapping Authority](../../mapping/index.md)
-- [010-F Family Composition Authority](../../mapping/application-family-workflow-composition-progressive-disclosure.md)
+- [010-G Parity / Difficult-Condition Authority](../../mapping/human-programmatic-semantic-parity-degraded-recovery-scale-misfit-audit.md)
 - [Jackson Methodology Completion Matrix](../../authority/jackson-methodology-completion-matrix.md)
 
-## Current baseline after 010-F
+## Current baseline after 010-G
 
 ```text
 accepted concepts                       11
@@ -44,6 +45,7 @@ accepted concept names                  11 / 11 LINGUISTICALLY ALIGNED
 command physical responsibility         66 / 66 MAPPED
 query physical responsibility           52 / 52 MAPPED
 required family/capability replays      10 / 10 PASS
+difficult-condition parity probes       20 / 20 PASS
 Phase 010                               ACTIVE
 010-A                                   COMPLETE
 010-B                                   COMPLETE
@@ -51,12 +53,13 @@ Phase 010                               ACTIVE
 010-D                                   COMPLETE
 010-E                                   COMPLETE
 010-F                                   COMPLETE
-010-G                                   NEXT ELIGIBLE
+010-G                                   COMPLETE
+010-H                                   NEXT ELIGIBLE
 F1                                      CURRENTLY CLOSED
 F2                                      CURRENTLY CLOSED
 F3                                      CURRENTLY CLOSED
 F4                                      CURRENTLY CLOSED
-F5                                      STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
+F5                                      CURRENTLY CLOSED
 Jackson concept design                  NOT COMPLETE
 implementation readiness                NOT READY
 implementation start                    NOT STARTED
@@ -73,45 +76,21 @@ Primary interaction is package/SDK, notebook and embedded automation. CLI, repor
 
 ## 010-F composition result
 
-The Phase 009 application family remains coherent in mapped experience form.
+The Phase 009 application family remains coherent in mapped experience form. Concept inclusion defines available capability rather than a mandatory invocation sequence. Existing reusable authority/results may be selected rather than recreated, and optional concepts do not create empty steps.
 
-010-F passes:
+## 010-G parity result
 
-```text
-authority-only use
-L-KERNEL
-direct G-KERNEL
-learned-state-assisted Generation
-E-KERNEL / evaluation-focused use
-evaluation-gated Generation
-Constraint-aware variants
-Execution-bearing vs Execution-light variants
-Provenance-bearing vs Provenance-light variants
-full eleven-concept composition
-```
+Human/programmatic parity is now revalidated against current Phase 008/009/010 authority.
 
-Critical composition rules:
+The governing rule is:
 
-- concept inclusion does not require repeated invocation of every included concept;
-- existing Learned State may be reused without performing new Learning;
-- existing reusable authorities may be selected instead of recreated;
-- direct Generation has no missing-Learning placeholder;
-- Evaluation/Evidence appear only when requested/required by capability;
-- Execution adds an orthogonal operational lane rather than replacing semantic lifecycle;
-- Provenance is inspectable historical context, not a mandatory final gate;
-- the full concept set does not become one eleven-stage wizard.
+> **For the same authorized context and conceptual question/action, surfaces preserve equivalent material owner, state, basis, uncertainty, limitation, historical meaning, actionability and effect even when ergonomics differ.**
 
-## Progressive disclosure
+Difficult-condition replay passes recovery/authority continuity, queued/retry/cancel/unknown operational states, capability-specific degradation, withholding/security, reconstructed history, later Evidence staleness/invalidation, topology/text-bearing data, enterprise scale, approximation pressure, Platform Operator and Extension Author cases.
 
-```text
-D0  task intent / immediate semantic action
-D1  material semantic basis
-D2  optional capability detail
-D3  historical / explanatory depth
-D4  distributed / host operational drill-down
-```
+Parity is authorization-relative. A security policy may intentionally hide existence or collapse outward responses without changing canonical truth.
 
-These are semantic presentation levels only. They do not prescribe UI screens, API tiers or storage layers.
+No generic Recovery, Actionability, Degraded Mode, History Quality, Disclosure State, Topology, Text, Platform Job, Workflow or global Status concept is required.
 
 ## Subgroups
 
@@ -123,8 +102,8 @@ These are semantic presentation levels only. They do not prescribe UI screens, A
 | **010-D** | Linguistic Mapping, Vocabulary, Typed Status & Disclosure Semantics | **complete** |
 | **010-E** | Package, Notebook, Automation, Host-Platform & Optional Presentation Interaction Mapping | **complete** |
 | **010-F** | Application-Family Workflow Composition, Optional-Capability Experience & Progressive Disclosure | **complete** |
-| **010-G** | **Human/Programmatic Semantic Parity, Degraded/Recovery/Scale & Mapping-Misfit Audit** | **next eligible** |
-| **010-H** | Phase 010 Consolidation, F1-F5 Completion Decision & Phase 011 Handoff | planned |
+| **010-G** | Human/Programmatic Semantic Parity, Degraded/Recovery/Scale & Mapping-Misfit Audit | **complete** |
+| **010-H** | **Phase 010 Consolidation, F1-F5 Completion Decision & Phase 011 Handoff** | **next eligible** |
 
 ## Dependency order
 
@@ -141,9 +120,9 @@ These are semantic presentation levels only. They do not prescribe UI screens, A
   ↓
 010-F COMPLETE
   ↓
-010-G NEXT
+010-G COMPLETE
   ↓
-010-H
+010-H NEXT
 ```
 
 ## Core mapping guardrails
@@ -161,6 +140,8 @@ Phase 010 must preserve:
 - Provenance relationship authority versus source-fact authority;
 - exact historical bindings and occurrence-scoped/non-reactive synchronization;
 - truthful disclosure/history-quality distinctions;
+- authority-continuity truth under recovery;
+- capability-specific degraded operation;
 - enterprise-scale bounded interaction;
 - equivalent material semantics across human and programmatic surfaces.
 
@@ -170,6 +151,6 @@ Phase 010 does not choose public class hierarchies, function signatures, endpoin
 
 ## Current next boundary
 
-**010-G — Human/Programmatic Semantic Parity, Degraded/Recovery/Scale & Mapping-Misfit Audit** is next eligible.
+**010-H — Phase 010 Consolidation, F1-F5 Completion Decision & Phase 011 Handoff** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
