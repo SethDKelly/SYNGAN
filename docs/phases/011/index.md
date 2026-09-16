@@ -17,13 +17,15 @@ Phase 011 judges the current composed design rather than adding implementation o
 - [011 Entry & Decomposition](011-entry-decomposition.md)
 - [011-A Phase Record](011-A-validation-authority-evidence-hierarchy-probe-taxonomy-misfit-reopen-rules.md)
 - [011-B Phase Record](011-B-composed-specificity-purpose-alignment-boundary-sharpness-audit.md)
+- [011-C Phase Record](011-C-familiarity-reuse-vocabulary-external-model-comparison-audit.md)
 - [Design Quality Validation Authority](../../authority/design-quality-validation-authority.md) — current Phase 011 audit-method authority
-- [Composed Specificity, Purpose Alignment & Boundary Sharpness Audit](../../authority/composed-specificity-purpose-boundary-audit.md) — **current G1 specificity authority**
+- [Composed Specificity, Purpose Alignment & Boundary Sharpness Audit](../../authority/composed-specificity-purpose-boundary-audit.md) — current G1 specificity authority
+- [Familiarity, Reuse, Vocabulary & External-Model Comparison Audit](../../authority/composed-familiarity-reuse-vocabulary-external-model-audit.md) — **current G2 familiarity authority**
 - [Phase 010 Concept Mapping Consolidation](../../authority/phase-010-concept-mapping-consolidation.md)
 - [Jackson Methodology Completion Matrix](../../authority/jackson-methodology-completion-matrix.md)
 - [Concept Design Methodology](../../authority/design-methodology.md)
 
-## Current state after 011-B
+## Current state after 011-C
 
 ```text
 Phase 008                    COMPLETE
@@ -33,10 +35,11 @@ Phase 011                    ACTIVE
 Phase 011 decomposition      COMPLETE
 011-A                        COMPLETE
 011-B                        COMPLETE
-011-C                        NEXT ELIGIBLE
+011-C                        COMPLETE
+011-D                        NEXT ELIGIBLE
 
 G1 specificity               CURRENTLY CLOSED
-G2 familiarity               PARTIAL TO STRONG
+G2 familiarity               CURRENTLY CLOSED
 G3 integrity                 PARTIAL TO STRONG
 G4 synergy / simplicity      PARTIAL TO STRONG
 G5 scenario / adversarial    PARTIAL TO STRONG
@@ -49,7 +52,7 @@ implementation start         NOT STARTED
 implementation next          NOT YET
 ```
 
-011-B performs the dedicated composed specificity audit. It changes no concept or composition authority because no material specificity defect is found.
+011-B and 011-C close the first two dedicated Phase 011 quality obligations without changing the eleven-concept catalog or Phase 009/010 composition/mapping authority.
 
 ## Phase 010 handoff risks
 
@@ -57,7 +60,7 @@ Phase 011 must disposition all eight non-blocking risks handed forward by 010-H:
 
 ```text
 R010-01  composed specificity drift                  -> NO DEFECT — 011-B
-R010-02  familiarity versus semantic precision       -> 011-C
+R010-02  familiarity versus semantic precision       -> NO DEFECT — compatibility guidance strengthened — 011-C
 R010-03  synchronization integrity under adversity   -> 011-D / 011-G
 R010-04  synergy versus conceptual burden            -> 011-E
 R010-05  progressive-disclosure misfit               -> 011-E / 011-F
@@ -95,8 +98,6 @@ Key rules:
 
 ## 011-B specificity result
 
-All eleven concepts pass `SP-1` through `SP-7` in their applicable composition context.
-
 ```text
 accepted concepts                         11
 concepts passing composed specificity     11 / 11
@@ -111,16 +112,45 @@ R010-01                                   NO DEFECT
 G1 SPECIFICITY                            CURRENTLY CLOSED
 ```
 
-Key conclusions:
+Synthesis Strategy's broad declaration surface and Provenance's high fan-in remain bounded watch points for later integrity/synergy/adversarial validation, not unresolved G1 defects.
 
-- Learning and Learned State remain a legitimate activity/result split despite mutual inclusion;
-- Evaluation and Evidence remain a legitimate examination/finding split despite mutual inclusion;
-- direct `G-KERNEL` demonstrates Generation is not merely a full-suite coordinator;
-- Execution's one-of activity prerequisite sharpens rather than weakens its operational-realization purpose;
-- Provenance's high fan-in does not make it a metadata/history god-concept because substantive owner truth remains outside Provenance;
-- no rejected/subordinate umbrella concept becomes necessary in the full mapped composition.
+## 011-C familiarity result
 
-Synthesis Strategy's broad declaration surface and Provenance's high fan-in remain bounded `MAT-1` watch points for later integrity/synergy/adversarial validation, not unresolved G1 defects.
+011-C compares the canonical vocabulary by conceptual job against current familiar models from SDV, Spark ML, MLflow, Great Expectations and OpenLineage, together with retained PyTorch evidence.
+
+```text
+accepted concept names                         11
+canonical names retained                       11 / 11
+concepts requiring rename                      0
+application-family vocabulary reuse            PASS
+external-model comparison                      PASS
+MAT-2 familiarity findings                     0
+MAT-3 familiarity blockers                     0
+upstream authority reopen                      NONE
+R010-02                                        NO DEFECT — COMPATIBILITY GUIDANCE STRENGTHENED
+B4 FAMILIARITY / REUSE                         CURRENTLY CLOSED
+G2 FAMILIARITY                                 CURRENTLY CLOSED
+```
+
+Key vocabulary conclusions:
+
+```text
+fit / train         -> qualified Learning verbs
+model               -> qualified Learned State analogue only when model-shaped
+sample              -> Generation verb only when clearly synthetic production
+synthesizer         -> external/implementation aggregate, not a concept alias
+expectation         -> inspect purpose: Constraint- or Criterion-like
+validation result   -> qualified Evidence analogue
+run / job           -> external/operational terms; qualify owner
+artifact            -> physical material, not semantic authority
+metric              -> method/observation term, not Criterion/Evidence by itself
+lineage             -> derivational subset of Provenance
+metadata            -> external umbrella, not a Data Meaning synonym
+```
+
+`Data Meaning`, `Learned State` and `Evaluation Criterion` carry bounded first-use `MAT-1` familiarity cost, but more conventional replacements introduce larger semantic distortion. Explanatory glosses are sufficient; no rename is justified.
+
+The canonical [Ecosystem Compatibility Vocabulary](../../terminology/ecosystem-compatibility.md) now records the strengthened one-way alias/analogue rules and refreshed current external documentation references.
 
 ## Materiality
 
@@ -147,27 +177,14 @@ M7  implementation-only concern
 M8  future-scope rediscovery trigger
 ```
 
-## Residual finding dispositions
-
-```text
-NO DEFECT
-RESOLVED IN PHASE 011
-REOPENED — EARLIER AUTHORITY CORRECTED
-ACCEPTED TRADEOFF — JUSTIFIED AND BOUNDED
-DEFERRED TO PHASE 013 — REPRESENTATION / ARCHITECTURE ONLY
-IMPLEMENTATION EVIDENCE ONLY — NO CURRENT CONCEPTUAL CONSEQUENCE
-FUTURE REDISCOVERY TRIGGER
-INSUFFICIENT EVIDENCE — CONCEPTUAL BLOCKER
-```
-
 ## Subgroups
 
 | Group | Scope | Principal methodology role | Status |
 |---|---|---|---|
 | **011-A** | Validation Authority, Evidence Hierarchy, Probe Taxonomy & Misfit/Reopen Rules | G1-G7 foundation | **complete** |
 | **011-B** | Composed Specificity, Purpose Alignment & Boundary Sharpness Audit | G1 | **complete** |
-| **011-C** | Familiarity, Reuse, Vocabulary & External-Model Comparison Audit | G2 / B4 revalidation | **next eligible** |
-| **011-D** | Integrity Under Synchronization, Correction, Invalidation & Historical Composition | G3 | planned |
+| **011-C** | Familiarity, Reuse, Vocabulary & External-Model Comparison Audit | G2 / B4 revalidation | **complete** |
+| **011-D** | Integrity Under Synchronization, Correction, Invalidation & Historical Composition | G3 | **next eligible** |
 | **011-E** | Synergy, Simplicity, Generic Fitness & Conceptual-Burden Audit | G4 | planned |
 | **011-F** | Archetypal, Exceptional & Progressive-Disclosure Misfit Replay | G5 — ordinary/exceptional | planned |
 | **011-G** | Adversarial, Degraded, Recovery, Scale & Provider-Semantic-Leakage Validation | G3/G5 stress | planned |
@@ -182,9 +199,9 @@ INSUFFICIENT EVIDENCE — CONCEPTUAL BLOCKER
   ↓
 011-B COMPLETE
   ↓
-011-C NEXT
+011-C COMPLETE
   ↓
-011-D
+011-D NEXT
   ↓
 011-E
   ↓
@@ -206,6 +223,7 @@ A genuine later misfit reopens only the smallest affected authority. After any m
 Phase 011 must preserve unless a genuine misfit disproves them:
 
 - eleven current accepted concepts and singular ownership boundaries;
+- canonical names plus owner-qualified compatibility terminology;
 - Phase 009 inclusion-dependence/application-family semantics;
 - thirteen active synchronizations and occurrence-scoped/non-reactive coordination;
 - package-first Python/Spark product form and Spark-host platform agnosticism;
@@ -224,7 +242,7 @@ Phase 011 must preserve unless a genuine misfit disproves them:
 
 Architecture, code, tests, current APIs and provider models may expose a counterexample, feasibility constraint or familiarity pressure. They do not become design authority merely by existing.
 
-011-B adds no executable tests or implementation restrictions.
+011-C does not choose public method/class names, adapter APIs, integration schemas, platform registries or UI copy.
 
 ## Positive exit boundary
 
@@ -242,4 +260,4 @@ IMPLEMENTATION NEXT          NOT YET
 
 ## Current next boundary
 
-**011-C — Familiarity, Reuse, Vocabulary & External-Model Comparison Audit** is next eligible.
+**011-D — Integrity Under Synchronization, Correction, Invalidation & Historical Composition** is next eligible.
