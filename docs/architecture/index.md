@@ -20,13 +20,10 @@ Phase 008                    COMPLETE
 Phase 009                    COMPLETE
 D1-D4                        CURRENTLY CLOSED
 E1-E5                        CURRENTLY CLOSED
-Phase 010                    ACTIVE
-010-A                        COMPLETE
-010-B                        COMPLETE
-010-C                        COMPLETE
-010-D                        NEXT ELIGIBLE
-F1                           CURRENTLY CLOSED
-F2                           CURRENTLY CLOSED
+Phase 010                    COMPLETE
+010-A..010-H                 COMPLETE
+F1-F5                        CURRENTLY CLOSED
+Phase 011                    NEXT — ENTRY/DECOMPOSITION
 architecture corpus          RETAINED AS DOWNSTREAM DESIGN EVIDENCE
 architecture reconciliation  PLANNED FOR PHASE 013
 implementation readiness     NOT READY
@@ -36,17 +33,21 @@ implementation next          NOT YET
 
 ## Current upstream mapping authority
 
+- [Phase 010 Concept Mapping Consolidation](../authority/phase-010-concept-mapping-consolidation.md)
 - [Concept Mapping Authority](../mapping/index.md)
-- [010-A Mapping Control Authority](../mapping/mapping-authority-coverage-actor-surface-evidence-baseline.md)
-- [010-B Concept Action Mapping](../mapping/concept-action-actor-intent-interaction-mapping.md)
-- [010-C Inspection Mapping](../mapping/concept-state-query-history-explanation-inspection-mapping.md)
 
-Current semantic mapping coverage:
+Final Phase 010 mapping coverage:
 
 ```text
-66 / 66 command groups               SEMANTICALLY MAPPED
-52 / 52 query groups                 SEMANTICALLY MAPPED
-11 / 11 lifecycle/history envelopes  SEMANTICALLY MAPPED
+66 / 66 command groups                    SEMANTICALLY MAPPED
+52 / 52 query groups                      SEMANTICALLY MAPPED
+11 / 11 lifecycle/history envelopes       SEMANTICALLY MAPPED
+5 / 5 explanation patterns                SEMANTICALLY MAPPED
+11 / 11 concept names                     LINGUISTICALLY ALIGNED
+66 / 66 commands                          PHYSICAL RESPONSIBILITY MAPPED
+52 / 52 queries                           PHYSICAL RESPONSIBILITY MAPPED
+10 / 10 family/capability replays         PASS
+20 / 20 difficult-condition parity probes PASS
 ```
 
 ## Architecture interpretation guardrails
@@ -63,15 +64,29 @@ history-quality category -> one storage-state enum
 one concept              -> one service/package
 one actor role           -> one UI persona/ACL role
 one surface family       -> one mandatory product component
+one family member        -> one product SKU/deployment edition
 ```
 
 System-established actions may have no direct physical control. One conceptual action may require several physical interactions. One inspection view may compose many owner-attributed facts while remaining derived.
 
-## 010-C inspection implications
+## Completed mapping implications
 
-Architecture must eventually support inspection of current versus exact historical state, semantic versus operational state, finality, Evidence interpretation context, Provenance relationships, disclosure/history quality and bounded enterprise-scale drill-down.
+Architecture must eventually preserve:
 
-But 010-C does not select:
+- package-first product form and Spark-host platform agnosticism;
+- current versus exact historical state;
+- semantic versus operational state;
+- candidate/partial versus authoritative result;
+- Evidence interpretation context and current applicability;
+- Provenance relationships without source-fact ownership transfer;
+- authorization-relative disclosure and history quality;
+- recovery authority continuity;
+- capability-specific degraded operation;
+- optional application-family capabilities without empty mandatory stages;
+- bounded enterprise-scale inspection;
+- equivalent material semantics across human/programmatic surfaces.
+
+Phase 010 does not select:
 
 - database/materialized views;
 - resource/query schemas;
@@ -82,13 +97,17 @@ But 010-C does not select:
 - log/telemetry products;
 - dashboards/pages/widgets;
 - report formats;
-- pagination protocols.
+- pagination protocols;
+- public Python API shapes;
+- platform adapter implementations.
 
 Those remain downstream representation choices for Phase 013 reconciliation.
 
-## 010-D remains upstream design
+## Phase 011 boundary
 
-010-D will align actor/programmatic language over the current action/inspection semantics. Architecture may supply vocabulary collision evidence but must not make existing API/schema/platform terminology canonical merely because it already exists.
+Phase 011 is still upstream concept-design quality/misfit validation. Existing architecture may be used only as counterexample/feasibility evidence and must not become the template for concept boundaries.
+
+Provider-specific architecture is especially useful as an adversarial check for the 010-H residual risk of host/provider semantic leakage, but Phase 011 must not select or freeze adapter architecture.
 
 ## Phase 007 architecture status
 
@@ -106,6 +125,6 @@ IMPLEMENTATION NEXT        NOT YET
 
 ## Current next boundary
 
-**010-D — Linguistic Mapping, Vocabulary, Typed Status & Disclosure Semantics** is next eligible.
+**Phase 011 — Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Design Validation — entry/decomposition** is next eligible.
 
 Architecture reconciliation remains deferred to Phase 013.
