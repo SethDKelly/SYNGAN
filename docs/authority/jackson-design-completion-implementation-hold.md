@@ -35,7 +35,7 @@ synchronization / composition              ← Phase 009 COMPLETE
         ↓
 concept mapping / actor-visible experience ← Phase 010 COMPLETE
         ↓
-whole concept-design quality / misfit validation ← Phase 011 NEXT
+whole concept-design quality / misfit validation ← Phase 011 ACTIVE
         ↓
 Jackson concept-design completion gate     ← Phase 012
         ↓
@@ -57,18 +57,48 @@ Phase 010                  COMPLETE
 010-A..010-H               COMPLETE
 F1-F5                      CURRENTLY CLOSED
 concept mapping            COMPLETE ENOUGH FOR PHASE 011
-Phase 011                  NEXT — ENTRY/DECOMPOSITION
+Phase 011                  ACTIVE
+Phase 011 decomposition    COMPLETE
+011-A                      NEXT ELIGIBLE
 Jackson concept design     NOT COMPLETE
 ```
 
-## Current mapping authority
+## Phase 011 quality/misfit boundary
 
-Phase 010 is consolidated by:
+Phase 011 owns methodology area G:
+
+```text
+G1  specificity
+G2  familiarity
+G3  integrity
+G4  synergy / simplicity / generic fitness
+G5  archetypal / exceptional / degraded / adversarial / recovery misfit
+G6  future-scope / extensibility misfit
+G7  explicit residual conceptual misfit register
+```
+
+Current G states remain:
+
+```text
+G1  PARTIAL TO STRONG
+G2  PARTIAL TO STRONG
+G3  PARTIAL TO STRONG
+G4  PARTIAL TO STRONG
+G5  PARTIAL TO STRONG
+G6  STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
+G7  PARTIAL
+```
+
+Phase 011 is decomposed by `docs/phases/011/011-entry-decomposition.md` into 011-A through 011-J. 011-A establishes validation authority, evidence hierarchy, probe taxonomy and misfit/reopen rules before substantive G1-G7 judgments begin.
+
+## Phase 010 authority held forward
+
+Phase 010 remains consolidated by:
 
 - [Phase 010 Concept Mapping Consolidation](phase-010-concept-mapping-consolidation.md)
 - [Concept Mapping Index](../mapping/index.md)
 
-Final mapping coverage is:
+Final mapping coverage remains:
 
 ```text
 66 / 66 command groups                    SEMANTICALLY MAPPED
@@ -82,20 +112,11 @@ Final mapping coverage is:
 20 / 20 difficult-condition parity probes PASS
 ```
 
-These mappings do **not** authorize implementation resources one-for-one.
+Phase 011 may reopen an earlier result only if a concrete quality/misfit probe establishes a genuine defect. A desire to fit existing architecture, code, tests or provider models is not sufficient evidence.
 
-```text
-mapped command      != API method / endpoint / button / event
-mapped query        != database view / endpoint / graph query
-history envelope    != event-store schema
-explanation pattern != persistent aggregate / dashboard
-surface role        != required deployment component
-family variant      != product SKU / package edition
-```
+## Product / mapping invariants held forward
 
-## Mapping invariants held forward
-
-Downstream work must preserve:
+Unless Phase 011 disproves them through a genuine misfit, preserve:
 
 - package-first product form and Spark-host platform agnosticism;
 - application-family optionality;
@@ -115,32 +136,18 @@ Downstream work must preserve:
 - bounded enterprise-scale inspection;
 - human/programmatic semantic parity for the same authorized context.
 
-## Phase 011 boundary
+## Phase 010 residual risks carried into Phase 011
 
-Phase 011 owns methodology area G:
+Phase 011 must explicitly disposition:
 
-```text
-G1  specificity
-G2  familiarity
-G3  integrity
-G4  synergy / simplicity / generic fitness
-G5  archetypal / exceptional / degraded / adversarial / recovery misfit
-G6  future-scope / extensibility misfit
-G7  explicit residual conceptual misfit register
-```
-
-Phase 011 must be deliberately decomposed before execution.
-
-010-H hands Phase 011 non-blocking risks around:
-
-- composed specificity drift;
-- familiarity versus semantic precision;
-- synchronization integrity under broader adversarial composition;
-- synergy versus conceptual burden;
-- progressive-disclosure misfit;
-- provider/host semantic leakage;
-- future-capability/extensibility pressure;
-- scale/approximation pressure.
+1. composed specificity drift;
+2. familiarity versus semantic precision;
+3. synchronization integrity under broader adversarial composition;
+4. synergy versus conceptual burden;
+5. progressive-disclosure misfit;
+6. provider/host semantic leakage;
+7. future-capability/extensibility pressure;
+8. scale/approximation pressure.
 
 These are design-audit obligations, not implementation tasks.
 
@@ -148,15 +155,15 @@ These are design-audit obligations, not implementation tasks.
 
 Phase 004/006/007 architecture and the retained executable scaffold remain downstream evidence.
 
-They may expose a genuine counterexample but cannot define current concept, dependence, family, synchronization, mapping, vocabulary or completion authority from package imports, persistence references, service/dataflow direction, event topology, runtime orchestration, deployment topology, existing APIs, databases or dashboards.
+They may expose a genuine counterexample but cannot define current concept, dependence, family, synchronization, mapping, quality or completion authority from package imports, persistence references, service/dataflow direction, event topology, runtime orchestration, deployment topology, existing APIs, databases or dashboards.
 
-Do not restructure implementation to mirror concepts, synchronization IDs, application-family kernels, mapping records, query groups or explanation patterns while the full design remains incomplete.
+Phase 011 may classify an issue as representation/architecture-only for Phase 013 or implementation-only, but must not implement the fix during current concept-design validation.
 
 ## Remaining design roadmap
 
 ```text
 010       concept mapping / interaction / language / experience — COMPLETE
-011       specificity / familiarity / integrity / synergy / misfit — NEXT
+011       specificity / familiarity / integrity / synergy / misfit — ACTIVE
 012       Jackson concept-design completion decision
 013       representation / architecture reconciliation
 014       whole-design completion / implementation-readiness decision
@@ -176,6 +183,6 @@ Until Phase 014 passes, do not add production behavior, executable architecture 
 
 ## Current next boundary
 
-**Phase 011 — Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Design Validation — entry/decomposition** is next eligible.
+**011-A — Validation Authority, Evidence Hierarchy, Probe Taxonomy & Misfit/Reopen Rules** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
