@@ -18,7 +18,8 @@ Concept specifications own purpose, state, actions, lifecycle and invariants. Sy
 - [Synchronization Inventory Revalidation Across the Application Family](application-family-revalidation.md) — 009-E inventory/scope authority, superseded where 009-F/G refine scope/classification.
 - [Core Synchronizations](core-synchronizations.md) — historical source evidence; current membership/scope follows 009-E/F/G/H.
 - [Phase 010 Concept Mapping Consolidation](../authority/phase-010-concept-mapping-consolidation.md) — downstream validation that mappings preserve synchronization ownership and conditionality.
-- [011-B Composed Specificity Audit](../authority/composed-specificity-purpose-boundary-audit.md) — downstream confirmation that composition does not require an umbrella owner or synchronization-driven concept merger.
+- [011-B Composed Specificity Audit](../authority/composed-specificity-purpose-boundary-audit.md) — confirms composition does not require an umbrella owner or synchronization-driven merger.
+- [011-C Familiarity / External-Model Audit](../authority/composed-familiarity-reuse-vocabulary-external-model-audit.md) — confirms external ecosystem nouns do not redefine synchronization ownership.
 
 ## Current synchronization inventory
 
@@ -150,28 +151,27 @@ F1-F5                     CURRENTLY CLOSED
 
 Phase 010 maps synchronization relevance through owning concept actions and inspection rather than giving synchronizations controls or state. It introduces no new synchronization, does not resurrect SYNC-08 or SYNC-15, and finds no hidden coordinator requirement.
 
-## 011-B specificity revalidation
-
-011-B specifically tests whether synchronization/composition pressure reveals artificial concept splits or demands an aggregate coordinator.
-
-Result:
+## 011-B / 011-C quality revalidation
 
 ```text
-Learning / Learned State split        PASS
-Evaluation / Evidence split           PASS
-Execution separation                  PASS
-Provenance high-fan-in boundary       PASS with MAT-1 watch point
+G1 specificity                        CURRENTLY CLOSED
+G2 familiarity                        CURRENTLY CLOSED
+specificity-driven synchronization    NONE
+familiarity-driven synchronization    NONE
 hidden umbrella concept required      NO
 new synchronization required          NO
 existing synchronization removed      NO
 SYNC-08 resurrected                   NO
 SYNC-15 resurrected                   NO
-G1 specificity                        CURRENTLY CLOSED
 ```
 
-Mutual-inclusion/result-establishment synchronization does not by itself imply merger. The activity/result and examination/finding pairs retain distinct purpose, lifecycle and authority.
+External vocabulary does not alter synchronization semantics:
 
-Provenance's high fan-in remains a planned integrity watch point for 011-D/G; no specificity-driven synchronization change is justified.
+- a `fit` operation may correspond to Learning but does not own `SYNC-05` result establishment;
+- a Spark/MLflow `Model` may represent model-shaped Learned State but cannot replace Learned State ownership;
+- a `Run`/`Job` may correlate to Execution/Attempt/platform realization without owning semantic activity completion;
+- a validation result may represent Evidence in a narrow integration without owning Generation completion;
+- `lineage` may describe a subset of Provenance relations without making Provenance the owner of referenced facts.
 
 ## Composition guardrails
 
@@ -189,12 +189,10 @@ Provenance's high fan-in remains a planned integrity watch point for 011-D/G; no
 
 ## Active Phase 011 boundary
 
-011-C may test familiar external vocabulary for these relationships, but terms such as `pipeline`, `workflow`, `run`, `model`, `artifact`, or `lineage` do not alter synchronization ownership merely because another ecosystem presents them that way.
-
-011-D/G remain the dedicated integrity/adversarial revalidation of this synchronization authority.
+011-D is the next dedicated integrity audit of synchronization, correction, invalidation and historical composition. 011-G later performs the hostile/degraded/recovery stress replay. A genuine defect may reopen the smallest affected synchronization authority; external naming or provider mechanics alone may not.
 
 ## Current next boundary
 
-**011-C — Familiarity, Reuse, Vocabulary & External-Model Comparison Audit** is next eligible.
+**011-D — Integrity Under Synchronization, Correction, Invalidation & Historical Composition** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
