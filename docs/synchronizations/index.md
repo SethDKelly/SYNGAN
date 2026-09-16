@@ -18,6 +18,7 @@ Concept specifications own purpose, state, actions, lifecycle and invariants. Sy
 - [Synchronization Inventory Revalidation Across the Application Family](application-family-revalidation.md) — 009-E inventory/scope authority, superseded where 009-F/G refine scope/classification.
 - [Core Synchronizations](core-synchronizations.md) — historical source evidence; current membership/scope follows 009-E/F/G/H.
 - [Phase 010 Concept Mapping Consolidation](../authority/phase-010-concept-mapping-consolidation.md) — downstream validation that mappings preserve synchronization ownership and conditionality.
+- [011-B Composed Specificity Audit](../authority/composed-specificity-purpose-boundary-audit.md) — downstream confirmation that composition does not require an umbrella owner or synchronization-driven concept merger.
 
 ## Current synchronization inventory
 
@@ -147,21 +148,30 @@ Phase 010                 COMPLETE
 F1-F5                     CURRENTLY CLOSED
 ```
 
-Phase 010 maps synchronization relevance through owning concept actions and inspection rather than giving synchronizations controls or state.
+Phase 010 maps synchronization relevance through owning concept actions and inspection rather than giving synchronizations controls or state. It introduces no new synchronization, does not resurrect SYNC-08 or SYNC-15, and finds no hidden coordinator requirement.
 
-It preserves:
+## 011-B specificity revalidation
 
-- semantic versus operational completion;
-- candidate versus completed Generation output;
-- exact authority/result bindings;
-- Evidence finding versus approval/release authority;
-- Provenance relation versus source ownership;
-- conditional synchronization activation;
-- current status versus historical binding truth;
-- occurrence-scoped/non-reactive coordination;
-- human/programmatic semantic parity.
+011-B specifically tests whether synchronization/composition pressure reveals artificial concept splits or demands an aggregate coordinator.
 
-Phase 010 introduces no new synchronization, does not resurrect SYNC-08 or SYNC-15, and finds no hidden coordinator requirement.
+Result:
+
+```text
+Learning / Learned State split        PASS
+Evaluation / Evidence split           PASS
+Execution separation                  PASS
+Provenance high-fan-in boundary       PASS with MAT-1 watch point
+hidden umbrella concept required      NO
+new synchronization required          NO
+existing synchronization removed      NO
+SYNC-08 resurrected                   NO
+SYNC-15 resurrected                   NO
+G1 specificity                        CURRENTLY CLOSED
+```
+
+Mutual-inclusion/result-establishment synchronization does not by itself imply merger. The activity/result and examination/finding pairs retain distinct purpose, lifecycle and authority.
+
+Provenance's high fan-in remains a planned integrity watch point for 011-D/G; no specificity-driven synchronization change is justified.
 
 ## Composition guardrails
 
@@ -177,12 +187,14 @@ Phase 010 introduces no new synchronization, does not resurrect SYNC-08 or SYNC-
 - synchronization is occurrence-scoped, not permanently reactive;
 - conceptual synchronization does not prescribe events, transactions, services, packages, queues, schemas or runtime call direction.
 
-## Phase 011 handoff
+## Active Phase 011 boundary
 
-Phase 011 must adversarially re-test synchronization integrity and synergy across the final mapped concept set. A genuine integrity misfit may reopen the smallest affected synchronization or concept authority, but provider/runtime mechanics must not be mistaken for conceptual synchronization needs.
+011-C may test familiar external vocabulary for these relationships, but terms such as `pipeline`, `workflow`, `run`, `model`, `artifact`, or `lineage` do not alter synchronization ownership merely because another ecosystem presents them that way.
+
+011-D/G remain the dedicated integrity/adversarial revalidation of this synchronization authority.
 
 ## Current next boundary
 
-**Phase 011 — Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Design Validation — entry/decomposition** is next eligible.
+**011-C — Familiarity, Reuse, Vocabulary & External-Model Comparison Audit** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
