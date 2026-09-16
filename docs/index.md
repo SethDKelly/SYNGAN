@@ -41,6 +41,7 @@ Existing architecture, source or tests never become upstream concept-design auth
 - [010-D Linguistic Mapping](mapping/linguistic-mapping-vocabulary-typed-status-disclosure-semantics.md)
 - [010-E Package/Host Physical Interaction Mapping](mapping/package-notebook-automation-host-platform-interaction-mapping.md)
 - [010-F Application-Family Workflow Composition](mapping/application-family-workflow-composition-progressive-disclosure.md)
+- [010-G Human/Programmatic Semantic Parity & Difficult-Condition Audit](mapping/human-programmatic-semantic-parity-degraded-recovery-scale-misfit-audit.md)
 - [Phase 010](phases/010/index.md)
 
 ## Current state
@@ -57,12 +58,13 @@ Phase 010                            ACTIVE
 010-D                                COMPLETE
 010-E                                COMPLETE
 010-F                                COMPLETE
-010-G                                NEXT ELIGIBLE
+010-G                                COMPLETE
+010-H                                NEXT ELIGIBLE
 F1                                   CURRENTLY CLOSED
 F2                                   CURRENTLY CLOSED
 F3                                   CURRENTLY CLOSED
 F4                                   CURRENTLY CLOSED
-F5                                   STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
+F5                                   CURRENTLY CLOSED
 Jackson design completion            IN PROGRESS
 implementation readiness             NOT READY
 implementation start                 NOT STARTED
@@ -75,7 +77,7 @@ SYNGAN is a deployable Python/Spark framework package.
 
 > **Platform agnosticism means agnostic across compliant Spark-capable hosting and infrastructure platforms.**
 
-Spark/PySpark remains the current required processing environment. Databricks, AWS or another host may provide notebooks, jobs, identity, scheduling, storage/catalog, logging and infrastructure UI without becoming semantic authority.
+Spark/PySpark remains the current required processing environment. A host may provide notebooks, jobs, identity, scheduling, storage/catalog, logging and infrastructure UI without becoming semantic authority.
 
 Primary interaction is package/notebook/automation. CLI, reports, rich graphical presentation, network service/API deployment and dedicated operator/admin applications are optional adapters or host integrations.
 
@@ -89,21 +91,14 @@ Primary interaction is package/notebook/automation. CLI, reports, rich graphical
 66 / 66 command groups                    PHYSICAL RESPONSIBILITY MAPPED
 52 / 52 query groups                      PHYSICAL RESPONSIBILITY MAPPED
 10 / 10 required family/capability replays PASS
+20 / 20 difficult-condition parity probes PASS
 ```
 
-010-F confirms that concept inclusion defines available capability rather than forcing every concept to be executed in every invocation. Existing reusable authority/results may be selected rather than recreated, and the full concept set is not one mandatory wizard.
+010-F confirms that concept inclusion defines available capability rather than forcing every concept to be executed in every invocation.
 
-Progressive disclosure is semantic:
+010-G confirms that human/programmatic parity requires equivalent material semantics rather than identical ergonomics. The mapping survives recovery/authority uncertainty, capability-specific degradation, security withholding, partial/reconstructed history, later Evidence staleness, topology/text cases, scale, approximation pressure, operator interaction and extension-author interaction without adding a generic coordinator/status concept.
 
-```text
-D0  immediate task / semantic action
-D1  material semantic basis
-D2  optional capability detail
-D3  history / explanation
-D4  distributed / host operational drill-down
-```
-
-These levels do not prescribe UI architecture.
+Parity is authorization-relative. Outward disclosure may differ by authorization context without changing canonical truth.
 
 ## Current Phase 010 sequence
 
@@ -114,8 +109,8 @@ These levels do not prescribe UI architecture.
 010-D  COMPLETE — linguistic / vocabulary / typed status / disclosure semantics
 010-E  COMPLETE — package/notebook/automation/host physical interaction mapping
 010-F  COMPLETE — application-family workflow composition / progressive disclosure
-010-G  NEXT — human-programmatic parity / degraded-recovery-scale mapping misfit audit
-010-H  mapping consolidation / Phase 011 handoff
+010-G  COMPLETE — human-programmatic parity / degraded-recovery-scale mapping misfit audit
+010-H  NEXT — mapping consolidation / F1-F5 decision / Phase 011 handoff
 ```
 
 ## Implementation status rule
@@ -134,4 +129,4 @@ Only a positive Phase 014 may make implementation **READY / NOT STARTED / NEXT**
 
 ## Current next boundary
 
-**010-G — Human/Programmatic Semantic Parity, Degraded/Recovery/Scale & Mapping-Misfit Audit** is next eligible.
+**010-H — Phase 010 Consolidation, F1-F5 Completion Decision & Phase 011 Handoff** is next eligible.
