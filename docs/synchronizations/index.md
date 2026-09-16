@@ -12,12 +12,12 @@ Concept specifications own purpose, state, actions, lifecycle and invariants. Sy
 
 ## Current authority
 
-- [Phase 009 Consolidation](../authority/phase-009-dependence-composition-consolidation.md) — current cross-layer handoff authority.
+- [Phase 009 Consolidation](../authority/phase-009-dependence-composition-consolidation.md) — current synchronization/composition consolidation authority.
 - [Composition Economy, Coupling, Synergy & Integrity Closure](composition-economy-synergy-integrity.md) — 009-G whole-composition authority.
-- [Synchronization Trigger, Preconditions/Postconditions, State Ownership & Hidden-Coordinator Audit](trigger-ownership-normalization.md) — 009-F detailed trigger/ownership authority.
+- [Synchronization Trigger, Preconditions/Postconditions, State Ownership & Hidden-Coordinator Audit](trigger-ownership-normalization.md) — 009-F trigger/ownership authority.
 - [Synchronization Inventory Revalidation Across the Application Family](application-family-revalidation.md) — 009-E inventory/scope authority, superseded where 009-F/G refine scope/classification.
 - [Core Synchronizations](core-synchronizations.md) — historical source evidence; current membership/scope follows 009-E/F/G/H.
-- [Concept Mapping Authority](../mapping/index.md) — current downstream consumer of synchronization semantics.
+- [Phase 010 Concept Mapping Consolidation](../authority/phase-010-concept-mapping-consolidation.md) — downstream validation that mappings preserve synchronization ownership and conditionality.
 
 ## Current synchronization inventory
 
@@ -106,8 +106,6 @@ E-KERNEL         SYNC-09, SYNC-10, SYNC-12
 
 Learned-state-assisted Generation adds `SYNC-06`. Evidence-gated Generation adds `SYNC-13`. Constraint, Execution and Provenance add only occurrence-specific coordination.
 
-No active rule is added, removed, merged, or further narrowed at Phase 009 exit.
-
 ## Occurrence-scoped / non-propagation rule
 
 A synchronization coordinates one conceptual occurrence/relation. It does not create a permanent reactive subscription.
@@ -139,24 +137,19 @@ Remains retired as Generation-local candidate/completion/output behavior. No sta
 
 Remains reclassified under the cross-cutting Reproducibility Contract. No standalone Reproducibility concept or synchronization-owned state exists.
 
-## Current methodology state
+## Phase 010 validation result
 
 ```text
 Phase 009                 COMPLETE
 D1-D4                     CURRENTLY CLOSED
 E1-E5                     CURRENTLY CLOSED
-Phase 010                 ACTIVE
-Phase 010 decomposition   COMPLETE
-010-A                     NEXT ELIGIBLE
+Phase 010                 COMPLETE
+F1-F5                     CURRENTLY CLOSED
 ```
 
-## Active Phase 010 mapping implications
+Phase 010 maps synchronization relevance through owning concept actions and inspection rather than giving synchronizations controls or state.
 
-Concept mapping must expose the distinctions synchronization preserves without turning them into implementation machinery.
-
-010-A must make synchronization applicability/ownership available to the coverage model so later mappings can distinguish required-relational from capability/occurrence-conditional coordination.
-
-Later mapping must preserve:
+It preserves:
 
 - semantic versus operational completion;
 - candidate versus completed Generation output;
@@ -168,7 +161,7 @@ Later mapping must preserve:
 - occurrence-scoped/non-reactive coordination;
 - human/programmatic semantic parity.
 
-No surface should expose a generic synchronization-owned `status`, `validation`, `quality`, `workflow` or `approval` state.
+Phase 010 introduces no new synchronization, does not resurrect SYNC-08 or SYNC-15, and finds no hidden coordinator requirement.
 
 ## Composition guardrails
 
@@ -184,8 +177,12 @@ No surface should expose a generic synchronization-owned `status`, `validation`,
 - synchronization is occurrence-scoped, not permanently reactive;
 - conceptual synchronization does not prescribe events, transactions, services, packages, queues, schemas or runtime call direction.
 
+## Phase 011 handoff
+
+Phase 011 must adversarially re-test synchronization integrity and synergy across the final mapped concept set. A genuine integrity misfit may reopen the smallest affected synchronization or concept authority, but provider/runtime mechanics must not be mistaken for conceptual synchronization needs.
+
 ## Current next boundary
 
-**010-A — Mapping Authority, Coverage Model, Actor/Surface Taxonomy & Evidence Baseline** is next eligible.
+**Phase 011 — Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Design Validation — entry/decomposition** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
