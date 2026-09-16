@@ -20,6 +20,7 @@ Current Phase 011 authority includes:
 - [`Composed Specificity Audit`](docs/authority/composed-specificity-purpose-boundary-audit.md)
 - [`Composed Familiarity Audit`](docs/authority/composed-familiarity-reuse-vocabulary-external-model-audit.md)
 - [`Synchronization / Historical Integrity Audit`](docs/authority/composed-integrity-synchronization-history-audit.md)
+- [`Synergy, Simplicity, Generic Fitness & Conceptual-Burden Audit`](docs/authority/composed-synergy-simplicity-generic-fitness-burden-audit.md)
 - [`Phase 011`](docs/phases/011/index.md)
 - [`Jackson Methodology Completion Matrix`](docs/authority/jackson-methodology-completion-matrix.md)
 
@@ -37,11 +38,12 @@ Phase 011                            ACTIVE
 011-B                                COMPLETE
 011-C                                COMPLETE
 011-D                                COMPLETE
-011-E                                NEXT ELIGIBLE
+011-E                                COMPLETE
+011-F                                NEXT ELIGIBLE
 G1 specificity                       CURRENTLY CLOSED
 G2 familiarity                       CURRENTLY CLOSED
 G3 integrity                         STRONG EVIDENCE / 011-G STRESS REVALIDATION REQUIRED
-G4 synergy / simplicity              PARTIAL TO STRONG
+G4 synergy / simplicity              CURRENTLY CLOSED
 G5 scenario / adversarial            PARTIAL TO STRONG
 G6 future-scope                      STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
 G7 residual misfit register          PARTIAL
@@ -51,7 +53,7 @@ implementation start                 NOT STARTED
 implementation next                  NOT YET
 ```
 
-## Phase 011 results through 011-D
+## Phase 011 results through 011-E
 
 ### 011-B — specificity
 
@@ -74,8 +76,6 @@ B4 / G2 CURRENTLY CLOSED
 
 ```text
 13 / 13 active synchronizations preserve singular ownership
-producer/result integrity                       PASS
-occurrence-scoped/non-reactive binding          PASS
 current-versus-historical truth                 PASS
 Evidence/Generation authority separation        PASS
 semantic/Execution separation                   PASS
@@ -83,12 +83,29 @@ Provenance low-authority-fan-out baseline       PASS
 recovery/reconstruction ownership baseline      PASS
 hidden coordinator required                     NO
 MAT-2 / MAT-3 findings                          0 / 0
-upstream reopen                                 NONE
 ```
 
-011-D confirms that later restriction, retirement, supersession, staleness or invalidation changes **current/future reliance**, not exact historical bindings. Recovery/reconstruction likewise cannot elevate Provenance, surviving bytes, platform state or restored projections into substitute semantic authority.
+G3 remains subject to 011-G stress revalidation.
 
-`R010-03` is **NO DEFECT for the 011-D baseline**, while 011-G still owns adversarial/degraded/recovery/provider stress revalidation. G3 is therefore not yet finally closed.
+### 011-E — synergy / simplicity / generic fitness
+
+```text
+concept add/remove/merge/split justified        0
+synchronization add/remove/merge justified      0
+reduced-family burden replay                    PASS
+positive composed synergies                     CONFIRMED
+repeated-pattern missing-purpose probe          PASS
+cross-cutting qualifier discipline              PASS
+generic-fitness / domain anchoring              PASS
+progressive-disclosure structural simplicity    PASS
+hidden universal coordinator                    NONE
+MAT-2 / MAT-3 findings                          0 / 0
+R010-04                                         NO DEFECT
+R010-05 simplicity portion                      NO DEFECT — 011-F REPLAY PENDING
+G4                                              CURRENTLY CLOSED
+```
+
+The catalog is not optimized by raw concept count. Complexity is bounded through valid application-family subsets, occurrence-local synchronization and progressive disclosure. Shared patterns do not justify generic `Activity`, `Artifact`, `Result`, `Validation`, `Status` or Workflow concepts merely for symmetry.
 
 ## Phase 011 sequence
 
@@ -97,8 +114,8 @@ upstream reopen                                 NONE
 011-B  COMPLETE — specificity
 011-C  COMPLETE — familiarity / reuse / external-model comparison
 011-D  COMPLETE — synchronization / correction / invalidation / historical integrity
-011-E  NEXT — synergy / simplicity / generic fitness / conceptual burden
-011-F  archetypal / exceptional / progressive-disclosure replay
+011-E  COMPLETE — synergy / simplicity / generic fitness / conceptual burden
+011-F  NEXT — archetypal / exceptional / progressive-disclosure replay
 011-G  adversarial / degraded / recovery / scale / provider leakage
 011-H  future-scope / extensibility
 011-I  residual conceptual misfit register
@@ -120,6 +137,6 @@ Only a positive Phase 014 may change implementation to **READY / NOT STARTED / N
 
 ## Current next boundary
 
-**011-E — Synergy, Simplicity, Generic Fitness & Conceptual-Burden Audit** is next eligible.
+**011-F — Archetypal, Exceptional & Progressive-Disclosure Misfit Replay** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
