@@ -8,7 +8,7 @@ status: suspended
 
 ## Current posture
 
-Implementation planning and retained executable scaffold remain historical/downstream evidence only.
+Implementation planning and the retained executable scaffold remain historical/downstream evidence only.
 
 ```text
 IMPLEMENTATION READINESS   NOT READY
@@ -25,25 +25,28 @@ Phase 008                  COMPLETE
 Phase 009                  COMPLETE
 D1-D4                      CURRENTLY CLOSED
 E1-E5                      CURRENTLY CLOSED
-Phase 010                  ACTIVE
-010-A                      COMPLETE
-010-B                      COMPLETE
-010-C                      COMPLETE
-010-D                      NEXT ELIGIBLE
-F1                         CURRENTLY CLOSED
-F2                         CURRENTLY CLOSED
+Phase 010                  COMPLETE
+010-A..010-H               COMPLETE
+F1-F5                      CURRENTLY CLOSED
+concept mapping            COMPLETE ENOUGH FOR PHASE 011
+Phase 011                  NEXT — ENTRY/DECOMPOSITION
 Jackson concept design     IN PROGRESS
 ```
 
-## Current mapping remains design-only
+## Completed mapping remains design-only
 
-Current semantic mapping now establishes:
+Current mapping establishes:
 
 ```text
-66 / 66 command groups               SEMANTICALLY MAPPED
-52 / 52 query groups                 SEMANTICALLY MAPPED
-11 / 11 lifecycle/history envelopes  SEMANTICALLY MAPPED
-5 explanation patterns               SEMANTICALLY MAPPED
+66 / 66 command groups                    SEMANTICALLY MAPPED
+52 / 52 query groups                      SEMANTICALLY MAPPED
+11 / 11 lifecycle/history envelopes       SEMANTICALLY MAPPED
+5 / 5 explanation patterns                SEMANTICALLY MAPPED
+11 / 11 concept names                     LINGUISTICALLY ALIGNED
+66 / 66 commands                          PHYSICAL RESPONSIBILITY MAPPED
+52 / 52 queries                           PHYSICAL RESPONSIBILITY MAPPED
+10 / 10 family/capability replays         PASS
+20 / 20 difficult-condition parity probes PASS
 ```
 
 These are design obligations, not implementation API/query/storage contracts.
@@ -51,38 +54,34 @@ These are design obligations, not implementation API/query/storage contracts.
 Do not convert:
 
 ```text
-semantic action mapping     -> one method/endpoint/command/button
-semantic query mapping      -> one query endpoint/database view
-history envelope            -> one event-store/table schema
-explanation pattern         -> one dashboard/persistent aggregate
-concept owner               -> service/package
-mapping identifier          -> public resource ID
-disclosure/history category -> global public/runtime enum
-actor lens                  -> ACL/auth role
-surface family              -> mandatory product component
-application-family tag      -> SKU/feature flag/deployment profile
-synchronization relevance   -> event/transaction/workflow edge
+semantic action mapping      -> one method/endpoint/command/button
+semantic query mapping       -> one query endpoint/database view
+history envelope             -> one event-store/table schema
+explanation pattern          -> one dashboard/persistent aggregate
+concept owner                -> service/package
+mapping identifier           -> public resource ID
+disclosure/history category  -> global public/runtime enum
+actor lens                   -> ACL/auth role
+surface family               -> mandatory product component
+application-family tag       -> SKU/feature flag/deployment profile
+synchronization relevance    -> event/transaction/workflow edge
+progressive-disclosure depth -> UI page/API tier
 ```
 
-010-C requires bounded inspection semantics but does not select database views, graph stores, caches/search indexes, log/telemetry systems, report formats, query protocols or UI dashboards.
-
-010-D will align vocabulary only; it likewise does not authorize public API enums or schemas.
+The package-first mapping does not authorize a standalone web application, mandatory service API, dedicated admin console or UI shell.
 
 ## Remaining design before readiness
 
 ```text
-010-D  language / vocabulary / typed status / disclosure semantics — NEXT
-010-E  physical interaction mapping
-010-F  application-family workflow composition
-010-G  parity / degraded / recovery / scale mapping audit
-010-H  Phase 010 consolidation
-011    concept-design quality / misfit validation
+011    specificity / familiarity / integrity / synergy / misfit — NEXT
 012    Jackson concept-design completion decision
 013    representation / architecture reconciliation
 014    whole-design completion / readiness decision
 ```
 
-Only a positive Phase 014 may make implementation **READY / NOT STARTED / NEXT**.
+Phase 011 must be deliberately decomposed before execution.
+
+Only a positive Phase 014 may make implementation **READY / NOT STARTED / NEXT**. A later explicit Phase 015 is still required to begin implementation.
 
 ## Current prohibition
 
@@ -92,4 +91,4 @@ Until Phase 014 passes, do not add production concept/domain behavior, implement
 
 Design-only work:
 
-**010-D — Linguistic Mapping, Vocabulary, Typed Status & Disclosure Semantics**.
+**Phase 011 — Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Design Validation — entry/decomposition**.
