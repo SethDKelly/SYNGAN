@@ -16,6 +16,7 @@ These documents define how SYNGAN design knowledge is created, interpreted, chan
 - [Documentation Governance](documentation-governance.md)
 - [Terminology Policy](terminology-policy.md)
 - [Source & Provenance Policy](source-provenance-policy.md)
+- [Design Quality Validation Authority](design-quality-validation-authority.md)
 
 ## Current design authority chain
 
@@ -27,8 +28,10 @@ These documents define how SYNGAN design knowledge is created, interpreted, chan
 - [Phase 009 Dependence, Application Family & Composition Consolidation](phase-009-dependence-composition-consolidation.md)
 - [Concept Mapping Authority](../mapping/index.md)
 - [Phase 010 Concept Mapping Consolidation](phase-010-concept-mapping-consolidation.md)
+- [Design Quality Validation Authority](design-quality-validation-authority.md)
 - [Phase 011](../phases/011/index.md)
 - [011 Entry & Decomposition](../phases/011/011-entry-decomposition.md)
+- [011-A Phase Record](../phases/011/011-A-validation-authority-evidence-hierarchy-probe-taxonomy-misfit-reopen-rules.md)
 
 ## Current posture
 
@@ -45,7 +48,8 @@ F1-F5                                CURRENTLY CLOSED
 concept mapping                      COMPLETE ENOUGH FOR PHASE 011
 Phase 011                            ACTIVE
 Phase 011 decomposition              COMPLETE
-011-A                                NEXT ELIGIBLE
+011-A                                COMPLETE
+011-B                                NEXT ELIGIBLE
 G1 specificity                       PARTIAL TO STRONG
 G2 familiarity                       PARTIAL TO STRONG
 G3 integrity                         PARTIAL TO STRONG
@@ -61,7 +65,7 @@ implementation next                  NOT YET
 
 ## Completed mapping authority
 
-Phase 010 closes:
+Phase 010 remains current upstream authority for actor/programmatic mapping:
 
 ```text
 66 / 66 normalized command groups       SEMANTICALLY MAPPED
@@ -75,25 +79,34 @@ Phase 010 closes:
 20 / 20 difficult-condition probes      PASS
 ```
 
-Phase 011 treats those results as current upstream authority unless a concrete quality/misfit finding proves a defect and reopens the smallest affected authority.
+Phase 011 may reopen the smallest affected mapping authority only when a concrete quality/misfit finding demonstrates that the current result is wrong or incomplete.
 
-## Phase 011 validation boundary
+## Phase 011 validation authority
 
-Phase 011 owns current closure work for:
+011-A establishes the common audit method for G1-G7.
+
+Evidence hierarchy:
 
 ```text
-G1  specificity
-G2  familiarity
-G3  integrity
-G4  synergy / simplicity / generic fitness
-G5  archetypal / exceptional / degraded / adversarial / recovery misfit
-G6  future-scope / extensibility misfit
-G7  explicit residual conceptual misfit register
+E1  problem / actor / outcome authority
+E2  accepted concept specifications
+E3  dependence / application family / synchronization
+E4  consolidated mapping
+E5  terminology / cross-cutting design contracts
+E6  retained discovery / scenario / experience evidence
+E7  architecture / source / tests — counterexample or feasibility only
+E8  external analogues — familiarity / counterexample only
 ```
 
-The approved decomposition is 011-A through 011-J. 011-A establishes validation authority and probe rules before the phase makes substantive design-quality judgments.
+The current governing rule is:
 
-The phase must explicitly disposition all eight risks handed forward by 010-H: composed specificity drift, familiarity/semantic precision, adversarial synchronization integrity, conceptual burden, progressive-disclosure misfit, provider semantic leakage, future-capability pressure and scale/approximation pressure.
+> **Evidence may challenge any prior conclusion, but only a demonstrated semantic consequence can justify changing upstream design authority.**
+
+Material findings use `MAT-0` through `MAT-3`; unresolved `MAT-3` conceptual blockers prevent positive Phase 011 exit.
+
+Misfit routing uses `M0-M8`, distinguishing local clarification, Phase 010 mapping defects, Phase 009 composition defects, current-concept defects, problem/scope defects, architecture-only concerns, implementation-only concerns and future rediscovery triggers.
+
+Any material upstream correction follows the smallest-authority reopen rule and revalidates only materially dependent downstream conclusions.
 
 ## Product-form boundary
 
@@ -112,7 +125,9 @@ Phase 011 may use architecture/code/provider models as counterexample, feasibili
 ## Remaining design sequence
 
 ```text
-011    specificity / familiarity / integrity / synergy / misfit — ACTIVE
+011-A  COMPLETE — validation authority / evidence / probes / reopen rules
+011-B  NEXT — specificity / purpose alignment / boundary sharpness
+011-C..J remaining Phase 011 quality/misfit validation
 012    Jackson concept-design completion decision
 013    representation / architecture reconciliation
 014    whole-design completion / implementation-readiness decision
@@ -126,6 +141,6 @@ Only Phase 014 may set **READY / NOT STARTED / NEXT** after the whole design pas
 
 ## Current next boundary
 
-**011-A — Validation Authority, Evidence Hierarchy, Probe Taxonomy & Misfit/Reopen Rules** is next eligible.
+**011-B — Composed Specificity, Purpose Alignment & Boundary Sharpness Audit** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
