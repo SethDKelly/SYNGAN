@@ -10,7 +10,7 @@ status: active
 
 This directory contains current Jackson-style concept mapping authority for SYNGAN.
 
-Concept mapping translates accepted concept actions, state, queries, history and composition into actor-visible and programmatic interaction semantics. It is downstream of concept/dependence/composition authority and upstream of representation/architecture.
+Concept mapping translates accepted concept actions, state, queries, history and composition into actor-visible and programmatic interaction semantics. It is downstream of concept/dependence/composition authority and upstream of design-quality validation and representation/architecture.
 
 A mapping describes what actors/programmatic consumers must be able to do, see, distinguish, inspect or understand. It does not by itself select classes, methods, endpoints, widgets, schemas, services, packages, storage or runtime mechanisms.
 
@@ -20,12 +20,11 @@ A mapping describes what actors/programmatic consumers must be able to do, see, 
 Phase 009                    COMPLETE
 Phase 010                    COMPLETE
 010-A..010-H                 COMPLETE
-F1                           CURRENTLY CLOSED
-F2                           CURRENTLY CLOSED
-F3                           CURRENTLY CLOSED
-F4                           CURRENTLY CLOSED
-F5                           CURRENTLY CLOSED
+F1-F5                        CURRENTLY CLOSED
 concept mapping              COMPLETE ENOUGH FOR PHASE 011
+Phase 011                    ACTIVE
+Phase 011 decomposition      COMPLETE
+011-A                        NEXT ELIGIBLE
 Jackson concept design       NOT COMPLETE
 implementation readiness     NOT READY
 implementation start         NOT STARTED
@@ -112,14 +111,16 @@ No Actionability, Recovery, Degraded Mode, History Quality, Disclosure State, To
 
 Routine inspection remains bounded/reference-first and does not require driver-local materialization of enterprise-scale data or telemetry.
 
-## Phase 011 handoff
+## Phase 011 quality-validation handoff
 
-Phase 010 hands forward non-blocking quality/misfit risks around composed specificity, familiarity/precision, adversarial synchronization integrity, synergy/burden, progressive disclosure, provider leakage, future capability pressure and scale/approximation pressure.
+The mapping layer is now an input to active Phase 011 design-quality/misfit validation.
 
-Those are Phase 011 design-quality obligations rather than open mapping gaps.
+Phase 011 must test composed specificity, familiarity/semantic precision, adversarial synchronization integrity, synergy/conceptual burden, progressive-disclosure misfit, provider semantic leakage, future-capability pressure and scale/approximation pressure without treating those as mapping gaps by default.
+
+If Phase 011 proves a mapping defect, it reopens the smallest affected Phase 010 authority. Otherwise the mapping conclusions remain current.
 
 ## Current next boundary
 
-**Phase 011 — Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Design Validation — entry/decomposition** is next eligible.
+**011-A — Validation Authority, Evidence Hierarchy, Probe Taxonomy & Misfit/Reopen Rules** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
