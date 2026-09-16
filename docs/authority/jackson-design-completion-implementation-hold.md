@@ -61,8 +61,10 @@ Phase 011                  ACTIVE
 Phase 011 decomposition    COMPLETE
 011-A                      COMPLETE
 011-B                      COMPLETE
-011-C                      NEXT ELIGIBLE
+011-C                      COMPLETE
+011-D                      NEXT ELIGIBLE
 G1 specificity             CURRENTLY CLOSED
+G2 familiarity             CURRENTLY CLOSED
 Jackson concept design     NOT COMPLETE
 ```
 
@@ -80,11 +82,11 @@ G6  future-scope / extensibility misfit
 G7  explicit residual conceptual misfit register
 ```
 
-Current G states after 011-B:
+Current G states after 011-C:
 
 ```text
 G1  CURRENTLY CLOSED
-G2  PARTIAL TO STRONG
+G2  CURRENTLY CLOSED
 G3  PARTIAL TO STRONG
 G4  PARTIAL TO STRONG
 G5  PARTIAL TO STRONG
@@ -120,12 +122,30 @@ R010-01                        NO DEFECT
 G1 specificity                 CURRENTLY CLOSED
 ```
 
-No concept, inclusion-dependence edge, synchronization or mapping rule changes in 011-B.
-
 Two bounded watch points are carried forward without blocking G1:
 
 - Strategy's broad capability declaration surface must not absorb plugin/runtime/configuration infrastructure;
 - Provenance's high fan-in must continue to have low authority fan-out.
+
+## 011-C familiarity authority
+
+Current G2 authority is [Familiarity, Reuse, Vocabulary & External-Model Comparison Audit](composed-familiarity-reuse-vocabulary-external-model-audit.md).
+
+```text
+11 / 11 canonical names retained
+application-family vocabulary reuse     PASS
+external-model comparison               PASS
+MAT-2 findings                          0
+MAT-3 blockers                          0
+upstream reopens                        0
+R010-02                                 NO DEFECT — COMPATIBILITY GUIDANCE STRENGTHENED
+B4 familiarity / reuse                  CURRENTLY CLOSED
+G2 familiarity                          CURRENTLY CLOSED
+```
+
+External words such as `fit`, `train`, `model`, `sample`, `run`, `job`, `artifact`, `metadata`, `metric`, `validation result`, `lineage` and `synthesizer` remain compatibility/representation vocabulary. They do not authorize concept, lifecycle or architecture changes by familiarity alone.
+
+The current durable collision guide is [Ecosystem Compatibility Vocabulary](../terminology/ecosystem-compatibility.md).
 
 ## Phase 010 authority held forward
 
@@ -156,7 +176,8 @@ Unless Phase 011 disproves them through a genuine misfit, preserve:
 - authority continuity under recovery;
 - capability-specific degraded operation;
 - bounded enterprise-scale inspection;
-- human/programmatic semantic parity for the same authorized context.
+- human/programmatic semantic parity for the same authorized context;
+- compatibility vocabulary remains one-way and owner-qualified.
 
 ## Phase 010 residual risks carried into Phase 011
 
@@ -164,7 +185,7 @@ Current disposition:
 
 ```text
 R010-01  composed specificity drift                  NO DEFECT — 011-B
-R010-02  familiarity versus semantic precision       OPEN — 011-C
+R010-02  familiarity versus semantic precision       NO DEFECT — GUIDANCE STRENGTHENED — 011-C
 R010-03  synchronization integrity under adversity   OPEN — 011-D / 011-G
 R010-04  synergy versus conceptual burden            OPEN — 011-E
 R010-05  progressive-disclosure misfit               OPEN — 011-E / 011-F
@@ -177,7 +198,7 @@ R010-08  scale / approximation pressure              OPEN — 011-G
 
 Phase 004/006/007 architecture and the retained executable scaffold remain downstream evidence.
 
-They may expose a genuine counterexample but cannot define current concept, dependence, family, synchronization, mapping, quality or completion authority from package imports, persistence references, service/dataflow direction, event topology, runtime orchestration, deployment topology, existing APIs, databases or dashboards.
+They may expose a genuine counterexample but cannot define current concept, dependence, family, synchronization, mapping, quality or completion authority from package imports, persistence references, service/dataflow direction, event topology, runtime orchestration, deployment topology, existing APIs, databases, dashboards, external tracking models or provider object names.
 
 Phase 011 may classify an issue as representation/architecture-only for Phase 013 or implementation-only, but must not implement the fix during current concept-design validation.
 
@@ -187,8 +208,9 @@ Phase 011 may classify an issue as representation/architecture-only for Phase 01
 010       concept mapping / interaction / language / experience — COMPLETE
 011-A     validation authority / evidence / probes / reopen rules — COMPLETE
 011-B     specificity / purpose alignment / boundary sharpness — COMPLETE
-011-C     familiarity / reuse / vocabulary / external-model comparison — NEXT
-011-D..J  remaining Phase 011 quality/misfit validation
+011-C     familiarity / reuse / vocabulary / external-model comparison — COMPLETE
+011-D     integrity under synchronization / correction / invalidation / history — NEXT
+011-E..J  remaining Phase 011 quality/misfit validation
 012       Jackson concept-design completion decision
 013       representation / architecture reconciliation
 014       whole-design completion / implementation-readiness decision
@@ -204,10 +226,10 @@ Even a positive Phase 012 does not make implementation ready. Phase 013 must rec
 
 ## No executable design-by-accident
 
-Until Phase 014 passes, do not add production behavior, executable architecture restrictions merely to crystallize design hypotheses, package-topology changes, persistence/query schemas, runtime/model/platform/security adapters, public API implementation, dashboards/materialized views, graph/search technology, reference algorithms, privacy mechanisms, product-edition packaging, event/service decomposition, synchronization transactions, observer/subscription infrastructure, or stale-test repair solely to manufacture readiness.
+Until Phase 014 passes, do not add production behavior, executable architecture restrictions merely to crystallize design hypotheses, package-topology changes, persistence/query schemas, runtime/model/platform/security adapters, public API implementation, dashboards/materialized views, graph/search technology, reference algorithms, privacy mechanisms, product-edition packaging, event/service decomposition, synchronization transactions, observer/subscription infrastructure, external-model compatibility shims, or stale-test repair solely to manufacture readiness.
 
 ## Current next boundary
 
-**011-C — Familiarity, Reuse, Vocabulary & External-Model Comparison Audit** is next eligible.
+**011-D — Integrity Under Synchronization, Correction, Invalidation & Historical Composition** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
