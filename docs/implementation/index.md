@@ -29,7 +29,9 @@ Phase 010                  COMPLETE
 010-A..010-H               COMPLETE
 F1-F5                      CURRENTLY CLOSED
 concept mapping            COMPLETE ENOUGH FOR PHASE 011
-Phase 011                  NEXT — ENTRY/DECOMPOSITION
+Phase 011                  ACTIVE
+Phase 011 decomposition    COMPLETE
+011-A                      NEXT ELIGIBLE
 Jackson concept design     IN PROGRESS
 ```
 
@@ -66,29 +68,32 @@ surface family               -> mandatory product component
 application-family tag       -> SKU/feature flag/deployment profile
 synchronization relevance    -> event/transaction/workflow edge
 progressive-disclosure depth -> UI page/API tier
+Phase 011 probe category     -> test suite/package/runtime enum
 ```
 
-The package-first mapping does not authorize a standalone web application, mandatory service API, dedicated admin console or UI shell.
+## Active Phase 011 remains design-only
+
+Phase 011 is decomposed into 011-A through 011-J and currently begins with validation authority, evidence hierarchy, probe taxonomy and misfit/reopen rules.
+
+Quality/misfit findings may reopen upstream concept-design authority when justified, or classify an issue as architecture-only/implementation-only. Neither case authorizes implementation work during Phase 011.
 
 ## Remaining design before readiness
 
 ```text
-011    specificity / familiarity / integrity / synergy / misfit — NEXT
+011    specificity / familiarity / integrity / synergy / misfit — ACTIVE
 012    Jackson concept-design completion decision
 013    representation / architecture reconciliation
 014    whole-design completion / readiness decision
 ```
 
-Phase 011 must be deliberately decomposed before execution.
-
 Only a positive Phase 014 may make implementation **READY / NOT STARTED / NEXT**. A later explicit Phase 015 is still required to begin implementation.
 
 ## Current prohibition
 
-Until Phase 014 passes, do not add production concept/domain behavior, implementation APIs, persistence/data-plane/query schemas, database/materialized views, graph/search technology, model/runtime/security/platform adapters, Execution/recovery implementations, Evidence/Provenance implementations, reference Strategies, privacy mechanisms, benchmarks, package-topology changes, event/service decomposition, synchronization transactions, mapping-driven public API implementation, or executable architecture restrictions intended to freeze unfinished design.
+Until Phase 014 passes, do not add production concept/domain behavior, implementation APIs, persistence/data-plane/query schemas, database/materialized views, graph/search technology, model/runtime/security/platform adapters, Execution/recovery implementations, Evidence/Provenance implementations, reference Strategies, privacy mechanisms, benchmarks, package-topology changes, event/service decomposition, synchronization transactions, mapping-driven public API implementation, Phase-011-driven executable tests intended to freeze design, or executable architecture restrictions intended to manufacture readiness.
 
 ## Current next boundary
 
 Design-only work:
 
-**Phase 011 — Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Design Validation — entry/decomposition**.
+**011-A — Validation Authority, Evidence Hierarchy, Probe Taxonomy & Misfit/Reopen Rules**.
