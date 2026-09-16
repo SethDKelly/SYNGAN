@@ -25,8 +25,10 @@ concept mapping              COMPLETE ENOUGH FOR PHASE 011
 Phase 011                    ACTIVE
 011-A                        COMPLETE
 011-B                        COMPLETE
-011-C                        NEXT ELIGIBLE
+011-C                        COMPLETE
+011-D                        NEXT ELIGIBLE
 G1 specificity               CURRENTLY CLOSED
+G2 familiarity               CURRENTLY CLOSED
 Jackson concept design       NOT COMPLETE
 implementation readiness     NOT READY
 implementation start         NOT STARTED
@@ -42,7 +44,7 @@ implementation next          NOT YET
 - [010-E Package, Notebook, Automation, Host-Platform & Optional Presentation Interaction Mapping](package-notebook-automation-host-platform-interaction-mapping.md)
 - [010-F Application-Family Workflow Composition, Optional-Capability Experience & Progressive Disclosure](application-family-workflow-composition-progressive-disclosure.md)
 - [010-G Human/Programmatic Semantic Parity, Degraded/Recovery/Scale & Mapping-Misfit Audit](human-programmatic-semantic-parity-degraded-recovery-scale-misfit-audit.md)
-- [Phase 010 Consolidation Authority](../authority/phase-010-concept-mapping-consolidation.md) — **current Phase 010 mapping consolidation**
+- [Phase 010 Consolidation Authority](../authority/phase-010-concept-mapping-consolidation.md)
 
 ## Final mapping coverage
 
@@ -73,25 +75,13 @@ mapping blocker                           NONE FOUND
 
 ## Product form
 
-SYNGAN is a deployable Python/Spark framework package.
+SYNGAN is a deployable Python/Spark framework package, agnostic across compliant Spark-capable hosting and infrastructure platforms.
 
-> **SYNGAN is agnostic across compliant Spark-capable hosting and infrastructure platforms.**
-
-Primary interaction remains:
-
-```text
-P1  Python package / SDK contract
-P2  notebook / interactive package use
-P3  embedded job / pipeline / automation
-```
-
-CLI, reports, rich/graphical presentation, network service exposure and dedicated operator/admin applications remain optional adapters or host integrations.
+Primary interaction remains package/SDK, notebook and embedded automation. CLI, reports, rich/graphical presentation, network service exposure and dedicated operator/admin applications remain optional adapters or host integrations.
 
 ## Application-family composition
 
 All ten required family/capability replays pass. Optional concepts create no mandatory empty steps. Existing Learned State and reusable authorities may be selected rather than recreated. Direct Generation is not a degraded learned workflow. Evaluation/Evidence, Execution and Provenance remain conditional rather than universal stages.
-
-The full eleven-concept family member does not become an eleven-stage wizard or a Workflow concept.
 
 ## Progressive disclosure
 
@@ -105,34 +95,29 @@ D4  distributed / host operational drill-down
 
 These are presentation obligations, not screens, endpoints, API tiers or persistence layers.
 
-## Semantic parity / difficult conditions
+## Phase 011 G1/G2 revalidation
 
-All 20 required difficult-condition probes pass across recovery, retry/cancellation, unknown operational state, degraded persistence/telemetry/dependency/storage/runtime conditions, security withholding, reconstructed history, later Evidence staleness/invalidation, topology, text-bearing data, enterprise scale, approximation pressure, operator use and extension-author use.
-
-No Actionability, Recovery, Degraded Mode, History Quality, Disclosure State, Topology, Text, Platform Job, Workflow or global Status concept is required.
-
-Routine inspection remains bounded/reference-first and does not require driver-local materialization of enterprise-scale data or telemetry.
-
-## Phase 011 specificity revalidation
-
-011-B tests whether the completed mapping exposed any hidden purpose collision, umbrella owner or boundary that survives only because of prior specification.
-
-Result:
+011-B finds no specificity-driven mapping defect. 011-C then compares canonical language against current external analogues and strengthens compatibility guidance without changing the Phase 010-D linguistic contract.
 
 ```text
-11 / 11 concepts               PASS composed specificity
-MAT-2 specificity findings     0
-MAT-3 specificity blockers     0
-catalog changes                0
-mapping reopens                0
-R010-01                        NO DEFECT
-G1 specificity                 CURRENTLY CLOSED
+G1 specificity                        CURRENTLY CLOSED
+G2 familiarity                        CURRENTLY CLOSED
+R010-01                               NO DEFECT
+R010-02                               NO DEFECT — COMPATIBILITY GUIDANCE STRENGTHENED
+F3 linguistic mapping                 CURRENTLY CLOSED
+mapping reopen                        NONE
 ```
 
-The mapping therefore remains valid as an input to 011-C. The familiarity audit may challenge vocabulary/analogue choices but must not use familiar labels to erase the already revalidated purpose boundaries.
+Qualified terms such as `fit/train`, model-shaped `model`, synthetic-production `sample`, validation result and `lineage` may aid presentation only when canonical owner semantics remain recoverable. Generic `run`, `job`, `artifact`, `metadata`, `metric`, `validation`, `synthesizer` or external object models do not become mapping authority.
+
+No public method name, field name, serialized enum, UI label or adapter contract is selected by 011-C.
+
+## Active integrity boundary
+
+011-D now re-tests whether synchronization, correction, invalidation and historical composition preserve the same owner-qualified semantics. If it finds a genuine mapping defect, only the smallest affected Phase 010 authority should reopen.
 
 ## Current next boundary
 
-**011-C — Familiarity, Reuse, Vocabulary & External-Model Comparison Audit** is next eligible.
+**011-D — Integrity Under Synchronization, Correction, Invalidation & Historical Composition** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
