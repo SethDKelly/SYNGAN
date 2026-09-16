@@ -19,13 +19,15 @@ Phase 011 remains concept design only.
 - [011-B Phase Record](011-B-composed-specificity-purpose-alignment-boundary-sharpness-audit.md)
 - [011-C Phase Record](011-C-familiarity-reuse-vocabulary-external-model-comparison-audit.md)
 - [011-D Phase Record](011-D-integrity-under-synchronization-correction-invalidation-historical-composition.md)
+- [011-E Phase Record](011-E-synergy-simplicity-generic-fitness-conceptual-burden-audit.md)
 - [Design Quality Validation Authority](../../authority/design-quality-validation-authority.md)
 - [Composed Specificity Audit](../../authority/composed-specificity-purpose-boundary-audit.md)
 - [Composed Familiarity Audit](../../authority/composed-familiarity-reuse-vocabulary-external-model-audit.md)
-- [Integrity Under Synchronization, Correction, Invalidation & Historical Composition](../../authority/composed-integrity-synchronization-history-audit.md) — **current 011-D/G3 baseline authority**
+- [Composed Integrity Audit](../../authority/composed-integrity-synchronization-history-audit.md)
+- [Synergy, Simplicity, Generic Fitness & Conceptual-Burden Audit](../../authority/composed-synergy-simplicity-generic-fitness-burden-audit.md) — **current G4 authority**
 - [Jackson Methodology Completion Matrix](../../authority/jackson-methodology-completion-matrix.md)
 
-## Current state after 011-D
+## Current state after 011-E
 
 ```text
 Phase 008                    COMPLETE
@@ -37,12 +39,13 @@ Phase 011 decomposition      COMPLETE
 011-B                        COMPLETE
 011-C                        COMPLETE
 011-D                        COMPLETE
-011-E                        NEXT ELIGIBLE
+011-E                        COMPLETE
+011-F                        NEXT ELIGIBLE
 
 G1 specificity               CURRENTLY CLOSED
 G2 familiarity               CURRENTLY CLOSED
 G3 integrity                 STRONG EVIDENCE / 011-G STRESS REVALIDATION REQUIRED
-G4 synergy / simplicity      PARTIAL TO STRONG
+G4 synergy / simplicity      CURRENTLY CLOSED
 G5 scenario / adversarial    PARTIAL TO STRONG
 G6 future-scope              STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
 G7 residual misfit register  PARTIAL
@@ -67,10 +70,11 @@ R010-03  synchronization integrity under adversarial composition
          011-G STRESS REVALIDATION STILL REQUIRED
 
 R010-04  synergy versus conceptual burden
-         OPEN — 011-E
+         NO DEFECT — 011-E
 
 R010-05  progressive-disclosure misfit
-         OPEN — 011-E / 011-F
+         NO DEFECT IN 011-E STRUCTURAL SIMPLICITY AUDIT
+         FINAL SCENARIO DISPOSITION PENDING 011-F
 
 R010-06  provider / host semantic leakage
          OPEN — 011-G
@@ -129,8 +133,6 @@ G2 familiarity                 CURRENTLY CLOSED
 
 ## 011-D integrity result
 
-011-D validates the current thirteen synchronizations under temporal correction, invalidation, supersession and historical/recovery composition.
-
 ```text
 13 / 13 synchronizations preserve singular ownership
 producer/result integrity                       PASS
@@ -140,20 +142,45 @@ Evidence/Generation authority separation        PASS
 semantic/Execution separation                   PASS
 Provenance low-authority-fan-out baseline       PASS
 recovery/reconstruction ownership baseline      PASS
-optional-capability integrity                   PASS
 hidden coordinator required                     NO
 MAT-2 findings                                  0
 MAT-3 blockers                                  0
-upstream reopen                                 NONE
 ```
 
-Key rule:
+011-D closes the baseline integrity audit but leaves final G3 closure to 011-G stress revalidation.
 
-> **Later status, restriction, retirement, supersession or invalidation changes current/future reliance where owned; it does not silently rewrite exact historical bindings or transfer authority to another concept.**
+## 011-E synergy / simplicity result
 
-Examples preserved simultaneously include historical Evidence finding, historical Generation use, current Evidence applicability, exact Learned State basis, current Learned State status, and reconstructed/unknown recovery history.
+011-E tests whether the eleven concepts and thirteen synchronization types deliver enough composed value to justify their conceptual burden.
 
-011-D closes the baseline integrity audit but deliberately leaves final G3 closure to 011-G stress revalidation.
+```text
+concept removal justified                      0
+concept merge justified                        0
+concept split justified                        0
+new concept justified                          0
+synchronization add/remove/merge justified     0
+reduced-family burden replay                    PASS
+positive composed synergies                     CONFIRMED
+repeated-pattern missing-purpose probe          PASS
+cross-cutting qualifier discipline              PASS
+generic-fitness / domain anchoring              PASS
+progressive-disclosure structural simplicity    PASS
+hidden universal coordinator                    NONE
+MAT-2 findings                                  0
+MAT-3 blockers                                  0
+upstream reopen                                 NONE
+R010-04                                         NO DEFECT
+R010-05 simplicity portion                      NO DEFECT — 011-F REPLAY PENDING
+G4 synergy / simplicity / generic fitness       CURRENTLY CLOSED
+```
+
+Principal bounded `MAT-1` burden watch points remain:
+
+- the Evaluation Criterion / Evaluation / Evidence trio has real first-use learning cost but preserves material question/method/finding distinctions;
+- Provenance high fan-in can appear hub-like even though authority fan-out remains low;
+- the full eleven-concept catalog has discoverability cost, bounded by application-family contraction, task-centered mapping and progressive disclosure.
+
+None currently changes purpose, ownership, lifecycle or valid application-family behavior.
 
 ## Subgroups
 
@@ -163,8 +190,8 @@ Examples preserved simultaneously include historical Evidence finding, historica
 | 011-B | Composed specificity / purpose / boundary sharpness | G1 | **complete** |
 | 011-C | Familiarity / reuse / vocabulary / external models | G2 / B4 | **complete** |
 | 011-D | Synchronization / correction / invalidation / historical integrity | G3 baseline | **complete** |
-| 011-E | Synergy / simplicity / generic fitness / conceptual burden | G4 | **next eligible** |
-| 011-F | Archetypal / exceptional / progressive-disclosure replay | G5 ordinary/exceptional | planned |
+| 011-E | Synergy / simplicity / generic fitness / conceptual burden | G4 | **complete** |
+| 011-F | Archetypal / exceptional / progressive-disclosure replay | G5 ordinary/exceptional | **next eligible** |
 | 011-G | Adversarial / degraded / recovery / scale / provider leakage | G3/G5 stress | planned |
 | 011-H | Future scope / extensibility / rediscovery triggers | G6 | planned |
 | 011-I | Residual misfit register / dispositions | G7 | planned |
@@ -181,9 +208,9 @@ Examples preserved simultaneously include historical Evidence finding, historica
   ↓
 011-D COMPLETE
   ↓
-011-E NEXT
+011-E COMPLETE
   ↓
-011-F
+011-F NEXT
   ↓
 011-G
   ↓
@@ -198,23 +225,23 @@ Examples preserved simultaneously include historical Evidence finding, historica
 
 Unless a later genuine misfit disproves them, preserve:
 
-- eleven accepted concepts;
-- thirteen active synchronizations;
+- eleven accepted concepts and thirteen active synchronizations;
+- application-family optionality and relation-local burden;
 - singular state ownership;
 - occurrence-scoped/non-reactive synchronization;
-- exact historical bindings;
-- current versus historical truth;
+- exact historical bindings and current-versus-historical truth;
 - semantic versus operational completion;
-- producer/result separation;
+- Criterion / Evaluation / Evidence question-method-finding separation;
 - Evidence versus Generation/approval/release authority;
-- Provenance relationship authority versus source-fact authority;
-- application-family optionality;
-- owner-qualified uncertainty/history/disclosure semantics;
+- Provenance high fan-in with low authority fan-out;
+- cross-cutting qualifiers remain cross-cutting absent independent lifecycle;
+- no Workflow / Activity / Result / Status / Validation / Quality umbrella concept;
+- D0-D4 progressive disclosure may simplify encounter but never erase material semantics;
 - package-first Python/Spark product form and Spark-host platform agnosticism.
 
 ## Anti-implementation boundary
 
-Phase 011 does not select transactions, events, persistence, services, package topology, workflow engines, invalidation propagation, provenance storage, recovery mechanisms, public APIs or executable tests intended to freeze the design.
+Phase 011 does not select implementation inheritance, module count, generic base classes, transactions, events, persistence, services, package topology, workflow engines, provenance storage, feature flags, public APIs or executable tests intended to freeze the design.
 
 ## Positive exit boundary
 
@@ -232,4 +259,4 @@ IMPLEMENTATION NEXT          NOT YET
 
 ## Current next boundary
 
-**011-E — Synergy, Simplicity, Generic Fitness & Conceptual-Burden Audit** is next eligible.
+**011-F — Archetypal, Exceptional & Progressive-Disclosure Misfit Replay** is next eligible.
