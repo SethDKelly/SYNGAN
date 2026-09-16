@@ -25,8 +25,8 @@ Current authority includes:
 - [`Concept Mapping Authority`](docs/mapping/index.md)
 - [`Phase 009 Consolidation`](docs/authority/phase-009-dependence-composition-consolidation.md)
 - [`Phase 010 Concept Mapping Consolidation`](docs/authority/phase-010-concept-mapping-consolidation.md)
+- [`Design Quality Validation Authority`](docs/authority/design-quality-validation-authority.md)
 - [`Phase 011`](docs/phases/011/index.md)
-- [`011 Entry & Decomposition`](docs/phases/011/011-entry-decomposition.md)
 
 ## Status
 
@@ -41,7 +41,8 @@ F1-F5                                CURRENTLY CLOSED
 concept mapping                      COMPLETE ENOUGH FOR PHASE 011
 Phase 011                            ACTIVE
 Phase 011 decomposition              COMPLETE
-011-A                                NEXT ELIGIBLE
+011-A                                COMPLETE
+011-B                                NEXT ELIGIBLE
 G1 specificity                       PARTIAL TO STRONG
 G2 familiarity                       PARTIAL TO STRONG
 G3 integrity                         PARTIAL TO STRONG
@@ -55,27 +56,25 @@ implementation start                 NOT STARTED
 implementation next                  NOT YET
 ```
 
-Final Phase 010 mapping coverage is:
+## Phase 011 validation method
+
+011-A establishes the audit method before substantive G1-G7 judgments.
+
+Key rules:
+
+> **Evidence may challenge any prior conclusion, but only a demonstrated semantic consequence can justify changing upstream design authority.**
+
+> **Reopen the smallest canonical authority that owns the violated semantic claim, then revalidate only materially dependent downstream conclusions.**
+
+Architecture, source, tests and provider/product models may expose counterexamples, feasibility constraints or familiarity pressure, but they do not become upstream design authority merely by existing.
+
+Materiality ranges from `MAT-0` observation to `MAT-3` conceptual blocker. An unresolved `MAT-3` blocks positive Phase 011 exit.
+
+## Phase 011 sequence
 
 ```text
-66 / 66 command groups                    SEMANTICALLY MAPPED
-52 / 52 query groups                      SEMANTICALLY MAPPED
-11 / 11 lifecycle/history envelopes       SEMANTICALLY MAPPED
-5 / 5 cross-concept explanation patterns  SEMANTICALLY MAPPED
-11 / 11 concept names                     LINGUISTICALLY ALIGNED
-66 / 66 command groups                    PHYSICAL RESPONSIBILITY MAPPED
-52 / 52 query groups                      PHYSICAL RESPONSIBILITY MAPPED
-10 / 10 required family/capability replays PASS
-20 / 20 difficult-condition parity probes PASS
-```
-
-## Phase 011
-
-Phase 011 validates the complete mapped design rather than adding implementation structure. Its dependency-safe sequence is:
-
-```text
-011-A  validation authority / evidence hierarchy / probe taxonomy / misfit-reopen rules
-011-B  composed specificity / purpose alignment / boundary sharpness
+011-A  COMPLETE — validation authority / evidence / probes / reopen rules
+011-B  NEXT — composed specificity / purpose alignment / boundary sharpness
 011-C  familiarity / reuse / vocabulary / external-model comparison
 011-D  integrity under synchronization / correction / invalidation / history
 011-E  synergy / simplicity / generic fitness / conceptual burden
@@ -85,8 +84,6 @@ Phase 011 validates the complete mapped design rather than adding implementation
 011-I  residual conceptual misfit register / disposition / closure preparation
 011-J  Phase 011 consolidation / G1-G7 decision / Phase 012 handoff
 ```
-
-The phase must explicitly disposition all eight risks handed forward by 010-H: composed specificity, vocabulary familiarity/precision, adversarial synchronization integrity, conceptual burden, progressive-disclosure misfit, provider semantic leakage, future-capability pressure and scale/approximation pressure.
 
 ## Remaining design roadmap
 
@@ -104,6 +101,6 @@ Only a positive Phase 014 may change implementation to **READY / NOT STARTED / N
 
 ## Current next boundary
 
-**011-A — Validation Authority, Evidence Hierarchy, Probe Taxonomy & Misfit/Reopen Rules** is next eligible.
+**011-B — Composed Specificity, Purpose Alignment & Boundary Sharpness Audit** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
