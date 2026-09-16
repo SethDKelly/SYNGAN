@@ -8,18 +8,28 @@ status: active-supporting-evidence
 
 This directory contains actor-visible and programmatic workflow/experience design developed primarily in Phases 003 and 006.
 
-During active Phase 010, these documents are strong supporting mapping evidence, not automatically complete current F1-F5 authority. Current concept mapping authority lives in [Concept Mapping](../mapping/index.md).
+Phase 010 is now complete. These documents remain strong supporting evidence, while current concept-mapping authority lives in [Concept Mapping](../mapping/index.md) and the [Phase 010 Concept Mapping Consolidation](../authority/phase-010-concept-mapping-consolidation.md).
 
-## Current Phase 010 relationship
+## Current relationship to completed Phase 010
 
 ```text
-010-A  COMPLETE — mapping control / actor-surface / evidence baseline
-010-B  COMPLETE — 66 / 66 command groups semantically mapped
-010-C  COMPLETE — 52 / 52 query groups + 11 / 11 lifecycle/history envelopes mapped
-010-D  NEXT — linguistic / vocabulary / typed status / disclosure semantics
+010-A..010-H  COMPLETE
+F1-F5         CURRENTLY CLOSED
 ```
 
-F1 and F2 are currently closed at the surface-neutral semantic mapping layer.
+Final Phase 010 coverage includes:
+
+```text
+66 / 66 command groups                    SEMANTICALLY MAPPED
+52 / 52 query groups                      SEMANTICALLY MAPPED
+11 / 11 lifecycle/history envelopes       SEMANTICALLY MAPPED
+5 / 5 explanation patterns                SEMANTICALLY MAPPED
+11 / 11 concept names                     LINGUISTICALLY ALIGNED
+66 / 66 commands                          PHYSICAL RESPONSIBILITY MAPPED
+52 / 52 queries                           PHYSICAL RESPONSIBILITY MAPPED
+10 / 10 family/capability replays         PASS
+20 / 20 difficult-condition parity probes PASS
+```
 
 ## Retained experience model
 
@@ -47,11 +57,11 @@ disclosure state
 historical-knowledge state
 ```
 
-These remain mapping obligations, not new concepts or one universal status enum.
+These remain interaction/mapping obligations, not new concepts or one universal status enum.
 
-## Current action and inspection alignment
+## Completed mapping alignment
 
-The current mapping authority preserves:
+Current mapping authority preserves:
 
 - reviewable proposal versus semantic commitment;
 - contextual readiness rather than global Readiness state;
@@ -65,7 +75,11 @@ The current mapping authority preserves:
 - relational Provenance rather than copied owner state;
 - current versus exact historical inspection;
 - directly retained versus reconstructed/partial/unknown history;
-- bounded enterprise-scale summary/drill-down.
+- authorization-relative disclosure;
+- recovery authority-continuity qualification;
+- capability-specific degraded operation;
+- bounded enterprise-scale summary/drill-down;
+- equivalent material semantics across human/programmatic surfaces.
 
 Current Phase 009 corrections remain authoritative:
 
@@ -78,32 +92,25 @@ Execution not universal
 Provenance not universal
 ```
 
-## 010-C inspection result
+## Progressive disclosure
 
-Actors/programmatic consumers must be able to inspect, where relevant:
+Phase 010-F establishes:
 
-- proposed/current/committed/historical owner state;
-- exact revisions/bindings used by committed work;
-- owner semantic status versus Execution/Attempt status;
-- partial/candidate/checkpoint/diagnostic versus authoritative result;
-- Condition/Constraint completion basis;
-- Evaluation Criterion, method, scope, coverage, uncertainty and limitations;
-- Evidence claim strength and current applicability;
-- Provenance relationship assertions versus source facts;
-- current versus historical/future-use status;
-- visible/redacted/withheld/unavailable/unknown/absent disclosure semantics;
-- direct/reconstructed/partial/unavailable/indeterminate history quality;
-- bounded enterprise-scale summaries plus legitimate drill-down.
+```text
+D0  task intent / immediate semantic action
+D1  material semantic basis
+D2  optional capability detail
+D3  historical / explanatory depth
+D4  distributed / host operational drill-down
+```
 
-Composed views may explain several concepts together but remain derived; they do not become a new canonical owner.
+These levels are semantic presentation obligations, not UI screens, API tiers or storage layers.
 
-## 010-D language handoff
+## Product-form result
 
-010-D must now align vocabulary over these mapped semantics.
+SYNGAN remains a Python/Spark package agnostic across compliant Spark-capable hosting and infrastructure platforms.
 
-It should preserve owner-qualified lifecycle language and distinguish terms that are often overloaded in data/ML/operations ecosystems, including `model`, `run`, `job`, `artifact`, `metric`, `validation`, `ready`, `passed`, `safe`, `private`, `reproducible`, `history`, and `complete`.
-
-The current disclosure/history labels are semantic categories, not final public wording or runtime enums.
+Package/SDK, notebook and embedded automation are primary. CLI, reports, rich graphical presentation, service exposure and dedicated operator/admin applications remain optional or host-integrated.
 
 ## Authority boundary
 
@@ -112,16 +119,16 @@ For conflicts:
 1. `docs/authority/` governs methodology/cross-cutting policy;
 2. `docs/concepts/` governs concept purpose/state/actions/queries/invariants;
 3. `docs/dependence/` and `docs/synchronizations/` govern application-family/composition;
-4. `docs/mapping/` governs current Phase 010 mapping authority;
+4. `docs/mapping/` and Phase 010 consolidation govern completed concept mapping;
 5. `docs/experience/` supplies retained workflow/experience evidence;
 6. `docs/architecture/` remains downstream pending Phase 013 reconciliation.
 
 An experience view may compose several concepts for comprehension but must not create a new canonical owner for the composed state.
 
-## Representation boundary
+## Phase 011 handoff
 
-These documents do not decide whether experience is implemented through Python resources/builders, notebooks, CLI, REST/SDK, web UI, Spark extensions, managed-platform integrations, databases, dashboards, graph stores or another surface.
+Experience evidence may be used in Phase 011 to test specificity, familiarity, integrity, synergy and misfit. It must not be treated as a reason to preserve a concept that later quality/adversarial evidence proves defective.
 
 ## Current next boundary
 
-**010-D — Linguistic Mapping, Vocabulary, Typed Status & Disclosure Semantics** is next eligible.
+**Phase 011 — Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Design Validation — entry/decomposition** is next eligible.
