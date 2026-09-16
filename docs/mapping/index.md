@@ -24,7 +24,8 @@ F1-F5                        CURRENTLY CLOSED
 concept mapping              COMPLETE ENOUGH FOR PHASE 011
 Phase 011                    ACTIVE
 Phase 011 decomposition      COMPLETE
-011-A                        NEXT ELIGIBLE
+011-A                        COMPLETE
+011-B                        NEXT ELIGIBLE
 Jackson concept design       NOT COMPLETE
 implementation readiness     NOT READY
 implementation start         NOT STARTED
@@ -75,52 +76,24 @@ SYNGAN is a deployable Python/Spark framework package.
 
 > **SYNGAN is agnostic across compliant Spark-capable hosting and infrastructure platforms.**
 
-Primary interaction remains:
-
-```text
-P1  Python package / SDK contract
-P2  notebook / interactive package use
-P3  embedded job / pipeline / automation
-```
-
-CLI, reports, rich/graphical presentation, network service exposure and dedicated operator/admin applications remain optional adapters or host integrations.
-
-## Application-family composition
-
-All ten required family/capability replays pass. Optional concepts create no mandatory empty steps. Existing Learned State and reusable authorities may be selected rather than recreated. Direct Generation is not a degraded learned workflow. Evaluation/Evidence, Execution and Provenance remain conditional rather than universal stages.
-
-The full eleven-concept family member does not become an eleven-stage wizard or a Workflow concept.
-
-## Progressive disclosure
-
-```text
-D0  task intent / immediate semantic action
-D1  material semantic basis
-D2  optional capability detail
-D3  historical / explanatory depth
-D4  distributed / host operational drill-down
-```
-
-These are presentation obligations, not screens, endpoints, API tiers or persistence layers.
-
-## Semantic parity / difficult conditions
-
-All 20 required difficult-condition probes pass across recovery, retry/cancellation, unknown operational state, degraded persistence/telemetry/dependency/storage/runtime conditions, security withholding, reconstructed history, later Evidence staleness/invalidation, topology, text-bearing data, enterprise scale, approximation pressure, operator use and extension-author use.
-
-No Actionability, Recovery, Degraded Mode, History Quality, Disclosure State, Topology, Text, Platform Job, Workflow or global Status concept is required.
-
-Routine inspection remains bounded/reference-first and does not require driver-local materialization of enterprise-scale data or telemetry.
+Primary interaction remains package/SDK, notebook and embedded automation. CLI, reports, rich/graphical presentation, network service exposure and dedicated operator/admin applications remain optional adapters or host integrations.
 
 ## Phase 011 quality-validation handoff
 
-The mapping layer is now an input to active Phase 011 design-quality/misfit validation.
+The mapping layer is an input to active Phase 011 design-quality/misfit validation.
 
-Phase 011 must test composed specificity, familiarity/semantic precision, adversarial synchronization integrity, synergy/conceptual burden, progressive-disclosure misfit, provider semantic leakage, future-capability pressure and scale/approximation pressure without treating those as mapping gaps by default.
+011-A establishes the governing audit rule:
 
-If Phase 011 proves a mapping defect, it reopens the smallest affected Phase 010 authority. Otherwise the mapping conclusions remain current.
+> **Evidence may challenge any prior conclusion, but only a demonstrated semantic consequence can justify changing upstream design authority.**
+
+If a Phase 011 finding proves a mapping defect, it is classified `M2`, the smallest affected Phase 010 authority is reopened, and only materially dependent downstream conclusions are revalidated.
+
+Architecture/code/provider mismatch alone is not a mapping defect.
+
+011-B now tests composed specificity and boundary sharpness; it must not alter mapping merely to simplify interaction unless the specificity audit proves a semantic defect.
 
 ## Current next boundary
 
-**011-A — Validation Authority, Evidence Hierarchy, Probe Taxonomy & Misfit/Reopen Rules** is next eligible.
+**011-B — Composed Specificity, Purpose Alignment & Boundary Sharpness Audit** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
