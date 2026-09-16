@@ -90,8 +90,10 @@ Current authority:
 - [011 Entry & Decomposition](011/011-entry-decomposition.md)
 - [011-A Phase Record](011/011-A-validation-authority-evidence-hierarchy-probe-taxonomy-misfit-reopen-rules.md)
 - [011-B Phase Record](011/011-B-composed-specificity-purpose-alignment-boundary-sharpness-audit.md)
+- [011-C Phase Record](011/011-C-familiarity-reuse-vocabulary-external-model-comparison-audit.md)
 - [Design Quality Validation Authority](../authority/design-quality-validation-authority.md)
 - [Composed Specificity Audit](../authority/composed-specificity-purpose-boundary-audit.md)
+- [Composed Familiarity / External-Model Audit](../authority/composed-familiarity-reuse-vocabulary-external-model-audit.md)
 - [Jackson Methodology Completion Matrix](../authority/jackson-methodology-completion-matrix.md)
 
 Current state:
@@ -101,9 +103,10 @@ Phase 011                    ACTIVE
 Phase 011 decomposition      COMPLETE
 011-A                        COMPLETE
 011-B                        COMPLETE
-011-C                        NEXT ELIGIBLE
+011-C                        COMPLETE
+011-D                        NEXT ELIGIBLE
 G1 specificity               CURRENTLY CLOSED
-G2 familiarity               PARTIAL TO STRONG
+G2 familiarity               CURRENTLY CLOSED
 G3 integrity                 PARTIAL TO STRONG
 G4 synergy / simplicity      PARTIAL TO STRONG
 G5 scenario / adversarial    PARTIAL TO STRONG
@@ -111,31 +114,31 @@ G6 future-scope              STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
 G7 residual misfit register  PARTIAL
 ```
 
-011-A establishes the common audit method used by 011-B through 011-J.
+011-B closes the dedicated G1 specificity audit. 011-C closes B4 composed familiarity/reuse and G2 familiarity without changing catalog, dependence, synchronization or mapping semantics.
 
-011-B closes the dedicated G1 specificity audit:
+011-C result:
 
 ```text
-11 / 11 concepts               PASS composed specificity
-reduced family replay          PASS
-full anti-umbrella replay      PASS
-MAT-2 findings                 0
-MAT-3 blockers                 0
-catalog changes                0
-upstream reopens               0
-R010-01                        NO DEFECT
-G1 specificity                 CURRENTLY CLOSED
+11 / 11 canonical names retained
+application-family vocabulary reuse     PASS
+external-model comparison               PASS
+MAT-2 findings                          0
+MAT-3 blockers                          0
+upstream reopens                        0
+R010-02                                 NO DEFECT — COMPATIBILITY GUIDANCE STRENGTHENED
+B4 familiarity / reuse                  CURRENTLY CLOSED
+G2 familiarity                          CURRENTLY CLOSED
 ```
 
-No rejected aggregate concept becomes necessary under the full mapped composition. Strategy's broad capability declaration surface and Provenance's high fan-in remain bounded MAT-1 watch points for later audits rather than specificity defects.
+External vocabulary remains compatibility-only and owner-qualified.
 
 Current sequence:
 
 ```text
 011-A  COMPLETE — validation authority / evidence / probes / reopen rules
 011-B  COMPLETE — composed specificity / purpose alignment / boundary sharpness
-011-C  NEXT — familiarity / reuse / vocabulary / external-model comparison
-011-D  integrity under synchronization / correction / invalidation / history
+011-C  COMPLETE — familiarity / reuse / vocabulary / external-model comparison
+011-D  NEXT — integrity under synchronization / correction / invalidation / history
 011-E  synergy / simplicity / generic fitness / conceptual burden
 011-F  archetypal / exceptional / progressive-disclosure misfit replay
 011-G  adversarial / degraded / recovery / scale / provider-semantic leakage
@@ -164,6 +167,6 @@ Placeholder only; not ready, not active and not next.
 
 ## Current next boundary
 
-**011-C — Familiarity, Reuse, Vocabulary & External-Model Comparison Audit** is next eligible.
+**011-D — Integrity Under Synchronization, Correction, Invalidation & Historical Composition** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
