@@ -27,6 +27,7 @@ Current authority includes:
 - [`Phase 010 Concept Mapping Consolidation`](docs/authority/phase-010-concept-mapping-consolidation.md)
 - [`Design Quality Validation Authority`](docs/authority/design-quality-validation-authority.md)
 - [`Composed Specificity Audit`](docs/authority/composed-specificity-purpose-boundary-audit.md)
+- [`Composed Familiarity / External-Model Audit`](docs/authority/composed-familiarity-reuse-vocabulary-external-model-audit.md)
 - [`Phase 011`](docs/phases/011/index.md)
 
 ## Status
@@ -44,9 +45,10 @@ Phase 011                            ACTIVE
 Phase 011 decomposition              COMPLETE
 011-A                                COMPLETE
 011-B                                COMPLETE
-011-C                                NEXT ELIGIBLE
+011-C                                COMPLETE
+011-D                                NEXT ELIGIBLE
 G1 specificity                       CURRENTLY CLOSED
-G2 familiarity                       PARTIAL TO STRONG
+G2 familiarity                       CURRENTLY CLOSED
 G3 integrity                         PARTIAL TO STRONG
 G4 synergy / simplicity              PARTIAL TO STRONG
 G5 scenario / adversarial            PARTIAL TO STRONG
@@ -74,8 +76,6 @@ Materiality ranges from `MAT-0` observation to `MAT-3` conceptual blocker. An un
 
 ## 011-B specificity result
 
-The complete mapped concept catalog passes the current G1 audit:
-
 ```text
 11 / 11 concepts               PASS
 reduced family replay          PASS
@@ -87,15 +87,30 @@ R010-01                        NO DEFECT
 G1 specificity                 CURRENTLY CLOSED
 ```
 
-No merge, split, rename, new concept, dependence change or synchronization change is justified. Strategy's broad capability declaration surface and Provenance's high fan-in remain bounded watch points for later audits rather than specificity defects.
+## 011-C familiarity result
+
+The final vocabulary was compared against familiar SDV, Spark ML, MLflow, Great Expectations and OpenLineage models, with retained PyTorch evidence.
+
+```text
+11 / 11 canonical names retained
+application-family vocabulary reuse    PASS
+external-model comparison              PASS
+MAT-2 findings                         0
+MAT-3 blockers                         0
+R010-02                                NO DEFECT — COMPATIBILITY GUIDANCE STRENGTHENED
+B4 familiarity / reuse                 CURRENTLY CLOSED
+G2 familiarity                         CURRENTLY CLOSED
+```
+
+External terms such as `fit`, `train`, `model`, `sample`, `run`, `job`, `validation result`, `artifact`, `metadata`, `metric`, `lineage` and `synthesizer` are compatibility vocabulary only and must not silently replace canonical ownership.
 
 ## Phase 011 sequence
 
 ```text
 011-A  COMPLETE — validation authority / evidence / probes / reopen rules
 011-B  COMPLETE — composed specificity / purpose alignment / boundary sharpness
-011-C  NEXT — familiarity / reuse / vocabulary / external-model comparison
-011-D  integrity under synchronization / correction / invalidation / history
+011-C  COMPLETE — familiarity / reuse / vocabulary / external-model comparison
+011-D  NEXT — integrity under synchronization / correction / invalidation / history
 011-E  synergy / simplicity / generic fitness / conceptual burden
 011-F  archetypal / exceptional / progressive-disclosure misfit replay
 011-G  adversarial / degraded / recovery / scale / provider-semantic leakage
@@ -120,6 +135,6 @@ Only a positive Phase 014 may change implementation to **READY / NOT STARTED / N
 
 ## Current next boundary
 
-**011-C — Familiarity, Reuse, Vocabulary & External-Model Comparison Audit** is next eligible.
+**011-D — Integrity Under Synchronization, Correction, Invalidation & Historical Composition** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
