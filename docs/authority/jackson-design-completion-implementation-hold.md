@@ -59,7 +59,8 @@ F1-F5                      CURRENTLY CLOSED
 concept mapping            COMPLETE ENOUGH FOR PHASE 011
 Phase 011                  ACTIVE
 Phase 011 decomposition    COMPLETE
-011-A                      NEXT ELIGIBLE
+011-A                      COMPLETE
+011-B                      NEXT ELIGIBLE
 Jackson concept design     NOT COMPLETE
 ```
 
@@ -77,7 +78,7 @@ G6  future-scope / extensibility misfit
 G7  explicit residual conceptual misfit register
 ```
 
-Current G states remain:
+Current G states remain unchanged after 011-A:
 
 ```text
 G1  PARTIAL TO STRONG
@@ -89,7 +90,29 @@ G6  STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
 G7  PARTIAL
 ```
 
-Phase 011 is decomposed by `docs/phases/011/011-entry-decomposition.md` into 011-A through 011-J. 011-A establishes validation authority, evidence hierarchy, probe taxonomy and misfit/reopen rules before substantive G1-G7 judgments begin.
+## 011-A validation-method authority
+
+Current Phase 011 audit method is governed by [Design Quality Validation Authority](design-quality-validation-authority.md).
+
+011-A establishes:
+
+- evidence hierarchy and evidence roles;
+- material quality-finding record;
+- probe target and scenario-mode taxonomy;
+- `MAT-0` through `MAT-3` materiality;
+- specificity, familiarity, integrity, synergy and scenario-quality criteria;
+- `M0-M8` misfit routing;
+- smallest-authority reopen rule;
+- downstream revalidation blast-radius rule;
+- residual-finding disposition vocabulary.
+
+The governing rule is:
+
+> **Evidence may challenge any prior conclusion, but only a demonstrated semantic consequence can justify changing upstream design authority.**
+
+Architecture, source, tests and provider/product models may expose counterexamples, feasibility constraints or familiarity pressure. They do not directly redefine problem, concept, dependence, synchronization or mapping authority.
+
+An unresolved `MAT-3` conceptual blocker prevents positive Phase 011 exit.
 
 ## Phase 010 authority held forward
 
@@ -98,21 +121,7 @@ Phase 010 remains consolidated by:
 - [Phase 010 Concept Mapping Consolidation](phase-010-concept-mapping-consolidation.md)
 - [Concept Mapping Index](../mapping/index.md)
 
-Final mapping coverage remains:
-
-```text
-66 / 66 command groups                    SEMANTICALLY MAPPED
-52 / 52 query groups                      SEMANTICALLY MAPPED
-11 / 11 lifecycle/history envelopes       SEMANTICALLY MAPPED
-5 / 5 explanation patterns                SEMANTICALLY MAPPED
-11 / 11 concept names                     LINGUISTICALLY ALIGNED
-66 / 66 command groups                    PHYSICAL RESPONSIBILITY MAPPED
-52 / 52 query groups                      PHYSICAL RESPONSIBILITY MAPPED
-10 / 10 family/capability replays         PASS
-20 / 20 difficult-condition parity probes PASS
-```
-
-Phase 011 may reopen an earlier result only if a concrete quality/misfit probe establishes a genuine defect. A desire to fit existing architecture, code, tests or provider models is not sufficient evidence.
+Phase 011 may reopen an earlier result only when a concrete quality/misfit finding demonstrates a genuine defect and the smallest-authority reopen discipline is followed.
 
 ## Product / mapping invariants held forward
 
@@ -138,7 +147,7 @@ Unless Phase 011 disproves them through a genuine misfit, preserve:
 
 ## Phase 010 residual risks carried into Phase 011
 
-Phase 011 must explicitly disposition:
+All eight remain open audit inputs until their owning subgroups disposition them:
 
 1. composed specificity drift;
 2. familiarity versus semantic precision;
@@ -148,8 +157,6 @@ Phase 011 must explicitly disposition:
 6. provider/host semantic leakage;
 7. future-capability/extensibility pressure;
 8. scale/approximation pressure.
-
-These are design-audit obligations, not implementation tasks.
 
 ## Architecture/executable boundary
 
@@ -163,7 +170,9 @@ Phase 011 may classify an issue as representation/architecture-only for Phase 01
 
 ```text
 010       concept mapping / interaction / language / experience — COMPLETE
-011       specificity / familiarity / integrity / synergy / misfit — ACTIVE
+011-A     validation authority / evidence / probes / reopen rules — COMPLETE
+011-B     specificity / purpose alignment / boundary sharpness — NEXT
+011-C..J  remaining Phase 011 quality/misfit validation
 012       Jackson concept-design completion decision
 013       representation / architecture reconciliation
 014       whole-design completion / implementation-readiness decision
@@ -183,6 +192,6 @@ Until Phase 014 passes, do not add production behavior, executable architecture 
 
 ## Current next boundary
 
-**011-A — Validation Authority, Evidence Hierarchy, Probe Taxonomy & Misfit/Reopen Rules** is next eligible.
+**011-B — Composed Specificity, Purpose Alignment & Boundary Sharpness Audit** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
