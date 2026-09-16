@@ -26,6 +26,7 @@ Current authority includes:
 - [`010-D Linguistic Mapping`](docs/mapping/linguistic-mapping-vocabulary-typed-status-disclosure-semantics.md)
 - [`010-E Package/Host Physical Interaction Mapping`](docs/mapping/package-notebook-automation-host-platform-interaction-mapping.md)
 - [`010-F Application-Family Workflow Composition`](docs/mapping/application-family-workflow-composition-progressive-disclosure.md)
+- [`010-G Human/Programmatic Semantic Parity & Difficult-Condition Audit`](docs/mapping/human-programmatic-semantic-parity-degraded-recovery-scale-misfit-audit.md)
 - [`Phase 010`](docs/phases/010/index.md)
 
 ## Status
@@ -42,12 +43,13 @@ Phase 010                            ACTIVE
 010-D                                COMPLETE
 010-E                                COMPLETE
 010-F                                COMPLETE
-010-G                                NEXT ELIGIBLE
+010-G                                COMPLETE
+010-H                                NEXT ELIGIBLE
 F1                                   CURRENTLY CLOSED
 F2                                   CURRENTLY CLOSED
 F3                                   CURRENTLY CLOSED
 F4                                   CURRENTLY CLOSED
-F5                                   STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
+F5                                   CURRENTLY CLOSED
 Jackson design completion            IN PROGRESS
 implementation readiness             NOT READY
 implementation start                 NOT STARTED
@@ -64,11 +66,14 @@ Current mapping coverage is:
 66 / 66 command groups                    PHYSICAL RESPONSIBILITY MAPPED
 52 / 52 query groups                      PHYSICAL RESPONSIBILITY MAPPED
 10 / 10 required family/capability replays PASS
+20 / 20 difficult-condition parity probes PASS
 ```
 
 010-E establishes package/notebook/automation as primary interaction surfaces and treats CLI/report/UI/operator presentation as optional or host-owned where appropriate. A standalone network service, graphical application or dedicated admin console is not required for semantic completeness.
 
-010-F establishes that concept inclusion defines available capability rather than forcing every included concept to be re-executed in every invocation. Existing Learned State and reusable authority revisions may be selected rather than recreated; optional capabilities create no empty mandatory steps; and the full eleven-concept family member is not an eleven-stage wizard.
+010-F establishes that concept inclusion defines available capability rather than forcing every included concept to be re-executed in every invocation.
+
+010-G establishes that human/programmatic parity means equivalent material semantics, not identical ergonomics. The mappings preserve owner/state/basis/uncertainty/history/actionability across recovery, degradation, security, reconstructed history, later Evidence staleness, topology/text cases and enterprise scale without adding generic coordinator/status concepts.
 
 ## Remaining design roadmap
 
@@ -86,6 +91,6 @@ Only a positive Phase 014 may change implementation to **READY / NOT STARTED / N
 
 ## Current next boundary
 
-**010-G — Human/Programmatic Semantic Parity, Degraded/Recovery/Scale & Mapping-Misfit Audit** is next eligible.
+**010-H — Phase 010 Consolidation, F1-F5 Completion Decision & Phase 011 Handoff** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
