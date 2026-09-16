@@ -22,7 +22,7 @@ IMPLEMENTATION START       NOT STARTED
 IMPLEMENTATION NEXT        NOT YET
 ```
 
-No Phase 010 result changes this posture by itself.
+No Phase 011 decomposition or intermediate quality finding changes this posture by itself.
 
 ## Completion-state vocabulary
 
@@ -47,7 +47,8 @@ Current problem, concept, dependence/composition and mapping authority includes:
 - [Phase 009 Dependence, Application Family & Composition Consolidation](phase-009-dependence-composition-consolidation.md);
 - current synchronization authority;
 - [Phase 010 Concept Mapping Consolidation](phase-010-concept-mapping-consolidation.md);
-- mapping authority under `docs/mapping/`.
+- mapping authority under `docs/mapping/`;
+- [Phase 011 Entry & Decomposition](../phases/011/011-entry-decomposition.md) for the current quality/misfit validation sequence and reopen discipline.
 
 ### Class B — supporting design evidence
 
@@ -69,7 +70,9 @@ Phase 009  COMPLETE
 009-A..H   COMPLETE
 Phase 010  COMPLETE
 010-A..H   COMPLETE
-Phase 011  NEXT — ENTRY/DECOMPOSITION
+Phase 011  ACTIVE
+011 decomposition COMPLETE
+011-A      NEXT ELIGIBLE
 ```
 
 Current Phase 010 result:
@@ -102,8 +105,8 @@ F5                                        CURRENTLY CLOSED
 | B1 | Divergent candidate concept discovery | 008-G replayed original/later/new candidates | **CURRENTLY CLOSED** | 008-G/H |
 | B2 | Candidate reduction/merger/subordination/defer/reject | 008-G revalidated exclusions/future triggers | **CURRENTLY CLOSED** | 008-G/H |
 | B3 | Independence and appropriate domain genericity | 008-F re-tested all eleven | **CURRENTLY CLOSED** | 008-F/H |
-| B4 | Explicit familiarity/reuse comparison | 008-F compared analogues/naming/reuse; Phase 010 normalized vocabulary but composed familiarity remains a Phase 011 question | **CURRENTLY CLOSED FOR INDIVIDUAL CONCEPTS** | 008-F/H; 011 composed review |
-| B5 | Missing-concept/god-concept/representation-leakage audit | 008-G plus Phase 010 mapping/misfit audits reject representation-shaped aggregate concepts | **CURRENTLY CLOSED** | 008-G/H; 010-H |
+| B4 | Explicit familiarity/reuse comparison | 008-F compared analogues/naming/reuse; Phase 010 normalized vocabulary but composed familiarity remains a Phase 011 question | **CURRENTLY CLOSED FOR INDIVIDUAL CONCEPTS** | 008-F/H; 011-C composed review |
+| B5 | Missing-concept/god-concept/representation-leakage audit | 008-G plus Phase 010 mapping/misfit audits reject representation-shaped aggregate concepts | **CURRENTLY CLOSED** | 008-G/H; 010-H; revalidate 011 |
 | C1 | Concept name and distinct purpose | 008-B/F | **CURRENTLY CLOSED** | 008-B/F/H |
 | C2 | Operational principle demonstrating purpose | 008-E normalized/falsified all eleven | **CURRENTLY CLOSED** | 008-E/H |
 | C3 | Complete conceptual state model | 008-C normalized state/identity/history/uncertainty | **CURRENTLY CLOSED** | 008-C/H |
@@ -119,20 +122,20 @@ F5                                        CURRENTLY CLOSED
 | E1 | Explicit concept synchronizations | 13 active from 15 historical IDs; no hidden new synchronization required by Phase 010 | **CURRENTLY CLOSED** | 009-E/F/G/H; 010-H |
 | E2 | Singular state ownership across synchronizations | 009-F ownership survives action/inspection/surface/family/parity mapping including difficult conditions | **CURRENTLY CLOSED** | 009-F/G/H; 010-H |
 | E3 | Composition burden/economy and hidden-coordinator avoidance | 010-F rejects generic full-suite workflow; 010-G/H reject generic Recovery/Degraded/Status authorities | **CURRENTLY CLOSED** | 009-F/G/H; 010-F/G/H |
-| E4 | Composition synergy | Phase 009 synergy evidence remains intact through Phase 010 mapping; broader final composed quality audit remains Phase 011 | **CURRENTLY CLOSED** | 009-G/H; revalidate 011 |
-| E5 | Integrity under composition | Phase 009 integrity plus 010-F/G difficult-condition replay preserve owner boundaries; broader adversarial concept-integrity audit remains Phase 011 | **CURRENTLY CLOSED** | 009-F/G/H; revalidate 011 |
+| E4 | Composition synergy | Phase 009 synergy evidence remains intact through Phase 010 mapping; broader final composed quality audit remains Phase 011 | **CURRENTLY CLOSED** | 009-G/H; revalidate 011-E |
+| E5 | Integrity under composition | Phase 009 integrity plus 010-F/G difficult-condition replay preserve owner boundaries; broader adversarial concept-integrity audit remains Phase 011 | **CURRENTLY CLOSED** | 009-F/G/H; revalidate 011-D/G |
 | F1 | Concept action → human/programmatic interaction mapping | 010-B maps all 66 command groups; 010-E/F/G preserve them physically, compositionally and under difficult conditions; 010-H consolidates | **CURRENTLY CLOSED** | 010-B/H |
 | F2 | Concept state/query → actor-visible inspection mapping | 010-C maps all 52 query groups, 11 lifecycle/history envelopes and explanation patterns; 010-G validates degraded/history/security/scale cases; 010-H consolidates | **CURRENTLY CLOSED** | 010-C/H |
 | F3 | Linguistic mapping/vocabulary alignment | 010-D aligns owner-qualified vocabulary, typed status, disclosure/history and ecosystem aliases; 010-G/H preserve distinctions under difficult conditions | **CURRENTLY CLOSED** | 010-D/H |
 | F4 | Physical/interaction mapping across relevant surfaces and application-family compositions | 010-E maps all actions/queries to package/notebook/automation/host responsibilities; 010-F passes ten family/capability replays; 010-H consolidates | **CURRENTLY CLOSED** | 010-E/F/H |
 | F5 | Human/programmatic semantic parity | 010-G passes 20 difficult-condition probes across recovery, degradation, security, history, Evidence, topology/text, scale, operator and extension-author interaction; 010-H consolidates | **CURRENTLY CLOSED** | 010-G/H |
-| G1 | Specificity across final composed set | Individual evidence strong; Phase 010 maps the complete set but does not perform the dedicated composed specificity audit | **PARTIAL TO STRONG** | 011 |
-| G2 | Familiarity across final composed set | Individual familiarity and linguistic alias discipline strong; final composed familiarity/reuse review remains | **PARTIAL TO STRONG** | 011 |
-| G3 | Integrity across synchronizations/mappings | Phase 009 integrity and Phase 010 ordinary/difficult mapping replay are strong; broader adversarial concept-integrity review remains | **PARTIAL TO STRONG** | 011 |
-| G4 | Synergy and simplicity/generic fitness | Phase 009 synergy/economy plus Phase 010 optional-capability composition/no-hidden-coordinator evidence are strong; dedicated composed quality replay remains | **PARTIAL TO STRONG** | 011 |
-| G5 | Archetypal/exceptional/degraded/adversarial/recovery misfit | 010-G covers mapping-level difficult cases; broader post-mapping concept-design adversarial validation remains | **PARTIAL TO STRONG** | 011 |
-| G6 | Future-scope/extensibility misfit | Rediscovery/extension/non-propagation boundaries recorded; extension-author mapping passes; final future-scope audit remains | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 011 |
-| G7 | Explicit residual conceptual misfit register | 010-H hands non-blocking mapping risks forward, but final concept-design residual misfit register remains to be produced | **PARTIAL** | 011/012 |
+| G1 | Specificity across final composed set | Individual evidence strong; Phase 010 maps the complete set but does not perform the dedicated composed specificity audit | **PARTIAL TO STRONG** | 011-B |
+| G2 | Familiarity across final composed set | Individual familiarity and linguistic alias discipline strong; final composed familiarity/reuse review remains | **PARTIAL TO STRONG** | 011-C |
+| G3 | Integrity across synchronizations/mappings | Phase 009 integrity and Phase 010 ordinary/difficult mapping replay are strong; broader adversarial concept-integrity review remains | **PARTIAL TO STRONG** | 011-D/G |
+| G4 | Synergy and simplicity/generic fitness | Phase 009 synergy/economy plus Phase 010 optional-capability composition/no-hidden-coordinator evidence are strong; dedicated composed quality replay remains | **PARTIAL TO STRONG** | 011-E |
+| G5 | Archetypal/exceptional/degraded/adversarial/recovery misfit | 010-G covers mapping-level difficult cases; broader post-mapping concept-design adversarial validation remains | **PARTIAL TO STRONG** | 011-F/G |
+| G6 | Future-scope/extensibility misfit | Rediscovery/extension/non-propagation boundaries recorded; extension-author mapping passes; final future-scope audit remains | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 011-H |
+| G7 | Explicit residual conceptual misfit register | 010-H hands non-blocking mapping risks forward, but final concept-design residual misfit register remains to be produced | **PARTIAL** | 011-I/J; 012 confirmation |
 | H1 | One current-state consolidated Jackson concept-design audit | Phases 008, 009 and 010 are individually consolidated; Phase 011 and one overall current-state audit remain | **OPEN** | 012 |
 | H2 | Explicit Jackson concept-design completion decision | Not yet performed | **OPEN** | 012 |
 | R1 | Architecture reconciled downstream to completed concept design | Extensive retained architecture exists | **DOWNSTREAM / PENDING RECONCILIATION** | 013 |
@@ -164,20 +167,37 @@ Key findings:
 - no new synchronization or universal application-family edge is introduced;
 - no Phase 008/009 reopening is required at the Phase 010 boundary.
 
-## Phase 011 handoff
+## Phase 011 entry / decomposition result
 
-010-H hands Phase 011 eight non-blocking audit risks:
+Phase 011 is now active and deliberately decomposed before substantive quality judgments.
 
-1. composed specificity drift;
-2. familiarity versus semantic precision;
-3. synchronization integrity under broader adversarial composition;
-4. synergy versus conceptual burden;
-5. progressive-disclosure misfit;
-6. provider/host semantic leakage;
-7. future-capability/extensibility pressure;
-8. scale/approximation pressure.
+The dependency-safe sequence is:
 
-Phase 011 must deliberately decompose methodology area G before executing it.
+```text
+011-A  validation authority / evidence hierarchy / probe taxonomy / misfit-reopen rules
+011-B  composed specificity / purpose alignment / boundary sharpness
+011-C  familiarity / reuse / vocabulary / external-model comparison
+011-D  integrity under synchronization / correction / invalidation / history
+011-E  synergy / simplicity / generic fitness / conceptual burden
+011-F  archetypal / exceptional / progressive-disclosure misfit replay
+011-G  adversarial / degraded / recovery / scale / provider-semantic leakage
+011-H  future-scope / extensibility / new-capability pressure / rediscovery triggers
+011-I  residual conceptual misfit register / disposition / closure preparation
+011-J  Phase 011 consolidation / G1-G7 decision / Phase 012 handoff
+```
+
+The decomposition assigns all eight 010-H residual risks:
+
+1. composed specificity drift → primarily 011-B;
+2. familiarity versus semantic precision → 011-C;
+3. adversarial synchronization integrity → 011-D/G;
+4. synergy versus conceptual burden → 011-E;
+5. progressive-disclosure misfit → 011-E/F;
+6. provider/host semantic leakage → 011-G;
+7. future-capability/extensibility pressure → 011-H;
+8. scale/approximation pressure → 011-G.
+
+No G1-G7 row is closed by decomposition alone.
 
 ## Current methodological verdict
 
@@ -189,7 +209,9 @@ D1-D4 DEPENDENCE / FAMILY            CURRENTLY CLOSED
 E1-E5 COMPOSITION                    CURRENTLY CLOSED
 PHASE 010                            COMPLETE
 F1-F5                                CURRENTLY CLOSED
-PHASE 011                            NEXT — ENTRY/DECOMPOSITION
+PHASE 011                            ACTIVE
+PHASE 011 DECOMPOSITION              COMPLETE
+011-A                                NEXT ELIGIBLE
 JACKSON CONCEPT DESIGN COMPLETE      NO
 REPRESENTATION/ARCHITECTURE FINAL    NO — PENDING PHASE 013 RECONCILIATION
 IMPLEMENTATION READINESS             NOT READY
@@ -200,7 +222,7 @@ IMPLEMENTATION NEXT                  NOT YET
 ## Current dependency order
 
 ```text
-011  Specificity / Familiarity / Integrity / Synergy / Misfit
+011-A -> 011-B -> 011-C -> 011-D -> 011-E -> 011-F -> 011-G -> 011-H -> 011-I -> 011-J
   ↓
 012  Jackson Concept-Design Consolidation & Completion Decision
   ↓
@@ -211,10 +233,10 @@ IMPLEMENTATION NEXT                  NOT YET
 
 ## Guardrail
 
-Phase 011 may expose a genuine upstream misfit, but representation or implementation convenience is not evidence to redefine a concept. Reopen only the smallest affected authority when a real misfit is established.
+Phase 011 may expose a genuine upstream misfit, but representation or implementation convenience is not evidence to redefine a concept. Reopen only the smallest affected authority when a real misfit is established. Architecture/source/tests/provider models remain counterexample, feasibility or familiarity evidence rather than upstream authority.
 
 ## Current next boundary
 
-**Phase 011 — Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Design Validation — entry/decomposition** is next eligible.
+**011-A — Validation Authority, Evidence Hierarchy, Probe Taxonomy & Misfit/Reopen Rules** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
