@@ -39,13 +39,10 @@ Existing architecture, source or tests never become upstream concept-design auth
 - [Concept Mapping Authority](mapping/index.md)
 - [Phase 010 Concept Mapping Consolidation](authority/phase-010-concept-mapping-consolidation.md)
 - [Design Quality Validation Authority](authority/design-quality-validation-authority.md)
-- [Composed Specificity, Purpose Alignment & Boundary Sharpness Audit](authority/composed-specificity-purpose-boundary-audit.md)
-- [Familiarity, Reuse, Vocabulary & External-Model Comparison Audit](authority/composed-familiarity-reuse-vocabulary-external-model-audit.md)
+- [Composed Specificity Audit](authority/composed-specificity-purpose-boundary-audit.md)
+- [Composed Familiarity Audit](authority/composed-familiarity-reuse-vocabulary-external-model-audit.md)
+- [Synchronization/Historical Integrity Audit](authority/composed-integrity-synchronization-history-audit.md)
 - [Phase 011](phases/011/index.md)
-- [011 Entry & Decomposition](phases/011/011-entry-decomposition.md)
-- [011-A Validation Authority Phase Record](phases/011/011-A-validation-authority-evidence-hierarchy-probe-taxonomy-misfit-reopen-rules.md)
-- [011-B Specificity Phase Record](phases/011/011-B-composed-specificity-purpose-alignment-boundary-sharpness-audit.md)
-- [011-C Familiarity Phase Record](phases/011/011-C-familiarity-reuse-vocabulary-external-model-comparison-audit.md)
 
 ## Current state
 
@@ -57,16 +54,16 @@ Phase 009                            COMPLETE
 Phase 010                            COMPLETE
 010-A..010-H                         COMPLETE
 F1-F5                                CURRENTLY CLOSED
-concept mapping                      COMPLETE ENOUGH FOR PHASE 011
 Phase 011                            ACTIVE
 Phase 011 decomposition              COMPLETE
 011-A                                COMPLETE
 011-B                                COMPLETE
 011-C                                COMPLETE
-011-D                                NEXT ELIGIBLE
+011-D                                COMPLETE
+011-E                                NEXT ELIGIBLE
 G1 specificity                       CURRENTLY CLOSED
 G2 familiarity                       CURRENTLY CLOSED
-G3 integrity                         PARTIAL TO STRONG
+G3 integrity                         STRONG EVIDENCE / 011-G STRESS REVALIDATION REQUIRED
 G4 synergy / simplicity              PARTIAL TO STRONG
 G5 scenario / adversarial            PARTIAL TO STRONG
 G6 future-scope                      STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
@@ -79,13 +76,7 @@ implementation next                  NOT YET
 
 ## Product form
 
-SYNGAN is a deployable Python/Spark framework package.
-
-> **Platform agnosticism means agnostic across compliant Spark-capable hosting and infrastructure platforms.**
-
-Spark/PySpark remains the current required processing environment. A host may provide notebooks, jobs, identity, scheduling, storage/catalog, logging and infrastructure UI without becoming semantic authority.
-
-Primary interaction is package/notebook/automation. CLI, reports, rich graphical presentation, network service/API deployment and dedicated operator/admin applications remain optional adapters or host integrations.
+SYNGAN remains a deployable Python/Spark framework package, agnostic across compliant Spark-capable hosting and infrastructure platforms. Package/SDK, notebook and embedded automation remain primary interaction roles; CLI, reports, rich presentation, network service/API exposure and dedicated operator/admin applications remain optional adapters/integrations.
 
 ## Completed Phase 010 mapping program
 
@@ -101,78 +92,51 @@ Primary interaction is package/notebook/automation. CLI, reports, rich graphical
 20 / 20 difficult-condition parity probes PASS
 ```
 
-Phase 010 remains the completed mapping authority. Phase 011 tests the resulting design for specificity, familiarity, integrity, synergy, scenario/adversarial misfit, future-scope pressure and residual conceptual debt.
+## Phase 011 results through 011-D
 
-## Phase 011 validation method
+### 011-A — validation method
 
-011-A establishes the common audit method:
+Common evidence, probe, materiality, quality-criterion, misfit-routing and smallest-authority reopen rules are established.
 
-```text
-E1-E8     evidence hierarchy
-ER-*      evidence roles
-Q1-Q15    material finding record
-PT-*      probe target classes
-PS-*      scenario modes
-MAT-0..3  materiality classes
-SP-*      specificity criteria
-FA-*      familiarity comparison discipline
-IN-*      integrity criteria
-SY-*      synergy / simplicity / generic-fitness criteria
-SC-*      scenario-quality criteria
-M0-M8     misfit routing taxonomy
-```
-
-Controlling rules:
-
-> **Evidence may challenge any prior conclusion, but only a demonstrated semantic consequence can justify changing upstream design authority.**
-
-> **Reopen the smallest canonical authority that owns the violated semantic claim, then revalidate only materially dependent downstream conclusions.**
-
-Architecture, source, tests and external provider/product models remain counterexample, feasibility or familiarity evidence rather than upstream authority.
-
-## 011-B specificity result
+### 011-B — specificity
 
 ```text
-11 / 11 concepts               PASS composed specificity
-reduced family replay          PASS
-full anti-umbrella replay      PASS
-MAT-2 specificity findings     0
-MAT-3 specificity blockers     0
-catalog changes                0
-upstream reopens               0
+11 / 11 concepts               PASS
 R010-01                        NO DEFECT
 G1 specificity                 CURRENTLY CLOSED
 ```
 
-## 011-C familiarity result
-
-The final vocabulary was compared by conceptual job against current SDV, Spark ML, MLflow, Great Expectations and OpenLineage terminology, plus retained PyTorch compatibility evidence.
+### 011-C — familiarity
 
 ```text
-11 / 11 canonical names retained
-application-family vocabulary reuse    PASS
-external-model comparison              PASS
-MAT-2 familiarity findings             0
-MAT-3 familiarity blockers             0
-upstream reopens                       0
-R010-02                                NO DEFECT — COMPATIBILITY GUIDANCE STRENGTHENED
-B4 familiarity / reuse                 CURRENTLY CLOSED
-G2 familiarity                         CURRENTLY CLOSED
+11 / 11 canonical names        RETAINED
+external-model comparison      PASS
+R010-02                        NO DEFECT — COMPATIBILITY GUIDANCE STRENGTHENED
+B4 / G2                        CURRENTLY CLOSED
 ```
 
-Useful external words remain one-way compatibility terms rather than new authority:
+### 011-D — integrity baseline
 
 ```text
-fit / train         -> qualified Learning verbs
-model               -> qualified Learned State analogue when model-shaped
-sample              -> Generation verb only when clearly synthetic production
-validation result   -> qualified Evidence analogue
-lineage             -> derivational subset of Provenance
-run / job           -> external operational terms; qualify owner
-artifact / metadata -> physical or umbrella terms, not concept owners
+13 / 13 synchronizations preserve singular ownership
+producer/result integrity                       PASS
+occurrence-scoped/non-reactive binding          PASS
+current-versus-historical truth                 PASS
+Evidence/Generation authority separation        PASS
+semantic/Execution separation                   PASS
+Provenance low-authority-fan-out baseline       PASS
+recovery/reconstruction ownership baseline      PASS
+optional-capability integrity                   PASS
+hidden coordinator required                     NO
+MAT-2 / MAT-3 findings                          0 / 0
+upstream reopen                                 NONE
 ```
 
-The canonical [Ecosystem Compatibility Vocabulary](terminology/ecosystem-compatibility.md) records the strengthened current guidance.
+Controlling temporal rule:
+
+> **Current status/applicability may change without rewriting the exact state an earlier occurrence bound or used. Reconstruction may restore missing historical representation only by satisfying the original owner's invariants.**
+
+`R010-03` is **NO DEFECT for the 011-D composed/historical integrity portion**, while 011-G still owns adversarial/degraded/recovery/provider stress revalidation. G3 therefore remains strong but not finally closed.
 
 ## Phase 011 sequence
 
@@ -180,16 +144,14 @@ The canonical [Ecosystem Compatibility Vocabulary](terminology/ecosystem-compati
 011-A  COMPLETE — validation authority / evidence / probes / reopen rules
 011-B  COMPLETE — specificity / purpose alignment / boundary sharpness
 011-C  COMPLETE — familiarity / reuse / vocabulary / external-model comparison
-011-D  NEXT — integrity under synchronization / correction / invalidation / history
-011-E  synergy / simplicity / generic fitness / conceptual burden
+011-D  COMPLETE — synchronization / correction / invalidation / historical integrity
+011-E  NEXT — synergy / simplicity / generic fitness / conceptual burden
 011-F  archetypal / exceptional / progressive-disclosure misfit replay
 011-G  adversarial / degraded / recovery / scale / provider-semantic leakage
 011-H  future-scope / extensibility / new-capability pressure / rediscovery triggers
 011-I  residual conceptual misfit register / dispositions
 011-J  Phase 011 consolidation / G1-G7 decision / Phase 012 handoff
 ```
-
-R010-01 and R010-02 are now dispositioned. The remaining six Phase 010 handoff risks retain their assigned Phase 011 owners.
 
 ## Implementation status rule
 
@@ -201,10 +163,10 @@ IMPLEMENTATION START       NOT STARTED
 IMPLEMENTATION NEXT        NOT YET
 ```
 
-Do not translate concepts, family variants, mapping roles, aliases or Phase 011 audit categories mechanically into packages, services, schemas, endpoints, UI components, workflow engines, deployment units, runtime enums or product SKUs.
+Do not translate concepts, synchronizations, historical-status distinctions, external aliases or Phase 011 audit categories mechanically into packages, services, schemas, endpoints, events, workflow engines, persistence, recovery mechanisms, runtime enums or product SKUs.
 
 Phase 012 may declare Jackson concept design complete. Phase 013 reconciles representation/architecture. Only a positive Phase 014 may make implementation **READY / NOT STARTED / NEXT**; implementation itself still requires Phase 015.
 
 ## Current next boundary
 
-**011-D — Integrity Under Synchronization, Correction, Invalidation & Historical Composition** is next eligible.
+**011-E — Synergy, Simplicity, Generic Fitness & Conceptual-Burden Audit** is next eligible.
