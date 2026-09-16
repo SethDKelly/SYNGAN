@@ -60,7 +60,9 @@ concept mapping            COMPLETE ENOUGH FOR PHASE 011
 Phase 011                  ACTIVE
 Phase 011 decomposition    COMPLETE
 011-A                      COMPLETE
-011-B                      NEXT ELIGIBLE
+011-B                      COMPLETE
+011-C                      NEXT ELIGIBLE
+G1 specificity             CURRENTLY CLOSED
 Jackson concept design     NOT COMPLETE
 ```
 
@@ -78,10 +80,10 @@ G6  future-scope / extensibility misfit
 G7  explicit residual conceptual misfit register
 ```
 
-Current G states remain unchanged after 011-A:
+Current G states after 011-B:
 
 ```text
-G1  PARTIAL TO STRONG
+G1  CURRENTLY CLOSED
 G2  PARTIAL TO STRONG
 G3  PARTIAL TO STRONG
 G4  PARTIAL TO STRONG
@@ -94,18 +96,6 @@ G7  PARTIAL
 
 Current Phase 011 audit method is governed by [Design Quality Validation Authority](design-quality-validation-authority.md).
 
-011-A establishes:
-
-- evidence hierarchy and evidence roles;
-- material quality-finding record;
-- probe target and scenario-mode taxonomy;
-- `MAT-0` through `MAT-3` materiality;
-- specificity, familiarity, integrity, synergy and scenario-quality criteria;
-- `M0-M8` misfit routing;
-- smallest-authority reopen rule;
-- downstream revalidation blast-radius rule;
-- residual-finding disposition vocabulary.
-
 The governing rule is:
 
 > **Evidence may challenge any prior conclusion, but only a demonstrated semantic consequence can justify changing upstream design authority.**
@@ -113,6 +103,29 @@ The governing rule is:
 Architecture, source, tests and provider/product models may expose counterexamples, feasibility constraints or familiarity pressure. They do not directly redefine problem, concept, dependence, synchronization or mapping authority.
 
 An unresolved `MAT-3` conceptual blocker prevents positive Phase 011 exit.
+
+## 011-B specificity authority
+
+Current G1 authority is [Composed Specificity, Purpose Alignment & Boundary Sharpness Audit](composed-specificity-purpose-boundary-audit.md).
+
+```text
+11 / 11 concepts               PASS
+reduced family replay          PASS
+full anti-umbrella replay      PASS
+MAT-2 findings                 0
+MAT-3 blockers                 0
+catalog changes                0
+upstream reopens               0
+R010-01                        NO DEFECT
+G1 specificity                 CURRENTLY CLOSED
+```
+
+No concept, inclusion-dependence edge, synchronization or mapping rule changes in 011-B.
+
+Two bounded watch points are carried forward without blocking G1:
+
+- Strategy's broad capability declaration surface must not absorb plugin/runtime/configuration infrastructure;
+- Provenance's high fan-in must continue to have low authority fan-out.
 
 ## Phase 010 authority held forward
 
@@ -147,16 +160,18 @@ Unless Phase 011 disproves them through a genuine misfit, preserve:
 
 ## Phase 010 residual risks carried into Phase 011
 
-All eight remain open audit inputs until their owning subgroups disposition them:
+Current disposition:
 
-1. composed specificity drift;
-2. familiarity versus semantic precision;
-3. synchronization integrity under broader adversarial composition;
-4. synergy versus conceptual burden;
-5. progressive-disclosure misfit;
-6. provider/host semantic leakage;
-7. future-capability/extensibility pressure;
-8. scale/approximation pressure.
+```text
+R010-01  composed specificity drift                  NO DEFECT — 011-B
+R010-02  familiarity versus semantic precision       OPEN — 011-C
+R010-03  synchronization integrity under adversity   OPEN — 011-D / 011-G
+R010-04  synergy versus conceptual burden            OPEN — 011-E
+R010-05  progressive-disclosure misfit               OPEN — 011-E / 011-F
+R010-06  provider / host semantic leakage            OPEN — 011-G
+R010-07  future-capability / extensibility pressure  OPEN — 011-H
+R010-08  scale / approximation pressure              OPEN — 011-G
+```
 
 ## Architecture/executable boundary
 
@@ -171,8 +186,9 @@ Phase 011 may classify an issue as representation/architecture-only for Phase 01
 ```text
 010       concept mapping / interaction / language / experience — COMPLETE
 011-A     validation authority / evidence / probes / reopen rules — COMPLETE
-011-B     specificity / purpose alignment / boundary sharpness — NEXT
-011-C..J  remaining Phase 011 quality/misfit validation
+011-B     specificity / purpose alignment / boundary sharpness — COMPLETE
+011-C     familiarity / reuse / vocabulary / external-model comparison — NEXT
+011-D..J  remaining Phase 011 quality/misfit validation
 012       Jackson concept-design completion decision
 013       representation / architecture reconciliation
 014       whole-design completion / implementation-readiness decision
@@ -192,6 +208,6 @@ Until Phase 014 passes, do not add production behavior, executable architecture 
 
 ## Current next boundary
 
-**011-B — Composed Specificity, Purpose Alignment & Boundary Sharpness Audit** is next eligible.
+**011-C — Familiarity, Reuse, Vocabulary & External-Model Comparison Audit** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
