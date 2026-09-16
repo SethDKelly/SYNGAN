@@ -8,7 +8,7 @@ status: active
 
 This directory contains the canonical concept specifications accepted in Phase 001 and normalized through Phase 008.
 
-Cross-concept dependence/composition is consolidated by [Phase 009 Dependence, Application Family & Composition Consolidation](../authority/phase-009-dependence-composition-consolidation.md). Concept mapping is consolidated by [Phase 010 Concept Mapping Consolidation](../authority/phase-010-concept-mapping-consolidation.md). Current composed specificity is governed by [Composed Specificity, Purpose Alignment & Boundary Sharpness Audit](../authority/composed-specificity-purpose-boundary-audit.md).
+Cross-concept dependence/composition is consolidated by [Phase 009 Dependence, Application Family & Composition Consolidation](../authority/phase-009-dependence-composition-consolidation.md). Concept mapping is consolidated by [Phase 010 Concept Mapping Consolidation](../authority/phase-010-concept-mapping-consolidation.md). Current composed specificity is governed by [Composed Specificity, Purpose Alignment & Boundary Sharpness Audit](../authority/composed-specificity-purpose-boundary-audit.md), and composed familiarity/reuse by [Familiarity, Reuse, Vocabulary & External-Model Comparison Audit](../authority/composed-familiarity-reuse-vocabulary-external-model-audit.md).
 
 ## Accepted concepts
 
@@ -36,12 +36,13 @@ F1-F5 mapping                        CURRENTLY CLOSED
 Phase 011                            ACTIVE
 011-A                                COMPLETE
 011-B                                COMPLETE
-011-C                                NEXT ELIGIBLE
+011-C                                COMPLETE
+011-D                                NEXT ELIGIBLE
 G1 composed specificity              CURRENTLY CLOSED
-G2 familiarity                       PARTIAL TO STRONG
+G2 composed familiarity              CURRENTLY CLOSED
 ```
 
-Phase 009 found no reason to add, remove, merge, split or rename a concept. Phase 010 found no mapping/composition reason to reopen that conclusion. 011-B now re-tests the catalog as one composed mapped design and again finds no catalog change justified.
+Phase 009 found no reason to add, remove, merge, split or rename a concept. Phase 010 found no mapping/composition reason to reopen that conclusion. 011-B re-tests the catalog as one composed mapped design and finds no specificity-driven catalog change. 011-C compares the final vocabulary against familiar external conceptual jobs and again retains all eleven canonical names.
 
 ## 011-B composed specificity result
 
@@ -58,41 +59,41 @@ R010-01 composed specificity drift    NO DEFECT
 G1 specificity                        CURRENTLY CLOSED
 ```
 
-Specificity remains distinct from mere independence. 011-B verifies that each concept's purpose survives composition, has an intelligible absence consequence, retains a proportionate state/action boundary, and does not become infrastructure or a restatement of the whole product.
-
-Key results:
-
-- Data Meaning remains descriptive authority rather than Constraint/schema/metadata/Relationship;
-- Synthesis Strategy remains reusable synthesis-behavior authority rather than plugin/runtime infrastructure;
-- Learning and Learned State remain a legitimate activity/result split;
-- Generation remains independently coherent in direct `G-KERNEL` composition;
-- Constraint remains reusable prescriptive authority distinct from Generation Condition and Evaluation Criterion;
-- Evaluation Criterion → Evaluation → Evidence remains question → examination → finding;
-- Execution remains operational realization rather than scheduler/workflow authority;
-- Provenance remains typed historical relationship authority with high fan-in and low authority fan-out.
-
-No Workflow, global Status, Quality, Run, Artifact, Relationship/Topology, Recovery, Degraded Mode, Actionability, History Quality, Disclosure State or similar aggregate concept becomes necessary under composed specificity.
-
 Two bounded `MAT-1` watch points remain for later Phase 011 audits:
 
 - Synthesis Strategy's broad capability declaration surface must not absorb plugin/runtime/configuration infrastructure;
 - Provenance's high reference fan-in must not become owner-state authority.
 
-Neither is an unresolved G1 defect.
-
-## Final Phase 010 mapping coverage
+## 011-C composed familiarity result
 
 ```text
-66 / 66 normalized command groups       SEMANTICALLY MAPPED
-52 / 52 normalized query groups         SEMANTICALLY MAPPED
-11 / 11 lifecycle/history envelopes     SEMANTICALLY MAPPED
-5 / 5 explanation patterns              SEMANTICALLY MAPPED
-11 / 11 accepted concept names          LINGUISTICALLY ALIGNED
-66 / 66 command groups                  PHYSICAL RESPONSIBILITY MAPPED
-52 / 52 query groups                    PHYSICAL RESPONSIBILITY MAPPED
-10 / 10 family/capability replays       PASS
-20 / 20 difficult-condition probes      PASS
+11 / 11 canonical names retained
+application-family vocabulary reuse     PASS
+external-model comparison               PASS
+MAT-2 familiarity findings              0
+MAT-3 familiarity blockers              0
+catalog rename / merge / split          NONE
+upstream reopens                        NONE
+R010-02 familiarity/precision           NO DEFECT — COMPATIBILITY GUIDANCE STRENGTHENED
+B4 familiarity / reuse                  CURRENTLY CLOSED
+G2 familiarity                          CURRENTLY CLOSED
 ```
+
+Compatibility terms remain subordinate to canonical ownership:
+
+```text
+fit / train         -> qualified Learning verbs
+model               -> qualified Learned State analogue when model-shaped
+sample              -> Generation verb only when clearly synthetic production
+validation result   -> qualified Evidence analogue
+lineage             -> derivational subset of Provenance
+run / job           -> external operational vocabulary; qualify owner
+artifact / metadata -> physical or umbrella vocabulary, not concepts
+metric              -> method/observation vocabulary, not Criterion/Evidence by itself
+synthesizer         -> external/implementation aggregate, not a canonical concept
+```
+
+`Data Meaning`, `Learned State` and `Evaluation Criterion` retain bounded first-use familiarity cost but remain more semantically accurate than their common alternatives.
 
 ## Core boundaries preserved
 
@@ -110,16 +111,6 @@ Execution              != Attempt != platform job
 
 Generation owns request/Condition and candidate-to-completed logical output semantics. Synthetic Output is not a separate concept. Reproducibility remains cross-cutting. Generic Privacy remains deferred pending mechanism-specific discovery. Use/Release Decision remains external authority.
 
-## Package product-form implications
-
-Concept completeness is provided through the Python/Spark package contract rather than through a required standalone application.
-
-Primary physical interaction is package/SDK, notebook and embedded automation. CLI, reports, rich/graphical presentation and standalone service/API exposure are optional adapters or representations. Host platforms ordinarily own infrastructure administration UI while SYNGAN preserves its own Execution/Attempt and semantic authority through stable package contracts and correlations.
-
-> **SYNGAN is agnostic across compliant Spark-capable hosting and infrastructure platforms.**
-
-This product-form mapping does not change any concept boundary.
-
 ## Application-family result
 
 ```text
@@ -130,16 +121,16 @@ E-KERNEL = { Evaluation Criterion, Evaluation, Evidence }
 
 Direct Generation remains valid without Learning/Learned State. Evaluation/Evidence are not universal prerequisites for Generation. Constraint, Execution and Provenance remain capability-conditional.
 
-Concept inclusion defines available capability rather than requiring every included concept to be re-executed in every invocation. Existing Learned State and reusable authority may be selected rather than recreated.
+Concept inclusion defines available capability rather than requiring every included concept to be re-executed in every invocation.
 
 ## Authority rule
 
-No implementation resource, architecture dependency, dashboard/report convenience, query schema, mapping vocabulary, recovery mechanism or host-platform representation may redefine concept boundaries merely because it exists.
+No external noun, implementation resource, architecture dependency, dashboard/report convenience, query schema, recovery mechanism or host-platform representation may redefine concept boundaries merely because it exists or is familiar.
 
 Later Phase 011 evidence may reopen the smallest affected concept authority only when a concrete semantic consequence demonstrates a genuine defect.
 
 ## Current next boundary
 
-**011-C — Familiarity, Reuse, Vocabulary & External-Model Comparison Audit** is next eligible.
+**011-D — Integrity Under Synchronization, Correction, Invalidation & Historical Composition** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
