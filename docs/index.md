@@ -39,9 +39,11 @@ Existing architecture, source or tests never become upstream concept-design auth
 - [Concept Mapping Authority](mapping/index.md)
 - [Phase 010 Concept Mapping Consolidation](authority/phase-010-concept-mapping-consolidation.md)
 - [Design Quality Validation Authority](authority/design-quality-validation-authority.md)
+- [Composed Specificity, Purpose Alignment & Boundary Sharpness Audit](authority/composed-specificity-purpose-boundary-audit.md)
 - [Phase 011](phases/011/index.md)
 - [011 Entry & Decomposition](phases/011/011-entry-decomposition.md)
 - [011-A Validation Authority Phase Record](phases/011/011-A-validation-authority-evidence-hierarchy-probe-taxonomy-misfit-reopen-rules.md)
+- [011-B Specificity Phase Record](phases/011/011-B-composed-specificity-purpose-alignment-boundary-sharpness-audit.md)
 
 ## Current state
 
@@ -57,8 +59,9 @@ concept mapping                      COMPLETE ENOUGH FOR PHASE 011
 Phase 011                            ACTIVE
 Phase 011 decomposition              COMPLETE
 011-A                                COMPLETE
-011-B                                NEXT ELIGIBLE
-G1 specificity                       PARTIAL TO STRONG
+011-B                                COMPLETE
+011-C                                NEXT ELIGIBLE
+G1 specificity                       CURRENTLY CLOSED
 G2 familiarity                       PARTIAL TO STRONG
 G3 integrity                         PARTIAL TO STRONG
 G4 synergy / simplicity              PARTIAL TO STRONG
@@ -99,7 +102,7 @@ Phase 010 remains the completed mapping authority. Phase 011 tests the resulting
 
 ## Phase 011 validation method
 
-011-A establishes the common audit method before any G1-G7 quality verdict:
+011-A establishes the common audit method:
 
 ```text
 E1-E8     evidence hierarchy
@@ -124,12 +127,32 @@ Controlling rules:
 
 Architecture, source, tests and external provider/product models remain counterexample, feasibility or familiarity evidence rather than upstream authority.
 
+## 011-B specificity result
+
+The complete mapped catalog passes the dedicated G1 specificity audit.
+
+```text
+11 / 11 concepts               PASS composed specificity
+reduced family replay          PASS
+full anti-umbrella replay      PASS
+MAT-2 specificity findings     0
+MAT-3 specificity blockers     0
+catalog changes                0
+upstream reopens               0
+R010-01                        NO DEFECT
+G1 specificity                 CURRENTLY CLOSED
+```
+
+Learning/Learned State and Evaluation/Evidence remain legitimate activity/result pairs despite mutual inclusion. Direct Generation remains independently coherent. Execution remains operational-realization authority rather than a scheduler. Provenance remains typed relationship authority with high fan-in but low authority fan-out. No rejected aggregate concept becomes necessary under the full mapped composition.
+
+Two bounded `MAT-1` watch points remain for later work: Synthesis Strategy's broad capability declaration surface and Provenance's high reference fan-in. Neither is an unresolved G1 defect.
+
 ## Phase 011 sequence
 
 ```text
 011-A  COMPLETE — validation authority / evidence / probes / reopen rules
-011-B  NEXT — specificity / purpose alignment / boundary sharpness
-011-C  familiarity / reuse / vocabulary / external-model comparison
+011-B  COMPLETE — specificity / purpose alignment / boundary sharpness
+011-C  NEXT — familiarity / reuse / vocabulary / external-model comparison
 011-D  integrity under synchronization / correction / invalidation / history
 011-E  synergy / simplicity / generic fitness / conceptual burden
 011-F  archetypal / exceptional / progressive-disclosure misfit replay
@@ -139,7 +162,7 @@ Architecture, source, tests and external provider/product models remain countere
 011-J  Phase 011 consolidation / G1-G7 decision / Phase 012 handoff
 ```
 
-All eight non-blocking Phase 010 residual risks remain assigned explicit Phase 011 audit ownership. 011-A resolves none of them; it defines how their evidence and dispositions must be recorded.
+R010-01 is now dispositioned `NO DEFECT`. The remaining seven Phase 010 handoff risks retain their assigned Phase 011 owners.
 
 ## Implementation status rule
 
@@ -157,4 +180,4 @@ Phase 012 may declare Jackson concept design complete. Phase 013 reconciles repr
 
 ## Current next boundary
 
-**011-B — Composed Specificity, Purpose Alignment & Boundary Sharpness Audit** is next eligible.
+**011-C — Familiarity, Reuse, Vocabulary & External-Model Comparison Audit** is next eligible.
