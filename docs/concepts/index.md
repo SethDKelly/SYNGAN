@@ -38,14 +38,16 @@ Phase 010                            ACTIVE
 010-D                                COMPLETE
 010-E                                COMPLETE
 010-F                                COMPLETE
-010-G                                NEXT ELIGIBLE
+010-G                                COMPLETE
+010-H                                NEXT ELIGIBLE
 F1 semantic action mapping           CURRENTLY CLOSED
 F2 semantic inspection mapping       CURRENTLY CLOSED
 F3 linguistic mapping                CURRENTLY CLOSED
 F4 physical/family mapping           CURRENTLY CLOSED
+F5 human/programmatic parity         CURRENTLY CLOSED
 ```
 
-Phase 009 found no reason to add, remove, merge, split or rename a concept. 010-B through 010-F find no mapping or family-composition reason to reopen that conclusion.
+Phase 009 found no reason to add, remove, merge, split or rename a concept. 010-B through 010-G find no mapping, family-composition or difficult-condition parity reason to reopen that conclusion.
 
 ## Current mapping coverage
 
@@ -57,6 +59,7 @@ Phase 009 found no reason to add, remove, merge, split or rename a concept. 010-
 66 / 66 command groups                  PHYSICAL RESPONSIBILITY MAPPED
 52 / 52 query groups                    PHYSICAL RESPONSIBILITY MAPPED
 10 / 10 family/capability replays       PASS
+20 / 20 difficult-condition probes      PASS
 ```
 
 ## Core boundaries mapping preserves
@@ -93,16 +96,30 @@ E-KERNEL = { Evaluation Criterion, Evaluation, Evidence }
 
 Direct Generation remains valid without Learning/Learned State. Evaluation/Evidence are not universal prerequisites for Generation. Constraint, Execution and Provenance remain capability-conditional.
 
-010-F adds the interaction rule:
+Concept inclusion defines available capability rather than requiring every included concept to be re-executed in every invocation. Existing Learned State and reusable authority may be selected rather than recreated.
 
-> **Concept inclusion defines available capability; it does not require every included concept to be re-executed in every invocation.**
+## Difficult-condition parity result
 
-Therefore an existing Learned State may be reused without new Learning; reusable authorities may be selected rather than recreated; absent optional concepts do not become failed/unknown/unavailable placeholders; and the full eleven-concept family member does not become a mandatory eleven-stage workflow.
+010-G confirms that the current catalog remains sufficient under:
 
-No Workflow, Status, Dashboard, Approval or other aggregate concept is added by composition convenience.
+- retry/cancellation/unknown operational state;
+- recovery/authority-continuity uncertainty;
+- capability-specific degraded operation;
+- disclosure/withholding/security responses;
+- reconstructed/partial history;
+- later Evidence staleness/invalidation/current inapplicability;
+- time-series/multi-table and text-bearing structured-data cases;
+- enterprise-scale bounded interaction;
+- operator and extension-author interaction.
+
+No Actionability, Recovery, Degraded Mode, History Quality, Disclosure State, Topology, Text, Platform Job, Workflow, Status, Dashboard, Approval or other aggregate concept is added.
+
+## Authority rule
+
+No implementation resource, architecture dependency, dashboard/report convenience, query schema, mapping vocabulary, recovery mechanism or host-platform representation may redefine concept boundaries merely because it exists.
 
 ## Current next boundary
 
-**010-G — Human/Programmatic Semantic Parity, Degraded/Recovery/Scale & Mapping-Misfit Audit** is next eligible.
+**010-H — Phase 010 Consolidation, F1-F5 Completion Decision & Phase 011 Handoff** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
