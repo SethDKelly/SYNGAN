@@ -8,18 +8,15 @@ status: complete-current
 
 This directory contains current cross-concept composition authority for SYNGAN.
 
-Concept specifications own purpose, state, actions, lifecycle and invariants. Synchronization coordinates already-owned behavior across concept boundaries and owns no independent state.
+Concept specifications own purpose, state, actions, lifecycle and invariants. Synchronization coordinates already-owned behavior and owns no independent state.
 
 ## Current authority
 
-- [Phase 009 Consolidation](../authority/phase-009-dependence-composition-consolidation.md) — current synchronization/composition consolidation authority.
-- [Composition Economy, Coupling, Synergy & Integrity Closure](composition-economy-synergy-integrity.md) — 009-G whole-composition authority.
-- [Synchronization Trigger, Preconditions/Postconditions, State Ownership & Hidden-Coordinator Audit](trigger-ownership-normalization.md) — 009-F trigger/ownership authority.
-- [Synchronization Inventory Revalidation Across the Application Family](application-family-revalidation.md) — 009-E inventory/scope authority, superseded where 009-F/G refine scope/classification.
-- [Core Synchronizations](core-synchronizations.md) — historical source evidence; current membership/scope follows 009-E/F/G/H.
-- [Phase 010 Concept Mapping Consolidation](../authority/phase-010-concept-mapping-consolidation.md) — downstream validation that mappings preserve synchronization ownership and conditionality.
-- [011-B Composed Specificity Audit](../authority/composed-specificity-purpose-boundary-audit.md) — confirms composition does not require an umbrella owner or synchronization-driven merger.
-- [011-C Familiarity / External-Model Audit](../authority/composed-familiarity-reuse-vocabulary-external-model-audit.md) — confirms external ecosystem nouns do not redefine synchronization ownership.
+- [Phase 009 Consolidation](../authority/phase-009-dependence-composition-consolidation.md)
+- [Synchronization Trigger / Ownership Normalization](trigger-ownership-normalization.md)
+- [Composition Economy / Synergy / Integrity](composition-economy-synergy-integrity.md)
+- [Phase 010 Concept Mapping Consolidation](../authority/phase-010-concept-mapping-consolidation.md)
+- [011-D Integrity Audit](../authority/composed-integrity-synchronization-history-audit.md) — **current baseline integrity revalidation**
 
 ## Current synchronization inventory
 
@@ -35,9 +32,7 @@ new synchronization IDs                  0
 SYNC-16                                  NOT JUSTIFIED
 ```
 
-Historical IDs remain reserved and are never reused.
-
-## Active — required relational
+### Required relational
 
 ```text
 SYNC-01  Data Meaning revision binding
@@ -48,7 +43,7 @@ SYNC-10  Evaluation method compatibility
 SYNC-12  Evaluation produces Evidence
 ```
 
-## Active — capability / occurrence conditional
+### Capability / occurrence conditional
 
 ```text
 SYNC-03  Constraint binding and handling disposition
@@ -60,139 +55,87 @@ SYNC-13  Generation / Evidence evidence-gated completion handoff
 SYNC-14  Provenance recording at material transitions
 ```
 
-`SYNC-06` does not activate for direct Generation.
-
 ## Canonical ownership
 
 ```text
-consumer exact bindings + contextual assessments
-  -> Learning / Generation / Evaluation
-
-producing Learning identity
-  -> Learned State
-
-producing Evaluation identity
-  -> Evidence
-
-Execution parent binding + Attempts/retry/recovery
-  -> Execution
-
-Provenance typed relationship assertions
-  -> Provenance
-
-synchronization-owned canonical state
-  -> NONE
+consumer exact bindings + contextual assessments  -> Learning / Generation / Evaluation
+producing Learning identity                       -> Learned State
+producing Evaluation identity                     -> Evidence
+Execution parent binding + Attempts/recovery       -> Execution
+Generation candidate/output/completion             -> Generation
+Provenance typed relationship assertions           -> Provenance
+synchronization-owned canonical state              -> NONE
 ```
 
-## Composition economy
-
-The thirteen rules form five conceptual coordination planes:
-
-```text
-A  reusable-authority binding / contextual assessment
-B  activity/result establishment
-C  reuse / completion gating
-D  operational realization
-E  historical relationship explanation
-```
-
-These are not architecture layers.
-
-Core family-member burden remains:
-
-```text
-L-KERNEL         SYNC-01, SYNC-02, SYNC-05
-Direct G-KERNEL  SYNC-01, SYNC-02
-E-KERNEL         SYNC-09, SYNC-10, SYNC-12
-```
-
-Learned-state-assisted Generation adds `SYNC-06`. Evidence-gated Generation adds `SYNC-13`. Constraint, Execution and Provenance add only occurrence-specific coordination.
-
-## Occurrence-scoped / non-propagation rule
+## Occurrence-scoped / non-reactive rule
 
 A synchronization coordinates one conceptual occurrence/relation. It does not create a permanent reactive subscription.
 
-Later revision/status changes therefore do not silently rewrite exact historical bindings.
+> **Later revision/status changes do not silently rewrite exact historical bindings.**
 
-## Combined-activation integrity
+This now has dedicated 011-D revalidation across Data Meaning, Strategy, Constraint, Criterion, Learned State and Evidence lifecycle change.
 
-Evaluation-gated Generation remains staged feedback:
+## 011-D integrity result
 
 ```text
-Generation candidate
-  -> Evaluation
-  -> Evidence
-  -> Generation-owned completion decision
+13 / 13 synchronizations preserve singular ownership
+producer/result integrity                       PASS
+occurrence-scoped/non-reactive binding          PASS
+current-versus-historical truth                 PASS
+Evidence/Generation authority separation        PASS
+semantic/Execution separation                   PASS
+Provenance low-authority-fan-out baseline       PASS
+recovery/reconstruction ownership baseline      PASS
+optional-capability integrity                   PASS
+hidden coordinator required                     NO
+MAT-2 / MAT-3 findings                          0 / 0
+synchronization changes                          0
+upstream reopen                                 NONE
 ```
 
-Evaluation needs candidate identity, not completed Generation. Evidence never owns `Generation.Complete`.
+Key temporal consequences:
 
-Execution cannot establish domain semantic completion. Provenance cannot establish source facts. Optional capabilities remain optional. No hidden coordinator concept is required.
+- Learned State restriction/retirement/invalidation affects future reliance, not producing Learning or historical Generation bindings;
+- Evidence supersession/staleness/invalidation affects current reliance, not its historical Evaluation or exact historical use by Generation;
+- `SYNC-13` remains a handoff to a Generation-owned completion decision, not an Evidence-owned gate state;
+- `SYNC-04/07/11` preserve Execution operational authority without granting it semantic completion authority;
+- `SYNC-14` records/corrects Provenance assertions without owning the referenced source facts;
+- recovered/reconstructed semantic history must satisfy the original owner transition invariants.
+
+## R010-03
+
+```text
+011-D result   NO DEFECT IN COMPOSED/HISTORICAL INTEGRITY AUDIT
+remaining      011-G ADVERSARIAL/DEGRADED/RECOVERY STRESS REVALIDATION
+```
+
+Therefore G3 has strong current evidence but is not finally closed until 011-G.
 
 ## Retired / reclassified IDs
 
-### SYNC-08
+`SYNC-08` remains retired as Generation-local output lifecycle behavior.
 
-Remains retired as Generation-local candidate/completion/output behavior. No standalone Output concept exists.
+`SYNC-15` remains reclassified under the cross-cutting Reproducibility Contract.
 
-### SYNC-15
-
-Remains reclassified under the cross-cutting Reproducibility Contract. No standalone Reproducibility concept or synchronization-owned state exists.
-
-## Phase 010 validation result
-
-```text
-Phase 009                 COMPLETE
-D1-D4                     CURRENTLY CLOSED
-E1-E5                     CURRENTLY CLOSED
-Phase 010                 COMPLETE
-F1-F5                     CURRENTLY CLOSED
-```
-
-Phase 010 maps synchronization relevance through owning concept actions and inspection rather than giving synchronizations controls or state. It introduces no new synchronization, does not resurrect SYNC-08 or SYNC-15, and finds no hidden coordinator requirement.
-
-## 011-B / 011-C quality revalidation
-
-```text
-G1 specificity                        CURRENTLY CLOSED
-G2 familiarity                        CURRENTLY CLOSED
-specificity-driven synchronization    NONE
-familiarity-driven synchronization    NONE
-hidden umbrella concept required      NO
-new synchronization required          NO
-existing synchronization removed      NO
-SYNC-08 resurrected                   NO
-SYNC-15 resurrected                   NO
-```
-
-External vocabulary does not alter synchronization semantics:
-
-- a `fit` operation may correspond to Learning but does not own `SYNC-05` result establishment;
-- a Spark/MLflow `Model` may represent model-shaped Learned State but cannot replace Learned State ownership;
-- a `Run`/`Job` may correlate to Execution/Attempt/platform realization without owning semantic activity completion;
-- a validation result may represent Evidence in a narrow integration without owning Generation completion;
-- `lineage` may describe a subset of Provenance relations without making Provenance the owner of referenced facts.
+Neither is resurrected by 011-D.
 
 ## Composition guardrails
 
 - one canonical state owner per material fact;
 - synchronization owns no state;
-- concept behavior remains authoritative under synchronization;
 - reusable authorities are bound, not mutated;
 - contextual assessments remain activity-owned;
 - semantic and operational completion remain distinct;
-- Evidence never becomes approval or Generation completion authority;
+- Evidence never becomes approval or Generation authority;
 - Provenance never becomes source-fact authority;
-- optional concepts/synchronizations remain optional unless a capability requires them;
-- synchronization is occurrence-scoped, not permanently reactive;
-- conceptual synchronization does not prescribe events, transactions, services, packages, queues, schemas or runtime call direction.
-
-## Active Phase 011 boundary
-
-011-D is the next dedicated integrity audit of synchronization, correction, invalidation and historical composition. 011-G later performs the hostile/degraded/recovery stress replay. A genuine defect may reopen the smallest affected synchronization authority; external naming or provider mechanics alone may not.
+- optional capabilities remain optional;
+- correction/invalidation is owner-scoped, not a generic retroactive cascade;
+- conceptual synchronization prescribes no event bus, transaction, service, package, queue, schema or runtime call direction.
 
 ## Current next boundary
 
-**011-D — Integrity Under Synchronization, Correction, Invalidation & Historical Composition** is next eligible.
+**011-E — Synergy, Simplicity, Generic Fitness & Conceptual-Burden Audit** is next eligible.
+
+011-G later performs the hostile/degraded/recovery stress revalidation of synchronization integrity.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
