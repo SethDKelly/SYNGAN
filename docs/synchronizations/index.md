@@ -16,7 +16,8 @@ Concept specifications own purpose, state, actions, lifecycle and invariants. Sy
 - [Synchronization Trigger / Ownership Normalization](trigger-ownership-normalization.md)
 - [Composition Economy / Synergy / Integrity](composition-economy-synergy-integrity.md)
 - [Phase 010 Concept Mapping Consolidation](../authority/phase-010-concept-mapping-consolidation.md)
-- [011-D Integrity Audit](../authority/composed-integrity-synchronization-history-audit.md) — **current baseline integrity revalidation**
+- [011-D Integrity Audit](../authority/composed-integrity-synchronization-history-audit.md) — current baseline integrity revalidation
+- [011-E Synergy / Simplicity Audit](../authority/composed-synergy-simplicity-generic-fitness-burden-audit.md) — **current final composed economy/synergy revalidation**
 
 ## Current synchronization inventory
 
@@ -73,7 +74,7 @@ A synchronization coordinates one conceptual occurrence/relation. It does not cr
 
 > **Later revision/status changes do not silently rewrite exact historical bindings.**
 
-This now has dedicated 011-D revalidation across Data Meaning, Strategy, Constraint, Criterion, Learned State and Evidence lifecycle change.
+011-D revalidates this across correction, invalidation, supersession and reconstruction.
 
 ## 011-D integrity result
 
@@ -86,30 +87,52 @@ Evidence/Generation authority separation        PASS
 semantic/Execution separation                   PASS
 Provenance low-authority-fan-out baseline       PASS
 recovery/reconstruction ownership baseline      PASS
-optional-capability integrity                   PASS
 hidden coordinator required                     NO
 MAT-2 / MAT-3 findings                          0 / 0
 synchronization changes                          0
-upstream reopen                                 NONE
 ```
 
-Key temporal consequences:
+`R010-03` remains subject to 011-G stress revalidation.
 
-- Learned State restriction/retirement/invalidation affects future reliance, not producing Learning or historical Generation bindings;
-- Evidence supersession/staleness/invalidation affects current reliance, not its historical Evaluation or exact historical use by Generation;
-- `SYNC-13` remains a handoff to a Generation-owned completion decision, not an Evidence-owned gate state;
-- `SYNC-04/07/11` preserve Execution operational authority without granting it semantic completion authority;
-- `SYNC-14` records/corrects Provenance assertions without owning the referenced source facts;
-- recovered/reconstructed semantic history must satisfy the original owner transition invariants.
+## 011-E synchronization economy result
 
-## R010-03
+011-E re-tests the thirteen rules as conceptual burden, not only as integrity contracts.
+
+The synchronization inventory remains economical because the rules are relation-local and organize into five coordination planes:
 
 ```text
-011-D result   NO DEFECT IN COMPOSED/HISTORICAL INTEGRITY AUDIT
-remaining      011-G ADVERSARIAL/DEGRADED/RECOVERY STRESS REVALIDATION
+A  reusable authority binding / contextual assessment
+B  activity/result establishment
+C  reuse / completion gating
+D  operational realization
+E  historical relationship explanation
 ```
 
-Therefore G3 has strong current evidence but is not finally closed until 011-G.
+These are explanatory coordination planes, **not architecture layers**.
+
+Current result:
+
+```text
+active synchronization types                  13
+required in every family member                0
+rule add/remove/merge justified                0
+synchronization-owned state                    0
+universal coordinator                          0
+reduced-family burden                          PASS
+positive synchronization-enabled synergy       CONFIRMED
+R010-04                                        NO DEFECT
+G4                                             CURRENTLY CLOSED
+```
+
+The principal economy conclusions are:
+
+- similar binding relations remain separate when their reusable authorities have different purposes;
+- `SYNC-04/07/11` share an Execution pattern but do not justify a generic `Activity` concept;
+- `SYNC-05` and `SYNC-12` share producer/result structure but do not justify generic `Artifact` production;
+- `SYNC-06` and `SYNC-13` remain conditional cross-kernel relations rather than universal workflow stages;
+- one typed `SYNC-14` is more economical than pair-specific provenance rules while Provenance retains low authority fan-out.
+
+No Phase 009 synchronization authority is reopened by 011-E.
 
 ## Retired / reclassified IDs
 
@@ -117,7 +140,7 @@ Therefore G3 has strong current evidence but is not finally closed until 011-G.
 
 `SYNC-15` remains reclassified under the cross-cutting Reproducibility Contract.
 
-Neither is resurrected by 011-D.
+Neither is resurrected by 011-D/E.
 
 ## Composition guardrails
 
@@ -128,14 +151,15 @@ Neither is resurrected by 011-D.
 - semantic and operational completion remain distinct;
 - Evidence never becomes approval or Generation authority;
 - Provenance never becomes source-fact authority;
-- optional capabilities remain optional;
+- optional capabilities add only their own coordination burden;
 - correction/invalidation is owner-scoped, not a generic retroactive cascade;
-- conceptual synchronization prescribes no event bus, transaction, service, package, queue, schema or runtime call direction.
+- repeated synchronization patterns do not by themselves justify umbrella concepts;
+- conceptual synchronization prescribes no event bus, transaction, service, package, queue, schema, architecture layer or runtime call direction.
 
 ## Current next boundary
 
-**011-E — Synergy, Simplicity, Generic Fitness & Conceptual-Burden Audit** is next eligible.
+**011-F — Archetypal, Exceptional & Progressive-Disclosure Misfit Replay** is next eligible.
 
-011-G later performs the hostile/degraded/recovery stress revalidation of synchronization integrity.
+011-G later performs hostile/degraded/recovery stress revalidation of synchronization integrity.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
