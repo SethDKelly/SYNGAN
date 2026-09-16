@@ -22,7 +22,7 @@ IMPLEMENTATION START       NOT STARTED
 IMPLEMENTATION NEXT        NOT YET
 ```
 
-No Phase 011 decomposition or intermediate quality finding changes this posture by itself.
+No Phase 011 intermediate quality finding changes this posture by itself.
 
 ## Completion-state vocabulary
 
@@ -39,7 +39,7 @@ No Phase 011 decomposition or intermediate quality finding changes this posture 
 
 ### Class A — current upstream design authority
 
-Current problem, concept, dependence/composition and mapping authority includes:
+Current problem, concept, dependence/composition, mapping and quality-validation authority includes:
 
 - [Concept Design Methodology](design-methodology.md)
 - current problem knowledge under `docs/problem/`;
@@ -48,7 +48,8 @@ Current problem, concept, dependence/composition and mapping authority includes:
 - current synchronization authority;
 - [Phase 010 Concept Mapping Consolidation](phase-010-concept-mapping-consolidation.md);
 - mapping authority under `docs/mapping/`;
-- [Phase 011 Entry & Decomposition](../phases/011/011-entry-decomposition.md) for the current quality/misfit validation sequence and reopen discipline.
+- [Design Quality Validation Authority](design-quality-validation-authority.md);
+- [Phase 011 Entry & Decomposition](../phases/011/011-entry-decomposition.md).
 
 ### Class B — supporting design evidence
 
@@ -72,7 +73,8 @@ Phase 010  COMPLETE
 010-A..H   COMPLETE
 Phase 011  ACTIVE
 011 decomposition COMPLETE
-011-A      NEXT ELIGIBLE
+011-A      COMPLETE
+011-B      NEXT ELIGIBLE
 ```
 
 Current Phase 010 result:
@@ -129,13 +131,13 @@ F5                                        CURRENTLY CLOSED
 | F3 | Linguistic mapping/vocabulary alignment | 010-D aligns owner-qualified vocabulary, typed status, disclosure/history and ecosystem aliases; 010-G/H preserve distinctions under difficult conditions | **CURRENTLY CLOSED** | 010-D/H |
 | F4 | Physical/interaction mapping across relevant surfaces and application-family compositions | 010-E maps all actions/queries to package/notebook/automation/host responsibilities; 010-F passes ten family/capability replays; 010-H consolidates | **CURRENTLY CLOSED** | 010-E/F/H |
 | F5 | Human/programmatic semantic parity | 010-G passes 20 difficult-condition probes across recovery, degradation, security, history, Evidence, topology/text, scale, operator and extension-author interaction; 010-H consolidates | **CURRENTLY CLOSED** | 010-G/H |
-| G1 | Specificity across final composed set | Individual evidence strong; Phase 010 maps the complete set but does not perform the dedicated composed specificity audit | **PARTIAL TO STRONG** | 011-B |
-| G2 | Familiarity across final composed set | Individual familiarity and linguistic alias discipline strong; final composed familiarity/reuse review remains | **PARTIAL TO STRONG** | 011-C |
-| G3 | Integrity across synchronizations/mappings | Phase 009 integrity and Phase 010 ordinary/difficult mapping replay are strong; broader adversarial concept-integrity review remains | **PARTIAL TO STRONG** | 011-D/G |
-| G4 | Synergy and simplicity/generic fitness | Phase 009 synergy/economy plus Phase 010 optional-capability composition/no-hidden-coordinator evidence are strong; dedicated composed quality replay remains | **PARTIAL TO STRONG** | 011-E |
-| G5 | Archetypal/exceptional/degraded/adversarial/recovery misfit | 010-G covers mapping-level difficult cases; broader post-mapping concept-design adversarial validation remains | **PARTIAL TO STRONG** | 011-F/G |
-| G6 | Future-scope/extensibility misfit | Rediscovery/extension/non-propagation boundaries recorded; extension-author mapping passes; final future-scope audit remains | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 011-H |
-| G7 | Explicit residual conceptual misfit register | 010-H hands non-blocking mapping risks forward, but final concept-design residual misfit register remains to be produced | **PARTIAL** | 011-I/J; 012 confirmation |
+| G1 | Specificity across final composed set | Individual evidence strong; 011-A establishes specificity criteria and finding/probe method; dedicated composed audit remains | **PARTIAL TO STRONG** | 011-B |
+| G2 | Familiarity across final composed set | Individual familiarity and linguistic alias discipline strong; 011-A establishes external-analogue comparison discipline; composed audit remains | **PARTIAL TO STRONG** | 011-C |
+| G3 | Integrity across synchronizations/mappings | Phase 009/010 evidence strong; 011-A establishes integrity criteria and misfit routing; broader adversarial audit remains | **PARTIAL TO STRONG** | 011-D/G |
+| G4 | Synergy and simplicity/generic fitness | Phase 009/010 evidence strong; 011-A establishes non-numeric synergy/simplicity criteria; dedicated audit remains | **PARTIAL TO STRONG** | 011-E |
+| G5 | Archetypal/exceptional/degraded/adversarial/recovery misfit | 010-G covers mapping-level difficult cases; 011-A establishes scenario target/mode and materiality rules; post-mapping concept-quality replay remains | **PARTIAL TO STRONG** | 011-F/G |
+| G6 | Future-scope/extensibility misfit | Rediscovery/extension boundaries recorded; 011-A establishes future-scope probe and M8 routing discipline; dedicated audit remains | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 011-H |
+| G7 | Explicit residual conceptual misfit register | 011-A establishes mandatory material-finding record and disposition vocabulary; the complete residual register still remains | **PARTIAL** | 011-I/J; 012 confirmation |
 | H1 | One current-state consolidated Jackson concept-design audit | Phases 008, 009 and 010 are individually consolidated; Phase 011 and one overall current-state audit remain | **OPEN** | 012 |
 | H2 | Explicit Jackson concept-design completion decision | Not yet performed | **OPEN** | 012 |
 | R1 | Architecture reconciled downstream to completed concept design | Extensive retained architecture exists | **DOWNSTREAM / PENDING RECONCILIATION** | 013 |
@@ -153,25 +155,11 @@ F1-F5                        CURRENTLY CLOSED
 MAPPING-DRIVEN BLOCKER       NONE FOUND
 ```
 
-Key findings:
-
-- all 66 commands, 52 queries, 11 lifecycle/history envelopes and five explanation patterns are mapped;
-- all accepted concept names are linguistically aligned with owner-qualified state/uncertainty/disclosure distinctions;
-- all actions and queries have package/host physical responsibility;
-- package/notebook/automation remain primary and no standalone application/service/UI is required;
-- all ten required application-family/capability compositions pass without a full-suite wizard;
-- all twenty difficult-condition parity probes pass;
-- human/programmatic parity means equivalent material semantics for the same authorized context, not identical ergonomics;
-- routine interaction remains bounded/reference-first at enterprise scale;
-- no Actionability, Recovery, Degraded Mode, History Quality, Disclosure State, Topology, Text, Platform Job, Workflow, global Status or similar aggregate concept is justified;
-- no new synchronization or universal application-family edge is introduced;
-- no Phase 008/009 reopening is required at the Phase 010 boundary.
+Key findings include complete semantic/physical mapping coverage, family replay, difficult-condition parity, package-first product form, bounded enterprise-scale interaction and no new aggregate concept/synchronization/universal family edge.
 
 ## Phase 011 entry / decomposition result
 
-Phase 011 is now active and deliberately decomposed before substantive quality judgments.
-
-The dependency-safe sequence is:
+Phase 011 is active with the dependency-safe sequence:
 
 ```text
 011-A  validation authority / evidence hierarchy / probe taxonomy / misfit-reopen rules
@@ -186,18 +174,38 @@ The dependency-safe sequence is:
 011-J  Phase 011 consolidation / G1-G7 decision / Phase 012 handoff
 ```
 
-The decomposition assigns all eight 010-H residual risks:
+## 011-A validation-method result
 
-1. composed specificity drift → primarily 011-B;
-2. familiarity versus semantic precision → 011-C;
-3. adversarial synchronization integrity → 011-D/G;
-4. synergy versus conceptual burden → 011-E;
-5. progressive-disclosure misfit → 011-E/F;
-6. provider/host semantic leakage → 011-G;
-7. future-capability/extensibility pressure → 011-H;
-8. scale/approximation pressure → 011-G.
+[Design Quality Validation Authority](design-quality-validation-authority.md) establishes the common audit method for 011-B through 011-J:
 
-No G1-G7 row is closed by decomposition alone.
+```text
+validation authority                     ESTABLISHED
+evidence hierarchy                       ESTABLISHED
+evidence roles                           ESTABLISHED
+quality finding record Q1-Q15            ESTABLISHED
+probe target / scenario taxonomy         ESTABLISHED
+materiality MAT-0..MAT-3                 ESTABLISHED
+specificity criteria SP-*                ESTABLISHED
+familiarity comparison FA-*              ESTABLISHED
+integrity criteria IN-*                  ESTABLISHED
+synergy criteria SY-*                    ESTABLISHED
+scenario-quality criteria SC-*           ESTABLISHED
+misfit classification M0-M8              ESTABLISHED
+smallest-authority reopen rule            ESTABLISHED
+revalidation blast-radius rule           ESTABLISHED
+residual-risk disposition vocabulary     ESTABLISHED
+```
+
+Key rules:
+
+- a finding must state a concrete semantic consequence before it can justify reopening design;
+- architecture, source, tests and provider/product models may challenge the design but do not directly redefine it;
+- `MAT-3` is a conceptual blocker and prevents positive Phase 011 exit while unresolved;
+- the smallest canonical authority owning the violated claim is reopened first;
+- only materially dependent downstream conclusions are revalidated after correction;
+- all eight R010 risks retain explicit Phase 011 owners and none are resolved by 011-A itself.
+
+No G1-G7 row is closed by 011-A.
 
 ## Current methodological verdict
 
@@ -211,7 +219,8 @@ PHASE 010                            COMPLETE
 F1-F5                                CURRENTLY CLOSED
 PHASE 011                            ACTIVE
 PHASE 011 DECOMPOSITION              COMPLETE
-011-A                                NEXT ELIGIBLE
+011-A                                COMPLETE
+011-B                                NEXT ELIGIBLE
 JACKSON CONCEPT DESIGN COMPLETE      NO
 REPRESENTATION/ARCHITECTURE FINAL    NO — PENDING PHASE 013 RECONCILIATION
 IMPLEMENTATION READINESS             NOT READY
@@ -222,7 +231,7 @@ IMPLEMENTATION NEXT                  NOT YET
 ## Current dependency order
 
 ```text
-011-A -> 011-B -> 011-C -> 011-D -> 011-E -> 011-F -> 011-G -> 011-H -> 011-I -> 011-J
+011-B -> 011-C -> 011-D -> 011-E -> 011-F -> 011-G -> 011-H -> 011-I -> 011-J
   ↓
 012  Jackson Concept-Design Consolidation & Completion Decision
   ↓
@@ -237,6 +246,6 @@ Phase 011 may expose a genuine upstream misfit, but representation or implementa
 
 ## Current next boundary
 
-**011-A — Validation Authority, Evidence Hierarchy, Probe Taxonomy & Misfit/Reopen Rules** is next eligible.
+**011-B — Composed Specificity, Purpose Alignment & Boundary Sharpness Audit** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
