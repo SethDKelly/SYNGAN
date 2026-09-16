@@ -445,7 +445,7 @@ INSUFFICIENT EVIDENCE — CONCEPTUAL BLOCKER
 
 # 15. Phase 010 risk-accounting rule
 
-The eight 010-H risks remain open audit inputs until explicitly dispositioned:
+The eight 010-H risks remain audit inputs until explicitly dispositioned:
 
 ```text
 R010-01  composed specificity drift
@@ -458,7 +458,7 @@ R010-07  future-capability / extensibility pressure
 R010-08  scale / approximation pressure
 ```
 
-Primary ownership remains:
+Primary ownership:
 
 ```text
 R010-01  -> 011-B
@@ -469,6 +469,19 @@ R010-05  -> 011-E / 011-F
 R010-06  -> 011-G
 R010-07  -> 011-H
 R010-08  -> 011-G
+```
+
+Current dispositions after 011-B:
+
+```text
+R010-01  NO DEFECT
+R010-02  OPEN
+R010-03  OPEN
+R010-04  OPEN
+R010-05  OPEN
+R010-06  OPEN
+R010-07  OPEN
+R010-08  OPEN
 ```
 
 A later subgroup may add evidence or secondary disposition, but the primary owner is responsible for ensuring the risk does not disappear from the Phase 011 record.
@@ -547,9 +560,37 @@ No concept, synchronization, application-family edge or mapping rule is changed 
 
 ---
 
+# 19. 011-B application result
+
+011-B is the first substantive application of this method and is governed in detail by [Composed Specificity, Purpose Alignment & Boundary Sharpness Audit](composed-specificity-purpose-boundary-audit.md).
+
+Result:
+
+```text
+11 / 11 concepts                       PASS composed specificity
+reduced family replay                  PASS
+full-composition anti-umbrella replay PASS
+MAT-2 specificity findings            0
+MAT-3 specificity blockers            0
+upstream reopens                      0
+R010-01                               NO DEFECT
+G1 specificity                        CURRENTLY CLOSED
+```
+
+The result does not modify this validation method. It demonstrates that the method can close a criterion while preserving bounded watch points and without converting architecture/implementation evidence into upstream authority.
+
+Two `MAT-1` watch points remain for later planned probes:
+
+- Synthesis Strategy's broad capability declaration surface;
+- Provenance's high reference fan-in / low authority fan-out requirement.
+
+Neither blocks G1.
+
+---
+
 ## Current next boundary
 
-**011-B — Composed Specificity, Purpose Alignment & Boundary Sharpness Audit** is next eligible.
+**011-C — Familiarity, Reuse, Vocabulary & External-Model Comparison Audit** is next eligible.
 
 Jackson concept design remains **NOT COMPLETE**.
 
