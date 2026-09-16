@@ -24,7 +24,8 @@ For concepts `C1` and `C2`, the governing question is:
 - [Contraction / Extension Consequences](contraction-extension-consequences.md) — 009-D.
 - [Phase 009 Consolidation](../authority/phase-009-dependence-composition-consolidation.md) — current dependence/composition consolidation authority.
 - [Phase 010 Concept Mapping Consolidation](../authority/phase-010-concept-mapping-consolidation.md) — downstream validation that mapping preserves this authority.
-- [011-B Composed Specificity Audit](../authority/composed-specificity-purpose-boundary-audit.md) — current downstream revalidation that reduced/full family members preserve distinct concept purposes.
+- [011-B Composed Specificity Audit](../authority/composed-specificity-purpose-boundary-audit.md) — downstream revalidation that reduced/full family members preserve distinct concept purposes.
+- [011-C Familiarity / External-Model Audit](../authority/composed-familiarity-reuse-vocabulary-external-model-audit.md) — downstream validation that family members reuse stable canonical vocabulary without importing external object dependencies.
 
 ## Current phase state
 
@@ -42,8 +43,10 @@ F1-F5 mapping                     CURRENTLY CLOSED
 Phase 011                         ACTIVE
 011-A                             COMPLETE
 011-B                             COMPLETE
-011-C                             NEXT ELIGIBLE
+011-C                             COMPLETE
+011-D                             NEXT ELIGIBLE
 G1 specificity                    CURRENTLY CLOSED
+G2 familiarity                    CURRENTLY CLOSED
 ```
 
 ## Canonical graph result
@@ -99,38 +102,7 @@ E-KERNEL = Evaluation Criterion + Evaluation + Evidence
 
 Authority-only coherent members include Data Meaning, Synthesis Strategy, Constraint and Evaluation Criterion independently.
 
-## Contraction / extension authority
-
-```text
-remove Data Meaning or Synthesis Strategy
-  => Learning + Learned State + Generation cannot remain
-
-remove Evaluation Criterion
-  => Evaluation + Evidence cannot remain
-
-remove one member of L-CLUSTER or E-CLUSTER
-  => remove its mutual-inclusion partner
-```
-
-Removing Generation, Constraint, Execution or Provenance may be capability-only contraction where remaining rules hold.
-
-Ordinary extension uses accepted concepts plus required closure/side conditions. Fresh discovery is reserved for genuinely new independent purpose/state/action lifecycles.
-
-## Phase 010 validation result
-
-Phase 010 preserves this family exactly rather than turning the eleven concepts into one mandatory workflow.
-
-All ten required family/capability replays pass, including authority-only, L-KERNEL, direct G-KERNEL, learned-state-assisted Generation, E-KERNEL, evaluation-gated Generation, Constraint-aware, Execution-bearing/light, Provenance-bearing/light and full composition.
-
-Controlling mapping rule:
-
-> **Concept inclusion defines available capability; it does not require every included concept to be re-executed in every invocation.**
-
 ## 011-B specificity revalidation
-
-011-B uses reduced family members as a direct test of whether concept purposes survive omission of common companions.
-
-Result:
 
 ```text
 authority-only members          PASS
@@ -145,15 +117,34 @@ catalog change                  NONE
 G1 specificity                  CURRENTLY CLOSED
 ```
 
-Important implications:
-
-- the Learning/Learned State SCC remains a legitimate activity/result split rather than an artificial concept split;
-- the Evaluation/Evidence SCC remains a legitimate examination/finding split;
-- direct G-KERNEL demonstrates Generation is independently meaningful without learned or evaluation capability;
-- Execution's one-of prerequisite strengthens its purpose boundary rather than making it a standalone scheduler;
-- Provenance's witness prerequisite keeps it from becoming an empty lineage/metadata platform.
-
 No Phase 009 dependence/application-family reopening is justified by 011-B.
+
+## 011-C familiarity/reuse revalidation
+
+011-C confirms that the same canonical vocabulary remains coherent across all relevant reduced and full family members.
+
+```text
+authority-only vocabulary reuse       PASS
+direct Generation vocabulary          PASS
+learned-generation vocabulary         PASS
+evaluation-family vocabulary          PASS
+Execution-bearing vocabulary          PASS
+Provenance-bearing vocabulary         PASS
+full-family vocabulary                 PASS
+familiarity-driven edge change        NONE
+application-family change             NONE
+G2 familiarity                        CURRENTLY CLOSED
+```
+
+External package/object relationships do not create inclusion-dependence edges. In particular:
+
+- an SDV `Synthesizer` object bundling fit/sample/state does not turn Strategy, Learning, Learned State and Generation into one inclusion unit;
+- Spark ML `Estimator -> Model` is a useful analogue but not the canonical L-CLUSTER definition;
+- MLflow `Run`/Model/Artifact tracking does not impose SYNGAN concept inclusion;
+- Great Expectations validation objects do not redefine Constraint/Evaluation-family dependence;
+- OpenLineage Job/Run/Dataset entities do not alter SYNGAN Provenance/Execution inclusion rules.
+
+No Phase 009 dependence/application-family reopening is justified by 011-C.
 
 ## Product-scope documentation rule
 
@@ -180,12 +171,10 @@ This is explanation/design order, not implementation order or a mandatory runtim
 
 ## Active Phase 011 boundary
 
-011-C may compare familiar external models/terminology against the current application family, but familiar product packaging, object graphs or API dependencies do not redefine Jackson inclusion dependence.
-
-Later 011-D/G may reopen the smallest Phase 009 authority only if a genuine integrity/adversarial semantic defect is demonstrated.
+011-D/G may reopen the smallest Phase 009 authority only if a genuine integrity/adversarial semantic defect is demonstrated. External object graphs, workflow packaging or familiar terminology remain evidence only.
 
 ## Current next boundary
 
-**011-C — Familiarity, Reuse, Vocabulary & External-Model Comparison Audit** is next eligible.
+**011-D — Integrity Under Synchronization, Correction, Invalidation & Historical Composition** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
