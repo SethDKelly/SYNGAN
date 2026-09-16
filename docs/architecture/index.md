@@ -23,7 +23,9 @@ E1-E5                        CURRENTLY CLOSED
 Phase 010                    COMPLETE
 010-A..010-H                 COMPLETE
 F1-F5                        CURRENTLY CLOSED
-Phase 011                    NEXT — ENTRY/DECOMPOSITION
+Phase 011                    ACTIVE
+Phase 011 decomposition      COMPLETE
+011-A                        NEXT ELIGIBLE
 architecture corpus          RETAINED AS DOWNSTREAM DESIGN EVIDENCE
 architecture reconciliation  PLANNED FOR PHASE 013
 implementation readiness     NOT READY
@@ -31,43 +33,13 @@ implementation start         NOT STARTED
 implementation next          NOT YET
 ```
 
-## Current upstream mapping authority
+## Current upstream design authority
 
 - [Phase 010 Concept Mapping Consolidation](../authority/phase-010-concept-mapping-consolidation.md)
 - [Concept Mapping Authority](../mapping/index.md)
+- [Phase 011 Entry & Decomposition](../phases/011/011-entry-decomposition.md)
 
-Final Phase 010 mapping coverage:
-
-```text
-66 / 66 command groups                    SEMANTICALLY MAPPED
-52 / 52 query groups                      SEMANTICALLY MAPPED
-11 / 11 lifecycle/history envelopes       SEMANTICALLY MAPPED
-5 / 5 explanation patterns                SEMANTICALLY MAPPED
-11 / 11 concept names                     LINGUISTICALLY ALIGNED
-66 / 66 commands                          PHYSICAL RESPONSIBILITY MAPPED
-52 / 52 queries                           PHYSICAL RESPONSIBILITY MAPPED
-10 / 10 family/capability replays         PASS
-20 / 20 difficult-condition parity probes PASS
-```
-
-## Architecture interpretation guardrails
-
-Architecture MUST NOT translate mapping inventories mechanically into:
-
-```text
-one command mapping      -> one method/endpoint/event
-one query mapping        -> one query endpoint/database view
-one history envelope     -> one event-store/table schema
-one explanation pattern  -> one persistent aggregate/dashboard
-disclosure category      -> one public/runtime enum
-history-quality category -> one storage-state enum
-one concept              -> one service/package
-one actor role           -> one UI persona/ACL role
-one surface family       -> one mandatory product component
-one family member        -> one product SKU/deployment edition
-```
-
-System-established actions may have no direct physical control. One conceptual action may require several physical interactions. One inspection view may compose many owner-attributed facts while remaining derived.
+Phase 011 is upstream design-quality/misfit validation. Architecture may expose counterexamples or feasibility concerns but does not define the audit criteria merely because a structure already exists.
 
 ## Completed mapping implications
 
@@ -103,11 +75,29 @@ Phase 010 does not select:
 
 Those remain downstream representation choices for Phase 013 reconciliation.
 
-## Phase 011 boundary
+## Phase 011 evidence boundary
 
-Phase 011 is still upstream concept-design quality/misfit validation. Existing architecture may be used only as counterexample/feasibility evidence and must not become the template for concept boundaries.
+Phase 011 may use retained architecture as:
 
-Provider-specific architecture is especially useful as an adversarial check for the 010-H residual risk of host/provider semantic leakage, but Phase 011 must not select or freeze adapter architecture.
+```text
+counterexample evidence
+feasibility evidence
+provider-semantic-leakage probe material
+familiarity/comparison evidence
+```
+
+It may not infer that:
+
+```text
+existing service/package      -> concept boundary
+existing API/resource         -> conceptual action/state owner
+existing job/status model     -> SYNGAN lifecycle
+existing provider artifact    -> canonical Learned State/Evidence/Provenance
+existing architecture edge    -> inclusion dependence/synchronization
+existing test expectation     -> upstream design invariant
+```
+
+Provider-specific architecture is especially useful during 011-G as an adversarial check for host/provider semantic leakage, but Phase 011 must not select or freeze adapter architecture.
 
 ## Phase 007 architecture status
 
@@ -125,6 +115,6 @@ IMPLEMENTATION NEXT        NOT YET
 
 ## Current next boundary
 
-**Phase 011 — Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Design Validation — entry/decomposition** is next eligible.
+**011-A — Validation Authority, Evidence Hierarchy, Probe Taxonomy & Misfit/Reopen Rules** is next eligible.
 
 Architecture reconciliation remains deferred to Phase 013.
