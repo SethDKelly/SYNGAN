@@ -23,6 +23,7 @@ These documents define how SYNGAN design knowledge is created, interpreted, chan
 - [Composed Specificity Audit](composed-specificity-purpose-boundary-audit.md) — G1
 - [Composed Familiarity / External-Model Audit](composed-familiarity-reuse-vocabulary-external-model-audit.md) — G2 / B4
 - [Integrity Under Synchronization, Correction, Invalidation & Historical Composition](composed-integrity-synchronization-history-audit.md) — 011-D G3 baseline
+- [Synergy, Simplicity, Generic Fitness & Conceptual-Burden Audit](composed-synergy-simplicity-generic-fitness-burden-audit.md) — G4
 - [Phase 011 Index](../phases/011/index.md)
 
 ## Current posture
@@ -41,11 +42,12 @@ Phase 011                            ACTIVE
 011-B                                COMPLETE
 011-C                                COMPLETE
 011-D                                COMPLETE
-011-E                                NEXT ELIGIBLE
+011-E                                COMPLETE
+011-F                                NEXT ELIGIBLE
 G1 specificity                       CURRENTLY CLOSED
 G2 familiarity                       CURRENTLY CLOSED
 G3 integrity                         STRONG EVIDENCE / 011-G STRESS REVALIDATION REQUIRED
-G4 synergy / simplicity              PARTIAL TO STRONG
+G4 synergy / simplicity              CURRENTLY CLOSED
 G5 scenario / adversarial            PARTIAL TO STRONG
 G6 future-scope                      STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
 G7 residual misfit register          PARTIAL
@@ -61,28 +63,40 @@ implementation next                  NOT YET
 
 > **Later status, restriction, retirement, supersession or invalidation changes current/future reliance where owned; it does not silently rewrite exact historical bindings or transfer authority to another concept.**
 
-It also confirms that recovery/reconstruction may restore missing history only by satisfying the original owner's invariants; Provenance, physical material, platform jobs and restored projections remain evidence rather than substitute semantic authority.
+`R010-03` has no defect in the 011-D composed/historical portion and remains subject to 011-G stress revalidation.
+
+## Current synergy / simplicity rule
+
+011-E confirms that conceptual economy is achieved primarily through **application-family contraction, capability-local synchronization and progressive disclosure**, not by collapsing semantically distinct concepts.
 
 ```text
-13 / 13 synchronizations preserve singular ownership
-hidden coordinator required         NO
-MAT-2 / MAT-3 integrity findings    0 / 0
-upstream reopen                     NONE
+concept add/remove/merge/split justified        0
+synchronization add/remove/merge justified      0
+reduced-family burden replay                    PASS
+positive composed synergies                     CONFIRMED
+generic-fitness / domain anchoring              PASS
+hidden universal coordinator                    NONE
+MAT-2 / MAT-3 findings                          0 / 0
+R010-04                                         NO DEFECT
+G4                                              CURRENTLY CLOSED
 ```
 
-`R010-03` is **NO DEFECT for the 011-D composed/historical portion** and remains open for 011-G stress revalidation.
+The Evaluation Criterion/Evaluation/Evidence learning cost, Provenance's hub-like appearance and full-catalog discoverability remain bounded `MAT-1` watch points rather than defects.
+
+`R010-05` passes its 011-E structural simplicity portion but remains open for 011-F scenario replay.
 
 ## Product / architecture boundary
 
 SYNGAN remains a deployable Python/Spark package, agnostic across compliant Spark-capable hosting/infrastructure platforms. Retained architecture remains downstream evidence pending Phase 013.
 
-Phase 011 does not select APIs, classes, persistence, events, services, packages, queues, recovery mechanisms, provenance stores, invalidation propagation or deployment topology.
+Phase 011 does not select APIs, classes, persistence, events, services, packages, generic base hierarchies, queues, recovery mechanisms, provenance stores, invalidation propagation or deployment topology.
+
+Conceptual economy does not imply one class per concept, fewer classes than concepts, or a generic `Activity`, `Result`, `Artifact`, `Authority` or Workflow implementation hierarchy.
 
 ## Remaining design sequence
 
 ```text
-011-E  NEXT — synergy / simplicity / generic fitness / conceptual burden
-011-F  archetypal / exceptional / progressive-disclosure replay
+011-F  NEXT — archetypal / exceptional / progressive-disclosure replay
 011-G  adversarial / degraded / recovery / scale / provider leakage
 011-H  future-scope / extensibility
 011-I  residual misfit register
@@ -98,4 +112,4 @@ Only Phase 014 may set implementation **READY / NOT STARTED / NEXT**; Phase 015 
 
 ## Current next boundary
 
-**011-E — Synergy, Simplicity, Generic Fitness & Conceptual-Burden Audit** is next eligible.
+**011-F — Archetypal, Exceptional & Progressive-Disclosure Misfit Replay** is next eligible.
