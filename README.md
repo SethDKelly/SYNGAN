@@ -26,6 +26,7 @@ Current authority includes:
 - [`Phase 009 Consolidation`](docs/authority/phase-009-dependence-composition-consolidation.md)
 - [`Phase 010 Concept Mapping Consolidation`](docs/authority/phase-010-concept-mapping-consolidation.md)
 - [`Design Quality Validation Authority`](docs/authority/design-quality-validation-authority.md)
+- [`Composed Specificity Audit`](docs/authority/composed-specificity-purpose-boundary-audit.md)
 - [`Phase 011`](docs/phases/011/index.md)
 
 ## Status
@@ -42,8 +43,9 @@ concept mapping                      COMPLETE ENOUGH FOR PHASE 011
 Phase 011                            ACTIVE
 Phase 011 decomposition              COMPLETE
 011-A                                COMPLETE
-011-B                                NEXT ELIGIBLE
-G1 specificity                       PARTIAL TO STRONG
+011-B                                COMPLETE
+011-C                                NEXT ELIGIBLE
+G1 specificity                       CURRENTLY CLOSED
 G2 familiarity                       PARTIAL TO STRONG
 G3 integrity                         PARTIAL TO STRONG
 G4 synergy / simplicity              PARTIAL TO STRONG
@@ -70,12 +72,29 @@ Architecture, source, tests and provider/product models may expose counterexampl
 
 Materiality ranges from `MAT-0` observation to `MAT-3` conceptual blocker. An unresolved `MAT-3` blocks positive Phase 011 exit.
 
+## 011-B specificity result
+
+The complete mapped concept catalog passes the current G1 audit:
+
+```text
+11 / 11 concepts               PASS
+reduced family replay          PASS
+full anti-umbrella replay      PASS
+MAT-2 findings                 0
+MAT-3 blockers                 0
+catalog changes                0
+R010-01                        NO DEFECT
+G1 specificity                 CURRENTLY CLOSED
+```
+
+No merge, split, rename, new concept, dependence change or synchronization change is justified. Strategy's broad capability declaration surface and Provenance's high fan-in remain bounded watch points for later audits rather than specificity defects.
+
 ## Phase 011 sequence
 
 ```text
 011-A  COMPLETE — validation authority / evidence / probes / reopen rules
-011-B  NEXT — composed specificity / purpose alignment / boundary sharpness
-011-C  familiarity / reuse / vocabulary / external-model comparison
+011-B  COMPLETE — composed specificity / purpose alignment / boundary sharpness
+011-C  NEXT — familiarity / reuse / vocabulary / external-model comparison
 011-D  integrity under synchronization / correction / invalidation / history
 011-E  synergy / simplicity / generic fitness / conceptual burden
 011-F  archetypal / exceptional / progressive-disclosure misfit replay
@@ -101,6 +120,6 @@ Only a positive Phase 014 may change implementation to **READY / NOT STARTED / N
 
 ## Current next boundary
 
-**011-B — Composed Specificity, Purpose Alignment & Boundary Sharpness Audit** is next eligible.
+**011-C — Familiarity, Reuse, Vocabulary & External-Model Comparison Audit** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
