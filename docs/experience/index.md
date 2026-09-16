@@ -10,25 +10,17 @@ This directory contains actor-visible and programmatic workflow/experience desig
 
 Phase 010 is complete. These documents remain strong supporting evidence, while current concept-mapping authority lives in [Concept Mapping](../mapping/index.md) and the [Phase 010 Concept Mapping Consolidation](../authority/phase-010-concept-mapping-consolidation.md). Phase 011 quality/misfit authority is downstream of the completed mapping layer and upstream of representation/architecture.
 
-## Current relationship to completed Phase 010
+## Current relationship to Phase 011
 
 ```text
 010-A..010-H  COMPLETE
 F1-F5         CURRENTLY CLOSED
-```
-
-Final Phase 010 coverage includes:
-
-```text
-66 / 66 command groups                    SEMANTICALLY MAPPED
-52 / 52 query groups                      SEMANTICALLY MAPPED
-11 / 11 lifecycle/history envelopes       SEMANTICALLY MAPPED
-5 / 5 explanation patterns                SEMANTICALLY MAPPED
-11 / 11 concept names                     LINGUISTICALLY ALIGNED
-66 / 66 commands                          PHYSICAL RESPONSIBILITY MAPPED
-52 / 52 queries                           PHYSICAL RESPONSIBILITY MAPPED
-10 / 10 family/capability replays         PASS
-20 / 20 difficult-condition parity probes PASS
+011-A         COMPLETE
+011-B         COMPLETE
+011-C         COMPLETE
+011-D         NEXT ELIGIBLE
+G1            CURRENTLY CLOSED
+G2            CURRENTLY CLOSED
 ```
 
 ## Retained experience model
@@ -61,36 +53,7 @@ These remain interaction/mapping obligations, not new concepts or one universal 
 
 ## Completed mapping alignment
 
-Current mapping authority preserves:
-
-- reviewable proposal versus semantic commitment;
-- contextual readiness rather than global Readiness state;
-- semantic versus operational lifecycle;
-- cancellation request versus terminal cancellation;
-- same-semantics retry/resume discipline;
-- candidate/checkpoint/diagnostic material versus authoritative result;
-- Evaluation success versus favorable Evidence;
-- Evidence versus external decision authority;
-- future-use status changes versus historical truth;
-- relational Provenance rather than copied owner state;
-- current versus exact historical inspection;
-- directly retained versus reconstructed/partial/unknown history;
-- authorization-relative disclosure;
-- recovery authority-continuity qualification;
-- capability-specific degraded operation;
-- bounded enterprise-scale summary/drill-down;
-- equivalent material semantics across human/programmatic surfaces.
-
-Current Phase 009 corrections remain authoritative:
-
-```text
-SYNC-08 retired — Generation owns output lifecycle
-SYNC-15 reclassified — Reproducibility is cross-cutting
-Learning not universal for Generation
-Evaluation/Evidence not universal for Generation
-Execution not universal
-Provenance not universal
-```
+Current mapping authority preserves proposal versus commitment, contextual readiness, semantic versus operational lifecycle, cancellation request versus terminal cancellation, candidate/checkpoint material versus authoritative result, Evaluation success versus favorable Evidence, Evidence versus external decision authority, future-use status versus historical truth, relational Provenance, authorization-relative disclosure, history quality, recovery authority continuity, capability-specific degradation, bounded enterprise-scale interaction and human/programmatic semantic parity.
 
 ## Progressive disclosure
 
@@ -106,26 +69,30 @@ D4  distributed / host operational drill-down
 
 These levels are semantic presentation obligations, not UI screens, API tiers or storage layers.
 
-## Product-form result
+## 011-B / 011-C relationship
 
-SYNGAN remains a Python/Spark package agnostic across compliant Spark-capable hosting and infrastructure platforms.
+011-B finds no experience-driven purpose collision or umbrella concept requirement.
 
-Package/SDK, notebook and embedded automation are primary. CLI, reports, rich graphical presentation, service exposure and dedicated operator/admin applications remain optional or host-integrated.
-
-## 011-B specificity relationship
-
-011-B replays the complete mapped catalog and finds no experience-driven purpose collision or umbrella concept requirement.
+011-C finds no vocabulary-driven concept or mapping defect. External familiar words may improve comprehension only as one-way qualified language:
 
 ```text
-11 / 11 concepts            PASS composed specificity
-R010-01                     NO DEFECT
-G1 specificity              CURRENTLY CLOSED
-experience-driven reopen    NONE
+fit / train         qualified Learning verbs
+model               model-shaped Learned State analogue
+sample              Generation verb only when unambiguous
+validation result   validation-oriented Evidence analogue
+lineage             derivational Provenance subset
+run / job           external operational terms; qualify owner
 ```
 
-Experience composition therefore remains supporting evidence rather than a new owner. Repeated experience barriers such as readiness, actionability, disclosure or historical quality do not become standalone concepts merely because actors encounter them repeatedly.
+Experience surfaces may use explanatory glosses and compatibility terms, but must preserve canonical owner, lifecycle, uncertainty, historical scope and disclosure meaning.
 
-011-C may use experience language as familiarity evidence, but familiar UI/workflow words must not erase the concept distinctions preserved by Phase 010 and revalidated by 011-B.
+In particular, a screen/report/notebook may summarize several concepts for comprehension without creating a `Run`, `Quality`, `Validation`, `Model`, `Artifact`, `Metadata` or `Lineage` canonical owner.
+
+```text
+R010-01  NO DEFECT
+R010-02  NO DEFECT — COMPATIBILITY GUIDANCE STRENGTHENED
+experience-driven reopen  NONE
+```
 
 ## Authority boundary
 
@@ -142,4 +109,4 @@ An experience view may compose several concepts for comprehension but must not c
 
 ## Current next boundary
 
-**011-C — Familiarity, Reuse, Vocabulary & External-Model Comparison Audit** is next eligible.
+**011-D — Integrity Under Synchronization, Correction, Invalidation & Historical Composition** is next eligible.
