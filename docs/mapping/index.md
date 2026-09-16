@@ -23,9 +23,10 @@ Phase 010                    COMPLETE
 F1-F5                        CURRENTLY CLOSED
 concept mapping              COMPLETE ENOUGH FOR PHASE 011
 Phase 011                    ACTIVE
-Phase 011 decomposition      COMPLETE
 011-A                        COMPLETE
-011-B                        NEXT ELIGIBLE
+011-B                        COMPLETE
+011-C                        NEXT ELIGIBLE
+G1 specificity               CURRENTLY CLOSED
 Jackson concept design       NOT COMPLETE
 implementation readiness     NOT READY
 implementation start         NOT STARTED
@@ -76,24 +77,62 @@ SYNGAN is a deployable Python/Spark framework package.
 
 > **SYNGAN is agnostic across compliant Spark-capable hosting and infrastructure platforms.**
 
-Primary interaction remains package/SDK, notebook and embedded automation. CLI, reports, rich/graphical presentation, network service exposure and dedicated operator/admin applications remain optional adapters or host integrations.
+Primary interaction remains:
 
-## Phase 011 quality-validation handoff
+```text
+P1  Python package / SDK contract
+P2  notebook / interactive package use
+P3  embedded job / pipeline / automation
+```
 
-The mapping layer is an input to active Phase 011 design-quality/misfit validation.
+CLI, reports, rich/graphical presentation, network service exposure and dedicated operator/admin applications remain optional adapters or host integrations.
 
-011-A establishes the governing audit rule:
+## Application-family composition
 
-> **Evidence may challenge any prior conclusion, but only a demonstrated semantic consequence can justify changing upstream design authority.**
+All ten required family/capability replays pass. Optional concepts create no mandatory empty steps. Existing Learned State and reusable authorities may be selected rather than recreated. Direct Generation is not a degraded learned workflow. Evaluation/Evidence, Execution and Provenance remain conditional rather than universal stages.
 
-If a Phase 011 finding proves a mapping defect, it is classified `M2`, the smallest affected Phase 010 authority is reopened, and only materially dependent downstream conclusions are revalidated.
+The full eleven-concept family member does not become an eleven-stage wizard or a Workflow concept.
 
-Architecture/code/provider mismatch alone is not a mapping defect.
+## Progressive disclosure
 
-011-B now tests composed specificity and boundary sharpness; it must not alter mapping merely to simplify interaction unless the specificity audit proves a semantic defect.
+```text
+D0  task intent / immediate semantic action
+D1  material semantic basis
+D2  optional capability detail
+D3  historical / explanatory depth
+D4  distributed / host operational drill-down
+```
+
+These are presentation obligations, not screens, endpoints, API tiers or persistence layers.
+
+## Semantic parity / difficult conditions
+
+All 20 required difficult-condition probes pass across recovery, retry/cancellation, unknown operational state, degraded persistence/telemetry/dependency/storage/runtime conditions, security withholding, reconstructed history, later Evidence staleness/invalidation, topology, text-bearing data, enterprise scale, approximation pressure, operator use and extension-author use.
+
+No Actionability, Recovery, Degraded Mode, History Quality, Disclosure State, Topology, Text, Platform Job, Workflow or global Status concept is required.
+
+Routine inspection remains bounded/reference-first and does not require driver-local materialization of enterprise-scale data or telemetry.
+
+## Phase 011 specificity revalidation
+
+011-B tests whether the completed mapping exposed any hidden purpose collision, umbrella owner or boundary that survives only because of prior specification.
+
+Result:
+
+```text
+11 / 11 concepts               PASS composed specificity
+MAT-2 specificity findings     0
+MAT-3 specificity blockers     0
+catalog changes                0
+mapping reopens                0
+R010-01                        NO DEFECT
+G1 specificity                 CURRENTLY CLOSED
+```
+
+The mapping therefore remains valid as an input to 011-C. The familiarity audit may challenge vocabulary/analogue choices but must not use familiar labels to erase the already revalidated purpose boundaries.
 
 ## Current next boundary
 
-**011-B — Composed Specificity, Purpose Alignment & Boundary Sharpness Audit** is next eligible.
+**011-C — Familiarity, Reuse, Vocabulary & External-Model Comparison Audit** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
