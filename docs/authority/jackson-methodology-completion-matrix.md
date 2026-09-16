@@ -22,6 +22,8 @@ IMPLEMENTATION START       NOT STARTED
 IMPLEMENTATION NEXT        NOT YET
 ```
 
+No Phase 010 result changes this posture by itself.
+
 ## Completion-state vocabulary
 
 - **CURRENTLY CLOSED** — sufficiently established for the present design stage; later genuine misfit may reopen it.
@@ -44,6 +46,7 @@ Methodology, problem knowledge, accepted concepts, Phase 008 normalization, Phas
 - [010-D linguistic mapping](../mapping/linguistic-mapping-vocabulary-typed-status-disclosure-semantics.md)
 - [010-E package/host physical mapping](../mapping/package-notebook-automation-host-platform-interaction-mapping.md)
 - [010-F application-family workflow composition](../mapping/application-family-workflow-composition-progressive-disclosure.md)
+- [010-G human/programmatic semantic parity and difficult-condition audit](../mapping/human-programmatic-semantic-parity-degraded-recovery-scale-misfit-audit.md)
 
 ### Class B — supporting design evidence
 
@@ -70,7 +73,8 @@ Phase 010  ACTIVE
 010-D      COMPLETE — vocabulary / typed status / disclosure / history-quality language aligned
 010-E      COMPLETE — package/notebook/automation/host physical responsibility mapped
 010-F      COMPLETE — application-family workflow composition / optional-capability experience / progressive disclosure
-010-G      NEXT ELIGIBLE — human/programmatic parity + difficult-condition mapping-misfit audit
+010-G      COMPLETE — human/programmatic parity + degraded/recovery/scale mapping-misfit audit
+010-H      NEXT ELIGIBLE — Phase 010 consolidation / F1-F5 completion decision / Phase 011 handoff
 ```
 
 Current Phase 010 result:
@@ -84,18 +88,19 @@ accepted concept names                   11 / 11 LINGUISTICALLY ALIGNED
 command physical responsibility          66 / 66 MAPPED
 query physical responsibility            52 / 52 MAPPED
 required family/capability replays       10 / 10 PASS
+difficult-condition parity probes        20 / 20 PASS
 F1                                       CURRENTLY CLOSED
 F2                                       CURRENTLY CLOSED
 F3                                       CURRENTLY CLOSED
 F4                                       CURRENTLY CLOSED
-F5                                       STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
+F5                                       CURRENTLY CLOSED
 ```
 
 ## Jackson completion matrix
 
 | ID | Methodology obligation | Current evidence/result | Current state | Owning closure phase |
 |---|---|---|---|---|
-| A1 | Application problem, actors, needs, outcomes, environmental constraints | 008-B reconciled actors/outcomes/scale; package product form and Spark-host agnosticism clarified before 010-E | **CURRENTLY CLOSED** | 008-B/H; current problem authority |
+| A1 | Application problem, actors, needs, outcomes, environmental constraints | 008-B reconciled actors/outcomes/scale; package product form and Spark-host agnosticism clarified before 010-E; 010-G retains those boundaries under difficult conditions | **CURRENTLY CLOSED** | 008-B/H; current problem authority |
 | A2 | Distinct purpose/justification for every accepted concept | 008-B tested all eleven and absence consequences | **CURRENTLY CLOSED** | 008-B/H |
 | A3 | Problem/outcome → concept traceability | Canonical concept-justification traceability | **CURRENTLY CLOSED** | 008-B/H |
 | B1 | Divergent candidate concept discovery | 008-G replayed original/later/new candidates | **CURRENTLY CLOSED** | 008-G/H |
@@ -111,28 +116,28 @@ F5                                       STRONG EVIDENCE / CURRENT REVALIDATION 
 | C6 | Preconditions/effects/postconditions | 008-D semantic transition contracts | **CURRENTLY CLOSED** | 008-D/H |
 | C7 | Invariants/lifecycle/history/unresolved/invalidated states | 008-C/D | **CURRENTLY CLOSED** | 008-C/D/H |
 | C8 | Explicit boundaries/non-responsibilities | 008-F/G/H | **CURRENTLY CLOSED** | 008-F/G/H |
-| D1 | Jackson application inclusion-dependence graph | 009-A/B establish graph/SCCs; 009-H confirms no composition-created universal edge | **CURRENTLY CLOSED** | 009-A/B/H |
-| D2 | Meaningful valid concept subsets/application family | 009-C family + side conditions; 009-H preserves optionality; 010-F interaction replay preserves valid subsets | **CURRENTLY CLOSED** | 009-C/H; replayed 010-F |
-| D3 | Explanation/design ordering implied by inclusion dependence | 009-B prerequisite/SCC narrative ordering; 010-F does not convert it to a mandatory runtime workflow | **CURRENTLY CLOSED** | 009-B/H |
+| D1 | Jackson application inclusion-dependence graph | 009-A/B establish graph/SCCs; later Phase 010 mapping creates no universal edge | **CURRENTLY CLOSED** | 009-A/B/H |
+| D2 | Meaningful valid concept subsets/application family | 009-C family + side conditions; 010-F interaction replay preserves valid subsets; 010-G difficult cases preserve optionality | **CURRENTLY CLOSED** | 009-C/H; replayed 010-F/G |
+| D3 | Explanation/design ordering implied by inclusion dependence | 009-B prerequisite/SCC narrative ordering; 010-F/G do not convert it into a mandatory runtime workflow | **CURRENTLY CLOSED** | 009-B/H |
 | D4 | Product-scope consequences of adding/removing concepts | 009-D contraction/extension/rediscovery; 009-H consolidated | **CURRENTLY CLOSED** | 009-D/H |
-| E1 | Explicit concept synchronizations | 13 active from 15 historical IDs; no hidden new synchronization required by mapping/family replay | **CURRENTLY CLOSED** | 009-E/F/G/H |
-| E2 | Singular state ownership across synchronizations | 009-F ownership survives 010-B through 010-F mapping/composition | **CURRENTLY CLOSED** | 009-F/G/H |
-| E3 | Composition burden/economy and hidden-coordinator avoidance | 010-F rejects generic workflow/full-suite coordinator and mandatory empty steps | **CURRENTLY CLOSED** | 009-F/G/H; replayed 010-F |
-| E4 | Composition synergy | Phase 009 synergy evidence remains intact through 010-F family replay | **CURRENTLY CLOSED** | 009-G/H; 011 revalidation |
-| E5 | Integrity under composition | Phase 009 combined activation remains intact; all required 010-F family/capability replays pass | **CURRENTLY CLOSED** | 009-F/G/H; 011 revalidation |
-| F1 | Concept action → human/programmatic interaction mapping | 010-B maps all 66 command groups to actor intent and surface-neutral interaction obligations | **CURRENTLY CLOSED** | 010-B; revalidate 010-H |
-| F2 | Concept state/query → actor-visible inspection mapping | 010-C maps all 52 query groups, history/explanation/disclosure/scale obligations | **CURRENTLY CLOSED** | 010-C; revalidate 010-H |
-| F3 | Linguistic mapping/vocabulary alignment | 010-D aligns owner-qualified vocabulary, typed status, disclosure/history and ecosystem aliases | **CURRENTLY CLOSED** | 010-D; revalidate 010-H |
-| F4 | Physical/interaction mapping across relevant surfaces and application-family compositions | 010-E maps all 66 actions/52 queries to package/notebook/automation/host responsibilities; 010-F passes authority-only, L, direct-G, learned-G, E, gated-G, Constraint, Execution, Provenance and full-set replay with progressive disclosure | **CURRENTLY CLOSED** | 010-E/F; revalidate 010-H |
-| F5 | Human/programmatic semantic parity | Strong retained evidence plus current package/family mappings; difficult-condition parity/recovery/degraded/scale replay remains | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 010-G/H |
-| G1 | Specificity across final composed set | Individual + Phase 009/010 evidence strong; post-mapping audit pending | **PARTIAL TO STRONG** | 011 |
-| G2 | Familiarity across final composed set | Individual naming + 010-D alias discipline closed; composed review pending | **PARTIAL TO STRONG** | 011 |
-| G3 | Integrity across synchronizations/mappings | Phase 009 sync integrity and 010-F ordinary family replay closed; adversarial post-mapping replay pending | **PARTIAL TO STRONG** | 011 |
-| G4 | Synergy and simplicity/generic fitness | Phase 009 synergy/economy and 010-F optional-capability composition strong; post-mapping quality replay pending | **PARTIAL TO STRONG** | 011 |
-| G5 | Archetypal/exceptional/degraded/adversarial/recovery misfit | Strong prior evidence; 010-G difficult-condition replay remains | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 010-G/011 |
-| G6 | Future-scope/extensibility misfit | Rediscovery/extension/non-propagation boundaries recorded; final replay pending | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 011 |
-| G7 | Explicit residual conceptual misfit register | No final post-mapping register | **PARTIAL** | 011/012 |
-| H1 | One current-state consolidated Jackson concept-design audit | Phase 008/009 consolidated; Phase 010/011 incomplete | **OPEN** | 012 |
+| E1 | Explicit concept synchronizations | 13 active from 15 historical IDs; no hidden new synchronization required by mapping/family/parity replay | **CURRENTLY CLOSED** | 009-E/F/G/H |
+| E2 | Singular state ownership across synchronizations | 009-F ownership survives 010-B through 010-G, including recovery/degraded/history cases | **CURRENTLY CLOSED** | 009-F/G/H; replayed 010-G |
+| E3 | Composition burden/economy and hidden-coordinator avoidance | 010-F rejects generic workflow/full-suite coordinator; 010-G rejects generic Recovery/Degraded/Status authority | **CURRENTLY CLOSED** | 009-F/G/H; replayed 010-F/G |
+| E4 | Composition synergy | Phase 009 synergy evidence remains intact through family and parity replay | **CURRENTLY CLOSED** | 009-G/H; 011 revalidation |
+| E5 | Integrity under composition | Phase 009 combined activation plus 010-F ordinary and 010-G difficult-condition replay preserve owner boundaries | **CURRENTLY CLOSED** | 009-F/G/H; 011 revalidation |
+| F1 | Concept action → human/programmatic interaction mapping | 010-B maps all 66 command groups to actor intent and interaction obligations; 010-G finds no difficult-condition contradiction | **CURRENTLY CLOSED** | 010-B; revalidate 010-H |
+| F2 | Concept state/query → actor-visible inspection mapping | 010-C maps all 52 query groups, history/explanation/disclosure/scale obligations; 010-G validates partial/reconstructed/withheld/indeterminate difficult cases | **CURRENTLY CLOSED** | 010-C; revalidate 010-H |
+| F3 | Linguistic mapping/vocabulary alignment | 010-D aligns owner-qualified vocabulary, typed status, disclosure/history and ecosystem aliases; 010-G preserves those distinctions under degraded/recovery conditions | **CURRENTLY CLOSED** | 010-D; revalidate 010-H |
+| F4 | Physical/interaction mapping across relevant surfaces and application-family compositions | 010-E maps all 66 actions/52 queries to package/notebook/automation/host responsibilities; 010-F passes ten family/capability replays | **CURRENTLY CLOSED** | 010-E/F; revalidate 010-H |
+| F5 | Human/programmatic semantic parity | 010-G passes 20 difficult-condition probes across recovery, queue/retry/cancel/unknown state, degradation, security/disclosure, history reconstruction, Evidence staleness, topology/text, scale/approximation, operator and extension-author interaction without hidden authority or semantic divergence | **CURRENTLY CLOSED** | 010-G; revalidate 010-H |
+| G1 | Specificity across final composed set | Individual + Phase 009/010 evidence strong; broader post-mapping concept-quality audit remains | **PARTIAL TO STRONG** | 011 |
+| G2 | Familiarity across final composed set | Individual naming + 010-D alias discipline strong; composed familiarity review remains | **PARTIAL TO STRONG** | 011 |
+| G3 | Integrity across synchronizations/mappings | Phase 009 integrity plus 010-F/G ordinary and difficult mapping replay are strong; Phase 011 still owns broader adversarial concept-integrity review | **PARTIAL TO STRONG** | 011 |
+| G4 | Synergy and simplicity/generic fitness | Phase 009 synergy/economy plus 010-F optional-capability composition and 010-G no-hidden-coordinator result are strong; Phase 011 composed quality replay remains | **PARTIAL TO STRONG** | 011 |
+| G5 | Archetypal/exceptional/degraded/adversarial/recovery misfit | 010-G passes dedicated degraded/recovery/scale/security/history/topology/text mapping replay; broader post-mapping adversarial concept-design validation remains | **PARTIAL TO STRONG** | 010-G/011 |
+| G6 | Future-scope/extensibility misfit | Rediscovery/extension/non-propagation boundaries recorded; 010-G extension-author replay passes; final future-scope audit remains | **STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED** | 011 |
+| G7 | Explicit residual conceptual misfit register | No final post-mapping concept-design misfit register yet; 010-G records no mapping blocker | **PARTIAL** | 011/012 |
+| H1 | One current-state consolidated Jackson concept-design audit | Phase 008/009 consolidated; Phase 010 consolidation and Phase 011 still pending | **OPEN** | 012 |
 | H2 | Explicit Jackson concept-design completion decision | Not yet performed | **OPEN** | 012 |
 | R1 | Architecture reconciled downstream to completed concept design | Extensive retained architecture exists | **DOWNSTREAM / PENDING RECONCILIATION** | 013 |
 | R2 | Whole design audited problem → concepts → dependence/sync → mapping → architecture | Not yet possible | **OPEN** | 014 |
@@ -169,6 +174,46 @@ Key findings:
 - progressive disclosure separates immediate task/basis from optional capability, historical and host-operational depth;
 - no concept, synchronization or mandatory family edge is added.
 
+## 010-G semantic parity / difficult-condition authority
+
+[Human/Programmatic Semantic Parity, Degraded/Recovery/Scale & Mapping-Misfit Audit](../mapping/human-programmatic-semantic-parity-degraded-recovery-scale-misfit-audit.md) establishes:
+
+```text
+normal human/programmatic parity               PASS
+queued/deferred admission                       PASS
+retryable Attempt failure                       PASS
+cancellation requested / unknown state          PASS
+regressive recovery / continuity uncertainty   PASS
+persistence/projection/telemetry degradation   PASS
+dependency/runtime/storage degradation          PASS
+authorization / protected existence            PASS
+reconstructed/partial/unavailable history       PASS
+later Evidence staleness/invalidation          PASS
+evaluation-gated unfavorable/indeterminate     PASS
+time-series / multi-table partial progress      PASS
+text-bearing structured data                    PASS
+enterprise-scale bounded inspection             PASS
+material approximation pressure                 PASS
+Platform Operator interaction                   PASS
+Extension Author / Library Maintainer           PASS
+20 / 20 required difficult-condition probes     PASS
+```
+
+Key findings:
+
+- human/programmatic parity means equivalent material semantics, not identical ergonomics;
+- parity is evaluated within the same effective authorization context;
+- recovery continuity uncertainty does not resurrect stale write authority;
+- degraded operation remains capability-specific rather than one global lifecycle;
+- unknown/indeterminate remains a legitimate result rather than implicit failure/success;
+- current and historical truth remain simultaneously inspectable;
+- later Evidence invalidation does not rewrite historical use while current applicability remains explicit;
+- topology/text cases remain expressible through existing concept ownership;
+- routine inspection remains bounded/reference-first at enterprise scale;
+- host operational facts remain correlations to Execution/Attempt rather than semantic completion;
+- no Actionability, Recovery, Degraded Mode, History Quality, Disclosure State, Topology, Text, Platform Job, Workflow or global Status concept is justified;
+- no concept, synchronization, application-family edge or mapping blocker is added.
+
 ## Current methodological verdict
 
 ```text
@@ -184,12 +229,13 @@ PHASE 010                            ACTIVE
 010-D                                COMPLETE
 010-E                                COMPLETE
 010-F                                COMPLETE
+010-G                                COMPLETE
 F1                                   CURRENTLY CLOSED
 F2                                   CURRENTLY CLOSED
 F3                                   CURRENTLY CLOSED
 F4                                   CURRENTLY CLOSED
-F5                                   STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
-010-G                                NEXT ELIGIBLE
+F5                                   CURRENTLY CLOSED
+010-H                                NEXT ELIGIBLE
 JACKSON CONCEPT DESIGN COMPLETE      NO
 REPRESENTATION/ARCHITECTURE FINAL    NO — PENDING PHASE 013 RECONCILIATION
 IMPLEMENTATION READINESS             NOT READY
@@ -200,7 +246,7 @@ IMPLEMENTATION NEXT                  NOT YET
 ## Current dependency order
 
 ```text
-010-G -> 010-H
+010-H
   ↓
 011  Specificity / Familiarity / Integrity / Synergy / Misfit
   ↓
@@ -213,12 +259,12 @@ IMPLEMENTATION NEXT                  NOT YET
 
 ## Guardrail
 
-Phase 010 mapping may expose a genuine upstream misfit, but interface convenience is not evidence to redefine a concept. Mapping does not prescribe framework classes, endpoints, services, schemas, packages, deployment units, workflow engines, dashboards, materialized views, graph/search technology or host-specific runtime adapters.
+Phase 010 mapping may expose a genuine upstream misfit, but interface convenience is not evidence to redefine a concept. Mapping does not prescribe framework classes, endpoints, services, schemas, packages, deployment units, workflow engines, dashboards, materialized views, graph/search technology, recovery mechanisms or host-specific runtime adapters.
 
 If a genuine mapping misfit is found, reopen only the smallest affected authority under J0-J7.
 
 ## Current next boundary
 
-**010-G — Human/Programmatic Semantic Parity, Degraded/Recovery/Scale & Mapping-Misfit Audit** is next eligible.
+**010-H — Phase 010 Consolidation, F1-F5 Completion Decision & Phase 011 Handoff** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
