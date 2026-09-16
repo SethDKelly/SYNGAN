@@ -18,9 +18,13 @@ F1-F5         CURRENTLY CLOSED
 011-A         COMPLETE
 011-B         COMPLETE
 011-C         COMPLETE
-011-D         NEXT ELIGIBLE
+011-D         COMPLETE
+011-E         COMPLETE
+011-F         NEXT ELIGIBLE
 G1            CURRENTLY CLOSED
 G2            CURRENTLY CLOSED
+G3            STRONG EVIDENCE / 011-G STRESS REVALIDATION REQUIRED
+G4            CURRENTLY CLOSED
 ```
 
 ## Retained experience model
@@ -69,30 +73,46 @@ D4  distributed / host operational drill-down
 
 These levels are semantic presentation obligations, not UI screens, API tiers or storage layers.
 
-## 011-B / 011-C relationship
+## Phase 011 relationship through 011-E
 
 011-B finds no experience-driven purpose collision or umbrella concept requirement.
 
-011-C finds no vocabulary-driven concept or mapping defect. External familiar words may improve comprehension only as one-way qualified language:
+011-C finds no vocabulary-driven concept or mapping defect; familiar external terms remain qualified aliases rather than canonical owners.
+
+011-D confirms experience composition must preserve current-versus-historical state, semantic-versus-operational completion, Evidence applicability, Provenance relationship authority and recovery/history uncertainty without creating shadow state.
+
+011-E confirms the experience can be structurally simpler than the full concept catalog without hiding semantics:
 
 ```text
-fit / train         qualified Learning verbs
-model               model-shaped Learned State analogue
-sample              Generation verb only when unambiguous
-validation result   validation-oriented Evidence analogue
-lineage             derivational Provenance subset
-run / job           external operational terms; qualify owner
+application-family contraction                  PASS
+optional-capability absence                     preserved
+D0/D1 material semantic basis                   preserved
+D2 optional detail                              capability-local
+D3 historical explanation                      preserved
+D4 host/distributed drill-down                  non-authoritative
+R010-04                                         NO DEFECT
+R010-05 structural simplicity portion           NO DEFECT
+G4                                              CURRENTLY CLOSED
 ```
 
-Experience surfaces may use explanatory glosses and compatibility terms, but must preserve canonical owner, lifecycle, uncertainty, historical scope and disclosure meaning.
+The full eleven-concept catalog must not become eleven sequential experience stages. Task-centered composition, existing-resource-first interaction and progressive disclosure are the accepted simplicity mechanisms.
 
-In particular, a screen/report/notebook may summarize several concepts for comprehension without creating a `Run`, `Quality`, `Validation`, `Model`, `Artifact`, `Metadata` or `Lineage` canonical owner.
+## 011-F replay boundary
 
-```text
-R010-01  NO DEFECT
-R010-02  NO DEFECT — COMPATIBILITY GUIDANCE STRENGTHENED
-experience-driven reopen  NONE
-```
+011-F now owns the concrete archetypal/exceptional replay of the retained experience model.
+
+For every representative scenario it must test whether D0/D1 could hide a fact material to the immediate decision, including:
+
+- an allowed-but-material limitation;
+- Evidence strength, uncertainty or indeterminacy;
+- current versus historical status;
+- authority-continuity uncertainty;
+- optional capability absence versus failure/unavailability;
+- semantic versus operational completion.
+
+A concise view is valid only when the omitted depth is genuinely optional for the current decision and remains recoverable at the appropriate disclosure level.
+
+A poorly designed hypothetical UI is not by itself a mapping defect. A defect exists only if current mapping/disclosure authority cannot represent the required material truth without semantic distortion.
 
 ## Authority boundary
 
@@ -109,4 +129,4 @@ An experience view may compose several concepts for comprehension but must not c
 
 ## Current next boundary
 
-**011-D — Integrity Under Synchronization, Correction, Invalidation & Historical Composition** is next eligible.
+**011-F — Archetypal, Exceptional & Progressive-Disclosure Misfit Replay** is next eligible.
