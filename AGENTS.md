@@ -4,7 +4,7 @@ These instructions apply repository-wide to automated coding/documentation agent
 
 ## Current posture
 
-**SYNGAN is in Jackson concept-design completion, not implementation re-entry. Phase 011 design-quality/misfit validation is active; 011-A is complete and 011-B is next.**
+**SYNGAN is in Jackson concept-design completion, not implementation re-entry. Phase 011 design-quality/misfit validation is active; 011-A and 011-B are complete and 011-C is next.**
 
 Start with:
 
@@ -16,9 +16,11 @@ Start with:
 - `docs/authority/phase-009-dependence-composition-consolidation.md`
 - `docs/authority/phase-010-concept-mapping-consolidation.md`
 - `docs/authority/design-quality-validation-authority.md`
+- `docs/authority/composed-specificity-purpose-boundary-audit.md`
 - `docs/phases/011/index.md`
 - `docs/phases/011/011-entry-decomposition.md`
 - `docs/phases/011/011-A-validation-authority-evidence-hierarchy-probe-taxonomy-misfit-reopen-rules.md`
+- `docs/phases/011/011-B-composed-specificity-purpose-alignment-boundary-sharpness-audit.md`
 - `docs/mapping/index.md`
 
 Current state:
@@ -35,8 +37,9 @@ concept mapping                      COMPLETE ENOUGH FOR PHASE 011
 Phase 011                            ACTIVE
 Phase 011 decomposition              COMPLETE
 011-A                                COMPLETE
-011-B                                NEXT ELIGIBLE
-G1 specificity                       PARTIAL TO STRONG
+011-B                                COMPLETE
+011-C                                NEXT ELIGIBLE
+G1 specificity                       CURRENTLY CLOSED
 G2 familiarity                       PARTIAL TO STRONG
 G3 integrity                         PARTIAL TO STRONG
 G4 synergy / simplicity              PARTIAL TO STRONG
@@ -141,12 +144,43 @@ G7  explicit residual conceptual misfit register
 
 It evaluates the **current composed and mapped design**, not historical phase claims in isolation.
 
+## 011-B specificity closure
+
+011-B establishes `docs/authority/composed-specificity-purpose-boundary-audit.md`.
+
+```text
+11 / 11 concepts               PASS composed specificity
+reduced family replay          PASS
+full anti-umbrella replay      PASS
+MAT-2 findings                 0
+MAT-3 blockers                 0
+catalog changes                0
+upstream reopens               0
+R010-01                        NO DEFECT
+G1 specificity                 CURRENTLY CLOSED
+```
+
+Preserve these current conclusions unless later Phase 011 evidence demonstrates a materially changed premise:
+
+- mutual inclusion does not collapse Learning/Learned State or Evaluation/Evidence;
+- direct Generation remains independently coherent;
+- Execution remains operational realization rather than workflow/scheduler authority;
+- Provenance remains typed relationship authority with low authority fan-out;
+- no Workflow/global Status/Quality/Run/Artifact/Relationship/Recovery/Degraded Mode or similar aggregate concept is currently required.
+
+Bounded watch points:
+
+- Synthesis Strategy has a broad capability declaration surface; do not let plugin/runtime/configuration infrastructure leak into its purpose.
+- Provenance has high fan-in; later 011-D/G must re-test that it never acquires owner truth.
+
+These are `MAT-1` watch points, not unresolved G1 defects.
+
 ## Phase 011 decomposition
 
 ```text
 011-A  COMPLETE — validation authority / evidence / probes / reopen rules
-011-B  NEXT — composed specificity / purpose alignment / boundary sharpness
-011-C  familiarity / reuse / vocabulary / external-model comparison
+011-B  COMPLETE — composed specificity / purpose alignment / boundary sharpness
+011-C  NEXT — familiarity / reuse / vocabulary / external-model comparison
 011-D  integrity under synchronization / correction / invalidation / history
 011-E  synergy / simplicity / generic fitness / conceptual burden
 011-F  archetypal / exceptional / progressive-disclosure misfit replay
@@ -156,27 +190,27 @@ It evaluates the **current composed and mapped design**, not historical phase cl
 011-J  Phase 011 consolidation / G1-G7 decision / Phase 012 handoff
 ```
 
-## 011-B discipline
+## 011-C discipline
 
-011-B must use the 011-A specificity criteria (`SP-1` through `SP-7`) against the complete mapped concept family.
+011-C owns G2 composed familiarity and B4 revalidation.
 
-It must test distinct motivating purpose, problem/outcome traceability, omission consequence, absence of infrastructural/whole-product purpose, neighboring-boundary sharpness, proportional state/action responsibility, and credible non-responsibilities.
+It must compare conceptual jobs rather than nouns/object models and use the 011-A `FA-*` discipline. External ecosystem terms/products may provide analogue evidence but cannot become authority over SYNGAN boundaries.
 
-011-B must explicitly disposition `R010-01 — composed specificity drift` and must not split/merge concepts merely to reduce concept count or fit an implementation model.
+011-C must explicitly disposition `R010-02 — familiarity versus semantic precision` and test whether familiar vocabulary improves comprehension or instead imports false ownership/lifecycle assumptions.
+
+Do not rename a concept merely because another ecosystem uses a more common noun, and do not preserve unnecessary novelty when a familiar concept form truly matches purpose, state and actions without semantic distortion.
 
 ## Phase 010 risk handoff
 
-All eight risks remain audit inputs until dispositioned:
-
 ```text
-R010-01  composed specificity drift
-R010-02  familiarity versus semantic precision
-R010-03  synchronization integrity under adversarial composition
-R010-04  synergy versus conceptual burden
-R010-05  progressive-disclosure misfit
-R010-06  provider / host semantic leakage
-R010-07  future-capability / extensibility pressure
-R010-08  scale / approximation pressure
+R010-01  composed specificity drift                  NO DEFECT — 011-B
+R010-02  familiarity versus semantic precision       OPEN — 011-C
+R010-03  synchronization integrity under adversity   OPEN — 011-D / 011-G
+R010-04  synergy versus conceptual burden            OPEN — 011-E
+R010-05  progressive-disclosure misfit               OPEN — 011-E / 011-F
+R010-06  provider / host semantic leakage            OPEN — 011-G
+R010-07  future-capability / extensibility pressure  OPEN — 011-H
+R010-08  scale / approximation pressure              OPEN — 011-G
 ```
 
 ## Architecture / implementation boundary
@@ -197,4 +231,4 @@ Phase 012 may declare Jackson concept design complete. Phase 013 then reconciles
 
 ## Current next boundary
 
-**011-B — Composed Specificity, Purpose Alignment & Boundary Sharpness Audit** is next eligible.
+**011-C — Familiarity, Reuse, Vocabulary & External-Model Comparison Audit** is next eligible.
