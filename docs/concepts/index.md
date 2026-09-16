@@ -8,7 +8,7 @@ status: active
 
 This directory contains the canonical concept specifications accepted in Phase 001 and normalized through Phase 008.
 
-Cross-concept dependence/composition is consolidated by [Phase 009 Dependence, Application Family & Composition Consolidation](../authority/phase-009-dependence-composition-consolidation.md). Current mapping work is governed by [Concept Mapping Authority](../mapping/index.md).
+Cross-concept dependence/composition is consolidated by [Phase 009 Dependence, Application Family & Composition Consolidation](../authority/phase-009-dependence-composition-consolidation.md). Concept mapping is consolidated by [Phase 010 Concept Mapping Consolidation](../authority/phase-010-concept-mapping-consolidation.md).
 
 ## Accepted concepts
 
@@ -31,30 +31,25 @@ accepted concepts                    11
 active synchronizations              13
 Phase 008                            COMPLETE
 Phase 009                            COMPLETE
-Phase 010                            ACTIVE
-010-A                                COMPLETE
-010-B                                COMPLETE
-010-C                                COMPLETE
-010-D                                COMPLETE
-010-E                                COMPLETE
-010-F                                COMPLETE
-010-G                                COMPLETE
-010-H                                NEXT ELIGIBLE
+Phase 010                            COMPLETE
+010-A..010-H                         COMPLETE
 F1 semantic action mapping           CURRENTLY CLOSED
 F2 semantic inspection mapping       CURRENTLY CLOSED
 F3 linguistic mapping                CURRENTLY CLOSED
 F4 physical/family mapping           CURRENTLY CLOSED
 F5 human/programmatic parity         CURRENTLY CLOSED
+concept mapping                      COMPLETE ENOUGH FOR PHASE 011
 ```
 
-Phase 009 found no reason to add, remove, merge, split or rename a concept. 010-B through 010-G find no mapping, family-composition or difficult-condition parity reason to reopen that conclusion.
+Phase 009 found no reason to add, remove, merge, split or rename a concept. Phase 010-A through 010-H find no mapping, family-composition or difficult-condition parity reason to reopen that conclusion.
 
-## Current mapping coverage
+## Final mapping coverage
 
 ```text
 66 / 66 normalized command groups       SEMANTICALLY MAPPED
 52 / 52 normalized query groups         SEMANTICALLY MAPPED
 11 / 11 lifecycle/history envelopes     SEMANTICALLY MAPPED
+5 / 5 explanation patterns              SEMANTICALLY MAPPED
 11 / 11 accepted concept names          LINGUISTICALLY ALIGNED
 66 / 66 command groups                  PHYSICAL RESPONSIBILITY MAPPED
 52 / 52 query groups                    PHYSICAL RESPONSIBILITY MAPPED
@@ -84,6 +79,8 @@ Concept completeness is provided through the Python/Spark package contract rathe
 
 Primary physical interaction is package/SDK, notebook and embedded automation. CLI, reports, rich/graphical presentation and standalone service/API exposure are optional adapters or representations. Host platforms ordinarily own infrastructure administration UI while SYNGAN preserves its own Execution/Attempt and semantic authority through stable package contracts and correlations.
 
+> **SYNGAN is agnostic across compliant Spark-capable hosting and infrastructure platforms.**
+
 This product-form mapping does not change any concept boundary.
 
 ## Application-family result
@@ -100,19 +97,15 @@ Concept inclusion defines available capability rather than requiring every inclu
 
 ## Difficult-condition parity result
 
-010-G confirms that the current catalog remains sufficient under:
-
-- retry/cancellation/unknown operational state;
-- recovery/authority-continuity uncertainty;
-- capability-specific degraded operation;
-- disclosure/withholding/security responses;
-- reconstructed/partial history;
-- later Evidence staleness/invalidation/current inapplicability;
-- time-series/multi-table and text-bearing structured-data cases;
-- enterprise-scale bounded interaction;
-- operator and extension-author interaction.
+The current catalog remains sufficient under retry/cancellation/unknown operational state, recovery/authority-continuity uncertainty, capability-specific degradation, disclosure/withholding/security responses, reconstructed/partial history, later Evidence staleness/invalidation, topology/text-bearing structured-data cases, enterprise-scale bounded interaction, approximation pressure, and operator/extension-author interaction.
 
 No Actionability, Recovery, Degraded Mode, History Quality, Disclosure State, Topology, Text, Platform Job, Workflow, Status, Dashboard, Approval or other aggregate concept is added.
+
+## Phase 011 handoff
+
+Phase 011 must now test the final mapped catalog for specificity, familiarity, integrity, synergy/simplicity, exceptional/adversarial misfit, future-scope/extensibility misfit and residual conceptual debt.
+
+A later genuine misfit may reopen the smallest affected concept authority; Phase 010 completion is not a prohibition on correction.
 
 ## Authority rule
 
@@ -120,6 +113,6 @@ No implementation resource, architecture dependency, dashboard/report convenienc
 
 ## Current next boundary
 
-**010-H — Phase 010 Consolidation, F1-F5 Completion Decision & Phase 011 Handoff** is next eligible.
+**Phase 011 — Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Design Validation — entry/decomposition** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
