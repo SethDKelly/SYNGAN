@@ -56,11 +56,7 @@ Final result:
 
 ```text
 010-A..010-H  COMPLETE
-F1            CURRENTLY CLOSED
-F2            CURRENTLY CLOSED
-F3            CURRENTLY CLOSED
-F4            CURRENTLY CLOSED
-F5            CURRENTLY CLOSED
+F1-F5         CURRENTLY CLOSED
 ```
 
 Final mapping coverage:
@@ -77,8 +73,6 @@ Final mapping coverage:
 20 / 20 difficult-condition probes   PASS
 ```
 
-Phase 010 confirms SYNGAN's package-first product form and Spark-host platform agnosticism, preserves application-family optionality, and validates equivalent material semantics across human/programmatic surfaces under difficult conditions without new concepts or hidden authority.
-
 Exit:
 
 ```text
@@ -88,25 +82,46 @@ MAPPING-DRIVEN BLOCKER       NONE FOUND
 JACKSON CONCEPT DESIGN       NOT COMPLETE
 ```
 
-## Phase 011 — Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Design Validation — next
+## Phase 011 — Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Design Validation — active
 
-**Next action: entry/decomposition.**
+Current authority:
 
-Phase 011 owns methodology area G:
+- [Phase 011 Index](011/index.md)
+- [011 Entry & Decomposition](011/011-entry-decomposition.md)
+- [Phase 010 Concept Mapping Consolidation](../authority/phase-010-concept-mapping-consolidation.md)
+- [Jackson Methodology Completion Matrix](../authority/jackson-methodology-completion-matrix.md)
+
+Current state:
 
 ```text
-G1  specificity
-G2  familiarity
-G3  integrity
-G4  synergy / simplicity / generic fitness
-G5  archetypal / exceptional / degraded / adversarial / recovery misfit
-G6  future-scope / extensibility misfit
-G7  explicit residual conceptual misfit register
+Phase 011                    ACTIVE
+Phase 011 decomposition      COMPLETE
+011-A                        NEXT ELIGIBLE
+G1 specificity               PARTIAL TO STRONG
+G2 familiarity               PARTIAL TO STRONG
+G3 integrity                 PARTIAL TO STRONG
+G4 synergy / simplicity      PARTIAL TO STRONG
+G5 scenario / adversarial    PARTIAL TO STRONG
+G6 future-scope              STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
+G7 residual misfit register  PARTIAL
 ```
 
-010-H hands forward non-blocking risks around composed specificity, familiarity/semantic precision, adversarial synchronization integrity, conceptual burden, progressive disclosure, provider semantic leakage, future capability pressure and scale/approximation pressure.
+Current decomposition:
 
-Phase 011 must be deliberately decomposed before execution.
+```text
+011-A  validation authority / evidence hierarchy / probe taxonomy / misfit-reopen rules
+011-B  composed specificity / purpose alignment / boundary sharpness
+011-C  familiarity / reuse / vocabulary / external-model comparison
+011-D  integrity under synchronization / correction / invalidation / history
+011-E  synergy / simplicity / generic fitness / conceptual burden
+011-F  archetypal / exceptional / progressive-disclosure misfit replay
+011-G  adversarial / degraded / recovery / scale / provider-semantic leakage
+011-H  future-scope / extensibility / new-capability pressure / rediscovery triggers
+011-I  residual conceptual misfit register / disposition / closure preparation
+011-J  Phase 011 consolidation / G1-G7 decision / Phase 012 handoff
+```
+
+The decomposition explicitly consumes all eight non-blocking Phase 010 risks and separates current-design quality validation from future-scope pressure and from downstream architecture/implementation concerns.
 
 ## Later design phases
 
@@ -128,6 +143,6 @@ Placeholder only; not ready, not active and not next.
 
 ## Current next boundary
 
-**Phase 011 — Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Design Validation — entry/decomposition** is next eligible.
+**011-A — Validation Authority, Evidence Hierarchy, Probe Taxonomy & Misfit/Reopen Rules** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
