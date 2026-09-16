@@ -8,15 +8,15 @@ status: active
 
 ## Historical work through Phase 007
 
-- Phase 001 — Design Foundation & Concept Discovery: complete historical discovery baseline.
-- Phase 002 — Concept Specification & Invariant Refinement: complete historical specification baseline.
-- Phase 003 — Experience & Workflow Design: complete historical experience baseline.
+- Phase 001 — Design Foundation & Concept Discovery: historical discovery baseline.
+- Phase 002 — Concept Specification & Invariant Refinement: historical specification baseline.
+- Phase 003 — Experience & Workflow Design: historical experience baseline.
 - Phase 004 — Representation & Architecture Design: retained downstream architecture baseline.
 - Phase 005 — Implementation Planning & Delivery Decomposition: planning/history only.
 - Phase 006 — Post-Planning Design Validation & Adversarial Refinement: historical design-refinement evidence.
 - Phase 007 — Design Continuation & Architecture Completion: retained downstream design evidence.
 
-Phase 007-K's implementation-reentry conclusion remains superseded.
+Phase 007-K implementation re-entry remains superseded.
 
 ## Current implementation posture
 
@@ -35,7 +35,7 @@ INDIVIDUAL CONCEPT DESIGN   COMPLETE ENOUGH FOR CURRENT PROGRAM
 JACKSON CONCEPT DESIGN      NOT COMPLETE
 ```
 
-## Phase 009 — Concept Dependence, Application Family, Composition & Synchronization Closure — complete
+## Phase 009 — Dependence, Application Family, Composition & Synchronization — complete
 
 ```text
 009-A..009-H  COMPLETE
@@ -45,106 +45,58 @@ E1-E5         CURRENTLY CLOSED
 
 ## Phase 010 — Concept Mapping, Interaction, Linguistic & Experience Alignment — complete
 
-Current authority:
-
-- [Phase 010 Index](010/index.md)
-- [010-H Phase Record](010/010-H-phase-010-consolidation-f1-f5-completion-decision-phase-011-handoff.md)
-- [Phase 010 Concept Mapping Consolidation](../authority/phase-010-concept-mapping-consolidation.md)
-- [Concept Mapping Authority](../mapping/index.md)
-
-Final result:
-
 ```text
 010-A..010-H  COMPLETE
 F1-F5         CURRENTLY CLOSED
 ```
 
-Final mapping coverage:
-
-```text
-66 / 66 command groups               SEMANTICALLY MAPPED
-52 / 52 query groups                 SEMANTICALLY MAPPED
-11 / 11 lifecycle/history envelopes  SEMANTICALLY MAPPED
-5 / 5 explanation patterns           SEMANTICALLY MAPPED
-11 / 11 accepted concept names       LINGUISTICALLY ALIGNED
-66 / 66 command groups               PHYSICAL RESPONSIBILITY MAPPED
-52 / 52 query groups                 PHYSICAL RESPONSIBILITY MAPPED
-10 / 10 family/capability replays    PASS
-20 / 20 difficult-condition probes   PASS
-```
-
-Exit:
-
-```text
-PHASE 010                    COMPLETE
-CONCEPT MAPPING              COMPLETE ENOUGH FOR PHASE 011
-MAPPING-DRIVEN BLOCKER       NONE FOUND
-JACKSON CONCEPT DESIGN       NOT COMPLETE
-```
+Final mapping coverage remains 66/66 commands, 52/52 queries, 11/11 lifecycle/history envelopes, 5/5 explanation patterns, 11/11 concept-name alignment, 10/10 family replays and 20/20 difficult-condition parity probes.
 
 ## Phase 011 — Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Design Validation — active
 
 Current authority:
 
 - [Phase 011 Index](011/index.md)
-- [011 Entry & Decomposition](011/011-entry-decomposition.md)
-- [011-A Phase Record](011/011-A-validation-authority-evidence-hierarchy-probe-taxonomy-misfit-reopen-rules.md)
-- [011-B Phase Record](011/011-B-composed-specificity-purpose-alignment-boundary-sharpness-audit.md)
-- [011-C Phase Record](011/011-C-familiarity-reuse-vocabulary-external-model-comparison-audit.md)
-- [Design Quality Validation Authority](../authority/design-quality-validation-authority.md)
-- [Composed Specificity Audit](../authority/composed-specificity-purpose-boundary-audit.md)
-- [Composed Familiarity / External-Model Audit](../authority/composed-familiarity-reuse-vocabulary-external-model-audit.md)
+- [011-A](011/011-A-validation-authority-evidence-hierarchy-probe-taxonomy-misfit-reopen-rules.md)
+- [011-B](011/011-B-composed-specificity-purpose-alignment-boundary-sharpness-audit.md)
+- [011-C](011/011-C-familiarity-reuse-vocabulary-external-model-comparison-audit.md)
+- [011-D](011/011-D-integrity-under-synchronization-correction-invalidation-historical-composition.md)
+- [011-D G3 Baseline Authority](../authority/composed-integrity-synchronization-history-audit.md)
 - [Jackson Methodology Completion Matrix](../authority/jackson-methodology-completion-matrix.md)
 
 Current state:
 
 ```text
 Phase 011                    ACTIVE
-Phase 011 decomposition      COMPLETE
 011-A                        COMPLETE
 011-B                        COMPLETE
 011-C                        COMPLETE
-011-D                        NEXT ELIGIBLE
+011-D                        COMPLETE
+011-E                        NEXT ELIGIBLE
 G1 specificity               CURRENTLY CLOSED
 G2 familiarity               CURRENTLY CLOSED
-G3 integrity                 PARTIAL TO STRONG
+G3 integrity                 STRONG EVIDENCE / 011-G STRESS REVALIDATION REQUIRED
 G4 synergy / simplicity      PARTIAL TO STRONG
 G5 scenario / adversarial    PARTIAL TO STRONG
 G6 future-scope              STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
 G7 residual misfit register  PARTIAL
 ```
 
-011-B closes the dedicated G1 specificity audit. 011-C closes B4 composed familiarity/reuse and G2 familiarity without changing catalog, dependence, synchronization or mapping semantics.
-
-011-C result:
-
-```text
-11 / 11 canonical names retained
-application-family vocabulary reuse     PASS
-external-model comparison               PASS
-MAT-2 findings                          0
-MAT-3 blockers                          0
-upstream reopens                        0
-R010-02                                 NO DEFECT — COMPATIBILITY GUIDANCE STRENGTHENED
-B4 familiarity / reuse                  CURRENTLY CLOSED
-G2 familiarity                          CURRENTLY CLOSED
-```
-
-External vocabulary remains compatibility-only and owner-qualified.
+011-D confirms 13/13 active synchronizations preserve singular ownership under normal/historical correction, invalidation, supersession and recovery/reconstruction composition. No MAT-2/MAT-3 integrity finding or upstream reopen was found. `R010-03` remains open only for 011-G stress revalidation.
 
 Current sequence:
 
 ```text
-011-A  COMPLETE — validation authority / evidence / probes / reopen rules
-011-B  COMPLETE — composed specificity / purpose alignment / boundary sharpness
-011-C  COMPLETE — familiarity / reuse / vocabulary / external-model comparison
-011-D  NEXT — integrity under synchronization / correction / invalidation / history
-011-E  synergy / simplicity / generic fitness / conceptual burden
-011-F  archetypal / exceptional / progressive-disclosure misfit replay
-011-G  adversarial / degraded / recovery / scale / provider-semantic leakage
-011-H  future-scope / extensibility / new-capability pressure / rediscovery triggers
-011-I  residual conceptual misfit register / disposition / closure preparation
-011-J  Phase 011 consolidation / G1-G7 decision / Phase 012 handoff
+011-A  COMPLETE — validation method
+011-B  COMPLETE — specificity
+011-C  COMPLETE — familiarity/reuse
+011-D  COMPLETE — integrity baseline
+011-E  NEXT — synergy / simplicity / generic fitness / conceptual burden
+011-F  archetypal / exceptional / progressive-disclosure replay
+011-G  adversarial / degraded / recovery / scale / provider leakage
+011-H  future-scope / extensibility
+011-I  residual misfit register
+011-J  Phase 011 consolidation / Phase 012 handoff
 ```
 
 ## Later design phases
@@ -155,18 +107,18 @@ Planned. A positive result does not make implementation ready.
 
 ### Phase 013 — Post-Concept Representation & Architecture Reconciliation
 
-Planned. Reconcile retained Phase 004/006/007 architecture against completed concept design. Remains design-only.
+Planned. Reconcile retained architecture against completed concept design. Remains design-only.
 
-### Phase 014 — Whole-Design Consolidation, Residual Debt Audit & Implementation-Readiness Decision
+### Phase 014 — Whole-Design Consolidation & Implementation-Readiness Decision
 
-Planned. Only this phase may set implementation **READY / NOT STARTED / NEXT** if the entire design passes.
+Planned. Only this phase may set implementation **READY / NOT STARTED / NEXT**.
 
 ### Future Phase 015 — Implementation Authority & Controlled Delivery
 
-Placeholder only; not ready, not active and not next.
+Future only. Explicit authorization is still required before implementation begins.
 
 ## Current next boundary
 
-**011-D — Integrity Under Synchronization, Correction, Invalidation & Historical Composition** is next eligible.
+**011-E — Synergy, Simplicity, Generic Fitness & Conceptual-Burden Audit** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
