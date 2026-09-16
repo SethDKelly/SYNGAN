@@ -42,6 +42,7 @@ Existing architecture, source or tests never become upstream concept-design auth
 - [Composed Specificity Audit](authority/composed-specificity-purpose-boundary-audit.md)
 - [Composed Familiarity Audit](authority/composed-familiarity-reuse-vocabulary-external-model-audit.md)
 - [Synchronization/Historical Integrity Audit](authority/composed-integrity-synchronization-history-audit.md)
+- [Synergy, Simplicity, Generic Fitness & Conceptual-Burden Audit](authority/composed-synergy-simplicity-generic-fitness-burden-audit.md)
 - [Phase 011](phases/011/index.md)
 
 ## Current state
@@ -60,11 +61,12 @@ Phase 011 decomposition              COMPLETE
 011-B                                COMPLETE
 011-C                                COMPLETE
 011-D                                COMPLETE
-011-E                                NEXT ELIGIBLE
+011-E                                COMPLETE
+011-F                                NEXT ELIGIBLE
 G1 specificity                       CURRENTLY CLOSED
 G2 familiarity                       CURRENTLY CLOSED
 G3 integrity                         STRONG EVIDENCE / 011-G STRESS REVALIDATION REQUIRED
-G4 synergy / simplicity              PARTIAL TO STRONG
+G4 synergy / simplicity              CURRENTLY CLOSED
 G5 scenario / adversarial            PARTIAL TO STRONG
 G6 future-scope                      STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
 G7 residual misfit register          PARTIAL
@@ -92,7 +94,7 @@ SYNGAN remains a deployable Python/Spark framework package, agnostic across comp
 20 / 20 difficult-condition parity probes PASS
 ```
 
-## Phase 011 results through 011-D
+## Phase 011 results through 011-E
 
 ### 011-A — validation method
 
@@ -119,24 +121,38 @@ B4 / G2                        CURRENTLY CLOSED
 
 ```text
 13 / 13 synchronizations preserve singular ownership
-producer/result integrity                       PASS
-occurrence-scoped/non-reactive binding          PASS
 current-versus-historical truth                 PASS
 Evidence/Generation authority separation        PASS
 semantic/Execution separation                   PASS
 Provenance low-authority-fan-out baseline       PASS
 recovery/reconstruction ownership baseline      PASS
-optional-capability integrity                   PASS
 hidden coordinator required                     NO
 MAT-2 / MAT-3 findings                          0 / 0
-upstream reopen                                 NONE
 ```
 
-Controlling temporal rule:
+`R010-03` has no defect in the composed/historical portion; 011-G still owns stress revalidation.
 
-> **Current status/applicability may change without rewriting the exact state an earlier occurrence bound or used. Reconstruction may restore missing historical representation only by satisfying the original owner's invariants.**
+### 011-E — synergy / simplicity / generic fitness
 
-`R010-03` is **NO DEFECT for the 011-D composed/historical integrity portion**, while 011-G still owns adversarial/degraded/recovery/provider stress revalidation. G3 therefore remains strong but not finally closed.
+```text
+concept add/remove/merge/split justified        0
+synchronization add/remove/merge justified      0
+reduced-family burden replay                    PASS
+positive composed synergies                     CONFIRMED
+repeated-pattern missing-purpose probe          PASS
+cross-cutting qualifier discipline              PASS
+generic-fitness / domain anchoring              PASS
+progressive-disclosure structural simplicity    PASS
+hidden universal coordinator                    NONE
+MAT-2 / MAT-3 findings                          0 / 0
+R010-04                                         NO DEFECT
+R010-05 simplicity portion                      NO DEFECT — 011-F REPLAY PENDING
+G4 synergy / simplicity / generic fitness       CURRENTLY CLOSED
+```
+
+The catalog is intentionally not minimized by raw concept count. Its burden is controlled through application-family contraction, relation-local synchronization and D0-D4 progressive disclosure rather than by merging materially distinct purposes.
+
+Bounded `MAT-1` watch points retained for later replay include the Criterion/Evaluation/Evidence first-use learning cost, Provenance's hub-like appearance pressure and full-catalog discoverability.
 
 ## Phase 011 sequence
 
@@ -145,8 +161,8 @@ Controlling temporal rule:
 011-B  COMPLETE — specificity / purpose alignment / boundary sharpness
 011-C  COMPLETE — familiarity / reuse / vocabulary / external-model comparison
 011-D  COMPLETE — synchronization / correction / invalidation / historical integrity
-011-E  NEXT — synergy / simplicity / generic fitness / conceptual burden
-011-F  archetypal / exceptional / progressive-disclosure misfit replay
+011-E  COMPLETE — synergy / simplicity / generic fitness / conceptual burden
+011-F  NEXT — archetypal / exceptional / progressive-disclosure misfit replay
 011-G  adversarial / degraded / recovery / scale / provider-semantic leakage
 011-H  future-scope / extensibility / new-capability pressure / rediscovery triggers
 011-I  residual conceptual misfit register / dispositions
@@ -163,10 +179,10 @@ IMPLEMENTATION START       NOT STARTED
 IMPLEMENTATION NEXT        NOT YET
 ```
 
-Do not translate concepts, synchronizations, historical-status distinctions, external aliases or Phase 011 audit categories mechanically into packages, services, schemas, endpoints, events, workflow engines, persistence, recovery mechanisms, runtime enums or product SKUs.
+Do not translate concepts, synchronizations, genericity conclusions, application-family members or Phase 011 audit categories mechanically into package inheritance, services, schemas, endpoints, workflow engines, feature flags, runtime enums or product SKUs.
 
 Phase 012 may declare Jackson concept design complete. Phase 013 reconciles representation/architecture. Only a positive Phase 014 may make implementation **READY / NOT STARTED / NEXT**; implementation itself still requires Phase 015.
 
 ## Current next boundary
 
-**011-E — Synergy, Simplicity, Generic Fitness & Conceptual-Burden Audit** is next eligible.
+**011-F — Archetypal, Exceptional & Progressive-Disclosure Misfit Replay** is next eligible.
