@@ -38,8 +38,10 @@ Existing architecture, source or tests never become upstream concept-design auth
 - [Phase 009 Consolidation](authority/phase-009-dependence-composition-consolidation.md)
 - [Concept Mapping Authority](mapping/index.md)
 - [Phase 010 Concept Mapping Consolidation](authority/phase-010-concept-mapping-consolidation.md)
+- [Design Quality Validation Authority](authority/design-quality-validation-authority.md)
 - [Phase 011](phases/011/index.md)
 - [011 Entry & Decomposition](phases/011/011-entry-decomposition.md)
+- [011-A Validation Authority Phase Record](phases/011/011-A-validation-authority-evidence-hierarchy-probe-taxonomy-misfit-reopen-rules.md)
 
 ## Current state
 
@@ -54,7 +56,8 @@ F1-F5                                CURRENTLY CLOSED
 concept mapping                      COMPLETE ENOUGH FOR PHASE 011
 Phase 011                            ACTIVE
 Phase 011 decomposition              COMPLETE
-011-A                                NEXT ELIGIBLE
+011-A                                COMPLETE
+011-B                                NEXT ELIGIBLE
 G1 specificity                       PARTIAL TO STRONG
 G2 familiarity                       PARTIAL TO STRONG
 G3 integrity                         PARTIAL TO STRONG
@@ -92,13 +95,40 @@ Primary interaction is package/notebook/automation. CLI, reports, rich graphical
 20 / 20 difficult-condition parity probes PASS
 ```
 
-Phase 010 remains the completed mapping authority. Phase 011 does not remap concepts by default; it tests the resulting design for specificity, familiarity, integrity, synergy, scenario/adversarial misfit, future-scope pressure and residual conceptual debt.
+Phase 010 remains the completed mapping authority. Phase 011 tests the resulting design for specificity, familiarity, integrity, synergy, scenario/adversarial misfit, future-scope pressure and residual conceptual debt.
 
-## Phase 011 decomposition
+## Phase 011 validation method
+
+011-A establishes the common audit method before any G1-G7 quality verdict:
 
 ```text
-011-A  validation authority / evidence hierarchy / probe taxonomy / misfit-reopen rules
-011-B  specificity / purpose alignment / boundary sharpness
+E1-E8     evidence hierarchy
+ER-*      evidence roles
+Q1-Q15    material finding record
+PT-*      probe target classes
+PS-*      scenario modes
+MAT-0..3  materiality classes
+SP-*      specificity criteria
+FA-*      familiarity comparison discipline
+IN-*      integrity criteria
+SY-*      synergy / simplicity / generic-fitness criteria
+SC-*      scenario-quality criteria
+M0-M8     misfit routing taxonomy
+```
+
+Controlling rules:
+
+> **Evidence may challenge any prior conclusion, but only a demonstrated semantic consequence can justify changing upstream design authority.**
+
+> **Reopen the smallest canonical authority that owns the violated semantic claim, then revalidate only materially dependent downstream conclusions.**
+
+Architecture, source, tests and external provider/product models remain counterexample, feasibility or familiarity evidence rather than upstream authority.
+
+## Phase 011 sequence
+
+```text
+011-A  COMPLETE — validation authority / evidence / probes / reopen rules
+011-B  NEXT — specificity / purpose alignment / boundary sharpness
 011-C  familiarity / reuse / vocabulary / external-model comparison
 011-D  integrity under synchronization / correction / invalidation / history
 011-E  synergy / simplicity / generic fitness / conceptual burden
@@ -109,7 +139,7 @@ Phase 010 remains the completed mapping authority. Phase 011 does not remap conc
 011-J  Phase 011 consolidation / G1-G7 decision / Phase 012 handoff
 ```
 
-All eight non-blocking Phase 010 residual risks are assigned explicit Phase 011 audit ownership.
+All eight non-blocking Phase 010 residual risks remain assigned explicit Phase 011 audit ownership. 011-A resolves none of them; it defines how their evidence and dispositions must be recorded.
 
 ## Implementation status rule
 
@@ -127,4 +157,4 @@ Phase 012 may declare Jackson concept design complete. Phase 013 reconciles repr
 
 ## Current next boundary
 
-**011-A — Validation Authority, Evidence Hierarchy, Probe Taxonomy & Misfit/Reopen Rules** is next eligible.
+**011-B — Composed Specificity, Purpose Alignment & Boundary Sharpness Audit** is next eligible.
