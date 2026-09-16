@@ -18,6 +18,7 @@ These documents define how SYNGAN design knowledge is created, interpreted, chan
 - [Source & Provenance Policy](source-provenance-policy.md)
 - [Design Quality Validation Authority](design-quality-validation-authority.md)
 - [Composed Specificity, Purpose Alignment & Boundary Sharpness Audit](composed-specificity-purpose-boundary-audit.md)
+- [Familiarity, Reuse, Vocabulary & External-Model Comparison Audit](composed-familiarity-reuse-vocabulary-external-model-audit.md)
 
 ## Current design authority chain
 
@@ -31,10 +32,12 @@ These documents define how SYNGAN design knowledge is created, interpreted, chan
 - [Phase 010 Concept Mapping Consolidation](phase-010-concept-mapping-consolidation.md)
 - [Design Quality Validation Authority](design-quality-validation-authority.md)
 - [Composed Specificity Audit](composed-specificity-purpose-boundary-audit.md)
+- [Composed Familiarity / External-Model Audit](composed-familiarity-reuse-vocabulary-external-model-audit.md)
 - [Phase 011](../phases/011/index.md)
 - [011 Entry & Decomposition](../phases/011/011-entry-decomposition.md)
 - [011-A Phase Record](../phases/011/011-A-validation-authority-evidence-hierarchy-probe-taxonomy-misfit-reopen-rules.md)
 - [011-B Phase Record](../phases/011/011-B-composed-specificity-purpose-alignment-boundary-sharpness-audit.md)
+- [011-C Phase Record](../phases/011/011-C-familiarity-reuse-vocabulary-external-model-comparison-audit.md)
 
 ## Current posture
 
@@ -53,9 +56,10 @@ Phase 011                            ACTIVE
 Phase 011 decomposition              COMPLETE
 011-A                                COMPLETE
 011-B                                COMPLETE
-011-C                                NEXT ELIGIBLE
+011-C                                COMPLETE
+011-D                                NEXT ELIGIBLE
 G1 specificity                       CURRENTLY CLOSED
-G2 familiarity                       PARTIAL TO STRONG
+G2 familiarity                       CURRENTLY CLOSED
 G3 integrity                         PARTIAL TO STRONG
 G4 synergy / simplicity              PARTIAL TO STRONG
 G5 scenario / adversarial            PARTIAL TO STRONG
@@ -111,9 +115,25 @@ R010-01                        NO DEFECT
 G1 specificity                 CURRENTLY CLOSED
 ```
 
-The full mapped composition preserves distinct purposes and proportionate state/action boundaries. Mutual-inclusion pairs remain legitimate, Execution remains operational-realization authority, and Provenance remains typed relationship authority rather than a metadata/history owner.
+## G2 composed familiarity authority
 
-No rejected aggregate concept becomes necessary under composed specificity.
+011-C closes composed familiarity/reuse and B4 revalidation:
+
+```text
+11 / 11 canonical names retained
+application-family vocabulary reuse     PASS
+external-model comparison               PASS
+MAT-2 findings                          0
+MAT-3 blockers                          0
+upstream reopens                        0
+R010-02                                 NO DEFECT — COMPATIBILITY GUIDANCE STRENGTHENED
+B4 familiarity / reuse                  CURRENTLY CLOSED
+G2 familiarity                          CURRENTLY CLOSED
+```
+
+External vocabulary is explicitly compatibility-only unless its conceptual job matches current authority. Qualified mappings include `fit/train` to Learning, model-shaped `model` to Learned State, synthetic-production `sample` to Generation, validation result to Evidence and `lineage` to a derivational subset of Provenance. Generic `run`, `job`, `artifact`, `metadata`, `metric`, `validation`, `synthesizer` and similar terms do not become concept owners.
+
+The [Ecosystem Compatibility Vocabulary](../terminology/ecosystem-compatibility.md) is the current durable collision/alias guide.
 
 ## Product-form boundary
 
@@ -134,8 +154,9 @@ Phase 011 may use architecture/code/provider models as counterexample, feasibili
 ```text
 011-A  COMPLETE — validation authority / evidence / probes / reopen rules
 011-B  COMPLETE — specificity / purpose alignment / boundary sharpness
-011-C  NEXT — familiarity / reuse / vocabulary / external-model comparison
-011-D..J remaining Phase 011 quality/misfit validation
+011-C  COMPLETE — familiarity / reuse / vocabulary / external-model comparison
+011-D  NEXT — integrity under synchronization / correction / invalidation / history
+011-E..J remaining Phase 011 quality/misfit validation
 012    Jackson concept-design completion decision
 013    representation / architecture reconciliation
 014    whole-design completion / implementation-readiness decision
@@ -149,6 +170,6 @@ Only Phase 014 may set **READY / NOT STARTED / NEXT** after the whole design pas
 
 ## Current next boundary
 
-**011-C — Familiarity, Reuse, Vocabulary & External-Model Comparison Audit** is next eligible.
+**011-D — Integrity Under Synchronization, Correction, Invalidation & Historical Composition** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
