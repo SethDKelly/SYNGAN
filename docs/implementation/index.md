@@ -26,50 +26,81 @@ Phase 009                  COMPLETE
 D1-D4                      CURRENTLY CLOSED
 E1-E5                      CURRENTLY CLOSED
 Phase 010                  COMPLETE
-010-A..010-H               COMPLETE
 F1-F5                      CURRENTLY CLOSED
 concept mapping            COMPLETE ENOUGH FOR PHASE 011
 Phase 011                  ACTIVE
-Phase 011 decomposition    COMPLETE
 011-A                      COMPLETE
-011-B                      NEXT ELIGIBLE
+011-B                      COMPLETE
+011-C                      NEXT ELIGIBLE
+G1 specificity             CURRENTLY CLOSED
 Jackson concept design     IN PROGRESS
 ```
 
 ## Completed mapping remains design-only
 
-Current mapping obligations remain design authority rather than implementation API/query/storage contracts.
+Current mapping establishes:
 
-Do not mechanically convert semantic actions, queries, history envelopes, concept owners, mapping identifiers, actor lenses, surface families, application-family tags, synchronization relevance, progressive-disclosure depths or Phase 011 probe categories into runtime resources, schemas, services, packages, tests or enums.
+```text
+66 / 66 command groups                    SEMANTICALLY MAPPED
+52 / 52 query groups                      SEMANTICALLY MAPPED
+11 / 11 lifecycle/history envelopes       SEMANTICALLY MAPPED
+5 / 5 explanation patterns                SEMANTICALLY MAPPED
+11 / 11 concept names                     LINGUISTICALLY ALIGNED
+66 / 66 commands                          PHYSICAL RESPONSIBILITY MAPPED
+52 / 52 queries                           PHYSICAL RESPONSIBILITY MAPPED
+10 / 10 family/capability replays         PASS
+20 / 20 difficult-condition parity probes PASS
+```
 
-## 011-A implementation-evidence boundary
+These are design obligations, not implementation API/query/storage contracts.
 
-Current Phase 011 audit method is governed by [Design Quality Validation Authority](../authority/design-quality-validation-authority.md).
+Do not convert:
 
-Source code, tests, build/runtime behavior and retained implementation plans are `E7` evidence only. They may expose:
+```text
+semantic action mapping      -> one method/endpoint/command/button
+semantic query mapping       -> one query endpoint/database view
+history envelope             -> one event-store/table schema
+explanation pattern          -> one dashboard/persistent aggregate
+concept owner                -> service/package
+mapping identifier           -> public resource ID
+disclosure/history category  -> global public/runtime enum
+actor lens                   -> ACL/auth role
+surface family               -> mandatory product component
+application-family tag       -> SKU/feature flag/deployment profile
+synchronization relevance    -> event/transaction/workflow edge
+progressive-disclosure depth -> UI page/API tier
+Phase 011 probe category     -> test suite/package/runtime enum
+```
 
-- a counterexample;
-- a feasibility constraint;
-- a physical limitation;
-- accidental implementation coupling;
-- terminology pressure.
+## 011-B specificity remains design-only
 
-They do not directly define concept purpose, ownership, inclusion dependence, synchronization or mapping semantics.
+011-B confirms the current eleven-concept catalog remains specific in composition:
 
-A concern that remains implementation-only is classified `M7` and cannot force a concept-design change without a concrete upstream semantic consequence.
+```text
+11 / 11 concepts               PASS
+MAT-2 findings                 0
+MAT-3 blockers                 0
+catalog changes                0
+upstream reopens               0
+R010-01                        NO DEFECT
+G1 specificity                 CURRENTLY CLOSED
+```
 
-011-A adds no executable tests intended to freeze Phase 011 quality conclusions.
+This does **not** authorize implementation modules, interfaces, database entities, services or test suites one-for-one with concepts. A concept boundary is semantic authority, not package topology.
+
+The Strategy and Provenance MAT-1 watch points likewise do not authorize implementation changes; they remain Phase 011 design-audit inputs.
 
 ## Active Phase 011 remains design-only
 
-011-B next evaluates composed specificity, purpose alignment and boundary sharpness using current problem/concept authority and the 011-A criteria. Existing package/class/test structure must not be used as evidence that a concept should exist, merge or split merely because implementation would be easier.
+011-C now owns familiarity/reuse/vocabulary/external-model comparison. Existing code/API/provider names may be used as analogue evidence only and cannot become canonical merely because they are implemented.
+
+Quality/misfit findings may reopen upstream concept-design authority when justified, or classify an issue as architecture-only/implementation-only. Neither case authorizes implementation work during Phase 011.
 
 ## Remaining design before readiness
 
 ```text
-011-A  validation authority / evidence / probes / reopen rules — COMPLETE
-011-B  specificity / purpose alignment / boundary sharpness — NEXT
-011-C..J remaining Phase 011 quality/misfit validation
+011-C  familiarity / reuse / vocabulary / external-model comparison — NEXT
+011-D..J remaining Phase 011 quality/misfit validation
 012    Jackson concept-design completion decision
 013    representation / architecture reconciliation
 014    whole-design completion / readiness decision
@@ -85,4 +116,4 @@ Until Phase 014 passes, do not add production concept/domain behavior, implement
 
 Design-only work:
 
-**011-B — Composed Specificity, Purpose Alignment & Boundary Sharpness Audit**.
+**011-C — Familiarity, Reuse, Vocabulary & External-Model Comparison Audit**.
