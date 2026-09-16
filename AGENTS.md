@@ -4,7 +4,7 @@ These instructions apply repository-wide to automated coding/documentation agent
 
 ## Current posture
 
-**SYNGAN is in Jackson concept-design completion, not implementation re-entry. Phase 010 concept mapping is complete; Phase 011 design-quality/misfit validation is next.**
+**SYNGAN is in Jackson concept-design completion, not implementation re-entry. Phase 010 concept mapping is complete. Phase 011 design-quality/misfit validation is active and decomposed; 011-A is next.**
 
 Start with:
 
@@ -15,14 +15,9 @@ Start with:
 - `docs/authority/jackson-methodology-completion-matrix.md`
 - `docs/authority/phase-009-dependence-composition-consolidation.md`
 - `docs/authority/phase-010-concept-mapping-consolidation.md`
+- `docs/phases/011/index.md`
+- `docs/phases/011/011-entry-decomposition.md`
 - `docs/mapping/index.md`
-- `docs/mapping/concept-action-actor-intent-interaction-mapping.md`
-- `docs/mapping/concept-state-query-history-explanation-inspection-mapping.md`
-- `docs/mapping/linguistic-mapping-vocabulary-typed-status-disclosure-semantics.md`
-- `docs/mapping/package-notebook-automation-host-platform-interaction-mapping.md`
-- `docs/mapping/application-family-workflow-composition-progressive-disclosure.md`
-- `docs/mapping/human-programmatic-semantic-parity-degraded-recovery-scale-misfit-audit.md`
-- `docs/phases/010/index.md`
 
 Current state:
 
@@ -33,12 +28,18 @@ Phase 008                            COMPLETE
 Phase 009                            COMPLETE
 Phase 010                            COMPLETE
 010-A..010-H                         COMPLETE
-F1                                   CURRENTLY CLOSED
-F2                                   CURRENTLY CLOSED
-F3                                   CURRENTLY CLOSED
-F4                                   CURRENTLY CLOSED
-F5                                   CURRENTLY CLOSED
+F1-F5                                CURRENTLY CLOSED
 concept mapping                      COMPLETE ENOUGH FOR PHASE 011
+Phase 011                            ACTIVE
+Phase 011 decomposition              COMPLETE
+011-A                                NEXT ELIGIBLE
+G1 specificity                       PARTIAL TO STRONG
+G2 familiarity                       PARTIAL TO STRONG
+G3 integrity                         PARTIAL TO STRONG
+G4 synergy / simplicity              PARTIAL TO STRONG
+G5 scenario / adversarial            PARTIAL TO STRONG
+G6 future-scope                      STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
+G7 residual misfit register          PARTIAL
 Jackson concept design               NOT COMPLETE
 implementation readiness             NOT READY
 implementation start                 NOT STARTED
@@ -55,29 +56,9 @@ SYNGAN is a deployable Python/Spark framework package, not a standalone applicat
 
 > **Platform agnosticism means agnostic across compliant Spark-capable hosting and infrastructure platforms.**
 
-Spark/PySpark remains the required processing environment in current scope.
+Spark/PySpark remains the required processing environment in current scope. Package/SDK, notebook and embedded automation remain primary interaction roles. CLI, reports, rich presentation, network-service exposure and host/operator integrations remain optional or host-owned as established by Phase 010.
 
-Primary interaction roles:
-
-```text
-P1  Python package / SDK contract
-P2  notebook / interactive package use
-P3  embedded job / pipeline / automation
-```
-
-Conditional/optional roles:
-
-```text
-P4  CLI adapter
-P5  report / exported review
-P6  rich / graphical presentation
-P7  host-platform / operator integration
-P8  external integration / handoff
-```
-
-Do not assume SYNGAN owns a web application shell, authentication UI, job/cluster dashboard, log viewer, storage browser, admin console or mandatory network service/API.
-
-## Completed mapping authority
+## Completed Phase 010 mapping authority
 
 ```text
 66 / 66 commands                         SEMANTICALLY MAPPED
@@ -91,7 +72,7 @@ Do not assume SYNGAN owns a web application shell, authentication UI, job/cluste
 20 / 20 difficult-condition probes       PASS
 ```
 
-Preserve these governing rules:
+Preserve these governing rules unless Phase 011 proves a genuine defect:
 
 > **Concept inclusion defines available capability; it does not require every included concept to be re-executed in every invocation.**
 
@@ -101,49 +82,7 @@ Preserve these governing rules:
 
 > **Words may simplify presentation, but they may not erase ownership, semantic dimension, historical scope, uncertainty or disclosure meaning.**
 
-## Progressive-disclosure discipline
-
-Use the 010-F semantic depths conceptually:
-
-```text
-D0  task intent / immediate semantic action
-D1  material semantic basis
-D2  optional capability detail
-D3  historical / explanatory depth
-D4  distributed / host operational drill-down
-```
-
-These are not UI screens, API tiers, classes or persistence layers.
-
-## Difficult-condition discipline
-
-Preserve the 010-G result under:
-
-- queueing, retry, cancellation and unknown operational state;
-- regressive recovery / authority continuity uncertainty;
-- persistence, projection/search, telemetry, dependency/runtime, storage and resource degradation;
-- authorization uncertainty and protected existence;
-- reconstructed/partial/unavailable history;
-- later Evidence staleness/invalidation/current inapplicability;
-- time-series/multi-table partial constituent progress;
-- text-bearing structured data and disclosure/memorization questions;
-- enterprise-scale bounded inspection and approximation pressure;
-- Platform Operator and Extension Author interaction.
-
-Do not create generic Actionability, Recovery, Degraded Mode, History Quality, Disclosure State, Topology, Text, Platform Job, Workflow or global Status concepts to simplify these cases.
-
-## Phase 010 final decision
-
-```text
-PHASE 010                    COMPLETE
-CONCEPT MAPPING              COMPLETE ENOUGH FOR PHASE 011
-F1-F5                        CURRENTLY CLOSED
-MAPPING-DRIVEN BLOCKER       NONE FOUND
-```
-
-Phase 010 consolidation authority is `docs/authority/phase-010-concept-mapping-consolidation.md`.
-
-## Phase 011 handoff
+## Phase 011 purpose
 
 Phase 011 owns methodology area G:
 
@@ -157,41 +96,92 @@ G6  future-scope / extensibility misfit
 G7  explicit residual conceptual misfit register
 ```
 
-010-H hands forward these non-blocking risks:
+It evaluates the **current composed and mapped design**, not historical phase claims in isolation.
 
-1. composed specificity drift;
-2. familiarity versus semantic precision;
-3. synchronization integrity under broader adversarial composition;
-4. synergy versus conceptual burden;
-5. progressive-disclosure misfit;
-6. provider/host semantic leakage;
-7. future-capability/extensibility pressure;
-8. scale/approximation pressure.
+## Phase 011 decomposition
 
-These are Phase 011 audit inputs, not implementation tasks.
+```text
+011-A  Validation Authority, Evidence Hierarchy, Probe Taxonomy & Misfit/Reopen Rules
+011-B  Composed Specificity, Purpose Alignment & Boundary Sharpness Audit
+011-C  Familiarity, Reuse, Vocabulary & External-Model Comparison Audit
+011-D  Integrity Under Synchronization, Correction, Invalidation & Historical Composition
+011-E  Synergy, Simplicity, Generic Fitness & Conceptual-Burden Audit
+011-F  Archetypal, Exceptional & Progressive-Disclosure Misfit Replay
+011-G  Adversarial, Degraded, Recovery, Scale & Provider-Semantic-Leakage Validation
+011-H  Future-Scope, Extensibility, New-Capability Pressure & Rediscovery Triggers
+011-I  Residual Conceptual Misfit Register, Reopen/Defer/Accept Decisions & Closure Preparation
+011-J  Phase 011 Consolidation, G1-G7 Completion Decision & Phase 012 Handoff
+```
 
-## Phase 011 entry discipline
+The sequence is strict by default. A later subgroup may reopen the smallest affected earlier authority if it proves a real misfit; affected downstream conclusions must then be revalidated.
 
-Before executing Phase 011 subgroups, deliberately decompose Phase 011 into dependency-safe design-only subphases. Do not infer subgroup structure from implementation architecture.
+## Phase 010 risk handoff
 
-Phase 011 may use architecture/source/tests/provider ecosystems as counterexample or feasibility evidence, but current problem/concept/dependence/composition/mapping authority remains upstream.
+Phase 011 must explicitly disposition all eight non-blocking risks:
 
-If Phase 011 exposes a genuine defect:
+```text
+R010-01  composed specificity drift
+R010-02  familiarity versus semantic precision
+R010-03  synchronization integrity under adversarial composition
+R010-04  synergy versus conceptual burden
+R010-05  progressive-disclosure misfit
+R010-06  provider / host semantic leakage
+R010-07  future-capability / extensibility pressure
+R010-08  scale / approximation pressure
+```
 
-1. record the concrete misfit;
-2. identify the smallest affected authority;
-3. reopen only that authority under J0-J7;
-4. do not paper over the defect with representation or implementation complexity.
+These are design-audit inputs, not implementation tasks.
 
-## What agents may do now
+## Misfit classification
 
-Agents may perform **Phase 011 entry/decomposition** and subsequent design-quality/misfit validation once that decomposition is accepted.
+Use the Phase 011 classification before changing authority:
 
-Architecture/source/tests may be inspected only as counterexample/feasibility evidence, not upstream design authority.
+```text
+M0  no defect / accepted observation
+M1  local Phase 011 quality clarification
+M2  Phase 010 mapping/experience defect
+M3  Phase 009 dependence/synchronization/composition defect
+M4  Phase 008/current concept defect
+M5  problem/actor/outcome/scope defect
+M6  representation/architecture-only concern — Phase 013
+M7  implementation-only concern
+M8  future-scope rediscovery trigger
+```
 
-## What agents must not do until Phase 014 passes
+Do not protect a prior phase conclusion because it is already documented. Do not reopen upstream design merely because a preferred API, platform or code structure is inconvenient.
 
-Do not add production behavior, implementation APIs, persistence/data-plane schemas, query endpoints, dashboards/materialized views, graph/search technologies, Spark/runtime/model/platform/security adapters, recovery implementations, Evidence/Provenance implementations, reference Strategies, privacy mechanisms, runtime/build dependencies, package-topology changes, event/service decomposition, or executable architecture restrictions merely to freeze evolving design.
+## 011-A discipline
+
+011-A must establish the audit method before judging the design. It should define:
+
+- quality claim/evidence record shape;
+- probe taxonomy;
+- materiality threshold;
+- familiarity-comparison discipline;
+- specificity/integrity/synergy criteria;
+- misfit/reopen rules;
+- residual-risk disposition vocabulary;
+- anti-bias boundary for architecture/code/provider evidence.
+
+011-A must not decide G1-G7 substantively before the criteria are established.
+
+## Architecture / implementation boundary
+
+Architecture/source/tests/provider ecosystems may be inspected only as counterexample, feasibility or familiarity evidence. They are downstream of current problem/concept/dependence/composition/mapping authority.
+
+Do not use Phase 011 to select or implement:
+
+- public classes/functions/APIs/CLI;
+- package/module topology;
+- persistence/query/data-plane schemas;
+- services/events/workflow engines;
+- dashboards/graph/search technology;
+- Spark/platform adapters;
+- model/Strategy algorithms;
+- privacy mechanisms;
+- recovery/fencing mechanisms;
+- benchmarks/SLOs;
+- executable tests intended to freeze evolving design.
 
 ## Readiness rule
 
@@ -201,8 +191,8 @@ Phases 011-013 retain:
 NOT READY / NOT STARTED / NOT YET
 ```
 
-Phase 012 may declare Jackson concept design complete. Phase 013 then reconciles representation/architecture. Only Phase 014 may make the final whole-design implementation-readiness decision; implementation itself still requires Phase 015.
+Phase 012 may declare Jackson concept design complete. Phase 013 then reconciles representation/architecture. Only Phase 014 may make the whole-design implementation-readiness decision; implementation itself still requires Phase 015.
 
 ## Current next boundary
 
-**Phase 011 — Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Design Validation — entry/decomposition**.
+**011-A — Validation Authority, Evidence Hierarchy, Probe Taxonomy & Misfit/Reopen Rules** is next eligible.
