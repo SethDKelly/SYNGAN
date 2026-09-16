@@ -8,7 +8,7 @@ status: active
 
 This directory contains the canonical concept specifications accepted in Phase 001 and normalized through Phase 008.
 
-Cross-concept dependence/composition is consolidated by [Phase 009 Dependence, Application Family & Composition Consolidation](../authority/phase-009-dependence-composition-consolidation.md). Concept mapping is consolidated by [Phase 010 Concept Mapping Consolidation](../authority/phase-010-concept-mapping-consolidation.md).
+Cross-concept dependence/composition is consolidated by [Phase 009 Dependence, Application Family & Composition Consolidation](../authority/phase-009-dependence-composition-consolidation.md). Concept mapping is consolidated by [Phase 010 Concept Mapping Consolidation](../authority/phase-010-concept-mapping-consolidation.md). Current composed specificity is governed by [Composed Specificity, Purpose Alignment & Boundary Sharpness Audit](../authority/composed-specificity-purpose-boundary-audit.md).
 
 ## Accepted concepts
 
@@ -24,7 +24,7 @@ Cross-concept dependence/composition is consolidated by [Phase 009 Dependence, A
 10. [Execution](execution.md)
 11. [Provenance](provenance.md)
 
-## Current concept/mapping state
+## Current concept/design state
 
 ```text
 accepted concepts                    11
@@ -32,18 +32,55 @@ active synchronizations              13
 Phase 008                            COMPLETE
 Phase 009                            COMPLETE
 Phase 010                            COMPLETE
-010-A..010-H                         COMPLETE
-F1 semantic action mapping           CURRENTLY CLOSED
-F2 semantic inspection mapping       CURRENTLY CLOSED
-F3 linguistic mapping                CURRENTLY CLOSED
-F4 physical/family mapping           CURRENTLY CLOSED
-F5 human/programmatic parity         CURRENTLY CLOSED
-concept mapping                      COMPLETE ENOUGH FOR PHASE 011
+F1-F5 mapping                        CURRENTLY CLOSED
+Phase 011                            ACTIVE
+011-A                                COMPLETE
+011-B                                COMPLETE
+011-C                                NEXT ELIGIBLE
+G1 composed specificity              CURRENTLY CLOSED
+G2 familiarity                       PARTIAL TO STRONG
 ```
 
-Phase 009 found no reason to add, remove, merge, split or rename a concept. Phase 010-A through 010-H find no mapping, family-composition or difficult-condition parity reason to reopen that conclusion.
+Phase 009 found no reason to add, remove, merge, split or rename a concept. Phase 010 found no mapping/composition reason to reopen that conclusion. 011-B now re-tests the catalog as one composed mapped design and again finds no catalog change justified.
 
-## Final mapping coverage
+## 011-B composed specificity result
+
+```text
+11 / 11 concepts                       PASS
+high-risk neighboring boundaries      PASS
+reduced application-family replay     PASS
+full-composition anti-umbrella replay PASS
+MAT-2 specificity findings            0
+MAT-3 specificity blockers            0
+catalog changes                       0
+upstream reopens                      0
+R010-01 composed specificity drift    NO DEFECT
+G1 specificity                        CURRENTLY CLOSED
+```
+
+Specificity remains distinct from mere independence. 011-B verifies that each concept's purpose survives composition, has an intelligible absence consequence, retains a proportionate state/action boundary, and does not become infrastructure or a restatement of the whole product.
+
+Key results:
+
+- Data Meaning remains descriptive authority rather than Constraint/schema/metadata/Relationship;
+- Synthesis Strategy remains reusable synthesis-behavior authority rather than plugin/runtime infrastructure;
+- Learning and Learned State remain a legitimate activity/result split;
+- Generation remains independently coherent in direct `G-KERNEL` composition;
+- Constraint remains reusable prescriptive authority distinct from Generation Condition and Evaluation Criterion;
+- Evaluation Criterion → Evaluation → Evidence remains question → examination → finding;
+- Execution remains operational realization rather than scheduler/workflow authority;
+- Provenance remains typed historical relationship authority with high fan-in and low authority fan-out.
+
+No Workflow, global Status, Quality, Run, Artifact, Relationship/Topology, Recovery, Degraded Mode, Actionability, History Quality, Disclosure State or similar aggregate concept becomes necessary under composed specificity.
+
+Two bounded `MAT-1` watch points remain for later Phase 011 audits:
+
+- Synthesis Strategy's broad capability declaration surface must not absorb plugin/runtime/configuration infrastructure;
+- Provenance's high reference fan-in must not become owner-state authority.
+
+Neither is an unresolved G1 defect.
+
+## Final Phase 010 mapping coverage
 
 ```text
 66 / 66 normalized command groups       SEMANTICALLY MAPPED
@@ -57,7 +94,7 @@ Phase 009 found no reason to add, remove, merge, split or rename a concept. Phas
 20 / 20 difficult-condition probes      PASS
 ```
 
-## Core boundaries mapping preserves
+## Core boundaries preserved
 
 ```text
 Data Meaning          != Constraint
@@ -95,24 +132,14 @@ Direct Generation remains valid without Learning/Learned State. Evaluation/Evide
 
 Concept inclusion defines available capability rather than requiring every included concept to be re-executed in every invocation. Existing Learned State and reusable authority may be selected rather than recreated.
 
-## Difficult-condition parity result
-
-The current catalog remains sufficient under retry/cancellation/unknown operational state, recovery/authority-continuity uncertainty, capability-specific degradation, disclosure/withholding/security responses, reconstructed/partial history, later Evidence staleness/invalidation, topology/text-bearing structured-data cases, enterprise-scale bounded interaction, approximation pressure, and operator/extension-author interaction.
-
-No Actionability, Recovery, Degraded Mode, History Quality, Disclosure State, Topology, Text, Platform Job, Workflow, Status, Dashboard, Approval or other aggregate concept is added.
-
-## Phase 011 handoff
-
-Phase 011 must now test the final mapped catalog for specificity, familiarity, integrity, synergy/simplicity, exceptional/adversarial misfit, future-scope/extensibility misfit and residual conceptual debt.
-
-A later genuine misfit may reopen the smallest affected concept authority; Phase 010 completion is not a prohibition on correction.
-
 ## Authority rule
 
 No implementation resource, architecture dependency, dashboard/report convenience, query schema, mapping vocabulary, recovery mechanism or host-platform representation may redefine concept boundaries merely because it exists.
 
+Later Phase 011 evidence may reopen the smallest affected concept authority only when a concrete semantic consequence demonstrates a genuine defect.
+
 ## Current next boundary
 
-**Phase 011 — Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Design Validation — entry/decomposition** is next eligible.
+**011-C — Familiarity, Reuse, Vocabulary & External-Model Comparison Audit** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
