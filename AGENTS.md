@@ -4,7 +4,7 @@ These instructions apply repository-wide to automated coding/documentation agent
 
 ## Current posture
 
-**SYNGAN is in Jackson concept-design completion, not implementation re-entry. Phase 010 concept mapping is active and ready for consolidation.**
+**SYNGAN is in Jackson concept-design completion, not implementation re-entry. Phase 010 concept mapping is complete; Phase 011 design-quality/misfit validation is next.**
 
 Start with:
 
@@ -14,6 +14,7 @@ Start with:
 - `docs/authority/jackson-design-completion-implementation-hold.md`
 - `docs/authority/jackson-methodology-completion-matrix.md`
 - `docs/authority/phase-009-dependence-composition-consolidation.md`
+- `docs/authority/phase-010-concept-mapping-consolidation.md`
 - `docs/mapping/index.md`
 - `docs/mapping/concept-action-actor-intent-interaction-mapping.md`
 - `docs/mapping/concept-state-query-history-explanation-inspection-mapping.md`
@@ -30,20 +31,15 @@ accepted concepts                    11
 active synchronizations              13
 Phase 008                            COMPLETE
 Phase 009                            COMPLETE
-Phase 010                            ACTIVE
-010-A                                COMPLETE
-010-B                                COMPLETE
-010-C                                COMPLETE
-010-D                                COMPLETE
-010-E                                COMPLETE
-010-F                                COMPLETE
-010-G                                COMPLETE
-010-H                                NEXT ELIGIBLE
+Phase 010                            COMPLETE
+010-A..010-H                         COMPLETE
 F1                                   CURRENTLY CLOSED
 F2                                   CURRENTLY CLOSED
 F3                                   CURRENTLY CLOSED
 F4                                   CURRENTLY CLOSED
 F5                                   CURRENTLY CLOSED
+concept mapping                      COMPLETE ENOUGH FOR PHASE 011
+Jackson concept design               NOT COMPLETE
 implementation readiness             NOT READY
 implementation start                 NOT STARTED
 implementation next                  NOT YET
@@ -81,12 +77,13 @@ P8  external integration / handoff
 
 Do not assume SYNGAN owns a web application shell, authentication UI, job/cluster dashboard, log viewer, storage browser, admin console or mandatory network service/API.
 
-## Mapping authority
+## Completed mapping authority
 
 ```text
 66 / 66 commands                         SEMANTICALLY MAPPED
 52 / 52 queries                          SEMANTICALLY MAPPED
 11 / 11 lifecycle/history envelopes      SEMANTICALLY MAPPED
+5 / 5 explanation patterns               SEMANTICALLY MAPPED
 11 / 11 concept names                    LINGUISTICALLY ALIGNED
 66 / 66 commands                         PHYSICAL RESPONSIBILITY MAPPED
 52 / 52 queries                          PHYSICAL RESPONSIBILITY MAPPED
@@ -98,9 +95,11 @@ Preserve these governing rules:
 
 > **Concept inclusion defines available capability; it does not require every included concept to be re-executed in every invocation.**
 
-> **Human/programmatic parity requires equivalent material semantics, not identical ergonomics.**
+> **Human/programmatic parity requires equivalent material semantics for the same authorized context, not identical ergonomics.**
 
-Human/programmatic parity is evaluated within the same effective authorization context. Security policy may deliberately hide existence or collapse outward responses without changing canonical truth.
+> **Inspection exposes owned or validly derived truth; it does not create a second owner for that truth.**
+
+> **Words may simplify presentation, but they may not erase ownership, semantic dimension, historical scope, uncertainty or disclosure meaning.**
 
 ## Progressive-disclosure discipline
 
@@ -116,15 +115,13 @@ D4  distributed / host operational drill-down
 
 These are not UI screens, API tiers, classes or persistence layers.
 
-Ordinary package/notebook interaction should remain concise and bounded while preserving on-demand access to exact bindings, Evidence limitations, Execution diagnostics, Provenance and historical truth.
-
 ## Difficult-condition discipline
 
-010-G establishes that the mapping must remain truthful under:
+Preserve the 010-G result under:
 
 - queueing, retry, cancellation and unknown operational state;
 - regressive recovery / authority continuity uncertainty;
-- canonical persistence, projection/search, telemetry, dependency/runtime, storage and resource degradation;
+- persistence, projection/search, telemetry, dependency/runtime, storage and resource degradation;
 - authorization uncertainty and protected existence;
 - reconstructed/partial/unavailable history;
 - later Evidence staleness/invalidation/current inapplicability;
@@ -135,58 +132,62 @@ Ordinary package/notebook interaction should remain concise and bounded while pr
 
 Do not create generic Actionability, Recovery, Degraded Mode, History Quality, Disclosure State, Topology, Text, Platform Job, Workflow or global Status concepts to simplify these cases.
 
-## Inspection and linguistic discipline
-
-> **Inspection exposes owned or validly derived truth; it does not create a second owner for that truth.**
-
-> **Words may simplify presentation, but they may not erase ownership, semantic dimension, historical scope, uncertainty or disclosure meaning.**
-
-Keep semantic lifecycle, current-use state, contextual assessment, Execution/Attempt state, Generation material finality, Evidence finding/claim strength, Constraint handling, disclosure, history quality and recovery authority-continuity qualification distinct where material.
-
-## Current Phase 010 sequence
+## Phase 010 final decision
 
 ```text
-010-A  COMPLETE — mapping control / coverage / actor-surface taxonomy / evidence baseline
-010-B  COMPLETE — action -> actor intent / interaction mapping
-010-C  COMPLETE — state/query/history/explanation -> inspection mapping
-010-D  COMPLETE — linguistic / vocabulary / typed status / disclosure semantics
-010-E  COMPLETE — package/notebook/automation/host physical interaction mapping
-010-F  COMPLETE — application-family workflow composition / progressive disclosure
-010-G  COMPLETE — human-programmatic parity / degraded-recovery-scale mapping misfit audit
-010-H  NEXT — mapping consolidation / F1-F5 completion decision / Phase 011 handoff
+PHASE 010                    COMPLETE
+CONCEPT MAPPING              COMPLETE ENOUGH FOR PHASE 011
+F1-F5                        CURRENTLY CLOSED
+MAPPING-DRIVEN BLOCKER       NONE FOUND
 ```
 
-## 010-H discipline
+Phase 010 consolidation authority is `docs/authority/phase-010-concept-mapping-consolidation.md`.
 
-010-H must consolidate Phase 010 rather than add a new mapping layer.
+## Phase 011 handoff
 
-It must verify:
+Phase 011 owns methodology area G:
 
-- all 66 commands / 52 queries / 11 lifecycle-history envelopes remain covered;
-- 010-D vocabulary remains current and owner-qualified;
-- 010-E package-first physical mapping remains valid;
-- 010-F application-family optionality remains honest;
-- 010-G difficult-condition parity remains intact;
-- F1-F5 can remain CURRENTLY CLOSED together;
-- no unresolved mapping-driven J1/J2/J3 defect remains;
-- residual mapping risks are handed to Phase 011 without converting them into implementation requirements;
-- implementation remains held.
+```text
+G1  specificity
+G2  familiarity
+G3  integrity
+G4  synergy / simplicity / generic fitness
+G5  archetypal / exceptional / degraded / adversarial / recovery misfit
+G6  future-scope / extensibility misfit
+G7  explicit residual conceptual misfit register
+```
 
-A positive 010-H exit may advance to Phase 011 but cannot declare Jackson concept design complete or implementation ready.
+010-H hands forward these non-blocking risks:
 
-## Mapping misfit rule
+1. composed specificity drift;
+2. familiarity versus semantic precision;
+3. synchronization integrity under broader adversarial composition;
+4. synergy versus conceptual burden;
+5. progressive-disclosure misfit;
+6. provider/host semantic leakage;
+7. future-capability/extensibility pressure;
+8. scale/approximation pressure.
 
-If consolidation exposes a genuine contradiction:
+These are Phase 011 audit inputs, not implementation tasks.
+
+## Phase 011 entry discipline
+
+Before executing Phase 011 subgroups, deliberately decompose Phase 011 into dependency-safe design-only subphases. Do not infer subgroup structure from implementation architecture.
+
+Phase 011 may use architecture/source/tests/provider ecosystems as counterexample or feasibility evidence, but current problem/concept/dependence/composition/mapping authority remains upstream.
+
+If Phase 011 exposes a genuine defect:
 
 1. record the concrete misfit;
-2. identify whether it is local to Phase 010 or proves an upstream defect;
-3. reopen only the smallest affected authority under J0-J7.
+2. identify the smallest affected authority;
+3. reopen only that authority under J0-J7;
+4. do not paper over the defect with representation or implementation complexity.
 
 ## What agents may do now
 
-Agents may perform design-only 010-H consolidation and F1-F5 completion revalidation using current mapping authority.
+Agents may perform **Phase 011 entry/decomposition** and subsequent design-quality/misfit validation once that decomposition is accepted.
 
-Architecture/source/tests may be inspected only as counterexample/feasibility evidence, not upstream mapping authority.
+Architecture/source/tests may be inspected only as counterexample/feasibility evidence, not upstream design authority.
 
 ## What agents must not do until Phase 014 passes
 
@@ -194,14 +195,14 @@ Do not add production behavior, implementation APIs, persistence/data-plane sche
 
 ## Readiness rule
 
-Phases 010-013 retain:
+Phases 011-013 retain:
 
 ```text
 NOT READY / NOT STARTED / NOT YET
 ```
 
-Only Phase 014 may make the final whole-design readiness decision; implementation itself still requires Phase 015.
+Phase 012 may declare Jackson concept design complete. Phase 013 then reconciles representation/architecture. Only Phase 014 may make the final whole-design implementation-readiness decision; implementation itself still requires Phase 015.
 
 ## Current next boundary
 
-**010-H — Phase 010 Consolidation, F1-F5 Completion Decision & Phase 011 Handoff**.
+**Phase 011 — Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Design Validation — entry/decomposition**.
