@@ -8,7 +8,7 @@ status: active-supporting-evidence
 
 This directory contains actor-visible and programmatic workflow/experience design developed primarily in Phases 003 and 006.
 
-Phase 010 is now complete. These documents remain strong supporting evidence, while current concept-mapping authority lives in [Concept Mapping](../mapping/index.md) and the [Phase 010 Concept Mapping Consolidation](../authority/phase-010-concept-mapping-consolidation.md).
+Phase 010 is complete. These documents remain strong supporting evidence, while current concept-mapping authority lives in [Concept Mapping](../mapping/index.md) and the [Phase 010 Concept Mapping Consolidation](../authority/phase-010-concept-mapping-consolidation.md). Phase 011 quality/misfit authority is downstream of the completed mapping layer and upstream of representation/architecture.
 
 ## Current relationship to completed Phase 010
 
@@ -112,11 +112,26 @@ SYNGAN remains a Python/Spark package agnostic across compliant Spark-capable ho
 
 Package/SDK, notebook and embedded automation are primary. CLI, reports, rich graphical presentation, service exposure and dedicated operator/admin applications remain optional or host-integrated.
 
+## 011-B specificity relationship
+
+011-B replays the complete mapped catalog and finds no experience-driven purpose collision or umbrella concept requirement.
+
+```text
+11 / 11 concepts            PASS composed specificity
+R010-01                     NO DEFECT
+G1 specificity              CURRENTLY CLOSED
+experience-driven reopen    NONE
+```
+
+Experience composition therefore remains supporting evidence rather than a new owner. Repeated experience barriers such as readiness, actionability, disclosure or historical quality do not become standalone concepts merely because actors encounter them repeatedly.
+
+011-C may use experience language as familiarity evidence, but familiar UI/workflow words must not erase the concept distinctions preserved by Phase 010 and revalidated by 011-B.
+
 ## Authority boundary
 
 For conflicts:
 
-1. `docs/authority/` governs methodology/cross-cutting policy;
+1. `docs/authority/` governs methodology/cross-cutting policy and current Phase 011 quality decisions;
 2. `docs/concepts/` governs concept purpose/state/actions/queries/invariants;
 3. `docs/dependence/` and `docs/synchronizations/` govern application-family/composition;
 4. `docs/mapping/` and Phase 010 consolidation govern completed concept mapping;
@@ -125,10 +140,6 @@ For conflicts:
 
 An experience view may compose several concepts for comprehension but must not create a new canonical owner for the composed state.
 
-## Phase 011 handoff
-
-Experience evidence may be used in Phase 011 to test specificity, familiarity, integrity, synergy and misfit. It must not be treated as a reason to preserve a concept that later quality/adversarial evidence proves defective.
-
 ## Current next boundary
 
-**Phase 011 — Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Design Validation — entry/decomposition** is next eligible.
+**011-C — Familiarity, Reuse, Vocabulary & External-Model Comparison Audit** is next eligible.
