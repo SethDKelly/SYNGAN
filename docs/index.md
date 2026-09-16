@@ -17,6 +17,7 @@ methodology / design authority
   > concepts
   > dependence / application family / synchronization / composition
   > concept mapping / experience
+  > design-quality / misfit validation
   > representation / architecture design
   > implementation planning history
   > code / tests / deployment evidence
@@ -37,13 +38,8 @@ Existing architecture, source or tests never become upstream concept-design auth
 - [Phase 009 Consolidation](authority/phase-009-dependence-composition-consolidation.md)
 - [Concept Mapping Authority](mapping/index.md)
 - [Phase 010 Concept Mapping Consolidation](authority/phase-010-concept-mapping-consolidation.md)
-- [010-B Concept Action Mapping](mapping/concept-action-actor-intent-interaction-mapping.md)
-- [010-C Inspection Mapping](mapping/concept-state-query-history-explanation-inspection-mapping.md)
-- [010-D Linguistic Mapping](mapping/linguistic-mapping-vocabulary-typed-status-disclosure-semantics.md)
-- [010-E Package/Host Physical Interaction Mapping](mapping/package-notebook-automation-host-platform-interaction-mapping.md)
-- [010-F Application-Family Workflow Composition](mapping/application-family-workflow-composition-progressive-disclosure.md)
-- [010-G Human/Programmatic Semantic Parity & Difficult-Condition Audit](mapping/human-programmatic-semantic-parity-degraded-recovery-scale-misfit-audit.md)
-- [Phase 010](phases/010/index.md)
+- [Phase 011](phases/011/index.md)
+- [011 Entry & Decomposition](phases/011/011-entry-decomposition.md)
 
 ## Current state
 
@@ -54,13 +50,18 @@ Phase 008                            COMPLETE
 Phase 009                            COMPLETE
 Phase 010                            COMPLETE
 010-A..010-H                         COMPLETE
-F1                                   CURRENTLY CLOSED
-F2                                   CURRENTLY CLOSED
-F3                                   CURRENTLY CLOSED
-F4                                   CURRENTLY CLOSED
-F5                                   CURRENTLY CLOSED
+F1-F5                                CURRENTLY CLOSED
 concept mapping                      COMPLETE ENOUGH FOR PHASE 011
-Phase 011                            NEXT — ENTRY/DECOMPOSITION
+Phase 011                            ACTIVE
+Phase 011 decomposition              COMPLETE
+011-A                                NEXT ELIGIBLE
+G1 specificity                       PARTIAL TO STRONG
+G2 familiarity                       PARTIAL TO STRONG
+G3 integrity                         PARTIAL TO STRONG
+G4 synergy / simplicity              PARTIAL TO STRONG
+G5 scenario / adversarial            PARTIAL TO STRONG
+G6 future-scope                      STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
+G7 residual misfit register          PARTIAL
 Jackson design completion            IN PROGRESS
 implementation readiness             NOT READY
 implementation start                 NOT STARTED
@@ -75,9 +76,9 @@ SYNGAN is a deployable Python/Spark framework package.
 
 Spark/PySpark remains the current required processing environment. A host may provide notebooks, jobs, identity, scheduling, storage/catalog, logging and infrastructure UI without becoming semantic authority.
 
-Primary interaction is package/notebook/automation. CLI, reports, rich graphical presentation, network service/API deployment and dedicated operator/admin applications are optional adapters or host integrations.
+Primary interaction is package/notebook/automation. CLI, reports, rich graphical presentation, network service/API deployment and dedicated operator/admin applications remain optional adapters or host integrations.
 
-## Completed mapping program
+## Completed Phase 010 mapping program
 
 ```text
 66 / 66 command groups                    SEMANTICALLY MAPPED
@@ -91,29 +92,24 @@ Primary interaction is package/notebook/automation. CLI, reports, rich graphical
 20 / 20 difficult-condition parity probes PASS
 ```
 
-Phase 010 confirms that concept inclusion defines available capability rather than forcing every concept to execute in every invocation, and that human/programmatic parity requires equivalent material semantics for the same authorized context rather than identical ergonomics.
+Phase 010 remains the completed mapping authority. Phase 011 does not remap concepts by default; it tests the resulting design for specificity, familiarity, integrity, synergy, scenario/adversarial misfit, future-scope pressure and residual conceptual debt.
 
-The mapping survives recovery/authority uncertainty, capability-specific degradation, security withholding, partial/reconstructed history, later Evidence staleness, topology/text cases, scale, approximation pressure, operator interaction and extension-author interaction without adding a generic coordinator/status concept.
-
-## Phase 010 exit
+## Phase 011 decomposition
 
 ```text
-PHASE 010                    COMPLETE
-CONCEPT MAPPING              COMPLETE ENOUGH FOR PHASE 011
-F1-F5                        CURRENTLY CLOSED
-MAPPING-DRIVEN BLOCKER       NONE FOUND
-JACKSON CONCEPT DESIGN       NOT COMPLETE
+011-A  validation authority / evidence hierarchy / probe taxonomy / misfit-reopen rules
+011-B  specificity / purpose alignment / boundary sharpness
+011-C  familiarity / reuse / vocabulary / external-model comparison
+011-D  integrity under synchronization / correction / invalidation / history
+011-E  synergy / simplicity / generic fitness / conceptual burden
+011-F  archetypal / exceptional / progressive-disclosure misfit replay
+011-G  adversarial / degraded / recovery / scale / provider-semantic leakage
+011-H  future-scope / extensibility / new-capability pressure / rediscovery triggers
+011-I  residual conceptual misfit register / dispositions
+011-J  Phase 011 consolidation / G1-G7 decision / Phase 012 handoff
 ```
 
-The current consolidation authority is [Phase 010 Concept Mapping Consolidation](authority/phase-010-concept-mapping-consolidation.md).
-
-## Phase 011 handoff
-
-Phase 011 owns specificity, familiarity, integrity, synergy/simplicity, archetypal/exceptional/adversarial misfit, future-scope/extensibility misfit and the residual conceptual-misfit register.
-
-010-H hands forward non-blocking risks around composed specificity, vocabulary familiarity/precision, adversarial synchronization integrity, conceptual burden, progressive disclosure, provider semantic leakage, future capability pressure and scale/approximation pressure.
-
-Phase 011 must be deliberately decomposed before execution.
+All eight non-blocking Phase 010 residual risks are assigned explicit Phase 011 audit ownership.
 
 ## Implementation status rule
 
@@ -125,10 +121,10 @@ IMPLEMENTATION START       NOT STARTED
 IMPLEMENTATION NEXT        NOT YET
 ```
 
-Do not translate concepts, family variants or mapping roles mechanically into packages, services, schemas, endpoints, UI components, workflow engines, deployment units, runtime enums or product SKUs.
+Do not translate concepts, family variants, mapping roles or Phase 011 audit categories mechanically into packages, services, schemas, endpoints, UI components, workflow engines, deployment units, runtime enums or product SKUs.
 
 Phase 012 may declare Jackson concept design complete. Phase 013 reconciles representation/architecture. Only a positive Phase 014 may make implementation **READY / NOT STARTED / NEXT**; implementation itself still requires Phase 015.
 
 ## Current next boundary
 
-**Phase 011 — Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Design Validation — entry/decomposition** is next eligible.
+**011-A — Validation Authority, Evidence Hierarchy, Probe Taxonomy & Misfit/Reopen Rules** is next eligible.
