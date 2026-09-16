@@ -10,7 +10,7 @@ status: active
 
 Maintain the correct design-to-implementation boundary while SYNGAN completes the full Daniel Jackson-style design program.
 
-This authority supersedes the historical 007-K implementation-reentry conclusion while retaining Phase 004/006/007 architecture and executable evidence as downstream evidence only.
+Historical Phase 004/006/007 architecture and executable evidence remain downstream evidence only. Historical implementation-reentry conclusions remain superseded.
 
 ## Current implementation status
 
@@ -20,7 +20,7 @@ IMPLEMENTATION START       NOT STARTED
 IMPLEMENTATION NEXT        NOT YET
 ```
 
-No intermediate phase, subgroup, architecture document, implementation plan, scaffold, test result or prior readiness finding may change this posture by implication.
+No intermediate quality result, architecture document, implementation plan, scaffold or test result may change this posture by implication.
 
 ## Methodology boundary
 
@@ -54,163 +54,95 @@ Phase 009                  COMPLETE
 D1-D4                      CURRENTLY CLOSED
 E1-E5                      CURRENTLY CLOSED
 Phase 010                  COMPLETE
-010-A..010-H               COMPLETE
 F1-F5                      CURRENTLY CLOSED
-concept mapping            COMPLETE ENOUGH FOR PHASE 011
 Phase 011                  ACTIVE
-Phase 011 decomposition    COMPLETE
 011-A                      COMPLETE
 011-B                      COMPLETE
 011-C                      COMPLETE
-011-D                      NEXT ELIGIBLE
+011-D                      COMPLETE
+011-E                      NEXT ELIGIBLE
 G1 specificity             CURRENTLY CLOSED
 G2 familiarity             CURRENTLY CLOSED
+G3 integrity               STRONG EVIDENCE / 011-G STRESS REVALIDATION REQUIRED
 Jackson concept design     NOT COMPLETE
 ```
 
-## Phase 011 quality/misfit boundary
+## 011-D integrity authority
 
-Phase 011 owns methodology area G:
-
-```text
-G1  specificity
-G2  familiarity
-G3  integrity
-G4  synergy / simplicity / generic fitness
-G5  archetypal / exceptional / degraded / adversarial / recovery misfit
-G6  future-scope / extensibility misfit
-G7  explicit residual conceptual misfit register
-```
-
-Current G states after 011-C:
+Current baseline G3 authority is [Integrity Under Synchronization, Correction, Invalidation & Historical Composition](composed-integrity-synchronization-history-audit.md).
 
 ```text
-G1  CURRENTLY CLOSED
-G2  CURRENTLY CLOSED
-G3  PARTIAL TO STRONG
-G4  PARTIAL TO STRONG
-G5  PARTIAL TO STRONG
-G6  STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
-G7  PARTIAL
+13 / 13 active synchronizations preserve singular ownership
+producer/result integrity                       PASS
+occurrence-scoped/non-reactive binding          PASS
+current-versus-historical truth                 PASS
+Evidence/Generation authority separation        PASS
+semantic/Execution separation                   PASS
+Provenance low-authority-fan-out baseline       PASS
+recovery/reconstruction ownership baseline      PASS
+hidden coordinator required                     NO
+MAT-2 / MAT-3 findings                          0 / 0
+upstream reopen                                 NONE
 ```
 
-## 011-A validation-method authority
+Governing temporal rule:
 
-Current Phase 011 audit method is governed by [Design Quality Validation Authority](design-quality-validation-authority.md).
+> **Later restriction, retirement, supersession, staleness or invalidation changes current/future reliance only where the owning concept says so; it does not silently rewrite exact historical bindings.**
 
-The governing rule is:
+Governing recovery rule:
 
-> **Evidence may challenge any prior conclusion, but only a demonstrated semantic consequence can justify changing upstream design authority.**
+> **Missing semantic transitions may be reconstructed only when the original owner's normal invariants can be established. Provenance, surviving bytes, platform jobs and restored projections are not substitute semantic authority.**
 
-Architecture, source, tests and provider/product models may expose counterexamples, feasibility constraints or familiarity pressure. They do not directly redefine problem, concept, dependence, synchronization or mapping authority.
-
-An unresolved `MAT-3` conceptual blocker prevents positive Phase 011 exit.
-
-## 011-B specificity authority
-
-Current G1 authority is [Composed Specificity, Purpose Alignment & Boundary Sharpness Audit](composed-specificity-purpose-boundary-audit.md).
-
-```text
-11 / 11 concepts               PASS
-reduced family replay          PASS
-full anti-umbrella replay      PASS
-MAT-2 findings                 0
-MAT-3 blockers                 0
-catalog changes                0
-upstream reopens               0
-R010-01                        NO DEFECT
-G1 specificity                 CURRENTLY CLOSED
-```
-
-Two bounded watch points are carried forward without blocking G1:
-
-- Strategy's broad capability declaration surface must not absorb plugin/runtime/configuration infrastructure;
-- Provenance's high fan-in must continue to have low authority fan-out.
-
-## 011-C familiarity authority
-
-Current G2 authority is [Familiarity, Reuse, Vocabulary & External-Model Comparison Audit](composed-familiarity-reuse-vocabulary-external-model-audit.md).
-
-```text
-11 / 11 canonical names retained
-application-family vocabulary reuse     PASS
-external-model comparison               PASS
-MAT-2 findings                          0
-MAT-3 blockers                          0
-upstream reopens                        0
-R010-02                                 NO DEFECT — COMPATIBILITY GUIDANCE STRENGTHENED
-B4 familiarity / reuse                  CURRENTLY CLOSED
-G2 familiarity                          CURRENTLY CLOSED
-```
-
-External words such as `fit`, `train`, `model`, `sample`, `run`, `job`, `artifact`, `metadata`, `metric`, `validation result`, `lineage` and `synthesizer` remain compatibility/representation vocabulary. They do not authorize concept, lifecycle or architecture changes by familiarity alone.
-
-The current durable collision guide is [Ecosystem Compatibility Vocabulary](../terminology/ecosystem-compatibility.md).
-
-## Phase 010 authority held forward
-
-Phase 010 remains consolidated by:
-
-- [Phase 010 Concept Mapping Consolidation](phase-010-concept-mapping-consolidation.md)
-- [Concept Mapping Index](../mapping/index.md)
-
-Phase 011 may reopen an earlier result only when a concrete quality/misfit finding demonstrates a genuine defect and the smallest-authority reopen discipline is followed.
+`R010-03` is **NO DEFECT for the 011-D composed/historical portion**, but final adversarial/degraded/recovery/provider stress remains in 011-G. Do not treat G3 as finally closed before that replay.
 
 ## Product / mapping invariants held forward
 
-Unless Phase 011 disproves them through a genuine misfit, preserve:
+Unless a genuine later misfit disproves them, preserve:
 
 - package-first product form and Spark-host platform agnosticism;
+- eleven concept boundaries and singular ownership;
+- thirteen occurrence-scoped synchronizations;
 - application-family optionality;
-- concept boundaries and singular state ownership;
 - direct versus learned-state-assisted Generation;
-- activity-owned contextual validation/readiness;
 - candidate/non-final versus authoritative result distinctions;
 - semantic versus operational completion;
 - current versus exact historical truth;
 - Criterion/Evaluation/Evidence separation;
-- Evidence versus approval/release/privacy claims;
+- Evidence versus Generation/approval/release/privacy authority;
 - Provenance relationship authority versus source-fact ownership;
-- occurrence-scoped/non-reactive synchronization;
-- typed disclosure/history-quality/uncertainty semantics;
 - authority continuity under recovery;
-- capability-specific degraded operation;
-- bounded enterprise-scale inspection;
-- human/programmatic semantic parity for the same authorized context;
-- compatibility vocabulary remains one-way and owner-qualified.
+- owner-qualified uncertainty/disclosure/history semantics;
+- human/programmatic semantic parity;
+- compatibility vocabulary as one-way, owner-qualified mapping only.
 
-## Phase 010 residual risks carried into Phase 011
-
-Current disposition:
+## Current Phase 010 risk state
 
 ```text
-R010-01  composed specificity drift                  NO DEFECT — 011-B
-R010-02  familiarity versus semantic precision       NO DEFECT — GUIDANCE STRENGTHENED — 011-C
-R010-03  synchronization integrity under adversity   OPEN — 011-D / 011-G
-R010-04  synergy versus conceptual burden            OPEN — 011-E
-R010-05  progressive-disclosure misfit               OPEN — 011-E / 011-F
-R010-06  provider / host semantic leakage            OPEN — 011-G
-R010-07  future-capability / extensibility pressure  OPEN — 011-H
-R010-08  scale / approximation pressure              OPEN — 011-G
+R010-01  NO DEFECT — 011-B
+R010-02  NO DEFECT — GUIDANCE STRENGTHENED — 011-C
+R010-03  NO DEFECT IN 011-D BASELINE / OPEN FOR 011-G STRESS
+R010-04  OPEN — 011-E
+R010-05  OPEN — 011-E / 011-F
+R010-06  OPEN — 011-G
+R010-07  OPEN — 011-H
+R010-08  OPEN — 011-G
 ```
 
 ## Architecture/executable boundary
 
-Phase 004/006/007 architecture and the retained executable scaffold remain downstream evidence.
+Phase 011 is design-only. Do not implement transactions, outboxes, event propagation, invalidation cascades, persistence/query schemas, service/package decomposition, workflow engines, recovery mechanisms, provenance stores, platform adapters, public APIs or test suites merely to crystallize the integrity model.
 
-They may expose a genuine counterexample but cannot define current concept, dependence, family, synchronization, mapping, quality or completion authority from package imports, persistence references, service/dataflow direction, event topology, runtime orchestration, deployment topology, existing APIs, databases, dashboards, external tracking models or provider object names.
-
-Phase 011 may classify an issue as representation/architecture-only for Phase 013 or implementation-only, but must not implement the fix during current concept-design validation.
+In particular, **do not model invalidation as a generic retroactive cascade**. Any future representation must preserve owner-specific current-use status and immutable historical bindings.
 
 ## Remaining design roadmap
 
 ```text
-010       concept mapping / interaction / language / experience — COMPLETE
-011-A     validation authority / evidence / probes / reopen rules — COMPLETE
-011-B     specificity / purpose alignment / boundary sharpness — COMPLETE
-011-C     familiarity / reuse / vocabulary / external-model comparison — COMPLETE
-011-D     integrity under synchronization / correction / invalidation / history — NEXT
-011-E..J  remaining Phase 011 quality/misfit validation
+011-E     synergy / simplicity / generic fitness / conceptual burden — NEXT
+011-F     archetypal / exceptional / progressive-disclosure replay
+011-G     adversarial / degraded / recovery / scale / provider leakage
+011-H     future-scope / extensibility
+011-I     residual misfit register
+011-J     Phase 011 consolidation / Phase 012 handoff
 012       Jackson concept-design completion decision
 013       representation / architecture reconciliation
 014       whole-design completion / implementation-readiness decision
@@ -218,18 +150,8 @@ Phase 011 may classify an issue as representation/architecture-only for Phase 01
 015       implementation authority / controlled delivery — FUTURE ONLY
 ```
 
-## Readiness transitions
-
-Through Phases 011-013 implementation remains **NOT READY / NOT STARTED / NOT YET**.
-
-Even a positive Phase 012 does not make implementation ready. Phase 013 must reconcile architecture. Only Phase 014 may make the final whole-design readiness decision.
-
-## No executable design-by-accident
-
-Until Phase 014 passes, do not add production behavior, executable architecture restrictions merely to crystallize design hypotheses, package-topology changes, persistence/query schemas, runtime/model/platform/security adapters, public API implementation, dashboards/materialized views, graph/search technology, reference algorithms, privacy mechanisms, product-edition packaging, event/service decomposition, synchronization transactions, observer/subscription infrastructure, external-model compatibility shims, or stale-test repair solely to manufacture readiness.
+Through Phases 011-013 implementation remains **NOT READY / NOT STARTED / NOT YET**. Even a positive Phase 012 does not make implementation ready; Phase 013 must reconcile architecture and only Phase 014 may make the readiness decision.
 
 ## Current next boundary
 
-**011-D — Integrity Under Synchronization, Correction, Invalidation & Historical Composition** is next eligible.
-
-Implementation remains **NOT READY / NOT STARTED / NOT YET**.
+**011-E — Synergy, Simplicity, Generic Fitness & Conceptual-Burden Audit** is next eligible.
