@@ -31,28 +31,16 @@ concept mapping            COMPLETE ENOUGH FOR PHASE 011
 Phase 011                  ACTIVE
 011-A                      COMPLETE
 011-B                      COMPLETE
-011-C                      NEXT ELIGIBLE
+011-C                      COMPLETE
+011-D                      NEXT ELIGIBLE
 G1 specificity             CURRENTLY CLOSED
+G2 familiarity             CURRENTLY CLOSED
 Jackson concept design     IN PROGRESS
 ```
 
 ## Completed mapping remains design-only
 
-Current mapping establishes:
-
-```text
-66 / 66 command groups                    SEMANTICALLY MAPPED
-52 / 52 query groups                      SEMANTICALLY MAPPED
-11 / 11 lifecycle/history envelopes       SEMANTICALLY MAPPED
-5 / 5 explanation patterns                SEMANTICALLY MAPPED
-11 / 11 concept names                     LINGUISTICALLY ALIGNED
-66 / 66 commands                          PHYSICAL RESPONSIBILITY MAPPED
-52 / 52 queries                           PHYSICAL RESPONSIBILITY MAPPED
-10 / 10 family/capability replays         PASS
-20 / 20 difficult-condition parity probes PASS
-```
-
-These are design obligations, not implementation API/query/storage contracts.
+Current mapping establishes complete semantic/physical responsibility coverage, family replay and difficult-condition parity. These are design obligations, not implementation API/query/storage contracts.
 
 Do not convert:
 
@@ -72,35 +60,40 @@ progressive-disclosure depth -> UI page/API tier
 Phase 011 probe category     -> test suite/package/runtime enum
 ```
 
-## 011-B specificity remains design-only
+## 011-B / 011-C remain design-only
 
-011-B confirms the current eleven-concept catalog remains specific in composition:
+011-B confirms the current eleven concepts remain specific in composition. 011-C confirms all eleven canonical names remain appropriate after external-model comparison.
+
+Neither result authorizes one-for-one implementation structures.
+
+In particular, 011-C does **not** select:
 
 ```text
-11 / 11 concepts               PASS
-MAT-2 findings                 0
-MAT-3 blockers                 0
-catalog changes                0
-upstream reopens               0
-R010-01                        NO DEFECT
-G1 specificity                 CURRENTLY CLOSED
+fit() / train()            as required Learning APIs
+sample()                   as the required Generation API
+Model / LearnedState class shapes
+Synthesizer aggregate objects
+Run / Job public resources
+Artifact / Metric / Metadata domain resources
+MLflow tracking / registry integration
+Great Expectations validation integration
+OpenLineage Job / Run / Dataset events
+Spark ML Estimator / Model inheritance
 ```
 
-This does **not** authorize implementation modules, interfaces, database entities, services or test suites one-for-one with concepts. A concept boundary is semantic authority, not package topology.
-
-The Strategy and Provenance MAT-1 watch points likewise do not authorize implementation changes; they remain Phase 011 design-audit inputs.
+Qualified external terms are compatibility evidence only. If future Phase 013 representation work chooses any similar shape, it must map explicitly to canonical SYNGAN semantics and preserve owner/lifecycle distinctions.
 
 ## Active Phase 011 remains design-only
 
-011-C now owns familiarity/reuse/vocabulary/external-model comparison. Existing code/API/provider names may be used as analogue evidence only and cannot become canonical merely because they are implemented.
+011-D now owns integrity under synchronization, correction, invalidation and historical composition. It may identify conceptual defects or downstream architecture concerns, but it must not implement transactions, event propagation, persistence, recovery mechanisms or lineage systems.
 
 Quality/misfit findings may reopen upstream concept-design authority when justified, or classify an issue as architecture-only/implementation-only. Neither case authorizes implementation work during Phase 011.
 
 ## Remaining design before readiness
 
 ```text
-011-C  familiarity / reuse / vocabulary / external-model comparison — NEXT
-011-D..J remaining Phase 011 quality/misfit validation
+011-D  integrity under synchronization / correction / invalidation / history — NEXT
+011-E..J remaining Phase 011 quality/misfit validation
 012    Jackson concept-design completion decision
 013    representation / architecture reconciliation
 014    whole-design completion / readiness decision
@@ -110,10 +103,10 @@ Only a positive Phase 014 may make implementation **READY / NOT STARTED / NEXT**
 
 ## Current prohibition
 
-Until Phase 014 passes, do not add production concept/domain behavior, implementation APIs, persistence/data-plane/query schemas, database/materialized views, graph/search technology, model/runtime/security/platform adapters, Execution/recovery implementations, Evidence/Provenance implementations, reference Strategies, privacy mechanisms, benchmarks, package-topology changes, event/service decomposition, synchronization transactions, mapping-driven public API implementation, Phase-011-driven executable tests intended to freeze design, or executable architecture restrictions intended to manufacture readiness.
+Until Phase 014 passes, do not add production concept/domain behavior, implementation APIs, persistence/data-plane/query schemas, database/materialized views, graph/search technology, model/runtime/security/platform adapters, Execution/recovery implementations, Evidence/Provenance implementations, reference Strategies, privacy mechanisms, benchmarks, package-topology changes, event/service decomposition, synchronization transactions, mapping-driven public API implementation, familiarity-driven compatibility shims, Phase-011-driven executable tests intended to freeze design, or executable architecture restrictions intended to manufacture readiness.
 
 ## Current next boundary
 
 Design-only work:
 
-**011-C — Familiarity, Reuse, Vocabulary & External-Model Comparison Audit**.
+**011-D — Integrity Under Synchronization, Correction, Invalidation & Historical Composition**.
