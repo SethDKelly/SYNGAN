@@ -18,20 +18,14 @@ A mapping describes what actors/programmatic consumers must be able to do, see, 
 
 ```text
 Phase 009                    COMPLETE
-Phase 010                    ACTIVE
-010-A                        COMPLETE
-010-B                        COMPLETE
-010-C                        COMPLETE
-010-D                        COMPLETE
-010-E                        COMPLETE
-010-F                        COMPLETE
-010-G                        COMPLETE
-010-H                        NEXT ELIGIBLE
+Phase 010                    COMPLETE
+010-A..010-H                 COMPLETE
 F1                           CURRENTLY CLOSED
 F2                           CURRENTLY CLOSED
 F3                           CURRENTLY CLOSED
 F4                           CURRENTLY CLOSED
 F5                           CURRENTLY CLOSED
+concept mapping              COMPLETE ENOUGH FOR PHASE 011
 Jackson concept design       NOT COMPLETE
 implementation readiness     NOT READY
 implementation start         NOT STARTED
@@ -46,20 +40,22 @@ implementation next          NOT YET
 - [010-D Linguistic Mapping, Vocabulary, Typed Status & Disclosure Semantics](linguistic-mapping-vocabulary-typed-status-disclosure-semantics.md)
 - [010-E Package, Notebook, Automation, Host-Platform & Optional Presentation Interaction Mapping](package-notebook-automation-host-platform-interaction-mapping.md)
 - [010-F Application-Family Workflow Composition, Optional-Capability Experience & Progressive Disclosure](application-family-workflow-composition-progressive-disclosure.md)
-- [010-G Human/Programmatic Semantic Parity, Degraded/Recovery/Scale & Mapping-Misfit Audit](human-programmatic-semantic-parity-degraded-recovery-scale-misfit-audit.md) — **current parity/difficult-condition authority**
+- [010-G Human/Programmatic Semantic Parity, Degraded/Recovery/Scale & Mapping-Misfit Audit](human-programmatic-semantic-parity-degraded-recovery-scale-misfit-audit.md)
+- [Phase 010 Consolidation Authority](../authority/phase-010-concept-mapping-consolidation.md) — **current Phase 010 mapping consolidation**
 
-## Current mapping coverage
+## Final mapping coverage
 
 ```text
 66 / 66 command groups                    SEMANTICALLY MAPPED
 52 / 52 query groups                      SEMANTICALLY MAPPED
 11 / 11 lifecycle/history envelopes       SEMANTICALLY MAPPED
-5 explanation patterns                    SEMANTICALLY MAPPED
+5 / 5 explanation patterns                SEMANTICALLY MAPPED
 11 / 11 accepted concept names            LINGUISTICALLY ALIGNED
 66 / 66 command groups                    PHYSICAL RESPONSIBILITY MAPPED
 52 / 52 query groups                      PHYSICAL RESPONSIBILITY MAPPED
 10 / 10 required family/capability replays PASS
 20 / 20 difficult-condition parity probes PASS
+mapping blocker                           NONE FOUND
 ```
 
 ## Core mapping rules
@@ -72,7 +68,7 @@ implementation next          NOT YET
 
 > **Concept inclusion defines available capability; it does not require every included concept to be re-executed in every invocation.**
 
-> **Human/programmatic parity requires equivalent material semantics, not identical ergonomics.**
+> **Human/programmatic parity requires equivalent material semantics for the same authorized context, not identical ergonomics.**
 
 ## Product form
 
@@ -90,11 +86,11 @@ P3  embedded job / pipeline / automation
 
 CLI, reports, rich/graphical presentation, network service exposure and dedicated operator/admin applications remain optional adapters or host integrations.
 
-## Application-family composition result
+## Application-family composition
 
-010-F passes authority-only, Learning, direct Generation, learned-state-assisted Generation, Evaluation, evidence-gated Generation, Constraint-aware, Execution-bearing/light, Provenance-bearing/light and full-set composition.
+All ten required family/capability replays pass. Optional concepts create no mandatory empty steps. Existing Learned State and reusable authorities may be selected rather than recreated. Direct Generation is not a degraded learned workflow. Evaluation/Evidence, Execution and Provenance remain conditional rather than universal stages.
 
-Optional concepts create no mandatory empty steps. Existing Learned State and reusable authorities may be selected rather than recreated. The full eleven-concept family member does not become an eleven-stage wizard.
+The full eleven-concept family member does not become an eleven-stage wizard or a Workflow concept.
 
 ## Progressive disclosure
 
@@ -108,33 +104,22 @@ D4  distributed / host operational drill-down
 
 These are presentation obligations, not screens, endpoints, API tiers or persistence layers.
 
-## Semantic parity / difficult-condition result
+## Semantic parity / difficult conditions
 
-010-G replays the mappings across notebook/human and package/automation interaction under recovery, retry/cancellation, unknown operational state, degraded persistence/telemetry/dependency/storage/runtime conditions, security withholding, reconstructed history, later Evidence staleness/invalidation, topology, text-bearing data, enterprise scale, approximation pressure, operator use and extension-author use.
-
-All required difficult-condition probes pass.
-
-Parity is authorization-relative: equivalent material truth must be preserved for the same effective authorization context, while disclosure policy may legitimately suppress information differently for differently authorized actors or protect existence itself.
+All 20 required difficult-condition probes pass across recovery, retry/cancellation, unknown operational state, degraded persistence/telemetry/dependency/storage/runtime conditions, security withholding, reconstructed history, later Evidence staleness/invalidation, topology, text-bearing data, enterprise scale, approximation pressure, operator use and extension-author use.
 
 No Actionability, Recovery, Degraded Mode, History Quality, Disclosure State, Topology, Text, Platform Job, Workflow or global Status concept is required.
 
 Routine inspection remains bounded/reference-first and does not require driver-local materialization of enterprise-scale data or telemetry.
 
-## Phase 010 sequence
+## Phase 011 handoff
 
-```text
-010-A  COMPLETE — mapping authority / coverage / actor-surface taxonomy / evidence baseline
-010-B  COMPLETE — concept action -> actor intent / interaction mapping
-010-C  COMPLETE — state/query/history/explanation -> inspection mapping
-010-D  COMPLETE — linguistic / vocabulary / typed status / disclosure semantics
-010-E  COMPLETE — package/notebook/automation/host physical interaction mapping
-010-F  COMPLETE — application-family workflow composition / progressive disclosure
-010-G  COMPLETE — human-programmatic parity / degraded-recovery-scale mapping misfit audit
-010-H  NEXT — Phase 010 consolidation / F1-F5 decision / Phase 011 handoff
-```
+Phase 010 hands forward non-blocking quality/misfit risks around composed specificity, familiarity/precision, adversarial synchronization integrity, synergy/burden, progressive disclosure, provider leakage, future capability pressure and scale/approximation pressure.
+
+Those are Phase 011 design-quality obligations rather than open mapping gaps.
 
 ## Current next boundary
 
-**010-H — Phase 010 Consolidation, F1-F5 Completion Decision & Phase 011 Handoff** is next eligible.
+**Phase 011 — Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Design Validation — entry/decomposition** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
