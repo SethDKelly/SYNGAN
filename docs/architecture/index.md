@@ -26,9 +26,13 @@ Phase 011                    ACTIVE
 011-A                        COMPLETE
 011-B                        COMPLETE
 011-C                        COMPLETE
-011-D                        NEXT ELIGIBLE
+011-D                        COMPLETE
+011-E                        COMPLETE
+011-F                        NEXT ELIGIBLE
 G1 specificity               CURRENTLY CLOSED
 G2 familiarity               CURRENTLY CLOSED
+G3 integrity                 STRONG EVIDENCE / 011-G STRESS REVALIDATION REQUIRED
+G4 synergy / simplicity      CURRENTLY CLOSED
 architecture corpus          RETAINED AS DOWNSTREAM DESIGN EVIDENCE
 architecture reconciliation  PLANNED FOR PHASE 013
 implementation readiness     NOT READY
@@ -43,9 +47,9 @@ implementation next          NOT YET
 - [Design Quality Validation Authority](../authority/design-quality-validation-authority.md)
 - [Composed Specificity Audit](../authority/composed-specificity-purpose-boundary-audit.md)
 - [Composed Familiarity / External-Model Audit](../authority/composed-familiarity-reuse-vocabulary-external-model-audit.md)
+- [Composed Integrity Audit](../authority/composed-integrity-synchronization-history-audit.md)
+- [Synergy, Simplicity, Generic Fitness & Conceptual-Burden Audit](../authority/composed-synergy-simplicity-generic-fitness-burden-audit.md)
 - [Phase 011](../phases/011/index.md)
-
-Phase 011 is upstream design-quality/misfit validation. Architecture may expose counterexamples or feasibility concerns but does not define the audit criteria merely because a structure already exists.
 
 ## Completed mapping implications
 
@@ -53,33 +57,46 @@ Architecture must eventually preserve package-first product form/Spark-host agno
 
 Phase 010 does not select database/materialized views, resource/query schemas, GraphQL/REST shapes, graph/search technology, event-sourced persistence, dashboards, public Python API shapes or platform adapter implementations. Those remain downstream representation choices for Phase 013 reconciliation.
 
-## 011-B / 011-C implications
+## Phase 011 implications through 011-E
 
 011-B confirms all eleven concepts retain distinct composed purposes without architecture-driven split/merge/add/remove decisions.
 
-011-C confirms familiar external object models remain analogues rather than architecture requirements. In particular:
+011-C confirms familiar external object models remain analogues rather than architecture requirements.
+
+011-D confirms synchronization/correction/history integrity without selecting transaction, event, persistence, invalidation or recovery mechanics.
+
+011-E confirms conceptual economy without prescribing implementation compression:
 
 ```text
-SDV Synthesizer              != mandatory aggregate architecture object
-Spark ML Estimator / Model   != required SYNGAN class hierarchy
-MLflow Run / Model / Artifact != required tracking/registry architecture
-Great Expectations objects   != required validation architecture
-OpenLineage Job/Run/Dataset  != required provenance representation
-fit / sample / run / model   != selected public API names
+concept add/remove/merge/split justified        0
+synchronization add/remove/merge justified      0
+reduced-family burden replay                    PASS
+positive composed synergies                     CONFIRMED
+generic-fitness / domain anchoring              PASS
+hidden universal coordinator                    NONE
+G4                                              CURRENTLY CLOSED
 ```
 
-Qualified compatibility vocabulary may later influence adapter ergonomics, but Phase 013 must still select representations against completed concept authority rather than copying the external models.
+Architecture must therefore **not** infer:
 
-Current bounded watch points remain conceptual:
+```text
+shared concept pattern        -> required base class
+three activity concepts       -> generic Activity domain abstraction
+result-like concepts          -> generic Artifact / Result domain abstraction
+five coordination planes      -> five architecture layers/services
+application-family member     -> package/SKU/deployment profile
+D0-D4 progressive disclosure -> UI navigation/API tier topology
+Provenance high fan-in         -> graph database as semantic authority
+Execution reuse               -> workflow/scheduler ownership of domain semantics
+```
 
-- Synthesis Strategy must not become a plugin/runtime/configuration registry by architecture convenience;
-- Provenance's high fan-in must not cause a graph/catalog/lineage representation to become owner truth.
+Implementation/architecture reuse may later be selected for engineering reasons only if it preserves the completed semantic boundaries.
 
 ## Phase 011 evidence boundary
 
-Phase 011 may use retained architecture as counterexample, feasibility, provider-semantic-leakage or familiarity evidence. It may not infer concept boundaries, canonical lifecycle, dependence or synchronization from existing services/packages/APIs/job models/artifacts/tests.
+Phase 011 may use retained architecture as counterexample, feasibility, provider-semantic-leakage or familiarity evidence. It may not infer concept boundaries, canonical lifecycle, dependence, synchronization or quality closure from existing services/packages/APIs/job models/artifacts/tests.
 
-011-D now tests synchronization/correction/history integrity. Architecture must remain observational during that audit; transactional/event/storage mechanisms are Phase 013 concerns.
+011-F is next and tests archetypal/exceptional experience histories and progressive disclosure. Architecture remains observational: a poor hypothetical UI/component layout is not itself a concept/mapping defect unless it demonstrates that current semantic obligations cannot be represented truthfully.
 
 ## Phase 007 architecture status
 
@@ -97,6 +114,6 @@ IMPLEMENTATION NEXT        NOT YET
 
 ## Current next boundary
 
-**011-D — Integrity Under Synchronization, Correction, Invalidation & Historical Composition** is next eligible.
+**011-F — Archetypal, Exceptional & Progressive-Disclosure Misfit Replay** is next eligible.
 
 Architecture reconciliation remains deferred to Phase 013.
