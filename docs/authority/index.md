@@ -17,6 +17,7 @@ These documents define how SYNGAN design knowledge is created, interpreted, chan
 - [Terminology Policy](terminology-policy.md)
 - [Source & Provenance Policy](source-provenance-policy.md)
 - [Design Quality Validation Authority](design-quality-validation-authority.md)
+- [Composed Specificity, Purpose Alignment & Boundary Sharpness Audit](composed-specificity-purpose-boundary-audit.md)
 
 ## Current design authority chain
 
@@ -29,9 +30,11 @@ These documents define how SYNGAN design knowledge is created, interpreted, chan
 - [Concept Mapping Authority](../mapping/index.md)
 - [Phase 010 Concept Mapping Consolidation](phase-010-concept-mapping-consolidation.md)
 - [Design Quality Validation Authority](design-quality-validation-authority.md)
+- [Composed Specificity Audit](composed-specificity-purpose-boundary-audit.md)
 - [Phase 011](../phases/011/index.md)
 - [011 Entry & Decomposition](../phases/011/011-entry-decomposition.md)
 - [011-A Phase Record](../phases/011/011-A-validation-authority-evidence-hierarchy-probe-taxonomy-misfit-reopen-rules.md)
+- [011-B Phase Record](../phases/011/011-B-composed-specificity-purpose-alignment-boundary-sharpness-audit.md)
 
 ## Current posture
 
@@ -49,8 +52,9 @@ concept mapping                      COMPLETE ENOUGH FOR PHASE 011
 Phase 011                            ACTIVE
 Phase 011 decomposition              COMPLETE
 011-A                                COMPLETE
-011-B                                NEXT ELIGIBLE
-G1 specificity                       PARTIAL TO STRONG
+011-B                                COMPLETE
+011-C                                NEXT ELIGIBLE
+G1 specificity                       CURRENTLY CLOSED
 G2 familiarity                       PARTIAL TO STRONG
 G3 integrity                         PARTIAL TO STRONG
 G4 synergy / simplicity              PARTIAL TO STRONG
@@ -85,28 +89,31 @@ Phase 011 may reopen the smallest affected mapping authority only when a concret
 
 011-A establishes the common audit method for G1-G7.
 
-Evidence hierarchy:
-
-```text
-E1  problem / actor / outcome authority
-E2  accepted concept specifications
-E3  dependence / application family / synchronization
-E4  consolidated mapping
-E5  terminology / cross-cutting design contracts
-E6  retained discovery / scenario / experience evidence
-E7  architecture / source / tests — counterexample or feasibility only
-E8  external analogues — familiarity / counterexample only
-```
-
-The current governing rule is:
+The governing rule is:
 
 > **Evidence may challenge any prior conclusion, but only a demonstrated semantic consequence can justify changing upstream design authority.**
 
-Material findings use `MAT-0` through `MAT-3`; unresolved `MAT-3` conceptual blockers prevent positive Phase 011 exit.
+Material findings use `MAT-0` through `MAT-3`; unresolved `MAT-3` conceptual blockers prevent positive Phase 011 exit. Misfit routing uses `M0-M8`, and any material upstream correction follows the smallest-authority reopen rule with bounded downstream revalidation.
 
-Misfit routing uses `M0-M8`, distinguishing local clarification, Phase 010 mapping defects, Phase 009 composition defects, current-concept defects, problem/scope defects, architecture-only concerns, implementation-only concerns and future rediscovery triggers.
+## G1 composed specificity authority
 
-Any material upstream correction follows the smallest-authority reopen rule and revalidates only materially dependent downstream conclusions.
+011-B closes the dedicated current G1 audit:
+
+```text
+11 / 11 concepts               PASS composed specificity
+reduced family replay          PASS
+full anti-umbrella replay      PASS
+MAT-2 findings                 0
+MAT-3 blockers                 0
+catalog changes                0
+upstream reopens               0
+R010-01                        NO DEFECT
+G1 specificity                 CURRENTLY CLOSED
+```
+
+The full mapped composition preserves distinct purposes and proportionate state/action boundaries. Mutual-inclusion pairs remain legitimate, Execution remains operational-realization authority, and Provenance remains typed relationship authority rather than a metadata/history owner.
+
+No rejected aggregate concept becomes necessary under composed specificity.
 
 ## Product-form boundary
 
@@ -126,8 +133,9 @@ Phase 011 may use architecture/code/provider models as counterexample, feasibili
 
 ```text
 011-A  COMPLETE — validation authority / evidence / probes / reopen rules
-011-B  NEXT — specificity / purpose alignment / boundary sharpness
-011-C..J remaining Phase 011 quality/misfit validation
+011-B  COMPLETE — specificity / purpose alignment / boundary sharpness
+011-C  NEXT — familiarity / reuse / vocabulary / external-model comparison
+011-D..J remaining Phase 011 quality/misfit validation
 012    Jackson concept-design completion decision
 013    representation / architecture reconciliation
 014    whole-design completion / implementation-readiness decision
@@ -141,6 +149,6 @@ Only Phase 014 may set **READY / NOT STARTED / NEXT** after the whole design pas
 
 ## Current next boundary
 
-**011-B — Composed Specificity, Purpose Alignment & Boundary Sharpness Audit** is next eligible.
+**011-C — Familiarity, Reuse, Vocabulary & External-Model Comparison Audit** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
