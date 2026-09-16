@@ -24,6 +24,7 @@ For concepts `C1` and `C2`, the governing question is:
 - [Contraction / Extension Consequences](contraction-extension-consequences.md) — 009-D.
 - [Phase 009 Consolidation](../authority/phase-009-dependence-composition-consolidation.md) — current dependence/composition consolidation authority.
 - [Phase 010 Concept Mapping Consolidation](../authority/phase-010-concept-mapping-consolidation.md) — downstream validation that mapping preserves this authority.
+- [011-B Composed Specificity Audit](../authority/composed-specificity-purpose-boundary-audit.md) — current downstream revalidation that reduced/full family members preserve distinct concept purposes.
 
 ## Current phase state
 
@@ -38,7 +39,11 @@ D4 add/remove consequences        CURRENTLY CLOSED
 E1-E5 composition                 CURRENTLY CLOSED
 Phase 010                         COMPLETE
 F1-F5 mapping                     CURRENTLY CLOSED
-Phase 011                         NEXT — ENTRY/DECOMPOSITION
+Phase 011                         ACTIVE
+011-A                             COMPLETE
+011-B                             COMPLETE
+011-C                             NEXT ELIGIBLE
+G1 specificity                    CURRENTLY CLOSED
 ```
 
 ## Canonical graph result
@@ -115,33 +120,40 @@ Ordinary extension uses accepted concepts plus required closure/side conditions.
 
 Phase 010 preserves this family exactly rather than turning the eleven concepts into one mandatory workflow.
 
-All ten required family/capability replays pass:
-
-```text
-authority-only use
-L-KERNEL
-direct G-KERNEL
-learned-state-assisted Generation
-E-KERNEL / evaluation-focused use
-evaluation-gated Generation
-Constraint-aware variants
-Execution-bearing / Execution-light variants
-Provenance-bearing / Provenance-light variants
-full eleven-concept composition
-```
+All ten required family/capability replays pass, including authority-only, L-KERNEL, direct G-KERNEL, learned-state-assisted Generation, E-KERNEL, evaluation-gated Generation, Constraint-aware, Execution-bearing/light, Provenance-bearing/light and full composition.
 
 Controlling mapping rule:
 
 > **Concept inclusion defines available capability; it does not require every included concept to be re-executed in every invocation.**
 
-Therefore:
+## 011-B specificity revalidation
 
-- direct Generation remains valid without Learning/Learned State;
-- existing Learned State may be reused without new Learning;
-- Evaluation/Evidence remain conditional rather than universal Generation prerequisites;
-- Constraint, Execution and Provenance remain capability/occurrence conditional;
-- no new universal inclusion edge or product-family restriction is introduced by mapping;
-- no Phase 009 reopening is required at the Phase 010 boundary.
+011-B uses reduced family members as a direct test of whether concept purposes survive omission of common companions.
+
+Result:
+
+```text
+authority-only members          PASS
+L-KERNEL                        PASS
+Direct G-KERNEL                 PASS
+E-KERNEL                        PASS
+Execution-bearing members       PASS
+Provenance-bearing members      PASS
+full eleven-concept member      PASS
+specificity-driven edge change  NONE
+catalog change                  NONE
+G1 specificity                  CURRENTLY CLOSED
+```
+
+Important implications:
+
+- the Learning/Learned State SCC remains a legitimate activity/result split rather than an artificial concept split;
+- the Evaluation/Evidence SCC remains a legitimate examination/finding split;
+- direct G-KERNEL demonstrates Generation is independently meaningful without learned or evaluation capability;
+- Execution's one-of prerequisite strengthens its purpose boundary rather than making it a standalone scheduler;
+- Provenance's witness prerequisite keeps it from becoming an empty lineage/metadata platform.
+
+No Phase 009 dependence/application-family reopening is justified by 011-B.
 
 ## Product-scope documentation rule
 
@@ -166,12 +178,14 @@ Evaluation before Evidence
 
 This is explanation/design order, not implementation order or a mandatory runtime wizard.
 
-## Phase 011 handoff
+## Active Phase 011 boundary
 
-Phase 011 may adversarially test whether composed specificity, integrity, synergy or future-scope evidence exposes a genuine dependence/application-family misfit. If so, reopen only the smallest affected Phase 009 authority rather than deriving dependence from interface or implementation structure.
+011-C may compare familiar external models/terminology against the current application family, but familiar product packaging, object graphs or API dependencies do not redefine Jackson inclusion dependence.
+
+Later 011-D/G may reopen the smallest Phase 009 authority only if a genuine integrity/adversarial semantic defect is demonstrated.
 
 ## Current next boundary
 
-**Phase 011 — Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Design Validation — entry/decomposition** is next eligible.
+**011-C — Familiarity, Reuse, Vocabulary & External-Model Comparison Audit** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
