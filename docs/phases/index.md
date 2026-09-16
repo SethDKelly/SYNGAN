@@ -88,7 +88,8 @@ Current authority:
 
 - [Phase 011 Index](011/index.md)
 - [011 Entry & Decomposition](011/011-entry-decomposition.md)
-- [Phase 010 Concept Mapping Consolidation](../authority/phase-010-concept-mapping-consolidation.md)
+- [011-A Phase Record](011/011-A-validation-authority-evidence-hierarchy-probe-taxonomy-misfit-reopen-rules.md)
+- [Design Quality Validation Authority](../authority/design-quality-validation-authority.md)
 - [Jackson Methodology Completion Matrix](../authority/jackson-methodology-completion-matrix.md)
 
 Current state:
@@ -96,7 +97,8 @@ Current state:
 ```text
 Phase 011                    ACTIVE
 Phase 011 decomposition      COMPLETE
-011-A                        NEXT ELIGIBLE
+011-A                        COMPLETE
+011-B                        NEXT ELIGIBLE
 G1 specificity               PARTIAL TO STRONG
 G2 familiarity               PARTIAL TO STRONG
 G3 integrity                 PARTIAL TO STRONG
@@ -106,11 +108,13 @@ G6 future-scope              STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
 G7 residual misfit register  PARTIAL
 ```
 
-Current decomposition:
+011-A establishes the audit method without changing any G1-G7 closure state. It defines the evidence hierarchy, finding record, probe taxonomy, materiality threshold, specificity/familiarity/integrity/synergy criteria, misfit routing, smallest-authority reopen rule, revalidation blast-radius rule and residual-finding dispositions used by 011-B through 011-J.
+
+Current sequence:
 
 ```text
-011-A  validation authority / evidence hierarchy / probe taxonomy / misfit-reopen rules
-011-B  composed specificity / purpose alignment / boundary sharpness
+011-A  COMPLETE — validation authority / evidence / probes / reopen rules
+011-B  NEXT — composed specificity / purpose alignment / boundary sharpness
 011-C  familiarity / reuse / vocabulary / external-model comparison
 011-D  integrity under synchronization / correction / invalidation / history
 011-E  synergy / simplicity / generic fitness / conceptual burden
@@ -120,8 +124,6 @@ Current decomposition:
 011-I  residual conceptual misfit register / disposition / closure preparation
 011-J  Phase 011 consolidation / G1-G7 decision / Phase 012 handoff
 ```
-
-The decomposition explicitly consumes all eight non-blocking Phase 010 risks and separates current-design quality validation from future-scope pressure and from downstream architecture/implementation concerns.
 
 ## Later design phases
 
@@ -143,6 +145,6 @@ Placeholder only; not ready, not active and not next.
 
 ## Current next boundary
 
-**011-A — Validation Authority, Evidence Hierarchy, Probe Taxonomy & Misfit/Reopen Rules** is next eligible.
+**011-B — Composed Specificity, Purpose Alignment & Boundary Sharpness Audit** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
