@@ -10,7 +10,7 @@ status: active
 
 Maintain the correct design-to-implementation boundary while SYNGAN completes the full Daniel Jackson-style design program.
 
-This authority supersedes the historical 007-K implementation-reentry conclusion while retaining Phase 007 architecture as downstream evidence.
+This authority supersedes the historical 007-K implementation-reentry conclusion while retaining Phase 004/006/007 architecture and executable evidence as downstream evidence only.
 
 ## Current implementation status
 
@@ -20,7 +20,7 @@ IMPLEMENTATION START       NOT STARTED
 IMPLEMENTATION NEXT        NOT YET
 ```
 
-No intermediate phase, subgroup, architecture document, implementation plan, scaffold, test result, or prior readiness finding may change this posture by implication.
+No intermediate phase, subgroup, architecture document, implementation plan, scaffold, test result or prior readiness finding may change this posture by implication.
 
 ## Methodology boundary
 
@@ -33,15 +33,15 @@ concept dependence / application family    ← Phase 009 COMPLETE
         ↓
 synchronization / composition              ← Phase 009 COMPLETE
         ↓
-concept mapping / actor-visible experience ← Phase 010 ACTIVE
+concept mapping / actor-visible experience ← Phase 010 COMPLETE
         ↓
-whole concept-design quality / misfit validation
+whole concept-design quality / misfit validation ← Phase 011 NEXT
         ↓
-Jackson concept-design completion gate
+Jackson concept-design completion gate     ← Phase 012
         ↓
-representation / architecture reconciliation
+representation / architecture reconciliation ← Phase 013
         ↓
-whole-design completion / readiness gate
+whole-design completion / readiness gate   ← Phase 014
         ↓
 implementation MAY become READY / NOT STARTED / NEXT
 ```
@@ -53,33 +53,33 @@ Phase 008                  COMPLETE
 Phase 009                  COMPLETE
 D1-D4                      CURRENTLY CLOSED
 E1-E5                      CURRENTLY CLOSED
-Phase 010                  ACTIVE
-010-A                      COMPLETE
-010-B                      COMPLETE
-010-C                      COMPLETE
-010-D                      NEXT ELIGIBLE
-F1                         CURRENTLY CLOSED
-F2                         CURRENTLY CLOSED
-F3                         PARTIAL TO STRONG
-F4                         PARTIAL
-F5                         STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
+Phase 010                  COMPLETE
+010-A..010-H               COMPLETE
+F1-F5                      CURRENTLY CLOSED
+concept mapping            COMPLETE ENOUGH FOR PHASE 011
+Phase 011                  NEXT — ENTRY/DECOMPOSITION
+Jackson concept design     NOT COMPLETE
 ```
 
-## Active Phase 010 mapping boundary
+## Current mapping authority
 
-Current mapping authority now includes:
+Phase 010 is consolidated by:
 
-- [010-A Mapping Control Authority](../mapping/mapping-authority-coverage-actor-surface-evidence-baseline.md)
-- [010-B Concept Action → Actor Intent & Interaction Mapping](../mapping/concept-action-actor-intent-interaction-mapping.md)
-- [010-C Concept State, Query, History & Explanation → Inspection Mapping](../mapping/concept-state-query-history-explanation-inspection-mapping.md)
+- [Phase 010 Concept Mapping Consolidation](phase-010-concept-mapping-consolidation.md)
+- [Concept Mapping Index](../mapping/index.md)
 
-Current semantic coverage:
+Final mapping coverage is:
 
 ```text
-66 / 66 command groups               SEMANTICALLY MAPPED
-52 / 52 query groups                 SEMANTICALLY MAPPED
-11 / 11 lifecycle/history envelopes  SEMANTICALLY MAPPED
-5 explanation patterns               SEMANTICALLY MAPPED
+66 / 66 command groups                    SEMANTICALLY MAPPED
+52 / 52 query groups                      SEMANTICALLY MAPPED
+11 / 11 lifecycle/history envelopes       SEMANTICALLY MAPPED
+5 / 5 explanation patterns                SEMANTICALLY MAPPED
+11 / 11 concept names                     LINGUISTICALLY ALIGNED
+66 / 66 command groups                    PHYSICAL RESPONSIBILITY MAPPED
+52 / 52 query groups                      PHYSICAL RESPONSIBILITY MAPPED
+10 / 10 family/capability replays         PASS
+20 / 20 difficult-condition parity probes PASS
 ```
 
 These mappings do **not** authorize implementation resources one-for-one.
@@ -89,33 +89,15 @@ mapped command      != API method / endpoint / button / event
 mapped query        != database view / endpoint / graph query
 history envelope    != event-store schema
 explanation pattern != persistent aggregate / dashboard
+surface role        != required deployment component
+family variant      != product SKU / package edition
 ```
 
-## Inspection-specific hold
+## Mapping invariants held forward
 
-010-C establishes what must be inspectable while explicitly deferring how inspection is implemented.
+Downstream work must preserve:
 
-Therefore do not infer requirements for:
-
-- database/materialized views;
-- query/resource schemas;
-- GraphQL or REST resources;
-- dashboards/pages/widgets;
-- caches/search indexes;
-- graph databases;
-- event-sourced persistence;
-- telemetry/log products;
-- report formats;
-- runtime status enums.
-
-Inspection may compose several concepts for comprehension, but no composed view becomes canonical domain state.
-
-010-C's semantic categories for disclosure/history quality remain design distinctions pending 010-D linguistic alignment. They are not public/runtime enum authority.
-
-## Current mapping invariants
-
-Mapping must preserve:
-
+- package-first product form and Spark-host platform agnosticism;
 - application-family optionality;
 - concept boundaries and singular state ownership;
 - direct versus learned-state-assisted Generation;
@@ -128,28 +110,53 @@ Mapping must preserve:
 - Provenance relationship authority versus source-fact ownership;
 - occurrence-scoped/non-reactive synchronization;
 - typed disclosure/history-quality/uncertainty semantics;
+- authority continuity under recovery;
+- capability-specific degraded operation;
 - bounded enterprise-scale inspection;
-- human/programmatic semantic parity.
+- human/programmatic semantic parity for the same authorized context.
 
-## Current 010-D boundary
+## Phase 011 boundary
 
-010-D owns linguistic mapping, vocabulary, typed status and disclosure semantics.
+Phase 011 owns methodology area G:
 
-It may select preferred actor/programmatic wording, qualify overloaded terms, and define owner-specific status language. It must not use vocabulary simplification to erase concept distinctions or to create one universal status model.
+```text
+G1  specificity
+G2  familiarity
+G3  integrity
+G4  synergy / simplicity / generic fitness
+G5  archetypal / exceptional / degraded / adversarial / recovery misfit
+G6  future-scope / extensibility misfit
+G7  explicit residual conceptual misfit register
+```
+
+Phase 011 must be deliberately decomposed before execution.
+
+010-H hands Phase 011 non-blocking risks around:
+
+- composed specificity drift;
+- familiarity versus semantic precision;
+- synchronization integrity under broader adversarial composition;
+- synergy versus conceptual burden;
+- progressive-disclosure misfit;
+- provider/host semantic leakage;
+- future-capability/extensibility pressure;
+- scale/approximation pressure.
+
+These are design-audit obligations, not implementation tasks.
 
 ## Architecture/executable boundary
 
 Phase 004/006/007 architecture and the retained executable scaffold remain downstream evidence.
 
-They may expose a genuine counterexample but cannot define current concept, dependence, family, synchronization, mapping, vocabulary, completion or inspection authority from package imports, persistence references, service/dataflow direction, event topology, runtime orchestration, deployment topology, existing APIs, databases or dashboards.
+They may expose a genuine counterexample but cannot define current concept, dependence, family, synchronization, mapping, vocabulary or completion authority from package imports, persistence references, service/dataflow direction, event topology, runtime orchestration, deployment topology, existing APIs, databases or dashboards.
 
 Do not restructure implementation to mirror concepts, synchronization IDs, application-family kernels, mapping records, query groups or explanation patterns while the full design remains incomplete.
 
 ## Remaining design roadmap
 
 ```text
-010       concept mapping / interaction / language / experience — ACTIVE
-011       specificity / familiarity / integrity / synergy / misfit
+010       concept mapping / interaction / language / experience — COMPLETE
+011       specificity / familiarity / integrity / synergy / misfit — NEXT
 012       Jackson concept-design completion decision
 013       representation / architecture reconciliation
 014       whole-design completion / implementation-readiness decision
@@ -159,16 +166,16 @@ Do not restructure implementation to mirror concepts, synchronization IDs, appli
 
 ## Readiness transitions
 
-Through Phases 010-013 implementation remains **NOT READY / NOT STARTED / NOT YET**.
+Through Phases 011-013 implementation remains **NOT READY / NOT STARTED / NOT YET**.
 
 Even a positive Phase 012 does not make implementation ready. Phase 013 must reconcile architecture. Only Phase 014 may make the final whole-design readiness decision.
 
 ## No executable design-by-accident
 
-Until Phase 014 passes, do not add production behavior, executable architecture restrictions merely to crystallize mapping hypotheses, package-topology changes, persistence/query schemas, runtime/model/platform/security adapters, public API implementation, dashboards/materialized views, graph/search technology, reference algorithms, privacy mechanisms, product-edition packaging, event/service decomposition, synchronization transactions, observer/subscription infrastructure, or stale-test repair solely to manufacture readiness.
+Until Phase 014 passes, do not add production behavior, executable architecture restrictions merely to crystallize design hypotheses, package-topology changes, persistence/query schemas, runtime/model/platform/security adapters, public API implementation, dashboards/materialized views, graph/search technology, reference algorithms, privacy mechanisms, product-edition packaging, event/service decomposition, synchronization transactions, observer/subscription infrastructure, or stale-test repair solely to manufacture readiness.
 
 ## Current next boundary
 
-**010-D — Linguistic Mapping, Vocabulary, Typed Status & Disclosure Semantics** is next eligible.
+**Phase 011 — Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Design Validation — entry/decomposition** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
