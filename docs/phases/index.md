@@ -54,8 +54,9 @@ Current authority:
 - [010-D](010/010-D-linguistic-mapping-vocabulary-typed-status-disclosure-semantics.md)
 - [010-E](010/010-E-package-notebook-automation-host-platform-interaction-mapping.md)
 - [010-F](010/010-F-application-family-workflow-composition-optional-capability-experience-progressive-disclosure.md)
+- [010-G](010/010-G-human-programmatic-semantic-parity-degraded-recovery-scale-mapping-misfit-audit.md)
 - [Concept Mapping Authority](../mapping/index.md)
-- [010-F Family Composition Authority](../mapping/application-family-workflow-composition-progressive-disclosure.md)
+- [010-G Parity / Difficult-Condition Authority](../mapping/human-programmatic-semantic-parity-degraded-recovery-scale-misfit-audit.md)
 
 Current sequence:
 
@@ -66,8 +67,8 @@ Current sequence:
 010-D  COMPLETE — linguistic / vocabulary / typed status / disclosure semantics
 010-E  COMPLETE — package/notebook/automation/host physical interaction mapping
 010-F  COMPLETE — application-family workflow composition / progressive disclosure
-010-G  NEXT — human-programmatic parity / degraded-recovery-scale mapping misfit audit
-010-H  mapping consolidation / Phase 011 handoff
+010-G  COMPLETE — human-programmatic parity / degraded-recovery-scale mapping misfit audit
+010-H  NEXT — mapping consolidation / F1-F5 decision / Phase 011 handoff
 ```
 
 Current methodology state:
@@ -77,7 +78,7 @@ F1  CURRENTLY CLOSED
 F2  CURRENTLY CLOSED
 F3  CURRENTLY CLOSED
 F4  CURRENTLY CLOSED
-F5  STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
+F5  CURRENTLY CLOSED
 ```
 
 Current mapping coverage:
@@ -90,9 +91,10 @@ Current mapping coverage:
 66 / 66 command groups               PHYSICAL RESPONSIBILITY MAPPED
 52 / 52 query groups                 PHYSICAL RESPONSIBILITY MAPPED
 10 / 10 family/capability replays    PASS
+20 / 20 difficult-condition probes   PASS
 ```
 
-010-E confirms SYNGAN's package-first product form and Spark-host platform agnosticism. 010-F confirms the valid application family remains experience-coherent without a mandatory full-suite workflow: existing reusable authority/results may be selected rather than recreated, optional capabilities do not create empty steps, and progressive disclosure retains deep detail without burdening ordinary package interaction.
+010-E confirms SYNGAN's package-first product form and Spark-host platform agnosticism. 010-F confirms the valid application family remains experience-coherent without a mandatory full-suite workflow. 010-G confirms human/programmatic semantic parity survives degraded, recovery, security, historical, topology, text-bearing, operator and enterprise-scale cases without requiring new concepts or hidden authority.
 
 ## Later design phases
 
@@ -118,6 +120,6 @@ Placeholder only; not ready, not active and not next.
 
 ## Current next boundary
 
-**010-G — Human/Programmatic Semantic Parity, Degraded/Recovery/Scale & Mapping-Misfit Audit** is next eligible.
+**010-H — Phase 010 Consolidation, F1-F5 Completion Decision & Phase 011 Handoff** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
