@@ -249,7 +249,7 @@ Specificity is not improved merely by splitting a concept into more concepts. A 
 
 # 7. Familiarity comparison discipline
 
-011-C must compare **conceptual jobs**, not simply nouns or object models.
+011-C compares **conceptual jobs**, not simply nouns or object models.
 
 For every material external analogue, record:
 
@@ -471,11 +471,11 @@ R010-07  -> 011-H
 R010-08  -> 011-G
 ```
 
-Current dispositions after 011-B:
+Current dispositions after 011-C:
 
 ```text
 R010-01  NO DEFECT
-R010-02  OPEN
+R010-02  NO DEFECT — COMPATIBILITY GUIDANCE STRENGTHENED
 R010-03  OPEN
 R010-04  OPEN
 R010-05  OPEN
@@ -516,6 +516,9 @@ Phase 011 must not treat any of the following as design authority merely because
 - Databricks/AWS/other provider resource models;
 - Spark ML or PyTorch object lifecycles;
 - SDV/CTGAN terminology or abstractions;
+- MLflow tracking/registry object models;
+- Great Expectations validation objects;
+- OpenLineage Job/Run/Dataset models;
 - popular API conventions;
 - retained implementation plans.
 
@@ -546,14 +549,6 @@ smallest-authority reopen rule            ESTABLISHED
 revalidation blast-radius rule           ESTABLISHED
 residual-risk disposition vocabulary     ESTABLISHED
 R010 risk-accounting ownership           ESTABLISHED
-
-G1                                      UNCHANGED — PARTIAL TO STRONG
-G2                                      UNCHANGED — PARTIAL TO STRONG
-G3                                      UNCHANGED — PARTIAL TO STRONG
-G4                                      UNCHANGED — PARTIAL TO STRONG
-G5                                      UNCHANGED — PARTIAL TO STRONG
-G6                                      UNCHANGED — STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
-G7                                      UNCHANGED — PARTIAL
 ```
 
 No concept, synchronization, application-family edge or mapping rule is changed by 011-A.
@@ -562,9 +557,7 @@ No concept, synchronization, application-family edge or mapping rule is changed 
 
 # 19. 011-B application result
 
-011-B is the first substantive application of this method and is governed in detail by [Composed Specificity, Purpose Alignment & Boundary Sharpness Audit](composed-specificity-purpose-boundary-audit.md).
-
-Result:
+011-B is governed in detail by [Composed Specificity, Purpose Alignment & Boundary Sharpness Audit](composed-specificity-purpose-boundary-audit.md).
 
 ```text
 11 / 11 concepts                       PASS composed specificity
@@ -577,8 +570,6 @@ R010-01                               NO DEFECT
 G1 specificity                        CURRENTLY CLOSED
 ```
 
-The result does not modify this validation method. It demonstrates that the method can close a criterion while preserving bounded watch points and without converting architecture/implementation evidence into upstream authority.
-
 Two `MAT-1` watch points remain for later planned probes:
 
 - Synthesis Strategy's broad capability declaration surface;
@@ -588,9 +579,31 @@ Neither blocks G1.
 
 ---
 
+# 20. 011-C application result
+
+011-C is governed in detail by [Familiarity, Reuse, Vocabulary & External-Model Comparison Audit](composed-familiarity-reuse-vocabulary-external-model-audit.md).
+
+```text
+11 / 11 canonical names retained
+application-family vocabulary reuse     PASS
+external-model comparison               PASS
+MAT-2 familiarity findings              0
+MAT-3 familiarity blockers              0
+upstream reopens                        0
+R010-02                                 NO DEFECT — COMPATIBILITY GUIDANCE STRENGTHENED
+B4 familiarity / reuse                  CURRENTLY CLOSED
+G2 familiarity                          CURRENTLY CLOSED
+```
+
+The result strengthens one-way compatibility guidance rather than changing concept semantics. `Data Meaning`, `Learned State` and `Evaluation Criterion` retain bounded first-use familiarity watch points; external `model`, `run/job`, `validation result`, `lineage`, `metadata`, `artifact`, `metric` and `synthesizer` vocabulary remains qualified compatibility/representation language.
+
+Phase 010-D F3 mapping remains current and does not reopen.
+
+---
+
 ## Current next boundary
 
-**011-C — Familiarity, Reuse, Vocabulary & External-Model Comparison Audit** is next eligible.
+**011-D — Integrity Under Synchronization, Correction, Invalidation & Historical Composition** is next eligible.
 
 Jackson concept design remains **NOT COMPLETE**.
 
