@@ -22,10 +22,10 @@ For concepts `C1` and `C2`, the governing question is:
 - [Inclusion-Dependence Graph & Ordering](inclusion-dependence-graph-ordering.md) — 009-B.
 - [Application Family & Valid Subsets](application-family-valid-subsets.md) — 009-C.
 - [Contraction / Extension Consequences](contraction-extension-consequences.md) — 009-D.
-- [Phase 009 Consolidation](../authority/phase-009-dependence-composition-consolidation.md) — current dependence/composition consolidation authority.
-- [Phase 010 Concept Mapping Consolidation](../authority/phase-010-concept-mapping-consolidation.md) — downstream validation that mapping preserves this authority.
-- [011-B Composed Specificity Audit](../authority/composed-specificity-purpose-boundary-audit.md) — downstream revalidation that reduced/full family members preserve distinct concept purposes.
-- [011-C Familiarity / External-Model Audit](../authority/composed-familiarity-reuse-vocabulary-external-model-audit.md) — downstream validation that family members reuse stable canonical vocabulary without importing external object dependencies.
+- [Phase 009 Consolidation](../authority/phase-009-dependence-composition-consolidation.md).
+- [Phase 010 Concept Mapping Consolidation](../authority/phase-010-concept-mapping-consolidation.md).
+- [011-B Composed Specificity Audit](../authority/composed-specificity-purpose-boundary-audit.md).
+- [011-E Synergy / Simplicity Audit](../authority/composed-synergy-simplicity-generic-fitness-burden-audit.md) — **current reduced-family burden revalidation**.
 
 ## Current phase state
 
@@ -44,9 +44,13 @@ Phase 011                         ACTIVE
 011-A                             COMPLETE
 011-B                             COMPLETE
 011-C                             COMPLETE
-011-D                             NEXT ELIGIBLE
+011-D                             COMPLETE
+011-E                             COMPLETE
+011-F                             NEXT ELIGIBLE
 G1 specificity                    CURRENTLY CLOSED
 G2 familiarity                    CURRENTLY CLOSED
+G3 integrity                      STRONG EVIDENCE / 011-G STRESS REVALIDATION REQUIRED
+G4 synergy / simplicity           CURRENTLY CLOSED
 ```
 
 ## Canonical graph result
@@ -102,55 +106,47 @@ E-KERNEL = Evaluation Criterion + Evaluation + Evidence
 
 Authority-only coherent members include Data Meaning, Synthesis Strategy, Constraint and Evaluation Criterion independently.
 
-## 011-B specificity revalidation
+## Phase 011 revalidation through 011-E
+
+011-B confirms each reduced member preserves distinct concept purpose. 011-C confirms stable vocabulary reuse. 011-D confirms optionality does not collapse under historical composition. 011-E then directly tests whether the family structure actually reduces conceptual burden.
+
+Result:
 
 ```text
-authority-only members          PASS
-L-KERNEL                        PASS
-Direct G-KERNEL                 PASS
-E-KERNEL                        PASS
-Execution-bearing members       PASS
-Provenance-bearing members      PASS
-full eleven-concept member      PASS
-specificity-driven edge change  NONE
-catalog change                  NONE
-G1 specificity                  CURRENTLY CLOSED
+authority-only members            PASS — no synchronization burden
+L-KERNEL                          PASS
+Direct G-KERNEL                   PASS
+E-KERNEL                          PASS
+Constraint increments             capability-local
+Execution increments              capability-local
+Learned-State reuse               capability-local
+Evidence gating                   capability-local
+Provenance increments             relationship-local
+full eleven-concept member        PASS without universal workflow
+application-family edge change    NONE
+catalog change                    NONE
+R010-04                           NO DEFECT
+G4                                CURRENTLY CLOSED
 ```
 
-No Phase 009 dependence/application-family reopening is justified by 011-B.
+The application family is therefore a primary **simplicity mechanism** rather than merely a correctness constraint.
 
-## 011-C familiarity/reuse revalidation
+Important consequences:
 
-011-C confirms that the same canonical vocabulary remains coherent across all relevant reduced and full family members.
+- direct Generation does not pay Learning/Learned State burden;
+- evaluation-only capability does not pay Generation burden;
+- authority-only uses do not pay activity or synchronization burden;
+- existing reusable authority/results may be selected without replaying their creation lifecycle;
+- optional Constraint, Execution and Provenance do not create empty mandatory stages;
+- full-suite membership does not imply all concepts are executed in every invocation.
 
-```text
-authority-only vocabulary reuse       PASS
-direct Generation vocabulary          PASS
-learned-generation vocabulary         PASS
-evaluation-family vocabulary          PASS
-Execution-bearing vocabulary          PASS
-Provenance-bearing vocabulary         PASS
-full-family vocabulary                 PASS
-familiarity-driven edge change        NONE
-application-family change             NONE
-G2 familiarity                        CURRENTLY CLOSED
-```
-
-External package/object relationships do not create inclusion-dependence edges. In particular:
-
-- an SDV `Synthesizer` object bundling fit/sample/state does not turn Strategy, Learning, Learned State and Generation into one inclusion unit;
-- Spark ML `Estimator -> Model` is a useful analogue but not the canonical L-CLUSTER definition;
-- MLflow `Run`/Model/Artifact tracking does not impose SYNGAN concept inclusion;
-- Great Expectations validation objects do not redefine Constraint/Evaluation-family dependence;
-- OpenLineage Job/Run/Dataset entities do not alter SYNGAN Provenance/Execution inclusion rules.
-
-No Phase 009 dependence/application-family reopening is justified by 011-C.
+No application-family contraction/extension rule is reopened by 011-E.
 
 ## Product-scope documentation rule
 
 A family member may remain coherent while losing a former advertised capability after contraction. Downstream mapping and representation must describe the actual included concepts/capabilities and remove stale promises.
 
-Application-family validity remains distinct from product packaging or implementation modularity.
+Application-family validity remains distinct from product packaging, implementation modularity, SKUs, runtime feature flags or deployment profiles.
 
 ## Dependence-derived explanation ordering
 
@@ -171,10 +167,12 @@ This is explanation/design order, not implementation order or a mandatory runtim
 
 ## Active Phase 011 boundary
 
-011-D/G may reopen the smallest Phase 009 authority only if a genuine integrity/adversarial semantic defect is demonstrated. External object graphs, workflow packaging or familiar terminology remain evidence only.
+011-F now replays archetypal and exceptional family-member histories to determine whether the progressive-disclosure mapping remains truthful in actual task sequences. 011-G later stress-revalidates integrity under hostile/degraded/recovery conditions.
+
+A later finding may reopen the smallest Phase 009 authority only when a genuine semantic defect is demonstrated. UI convenience, package layout, feature flags or product packaging are not inclusion-dependence evidence.
 
 ## Current next boundary
 
-**011-D — Integrity Under Synchronization, Correction, Invalidation & Historical Composition** is next eligible.
+**011-F — Archetypal, Exceptional & Progressive-Disclosure Misfit Replay** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
