@@ -16,12 +16,14 @@ Phase 011 judges the current composed design rather than adding implementation o
 
 - [011 Entry & Decomposition](011-entry-decomposition.md)
 - [011-A Phase Record](011-A-validation-authority-evidence-hierarchy-probe-taxonomy-misfit-reopen-rules.md)
-- [Design Quality Validation Authority](../../authority/design-quality-validation-authority.md) — **current Phase 011 audit-method authority**
+- [011-B Phase Record](011-B-composed-specificity-purpose-alignment-boundary-sharpness-audit.md)
+- [Design Quality Validation Authority](../../authority/design-quality-validation-authority.md) — current Phase 011 audit-method authority
+- [Composed Specificity, Purpose Alignment & Boundary Sharpness Audit](../../authority/composed-specificity-purpose-boundary-audit.md) — **current G1 specificity authority**
 - [Phase 010 Concept Mapping Consolidation](../../authority/phase-010-concept-mapping-consolidation.md)
 - [Jackson Methodology Completion Matrix](../../authority/jackson-methodology-completion-matrix.md)
 - [Concept Design Methodology](../../authority/design-methodology.md)
 
-## Current state after 011-A
+## Current state after 011-B
 
 ```text
 Phase 008                    COMPLETE
@@ -30,9 +32,10 @@ Phase 010                    COMPLETE
 Phase 011                    ACTIVE
 Phase 011 decomposition      COMPLETE
 011-A                        COMPLETE
-011-B                        NEXT ELIGIBLE
+011-B                        COMPLETE
+011-C                        NEXT ELIGIBLE
 
-G1 specificity               PARTIAL TO STRONG
+G1 specificity               CURRENTLY CLOSED
 G2 familiarity               PARTIAL TO STRONG
 G3 integrity                 PARTIAL TO STRONG
 G4 synergy / simplicity      PARTIAL TO STRONG
@@ -46,14 +49,14 @@ implementation start         NOT STARTED
 implementation next          NOT YET
 ```
 
-011-A changes none of the G1-G7 states. It establishes the common audit method used to judge them.
+011-B performs the dedicated composed specificity audit. It changes no concept or composition authority because no material specificity defect is found.
 
 ## Phase 010 handoff risks
 
 Phase 011 must disposition all eight non-blocking risks handed forward by 010-H:
 
 ```text
-R010-01  composed specificity drift                  -> 011-B
+R010-01  composed specificity drift                  -> NO DEFECT — 011-B
 R010-02  familiarity versus semantic precision       -> 011-C
 R010-03  synchronization integrity under adversity   -> 011-D / 011-G
 R010-04  synergy versus conceptual burden            -> 011-E
@@ -89,6 +92,35 @@ Key rules:
 > **An implementation, architecture or provider mismatch may trigger review; it does not directly redefine a concept.**
 
 > **Reopen the smallest canonical authority that owns the violated semantic claim, then revalidate only materially dependent downstream conclusions.**
+
+## 011-B specificity result
+
+All eleven concepts pass `SP-1` through `SP-7` in their applicable composition context.
+
+```text
+accepted concepts                         11
+concepts passing composed specificity     11 / 11
+high-risk neighboring boundaries          PASS
+reduced family specificity replays        PASS
+full-composition anti-umbrella replay     PASS
+MAT-2 specificity findings                0
+MAT-3 specificity blockers                0
+upstream authority reopen                 NONE
+catalog change                            NONE
+R010-01                                   NO DEFECT
+G1 SPECIFICITY                            CURRENTLY CLOSED
+```
+
+Key conclusions:
+
+- Learning and Learned State remain a legitimate activity/result split despite mutual inclusion;
+- Evaluation and Evidence remain a legitimate examination/finding split despite mutual inclusion;
+- direct `G-KERNEL` demonstrates Generation is not merely a full-suite coordinator;
+- Execution's one-of activity prerequisite sharpens rather than weakens its operational-realization purpose;
+- Provenance's high fan-in does not make it a metadata/history god-concept because substantive owner truth remains outside Provenance;
+- no rejected/subordinate umbrella concept becomes necessary in the full mapped composition.
+
+Synthesis Strategy's broad declaration surface and Provenance's high fan-in remain bounded `MAT-1` watch points for later integrity/synergy/adversarial validation, not unresolved G1 defects.
 
 ## Materiality
 
@@ -133,8 +165,8 @@ INSUFFICIENT EVIDENCE — CONCEPTUAL BLOCKER
 | Group | Scope | Principal methodology role | Status |
 |---|---|---|---|
 | **011-A** | Validation Authority, Evidence Hierarchy, Probe Taxonomy & Misfit/Reopen Rules | G1-G7 foundation | **complete** |
-| **011-B** | Composed Specificity, Purpose Alignment & Boundary Sharpness Audit | G1 | **next eligible** |
-| **011-C** | Familiarity, Reuse, Vocabulary & External-Model Comparison Audit | G2 / B4 revalidation | planned |
+| **011-B** | Composed Specificity, Purpose Alignment & Boundary Sharpness Audit | G1 | **complete** |
+| **011-C** | Familiarity, Reuse, Vocabulary & External-Model Comparison Audit | G2 / B4 revalidation | **next eligible** |
 | **011-D** | Integrity Under Synchronization, Correction, Invalidation & Historical Composition | G3 | planned |
 | **011-E** | Synergy, Simplicity, Generic Fitness & Conceptual-Burden Audit | G4 | planned |
 | **011-F** | Archetypal, Exceptional & Progressive-Disclosure Misfit Replay | G5 — ordinary/exceptional | planned |
@@ -148,9 +180,9 @@ INSUFFICIENT EVIDENCE — CONCEPTUAL BLOCKER
 ```text
 011-A COMPLETE
   ↓
-011-B NEXT
+011-B COMPLETE
   ↓
-011-C
+011-C NEXT
   ↓
 011-D
   ↓
@@ -192,7 +224,7 @@ Phase 011 must preserve unless a genuine misfit disproves them:
 
 Architecture, code, tests, current APIs and provider models may expose a counterexample, feasibility constraint or familiarity pressure. They do not become design authority merely by existing.
 
-011-A adds no executable tests or implementation restrictions intended to freeze the audit method.
+011-B adds no executable tests or implementation restrictions.
 
 ## Positive exit boundary
 
@@ -210,4 +242,4 @@ IMPLEMENTATION NEXT          NOT YET
 
 ## Current next boundary
 
-**011-B — Composed Specificity, Purpose Alignment & Boundary Sharpness Audit** is next eligible.
+**011-C — Familiarity, Reuse, Vocabulary & External-Model Comparison Audit** is next eligible.
