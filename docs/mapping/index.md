@@ -26,9 +26,13 @@ Phase 011                    ACTIVE
 011-A                        COMPLETE
 011-B                        COMPLETE
 011-C                        COMPLETE
-011-D                        NEXT ELIGIBLE
+011-D                        COMPLETE
+011-E                        COMPLETE
+011-F                        NEXT ELIGIBLE
 G1 specificity               CURRENTLY CLOSED
 G2 familiarity               CURRENTLY CLOSED
+G3 integrity                 STRONG EVIDENCE / 011-G STRESS REVALIDATION REQUIRED
+G4 synergy / simplicity      CURRENTLY CLOSED
 Jackson concept design       NOT COMPLETE
 implementation readiness     NOT READY
 implementation start         NOT STARTED
@@ -95,29 +99,38 @@ D4  distributed / host operational drill-down
 
 These are presentation obligations, not screens, endpoints, API tiers or persistence layers.
 
-## Phase 011 G1/G2 revalidation
+## Phase 011 revalidation through 011-E
 
-011-B finds no specificity-driven mapping defect. 011-C then compares canonical language against current external analogues and strengthens compatibility guidance without changing the Phase 010-D linguistic contract.
+011-B finds no specificity-driven mapping defect. 011-C strengthens compatibility vocabulary without changing F3. 011-D confirms owner-qualified current/historical semantics survive synchronization, invalidation and reconstruction. 011-E then tests whether the final mapped experience can remain simple without collapsing the concept model.
+
+Current result:
 
 ```text
-G1 specificity                        CURRENTLY CLOSED
-G2 familiarity                        CURRENTLY CLOSED
-R010-01                               NO DEFECT
-R010-02                               NO DEFECT — COMPATIBILITY GUIDANCE STRENGTHENED
-F3 linguistic mapping                 CURRENTLY CLOSED
-mapping reopen                        NONE
+G1 specificity                         CURRENTLY CLOSED
+G2 familiarity                         CURRENTLY CLOSED
+G3 integrity                           STRONG EVIDENCE / 011-G STRESS REVALIDATION REQUIRED
+G4 synergy / simplicity                CURRENTLY CLOSED
+R010-01                                NO DEFECT
+R010-02                                NO DEFECT — COMPATIBILITY GUIDANCE STRENGTHENED
+R010-04                                NO DEFECT
+R010-05 structural simplicity portion  NO DEFECT — 011-F REPLAY PENDING
+mapping reopen                         NONE
 ```
 
-Qualified terms such as `fit/train`, model-shaped `model`, synthetic-production `sample`, validation result and `lineage` may aid presentation only when canonical owner semantics remain recoverable. Generic `run`, `job`, `artifact`, `metadata`, `metric`, `validation`, `synthesizer` or external object models do not become mapping authority.
+011-E specifically confirms that D0-D4 can **structurally** reduce actor-visible burden because:
 
-No public method name, field name, serialized enum, UI label or adapter contract is selected by 011-C.
+- D0/D1 retain the owner, immediate action, material semantic basis and material limitations;
+- D2 introduces optional Constraint/Execution/Evidence/Provenance detail only when present or requested;
+- D3 retains exact current-versus-historical explanation;
+- D4 defers high-volume host/distributed detail without making it authoritative;
+- absent capabilities do not create empty mandatory steps.
 
-## Active integrity boundary
-
-011-D now re-tests whether synchronization, correction, invalidation and historical composition preserve the same owner-qualified semantics. If it finds a genuine mapping defect, only the smallest affected Phase 010 authority should reopen.
+This is not yet the final progressive-disclosure verdict. 011-F must replay archetypal and exceptional end-to-end histories to ensure a concise D0/D1 view never conceals a fact material to the immediate semantic decision.
 
 ## Current next boundary
 
-**011-D — Integrity Under Synchronization, Correction, Invalidation & Historical Composition** is next eligible.
+**011-F — Archetypal, Exceptional & Progressive-Disclosure Misfit Replay** is next eligible.
+
+If 011-F finds a genuine mapping/disclosure defect, reopen only the smallest affected Phase 010 authority. A poor hypothetical UI implementation alone is not a mapping defect.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
