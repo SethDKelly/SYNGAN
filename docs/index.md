@@ -20,13 +20,14 @@ methodology / design authority
   > design-quality / misfit validation
   > Jackson concept-design consolidation
   > Phase 013 architecture reconciliation authority
-  > reconciled representation / architecture design
+  > completed Phase 013 reconciliation decisions
+  > retained unreconciled architecture
   > implementation planning history
   > code / tests / deployment evidence
   > ADR rationale / phase history / backlog / examples
 ```
 
-Completed concept design is upstream authority for Phase 013 architecture reconciliation. Existing architecture/source/tests may expose a genuine misfit, but they may not silently redefine concept semantics.
+Completed concept design and completed Phase 013 subgroup decisions are upstream authority for unreconciled architecture. Existing architecture/source/tests may expose a genuine misfit, but they may not silently redefine concept semantics.
 
 ## Current governing authority
 
@@ -46,6 +47,8 @@ Completed concept design is upstream authority for Phase 013 architecture reconc
 - [Phase 013 Architecture Reconciliation Authority](authority/phase-013-architecture-reconciliation-authority.md)
 - [Phase 013](phases/013/index.md)
 - [013-A Reconciliation Authority / Corpus Inventory / Taxonomy](phases/013/013-A-reconciliation-authority-retained-corpus-inventory-precedence-reset-discrepancy-taxonomy.md)
+- [013-B Representation Phase Record](phases/013/013-B-representation-layering-public-contract-identity-revision-handle-view-reconciliation.md)
+- [013-B Representation Reconciliation Authority](architecture/phase-013-b-representation-layering-public-contract-identity-view-reconciliation.md)
 - [Representation & Architecture](architecture/index.md)
 
 ## Current state
@@ -62,7 +65,8 @@ A1-H2                                CURRENTLY CLOSED
 Jackson concept design               COMPLETE FOR CURRENT PRODUCT SCOPE
 Phase 013                            ACTIVE
 013-A                                COMPLETE
-013-B                                NEXT ELIGIBLE
+013-B                                COMPLETE
+013-C                                NEXT ELIGIBLE
 R1 architecture reconciliation       DOWNSTREAM / IN PROGRESS
 whole-design completion              NOT YET — PHASE 014
 implementation readiness             NOT READY
@@ -76,36 +80,41 @@ SYNGAN remains a deployable Python/Spark framework package, agnostic across comp
 
 ## Completed concept-design package
 
-Current Jackson concept design includes:
-
-```text
-problem / actors / outcomes / scale constraints
-11 accepted concept specifications
-Phase 009 inclusion dependence / application family
-13 active cross-concept synchronizations
-Phase 010 concept mapping / semantic parity
-Phase 011 design-quality / residual-misfit closure
-Phase 012 current-state H1 audit + H2 completion decision
-```
+Current Jackson concept design includes the problem/actor/outcome authority, eleven concept specifications, Phase 009 application-family/synchronization authority, Phase 010 mapping/parity, Phase 011 quality/residual closure and Phase 012 H1/H2 completion decision.
 
 ## Phase 013 reconciliation method
 
-013-A inventoried **19 substantive retained architecture documents** and **10 ADRs**, reset architecture precedence beneath completed Phase 012 authority, and established:
+013-A inventoried **19 substantive retained architecture documents** and **10 ADRs**, reset precedence, and established `AR-0..AR-9`, `AMAT-0..AMAT-3`, and the dispositions `RETAIN / CLARIFY / SUPERSEDE / CORRECT / DEFER / UPSTREAM-REOPEN`.
+
+## 013-B representation result
+
+013-B retains the typed representation/identity/handle architecture with bounded clarifications:
+
+- architecture represents rather than owns upstream semantics;
+- logical architecture layers do not imply package/service/API tiers;
+- optional surfaces remain optional while preserving parity when present;
+- stable identity remains distinct from provider/location identity;
+- logical identity, exact semantic revision/commitment, current-state version/freshness and representation schema version remain separate;
+- handles/views resolve and compose authority rather than becoming detached canonical entities;
+- retry/resume/reconcile/cancel operational state remains Execution-owned;
+- result-handle grouping does not create a universal Result lifecycle;
+- D0-D4 remains semantic disclosure depth rather than technical architecture tiers.
 
 ```text
-AR-0..AR-9       discrepancy taxonomy
-AMAT-0..AMAT-3   architecture materiality
-RETAIN / CLARIFY / SUPERSEDE / CORRECT / DEFER / UPSTREAM-REOPEN
+AMAT-2 representation defects   0
+AMAT-3 blockers                 0
+AR-9 contradictions             0
+upstream reopen                 NONE
 ```
 
-Known entry candidates: **6**. 013-A declared **0 AMAT-2 defects**, **0 AMAT-3 blockers**, and **no upstream reopen**. Domain-specific reconciliation now begins with 013-B.
+Historical `007-D` synchronization-count wording and old representation-precedence wording remain tracked for 013-I cleanup.
 
 ## Phase 013 sequence
 
 ```text
 013-A  authority / corpus inventory / precedence / discrepancy taxonomy  COMPLETE
-013-B  representation / layering / public contract / identity / views   NEXT
-013-C  persistence / history / transaction-concurrency / migration
+013-B  representation / layering / public contract / identity / views   COMPLETE
+013-C  persistence / history / transaction-concurrency / migration      NEXT
 013-D  distributed data / topology / manifest / candidate-seal-promotion
 013-E  Strategy/runtime / dependency / security / offline-no-egress
 013-F  Execution / Attempt / recovery / fencing / admission
@@ -115,43 +124,33 @@ Known entry candidates: **6**. 013-A declared **0 AMAT-2 defects**, **0 AMAT-3 b
 013-J  consolidation / R1 decision / Phase 014 handoff
 ```
 
-The Phase 007 consolidated architecture remains the strongest retained pre-completion synthesis, but it is a reconciliation subject rather than automatic current authority.
-
 ## Residual accounting carried downstream
 
 ```text
-unresolved MAT-2 findings                  0
-MAT-3 blockers                             0
-unresolved M2-M5 current-design defects    0
-upstream reopens required                  0
-resolved M1 quality-rule families          2
-M6 Phase-013 deferrals                     1
-M8 future-rediscovery finding groups       4
+unresolved current conceptual defects    0
+M6 Phase-013 deferrals                   1
+M8 future-rediscovery finding groups     4
 ```
 
-The M6 item is historical synchronization-label/documentation drift in retained Phase 006/007 architecture material. Current Phase 009 synchronization semantics are authoritative.
-
-M8 findings remain conditional future rediscovery gates, not architecture/implementation pre-approvals.
+Current Phase 009 synchronization semantics remain authoritative; M8 findings remain future rediscovery gates, not architecture/implementation pre-approvals.
 
 ## Durable quality rules
 
 Decision-material disclosure:
 
-> **Progressive disclosure may defer explanatory depth, but it must not defer a qualifier whose omission could change the actor's immediate semantic decision or make current state appear stronger than the owning concept supports.**
+> **Do not hide a qualifier whose omission could change the actor's immediate semantic decision or make current state appear stronger than the owning concept supports.**
 
 Provider evidence:
 
-> **Consume provider facts only at the evidentiary strength they actually establish; familiar provider vocabulary never automatically escalates into stronger SYNGAN semantics.**
+> **Consume provider facts only at the evidentiary strength they actually establish.**
 
 Future rediscovery:
 
-> **Genericity means accepting new instances within a stable purpose. Rediscover before implementation when future scope introduces an independent product-facing purpose with durable state/history and independently meaningful actions/lifecycle.**
+> **Rediscover before architecture/implementation when future scope introduces an independent product-facing purpose with durable state/history and independently meaningful actions/lifecycle.**
 
 ## Phase 013 boundary
 
-Phase 013 may revise retained representation/architecture where it conflicts with completed concept design, but it may not revise concept authority merely to preserve historical architecture convenience.
-
-Only a demonstrated AR-9 finding may justify upstream reopen.
+Phase 013 may revise retained representation/architecture where it conflicts with completed design, but only a demonstrated AR-9 finding may justify upstream reopen.
 
 Phase 013 remains design-only.
 
@@ -174,4 +173,4 @@ IMPLEMENTATION NEXT        NOT YET
 
 ## Current next boundary
 
-**013-B — Representation Layering, Public Contract, Identity, Revision, Handle & View Reconciliation** is next eligible.
+**013-C — Control Persistence, Historical Reference, Transaction/Concurrency, Migration & Recovery-State Reconciliation** is next eligible.
