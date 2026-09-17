@@ -24,10 +24,9 @@ For concepts `C1` and `C2`, the governing question is:
 - [Contraction / Extension Consequences](contraction-extension-consequences.md) — 009-D.
 - [Phase 009 Consolidation](../authority/phase-009-dependence-composition-consolidation.md).
 - [Phase 010 Concept Mapping Consolidation](../authority/phase-010-concept-mapping-consolidation.md).
-- [011-B Composed Specificity Audit](../authority/composed-specificity-purpose-boundary-audit.md).
 - [011-E Synergy / Simplicity Audit](../authority/composed-synergy-simplicity-generic-fitness-burden-audit.md).
-- [011-F Archetypal / Exceptional Replay](../authority/archetypal-exceptional-progressive-disclosure-misfit-replay.md).
-- [011-G Adversarial / Recovery / Scale / Provider Stress Validation](../authority/adversarial-degraded-recovery-scale-provider-semantic-leakage-validation.md) — **current stress revalidation**.
+- [011-G Adversarial / Recovery / Scale / Provider Stress Validation](../authority/adversarial-degraded-recovery-scale-provider-semantic-leakage-validation.md).
+- [011-H Future-Scope / Extensibility Audit](../authority/future-scope-extensibility-new-capability-rediscovery-audit.md) — **current extension/rediscovery revalidation**.
 
 ## Current phase state
 
@@ -43,19 +42,10 @@ E1-E5 composition                 CURRENTLY CLOSED
 Phase 010                         COMPLETE
 F1-F5 mapping                     CURRENTLY CLOSED
 Phase 011                         ACTIVE
-011-A                             COMPLETE
-011-B                             COMPLETE
-011-C                             COMPLETE
-011-D                             COMPLETE
-011-E                             COMPLETE
-011-F                             COMPLETE
-011-G                             COMPLETE
-011-H                             NEXT ELIGIBLE
-G1 specificity                    CURRENTLY CLOSED
-G2 familiarity                    CURRENTLY CLOSED
-G3 integrity                      CURRENTLY CLOSED
-G4 synergy / simplicity           CURRENTLY CLOSED
-G5 scenario / adversarial         CURRENTLY CLOSED
+011-A..011-H                      COMPLETE
+011-I                             NEXT ELIGIBLE
+G1-G6                             CURRENTLY CLOSED
+G7 residual misfit                PARTIAL — 011-I OWNS CLOSURE
 ```
 
 ## Canonical graph result
@@ -89,7 +79,7 @@ L-CLUSTER = { Learning, Learned State }
 E-CLUSTER = { Evaluation, Evidence }
 ```
 
-The condensed graph is acyclic.
+The condensed graph remains acyclic.
 
 ## Application-family rule
 
@@ -111,34 +101,61 @@ E-KERNEL = Evaluation Criterion + Evaluation + Evidence
 
 Authority-only coherent members include Data Meaning, Synthesis Strategy, Constraint and Evaluation Criterion independently.
 
-## Phase 011 family revalidation through 011-G
+## 011-H extension result
 
-011-E confirms the application family is a primary simplicity mechanism. 011-F confirms all required family/capability histories remain truthful under archetypal/exceptional use. 011-G then stress-tests optionality under recovery, scale and provider pressure.
+011-H revalidates Phase 009-D's distinction between ordinary extension and new-concept discovery.
 
-Stress consequences remain intact:
+Future capability pressure is classified as:
 
-- direct Generation does not acquire Learning/Learned State because a provider calls an implementation object a `model` or `job`;
-- Evaluation/Evidence do not become universal Generation prerequisites because a platform exposes generic validation/quality features;
-- provider lineage capability does not make Provenance mandatory for variants that do not claim it;
-- absence of Execution remains valid for Execution-light conceptual variants; provider jobs do not create a hidden universal Execution requirement at the concept-family level;
-- a recovery condition does not add a Recovery concept to every family member;
-- degraded capacity does not add a Degraded Mode concept;
-- topology or text pressure does not add Relationship/Text/Tokenizer concepts merely to satisfy a provider/runtime representation;
-- scale pressure cannot contract a committed family member's semantics by dropping included capabilities/requirements after commitment.
+```text
+F-1  fits existing concept unchanged
+F-2  fits new state/action within existing purpose
+F-3  requires new synchronization only
+F-4  requires application-family capability refinement
+F-5  requires genuine concept rediscovery
+F-6  remains external authority / non-goal
+F-7  insufficient evidence
+```
+
+Current likely extensions such as new Strategy families, richer structured topology, advanced text, new Evaluation methods, runtime/accelerator breadth and new source-derived Learned State forms require **no current inclusion-dependence change**.
 
 Current result:
 
 ```text
-application-family edge change        NONE
-conditional-family rule change        NONE
-provider-driven inclusion edge        NONE
-recovery-driven inclusion edge        NONE
-scale-driven inclusion edge           NONE
-catalog change                        NONE
-R010-03                               NO DEFECT
-R010-06                               NO DEFECT
-R010-08                               NO DEFECT
+universal inclusion edge change          NONE
+SCC change                               NONE
+conditional family rule change           NONE
+new current family kernel                NONE
+current new concept                      NONE
+current new synchronization              NONE
+R010-07                                  NO DEFECT
+G6                                       CURRENTLY CLOSED
 ```
+
+## Rediscovery before family redesign
+
+When future scope introduces an independent product-facing purpose with durable state/history and independently meaningful actions/lifecycle, concept discovery happens **before** application-family edges are invented.
+
+Known future `M8` triggers include:
+
+- formal composable privacy/accounting;
+- product-owned governance/release;
+- independent output publication/versioning/retirement;
+- independently reusable request/cohort definitions;
+- independently governed graph/relationship state;
+- durable streaming/session/feed state not reducible to bounded activities;
+- product-owned economic/resource accounting;
+- product-owned reusable knowledge/memory beyond Strategy/Learned State.
+
+If a future concept is accepted, D1-D4 and relevant synchronizations must be designed afresh for that concept. No implementation bundle, plugin, feature flag, package extra or provider object determines those relations automatically.
+
+## Synchronization-only / capability-refinement extensions
+
+A future `F-3` synchronization candidate is valid only when existing concepts remain the owners, a genuinely new cross-concept relation is required, and the existing synchronization inventory cannot express it.
+
+A future `F-4` application-family refinement is valid when current concepts remain sufficient but a newly advertised capability needs a more explicit optional inclusion/conditional-composition rule.
+
+011-H finds no current case requiring either change.
 
 ## Product-scope documentation rule
 
@@ -163,14 +180,8 @@ Evaluation before Evidence
 
 This is explanation/design order, not implementation order or a mandatory runtime wizard.
 
-## Future-scope boundary
-
-011-H may refine capability-conditional family rules if a plausible extension can reuse existing concepts but needs a new inclusion condition. It must not add an edge merely because a provider/library implementation happens to bundle objects together.
-
-A genuine new concept requires independent purpose + state + action/lifecycle evidence before application-family inclusion can be defined.
-
 ## Current next boundary
 
-**011-H — Future-Scope, Extensibility, New-Capability Pressure & Rediscovery Triggers** is next eligible.
+**011-I — Residual Conceptual Misfit Register, Reopen/Defer/Accept Decisions & Closure Preparation** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
