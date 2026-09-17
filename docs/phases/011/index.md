@@ -20,14 +20,16 @@ Phase 011 remains concept design only.
 - [011-C Phase Record](011-C-familiarity-reuse-vocabulary-external-model-comparison-audit.md)
 - [011-D Phase Record](011-D-integrity-under-synchronization-correction-invalidation-historical-composition.md)
 - [011-E Phase Record](011-E-synergy-simplicity-generic-fitness-conceptual-burden-audit.md)
+- [011-F Phase Record](011-F-archetypal-exceptional-progressive-disclosure-misfit-replay.md)
 - [Design Quality Validation Authority](../../authority/design-quality-validation-authority.md)
 - [Composed Specificity Audit](../../authority/composed-specificity-purpose-boundary-audit.md)
 - [Composed Familiarity Audit](../../authority/composed-familiarity-reuse-vocabulary-external-model-audit.md)
 - [Composed Integrity Audit](../../authority/composed-integrity-synchronization-history-audit.md)
-- [Synergy, Simplicity, Generic Fitness & Conceptual-Burden Audit](../../authority/composed-synergy-simplicity-generic-fitness-burden-audit.md) — **current G4 authority**
+- [Synergy, Simplicity, Generic Fitness & Conceptual-Burden Audit](../../authority/composed-synergy-simplicity-generic-fitness-burden-audit.md)
+- [Archetypal, Exceptional & Progressive-Disclosure Misfit Replay](../../authority/archetypal-exceptional-progressive-disclosure-misfit-replay.md) — **current 011-F / G5 ordinary-exceptional authority**
 - [Jackson Methodology Completion Matrix](../../authority/jackson-methodology-completion-matrix.md)
 
-## Current state after 011-E
+## Current state after 011-F
 
 ```text
 Phase 008                    COMPLETE
@@ -40,13 +42,14 @@ Phase 011 decomposition      COMPLETE
 011-C                        COMPLETE
 011-D                        COMPLETE
 011-E                        COMPLETE
-011-F                        NEXT ELIGIBLE
+011-F                        COMPLETE
+011-G                        NEXT ELIGIBLE
 
 G1 specificity               CURRENTLY CLOSED
 G2 familiarity               CURRENTLY CLOSED
 G3 integrity                 STRONG EVIDENCE / 011-G STRESS REVALIDATION REQUIRED
 G4 synergy / simplicity      CURRENTLY CLOSED
-G5 scenario / adversarial    PARTIAL TO STRONG
+G5 scenario / adversarial    STRONG EVIDENCE / 011-G STRESS REVALIDATION REQUIRED
 G6 future-scope              STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
 G7 residual misfit register  PARTIAL
 
@@ -73,8 +76,7 @@ R010-04  synergy versus conceptual burden
          NO DEFECT — 011-E
 
 R010-05  progressive-disclosure misfit
-         NO DEFECT IN 011-E STRUCTURAL SIMPLICITY AUDIT
-         FINAL SCENARIO DISPOSITION PENDING 011-F
+         NO DEFECT — 011-E STRUCTURAL + 011-F SCENARIO REPLAY
 
 R010-06  provider / host semantic leakage
          OPEN — 011-G
@@ -151,14 +153,9 @@ MAT-3 blockers                                  0
 
 ## 011-E synergy / simplicity result
 
-011-E tests whether the eleven concepts and thirteen synchronization types deliver enough composed value to justify their conceptual burden.
-
 ```text
-concept removal justified                      0
-concept merge justified                        0
-concept split justified                        0
-new concept justified                          0
-synchronization add/remove/merge justified     0
+concept removal / merge / split / addition      0
+synchronization add/remove/merge justified      0
 reduced-family burden replay                    PASS
 positive composed synergies                     CONFIRMED
 repeated-pattern missing-purpose probe          PASS
@@ -168,19 +165,33 @@ progressive-disclosure structural simplicity    PASS
 hidden universal coordinator                    NONE
 MAT-2 findings                                  0
 MAT-3 blockers                                  0
-upstream reopen                                 NONE
 R010-04                                         NO DEFECT
-R010-05 simplicity portion                      NO DEFECT — 011-F REPLAY PENDING
 G4 synergy / simplicity / generic fitness       CURRENTLY CLOSED
 ```
 
-Principal bounded `MAT-1` burden watch points remain:
+## 011-F archetypal / exceptional replay result
 
-- the Evaluation Criterion / Evaluation / Evidence trio has real first-use learning cost but preserves material question/method/finding distinctions;
-- Provenance high fan-in can appear hub-like even though authority fan-out remains low;
-- the full eleven-concept catalog has discoverability cost, bounded by application-family contraction, task-centered mapping and progressive disclosure.
+011-F replays the ten required application-family/capability histories through one archetypal and one material exceptional branch each.
 
-None currently changes purpose, ownership, lifecycle or valid application-family behavior.
+```text
+required scenario families                       10 / 10
+archetypal histories                             10 / 10 PASS
+material exceptional histories                   10 / 10 PASS
+paired scenario replays                          20 / 20 PASS
+progressive-disclosure concealment classes        6 / 6 PASS
+MAT-2 findings                                    0
+MAT-3 blockers                                    0
+upstream reopen                                   NONE
+R010-05                                           NO DEFECT
+```
+
+Decision-material disclosure rule:
+
+> **Progressive disclosure may defer explanatory depth, but it must not defer a qualifier whose omission could change the actor's immediate semantic decision or make current state appear stronger than the owning concept supports.**
+
+This clarification preserves the existing Phase 010 mapping ownership model. It does not introduce a new status concept, workflow, surface or API tier.
+
+011-F closes the ordinary/archetypal and exceptional component of G5. 011-G still owns adversarial, degraded, recovery, scale and provider-semantic-leakage stress.
 
 ## Subgroups
 
@@ -191,8 +202,8 @@ None currently changes purpose, ownership, lifecycle or valid application-family
 | 011-C | Familiarity / reuse / vocabulary / external models | G2 / B4 | **complete** |
 | 011-D | Synchronization / correction / invalidation / historical integrity | G3 baseline | **complete** |
 | 011-E | Synergy / simplicity / generic fitness / conceptual burden | G4 | **complete** |
-| 011-F | Archetypal / exceptional / progressive-disclosure replay | G5 ordinary/exceptional | **next eligible** |
-| 011-G | Adversarial / degraded / recovery / scale / provider leakage | G3/G5 stress | planned |
+| 011-F | Archetypal / exceptional / progressive-disclosure replay | G5 ordinary/exceptional | **complete** |
+| 011-G | Adversarial / degraded / recovery / scale / provider leakage | G3/G5 stress | **next eligible** |
 | 011-H | Future scope / extensibility / rediscovery triggers | G6 | planned |
 | 011-I | Residual misfit register / dispositions | G7 | planned |
 | 011-J | Phase consolidation / G1-G7 decision / Phase 012 handoff | consolidation | planned |
@@ -210,9 +221,9 @@ None currently changes purpose, ownership, lifecycle or valid application-family
   ↓
 011-E COMPLETE
   ↓
-011-F NEXT
+011-F COMPLETE
   ↓
-011-G
+011-G NEXT
   ↓
 011-H
   ↓
@@ -236,12 +247,13 @@ Unless a later genuine misfit disproves them, preserve:
 - Provenance high fan-in with low authority fan-out;
 - cross-cutting qualifiers remain cross-cutting absent independent lifecycle;
 - no Workflow / Activity / Result / Status / Validation / Quality umbrella concept;
-- D0-D4 progressive disclosure may simplify encounter but never erase material semantics;
+- D0/D1 retain every qualifier material to the immediate semantic decision;
+- D2-D4 may defer explanatory, historical and host-operational depth only when that detail is not decision-material;
 - package-first Python/Spark product form and Spark-host platform agnosticism.
 
 ## Anti-implementation boundary
 
-Phase 011 does not select implementation inheritance, module count, generic base classes, transactions, events, persistence, services, package topology, workflow engines, provenance storage, feature flags, public APIs or executable tests intended to freeze the design.
+Phase 011 does not select implementation inheritance, module count, generic base classes, transactions, events, persistence, services, package topology, workflow engines, provenance storage, feature flags, public APIs, status-object shapes or executable tests intended to freeze the design.
 
 ## Positive exit boundary
 
@@ -259,4 +271,4 @@ IMPLEMENTATION NEXT          NOT YET
 
 ## Current next boundary
 
-**011-F — Archetypal, Exceptional & Progressive-Disclosure Misfit Replay** is next eligible.
+**011-G — Adversarial, Degraded, Recovery, Scale & Provider-Semantic-Leakage Validation** is next eligible.
