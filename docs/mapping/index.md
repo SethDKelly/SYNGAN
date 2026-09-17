@@ -29,12 +29,13 @@ Phase 011                    ACTIVE
 011-D                        COMPLETE
 011-E                        COMPLETE
 011-F                        COMPLETE
-011-G                        NEXT ELIGIBLE
+011-G                        COMPLETE
+011-H                        NEXT ELIGIBLE
 G1 specificity               CURRENTLY CLOSED
 G2 familiarity               CURRENTLY CLOSED
-G3 integrity                 STRONG EVIDENCE / 011-G STRESS REVALIDATION REQUIRED
+G3 integrity                 CURRENTLY CLOSED
 G4 synergy / simplicity      CURRENTLY CLOSED
-G5 scenario / adversarial    STRONG EVIDENCE / 011-G STRESS REVALIDATION REQUIRED
+G5 scenario / adversarial    CURRENTLY CLOSED
 Jackson concept design       NOT COMPLETE
 implementation readiness     NOT READY
 implementation start         NOT STARTED
@@ -51,6 +52,7 @@ implementation next          NOT YET
 - [010-F Application-Family Workflow Composition, Optional-Capability Experience & Progressive Disclosure](application-family-workflow-composition-progressive-disclosure.md)
 - [010-G Human/Programmatic Semantic Parity, Degraded/Recovery/Scale & Mapping-Misfit Audit](human-programmatic-semantic-parity-degraded-recovery-scale-misfit-audit.md)
 - [Phase 010 Consolidation Authority](../authority/phase-010-concept-mapping-consolidation.md)
+- [011-G Stress Validation](../authority/adversarial-degraded-recovery-scale-provider-semantic-leakage-validation.md) — downstream design-quality revalidation of provider/recovery/scale mapping truthfulness
 
 ## Final mapping coverage
 
@@ -61,7 +63,7 @@ implementation next          NOT YET
 5 / 5 explanation patterns                SEMANTICALLY MAPPED
 11 / 11 accepted concept names            LINGUISTICALLY ALIGNED
 66 / 66 command groups                    PHYSICAL RESPONSIBILITY MAPPED
-52 / 52 query groups                      PHYSICAL RESPONSIBILITY MAPPED
+52 / 52 query physical responsibility     52 / 52 MAPPED
 10 / 10 required family/capability replays PASS
 20 / 20 difficult-condition parity probes PASS
 mapping blocker                           NONE FOUND
@@ -85,10 +87,6 @@ SYNGAN is a deployable Python/Spark framework package, agnostic across compliant
 
 Primary interaction remains package/SDK, notebook and embedded automation. CLI, reports, rich/graphical presentation, network service exposure and dedicated operator/admin applications remain optional adapters or host integrations.
 
-## Application-family composition
-
-All ten required family/capability replays pass. Optional concepts create no mandatory empty steps. Existing Learned State and reusable authorities may be selected rather than recreated. Direct Generation is not a degraded learned workflow. Evaluation/Evidence, Execution and Provenance remain conditional rather than universal stages.
-
 ## Progressive disclosure
 
 ```text
@@ -101,46 +99,51 @@ D4  distributed / host operational drill-down
 
 These are presentation obligations, not screens, endpoints, API tiers or persistence layers.
 
-## Phase 011 revalidation through 011-F
-
-011-B finds no specificity-driven mapping defect. 011-C strengthens compatibility vocabulary without changing F3. 011-D confirms owner-qualified current/historical semantics survive synchronization, invalidation and reconstruction. 011-E confirms progressive disclosure can structurally simplify experience without collapsing the concept model.
-
-011-F then performs the concrete scenario replay:
-
-```text
-required scenario families                       10 / 10
-archetypal histories                             10 / 10 PASS
-material exceptional histories                   10 / 10 PASS
-paired scenario replays                          20 / 20 PASS
-progressive-disclosure concealment classes        6 / 6 PASS
-MAT-2 / MAT-3 findings                            0 / 0
-mapping reopen                                    NONE
-R010-05                                           NO DEFECT
-```
-
-011-F clarifies the D0/D1 contract:
+Decision-material rule from 011-F:
 
 > **Progressive disclosure may defer explanatory depth, but it must not defer a qualifier whose omission could change the actor's immediate semantic decision or make current state appear stronger than the owning concept supports.**
 
-Therefore, where decision-material, D0/D1 must preserve distinctions such as:
+## 011-G mapping/provider stress result
 
-- candidate versus completed result;
-- favorable/unfavorable/indeterminate/bounded Evidence strength;
-- current-use status versus historical exact use;
-- semantic completion versus Execution/Attempt state;
-- unresolved cancellation or authority-continuity qualification;
-- optional capability absence when omission could be mistaken for failure.
+011-G finds no mapping reopen under hostile/degraded/recovery/scale/provider pressure.
 
-D2-D4 may continue to defer full method detail, Attempt history, Provenance traversal, revision diff and host/distributed diagnostics when those details do not change the immediate semantic decision.
+```text
+provider job/run lifecycle                provider operational truth only
+provider SUCCESS / COMPLETED              not parent semantic completion
+provider model/artifact/catalog object    not canonical Strategy/State/result by default
+provider lineage                          not complete SYNGAN Provenance authority
+provider identity/permission              integration input, not universal action authority
+restored persistence                      historical knowledge, not current mutation authority
+surviving provider effect                 reconciliation evidence, not automatic semantic fact
+partial bytes/checkpoints                 non-final unless owning invariants establish result
+resource pressure                         may queue/block/fail; cannot silently weaken commitment
+approximation                             explicit and owned by changed semantic concept
+runtime package on driver                 not distributed runtime closure
+```
 
-This is a Phase 011 quality clarification, not a new Phase 010 mapping owner or a public API/UI contract.
+Provider-evidence qualification:
 
-## Active stress boundary
+> **A host/provider fact must be exposed and consumed only at the strength that provider fact actually establishes. Familiar words such as `success`, `completed`, `model`, `artifact`, `lineage`, `current`, or `production` cannot erase the canonical owner or strengthen the claim by presentation convenience.**
 
-011-G now stress-tests whether the same mapping/concept distinctions remain truthful under adversarial, degraded, recovery, scale and provider-semantic pressure. A genuine 011-G defect may reopen the smallest affected Phase 009/010/current-concept authority.
+This strengthens the existing physical-host mapping boundary without changing F1-F5.
+
+## Current Phase 011 mapping revalidation state
+
+```text
+F1-F5                                CURRENTLY CLOSED
+G3 integrity                         CURRENTLY CLOSED
+G5 scenario / adversarial            CURRENTLY CLOSED
+R010-03                              NO DEFECT
+R010-05                              NO DEFECT
+R010-06                              NO DEFECT
+R010-08                              NO DEFECT
+Phase 010 mapping reopen             NONE
+```
+
+011-H may use future provider/integration capabilities as pressure evidence, but must not change mapping merely to resemble external product objects.
 
 ## Current next boundary
 
-**011-G — Adversarial, Degraded, Recovery, Scale & Provider-Semantic-Leakage Validation** is next eligible.
+**011-H — Future-Scope, Extensibility, New-Capability Pressure & Rediscovery Triggers** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
