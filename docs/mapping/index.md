@@ -1,7 +1,7 @@
 ---
 type: Concept Mapping Index
 title: SYNGAN Concept Mapping, Interaction & Linguistic Design
-status: active
+status: complete-current
 ---
 
 # SYNGAN Concept Mapping, Interaction & Linguistic Design
@@ -19,17 +19,17 @@ Phase 009                    COMPLETE
 Phase 010                    COMPLETE
 010-A..010-H                 COMPLETE
 F1-F5                        CURRENTLY CLOSED
-Phase 011                    ACTIVE
-011-A..011-I                 COMPLETE
-011-J                        NEXT ELIGIBLE
+Phase 011                    COMPLETE
+011-A..011-J                 COMPLETE
 G1-G7                        CURRENTLY CLOSED
+H1/H2                        OPEN — PHASE 012
 Jackson concept design       NOT COMPLETE
 implementation readiness     NOT READY
 implementation start         NOT STARTED
 implementation next          NOT YET
 ```
 
-011-I confirms no residual Phase 010 mapping defect and no mapping reopen.
+Phase 011 closes with no residual Phase 010 mapping defect and no mapping reopen.
 
 ## Final mapping coverage
 
@@ -75,8 +75,6 @@ D3  historical / explanatory depth
 D4  distributed / host operational drill-down
 ```
 
-These are presentation obligations, not screens, endpoints, API tiers or persistence layers.
-
 Decision-material rule:
 
 > **Progressive disclosure may defer explanatory depth, but it must not defer a qualifier whose omission could change the actor's immediate semantic decision or make current state appear stronger than the owning concept supports.**
@@ -85,20 +83,22 @@ Decision-material rule:
 
 Provider facts remain provider-qualified evidence/integration facts rather than semantic-owner substitutions. Restored state remains historical rather than current authority, physical material remains non-final without owner invariants, and resource/approximation pressure cannot silently weaken mapped semantic commitments.
 
-Provider-evidence rule:
-
-> **Consume provider facts only at the strength they actually establish; familiar provider vocabulary never escalates automatically into stronger SYNGAN semantics.**
+> **Consume provider facts only at the strength they actually establish; familiar provider vocabulary never automatically escalates into stronger SYNGAN semantics.**
 
 ## Future-scope and residual boundary
 
-Likely future Strategy, topology, text, Evaluation, runtime/platform and reusable-state capability breadth creates no current mapping reopen.
+Likely future Strategy, topology, text, Evaluation, runtime/platform and reusable-state breadth creates no current mapping reopen.
 
-If future product scope triggers M8 concept rediscovery, mapping follows **after** concept/dependence/synchronization design; placeholder mapping for future `Privacy`, `Governance`, `Output`, `Session`, `Relationship`, `Resource`, `Knowledge` or similar concepts is prohibited.
+If future product scope triggers M8 rediscovery, mapping follows **after** concept/dependence/synchronization design; placeholder mapping for future concepts is prohibited.
 
-011-I records one M6 downstream documentation/architecture reconciliation item for historical synchronization labels. It does not change current mapping semantics.
+The bounded M6 historical synchronization-label issue is downstream representation/architecture reconciliation only and does not change current mapping semantics.
+
+## Phase 012 boundary
+
+Phase 012 must verify this completed mapping against the latest problem, concepts, application family, synchronizations and Phase 011 quality authority as one current Jackson concept design.
 
 ## Current next boundary
 
-**011-J — Phase 011 Consolidation, G1-G7 Completion Decision & Phase 012 Handoff** is next eligible.
+**Phase 012 — Jackson Concept-Design Consolidation & Completion Decision** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
