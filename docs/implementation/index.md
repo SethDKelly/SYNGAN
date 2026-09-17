@@ -27,32 +27,16 @@ D1-D4                      CURRENTLY CLOSED
 E1-E5                      CURRENTLY CLOSED
 Phase 010                  COMPLETE
 F1-F5                      CURRENTLY CLOSED
-Phase 011                  ACTIVE
-011-A                      COMPLETE
-011-B                      COMPLETE
-011-C                      COMPLETE
-011-D                      COMPLETE
-011-E                      COMPLETE
-011-F                      COMPLETE
-011-G                      COMPLETE
-011-H                      COMPLETE
-011-I                      COMPLETE
-011-J                      NEXT ELIGIBLE
-G1 specificity             CURRENTLY CLOSED
-G2 familiarity             CURRENTLY CLOSED
-G3 integrity               CURRENTLY CLOSED
-G4 synergy / simplicity    CURRENTLY CLOSED
-G5 scenario / adversarial  CURRENTLY CLOSED
-G6 future-scope            CURRENTLY CLOSED
-G7 residual misfit         CURRENTLY CLOSED
+Phase 011                  COMPLETE
+011-A..011-J               COMPLETE
+G1-G7                      CURRENTLY CLOSED
+H1/H2                      OPEN — PHASE 012
 Jackson concept design     IN PROGRESS
 ```
 
-G1-G7 individual closure does not make Phase 011 or Jackson concept design complete.
+Phase 011 completion does **not** make Jackson concept design or implementation ready.
 
-## Residual-register implementation boundary
-
-011-I establishes:
+## Final Phase 011 residual boundary
 
 ```text
 unresolved MAT-2 findings                0
@@ -93,36 +77,32 @@ Phase 011 finding/probe       -> executable test/runtime enum
 
 ## Future capability boundary
 
-Known conditional rediscovery triggers include:
-
-- formal composable privacy/accounting;
-- product-owned governance/release decisions;
-- independent output publication/versioning/retirement;
-- independently reusable request/cohort semantics;
-- independently governed graph/relationship state;
-- durable streaming/session/feed lifecycle not reducible to bounded activities;
-- product-owned economic/resource accounting;
-- product-owned reusable knowledge/memory beyond Strategy/Learned State purpose.
+Known conditional rediscovery triggers include formal composable privacy/accounting, product-owned governance/release, independent output publication/versioning/retirement, independently reusable request/cohort semantics, independently governed graph/relationship state, durable streaming/session/feed lifecycle, product-owned economic/resource accounting and product-owned reusable knowledge/memory beyond current purposes.
 
 These are design-governance gates only.
+
+## Phase 012 boundary
+
+Phase 012 owns the whole-current-state Jackson concept-design audit and explicit completion decision. It remains design-only.
+
+A positive Phase 012 still does not authorize implementation because Phase 013 architecture reconciliation and Phase 014 whole-design readiness remain required.
 
 ## Remaining design before readiness
 
 ```text
-011-J  Phase 011 consolidation / G1-G7 joint decision — NEXT
-012    Jackson concept-design completion decision
-013    representation / architecture reconciliation
-014    whole-design completion / readiness decision
+012    Jackson Concept-Design Consolidation & Completion Decision — NEXT
+013    Post-Concept Representation & Architecture Reconciliation
+014    Whole-Design Consolidation & Implementation-Readiness Decision
 ```
 
 Only a positive Phase 014 may make implementation **READY / NOT STARTED / NEXT**. An explicit Phase 015 is still required to begin implementation.
 
 ## Current prohibition
 
-Until Phase 014 passes, do not add production concept behavior, generic domain base hierarchies, public APIs, persistence/query schemas, services/events, graph/search technology, provider/runtime/security adapters, Execution/recovery implementations, Evidence/Provenance implementations, invalidation cascades, reference Strategies, formal privacy mechanisms, governance/release engines, streaming/session systems, output-publication systems, resource/economic systems, benchmarks, package-topology changes, feature flags, status resources, compatibility shims or executable Phase-011 restrictions intended to manufacture readiness.
+Until Phase 014 passes, do not add production concept behavior, generic domain base hierarchies, public APIs, persistence/query schemas, services/events, graph/search technology, provider/runtime/security adapters, Execution/recovery implementations, Evidence/Provenance implementations, invalidation cascades, reference Strategies, formal privacy mechanisms, governance/release engines, streaming/session systems, output-publication systems, resource/economic systems, benchmarks, package-topology changes, feature flags, status resources or compatibility shims intended to manufacture readiness.
 
 ## Current next boundary
 
 Design-only work:
 
-**011-J — Phase 011 Consolidation, G1-G7 Completion Decision & Phase 012 Handoff**.
+**Phase 012 — Jackson Concept-Design Consolidation & Completion Decision**.
