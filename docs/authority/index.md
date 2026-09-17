@@ -24,9 +24,14 @@ These documents define how SYNGAN design knowledge is created, interpreted, chan
 - [Phase 011 Design Quality / Misfit Consolidation](phase-011-design-quality-misfit-consolidation.md)
 - [Residual Conceptual Misfit Register](residual-conceptual-misfit-register.md)
 - [Phase 012 Jackson Concept-Design Consolidation](phase-012-jackson-concept-design-consolidation.md) — **current Jackson completion authority**
-- [Phase 012 Index](../phases/012/index.md)
 
-Supporting Phase 011 authorities remain current for G1-G7 quality rules and findings.
+## Active Phase 013 architecture-reconciliation authority
+
+- [Phase 013 Index](../phases/013/index.md)
+- [Phase 013 Entry & Decomposition](../phases/013/013-entry-decomposition.md)
+- [Representation & Architecture Index](../architecture/index.md)
+
+Retained Phase 004/006/007 architecture remains downstream reconciliation material until Phase 013 explicitly retains, clarifies, supersedes, corrects, defers, or reopens the relevant authority.
 
 ## Current posture
 
@@ -38,17 +43,15 @@ Phase 009                            COMPLETE
 Phase 010                            COMPLETE
 Phase 011                            COMPLETE
 Phase 012                            COMPLETE
-A1-A3 / B1-B5 / C1-C8              CURRENTLY CLOSED
-D1-D4 / E1-E5                      CURRENTLY CLOSED
-F1-F5                              CURRENTLY CLOSED
-G1-G7                              CURRENTLY CLOSED
-H1                                 CURRENTLY CLOSED
-H2                                 CURRENTLY CLOSED
-Jackson concept design             COMPLETE FOR CURRENT PRODUCT SCOPE
-representation/architecture        PENDING PHASE 013 RECONCILIATION
-implementation readiness           NOT READY
-implementation start               NOT STARTED
-implementation next                NOT YET
+A1-H2                                CURRENTLY CLOSED
+Jackson concept design               COMPLETE FOR CURRENT PRODUCT SCOPE
+Phase 013                            ACTIVE
+013-A                                NEXT ELIGIBLE
+R1 architecture reconciliation       DOWNSTREAM / IN PROGRESS
+whole-design completion              NOT YET — PHASE 014
+implementation readiness             NOT READY
+implementation start                 NOT STARTED
+implementation next                  NOT YET
 ```
 
 ## Durable current quality rules
@@ -79,13 +82,13 @@ bounded M6 Phase-013 deferrals                1
 M8 future-rediscovery finding groups          4
 ```
 
-The M6 item is historical synchronization-label/documentation drift in retained Phase 006 architecture material. Current Phase 009 synchronization semantics are authoritative; Phase 013 owns reconciliation.
+The M6 item includes historical `11 / 15` synchronization assumptions and older `SYNC-08` / `SYNC-15` roles in retained Phase 006/007 architecture material. Current Phase 009 synchronization semantics are authoritative; Phase 013 owns reconciliation.
 
 M8 triggers remain conditional future design-governance gates, not architecture pre-approvals.
 
 ## Phase 013 boundary
 
-Completed concept design is now upstream authority for representation/architecture reconciliation.
+Completed concept design is upstream authority for representation/architecture reconciliation.
 
 Phase 013 may revise retained architecture where it conflicts with current concept semantics, but it must not change concept authority merely to preserve historical architecture convenience.
 
@@ -93,10 +96,27 @@ A genuine newly exposed semantic contradiction must use the smallest-authority r
 
 Phase 013 remains design-only.
 
+Current dependency-safe sequence:
+
+```text
+013-A  authority / corpus inventory / precedence / discrepancy taxonomy
+013-B  representation / layering / public contract / identity / views
+013-C  persistence / history / transaction-concurrency / migration
+013-D  distributed data / topology / manifest / candidate-seal-promotion
+013-E  Strategy/runtime / dependency / security / offline-no-egress
+013-F  Execution / Attempt / recovery / fencing / admission
+013-G  Evaluation / Evidence / Provenance / history / disclosure
+013-H  deployment / scale / observability / portability / platform integration
+013-I  cross-architecture / ADR / legacy / M6 / residual register
+013-J  consolidation / R1 decision / Phase 014 handoff
+```
+
+Only 013-J may close R1.
+
 ## Remaining design sequence
 
 ```text
-013    Post-Concept Representation & Architecture Reconciliation — NEXT
+013    Post-Concept Representation & Architecture Reconciliation — ACTIVE
 014    Whole-Design Consolidation & Implementation-Readiness Decision
 ---
 015    Implementation Authority & Controlled Delivery — FUTURE ONLY
@@ -106,4 +126,4 @@ Only Phase 014 may set implementation **READY / NOT STARTED / NEXT**; Phase 015 
 
 ## Current next boundary
 
-**Phase 013 — Post-Concept Representation & Architecture Reconciliation** is next eligible.
+**013-A — Reconciliation Authority, Retained Corpus Inventory, Precedence Reset & Discrepancy Taxonomy** is next eligible.
