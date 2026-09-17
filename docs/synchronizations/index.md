@@ -6,16 +6,7 @@ status: complete-current
 
 # SYNGAN Accepted Synchronizations
 
-This directory contains current cross-concept composition authority for SYNGAN.
-
-Concept specifications own purpose, state, actions, lifecycle and invariants. Synchronization coordinates already-owned behavior and owns no independent state.
-
-## Current authority
-
-- [Phase 009 Consolidation](../authority/phase-009-dependence-composition-consolidation.md)
-- [Synchronization Trigger / Ownership Normalization](trigger-ownership-normalization.md)
-- [Composition Economy / Synergy / Integrity](composition-economy-synergy-integrity.md)
-- [Phase 011 Consolidation](../authority/phase-011-design-quality-misfit-consolidation.md)
+This directory contains current cross-concept composition authority for SYNGAN. Concept specifications own semantic state; synchronization coordinates already-owned behavior and owns no independent canonical state.
 
 ## Current synchronization inventory
 
@@ -28,31 +19,11 @@ capability/occurrence conditional        7
 retired concept-local IDs                1  (SYNC-08)
 reclassified contract IDs                1  (SYNC-15)
 new synchronization IDs                  0
-SYNC-16                                  NOT JUSTIFIED
 ```
 
-### Required relational
+Required relational rules remain `SYNC-01`, `SYNC-02`, `SYNC-05`, `SYNC-09`, `SYNC-10`, and `SYNC-12`.
 
-```text
-SYNC-01  Data Meaning revision binding
-SYNC-02  Strategy selection and compatibility
-SYNC-05  Learning produces Learned State
-SYNC-09  Evaluation Criterion binding
-SYNC-10  Evaluation method compatibility
-SYNC-12  Evaluation produces Evidence
-```
-
-### Capability / occurrence conditional
-
-```text
-SYNC-03  Constraint binding and handling disposition
-SYNC-04  Learning operational realization
-SYNC-06  Generation / Learned State reuse compatibility and exact basis binding
-SYNC-07  Generation operational realization
-SYNC-11  Evaluation operational realization
-SYNC-13  Generation / Evidence evidence-gated completion handoff
-SYNC-14  Provenance recording at material transitions
-```
+Capability/occurrence-conditional rules remain `SYNC-03`, `SYNC-04`, `SYNC-06`, `SYNC-07`, `SYNC-11`, `SYNC-13`, and `SYNC-14`.
 
 ## Canonical ownership
 
@@ -66,73 +37,46 @@ Provenance typed relationship assertions           -> Provenance
 synchronization-owned canonical state              -> NONE
 ```
 
-## Final Phase 011 validation result
+## Current completion state
 
 ```text
-13 / 13 synchronizations preserve singular ownership
-producer/result integrity                       PASS
-occurrence-scoped/non-reactive binding          PASS
-current-versus-historical truth                 PASS
-Evidence/Generation authority separation        PASS
-semantic/Execution separation                   PASS
-Provenance low-authority-fan-out                 PASS
-recovery/reconstruction ownership                PASS
-provider operational-state containment           PASS
-scale/approximation containment                  PASS
-hidden coordinator required                     NO
-MAT-2 / MAT-3 findings                          0 / 0
-synchronization changes                          0
-Phase 009 synchronization reopen                 NONE
-R010-03                                         NO DEFECT
-G3                                              CURRENTLY CLOSED
+Phase 009 synchronization authority       COMPLETE
+13 / 13 singular ownership                PASS
+occurrence-scoped/non-reactive binding    PASS
+current-versus-historical truth           PASS
+Evidence/Generation separation            PASS
+semantic/Execution separation             PASS
+Provenance low-authority fan-out           PASS
+hidden coordinator required               NO
+synchronization reopen                    NONE
+Phase 012 H1/H2                           PASS
+Jackson concept design                    COMPLETE FOR CURRENT PRODUCT SCOPE
 ```
 
-Phase 011 closes with no residual synchronization defect and no current add/remove/merge/new-sync requirement.
+Phase 012 confirms this synchronization model is coherent with the current problem, catalog, application family, mapping and quality authority.
 
-## Future synchronization rule
-
-A future synchronization is a legitimate F-3 candidate only when:
-
-```text
-all substantive state owners already exist
-+ a genuinely new cross-concept coordination relation is required
-+ the relation owns no independent canonical state
-+ the current synchronization inventory cannot express that relation
-```
-
-If future capability instead introduces independent purpose + durable state/history + independently meaningful actions/lifecycle, concept rediscovery occurs first. M8 triggers do not justify placeholder synchronization IDs now.
-
-## Retired / reclassified IDs and M6 handoff
+## Retired/reclassified IDs and M6 handoff
 
 `SYNC-08` remains retired as Generation-local output lifecycle behavior.
 
 `SYNC-15` remains reclassified under the cross-cutting Reproducibility Contract.
 
-Some retained Phase 006 representation/architecture contracts still use historical numbering. Current Phase 009 authority controls the active inventory. This remains the one bounded `MAT-1 / M6` Phase 013 reconciliation item—not a synchronization-design reopen.
+Some retained Phase 006 representation/architecture documents use historical numbering. Current Phase 009 authority controls current semantics. This is the one bounded `MAT-1 / M6` Phase 013 reconciliation item—not a synchronization-design reopen.
 
-## Composition guardrails
+## Future synchronization rule
 
-- one canonical state owner per material fact;
-- synchronization owns no state;
-- reusable authorities are bound, not mutated;
-- contextual assessments remain activity-owned;
-- semantic and operational completion remain distinct;
-- Evidence never becomes approval or Generation authority;
-- Provenance never becomes source-fact authority;
-- provider objects never become owner truth by representation convenience;
-- optional capabilities add only their own coordination burden;
-- correction/invalidation is owner-scoped, not a generic retroactive cascade;
-- recovery does not resurrect stale authority;
-- resource pressure does not silently weaken committed semantics;
-- future implementation call flow is not synchronization evidence;
-- conceptual synchronization prescribes no event bus, transaction, service, package, queue, schema, architecture layer or runtime call direction.
+A future synchronization may be added only when existing concepts already own the substantive state, a genuinely new relation is required, that relation owns no independent state, and the current inventory cannot express it.
 
-## Phase 012 boundary
+If future scope introduces independent purpose + durable state/history + meaningful actions/lifecycle, concept rediscovery happens first. M8 triggers do not justify placeholder synchronization IDs.
 
-Phase 012 must verify this synchronization inventory and ownership model together with the current concepts, application family, mapping and Phase 011 quality closure before making the Jackson completion decision.
+## Phase 013 boundary
+
+Phase 013 must not translate synchronization mechanically into event buses, transactions, services, packages, queues, schemas, architecture layers or runtime call direction.
+
+Architecture must preserve singular ownership and occurrence-scoped semantics while reconciling historical representations.
 
 ## Current next boundary
 
-**Phase 012 — Jackson Concept-Design Consolidation & Completion Decision** is next eligible.
+**Phase 013 — Post-Concept Representation & Architecture Reconciliation** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
