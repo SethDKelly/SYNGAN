@@ -8,55 +8,111 @@ status: active-reconciliation
 
 ## Purpose
 
-Reconcile retained SYNGAN representation/architecture against the now-complete Jackson concept design and establish one current architecture baseline for the Phase 014 whole-design completion/readiness gate.
+Reconcile retained SYNGAN representation/architecture against the completed Jackson concept design and establish one current architecture baseline for the Phase 014 whole-design completion/readiness gate.
 
-Current governing authority: [Jackson Design Completion & Implementation Hold](../authority/jackson-design-completion-implementation-hold.md).
+Current governing authority: [Phase 013 Architecture Reconciliation Authority](../authority/phase-013-architecture-reconciliation-authority.md).
 
 ## Current posture
 
 ```text
-Jackson concept design       COMPLETE FOR CURRENT PRODUCT SCOPE
-Phase 012                    COMPLETE
-H1/H2                        CURRENTLY CLOSED
-Phase 013                    ACTIVE
-013-A                        NEXT ELIGIBLE
-architecture corpus          UNDER RECONCILIATION
-R1 architecture reconciliation DOWNSTREAM / IN PROGRESS
-whole-design completion      NOT YET — PHASE 014
-implementation readiness     NOT READY
-implementation start         NOT STARTED
-implementation next          NOT YET
+Jackson concept design          COMPLETE FOR CURRENT PRODUCT SCOPE
+Phase 012                       COMPLETE
+H1/H2                           CURRENTLY CLOSED
+Phase 013                       ACTIVE
+013-A                           COMPLETE
+013-B                           NEXT ELIGIBLE
+architecture corpus             UNDER RECONCILIATION
+R1 architecture reconciliation  DOWNSTREAM / IN PROGRESS
+whole-design completion         NOT YET — PHASE 014
+implementation readiness        NOT READY
+implementation start            NOT STARTED
+implementation next             NOT YET
 ```
 
 Completed concept design is upstream authority for architecture.
 
 ## Current Phase 013 authority
 
+- [Phase 013 Architecture Reconciliation Authority](../authority/phase-013-architecture-reconciliation-authority.md)
 - [Phase 013 Index](../phases/013/index.md)
+- [013-A Reconciliation Authority / Corpus Inventory / Taxonomy](../phases/013/013-A-reconciliation-authority-retained-corpus-inventory-precedence-reset-discrepancy-taxonomy.md)
 - [Phase 013 Entry & Decomposition](../phases/013/013-entry-decomposition.md)
 - [Phase 012 Jackson Concept-Design Consolidation](../authority/phase-012-jackson-concept-design-consolidation.md)
-- [Jackson Methodology Completion Matrix](../authority/jackson-methodology-completion-matrix.md)
 
-## Retained architecture corpus
+## 013-A retained corpus inventory
 
-Primary reconciliation subjects include:
+Phase 013 reconciles:
 
-- [Architecture Authority, Representation Principles, Layering & Dependency Direction](architecture-authority-representation-layering.md)
-- [Public API, Resource/Handle Model, Workflow Composition & Semantic Mapping](public-api-resource-handle-workflow-semantic-mapping.md)
-- [Control-Plane Identity, Revision, State, Persistence & Historical Reference Architecture](control-plane-identity-revision-state-persistence-historical-reference.md)
-- [Spark Data Boundary, Source/Output Reference, Distributed Materialization, Manifest & Promotion Architecture](spark-data-boundary-source-output-reference-distributed-materialization-manifest-promotion.md)
-- [Strategy Extension, Learning/Generation/Evaluation Runtime & Adapter Architecture](strategy-extension-learning-generation-evaluation-runtime-adapter.md)
-- [Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Architecture](execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation.md)
-- [Evaluation/Evidence, Provenance, Reproducibility & Historical Query Architecture](evaluation-evidence-provenance-reproducibility-historical-query.md)
-- [Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Architecture](dependency-resolution-offline-no-egress-authorization-redaction-enterprise-security.md)
-- [Deployment, Scalability, Observability, Portability, Compatibility & Platform Integration Architecture](deployment-scalability-observability-portability-compatibility-platform-integration.md)
-- [Phase 004 Consolidated Architecture Contract](phase-004-consolidated-architecture-contract.md)
-- [Phase 006 Architecture Reconciliation Contract](phase-006-architecture-reconciliation-contract.md)
-- Phase 007-D through 007-J retained architecture foundations
-- [Phase 007 Consolidated Architecture Contract](phase-007-consolidated-architecture-contract.md)
-- ADR-0001 through ADR-0010
+```text
+Phase 004 detailed architecture                 9
+Phase 004 consolidated architecture             1
+Phase 006 architecture reconciliation overlay   1
+Phase 007-D..007-I refined architecture         6
+Phase 007-J proof-boundary architecture         1
+Phase 007 consolidated architecture             1
+--------------------------------------------------
+substantive retained architecture docs          19
 
-The Phase 007 consolidated contract is the strongest retained pre-completion synthesis, but not automatic current authority where it conflicts with Phase 012-completed concept design.
+ADR-0001..ADR-0010                              10
+```
+
+Phase 005 planning, Phase 007-A..C scaffold/bootstrap work, Phase 007-K readiness history, source and tests are supporting evidence rather than architecture authority.
+
+A historical `status: active` or `canonical` statement does not outrank completed Phase 012 authority or a later Phase 013 reconciliation decision.
+
+## Reconciliation taxonomy
+
+Phase 013 uses:
+
+```text
+AR-0  aligned architecture
+AR-1  terminology / count / identifier drift
+AR-2  authority / precedence drift
+AR-3  semantic ownership leakage / duplicate authority
+AR-4  semantic-strength inflation
+AR-5  temporal / recovery / historical-truth distortion
+AR-6  application-family / composition distortion
+AR-7  architecture over-prescription / implementation leakage
+AR-8  unauthorized future-scope reservation
+AR-9  genuine upstream semantic contradiction
+```
+
+Materiality:
+
+```text
+AMAT-0  editorial / historical-only
+AMAT-1  bounded architecture clarification
+AMAT-2  material architecture defect
+AMAT-3  architecture blocker / upstream contradiction candidate
+```
+
+Allowed dispositions:
+
+```text
+RETAIN
+CLARIFY
+SUPERSEDE
+CORRECT
+DEFER
+UPSTREAM-REOPEN
+```
+
+Only a demonstrated AR-9 finding may justify upstream reopen.
+
+## Known 013-A entry findings
+
+Six bounded candidates are registered:
+
+```text
+A13-A-001  historical 15-sync inventory shown as current         AR-1 / AMAT-1
+A13-A-002  historical SYNC-08 role                               AR-1 / AMAT-1
+A13-A-003  historical SYNC-15 role                               AR-1 / AMAT-1
+A13-A-004  retained Phase 006/007 current/canonical wording      AR-2 / AMAT-1
+A13-A-005  ADR-index Phase-007-as-current precedence             AR-2 / AMAT-1
+A13-A-006  historical implementation-reentry/scaffold assumptions AR-7 / AMAT-0..1
+```
+
+013-A declares no AMAT-2 defect, no AMAT-3 blocker and no upstream reopen. Later groups determine whether deeper architecture defects exist.
 
 ## Architecture constraints from completed concept design
 
@@ -81,8 +137,8 @@ Phase 013 must preserve unless a genuine explicit upstream reopen is justified:
 ## Phase 013 sequence
 
 ```text
-013-A  reconciliation authority / corpus inventory / precedence / discrepancy taxonomy
-013-B  representation / layering / public contract / identity / views
+013-A  reconciliation authority / corpus inventory / precedence / discrepancy taxonomy  COMPLETE
+013-B  representation / layering / public contract / identity / views                   NEXT
 013-C  persistence / history / transaction-concurrency / migration
 013-D  distributed data / topology / manifest / candidate-seal-promotion
 013-E  Strategy/runtime / dependency / security / offline-no-egress
@@ -95,8 +151,6 @@ Phase 013 must preserve unless a genuine explicit upstream reopen is justified:
 
 ## M6 explicit reconciliation item
 
-The retained Phase 006/007 corpus contains historical `11 / 15` synchronization assumptions and references to older `SYNC-08` / `SYNC-15` roles.
-
 Current Phase 009 authority controls:
 
 ```text
@@ -108,31 +162,11 @@ SYNC-15                        reclassified — Reproducibility contract
 
 Phase 013 must remove current ambiguity without reopening synchronization semantics merely to preserve old architecture language.
 
-## M8 exclusion from default Phase 013 scope
+## M8 exclusion
 
 Formal composable privacy/accounting, product-owned governance/release, independent output publication/versioning, reusable request/cohort lifecycles, independently governed graph relationships, durable streaming/session/feed lifecycle, product-owned resource/economic accounting and product-owned reusable knowledge/memory remain future rediscovery triggers.
 
-They are **not architecture reservations** and must not receive placeholder services/stores/APIs unless future scope first returns to concept discovery.
-
-## Anti-prescription rule
-
-Phase 013 does not begin by assuming:
-
-```text
-Databricks/AWS-specific architecture
-one provider adapter interface
-job/run correlation database
-lineage graph database
-one recovery fencing mechanism
-one global status/read model
-autoscaling/admission service
-one approximation framework
-formal privacy/accounting architecture
-publication/governance/session/resource services
-exact package/service/database/API topology
-```
-
-Each representation/architecture choice must be justified against completed concept requirements and product constraints.
+They are not architecture reservations.
 
 ## Implementation boundary
 
@@ -148,4 +182,4 @@ No production implementation, migration, provider integration, package refactor 
 
 ## Current next boundary
 
-**013-A — Reconciliation Authority, Retained Corpus Inventory, Precedence Reset & Discrepancy Taxonomy** is next eligible.
+**013-B — Representation Layering, Public Contract, Identity, Revision, Handle & View Reconciliation** is next eligible.
