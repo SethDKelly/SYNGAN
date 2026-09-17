@@ -1,130 +1,118 @@
 ---
 type: Architecture Index
 title: SYNGAN Representation & Architecture Design
-status: retained-pending-reconciliation
+status: active-reconciliation-next
 ---
 
 # SYNGAN Representation & Architecture Design
 
 ## Purpose
 
-Preserve SYNGAN representation/architecture design as downstream evidence while Jackson concept design proceeds through Phase 012.
+Preserve retained SYNGAN representation/architecture as downstream design evidence and establish the Phase 013 reconciliation boundary against the now-completed Jackson concept design.
 
 Current governing authority: [Jackson Design Completion & Implementation Hold](../authority/jackson-design-completion-implementation-hold.md).
 
 ## Current posture
 
 ```text
-Jackson concept design       IN PROGRESS
-Phase 008                    COMPLETE
-Phase 009                    COMPLETE
-D1-D4                        CURRENTLY CLOSED
-E1-E5                        CURRENTLY CLOSED
-Phase 010                    COMPLETE
-F1-F5                        CURRENTLY CLOSED
-Phase 011                    COMPLETE
-011-A..011-J                 COMPLETE
-G1-G7                        CURRENTLY CLOSED
-H1/H2                        OPEN — PHASE 012
+Jackson concept design       COMPLETE FOR CURRENT PRODUCT SCOPE
+Phase 012                    COMPLETE
+H1/H2                        CURRENTLY CLOSED
 architecture corpus          RETAINED AS DOWNSTREAM DESIGN EVIDENCE
-architecture reconciliation  PLANNED FOR PHASE 013
+architecture reconciliation  PHASE 013 NEXT
+whole-design completion      NOT YET — PHASE 014
 implementation readiness     NOT READY
 implementation start         NOT STARTED
 implementation next          NOT YET
 ```
 
-Phase 011 closure does not authorize architecture reconciliation early. Phase 012 must first make the Jackson concept-design completion decision.
+Completed concept design is now upstream authority for architecture.
 
 ## Current upstream design authority
 
+- [Problem & Purpose](../problem/problem-purpose.md)
+- [Accepted Concept Catalog](../concepts/index.md)
+- [Phase 009 Dependence & Composition Consolidation](../authority/phase-009-dependence-composition-consolidation.md)
 - [Phase 010 Concept Mapping Consolidation](../authority/phase-010-concept-mapping-consolidation.md)
-- [Concept Mapping Authority](../mapping/index.md)
 - [Phase 011 Design Quality & Misfit Consolidation](../authority/phase-011-design-quality-misfit-consolidation.md)
 - [Residual Conceptual Misfit Register](../authority/residual-conceptual-misfit-register.md)
-- [Phase 011](../phases/011/index.md)
+- [Phase 012 Jackson Concept-Design Consolidation](../authority/phase-012-jackson-concept-design-consolidation.md)
+- [Phase 012](../phases/012/index.md)
 
-## Architecture constraints retained from Phase 011
+## Architecture constraints from completed concept design
 
-Architecture must eventually preserve:
+Phase 013 must preserve unless a genuine explicit upstream reopen is justified:
 
-- package-first product form and Spark-host agnosticism;
-- current versus exact historical state;
+- package-first Python/Spark product form and Spark-host agnosticism;
+- eleven concept boundaries and singular ownership;
+- thirteen occurrence-scoped active synchronizations;
+- application-family optionality and capability-local burden;
+- current versus exact historical truth;
 - semantic versus operational state/completion;
-- candidate versus authoritative result;
+- candidate/non-final versus authoritative Generation result;
 - Criterion/Evaluation/Evidence question-method-finding separation;
-- Evidence claim strength and applicability;
-- Provenance without source-fact ownership;
-- authorization-relative disclosure/history quality;
-- recovery authority continuity;
-- application-family optionality;
-- bounded enterprise-scale inspection;
-- human/programmatic semantic parity;
-- provider facts only at their actual evidentiary strength;
+- Evidence claim strength/applicability without approval/release/privacy takeover;
+- Provenance relationship authority without source-fact takeover;
+- recovery authority continuity and explicit unresolved state;
+- provider facts only at actual evidentiary strength;
 - material approximation as explicit and owner-scoped;
-- decision-material qualifiers surfaced when they affect immediate semantic decisions.
+- decision-material qualifiers surfaced when they affect immediate semantic decisions;
+- future rediscovery before architecture for new independent product purposes.
 
-Phase 010/011 do not select database/materialized views, schemas, REST/GraphQL shapes, graph/search technology, event-sourced persistence, dashboards, public Python API shapes or platform adapter implementations.
+## Phase 013 reconciliation obligations
 
-## Residual-register consequences
+At minimum inspect retained architecture for:
 
-```text
-unresolved MAT-2 findings               0
-MAT-3 blockers                          0
-unresolved M2-M5 current defects        0
-M6 Phase-013 deferrals                  1
-M8 future-rediscovery finding groups    4
-```
-
-### M6 — actual Phase 013 obligation
-
-The one bounded M6 item is retained Phase 006 documentation/architecture material containing historical synchronization identifiers such as older `SYNC-08` / `SYNC-15` wording.
-
-Current Phase 009 synchronization authority controls active semantics. Phase 013 must reconcile the retained corpus without treating old numbering as semantic authority.
-
-### M8 — not Phase 013 architecture work by default
-
-Known M8 triggers include formal composable privacy/accounting, product-owned governance/release, independent output publication/versioning, reusable request/cohort lifecycles, independently governed graph relationships, durable streaming/session/feed lifecycle, product-owned resource/economic accounting, and product-owned reusable knowledge/memory beyond Strategy/Learned State.
-
-These are **not architecture reservations**. Phase 013 must not invent placeholder services/stores/APIs for them unless product scope first returns to concept discovery and accepts the new purpose.
-
-## Phase 013 explicit reconciliation obligations
-
-Phase 013 must inspect retained architecture for at least:
-
-- host job/run/resource status accidentally driving semantic completion;
-- provider model/artifact/catalog identity substituting for canonical Strategy/Learned State/Data Meaning identity;
-- provider lineage being treated as complete Provenance/source truth;
-- recovery mechanisms that could replay restored stale authority;
-- runtime packaging/distribution designs that prove only driver-local availability;
-- scale/admission/fallback designs that silently approximate or contract committed work;
+- semantic-owner state duplicated or transferred into architecture components;
+- host job/run/resource status driving Learning/Generation/Evaluation completion;
+- provider model/artifact/catalog identity substituting for Data Meaning/Synthesis Strategy/Learned State/result identity;
+- provider lineage treated as complete Provenance/source truth;
+- recovery mechanisms that can replay restored stale authority;
+- physical material/checkpoint existence treated as semantic result establishment;
+- driver-local dependency availability treated as distributed runtime closure;
+- resource/admission/fallback behavior silently weakening committed semantics;
 - global `degraded`, `recovery`, `status`, `workflow` or `validation` resources duplicating owner truth;
-- historical synchronization identifiers that no longer match current Phase 009 authority;
+- old synchronization identifiers inconsistent with current Phase 009 authority;
 - speculative architecture for M8 future concepts that have not undergone discovery.
 
-## What Phase 011 closure does not imply
+## M6 explicit reconciliation item
 
-Do not infer:
+The retained Phase 006 corpus contains historical synchronization labels such as older `SYNC-08` / `SYNC-15` wording.
+
+Current Phase 009 synchronization authority supersedes those labels. Phase 013 must reconcile the retained architecture/documentation without treating old numbering as current semantic authority.
+
+## M8 exclusion from default Phase 013 scope
+
+Formal composable privacy/accounting, product-owned governance/release, independent output publication/versioning, reusable request/cohort lifecycles, independently governed graph relationships, durable streaming/session/feed lifecycle, product-owned resource/economic accounting and product-owned reusable knowledge/memory remain future rediscovery triggers.
+
+They are **not architecture reservations** and must not receive placeholder services/stores/APIs unless future scope first returns to concept discovery.
+
+## Retained architecture baseline
+
+The [Phase 007 Consolidated Architecture Contract](phase-007-consolidated-architecture-contract.md) remains the strongest retained pre-completion architecture synthesis and is now a primary Phase 013 reconciliation subject—not automatic current architecture authority where it conflicts with completed concept design.
+
+## Anti-prescription rule
+
+Phase 013 does not begin by assuming:
 
 ```text
-Databricks/AWS-specific architecture is required
-one provider adapter interface is required
-job/run correlation database is required
-lineage graph database is required
-recovery must use one specific fencing mechanism
-one global status/read-model is required
-autoscaling/admission service is required
-one approximation framework is required
-formal privacy/accounting architecture is pre-approved
-publication/governance/session/resource services are pre-approved
+Databricks/AWS-specific architecture
+one provider adapter interface
+job/run correlation database
+lineage graph database
+one recovery fencing mechanism
+one global status/read model
+autoscaling/admission service
+one approximation framework
+formal privacy/accounting architecture
+publication/governance/session/resource services
 ```
 
-## Phase 007 architecture status
+Each representation/architecture choice must be justified against completed concept requirements and product constraints.
 
-The [Phase 007 Consolidated Architecture Contract](phase-007-consolidated-architecture-contract.md) remains the strongest retained architecture synthesis through 007-J and is subject to Phase 013 reconciliation only after Phase 012 decides Jackson concept-design completion.
+## Implementation boundary
 
-## Phase 012 / 014 gates
-
-Phase 012 decides Jackson concept-design completion. Only after that may Phase 013 reconcile representation/architecture. Only after Phase 013 may Phase 014 decide implementation readiness.
+Phase 013 remains design/reconciliation only.
 
 ```text
 IMPLEMENTATION READINESS   NOT READY
@@ -132,8 +120,8 @@ IMPLEMENTATION START       NOT STARTED
 IMPLEMENTATION NEXT        NOT YET
 ```
 
+No production implementation, migration, provider integration or API stabilization is authorized by concept-design completion.
+
 ## Current next boundary
 
-**Phase 012 — Jackson Concept-Design Consolidation & Completion Decision** is next eligible.
-
-Architecture reconciliation remains deferred to Phase 013.
+**Phase 013 — Post-Concept Representation & Architecture Reconciliation** is next eligible.
