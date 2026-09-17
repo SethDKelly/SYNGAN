@@ -28,11 +28,13 @@ Phase 011                    ACTIVE
 011-C                        COMPLETE
 011-D                        COMPLETE
 011-E                        COMPLETE
-011-F                        NEXT ELIGIBLE
+011-F                        COMPLETE
+011-G                        NEXT ELIGIBLE
 G1 specificity               CURRENTLY CLOSED
 G2 familiarity               CURRENTLY CLOSED
 G3 integrity                 STRONG EVIDENCE / 011-G STRESS REVALIDATION REQUIRED
 G4 synergy / simplicity      CURRENTLY CLOSED
+G5 scenario / adversarial    STRONG EVIDENCE / 011-G STRESS REVALIDATION REQUIRED
 architecture corpus          RETAINED AS DOWNSTREAM DESIGN EVIDENCE
 architecture reconciliation  PLANNED FOR PHASE 013
 implementation readiness     NOT READY
@@ -49,6 +51,7 @@ implementation next          NOT YET
 - [Composed Familiarity / External-Model Audit](../authority/composed-familiarity-reuse-vocabulary-external-model-audit.md)
 - [Composed Integrity Audit](../authority/composed-integrity-synchronization-history-audit.md)
 - [Synergy, Simplicity, Generic Fitness & Conceptual-Burden Audit](../authority/composed-synergy-simplicity-generic-fitness-burden-audit.md)
+- [Archetypal, Exceptional & Progressive-Disclosure Misfit Replay](../authority/archetypal-exceptional-progressive-disclosure-misfit-replay.md)
 - [Phase 011](../phases/011/index.md)
 
 ## Completed mapping implications
@@ -57,46 +60,41 @@ Architecture must eventually preserve package-first product form/Spark-host agno
 
 Phase 010 does not select database/materialized views, resource/query schemas, GraphQL/REST shapes, graph/search technology, event-sourced persistence, dashboards, public Python API shapes or platform adapter implementations. Those remain downstream representation choices for Phase 013 reconciliation.
 
-## Phase 011 implications through 011-E
+## Phase 011 implications through 011-F
 
-011-B confirms all eleven concepts retain distinct composed purposes without architecture-driven split/merge/add/remove decisions.
+011-B through 011-E preserve the eleven-concept catalog, thirteen synchronization types and application-family boundaries without architecture-driven correction.
 
-011-C confirms familiar external object models remain analogues rather than architecture requirements.
+011-F adds one representation-facing semantic obligation:
 
-011-D confirms synchronization/correction/history integrity without selecting transaction, event, persistence, invalidation or recovery mechanics.
+> **A representation may defer explanatory depth, but it may not defer a qualifier whose omission could change the actor's immediate semantic decision or make current state appear stronger than the owning concept supports.**
 
-011-E confirms conceptual economy without prescribing implementation compression:
+Architecture must eventually satisfy that obligation without assuming a particular mechanism.
 
-```text
-concept add/remove/merge/split justified        0
-synchronization add/remove/merge justified      0
-reduced-family burden replay                    PASS
-positive composed synergies                     CONFIRMED
-generic-fitness / domain anchoring              PASS
-hidden universal coordinator                    NONE
-G4                                              CURRENTLY CLOSED
-```
-
-Architecture must therefore **not** infer:
+It does **not** imply:
 
 ```text
-shared concept pattern        -> required base class
-three activity concepts       -> generic Activity domain abstraction
-result-like concepts          -> generic Artifact / Result domain abstraction
-five coordination planes      -> five architecture layers/services
-application-family member     -> package/SKU/deployment profile
-D0-D4 progressive disclosure -> UI navigation/API tier topology
-Provenance high fan-in         -> graph database as semantic authority
-Execution reuse               -> workflow/scheduler ownership of domain semantics
+one summary/status resource
+one workflow aggregate
+one warning/banner service
+one API envelope for all concepts
+D0-D4 screen hierarchy
+D0-D4 endpoint tiers
+materialized global actionability state
 ```
 
-Implementation/architecture reuse may later be selected for engineering reasons only if it preserves the completed semantic boundaries.
+The architecture may later choose different representations so long as candidate/final, Evidence-strength, current/historical, semantic/operational, optionality and continuity distinctions remain truthfully available when decision-material.
 
-## Phase 011 evidence boundary
+## 011-G evidence boundary
 
-Phase 011 may use retained architecture as counterexample, feasibility, provider-semantic-leakage or familiarity evidence. It may not infer concept boundaries, canonical lifecycle, dependence, synchronization or quality closure from existing services/packages/APIs/job models/artifacts/tests.
+011-G may use retained architecture/provider models as counterexample evidence for:
 
-011-F is next and tests archetypal/exceptional experience histories and progressive disclosure. Architecture remains observational: a poor hypothetical UI/component layout is not itself a concept/mapping defect unless it demonstrates that current semantic obligations cannot be represented truthfully.
+- provider job/run success trying to become semantic completion;
+- host model/artifact/catalog identity trying to replace SYNGAN concept identity;
+- platform lineage trying to become Provenance/source-fact authority;
+- recovery mechanics violating current-authority continuity;
+- scale/approximation mechanisms weakening semantic commitments.
+
+Those examples remain evidence only. 011-G must not select architecture merely to solve the counterexample.
 
 ## Phase 007 architecture status
 
@@ -114,6 +112,6 @@ IMPLEMENTATION NEXT        NOT YET
 
 ## Current next boundary
 
-**011-F — Archetypal, Exceptional & Progressive-Disclosure Misfit Replay** is next eligible.
+**011-G — Adversarial, Degraded, Recovery, Scale & Provider-Semantic-Leakage Validation** is next eligible.
 
 Architecture reconciliation remains deferred to Phase 013.
