@@ -33,11 +33,13 @@ Phase 011                  ACTIVE
 011-C                      COMPLETE
 011-D                      COMPLETE
 011-E                      COMPLETE
-011-F                      NEXT ELIGIBLE
+011-F                      COMPLETE
+011-G                      NEXT ELIGIBLE
 G1 specificity             CURRENTLY CLOSED
 G2 familiarity             CURRENTLY CLOSED
 G3 integrity               STRONG EVIDENCE / 011-G STRESS REVALIDATION REQUIRED
 G4 synergy / simplicity    CURRENTLY CLOSED
+G5 scenario / adversarial  STRONG EVIDENCE / 011-G STRESS REVALIDATION REQUIRED
 Jackson concept design     IN PROGRESS
 ```
 
@@ -60,43 +62,47 @@ Phase 011 finding/probe      -> executable test/runtime enum
 external familiarity alias   -> required public API name
 ```
 
-## 011-D / 011-E remain design-only
+## 011-F remains design-only
 
-011-D confirms synchronization/historical integrity. 011-E confirms the current catalog/synchronization set is compositionally economical enough and G4 is currently closed.
-
-011-E does **not** authorize code-level compression or generic implementation hierarchies.
-
-In particular, do not infer required runtime abstractions such as:
+011-F confirms:
 
 ```text
-Activity
-Result
-Artifact
-Authority
-Status
-Validation
-Workflow
-Compatibility
-Readiness
+10 / 10 required scenario families
+10 / 10 archetypal histories PASS
+10 / 10 exceptional histories PASS
+20 / 20 paired replays PASS
+6 / 6 progressive-disclosure concealment classes PASS
+MAT-2 / MAT-3 findings 0 / 0
+R010-05 NO DEFECT
 ```
 
-merely because similar patterns recur across concepts.
+Its quality clarification is semantic only:
 
-The design explicitly concludes that several repeated patterns are healthy reuse/cross-cutting structure rather than missing concepts. Future architecture may use internal implementation reuse only if it preserves current semantic ownership and does not make the implementation abstraction into domain authority.
+> **Progressive disclosure may defer explanatory depth, but it must not defer a qualifier whose omission could change the actor's immediate semantic decision or make current state appear stronger than the owning concept supports.**
 
-Likewise:
+This does **not** authorize implementation structures for that rule.
 
-- the five synchronization coordination planes are explanatory, not services/modules;
-- application-family contraction is conceptual capability validity, not packaging;
-- D0-D4 is semantic presentation depth, not interface architecture;
-- Provenance genericity does not require graph technology;
-- Execution reuse does not require one universal Activity superclass.
+Do not infer required runtime/UI abstractions such as:
+
+```text
+GlobalStatus
+WorkflowStatus
+ValidationStatus
+DecisionSummary
+WarningBanner
+DisclosureTier
+HistoryView
+ActionabilityState
+```
+
+merely because concise interaction must preserve decision-material truth.
+
+Representation may later satisfy the obligation through many different mechanisms. Phase 013 owns that reconciliation after concept design completes.
 
 ## Remaining design before readiness
 
 ```text
-011-F  archetypal / exceptional / progressive-disclosure replay — NEXT
-011-G  adversarial / degraded / recovery / scale / provider leakage
+011-G  adversarial / degraded / recovery / scale / provider leakage — NEXT
 011-H  future-scope / extensibility
 011-I  residual misfit register
 011-J  Phase 011 consolidation
@@ -109,10 +115,10 @@ Only a positive Phase 014 may make implementation **READY / NOT STARTED / NEXT**
 
 ## Current prohibition
 
-Until Phase 014 passes, do not add production concept behavior, generic domain base hierarchies, public APIs, persistence/query schemas, services/events, graph/search technology, runtime/security/platform adapters, Execution/recovery implementations, Evidence/Provenance implementations, invalidation cascades, reference Strategies, privacy mechanisms, benchmarks, package-topology changes, feature flags, compatibility shims or executable Phase-011 restrictions intended to manufacture readiness.
+Until Phase 014 passes, do not add production concept behavior, generic domain base hierarchies, public APIs, persistence/query schemas, services/events, graph/search technology, runtime/security/platform adapters, Execution/recovery implementations, Evidence/Provenance implementations, invalidation cascades, reference Strategies, privacy mechanisms, benchmarks, package-topology changes, feature flags, status resources, compatibility shims or executable Phase-011 restrictions intended to manufacture readiness.
 
 ## Current next boundary
 
 Design-only work:
 
-**011-F — Archetypal, Exceptional & Progressive-Disclosure Misfit Replay**.
+**011-G — Adversarial, Degraded, Recovery, Scale & Provider-Semantic-Leakage Validation**.
