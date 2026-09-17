@@ -8,7 +8,7 @@ status: active
 
 This directory contains the canonical concept specifications accepted in Phase 001 and normalized through Phase 008.
 
-Cross-concept dependence/composition is consolidated by [Phase 009 Dependence, Application Family & Composition Consolidation](../authority/phase-009-dependence-composition-consolidation.md). Concept mapping is consolidated by [Phase 010 Concept Mapping Consolidation](../authority/phase-010-concept-mapping-consolidation.md). Current Phase 011 quality authority now includes composed specificity, familiarity, integrity, synergy/simplicity/generic-fitness, scenario/adversarial validation and future-scope/extensibility validation.
+Current cross-concept authority is consolidated by Phase 009, Phase 010 mapping, and Phase 011 quality/misfit validation through 011-I.
 
 ## Accepted concepts
 
@@ -34,50 +34,39 @@ Phase 009                            COMPLETE
 Phase 010                            COMPLETE
 F1-F5 mapping                        CURRENTLY CLOSED
 Phase 011                            ACTIVE
-011-A                                COMPLETE
-011-B                                COMPLETE
-011-C                                COMPLETE
-011-D                                COMPLETE
-011-E                                COMPLETE
-011-F                                COMPLETE
-011-G                                COMPLETE
-011-H                                COMPLETE
-011-I                                NEXT ELIGIBLE
-G1 composed specificity              CURRENTLY CLOSED
-G2 composed familiarity              CURRENTLY CLOSED
-G3 integrity                         CURRENTLY CLOSED
-G4 synergy / simplicity              CURRENTLY CLOSED
-G5 scenario / adversarial            CURRENTLY CLOSED
-G6 future-scope                      CURRENTLY CLOSED
-G7 residual misfit                   PARTIAL — 011-I OWNS CLOSURE
+011-A..011-I                         COMPLETE
+011-J                                NEXT ELIGIBLE
+G1-G7                                CURRENTLY CLOSED
+Jackson concept design               NOT COMPLETE
+implementation readiness             NOT READY
+implementation start                 NOT STARTED
+implementation next                  NOT YET
 ```
 
-Phase 009 found no reason to add, remove, merge, split or rename a concept. Phase 010 found no mapping/composition reason to reopen that conclusion. 011-B through 011-H retain the same eleven across specificity, familiarity, integrity, burden, scenario, hostile/provider and future-scope pressure.
+No Phase 011 finding requires adding, removing, merging, splitting or renaming a current concept.
 
-## Future-scope catalog result
+## Residual-register catalog result
 
-011-H explicitly tests whether extensibility requires pre-generalizing the catalog.
-
-Current result:
+011-I confirms:
 
 ```text
-current new concept justified                     0
-current concept merge/split justified             0
-current concept rename justified                  0
-current synchronization addition justified        0
-current application-family reopen justified       0
-MAT-2 / MAT-3 findings                             0 / 0
-R010-07                                            NO DEFECT
-G6                                                 CURRENTLY CLOSED
+current M2-M5 conceptual defects      0
+unresolved MAT-2 findings             0
+MAT-3 blockers                        0
+concept reopen                        NONE
+catalog change                        NONE
+accepted conceptual tradeoff          NONE REQUIRED
+M6 Phase-013 deferrals                1 — downstream documentation only
+M8 future-rediscovery groups          4 — conditional future gates
 ```
 
-Likely new algorithm families, richer structured topology, advanced text methods, new Evaluation methods, new accelerator/runtime capability and new source-derived reusable state remain extensible through current purposes.
+The M6 item does not affect concept authority. M8 findings are not accepted concepts now.
 
 ## Future rediscovery boundary
 
 Future scope must reopen concept discovery before implementation when it introduces an independently useful product purpose with durable state/history and independently meaningful actions/lifecycle that cannot be owned cleanly by the current catalog.
 
-Known `M8` rediscovery triggers include:
+Known M8 trigger forms include:
 
 ```text
 formal composable privacy / guarantee accounting
@@ -90,22 +79,7 @@ product-owned economic / resource accounting
 product-owned reusable knowledge / memory beyond Strategy/Learned State
 ```
 
-These remain **future design-governance triggers**, not accepted concepts now.
-
-The following therefore remain rejected as premature umbrella concepts:
-
-```text
-Privacy
-Governance / Approval / Release
-Output / Publication
-Session / Feed
-Relationship / Graph
-Resource / Budget
-Knowledge / Memory
-Capability
-Workflow / Status
-Model / Artifact
-```
+These remain future design-governance triggers, not accepted concepts, architecture placeholders or implementation backlog items.
 
 ## Core boundaries preserved
 
@@ -133,10 +107,8 @@ E-KERNEL = { Evaluation Criterion, Evaluation, Evidence }
 
 Direct Generation remains valid without Learning/Learned State. Evaluation/Evidence are not universal prerequisites for Generation. Constraint, Execution and Provenance remain capability-conditional.
 
-011-H finds no current need to modify these kernels or add a future-capability placeholder concept.
-
 ## Current next boundary
 
-**011-I — Residual Conceptual Misfit Register, Reopen/Defer/Accept Decisions & Closure Preparation** is next eligible.
+**011-J — Phase 011 Consolidation, G1-G7 Completion Decision & Phase 012 Handoff** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
