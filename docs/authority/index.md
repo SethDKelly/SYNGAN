@@ -30,10 +30,12 @@ These documents define how SYNGAN design knowledge is created, interpreted, chan
 - [Phase 013 Architecture Reconciliation Authority](phase-013-architecture-reconciliation-authority.md) — **current Phase 013 method authority**
 - [Phase 013 Index](../phases/013/index.md)
 - [013-A Reconciliation Authority / Corpus Inventory / Taxonomy](../phases/013/013-A-reconciliation-authority-retained-corpus-inventory-precedence-reset-discrepancy-taxonomy.md)
+- [013-B Representation Phase Record](../phases/013/013-B-representation-layering-public-contract-identity-revision-handle-view-reconciliation.md)
+- [013-B Representation Reconciliation Authority](../architecture/phase-013-b-representation-layering-public-contract-identity-view-reconciliation.md) — **current representation baseline**
 - [Phase 013 Entry & Decomposition](../phases/013/013-entry-decomposition.md)
 - [Representation & Architecture Index](../architecture/index.md)
 
-Retained Phase 004/006/007 architecture remains downstream reconciliation material until Phase 013 explicitly retains, clarifies, supersedes, corrects, defers, or reopens the relevant authority.
+Retained Phase 004/006/007 architecture remains downstream reconciliation material except where a completed Phase 013 subgroup has explicitly retained/clarified its current meaning.
 
 ## Current posture
 
@@ -49,7 +51,8 @@ A1-H2                                CURRENTLY CLOSED
 Jackson concept design               COMPLETE FOR CURRENT PRODUCT SCOPE
 Phase 013                            ACTIVE
 013-A                                COMPLETE
-013-B                                NEXT ELIGIBLE
+013-B                                COMPLETE
+013-C                                NEXT ELIGIBLE
 R1 architecture reconciliation       DOWNSTREAM / IN PROGRESS
 whole-design completion              NOT YET — PHASE 014
 implementation readiness             NOT READY
@@ -59,19 +62,34 @@ implementation next                  NOT YET
 
 ## 013-A method result
 
+013-A established the retained corpus inventory, precedence reset, AR-0..AR-9 taxonomy, AMAT-0..AMAT-3 materiality, canonical dispositions and residual-register contract. It declared no AMAT-2/AMAT-3 defect and no upstream reopen.
+
+## 013-B representation result
+
 ```text
-retained substantive architecture docs   19
-retained ADRs                             10
-AR-0..AR-9 discrepancy taxonomy           ESTABLISHED
-AMAT-0..AMAT-3 materiality                ESTABLISHED
-canonical dispositions                    ESTABLISHED
-known entry candidates                     6
-AMAT-2 defects declared by 013-A           0
-AMAT-3 blockers declared by 013-A          0
-upstream reopen                           NONE
+representation spine                 RETAINED WITH BOUNDED CLARIFICATION
+AMAT-2 representation defects        0
+AMAT-3 blockers                      0
+AR-9 contradictions                  0
+upstream reopen                      NONE
+new concepts                         0
+new synchronizations                 0
 ```
 
-The six entry candidates cover historical synchronization count/ID drift, retained precedence wording and superseded implementation-reentry assumptions. Later groups determine whether any deeper material architecture defect exists.
+Current representation rules now explicitly preserve:
+
+- architecture as representation of semantic authority rather than a second semantic owner;
+- logical layering without mandatory package/service/API-tier mapping;
+- package-first primary surfaces and optional CLI/report/graphical/service integrations;
+- stable logical identity distinct from locator/provider identity;
+- separate identity, semantic revision/commitment, current-state version/freshness and representation-schema version axes;
+- exact historical binding alongside refreshable current views;
+- handles/views as resolvers/projections rather than detached canonical entities;
+- Execution ownership of retry/resume/reconcile/cancel operational state;
+- owner-specific Learned State / Generation-output / Evidence establishment rather than a shared Result lifecycle;
+- D0-D4 as semantic disclosure depth rather than architecture tiers.
+
+Historical `007-D` synchronization-count wording and pre-Phase-013 representation precedence wording remain tracked for 013-I corpus cleanup, but current semantic ambiguity is removed.
 
 ## Durable current quality rules
 
@@ -91,7 +109,7 @@ Future rediscovery:
 
 > **Genericity means accepting new instances within a stable purpose. Rediscover before implementation when future scope introduces an independent product-facing purpose with durable state/history and independently meaningful actions/lifecycle.**
 
-## Residual state carried into Phase 013
+## Residual state carried through Phase 013
 
 ```text
 unresolved current conceptual defects         0
@@ -101,15 +119,11 @@ bounded M6 Phase-013 deferrals                1
 M8 future-rediscovery finding groups          4
 ```
 
-The M6 item includes historical `11 / 15` synchronization assumptions and older `SYNC-08` / `SYNC-15` roles in retained Phase 006/007 architecture material. Current Phase 009 synchronization semantics are authoritative; Phase 013 owns reconciliation.
-
-M8 triggers remain conditional future design-governance gates, not architecture pre-approvals.
+M6 historical synchronization wording remains a downstream architecture/documentation cleanup obligation. M8 triggers remain future design-governance gates, not architecture pre-approvals.
 
 ## Phase 013 boundary
 
-Completed concept design is upstream authority for representation/architecture reconciliation.
-
-Phase 013 uses the canonical dispositions:
+Phase 013 continues to use:
 
 ```text
 RETAIN
@@ -120,14 +134,14 @@ DEFER
 UPSTREAM-REOPEN
 ```
 
-Only a demonstrated AR-9 genuine semantic contradiction may justify upstream reopen. Historical architecture convenience, provider preference, implementation cost or existing code shape cannot.
+Only a demonstrated AR-9 genuine semantic contradiction may justify upstream reopen.
 
 Current dependency-safe sequence:
 
 ```text
 013-A  authority / corpus inventory / precedence / discrepancy taxonomy  COMPLETE
-013-B  representation / layering / public contract / identity / views   NEXT
-013-C  persistence / history / transaction-concurrency / migration
+013-B  representation / layering / public contract / identity / views   COMPLETE
+013-C  persistence / history / transaction-concurrency / migration      NEXT
 013-D  distributed data / topology / manifest / candidate-seal-promotion
 013-E  Strategy/runtime / dependency / security / offline-no-egress
 013-F  Execution / Attempt / recovery / fencing / admission
@@ -152,4 +166,4 @@ Only Phase 014 may set implementation **READY / NOT STARTED / NEXT**; Phase 015 
 
 ## Current next boundary
 
-**013-B — Representation Layering, Public Contract, Identity, Revision, Handle & View Reconciliation** is next eligible.
+**013-C — Control Persistence, Historical Reference, Transaction/Concurrency, Migration & Recovery-State Reconciliation** is next eligible.
