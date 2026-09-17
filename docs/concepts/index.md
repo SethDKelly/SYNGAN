@@ -8,7 +8,7 @@ status: active
 
 This directory contains the canonical concept specifications accepted in Phase 001 and normalized through Phase 008.
 
-Cross-concept dependence/composition is consolidated by [Phase 009 Dependence, Application Family & Composition Consolidation](../authority/phase-009-dependence-composition-consolidation.md). Concept mapping is consolidated by [Phase 010 Concept Mapping Consolidation](../authority/phase-010-concept-mapping-consolidation.md). Current Phase 011 quality authority includes composed specificity, familiarity, integrity and synergy/simplicity/generic-fitness audits.
+Cross-concept dependence/composition is consolidated by [Phase 009 Dependence, Application Family & Composition Consolidation](../authority/phase-009-dependence-composition-consolidation.md). Concept mapping is consolidated by [Phase 010 Concept Mapping Consolidation](../authority/phase-010-concept-mapping-consolidation.md). Current Phase 011 quality authority includes composed specificity, familiarity, integrity, synergy/simplicity/generic-fitness and archetypal/exceptional scenario replay.
 
 ## Accepted concepts
 
@@ -39,59 +39,42 @@ Phase 011                            ACTIVE
 011-C                                COMPLETE
 011-D                                COMPLETE
 011-E                                COMPLETE
-011-F                                NEXT ELIGIBLE
+011-F                                COMPLETE
+011-G                                NEXT ELIGIBLE
 G1 composed specificity              CURRENTLY CLOSED
 G2 composed familiarity              CURRENTLY CLOSED
 G3 integrity                         STRONG EVIDENCE / 011-G STRESS REVALIDATION REQUIRED
 G4 synergy / simplicity              CURRENTLY CLOSED
+G5 scenario / adversarial            STRONG EVIDENCE / 011-G STRESS REVALIDATION REQUIRED
 ```
 
-Phase 009 found no reason to add, remove, merge, split or rename a concept. Phase 010 found no mapping/composition reason to reopen that conclusion. 011-B/C retain all eleven under specificity/familiarity review. 011-D preserves ownership under temporal composition. 011-E now confirms that the same eleven remain economically justified in the final composed design.
+Phase 009 found no reason to add, remove, merge, split or rename a concept. Phase 010 found no mapping/composition reason to reopen that conclusion. 011-B/C retain all eleven under specificity/familiarity review. 011-D preserves ownership under temporal composition. 011-E confirms all eleven remain economically justified. 011-F now confirms the same boundaries remain intelligible through ordinary and material exceptional histories.
 
-## 011-E catalog economy result
+## 011-F scenario result
 
 ```text
-accepted concepts                              11
-concept removal justified                      0
-concept merge justified                        0
-concept split justified                        0
-new concept justified                          0
-reduced-family burden replay                    PASS
-positive composed synergies                     CONFIRMED
-repeated-pattern missing-purpose probe          PASS
-cross-cutting qualifier discipline              PASS
-generic-fitness / domain anchoring              PASS
-hidden universal coordinator                    NONE
-MAT-2 / MAT-3 burden findings                   0 / 0
-R010-04                                         NO DEFECT
-G4                                              CURRENTLY CLOSED
+required scenario families                       10 / 10
+archetypal histories                             10 / 10 PASS
+material exceptional histories                   10 / 10 PASS
+paired scenario replays                          20 / 20 PASS
+progressive-disclosure concealment classes        6 / 6 PASS
+concept add/remove/merge/split                    NONE
+MAT-2 / MAT-3 findings                            0 / 0
+R010-05                                           NO DEFECT
 ```
 
-The strongest bounded burden pressure remains the Evaluation Criterion / Evaluation / Evidence trio. The trio is intentionally retained because it preserves:
+No scenario requires a global `Workflow`, `Status`, `Validation`, `Quality`, `Artifact`, `Result` or similar concept.
+
+The current concepts can represent simultaneously difficult but ordinary distinctions such as:
 
 ```text
-question / answer-strength authority
-!= committed examination method/scope
-!= durable finding / applicability authority
+Execution completed != Generation completed
+Evaluation completed != favorable Evidence
+historical Learned State use != current Learned State eligibility
+Constraint handling != satisfaction finding
+candidate output exists != completed Generation output
+Provenance assertion != referenced owner truth
 ```
-
-Likewise, repeated patterns do **not** currently justify umbrella concepts such as:
-
-```text
-Activity
-Artifact / Result
-Workflow
-Status
-Validation
-Quality
-Metadata
-Configuration
-Readiness / Compatibility
-Recovery / Degraded Mode
-Reproducibility
-```
-
-These remain either rejected umbrellas, owner-qualified dimensions or cross-cutting contracts unless future discovery exposes an independent purpose + state + action lifecycle.
 
 ## Core boundaries preserved
 
@@ -119,24 +102,16 @@ E-KERNEL = { Evaluation Criterion, Evaluation, Evidence }
 
 Direct Generation remains valid without Learning/Learned State. Evaluation/Evidence are not universal prerequisites for Generation. Constraint, Execution and Provenance remain capability-conditional.
 
-011-E confirms that these reduced members are a primary simplicity mechanism: absent capabilities do not impose placeholder concepts, empty workflow stages or synchronization burden.
+011-F confirms optional capability absence remains a truthful scenario condition rather than a failed/missing stage.
 
-## Generic-fitness guardrail
+## Decision-material presentation guardrail
 
-Broad reusable concepts remain intentionally domain-anchored:
+Phase 011 now requires that a concise presentation retain any concept-owned qualifier whose omission would change the immediate semantic decision or make the state appear stronger than the concept supports.
 
-- Data Meaning is synthesis-relevant semantics, not enterprise metadata governance;
-- Synthesis Strategy is reusable synthesis behavior/capability, not a plugin registry;
-- Learning is reusable-state derivation, not a generic ML/ETL platform;
-- Learned State is source-derived synthesis knowledge, not a generic artifact;
-- Evaluation is committed examination, not a metrics/experiment platform;
-- Execution is operational realization of SYNGAN activities, not a scheduler;
-- Provenance is typed SYNGAN relationship authority, not an enterprise lineage system.
-
-Later architecture may reuse implementation patterns, but such reuse cannot become domain authority.
+This presentation obligation does not alter concept ownership and does not create a new status/summary concept.
 
 ## Current next boundary
 
-**011-F — Archetypal, Exceptional & Progressive-Disclosure Misfit Replay** is next eligible.
+**011-G — Adversarial, Degraded, Recovery, Scale & Provider-Semantic-Leakage Validation** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
