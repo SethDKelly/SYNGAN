@@ -36,16 +36,36 @@ Phase 011                  ACTIVE
 011-F                      COMPLETE
 011-G                      COMPLETE
 011-H                      COMPLETE
-011-I                      NEXT ELIGIBLE
+011-I                      COMPLETE
+011-J                      NEXT ELIGIBLE
 G1 specificity             CURRENTLY CLOSED
 G2 familiarity             CURRENTLY CLOSED
 G3 integrity               CURRENTLY CLOSED
 G4 synergy / simplicity    CURRENTLY CLOSED
 G5 scenario / adversarial  CURRENTLY CLOSED
 G6 future-scope            CURRENTLY CLOSED
-G7 residual misfit         PARTIAL — 011-I OWNS CLOSURE
+G7 residual misfit         CURRENTLY CLOSED
 Jackson concept design     IN PROGRESS
 ```
+
+G1-G7 individual closure does not make Phase 011 or Jackson concept design complete.
+
+## Residual-register implementation boundary
+
+011-I establishes:
+
+```text
+unresolved MAT-2 findings                0
+MAT-3 blockers                           0
+unresolved M2-M5 current defects         0
+upstream reopens required                0
+M6 Phase-013 deferrals                   1
+M8 future-rediscovery finding groups     4
+```
+
+The M6 item is retained historical synchronization-numbering/documentation drift. It belongs to Phase 013 reconciliation, not production-code correction.
+
+M8 triggers mean **return to concept discovery if that future scope becomes current**. They do not authorize placeholder classes, schemas, services, package extras, feature flags, persistence, APIs or workflow resources.
 
 ## Design results are not implementation topology
 
@@ -67,28 +87,13 @@ provider lineage              -> canonical Provenance store
 provider model/artifact       -> Strategy/Learned State/result by default
 provider identity             -> universal SYNGAN authorization
 M8 rediscovery trigger        -> future feature flag/schema/class
+residual-register entry       -> runtime issue/status resource
 Phase 011 finding/probe       -> executable test/runtime enum
 ```
 
-## 011-G / 011-H remain design-only
+## Future capability boundary
 
-011-G confirms stress integrity without selecting mechanisms. 011-H confirms future extension boundaries without pre-authorizing future features.
-
-Future capability classification is semantic:
-
-```text
-F-1  fits existing concept unchanged
-F-2  fits new state/action within existing purpose
-F-3  requires new synchronization only
-F-4  requires application-family capability refinement
-F-5  requires genuine concept rediscovery
-F-6  remains external authority / non-goal
-F-7  insufficient evidence
-```
-
-An `F-5 / M8` finding means **return to design discovery before implementation if that scope becomes current**. It does not mean the future concept already exists and does not authorize implementation scaffolding for it.
-
-Known future rediscovery triggers include:
+Known conditional rediscovery triggers include:
 
 - formal composable privacy/accounting;
 - product-owned governance/release decisions;
@@ -99,17 +104,12 @@ Known future rediscovery triggers include:
 - product-owned economic/resource accounting;
 - product-owned reusable knowledge/memory beyond Strategy/Learned State purpose.
 
-Do not implement placeholders such as generic `Privacy`, `Governance`, `Output`, `Session`, `Relationship`, `Resource`, `Knowledge`, `Policy`, `Capability` or future-state registries merely because these triggers are documented.
-
-## Phase 013 reconciliation note
-
-Some retained Phase 006 design documents still mention historical synchronization IDs. Current Phase 009 synchronization authority already supersedes those labels. Their cleanup/reconciliation belongs to Phase 013 and does not authorize implementation changes now.
+These are design-governance gates only.
 
 ## Remaining design before readiness
 
 ```text
-011-I  residual conceptual misfit register — NEXT
-011-J  Phase 011 consolidation
+011-J  Phase 011 consolidation / G1-G7 joint decision — NEXT
 012    Jackson concept-design completion decision
 013    representation / architecture reconciliation
 014    whole-design completion / readiness decision
@@ -125,4 +125,4 @@ Until Phase 014 passes, do not add production concept behavior, generic domain b
 
 Design-only work:
 
-**011-I — Residual Conceptual Misfit Register, Reopen/Defer/Accept Decisions & Closure Preparation**.
+**011-J — Phase 011 Consolidation, G1-G7 Completion Decision & Phase 012 Handoff**.
