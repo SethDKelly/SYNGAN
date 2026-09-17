@@ -64,7 +64,8 @@ Current authority:
 - [011-E](011/011-E-synergy-simplicity-generic-fitness-conceptual-burden-audit.md)
 - [011-F](011/011-F-archetypal-exceptional-progressive-disclosure-misfit-replay.md)
 - [011-G](011/011-G-adversarial-degraded-recovery-scale-provider-semantic-leakage-validation.md)
-- [011-G G3/G5 Stress Authority](../authority/adversarial-degraded-recovery-scale-provider-semantic-leakage-validation.md)
+- [011-H](011/011-H-future-scope-extensibility-new-capability-pressure-rediscovery-triggers.md)
+- [011-H G6 Authority](../authority/future-scope-extensibility-new-capability-rediscovery-audit.md)
 - [Jackson Methodology Completion Matrix](../authority/jackson-methodology-completion-matrix.md)
 
 Current state:
@@ -78,39 +79,34 @@ Phase 011                    ACTIVE
 011-E                        COMPLETE
 011-F                        COMPLETE
 011-G                        COMPLETE
-011-H                        NEXT ELIGIBLE
+011-H                        COMPLETE
+011-I                        NEXT ELIGIBLE
 G1 specificity               CURRENTLY CLOSED
 G2 familiarity               CURRENTLY CLOSED
 G3 integrity                 CURRENTLY CLOSED
 G4 synergy / simplicity      CURRENTLY CLOSED
 G5 scenario / adversarial    CURRENTLY CLOSED
-G6 future-scope              STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
-G7 residual misfit register  PARTIAL
+G6 future-scope              CURRENTLY CLOSED
+G7 residual misfit register  PARTIAL — 011-I OWNS CLOSURE
 ```
 
-011-G closes the hostile/degraded/recovery/scale/provider portion of G3/G5:
+011-H closes the future-scope/extensibility obligation with explicit extension and rediscovery classifications:
 
 ```text
-stale / contradictory authority            PASS
-concurrent / superseded work               PASS
-regressive recovery / stale writer         PASS
-partial material / physical result         PASS
-runtime distribution closure               PASS
-scale / approximation                      PASS
-provider job/run leakage                   PASS
-provider lineage/catalog/model leakage     PASS
-combined hostile composition               PASS
-MAT-2 / MAT-3 findings                     0 / 0
-R010-03                                    NO DEFECT
-R010-06                                    NO DEFECT
-R010-08                                    NO DEFECT
-G3                                         CURRENTLY CLOSED
-G5                                         CURRENTLY CLOSED
+F-1  fits existing concept unchanged
+F-2  fits new state/action within existing purpose
+F-3  requires new synchronization only
+F-4  requires application-family capability refinement
+F-5  requires genuine concept rediscovery
+F-6  remains external authority / non-goal
+F-7  insufficient evidence
 ```
 
-Provider facts remain bounded to the evidentiary strength they actually establish; provider vocabulary never becomes stronger SYNGAN semantics by naming alone.
+Likely Strategy, topology, text, Evaluation, runtime/platform and source-derived reusable-state breadth fits current purposes. Known `M8` future rediscovery triggers remain explicit for formal composable privacy/accounting, product-owned governance/release, independent output lifecycle, reusable request/cohort lifecycle, independently governed graph relationship state, durable streaming/session/feed state, product-owned resource/economic accounting and product-owned reusable knowledge/memory beyond Strategy/Learned State.
 
-A bounded Phase 013 reconciliation note remains for historical synchronization IDs in retained Phase 006 documentation. Current Phase 009 authority already controls active identifiers.
+These are future design-governance gates rather than current concepts or current blockers.
+
+All eight Phase 010 risks now have explicit dispositions. No MAT-2/MAT-3 finding or upstream reopen was introduced by 011-H.
 
 Current sequence:
 
@@ -122,8 +118,8 @@ Current sequence:
 011-E  COMPLETE — synergy / simplicity / generic fitness / conceptual burden
 011-F  COMPLETE — archetypal / exceptional / progressive-disclosure replay
 011-G  COMPLETE — adversarial / degraded / recovery / scale / provider leakage
-011-H  NEXT — future-scope / extensibility / rediscovery triggers
-011-I  residual misfit register
+011-H  COMPLETE — future-scope / extensibility / rediscovery triggers
+011-I  NEXT — residual conceptual misfit register / dispositions
 011-J  Phase 011 consolidation / Phase 012 handoff
 ```
 
@@ -147,6 +143,6 @@ Future only. Explicit authorization is still required before implementation begi
 
 ## Current next boundary
 
-**011-H — Future-Scope, Extensibility, New-Capability Pressure & Rediscovery Triggers** is next eligible.
+**011-I — Residual Conceptual Misfit Register, Reopen/Defer/Accept Decisions & Closure Preparation** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
