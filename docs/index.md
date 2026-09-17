@@ -43,7 +43,8 @@ Existing architecture, source or tests never become upstream concept-design auth
 - [Composed Familiarity Audit](authority/composed-familiarity-reuse-vocabulary-external-model-audit.md)
 - [Synchronization/Historical Integrity Audit](authority/composed-integrity-synchronization-history-audit.md)
 - [Synergy, Simplicity, Generic Fitness & Conceptual-Burden Audit](authority/composed-synergy-simplicity-generic-fitness-burden-audit.md)
-- [Archetypal, Exceptional & Progressive-Disclosure Misfit Replay](authority/archetypal-exceptional-progressive-disclosure-misfit-replay.md)
+- [Archetypal, Exceptional & Progressive-Disclosure Replay](authority/archetypal-exceptional-progressive-disclosure-misfit-replay.md)
+- [Adversarial, Degraded, Recovery, Scale & Provider-Semantic-Leakage Validation](authority/adversarial-degraded-recovery-scale-provider-semantic-leakage-validation.md)
 - [Phase 011](phases/011/index.md)
 
 ## Current state
@@ -64,12 +65,13 @@ Phase 011 decomposition              COMPLETE
 011-D                                COMPLETE
 011-E                                COMPLETE
 011-F                                COMPLETE
-011-G                                NEXT ELIGIBLE
+011-G                                COMPLETE
+011-H                                NEXT ELIGIBLE
 G1 specificity                       CURRENTLY CLOSED
 G2 familiarity                       CURRENTLY CLOSED
-G3 integrity                         STRONG EVIDENCE / 011-G STRESS REVALIDATION REQUIRED
+G3 integrity                         CURRENTLY CLOSED
 G4 synergy / simplicity              CURRENTLY CLOSED
-G5 scenario / adversarial            STRONG EVIDENCE / 011-G STRESS REVALIDATION REQUIRED
+G5 scenario / adversarial            CURRENTLY CLOSED
 G6 future-scope                      STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
 G7 residual misfit register          PARTIAL
 Jackson design completion            IN PROGRESS
@@ -96,73 +98,46 @@ SYNGAN remains a deployable Python/Spark framework package, agnostic across comp
 20 / 20 difficult-condition parity probes PASS
 ```
 
-## Phase 011 results through 011-F
-
-### 011-B — specificity
+## Phase 011 results through 011-G
 
 ```text
-11 / 11 concepts               PASS
-R010-01                        NO DEFECT
-G1 specificity                 CURRENTLY CLOSED
+G1 specificity                  CURRENTLY CLOSED — 011-B
+G2 familiarity                  CURRENTLY CLOSED — 011-C
+G3 integrity                    CURRENTLY CLOSED — 011-D/F/G
+G4 synergy / simplicity         CURRENTLY CLOSED — 011-E
+G5 scenario / adversarial       CURRENTLY CLOSED — 011-F/G
+G6 future-scope                 STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
+G7 residual misfit register     PARTIAL
 ```
 
-### 011-C — familiarity
+Phase 011 risk accounting:
 
 ```text
-11 / 11 canonical names        RETAINED
-external-model comparison      PASS
-R010-02                        NO DEFECT — COMPATIBILITY GUIDANCE STRENGTHENED
-B4 / G2                        CURRENTLY CLOSED
+R010-01  NO DEFECT — 011-B
+R010-02  NO DEFECT — GUIDANCE STRENGTHENED — 011-C
+R010-03  NO DEFECT — 011-D + 011-G
+R010-04  NO DEFECT — 011-E
+R010-05  NO DEFECT — 011-E + 011-F
+R010-06  NO DEFECT — 011-G
+R010-07  OPEN — 011-H
+R010-08  NO DEFECT — 011-G
 ```
 
-### 011-D — integrity baseline
+011-G stress validation adds no MAT-2/MAT-3 finding and no upstream reopen. It confirms:
 
-```text
-13 / 13 synchronizations preserve singular ownership
-current-versus-historical truth                 PASS
-Evidence/Generation authority separation        PASS
-semantic/Execution separation                   PASS
-Provenance low-authority-fan-out baseline       PASS
-recovery/reconstruction ownership baseline      PASS
-hidden coordinator required                     NO
-MAT-2 / MAT-3 findings                          0 / 0
-```
+- provider/host `success`, `completed`, `model`, `artifact`, `lineage`, identity and catalog semantics remain provider-qualified evidence/integration facts rather than canonical SYNGAN owner truth;
+- regressive restore never resurrects stale write authority;
+- unresolved recovery/history remains explicit rather than fabricated;
+- resource pressure cannot silently weaken committed semantics;
+- material approximation remains explicit and owner-scoped;
+- driver/package availability is weaker than distributed runtime closure;
+- topology/text/provider stress exposes no missing umbrella concept.
 
-`R010-03` has no defect in the composed/historical portion; 011-G still owns stress revalidation.
+Provider-evidence qualification:
 
-### 011-E — synergy / simplicity / generic fitness
+> **Consume provider facts only at the strength they actually establish; familiar provider vocabulary never escalates automatically into stronger SYNGAN semantics.**
 
-```text
-concept add/remove/merge/split justified        0
-synchronization add/remove/merge justified      0
-reduced-family burden replay                    PASS
-positive composed synergies                     CONFIRMED
-generic-fitness / domain anchoring              PASS
-progressive-disclosure structural simplicity    PASS
-hidden universal coordinator                    NONE
-MAT-2 / MAT-3 findings                          0 / 0
-R010-04                                         NO DEFECT
-G4                                              CURRENTLY CLOSED
-```
-
-### 011-F — archetypal / exceptional / progressive disclosure
-
-```text
-required scenario families                       10 / 10
-archetypal histories                             10 / 10 PASS
-material exceptional histories                   10 / 10 PASS
-paired scenario replays                          20 / 20 PASS
-progressive-disclosure concealment classes        6 / 6 PASS
-MAT-2 / MAT-3 findings                            0 / 0
-upstream reopen                                   NONE
-R010-05                                           NO DEFECT
-```
-
-Decision-material disclosure rule:
-
-> **Progressive disclosure may defer explanatory depth, but it must not defer a qualifier whose omission could change the actor's immediate semantic decision or make current state appear stronger than the owning concept supports.**
-
-011-G now owns the remaining adversarial/degraded/recovery/scale/provider stress for G3/G5 plus `R010-06` and `R010-08`.
+A bounded Phase 013 reconciliation note remains for historical synchronization identifiers in retained Phase 006 documents. Current Phase 009 synchronization authority remains controlling.
 
 ## Phase 011 sequence
 
@@ -173,8 +148,8 @@ Decision-material disclosure rule:
 011-D  COMPLETE — synchronization / correction / invalidation / historical integrity
 011-E  COMPLETE — synergy / simplicity / generic fitness / conceptual burden
 011-F  COMPLETE — archetypal / exceptional / progressive-disclosure replay
-011-G  NEXT — adversarial / degraded / recovery / scale / provider-semantic leakage
-011-H  future-scope / extensibility / new-capability pressure / rediscovery triggers
+011-G  COMPLETE — adversarial / degraded / recovery / scale / provider leakage
+011-H  NEXT — future-scope / extensibility / new-capability pressure / rediscovery triggers
 011-I  residual conceptual misfit register / dispositions
 011-J  Phase 011 consolidation / G1-G7 decision / Phase 012 handoff
 ```
@@ -189,10 +164,10 @@ IMPLEMENTATION START       NOT STARTED
 IMPLEMENTATION NEXT        NOT YET
 ```
 
-Do not translate concepts, synchronizations, genericity conclusions, scenario states or D0-D4 disclosure levels mechanically into package inheritance, services, schemas, endpoints, workflow engines, status resources, feature flags, runtime enums or product SKUs.
+Do not translate concepts, synchronizations, provider seams, recovery qualifications, application-family members or Phase 011 audit categories mechanically into package inheritance, services, schemas, endpoints, workflow engines, provider adapters, feature flags, runtime enums or product SKUs.
 
 Phase 012 may declare Jackson concept design complete. Phase 013 reconciles representation/architecture. Only a positive Phase 014 may make implementation **READY / NOT STARTED / NEXT**; implementation itself still requires Phase 015.
 
 ## Current next boundary
 
-**011-G — Adversarial, Degraded, Recovery, Scale & Provider-Semantic-Leakage Validation** is next eligible.
+**011-H — Future-Scope, Extensibility, New-Capability Pressure & Rediscovery Triggers** is next eligible.
