@@ -64,20 +64,21 @@ H1                         CURRENTLY CLOSED
 H2                         CURRENTLY CLOSED
 Jackson concept design     COMPLETE FOR CURRENT PRODUCT SCOPE
 Phase 013                  ACTIVE
-013-A                      NEXT ELIGIBLE
+013-A                      COMPLETE
+013-B                      NEXT ELIGIBLE
 R1 architecture            DOWNSTREAM / IN PROGRESS
 ```
 
 Current concept-design completion authority:
 
 - [Phase 012 Jackson Concept-Design Consolidation](phase-012-jackson-concept-design-consolidation.md);
-- [Jackson Methodology Completion Matrix](jackson-methodology-completion-matrix.md);
-- [Phase 012 Index](../phases/012/index.md).
+- [Jackson Methodology Completion Matrix](jackson-methodology-completion-matrix.md).
 
 Current Phase 013 authority:
 
+- [Phase 013 Architecture Reconciliation Authority](phase-013-architecture-reconciliation-authority.md);
 - [Phase 013 Index](../phases/013/index.md);
-- [Phase 013 Entry & Decomposition](../phases/013/013-entry-decomposition.md);
+- [013-A Reconciliation Authority / Corpus Inventory / Taxonomy](../phases/013/013-A-reconciliation-authority-retained-corpus-inventory-precedence-reset-discrepancy-taxonomy.md);
 - [Representation & Architecture Index](../architecture/index.md).
 
 ## Meaning of concept-design completion
@@ -95,6 +96,25 @@ Current concept design has complete authority for:
 
 Phase 013 reconciles how those semantics are represented architecturally; it does not infer new concept semantics from historical architecture.
 
+## 013-A architecture-reconciliation guard
+
+013-A established a fixed method over the retained architecture corpus:
+
+```text
+substantive architecture documents   19
+retained ADRs                         10
+AR-0..AR-9 taxonomy                   ESTABLISHED
+AMAT-0..AMAT-3 materiality            ESTABLISHED
+known entry candidates                 6
+AMAT-2 defects declared                0
+AMAT-3 blockers declared               0
+upstream reopen                       NONE
+```
+
+Architecture may be retained, clarified, superseded, corrected or deferred. `UPSTREAM-REOPEN` is reserved for a demonstrated AR-9 genuine semantic contradiction.
+
+Historical provider constraints, implementation cost, package shape, tests or code are not sufficient by themselves to reopen completed concept design.
+
 ## Residual concept-design accounting carried downstream
 
 ```text
@@ -106,16 +126,6 @@ resolved M1 quality-rule families                 2
 M6 Phase-013 deferrals                            1
 M8 future-rediscovery finding groups              4
 ```
-
-### Resolved M1 rules
-
-Decision-material disclosure:
-
-> **Progressive disclosure may defer explanatory depth, but it must not defer a qualifier whose omission could change the actor's immediate semantic decision or make current state appear stronger than the owning concept supports.**
-
-Provider-evidence qualification:
-
-> **A host/provider fact may be consumed only at the evidentiary strength that fact actually establishes. Familiar provider vocabulary does not become stronger SYNGAN semantic truth by naming alone.**
 
 ### M6 Phase 013 obligation
 
@@ -131,7 +141,7 @@ These are not architecture reservations or implementation backlog items. Trigger
 
 ## Product / concept invariants Phase 013 must preserve
 
-Unless a future genuine misfit explicitly reopens concept design, Phase 013 must preserve:
+Unless a genuine AR-9 misfit explicitly reopens concept design, Phase 013 must preserve:
 
 - package-first Python/Spark product form and Spark-host agnosticism;
 - eleven current concept boundaries and singular ownership;
@@ -145,21 +155,17 @@ Unless a future genuine misfit explicitly reopens concept design, Phase 013 must
 - Evidence versus Generation/approval/release/privacy authority;
 - Provenance relationship authority versus source-fact ownership;
 - provider facts only at actual evidentiary strength;
-- cross-cutting qualifiers remaining cross-cutting absent independent lifecycle;
 - D0/D1 decision-material disclosure;
 - recovery authority continuity;
 - material approximation as explicit and owner-scoped;
 - genericity as new instances within stable purpose rather than umbrella expansion;
-- human/programmatic semantic parity;
-- compatibility vocabulary remaining owner-qualified.
+- human/programmatic semantic parity.
 
 ## Phase 013 boundary
 
 Phase 013 may retain, clarify, supersede or correct downstream architecture to fit completed concept design.
 
 It must not silently revise concept purposes, ownership, inclusion dependence, synchronization semantics or mapping merely to preserve historical architectural choices.
-
-If architecture exposes a genuine upstream semantic contradiction, use the established smallest-authority reopen discipline explicitly and revalidate the material blast radius.
 
 Only 013-J may close R1 and hand the reconciled architecture to Phase 014.
 
@@ -172,7 +178,8 @@ Phase 013 is design/reconciliation work.
 ## Remaining roadmap
 
 ```text
-013       Post-Concept Representation & Architecture Reconciliation — ACTIVE
+013-B     Representation / Layering / Public Contract / Identity / Revision / Handles / Views — NEXT
+013-C..J  remaining architecture reconciliation
 014       Whole-Design Consolidation & Implementation-Readiness Decision
 ---
 015       Implementation Authority & Controlled Delivery — FUTURE ONLY
@@ -182,4 +189,4 @@ Only a positive Phase 014 may make implementation **READY / NOT STARTED / NEXT**
 
 ## Current next boundary
 
-**013-A — Reconciliation Authority, Retained Corpus Inventory, Precedence Reset & Discrepancy Taxonomy** is next eligible.
+**013-B — Representation Layering, Public Contract, Identity, Revision, Handle & View Reconciliation** is next eligible.
