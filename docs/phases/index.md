@@ -30,87 +30,68 @@ Only Phase 014 may change that posture after a positive whole-design completion 
 
 ## Phase 008 — Individual Concept Design Normalization & Completeness — complete
 
-```text
-INDIVIDUAL CONCEPT DESIGN   COMPLETE ENOUGH FOR CURRENT PROGRAM
-```
+A1-A3, B1-B5 and C1-C8 are currently closed.
 
 ## Phase 009 — Dependence, Application Family, Composition & Synchronization — complete
 
 ```text
-009-A..009-H  COMPLETE
-D1-D4         CURRENTLY CLOSED
-E1-E5         CURRENTLY CLOSED
+D1-D4  CURRENTLY CLOSED
+E1-E5  CURRENTLY CLOSED
 ```
 
 ## Phase 010 — Concept Mapping, Interaction, Linguistic & Experience Alignment — complete
 
 ```text
-010-A..010-H  COMPLETE
-F1-F5         CURRENTLY CLOSED
+F1-F5  CURRENTLY CLOSED
 ```
 
 Final mapping coverage remains 66/66 commands, 52/52 queries, 11/11 lifecycle/history envelopes, 5/5 explanation patterns, 11/11 concept-name alignment, 10/10 family replays and 20/20 difficult-condition parity probes.
 
-## Phase 011 — Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Design Validation — complete
+## Phase 011 — Design Quality / Misfit Validation — complete
+
+```text
+011-A..011-J  COMPLETE
+G1-G7         CURRENTLY CLOSED
+```
+
+No unresolved current conceptual blocker remains.
+
+## Phase 012 — Jackson Concept-Design Consolidation & Completion Decision — complete
 
 Current authority:
 
-- [Phase 011 Index](011/index.md)
-- [011-J Consolidation Record](011/011-J-phase-011-consolidation-g1-g7-completion-decision-phase-012-handoff.md)
-- [Phase 011 Consolidation Authority](../authority/phase-011-design-quality-misfit-consolidation.md)
-- [Residual Conceptual Misfit Register](../authority/residual-conceptual-misfit-register.md)
-- [Jackson Methodology Completion Matrix](../authority/jackson-methodology-completion-matrix.md)
+- [Phase 012 Index](012/index.md)
+- [012-A Current-State Consolidated Audit](012/012-A-current-state-jackson-concept-design-consolidated-audit.md)
+- [012-B Completion Decision & Phase 013 Handoff](012/012-B-jackson-concept-design-completion-decision-phase-013-handoff.md)
+- [Phase 012 Consolidation Authority](../authority/phase-012-jackson-concept-design-consolidation.md)
 
 Final state:
 
 ```text
-Phase 011                    COMPLETE
-011-A..011-J                 COMPLETE
-G1 specificity               CURRENTLY CLOSED
-G2 familiarity               CURRENTLY CLOSED
-G3 integrity                 CURRENTLY CLOSED
-G4 synergy / simplicity      CURRENTLY CLOSED
-G5 scenario / adversarial    CURRENTLY CLOSED
-G6 future-scope              CURRENTLY CLOSED
-G7 residual misfit register  CURRENTLY CLOSED
-DESIGN QUALITY / MISFIT      COMPLETE ENOUGH FOR PHASE 012
+012-A  COMPLETE — H1 CURRENTLY CLOSED
+012-B  COMPLETE — H2 CURRENTLY CLOSED
+PHASE 012                    COMPLETE
+JACKSON CONCEPT DESIGN       COMPLETE FOR CURRENT PRODUCT SCOPE
 ```
 
-Final residual state:
+Phase 012 confirms that current A-G authority is coherent as one system and makes the explicit Jackson completion decision.
 
-```text
-Phase 010 risks dispositioned                 8 / 8
-unresolved MAT-2 findings                     0
-MAT-3 blockers                                0
-unresolved M2-M5 current-design defects       0
-upstream reopens required                     0
-accepted conceptual tradeoffs required        0
-M6 Phase-013 deferrals                        1
-M8 future-rediscovery finding groups          4
-```
+Completion remains scope-relative: a future genuine misfit or newly independent product purpose may reopen the smallest affected design authority.
 
-The M6 item is historical synchronization-numbering/documentation drift in retained Phase 006 representation/architecture material. It remains a bounded Phase 013 reconciliation obligation, not a current concept/synchronization defect.
+## Phase 013 — Post-Concept Representation & Architecture Reconciliation — next
 
-M8 triggers are conditional future rediscovery gates and do not authorize placeholder concepts or implementation.
+Phase 013 must reconcile retained Phase 004/006/007 representation/architecture against the completed concept design.
 
-## Phase 012 — Jackson Concept-Design Consolidation & Completion Decision — next
+Explicit inputs include:
 
-Phase 012 owns:
+- completed Phase 012 concept-design authority;
+- the one bounded M6 historical synchronization-label/documentation reconciliation item;
+- provider-evidence, temporal-integrity, semantic/operational, Evidence/Provenance and approximation guardrails;
+- M8 future triggers as **non-architecture** unless product scope first re-enters concept discovery.
 
-```text
-H1  one whole-current-state consolidated Jackson concept-design audit
-H2  explicit Jackson concept-design completion decision
-```
+Phase 013 remains design-only and must be deliberately decomposed before architecture changes are made.
 
-It must reconcile A-G against the latest canonical authority chain and cannot infer completion merely from positive prior phases.
-
-A positive Phase 012 result does **not** make implementation ready.
-
-## Later design phases
-
-### Phase 013 — Post-Concept Representation & Architecture Reconciliation
-
-Planned. Reconcile retained architecture against the completed concept design, including the bounded historical synchronization-numbering drift retained by 011-I/J. Remains design-only.
+## Later design phase
 
 ### Phase 014 — Whole-Design Consolidation & Implementation-Readiness Decision
 
@@ -118,13 +99,12 @@ Planned. Only this phase may set implementation **READY / NOT STARTED / NEXT**.
 
 ### Future Phase 015 — Implementation Authority & Controlled Delivery
 
-Future only. Explicit authorization is still required before implementation begins.
+Future only. Explicit authorization remains required before implementation begins.
 
 ## Current sequence
 
 ```text
-012  Jackson Concept-Design Consolidation & Completion Decision — NEXT
-013  Post-Concept Representation & Architecture Reconciliation
+013  Post-Concept Representation & Architecture Reconciliation — NEXT
 014  Whole-Design Consolidation & Implementation-Readiness Decision
 ---
 015  Implementation Authority & Controlled Delivery — FUTURE ONLY
@@ -132,6 +112,6 @@ Future only. Explicit authorization is still required before implementation begi
 
 ## Current next boundary
 
-**Phase 012 — Jackson Concept-Design Consolidation & Completion Decision** is next eligible.
+**Phase 013 — Post-Concept Representation & Architecture Reconciliation** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
