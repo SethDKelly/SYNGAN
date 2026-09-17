@@ -4,7 +4,7 @@ These instructions apply repository-wide to automated coding/documentation agent
 
 ## Current posture
 
-**SYNGAN is in Jackson concept-design completion, not implementation re-entry. Phase 011 is active; 011-A through 011-F are complete and 011-G is next.**
+**SYNGAN is in Jackson concept-design completion, not implementation re-entry. Phase 011 is active; 011-A through 011-G are complete and 011-H is next.**
 
 Start with:
 
@@ -21,6 +21,7 @@ Start with:
 - `docs/authority/composed-integrity-synchronization-history-audit.md`
 - `docs/authority/composed-synergy-simplicity-generic-fitness-burden-audit.md`
 - `docs/authority/archetypal-exceptional-progressive-disclosure-misfit-replay.md`
+- `docs/authority/adversarial-degraded-recovery-scale-provider-semantic-leakage-validation.md`
 - `docs/phases/011/index.md`
 - `docs/synchronizations/index.md`
 - `docs/mapping/index.md`
@@ -41,12 +42,13 @@ Phase 011                            ACTIVE
 011-D                                COMPLETE
 011-E                                COMPLETE
 011-F                                COMPLETE
-011-G                                NEXT ELIGIBLE
+011-G                                COMPLETE
+011-H                                NEXT ELIGIBLE
 G1 specificity                       CURRENTLY CLOSED
 G2 familiarity                       CURRENTLY CLOSED
-G3 integrity                         STRONG EVIDENCE / 011-G STRESS REVALIDATION REQUIRED
+G3 integrity                         CURRENTLY CLOSED
 G4 synergy / simplicity              CURRENTLY CLOSED
-G5 scenario / adversarial            STRONG EVIDENCE / 011-G STRESS REVALIDATION REQUIRED
+G5 scenario / adversarial            CURRENTLY CLOSED
 G6 future-scope                      STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
 G7 residual misfit register          PARTIAL
 Jackson concept design               NOT COMPLETE
@@ -80,129 +82,95 @@ MAT-2  material design defect or credible material risk
 MAT-3  conceptual blocker
 ```
 
-## Completed quality results
-
-### G1 — specificity
+## Completed quality results through 011-G
 
 ```text
-11 / 11 concepts PASS
-R010-01 NO DEFECT
-G1 CURRENTLY CLOSED
+G1 specificity             CURRENTLY CLOSED
+G2 familiarity             CURRENTLY CLOSED
+G3 integrity               CURRENTLY CLOSED
+G4 synergy / simplicity    CURRENTLY CLOSED
+G5 scenario / adversarial  CURRENTLY CLOSED
 ```
 
-### G2 — familiarity
-
-```text
-11 / 11 canonical names retained
-external-model comparison PASS
-R010-02 NO DEFECT — COMPATIBILITY GUIDANCE STRENGTHENED
-B4 / G2 CURRENTLY CLOSED
-```
-
-### 011-D — integrity baseline
-
-```text
-13 / 13 synchronizations preserve singular ownership
-current-versus-historical truth                 PASS
-Evidence/Generation authority separation        PASS
-semantic/Execution separation                   PASS
-Provenance low-authority-fan-out baseline       PASS
-recovery/reconstruction ownership baseline      PASS
-hidden coordinator required                     NO
-MAT-2 / MAT-3 findings                          0 / 0
-```
-
-`R010-03` has no defect for the 011-D composed/historical portion but remains open for 011-G stress. Do not mark G3 fully closed before 011-G.
-
-### G4 — synergy / simplicity / generic fitness
-
-```text
-concept add/remove/merge/split justified        0
-synchronization add/remove/merge justified      0
-reduced-family burden replay                    PASS
-positive composed synergies                     CONFIRMED
-generic-fitness / domain anchoring              PASS
-progressive-disclosure structural simplicity    PASS
-hidden universal coordinator                    NONE
-MAT-2 / MAT-3 findings                          0 / 0
-R010-04                                         NO DEFECT
-G4                                              CURRENTLY CLOSED
-```
-
-### 011-F — archetypal / exceptional / progressive disclosure
-
-Current authority: `docs/authority/archetypal-exceptional-progressive-disclosure-misfit-replay.md`.
-
-```text
-required scenario families                       10 / 10
-archetypal histories                             10 / 10 PASS
-material exceptional histories                   10 / 10 PASS
-paired scenario replays                          20 / 20 PASS
-progressive-disclosure concealment classes        6 / 6 PASS
-MAT-2 / MAT-3 findings                            0 / 0
-upstream reopen                                   NONE
-R010-05                                           NO DEFECT
-```
-
-Decision-material disclosure rule:
-
-> **Progressive disclosure may defer explanatory depth, but it must not defer a qualifier whose omission could change the actor's immediate semantic decision or make current state appear stronger than the owning concept supports.**
-
-At D0/D1, preserve material distinctions such as candidate versus completed output, Evidence strength/uncertainty, current versus historical status, semantic versus operational completion, unresolved cancellation, continuity qualification, and optional-capability absence when omission could be mistaken for failure.
-
-Do not infer from 011-F that D0-D4 are screens, API tiers, status-resource classes or workflow stages.
-
-## 011-G discipline
-
-011-G owns the remaining G3/G5 stress closure plus:
-
-```text
-R010-03  synchronization integrity under adversarial composition — final stress portion
-R010-06  provider / host semantic leakage
-R010-08  scale / approximation pressure
-```
-
-Stress the **concept system itself**, not merely interaction mapping. At minimum re-test:
-
-- stale / contradictory authority references;
-- concurrent or superseded work;
-- retry/recovery ambiguity and regressive restoration;
-- partial material and indeterminate operational state;
-- authorization/disclosure conflict;
-- Evidence invalidation after historical use;
-- distributed runtime/dependency closure failure;
-- enterprise-scale approximation pressure;
-- multi-table/time-series/text-bearing pressure;
-- host/provider job, run, model, artifact, catalog and identity objects attempting to substitute for canonical SYNGAN owners.
-
-Carry forward these explicit watch points:
-
-```text
-W-4 recovery/continuity qualification must reach D0/D1 when it changes actionability
-Provenance high fan-in must retain low authority fan-out
-Synthesis Strategy must not absorb plugin/runtime/provider infrastructure
-host/provider success must not become semantic completion
-approximation must not silently weaken committed semantics
-```
-
-Provider/platform examples are counterexample evidence only. Do not select architecture in 011-G.
-
-## Risk handoff
+Risk state:
 
 ```text
 R010-01  NO DEFECT — 011-B
 R010-02  NO DEFECT — GUIDANCE STRENGTHENED — 011-C
-R010-03  NO DEFECT IN 011-D BASELINE / OPEN FOR 011-G STRESS
+R010-03  NO DEFECT — 011-D + 011-G
 R010-04  NO DEFECT — 011-E
-R010-05  NO DEFECT — 011-F
-R010-06  OPEN — 011-G
+R010-05  NO DEFECT — 011-E + 011-F
+R010-06  NO DEFECT — 011-G
 R010-07  OPEN — 011-H
-R010-08  OPEN — 011-G
+R010-08  NO DEFECT — 011-G
 ```
+
+## Decision-material disclosure rule
+
+> **Progressive disclosure may defer explanatory depth, but it must not defer a qualifier whose omission could change the actor's immediate semantic decision or make current state appear stronger than the owning concept supports.**
+
+Do not infer that D0-D4 are screens, API tiers, status-resource classes or workflow stages.
+
+## Provider / recovery / scale rules from 011-G
+
+Provider-evidence qualification:
+
+> **Consume host/provider facts only at the strength they actually establish. Familiar provider words such as `success`, `completed`, `model`, `artifact`, `lineage`, `current`, or `production` never escalate automatically into stronger SYNGAN semantic claims.**
+
+Preserve:
+
+- provider job/run success does not establish parent semantic completion;
+- provider model/artifact/catalog objects do not automatically become Strategy/Learned State/Data Meaning/result authority;
+- provider lineage may inform Provenance but is not complete SYNGAN Provenance authority;
+- restored persistence does not establish current write authority after regressive recovery;
+- surviving workers/jobs/material do not resurrect stale authority;
+- unresolved recovery/history remains explicitly unresolved;
+- resource pressure may queue/block/fail but may not silently weaken a committed contract;
+- material approximation is explicit and owned by the concept whose semantics it changes;
+- driver/package availability does not establish distributed runtime closure;
+- provider identity/permission is an integration input, not universal protected-action authority.
+
+011-G found no MAT-2/MAT-3 defect and no upstream reopen.
+
+## 011-H discipline
+
+011-H owns **G6 future-scope/extensibility** and `R010-07`.
+
+Test likely future capabilities against the now stress-validated current design. At minimum explore:
+
+```text
+new Strategy families
+richer relational / topological structures
+advanced text-bearing capabilities
+formal privacy mechanisms / guarantees
+external integrations and handoff
+new Evaluation methods and claim-strength models
+new runtime / accelerator / platform capabilities
+new reusable state forms
+additional governance requirements where SYNGAN itself may own a new purpose
+```
+
+For each pressure, classify it as one of:
+
+```text
+fits existing concept unchanged
+fits through new state/action within an existing purpose
+requires new synchronization only
+requires application-family capability refinement
+requires genuine concept rediscovery
+remains external authority / non-goal
+insufficient evidence
+```
+
+Rediscovery requires evidence of an independent **purpose + state + action/lifecycle**, not simply new implementation technology, a provider object, or a familiar external abstraction.
+
+Do not pre-add a generic Privacy, Relationship, Model, Plugin, Workflow, Governance, Approval, Accelerator, Integration or Capability concept merely to reserve future space.
+
+Carry the Phase 013 note that some retained Phase 006 documents contain historical synchronization identifiers; current Phase 009 authority already controls active identifiers.
 
 ## Architecture / implementation boundary
 
-Phase 011 is design-only. Do not select or implement generic base hierarchies, transactions, event propagation, storage schemas, service/package decomposition, provenance databases, recovery mechanisms, public APIs, workflow engines, platform adapters, feature flags, executable tests or compatibility shims merely to crystallize current design.
+Phase 011 is design-only. Do not select or implement generic base hierarchies, provider adapters, transactions, event propagation, storage schemas, service/package decomposition, provenance databases, recovery mechanisms, public APIs, workflow engines, platform adapters, feature flags, executable tests or compatibility shims merely to crystallize current design.
 
 ## Readiness rule
 
@@ -216,4 +184,4 @@ Phase 012 may declare Jackson concept design complete. Phase 013 reconciles arch
 
 ## Current next boundary
 
-**011-G — Adversarial, Degraded, Recovery, Scale & Provider-Semantic-Leakage Validation** is next eligible.
+**011-H — Future-Scope, Extensibility, New-Capability Pressure & Rediscovery Triggers** is next eligible.
