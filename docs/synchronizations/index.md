@@ -15,11 +15,10 @@ Concept specifications own purpose, state, actions, lifecycle and invariants. Sy
 - [Phase 009 Consolidation](../authority/phase-009-dependence-composition-consolidation.md)
 - [Synchronization Trigger / Ownership Normalization](trigger-ownership-normalization.md)
 - [Composition Economy / Synergy / Integrity](composition-economy-synergy-integrity.md)
-- [Phase 010 Concept Mapping Consolidation](../authority/phase-010-concept-mapping-consolidation.md)
 - [011-D Integrity Audit](../authority/composed-integrity-synchronization-history-audit.md)
-- [011-E Synergy / Simplicity Audit](../authority/composed-synergy-simplicity-generic-fitness-burden-audit.md)
-- [011-G Adversarial / Recovery / Scale / Provider Stress Validation](../authority/adversarial-degraded-recovery-scale-provider-semantic-leakage-validation.md)
-- [011-H Future-Scope / Extensibility Audit](../authority/future-scope-extensibility-new-capability-rediscovery-audit.md) — **current extension-pressure revalidation**
+- [011-G Stress Validation](../authority/adversarial-degraded-recovery-scale-provider-semantic-leakage-validation.md)
+- [011-H Future-Scope Audit](../authority/future-scope-extensibility-new-capability-rediscovery-audit.md)
+- [011-I Residual Conceptual Misfit Register](../authority/residual-conceptual-misfit-register.md)
 
 ## Current synchronization inventory
 
@@ -70,9 +69,7 @@ Provenance typed relationship assertions           -> Provenance
 synchronization-owned canonical state              -> NONE
 ```
 
-## Integrity and stress result
-
-011-D/F/G together establish:
+## Current validation result
 
 ```text
 13 / 13 synchronizations preserve singular ownership
@@ -88,17 +85,16 @@ scale/approximation containment                  PASS
 hidden coordinator required                     NO
 MAT-2 / MAT-3 findings                          0 / 0
 synchronization changes                          0
+Phase 009 synchronization reopen                 NONE
 R010-03                                         NO DEFECT
 G3                                              CURRENTLY CLOSED
 ```
 
-Provider facts enter synchronization reasoning only at the strength they actually establish. Provider job/run state cannot establish parent semantic completion, and provider lineage can inform Provenance without becoming complete Provenance authority.
+011-I confirms no residual synchronization defect and no current add/remove/merge/new-sync requirement.
 
-## 011-H future synchronization pressure
+## Future synchronization rule
 
-011-H explicitly separates future capability extension from new synchronization discovery.
-
-A future synchronization is a legitimate `F-3` candidate only when:
+A future synchronization is a legitimate F-3 candidate only when:
 
 ```text
 all substantive state owners already exist
@@ -107,40 +103,15 @@ all substantive state owners already exist
 + the current synchronization inventory cannot express that relation
 ```
 
-If a future capability instead introduces independent purpose + durable state/history + independently meaningful actions/lifecycle, concept rediscovery must occur first; a new synchronization cannot be used as a hidden substitute for a missing concept.
+If future capability instead introduces independent purpose + durable state/history + independently meaningful actions/lifecycle, concept rediscovery occurs first. M8 triggers do not justify placeholder synchronization IDs now.
 
-Current likely future pressures were replayed and produce:
-
-```text
-current new synchronization required       NO
-current sync add/remove/merge justified    NO
-current hidden future coordinator          NO
-current application-family sync gap        NONE
-R010-07                                    NO DEFECT
-G6                                         CURRENTLY CLOSED
-```
-
-Known future `M8` concept rediscovery triggers—formal privacy accounting, product-owned governance/release, independent output lifecycle, reusable request/cohort lifecycle, graph-relationship lifecycle, durable session/feed lifecycle, resource/economic accounting and independent knowledge/memory authority—do not justify placeholder synchronizations now.
-
-## Synchronization economy remains closed
-
-```text
-rule add/remove/merge justified                0
-synchronization-owned state                    0
-universal coordinator                          0
-reduced-family burden                          PASS
-positive synchronization-enabled synergy       CONFIRMED
-R010-04                                        NO DEFECT
-G4                                             CURRENTLY CLOSED
-```
-
-## Retired / reclassified IDs
+## Retired / reclassified IDs and M6 handoff
 
 `SYNC-08` remains retired as Generation-local output lifecycle behavior.
 
 `SYNC-15` remains reclassified under the cross-cutting Reproducibility Contract.
 
-Some retained Phase 006 contracts still use historical numbering. Current Phase 009 authority controls the active inventory; cleanup of stale historical labels is a bounded Phase 013 reconciliation concern, not a synchronization-design reopen.
+Some retained Phase 006 contracts still use historical numbering. Current Phase 009 authority controls the active inventory. 011-I carries this as the one bounded `MAT-1 / M6` Phase 013 documentation/architecture reconciliation item—not a synchronization-design reopen.
 
 ## Composition guardrails
 
@@ -156,13 +127,11 @@ Some retained Phase 006 contracts still use historical numbering. Current Phase 
 - correction/invalidation is owner-scoped, not a generic retroactive cascade;
 - recovery does not resurrect stale authority;
 - resource pressure does not silently weaken committed semantics;
-- repeated synchronization patterns do not by themselves justify umbrella concepts;
 - future implementation call flow is not synchronization evidence;
-- future rediscovery triggers do not imply future synchronization IDs until concept/dependence design is performed;
 - conceptual synchronization prescribes no event bus, transaction, service, package, queue, schema, architecture layer or runtime call direction.
 
 ## Current next boundary
 
-**011-I — Residual Conceptual Misfit Register, Reopen/Defer/Accept Decisions & Closure Preparation** is next eligible.
+**011-J — Phase 011 Consolidation, G1-G7 Completion Decision & Phase 012 Handoff** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
