@@ -8,9 +8,9 @@ status: active
 
 ## Purpose
 
-Maintain the correct boundary between completed Jackson concept design, downstream representation/architecture reconciliation, whole-design readiness, and implementation.
+Maintain the correct boundary between completed Jackson concept design, active representation/architecture reconciliation, whole-design readiness, and implementation.
 
-Historical Phase 004/006/007 architecture and executable evidence remain downstream evidence only. Historical implementation-reentry conclusions remain superseded.
+Historical Phase 004/006/007 architecture and executable evidence remain downstream evidence until Phase 013 reconciles them. Historical implementation-reentry conclusions remain superseded.
 
 ## Current implementation status
 
@@ -20,7 +20,7 @@ IMPLEMENTATION START       NOT STARTED
 IMPLEMENTATION NEXT        NOT YET
 ```
 
-Jackson concept-design completion does not change this posture by implication.
+Jackson concept-design completion and Phase 013 architecture work do not change this posture by implication.
 
 ## Methodology boundary
 
@@ -39,7 +39,7 @@ whole concept-design quality / misfit validation ← Phase 011 COMPLETE
         ↓
 Jackson concept-design completion gate     ← Phase 012 COMPLETE
         ↓
-representation / architecture reconciliation ← Phase 013 NEXT
+representation / architecture reconciliation ← Phase 013 ACTIVE
         ↓
 whole-design completion / readiness gate   ← Phase 014
         ↓
@@ -48,7 +48,7 @@ implementation MAY become READY / NOT STARTED / NEXT
 explicit implementation authority          ← Phase 015 FUTURE ONLY
 ```
 
-## Current design status after Phase 012
+## Current design status
 
 ```text
 Phase 008                  COMPLETE
@@ -63,17 +63,26 @@ Phase 012                  COMPLETE
 H1                         CURRENTLY CLOSED
 H2                         CURRENTLY CLOSED
 Jackson concept design     COMPLETE FOR CURRENT PRODUCT SCOPE
+Phase 013                  ACTIVE
+013-A                      NEXT ELIGIBLE
+R1 architecture            DOWNSTREAM / IN PROGRESS
 ```
 
-Current completion authority:
+Current concept-design completion authority:
 
 - [Phase 012 Jackson Concept-Design Consolidation](phase-012-jackson-concept-design-consolidation.md);
 - [Jackson Methodology Completion Matrix](jackson-methodology-completion-matrix.md);
 - [Phase 012 Index](../phases/012/index.md).
 
+Current Phase 013 authority:
+
+- [Phase 013 Index](../phases/013/index.md);
+- [Phase 013 Entry & Decomposition](../phases/013/013-entry-decomposition.md);
+- [Representation & Architecture Index](../architecture/index.md).
+
 ## Meaning of concept-design completion
 
-Current concept design now has complete authority for:
+Current concept design has complete authority for:
 
 - current problem/purpose/actors/outcomes;
 - eleven accepted concept purposes and complete conceptual behavior;
@@ -84,7 +93,7 @@ Current concept design now has complete authority for:
 - residual misfit accounting and rediscovery triggers;
 - one whole-current-state A-G consolidated audit.
 
-Completion is scope-relative rather than permanent. A future genuine misfit or newly independent product purpose may reopen the smallest affected design authority.
+Phase 013 reconciles how those semantics are represented architecturally; it does not infer new concept semantics from historical architecture.
 
 ## Residual concept-design accounting carried downstream
 
@@ -108,11 +117,11 @@ Provider-evidence qualification:
 
 > **A host/provider fact may be consumed only at the evidentiary strength that fact actually establishes. Familiar provider vocabulary does not become stronger SYNGAN semantic truth by naming alone.**
 
-### M6 Phase 013 handoff
+### M6 Phase 013 obligation
 
-Retained Phase 006 representation/architecture documents contain historical synchronization identifiers such as older `SYNC-08` / `SYNC-15` wording.
+Retained Phase 006/007 architecture documents contain historical synchronization assumptions, including `11 / 15` inventory wording and older `SYNC-08` / `SYNC-15` roles.
 
-Current Phase 009 synchronization authority supersedes those labels. Phase 013 must reconcile the retained corpus without reopening current synchronization semantics merely because historical representation used different identifiers.
+Current Phase 009 synchronization authority supersedes those semantics. Phase 013 must reconcile the retained corpus without reopening current synchronization semantics merely to preserve historical architecture wording.
 
 ### M8 future rediscovery triggers
 
@@ -146,26 +155,24 @@ Unless a future genuine misfit explicitly reopens concept design, Phase 013 must
 
 ## Phase 013 boundary
 
-Phase 013 is now eligible to reconcile representation and architecture against completed concept design.
-
-It may revise retained architecture when that architecture conflicts with current concept authority.
+Phase 013 may retain, clarify, supersede or correct downstream architecture to fit completed concept design.
 
 It must not silently revise concept purposes, ownership, inclusion dependence, synchronization semantics or mapping merely to preserve historical architectural choices.
 
-If architecture exposes a genuine upstream semantic contradiction, use the established smallest-authority reopen discipline explicitly.
+If architecture exposes a genuine upstream semantic contradiction, use the established smallest-authority reopen discipline explicitly and revalidate the material blast radius.
+
+Only 013-J may close R1 and hand the reconciled architecture to Phase 014.
 
 ## Architecture / executable prohibition remains
 
-Concept-design completion does not authorize implementation.
+Do not begin production changes, implementation tranche work, public API stabilization, provider adapters, persistence migration, runtime integration, recovery mechanism implementation, package refactoring, benchmarks or executable conformance enforcement under Phase 013.
 
-Do not begin production changes, implementation tranche work, public API stabilization, provider adapters, persistence migration, runtime integration, recovery mechanism implementation, or executable conformance enforcement under Phase 013 merely because the upstream concept design is complete.
-
-Phase 013 remains design/reconciliation work.
+Phase 013 is design/reconciliation work.
 
 ## Remaining roadmap
 
 ```text
-013       Post-Concept Representation & Architecture Reconciliation — NEXT
+013       Post-Concept Representation & Architecture Reconciliation — ACTIVE
 014       Whole-Design Consolidation & Implementation-Readiness Decision
 ---
 015       Implementation Authority & Controlled Delivery — FUTURE ONLY
@@ -175,4 +182,4 @@ Only a positive Phase 014 may make implementation **READY / NOT STARTED / NEXT**
 
 ## Current next boundary
 
-**Phase 013 — Post-Concept Representation & Architecture Reconciliation** is next eligible.
+**013-A — Reconciliation Authority, Retained Corpus Inventory, Precedence Reset & Discrepancy Taxonomy** is next eligible.
