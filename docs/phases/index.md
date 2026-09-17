@@ -32,7 +32,6 @@ Only Phase 014 may change that posture after a positive whole-design completion 
 
 ```text
 INDIVIDUAL CONCEPT DESIGN   COMPLETE ENOUGH FOR CURRENT PROGRAM
-JACKSON CONCEPT DESIGN      NOT COMPLETE
 ```
 
 ## Phase 009 — Dependence, Application Family, Composition & Synchronization — complete
@@ -52,29 +51,21 @@ F1-F5         CURRENTLY CLOSED
 
 Final mapping coverage remains 66/66 commands, 52/52 queries, 11/11 lifecycle/history envelopes, 5/5 explanation patterns, 11/11 concept-name alignment, 10/10 family replays and 20/20 difficult-condition parity probes.
 
-## Phase 011 — Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Design Validation — active
+## Phase 011 — Specificity, Familiarity, Integrity, Synergy, Misfit & Adversarial Design Validation — complete
 
 Current authority:
 
 - [Phase 011 Index](011/index.md)
-- [011-I Residual Misfit Record](011/011-I-residual-conceptual-misfit-register-reopen-defer-accept-closure-preparation.md)
+- [011-J Consolidation Record](011/011-J-phase-011-consolidation-g1-g7-completion-decision-phase-012-handoff.md)
+- [Phase 011 Consolidation Authority](../authority/phase-011-design-quality-misfit-consolidation.md)
 - [Residual Conceptual Misfit Register](../authority/residual-conceptual-misfit-register.md)
 - [Jackson Methodology Completion Matrix](../authority/jackson-methodology-completion-matrix.md)
 
-Current state:
+Final state:
 
 ```text
-Phase 011                    ACTIVE
-011-A                        COMPLETE
-011-B                        COMPLETE
-011-C                        COMPLETE
-011-D                        COMPLETE
-011-E                        COMPLETE
-011-F                        COMPLETE
-011-G                        COMPLETE
-011-H                        COMPLETE
-011-I                        COMPLETE
-011-J                        NEXT ELIGIBLE
+Phase 011                    COMPLETE
+011-A..011-J                 COMPLETE
 G1 specificity               CURRENTLY CLOSED
 G2 familiarity               CURRENTLY CLOSED
 G3 integrity                 CURRENTLY CLOSED
@@ -82,9 +73,10 @@ G4 synergy / simplicity      CURRENTLY CLOSED
 G5 scenario / adversarial    CURRENTLY CLOSED
 G6 future-scope              CURRENTLY CLOSED
 G7 residual misfit register  CURRENTLY CLOSED
+DESIGN QUALITY / MISFIT      COMPLETE ENOUGH FOR PHASE 012
 ```
 
-011-I confirms:
+Final residual state:
 
 ```text
 Phase 010 risks dispositioned                 8 / 8
@@ -97,36 +89,28 @@ M6 Phase-013 deferrals                        1
 M8 future-rediscovery finding groups          4
 ```
 
-The M6 item is historical synchronization-numbering/documentation drift in retained Phase 006 material. It is a bounded Phase 013 reconciliation obligation, not a current concept/synchronization defect.
+The M6 item is historical synchronization-numbering/documentation drift in retained Phase 006 representation/architecture material. It remains a bounded Phase 013 reconciliation obligation, not a current concept/synchronization defect.
 
 M8 triggers are conditional future rediscovery gates and do not authorize placeholder concepts or implementation.
 
-Current sequence:
+## Phase 012 — Jackson Concept-Design Consolidation & Completion Decision — next
+
+Phase 012 owns:
 
 ```text
-011-A  COMPLETE — validation method
-011-B  COMPLETE — specificity
-011-C  COMPLETE — familiarity/reuse
-011-D  COMPLETE — integrity baseline
-011-E  COMPLETE — synergy / simplicity / generic fitness / conceptual burden
-011-F  COMPLETE — archetypal / exceptional / progressive-disclosure replay
-011-G  COMPLETE — adversarial / degraded / recovery / scale / provider leakage
-011-H  COMPLETE — future-scope / extensibility / rediscovery triggers
-011-I  COMPLETE — residual conceptual misfit register / dispositions
-011-J  NEXT — Phase 011 consolidation / G1-G7 joint decision / Phase 012 handoff
+H1  one whole-current-state consolidated Jackson concept-design audit
+H2  explicit Jackson concept-design completion decision
 ```
 
-G1-G7 individual closure is not Phase 011 completion. Only 011-J may make the joint Phase 011 exit decision.
+It must reconcile A-G against the latest canonical authority chain and cannot infer completion merely from positive prior phases.
+
+A positive Phase 012 result does **not** make implementation ready.
 
 ## Later design phases
 
-### Phase 012 — Jackson Concept-Design Consolidation & Completion Decision
-
-Planned. Owns the final Jackson concept-design completion decision. A positive result does not make implementation ready.
-
 ### Phase 013 — Post-Concept Representation & Architecture Reconciliation
 
-Planned. Reconcile retained architecture against completed concept design, including the bounded historical synchronization-numbering drift retained by 011-I. Remains design-only.
+Planned. Reconcile retained architecture against the completed concept design, including the bounded historical synchronization-numbering drift retained by 011-I/J. Remains design-only.
 
 ### Phase 014 — Whole-Design Consolidation & Implementation-Readiness Decision
 
@@ -136,8 +120,18 @@ Planned. Only this phase may set implementation **READY / NOT STARTED / NEXT**.
 
 Future only. Explicit authorization is still required before implementation begins.
 
+## Current sequence
+
+```text
+012  Jackson Concept-Design Consolidation & Completion Decision — NEXT
+013  Post-Concept Representation & Architecture Reconciliation
+014  Whole-Design Consolidation & Implementation-Readiness Decision
+---
+015  Implementation Authority & Controlled Delivery — FUTURE ONLY
+```
+
 ## Current next boundary
 
-**011-J — Phase 011 Consolidation, G1-G7 Completion Decision & Phase 012 Handoff** is next eligible.
+**Phase 012 — Jackson Concept-Design Consolidation & Completion Decision** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
