@@ -27,7 +27,9 @@ These documents define how SYNGAN design knowledge is created, interpreted, chan
 
 ## Active Phase 013 architecture-reconciliation authority
 
+- [Phase 013 Architecture Reconciliation Authority](phase-013-architecture-reconciliation-authority.md) — **current Phase 013 method authority**
 - [Phase 013 Index](../phases/013/index.md)
+- [013-A Reconciliation Authority / Corpus Inventory / Taxonomy](../phases/013/013-A-reconciliation-authority-retained-corpus-inventory-precedence-reset-discrepancy-taxonomy.md)
 - [Phase 013 Entry & Decomposition](../phases/013/013-entry-decomposition.md)
 - [Representation & Architecture Index](../architecture/index.md)
 
@@ -46,13 +48,30 @@ Phase 012                            COMPLETE
 A1-H2                                CURRENTLY CLOSED
 Jackson concept design               COMPLETE FOR CURRENT PRODUCT SCOPE
 Phase 013                            ACTIVE
-013-A                                NEXT ELIGIBLE
+013-A                                COMPLETE
+013-B                                NEXT ELIGIBLE
 R1 architecture reconciliation       DOWNSTREAM / IN PROGRESS
 whole-design completion              NOT YET — PHASE 014
 implementation readiness             NOT READY
 implementation start                 NOT STARTED
 implementation next                  NOT YET
 ```
+
+## 013-A method result
+
+```text
+retained substantive architecture docs   19
+retained ADRs                             10
+AR-0..AR-9 discrepancy taxonomy           ESTABLISHED
+AMAT-0..AMAT-3 materiality                ESTABLISHED
+canonical dispositions                    ESTABLISHED
+known entry candidates                     6
+AMAT-2 defects declared by 013-A           0
+AMAT-3 blockers declared by 013-A          0
+upstream reopen                           NONE
+```
+
+The six entry candidates cover historical synchronization count/ID drift, retained precedence wording and superseded implementation-reentry assumptions. Later groups determine whether any deeper material architecture defect exists.
 
 ## Durable current quality rules
 
@@ -90,17 +109,24 @@ M8 triggers remain conditional future design-governance gates, not architecture 
 
 Completed concept design is upstream authority for representation/architecture reconciliation.
 
-Phase 013 may revise retained architecture where it conflicts with current concept semantics, but it must not change concept authority merely to preserve historical architecture convenience.
+Phase 013 uses the canonical dispositions:
 
-A genuine newly exposed semantic contradiction must use the smallest-authority reopen rule explicitly.
+```text
+RETAIN
+CLARIFY
+SUPERSEDE
+CORRECT
+DEFER
+UPSTREAM-REOPEN
+```
 
-Phase 013 remains design-only.
+Only a demonstrated AR-9 genuine semantic contradiction may justify upstream reopen. Historical architecture convenience, provider preference, implementation cost or existing code shape cannot.
 
 Current dependency-safe sequence:
 
 ```text
-013-A  authority / corpus inventory / precedence / discrepancy taxonomy
-013-B  representation / layering / public contract / identity / views
+013-A  authority / corpus inventory / precedence / discrepancy taxonomy  COMPLETE
+013-B  representation / layering / public contract / identity / views   NEXT
 013-C  persistence / history / transaction-concurrency / migration
 013-D  distributed data / topology / manifest / candidate-seal-promotion
 013-E  Strategy/runtime / dependency / security / offline-no-egress
@@ -126,4 +152,4 @@ Only Phase 014 may set implementation **READY / NOT STARTED / NEXT**; Phase 015 
 
 ## Current next boundary
 
-**013-A — Reconciliation Authority, Retained Corpus Inventory, Precedence Reset & Discrepancy Taxonomy** is next eligible.
+**013-B — Representation Layering, Public Contract, Identity, Revision, Handle & View Reconciliation** is next eligible.
