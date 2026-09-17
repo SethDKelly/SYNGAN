@@ -61,43 +61,52 @@ Phase 011                  ACTIVE
 011-C                      COMPLETE
 011-D                      COMPLETE
 011-E                      COMPLETE
-011-F                      NEXT ELIGIBLE
+011-F                      COMPLETE
+011-G                      NEXT ELIGIBLE
 G1 specificity             CURRENTLY CLOSED
 G2 familiarity             CURRENTLY CLOSED
 G3 integrity               STRONG EVIDENCE / 011-G STRESS REVALIDATION REQUIRED
 G4 synergy / simplicity    CURRENTLY CLOSED
+G5 scenario / adversarial  STRONG EVIDENCE / 011-G STRESS REVALIDATION REQUIRED
 Jackson concept design     NOT COMPLETE
 ```
 
-## 011-D integrity authority
+## Current Phase 011 quality authority
 
-Current baseline G3 authority is [Integrity Under Synchronization, Correction, Invalidation & Historical Composition](composed-integrity-synchronization-history-audit.md).
+Current authority includes:
 
-`R010-03` has no defect in the 011-D composed/historical portion, but final adversarial/degraded/recovery/provider stress remains in 011-G. Do not treat G3 as finally closed before that replay.
+- [Integrity Under Synchronization, Correction, Invalidation & Historical Composition](composed-integrity-synchronization-history-audit.md);
+- [Synergy, Simplicity, Generic Fitness & Conceptual-Burden Audit](composed-synergy-simplicity-generic-fitness-burden-audit.md);
+- [Archetypal, Exceptional & Progressive-Disclosure Misfit Replay](archetypal-exceptional-progressive-disclosure-misfit-replay.md).
 
-## 011-E synergy / simplicity authority
-
-Current G4 authority is [Synergy, Simplicity, Generic Fitness & Conceptual-Burden Audit](composed-synergy-simplicity-generic-fitness-burden-audit.md).
+Current results include:
 
 ```text
-concept add/remove/merge/split justified        0
-synchronization add/remove/merge justified      0
-reduced-family burden replay                    PASS
-positive composed synergies                     CONFIRMED
-repeated-pattern missing-purpose probe          PASS
-cross-cutting qualifier discipline              PASS
-generic-fitness / domain anchoring              PASS
-progressive-disclosure structural simplicity    PASS
-hidden universal coordinator                    NONE
-MAT-2 / MAT-3 findings                          0 / 0
-R010-04                                         NO DEFECT
-R010-05 simplicity portion                      NO DEFECT — 011-F REPLAY PENDING
-G4                                              CURRENTLY CLOSED
+R010-03  no defect in 011-D baseline / 011-G stress pending
+R010-04  NO DEFECT — 011-E
+R010-05  NO DEFECT — 011-F
 ```
 
-G4 closure does **not** authorize implementation compression. In particular, do not infer that conceptual patterns should become generic runtime base types such as `Activity`, `Result`, `Artifact`, `Authority`, `Status`, `Validation` or Workflow.
+011-F confirms 10/10 required scenario families, 20/20 paired archetypal/exceptional histories and 6/6 progressive-disclosure concealment classes pass without MAT-2/MAT-3 findings or upstream reopen.
 
-Application-family members are conceptual capability subsets, not package editions, deployment profiles or feature flags.
+## Decision-material disclosure rule
+
+> **Progressive disclosure may defer explanatory depth, but it must not defer a qualifier whose omission could change the actor's immediate semantic decision or make current state appear stronger than the owning concept supports.**
+
+This rule constrains future representation but does not select one.
+
+It does **not** authorize:
+
+- one global status object;
+- workflow summary state;
+- notification/banner infrastructure;
+- specific UI screens;
+- API response envelopes;
+- exception hierarchies;
+- event propagation;
+- materialized status projections.
+
+The representation obligation is only that decision-material truth remains available at the encounter depth where the decision is made.
 
 ## Product / mapping invariants held forward
 
@@ -115,7 +124,8 @@ Unless a genuine later misfit disproves them, preserve:
 - Evidence versus Generation/approval/release/privacy authority;
 - Provenance relationship authority versus source-fact ownership;
 - cross-cutting qualifiers remain cross-cutting absent independent lifecycle;
-- D0-D4 progressive disclosure may simplify interaction but may not hide material semantics;
+- D0/D1 preserve decision-material limitations/uncertainty/orientation;
+- D2-D4 may defer only non-decision-material explanatory or operational depth;
 - authority continuity under recovery;
 - owner-qualified uncertainty/disclosure/history semantics;
 - human/programmatic semantic parity;
@@ -128,7 +138,7 @@ R010-01  NO DEFECT — 011-B
 R010-02  NO DEFECT — GUIDANCE STRENGTHENED — 011-C
 R010-03  NO DEFECT IN 011-D BASELINE / OPEN FOR 011-G STRESS
 R010-04  NO DEFECT — 011-E
-R010-05  NO DEFECT IN 011-E STRUCTURAL AUDIT / OPEN FOR 011-F SCENARIO REPLAY
+R010-05  NO DEFECT — 011-F
 R010-06  OPEN — 011-G
 R010-07  OPEN — 011-H
 R010-08  OPEN — 011-G
@@ -136,21 +146,20 @@ R010-08  OPEN — 011-G
 
 ## Architecture/executable boundary
 
-Phase 011 is design-only. Do not implement generic base hierarchies, transactions, outboxes, event propagation, invalidation cascades, persistence/query schemas, service/package decomposition, workflow engines, recovery mechanisms, provenance stores, platform adapters, public APIs, feature flags or test suites merely to crystallize the quality model.
+Phase 011 is design-only. Do not implement generic base hierarchies, transactions, outboxes, event propagation, invalidation cascades, persistence/query schemas, service/package decomposition, workflow engines, recovery mechanisms, provenance stores, platform adapters, public APIs, feature flags, status resources or test suites merely to crystallize the quality model.
 
 In particular:
 
 - do not model invalidation as a generic retroactive cascade;
-- do not convert the five synchronization coordination planes into architecture layers;
+- do not convert synchronization coordination planes into architecture layers;
 - do not convert D0-D4 into UI pages or API tiers;
 - do not convert application-family members into SKUs or runtime feature combinations;
-- do not use G4 closure to justify a generic `Activity`, `Artifact`, `Result`, `Validation`, `Status` or Workflow abstraction.
+- do not use G4/G5 evidence to justify generic `Activity`, `Artifact`, `Result`, `Validation`, `Status` or Workflow abstractions.
 
 ## Remaining design roadmap
 
 ```text
-011-F     archetypal / exceptional / progressive-disclosure replay — NEXT
-011-G     adversarial / degraded / recovery / scale / provider leakage
+011-G     adversarial / degraded / recovery / scale / provider leakage — NEXT
 011-H     future-scope / extensibility
 011-I     residual misfit register
 011-J     Phase 011 consolidation / Phase 012 handoff
@@ -165,4 +174,4 @@ Through Phases 011-013 implementation remains **NOT READY / NOT STARTED / NOT YE
 
 ## Current next boundary
 
-**011-F — Archetypal, Exceptional & Progressive-Disclosure Misfit Replay** is next eligible.
+**011-G — Adversarial, Degraded, Recovery, Scale & Provider-Semantic-Leakage Validation** is next eligible.
