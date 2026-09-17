@@ -18,8 +18,8 @@ Concept specifications own purpose, state, actions, lifecycle and invariants. Sy
 - [Phase 010 Concept Mapping Consolidation](../authority/phase-010-concept-mapping-consolidation.md)
 - [011-D Integrity Audit](../authority/composed-integrity-synchronization-history-audit.md)
 - [011-E Synergy / Simplicity Audit](../authority/composed-synergy-simplicity-generic-fitness-burden-audit.md)
-- [011-F Archetypal / Exceptional Replay](../authority/archetypal-exceptional-progressive-disclosure-misfit-replay.md)
-- [011-G Adversarial / Recovery / Scale / Provider Stress Validation](../authority/adversarial-degraded-recovery-scale-provider-semantic-leakage-validation.md) — **current final G3 stress authority**
+- [011-G Adversarial / Recovery / Scale / Provider Stress Validation](../authority/adversarial-degraded-recovery-scale-provider-semantic-leakage-validation.md)
+- [011-H Future-Scope / Extensibility Audit](../authority/future-scope-extensibility-new-capability-rediscovery-audit.md) — **current extension-pressure revalidation**
 
 ## Current synchronization inventory
 
@@ -70,15 +70,9 @@ Provenance typed relationship assertions           -> Provenance
 synchronization-owned canonical state              -> NONE
 ```
 
-## Occurrence-scoped / non-reactive rule
+## Integrity and stress result
 
-A synchronization coordinates one conceptual occurrence/relation. It does not create a permanent reactive subscription.
-
-> **Later revision/status changes do not silently rewrite exact historical bindings.**
-
-011-D validates the normal/historical baseline; 011-G now validates the same rule under stale authority, concurrent/superseded work, regressive recovery and provider stress.
-
-## Combined G3 integrity result
+011-D/F/G together establish:
 
 ```text
 13 / 13 synchronizations preserve singular ownership
@@ -98,35 +92,37 @@ R010-03                                         NO DEFECT
 G3                                              CURRENTLY CLOSED
 ```
 
-## 011-G synchronization stress consequences
+Provider facts enter synchronization reasoning only at the strength they actually establish. Provider job/run state cannot establish parent semantic completion, and provider lineage can inform Provenance without becoming complete Provenance authority.
 
-### Provider job/run state
+## 011-H future synchronization pressure
 
-Provider job/run `SUCCESS`, `COMPLETED`, `RUNNING`, retry/repair or terminal state may be operational/reconciliation evidence for `SYNC-04/07/11`, but it cannot establish the parent Learning/Generation/Evaluation semantic outcome.
+011-H explicitly separates future capability extension from new synchronization discovery.
 
-### Regressive recovery
+A future synchronization is a legitimate `F-3` candidate only when:
 
-A restored snapshot or surviving provider effect cannot reactivate stale Attempt/write authority. Reconstruction of missing semantic transitions must satisfy the original owner invariants; `SYNC-14` may record recovery relations but cannot establish the referenced fact.
+```text
+all substantive state owners already exist
++ a genuinely new cross-concept coordination relation is required
++ the relation owns no independent canonical state
++ the current synchronization inventory cannot express that relation
+```
 
-### Scale / approximation
+If a future capability instead introduces independent purpose + durable state/history + independently meaningful actions/lifecycle, concept rediscovery must occur first; a new synchronization cannot be used as a hidden substitute for a missing concept.
 
-Resource pressure may affect operational realization but cannot silently change exact authority bindings, Generation scope, Constraint obligations or Evaluation coverage. A material semantic approximation remains owner-scoped rather than a synchronization/runtime side effect.
+Current likely future pressures were replayed and produce:
 
-### Distributed closure
+```text
+current new synchronization required       NO
+current sync add/remove/merge justified    NO
+current hidden future coordinator          NO
+current application-family sync gap        NONE
+R010-07                                    NO DEFECT
+G6                                         CURRENTLY CLOSED
+```
 
-Driver/package/provider-library visibility cannot establish distributed execution readiness. Runtime closure is an operational compatibility condition; failed closure does not rewrite the committed semantic basis.
-
-### Provider lineage
-
-Provider lineage may be an input/evidence source for `SYNC-14`, but it is neither complete SYNGAN Provenance nor authority over the facts it relates.
-
-Provider-evidence rule:
-
-> **A provider fact enters synchronization reasoning only at the strength it actually establishes; provider vocabulary cannot transfer semantic ownership.**
+Known future `M8` concept rediscovery triggers—formal privacy accounting, product-owned governance/release, independent output lifecycle, reusable request/cohort lifecycle, graph-relationship lifecycle, durable session/feed lifecycle, resource/economic accounting and independent knowledge/memory authority—do not justify placeholder synchronizations now.
 
 ## Synchronization economy remains closed
-
-011-E's economy conclusion is unchanged:
 
 ```text
 rule add/remove/merge justified                0
@@ -144,8 +140,6 @@ G4                                             CURRENTLY CLOSED
 
 `SYNC-15` remains reclassified under the cross-cutting Reproducibility Contract.
 
-Neither is resurrected by 011-D through 011-G.
-
 Some retained Phase 006 contracts still use historical numbering. Current Phase 009 authority controls the active inventory; cleanup of stale historical labels is a bounded Phase 013 reconciliation concern, not a synchronization-design reopen.
 
 ## Composition guardrails
@@ -157,16 +151,18 @@ Some retained Phase 006 contracts still use historical numbering. Current Phase 
 - semantic and operational completion remain distinct;
 - Evidence never becomes approval or Generation authority;
 - Provenance never becomes source-fact authority;
-- provider job/run/catalog/lineage/model objects never become owner truth by representation convenience;
+- provider objects never become owner truth by representation convenience;
 - optional capabilities add only their own coordination burden;
 - correction/invalidation is owner-scoped, not a generic retroactive cascade;
 - recovery does not resurrect stale authority;
 - resource pressure does not silently weaken committed semantics;
 - repeated synchronization patterns do not by themselves justify umbrella concepts;
+- future implementation call flow is not synchronization evidence;
+- future rediscovery triggers do not imply future synchronization IDs until concept/dependence design is performed;
 - conceptual synchronization prescribes no event bus, transaction, service, package, queue, schema, architecture layer or runtime call direction.
 
 ## Current next boundary
 
-**011-H — Future-Scope, Extensibility, New-Capability Pressure & Rediscovery Triggers** is next eligible.
+**011-I — Residual Conceptual Misfit Register, Reopen/Defer/Accept Decisions & Closure Preparation** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
