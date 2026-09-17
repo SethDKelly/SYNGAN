@@ -23,20 +23,10 @@ E1-E5                        CURRENTLY CLOSED
 Phase 010                    COMPLETE
 F1-F5                        CURRENTLY CLOSED
 Phase 011                    ACTIVE
-011-A                        COMPLETE
-011-B                        COMPLETE
-011-C                        COMPLETE
-011-D                        COMPLETE
-011-E                        COMPLETE
-011-F                        COMPLETE
-011-G                        COMPLETE
-011-H                        NEXT ELIGIBLE
-G1 specificity               CURRENTLY CLOSED
-G2 familiarity               CURRENTLY CLOSED
-G3 integrity                 CURRENTLY CLOSED
-G4 synergy / simplicity      CURRENTLY CLOSED
-G5 scenario / adversarial    CURRENTLY CLOSED
-G6 future-scope              STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
+011-A..011-H                 COMPLETE
+011-I                        NEXT ELIGIBLE
+G1-G6                        CURRENTLY CLOSED
+G7 residual misfit           PARTIAL — 011-I OWNS CLOSURE
 architecture corpus          RETAINED AS DOWNSTREAM DESIGN EVIDENCE
 architecture reconciliation  PLANNED FOR PHASE 013
 implementation readiness     NOT READY
@@ -55,6 +45,7 @@ implementation next          NOT YET
 - [Synergy, Simplicity, Generic Fitness & Conceptual-Burden Audit](../authority/composed-synergy-simplicity-generic-fitness-burden-audit.md)
 - [Archetypal, Exceptional & Progressive-Disclosure Misfit Replay](../authority/archetypal-exceptional-progressive-disclosure-misfit-replay.md)
 - [Adversarial, Degraded, Recovery, Scale & Provider-Semantic-Leakage Validation](../authority/adversarial-degraded-recovery-scale-provider-semantic-leakage-validation.md)
+- [Future-Scope, Extensibility, New-Capability Pressure & Rediscovery Trigger Audit](../authority/future-scope-extensibility-new-capability-rediscovery-audit.md)
 - [Phase 011](../phases/011/index.md)
 
 ## Completed mapping implications
@@ -63,7 +54,7 @@ Architecture must eventually preserve package-first product form/Spark-host agno
 
 Phase 010 does not select database/materialized views, resource/query schemas, GraphQL/REST shapes, graph/search technology, event-sourced persistence, dashboards, public Python API shapes or platform adapter implementations. Those remain downstream representation choices for Phase 013 reconciliation.
 
-## Phase 011 implications through 011-G
+## Phase 011 implications through 011-H
 
 011-B through 011-E preserve the eleven-concept catalog, thirteen synchronization types and application-family boundaries without architecture-driven correction.
 
@@ -84,9 +75,35 @@ driver-local package resolution   != distributed runtime closure
 provider identity/permission      != universal protected-action authority
 ```
 
-Provider/platform objects may still be used later as integration surfaces, correlations or implementation mechanisms. Phase 013 must preserve their provider-owned meaning without promoting them into canonical SYNGAN owners.
+011-H adds a different architecture guardrail: **future rediscovery triggers are not architecture reservations.**
 
-## Phase 013 explicit reconciliation obligations from 011-G
+Future capability classification is semantic:
+
+```text
+F-1/F-2  existing concept purpose remains sufficient
+F-3      possible future synchronization after conceptual relation design
+F-4      possible future application-family refinement
+F-5      concept rediscovery required before architecture/implementation
+F-6      external authority/non-goal
+F-7      insufficient evidence
+```
+
+Therefore Phase 013 must not infer placeholder architecture from known `M8` triggers. In particular, the current design does not authorize or require generic:
+
+```text
+PrivacyBudget service/store
+Governance / Approval engine
+Output / Publication service
+Session / Feed manager
+Relationship / Graph service
+Resource / Budget accounting service
+Knowledge / Memory service
+future Capability registry
+```
+
+If one of those future product scopes becomes current, concept discovery must happen before architecture is selected for it.
+
+## Phase 013 explicit reconciliation obligations
 
 Phase 013 must inspect retained architecture for at least:
 
@@ -97,11 +114,12 @@ Phase 013 must inspect retained architecture for at least:
 - runtime packaging/distribution designs that prove only driver-local availability;
 - scale/admission/fallback designs that could silently approximate or contract committed work;
 - global `degraded`, `recovery`, `status`, `workflow` or `validation` resources that duplicate owner truth;
-- historical synchronization identifiers in retained Phase 006 documents that no longer match current Phase 009 numbering.
+- historical synchronization identifiers in retained Phase 006 documents that no longer match current Phase 009 numbering;
+- speculative architecture for `M8` future concepts that have not undergone discovery.
 
 The historical numbering issue is `MAT-1 / M6`: documentation/representation reconciliation only. Current Phase 009 authority already controls active synchronization semantics.
 
-## What 011-G does not imply
+## What 011-G/H do not imply
 
 Do not infer:
 
@@ -114,9 +132,11 @@ recovery must use one specific fencing mechanism
 one global status/read-model is required
 autoscaling/admission service is required
 one approximation framework is required
+formal privacy/accounting architecture is pre-approved
+publication/governance/session/resource services are pre-approved
 ```
 
-These remain Phase 013 architecture choices constrained by completed semantic authority.
+These remain either Phase 013 architecture choices constrained by completed semantic authority or future design questions that require rediscovery first.
 
 ## Phase 007 architecture status
 
@@ -134,6 +154,6 @@ IMPLEMENTATION NEXT        NOT YET
 
 ## Current next boundary
 
-**011-H — Future-Scope, Extensibility, New-Capability Pressure & Rediscovery Triggers** is next eligible.
+**011-I — Residual Conceptual Misfit Register, Reopen/Defer/Accept Decisions & Closure Preparation** is next eligible.
 
 Architecture reconciliation remains deferred to Phase 013.
