@@ -8,19 +8,19 @@ status: active-supporting-evidence
 
 This directory contains actor-visible and programmatic workflow/experience design developed primarily in Phases 003 and 006.
 
-Phase 010 is complete. These documents remain supporting evidence; current concept-mapping authority lives in `docs/mapping/`, while Phase 011 quality/misfit authority remains upstream of representation/architecture.
+Phase 010 mapping and Phase 011 quality/misfit validation are complete. These documents remain supporting evidence rather than upstream semantic authority.
 
-## Current relationship to Phase 011
+## Current relationship to completed quality work
 
 ```text
 010-A..010-H  COMPLETE
 F1-F5         CURRENTLY CLOSED
-011-A..011-I  COMPLETE
-011-J         NEXT ELIGIBLE
+011-A..011-J  COMPLETE
 G1-G7         CURRENTLY CLOSED
+H1/H2         OPEN — PHASE 012
 ```
 
-011-I confirms no residual experience/mapping defect and no Phase 010 mapping reopen.
+Phase 011 confirms no residual experience/mapping defect and no Phase 010 mapping reopen.
 
 ## Retained experience model
 
@@ -66,13 +66,9 @@ Decision-material rule:
 
 > **Progressive disclosure may defer explanatory depth, but it must not defer a qualifier whose omission could change the actor's immediate semantic decision or make current state appear stronger than the owning concept supports.**
 
-This M1 clarification is resolved in Phase 011 and retained as an experience guardrail.
-
 ## Provider / recovery / scale boundary
 
 Actor-facing and programmatic experience must distinguish provider job/run state from parent semantic state, physical material from authoritative result, restored historical state from current authority, current-use restriction from historical use, provider lineage observation from Provenance truth, and approximation scope from stronger Evidence claims.
-
-Provider-evidence qualification:
 
 > **A provider fact is shown/consumed only at the strength it actually establishes. Provider-visible state is not automatically canonical SYNGAN state.**
 
@@ -82,22 +78,13 @@ No global provider/recovery/degraded/status experience owner is required.
 
 Future M8 rediscovery triggers do **not** justify pre-building generic Privacy, Governance, Publication, Session, Graph, Resource or Knowledge workflows. If such scope later becomes current and a new concept is accepted, its experience is derived from its purpose/actions/state after rediscovery.
 
-The one M6 Phase 013 item concerns retained historical synchronization labels in downstream documentation/architecture. It creates no current experience owner or mapping change.
-
-Current result:
-
-```text
-experience/mapping reopen       NONE
-current conceptual blocker      NONE
-future placeholder workflow     NOT JUSTIFIED
-G7                              CURRENTLY CLOSED
-```
+The one M6 Phase 013 item concerns retained historical synchronization labels in downstream representation/architecture material. It creates no current experience owner or mapping change.
 
 ## Authority boundary
 
 For conflicts:
 
-1. `docs/authority/` governs methodology/cross-cutting policy and current Phase 011 quality decisions;
+1. `docs/authority/` governs methodology/cross-cutting policy and current Phase 011 consolidation;
 2. `docs/concepts/` governs concept purpose/state/actions/queries/invariants;
 3. `docs/dependence/` and `docs/synchronizations/` govern application-family/composition;
 4. `docs/mapping/` and Phase 010 consolidation govern concept mapping;
@@ -106,6 +93,10 @@ For conflicts:
 
 An experience view may compose several concepts for comprehension but must not create a new canonical owner for the composed state.
 
+## Phase 012 boundary
+
+Phase 012 may use this experience corpus as supporting evidence while auditing the whole current concept design, but experience convenience may not override current concept/composition/mapping authority.
+
 ## Current next boundary
 
-**011-J — Phase 011 Consolidation, G1-G7 Completion Decision & Phase 012 Handoff** is next eligible.
+**Phase 012 — Jackson Concept-Design Consolidation & Completion Decision** is next eligible.
