@@ -74,22 +74,35 @@ PHASE 012                    COMPLETE
 JACKSON CONCEPT DESIGN       COMPLETE FOR CURRENT PRODUCT SCOPE
 ```
 
-Phase 012 confirms that current A-G authority is coherent as one system and makes the explicit Jackson completion decision.
-
 Completion remains scope-relative: a future genuine misfit or newly independent product purpose may reopen the smallest affected design authority.
 
-## Phase 013 — Post-Concept Representation & Architecture Reconciliation — next
+## Phase 013 — Post-Concept Representation & Architecture Reconciliation — active
 
-Phase 013 must reconcile retained Phase 004/006/007 representation/architecture against the completed concept design.
+Current authority:
 
-Explicit inputs include:
+- [Phase 013 Index](013/index.md)
+- [Phase 013 Entry & Decomposition](013/013-entry-decomposition.md)
+- [Representation & Architecture Index](../architecture/index.md)
+- [Jackson Design Completion & Implementation Hold](../authority/jackson-design-completion-implementation-hold.md)
 
-- completed Phase 012 concept-design authority;
-- the one bounded M6 historical synchronization-label/documentation reconciliation item;
-- provider-evidence, temporal-integrity, semantic/operational, Evidence/Provenance and approximation guardrails;
-- M8 future triggers as **non-architecture** unless product scope first re-enters concept discovery.
+Current sequence:
 
-Phase 013 remains design-only and must be deliberately decomposed before architecture changes are made.
+```text
+013-A  NEXT — reconciliation authority / corpus inventory / precedence / discrepancy taxonomy
+013-B       — representation / layering / public contract / identity / views
+013-C       — persistence / history / transaction-concurrency / migration
+013-D       — distributed data / topology / manifest / candidate-seal-promotion
+013-E       — Strategy/runtime / dependency / security / offline-no-egress
+013-F       — Execution / Attempt / recovery / fencing / admission
+013-G       — Evaluation / Evidence / Provenance / history / disclosure
+013-H       — deployment / scale / observability / portability / platform integration
+013-I       — cross-architecture / ADR / legacy / M6 / residual register
+013-J       — consolidation / R1 decision / Phase 014 handoff
+```
+
+Phase 013 must reconcile retained Phase 004/006/007 representation/architecture against completed concept design. It remains design-only.
+
+The bounded M6 historical synchronization-label/documentation item remains an explicit 013-I reconciliation obligation. M8 future triggers remain non-architecture unless future scope first re-enters concept discovery.
 
 ## Later design phase
 
@@ -101,17 +114,8 @@ Planned. Only this phase may set implementation **READY / NOT STARTED / NEXT**.
 
 Future only. Explicit authorization remains required before implementation begins.
 
-## Current sequence
-
-```text
-013  Post-Concept Representation & Architecture Reconciliation — NEXT
-014  Whole-Design Consolidation & Implementation-Readiness Decision
----
-015  Implementation Authority & Controlled Delivery — FUTURE ONLY
-```
-
 ## Current next boundary
 
-**Phase 013 — Post-Concept Representation & Architecture Reconciliation** is next eligible.
+**013-A — Reconciliation Authority, Retained Corpus Inventory, Precedence Reset & Discrepancy Taxonomy** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
