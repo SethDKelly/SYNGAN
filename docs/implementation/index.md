@@ -29,12 +29,27 @@ Phase 012                  COMPLETE
 A1-H2                      CURRENTLY CLOSED
 Jackson concept design     COMPLETE FOR CURRENT PRODUCT SCOPE
 Phase 013                  ACTIVE
-013-A                      NEXT ELIGIBLE
+013-A                      COMPLETE
+013-B                      NEXT ELIGIBLE
 R1 architecture            DOWNSTREAM / IN PROGRESS
 whole-design readiness     PHASE 014
 ```
 
-Jackson concept-design completion is a prerequisite for architecture reconciliation, not implementation authorization.
+Jackson concept-design completion and Phase 013 reconciliation do not authorize implementation.
+
+## Phase 013 method boundary
+
+013-A established the reconciliation method over 19 retained substantive architecture documents and 10 ADRs.
+
+Architecture findings use:
+
+```text
+AR-0..AR-9
+AMAT-0..AMAT-3
+RETAIN / CLARIFY / SUPERSEDE / CORRECT / DEFER / UPSTREAM-REOPEN
+```
+
+Only a demonstrated AR-9 semantic contradiction may justify upstream reopen. An architecture correction, clarification, or better implementation option does not authorize code changes during Phase 013.
 
 ## Residual boundary carried downstream
 
@@ -74,6 +89,7 @@ M8 rediscovery trigger        -> future feature flag/schema/class
 residual-register entry       -> runtime issue/status resource
 concept-design completion     -> implementation authorization
 Phase 013 architecture role   -> production component by implication
+AR/AMAT finding               -> runtime issue/status enum
 ```
 
 ## Phase 013 boundary
@@ -84,14 +100,13 @@ It may not begin implementation merely because a better architecture is identifi
 
 Architecture findings remain design evidence until 013-J closes R1 and Phase 014 performs the whole-design completion/readiness decision.
 
-If Phase 013 exposes a genuine upstream semantic contradiction, use the smallest-authority reopen rule explicitly rather than patching concepts through code or architecture.
-
-Historical Phase 007-B/007-C package/toolchain/scaffold decisions remain feasibility evidence and are reconciled only after substantive architecture domains, principally in 013-I. They are not current implementation authority.
+Historical Phase 007-B/007-C package/toolchain/scaffold decisions remain feasibility evidence and are reconciled principally in 013-I. They are not current implementation authority.
 
 ## Remaining design before readiness
 
 ```text
-013    Post-Concept Representation & Architecture Reconciliation — ACTIVE
+013-B  Representation / Layering / Public Contract / Identity / Revision / Handles / Views — NEXT
+013-C..013-J  remaining architecture reconciliation
 014    Whole-Design Consolidation & Implementation-Readiness Decision
 ```
 
@@ -105,4 +120,4 @@ Until Phase 014 passes, do not add production concept behavior, generic domain b
 
 Design-only work:
 
-**013-A — Reconciliation Authority, Retained Corpus Inventory, Precedence Reset & Discrepancy Taxonomy**.
+**013-B — Representation Layering, Public Contract, Identity, Revision, Handle & View Reconciliation**.
