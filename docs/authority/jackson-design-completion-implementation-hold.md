@@ -20,7 +20,7 @@ IMPLEMENTATION START       NOT STARTED
 IMPLEMENTATION NEXT        NOT YET
 ```
 
-No intermediate quality result, architecture document, implementation plan, scaffold or test result may change this posture by implication.
+No intermediate quality result, architecture document, implementation plan, scaffold, future-capability idea or test result may change this posture by implication.
 
 ## Methodology boundary
 
@@ -63,14 +63,15 @@ Phase 011                  ACTIVE
 011-E                      COMPLETE
 011-F                      COMPLETE
 011-G                      COMPLETE
-011-H                      NEXT ELIGIBLE
+011-H                      COMPLETE
+011-I                      NEXT ELIGIBLE
 G1 specificity             CURRENTLY CLOSED
 G2 familiarity             CURRENTLY CLOSED
 G3 integrity               CURRENTLY CLOSED
 G4 synergy / simplicity    CURRENTLY CLOSED
 G5 scenario / adversarial  CURRENTLY CLOSED
-G6 future-scope            STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
-G7 residual misfit         PARTIAL
+G6 future-scope            CURRENTLY CLOSED
+G7 residual misfit         PARTIAL — 011-I OWNS CLOSURE
 Jackson concept design     NOT COMPLETE
 ```
 
@@ -81,7 +82,8 @@ Current authority includes:
 - [Integrity Under Synchronization, Correction, Invalidation & Historical Composition](composed-integrity-synchronization-history-audit.md);
 - [Synergy, Simplicity, Generic Fitness & Conceptual-Burden Audit](composed-synergy-simplicity-generic-fitness-burden-audit.md);
 - [Archetypal, Exceptional & Progressive-Disclosure Misfit Replay](archetypal-exceptional-progressive-disclosure-misfit-replay.md);
-- [Adversarial, Degraded, Recovery, Scale & Provider-Semantic-Leakage Validation](adversarial-degraded-recovery-scale-provider-semantic-leakage-validation.md).
+- [Adversarial, Degraded, Recovery, Scale & Provider-Semantic-Leakage Validation](adversarial-degraded-recovery-scale-provider-semantic-leakage-validation.md);
+- [Future-Scope, Extensibility, New-Capability Pressure & Rediscovery Trigger Audit](future-scope-extensibility-new-capability-rediscovery-audit.md).
 
 Current Phase 010 risk state:
 
@@ -92,9 +94,11 @@ R010-03  NO DEFECT — 011-D + 011-G
 R010-04  NO DEFECT — 011-E
 R010-05  NO DEFECT — 011-E + 011-F
 R010-06  NO DEFECT — 011-G
-R010-07  OPEN — 011-H
+R010-07  NO DEFECT — EXPLICIT REDISCOVERY TRIGGERS RETAINED/STRENGTHENED — 011-H
 R010-08  NO DEFECT — 011-G
 ```
+
+All eight risks have explicit dispositions. That does not close G7; 011-I must consolidate the residual-misfit register.
 
 ## Decision-material disclosure rule
 
@@ -116,11 +120,7 @@ provider lineage          != complete SYNGAN Provenance authority
 provider permission       != universal SYNGAN protected-action authority
 ```
 
-Provider objects may still be valuable correlations, operational facts, capability evidence, recovery evidence or Provenance inputs.
-
 ## Recovery / scale guardrails
-
-011-G closes the hostile/degraded/recovery/scale stress program with no MAT-2/MAT-3 finding.
 
 Preserve:
 
@@ -132,6 +132,41 @@ Preserve:
 - material approximation is explicit and owner-scoped;
 - driver/package availability does not establish distributed runtime closure;
 - current authorization/disclosure remains distinct from historical facts and provider identity.
+
+## Future-scope / rediscovery guardrail
+
+011-H closes G6 by distinguishing ordinary extension from genuine concept rediscovery.
+
+Future capability classification:
+
+```text
+F-1  fits existing concept unchanged
+F-2  fits new state/action within existing purpose
+F-3  requires new synchronization only
+F-4  requires application-family capability refinement
+F-5  requires genuine concept rediscovery
+F-6  remains external authority / non-goal
+F-7  insufficient evidence
+```
+
+Governing rule:
+
+> **Genericity means new instances within a stable purpose. If future scope introduces an independent product-facing purpose with durable state/history and independently meaningful actions/lifecycle, discovery must reopen before implementation.**
+
+Known `M8` rediscovery triggers include:
+
+- formal composable privacy/accounting;
+- product-owned governance/release decisions;
+- independent output publication/versioning/retirement;
+- independently reusable request/cohort semantics;
+- independently governed graph/relationship state;
+- durable streaming/session/feed lifecycle not reducible to bounded activities;
+- product-owned economic/resource accounting;
+- product-owned knowledge/memory state beyond Strategy/Learned State purpose.
+
+These are **not accepted concepts now** and are **not implementation pre-approvals**.
+
+Do not create generic `Privacy`, `Governance`, `Output`, `Session`, `Relationship`, `Resource`, `Knowledge`, `Policy`, `Model`, `Artifact` or similar umbrella concepts merely to appear future-proof.
 
 ## Product / mapping invariants held forward
 
@@ -155,17 +190,19 @@ Unless a genuine later misfit disproves them, preserve:
 - authority continuity under recovery;
 - owner-qualified uncertainty/disclosure/history semantics;
 - human/programmatic semantic parity;
-- compatibility vocabulary as one-way, owner-qualified mapping only.
+- compatibility vocabulary as one-way, owner-qualified mapping only;
+- future implementation novelty is not concept-discovery evidence;
+- future independent product lifecycle pressure must reopen discovery rather than erode current boundaries.
 
 ## Phase 013 reconciliation note
 
 Some retained Phase 006 contracts still contain historical synchronization identifiers such as earlier `SYNC-08` / `SYNC-15` wording.
 
-Current Phase 009 authority already supersedes those identifiers and owns the active synchronization inventory. 011-G therefore classifies the stale numbering as a bounded `MAT-1 / M6` documentation/representation reconciliation concern for Phase 013, not a concept-design defect.
+Current Phase 009 authority already supersedes those identifiers and owns the active synchronization inventory. 011-G classifies the stale numbering as a bounded `MAT-1 / M6` documentation/representation reconciliation concern for Phase 013, not a concept-design defect.
 
 ## Architecture/executable boundary
 
-Phase 011 is design-only. Do not implement generic base hierarchies, provider adapters, transactions, outboxes, event propagation, recovery fencing, invalidation cascades, persistence/query schemas, service/package decomposition, workflow engines, provenance/lineage stores, platform identity bridges, autoscaling/admission systems, approximation mechanisms, status resources, public APIs, feature flags or test suites merely to crystallize the quality model.
+Phase 011 is design-only. Do not implement generic base hierarchies, provider adapters, transactions, outboxes, event propagation, recovery fencing, invalidation cascades, persistence/query schemas, service/package decomposition, workflow engines, provenance/lineage stores, platform identity bridges, autoscaling/admission systems, approximation mechanisms, formal privacy mechanisms, governance/release engines, output-publication systems, streaming/session systems, resource/economic systems, status resources, public APIs, feature flags or test suites merely to crystallize the quality model.
 
 In particular:
 
@@ -174,13 +211,13 @@ In particular:
 - do not convert D0-D4 into UI pages or API tiers;
 - do not convert application-family members into SKUs or runtime feature combinations;
 - do not treat provider job/catalog/model/lineage objects as canonical SYNGAN state;
-- do not use G3/G4/G5 closure to justify generic `Activity`, `Artifact`, `Result`, `Validation`, `Status`, `Recovery` or Workflow abstractions.
+- do not use G1-G6 closure to justify generic `Activity`, `Artifact`, `Result`, `Validation`, `Status`, `Recovery`, `Workflow`, `Privacy`, `Governance`, `Output`, `Session` or `Resource` abstractions;
+- do not interpret an `M8` future rediscovery trigger as permission to implement the future concept or capability before discovery occurs.
 
 ## Remaining design roadmap
 
 ```text
-011-H     future-scope / extensibility / rediscovery triggers — NEXT
-011-I     residual misfit register
+011-I     residual conceptual misfit register — NEXT
 011-J     Phase 011 consolidation / Phase 012 handoff
 012       Jackson concept-design completion decision
 013       representation / architecture reconciliation
@@ -193,4 +230,4 @@ Through Phases 011-013 implementation remains **NOT READY / NOT STARTED / NOT YE
 
 ## Current next boundary
 
-**011-H — Future-Scope, Extensibility, New-Capability Pressure & Rediscovery Triggers** is next eligible.
+**011-I — Residual Conceptual Misfit Register, Reopen/Defer/Accept Decisions & Closure Preparation** is next eligible.
