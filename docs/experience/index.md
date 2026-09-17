@@ -20,11 +20,13 @@ F1-F5         CURRENTLY CLOSED
 011-C         COMPLETE
 011-D         COMPLETE
 011-E         COMPLETE
-011-F         NEXT ELIGIBLE
+011-F         COMPLETE
+011-G         NEXT ELIGIBLE
 G1            CURRENTLY CLOSED
 G2            CURRENTLY CLOSED
 G3            STRONG EVIDENCE / 011-G STRESS REVALIDATION REQUIRED
 G4            CURRENTLY CLOSED
+G5            STRONG EVIDENCE / 011-G STRESS REVALIDATION REQUIRED
 ```
 
 ## Retained experience model
@@ -73,46 +75,62 @@ D4  distributed / host operational drill-down
 
 These levels are semantic presentation obligations, not UI screens, API tiers or storage layers.
 
-## Phase 011 relationship through 011-E
+## Phase 011 scenario validation
 
-011-B finds no experience-driven purpose collision or umbrella concept requirement.
+011-E confirmed the disclosure model is structurally capable of simplifying experience without collapsing semantics.
 
-011-C finds no vocabulary-driven concept or mapping defect; familiar external terms remain qualified aliases rather than canonical owners.
-
-011-D confirms experience composition must preserve current-versus-historical state, semantic-versus-operational completion, Evidence applicability, Provenance relationship authority and recovery/history uncertainty without creating shadow state.
-
-011-E confirms the experience can be structurally simpler than the full concept catalog without hiding semantics:
+011-F then replayed ten required application-family/capability scenarios through archetypal and exceptional branches:
 
 ```text
-application-family contraction                  PASS
-optional-capability absence                     preserved
-D0/D1 material semantic basis                   preserved
-D2 optional detail                              capability-local
-D3 historical explanation                      preserved
-D4 host/distributed drill-down                  non-authoritative
-R010-04                                         NO DEFECT
-R010-05 structural simplicity portion           NO DEFECT
-G4                                              CURRENTLY CLOSED
+10 / 10 required scenario families
+10 / 10 archetypal histories PASS
+10 / 10 exceptional histories PASS
+20 / 20 paired scenario replays PASS
+6 / 6 progressive-disclosure concealment classes PASS
+R010-05 NO DEFECT
 ```
 
-The full eleven-concept catalog must not become eleven sequential experience stages. Task-centered composition, existing-resource-first interaction and progressive disclosure are the accepted simplicity mechanisms.
+The governing experience rule is now:
 
-## 011-F replay boundary
+> **Progressive disclosure may defer explanatory depth, but it must not defer a qualifier whose omission could change the actor's immediate semantic decision or make current state appear stronger than the owning concept supports.**
 
-011-F now owns the concrete archetypal/exceptional replay of the retained experience model.
+Examples that must remain at D0/D1 when material include:
 
-For every representative scenario it must test whether D0/D1 could hide a fact material to the immediate decision, including:
+```text
+candidate versus completed result
+Evidence strength / uncertainty / indeterminacy
+current-use restriction versus historical valid use
+semantic completion versus operational completion
+cancellation requested versus terminal cancellation
+authority-continuity uncertainty when it changes actionability
+optional capability absence when omission could look like failure
+```
 
-- an allowed-but-material limitation;
-- Evidence strength, uncertainty or indeterminacy;
-- current versus historical status;
-- authority-continuity uncertainty;
-- optional capability absence versus failure/unavailability;
-- semantic versus operational completion.
+Examples that may remain D2-D4 when not decision-material include:
 
-A concise view is valid only when the omitted depth is genuinely optional for the current decision and remains recoverable at the appropriate disclosure level.
+```text
+full Attempt history
+full Evaluation method detail
+complete Provenance traversal
+historical revision diff
+large diagnostic datasets
+host logs / metrics / traces
+```
 
-A poorly designed hypothetical UI is not by itself a mapping defect. A defect exists only if current mapping/disclosure authority cannot represent the required material truth without semantic distortion.
+This does not create one global experience status. A composed view may summarize several owners while preserving their boundaries.
+
+## 011-G stress boundary
+
+011-G now owns the hostile/degraded/recovery/scale/provider-semantic stress replay. The retained experience evidence must continue to preserve:
+
+- continuity/recovery qualification when restored state may be stale;
+- unknown versus failed/cancelled/completed operational state;
+- bounded interaction at enterprise scale;
+- approximation/claim-strength limitations;
+- host/provider operational objects as correlated evidence rather than domain authority;
+- Provenance high fan-in without source-fact ownership.
+
+A provider dashboard, job status, lineage graph or catalog record cannot become canonical SYNGAN truth merely because it is the most visible representation.
 
 ## Authority boundary
 
@@ -129,4 +147,4 @@ An experience view may compose several concepts for comprehension but must not c
 
 ## Current next boundary
 
-**011-F — Archetypal, Exceptional & Progressive-Disclosure Misfit Replay** is next eligible.
+**011-G — Adversarial, Degraded, Recovery, Scale & Provider-Semantic-Leakage Validation** is next eligible.
