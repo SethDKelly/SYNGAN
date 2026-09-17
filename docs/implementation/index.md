@@ -34,12 +34,15 @@ Phase 011                  ACTIVE
 011-D                      COMPLETE
 011-E                      COMPLETE
 011-F                      COMPLETE
-011-G                      NEXT ELIGIBLE
+011-G                      COMPLETE
+011-H                      NEXT ELIGIBLE
 G1 specificity             CURRENTLY CLOSED
 G2 familiarity             CURRENTLY CLOSED
-G3 integrity               STRONG EVIDENCE / 011-G STRESS REVALIDATION REQUIRED
+G3 integrity               CURRENTLY CLOSED
 G4 synergy / simplicity    CURRENTLY CLOSED
-G5 scenario / adversarial  STRONG EVIDENCE / 011-G STRESS REVALIDATION REQUIRED
+G5 scenario / adversarial  CURRENTLY CLOSED
+G6 future-scope            STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
+G7 residual misfit         PARTIAL
 Jackson concept design     IN PROGRESS
 ```
 
@@ -58,52 +61,67 @@ Provenance relation          -> graph database requirement
 Execution                    -> scheduler/job service
 history reconstruction       -> automatic material adoption
 progressive-disclosure D0-D4 -> UI pages/API tiers
+provider job/run state       -> parent semantic state
+provider lineage             -> canonical Provenance store
+provider model/artifact      -> Strategy/Learned State/result by default
+provider identity            -> universal SYNGAN authorization
 Phase 011 finding/probe      -> executable test/runtime enum
-external familiarity alias   -> required public API name
 ```
 
-## 011-F remains design-only
+## 011-G remains design-only
 
-011-F confirms:
+011-G confirms stress integrity without selecting mechanisms:
 
 ```text
-10 / 10 required scenario families
-10 / 10 archetypal histories PASS
-10 / 10 exceptional histories PASS
-20 / 20 paired replays PASS
-6 / 6 progressive-disclosure concealment classes PASS
-MAT-2 / MAT-3 findings 0 / 0
-R010-05 NO DEFECT
+regressive recovery / stale authority        PASS
+partial material / physical result            PASS
+runtime distribution closure                  PASS
+enterprise scale / approximation              PASS
+provider job/run semantic leakage             PASS
+provider lineage/catalog/model leakage        PASS
+combined hostile composition                  PASS
+MAT-2 / MAT-3 findings                        0 / 0
+R010-03                                       NO DEFECT
+R010-06                                       NO DEFECT
+R010-08                                       NO DEFECT
+G3                                            CURRENTLY CLOSED
+G5                                            CURRENTLY CLOSED
 ```
 
-Its quality clarification is semantic only:
+Provider-evidence qualification:
 
-> **Progressive disclosure may defer explanatory depth, but it must not defer a qualifier whose omission could change the actor's immediate semantic decision or make current state appear stronger than the owning concept supports.**
+> **Provider facts are consumed only at the semantic/evidentiary strength they actually establish; familiar provider vocabulary does not automatically become stronger SYNGAN truth.**
 
-This does **not** authorize implementation structures for that rule.
+This does **not** authorize:
 
-Do not infer required runtime/UI abstractions such as:
+- Databricks/AWS/provider adapter implementation;
+- job/run correlation schemas;
+- recovery fencing/incarnation mechanisms;
+- event/outbox architecture;
+- lineage graph storage;
+- provider identity bridges;
+- runtime/package distribution mechanisms;
+- autoscaling/admission infrastructure;
+- approximation algorithms;
+- global degraded/recovery/status resources.
 
-```text
-GlobalStatus
-WorkflowStatus
-ValidationStatus
-DecisionSummary
-WarningBanner
-DisclosureTier
-HistoryView
-ActionabilityState
-```
+Recovery and scale constraints remain requirements on future architecture, not selected architecture:
 
-merely because concise interaction must preserve decision-material truth.
+- a regressive restore must not resurrect stale authority;
+- surviving provider work/material is evidence, not current authority;
+- missing semantic history is reconstructed only through owning-concept invariants;
+- resource pressure must not silently change commitments;
+- material approximation must be explicit and owner-scoped;
+- distributed closure must be established beyond driver-local availability.
 
-Representation may later satisfy the obligation through many different mechanisms. Phase 013 owns that reconciliation after concept design completes.
+## Phase 013 reconciliation note
+
+Some retained Phase 006 design documents still mention historical synchronization IDs. Current Phase 009 synchronization authority already supersedes those labels. Their cleanup/reconciliation belongs to Phase 013 and does not authorize implementation changes now.
 
 ## Remaining design before readiness
 
 ```text
-011-G  adversarial / degraded / recovery / scale / provider leakage — NEXT
-011-H  future-scope / extensibility
+011-H  future-scope / extensibility / rediscovery triggers — NEXT
 011-I  residual misfit register
 011-J  Phase 011 consolidation
 012    Jackson concept-design completion decision
@@ -115,10 +133,10 @@ Only a positive Phase 014 may make implementation **READY / NOT STARTED / NEXT**
 
 ## Current prohibition
 
-Until Phase 014 passes, do not add production concept behavior, generic domain base hierarchies, public APIs, persistence/query schemas, services/events, graph/search technology, runtime/security/platform adapters, Execution/recovery implementations, Evidence/Provenance implementations, invalidation cascades, reference Strategies, privacy mechanisms, benchmarks, package-topology changes, feature flags, status resources, compatibility shims or executable Phase-011 restrictions intended to manufacture readiness.
+Until Phase 014 passes, do not add production concept behavior, generic domain base hierarchies, public APIs, persistence/query schemas, services/events, graph/search technology, provider/runtime/security adapters, Execution/recovery implementations, Evidence/Provenance implementations, invalidation cascades, reference Strategies, privacy mechanisms, benchmarks, package-topology changes, feature flags, status resources, compatibility shims or executable Phase-011 restrictions intended to manufacture readiness.
 
 ## Current next boundary
 
 Design-only work:
 
-**011-G — Adversarial, Degraded, Recovery, Scale & Provider-Semantic-Leakage Validation**.
+**011-H — Future-Scope, Extensibility, New-Capability Pressure & Rediscovery Triggers**.
