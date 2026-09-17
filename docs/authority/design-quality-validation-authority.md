@@ -471,17 +471,17 @@ R010-07  -> 011-H
 R010-08  -> 011-G
 ```
 
-Current dispositions after 011-F:
+Current dispositions after 011-G:
 
 ```text
 R010-01  NO DEFECT — 011-B
 R010-02  NO DEFECT — COMPATIBILITY GUIDANCE STRENGTHENED — 011-C
-R010-03  NO DEFECT IN 011-D BASELINE / 011-G STRESS REVALIDATION REQUIRED
+R010-03  NO DEFECT — 011-D + 011-G
 R010-04  NO DEFECT — 011-E
-R010-05  NO DEFECT — 011-F
-R010-06  OPEN — 011-G
+R010-05  NO DEFECT — 011-E + 011-F
+R010-06  NO DEFECT — 011-G
 R010-07  OPEN — 011-H
-R010-08  OPEN — 011-G
+R010-08  NO DEFECT — 011-G
 ```
 
 A later subgroup may add evidence or secondary disposition, but the primary owner is responsible for ensuring the risk does not disappear from the Phase 011 record.
@@ -570,12 +570,7 @@ R010-01                               NO DEFECT
 G1 specificity                        CURRENTLY CLOSED
 ```
 
-Two `MAT-1` watch points remain for later planned probes:
-
-- Synthesis Strategy's broad capability declaration surface;
-- Provenance's high reference fan-in / low authority fan-out requirement.
-
-Neither blocks G1.
+Two `MAT-1` watch points remain for later planned probes: Synthesis Strategy's broad capability declaration surface and Provenance's high reference fan-in / low authority fan-out requirement. Neither blocks G1.
 
 ---
 
@@ -594,8 +589,6 @@ R010-02                                 NO DEFECT — COMPATIBILITY GUIDANCE STR
 B4 familiarity / reuse                  CURRENTLY CLOSED
 G2 familiarity                          CURRENTLY CLOSED
 ```
-
-The result strengthens one-way compatibility guidance rather than changing concept semantics. `Data Meaning`, `Learned State` and `Evaluation Criterion` retain bounded first-use familiarity watch points; external vocabulary remains qualified compatibility/representation language.
 
 Phase 010-D F3 mapping remains current and does not reopen.
 
@@ -619,7 +612,7 @@ upstream reopen                                 NONE
 R010-03 011-D portion                           NO DEFECT
 ```
 
-G3 remains stress-pending because 011-G owns hostile/degraded/recovery/provider revalidation.
+011-G later owns the hostile/degraded/recovery/provider stress portion.
 
 ---
 
@@ -642,8 +635,6 @@ R010-04                                         NO DEFECT
 G4                                              CURRENTLY CLOSED
 ```
 
-The structural simplicity portion of `R010-05` also passes, with final scenario disposition delegated to 011-F.
-
 ---
 
 # 23. 011-F application result
@@ -665,15 +656,51 @@ R010-05                                           NO DEFECT
 
 > **Progressive disclosure may defer explanatory depth, but it must not defer a qualifier whose omission could change the actor's immediate semantic decision or make current state appear stronger than the owning concept supports.**
 
-The clarification is `MAT-1 / M1`: it sharpens how the already-established D0/D1 contract is judged. It creates no new state owner, workflow, surface or API tier.
+---
 
-G5 now has strong ordinary/exceptional evidence but remains stress-pending until 011-G.
+# 24. 011-G application result
+
+011-G is governed in detail by [Adversarial, Degraded, Recovery, Scale & Provider-Semantic-Leakage Validation](adversarial-degraded-recovery-scale-provider-semantic-leakage-validation.md).
+
+```text
+stale / contradictory authority                 PASS
+concurrent / superseded work                    PASS
+retry / cancellation / late result              PASS
+regressive recovery / stale writer              PASS
+partial material / physical result              PASS
+persistence / projection / telemetry degrade    PASS
+authorization / disclosure conflict             PASS
+Evidence invalidation after historical use      PASS
+distributed runtime closure                     PASS
+enterprise scale / approximation                 PASS
+multi-table / time-series pressure              PASS
+text-bearing runtime/dependency pressure         PASS
+provider job/run semantic leakage                PASS
+provider lineage/catalog/model leakage           PASS
+provider identity pressure                       PASS
+combined hostile composition                     PASS
+MAT-2 / MAT-3 findings                           0 / 0
+upstream reopen                                  NONE
+R010-03                                          NO DEFECT
+R010-06                                          NO DEFECT
+R010-08                                          NO DEFECT
+G3                                               CURRENTLY CLOSED
+G5                                               CURRENTLY CLOSED
+```
+
+011-G adds one local quality clarification:
+
+> **A provider fact may be consumed only at the evidentiary strength it actually establishes; provider vocabulary cannot silently escalate into stronger SYNGAN semantics.**
+
+This is `MAT-1 / M1` and creates no provider-specific owner or mapping resource.
+
+011-G also records a bounded `MAT-1 / M6` Phase 013 reconciliation concern: retained Phase 006 documents contain historical synchronization identifiers that predate current Phase 009 numbering. Current Phase 009 authority already controls the active identifiers, so no concept/synchronization reopen is required.
 
 ---
 
 ## Current next boundary
 
-**011-G — Adversarial, Degraded, Recovery, Scale & Provider-Semantic-Leakage Validation** is next eligible.
+**011-H — Future-Scope, Extensibility, New-Capability Pressure & Rediscovery Triggers** is next eligible.
 
 Jackson concept design remains **NOT COMPLETE**.
 
