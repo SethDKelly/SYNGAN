@@ -25,7 +25,7 @@ methodology / design authority
   > ADR rationale / phase history / backlog / examples
 ```
 
-Completed concept design is now upstream authority for Phase 013 architecture reconciliation. Existing architecture/source/tests may expose a genuine misfit, but they may not silently redefine concept semantics.
+Completed concept design is upstream authority for Phase 013 architecture reconciliation. Existing architecture/source/tests may expose a genuine misfit, but they may not silently redefine concept semantics.
 
 ## Current governing authority
 
@@ -42,7 +42,8 @@ Completed concept design is now upstream authority for Phase 013 architecture re
 - [Phase 011 Consolidation](authority/phase-011-design-quality-misfit-consolidation.md)
 - [Residual Conceptual Misfit Register](authority/residual-conceptual-misfit-register.md)
 - [Phase 012 Jackson Concept-Design Consolidation](authority/phase-012-jackson-concept-design-consolidation.md)
-- [Phase 012](phases/012/index.md)
+- [Phase 013](phases/013/index.md)
+- [Phase 013 Entry & Decomposition](phases/013/013-entry-decomposition.md)
 - [Representation & Architecture](architecture/index.md)
 
 ## Current state
@@ -55,17 +56,15 @@ Phase 009                            COMPLETE
 Phase 010                            COMPLETE
 Phase 011                            COMPLETE
 Phase 012                            COMPLETE
-A1-A3 / B1-B5 / C1-C8              CURRENTLY CLOSED
-D1-D4 / E1-E5                      CURRENTLY CLOSED
-F1-F5                              CURRENTLY CLOSED
-G1-G7                              CURRENTLY CLOSED
-H1                                 CURRENTLY CLOSED
-H2                                 CURRENTLY CLOSED
-Jackson concept design             COMPLETE FOR CURRENT PRODUCT SCOPE
-representation/architecture        PENDING PHASE 013 RECONCILIATION
-implementation readiness           NOT READY
-implementation start               NOT STARTED
-implementation next                NOT YET
+A1-H2                                CURRENTLY CLOSED
+Jackson concept design               COMPLETE FOR CURRENT PRODUCT SCOPE
+Phase 013                            ACTIVE
+013-A                                NEXT ELIGIBLE
+R1 architecture reconciliation       DOWNSTREAM / IN PROGRESS
+whole-design completion              NOT YET — PHASE 014
+implementation readiness             NOT READY
+implementation start                 NOT STARTED
+implementation next                  NOT YET
 ```
 
 ## Product form
@@ -74,7 +73,7 @@ SYNGAN remains a deployable Python/Spark framework package, agnostic across comp
 
 ## Completed concept-design package
 
-Current Jackson concept design now includes:
+Current Jackson concept design includes:
 
 ```text
 problem / actors / outcomes / scale constraints
@@ -87,6 +86,25 @@ Phase 012 current-state H1 audit + H2 completion decision
 ```
 
 Phase 012 found no current cross-layer contradiction, orphaned problem outcome, missing concept owner, mapping distortion, unresolved conceptual blocker or missed upstream revalidation.
+
+## Phase 013 architecture reconciliation
+
+Phase 013 is decomposed as:
+
+```text
+013-A  authority / corpus inventory / precedence / discrepancy taxonomy
+013-B  representation / layering / public contract / identity / views
+013-C  persistence / history / transaction-concurrency / migration
+013-D  distributed data / topology / manifest / candidate-seal-promotion
+013-E  Strategy/runtime / dependency / security / offline-no-egress
+013-F  Execution / Attempt / recovery / fencing / admission
+013-G  Evaluation / Evidence / Provenance / history / disclosure
+013-H  deployment / scale / observability / portability / platform integration
+013-I  cross-architecture / ADR / legacy / M6 / residual register
+013-J  consolidation / R1 decision / Phase 014 handoff
+```
+
+The Phase 007 consolidated architecture remains the strongest retained pre-completion synthesis, but it is a reconciliation subject rather than automatic current authority.
 
 ## Residual accounting carried downstream
 
@@ -101,7 +119,7 @@ M6 Phase-013 deferrals                     1
 M8 future-rediscovery finding groups       4
 ```
 
-The M6 item is historical synchronization-label/documentation drift in retained Phase 006 architecture material. Current Phase 009 synchronization semantics are authoritative; Phase 013 owns reconciliation.
+The M6 item is historical synchronization-label/documentation drift in retained Phase 006/007 architecture material. Current Phase 009 synchronization semantics are authoritative; Phase 013 owns reconciliation.
 
 M8 findings are conditional future rediscovery gates, not current defects or architecture/implementation pre-approvals.
 
@@ -121,16 +139,16 @@ Future rediscovery:
 
 ## Phase 013 boundary
 
-Phase 013 reconciles retained representation/architecture against completed concept design.
+Phase 013 may revise retained representation/architecture where it conflicts with completed concept design, but it may not revise concept authority merely to preserve historical architecture convenience.
 
-It must preserve concept ownership, application-family optionality, occurrence-scoped synchronization, semantic/operational separation, historical truth, Evidence/Provenance boundaries, provider evidence qualification, explicit approximation, and future rediscovery boundaries unless a genuine upstream semantic contradiction is explicitly proven and reopened.
+It must preserve concept ownership, application-family optionality, occurrence-scoped synchronization, semantic/operational separation, historical truth, Evidence/Provenance boundaries, provider evidence qualification, explicit approximation and future rediscovery boundaries unless a genuine upstream contradiction is explicitly proven and reopened.
 
 Phase 013 remains design-only.
 
 ## Remaining design roadmap
 
 ```text
-013    Post-Concept Representation & Architecture Reconciliation — NEXT
+013    Post-Concept Representation & Architecture Reconciliation — ACTIVE
 014    Whole-Design Consolidation & Implementation-Readiness Decision
 ---
 015    Implementation Authority & Controlled Delivery — FUTURE ONLY
@@ -146,4 +164,4 @@ IMPLEMENTATION NEXT        NOT YET
 
 ## Current next boundary
 
-**Phase 013 — Post-Concept Representation & Architecture Reconciliation** is next eligible.
+**013-A — Reconciliation Authority, Retained Corpus Inventory, Precedence Reset & Discrepancy Taxonomy** is next eligible.
