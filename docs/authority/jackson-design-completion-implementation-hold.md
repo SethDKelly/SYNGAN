@@ -8,7 +8,7 @@ status: active
 
 ## Purpose
 
-Maintain the correct design-to-implementation boundary while SYNGAN completes the full Daniel Jackson-style design program.
+Maintain the correct boundary between completed Jackson concept design, downstream representation/architecture reconciliation, whole-design readiness, and implementation.
 
 Historical Phase 004/006/007 architecture and executable evidence remain downstream evidence only. Historical implementation-reentry conclusions remain superseded.
 
@@ -20,7 +20,7 @@ IMPLEMENTATION START       NOT STARTED
 IMPLEMENTATION NEXT        NOT YET
 ```
 
-No Phase 011 completion result, architecture document, implementation plan, scaffold, future-capability idea or test result may change this posture by implication.
+Jackson concept-design completion does not change this posture by implication.
 
 ## Methodology boundary
 
@@ -37,9 +37,9 @@ concept mapping / actor-visible experience ← Phase 010 COMPLETE
         ↓
 whole concept-design quality / misfit validation ← Phase 011 COMPLETE
         ↓
-Jackson concept-design completion gate     ← Phase 012 NEXT
+Jackson concept-design completion gate     ← Phase 012 COMPLETE
         ↓
-representation / architecture reconciliation ← Phase 013
+representation / architecture reconciliation ← Phase 013 NEXT
         ↓
 whole-design completion / readiness gate   ← Phase 014
         ↓
@@ -48,53 +48,54 @@ implementation MAY become READY / NOT STARTED / NEXT
 explicit implementation authority          ← Phase 015 FUTURE ONLY
 ```
 
-## Current design status after 011-J
+## Current design status after Phase 012
 
 ```text
 Phase 008                  COMPLETE
+A1-A3 / B1-B5 / C1-C8     CURRENTLY CLOSED
 Phase 009                  COMPLETE
-D1-D4                      CURRENTLY CLOSED
-E1-E5                      CURRENTLY CLOSED
+D1-D4 / E1-E5             CURRENTLY CLOSED
 Phase 010                  COMPLETE
 F1-F5                      CURRENTLY CLOSED
 Phase 011                  COMPLETE
-011-A..011-J               COMPLETE
 G1-G7                      CURRENTLY CLOSED
-H1                         OPEN — PHASE 012
-H2                         OPEN — PHASE 012
-Jackson concept design     NOT COMPLETE
+Phase 012                  COMPLETE
+H1                         CURRENTLY CLOSED
+H2                         CURRENTLY CLOSED
+Jackson concept design     COMPLETE FOR CURRENT PRODUCT SCOPE
 ```
 
-Phase 011 closure means design-quality/misfit validation is complete enough for Phase 012. It does **not** make Jackson concept design complete.
+Current completion authority:
 
-## Current Phase 011 consolidation authority
+- [Phase 012 Jackson Concept-Design Consolidation](phase-012-jackson-concept-design-consolidation.md);
+- [Jackson Methodology Completion Matrix](jackson-methodology-completion-matrix.md);
+- [Phase 012 Index](../phases/012/index.md).
 
-Current authority includes:
+## Meaning of concept-design completion
 
-- [Design Quality Validation Authority](design-quality-validation-authority.md);
-- [Composed Specificity Audit](composed-specificity-purpose-boundary-audit.md);
-- [Composed Familiarity Audit](composed-familiarity-reuse-vocabulary-external-model-audit.md);
-- [Integrity Under Synchronization, Correction, Invalidation & Historical Composition](composed-integrity-synchronization-history-audit.md);
-- [Synergy, Simplicity, Generic Fitness & Conceptual-Burden Audit](composed-synergy-simplicity-generic-fitness-burden-audit.md);
-- [Archetypal, Exceptional & Progressive-Disclosure Misfit Replay](archetypal-exceptional-progressive-disclosure-misfit-replay.md);
-- [Adversarial, Degraded, Recovery, Scale & Provider-Semantic-Leakage Validation](adversarial-degraded-recovery-scale-provider-semantic-leakage-validation.md);
-- [Future-Scope, Extensibility, New-Capability Pressure & Rediscovery Trigger Audit](future-scope-extensibility-new-capability-rediscovery-audit.md);
-- [Residual Conceptual Misfit Register](residual-conceptual-misfit-register.md);
-- [Phase 011 Consolidation](phase-011-design-quality-misfit-consolidation.md).
+Current concept design now has complete authority for:
 
-## Phase 011 final accounting
+- current problem/purpose/actors/outcomes;
+- eleven accepted concept purposes and complete conceptual behavior;
+- concept inclusion dependence and application-family semantics;
+- thirteen active cross-concept synchronizations and singular ownership;
+- concept mapping and material human/programmatic semantics;
+- specificity/familiarity/integrity/synergy/scenario/future-scope quality validation;
+- residual misfit accounting and rediscovery triggers;
+- one whole-current-state A-G consolidated audit.
+
+Completion is scope-relative rather than permanent. A future genuine misfit or newly independent product purpose may reopen the smallest affected design authority.
+
+## Residual concept-design accounting carried downstream
 
 ```text
-Phase 010 risks dispositioned                 8 / 8
-unresolved MAT-2                              0
-MAT-3 blockers                                0
-unresolved M2-M5 current defects              0
-upstream reopens required                     0
-accepted conceptual tradeoffs required        0
-resolved M1 quality-rule families             2
-M6 Phase-013 deferrals                        1
-M8 future-rediscovery finding groups          4
-G1-G7                                         CURRENTLY CLOSED
+unresolved MAT-2 current conceptual defects       0
+MAT-3 conceptual blockers                         0
+unresolved M2-M5 current-design defects           0
+upstream reopens awaiting revalidation             0
+resolved M1 quality-rule families                 2
+M6 Phase-013 deferrals                            1
+M8 future-rediscovery finding groups              4
 ```
 
 ### Resolved M1 rules
@@ -107,89 +108,71 @@ Provider-evidence qualification:
 
 > **A host/provider fact may be consumed only at the evidentiary strength that fact actually establishes. Familiar provider vocabulary does not become stronger SYNGAN semantic truth by naming alone.**
 
-These constrain future representation without selecting one.
+### M6 Phase 013 handoff
 
-### Bounded M6 Phase 013 handoff
+Retained Phase 006 representation/architecture documents contain historical synchronization identifiers such as older `SYNC-08` / `SYNC-15` wording.
 
-Some retained Phase 006 representation/architecture documents contain historical synchronization identifiers such as older `SYNC-08` / `SYNC-15` wording.
-
-Current Phase 009 synchronization authority already supersedes those identifiers. Phase 013 must reconcile the retained corpus; no Phase 009 reopen or implementation change is authorized now.
+Current Phase 009 synchronization authority supersedes those labels. Phase 013 must reconcile the retained corpus without reopening current synchronization semantics merely because historical representation used different identifiers.
 
 ### M8 future rediscovery triggers
 
-Conditional rediscovery gates include formal composable privacy/accounting, product-owned governance/release, independent output publication/versioning/retirement, independently reusable request/cohort lifecycles, durable streaming/session/feed lifecycles, product-owned economic/resource accounting, independent graph/relationship lifecycle and product-owned reusable knowledge/memory beyond current purposes.
+Conditional future triggers include formal composable privacy/accounting, product-owned governance/release, independent output publication/versioning/retirement, reusable request/cohort lifecycle, durable streaming/session/feed lifecycle, product-owned economic/resource accounting, independent graph/relationship lifecycle, and product-owned reusable knowledge/memory beyond current purposes.
 
-These are not accepted concepts, implementation backlog items, feature flags, database resources or pre-approved APIs.
+These are not architecture reservations or implementation backlog items. Triggered future scope returns to concept discovery first.
 
-## Product / mapping invariants held forward
+## Product / concept invariants Phase 013 must preserve
 
-Unless a genuine later misfit disproves them, preserve:
+Unless a future genuine misfit explicitly reopens concept design, Phase 013 must preserve:
 
 - package-first Python/Spark product form and Spark-host agnosticism;
-- eleven concept boundaries and singular ownership;
+- eleven current concept boundaries and singular ownership;
 - thirteen active occurrence-scoped synchronizations;
 - application-family optionality and capability-local burden;
 - direct versus learned-state-assisted Generation;
-- candidate/non-final versus authoritative result distinctions;
+- candidate/non-final versus authoritative Generation result;
 - semantic versus operational completion;
 - current versus exact historical truth;
-- Criterion/Evaluation/Evidence separation;
+- Evaluation Criterion / Evaluation / Evidence separation;
 - Evidence versus Generation/approval/release/privacy authority;
 - Provenance relationship authority versus source-fact ownership;
-- provider facts remain provider-qualified evidence/integration facts;
-- cross-cutting qualifiers remain cross-cutting absent independent lifecycle;
-- D0/D1 preserve decision-material limitations/uncertainty/orientation;
-- authority continuity under recovery;
-- material approximation remains explicit and owner-scoped;
-- genericity means new instances within stable purpose, not preemptive umbrella expansion;
-- future independent purpose/state/actions/lifecycle requires rediscovery;
+- provider facts only at actual evidentiary strength;
+- cross-cutting qualifiers remaining cross-cutting absent independent lifecycle;
+- D0/D1 decision-material disclosure;
+- recovery authority continuity;
+- material approximation as explicit and owner-scoped;
+- genericity as new instances within stable purpose rather than umbrella expansion;
 - human/programmatic semantic parity;
-- compatibility vocabulary remains one-way and owner-qualified.
+- compatibility vocabulary remaining owner-qualified.
 
-## Architecture / executable boundary
+## Phase 013 boundary
 
-Do not convert Phase 011 conclusions mechanically into:
+Phase 013 is now eligible to reconcile representation and architecture against completed concept design.
 
-- generic base hierarchies;
-- provider adapters;
-- transactions/outboxes/event propagation;
-- recovery fencing or invalidation cascades;
-- persistence/query schemas;
-- service/package decomposition;
-- workflow engines;
-- provenance/lineage stores;
-- status resources;
-- public APIs;
-- feature flags;
-- formal privacy mechanisms;
-- governance/release systems;
-- streaming/session systems;
-- output-publication systems;
-- resource/economic systems.
+It may revise retained architecture when that architecture conflicts with current concept authority.
 
-In particular, do not implement an M8 trigger as a placeholder concept/service and do not resolve the M6 Phase 013 item through production code.
+It must not silently revise concept purposes, ownership, inclusion dependence, synchronization semantics or mapping merely to preserve historical architectural choices.
 
-## Phase 012 boundary
+If architecture exposes a genuine upstream semantic contradiction, use the established smallest-authority reopen discipline explicitly.
 
-Phase 012 owns:
+## Architecture / executable prohibition remains
+
+Concept-design completion does not authorize implementation.
+
+Do not begin production changes, implementation tranche work, public API stabilization, provider adapters, persistence migration, runtime integration, recovery mechanism implementation, or executable conformance enforcement under Phase 013 merely because the upstream concept design is complete.
+
+Phase 013 remains design/reconciliation work.
+
+## Remaining roadmap
 
 ```text
-H1  one whole-current-state consolidated Jackson concept-design audit
-H2  explicit Jackson concept-design completion decision
-```
-
-A positive Phase 012 result still leaves implementation **NOT READY** because Phase 013 representation/architecture reconciliation and Phase 014 whole-design readiness remain mandatory.
-
-## Remaining design roadmap
-
-```text
-012       Jackson Concept-Design Consolidation & Completion Decision — NEXT
-013       Post-Concept Representation & Architecture Reconciliation
+013       Post-Concept Representation & Architecture Reconciliation — NEXT
 014       Whole-Design Consolidation & Implementation-Readiness Decision
 ---
 015       Implementation Authority & Controlled Delivery — FUTURE ONLY
 ```
 
+Only a positive Phase 014 may make implementation **READY / NOT STARTED / NEXT**. A later explicit Phase 015 remains required before implementation begins.
+
 ## Current next boundary
 
-**Phase 012 — Jackson Concept-Design Consolidation & Completion Decision** is next eligible.
+**Phase 013 — Post-Concept Representation & Architecture Reconciliation** is next eligible.
