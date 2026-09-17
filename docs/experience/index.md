@@ -15,20 +15,10 @@ Phase 010 is complete. These documents remain strong supporting evidence, while 
 ```text
 010-A..010-H  COMPLETE
 F1-F5         CURRENTLY CLOSED
-011-A         COMPLETE
-011-B         COMPLETE
-011-C         COMPLETE
-011-D         COMPLETE
-011-E         COMPLETE
-011-F         COMPLETE
-011-G         COMPLETE
-011-H         NEXT ELIGIBLE
-G1            CURRENTLY CLOSED
-G2            CURRENTLY CLOSED
-G3            CURRENTLY CLOSED
-G4            CURRENTLY CLOSED
-G5            CURRENTLY CLOSED
-G6            STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
+011-A..011-H  COMPLETE
+011-I         NEXT ELIGIBLE
+G1-G6         CURRENTLY CLOSED
+G7            PARTIAL — 011-I OWNS CLOSURE
 ```
 
 ## Retained experience model
@@ -77,52 +67,40 @@ Decision-material rule from 011-F:
 
 > **Progressive disclosure may defer explanatory depth, but it must not defer a qualifier whose omission could change the actor's immediate semantic decision or make current state appear stronger than the owning concept supports.**
 
-## 011-G experience stress result
+## Provider / recovery / scale experience boundary
 
-011-G confirms the experience model remains truthful under hostile/degraded/recovery/scale/provider pressure.
-
-Where material, actor-facing and programmatic experience must distinguish:
-
-```text
-provider job/run state            from parent semantic state
-provider SUCCESS/COMPLETED        from semantic completion
-physical/partial material         from authoritative result
-restored historical state         from current mutation authority
-surviving old worker/effect       from current authority
-unknown/indeterminate             from failed/cancelled/completed
-current-use restriction           from exact historical use
-provider lineage observation      from canonical Provenance truth
-provider identity/permission      from current SYNGAN protected-action authority
-sampled/approximate Evaluation    from exhaustive/universal Evidence
-```
+011-G confirms actor-facing and programmatic experience must distinguish provider job/run state from parent semantic state, physical material from authoritative result, restored historical state from current authority, current-use restriction from historical use, provider lineage observation from Provenance truth, and approximation scope from stronger Evidence claims.
 
 Provider-evidence qualification:
 
 > **A provider fact is shown/consumed only at the strength it actually establishes. Provider-visible state is not automatically canonical SYNGAN state.**
 
-### Recovery encounter
+No global provider/recovery/degraded/status experience owner is required.
 
-When regressive recovery makes authority continuity uncertain, that qualification becomes D0/D1 when it changes actionability. The ordinary experience must not show restored `running`, `completed`, `current Attempt` or equivalent state without the recovery qualification.
+## 011-H future-experience boundary
 
-### Scale encounter
+011-H does not add future screens, workflows, navigation, status types or experience stages.
 
-Queueing, resource pressure or unavailable runtime closure may be foregrounded as current actionability/operational limitation without rewriting the committed semantic request. If a weaker approximation is desired, the changed semantic plan must be explicit rather than hidden behind an operational fallback.
-
-### Provider encounter
-
-A host dashboard/job/catalog/lineage/model representation may remain D2-D4 or linked host detail. It may be highly authoritative for provider facts while still being non-authoritative for the SYNGAN concept fact it resembles.
-
-011-G finds no need for a global provider/recovery/degraded/status experience owner.
-
-## Current quality state
+Future capability classification has an experience consequence only after the semantic design path is known:
 
 ```text
-R010-05 progressive disclosure       NO DEFECT
-R010-06 provider/host leakage        NO DEFECT
-R010-08 scale/approximation          NO DEFECT
-G3 integrity                         CURRENTLY CLOSED
-G5 scenario / adversarial            CURRENTLY CLOSED
-experience/mapping reopen            NONE
+F-1/F-2  extend experience for an accepted existing owner
+F-3      map a new synchronization after synchronization design
+F-4      map a new family/capability composition after family design
+F-5      perform concept discovery first; do not design the concept's experience in advance
+F-6      keep the experience at integration/handoff boundary
+F-7      defer experience commitments until evidence is sufficient
+```
+
+Known `M8` rediscovery triggers therefore do **not** justify pre-building a generic Privacy, Governance, Publication, Session, Graph, Resource or Knowledge workflow. If such a scope later becomes current and a new concept is accepted, its experience must be derived from its purpose/actions/state rather than from a pre-existing UI metaphor.
+
+Current result:
+
+```text
+experience/mapping reopen     NONE
+future placeholder workflow   NOT JUSTIFIED
+R010-07                       NO DEFECT
+G6                            CURRENTLY CLOSED
 ```
 
 ## Authority boundary
@@ -140,4 +118,4 @@ An experience view may compose several concepts for comprehension but must not c
 
 ## Current next boundary
 
-**011-H — Future-Scope, Extensibility, New-Capability Pressure & Rediscovery Triggers** is next eligible.
+**011-I — Residual Conceptual Misfit Register, Reopen/Defer/Accept Decisions & Closure Preparation** is next eligible.
