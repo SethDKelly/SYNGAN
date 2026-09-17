@@ -4,7 +4,7 @@ These instructions apply repository-wide to automated coding/documentation agent
 
 ## Current posture
 
-**SYNGAN is in Jackson concept-design completion, not implementation re-entry. Phase 011 is active; 011-A through 011-H are complete and 011-I is next.**
+**SYNGAN is in Jackson concept-design completion, not implementation re-entry. Phase 011 is active; 011-A through 011-I are complete and 011-J is next.**
 
 Start with:
 
@@ -23,9 +23,8 @@ Start with:
 - `docs/authority/archetypal-exceptional-progressive-disclosure-misfit-replay.md`
 - `docs/authority/adversarial-degraded-recovery-scale-provider-semantic-leakage-validation.md`
 - `docs/authority/future-scope-extensibility-new-capability-rediscovery-audit.md`
+- `docs/authority/residual-conceptual-misfit-register.md`
 - `docs/phases/011/index.md`
-- `docs/synchronizations/index.md`
-- `docs/mapping/index.md`
 
 ## Current state
 
@@ -45,19 +44,22 @@ Phase 011                            ACTIVE
 011-F                                COMPLETE
 011-G                                COMPLETE
 011-H                                COMPLETE
-011-I                                NEXT ELIGIBLE
+011-I                                COMPLETE
+011-J                                NEXT ELIGIBLE
 G1 specificity                       CURRENTLY CLOSED
 G2 familiarity                       CURRENTLY CLOSED
 G3 integrity                         CURRENTLY CLOSED
 G4 synergy / simplicity              CURRENTLY CLOSED
 G5 scenario / adversarial            CURRENTLY CLOSED
 G6 future-scope                      CURRENTLY CLOSED
-G7 residual misfit register          PARTIAL — 011-I OWNS CLOSURE
+G7 residual misfit register          CURRENTLY CLOSED
 Jackson concept design               NOT COMPLETE
 implementation readiness             NOT READY
 implementation start                 NOT STARTED
 implementation next                  NOT YET
 ```
+
+G1-G7 individual closure does **not** mean Phase 011 is complete. 011-J owns the joint-current-state consolidation and Phase 012 handoff.
 
 ## Primary rule
 
@@ -84,7 +86,7 @@ MAT-2  material design defect or credible material risk
 MAT-3  conceptual blocker
 ```
 
-## Completed quality results through 011-H
+## Current quality result through 011-I
 
 ```text
 G1 specificity             CURRENTLY CLOSED
@@ -93,6 +95,7 @@ G3 integrity               CURRENTLY CLOSED
 G4 synergy / simplicity    CURRENTLY CLOSED
 G5 scenario / adversarial  CURRENTLY CLOSED
 G6 future-scope            CURRENTLY CLOSED
+G7 residual misfit         CURRENTLY CLOSED
 ```
 
 Risk state:
@@ -104,52 +107,49 @@ R010-03  NO DEFECT — 011-D + 011-G
 R010-04  NO DEFECT — 011-E
 R010-05  NO DEFECT — 011-E + 011-F
 R010-06  NO DEFECT — 011-G
-R010-07  NO DEFECT — EXPLICIT REDISCOVERY TRIGGERS RETAINED/STRENGTHENED — 011-H
+R010-07  NO DEFECT — REDISCOVERY TRIGGERS RETAINED/STRENGTHENED — 011-H
 R010-08  NO DEFECT — 011-G
 ```
 
-All eight Phase 010 handoff risks are dispositioned. Do **not** interpret that as Phase 011 complete; G7 and 011-J remain.
+011-I residual register:
 
-## Decision-material disclosure rule
+```text
+unresolved MAT-2 findings                  0
+MAT-3 blockers                             0
+unresolved M2-M5 current-design defects    0
+upstream reopens required                  0
+accepted conceptual tradeoffs required     0
+resolved M1 quality-rule families          2
+M6 Phase-013 deferrals                     1
+M8 future-rediscovery finding groups       4
+```
+
+## Durable M1 quality rules
+
+Decision-material disclosure:
 
 > **Progressive disclosure may defer explanatory depth, but it must not defer a qualifier whose omission could change the actor's immediate semantic decision or make current state appear stronger than the owning concept supports.**
 
-Do not infer that D0-D4 are screens, API tiers, status-resource classes or workflow stages.
+Provider-evidence qualification:
 
-## Provider / recovery / scale rules
+> **Consume host/provider facts only at the strength they actually establish. Familiar provider words such as `success`, `completed`, `model`, `artifact`, `lineage`, `current`, or `production` never escalate automatically into stronger SYNGAN semantic claims.**
 
-Preserve:
+## M6 Phase 013 carry-forward
 
-- provider facts only at the evidentiary strength they actually establish;
-- provider job/run success does not establish parent semantic completion;
-- provider model/artifact/catalog objects do not automatically become Strategy/Learned State/Data Meaning/result authority;
-- provider lineage may inform Provenance but is not complete SYNGAN Provenance authority;
-- restored persistence does not establish current write authority after regressive recovery;
-- surviving workers/jobs/material do not resurrect stale authority;
-- unresolved recovery/history remains explicitly unresolved;
-- resource pressure may queue/block/fail but may not silently weaken a committed contract;
-- material approximation is explicit and owner-scoped;
-- driver/package availability does not establish distributed runtime closure.
+Retained Phase 006 documents contain historical synchronization identifiers such as older `SYNC-08` / `SYNC-15` wording. Current Phase 009 authority already supersedes those labels.
 
-## Future-scope / rediscovery discipline from 011-H
-
-Future capability classification:
+Treat this only as:
 
 ```text
-F-1  fits existing concept unchanged
-F-2  fits new state/action within existing purpose
-F-3  requires new synchronization only
-F-4  requires application-family capability refinement
-F-5  requires genuine concept rediscovery
-F-6  remains external authority / non-goal
-F-7  insufficient evidence
+MAT-1 / M6
+DEFERRED TO PHASE 013 — REPRESENTATION / ARCHITECTURE DOCUMENTATION RECONCILIATION
 ```
 
-Governing rule:
+Do not reopen concepts/synchronizations and do not implement a production fix during Phase 011/012.
 
-> **Genericity means accepting new instances within a stable purpose. Rediscover before implementation when a future capability introduces an independent product-facing purpose with durable state/history and independently meaningful actions/lifecycle.**
+## M8 future rediscovery discipline
 
-Known `M8` rediscovery triggers include:
+Known conditional triggers include:
 
 - formal composable privacy/accounting;
 - product-owned governance/release decisions;
@@ -160,39 +160,39 @@ Known `M8` rediscovery triggers include:
 - product-owned economic/resource accounting;
 - product-owned reusable knowledge/memory beyond Strategy/Learned State purpose.
 
-These are future guardrails, not accepted concepts and not implementation authorization.
+These are future design-governance gates, not current defects, accepted concepts, implementation backlog items, service placeholders, package extras, database schemas or feature flags.
 
-Do not pre-add generic Privacy, Governance, Output, Session, Relationship, Resource, Knowledge, Model, Artifact, Policy, Workflow or Capability concepts merely to reserve future space.
+> **Genericity means accepting new instances within a stable purpose. Rediscover before implementation when future scope introduces an independent product-facing purpose with durable state/history and independently meaningful actions/lifecycle.**
 
-## 011-I discipline
+## 011-J discipline
 
-011-I owns **G7 residual conceptual misfit register** and closure preparation.
+011-J owns **Phase 011 consolidation, the joint G1-G7 completion decision, and Phase 012 handoff**.
 
-It must consolidate every finding from 011-B through 011-H. At minimum preserve and distinguish:
+011-J must audit the latest canonical design rather than simply concatenate subgroup conclusions. At minimum verify:
+
+- G1-G7 remain current together after 011-I reconciliation;
+- all eight R010 risks have explicit disposition;
+- no MAT-2/MAT-3 finding was omitted from the residual register;
+- the bounded M6 Phase 013 handoff remains visible;
+- M8 triggers remain future rediscovery gates rather than current implementation authority;
+- no upstream authority was reopened, so no blast-radius revalidation is missing;
+- current concept/synchronization/application-family/mapping authority remains internally consistent;
+- Phase 012—not 011-J—owns the final Jackson concept-design completion decision;
+- implementation remains held.
+
+A positive 011-J may state only:
 
 ```text
-NO DEFECT
-RESOLVED IN PHASE 011
-REOPENED — EARLIER AUTHORITY CORRECTED
-ACCEPTED TRADEOFF — JUSTIFIED AND BOUNDED
-DEFERRED TO PHASE 013 — REPRESENTATION / ARCHITECTURE ONLY
-IMPLEMENTATION EVIDENCE ONLY — NO CURRENT CONCEPTUAL CONSEQUENCE
-FUTURE REDISCOVERY TRIGGER
-INSUFFICIENT EVIDENCE — CONCEPTUAL BLOCKER
+PHASE 011                    COMPLETE
+DESIGN QUALITY / MISFIT      COMPLETE ENOUGH FOR PHASE 012
+G1-G7                        CURRENTLY CLOSED
+JACKSON CONCEPT DESIGN       NOT COMPLETE — PHASE 012 DECISION PENDING
+IMPLEMENTATION READINESS     NOT READY
+IMPLEMENTATION START         NOT STARTED
+IMPLEMENTATION NEXT          NOT YET
 ```
 
-011-I must explicitly account for:
-
-- all eight R010 risks;
-- all MAT-1/M1 clarifications, including decision-material disclosure and provider-evidence qualification;
-- bounded watch points from 011-B through 011-F;
-- the `MAT-1 / M6` Phase 013 reconciliation item for stale synchronization numbering in retained Phase 006 documents;
-- all `MAT-1 / M8` rediscovery triggers from 011-H;
-- every MAT-2/MAT-3 finding (currently none) and any reopened authority (currently none).
-
-Do not treat `M8` as a current defect. Do not treat `M6` as permission to change concepts. Do not let low-materiality watch points disappear merely because they are non-blocking.
-
-011-I may close G7 only when the register is explicit, complete, and contains no unresolved conceptual blocker.
+Do not use 011-J to start Phase 012 architecture work, Phase 013 reconciliation, or implementation.
 
 ## Architecture / implementation boundary
 
@@ -210,4 +210,4 @@ Phase 012 may declare Jackson concept design complete. Phase 013 reconciles arch
 
 ## Current next boundary
 
-**011-I — Residual Conceptual Misfit Register, Reopen/Defer/Accept Decisions & Closure Preparation** is next eligible.
+**011-J — Phase 011 Consolidation, G1-G7 Completion Decision & Phase 012 Handoff** is next eligible.
