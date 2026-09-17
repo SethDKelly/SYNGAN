@@ -23,19 +23,10 @@ Phase 010                    COMPLETE
 F1-F5                        CURRENTLY CLOSED
 concept mapping              COMPLETE ENOUGH FOR PHASE 011
 Phase 011                    ACTIVE
-011-A                        COMPLETE
-011-B                        COMPLETE
-011-C                        COMPLETE
-011-D                        COMPLETE
-011-E                        COMPLETE
-011-F                        COMPLETE
-011-G                        COMPLETE
-011-H                        NEXT ELIGIBLE
-G1 specificity               CURRENTLY CLOSED
-G2 familiarity               CURRENTLY CLOSED
-G3 integrity                 CURRENTLY CLOSED
-G4 synergy / simplicity      CURRENTLY CLOSED
-G5 scenario / adversarial    CURRENTLY CLOSED
+011-A..011-H                 COMPLETE
+011-I                        NEXT ELIGIBLE
+G1-G6                        CURRENTLY CLOSED
+G7 residual misfit           PARTIAL — 011-I OWNS CLOSURE
 Jackson concept design       NOT COMPLETE
 implementation readiness     NOT READY
 implementation start         NOT STARTED
@@ -52,21 +43,22 @@ implementation next          NOT YET
 - [010-F Application-Family Workflow Composition, Optional-Capability Experience & Progressive Disclosure](application-family-workflow-composition-progressive-disclosure.md)
 - [010-G Human/Programmatic Semantic Parity, Degraded/Recovery/Scale & Mapping-Misfit Audit](human-programmatic-semantic-parity-degraded-recovery-scale-misfit-audit.md)
 - [Phase 010 Consolidation Authority](../authority/phase-010-concept-mapping-consolidation.md)
-- [011-G Stress Validation](../authority/adversarial-degraded-recovery-scale-provider-semantic-leakage-validation.md) — downstream design-quality revalidation of provider/recovery/scale mapping truthfulness
+- [011-G Stress Validation](../authority/adversarial-degraded-recovery-scale-provider-semantic-leakage-validation.md)
+- [011-H Future-Scope Audit](../authority/future-scope-extensibility-new-capability-rediscovery-audit.md) — confirms likely extensions do not currently reopen mapping
 
 ## Final mapping coverage
 
 ```text
-66 / 66 command groups                    SEMANTICALLY MAPPED
-52 / 52 query groups                      SEMANTICALLY MAPPED
-11 / 11 lifecycle/history envelopes       SEMANTICALLY MAPPED
-5 / 5 explanation patterns                SEMANTICALLY MAPPED
-11 / 11 accepted concept names            LINGUISTICALLY ALIGNED
-66 / 66 command groups                    PHYSICAL RESPONSIBILITY MAPPED
-52 / 52 query physical responsibility     52 / 52 MAPPED
+66 / 66 command groups                     SEMANTICALLY MAPPED
+52 / 52 query groups                       SEMANTICALLY MAPPED
+11 / 11 lifecycle/history envelopes        SEMANTICALLY MAPPED
+5 / 5 explanation patterns                 SEMANTICALLY MAPPED
+11 / 11 accepted concept names             LINGUISTICALLY ALIGNED
+66 / 66 command groups                     PHYSICAL RESPONSIBILITY MAPPED
+52 / 52 query physical responsibility      MAPPED
 10 / 10 required family/capability replays PASS
 20 / 20 difficult-condition parity probes PASS
-mapping blocker                           NONE FOUND
+mapping blocker                            NONE FOUND
 ```
 
 ## Core mapping rules
@@ -103,47 +95,42 @@ Decision-material rule from 011-F:
 
 > **Progressive disclosure may defer explanatory depth, but it must not defer a qualifier whose omission could change the actor's immediate semantic decision or make current state appear stronger than the owning concept supports.**
 
-## 011-G mapping/provider stress result
+## Provider / recovery / scale mapping boundary
 
 011-G finds no mapping reopen under hostile/degraded/recovery/scale/provider pressure.
 
-```text
-provider job/run lifecycle                provider operational truth only
-provider SUCCESS / COMPLETED              not parent semantic completion
-provider model/artifact/catalog object    not canonical Strategy/State/result by default
-provider lineage                          not complete SYNGAN Provenance authority
-provider identity/permission              integration input, not universal action authority
-restored persistence                      historical knowledge, not current mutation authority
-surviving provider effect                 reconciliation evidence, not automatic semantic fact
-partial bytes/checkpoints                 non-final unless owning invariants establish result
-resource pressure                         may queue/block/fail; cannot silently weaken commitment
-approximation                             explicit and owned by changed semantic concept
-runtime package on driver                 not distributed runtime closure
-```
+Provider facts remain provider-qualified evidence/integration facts rather than semantic-owner substitutions. Restored state remains historical rather than current authority, physical material remains non-final without owner invariants, and resource/approximation pressure cannot silently weaken mapped semantic commitments.
 
-Provider-evidence qualification:
+## 011-H future-scope mapping result
 
-> **A host/provider fact must be exposed and consumed only at the strength that provider fact actually establishes. Familiar words such as `success`, `completed`, `model`, `artifact`, `lineage`, `current`, or `production` cannot erase the canonical owner or strengthen the claim by presentation convenience.**
+011-H finds no current mapping defect or extension requirement for likely future Strategy, topology, text, Evaluation, runtime/platform or reusable-state capability breadth.
 
-This strengthens the existing physical-host mapping boundary without changing F1-F5.
-
-## Current Phase 011 mapping revalidation state
+Future capability classification may eventually produce:
 
 ```text
-F1-F5                                CURRENTLY CLOSED
-G3 integrity                         CURRENTLY CLOSED
-G5 scenario / adversarial            CURRENTLY CLOSED
-R010-03                              NO DEFECT
-R010-05                              NO DEFECT
-R010-06                              NO DEFECT
-R010-08                              NO DEFECT
-Phase 010 mapping reopen             NONE
+F-1/F-2  existing concept mapping extension
+F-3      new synchronization mapping after synchronization design
+F-4      application-family mapping refinement after family design
+F-5      concept rediscovery first, then mapping only after concept acceptance
+F-6      external integration/handoff mapping only
+F-7      no mapping until evidence is sufficient
 ```
 
-011-H may use future provider/integration capabilities as pressure evidence, but must not change mapping merely to resemble external product objects.
+Known `M8` future rediscovery triggers must **not** receive placeholder mapping now. There is therefore no current generic mapping owner for future `Privacy`, `Governance`, `Output`, `Session`, `Relationship`, `Resource`, `Knowledge` or similar concepts.
+
+Current mapping revalidation state:
+
+```text
+F1-F5                    CURRENTLY CLOSED
+Phase 010 mapping reopen NONE
+R010-07                  NO DEFECT
+G6                       CURRENTLY CLOSED
+```
+
+If a future concept is accepted after rediscovery, its actions, queries, language, application-family composition and physical interaction must be mapped deliberately at that time rather than inferred from a pre-existing adapter or UI.
 
 ## Current next boundary
 
-**011-H — Future-Scope, Extensibility, New-Capability Pressure & Rediscovery Triggers** is next eligible.
+**011-I — Residual Conceptual Misfit Register, Reopen/Defer/Accept Decisions & Closure Preparation** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
