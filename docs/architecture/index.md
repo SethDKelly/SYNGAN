@@ -1,14 +1,14 @@
 ---
 type: Architecture Index
 title: SYNGAN Representation & Architecture Design
-status: active-reconciliation-next
+status: active-reconciliation
 ---
 
 # SYNGAN Representation & Architecture Design
 
 ## Purpose
 
-Preserve retained SYNGAN representation/architecture as downstream design evidence and establish the Phase 013 reconciliation boundary against the now-completed Jackson concept design.
+Reconcile retained SYNGAN representation/architecture against the now-complete Jackson concept design and establish one current architecture baseline for the Phase 014 whole-design completion/readiness gate.
 
 Current governing authority: [Jackson Design Completion & Implementation Hold](../authority/jackson-design-completion-implementation-hold.md).
 
@@ -18,26 +18,45 @@ Current governing authority: [Jackson Design Completion & Implementation Hold](.
 Jackson concept design       COMPLETE FOR CURRENT PRODUCT SCOPE
 Phase 012                    COMPLETE
 H1/H2                        CURRENTLY CLOSED
-architecture corpus          RETAINED AS DOWNSTREAM DESIGN EVIDENCE
-architecture reconciliation  PHASE 013 NEXT
+Phase 013                    ACTIVE
+013-A                        NEXT ELIGIBLE
+architecture corpus          UNDER RECONCILIATION
+R1 architecture reconciliation DOWNSTREAM / IN PROGRESS
 whole-design completion      NOT YET — PHASE 014
 implementation readiness     NOT READY
 implementation start         NOT STARTED
 implementation next          NOT YET
 ```
 
-Completed concept design is now upstream authority for architecture.
+Completed concept design is upstream authority for architecture.
 
-## Current upstream design authority
+## Current Phase 013 authority
 
-- [Problem & Purpose](../problem/problem-purpose.md)
-- [Accepted Concept Catalog](../concepts/index.md)
-- [Phase 009 Dependence & Composition Consolidation](../authority/phase-009-dependence-composition-consolidation.md)
-- [Phase 010 Concept Mapping Consolidation](../authority/phase-010-concept-mapping-consolidation.md)
-- [Phase 011 Design Quality & Misfit Consolidation](../authority/phase-011-design-quality-misfit-consolidation.md)
-- [Residual Conceptual Misfit Register](../authority/residual-conceptual-misfit-register.md)
+- [Phase 013 Index](../phases/013/index.md)
+- [Phase 013 Entry & Decomposition](../phases/013/013-entry-decomposition.md)
 - [Phase 012 Jackson Concept-Design Consolidation](../authority/phase-012-jackson-concept-design-consolidation.md)
-- [Phase 012](../phases/012/index.md)
+- [Jackson Methodology Completion Matrix](../authority/jackson-methodology-completion-matrix.md)
+
+## Retained architecture corpus
+
+Primary reconciliation subjects include:
+
+- [Architecture Authority, Representation Principles, Layering & Dependency Direction](architecture-authority-representation-layering.md)
+- [Public API, Resource/Handle Model, Workflow Composition & Semantic Mapping](public-api-resource-handle-workflow-semantic-mapping.md)
+- [Control-Plane Identity, Revision, State, Persistence & Historical Reference Architecture](control-plane-identity-revision-state-persistence-historical-reference.md)
+- [Spark Data Boundary, Source/Output Reference, Distributed Materialization, Manifest & Promotion Architecture](spark-data-boundary-source-output-reference-distributed-materialization-manifest-promotion.md)
+- [Strategy Extension, Learning/Generation/Evaluation Runtime & Adapter Architecture](strategy-extension-learning-generation-evaluation-runtime-adapter.md)
+- [Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Architecture](execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation.md)
+- [Evaluation/Evidence, Provenance, Reproducibility & Historical Query Architecture](evaluation-evidence-provenance-reproducibility-historical-query.md)
+- [Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Architecture](dependency-resolution-offline-no-egress-authorization-redaction-enterprise-security.md)
+- [Deployment, Scalability, Observability, Portability, Compatibility & Platform Integration Architecture](deployment-scalability-observability-portability-compatibility-platform-integration.md)
+- [Phase 004 Consolidated Architecture Contract](phase-004-consolidated-architecture-contract.md)
+- [Phase 006 Architecture Reconciliation Contract](phase-006-architecture-reconciliation-contract.md)
+- Phase 007-D through 007-J retained architecture foundations
+- [Phase 007 Consolidated Architecture Contract](phase-007-consolidated-architecture-contract.md)
+- ADR-0001 through ADR-0010
+
+The Phase 007 consolidated contract is the strongest retained pre-completion synthesis, but not automatic current authority where it conflicts with Phase 012-completed concept design.
 
 ## Architecture constraints from completed concept design
 
@@ -56,40 +75,44 @@ Phase 013 must preserve unless a genuine explicit upstream reopen is justified:
 - recovery authority continuity and explicit unresolved state;
 - provider facts only at actual evidentiary strength;
 - material approximation as explicit and owner-scoped;
-- decision-material qualifiers surfaced when they affect immediate semantic decisions;
+- decision-material qualifiers when they affect immediate semantic decisions;
 - future rediscovery before architecture for new independent product purposes.
 
-## Phase 013 reconciliation obligations
+## Phase 013 sequence
 
-At minimum inspect retained architecture for:
-
-- semantic-owner state duplicated or transferred into architecture components;
-- host job/run/resource status driving Learning/Generation/Evaluation completion;
-- provider model/artifact/catalog identity substituting for Data Meaning/Synthesis Strategy/Learned State/result identity;
-- provider lineage treated as complete Provenance/source truth;
-- recovery mechanisms that can replay restored stale authority;
-- physical material/checkpoint existence treated as semantic result establishment;
-- driver-local dependency availability treated as distributed runtime closure;
-- resource/admission/fallback behavior silently weakening committed semantics;
-- global `degraded`, `recovery`, `status`, `workflow` or `validation` resources duplicating owner truth;
-- old synchronization identifiers inconsistent with current Phase 009 authority;
-- speculative architecture for M8 future concepts that have not undergone discovery.
+```text
+013-A  reconciliation authority / corpus inventory / precedence / discrepancy taxonomy
+013-B  representation / layering / public contract / identity / views
+013-C  persistence / history / transaction-concurrency / migration
+013-D  distributed data / topology / manifest / candidate-seal-promotion
+013-E  Strategy/runtime / dependency / security / offline-no-egress
+013-F  Execution / Attempt / recovery / fencing / admission
+013-G  Evaluation / Evidence / Provenance / history / disclosure
+013-H  deployment / scale / observability / portability / platform integration
+013-I  cross-architecture / ADR / legacy / M6 / residual register
+013-J  consolidation / R1 decision / Phase 014 handoff
+```
 
 ## M6 explicit reconciliation item
 
-The retained Phase 006 corpus contains historical synchronization labels such as older `SYNC-08` / `SYNC-15` wording.
+The retained Phase 006/007 corpus contains historical `11 / 15` synchronization assumptions and references to older `SYNC-08` / `SYNC-15` roles.
 
-Current Phase 009 synchronization authority supersedes those labels. Phase 013 must reconcile the retained architecture/documentation without treating old numbering as current semantic authority.
+Current Phase 009 authority controls:
+
+```text
+historical IDs                 15
+active synchronizations        13
+SYNC-08                        retired — Generation-local behavior
+SYNC-15                        reclassified — Reproducibility contract
+```
+
+Phase 013 must remove current ambiguity without reopening synchronization semantics merely to preserve old architecture language.
 
 ## M8 exclusion from default Phase 013 scope
 
 Formal composable privacy/accounting, product-owned governance/release, independent output publication/versioning, reusable request/cohort lifecycles, independently governed graph relationships, durable streaming/session/feed lifecycle, product-owned resource/economic accounting and product-owned reusable knowledge/memory remain future rediscovery triggers.
 
 They are **not architecture reservations** and must not receive placeholder services/stores/APIs unless future scope first returns to concept discovery.
-
-## Retained architecture baseline
-
-The [Phase 007 Consolidated Architecture Contract](phase-007-consolidated-architecture-contract.md) remains the strongest retained pre-completion architecture synthesis and is now a primary Phase 013 reconciliation subject—not automatic current architecture authority where it conflicts with completed concept design.
 
 ## Anti-prescription rule
 
@@ -106,6 +129,7 @@ autoscaling/admission service
 one approximation framework
 formal privacy/accounting architecture
 publication/governance/session/resource services
+exact package/service/database/API topology
 ```
 
 Each representation/architecture choice must be justified against completed concept requirements and product constraints.
@@ -120,8 +144,8 @@ IMPLEMENTATION START       NOT STARTED
 IMPLEMENTATION NEXT        NOT YET
 ```
 
-No production implementation, migration, provider integration or API stabilization is authorized by concept-design completion.
+No production implementation, migration, provider integration, package refactor or API stabilization is authorized.
 
 ## Current next boundary
 
-**Phase 013 — Post-Concept Representation & Architecture Reconciliation** is next eligible.
+**013-A — Reconciliation Authority, Retained Corpus Inventory, Precedence Reset & Discrepancy Taxonomy** is next eligible.
