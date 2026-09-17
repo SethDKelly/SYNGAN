@@ -85,7 +85,7 @@ OPEN
 | G7 | Explicit residual conceptual misfit register | 0 unresolved MAT-2, 0 MAT-3, 0 M2-M5 defects; M6/M8 routed | **CURRENTLY CLOSED** | 011-I/J; 012 |
 | H1 | One current-state consolidated Jackson concept-design audit | 012-A audits current A-G as one system across eight cross-layer consistency dimensions | **CURRENTLY CLOSED** | 012-A |
 | H2 | Explicit Jackson concept-design completion decision | 012-B explicitly declares Jackson concept design complete for current product scope | **CURRENTLY CLOSED** | 012-B |
-| R1 | Architecture reconciled downstream to completed concept design | Phase 013 active; retained Phase 004/006/007 corpus and bounded M6 sync-label drift are being reconciled under the 013-A..J sequence | **DOWNSTREAM / IN PROGRESS** | 013 |
+| R1 | Architecture reconciled downstream to completed concept design | 013-A established precedence, 19-document/10-ADR inventory, AR-0..AR-9 taxonomy, AMAT-0..3 materiality, dispositions and residual-register contract; domain reconciliation remains | **DOWNSTREAM / IN PROGRESS** | 013 |
 | R2 | Whole design audited problem → concepts → dependence/sync → mapping → architecture | Requires completed Phase 013 architecture reconciliation | **OPEN** | 014 |
 | R3 | Implementation-readiness decision based on complete design | Historical readiness remains non-authoritative | **OPEN** | 014 |
 
@@ -107,7 +107,8 @@ H1                                   CURRENTLY CLOSED
 H2                                   CURRENTLY CLOSED
 JACKSON CONCEPT DESIGN               COMPLETE FOR CURRENT PRODUCT SCOPE
 Phase 013                            ACTIVE
-013-A                                NEXT ELIGIBLE
+013-A                                COMPLETE
+013-B                                NEXT ELIGIBLE
 R1                                   DOWNSTREAM / IN PROGRESS
 REPRESENTATION/ARCHITECTURE FINAL    NO — PHASE 013 ACTIVE
 WHOLE-DESIGN COMPLETION              NOT YET — PHASE 014
@@ -115,6 +116,19 @@ IMPLEMENTATION READINESS             NOT READY
 IMPLEMENTATION START                 NOT STARTED
 IMPLEMENTATION NEXT                  NOT YET
 ```
+
+## Phase 013 reconciliation method state
+
+```text
+retained substantive architecture docs       19
+retained ADRs                                 10
+known 013-A entry candidates                   6
+AMAT-2 defects declared by 013-A               0
+AMAT-3 blockers declared by 013-A              0
+upstream reopen                               NONE
+```
+
+The known candidates are bounded synchronization count/ID drift, historical precedence language and superseded implementation-reentry assumptions. They are not current conceptual defects.
 
 ## Final concept-design residual accounting
 
@@ -130,16 +144,18 @@ M6 Phase-013 deferrals                            1
 M8 future-rediscovery finding groups              4
 ```
 
-The M6 item is now an active downstream representation/architecture reconciliation obligation. Current Phase 009 synchronization semantics remain authoritative throughout Phase 013.
+The M6 item is an active downstream representation/architecture reconciliation obligation. Current Phase 009 synchronization semantics remain authoritative throughout Phase 013.
 
 The M8 findings are conditional future rediscovery gates. They do not authorize Phase 013 architecture placeholders or implementation.
 
 ## Current dependency order
 
 ```text
-013-A  Reconciliation Authority / Corpus Inventory / Precedence / Discrepancy Taxonomy
+013-A  Reconciliation Authority / Corpus Inventory / Precedence / Discrepancy Taxonomy — COMPLETE
   ↓
-013-B..013-H  Domain-by-domain architecture reconciliation
+013-B  Representation / Layering / Public Contract / Identity / Revision / Handles / Views — NEXT
+  ↓
+013-C..013-H  Remaining domain-by-domain architecture reconciliation
   ↓
 013-I  Cross-Architecture / ADR / Legacy / M6 / Residual Reconciliation
   ↓
@@ -158,4 +174,4 @@ Phase 013 must not manufacture an upstream reopen merely to preserve retained ar
 
 ## Current next boundary
 
-**013-A — Reconciliation Authority, Retained Corpus Inventory, Precedence Reset & Discrepancy Taxonomy** is next eligible.
+**013-B — Representation Layering, Public Contract, Identity, Revision, Handle & View Reconciliation** is next eligible.
