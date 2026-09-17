@@ -20,7 +20,7 @@ IMPLEMENTATION START       NOT STARTED
 IMPLEMENTATION NEXT        NOT YET
 ```
 
-Jackson concept design is now complete for the current product scope. Phase 013 must reconcile representation/architecture, and Phase 014 owns whole-design implementation readiness.
+Jackson concept design is complete for the current product scope. Phase 013 architecture reconciliation is active, and Phase 014 owns whole-design implementation readiness.
 
 ---
 
@@ -33,8 +33,8 @@ CURRENTLY CLOSED
 COMPLETE FOR CURRENT PRODUCT SCOPE
   All Jackson concept-design obligations A-H are satisfied under current documented scope/evidence.
 
-DOWNSTREAM / PENDING RECONCILIATION
-  Concept semantics are sufficient, but retained representation/architecture must be reconciled before whole-design completion.
+DOWNSTREAM / IN PROGRESS
+  Concept semantics are sufficient and downstream representation/architecture reconciliation is actively underway.
 
 OPEN
   Required downstream decision has not yet been performed.
@@ -85,7 +85,7 @@ OPEN
 | G7 | Explicit residual conceptual misfit register | 0 unresolved MAT-2, 0 MAT-3, 0 M2-M5 defects; M6/M8 routed | **CURRENTLY CLOSED** | 011-I/J; 012 |
 | H1 | One current-state consolidated Jackson concept-design audit | 012-A audits current A-G as one system across eight cross-layer consistency dimensions | **CURRENTLY CLOSED** | 012-A |
 | H2 | Explicit Jackson concept-design completion decision | 012-B explicitly declares Jackson concept design complete for current product scope | **CURRENTLY CLOSED** | 012-B |
-| R1 | Architecture reconciled downstream to completed concept design | Retained architecture exists; bounded M6 sync-label cleanup and broader reconciliation remain | **DOWNSTREAM / PENDING RECONCILIATION** | 013 |
+| R1 | Architecture reconciled downstream to completed concept design | Phase 013 active; retained Phase 004/006/007 corpus and bounded M6 sync-label drift are being reconciled under the 013-A..J sequence | **DOWNSTREAM / IN PROGRESS** | 013 |
 | R2 | Whole design audited problem → concepts → dependence/sync → mapping → architecture | Requires completed Phase 013 architecture reconciliation | **OPEN** | 014 |
 | R3 | Implementation-readiness decision based on complete design | Historical readiness remains non-authoritative | **OPEN** | 014 |
 
@@ -106,7 +106,10 @@ Phase 012                            COMPLETE
 H1                                   CURRENTLY CLOSED
 H2                                   CURRENTLY CLOSED
 JACKSON CONCEPT DESIGN               COMPLETE FOR CURRENT PRODUCT SCOPE
-REPRESENTATION/ARCHITECTURE FINAL    NO — PHASE 013
+Phase 013                            ACTIVE
+013-A                                NEXT ELIGIBLE
+R1                                   DOWNSTREAM / IN PROGRESS
+REPRESENTATION/ARCHITECTURE FINAL    NO — PHASE 013 ACTIVE
 WHOLE-DESIGN COMPLETION              NOT YET — PHASE 014
 IMPLEMENTATION READINESS             NOT READY
 IMPLEMENTATION START                 NOT STARTED
@@ -127,14 +130,20 @@ M6 Phase-013 deferrals                            1
 M8 future-rediscovery finding groups              4
 ```
 
-The M6 item is downstream representation/architecture documentation reconciliation. Current Phase 009 synchronization semantics are already authoritative.
+The M6 item is now an active downstream representation/architecture reconciliation obligation. Current Phase 009 synchronization semantics remain authoritative throughout Phase 013.
 
-The M8 findings are conditional future rediscovery gates. They do not prevent current Jackson concept-design completion and do not authorize implementation.
+The M8 findings are conditional future rediscovery gates. They do not authorize Phase 013 architecture placeholders or implementation.
 
 ## Current dependency order
 
 ```text
-013  Post-Concept Representation & Architecture Reconciliation
+013-A  Reconciliation Authority / Corpus Inventory / Precedence / Discrepancy Taxonomy
+  ↓
+013-B..013-H  Domain-by-domain architecture reconciliation
+  ↓
+013-I  Cross-Architecture / ADR / Legacy / M6 / Residual Reconciliation
+  ↓
+013-J  Phase 013 Consolidation / R1 Decision / Phase 014 Handoff
   ↓
 014  Whole-Design Consolidation / Implementation-Readiness Decision
   ↓
@@ -145,8 +154,8 @@ The M8 findings are conditional future rediscovery gates. They do not prevent cu
 
 Jackson concept-design completion is scope-relative, not permanent freeze. A future genuine misfit or new independent product purpose may reopen the smallest affected design authority.
 
-A positive Phase 012 does **not** make implementation ready.
+Phase 013 must not manufacture an upstream reopen merely to preserve retained architecture, and a positive architecture reconciliation still does **not** make implementation ready.
 
 ## Current next boundary
 
-**Phase 013 — Post-Concept Representation & Architecture Reconciliation** is next eligible.
+**013-A — Reconciliation Authority, Retained Corpus Inventory, Precedence Reset & Discrepancy Taxonomy** is next eligible.
