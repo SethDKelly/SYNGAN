@@ -23,6 +23,7 @@ Current Phase 011 authority includes:
 - [`Synergy, Simplicity, Generic Fitness & Conceptual-Burden Audit`](docs/authority/composed-synergy-simplicity-generic-fitness-burden-audit.md)
 - [`Archetypal, Exceptional & Progressive-Disclosure Misfit Replay`](docs/authority/archetypal-exceptional-progressive-disclosure-misfit-replay.md)
 - [`Adversarial, Degraded, Recovery, Scale & Provider-Semantic-Leakage Validation`](docs/authority/adversarial-degraded-recovery-scale-provider-semantic-leakage-validation.md)
+- [`Future-Scope, Extensibility, New-Capability Pressure & Rediscovery Trigger Audit`](docs/authority/future-scope-extensibility-new-capability-rediscovery-audit.md)
 - [`Phase 011`](docs/phases/011/index.md)
 - [`Jackson Methodology Completion Matrix`](docs/authority/jackson-methodology-completion-matrix.md)
 
@@ -43,21 +44,22 @@ Phase 011                            ACTIVE
 011-E                                COMPLETE
 011-F                                COMPLETE
 011-G                                COMPLETE
-011-H                                NEXT ELIGIBLE
+011-H                                COMPLETE
+011-I                                NEXT ELIGIBLE
 G1 specificity                       CURRENTLY CLOSED
 G2 familiarity                       CURRENTLY CLOSED
 G3 integrity                         CURRENTLY CLOSED
 G4 synergy / simplicity              CURRENTLY CLOSED
 G5 scenario / adversarial            CURRENTLY CLOSED
-G6 future-scope                      STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
-G7 residual misfit register          PARTIAL
+G6 future-scope                      CURRENTLY CLOSED
+G7 residual misfit register          PARTIAL — 011-I OWNS CLOSURE
 Jackson design completion            IN PROGRESS
 implementation readiness             NOT READY
 implementation start                 NOT STARTED
 implementation next                  NOT YET
 ```
 
-## Phase 011 results through 011-G
+## Phase 011 results through 011-H
 
 ```text
 G1 specificity                  CURRENTLY CLOSED
@@ -65,34 +67,38 @@ G2 familiarity                  CURRENTLY CLOSED
 G3 integrity                    CURRENTLY CLOSED
 G4 synergy / simplicity         CURRENTLY CLOSED
 G5 scenario / adversarial       CURRENTLY CLOSED
+G6 future-scope                 CURRENTLY CLOSED
 R010-01                         NO DEFECT
 R010-02                         NO DEFECT — GUIDANCE STRENGTHENED
 R010-03                         NO DEFECT
 R010-04                         NO DEFECT
 R010-05                         NO DEFECT
 R010-06                         NO DEFECT
+R010-07                         NO DEFECT — REDISCOVERY TRIGGERS EXPLICIT
 R010-08                         NO DEFECT
 ```
 
-011-G closes the remaining adversarial/degraded/recovery/scale/provider stress:
+011-H confirms likely algorithmic and capability breadth can extend current purposes without pre-generalizing the catalog. It explicitly classifies future capability pressure as:
 
 ```text
-regressive recovery / stale authority        PASS
-partial material / physical result            PASS
-runtime distribution closure                  PASS
-enterprise scale / approximation              PASS
-provider job/run semantic leakage             PASS
-provider lineage/catalog/model leakage        PASS
-combined hostile composition                  PASS
-MAT-2 / MAT-3 findings                        0 / 0
-upstream reopen                               NONE
+F-1  fits existing concept unchanged
+F-2  fits new state/action within existing purpose
+F-3  requires new synchronization only
+F-4  requires application-family capability refinement
+F-5  requires genuine concept rediscovery
+F-6  remains external authority / non-goal
+F-7  insufficient evidence
 ```
 
-Provider-evidence rule:
+Rediscovery rule:
 
-> **Consume provider facts only at the evidentiary strength they actually establish. Familiar provider words such as `success`, `completed`, `model`, `artifact`, `lineage`, `current`, or `production` do not become stronger SYNGAN semantic claims by naming alone.**
+> **Genericity means accepting new instances within a stable purpose. Rediscover before implementation when future scope introduces an independent product-facing purpose with durable state/history and independently meaningful actions/lifecycle.**
 
-Recovery/scale rules remain equally strict: restored state does not resurrect write authority, unresolved history is not fabricated, resource pressure does not silently weaken commitments, and material approximation remains explicit and owner-scoped.
+Known future rediscovery triggers include formal composable privacy/accounting, product-owned governance/release, independent output publication/versioning, reusable request/cohort lifecycle, independently governed graph relationship state, durable streaming/session/feed state, product-owned resource/economic accounting, and product-owned reusable knowledge/memory beyond current Strategy/Learned State purpose.
+
+These are future design-governance gates, not accepted concepts and not implementation authorization.
+
+A bounded Phase 013 reconciliation note remains for historical synchronization identifiers in retained Phase 006 documentation. Current Phase 009 synchronization authority remains controlling.
 
 ## Phase 011 sequence
 
@@ -104,8 +110,8 @@ Recovery/scale rules remain equally strict: restored state does not resurrect wr
 011-E  COMPLETE — synergy / simplicity / generic fitness / conceptual burden
 011-F  COMPLETE — archetypal / exceptional / progressive-disclosure replay
 011-G  COMPLETE — adversarial / degraded / recovery / scale / provider leakage
-011-H  NEXT — future-scope / extensibility / new-capability pressure / rediscovery triggers
-011-I  residual conceptual misfit register
+011-H  COMPLETE — future-scope / extensibility / rediscovery triggers
+011-I  NEXT — residual conceptual misfit register / dispositions
 011-J  Phase 011 consolidation / Phase 012 handoff
 ```
 
@@ -124,6 +130,6 @@ Only a positive Phase 014 may change implementation to **READY / NOT STARTED / N
 
 ## Current next boundary
 
-**011-H — Future-Scope, Extensibility, New-Capability Pressure & Rediscovery Triggers** is next eligible.
+**011-I — Residual Conceptual Misfit Register, Reopen/Defer/Accept Decisions & Closure Preparation** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
