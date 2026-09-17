@@ -19,7 +19,8 @@ methodology / design authority
   > concept mapping / experience
   > design-quality / misfit validation
   > Jackson concept-design consolidation
-  > representation / architecture design
+  > Phase 013 architecture reconciliation authority
+  > reconciled representation / architecture design
   > implementation planning history
   > code / tests / deployment evidence
   > ADR rationale / phase history / backlog / examples
@@ -42,8 +43,9 @@ Completed concept design is upstream authority for Phase 013 architecture reconc
 - [Phase 011 Consolidation](authority/phase-011-design-quality-misfit-consolidation.md)
 - [Residual Conceptual Misfit Register](authority/residual-conceptual-misfit-register.md)
 - [Phase 012 Jackson Concept-Design Consolidation](authority/phase-012-jackson-concept-design-consolidation.md)
+- [Phase 013 Architecture Reconciliation Authority](authority/phase-013-architecture-reconciliation-authority.md)
 - [Phase 013](phases/013/index.md)
-- [Phase 013 Entry & Decomposition](phases/013/013-entry-decomposition.md)
+- [013-A Reconciliation Authority / Corpus Inventory / Taxonomy](phases/013/013-A-reconciliation-authority-retained-corpus-inventory-precedence-reset-discrepancy-taxonomy.md)
 - [Representation & Architecture](architecture/index.md)
 
 ## Current state
@@ -59,7 +61,8 @@ Phase 012                            COMPLETE
 A1-H2                                CURRENTLY CLOSED
 Jackson concept design               COMPLETE FOR CURRENT PRODUCT SCOPE
 Phase 013                            ACTIVE
-013-A                                NEXT ELIGIBLE
+013-A                                COMPLETE
+013-B                                NEXT ELIGIBLE
 R1 architecture reconciliation       DOWNSTREAM / IN PROGRESS
 whole-design completion              NOT YET — PHASE 014
 implementation readiness             NOT READY
@@ -85,15 +88,23 @@ Phase 011 design-quality / residual-misfit closure
 Phase 012 current-state H1 audit + H2 completion decision
 ```
 
-Phase 012 found no current cross-layer contradiction, orphaned problem outcome, missing concept owner, mapping distortion, unresolved conceptual blocker or missed upstream revalidation.
+## Phase 013 reconciliation method
 
-## Phase 013 architecture reconciliation
-
-Phase 013 is decomposed as:
+013-A inventoried **19 substantive retained architecture documents** and **10 ADRs**, reset architecture precedence beneath completed Phase 012 authority, and established:
 
 ```text
-013-A  authority / corpus inventory / precedence / discrepancy taxonomy
-013-B  representation / layering / public contract / identity / views
+AR-0..AR-9       discrepancy taxonomy
+AMAT-0..AMAT-3   architecture materiality
+RETAIN / CLARIFY / SUPERSEDE / CORRECT / DEFER / UPSTREAM-REOPEN
+```
+
+Known entry candidates: **6**. 013-A declared **0 AMAT-2 defects**, **0 AMAT-3 blockers**, and **no upstream reopen**. Domain-specific reconciliation now begins with 013-B.
+
+## Phase 013 sequence
+
+```text
+013-A  authority / corpus inventory / precedence / discrepancy taxonomy  COMPLETE
+013-B  representation / layering / public contract / identity / views   NEXT
 013-C  persistence / history / transaction-concurrency / migration
 013-D  distributed data / topology / manifest / candidate-seal-promotion
 013-E  Strategy/runtime / dependency / security / offline-no-egress
@@ -113,15 +124,14 @@ unresolved MAT-2 findings                  0
 MAT-3 blockers                             0
 unresolved M2-M5 current-design defects    0
 upstream reopens required                  0
-accepted conceptual tradeoffs required     0
 resolved M1 quality-rule families          2
 M6 Phase-013 deferrals                     1
 M8 future-rediscovery finding groups       4
 ```
 
-The M6 item is historical synchronization-label/documentation drift in retained Phase 006/007 architecture material. Current Phase 009 synchronization semantics are authoritative; Phase 013 owns reconciliation.
+The M6 item is historical synchronization-label/documentation drift in retained Phase 006/007 architecture material. Current Phase 009 synchronization semantics are authoritative.
 
-M8 findings are conditional future rediscovery gates, not current defects or architecture/implementation pre-approvals.
+M8 findings remain conditional future rediscovery gates, not architecture/implementation pre-approvals.
 
 ## Durable quality rules
 
@@ -141,7 +151,7 @@ Future rediscovery:
 
 Phase 013 may revise retained representation/architecture where it conflicts with completed concept design, but it may not revise concept authority merely to preserve historical architecture convenience.
 
-It must preserve concept ownership, application-family optionality, occurrence-scoped synchronization, semantic/operational separation, historical truth, Evidence/Provenance boundaries, provider evidence qualification, explicit approximation and future rediscovery boundaries unless a genuine upstream contradiction is explicitly proven and reopened.
+Only a demonstrated AR-9 finding may justify upstream reopen.
 
 Phase 013 remains design-only.
 
@@ -164,4 +174,4 @@ IMPLEMENTATION NEXT        NOT YET
 
 ## Current next boundary
 
-**013-A — Reconciliation Authority, Retained Corpus Inventory, Precedence Reset & Discrepancy Taxonomy** is next eligible.
+**013-B — Representation Layering, Public Contract, Identity, Revision, Handle & View Reconciliation** is next eligible.
