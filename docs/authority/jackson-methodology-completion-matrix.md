@@ -35,7 +35,7 @@ No Phase 011 intermediate result changes this posture by implication.
 
 ### Class A — current upstream design authority
 
-Includes current problem knowledge, accepted concepts, Phase 009 dependence/application-family/synchronization authority, Phase 010 mapping authority, the Phase 011 validation method, and current Phase 011 G1-G6 authorities:
+Includes current problem knowledge, accepted concepts, Phase 009 dependence/application-family/synchronization authority, Phase 010 mapping authority, the Phase 011 validation method, and current Phase 011 G1-G7 authorities:
 
 - [Design Quality Validation Authority](design-quality-validation-authority.md)
 - [Composed Specificity Audit](composed-specificity-purpose-boundary-audit.md)
@@ -45,6 +45,7 @@ Includes current problem knowledge, accepted concepts, Phase 009 dependence/appl
 - [Archetypal, Exceptional & Progressive-Disclosure Misfit Replay](archetypal-exceptional-progressive-disclosure-misfit-replay.md)
 - [Adversarial, Degraded, Recovery, Scale & Provider-Semantic-Leakage Validation](adversarial-degraded-recovery-scale-provider-semantic-leakage-validation.md)
 - [Future-Scope, Extensibility, New-Capability Pressure & Rediscovery Trigger Audit](future-scope-extensibility-new-capability-rediscovery-audit.md)
+- [Residual Conceptual Misfit Register](residual-conceptual-misfit-register.md)
 
 ### Class B — supporting design evidence
 
@@ -76,7 +77,8 @@ Phase 011  ACTIVE
 011-F      COMPLETE
 011-G      COMPLETE
 011-H      COMPLETE
-011-I      NEXT ELIGIBLE
+011-I      COMPLETE
+011-J      NEXT ELIGIBLE
 ```
 
 ## Current Phase 010 result retained
@@ -99,91 +101,82 @@ F1-F5                                     CURRENTLY CLOSED
 
 | ID | Methodology obligation | Current evidence/result | Current state | Owning closure phase |
 |---|---|---|---|---|
-| A1 | Application problem, actors, needs, outcomes, environmental constraints | Current problem authority; package-first Spark-host scope preserved through 011-H | **CURRENTLY CLOSED** | 008-B/H; current problem authority |
-| A2 | Distinct purpose/justification for every accepted concept | 008-B plus 011-B composed purpose replay | **CURRENTLY CLOSED** | 008-B/H; 011-B |
+| A1 | Application problem, actors, needs, outcomes, environmental constraints | Current problem authority; package-first Spark-host scope preserved through 011-I | **CURRENTLY CLOSED** | 008-B/H; current problem authority |
+| A2 | Distinct purpose/justification for every accepted concept | 008-B plus 011-B composed-purpose replay | **CURRENTLY CLOSED** | 008-B/H; 011-B |
 | A3 | Problem/outcome → concept traceability | Canonical concept-justification traceability | **CURRENTLY CLOSED** | 008-B/H |
-| B1 | Divergent candidate concept discovery | 008-G replayed original/later/new candidates; 011-H validates future rediscovery discipline | **CURRENTLY CLOSED** | 008-G/H; 011-H |
-| B2 | Candidate reduction/merger/subordination/defer/reject | 008-G dispositions retained; 011-H confirms deferred candidates remain triggers rather than current concepts | **CURRENTLY CLOSED** | 008-G/H; 011-H |
-| B3 | Independence and appropriate domain genericity | 008-F plus 011-B/E/G/H confirm stable purposes under current and future pressure | **CURRENTLY CLOSED** | 008-F/H; 011-B/E/G/H |
+| B1 | Divergent candidate concept discovery | 008-G candidate replay; 011-H future rediscovery discipline; 011-I retains M8 triggers without premature acceptance | **CURRENTLY CLOSED** | 008-G/H; 011-H/I |
+| B2 | Candidate reduction/merger/subordination/defer/reject | 008-G dispositions retained; 011-H/I confirm future candidates remain conditional triggers | **CURRENTLY CLOSED** | 008-G/H; 011-H/I |
+| B3 | Independence and appropriate domain genericity | 008-F plus 011-B/E/G/H/I preserve stable purposes and reject future-proof umbrellas | **CURRENTLY CLOSED** | 008-F/H; 011-B/E/G/H/I |
 | B4 | Explicit familiarity/reuse comparison | 008-F plus 011-C composed/external-model comparison | **CURRENTLY CLOSED** | 008-F/H; 011-C |
-| B5 | Missing-concept/god-concept/representation-leakage audit | 008-G, Phase 010 and 011-B-H reject aggregate/provider/future-proof umbrellas while retaining explicit rediscovery triggers | **CURRENTLY CLOSED** | 008-G/H; 010-H; 011-B-H |
-| C1 | Concept name and distinct purpose | All eleven retained and composed-purpose/familiarity tested | **CURRENTLY CLOSED** | 008-B/F/H; 011-B/C |
+| B5 | Missing-concept/god-concept/representation-leakage audit | 008-G, Phase 010 and 011-B-I reject aggregate/provider/future-proof substitutes while routing M8 triggers explicitly | **CURRENTLY CLOSED** | 008-G/H; 010-H; 011-B-I |
+| C1 | Concept name and distinct purpose | All eleven retained; composed purpose/familiarity validated | **CURRENTLY CLOSED** | 008-B/F/H; 011-B/C |
 | C2 | Operational principle demonstrating purpose | 008-E normalized/falsified all eleven | **CURRENTLY CLOSED** | 008-E/H |
-| C3 | Complete conceptual state model | 008-C plus 011-D/F/G stress and 011-H future-pressure replay find no missing current global state | **CURRENTLY CLOSED** | 008-C/H; 011-D/F/G/H |
-| C4 | Conceptual actions | 008-D normalized actions; 011-H identifies future actions that would require rediscovery rather than silent absorption | **CURRENTLY CLOSED** | 008-D/H; 011-H |
+| C3 | Complete conceptual state model | 008-C plus 011-D/F/G/H/I find no missing current global state | **CURRENTLY CLOSED** | 008-C/H; 011-D/F/G/H/I |
+| C4 | Conceptual actions | 008-D normalized actions; 011-H/I preserve rediscovery boundary for genuinely new future actions | **CURRENTLY CLOSED** | 008-D/H; 011-H/I |
 | C5 | Conceptual queries/observations | 008-D plus complete 010-C inspection mapping | **CURRENTLY CLOSED** | 008-D/H; 010-C/H |
 | C6 | Preconditions/effects/postconditions | 008-D transition contracts; 009-F synchronization contracts | **CURRENTLY CLOSED** | 008-D/H; 009-F/H |
-| C7 | Invariants/lifecycle/history/unresolved/invalidated states | 008-C/D plus Phase 010 and 011-D/F/G/H temporal/recovery/future-boundary replay | **CURRENTLY CLOSED** | 008-C/D/H; 010-H; 011-D/F/G/H |
-| C8 | Explicit boundaries/non-responsibilities | 008-F/G/H, Phase 010 mapping and 011-B-H preserve current boundaries and future stop conditions | **CURRENTLY CLOSED** | 008-F/G/H; 010-H; 011-B-H |
-| D1 | Jackson application inclusion-dependence graph | 009-A/B; no current edge change from 011-H | **CURRENTLY CLOSED** | 009-A/B/H; 011-H revalidation |
-| D2 | Meaningful valid concept subsets/application family | 009-C; 011-E/F/G/H preserve reduced-family optionality and future extension discipline | **CURRENTLY CLOSED** | 009-C/H; 010-F/G/H; 011-E-H |
+| C7 | Invariants/lifecycle/history/unresolved/invalidated states | 008-C/D plus Phase 010 and 011-D/F/G/H/I temporal, recovery and future-boundary validation | **CURRENTLY CLOSED** | 008-C/D/H; 010-H; 011-D/F/G/H/I |
+| C8 | Explicit boundaries/non-responsibilities | 008-F/G/H, Phase 010 and 011-B-I preserve current boundaries, provider seams and future stop conditions | **CURRENTLY CLOSED** | 008-F/G/H; 010-H; 011-B-I |
+| D1 | Jackson application inclusion-dependence graph | 009-A/B; no current edge change through 011-I | **CURRENTLY CLOSED** | 009-A/B/H; 011-H/I revalidation |
+| D2 | Meaningful valid concept subsets/application family | 009-C; 011-E/F/G/H/I preserve reduced-family optionality and extension discipline | **CURRENTLY CLOSED** | 009-C/H; 010-F/G/H; 011-E-I |
 | D3 | Explanation/design ordering implied by inclusion dependence | 009-B prerequisite/SCC ordering; not converted into workflow | **CURRENTLY CLOSED** | 009-B/H |
-| D4 | Product-scope consequences of adding/removing concepts | 009-D extension/rediscovery rules directly revalidated by 011-H | **CURRENTLY CLOSED** | 009-D/H; 011-H |
-| E1 | Explicit concept synchronizations | 13 active from 15 historical IDs; no 011-H current add/remove/new-sync need | **CURRENTLY CLOSED** | 009-E/F/G/H; 011-D/G/H |
-| E2 | Singular state ownership across synchronizations | 009-F plus 011-D/G preserve singular ownership; 011-H prevents future capability absorption from eroding it | **CURRENTLY CLOSED** | 009-F/G/H; 010-H; 011-D/G/H |
-| E3 | Composition burden/economy and hidden-coordinator avoidance | 009-G and 011-E/F/G/H preserve relation-local burden and reject future-proof global coordinators | **CURRENTLY CLOSED** | 009-F/G/H; 010-F/G/H; 011-E-H |
-| E4 | Composition synergy | 009-G synergy revalidated through 011-E-H | **CURRENTLY CLOSED** | 009-G/H; 011-E-H |
-| E5 | Integrity under composition | 009-F/G, 010-G, 011-D/F/G all pass; 011-H introduces no future-pressure current defect | **CURRENTLY CLOSED** | 009-F/G/H; 010-H; 011-D/F/G/H |
+| D4 | Product-scope consequences of adding/removing concepts | 009-D extension/rediscovery rules validated by 011-H/I | **CURRENTLY CLOSED** | 009-D/H; 011-H/I |
+| E1 | Explicit concept synchronizations | 13 active from 15 historical IDs; no Phase 011 current add/remove/merge need | **CURRENTLY CLOSED** | 009-E/F/G/H; 011-D/G/H/I |
+| E2 | Singular state ownership across synchronizations | 009-F plus 011-D/G preserve ownership; 011-I finds no residual ownership defect | **CURRENTLY CLOSED** | 009-F/G/H; 010-H; 011-D/G/I |
+| E3 | Composition burden/economy and hidden-coordinator avoidance | 009-G and 011-E/F/G/H/I preserve relation-local burden and no hidden coordinator | **CURRENTLY CLOSED** | 009-F/G/H; 010-F/G/H; 011-E-I |
+| E4 | Composition synergy | 009-G synergy revalidated through 011-E-I | **CURRENTLY CLOSED** | 009-G/H; 011-E-I |
+| E5 | Integrity under composition | 009-F/G, 010-G, 011-D/F/G pass; 011-I confirms no residual composition defect | **CURRENTLY CLOSED** | 009-F/G/H; 010-H; 011-D/F/G/I |
 | F1 | Concept action → human/programmatic interaction mapping | 66/66 command groups mapped | **CURRENTLY CLOSED** | 010-B/H |
 | F2 | Concept state/query → actor-visible inspection mapping | 52/52 queries + history/explanation mapped | **CURRENTLY CLOSED** | 010-C/H |
-| F3 | Linguistic mapping/vocabulary alignment | 010-D + 011-C; 011-G/H keep provider/future terms qualified rather than canonical by familiarity | **CURRENTLY CLOSED** | 010-D/H; 011-C/G/H |
-| F4 | Physical/interaction mapping across surfaces/application-family compositions | 010-E/F; 011-F/G/H find no mapping reopen under scenarios, providers or likely extensions | **CURRENTLY CLOSED** | 010-E/F/H; 011-F/G/H |
-| F5 | Human/programmatic semantic parity | 010-G plus 011-F/G; 011-H adds no new current parity obligation | **CURRENTLY CLOSED** | 010-G/H; 011-F/G/H |
-| G1 | Specificity across final composed set | 011-B: 11/11 pass, R010-01 NO DEFECT | **CURRENTLY CLOSED** | 011-B |
-| G2 | Familiarity across final composed set | 011-C: 11/11 names retained, R010-02 NO DEFECT | **CURRENTLY CLOSED** | 011-C |
-| G3 | Integrity across synchronizations/mappings | 011-D/F/G pass normal, exceptional and hostile stress; R010-03 NO DEFECT | **CURRENTLY CLOSED** | 011-D/F/G |
-| G4 | Synergy and simplicity/generic fitness | 011-E passes reduced-family burden, synergy, repeated-pattern and genericity audits; R010-04 NO DEFECT | **CURRENTLY CLOSED** | 011-E |
-| G5 | Archetypal/exceptional/degraded/adversarial/recovery misfit | 011-F/G pass; R010-05/06/08 NO DEFECT | **CURRENTLY CLOSED** | 011-F/G |
-| G6 | Future-scope/extensibility misfit | 011-H classifies likely extension pressures, retains bounded M8 rediscovery triggers, finds no current catalog stretch; R010-07 NO DEFECT | **CURRENTLY CLOSED** | 011-H |
-| G7 | Explicit residual conceptual misfit register | 011-B-H findings now available; complete consolidated register remains | **PARTIAL** | 011-I/J; 012 confirmation |
-| H1 | One current-state consolidated Jackson concept-design audit | Phases 008-010 consolidated; Phase 011 residual/consolidation and overall audit remain | **OPEN** | 012 |
+| F3 | Linguistic mapping/vocabulary alignment | 010-D + 011-C; provider/future terms remain qualified; no residual language defect | **CURRENTLY CLOSED** | 010-D/H; 011-C/G/I |
+| F4 | Physical/interaction mapping across surfaces/application-family compositions | 010-E/F; 011-F/G/H/I find no current mapping reopen | **CURRENTLY CLOSED** | 010-E/F/H; 011-F/G/H/I |
+| F5 | Human/programmatic semantic parity | 010-G plus 011-F/G; 011-I retains decision-material/provider-strength rules without new mapping owner | **CURRENTLY CLOSED** | 010-G/H; 011-F/G/I |
+| G1 | Specificity across final composed set | 011-B: 11/11 pass, R010-01 NO DEFECT; 011-I no residual G1 defect | **CURRENTLY CLOSED** | 011-B/I |
+| G2 | Familiarity across final composed set | 011-C: names retained, R010-02 NO DEFECT; 011-I retains guidance only | **CURRENTLY CLOSED** | 011-C/I |
+| G3 | Integrity across synchronizations/mappings | 011-D/F/G pass normal, exceptional and hostile stress; R010-03 NO DEFECT; 011-I no residual defect | **CURRENTLY CLOSED** | 011-D/F/G/I |
+| G4 | Synergy and simplicity/generic fitness | 011-E passes burden/economy/synergy/genericity; R010-04 NO DEFECT; 011-I no tradeoff required | **CURRENTLY CLOSED** | 011-E/I |
+| G5 | Archetypal/exceptional/degraded/adversarial/recovery misfit | 011-F/G pass; R010-05/06/08 NO DEFECT; 011-I no residual blocker | **CURRENTLY CLOSED** | 011-F/G/I |
+| G6 | Future-scope/extensibility misfit | 011-H classifies likely pressures and M8 triggers; R010-07 NO DEFECT; 011-I routes triggers | **CURRENTLY CLOSED** | 011-H/I |
+| G7 | Explicit residual conceptual misfit register | 011-I consolidates 011-B-H findings: 0 unresolved MAT-2, 0 MAT-3, 0 M2-M5 defects, 1 bounded M6 Phase-013 deferral, explicit M8 triggers | **CURRENTLY CLOSED** | 011-I |
+| H1 | One current-state consolidated Jackson concept-design audit | Phases 008-010 consolidated; Phase 011 joint consolidation remains, then overall audit | **OPEN** | 011-J handoff; 012 final ownership |
 | H2 | Explicit Jackson concept-design completion decision | Not yet performed | **OPEN** | 012 |
-| R1 | Architecture reconciled downstream to completed concept design | Retained architecture exists; historical Phase 006 sync labels recorded for Phase 013 cleanup | **DOWNSTREAM / PENDING RECONCILIATION** | 013 |
+| R1 | Architecture reconciled downstream to completed concept design | Retained architecture exists; one bounded M6 synchronization-label cleanup retained for Phase 013 | **DOWNSTREAM / PENDING RECONCILIATION** | 013 |
 | R2 | Whole design audited problem → concepts → dependence/sync → mapping → architecture | Not yet possible | **OPEN** | 014 |
 | R3 | Implementation-readiness decision based on complete design | Superseded historical readiness remains non-authoritative | **OPEN** | 014 |
 
-## Phase 011 results through 011-H
+## Phase 011 current result through 011-I
 
 ```text
 011-A  COMPLETE — validation method
-011-B  COMPLETE — G1 specificity CURRENTLY CLOSED
-011-C  COMPLETE — G2 familiarity CURRENTLY CLOSED
-011-D  COMPLETE — G3 baseline integrity
-011-E  COMPLETE — G4 synergy/simplicity CURRENTLY CLOSED
-011-F  COMPLETE — G5 ordinary/exceptional replay
-011-G  COMPLETE — G3/G5 stress closure CURRENTLY CLOSED
-011-H  COMPLETE — G6 future-scope/extensibility CURRENTLY CLOSED
-011-I  NEXT — G7 residual conceptual misfit register
+011-B  COMPLETE — G1 CURRENTLY CLOSED
+011-C  COMPLETE — G2 CURRENTLY CLOSED
+011-D  COMPLETE — G3 baseline
+011-E  COMPLETE — G4 CURRENTLY CLOSED
+011-F  COMPLETE — G5 ordinary/exceptional component
+011-G  COMPLETE — G3/G5 CURRENTLY CLOSED
+011-H  COMPLETE — G6 CURRENTLY CLOSED
+011-I  COMPLETE — G7 CURRENTLY CLOSED
+011-J  NEXT — joint G1-G7 consolidation / Phase 012 handoff
 ```
 
-### 011-H — future scope / extensibility
-
-011-H explicitly distinguishes:
+### 011-I residual register result
 
 ```text
-F-1  fits existing concept unchanged
-F-2  fits new state/action within existing purpose
-F-3  requires new synchronization only
-F-4  requires application-family capability refinement
-F-5  requires genuine concept rediscovery
-F-6  remains external authority / non-goal
-F-7  insufficient evidence
+Phase 010 residual risks dispositioned            8 / 8
+unresolved MAT-2 findings                         0
+MAT-3 blockers                                    0
+unresolved M2-M5 current-design defects           0
+upstream reopens required                         0
+accepted conceptual tradeoffs required            0
+resolved M1 quality-rule families                 2
+M6 Phase-013 deferrals                            1
+M8 future-rediscovery finding groups              4
+G7                                                 CURRENTLY CLOSED
 ```
 
-Current likely algorithmic/capability breadth fits the existing catalog. Bounded `M8` future rediscovery triggers remain for capabilities that would introduce an independent product purpose/state/action lifecycle, including:
+The M6 item concerns retained historical synchronization numbering in downstream architecture documentation. Current Phase 009 semantics are already authoritative.
 
-- formal composable privacy/accounting;
-- product-owned governance/release decisions;
-- independent output publication/versioning/retirement;
-- independently reusable request/cohort semantics;
-- independently governed graph/relationship state;
-- durable streaming/session/feed state not reducible to bounded activities;
-- product-owned economic/resource accounting;
-- product-owned knowledge/memory state beyond Strategy/Learned State purpose.
-
-These triggers are not current concepts and are not current blockers.
-
-No `MAT-2` or `MAT-3` finding exists in 011-H.
+The M8 findings are conditional rediscovery gates, not current missing concepts or implementation authorization.
 
 ## Current methodological verdict
 
@@ -196,22 +189,15 @@ E1-E5 COMPOSITION                    CURRENTLY CLOSED
 PHASE 010                            COMPLETE
 F1-F5                                CURRENTLY CLOSED
 PHASE 011                            ACTIVE
-011-A                                COMPLETE
-011-B                                COMPLETE
-011-C                                COMPLETE
-011-D                                COMPLETE
-011-E                                COMPLETE
-011-F                                COMPLETE
-011-G                                COMPLETE
-011-H                                COMPLETE
+011-A..011-I                         COMPLETE
 G1                                   CURRENTLY CLOSED
 G2                                   CURRENTLY CLOSED
 G3                                   CURRENTLY CLOSED
 G4                                   CURRENTLY CLOSED
 G5                                   CURRENTLY CLOSED
 G6                                   CURRENTLY CLOSED
-G7                                   PARTIAL — 011-I OWNS CLOSURE
-011-I                                NEXT ELIGIBLE
+G7                                   CURRENTLY CLOSED
+011-J                                NEXT ELIGIBLE
 JACKSON CONCEPT DESIGN COMPLETE      NO
 REPRESENTATION/ARCHITECTURE FINAL    NO — PENDING PHASE 013 RECONCILIATION
 IMPLEMENTATION READINESS             NOT READY
@@ -228,16 +214,14 @@ R010-03  NO DEFECT — 011-D + 011-G
 R010-04  NO DEFECT — 011-E
 R010-05  NO DEFECT — 011-E + 011-F
 R010-06  NO DEFECT — 011-G
-R010-07  NO DEFECT — EXPLICIT REDISCOVERY TRIGGERS RETAINED/STRENGTHENED — 011-H
+R010-07  NO DEFECT — REDISCOVERY TRIGGERS RETAINED/STRENGTHENED — 011-H
 R010-08  NO DEFECT — 011-G
 ```
-
-All eight Phase 010 residual risks have explicit dispositions. 011-I must now consolidate them with every material/lower-materiality Phase 011 finding into G7's residual register.
 
 ## Current dependency order
 
 ```text
-011-I -> 011-J
+011-J  Phase 011 Consolidation / G1-G7 Completion Decision / Phase 012 Handoff
   ↓
 012  Jackson Concept-Design Consolidation & Completion Decision
   ↓
@@ -248,12 +232,8 @@ All eight Phase 010 residual risks have explicit dispositions. 011-I must now co
 
 ## Guardrail
 
-Phase 011 may reopen the smallest upstream authority only when a concrete semantic misfit is demonstrated. Architecture/source/tests/provider models remain counterexample, feasibility or familiarity evidence rather than upstream authority.
+G1-G7 being individually `CURRENTLY CLOSED` after 011-I does not itself close Phase 011. 011-J must perform the joint-current-state consistency audit and explicit handoff.
 
-Future extensibility does not mean pre-generalizing the catalog. New implementation technologies remain inside stable current purposes when semantics fit; new independent purposes/lifecycles must trigger discovery before implementation.
-
-## Current next boundary
-
-**011-I — Residual Conceptual Misfit Register, Reopen/Defer/Accept Decisions & Closure Preparation** is next eligible.
+Phase 012, not Phase 011, owns the final Jackson concept-design completion decision.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
