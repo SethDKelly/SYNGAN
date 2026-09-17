@@ -35,14 +35,15 @@ Phase 011                  ACTIVE
 011-E                      COMPLETE
 011-F                      COMPLETE
 011-G                      COMPLETE
-011-H                      NEXT ELIGIBLE
+011-H                      COMPLETE
+011-I                      NEXT ELIGIBLE
 G1 specificity             CURRENTLY CLOSED
 G2 familiarity             CURRENTLY CLOSED
 G3 integrity               CURRENTLY CLOSED
 G4 synergy / simplicity    CURRENTLY CLOSED
 G5 scenario / adversarial  CURRENTLY CLOSED
-G6 future-scope            STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
-G7 residual misfit         PARTIAL
+G6 future-scope            CURRENTLY CLOSED
+G7 residual misfit         PARTIAL — 011-I OWNS CLOSURE
 Jackson concept design     IN PROGRESS
 ```
 
@@ -51,68 +52,54 @@ Jackson concept design     IN PROGRESS
 Do not convert:
 
 ```text
-concept owner                -> service/package/table
-synchronization              -> event/transaction/workflow edge
-coordination plane           -> architecture layer
-application-family member    -> SKU/feature flag/deployment profile
-exact historical binding     -> mandatory event-sourcing architecture
-current-use invalidation     -> generic retroactive invalidation cascade
-Provenance relation          -> graph database requirement
-Execution                    -> scheduler/job service
-history reconstruction       -> automatic material adoption
-progressive-disclosure D0-D4 -> UI pages/API tiers
-provider job/run state       -> parent semantic state
-provider lineage             -> canonical Provenance store
-provider model/artifact      -> Strategy/Learned State/result by default
-provider identity            -> universal SYNGAN authorization
-Phase 011 finding/probe      -> executable test/runtime enum
+concept owner                 -> service/package/table
+synchronization               -> event/transaction/workflow edge
+coordination plane            -> architecture layer
+application-family member     -> SKU/feature flag/deployment profile
+exact historical binding      -> mandatory event-sourcing architecture
+current-use invalidation      -> generic retroactive invalidation cascade
+Provenance relation           -> graph database requirement
+Execution                     -> scheduler/job service
+history reconstruction        -> automatic material adoption
+progressive-disclosure D0-D4  -> UI pages/API tiers
+provider job/run state        -> parent semantic state
+provider lineage              -> canonical Provenance store
+provider model/artifact       -> Strategy/Learned State/result by default
+provider identity             -> universal SYNGAN authorization
+M8 rediscovery trigger        -> future feature flag/schema/class
+Phase 011 finding/probe       -> executable test/runtime enum
 ```
 
-## 011-G remains design-only
+## 011-G / 011-H remain design-only
 
-011-G confirms stress integrity without selecting mechanisms:
+011-G confirms stress integrity without selecting mechanisms. 011-H confirms future extension boundaries without pre-authorizing future features.
+
+Future capability classification is semantic:
 
 ```text
-regressive recovery / stale authority        PASS
-partial material / physical result            PASS
-runtime distribution closure                  PASS
-enterprise scale / approximation              PASS
-provider job/run semantic leakage             PASS
-provider lineage/catalog/model leakage        PASS
-combined hostile composition                  PASS
-MAT-2 / MAT-3 findings                        0 / 0
-R010-03                                       NO DEFECT
-R010-06                                       NO DEFECT
-R010-08                                       NO DEFECT
-G3                                            CURRENTLY CLOSED
-G5                                            CURRENTLY CLOSED
+F-1  fits existing concept unchanged
+F-2  fits new state/action within existing purpose
+F-3  requires new synchronization only
+F-4  requires application-family capability refinement
+F-5  requires genuine concept rediscovery
+F-6  remains external authority / non-goal
+F-7  insufficient evidence
 ```
 
-Provider-evidence qualification:
+An `F-5 / M8` finding means **return to design discovery before implementation if that scope becomes current**. It does not mean the future concept already exists and does not authorize implementation scaffolding for it.
 
-> **Provider facts are consumed only at the semantic/evidentiary strength they actually establish; familiar provider vocabulary does not automatically become stronger SYNGAN truth.**
+Known future rediscovery triggers include:
 
-This does **not** authorize:
+- formal composable privacy/accounting;
+- product-owned governance/release decisions;
+- independent output publication/versioning/retirement;
+- independently reusable request/cohort semantics;
+- independently governed graph/relationship state;
+- durable streaming/session/feed lifecycle not reducible to bounded activities;
+- product-owned economic/resource accounting;
+- product-owned reusable knowledge/memory beyond Strategy/Learned State purpose.
 
-- Databricks/AWS/provider adapter implementation;
-- job/run correlation schemas;
-- recovery fencing/incarnation mechanisms;
-- event/outbox architecture;
-- lineage graph storage;
-- provider identity bridges;
-- runtime/package distribution mechanisms;
-- autoscaling/admission infrastructure;
-- approximation algorithms;
-- global degraded/recovery/status resources.
-
-Recovery and scale constraints remain requirements on future architecture, not selected architecture:
-
-- a regressive restore must not resurrect stale authority;
-- surviving provider work/material is evidence, not current authority;
-- missing semantic history is reconstructed only through owning-concept invariants;
-- resource pressure must not silently change commitments;
-- material approximation must be explicit and owner-scoped;
-- distributed closure must be established beyond driver-local availability.
+Do not implement placeholders such as generic `Privacy`, `Governance`, `Output`, `Session`, `Relationship`, `Resource`, `Knowledge`, `Policy`, `Capability` or future-state registries merely because these triggers are documented.
 
 ## Phase 013 reconciliation note
 
@@ -121,8 +108,7 @@ Some retained Phase 006 design documents still mention historical synchronizatio
 ## Remaining design before readiness
 
 ```text
-011-H  future-scope / extensibility / rediscovery triggers — NEXT
-011-I  residual misfit register
+011-I  residual conceptual misfit register — NEXT
 011-J  Phase 011 consolidation
 012    Jackson concept-design completion decision
 013    representation / architecture reconciliation
@@ -133,10 +119,10 @@ Only a positive Phase 014 may make implementation **READY / NOT STARTED / NEXT**
 
 ## Current prohibition
 
-Until Phase 014 passes, do not add production concept behavior, generic domain base hierarchies, public APIs, persistence/query schemas, services/events, graph/search technology, provider/runtime/security adapters, Execution/recovery implementations, Evidence/Provenance implementations, invalidation cascades, reference Strategies, privacy mechanisms, benchmarks, package-topology changes, feature flags, status resources, compatibility shims or executable Phase-011 restrictions intended to manufacture readiness.
+Until Phase 014 passes, do not add production concept behavior, generic domain base hierarchies, public APIs, persistence/query schemas, services/events, graph/search technology, provider/runtime/security adapters, Execution/recovery implementations, Evidence/Provenance implementations, invalidation cascades, reference Strategies, formal privacy mechanisms, governance/release engines, streaming/session systems, output-publication systems, resource/economic systems, benchmarks, package-topology changes, feature flags, status resources, compatibility shims or executable Phase-011 restrictions intended to manufacture readiness.
 
 ## Current next boundary
 
 Design-only work:
 
-**011-H — Future-Scope, Extensibility, New-Capability Pressure & Rediscovery Triggers**.
+**011-I — Residual Conceptual Misfit Register, Reopen/Defer/Accept Decisions & Closure Preparation**.
