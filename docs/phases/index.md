@@ -8,15 +8,7 @@ status: active
 
 ## Historical work through Phase 007
 
-- Phase 001 — Design Foundation & Concept Discovery: historical discovery baseline.
-- Phase 002 — Concept Specification & Invariant Refinement: historical specification baseline.
-- Phase 003 — Experience & Workflow Design: historical experience baseline.
-- Phase 004 — Representation & Architecture Design: retained downstream architecture baseline.
-- Phase 005 — Implementation Planning & Delivery Decomposition: planning/history only.
-- Phase 006 — Post-Planning Design Validation & Adversarial Refinement: historical design-refinement evidence.
-- Phase 007 — Design Continuation & Architecture Completion: retained downstream design evidence.
-
-Phase 007-K implementation re-entry remains superseded.
+Phases 001-007 remain historical discovery/specification/experience/architecture/planning evidence. Phase 007-K implementation re-entry remains superseded.
 
 ## Current implementation posture
 
@@ -26,78 +18,44 @@ IMPLEMENTATION START       NOT STARTED
 IMPLEMENTATION NEXT        NOT YET
 ```
 
-Only Phase 014 may change that posture after a positive whole-design completion audit.
+Only Phase 014 may change that posture after a positive whole-design audit.
 
-## Phase 008 — Individual Concept Design Normalization & Completeness — complete
+## Phase 008 — complete
 
 A1-A3, B1-B5 and C1-C8 are currently closed.
 
-## Phase 009 — Dependence, Application Family, Composition & Synchronization — complete
+## Phase 009 — complete
 
-```text
-D1-D4  CURRENTLY CLOSED
-E1-E5  CURRENTLY CLOSED
-```
+D1-D4 and E1-E5 are currently closed.
 
-## Phase 010 — Concept Mapping, Interaction, Linguistic & Experience Alignment — complete
+## Phase 010 — complete
 
-```text
-F1-F5  CURRENTLY CLOSED
-```
+F1-F5 are currently closed; mapping remains 66/66 commands, 52/52 queries, 11/11 lifecycle/history envelopes, 5/5 explanation patterns, 10/10 family replays and 20/20 difficult-condition parity probes.
 
-## Phase 011 — Design Quality / Misfit Validation — complete
+## Phase 011 — complete
 
-```text
-011-A..011-J  COMPLETE
-G1-G7         CURRENTLY CLOSED
-```
+G1-G7 are currently closed with no unresolved current conceptual blocker.
 
-## Phase 012 — Jackson Concept-Design Consolidation & Completion Decision — complete
+## Phase 012 — complete
 
-```text
-012-A  COMPLETE — H1 CURRENTLY CLOSED
-012-B  COMPLETE — H2 CURRENTLY CLOSED
-PHASE 012                    COMPLETE
-JACKSON CONCEPT DESIGN       COMPLETE FOR CURRENT PRODUCT SCOPE
-```
+H1/H2 are currently closed and Jackson concept design is **COMPLETE FOR CURRENT PRODUCT SCOPE**.
 
 ## Phase 013 — Post-Concept Representation & Architecture Reconciliation — active
 
 Current authority:
 
-- [Phase 013 Architecture Reconciliation Authority](../authority/phase-013-architecture-reconciliation-authority.md)
 - [Phase 013 Index](013/index.md)
 - [013-A Reconciliation Authority / Corpus Inventory / Taxonomy](013/013-A-reconciliation-authority-retained-corpus-inventory-precedence-reset-discrepancy-taxonomy.md)
-- [Representation & Architecture Index](../architecture/index.md)
-
-Current state:
-
-```text
-013-A  COMPLETE
-013-B  NEXT ELIGIBLE
-R1     DOWNSTREAM / IN PROGRESS
-```
-
-013-A established:
-
-```text
-substantive retained architecture docs   19
-retained ADRs                             10
-AR-0..AR-9 discrepancy taxonomy           COMPLETE
-AMAT-0..AMAT-3 materiality                COMPLETE
-canonical dispositions                    COMPLETE
-known entry candidates                     6
-AMAT-2 defects declared                    0
-AMAT-3 blockers declared                   0
-upstream reopen                           NONE
-```
+- [013-B Representation Phase Record](013/013-B-representation-layering-public-contract-identity-revision-handle-view-reconciliation.md)
+- [Phase 013 Architecture Reconciliation Authority](../authority/phase-013-architecture-reconciliation-authority.md)
+- [013-B Representation Reconciliation Authority](../architecture/phase-013-b-representation-layering-public-contract-identity-view-reconciliation.md)
 
 Current sequence:
 
 ```text
-013-A  COMPLETE — reconciliation authority / corpus inventory / precedence / taxonomy
-013-B  NEXT     — representation / layering / public contract / identity / views
-013-C           — persistence / history / transaction-concurrency / migration
+013-A  COMPLETE — authority / corpus inventory / precedence / discrepancy taxonomy
+013-B  COMPLETE — representation / layering / public contract / identity / views
+013-C  NEXT     — persistence / history / transaction-concurrency / migration / recovery state
 013-D           — distributed data / topology / manifest / candidate-seal-promotion
 013-E           — Strategy/runtime / dependency / security / offline-no-egress
 013-F           — Execution / Attempt / recovery / fencing / admission
@@ -107,7 +65,9 @@ Current sequence:
 013-J           — consolidation / R1 decision / Phase 014 handoff
 ```
 
-The bounded M6 historical synchronization-label/documentation item remains an explicit Phase 013 reconciliation obligation. M8 future triggers remain non-architecture unless future scope first re-enters concept discovery.
+013-B retains the representation spine with bounded clarification and records zero AMAT-2 defects, zero AMAT-3 blockers and no upstream reopen.
+
+The bounded M6 historical synchronization-label/documentation item remains an explicit 013-I cleanup obligation. M8 future triggers remain non-architecture absent renewed concept discovery.
 
 ## Later design phase
 
@@ -121,6 +81,6 @@ Future only. Explicit authorization remains required before implementation begin
 
 ## Current next boundary
 
-**013-B — Representation Layering, Public Contract, Identity, Revision, Handle & View Reconciliation** is next eligible.
+**013-C — Control Persistence, Historical Reference, Transaction/Concurrency, Migration & Recovery-State Reconciliation** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
