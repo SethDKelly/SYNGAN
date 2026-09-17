@@ -24,7 +24,7 @@ A1-H2                        CURRENTLY CLOSED
 JACKSON CONCEPT DESIGN       COMPLETE FOR CURRENT PRODUCT SCOPE
 accepted concepts            11
 active synchronizations      13
-R1 architecture reconciliation DOWNSTREAM / PENDING
+R1 architecture reconciliation DOWNSTREAM / IN PROGRESS
 implementation readiness     NOT READY
 implementation start         NOT STARTED
 implementation next          NOT YET
