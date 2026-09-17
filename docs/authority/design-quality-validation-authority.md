@@ -471,7 +471,7 @@ R010-07  -> 011-H
 R010-08  -> 011-G
 ```
 
-Current dispositions after 011-G:
+Current dispositions after 011-H:
 
 ```text
 R010-01  NO DEFECT — 011-B
@@ -480,11 +480,11 @@ R010-03  NO DEFECT — 011-D + 011-G
 R010-04  NO DEFECT — 011-E
 R010-05  NO DEFECT — 011-E + 011-F
 R010-06  NO DEFECT — 011-G
-R010-07  OPEN — 011-H
+R010-07  NO DEFECT — EXPLICIT REDISCOVERY TRIGGERS RETAINED/STRENGTHENED — 011-H
 R010-08  NO DEFECT — 011-G
 ```
 
-A later subgroup may add evidence or secondary disposition, but the primary owner is responsible for ensuring the risk does not disappear from the Phase 011 record.
+All eight risks now have explicit dispositions. 011-I must preserve them in the final residual-misfit register.
 
 ---
 
@@ -523,6 +523,8 @@ Phase 011 must not treat any of the following as design authority merely because
 - retained implementation plans.
 
 They may falsify an assumption, expose infeasibility, reveal terminology pressure or demonstrate a scenario. Any resulting change must still be expressed and justified at the correct canonical design layer.
+
+Future feature ideas likewise remain pressure evidence until an independent purpose/state/action lifecycle is established within product scope.
 
 011-A adds no executable tests or restrictions intended to freeze Phase 011 conclusions.
 
@@ -570,8 +572,6 @@ R010-01                               NO DEFECT
 G1 specificity                        CURRENTLY CLOSED
 ```
 
-Two `MAT-1` watch points remain for later planned probes: Synthesis Strategy's broad capability declaration surface and Provenance's high reference fan-in / low authority fan-out requirement. Neither blocks G1.
-
 ---
 
 # 20. 011-C application result
@@ -589,8 +589,6 @@ R010-02                                 NO DEFECT — COMPATIBILITY GUIDANCE STR
 B4 familiarity / reuse                  CURRENTLY CLOSED
 G2 familiarity                          CURRENTLY CLOSED
 ```
-
-Phase 010-D F3 mapping remains current and does not reopen.
 
 ---
 
@@ -611,8 +609,6 @@ MAT-2 / MAT-3 findings                          0 / 0
 upstream reopen                                 NONE
 R010-03 011-D portion                           NO DEFECT
 ```
-
-011-G later owns the hostile/degraded/recovery/provider stress portion.
 
 ---
 
@@ -663,44 +659,85 @@ R010-05                                           NO DEFECT
 011-G is governed in detail by [Adversarial, Degraded, Recovery, Scale & Provider-Semantic-Leakage Validation](adversarial-degraded-recovery-scale-provider-semantic-leakage-validation.md).
 
 ```text
-stale / contradictory authority                 PASS
-concurrent / superseded work                    PASS
-retry / cancellation / late result              PASS
-regressive recovery / stale writer              PASS
-partial material / physical result              PASS
-persistence / projection / telemetry degrade    PASS
-authorization / disclosure conflict             PASS
-Evidence invalidation after historical use      PASS
-distributed runtime closure                     PASS
-enterprise scale / approximation                 PASS
-multi-table / time-series pressure              PASS
-text-bearing runtime/dependency pressure         PASS
-provider job/run semantic leakage                PASS
-provider lineage/catalog/model leakage           PASS
-provider identity pressure                       PASS
-combined hostile composition                     PASS
-MAT-2 / MAT-3 findings                           0 / 0
-upstream reopen                                  NONE
-R010-03                                          NO DEFECT
-R010-06                                          NO DEFECT
-R010-08                                          NO DEFECT
-G3                                               CURRENTLY CLOSED
-G5                                               CURRENTLY CLOSED
+required stress classes                         PASS
+combined hostile composition                    PASS
+provider job/run leakage                        PASS
+provider lineage/catalog/model leakage          PASS
+runtime distribution closure                    PASS
+scale / approximation                           PASS
+regressive recovery / stale authority           PASS
+MAT-2 / MAT-3 findings                          0 / 0
+upstream reopen                                 NONE
+R010-03                                         NO DEFECT
+R010-06                                         NO DEFECT
+R010-08                                         NO DEFECT
+G3                                              CURRENTLY CLOSED
+G5                                              CURRENTLY CLOSED
 ```
 
-011-G adds one local quality clarification:
+Provider-evidence qualification:
 
 > **A provider fact may be consumed only at the evidentiary strength it actually establishes; provider vocabulary cannot silently escalate into stronger SYNGAN semantics.**
 
-This is `MAT-1 / M1` and creates no provider-specific owner or mapping resource.
+A bounded `MAT-1 / M6` Phase 013 reconciliation concern remains for historical synchronization identifiers in retained Phase 006 documents. Current Phase 009 authority already controls active identifiers and semantics.
 
-011-G also records a bounded `MAT-1 / M6` Phase 013 reconciliation concern: retained Phase 006 documents contain historical synchronization identifiers that predate current Phase 009 numbering. Current Phase 009 authority already controls the active identifiers, so no concept/synchronization reopen is required.
+---
+
+# 25. 011-H application result
+
+011-H is governed in detail by [Future-Scope, Extensibility, New-Capability Pressure & Rediscovery Trigger Audit](future-scope-extensibility-new-capability-rediscovery-audit.md).
+
+Future pressures are classified as:
+
+```text
+F-1  fits existing concept unchanged
+F-2  fits new state/action within existing purpose
+F-3  requires new synchronization only
+F-4  requires application-family capability refinement
+F-5  requires genuine concept rediscovery
+F-6  remains external authority / non-goal
+F-7  insufficient evidence
+```
+
+Current result:
+
+```text
+new Strategy-family pressure                PASS
+richer topology pressure                    PASS
+advanced text pressure                      PASS
+formal privacy boundary                     PASS — REDISCOVERY TRIGGER EXPLICIT
+external integration / handoff              PASS
+new Evaluation / claim-strength pressure    PASS
+runtime / accelerator / platform pressure   PASS
+new reusable-state pressure                 PASS
+product-owned governance pressure           PASS — REDISCOVERY TRIGGER EXPLICIT
+output lifecycle pressure                   PASS — REDISCOVERY TRIGGER EXPLICIT
+reusable request/cohort pressure            PASS — REDISCOVERY TRIGGER EXPLICIT
+streaming / continuous-session pressure     PASS — REDISCOVERY TRIGGER EXPLICIT
+resource/economic pressure                  PASS — REDISCOVERY TRIGGER EXPLICIT
+MAT-2 / MAT-3 findings                      0 / 0
+upstream reopen                             NONE
+R010-07                                     NO DEFECT
+G6                                           CURRENTLY CLOSED
+```
+
+011-H records bounded `MAT-1 / M8` future rediscovery triggers where a future capability would introduce independent product purpose + durable state/history + independently meaningful actions/lifecycle.
+
+These triggers do not add concepts now and do not block Phase 011. They prevent future implementation from stretching Strategy, Learned State, Generation, Evidence, Execution, Provenance or Data Meaning beyond their purposes merely to avoid rediscovery.
 
 ---
 
 ## Current next boundary
 
-**011-H — Future-Scope, Extensibility, New-Capability Pressure & Rediscovery Triggers** is next eligible.
+**011-I — Residual Conceptual Misfit Register, Reopen/Defer/Accept Decisions & Closure Preparation** is next eligible.
+
+011-I must distinguish current defects from:
+
+- `M1` local quality clarifications;
+- `M6` Phase 013 representation/architecture deferrals;
+- `M8` future rediscovery triggers;
+- accepted bounded observations/tradeoffs;
+- and `NO DEFECT` findings.
 
 Jackson concept design remains **NOT COMPLETE**.
 
