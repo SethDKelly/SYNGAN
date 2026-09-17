@@ -28,8 +28,10 @@ Phase 011                  COMPLETE
 Phase 012                  COMPLETE
 A1-H2                      CURRENTLY CLOSED
 Jackson concept design     COMPLETE FOR CURRENT PRODUCT SCOPE
-architecture reconciliation PHASE 013 NEXT
-whole-design readiness      PHASE 014
+Phase 013                  ACTIVE
+013-A                      NEXT ELIGIBLE
+R1 architecture            DOWNSTREAM / IN PROGRESS
+whole-design readiness     PHASE 014
 ```
 
 Jackson concept-design completion is a prerequisite for architecture reconciliation, not implementation authorization.
@@ -45,7 +47,7 @@ M6 Phase-013 deferrals                         1
 M8 future-rediscovery finding groups           4
 ```
 
-The M6 item is retained historical synchronization-label/documentation drift. It belongs to Phase 013 reconciliation, not production-code correction.
+The M6 item is active Phase 013 architecture/documentation reconciliation: historical `11 / 15` synchronization assumptions and older `SYNC-08` / `SYNC-15` roles must be reconciled to current Phase 009 semantics.
 
 M8 triggers mean **return to concept discovery if that future scope becomes current**. They do not authorize placeholder classes, schemas, services, package extras, feature flags, persistence, APIs or workflow resources.
 
@@ -71,6 +73,7 @@ provider identity             -> universal SYNGAN authorization
 M8 rediscovery trigger        -> future feature flag/schema/class
 residual-register entry       -> runtime issue/status resource
 concept-design completion     -> implementation authorization
+Phase 013 architecture role   -> production component by implication
 ```
 
 ## Phase 013 boundary
@@ -79,14 +82,16 @@ Phase 013 may reconcile and revise retained architecture design against complete
 
 It may not begin implementation merely because a better architecture is identified.
 
-Architecture findings remain design evidence until Phase 014 performs the whole-design completion/readiness decision.
+Architecture findings remain design evidence until 013-J closes R1 and Phase 014 performs the whole-design completion/readiness decision.
 
 If Phase 013 exposes a genuine upstream semantic contradiction, use the smallest-authority reopen rule explicitly rather than patching concepts through code or architecture.
+
+Historical Phase 007-B/007-C package/toolchain/scaffold decisions remain feasibility evidence and are reconciled only after substantive architecture domains, principally in 013-I. They are not current implementation authority.
 
 ## Remaining design before readiness
 
 ```text
-013    Post-Concept Representation & Architecture Reconciliation — NEXT
+013    Post-Concept Representation & Architecture Reconciliation — ACTIVE
 014    Whole-Design Consolidation & Implementation-Readiness Decision
 ```
 
@@ -100,4 +105,4 @@ Until Phase 014 passes, do not add production concept behavior, generic domain b
 
 Design-only work:
 
-**Phase 013 — Post-Concept Representation & Architecture Reconciliation**.
+**013-A — Reconciliation Authority, Retained Corpus Inventory, Precedence Reset & Discrepancy Taxonomy**.
