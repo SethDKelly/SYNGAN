@@ -16,9 +16,10 @@ Concept specifications own purpose, state, actions, lifecycle and invariants. Sy
 - [Synchronization Trigger / Ownership Normalization](trigger-ownership-normalization.md)
 - [Composition Economy / Synergy / Integrity](composition-economy-synergy-integrity.md)
 - [Phase 010 Concept Mapping Consolidation](../authority/phase-010-concept-mapping-consolidation.md)
-- [011-D Integrity Audit](../authority/composed-integrity-synchronization-history-audit.md) — current baseline integrity revalidation
-- [011-E Synergy / Simplicity Audit](../authority/composed-synergy-simplicity-generic-fitness-burden-audit.md) — current economy/synergy revalidation
-- [011-F Archetypal / Exceptional Replay](../authority/archetypal-exceptional-progressive-disclosure-misfit-replay.md) — ordinary/exceptional composition truthfulness
+- [011-D Integrity Audit](../authority/composed-integrity-synchronization-history-audit.md)
+- [011-E Synergy / Simplicity Audit](../authority/composed-synergy-simplicity-generic-fitness-burden-audit.md)
+- [011-F Archetypal / Exceptional Replay](../authority/archetypal-exceptional-progressive-disclosure-misfit-replay.md)
+- [011-G Adversarial / Recovery / Scale / Provider Stress Validation](../authority/adversarial-degraded-recovery-scale-provider-semantic-leakage-validation.md) — **current final G3 stress authority**
 
 ## Current synchronization inventory
 
@@ -75,9 +76,9 @@ A synchronization coordinates one conceptual occurrence/relation. It does not cr
 
 > **Later revision/status changes do not silently rewrite exact historical bindings.**
 
-011-D revalidates this across correction, invalidation, supersession and reconstruction.
+011-D validates the normal/historical baseline; 011-G now validates the same rule under stale authority, concurrent/superseded work, regressive recovery and provider stress.
 
-## 011-D integrity result
+## Combined G3 integrity result
 
 ```text
 13 / 13 synchronizations preserve singular ownership
@@ -86,28 +87,46 @@ occurrence-scoped/non-reactive binding          PASS
 current-versus-historical truth                 PASS
 Evidence/Generation authority separation        PASS
 semantic/Execution separation                   PASS
-Provenance low-authority-fan-out baseline       PASS
-recovery/reconstruction ownership baseline      PASS
+Provenance low-authority-fan-out                 PASS
+recovery/reconstruction ownership                PASS
+provider operational-state containment           PASS
+scale/approximation containment                  PASS
 hidden coordinator required                     NO
 MAT-2 / MAT-3 findings                          0 / 0
 synchronization changes                          0
+R010-03                                         NO DEFECT
+G3                                              CURRENTLY CLOSED
 ```
 
-`R010-03` remains subject to 011-G stress revalidation.
+## 011-G synchronization stress consequences
 
-## 011-E synchronization economy result
+### Provider job/run state
 
-011-E confirms the thirteen rules remain relation-local and organize into five explanatory coordination planes:
+Provider job/run `SUCCESS`, `COMPLETED`, `RUNNING`, retry/repair or terminal state may be operational/reconciliation evidence for `SYNC-04/07/11`, but it cannot establish the parent Learning/Generation/Evaluation semantic outcome.
 
-```text
-A  reusable authority binding / contextual assessment
-B  activity/result establishment
-C  reuse / completion gating
-D  operational realization
-E  historical relationship explanation
-```
+### Regressive recovery
 
-These are **not architecture layers**.
+A restored snapshot or surviving provider effect cannot reactivate stale Attempt/write authority. Reconstruction of missing semantic transitions must satisfy the original owner invariants; `SYNC-14` may record recovery relations but cannot establish the referenced fact.
+
+### Scale / approximation
+
+Resource pressure may affect operational realization but cannot silently change exact authority bindings, Generation scope, Constraint obligations or Evaluation coverage. A material semantic approximation remains owner-scoped rather than a synchronization/runtime side effect.
+
+### Distributed closure
+
+Driver/package/provider-library visibility cannot establish distributed execution readiness. Runtime closure is an operational compatibility condition; failed closure does not rewrite the committed semantic basis.
+
+### Provider lineage
+
+Provider lineage may be an input/evidence source for `SYNC-14`, but it is neither complete SYNGAN Provenance nor authority over the facts it relates.
+
+Provider-evidence rule:
+
+> **A provider fact enters synchronization reasoning only at the strength it actually establishes; provider vocabulary cannot transfer semantic ownership.**
+
+## Synchronization economy remains closed
+
+011-E's economy conclusion is unchanged:
 
 ```text
 rule add/remove/merge justified                0
@@ -119,37 +138,15 @@ R010-04                                        NO DEFECT
 G4                                             CURRENTLY CLOSED
 ```
 
-## 011-F scenario result
-
-011-F replays the synchronization-relevant histories through normal and exceptional use without changing the inventory:
-
-- Learning completion remains distinct from Learned State establishment and Execution endpoint;
-- Learned State current-use status can diverge from historical exact Generation binding;
-- direct Generation remains valid without a fabricated Learning/`SYNC-06` path;
-- Evaluation completion, Evidence finding and Generation completion remain separately expressible under `SYNC-12/13`;
-- Constraint handling remains distinct from satisfaction Evidence;
-- Execution/Attempt state remains distinct from parent semantic result;
-- Provenance explanation remains relationship authority, not source-fact authority.
-
-Current result:
-
-```text
-paired scenario replays                       20 / 20 PASS
-progressive-disclosure concealment classes     6 / 6 PASS
-synchronization add/remove/merge               NONE
-hidden coordinator                             NONE
-R010-05                                        NO DEFECT
-```
-
-Decision-material presentation must expose any synchronization-related qualifier that changes the immediate semantic decision; deeper relation history may remain deferred.
-
 ## Retired / reclassified IDs
 
 `SYNC-08` remains retired as Generation-local output lifecycle behavior.
 
 `SYNC-15` remains reclassified under the cross-cutting Reproducibility Contract.
 
-Neither is resurrected by 011-D/E/F.
+Neither is resurrected by 011-D through 011-G.
+
+Some retained Phase 006 contracts still use historical numbering. Current Phase 009 authority controls the active inventory; cleanup of stale historical labels is a bounded Phase 013 reconciliation concern, not a synchronization-design reopen.
 
 ## Composition guardrails
 
@@ -160,16 +157,16 @@ Neither is resurrected by 011-D/E/F.
 - semantic and operational completion remain distinct;
 - Evidence never becomes approval or Generation authority;
 - Provenance never becomes source-fact authority;
+- provider job/run/catalog/lineage/model objects never become owner truth by representation convenience;
 - optional capabilities add only their own coordination burden;
 - correction/invalidation is owner-scoped, not a generic retroactive cascade;
+- recovery does not resurrect stale authority;
+- resource pressure does not silently weaken committed semantics;
 - repeated synchronization patterns do not by themselves justify umbrella concepts;
-- decision-material qualifiers cannot be hidden by concise presentation;
 - conceptual synchronization prescribes no event bus, transaction, service, package, queue, schema, architecture layer or runtime call direction.
 
 ## Current next boundary
 
-**011-G — Adversarial, Degraded, Recovery, Scale & Provider-Semantic-Leakage Validation** is next eligible.
-
-011-G performs the remaining hostile/degraded/recovery stress revalidation of synchronization integrity.
+**011-H — Future-Scope, Extensibility, New-Capability Pressure & Rediscovery Triggers** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
