@@ -8,7 +8,7 @@ status: active
 
 This directory contains the canonical concept specifications accepted in Phase 001 and normalized through Phase 008.
 
-Cross-concept dependence/composition is consolidated by [Phase 009 Dependence, Application Family & Composition Consolidation](../authority/phase-009-dependence-composition-consolidation.md). Concept mapping is consolidated by [Phase 010 Concept Mapping Consolidation](../authority/phase-010-concept-mapping-consolidation.md). Current Phase 011 quality authority includes composed specificity, familiarity, integrity, synergy/simplicity/generic-fitness, scenario replay and hostile/degraded/provider stress validation.
+Cross-concept dependence/composition is consolidated by [Phase 009 Dependence, Application Family & Composition Consolidation](../authority/phase-009-dependence-composition-consolidation.md). Concept mapping is consolidated by [Phase 010 Concept Mapping Consolidation](../authority/phase-010-concept-mapping-consolidation.md). Current Phase 011 quality authority now includes composed specificity, familiarity, integrity, synergy/simplicity/generic-fitness, scenario/adversarial validation and future-scope/extensibility validation.
 
 ## Accepted concepts
 
@@ -41,79 +41,71 @@ Phase 011                            ACTIVE
 011-E                                COMPLETE
 011-F                                COMPLETE
 011-G                                COMPLETE
-011-H                                NEXT ELIGIBLE
+011-H                                COMPLETE
+011-I                                NEXT ELIGIBLE
 G1 composed specificity              CURRENTLY CLOSED
 G2 composed familiarity              CURRENTLY CLOSED
 G3 integrity                         CURRENTLY CLOSED
 G4 synergy / simplicity              CURRENTLY CLOSED
 G5 scenario / adversarial            CURRENTLY CLOSED
-G6 future-scope                      STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
+G6 future-scope                      CURRENTLY CLOSED
+G7 residual misfit                   PARTIAL — 011-I OWNS CLOSURE
 ```
 
-Phase 009 found no reason to add, remove, merge, split or rename a concept. Phase 010 found no mapping/composition reason to reopen that conclusion. 011-B through 011-G continue to retain the same eleven under specificity, familiarity, integrity, burden, scenario and hostile/provider stress.
+Phase 009 found no reason to add, remove, merge, split or rename a concept. Phase 010 found no mapping/composition reason to reopen that conclusion. 011-B through 011-H retain the same eleven across specificity, familiarity, integrity, burden, scenario, hostile/provider and future-scope pressure.
 
-## 011-G catalog stress result
+## Future-scope catalog result
 
-No stress case exposes a missing current independent purpose/state/action lifecycle.
+011-H explicitly tests whether extensibility requires pre-generalizing the catalog.
+
+Current result:
 
 ```text
-stale / contradictory authority            PASS
-concurrent / superseded work               PASS
-regressive recovery / stale writer         PASS
-runtime distribution closure               PASS
-enterprise scale / approximation            PASS
-multi-table / time-series pressure          PASS
-text-bearing dependency pressure            PASS
-provider job/run pressure                   PASS
-provider lineage/catalog/model pressure     PASS
-combined hostile composition                PASS
-concept add/remove/merge/split              NONE
-MAT-2 / MAT-3 findings                      0 / 0
+current new concept justified                     0
+current concept merge/split justified             0
+current concept rename justified                  0
+current synchronization addition justified        0
+current application-family reopen justified       0
+MAT-2 / MAT-3 findings                             0 / 0
+R010-07                                            NO DEFECT
+G6                                                 CURRENTLY CLOSED
 ```
 
-Current repeated pressures still do **not** justify umbrella concepts such as:
+Likely new algorithm families, richer structured topology, advanced text methods, new Evaluation methods, new accelerator/runtime capability and new source-derived reusable state remain extensible through current purposes.
+
+## Future rediscovery boundary
+
+Future scope must reopen concept discovery before implementation when it introduces an independently useful product purpose with durable state/history and independently meaningful actions/lifecycle that cannot be owned cleanly by the current catalog.
+
+Known `M8` rediscovery triggers include:
 
 ```text
-Workflow
-Status
-Validation / Quality
-Artifact / Result
-Recovery
-Degraded Mode
-Provider Job / Run
-Model / Artifact
-Lineage
-Relationship / Topology
-Text / Tokenizer
+formal composable privacy / guarantee accounting
+product-owned governance / release decisions
+independent output publication / versioning / retirement
+independently reusable request / cohort semantics
+independently governed graph / relationship lifecycle
+durable streaming / session / feed lifecycle
+product-owned economic / resource accounting
+product-owned reusable knowledge / memory beyond Strategy/Learned State
+```
+
+These remain **future design-governance triggers**, not accepted concepts now.
+
+The following therefore remain rejected as premature umbrella concepts:
+
+```text
 Privacy
-Approval / Release Decision
+Governance / Approval / Release
+Output / Publication
+Session / Feed
+Relationship / Graph
+Resource / Budget
+Knowledge / Memory
+Capability
+Workflow / Status
+Model / Artifact
 ```
-
-Those concerns remain owned by existing concepts, cross-cutting contracts, external authority or future rediscovery triggers as appropriate.
-
-## Provider/host boundary
-
-Provider objects may be authoritative in their own domain, but current concept ownership remains:
-
-```text
-provider job/run          -> Execution correlation/evidence, not parent semantic owner
-provider model/artifact   -> representation/integration fact, not Strategy/Learned State/result by default
-provider lineage          -> possible Provenance evidence, not complete Provenance authority
-provider catalog/schema   -> representation/metadata fact, not Data Meaning authority
-provider identity/ACL     -> authorization input, not universal protected-action authority
-```
-
-Provider vocabulary never strengthens a SYNGAN claim merely by naming resemblance.
-
-## Recovery / scale boundaries
-
-No Recovery or Degraded Mode concept is required because current state remains owner-qualified and cross-cutting:
-
-- restored state does not resurrect write authority;
-- unresolved history remains unknown/partial rather than fabricated;
-- resource pressure cannot silently weaken semantic commitment;
-- approximation belongs to the concept whose semantics it changes;
-- distributed runtime closure remains an operational compatibility condition rather than a new domain purpose.
 
 ## Core boundaries preserved
 
@@ -129,7 +121,7 @@ Evidence               != Provenance
 Execution              != Attempt != platform job
 ```
 
-Generation owns request/Condition and candidate-to-completed logical output semantics. Synthetic Output is not a separate concept. Reproducibility remains cross-cutting. Generic Privacy remains deferred pending mechanism-specific discovery. Use/Release Decision remains external authority.
+Generation owns request/Condition and candidate-to-completed logical output semantics under current scope. Learned State owns reusable source-derived synthesis knowledge under current scope. Reproducibility remains cross-cutting. Generic Privacy remains rejected pending mechanism-specific discovery. Use/Release Decision remains external until product scope explicitly changes.
 
 ## Application-family result
 
@@ -141,10 +133,10 @@ E-KERNEL = { Evaluation Criterion, Evaluation, Evidence }
 
 Direct Generation remains valid without Learning/Learned State. Evaluation/Evidence are not universal prerequisites for Generation. Constraint, Execution and Provenance remain capability-conditional.
 
+011-H finds no current need to modify these kernels or add a future-capability placeholder concept.
+
 ## Current next boundary
 
-**011-H — Future-Scope, Extensibility, New-Capability Pressure & Rediscovery Triggers** is next eligible.
-
-011-H may reopen discovery only when future pressure demonstrates a genuinely independent purpose + state + action/lifecycle, not merely an implementation/provider abstraction.
+**011-I — Residual Conceptual Misfit Register, Reopen/Defer/Accept Decisions & Closure Preparation** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
