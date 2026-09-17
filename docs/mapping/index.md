@@ -10,9 +10,7 @@ status: active
 
 This directory contains current Jackson-style concept mapping authority for SYNGAN.
 
-Concept mapping translates accepted concept actions, state, queries, history and composition into actor-visible and programmatic interaction semantics. It is downstream of concept/dependence/composition authority and upstream of design-quality validation and representation/architecture.
-
-A mapping describes what actors/programmatic consumers must be able to do, see, distinguish, inspect or understand. It does not by itself select classes, methods, endpoints, widgets, schemas, services, packages, storage or runtime mechanisms.
+Concept mapping translates accepted concept actions, state, queries, history and composition into actor-visible and programmatic interaction semantics. It does not select classes, methods, endpoints, widgets, schemas, services, packages, storage or runtime mechanisms.
 
 ## Current phase
 
@@ -21,30 +19,17 @@ Phase 009                    COMPLETE
 Phase 010                    COMPLETE
 010-A..010-H                 COMPLETE
 F1-F5                        CURRENTLY CLOSED
-concept mapping              COMPLETE ENOUGH FOR PHASE 011
 Phase 011                    ACTIVE
-011-A..011-H                 COMPLETE
-011-I                        NEXT ELIGIBLE
-G1-G6                        CURRENTLY CLOSED
-G7 residual misfit           PARTIAL — 011-I OWNS CLOSURE
+011-A..011-I                 COMPLETE
+011-J                        NEXT ELIGIBLE
+G1-G7                        CURRENTLY CLOSED
 Jackson concept design       NOT COMPLETE
 implementation readiness     NOT READY
 implementation start         NOT STARTED
 implementation next          NOT YET
 ```
 
-## Current mapping authority
-
-- [010-A Mapping Control](mapping-authority-coverage-actor-surface-evidence-baseline.md)
-- [010-B Concept Action → Actor Intent & Interaction Mapping](concept-action-actor-intent-interaction-mapping.md)
-- [010-C Concept State, Query, History & Explanation → Inspection Mapping](concept-state-query-history-explanation-inspection-mapping.md)
-- [010-D Linguistic Mapping, Vocabulary, Typed Status & Disclosure Semantics](linguistic-mapping-vocabulary-typed-status-disclosure-semantics.md)
-- [010-E Package, Notebook, Automation, Host-Platform & Optional Presentation Interaction Mapping](package-notebook-automation-host-platform-interaction-mapping.md)
-- [010-F Application-Family Workflow Composition, Optional-Capability Experience & Progressive Disclosure](application-family-workflow-composition-progressive-disclosure.md)
-- [010-G Human/Programmatic Semantic Parity, Degraded/Recovery/Scale & Mapping-Misfit Audit](human-programmatic-semantic-parity-degraded-recovery-scale-misfit-audit.md)
-- [Phase 010 Consolidation Authority](../authority/phase-010-concept-mapping-consolidation.md)
-- [011-G Stress Validation](../authority/adversarial-degraded-recovery-scale-provider-semantic-leakage-validation.md)
-- [011-H Future-Scope Audit](../authority/future-scope-extensibility-new-capability-rediscovery-audit.md) — confirms likely extensions do not currently reopen mapping
+011-I confirms no residual Phase 010 mapping defect and no mapping reopen.
 
 ## Final mapping coverage
 
@@ -59,6 +44,7 @@ implementation next          NOT YET
 10 / 10 required family/capability replays PASS
 20 / 20 difficult-condition parity probes PASS
 mapping blocker                            NONE FOUND
+Phase 010 mapping reopen                   NONE
 ```
 
 ## Core mapping rules
@@ -91,46 +77,28 @@ D4  distributed / host operational drill-down
 
 These are presentation obligations, not screens, endpoints, API tiers or persistence layers.
 
-Decision-material rule from 011-F:
+Decision-material rule:
 
 > **Progressive disclosure may defer explanatory depth, but it must not defer a qualifier whose omission could change the actor's immediate semantic decision or make current state appear stronger than the owning concept supports.**
 
-## Provider / recovery / scale mapping boundary
-
-011-G finds no mapping reopen under hostile/degraded/recovery/scale/provider pressure.
+## Provider / recovery / scale boundary
 
 Provider facts remain provider-qualified evidence/integration facts rather than semantic-owner substitutions. Restored state remains historical rather than current authority, physical material remains non-final without owner invariants, and resource/approximation pressure cannot silently weaken mapped semantic commitments.
 
-## 011-H future-scope mapping result
+Provider-evidence rule:
 
-011-H finds no current mapping defect or extension requirement for likely future Strategy, topology, text, Evaluation, runtime/platform or reusable-state capability breadth.
+> **Consume provider facts only at the strength they actually establish; familiar provider vocabulary never escalates automatically into stronger SYNGAN semantics.**
 
-Future capability classification may eventually produce:
+## Future-scope and residual boundary
 
-```text
-F-1/F-2  existing concept mapping extension
-F-3      new synchronization mapping after synchronization design
-F-4      application-family mapping refinement after family design
-F-5      concept rediscovery first, then mapping only after concept acceptance
-F-6      external integration/handoff mapping only
-F-7      no mapping until evidence is sufficient
-```
+Likely future Strategy, topology, text, Evaluation, runtime/platform and reusable-state capability breadth creates no current mapping reopen.
 
-Known `M8` future rediscovery triggers must **not** receive placeholder mapping now. There is therefore no current generic mapping owner for future `Privacy`, `Governance`, `Output`, `Session`, `Relationship`, `Resource`, `Knowledge` or similar concepts.
+If future product scope triggers M8 concept rediscovery, mapping follows **after** concept/dependence/synchronization design; placeholder mapping for future `Privacy`, `Governance`, `Output`, `Session`, `Relationship`, `Resource`, `Knowledge` or similar concepts is prohibited.
 
-Current mapping revalidation state:
-
-```text
-F1-F5                    CURRENTLY CLOSED
-Phase 010 mapping reopen NONE
-R010-07                  NO DEFECT
-G6                       CURRENTLY CLOSED
-```
-
-If a future concept is accepted after rediscovery, its actions, queries, language, application-family composition and physical interaction must be mapped deliberately at that time rather than inferred from a pre-existing adapter or UI.
+011-I records one M6 downstream documentation/architecture reconciliation item for historical synchronization labels. It does not change current mapping semantics.
 
 ## Current next boundary
 
-**011-I — Residual Conceptual Misfit Register, Reopen/Defer/Accept Decisions & Closure Preparation** is next eligible.
+**011-J — Phase 011 Consolidation, G1-G7 Completion Decision & Phase 012 Handoff** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
