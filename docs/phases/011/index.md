@@ -8,7 +8,7 @@ status: active
 
 ## Purpose
 
-Validate the complete mapped SYNGAN concept design against Daniel Jackson-style design-quality and misfit criteria before Phase 012 attempts a whole current-state concept-design completion decision.
+Validate the complete mapped SYNGAN concept design against Daniel Jackson-style design-quality and misfit criteria before Phase 012 attempts a whole current-state Jackson concept-design completion decision.
 
 Phase 011 remains concept design only.
 
@@ -23,6 +23,7 @@ Phase 011 remains concept design only.
 - [011-F Phase Record](011-F-archetypal-exceptional-progressive-disclosure-misfit-replay.md)
 - [011-G Phase Record](011-G-adversarial-degraded-recovery-scale-provider-semantic-leakage-validation.md)
 - [011-H Phase Record](011-H-future-scope-extensibility-new-capability-pressure-rediscovery-triggers.md)
+- [011-I Phase Record](011-I-residual-conceptual-misfit-register-reopen-defer-accept-closure-preparation.md)
 - [Design Quality Validation Authority](../../authority/design-quality-validation-authority.md)
 - [Composed Specificity Audit](../../authority/composed-specificity-purpose-boundary-audit.md)
 - [Composed Familiarity Audit](../../authority/composed-familiarity-reuse-vocabulary-external-model-audit.md)
@@ -30,10 +31,11 @@ Phase 011 remains concept design only.
 - [Synergy, Simplicity, Generic Fitness & Conceptual-Burden Audit](../../authority/composed-synergy-simplicity-generic-fitness-burden-audit.md)
 - [Archetypal, Exceptional & Progressive-Disclosure Misfit Replay](../../authority/archetypal-exceptional-progressive-disclosure-misfit-replay.md)
 - [Adversarial, Degraded, Recovery, Scale & Provider-Semantic-Leakage Validation](../../authority/adversarial-degraded-recovery-scale-provider-semantic-leakage-validation.md)
-- [Future-Scope, Extensibility, New-Capability Pressure & Rediscovery Trigger Audit](../../authority/future-scope-extensibility-new-capability-rediscovery-audit.md) — **current G6 authority**
+- [Future-Scope, Extensibility, New-Capability Pressure & Rediscovery Trigger Audit](../../authority/future-scope-extensibility-new-capability-rediscovery-audit.md)
+- [Residual Conceptual Misfit Register](../../authority/residual-conceptual-misfit-register.md) — **current G7 authority**
 - [Jackson Methodology Completion Matrix](../../authority/jackson-methodology-completion-matrix.md)
 
-## Current state after 011-H
+## Current state after 011-I
 
 ```text
 Phase 008                    COMPLETE
@@ -49,7 +51,8 @@ Phase 011 decomposition      COMPLETE
 011-F                        COMPLETE
 011-G                        COMPLETE
 011-H                        COMPLETE
-011-I                        NEXT ELIGIBLE
+011-I                        COMPLETE
+011-J                        NEXT ELIGIBLE
 
 G1 specificity               CURRENTLY CLOSED
 G2 familiarity               CURRENTLY CLOSED
@@ -57,7 +60,7 @@ G3 integrity                 CURRENTLY CLOSED
 G4 synergy / simplicity      CURRENTLY CLOSED
 G5 scenario / adversarial    CURRENTLY CLOSED
 G6 future-scope              CURRENTLY CLOSED
-G7 residual misfit register  PARTIAL — 011-I OWNS CLOSURE
+G7 residual misfit register  CURRENTLY CLOSED
 
 Jackson concept design       NOT COMPLETE
 implementation readiness     NOT READY
@@ -65,37 +68,24 @@ implementation start         NOT STARTED
 implementation next          NOT YET
 ```
 
-## Phase 010 handoff risks
+G1-G7 are individually current, but only 011-J may decide whether they are jointly complete enough for Phase 012.
+
+## Phase 010 handoff risks — final Phase 011 dispositions
 
 ```text
-R010-01  composed specificity drift
-         NO DEFECT — 011-B
-
-R010-02  familiarity versus semantic precision
-         NO DEFECT — COMPATIBILITY GUIDANCE STRENGTHENED — 011-C
-
-R010-03  synchronization integrity under adversarial composition
-         NO DEFECT — 011-D + 011-G
-
-R010-04  synergy versus conceptual burden
-         NO DEFECT — 011-E
-
-R010-05  progressive-disclosure misfit
-         NO DEFECT — 011-E + 011-F
-
-R010-06  provider / host semantic leakage
-         NO DEFECT — 011-G
-
-R010-07  future-capability / extensibility pressure
-         NO DEFECT — EXPLICIT REDISCOVERY TRIGGERS RETAINED/STRENGTHENED — 011-H
-
-R010-08  scale / approximation pressure
-         NO DEFECT — 011-G
+R010-01  NO DEFECT — 011-B
+R010-02  NO DEFECT — COMPATIBILITY GUIDANCE STRENGTHENED — 011-C
+R010-03  NO DEFECT — 011-D + 011-G
+R010-04  NO DEFECT — 011-E
+R010-05  NO DEFECT — 011-E + 011-F
+R010-06  NO DEFECT — 011-G
+R010-07  NO DEFECT — EXPLICIT REDISCOVERY TRIGGERS RETAINED/STRENGTHENED — 011-H
+R010-08  NO DEFECT — 011-G
 ```
 
-All eight Phase 010 handoff risks now have explicit dispositions. 011-I must carry those dispositions into the residual-misfit register rather than treating risk closure as equivalent to Phase 011 completion.
+All eight Phase 010 risks are explicitly dispositioned.
 
-## 011-A validation method
+## Phase 011 validation method
 
 ```text
 E1-E8     evidence / authority hierarchy
@@ -116,142 +106,107 @@ Governing rule:
 
 > **Evidence may challenge any prior conclusion, but only a demonstrated semantic consequence can justify changing upstream design authority.**
 
-## Results through 011-H
+## Results through 011-I
 
-### 011-B — specificity
+### G1 — specificity / 011-B
 
 ```text
-11 / 11 concepts               PASS
-R010-01                        NO DEFECT
-G1 specificity                 CURRENTLY CLOSED
+11 / 11 concepts                         PASS
+catalog add/remove/merge/split           NONE
+R010-01                                  NO DEFECT
+G1                                       CURRENTLY CLOSED
 ```
 
-### 011-C — familiarity
+### G2 — familiarity / 011-C
 
 ```text
-11 / 11 canonical names        RETAINED
-external-model comparison      PASS
-R010-02                        NO DEFECT — GUIDANCE STRENGTHENED
-G2 familiarity                 CURRENTLY CLOSED
+11 / 11 canonical names                  RETAINED
+external-model comparison                PASS
+R010-02                                  NO DEFECT — GUIDANCE STRENGTHENED
+G2                                       CURRENTLY CLOSED
 ```
 
-### 011-D — integrity baseline
+### G3 — integrity / 011-D + 011-G
 
 ```text
-13 / 13 synchronizations preserve singular ownership
-producer/result integrity                       PASS
-occurrence-scoped/non-reactive binding          PASS
-current-versus-historical truth                 PASS
-Evidence/Generation authority separation        PASS
-semantic/Execution separation                   PASS
-Provenance low-authority-fan-out baseline       PASS
-recovery/reconstruction ownership baseline      PASS
-MAT-2 / MAT-3 findings                          0 / 0
+13 / 13 synchronizations preserve ownership
+current-versus-historical truth          PASS
+semantic-versus-operational separation   PASS
+Evidence/Generation separation           PASS
+Provenance low-authority fan-out          PASS
+recovery/reconstruction                   PASS
+provider-stress containment               PASS
+R010-03                                   NO DEFECT
+G3                                        CURRENTLY CLOSED
 ```
 
-### 011-E — synergy / simplicity / generic fitness
+### G4 — synergy / simplicity / generic fitness / 011-E
 
 ```text
-concept add/remove/merge/split justified        0
-synchronization add/remove/merge justified      0
-reduced-family burden replay                    PASS
-positive composed synergies                     CONFIRMED
-repeated-pattern missing-purpose probe          PASS
-cross-cutting qualifier discipline              PASS
-generic-fitness / domain anchoring              PASS
-hidden universal coordinator                    NONE
-R010-04                                         NO DEFECT
-G4                                              CURRENTLY CLOSED
+concept change justified                  0
+synchronization change justified          0
+reduced-family burden replay              PASS
+positive composed synergies               CONFIRMED
+hidden universal coordinator              NONE
+R010-04                                   NO DEFECT
+G4                                        CURRENTLY CLOSED
 ```
 
-### 011-F — archetypal / exceptional replay
+### G5 — scenario / adversarial / 011-F + 011-G
 
 ```text
-required scenario families                       10 / 10
-paired archetypal/exceptional replays            20 / 20 PASS
-progressive-disclosure concealment classes        6 / 6 PASS
-MAT-2 / MAT-3 findings                            0 / 0
-R010-05                                           NO DEFECT
+paired archetypal/exceptional replays     20 / 20 PASS
+progressive-disclosure concealment classes 6 / 6 PASS
+hostile/degraded/recovery/scale/provider  PASS
+R010-05                                   NO DEFECT
+R010-06                                   NO DEFECT
+R010-08                                   NO DEFECT
+G5                                        CURRENTLY CLOSED
 ```
 
 Decision-material disclosure rule:
 
 > **Progressive disclosure may defer explanatory depth, but it must not defer a qualifier whose omission could change the actor's immediate semantic decision or make current state appear stronger than the owning concept supports.**
 
-### 011-G — adversarial / degraded / recovery / scale / provider stress
-
-```text
-stale / contradictory authority                 PASS
-concurrent / superseded work                    PASS
-retry / cancellation / late result              PASS
-regressive recovery / stale writer              PASS
-partial material / physical result              PASS
-persistence / projection / telemetry degrade    PASS
-authorization / disclosure conflict             PASS
-Evidence invalidation after historical use      PASS
-distributed runtime closure                     PASS
-enterprise scale / approximation                 PASS
-multi-table / time-series pressure              PASS
-text-bearing runtime/dependency pressure         PASS
-provider job/run semantic leakage                PASS
-provider lineage/catalog/model leakage           PASS
-provider identity pressure                       PASS
-combined hostile composition                     PASS
-MAT-2 / MAT-3 findings                           0 / 0
-R010-03                                          NO DEFECT
-R010-06                                          NO DEFECT
-R010-08                                          NO DEFECT
-G3                                               CURRENTLY CLOSED
-G5                                               CURRENTLY CLOSED
-```
-
 Provider-evidence qualification rule:
 
-> **A host/provider fact may be consumed only at the evidentiary strength that fact actually establishes. Familiar provider words such as `success`, `completed`, `model`, `artifact`, `lineage`, `current`, or `production` do not become stronger SYNGAN semantic claims by naming alone.**
+> **A provider fact may be consumed only at the evidentiary strength it actually establishes; familiar provider vocabulary does not become stronger SYNGAN semantic truth by naming alone.**
 
-A bounded Phase 013 reconciliation note remains for historical synchronization numbering retained in older Phase 006 contracts; current Phase 009 identifiers and ownership remain authoritative.
-
-### 011-H — future scope / extensibility
-
-011-H classifies likely extension pressure rather than pre-adding concepts.
+### G6 — future scope / 011-H
 
 ```text
-new Strategy-family pressure                PASS
-richer topology pressure                    PASS
-advanced text pressure                      PASS
-formal privacy boundary                     PASS — REDISCOVERY TRIGGER EXPLICIT
-external integration / handoff              PASS
-new Evaluation / claim-strength pressure    PASS
-runtime / accelerator / platform pressure   PASS
-new reusable-state pressure                 PASS
-product-owned governance pressure           PASS — REDISCOVERY TRIGGER EXPLICIT
-output lifecycle pressure                   PASS — REDISCOVERY TRIGGER EXPLICIT
-reusable request/cohort pressure            PASS — REDISCOVERY TRIGGER EXPLICIT
-streaming / continuous-session pressure     PASS — REDISCOVERY TRIGGER EXPLICIT
-resource/economic pressure                  PASS — REDISCOVERY TRIGGER EXPLICIT
-MAT-2 / MAT-3 findings                      0 / 0
-upstream reopen                             NONE
-R010-07                                     NO DEFECT
-G6                                           CURRENTLY CLOSED
+likely extension pressures classified     PASS
+current catalog stretch required          NO
+current new synchronization required      NO
+application-family reopen required         NO
+future rediscovery triggers               EXPLICIT
+R010-07                                    NO DEFECT
+G6                                         CURRENTLY CLOSED
 ```
 
-Future-extension classification:
+Genericity rule:
+
+> **Genericity means accepting new instances within a stable purpose—not widening a concept until every future concern can fit inside it.**
+
+### G7 — residual misfit register / 011-I
 
 ```text
-F-1  fits existing concept unchanged
-F-2  fits new state/action within existing purpose
-F-3  requires new synchronization only
-F-4  requires application-family capability refinement
-F-5  requires genuine concept rediscovery
-F-6  remains external authority / non-goal
-F-7  insufficient evidence
+Phase 011-B..H findings consolidated             PASS
+Phase 010 risks explicitly dispositioned         8 / 8
+unresolved MAT-2 findings                        0
+MAT-3 blockers                                   0
+unresolved M2-M5 current-design defects          0
+upstream reopens required                        0
+accepted conceptual tradeoffs required           0
+resolved M1 quality-rule families                2
+bounded M6 Phase-013 deferrals                   1
+M8 future-rediscovery finding groups             4
+G7                                               CURRENTLY CLOSED
 ```
 
-Rediscovery is triggered by independent product-facing purpose + durable state/history + independently meaningful actions/lifecycle, not implementation novelty.
+The one M6 item is retained historical synchronization-numbering/documentation drift in the Phase 006 architecture corpus. Current Phase 009 semantics are already authoritative; cleanup belongs to Phase 013.
 
-Known `M8` triggers retained for future discovery include formal composable privacy/accounting, product-owned governance/release, independent output publication/versioning, independently reusable request/cohort semantics, durable continuous-session/feed lifecycle, product-owned economic/resource management, independently governed graph/relationship state, and product-owned reusable knowledge/memory state beyond current Strategy/Learned State boundaries.
-
-These are future guardrails, not accepted concepts or current defects.
+The M8 findings are future rediscovery gates, not current defects or implementation authorizations.
 
 ## Subgroups
 
@@ -265,8 +220,8 @@ These are future guardrails, not accepted concepts or current defects.
 | 011-F | Archetypal / exceptional / progressive-disclosure replay | G5 ordinary/exceptional | **complete** |
 | 011-G | Adversarial / degraded / recovery / scale / provider leakage | G3/G5 stress | **complete** |
 | 011-H | Future scope / extensibility / rediscovery triggers | G6 | **complete** |
-| 011-I | Residual misfit register / dispositions | G7 | **next eligible** |
-| 011-J | Phase consolidation / G1-G7 decision / Phase 012 handoff | consolidation | planned |
+| 011-I | Residual misfit register / reopen-defer-accept decisions | G7 | **complete** |
+| 011-J | Phase consolidation / G1-G7 decision / Phase 012 handoff | consolidation | **next eligible** |
 
 ## Dependency order
 
@@ -287,9 +242,9 @@ These are future guardrails, not accepted concepts or current defects.
   ↓
 011-H COMPLETE
   ↓
-011-I NEXT
+011-I COMPLETE
   ↓
-011-J
+011-J NEXT
 ```
 
 ## Design guardrails held forward
@@ -301,24 +256,25 @@ Unless a later genuine misfit disproves them, preserve:
 - singular state ownership and occurrence-scoped synchronization;
 - exact historical bindings and current-versus-historical truth;
 - semantic versus operational completion;
-- provider operational/catalog/lineage truth never substitutes for canonical semantic owner truth;
-- stale/restored physical authority never resurrects itself after regressive recovery;
-- unresolved recovery/history remains explicitly unresolved rather than fabricated;
-- resource pressure cannot silently weaken committed semantics;
-- material approximation is explicit and owner-scoped;
-- runtime distribution closure is stronger than driver/package availability;
-- Criterion / Evaluation / Evidence question-method-finding separation;
+- question / examination / finding separation for Criterion/Evaluation/Evidence;
 - Evidence versus Generation/approval/release/privacy authority;
 - Provenance high fan-in with low authority fan-out;
+- provider operational/catalog/lineage facts remain provider-qualified evidence rather than canonical owner truth;
+- regressive restore does not resurrect stale mutation authority;
+- unresolved recovery/history remains unknown/partial rather than fabricated;
+- resource pressure cannot silently weaken committed semantics;
+- material approximation is explicit and owner-scoped;
 - D0/D1 retain every qualifier material to the immediate semantic decision;
 - genericity means new instances within stable purpose, not preemptive umbrella expansion;
-- implementation/platform novelty is not concept-discovery evidence;
-- new durable independent purpose/state/actions/lifecycle must reopen discovery before implementation;
+- future independent durable purpose/state/actions/lifecycle re-enters discovery before implementation;
+- M6 representation/architecture concerns remain downstream rather than forcing concept changes;
 - package-first Python/Spark product form and Spark-host platform agnosticism.
 
 ## Anti-implementation boundary
 
-Phase 011 does not select provider adapters, recovery fencing, transactions, events, persistence, service/package topology, workflow engines, provenance/lineage storage, feature flags, autoscaling/admission implementations, approximation algorithms, formal privacy mechanisms, governance/release engines, streaming/session systems, output-publication systems, resource/economic systems, status schemas or executable tests intended to freeze the design.
+Phase 011 does not select or authorize provider adapters, recovery fencing, transactions, persistence, events, service/package topology, workflow engines, provenance/lineage storage, formal privacy mechanisms, governance/release systems, streaming/session systems, output-publication systems, resource/economic systems, status schemas, public APIs, feature flags or executable tests intended to freeze the design.
+
+The residual register is design governance, not an implementation backlog or runtime resource.
 
 ## Positive exit boundary
 
@@ -336,4 +292,4 @@ IMPLEMENTATION NEXT          NOT YET
 
 ## Current next boundary
 
-**011-I — Residual Conceptual Misfit Register, Reopen/Defer/Accept Decisions & Closure Preparation** is next eligible.
+**011-J — Phase 011 Consolidation, G1-G7 Completion Decision & Phase 012 Handoff** is next eligible.
