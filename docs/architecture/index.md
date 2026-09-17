@@ -29,12 +29,14 @@ Phase 011                    ACTIVE
 011-D                        COMPLETE
 011-E                        COMPLETE
 011-F                        COMPLETE
-011-G                        NEXT ELIGIBLE
+011-G                        COMPLETE
+011-H                        NEXT ELIGIBLE
 G1 specificity               CURRENTLY CLOSED
 G2 familiarity               CURRENTLY CLOSED
-G3 integrity                 STRONG EVIDENCE / 011-G STRESS REVALIDATION REQUIRED
+G3 integrity                 CURRENTLY CLOSED
 G4 synergy / simplicity      CURRENTLY CLOSED
-G5 scenario / adversarial    STRONG EVIDENCE / 011-G STRESS REVALIDATION REQUIRED
+G5 scenario / adversarial    CURRENTLY CLOSED
+G6 future-scope              STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
 architecture corpus          RETAINED AS DOWNSTREAM DESIGN EVIDENCE
 architecture reconciliation  PLANNED FOR PHASE 013
 implementation readiness     NOT READY
@@ -52,6 +54,7 @@ implementation next          NOT YET
 - [Composed Integrity Audit](../authority/composed-integrity-synchronization-history-audit.md)
 - [Synergy, Simplicity, Generic Fitness & Conceptual-Burden Audit](../authority/composed-synergy-simplicity-generic-fitness-burden-audit.md)
 - [Archetypal, Exceptional & Progressive-Disclosure Misfit Replay](../authority/archetypal-exceptional-progressive-disclosure-misfit-replay.md)
+- [Adversarial, Degraded, Recovery, Scale & Provider-Semantic-Leakage Validation](../authority/adversarial-degraded-recovery-scale-provider-semantic-leakage-validation.md)
 - [Phase 011](../phases/011/index.md)
 
 ## Completed mapping implications
@@ -60,41 +63,60 @@ Architecture must eventually preserve package-first product form/Spark-host agno
 
 Phase 010 does not select database/materialized views, resource/query schemas, GraphQL/REST shapes, graph/search technology, event-sourced persistence, dashboards, public Python API shapes or platform adapter implementations. Those remain downstream representation choices for Phase 013 reconciliation.
 
-## Phase 011 implications through 011-F
+## Phase 011 implications through 011-G
 
 011-B through 011-E preserve the eleven-concept catalog, thirteen synchronization types and application-family boundaries without architecture-driven correction.
 
-011-F adds one representation-facing semantic obligation:
+011-F adds the representation-facing semantic obligation that decision-material qualifiers cannot be deferred merely for presentation simplicity.
 
-> **A representation may defer explanatory depth, but it may not defer a qualifier whose omission could change the actor's immediate semantic decision or make current state appear stronger than the owning concept supports.**
-
-Architecture must eventually satisfy that obligation without assuming a particular mechanism.
-
-It does **not** imply:
+011-G adds architecture pressure constraints without selecting mechanisms:
 
 ```text
-one summary/status resource
-one workflow aggregate
-one warning/banner service
-one API envelope for all concepts
-D0-D4 screen hierarchy
-D0-D4 endpoint tiers
-materialized global actionability state
+provider job/run success          != parent semantic completion
+provider model/artifact/catalog   != canonical Strategy/Learned State/result owner by default
+provider lineage                  != complete SYNGAN Provenance authority
+restored persistence              != current mutation authority after regressive recovery
+surviving worker/effect           != resurrected write authority
+physical bytes/checkpoint         != semantic result establishment
+resource pressure                 != permission to weaken committed semantics
+material approximation            must be explicit / owner-scoped
+driver-local package resolution   != distributed runtime closure
+provider identity/permission      != universal protected-action authority
 ```
 
-The architecture may later choose different representations so long as candidate/final, Evidence-strength, current/historical, semantic/operational, optionality and continuity distinctions remain truthfully available when decision-material.
+Provider/platform objects may still be used later as integration surfaces, correlations or implementation mechanisms. Phase 013 must preserve their provider-owned meaning without promoting them into canonical SYNGAN owners.
 
-## 011-G evidence boundary
+## Phase 013 explicit reconciliation obligations from 011-G
 
-011-G may use retained architecture/provider models as counterexample evidence for:
+Phase 013 must inspect retained architecture for at least:
 
-- provider job/run success trying to become semantic completion;
-- host model/artifact/catalog identity trying to replace SYNGAN concept identity;
-- platform lineage trying to become Provenance/source-fact authority;
-- recovery mechanics violating current-authority continuity;
-- scale/approximation mechanisms weakening semantic commitments.
+- host job/run/resource status accidentally driving semantic completion;
+- provider model/artifact/catalog identity substituting for canonical Strategy/Learned State/Data Meaning identity;
+- provider lineage being treated as complete Provenance/source truth;
+- recovery mechanisms that could replay restored stale authority;
+- runtime packaging/distribution designs that prove only driver-local availability;
+- scale/admission/fallback designs that could silently approximate or contract committed work;
+- global `degraded`, `recovery`, `status`, `workflow` or `validation` resources that duplicate owner truth;
+- historical synchronization identifiers in retained Phase 006 documents that no longer match current Phase 009 numbering.
 
-Those examples remain evidence only. 011-G must not select architecture merely to solve the counterexample.
+The historical numbering issue is `MAT-1 / M6`: documentation/representation reconciliation only. Current Phase 009 authority already controls active synchronization semantics.
+
+## What 011-G does not imply
+
+Do not infer:
+
+```text
+Databricks/AWS-specific architecture is required
+one provider adapter interface is required
+job/run correlation database is required
+lineage graph database is required
+recovery must use one specific fencing mechanism
+one global status/read-model is required
+autoscaling/admission service is required
+one approximation framework is required
+```
+
+These remain Phase 013 architecture choices constrained by completed semantic authority.
 
 ## Phase 007 architecture status
 
@@ -112,6 +134,6 @@ IMPLEMENTATION NEXT        NOT YET
 
 ## Current next boundary
 
-**011-G — Adversarial, Degraded, Recovery, Scale & Provider-Semantic-Leakage Validation** is next eligible.
+**011-H — Future-Scope, Extensibility, New-Capability Pressure & Rediscovery Triggers** is next eligible.
 
 Architecture reconciliation remains deferred to Phase 013.
