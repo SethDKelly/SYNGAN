@@ -25,7 +25,8 @@ These documents define how SYNGAN design knowledge is created, interpreted, chan
 - [Integrity Under Synchronization, Correction, Invalidation & Historical Composition](composed-integrity-synchronization-history-audit.md) — G3 baseline
 - [Synergy, Simplicity, Generic Fitness & Conceptual-Burden Audit](composed-synergy-simplicity-generic-fitness-burden-audit.md) — G4
 - [Archetypal, Exceptional & Progressive-Disclosure Misfit Replay](archetypal-exceptional-progressive-disclosure-misfit-replay.md) — G5 ordinary/exceptional
-- [Adversarial, Degraded, Recovery, Scale & Provider-Semantic-Leakage Validation](adversarial-degraded-recovery-scale-provider-semantic-leakage-validation.md) — **G3/G5 stress closure**
+- [Adversarial, Degraded, Recovery, Scale & Provider-Semantic-Leakage Validation](adversarial-degraded-recovery-scale-provider-semantic-leakage-validation.md) — G3/G5 stress closure
+- [Future-Scope, Extensibility, New-Capability Pressure & Rediscovery Trigger Audit](future-scope-extensibility-new-capability-rediscovery-audit.md) — **G6 closure**
 - [Phase 011 Index](../phases/011/index.md)
 
 ## Current posture
@@ -47,14 +48,15 @@ Phase 011                            ACTIVE
 011-E                                COMPLETE
 011-F                                COMPLETE
 011-G                                COMPLETE
-011-H                                NEXT ELIGIBLE
+011-H                                COMPLETE
+011-I                                NEXT ELIGIBLE
 G1 specificity                       CURRENTLY CLOSED
 G2 familiarity                       CURRENTLY CLOSED
 G3 integrity                         CURRENTLY CLOSED
 G4 synergy / simplicity              CURRENTLY CLOSED
 G5 scenario / adversarial            CURRENTLY CLOSED
-G6 future-scope                      STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
-G7 residual misfit register          PARTIAL
+G6 future-scope                      CURRENTLY CLOSED
+G7 residual misfit register          PARTIAL — 011-I OWNS CLOSURE
 Jackson design completion            IN PROGRESS
 implementation readiness             NOT READY
 implementation start                 NOT STARTED
@@ -75,14 +77,25 @@ Provider-evidence qualification:
 
 > **A provider fact is consumed only at the evidentiary strength it actually establishes; provider vocabulary such as `success`, `completed`, `model`, `artifact`, `lineage`, `current`, or `production` never escalates automatically into stronger SYNGAN semantics.**
 
-Recovery/scale consequences:
+Future rediscovery:
 
-- regressive persistence restore does not establish current mutation authority;
-- surviving workers/jobs/material do not resurrect stale authority;
-- reconstruction requires the owning concept's normal invariants;
-- resource pressure cannot silently weaken a committed contract;
-- material approximation is explicit and owner-scoped;
-- distributed runtime closure is stronger than driver/package availability.
+> **Genericity means accepting new instances within a stable purpose. Rediscover before implementation when future scope introduces an independent product-facing purpose with durable state/history and independently meaningful actions/lifecycle.**
+
+## Future-extension classification
+
+```text
+F-1  fits existing concept unchanged
+F-2  fits new state/action within existing purpose
+F-3  requires new synchronization only
+F-4  requires application-family capability refinement
+F-5  requires genuine concept rediscovery
+F-6  remains external authority / non-goal
+F-7  insufficient evidence
+```
+
+Likely algorithm/runtime/topology/text/evaluation breadth remains within existing purposes. Explicit `M8` future rediscovery triggers include formal composable privacy/accounting, product-owned governance/release, independent output lifecycle, reusable request/cohort lifecycle, independently governed graph relationship state, durable streaming/session/feed state, product-owned economic/resource accounting, and product-owned reusable knowledge/memory beyond current Strategy/Learned State purpose.
+
+These are not current concepts, current defects or implementation pre-approvals.
 
 ## Phase 010 risk state
 
@@ -93,9 +106,11 @@ R010-03  NO DEFECT — 011-D + 011-G
 R010-04  NO DEFECT — 011-E
 R010-05  NO DEFECT — 011-E + 011-F
 R010-06  NO DEFECT — 011-G
-R010-07  OPEN — 011-H
+R010-07  NO DEFECT — EXPLICIT REDISCOVERY TRIGGERS RETAINED/STRENGTHENED — 011-H
 R010-08  NO DEFECT — 011-G
 ```
+
+All eight risks now have explicit dispositions. G7 remains open until 011-I consolidates every finding/deferral/trigger.
 
 ## Phase 013 reconciliation note
 
@@ -105,13 +120,12 @@ Some retained Phase 006 documents contain historical synchronization identifiers
 
 SYNGAN remains a deployable Python/Spark package, agnostic across compliant Spark-capable hosting/infrastructure platforms. Retained architecture remains downstream evidence pending Phase 013.
 
-Phase 011 does not select provider adapters, APIs, classes, persistence, events, services, packages, generic base hierarchies, queues, recovery/fencing mechanisms, provenance/lineage stores, invalidation propagation, status resources, autoscaling/admission mechanisms or deployment topology.
+Phase 011 does not select provider adapters, APIs, classes, persistence, events, services, packages, generic base hierarchies, queues, recovery/fencing mechanisms, provenance/lineage stores, formal privacy mechanisms, governance/release engines, streaming/session systems, output-publication systems, resource/economic systems, invalidation propagation, status resources, autoscaling/admission mechanisms or deployment topology.
 
 ## Remaining design sequence
 
 ```text
-011-H  NEXT — future-scope / extensibility / rediscovery triggers
-011-I  residual misfit register
+011-I  NEXT — residual conceptual misfit register / dispositions
 011-J  Phase 011 consolidation / Phase 012 handoff
 012    Jackson concept-design completion decision
 013    representation / architecture reconciliation
@@ -124,4 +138,4 @@ Only Phase 014 may set implementation **READY / NOT STARTED / NEXT**; Phase 015 
 
 ## Current next boundary
 
-**011-H — Future-Scope, Extensibility, New-Capability Pressure & Rediscovery Triggers** is next eligible.
+**011-I — Residual Conceptual Misfit Register, Reopen/Defer/Accept Decisions & Closure Preparation** is next eligible.
