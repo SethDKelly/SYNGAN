@@ -471,17 +471,17 @@ R010-07  -> 011-H
 R010-08  -> 011-G
 ```
 
-Current dispositions after 011-C:
+Current dispositions after 011-F:
 
 ```text
-R010-01  NO DEFECT
-R010-02  NO DEFECT — COMPATIBILITY GUIDANCE STRENGTHENED
-R010-03  OPEN
-R010-04  OPEN
-R010-05  OPEN
-R010-06  OPEN
-R010-07  OPEN
-R010-08  OPEN
+R010-01  NO DEFECT — 011-B
+R010-02  NO DEFECT — COMPATIBILITY GUIDANCE STRENGTHENED — 011-C
+R010-03  NO DEFECT IN 011-D BASELINE / 011-G STRESS REVALIDATION REQUIRED
+R010-04  NO DEFECT — 011-E
+R010-05  NO DEFECT — 011-F
+R010-06  OPEN — 011-G
+R010-07  OPEN — 011-H
+R010-08  OPEN — 011-G
 ```
 
 A later subgroup may add evidence or secondary disposition, but the primary owner is responsible for ensuring the risk does not disappear from the Phase 011 record.
@@ -595,15 +595,85 @@ B4 familiarity / reuse                  CURRENTLY CLOSED
 G2 familiarity                          CURRENTLY CLOSED
 ```
 
-The result strengthens one-way compatibility guidance rather than changing concept semantics. `Data Meaning`, `Learned State` and `Evaluation Criterion` retain bounded first-use familiarity watch points; external `model`, `run/job`, `validation result`, `lineage`, `metadata`, `artifact`, `metric` and `synthesizer` vocabulary remains qualified compatibility/representation language.
+The result strengthens one-way compatibility guidance rather than changing concept semantics. `Data Meaning`, `Learned State` and `Evaluation Criterion` retain bounded first-use familiarity watch points; external vocabulary remains qualified compatibility/representation language.
 
 Phase 010-D F3 mapping remains current and does not reopen.
 
 ---
 
+# 21. 011-D application result
+
+011-D is governed in detail by [Integrity Under Synchronization, Correction, Invalidation & Historical Composition](composed-integrity-synchronization-history-audit.md).
+
+```text
+13 / 13 synchronizations preserve singular ownership
+producer/result integrity                       PASS
+occurrence-scoped/non-reactive binding          PASS
+current-versus-historical truth                 PASS
+Evidence/Generation authority separation        PASS
+semantic/Execution separation                   PASS
+Provenance low-authority-fan-out baseline       PASS
+recovery/reconstruction ownership baseline      PASS
+MAT-2 / MAT-3 findings                          0 / 0
+upstream reopen                                 NONE
+R010-03 011-D portion                           NO DEFECT
+```
+
+G3 remains stress-pending because 011-G owns hostile/degraded/recovery/provider revalidation.
+
+---
+
+# 22. 011-E application result
+
+011-E is governed in detail by [Synergy, Simplicity, Generic Fitness & Conceptual-Burden Audit](composed-synergy-simplicity-generic-fitness-burden-audit.md).
+
+```text
+concept add/remove/merge/split justified        0
+synchronization add/remove/merge justified      0
+reduced-family burden replay                    PASS
+positive composed synergies                     CONFIRMED
+repeated-pattern missing-purpose probe          PASS
+cross-cutting qualifier discipline              PASS
+generic-fitness / domain anchoring              PASS
+progressive-disclosure structural simplicity    PASS
+hidden universal coordinator                    NONE
+MAT-2 / MAT-3 findings                          0 / 0
+R010-04                                         NO DEFECT
+G4                                              CURRENTLY CLOSED
+```
+
+The structural simplicity portion of `R010-05` also passes, with final scenario disposition delegated to 011-F.
+
+---
+
+# 23. 011-F application result
+
+011-F is governed in detail by [Archetypal, Exceptional & Progressive-Disclosure Misfit Replay](archetypal-exceptional-progressive-disclosure-misfit-replay.md).
+
+```text
+required scenario families                       10 / 10
+archetypal histories                             10 / 10 PASS
+material exceptional histories                   10 / 10 PASS
+paired scenario replays                          20 / 20 PASS
+progressive-disclosure concealment classes        6 / 6 PASS
+MAT-2 / MAT-3 findings                            0 / 0
+upstream reopen                                   NONE
+R010-05                                           NO DEFECT
+```
+
+011-F adds one local Phase 011 quality clarification without reopening Phase 010:
+
+> **Progressive disclosure may defer explanatory depth, but it must not defer a qualifier whose omission could change the actor's immediate semantic decision or make current state appear stronger than the owning concept supports.**
+
+The clarification is `MAT-1 / M1`: it sharpens how the already-established D0/D1 contract is judged. It creates no new state owner, workflow, surface or API tier.
+
+G5 now has strong ordinary/exceptional evidence but remains stress-pending until 011-G.
+
+---
+
 ## Current next boundary
 
-**011-D — Integrity Under Synchronization, Correction, Invalidation & Historical Composition** is next eligible.
+**011-G — Adversarial, Degraded, Recovery, Scale & Provider-Semantic-Leakage Validation** is next eligible.
 
 Jackson concept design remains **NOT COMPLETE**.
 
