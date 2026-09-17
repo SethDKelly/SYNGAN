@@ -24,6 +24,7 @@ These documents define how SYNGAN design knowledge is created, interpreted, chan
 - [Composed Familiarity / External-Model Audit](composed-familiarity-reuse-vocabulary-external-model-audit.md) — G2 / B4
 - [Integrity Under Synchronization, Correction, Invalidation & Historical Composition](composed-integrity-synchronization-history-audit.md) — 011-D G3 baseline
 - [Synergy, Simplicity, Generic Fitness & Conceptual-Burden Audit](composed-synergy-simplicity-generic-fitness-burden-audit.md) — G4
+- [Archetypal, Exceptional & Progressive-Disclosure Misfit Replay](archetypal-exceptional-progressive-disclosure-misfit-replay.md) — 011-F G5 ordinary/exceptional
 - [Phase 011 Index](../phases/011/index.md)
 
 ## Current posture
@@ -43,12 +44,13 @@ Phase 011                            ACTIVE
 011-C                                COMPLETE
 011-D                                COMPLETE
 011-E                                COMPLETE
-011-F                                NEXT ELIGIBLE
+011-F                                COMPLETE
+011-G                                NEXT ELIGIBLE
 G1 specificity                       CURRENTLY CLOSED
 G2 familiarity                       CURRENTLY CLOSED
 G3 integrity                         STRONG EVIDENCE / 011-G STRESS REVALIDATION REQUIRED
 G4 synergy / simplicity              CURRENTLY CLOSED
-G5 scenario / adversarial            PARTIAL TO STRONG
+G5 scenario / adversarial            STRONG EVIDENCE / 011-G STRESS REVALIDATION REQUIRED
 G6 future-scope                      STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
 G7 residual misfit register          PARTIAL
 Jackson design completion            IN PROGRESS
@@ -69,35 +71,38 @@ implementation next                  NOT YET
 
 011-E confirms that conceptual economy is achieved primarily through **application-family contraction, capability-local synchronization and progressive disclosure**, not by collapsing semantically distinct concepts.
 
+`R010-04` is **NO DEFECT** and G4 is **CURRENTLY CLOSED**.
+
+## Current scenario / disclosure rule
+
+011-F confirms:
+
 ```text
-concept add/remove/merge/split justified        0
-synchronization add/remove/merge justified      0
-reduced-family burden replay                    PASS
-positive composed synergies                     CONFIRMED
-generic-fitness / domain anchoring              PASS
-hidden universal coordinator                    NONE
-MAT-2 / MAT-3 findings                          0 / 0
-R010-04                                         NO DEFECT
-G4                                              CURRENTLY CLOSED
+required scenario families                       10 / 10
+archetypal histories                             10 / 10 PASS
+material exceptional histories                   10 / 10 PASS
+paired replays                                   20 / 20 PASS
+progressive-disclosure concealment classes        6 / 6 PASS
+MAT-2 / MAT-3 findings                            0 / 0
+R010-05                                           NO DEFECT
 ```
 
-The Evaluation Criterion/Evaluation/Evidence learning cost, Provenance's hub-like appearance and full-catalog discoverability remain bounded `MAT-1` watch points rather than defects.
+Governing clarification:
 
-`R010-05` passes its 011-E structural simplicity portion but remains open for 011-F scenario replay.
+> **Progressive disclosure may defer explanatory depth, but it must not defer a qualifier whose omission could change the actor's immediate semantic decision or make current state appear stronger than the owning concept supports.**
+
+G5 now has strong ordinary/exceptional evidence but remains stress-pending until 011-G.
 
 ## Product / architecture boundary
 
 SYNGAN remains a deployable Python/Spark package, agnostic across compliant Spark-capable hosting/infrastructure platforms. Retained architecture remains downstream evidence pending Phase 013.
 
-Phase 011 does not select APIs, classes, persistence, events, services, packages, generic base hierarchies, queues, recovery mechanisms, provenance stores, invalidation propagation or deployment topology.
-
-Conceptual economy does not imply one class per concept, fewer classes than concepts, or a generic `Activity`, `Result`, `Artifact`, `Authority` or Workflow implementation hierarchy.
+Phase 011 does not select APIs, classes, persistence, events, services, packages, generic base hierarchies, queues, recovery mechanisms, provenance stores, invalidation propagation, status resources or deployment topology.
 
 ## Remaining design sequence
 
 ```text
-011-F  NEXT — archetypal / exceptional / progressive-disclosure replay
-011-G  adversarial / degraded / recovery / scale / provider leakage
+011-G  NEXT — adversarial / degraded / recovery / scale / provider leakage
 011-H  future-scope / extensibility
 011-I  residual misfit register
 011-J  Phase 011 consolidation / Phase 012 handoff
@@ -112,4 +117,4 @@ Only Phase 014 may set implementation **READY / NOT STARTED / NEXT**; Phase 015 
 
 ## Current next boundary
 
-**011-F — Archetypal, Exceptional & Progressive-Disclosure Misfit Replay** is next eligible.
+**011-G — Adversarial, Degraded, Recovery, Scale & Provider-Semantic-Leakage Validation** is next eligible.
