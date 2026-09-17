@@ -8,8 +8,6 @@ status: suspended
 
 ## Current posture
 
-Implementation planning and retained executable work remain historical/downstream evidence only.
-
 ```text
 IMPLEMENTATION READINESS   NOT READY
 IMPLEMENTATION START       NOT STARTED
@@ -21,103 +19,57 @@ No implementation tranche is eligible.
 ## Current design progress
 
 ```text
-Phase 008                  COMPLETE
-Phase 009                  COMPLETE
-Phase 010                  COMPLETE
-Phase 011                  COMPLETE
-Phase 012                  COMPLETE
-A1-H2                      CURRENTLY CLOSED
 Jackson concept design     COMPLETE FOR CURRENT PRODUCT SCOPE
 Phase 013                  ACTIVE
 013-A                      COMPLETE
-013-B                      NEXT ELIGIBLE
+013-B                      COMPLETE
+013-C                      NEXT ELIGIBLE
 R1 architecture            DOWNSTREAM / IN PROGRESS
 whole-design readiness     PHASE 014
 ```
 
-Jackson concept-design completion and Phase 013 reconciliation do not authorize implementation.
+013-B reconciled representation/layering/public-contract/identity/view architecture without finding an AMAT-2 defect, AMAT-3 blocker or upstream contradiction.
 
-## Phase 013 method boundary
+That is architecture progress, not implementation authorization.
 
-013-A established the reconciliation method over 19 retained substantive architecture documents and 10 ADRs.
+## Current representation constraints on later implementation
 
-Architecture findings use:
+Any later implementation must preserve:
 
-```text
-AR-0..AR-9
-AMAT-0..AMAT-3
-RETAIN / CLARIFY / SUPERSEDE / CORRECT / DEFER / UPSTREAM-REOPEN
-```
+- stable logical identity distinct from provider/location identity;
+- separate identity, semantic revision/commitment, current state version/freshness and representation schema version;
+- exact historical binding;
+- owner-qualified handles/views rather than generic detached mutable resources;
+- Execution ownership of retry/resume/reconcile/cancel operational state;
+- owner-specific result establishment rather than a universal Result lifecycle;
+- optional surface semantics rather than mandatory REST/CLI/UI products;
+- D0-D4 as semantic disclosure depth, not implementation tiers;
+- bounded/reference-first Spark-scale interaction.
 
-Only a demonstrated AR-9 semantic contradiction may justify upstream reopen. An architecture correction, clarification, or better implementation option does not authorize code changes during Phase 013.
-
-## Residual boundary carried downstream
-
-```text
-unresolved MAT-2 current conceptual defects    0
-MAT-3 blockers                                 0
-unresolved M2-M5 current defects               0
-upstream reopens required                      0
-M6 Phase-013 deferrals                         1
-M8 future-rediscovery finding groups           4
-```
-
-The M6 item is active Phase 013 architecture/documentation reconciliation: historical `11 / 15` synchronization assumptions and older `SYNC-08` / `SYNC-15` roles must be reconciled to current Phase 009 semantics.
-
-M8 triggers mean **return to concept discovery if that future scope becomes current**. They do not authorize placeholder classes, schemas, services, package extras, feature flags, persistence, APIs or workflow resources.
-
-## Completed design results are not implementation topology
-
-Do not convert:
-
-```text
-concept owner                 -> service/package/table
-synchronization               -> event/transaction/workflow edge
-coordination plane            -> architecture layer
-application-family member     -> SKU/feature flag/deployment profile
-exact historical binding      -> mandatory event-sourcing architecture
-current-use invalidation      -> generic retroactive invalidation cascade
-Provenance relation           -> graph database requirement
-Execution                     -> scheduler/job service
-history reconstruction        -> automatic material adoption
-progressive-disclosure D0-D4  -> UI pages/API tiers
-provider job/run state        -> parent semantic state
-provider lineage              -> canonical Provenance store
-provider model/artifact       -> Strategy/Learned State/result by default
-provider identity             -> universal SYNGAN authorization
-M8 rediscovery trigger        -> future feature flag/schema/class
-residual-register entry       -> runtime issue/status resource
-concept-design completion     -> implementation authorization
-Phase 013 architecture role   -> production component by implication
-AR/AMAT finding               -> runtime issue/status enum
-```
+Do not convert representation roles into production classes/services/tables by implication.
 
 ## Phase 013 boundary
 
-Phase 013 may reconcile and revise retained architecture design against completed concept authority.
+Architecture findings remain design evidence until 013-J closes R1 and Phase 014 performs the whole-design/readiness decision.
 
-It may not begin implementation merely because a better architecture is identified.
+Historical Phase 007-B/007-C package/toolchain/scaffold decisions remain feasibility evidence and are reconciled later, principally in 013-I.
 
-Architecture findings remain design evidence until 013-J closes R1 and Phase 014 performs the whole-design completion/readiness decision.
+## Current prohibition
 
-Historical Phase 007-B/007-C package/toolchain/scaffold decisions remain feasibility evidence and are reconciled principally in 013-I. They are not current implementation authority.
+Until Phase 014 passes, do not add production concept behavior, public APIs, persistence/query schemas, migrations, services/events, provider/runtime/security adapters, Execution/recovery implementations, Evidence/Provenance implementations, package-topology changes, feature flags, formal privacy mechanisms, governance/release engines, session systems, output-publication systems, resource/economic systems, benchmarks or compatibility shims intended to manufacture readiness.
 
 ## Remaining design before readiness
 
 ```text
-013-B  Representation / Layering / Public Contract / Identity / Revision / Handles / Views — NEXT
-013-C..013-J  remaining architecture reconciliation
-014    Whole-Design Consolidation & Implementation-Readiness Decision
+013-C     Persistence / History / Concurrency / Migration Reconciliation — NEXT
+013-D..H  Remaining architecture reconciliation
+013-I     Cross-architecture / ADR / legacy / M6 / residual register
+013-J     R1 completion / Phase 014 handoff
+014       Whole-design implementation-readiness decision
 ```
-
-Only a positive Phase 014 may make implementation **READY / NOT STARTED / NEXT**. An explicit Phase 015 remains required before implementation begins.
-
-## Current prohibition
-
-Until Phase 014 passes, do not add production concept behavior, generic domain base hierarchies, public APIs, persistence/query schemas, services/events, graph/search technology, provider/runtime/security adapters, Execution/recovery implementations, Evidence/Provenance implementations, invalidation cascades, reference Strategies, formal privacy mechanisms, governance/release engines, streaming/session systems, output-publication systems, resource/economic systems, benchmarks, package-topology changes, feature flags, status resources or compatibility shims intended to manufacture readiness.
 
 ## Current next boundary
 
 Design-only work:
 
-**013-B — Representation Layering, Public Contract, Identity, Revision, Handle & View Reconciliation**.
+**013-C — Control Persistence, Historical Reference, Transaction/Concurrency, Migration & Recovery-State Reconciliation**.
