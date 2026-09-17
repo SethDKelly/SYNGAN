@@ -10,33 +10,13 @@ status: active
 
 Establish the canonical Phase 011 method for evaluating SYNGAN's complete mapped concept design against specificity, familiarity, integrity, synergy/simplicity, scenario misfit, future-scope pressure and residual conceptual debt.
 
-This authority is established by 011-A before any substantive Phase 011 quality verdict.
-
-It answers:
-
-> **What counts as design-quality evidence, how must probes be constructed, when is a concern material, how is a misfit classified, and what is the smallest canonical authority that must be reopened when a real defect is found?**
-
-Current rule:
+Governing rule:
 
 > **Evidence may challenge any prior conclusion, but only a demonstrated semantic consequence can justify changing upstream design authority.**
 
-Phase 011 therefore remains capable of correcting earlier phases without allowing architecture, code, tests, provider models, familiar terminology or implementation convenience to become upstream authority by accident.
+Phase 011 may correct earlier design, but architecture, code, tests, provider models, familiar terminology, implementation convenience and speculative future features never become upstream authority by accident.
 
----
-
-## Governing inputs
-
-This authority follows:
-
-- [Concept Design Methodology](design-methodology.md);
-- [Documentation Governance and Anti-Drift Rules](documentation-governance.md);
-- [Source and Provenance Policy](source-provenance-policy.md);
-- [Jackson Methodology Completion Matrix](jackson-methodology-completion-matrix.md);
-- [Phase 010 Concept Mapping Consolidation](phase-010-concept-mapping-consolidation.md);
-- current problem, concept, dependence, synchronization, terminology and mapping authority;
-- [Phase 011 Entry & Decomposition](../phases/011/011-entry-decomposition.md).
-
-The method is design-only. It does not define executable tests, test frameworks, implementation acceptance criteria, API contracts, schemas, architecture components or deployment gates.
+The method is design-only. It does not define executable tests, API contracts, schemas, architecture components or deployment gates.
 
 ---
 
@@ -44,28 +24,26 @@ The method is design-only. It does not define executable tests, test frameworks,
 
 Phase 011 evaluates the **latest canonical design as composed and mapped**.
 
-The unit under review may be:
+A validation target may be:
 
 ```text
 one concept
 one concept boundary or pair
 one synchronization
 one application-family member
-one mapped interaction/explanation
+one mapped actor/programmatic interaction
 one historical/composed scenario
 one cross-cutting semantic distinction
 the full eleven-concept composition
 ```
 
-A historical phase document is evidence of how a conclusion was reached; it is not automatically the current object of validation.
+Historical phase documents are evidence of reasoning, not automatically the current object of validation.
 
 ---
 
-# 2. Evidence hierarchy and evidence roles
+# 2. Evidence hierarchy and roles
 
 ## 2.1 Authority precedence
-
-Phase 011 uses the following evidence/authority order:
 
 ```text
 E1  current problem / actor / outcome authority
@@ -78,17 +56,11 @@ E7  retained architecture / source / tests / executable behavior
 E8  external ecosystem analogues / products / platforms / libraries
 ```
 
-`E1-E5` can contain current normative design authority.
+`E1-E5` may contain current normative authority. `E6` is supporting design evidence. `E7-E8` are counterexample, feasibility, familiarity or pressure evidence unless higher authority explicitly adopts a resulting fact.
 
-`E6` is supporting design evidence and may reveal gaps or contradictions.
-
-`E7-E8` are counterexample, feasibility, familiarity or pressure evidence only unless a current higher-level authority explicitly adopts a fact derived from them.
-
-Lower-ranked evidence can prove that a higher-level design is incomplete or contradictory. It cannot silently replace that design merely because it is concrete, executable or familiar.
+Lower-ranked evidence can expose a defect in higher authority; it cannot silently replace that authority merely because it is executable, concrete or familiar.
 
 ## 2.2 Evidence roles
-
-Every material Phase 011 finding should identify the role played by its evidence:
 
 ```text
 ER-N  normative current authority
@@ -99,31 +71,13 @@ ER-F  feasibility or physical-constraint evidence
 ER-H  hypothesis requiring further evidence
 ```
 
-The same source may play more than one role, but the role must be explicit where it affects the conclusion.
-
-## 2.3 External-source discipline
-
-External ecosystems are valid evidence for questions such as:
-
-- whether a familiar concept form exists;
-- whether terminology will predictably mislead;
-- whether a platform exposes a counterexample to a portability assumption;
-- whether a technical constraint makes an established semantic guarantee infeasible.
-
-They are not authority for questions such as:
-
-- what SYNGAN's concepts must be called;
-- which concept owns a fact;
-- whether a platform job is equivalent to semantic Generation completion;
-- whether an external `model`, `artifact`, `dataset`, `run`, `metric` or `lineage` object should become a SYNGAN concept.
-
-A local normative conclusion must be stated in local authority even when external evidence motivates it.
+External models may show familiarity, feasibility or counterexamples. They do not decide SYNGAN concept names, ownership, boundaries or semantic completion rules.
 
 ---
 
 # 3. Quality finding record
 
-Every material 011-B through 011-I finding must be representable with the following fields:
+Every material Phase 011 finding must be representable with:
 
 ```text
 Q1   finding identifier
@@ -143,63 +97,46 @@ Q14  required downstream revalidation
 Q15  related Phase 010 residual risk, if any
 ```
 
-This is a documentation record shape only. It is not a database schema, test-case schema, public API resource, issue template or runtime object.
+This is a documentation record shape only. It is not a runtime/resource/schema/test object.
 
-A finding that cannot state `Q9 concrete semantic consequence` is not sufficient by itself to reopen design.
+A concern unable to state a concrete `Q9` semantic consequence is insufficient by itself to reopen design.
 
 ---
 
 # 4. Probe taxonomy
 
-Phase 011 uses two orthogonal probe dimensions: **target** and **scenario mode**.
-
 ## 4.1 Target classes
 
 ```text
-PT-C   single concept / purpose / state / action / boundary
-PT-B   concept boundary or neighboring concept pair
-PT-S   synchronization / composed ownership relation
-PT-F   application-family member / reduced composition
-PT-M   mapped actor/programmatic interaction or explanation
-PT-H   historical / temporal / correction / invalidation behavior
-PT-W   whole-system composed design
+PT-C  single concept / purpose / state / action / boundary
+PT-B  concept boundary or neighboring concept pair
+PT-S  synchronization / composed ownership relation
+PT-F  application-family member / reduced composition
+PT-M  mapped actor/programmatic interaction or explanation
+PT-H  historical / temporal / correction / invalidation behavior
+PT-W  whole-system composed design
 ```
-
-A probe may legitimately use more than one target class.
 
 ## 4.2 Scenario modes
 
 ```text
-PS-A   archetypal — expected ordinary purpose-fulfilling history
-PS-E   exceptional — legitimate but non-default branch
-PS-V   adversarial — hostile, contradictory or boundary-seeking case
-PS-D   degraded — capability/resource/dependency/security limitation
-PS-R   recovery — retry, reconciliation, restoration or authority-continuity case
-PS-S   scale — volume/topology/distribution/approximation pressure
-PS-P   provider/representation pressure — external model tries to substitute semantics
-PS-F   future-scope — likely extension/new-capability pressure
+PS-A  archetypal
+PS-E  exceptional
+PS-V  adversarial
+PS-D  degraded
+PS-R  recovery
+PS-S  scale
+PS-P  provider / representation pressure
+PS-F  future-scope / new-capability pressure
 ```
 
-A scenario may carry multiple modes, for example `PS-R + PS-S` for large-scale recovery.
+A valid probe identifies the exact claim, context, expected owner/property, sufficient history/conditions, falsification condition and actual conclusion including uncertainty.
 
-## 4.3 Required probe discipline
-
-A valid probe must identify:
-
-1. the exact current design claim being tested;
-2. the actor/application-family context when material;
-3. the expected owner, state distinction or quality property;
-4. the history/conditions sufficient to expose the property;
-5. the result that would falsify or weaken the claim;
-6. the actual conclusion, including uncertainty.
-
-A scenario that merely asks whether a preferred implementation would be convenient is not a concept-design probe.
+Implementation convenience is not a concept-design probe.
 
 ---
 
-# 5. Materiality threshold
-
-Phase 011 distinguishes concern severity from misfit location.
+# 5. Materiality
 
 ```text
 MAT-0  observation
@@ -207,51 +144,43 @@ MAT-0  observation
 
 MAT-1  bounded clarity / quality concern
        may merit explanation or local wording refinement
-       does not currently alter purpose, ownership, lifecycle or valid behavior
+       does not alter current purpose, ownership, lifecycle or valid behavior
 
 MAT-2  material design defect or credible material risk
-       changes actor understanding, valid application-family behavior,
-       concept purpose/boundary, ownership, guarantee, history or scenario truth
-       requires explicit resolution, accepted bounded tradeoff, or reopen/defer decision
+       changes actor understanding, valid family behavior, purpose/boundary,
+       ownership, guarantee, history or scenario truth
 
 MAT-3  conceptual blocker
        current design cannot truthfully express a required scenario,
        contains contradictory canonical authority, loses singular ownership,
-       invalidates an accepted concept purpose, or requires semantic distortion
-       Phase 011 cannot exit positively while unresolved
+       invalidates an accepted purpose or requires semantic distortion
 ```
 
 Materiality does not measure implementation cost.
 
-A technically expensive but semantically valid design may be `MAT-0/1` for Phase 011. A small wording ambiguity can be `MAT-2` if it predictably transfers authority or changes actor-visible meaning.
-
-Only `MAT-2` and `MAT-3` findings require a formal disposition in the residual-misfit register, though lower-materiality observations may also be retained when useful.
+Only MAT-2/MAT-3 require formal residual-defect disposition, though lower-materiality findings may be retained as useful guardrails.
 
 ---
 
-# 6. Specificity criteria
-
-011-B evaluates specificity using these criteria:
+# 6. Specificity criteria — G1
 
 ```text
 SP-1  distinct motivating purpose
 SP-2  purpose traceable to current problem/actor/outcome need
-SP-3  absence has an intelligible capability/meaning consequence
-SP-4  responsibility is neither whole-product restatement nor infrastructure convenience
+SP-3  absence has intelligible capability/meaning consequence
+SP-4  responsibility is not whole-product restatement or infrastructure convenience
 SP-5  neighboring concept purposes remain distinguishable in composition
-SP-6  state/actions are proportionate to the purpose rather than unrelated accumulation
+SP-6  state/actions are proportionate to purpose
 SP-7  non-responsibilities remain credible under mapped use
 ```
 
-Specificity is not improved merely by splitting a concept into more concepts. A split is justified only when an independent purpose/state/action lifecycle is actually exposed.
+A split is justified only when an independent purpose/state/action lifecycle exists; more concepts do not automatically improve specificity.
 
 ---
 
-# 7. Familiarity comparison discipline
+# 7. Familiarity discipline — G2 / B4
 
-011-C compares **conceptual jobs**, not simply nouns or object models.
-
-For every material external analogue, record:
+For material external analogues evaluate:
 
 ```text
 FA-1  analogue / ecosystem
@@ -259,94 +188,77 @@ FA-2  familiar term or concept form
 FA-3  purpose correspondence
 FA-4  state/action correspondence
 FA-5  ownership/lifecycle differences
-FA-6  what user understanding would improve through reuse
-FA-7  what semantic distortion would result from reuse
+FA-6  user-understanding benefit from reuse
+FA-7  semantic distortion from reuse
 FA-8  disposition: reuse / qualified alias / reject / insufficient evidence
 ```
 
-Rules:
-
-- familiarity may improve vocabulary or explanation without renaming the canonical concept;
-- a familiar term must not erase material state dimensions or ownership;
-- external prevalence is not evidence that its boundary is correct for SYNGAN;
-- unfamiliarity alone is not a defect when a familiar alternative would be misleading;
-- unnecessary novelty is a defect when an established familiar concept form fulfills the same purpose/state/action semantics without distortion;
-- specificity and integrity take precedence over superficial familiarity.
-
-No external API/object model may be copied wholesale as Phase 011 design authority.
+Familiarity may improve explanation without renaming canonical concepts. External prevalence is not evidence that an external boundary is correct for SYNGAN. Specificity and integrity take precedence over superficial familiarity.
 
 ---
 
-# 8. Integrity criteria
-
-011-D and 011-G evaluate integrity through at least:
+# 8. Integrity criteria — G3
 
 ```text
-IN-1  singular canonical ownership of every material fact
-IN-2  each concept retains its own purpose and lifecycle under composition
-IN-3  synchronization coordinates behavior but owns no independent canonical state
-IN-4  producer/result concepts do not collapse ownership
-IN-5  occurrence-scoped bindings do not become future-reactive rewriting
-IN-6  current-state changes do not rewrite historical as-bound truth
-IN-7  operational realization cannot substitute for semantic outcome
-IN-8  Evidence cannot become approval/release/privacy or Generation authority
-IN-9  Provenance cannot become referenced source-fact authority
-IN-10 optional capability remains absent rather than becoming a failed mandatory stage
-IN-11 correction/invalidation/supersession affects only the authority actually owned
-IN-12 explanation/projection/presentation does not create shadow canonical state
+IN-1   singular canonical ownership of every material fact
+IN-2   each concept retains its own purpose/lifecycle under composition
+IN-3   synchronization coordinates behavior but owns no canonical state
+IN-4   producer/result concepts do not collapse ownership
+IN-5   occurrence-scoped bindings do not become future-reactive rewriting
+IN-6   current-state changes do not rewrite historical as-bound truth
+IN-7   operational realization cannot substitute for semantic outcome
+IN-8   Evidence cannot become approval/release/privacy or Generation authority
+IN-9   Provenance cannot become referenced source-fact authority
+IN-10  optional capability remains absent rather than failed mandatory stage
+IN-11  correction/invalidation/supersession affects only owned authority
+IN-12  explanation/projection/presentation does not create shadow canonical state
 ```
 
-A composed experience may summarize several concepts. Integrity fails only when that composition changes ownership, lifecycle, guarantee or truth—not merely because several facts are shown together.
+A composed view may summarize several concepts without becoming a new owner.
 
 ---
 
-# 9. Synergy, simplicity and generic-fitness criteria
-
-011-E evaluates composition without using a numeric optimization score.
+# 9. Synergy, simplicity and generic-fitness criteria — G4
 
 ```text
-SY-1  each included concept contributes a distinct useful purpose
-SY-2  synchronization preserves more useful independence than burden it creates
-SY-3  valid reduced family members avoid unrelated conceptual burden
-SY-4  repeated coordination does not conceal a missing independent purpose
-SY-5  similar behavior across concepts does not justify merger when purposes differ
-SY-6  cross-cutting qualifiers remain cross-cutting unless independent lifecycle emerges
-SY-7  progressive disclosure can simplify encounter without hiding material semantics
-SY-8  genericity does not expand a concept beyond current justified purpose
-SY-9  domain specificity is retained where generic abstraction would erase meaning
-SY-10 full composition remains explainable without a hidden universal coordinator
+SY-1   each included concept contributes distinct useful purpose
+SY-2   synchronization preserves more useful independence than burden it creates
+SY-3   valid reduced family members avoid unrelated conceptual burden
+SY-4   repeated coordination does not conceal a missing independent purpose
+SY-5   similar behavior does not justify merger when purposes differ
+SY-6   cross-cutting qualifiers remain cross-cutting absent independent lifecycle
+SY-7   progressive disclosure simplifies encounter without hiding material semantics
+SY-8   genericity does not expand a concept beyond justified purpose
+SY-9   domain specificity is retained where generic abstraction erases meaning
+SY-10  full composition remains explainable without hidden universal coordinator
 ```
 
-A concept is not burdensome merely because it appears in the full catalog. Burden must be assessed against the application-family member in which the capability is actually included.
+Burden is assessed against the actual application-family member, not raw full-catalog size.
 
 ---
 
-# 10. Scenario-quality criteria
+# 10. Scenario-quality criteria — G5/G6
 
-011-F through 011-H must test whether current design remains truthful when histories become difficult.
-
-A scenario exposes a design-quality defect when it demonstrates one or more of:
+A scenario exposes a design-quality defect when it demonstrates:
 
 ```text
-SC-1  required state cannot be represented without contradiction
-SC-2  correct owner becomes ambiguous
-SC-3  a valid history requires hidden state or hidden coordinator
-SC-4  current and historical truth cannot both remain expressible
-SC-5  limitation/uncertainty must be hidden to maintain the advertised workflow
-SC-6  application-family optionality breaks under the scenario
-SC-7  a provider/representation object must become semantic authority for the design to work
-SC-8  scale/approximation silently changes a committed semantic contract
-SC-9  future capability cannot fit without distorting an existing purpose
-SC-10 a genuinely new independent purpose/state/action lifecycle is exposed
+SC-1   required state cannot be represented without contradiction
+SC-2   correct owner becomes ambiguous
+SC-3   valid history requires hidden state or hidden coordinator
+SC-4   current and historical truth cannot both remain expressible
+SC-5   limitation/uncertainty must be hidden to preserve advertised workflow
+SC-6   application-family optionality breaks
+SC-7   provider/representation object must become semantic authority
+SC-8   scale/approximation silently changes committed semantic contract
+SC-9   future capability cannot fit without distorting existing purpose
+SC-10  genuinely new independent purpose/state/action lifecycle is exposed
 ```
 
-`SC-10` is evidence for rediscovery, not automatic permission to add a concept immediately.
+`SC-10` is evidence for rediscovery, not automatic permission to add a concept.
 
 ---
 
-# 11. Misfit classification
-
-Every material finding receives exactly one primary misfit class:
+# 11. Misfit routing
 
 ```text
 M0  no defect / accepted observation
@@ -360,67 +272,47 @@ M7  implementation-only concern — downstream evidence only
 M8  future-scope rediscovery trigger
 ```
 
-Secondary affected areas may also be recorded, but the primary class routes correction.
-
-Historical `J1/J2/J3` shorthand should be interpreted during Phase 011 as:
+Historical shorthand:
 
 ```text
-J1 local concept defect                 -> normally M4
-J2 purpose/catalog/boundary defect      -> normally M4 or M5
-J3 dependence/composition defect        -> M3
+J1 local concept defect            -> normally M4
+J2 purpose/catalog/boundary defect -> normally M4 or M5
+J3 dependence/composition defect   -> M3
 ```
-
-Phase 011 uses `M0-M8` because it also needs to distinguish mapping, architecture, implementation and future-scope findings.
 
 ---
 
 # 12. Smallest-authority reopen rule
 
-When a `MAT-2` or `MAT-3` finding indicates an upstream defect:
+For a MAT-2/MAT-3 upstream defect:
 
-1. **State the violated semantic claim.** Do not begin from a preferred correction.
-2. **Locate its canonical owner.** Identify the smallest current document/authority that owns the wrong or incomplete rule.
-3. **Classify the misfit.** Assign `M2-M5` as appropriate.
-4. **Reopen only that authority first.** Do not reopen an entire phase when one concept, synchronization, mapping rule or problem statement is sufficient.
-5. **Correct canonical authority before summaries.** Follow documentation-governance precedence.
-6. **Identify dependent conclusions.** Mark which later Phase 009/010/011 findings relied materially on the changed rule.
-7. **Revalidate affected downstream conclusions.** Unaffected work remains closed.
-8. **Record supersession/compatibility consequences.** Do not leave contradictory active authority.
+1. state the violated semantic claim;
+2. locate its smallest canonical owner;
+3. classify the misfit;
+4. reopen only that authority first;
+5. correct canonical authority before summaries;
+6. identify dependent conclusions;
+7. revalidate only materially affected downstream conclusions;
+8. record supersession/compatibility consequences.
 
-A reopen is not a failure of the methodology; it is the expected response to a demonstrated misfit.
-
-Conversely, do not reopen upstream design to solve `M6` architecture convenience or `M7` implementation convenience unless those concerns expose a real upstream semantic contradiction.
+A reopen is expected methodology behavior when justified. Conversely, M6/M7 concerns do not reopen upstream design unless they expose an actual semantic contradiction.
 
 ---
 
-# 13. Revalidation blast-radius rule
-
-An upstream correction invalidates only downstream conclusions whose premises materially changed.
-
-Use this reasoning:
+# 13. Revalidation blast radius
 
 ```text
 changed authority
   -> direct dependents
   -> conclusions whose evidence includes the changed fact
-  -> scenario/probe results whose expected invariant changed
+  -> probes whose expected invariant changed
 ```
 
-Do not mechanically rerun all prior phases.
-
-Examples:
-
-- a vocabulary clarification may require 010-D/011-C revalidation but not Phase 009 dependence;
-- a synchronization ownership correction may require Phase 009 composition, Phase 010 mappings that expose it, and 011-D/G revalidation;
-- a concept-purpose change may have a wider blast radius through dependence, synchronization, mapping and all later quality audits.
-
-The exact blast radius must be recorded in `Q14`.
+Do not mechanically rerun unrelated phases.
 
 ---
 
-# 14. Residual-risk disposition vocabulary
-
-Every Phase 010 residual risk and every material Phase 011 finding must eventually receive one of:
+# 14. Residual disposition vocabulary
 
 ```text
 NO DEFECT
@@ -433,45 +325,26 @@ FUTURE REDISCOVERY TRIGGER
 INSUFFICIENT EVIDENCE — CONCEPTUAL BLOCKER
 ```
 
-`ACCEPTED TRADEOFF` requires an explicit boundary and consequence; it must not be used to hide a contradiction.
-
-`DEFERRED TO PHASE 013` is valid only for concerns that leave current concept semantics coherent.
-
-`IMPLEMENTATION EVIDENCE ONLY` is not a promise that the concern will be ignored; it means current evidence does not justify a conceptual conclusion.
-
-`INSUFFICIENT EVIDENCE — CONCEPTUAL BLOCKER` prevents positive Phase 011 exit when the unresolved uncertainty is material to concept-design completeness.
+An accepted tradeoff must state its boundary and consequence. `DEFERRED TO PHASE 013` is valid only when current concept semantics remain coherent. An insufficient-evidence conceptual blocker prevents positive Phase 011 exit.
 
 ---
 
-# 15. Phase 010 risk-accounting rule
+# 15. Phase 010 risk accounting
 
-The eight 010-H risks remain audit inputs until explicitly dispositioned:
-
-```text
-R010-01  composed specificity drift
-R010-02  familiarity versus semantic precision
-R010-03  synchronization integrity under adversarial composition
-R010-04  synergy versus conceptual burden
-R010-05  progressive-disclosure misfit
-R010-06  provider / host semantic leakage
-R010-07  future-capability / extensibility pressure
-R010-08  scale / approximation pressure
-```
-
-Primary ownership:
+Risk ownership:
 
 ```text
-R010-01  -> 011-B
-R010-02  -> 011-C
-R010-03  -> 011-D / 011-G
-R010-04  -> 011-E
-R010-05  -> 011-E / 011-F
-R010-06  -> 011-G
-R010-07  -> 011-H
-R010-08  -> 011-G
+R010-01  composed specificity drift                         -> 011-B
+R010-02  familiarity versus semantic precision              -> 011-C
+R010-03  synchronization integrity under adversarial comp.  -> 011-D / 011-G
+R010-04  synergy versus conceptual burden                   -> 011-E
+R010-05  progressive-disclosure misfit                      -> 011-E / 011-F
+R010-06  provider / host semantic leakage                   -> 011-G
+R010-07  future-capability / extensibility pressure         -> 011-H
+R010-08  scale / approximation pressure                     -> 011-G
 ```
 
-Current dispositions after 011-H:
+Final Phase 011 dispositions after 011-I:
 
 ```text
 R010-01  NO DEFECT — 011-B
@@ -484,210 +357,144 @@ R010-07  NO DEFECT — EXPLICIT REDISCOVERY TRIGGERS RETAINED/STRENGTHENED — 0
 R010-08  NO DEFECT — 011-G
 ```
 
-All eight risks now have explicit dispositions. 011-I must preserve them in the final residual-misfit register.
+All eight risks are explicitly dispositioned and retained in the residual register.
 
 ---
 
-# 16. Quality-closure rules for 011-B through 011-H
+# 16. Quality-closure rules
 
-A subgroup may report its criterion **CURRENTLY CLOSED** only when:
-
-- its required probes have been performed against current canonical authority;
-- all `MAT-2`/`MAT-3` findings are classified;
-- no unresolved `MAT-3` blocker remains;
-- any reopened authority has been corrected and affected subgroup conclusions revalidated;
-- related R010 risks have a provisional or final disposition;
-- no architecture/implementation choice has been smuggled in as a concept-design fix.
+A G1-G6 subgroup may report its criterion `CURRENTLY CLOSED` only when required probes were performed, all MAT-2/MAT-3 findings were classified, no unresolved MAT-3 remains, any reopened authority was corrected/revalidated, related R010 risks were dispositioned, and no architecture/implementation choice was smuggled in as a conceptual fix.
 
 Only 011-I may claim the residual-misfit register is complete.
 
-Only 011-J may claim G1-G7 are jointly complete enough for Phase 012.
+Only 011-J may claim G1-G7 are **jointly** complete enough for Phase 012.
+
+Phase 012, not Phase 011, owns the final Jackson concept-design completion decision.
 
 ---
 
-# 17. Anti-bias and anti-implementation rules
+# 17. Anti-bias / anti-implementation rules
 
-Phase 011 must not treat any of the following as design authority merely because they are concrete:
+The following may expose counterexamples but are not concept-design authority merely because they are concrete:
 
-- current Python class/package structure;
-- existing tests or fixtures;
-- architecture diagrams or service boundaries;
+- current Python/package structure;
+- tests/fixtures;
+- architecture diagrams/service boundaries;
 - database/storage schemas;
-- Databricks/AWS/other provider resource models;
-- Spark ML or PyTorch object lifecycles;
-- SDV/CTGAN terminology or abstractions;
-- MLflow tracking/registry object models;
+- Databricks/AWS/provider resource models;
+- Spark ML/PyTorch lifecycles;
+- SDV/CTGAN abstractions;
+- MLflow registry/tracking objects;
 - Great Expectations validation objects;
-- OpenLineage Job/Run/Dataset models;
+- OpenLineage Job/Run/Dataset objects;
 - popular API conventions;
-- retained implementation plans.
+- retained implementation plans;
+- speculative future feature architecture.
 
-They may falsify an assumption, expose infeasibility, reveal terminology pressure or demonstrate a scenario. Any resulting change must still be expressed and justified at the correct canonical design layer.
-
-Future feature ideas likewise remain pressure evidence until an independent purpose/state/action lifecycle is established within product scope.
-
-011-A adds no executable tests or restrictions intended to freeze Phase 011 conclusions.
+Future feature ideas remain pressure evidence until independent purpose/state/action lifecycle and current product intent justify discovery.
 
 ---
 
-# 18. 011-A result
+# 18. Phase 011 application results
 
-011-A establishes the audit method without judging G1-G7 substantively.
+## 18.1 011-A — validation method
+
+Evidence hierarchy/roles, Q1-Q15 record, probe taxonomy, materiality, quality criteria, M0-M8 routing, smallest-authority reopen, blast-radius and residual-risk rules are established.
+
+## 18.2 011-B — G1 specificity
 
 ```text
-validation authority                     ESTABLISHED
-evidence hierarchy                       ESTABLISHED
-evidence-role taxonomy                   ESTABLISHED
-quality finding record                   ESTABLISHED
-probe taxonomy                           ESTABLISHED
-materiality threshold                    ESTABLISHED
-specificity criteria                     ESTABLISHED
-familiarity comparison discipline        ESTABLISHED
-integrity criteria                       ESTABLISHED
-synergy / simplicity criteria            ESTABLISHED
-scenario-quality criteria                ESTABLISHED
-misfit classification                    ESTABLISHED
-smallest-authority reopen rule            ESTABLISHED
-revalidation blast-radius rule           ESTABLISHED
-residual-risk disposition vocabulary     ESTABLISHED
-R010 risk-accounting ownership           ESTABLISHED
+11 / 11 concepts                 PASS
+MAT-2 / MAT-3                    0 / 0
+upstream reopen                  NONE
+R010-01                          NO DEFECT
+G1                               CURRENTLY CLOSED
 ```
 
-No concept, synchronization, application-family edge or mapping rule is changed by 011-A.
+Bounded MAT-1/M0 watches around Strategy breadth and Provenance high fan-in remain quality guardrails, not defects.
 
----
-
-# 19. 011-B application result
-
-011-B is governed in detail by [Composed Specificity, Purpose Alignment & Boundary Sharpness Audit](composed-specificity-purpose-boundary-audit.md).
+## 18.3 011-C — G2 familiarity
 
 ```text
-11 / 11 concepts                       PASS composed specificity
-reduced family replay                  PASS
-full-composition anti-umbrella replay PASS
-MAT-2 specificity findings            0
-MAT-3 specificity blockers            0
-upstream reopens                      0
-R010-01                               NO DEFECT
-G1 specificity                        CURRENTLY CLOSED
+11 / 11 canonical names          RETAINED
+external-model comparison        PASS
+MAT-2 / MAT-3                    0 / 0
+R010-02                          NO DEFECT — GUIDANCE STRENGTHENED
+G2                               CURRENTLY CLOSED
 ```
 
----
-
-# 20. 011-C application result
-
-011-C is governed in detail by [Familiarity, Reuse, Vocabulary & External-Model Comparison Audit](composed-familiarity-reuse-vocabulary-external-model-audit.md).
-
-```text
-11 / 11 canonical names retained
-application-family vocabulary reuse     PASS
-external-model comparison               PASS
-MAT-2 familiarity findings              0
-MAT-3 familiarity blockers              0
-upstream reopens                        0
-R010-02                                 NO DEFECT — COMPATIBILITY GUIDANCE STRENGTHENED
-B4 familiarity / reuse                  CURRENTLY CLOSED
-G2 familiarity                          CURRENTLY CLOSED
-```
-
----
-
-# 21. 011-D application result
-
-011-D is governed in detail by [Integrity Under Synchronization, Correction, Invalidation & Historical Composition](composed-integrity-synchronization-history-audit.md).
+## 18.4 011-D — G3 integrity baseline
 
 ```text
 13 / 13 synchronizations preserve singular ownership
-producer/result integrity                       PASS
-occurrence-scoped/non-reactive binding          PASS
-current-versus-historical truth                 PASS
-Evidence/Generation authority separation        PASS
-semantic/Execution separation                   PASS
-Provenance low-authority-fan-out baseline       PASS
-recovery/reconstruction ownership baseline      PASS
-MAT-2 / MAT-3 findings                          0 / 0
-upstream reopen                                 NONE
-R010-03 011-D portion                           NO DEFECT
+producer/result integrity        PASS
+exact historical binding         PASS
+Evidence/Generation separation   PASS
+semantic/Execution separation    PASS
+Provenance low-authority fan-out PASS
+recovery/reconstruction baseline PASS
+MAT-2 / MAT-3                    0 / 0
 ```
 
----
-
-# 22. 011-E application result
-
-011-E is governed in detail by [Synergy, Simplicity, Generic Fitness & Conceptual-Burden Audit](composed-synergy-simplicity-generic-fitness-burden-audit.md).
+## 18.5 011-E — G4 synergy / simplicity / generic fitness
 
 ```text
-concept add/remove/merge/split justified        0
-synchronization add/remove/merge justified      0
-reduced-family burden replay                    PASS
-positive composed synergies                     CONFIRMED
-repeated-pattern missing-purpose probe          PASS
-cross-cutting qualifier discipline              PASS
-generic-fitness / domain anchoring              PASS
-progressive-disclosure structural simplicity    PASS
-hidden universal coordinator                    NONE
-MAT-2 / MAT-3 findings                          0 / 0
-R010-04                                         NO DEFECT
-G4                                              CURRENTLY CLOSED
+concept add/remove/merge/split   0
+sync add/remove/merge            0
+reduced-family burden replay     PASS
+positive synergies               CONFIRMED
+hidden universal coordinator     NONE
+R010-04                          NO DEFECT
+G4                               CURRENTLY CLOSED
 ```
 
----
-
-# 23. 011-F application result
-
-011-F is governed in detail by [Archetypal, Exceptional & Progressive-Disclosure Misfit Replay](archetypal-exceptional-progressive-disclosure-misfit-replay.md).
+## 18.6 011-F — G5 archetypal/exceptional component
 
 ```text
-required scenario families                       10 / 10
-archetypal histories                             10 / 10 PASS
-material exceptional histories                   10 / 10 PASS
-paired scenario replays                          20 / 20 PASS
-progressive-disclosure concealment classes        6 / 6 PASS
-MAT-2 / MAT-3 findings                            0 / 0
-upstream reopen                                   NONE
-R010-05                                           NO DEFECT
+required scenario families       10 / 10
+paired replays                   20 / 20 PASS
+concealment classes              6 / 6 PASS
+MAT-2 / MAT-3                    0 / 0
+R010-05                          NO DEFECT
 ```
 
-011-F adds one local Phase 011 quality clarification without reopening Phase 010:
+Resolved M1 rule:
 
 > **Progressive disclosure may defer explanatory depth, but it must not defer a qualifier whose omission could change the actor's immediate semantic decision or make current state appear stronger than the owning concept supports.**
 
----
-
-# 24. 011-G application result
-
-011-G is governed in detail by [Adversarial, Degraded, Recovery, Scale & Provider-Semantic-Leakage Validation](adversarial-degraded-recovery-scale-provider-semantic-leakage-validation.md).
+## 18.7 011-G — G3/G5 stress closure
 
 ```text
-required stress classes                         PASS
-combined hostile composition                    PASS
-provider job/run leakage                        PASS
-provider lineage/catalog/model leakage          PASS
-runtime distribution closure                    PASS
-scale / approximation                           PASS
-regressive recovery / stale authority           PASS
-MAT-2 / MAT-3 findings                          0 / 0
-upstream reopen                                 NONE
-R010-03                                         NO DEFECT
-R010-06                                         NO DEFECT
-R010-08                                         NO DEFECT
-G3                                              CURRENTLY CLOSED
-G5                                              CURRENTLY CLOSED
+hostile/degraded/recovery stress PASS
+provider leakage stress          PASS
+scale/approximation stress       PASS
+MAT-2 / MAT-3                    0 / 0
+R010-03                          NO DEFECT
+R010-06                          NO DEFECT
+R010-08                          NO DEFECT
+G3                               CURRENTLY CLOSED
+G5                               CURRENTLY CLOSED
 ```
 
-Provider-evidence qualification:
+Resolved M1 rule:
 
 > **A provider fact may be consumed only at the evidentiary strength it actually establishes; provider vocabulary cannot silently escalate into stronger SYNGAN semantics.**
 
-A bounded `MAT-1 / M6` Phase 013 reconciliation concern remains for historical synchronization identifiers in retained Phase 006 documents. Current Phase 009 authority already controls active identifiers and semantics.
+One bounded MAT-1/M6 item is routed to Phase 013: retained Phase 006 documentation uses historical synchronization identifiers that current Phase 009 authority already supersedes.
 
----
+## 18.8 011-H — G6 future scope
 
-# 25. 011-H application result
+```text
+likely extension pressures       CLASSIFIED
+current catalog stretch          NO
+current new sync                 NO
+family reopen                    NO
+MAT-2 / MAT-3                    0 / 0
+R010-07                          NO DEFECT — REDISCOVERY TRIGGERS STRENGTHENED
+G6                               CURRENTLY CLOSED
+```
 
-011-H is governed in detail by [Future-Scope, Extensibility, New-Capability Pressure & Rediscovery Trigger Audit](future-scope-extensibility-new-capability-rediscovery-audit.md).
-
-Future pressures are classified as:
+Future-pressure classifications:
 
 ```text
 F-1  fits existing concept unchanged
@@ -699,46 +506,59 @@ F-6  remains external authority / non-goal
 F-7  insufficient evidence
 ```
 
-Current result:
+M8 triggers are future governance gates, not current defects or implementation authorization.
+
+## 18.9 011-I — G7 residual misfit register
+
+Canonical register: [Residual Conceptual Misfit Register](residual-conceptual-misfit-register.md).
 
 ```text
-new Strategy-family pressure                PASS
-richer topology pressure                    PASS
-advanced text pressure                      PASS
-formal privacy boundary                     PASS — REDISCOVERY TRIGGER EXPLICIT
-external integration / handoff              PASS
-new Evaluation / claim-strength pressure    PASS
-runtime / accelerator / platform pressure   PASS
-new reusable-state pressure                 PASS
-product-owned governance pressure           PASS — REDISCOVERY TRIGGER EXPLICIT
-output lifecycle pressure                   PASS — REDISCOVERY TRIGGER EXPLICIT
-reusable request/cohort pressure            PASS — REDISCOVERY TRIGGER EXPLICIT
-streaming / continuous-session pressure     PASS — REDISCOVERY TRIGGER EXPLICIT
-resource/economic pressure                  PASS — REDISCOVERY TRIGGER EXPLICIT
-MAT-2 / MAT-3 findings                      0 / 0
-upstream reopen                             NONE
-R010-07                                     NO DEFECT
-G6                                           CURRENTLY CLOSED
+Phase 011-B..H findings consolidated       PASS
+Phase 010 risks dispositioned              8 / 8
+unresolved MAT-2 findings                  0
+MAT-3 blockers                             0
+unresolved M2-M5 current defects           0
+upstream reopens required                  0
+accepted conceptual tradeoffs required     0
+resolved M1 quality-rule families          2
+M6 Phase-013 deferrals                     1
+M8 future-rediscovery finding groups       4
+G7                                         CURRENTLY CLOSED
 ```
 
-011-H records bounded `MAT-1 / M8` future rediscovery triggers where a future capability would introduce independent product purpose + durable state/history + independently meaningful actions/lifecycle.
-
-These triggers do not add concepts now and do not block Phase 011. They prevent future implementation from stretching Strategy, Learned State, Generation, Evidence, Execution, Provenance or Data Meaning beyond their purposes merely to avoid rediscovery.
+The M6 item is downstream documentation/architecture reconciliation only. M8 findings are conditional future rediscovery triggers. Neither is a current conceptual blocker.
 
 ---
 
-## Current next boundary
+# 19. Current Phase 011 state
 
-**011-I — Residual Conceptual Misfit Register, Reopen/Defer/Accept Decisions & Closure Preparation** is next eligible.
+```text
+011-A  COMPLETE
+011-B  COMPLETE
+011-C  COMPLETE
+011-D  COMPLETE
+011-E  COMPLETE
+011-F  COMPLETE
+011-G  COMPLETE
+011-H  COMPLETE
+011-I  COMPLETE
+011-J  NEXT ELIGIBLE
 
-011-I must distinguish current defects from:
+G1     CURRENTLY CLOSED
+G2     CURRENTLY CLOSED
+G3     CURRENTLY CLOSED
+G4     CURRENTLY CLOSED
+G5     CURRENTLY CLOSED
+G6     CURRENTLY CLOSED
+G7     CURRENTLY CLOSED
+```
 
-- `M1` local quality clarifications;
-- `M6` Phase 013 representation/architecture deferrals;
-- `M8` future rediscovery triggers;
-- accepted bounded observations/tradeoffs;
-- and `NO DEFECT` findings.
+G1-G7 individual closure is closure preparation, not Phase 011 joint completion.
 
 Jackson concept design remains **NOT COMPLETE**.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
+
+## Current next boundary
+
+**011-J — Phase 011 Consolidation, G1-G7 Completion Decision & Phase 012 Handoff** is next eligible.
