@@ -12,15 +12,15 @@ It is not defined as a standalone UI application. Package, notebook and automate
 
 Start with [`docs/index.md`](docs/index.md).
 
-Current governing consolidation authority includes:
+Current governing consolidation/reconciliation authority includes:
 
 - [`Phase 009 Dependence & Composition Consolidation`](docs/authority/phase-009-dependence-composition-consolidation.md)
 - [`Phase 010 Concept Mapping Consolidation`](docs/authority/phase-010-concept-mapping-consolidation.md)
 - [`Phase 011 Design Quality & Misfit Consolidation`](docs/authority/phase-011-design-quality-misfit-consolidation.md)
 - [`Residual Conceptual Misfit Register`](docs/authority/residual-conceptual-misfit-register.md)
 - [`Phase 012 Jackson Concept-Design Consolidation`](docs/authority/phase-012-jackson-concept-design-consolidation.md)
+- [`Phase 013 Architecture Reconciliation Authority`](docs/authority/phase-013-architecture-reconciliation-authority.md)
 - [`Phase 013`](docs/phases/013/index.md)
-- [`Phase 013 Entry & Decomposition`](docs/phases/013/013-entry-decomposition.md)
 - [`Representation & Architecture`](docs/architecture/index.md)
 - [`Jackson Methodology Completion Matrix`](docs/authority/jackson-methodology-completion-matrix.md)
 - [`Jackson Design Completion & Implementation Hold`](docs/authority/jackson-design-completion-implementation-hold.md)
@@ -38,32 +38,42 @@ Phase 012                            COMPLETE
 A1-H2                                CURRENTLY CLOSED
 Jackson concept design               COMPLETE FOR CURRENT PRODUCT SCOPE
 Phase 013                            ACTIVE
-013-A                                NEXT ELIGIBLE
+013-A                                COMPLETE
+013-B                                NEXT ELIGIBLE
 R1 architecture reconciliation       DOWNSTREAM / IN PROGRESS
 implementation readiness             NOT READY
 implementation start                 NOT STARTED
 implementation next                  NOT YET
 ```
 
-## Phase 012 result
+## Phase 013 reconciliation method
 
-Phase 012 audited the latest A-G design as one current system and explicitly closed H1/H2.
+013-A inventoried the retained downstream design and established the rules for the rest of Phase 013:
 
 ```text
-H1 CURRENT-STATE CONSOLIDATED AUDIT       PASS
-H2 JACKSON COMPLETION DECISION            PASS
-JACKSON CONCEPT DESIGN                    COMPLETE FOR CURRENT PRODUCT SCOPE
+substantive retained architecture docs   19
+retained ADRs                             10
+known entry candidates                     6
+AMAT-2 defects declared by 013-A           0
+AMAT-3 blockers declared by 013-A          0
+upstream reopen                           NONE
 ```
 
-The completion decision is scope-relative, not a permanent freeze. A later genuine misfit or newly independent product purpose may reopen the smallest affected design authority.
+Architecture findings now use:
+
+```text
+AR-0..AR-9       discrepancy class
+AMAT-0..AMAT-3   materiality
+RETAIN / CLARIFY / SUPERSEDE / CORRECT / DEFER / UPSTREAM-REOPEN
+```
+
+Only a demonstrated AR-9 genuine semantic contradiction may reopen completed upstream concept design.
 
 ## Phase 013 structure
 
-Phase 013 reconciles retained Phase 004/006/007 representation/architecture against the completed concept design in dependency order:
-
 ```text
-013-A  reconciliation authority / corpus inventory / precedence / discrepancy taxonomy
-013-B  representation / layering / public contract / identity / views
+013-A  reconciliation authority / corpus inventory / precedence / taxonomy  COMPLETE
+013-B  representation / layering / public contract / identity / views       NEXT
 013-C  persistence / history / transaction-concurrency / migration
 013-D  distributed data / topology / manifest / candidate-seal-promotion
 013-E  Strategy/runtime / dependency / security / offline-no-egress
@@ -74,7 +84,7 @@ Phase 013 reconciles retained Phase 004/006/007 representation/architecture agai
 013-J  consolidation / R1 decision / Phase 014 handoff
 ```
 
-The Phase 007 consolidated architecture is retained as the strongest pre-completion architecture synthesis, but it must now be reconciled rather than presumed authoritative where it conflicts with Phase 012.
+The Phase 007 consolidated architecture is retained as the strongest pre-completion architecture synthesis, but it is a reconciliation subject rather than automatic current architecture authority.
 
 ## Residual accounting carried forward
 
@@ -83,21 +93,14 @@ unresolved MAT-2 findings                     0
 MAT-3 blockers                                0
 unresolved M2-M5 current-design defects       0
 upstream reopens required                     0
-accepted conceptual tradeoffs required        0
 resolved M1 quality-rule families             2
 bounded M6 Phase-013 deferrals                1
 M8 future-rediscovery finding groups          4
 ```
 
-The M6 item includes historical `11 / 15` synchronization assumptions and older `SYNC-08` / `SYNC-15` roles in retained architecture material. Current Phase 009 synchronization semantics are authoritative; Phase 013 owns reconciliation.
+The M6 item includes historical `11 / 15` synchronization assumptions and older `SYNC-08` / `SYNC-15` roles in retained architecture material. Current Phase 009 synchronization semantics are authoritative.
 
-M8 future rediscovery triggers remain conditional design-governance gates, not accepted concepts, implementation backlog items or architecture pre-approvals.
-
-## Phase 013 boundary
-
-Completed concept design is upstream authority. Phase 013 may correct retained architecture when needed, but it must not change concept ownership or semantics merely to preserve historical representation choices.
-
-Phase 013 remains design-only.
+M8 future rediscovery triggers remain conditional design-governance gates, not architecture pre-approvals.
 
 ## Remaining roadmap
 
@@ -112,6 +115,6 @@ Only a positive Phase 014 may change implementation to **READY / NOT STARTED / N
 
 ## Current next boundary
 
-**013-A — Reconciliation Authority, Retained Corpus Inventory, Precedence Reset & Discrepancy Taxonomy** is next eligible.
+**013-B — Representation Layering, Public Contract, Identity, Revision, Handle & View Reconciliation** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
