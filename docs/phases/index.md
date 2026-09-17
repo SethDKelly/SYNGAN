@@ -57,15 +57,8 @@ Final mapping coverage remains 66/66 commands, 52/52 queries, 11/11 lifecycle/hi
 Current authority:
 
 - [Phase 011 Index](011/index.md)
-- [011-A](011/011-A-validation-authority-evidence-hierarchy-probe-taxonomy-misfit-reopen-rules.md)
-- [011-B](011/011-B-composed-specificity-purpose-alignment-boundary-sharpness-audit.md)
-- [011-C](011/011-C-familiarity-reuse-vocabulary-external-model-comparison-audit.md)
-- [011-D](011/011-D-integrity-under-synchronization-correction-invalidation-historical-composition.md)
-- [011-E](011/011-E-synergy-simplicity-generic-fitness-conceptual-burden-audit.md)
-- [011-F](011/011-F-archetypal-exceptional-progressive-disclosure-misfit-replay.md)
-- [011-G](011/011-G-adversarial-degraded-recovery-scale-provider-semantic-leakage-validation.md)
-- [011-H](011/011-H-future-scope-extensibility-new-capability-pressure-rediscovery-triggers.md)
-- [011-H G6 Authority](../authority/future-scope-extensibility-new-capability-rediscovery-audit.md)
+- [011-I Residual Misfit Record](011/011-I-residual-conceptual-misfit-register-reopen-defer-accept-closure-preparation.md)
+- [Residual Conceptual Misfit Register](../authority/residual-conceptual-misfit-register.md)
 - [Jackson Methodology Completion Matrix](../authority/jackson-methodology-completion-matrix.md)
 
 Current state:
@@ -80,33 +73,33 @@ Phase 011                    ACTIVE
 011-F                        COMPLETE
 011-G                        COMPLETE
 011-H                        COMPLETE
-011-I                        NEXT ELIGIBLE
+011-I                        COMPLETE
+011-J                        NEXT ELIGIBLE
 G1 specificity               CURRENTLY CLOSED
 G2 familiarity               CURRENTLY CLOSED
 G3 integrity                 CURRENTLY CLOSED
 G4 synergy / simplicity      CURRENTLY CLOSED
 G5 scenario / adversarial    CURRENTLY CLOSED
 G6 future-scope              CURRENTLY CLOSED
-G7 residual misfit register  PARTIAL — 011-I OWNS CLOSURE
+G7 residual misfit register  CURRENTLY CLOSED
 ```
 
-011-H closes the future-scope/extensibility obligation with explicit extension and rediscovery classifications:
+011-I confirms:
 
 ```text
-F-1  fits existing concept unchanged
-F-2  fits new state/action within existing purpose
-F-3  requires new synchronization only
-F-4  requires application-family capability refinement
-F-5  requires genuine concept rediscovery
-F-6  remains external authority / non-goal
-F-7  insufficient evidence
+Phase 010 risks dispositioned                 8 / 8
+unresolved MAT-2 findings                     0
+MAT-3 blockers                                0
+unresolved M2-M5 current-design defects       0
+upstream reopens required                     0
+accepted conceptual tradeoffs required        0
+M6 Phase-013 deferrals                        1
+M8 future-rediscovery finding groups          4
 ```
 
-Likely Strategy, topology, text, Evaluation, runtime/platform and source-derived reusable-state breadth fits current purposes. Known `M8` future rediscovery triggers remain explicit for formal composable privacy/accounting, product-owned governance/release, independent output lifecycle, reusable request/cohort lifecycle, independently governed graph relationship state, durable streaming/session/feed state, product-owned resource/economic accounting and product-owned reusable knowledge/memory beyond Strategy/Learned State.
+The M6 item is historical synchronization-numbering/documentation drift in retained Phase 006 material. It is a bounded Phase 013 reconciliation obligation, not a current concept/synchronization defect.
 
-These are future design-governance gates rather than current concepts or current blockers.
-
-All eight Phase 010 risks now have explicit dispositions. No MAT-2/MAT-3 finding or upstream reopen was introduced by 011-H.
+M8 triggers are conditional future rediscovery gates and do not authorize placeholder concepts or implementation.
 
 Current sequence:
 
@@ -119,19 +112,21 @@ Current sequence:
 011-F  COMPLETE — archetypal / exceptional / progressive-disclosure replay
 011-G  COMPLETE — adversarial / degraded / recovery / scale / provider leakage
 011-H  COMPLETE — future-scope / extensibility / rediscovery triggers
-011-I  NEXT — residual conceptual misfit register / dispositions
-011-J  Phase 011 consolidation / Phase 012 handoff
+011-I  COMPLETE — residual conceptual misfit register / dispositions
+011-J  NEXT — Phase 011 consolidation / G1-G7 joint decision / Phase 012 handoff
 ```
+
+G1-G7 individual closure is not Phase 011 completion. Only 011-J may make the joint Phase 011 exit decision.
 
 ## Later design phases
 
 ### Phase 012 — Jackson Concept-Design Consolidation & Completion Decision
 
-Planned. A positive result does not make implementation ready.
+Planned. Owns the final Jackson concept-design completion decision. A positive result does not make implementation ready.
 
 ### Phase 013 — Post-Concept Representation & Architecture Reconciliation
 
-Planned. Reconcile retained architecture against completed concept design, including historical synchronization-numbering drift recorded by 011-G. Remains design-only.
+Planned. Reconcile retained architecture against completed concept design, including the bounded historical synchronization-numbering drift retained by 011-I. Remains design-only.
 
 ### Phase 014 — Whole-Design Consolidation & Implementation-Readiness Decision
 
@@ -143,6 +138,6 @@ Future only. Explicit authorization is still required before implementation begi
 
 ## Current next boundary
 
-**011-I — Residual Conceptual Misfit Register, Reopen/Defer/Accept Decisions & Closure Preparation** is next eligible.
+**011-J — Phase 011 Consolidation, G1-G7 Completion Decision & Phase 012 Handoff** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
