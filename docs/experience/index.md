@@ -6,51 +6,25 @@ status: active-supporting-evidence
 
 # SYNGAN Experience & Workflow Design
 
-This directory contains actor-visible and programmatic workflow/experience design developed primarily in Phases 003 and 006.
+This directory contains retained actor-visible/programmatic workflow evidence from earlier design phases. Current semantic authority lives in concepts, composition, mapping, and the completed Phase 012 Jackson consolidation.
 
-Phase 010 mapping and Phase 011 quality/misfit validation are complete. These documents remain supporting evidence rather than upstream semantic authority.
-
-## Current relationship to completed quality work
+## Current state
 
 ```text
-010-A..010-H  COMPLETE
-F1-F5         CURRENTLY CLOSED
-011-A..011-J  COMPLETE
-G1-G7         CURRENTLY CLOSED
-H1/H2         OPEN — PHASE 012
+Phase 010 mapping            COMPLETE
+F1-F5                        CURRENTLY CLOSED
+Phase 011 quality            COMPLETE
+G1-G7                        CURRENTLY CLOSED
+Phase 012                    COMPLETE
+H1/H2                        CURRENTLY CLOSED
+Jackson concept design       COMPLETE FOR CURRENT PRODUCT SCOPE
 ```
 
-Phase 011 confirms no residual experience/mapping defect and no Phase 010 mapping reopen.
+## Retained experience obligations
 
-## Retained experience model
+Experience must continue to distinguish owner semantic state, operational state, current actionability, authority continuity, compatibility/limitation, disclosure state and historical-knowledge quality without turning them into one global status owner.
 
-Phase 003 contributes recurring barriers:
-
-```text
-preparation / readiness
-        ↓
-semantic commitment
-        ↓
-operational realization
-        ↓
-semantic promotion / finding
-```
-
-Phase 006 adds orthogonal dimensions:
-
-```text
-owner semantic state
-operational state
-current actionability
-authority continuity
-compatibility / limitation
-disclosure state
-historical-knowledge state
-```
-
-These remain interaction/mapping obligations, not new concepts or one universal status enum.
-
-## Progressive disclosure
+Progressive disclosure remains:
 
 ```text
 D0  task intent / immediate semantic action
@@ -60,43 +34,28 @@ D3  historical / explanatory depth
 D4  distributed / host operational drill-down
 ```
 
-These are semantic presentation obligations, not UI screens, API tiers or storage layers.
+> **A qualifier material to the immediate semantic decision may not be hidden merely to simplify presentation.**
 
-Decision-material rule:
+Provider-visible state remains provider-qualified evidence rather than canonical SYNGAN state.
 
-> **Progressive disclosure may defer explanatory depth, but it must not defer a qualifier whose omission could change the actor's immediate semantic decision or make current state appear stronger than the owning concept supports.**
+## Phase 013 boundary
 
-## Provider / recovery / scale boundary
+Phase 013 may reconcile UI/report/notebook/host representation choices, but must preserve completed mapping semantics and may not create a new canonical owner through a combined view/read model.
 
-Actor-facing and programmatic experience must distinguish provider job/run state from parent semantic state, physical material from authoritative result, restored historical state from current authority, current-use restriction from historical use, provider lineage observation from Provenance truth, and approximation scope from stronger Evidence claims.
+M8 future triggers do not justify placeholder Privacy, Governance, Publication, Session, Graph, Resource or Knowledge workflows.
 
-> **A provider fact is shown/consumed only at the strength it actually establishes. Provider-visible state is not automatically canonical SYNGAN state.**
-
-No global provider/recovery/degraded/status experience owner is required.
-
-## Future and residual boundary
-
-Future M8 rediscovery triggers do **not** justify pre-building generic Privacy, Governance, Publication, Session, Graph, Resource or Knowledge workflows. If such scope later becomes current and a new concept is accepted, its experience is derived from its purpose/actions/state after rediscovery.
-
-The one M6 Phase 013 item concerns retained historical synchronization labels in downstream representation/architecture material. It creates no current experience owner or mapping change.
+The M6 historical synchronization-label item remains downstream architecture/documentation reconciliation only.
 
 ## Authority boundary
 
 For conflicts:
 
-1. `docs/authority/` governs methodology/cross-cutting policy and current Phase 011 consolidation;
-2. `docs/concepts/` governs concept purpose/state/actions/queries/invariants;
-3. `docs/dependence/` and `docs/synchronizations/` govern application-family/composition;
-4. `docs/mapping/` and Phase 010 consolidation govern concept mapping;
-5. `docs/experience/` supplies retained workflow/experience evidence;
-6. `docs/architecture/` remains downstream pending Phase 013 reconciliation.
-
-An experience view may compose several concepts for comprehension but must not create a new canonical owner for the composed state.
-
-## Phase 012 boundary
-
-Phase 012 may use this experience corpus as supporting evidence while auditing the whole current concept design, but experience convenience may not override current concept/composition/mapping authority.
+1. completed Phase 012 concept-design authority;
+2. current concept/dependence/synchronization authority;
+3. current mapping authority;
+4. retained experience evidence;
+5. retained architecture pending Phase 013 reconciliation.
 
 ## Current next boundary
 
-**Phase 012 — Jackson Concept-Design Consolidation & Completion Decision** is next eligible.
+**Phase 013 — Post-Concept Representation & Architecture Reconciliation** is next eligible.
