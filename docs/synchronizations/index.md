@@ -17,7 +17,8 @@ Concept specifications own purpose, state, actions, lifecycle and invariants. Sy
 - [Composition Economy / Synergy / Integrity](composition-economy-synergy-integrity.md)
 - [Phase 010 Concept Mapping Consolidation](../authority/phase-010-concept-mapping-consolidation.md)
 - [011-D Integrity Audit](../authority/composed-integrity-synchronization-history-audit.md) — current baseline integrity revalidation
-- [011-E Synergy / Simplicity Audit](../authority/composed-synergy-simplicity-generic-fitness-burden-audit.md) — **current final composed economy/synergy revalidation**
+- [011-E Synergy / Simplicity Audit](../authority/composed-synergy-simplicity-generic-fitness-burden-audit.md) — current economy/synergy revalidation
+- [011-F Archetypal / Exceptional Replay](../authority/archetypal-exceptional-progressive-disclosure-misfit-replay.md) — ordinary/exceptional composition truthfulness
 
 ## Current synchronization inventory
 
@@ -96,9 +97,7 @@ synchronization changes                          0
 
 ## 011-E synchronization economy result
 
-011-E re-tests the thirteen rules as conceptual burden, not only as integrity contracts.
-
-The synchronization inventory remains economical because the rules are relation-local and organize into five coordination planes:
+011-E confirms the thirteen rules remain relation-local and organize into five explanatory coordination planes:
 
 ```text
 A  reusable authority binding / contextual assessment
@@ -108,13 +107,9 @@ D  operational realization
 E  historical relationship explanation
 ```
 
-These are explanatory coordination planes, **not architecture layers**.
-
-Current result:
+These are **not architecture layers**.
 
 ```text
-active synchronization types                  13
-required in every family member                0
 rule add/remove/merge justified                0
 synchronization-owned state                    0
 universal coordinator                          0
@@ -124,15 +119,29 @@ R010-04                                        NO DEFECT
 G4                                             CURRENTLY CLOSED
 ```
 
-The principal economy conclusions are:
+## 011-F scenario result
 
-- similar binding relations remain separate when their reusable authorities have different purposes;
-- `SYNC-04/07/11` share an Execution pattern but do not justify a generic `Activity` concept;
-- `SYNC-05` and `SYNC-12` share producer/result structure but do not justify generic `Artifact` production;
-- `SYNC-06` and `SYNC-13` remain conditional cross-kernel relations rather than universal workflow stages;
-- one typed `SYNC-14` is more economical than pair-specific provenance rules while Provenance retains low authority fan-out.
+011-F replays the synchronization-relevant histories through normal and exceptional use without changing the inventory:
 
-No Phase 009 synchronization authority is reopened by 011-E.
+- Learning completion remains distinct from Learned State establishment and Execution endpoint;
+- Learned State current-use status can diverge from historical exact Generation binding;
+- direct Generation remains valid without a fabricated Learning/`SYNC-06` path;
+- Evaluation completion, Evidence finding and Generation completion remain separately expressible under `SYNC-12/13`;
+- Constraint handling remains distinct from satisfaction Evidence;
+- Execution/Attempt state remains distinct from parent semantic result;
+- Provenance explanation remains relationship authority, not source-fact authority.
+
+Current result:
+
+```text
+paired scenario replays                       20 / 20 PASS
+progressive-disclosure concealment classes     6 / 6 PASS
+synchronization add/remove/merge               NONE
+hidden coordinator                             NONE
+R010-05                                        NO DEFECT
+```
+
+Decision-material presentation must expose any synchronization-related qualifier that changes the immediate semantic decision; deeper relation history may remain deferred.
 
 ## Retired / reclassified IDs
 
@@ -140,7 +149,7 @@ No Phase 009 synchronization authority is reopened by 011-E.
 
 `SYNC-15` remains reclassified under the cross-cutting Reproducibility Contract.
 
-Neither is resurrected by 011-D/E.
+Neither is resurrected by 011-D/E/F.
 
 ## Composition guardrails
 
@@ -154,12 +163,13 @@ Neither is resurrected by 011-D/E.
 - optional capabilities add only their own coordination burden;
 - correction/invalidation is owner-scoped, not a generic retroactive cascade;
 - repeated synchronization patterns do not by themselves justify umbrella concepts;
+- decision-material qualifiers cannot be hidden by concise presentation;
 - conceptual synchronization prescribes no event bus, transaction, service, package, queue, schema, architecture layer or runtime call direction.
 
 ## Current next boundary
 
-**011-F — Archetypal, Exceptional & Progressive-Disclosure Misfit Replay** is next eligible.
+**011-G — Adversarial, Degraded, Recovery, Scale & Provider-Semantic-Leakage Validation** is next eligible.
 
-011-G later performs hostile/degraded/recovery stress revalidation of synchronization integrity.
+011-G performs the remaining hostile/degraded/recovery stress revalidation of synchronization integrity.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
