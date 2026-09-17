@@ -8,7 +8,7 @@ status: active
 
 This directory contains the canonical concept specifications accepted in Phase 001 and normalized through Phase 008.
 
-Current cross-concept authority is consolidated by Phase 009, Phase 010 mapping, and Phase 011 quality/misfit validation through 011-I.
+Current cross-concept authority is consolidated by Phase 009, Phase 010 mapping, and the completed Phase 011 quality/misfit program.
 
 ## Accepted concepts
 
@@ -32,11 +32,10 @@ active synchronizations              13
 Phase 008                            COMPLETE
 Phase 009                            COMPLETE
 Phase 010                            COMPLETE
-F1-F5 mapping                        CURRENTLY CLOSED
-Phase 011                            ACTIVE
-011-A..011-I                         COMPLETE
-011-J                                NEXT ELIGIBLE
+Phase 011                            COMPLETE
+011-A..011-J                         COMPLETE
 G1-G7                                CURRENTLY CLOSED
+H1/H2                                OPEN — PHASE 012
 Jackson concept design               NOT COMPLETE
 implementation readiness             NOT READY
 implementation start                 NOT STARTED
@@ -45,9 +44,7 @@ implementation next                  NOT YET
 
 No Phase 011 finding requires adding, removing, merging, splitting or renaming a current concept.
 
-## Residual-register catalog result
-
-011-I confirms:
+## Final Phase 011 catalog result
 
 ```text
 current M2-M5 conceptual defects      0
@@ -66,7 +63,7 @@ The M6 item does not affect concept authority. M8 findings are not accepted conc
 
 Future scope must reopen concept discovery before implementation when it introduces an independently useful product purpose with durable state/history and independently meaningful actions/lifecycle that cannot be owned cleanly by the current catalog.
 
-Known M8 trigger forms include:
+Known trigger forms include:
 
 ```text
 formal composable privacy / guarantee accounting
@@ -107,8 +104,12 @@ E-KERNEL = { Evaluation Criterion, Evaluation, Evidence }
 
 Direct Generation remains valid without Learning/Learned State. Evaluation/Evidence are not universal prerequisites for Generation. Constraint, Execution and Provenance remain capability-conditional.
 
+## Phase 012 boundary
+
+Phase 012 must audit this catalog together with problem authority, application-family/dependence, synchronization, mapping and Phase 011 quality results as one current Jackson concept design.
+
 ## Current next boundary
 
-**011-J — Phase 011 Consolidation, G1-G7 Completion Decision & Phase 012 Handoff** is next eligible.
+**Phase 012 — Jackson Concept-Design Consolidation & Completion Decision** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
