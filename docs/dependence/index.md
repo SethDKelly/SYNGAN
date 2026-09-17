@@ -25,7 +25,8 @@ For concepts `C1` and `C2`, the governing question is:
 - [Phase 009 Consolidation](../authority/phase-009-dependence-composition-consolidation.md).
 - [Phase 010 Concept Mapping Consolidation](../authority/phase-010-concept-mapping-consolidation.md).
 - [011-B Composed Specificity Audit](../authority/composed-specificity-purpose-boundary-audit.md).
-- [011-E Synergy / Simplicity Audit](../authority/composed-synergy-simplicity-generic-fitness-burden-audit.md) — **current reduced-family burden revalidation**.
+- [011-E Synergy / Simplicity Audit](../authority/composed-synergy-simplicity-generic-fitness-burden-audit.md).
+- [011-F Archetypal / Exceptional Replay](../authority/archetypal-exceptional-progressive-disclosure-misfit-replay.md) — **current family-history revalidation**.
 
 ## Current phase state
 
@@ -46,11 +47,13 @@ Phase 011                         ACTIVE
 011-C                             COMPLETE
 011-D                             COMPLETE
 011-E                             COMPLETE
-011-F                             NEXT ELIGIBLE
+011-F                             COMPLETE
+011-G                             NEXT ELIGIBLE
 G1 specificity                    CURRENTLY CLOSED
 G2 familiarity                    CURRENTLY CLOSED
 G3 integrity                      STRONG EVIDENCE / 011-G STRESS REVALIDATION REQUIRED
 G4 synergy / simplicity           CURRENTLY CLOSED
+G5 scenario / adversarial         STRONG EVIDENCE / 011-G STRESS REVALIDATION REQUIRED
 ```
 
 ## Canonical graph result
@@ -106,41 +109,37 @@ E-KERNEL = Evaluation Criterion + Evaluation + Evidence
 
 Authority-only coherent members include Data Meaning, Synthesis Strategy, Constraint and Evaluation Criterion independently.
 
-## Phase 011 revalidation through 011-E
+## Phase 011 revalidation through 011-F
 
-011-B confirms each reduced member preserves distinct concept purpose. 011-C confirms stable vocabulary reuse. 011-D confirms optionality does not collapse under historical composition. 011-E then directly tests whether the family structure actually reduces conceptual burden.
+011-E confirms the application family is a primary simplicity mechanism rather than merely a correctness constraint.
 
-Result:
+011-F then replays all ten required family/capability histories through archetypal and exceptional branches:
 
 ```text
-authority-only members            PASS — no synchronization burden
-L-KERNEL                          PASS
-Direct G-KERNEL                   PASS
-E-KERNEL                          PASS
-Constraint increments             capability-local
-Execution increments              capability-local
-Learned-State reuse               capability-local
-Evidence gating                   capability-local
-Provenance increments             relationship-local
-full eleven-concept member        PASS without universal workflow
-application-family edge change    NONE
-catalog change                    NONE
-R010-04                           NO DEFECT
-G4                                CURRENTLY CLOSED
+authority-only definition / reuse                 PASS
+new Learning -> Learned State                     PASS
+reuse existing Learned State -> Generation        PASS
+direct Generation                                 PASS
+Evaluation-only use                               PASS
+evidence-gated Generation                         PASS
+Constraint-aware Generation/Evaluation            PASS
+Execution-bearing long-running work               PASS
+Provenance-bearing historical explanation         PASS
+full-capability composition                       PASS
 ```
 
-The application family is therefore a primary **simplicity mechanism** rather than merely a correctness constraint.
+Each scenario also passes a material exceptional branch.
 
-Important consequences:
+Application-family consequences remain intact:
 
-- direct Generation does not pay Learning/Learned State burden;
-- evaluation-only capability does not pay Generation burden;
-- authority-only uses do not pay activity or synchronization burden;
-- existing reusable authority/results may be selected without replaying their creation lifecycle;
-- optional Constraint, Execution and Provenance do not create empty mandatory stages;
-- full-suite membership does not imply all concepts are executed in every invocation.
+- direct Generation does not acquire a failed/missing Learning stage;
+- existing Learned State may be reused without replaying Learning;
+- evaluation-only use does not require Generation;
+- optional Constraint, Execution and Provenance absence remains absence, not failure;
+- full-capability membership does not imply all concepts are executed in each invocation;
+- historical/current divergence does not change inclusion dependence.
 
-No application-family contraction/extension rule is reopened by 011-E.
+No application-family edge or conditional rule is reopened by 011-F.
 
 ## Product-scope documentation rule
 
@@ -167,12 +166,10 @@ This is explanation/design order, not implementation order or a mandatory runtim
 
 ## Active Phase 011 boundary
 
-011-F now replays archetypal and exceptional family-member histories to determine whether the progressive-disclosure mapping remains truthful in actual task sequences. 011-G later stress-revalidates integrity under hostile/degraded/recovery conditions.
-
-A later finding may reopen the smallest Phase 009 authority only when a genuine semantic defect is demonstrated. UI convenience, package layout, feature flags or product packaging are not inclusion-dependence evidence.
+011-G now stress-revalidates the current family under adversarial/degraded/recovery/scale/provider pressure. A genuine defect may reopen the smallest Phase 009 authority, but a provider object graph, UI convenience, package layout, feature flag or product SKU is not inclusion-dependence evidence.
 
 ## Current next boundary
 
-**011-F — Archetypal, Exceptional & Progressive-Disclosure Misfit Replay** is next eligible.
+**011-G — Adversarial, Degraded, Recovery, Scale & Provider-Semantic-Leakage Validation** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
