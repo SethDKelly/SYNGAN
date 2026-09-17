@@ -28,11 +28,13 @@ Phase 011                    ACTIVE
 011-C                        COMPLETE
 011-D                        COMPLETE
 011-E                        COMPLETE
-011-F                        NEXT ELIGIBLE
+011-F                        COMPLETE
+011-G                        NEXT ELIGIBLE
 G1 specificity               CURRENTLY CLOSED
 G2 familiarity               CURRENTLY CLOSED
 G3 integrity                 STRONG EVIDENCE / 011-G STRESS REVALIDATION REQUIRED
 G4 synergy / simplicity      CURRENTLY CLOSED
+G5 scenario / adversarial    STRONG EVIDENCE / 011-G STRESS REVALIDATION REQUIRED
 Jackson concept design       NOT COMPLETE
 implementation readiness     NOT READY
 implementation start         NOT STARTED
@@ -99,38 +101,46 @@ D4  distributed / host operational drill-down
 
 These are presentation obligations, not screens, endpoints, API tiers or persistence layers.
 
-## Phase 011 revalidation through 011-E
+## Phase 011 revalidation through 011-F
 
-011-B finds no specificity-driven mapping defect. 011-C strengthens compatibility vocabulary without changing F3. 011-D confirms owner-qualified current/historical semantics survive synchronization, invalidation and reconstruction. 011-E then tests whether the final mapped experience can remain simple without collapsing the concept model.
+011-B finds no specificity-driven mapping defect. 011-C strengthens compatibility vocabulary without changing F3. 011-D confirms owner-qualified current/historical semantics survive synchronization, invalidation and reconstruction. 011-E confirms progressive disclosure can structurally simplify experience without collapsing the concept model.
 
-Current result:
+011-F then performs the concrete scenario replay:
 
 ```text
-G1 specificity                         CURRENTLY CLOSED
-G2 familiarity                         CURRENTLY CLOSED
-G3 integrity                           STRONG EVIDENCE / 011-G STRESS REVALIDATION REQUIRED
-G4 synergy / simplicity                CURRENTLY CLOSED
-R010-01                                NO DEFECT
-R010-02                                NO DEFECT — COMPATIBILITY GUIDANCE STRENGTHENED
-R010-04                                NO DEFECT
-R010-05 structural simplicity portion  NO DEFECT — 011-F REPLAY PENDING
-mapping reopen                         NONE
+required scenario families                       10 / 10
+archetypal histories                             10 / 10 PASS
+material exceptional histories                   10 / 10 PASS
+paired scenario replays                          20 / 20 PASS
+progressive-disclosure concealment classes        6 / 6 PASS
+MAT-2 / MAT-3 findings                            0 / 0
+mapping reopen                                    NONE
+R010-05                                           NO DEFECT
 ```
 
-011-E specifically confirms that D0-D4 can **structurally** reduce actor-visible burden because:
+011-F clarifies the D0/D1 contract:
 
-- D0/D1 retain the owner, immediate action, material semantic basis and material limitations;
-- D2 introduces optional Constraint/Execution/Evidence/Provenance detail only when present or requested;
-- D3 retains exact current-versus-historical explanation;
-- D4 defers high-volume host/distributed detail without making it authoritative;
-- absent capabilities do not create empty mandatory steps.
+> **Progressive disclosure may defer explanatory depth, but it must not defer a qualifier whose omission could change the actor's immediate semantic decision or make current state appear stronger than the owning concept supports.**
 
-This is not yet the final progressive-disclosure verdict. 011-F must replay archetypal and exceptional end-to-end histories to ensure a concise D0/D1 view never conceals a fact material to the immediate semantic decision.
+Therefore, where decision-material, D0/D1 must preserve distinctions such as:
+
+- candidate versus completed result;
+- favorable/unfavorable/indeterminate/bounded Evidence strength;
+- current-use status versus historical exact use;
+- semantic completion versus Execution/Attempt state;
+- unresolved cancellation or authority-continuity qualification;
+- optional capability absence when omission could be mistaken for failure.
+
+D2-D4 may continue to defer full method detail, Attempt history, Provenance traversal, revision diff and host/distributed diagnostics when those details do not change the immediate semantic decision.
+
+This is a Phase 011 quality clarification, not a new Phase 010 mapping owner or a public API/UI contract.
+
+## Active stress boundary
+
+011-G now stress-tests whether the same mapping/concept distinctions remain truthful under adversarial, degraded, recovery, scale and provider-semantic pressure. A genuine 011-G defect may reopen the smallest affected Phase 009/010/current-concept authority.
 
 ## Current next boundary
 
-**011-F — Archetypal, Exceptional & Progressive-Disclosure Misfit Replay** is next eligible.
-
-If 011-F finds a genuine mapping/disclosure defect, reopen only the smallest affected Phase 010 authority. A poor hypothetical UI implementation alone is not a mapping defect.
+**011-G — Adversarial, Degraded, Recovery, Scale & Provider-Semantic-Leakage Validation** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
