@@ -26,7 +26,8 @@ For concepts `C1` and `C2`, the governing question is:
 - [Phase 010 Concept Mapping Consolidation](../authority/phase-010-concept-mapping-consolidation.md).
 - [011-B Composed Specificity Audit](../authority/composed-specificity-purpose-boundary-audit.md).
 - [011-E Synergy / Simplicity Audit](../authority/composed-synergy-simplicity-generic-fitness-burden-audit.md).
-- [011-F Archetypal / Exceptional Replay](../authority/archetypal-exceptional-progressive-disclosure-misfit-replay.md) — **current family-history revalidation**.
+- [011-F Archetypal / Exceptional Replay](../authority/archetypal-exceptional-progressive-disclosure-misfit-replay.md).
+- [011-G Adversarial / Recovery / Scale / Provider Stress Validation](../authority/adversarial-degraded-recovery-scale-provider-semantic-leakage-validation.md) — **current stress revalidation**.
 
 ## Current phase state
 
@@ -48,12 +49,13 @@ Phase 011                         ACTIVE
 011-D                             COMPLETE
 011-E                             COMPLETE
 011-F                             COMPLETE
-011-G                             NEXT ELIGIBLE
+011-G                             COMPLETE
+011-H                             NEXT ELIGIBLE
 G1 specificity                    CURRENTLY CLOSED
 G2 familiarity                    CURRENTLY CLOSED
-G3 integrity                      STRONG EVIDENCE / 011-G STRESS REVALIDATION REQUIRED
+G3 integrity                      CURRENTLY CLOSED
 G4 synergy / simplicity           CURRENTLY CLOSED
-G5 scenario / adversarial         STRONG EVIDENCE / 011-G STRESS REVALIDATION REQUIRED
+G5 scenario / adversarial         CURRENTLY CLOSED
 ```
 
 ## Canonical graph result
@@ -109,41 +111,38 @@ E-KERNEL = Evaluation Criterion + Evaluation + Evidence
 
 Authority-only coherent members include Data Meaning, Synthesis Strategy, Constraint and Evaluation Criterion independently.
 
-## Phase 011 revalidation through 011-F
+## Phase 011 family revalidation through 011-G
 
-011-E confirms the application family is a primary simplicity mechanism rather than merely a correctness constraint.
+011-E confirms the application family is a primary simplicity mechanism. 011-F confirms all required family/capability histories remain truthful under archetypal/exceptional use. 011-G then stress-tests optionality under recovery, scale and provider pressure.
 
-011-F then replays all ten required family/capability histories through archetypal and exceptional branches:
+Stress consequences remain intact:
+
+- direct Generation does not acquire Learning/Learned State because a provider calls an implementation object a `model` or `job`;
+- Evaluation/Evidence do not become universal Generation prerequisites because a platform exposes generic validation/quality features;
+- provider lineage capability does not make Provenance mandatory for variants that do not claim it;
+- absence of Execution remains valid for Execution-light conceptual variants; provider jobs do not create a hidden universal Execution requirement at the concept-family level;
+- a recovery condition does not add a Recovery concept to every family member;
+- degraded capacity does not add a Degraded Mode concept;
+- topology or text pressure does not add Relationship/Text/Tokenizer concepts merely to satisfy a provider/runtime representation;
+- scale pressure cannot contract a committed family member's semantics by dropping included capabilities/requirements after commitment.
+
+Current result:
 
 ```text
-authority-only definition / reuse                 PASS
-new Learning -> Learned State                     PASS
-reuse existing Learned State -> Generation        PASS
-direct Generation                                 PASS
-Evaluation-only use                               PASS
-evidence-gated Generation                         PASS
-Constraint-aware Generation/Evaluation            PASS
-Execution-bearing long-running work               PASS
-Provenance-bearing historical explanation         PASS
-full-capability composition                       PASS
+application-family edge change        NONE
+conditional-family rule change        NONE
+provider-driven inclusion edge        NONE
+recovery-driven inclusion edge        NONE
+scale-driven inclusion edge           NONE
+catalog change                        NONE
+R010-03                               NO DEFECT
+R010-06                               NO DEFECT
+R010-08                               NO DEFECT
 ```
-
-Each scenario also passes a material exceptional branch.
-
-Application-family consequences remain intact:
-
-- direct Generation does not acquire a failed/missing Learning stage;
-- existing Learned State may be reused without replaying Learning;
-- evaluation-only use does not require Generation;
-- optional Constraint, Execution and Provenance absence remains absence, not failure;
-- full-capability membership does not imply all concepts are executed in each invocation;
-- historical/current divergence does not change inclusion dependence.
-
-No application-family edge or conditional rule is reopened by 011-F.
 
 ## Product-scope documentation rule
 
-A family member may remain coherent while losing a former advertised capability after contraction. Downstream mapping and representation must describe the actual included concepts/capabilities and remove stale promises.
+A family member may remain coherent while losing a former advertised capability after deliberate contraction. Downstream mapping and representation must describe the actual included concepts/capabilities and remove stale promises.
 
 Application-family validity remains distinct from product packaging, implementation modularity, SKUs, runtime feature flags or deployment profiles.
 
@@ -164,12 +163,14 @@ Evaluation before Evidence
 
 This is explanation/design order, not implementation order or a mandatory runtime wizard.
 
-## Active Phase 011 boundary
+## Future-scope boundary
 
-011-G now stress-revalidates the current family under adversarial/degraded/recovery/scale/provider pressure. A genuine defect may reopen the smallest Phase 009 authority, but a provider object graph, UI convenience, package layout, feature flag or product SKU is not inclusion-dependence evidence.
+011-H may refine capability-conditional family rules if a plausible extension can reuse existing concepts but needs a new inclusion condition. It must not add an edge merely because a provider/library implementation happens to bundle objects together.
+
+A genuine new concept requires independent purpose + state + action/lifecycle evidence before application-family inclusion can be defined.
 
 ## Current next boundary
 
-**011-G — Adversarial, Degraded, Recovery, Scale & Provider-Semantic-Leakage Validation** is next eligible.
+**011-H — Future-Scope, Extensibility, New-Capability Pressure & Rediscovery Triggers** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
