@@ -15,10 +15,7 @@ Concept specifications own purpose, state, actions, lifecycle and invariants. Sy
 - [Phase 009 Consolidation](../authority/phase-009-dependence-composition-consolidation.md)
 - [Synchronization Trigger / Ownership Normalization](trigger-ownership-normalization.md)
 - [Composition Economy / Synergy / Integrity](composition-economy-synergy-integrity.md)
-- [011-D Integrity Audit](../authority/composed-integrity-synchronization-history-audit.md)
-- [011-G Stress Validation](../authority/adversarial-degraded-recovery-scale-provider-semantic-leakage-validation.md)
-- [011-H Future-Scope Audit](../authority/future-scope-extensibility-new-capability-rediscovery-audit.md)
-- [011-I Residual Conceptual Misfit Register](../authority/residual-conceptual-misfit-register.md)
+- [Phase 011 Consolidation](../authority/phase-011-design-quality-misfit-consolidation.md)
 
 ## Current synchronization inventory
 
@@ -69,7 +66,7 @@ Provenance typed relationship assertions           -> Provenance
 synchronization-owned canonical state              -> NONE
 ```
 
-## Current validation result
+## Final Phase 011 validation result
 
 ```text
 13 / 13 synchronizations preserve singular ownership
@@ -90,7 +87,7 @@ R010-03                                         NO DEFECT
 G3                                              CURRENTLY CLOSED
 ```
 
-011-I confirms no residual synchronization defect and no current add/remove/merge/new-sync requirement.
+Phase 011 closes with no residual synchronization defect and no current add/remove/merge/new-sync requirement.
 
 ## Future synchronization rule
 
@@ -111,7 +108,7 @@ If future capability instead introduces independent purpose + durable state/hist
 
 `SYNC-15` remains reclassified under the cross-cutting Reproducibility Contract.
 
-Some retained Phase 006 contracts still use historical numbering. Current Phase 009 authority controls the active inventory. 011-I carries this as the one bounded `MAT-1 / M6` Phase 013 documentation/architecture reconciliation item—not a synchronization-design reopen.
+Some retained Phase 006 representation/architecture contracts still use historical numbering. Current Phase 009 authority controls the active inventory. This remains the one bounded `MAT-1 / M6` Phase 013 reconciliation item—not a synchronization-design reopen.
 
 ## Composition guardrails
 
@@ -130,8 +127,12 @@ Some retained Phase 006 contracts still use historical numbering. Current Phase 
 - future implementation call flow is not synchronization evidence;
 - conceptual synchronization prescribes no event bus, transaction, service, package, queue, schema, architecture layer or runtime call direction.
 
+## Phase 012 boundary
+
+Phase 012 must verify this synchronization inventory and ownership model together with the current concepts, application family, mapping and Phase 011 quality closure before making the Jackson completion decision.
+
 ## Current next boundary
 
-**011-J — Phase 011 Consolidation, G1-G7 Completion Decision & Phase 012 Handoff** is next eligible.
+**Phase 012 — Jackson Concept-Design Consolidation & Completion Decision** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
