@@ -21,6 +21,7 @@ Current Phase 011 authority includes:
 - [`Composed Familiarity Audit`](docs/authority/composed-familiarity-reuse-vocabulary-external-model-audit.md)
 - [`Synchronization / Historical Integrity Audit`](docs/authority/composed-integrity-synchronization-history-audit.md)
 - [`Synergy, Simplicity, Generic Fitness & Conceptual-Burden Audit`](docs/authority/composed-synergy-simplicity-generic-fitness-burden-audit.md)
+- [`Archetypal, Exceptional & Progressive-Disclosure Misfit Replay`](docs/authority/archetypal-exceptional-progressive-disclosure-misfit-replay.md)
 - [`Phase 011`](docs/phases/011/index.md)
 - [`Jackson Methodology Completion Matrix`](docs/authority/jackson-methodology-completion-matrix.md)
 
@@ -39,12 +40,13 @@ Phase 011                            ACTIVE
 011-C                                COMPLETE
 011-D                                COMPLETE
 011-E                                COMPLETE
-011-F                                NEXT ELIGIBLE
+011-F                                COMPLETE
+011-G                                NEXT ELIGIBLE
 G1 specificity                       CURRENTLY CLOSED
 G2 familiarity                       CURRENTLY CLOSED
 G3 integrity                         STRONG EVIDENCE / 011-G STRESS REVALIDATION REQUIRED
 G4 synergy / simplicity              CURRENTLY CLOSED
-G5 scenario / adversarial            PARTIAL TO STRONG
+G5 scenario / adversarial            STRONG EVIDENCE / 011-G STRESS REVALIDATION REQUIRED
 G6 future-scope                      STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
 G7 residual misfit register          PARTIAL
 Jackson design completion            IN PROGRESS
@@ -53,59 +55,36 @@ implementation start                 NOT STARTED
 implementation next                  NOT YET
 ```
 
-## Phase 011 results through 011-E
-
-### 011-B — specificity
+## Phase 011 results through 011-F
 
 ```text
-11 / 11 concepts PASS
-R010-01 NO DEFECT
-G1 CURRENTLY CLOSED
+G1 specificity                       CURRENTLY CLOSED
+G2 familiarity                       CURRENTLY CLOSED
+G4 synergy / simplicity              CURRENTLY CLOSED
+R010-01                              NO DEFECT
+R010-02                              NO DEFECT — GUIDANCE STRENGTHENED
+R010-04                              NO DEFECT
+R010-05                              NO DEFECT
 ```
 
-### 011-C — familiarity
+011-D provides a positive normal/historical G3 baseline, while 011-G still owns stress revalidation.
+
+011-F completes the ordinary/archetypal and exceptional scenario replay:
 
 ```text
-11 / 11 canonical names retained
-external-model comparison PASS
-R010-02 NO DEFECT — COMPATIBILITY GUIDANCE STRENGTHENED
-B4 / G2 CURRENTLY CLOSED
+10 / 10 required scenario families
+10 / 10 archetypal histories PASS
+10 / 10 exceptional histories PASS
+20 / 20 paired replays PASS
+6 / 6 progressive-disclosure concealment classes PASS
+MAT-2 / MAT-3 findings 0 / 0
 ```
 
-### 011-D — integrity baseline
+Its controlling disclosure rule is:
 
-```text
-13 / 13 active synchronizations preserve singular ownership
-current-versus-historical truth                 PASS
-Evidence/Generation authority separation        PASS
-semantic/Execution separation                   PASS
-Provenance low-authority-fan-out baseline       PASS
-recovery/reconstruction ownership baseline      PASS
-hidden coordinator required                     NO
-MAT-2 / MAT-3 findings                          0 / 0
-```
+> **Progressive disclosure may defer explanatory depth, but it must not defer a qualifier whose omission could change the actor's immediate semantic decision or make current state appear stronger than the owning concept supports.**
 
-G3 remains subject to 011-G stress revalidation.
-
-### 011-E — synergy / simplicity / generic fitness
-
-```text
-concept add/remove/merge/split justified        0
-synchronization add/remove/merge justified      0
-reduced-family burden replay                    PASS
-positive composed synergies                     CONFIRMED
-repeated-pattern missing-purpose probe          PASS
-cross-cutting qualifier discipline              PASS
-generic-fitness / domain anchoring              PASS
-progressive-disclosure structural simplicity    PASS
-hidden universal coordinator                    NONE
-MAT-2 / MAT-3 findings                          0 / 0
-R010-04                                         NO DEFECT
-R010-05 simplicity portion                      NO DEFECT — 011-F REPLAY PENDING
-G4                                              CURRENTLY CLOSED
-```
-
-The catalog is not optimized by raw concept count. Complexity is bounded through valid application-family subsets, occurrence-local synchronization and progressive disclosure. Shared patterns do not justify generic `Activity`, `Artifact`, `Result`, `Validation`, `Status` or Workflow concepts merely for symmetry.
+G5 therefore has strong evidence but remains stress-pending until 011-G.
 
 ## Phase 011 sequence
 
@@ -115,8 +94,8 @@ The catalog is not optimized by raw concept count. Complexity is bounded through
 011-C  COMPLETE — familiarity / reuse / external-model comparison
 011-D  COMPLETE — synchronization / correction / invalidation / historical integrity
 011-E  COMPLETE — synergy / simplicity / generic fitness / conceptual burden
-011-F  NEXT — archetypal / exceptional / progressive-disclosure replay
-011-G  adversarial / degraded / recovery / scale / provider leakage
+011-F  COMPLETE — archetypal / exceptional / progressive-disclosure replay
+011-G  NEXT — adversarial / degraded / recovery / scale / provider leakage
 011-H  future-scope / extensibility
 011-I  residual conceptual misfit register
 011-J  Phase 011 consolidation / Phase 012 handoff
@@ -137,6 +116,6 @@ Only a positive Phase 014 may change implementation to **READY / NOT STARTED / N
 
 ## Current next boundary
 
-**011-F — Archetypal, Exceptional & Progressive-Disclosure Misfit Replay** is next eligible.
+**011-G — Adversarial, Degraded, Recovery, Scale & Provider-Semantic-Leakage Validation** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
