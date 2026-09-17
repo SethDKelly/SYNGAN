@@ -63,9 +63,8 @@ Current authority:
 - [011-D](011/011-D-integrity-under-synchronization-correction-invalidation-historical-composition.md)
 - [011-E](011/011-E-synergy-simplicity-generic-fitness-conceptual-burden-audit.md)
 - [011-F](011/011-F-archetypal-exceptional-progressive-disclosure-misfit-replay.md)
-- [011-D G3 Baseline Authority](../authority/composed-integrity-synchronization-history-audit.md)
-- [011-E G4 Authority](../authority/composed-synergy-simplicity-generic-fitness-burden-audit.md)
-- [011-F G5 Ordinary/Exceptional Authority](../authority/archetypal-exceptional-progressive-disclosure-misfit-replay.md)
+- [011-G](011/011-G-adversarial-degraded-recovery-scale-provider-semantic-leakage-validation.md)
+- [011-G G3/G5 Stress Authority](../authority/adversarial-degraded-recovery-scale-provider-semantic-leakage-validation.md)
 - [Jackson Methodology Completion Matrix](../authority/jackson-methodology-completion-matrix.md)
 
 Current state:
@@ -78,31 +77,40 @@ Phase 011                    ACTIVE
 011-D                        COMPLETE
 011-E                        COMPLETE
 011-F                        COMPLETE
-011-G                        NEXT ELIGIBLE
+011-G                        COMPLETE
+011-H                        NEXT ELIGIBLE
 G1 specificity               CURRENTLY CLOSED
 G2 familiarity               CURRENTLY CLOSED
-G3 integrity                 STRONG EVIDENCE / 011-G STRESS REVALIDATION REQUIRED
+G3 integrity                 CURRENTLY CLOSED
 G4 synergy / simplicity      CURRENTLY CLOSED
-G5 scenario / adversarial    STRONG EVIDENCE / 011-G STRESS REVALIDATION REQUIRED
+G5 scenario / adversarial    CURRENTLY CLOSED
 G6 future-scope              STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
 G7 residual misfit register  PARTIAL
 ```
 
-011-F replays ten required family/capability histories through archetypal and exceptional branches:
+011-G closes the hostile/degraded/recovery/scale/provider portion of G3/G5:
 
 ```text
-10 / 10 required scenario families
-10 / 10 archetypal histories PASS
-10 / 10 exceptional histories PASS
-20 / 20 paired replays PASS
-6 / 6 progressive-disclosure concealment classes PASS
-MAT-2 / MAT-3 findings 0 / 0
-R010-05 NO DEFECT
+stale / contradictory authority            PASS
+concurrent / superseded work               PASS
+regressive recovery / stale writer         PASS
+partial material / physical result         PASS
+runtime distribution closure               PASS
+scale / approximation                      PASS
+provider job/run leakage                   PASS
+provider lineage/catalog/model leakage     PASS
+combined hostile composition               PASS
+MAT-2 / MAT-3 findings                     0 / 0
+R010-03                                    NO DEFECT
+R010-06                                    NO DEFECT
+R010-08                                    NO DEFECT
+G3                                         CURRENTLY CLOSED
+G5                                         CURRENTLY CLOSED
 ```
 
-Its governing clarification is that progressive disclosure may defer explanatory depth but may not defer a qualifier that changes the immediate semantic decision or makes current state appear stronger than the owner supports.
+Provider facts remain bounded to the evidentiary strength they actually establish; provider vocabulary never becomes stronger SYNGAN semantics by naming alone.
 
-011-G now owns the remaining adversarial/degraded/recovery/scale/provider pressure for G3/G5, plus `R010-06` and `R010-08`.
+A bounded Phase 013 reconciliation note remains for historical synchronization IDs in retained Phase 006 documentation. Current Phase 009 authority already controls active identifiers.
 
 Current sequence:
 
@@ -113,8 +121,8 @@ Current sequence:
 011-D  COMPLETE — integrity baseline
 011-E  COMPLETE — synergy / simplicity / generic fitness / conceptual burden
 011-F  COMPLETE — archetypal / exceptional / progressive-disclosure replay
-011-G  NEXT — adversarial / degraded / recovery / scale / provider leakage
-011-H  future-scope / extensibility
+011-G  COMPLETE — adversarial / degraded / recovery / scale / provider leakage
+011-H  NEXT — future-scope / extensibility / rediscovery triggers
 011-I  residual misfit register
 011-J  Phase 011 consolidation / Phase 012 handoff
 ```
@@ -127,7 +135,7 @@ Planned. A positive result does not make implementation ready.
 
 ### Phase 013 — Post-Concept Representation & Architecture Reconciliation
 
-Planned. Reconcile retained architecture against completed concept design. Remains design-only.
+Planned. Reconcile retained architecture against completed concept design, including historical synchronization-numbering drift recorded by 011-G. Remains design-only.
 
 ### Phase 014 — Whole-Design Consolidation & Implementation-Readiness Decision
 
@@ -139,6 +147,6 @@ Future only. Explicit authorization is still required before implementation begi
 
 ## Current next boundary
 
-**011-G — Adversarial, Degraded, Recovery, Scale & Provider-Semantic-Leakage Validation** is next eligible.
+**011-H — Future-Scope, Extensibility, New-Capability Pressure & Rediscovery Triggers** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
