@@ -62,8 +62,10 @@ Current authority:
 - [011-C](011/011-C-familiarity-reuse-vocabulary-external-model-comparison-audit.md)
 - [011-D](011/011-D-integrity-under-synchronization-correction-invalidation-historical-composition.md)
 - [011-E](011/011-E-synergy-simplicity-generic-fitness-conceptual-burden-audit.md)
+- [011-F](011/011-F-archetypal-exceptional-progressive-disclosure-misfit-replay.md)
 - [011-D G3 Baseline Authority](../authority/composed-integrity-synchronization-history-audit.md)
 - [011-E G4 Authority](../authority/composed-synergy-simplicity-generic-fitness-burden-audit.md)
+- [011-F G5 Ordinary/Exceptional Authority](../authority/archetypal-exceptional-progressive-disclosure-misfit-replay.md)
 - [Jackson Methodology Completion Matrix](../authority/jackson-methodology-completion-matrix.md)
 
 Current state:
@@ -75,19 +77,32 @@ Phase 011                    ACTIVE
 011-C                        COMPLETE
 011-D                        COMPLETE
 011-E                        COMPLETE
-011-F                        NEXT ELIGIBLE
+011-F                        COMPLETE
+011-G                        NEXT ELIGIBLE
 G1 specificity               CURRENTLY CLOSED
 G2 familiarity               CURRENTLY CLOSED
 G3 integrity                 STRONG EVIDENCE / 011-G STRESS REVALIDATION REQUIRED
 G4 synergy / simplicity      CURRENTLY CLOSED
-G5 scenario / adversarial    PARTIAL TO STRONG
+G5 scenario / adversarial    STRONG EVIDENCE / 011-G STRESS REVALIDATION REQUIRED
 G6 future-scope              STRONG EVIDENCE / CURRENT REVALIDATION REQUIRED
 G7 residual misfit register  PARTIAL
 ```
 
-011-D confirms 13/13 active synchronizations preserve singular ownership under normal/historical correction, invalidation, supersession and recovery/reconstruction composition. `R010-03` remains open only for 011-G stress revalidation.
+011-F replays ten required family/capability histories through archetypal and exceptional branches:
 
-011-E confirms the eleven concepts and thirteen synchronization types remain compositionally economical: reduced family members shed unrelated burden, six material positive synergies are retained, no generic umbrella concept or hidden coordinator is needed, no concept/synchronization change is justified, and G4 is currently closed. `R010-04` is NO DEFECT. The structural simplicity portion of `R010-05` passes, with final progressive-disclosure scenario replay still owned by 011-F.
+```text
+10 / 10 required scenario families
+10 / 10 archetypal histories PASS
+10 / 10 exceptional histories PASS
+20 / 20 paired replays PASS
+6 / 6 progressive-disclosure concealment classes PASS
+MAT-2 / MAT-3 findings 0 / 0
+R010-05 NO DEFECT
+```
+
+Its governing clarification is that progressive disclosure may defer explanatory depth but may not defer a qualifier that changes the immediate semantic decision or makes current state appear stronger than the owner supports.
+
+011-G now owns the remaining adversarial/degraded/recovery/scale/provider pressure for G3/G5, plus `R010-06` and `R010-08`.
 
 Current sequence:
 
@@ -97,8 +112,8 @@ Current sequence:
 011-C  COMPLETE — familiarity/reuse
 011-D  COMPLETE — integrity baseline
 011-E  COMPLETE — synergy / simplicity / generic fitness / conceptual burden
-011-F  NEXT — archetypal / exceptional / progressive-disclosure replay
-011-G  adversarial / degraded / recovery / scale / provider leakage
+011-F  COMPLETE — archetypal / exceptional / progressive-disclosure replay
+011-G  NEXT — adversarial / degraded / recovery / scale / provider leakage
 011-H  future-scope / extensibility
 011-I  residual misfit register
 011-J  Phase 011 consolidation / Phase 012 handoff
@@ -124,6 +139,6 @@ Future only. Explicit authorization is still required before implementation begi
 
 ## Current next boundary
 
-**011-F — Archetypal, Exceptional & Progressive-Disclosure Misfit Replay** is next eligible.
+**011-G — Adversarial, Degraded, Recovery, Scale & Provider-Semantic-Leakage Validation** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
