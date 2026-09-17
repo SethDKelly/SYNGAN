@@ -26,7 +26,8 @@ accepted concepts            11
 active synchronizations      13
 Phase 013                    ACTIVE
 013-A                        COMPLETE
-013-B                        NEXT ELIGIBLE
+013-B                        COMPLETE
+013-C                        NEXT ELIGIBLE
 R1 architecture reconciliation DOWNSTREAM / IN PROGRESS
 implementation readiness     NOT READY
 implementation start         NOT STARTED
@@ -37,7 +38,9 @@ implementation next          NOT YET
 
 - [Phase 013 Entry & Decomposition](013-entry-decomposition.md)
 - [013-A Reconciliation Authority / Corpus Inventory / Taxonomy](013-A-reconciliation-authority-retained-corpus-inventory-precedence-reset-discrepancy-taxonomy.md)
+- [013-B Representation / Identity / Handle / View Reconciliation](013-B-representation-layering-public-contract-identity-revision-handle-view-reconciliation.md)
 - [Phase 013 Architecture Reconciliation Authority](../../authority/phase-013-architecture-reconciliation-authority.md)
+- [Phase 013-B Representation Reconciliation](../../architecture/phase-013-b-representation-layering-public-contract-identity-view-reconciliation.md)
 - [Phase 012 Jackson Concept-Design Consolidation](../../authority/phase-012-jackson-concept-design-consolidation.md)
 - [Jackson Methodology Completion Matrix](../../authority/jackson-methodology-completion-matrix.md)
 - [Jackson Design Completion & Implementation Hold](../../authority/jackson-design-completion-implementation-hold.md)
@@ -45,31 +48,52 @@ implementation next          NOT YET
 
 ## 013-A result
 
-013-A establishes the governing Phase 013 method before substantive architecture corrections begin.
+013-A established the Phase 013 precedence, discrepancy taxonomy, materiality, dispositions and residual-register contract.
 
 ```text
 substantive retained architecture documents   19
 retained ADRs                                  10
-precedence reset                               COMPLETE
-subject-state model                            COMPLETE
-AR-0..AR-9 discrepancy taxonomy                COMPLETE
-AMAT-0..AMAT-3 materiality                     COMPLETE
-disposition vocabulary                         COMPLETE
-cross-subphase propagation rules               COMPLETE
-residual-register contract                     COMPLETE
+AR-0..AR-9 taxonomy                           COMPLETE
+AMAT-0..AMAT-3 materiality                    COMPLETE
 known entry candidates                          6
 AMAT-2 defects declared by 013-A                0
 AMAT-3 blockers declared by 013-A               0
 upstream reopen                                NONE
 ```
 
-The six entry candidates are bounded synchronization-count/ID drift, historical precedence language and superseded implementation-reentry assumptions. They are not evidence of a current conceptual defect.
+## 013-B result
+
+013-B reconciled representation layering, public contract roles, identity/revision separation, handles and bounded views against current concept/mapping authority.
+
+```text
+representation spine                    RETAINED WITH BOUNDED CLARIFICATION
+AMAT-2 representation defects            0
+AMAT-3 blockers                          0
+AR-9 contradictions                      0
+upstream reopen                          NONE
+new concepts                             0
+new synchronizations                     0
+mandatory new product surfaces           0
+mandatory package/service topology       0
+```
+
+Durable clarifications now include:
+
+- architecture represents upstream semantic authority rather than owning it;
+- logical layers are responsibility/dependency views, not mandatory packages/services/API tiers;
+- parity applies to optional surfaces when present and does not require REST/CLI/web products;
+- stable logical identity remains distinct from locator/provider identity;
+- identity, semantic revision/commitment, current state version and representation schema version remain separate;
+- handles/views resolve and compose authority rather than becoming detached canonical state;
+- retry/resume/reconcile/cancel operational state remains Execution-owned even when an activity-facing façade forwards the action;
+- `Result handle` is representation shorthand, not a shared Result concept/lifecycle;
+- D0-D4 remains semantic disclosure depth rather than architecture tiers.
+
+Historical `007-D` synchronization-count wording and older representation-precedence wording are semantically resolved but remain explicit 013-I corpus-cleanup obligations.
 
 ## Retained architecture baseline
 
-The Phase 004 detailed architecture, Phase 006 reconciliation, Phase 007-D through 007-J architecture refinements, Phase 007 consolidated architecture contract, and ADR-0001 through ADR-0010 are reconciliation inputs.
-
-They are not allowed to override completed concept design merely because they were historically labeled `active`, `current`, `canonical`, or implementation-facing.
+The Phase 004 detailed architecture, Phase 006 reconciliation, Phase 007-D through 007-J architecture refinements, Phase 007 consolidated architecture contract, and ADR-0001 through ADR-0010 remain reconciliation inputs beneath completed concept design and completed Phase 013 decisions.
 
 ## Phase structure
 
@@ -78,10 +102,10 @@ They are not allowed to override completed concept design merely because they we
        Precedence Reset & Discrepancy Taxonomy                         COMPLETE
 
 013-B  Representation Layering, Public Contract, Identity,
-       Revision, Handle & View Reconciliation                         NEXT
+       Revision, Handle & View Reconciliation                         COMPLETE
 
 013-C  Control Persistence, Historical Reference,
-       Transaction/Concurrency, Migration & Recovery-State Reconciliation
+       Transaction/Concurrency, Migration & Recovery-State Reconciliation    NEXT
 
 013-D  Distributed Data Boundary, Structured Topology, Manifest,
        Candidate/Seal/Promotion & Large-State Reconciliation
@@ -107,7 +131,7 @@ They are not allowed to override completed concept design merely because they we
 
 ## Reconciliation method
 
-Phase 013 uses the canonical dispositions:
+Phase 013 uses:
 
 ```text
 RETAIN
@@ -118,15 +142,11 @@ DEFER
 UPSTREAM-REOPEN
 ```
 
-Architecture discrepancies are classified AR-0 through AR-9 and materiality AMAT-0 through AMAT-3 under the Phase 013 Architecture Reconciliation Authority.
+Only a demonstrated AR-9 semantic contradiction may justify `UPSTREAM-REOPEN`.
 
-Only a demonstrated AR-9 semantic contradiction may justify `UPSTREAM-REOPEN`. Architecture inconvenience, provider preference, existing code, test shape or historical implementation planning is insufficient.
+## Required carry-forward
 
-## Required Phase 013 carry-forward
-
-### M6 historical synchronization reconciliation
-
-Current Phase 009 authority controls:
+### M6 synchronization history
 
 ```text
 historical synchronization IDs          15
@@ -135,11 +155,9 @@ SYNC-08                                  retired — Generation-local behavior
 SYNC-15                                  reclassified — Reproducibility contract
 ```
 
-Historical architecture using older `11 / 15` or current-looking `SYNC-08` / `SYNC-15` semantics must be reconciled before 013-J.
-
 ### M8 exclusion
 
-Future rediscovery triggers remain outside default architecture scope. Phase 013 must not reserve architecture for formal composable privacy, product-owned governance/release, independent output publication, durable request/session/feed lifecycles, independently governed graph relationships, resource/economic accounting, or reusable knowledge/memory unless upstream concept discovery is first reopened.
+Future rediscovery triggers remain outside default architecture scope and receive no placeholder services/stores/APIs absent renewed concept discovery.
 
 ## Implementation boundary
 
@@ -149,10 +167,8 @@ IMPLEMENTATION START       NOT STARTED
 IMPLEMENTATION NEXT        NOT YET
 ```
 
-Do not make production code, package, schema, API, migration, provider adapter or executable-conformance changes during Phase 013 merely to crystallize reconciled architecture.
-
 Only 013-J may close R1. Phase 014 still owns the whole-design implementation-readiness decision.
 
 ## Current next boundary
 
-**013-B — Representation Layering, Public Contract, Identity, Revision, Handle & View Reconciliation** is next eligible.
+**013-C — Control Persistence, Historical Reference, Transaction/Concurrency, Migration & Recovery-State Reconciliation** is next eligible.
