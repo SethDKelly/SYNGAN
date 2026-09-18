@@ -27,20 +27,22 @@ This directory contains the canonical concept specifications accepted in Phase 0
 ```text
 accepted concepts                    11
 active synchronizations              13
-Phase 008                            COMPLETE
-Phase 009                            COMPLETE
-Phase 010                            COMPLETE
-Phase 011                            COMPLETE
-Phase 012                            COMPLETE
+Phase 008-012                        COMPLETE
 A1-H2                                CURRENTLY CLOSED
 Jackson concept design               COMPLETE FOR CURRENT PRODUCT SCOPE
-representation/architecture          PENDING PHASE 013 RECONCILIATION
+Phase 013                            COMPLETE
+R1 architecture reconciliation       CURRENTLY CLOSED
+representation / architecture       RECONCILED / CURRENT
+Phase 014                            ACTIVE
+014-A                                NEXT ELIGIBLE
+R2                                   OPEN
+R3                                   OPEN
 implementation readiness             NOT READY
 implementation start                 NOT STARTED
 implementation next                  NOT YET
 ```
 
-Phase 012's whole-current-state audit found no reason to add, remove, merge, split or rename a current concept.
+Phase 012 found no reason to add, remove, merge, split or rename a current concept. Phase 013 reconciled architecture without requiring a concept reopen.
 
 ## Current catalog result
 
@@ -99,12 +101,14 @@ E-KERNEL = { Evaluation Criterion, Evaluation, Evidence }
 
 Direct Generation remains valid without Learning/Learned State. Evaluation/Evidence are not universal prerequisites for Generation. Constraint, Execution and Provenance remain capability-conditional.
 
-## Phase 013 boundary
+## Phase 014 boundary
 
-Phase 013 must represent these completed concept boundaries faithfully. Representation convenience may not create umbrella concepts, transfer canonical state ownership, or pre-build M8 future concepts.
+Phase 014 re-audits the catalog only as part of the **whole-design chain**. It may reopen a concept only if cross-layer evidence demonstrates a genuine contradiction or missing independently owned purpose/state/actions/lifecycle.
+
+Existing code, provider convenience, architecture roles, or implementation difficulty cannot create a concept by pressure alone.
 
 ## Current next boundary
 
-**Phase 013 — Post-Concept Representation & Architecture Reconciliation** is next eligible.
+**014-A — Whole-Design Audit Authority, Evidence Baseline, Traceability & Reopen Rules** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
