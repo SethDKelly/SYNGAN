@@ -130,6 +130,8 @@ The design MUST preserve several distinctions even when one person fills multipl
 
 ## Current actor-model assessment
 
-Phase 008-B finds no new actor role required to justify the current accepted concept set.
+Current whole-design evidence finds no new actor role required to justify the accepted concept set or reconciled architecture.
 
-Later concept mapping may introduce more specific interaction roles or personas, but those should be mappings of these needs unless a genuinely distinct authority/purpose is discovered. Likewise, organizational approval/release authority remains an external boundary under current evidence rather than a SYNGAN concept merely because some actors participate in that decision.
+Completed concept mapping may use more specific interaction roles or personas, but they remain mappings of these needs unless a genuinely distinct authority/purpose is discovered. Organizational approval/release authority remains an external boundary under current evidence rather than a SYNGAN concept merely because some actors participate in that decision.
+
+Phase 014-B re-audited these roles and found no unserved current actor need or authority-role gap at the problem/purpose level.
