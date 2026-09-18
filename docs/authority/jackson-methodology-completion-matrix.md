@@ -92,8 +92,8 @@ The Phase 014 pre-phase start gate is complete and has activated the dependency-
 
 ```text
 014-A  Whole-Design Audit Authority / Evidence Baseline / Traceability — COMPLETE
-014-B  Problem / Actors / Outcomes / Scope / Concept-Purpose Coverage — NEXT
-014-C  Concept / Dependence / Application-Family / Synchronization Integrity
+014-B  Problem / Actors / Outcomes / Scope / Concept-Purpose Coverage — COMPLETE
+014-C  Concept / Dependence / Application-Family / Synchronization Integrity — NEXT
 014-D  Mapping / Interaction / Linguistic / Disclosure / Semantic Parity
 014-E  Architecture Realization / Responsibility / Design-to-Architecture Traceability
 014-F  End-to-End Scenario / Failure / Recovery / Scale / Security / Portability
@@ -102,6 +102,20 @@ The Phase 014 pre-phase start gate is complete and has activated the dependency-
 ```
 
 R3 remains blocked from decision until the R2 evidence chain has been completed and consolidated.
+
+## 014-B whole-design evidence
+
+```text
+O1-O16 desired-outcome coverage              PASS — 16/16
+actor-purpose coverage                       PASS
+accepted concept purpose coverage            PASS — 11/11
+architecture obligation -> upstream purpose  PASS
+unresolved WMAT-2                            0
+unresolved WMAT-3                            0
+upstream reopen                              NONE
+```
+
+R2 remains OPEN pending 014-C through 014-G.
 
 ## Current synchronization state
 
@@ -126,7 +140,8 @@ REPRESENTATION / ARCHITECTURE        RECONCILED / CURRENT
 Phase 014 start gate                 COMPLETE
 Phase 014                            ACTIVE
 014-A                                COMPLETE
-014-B                                NEXT ELIGIBLE
+014-B                                COMPLETE
+014-C                                NEXT ELIGIBLE
 R2                                   OPEN
 R3                                   OPEN
 IMPLEMENTATION READINESS             NOT READY
@@ -154,4 +169,4 @@ Phase 014 is not implementation. A positive future R3 may set readiness to `READ
 
 ## Current next boundary
 
-**014-B — Problem, Actors, Outcomes, Scope & Concept-Purpose Coverage Audit** is next eligible.
+**014-C — Concept Specification, Dependence, Application-Family & Synchronization Integrity Audit** is next eligible.
