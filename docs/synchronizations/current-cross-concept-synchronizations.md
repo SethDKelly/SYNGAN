@@ -41,7 +41,7 @@ Learning or Generation binds a Strategy and owns its contextual compatibility re
 
 ### SYNC-05 — Learning produces Learned State
 
-Successful Learning may establish zero or one primary logical Learned State under the current model. Repeated physical work cannot create ambiguous duplicate authoritative Learned State.
+A valid Learning semantic completion establishes exactly one primary logical Learned State under the current model. Failed, cancelled or incomplete Learning establishes none. Repeated physical work cannot create ambiguous duplicate authoritative Learned State.
 
 ### SYNC-09 — Evaluation Criterion binding
 
@@ -53,7 +53,7 @@ Evaluation owns contextual method compatibility. Evidence claim strength cannot 
 
 ### SYNC-12 — Evaluation produces Evidence
 
-A semantically valid Evaluation establishes zero or more independently interpretable Evidence findings when such findings exist. Retry/recovery cannot duplicate or conflict the same authoritative semantic finding.
+A completed Evidence-producing Evaluation establishes one or more independently interpretable Evidence findings according to its committed method/contract. Failed, cancelled or incomplete Evaluation may establish none. Retry/recovery cannot duplicate or conflict the same authoritative semantic finding.
 
 ## Capability / occurrence-conditional synchronizations
 
@@ -155,6 +155,8 @@ Phase 014-C replayed the synchronization contract against the current applicatio
 ```text
 SYNC-01  explicit "when Data Meaning participates" scope for Evaluation
 SYNC-06  Generation / Learned State reuse only; direct Generation does not activate it
+SYNC-05  Learning completion establishes exactly one primary Learned State; non-completed occurrences establish none
+SYNC-12  completed Evidence-producing Evaluation establishes one or more findings; non-completed occurrences may establish none
 SYNC-13  Generation / Evidence evidence-gated completion only; external governance handoff is not accepted-concept synchronization
 ```
 
