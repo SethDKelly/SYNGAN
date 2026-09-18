@@ -18,7 +18,9 @@ Phase 013                       COMPLETE
 013-A..013-J                    COMPLETE
 architecture corpus             RECONCILED / CURRENT
 R1 architecture reconciliation  CURRENTLY CLOSED
-Phase 014                       NEXT ELIGIBLE
+Phase 014 start gate            COMPLETE
+Phase 014                       ACTIVE
+014-A                           NEXT ELIGIBLE
 R2 whole-design audit           OPEN
 R3 implementation readiness     OPEN
 implementation readiness        NOT READY
@@ -94,6 +96,12 @@ ADR-0001..0010                          RETAINED RATIONALE
 
 Historical `active/current/canonical` wording in pre-013 records does not outrank the current Phase 013 contract.
 
+## Phase 014 boundary
+
+Architecture is an audited downstream layer in R2, not a substitute for the whole design. Phase 014 must verify that every material architecture obligation traces to upstream purpose/semantics and that every material upstream semantic obligation has an architecture realization boundary.
+
+Architecture may be reopened only if the whole-design audit demonstrates a genuine representation/realization contradiction.
+
 ## Implementation boundary
 
 ```text
@@ -106,4 +114,4 @@ Phase 014 owns R2/R3. Phase 015 remains required for explicit implementation aut
 
 ## Current next boundary
 
-**Phase 014 pre-phase start gate — review the whole-design/readiness intention and create the dependency-safe R2/R3 subphase plan** is next eligible.
+**014-A — Whole-Design Audit Authority, Evidence Baseline, Traceability & Reopen Rules** is next eligible.
