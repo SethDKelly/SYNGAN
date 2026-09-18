@@ -29,87 +29,82 @@ Phase 013                  ACTIVE
 013-F                      COMPLETE
 013-G                      COMPLETE
 013-H                      COMPLETE
-013-I                      NEXT ELIGIBLE
+013-I                      COMPLETE
+013-J                      NEXT ELIGIBLE
 R1 architecture            DOWNSTREAM / IN PROGRESS
 whole-design readiness     PHASE 014
 ```
 
 Architecture progress does not authorize implementation.
 
-## Current constraints on any later implementation
+## 013-I implementation-authority result
 
-Any future implementation must preserve the reconciled Phase 013 baseline, including:
+013-I explicitly resolves historical delivery/re-entry ambiguity:
 
-- stable logical identity separate from provider/location identity;
-- exact historical binding and non-regressing recovery authority;
-- persistence as durability rather than semantic ownership;
-- physical/provider/runtime/telemetry facts only at actual evidentiary strength;
-- candidate/seal/result-establishment separation with Generation-owned finality;
-- Strategy semantics distinct from implementation/runtime identity;
-- no hidden acquisition, substitution, remote fallback or undeclared egress;
-- role-specific distributed runtime closure rather than driver-only readiness;
-- one stable Execution distinct from Attempts/provider jobs;
-- mutation authority distinct from provider observation;
-- scoped idempotency/fencing/checkpoint/cancellation/recovery/admission boundaries;
-- Evaluation semantic validity distinct from runtime success;
-- retry-safe independently interpretable Evidence findings;
-- immutable Evidence findings distinct from current applicability;
-- Evidence claim strength bounded by actual examination support;
-- Generation-owned Evidence completion basis;
+```text
+Phase 007-A..C executable scaffold      FEASIBILITY EVIDENCE ONLY
+Phase 007-K implementation re-entry     SUPERSEDED AS CURRENT AUTHORIZATION
+legacy package/test/tool choices        DOWNSTREAM IMPLEMENTATION EVIDENCE ONLY
+```
+
+No historical readiness statement, scaffold test, package topology, provider integration or prior implementation plan can bypass the current design sequence.
+
+013-I also closes M6 synchronization drift and leaves the architecture residual register at zero blockers, but that still does not create implementation readiness.
+
+## Constraints on any later implementation
+
+Any future implementation must preserve the reconciled Phase 013 architecture, including:
+
+- semantic ownership above storage/runtime/provider mechanics;
+- stable logical identity, exact historical binding and non-regressing recovery;
+- Generation-owned candidate/finality/completed-output semantics;
+- Strategy semantics distinct from executable/runtime realization;
+- exact dependency/trust/authorization/no-egress distinctions with no hidden acquisition/fallback;
+- distributed runtime closure across material roles;
+- stable Execution separate from Attempts/provider jobs and semantic completion;
+- scoped fencing/idempotency/checkpoint/cancellation/recovery/admission;
+- Evaluation validity separate from runtime success;
+- retry-safe Evidence findings with bounded claim strength;
 - typed Provenance with low authority fan-out;
-- historical knowledge quality distinct from current resolution/disclosure;
-- derived/non-authoritative history/search projections;
-- Reproducibility historical supportability distinct from current feasibility and actor-visible assessability;
+- derived historical query and Reproducibility rather than new canonical owners;
 - disclosure/redaction unable to mutate canonical history;
-- empirical privacy Evidence distinct from formal mechanism guarantees and external release/use approval;
-- external governance/lineage integrations unable to create hidden canonical authority;
-- provider/product identity distinct from capability guarantees;
-- architecture-compatible distinct from implemented/conformance-verified/scale-qualified provider support;
-- multi-axis/directional compatibility rather than one global Boolean;
-- provider HA/backup/restore beneath SYNGAN non-regressing recovery authority;
-- workload/profile-specific enterprise scale rather than row-count or Spark-presence claims;
-- canonical history, runtime observability and security audit as separate lanes;
-- capability-specific degraded operation;
-- platform specialization behind portable contracts;
-- private/offline/no-egress support without hidden public runtime dependencies.
+- external governance remaining external;
+- provider capability/status/lineage/telemetry consumed only at actual evidentiary strength;
+- portability without provider semantic lock-in;
+- multidimensional scale qualification;
+- application-family optionality rather than a universal pipeline;
+- no M8 future-scope placeholder services/state/APIs.
 
-Do not convert these architecture roles into production classes/services/tables merely because their semantics are reconciled.
-
-## Phase 013 boundary
-
-Historical Phase 005 and Phase 007-A..C/K implementation/scaffold decisions remain feasibility evidence only. Final ADR/legacy/implementation-authority disposition occurs in 013-I.
-
-Phase 013 findings remain design evidence until 013-J closes R1 and Phase 014 performs the whole-design/readiness decision.
+Do not convert architecture roles into production classes/services/tables merely because Phase 013 reconciled their semantics.
 
 ## Current prohibition
 
-Until Phase 014 passes, do not add or stabilize production:
+Until Phase 014 positively passes, do not add or stabilize production:
 
 - persistence/query schemas or migrations;
 - data-state/manifest/candidate stores;
 - public APIs or package topology;
 - Strategy/runtime/plugin adapters;
-- dependency resolvers/downloaders;
-- authorization/secrets/provider integrations;
-- Execution/Attempt schedulers, launchers, fencing/idempotency/checkpoint/recovery/admission machinery;
-- Evidence stores, Provenance graphs, history/query/reproducibility services;
-- privacy accounting/guarantee or governance/release workflow state;
-- platform/provider adapters;
-- IaC/deployment automation;
-- provider support matrices presented as verified implementation support;
+- dependency/security/provider integrations;
+- Execution/Attempt scheduling, fencing, checkpoint, recovery or admission machinery;
+- Evidence/Provenance/history/reproducibility services;
+- privacy-accounting or governance/release workflow state;
+- platform/provider adapters or IaC;
+- provider-support certification;
 - benchmarks/performance qualification;
 - executable conformance gates intended to manufacture readiness.
 
 ## Remaining design before readiness
 
 ```text
-013-I  cross-architecture composition / ADR / legacy / M6 / residual register — NEXT
-013-J  R1 completion / Phase 014 handoff
+013-J  Phase 013 consolidation / R1 completion decision / Phase 014 handoff — NEXT
 014    whole-design implementation-readiness decision
 ```
+
+Even a positive 013-J closes architecture reconciliation only. Phase 014 still decides readiness, and explicit Phase 015 authority remains required before implementation begins.
 
 ## Current next boundary
 
 Design-only work:
 
-**013-I — Cross-Architecture Composition, ADR/Legacy Contract Reconciliation, M6 Cleanup & Residual Architecture Misfit Register**.
+**013-J — Phase 013 Consolidation, R1 Completion Decision & Phase 014 Handoff**.
