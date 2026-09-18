@@ -44,7 +44,8 @@ Phase 013                  ACTIVE
 013-C                      COMPLETE
 013-D                      COMPLETE
 013-E                      COMPLETE
-013-F                      NEXT ELIGIBLE
+013-F                      COMPLETE
+013-G                      NEXT ELIGIBLE
 R1 architecture            DOWNSTREAM / IN PROGRESS
 ```
 
@@ -56,33 +57,40 @@ Current Phase 013 authority:
 - [013-C Persistence Reconciliation](../architecture/phase-013-c-control-persistence-history-concurrency-migration-recovery-reconciliation.md)
 - [013-D Distributed Data Reconciliation](../architecture/phase-013-d-distributed-data-topology-manifest-candidate-promotion-reconciliation.md)
 - [013-E Runtime / Dependency / Security Reconciliation](../architecture/phase-013-e-strategy-runtime-dependency-authorization-secrets-distribution-reconciliation.md)
+- [013-F Execution / Recovery / Admission Reconciliation](../architecture/phase-013-f-execution-attempt-fencing-idempotency-checkpoint-cancellation-recovery-admission-reconciliation.md)
+- [Operational Authority Continuity Contract](operational-authority-continuity-regressive-recovery-contract.md)
 - [Reproducibility Contract](reproducibility-contract.md)
-- [Self-Contained Runtime Distribution Closure](self-contained-execution-runtime-distribution-closure-contract.md)
-- [Operational Authority Continuity & Regressive Recovery Contract](operational-authority-continuity-regressive-recovery-contract.md)
 
-## Reconciled architecture boundaries through 013-E
+## Reconciled architecture boundaries through 013-F
 
 Phase 013 currently preserves:
 
-- semantic ownership upstream of representation/persistence/data-plane/runtime mechanisms;
+- semantic ownership upstream of representation/persistence/data-plane/runtime/operational mechanisms;
 - stable logical identity and exact historical binding distinct from provider/location/runtime identity;
 - persistence as durability rather than generic semantic CRUD;
 - non-regressing recovery authority after potentially regressive restore;
 - physical/provider/manifest/runtime facts only at their actual evidentiary strength;
-- Data Meaning structural interpretation distinct from Constraint validity and Generation topology fulfillment;
 - Generation ownership of candidate/finality/completed-output establishment;
 - Strategy/method semantics separate from implementation binding/package/runtime identity;
-- implementation bindings may narrow support but cannot silently broaden Strategy dependency/network/egress semantics;
 - dependency availability distinct from identity, integrity, trust, compatibility, current authorization and egress compatibility;
 - explicit provisioning and no hidden runtime acquisition/fallback;
 - current authorization may block present action without rewriting historical commitment;
-- no-egress semantics cannot be broadened by host connectivity or broad credentials;
 - runtime capabilities/secrets remain current operational authority/material rather than durable semantic state;
-- every material runtime role, including dynamically admitted workers, must satisfy compatible exact distributed closure;
-- large Learned State/artifacts need not be universally driver-materialized or broadcast;
-- cross-cutting Reproducibility assembled from preserved owner/integration facts, with historical `SYNC-15` not active.
+- every material runtime role must satisfy compatible exact distributed closure;
+- one stable Execution remains separate from subordinate Attempts and platform jobs;
+- Attempt observed state remains separate from current framework mutation authority;
+- effective write authority composes a current recovery frontier, Execution/Attempt authority, resource-local preconditions where needed and current action authorization/capability;
+- lease/heartbeat is liveness coordination rather than stale-writer safety;
+- idempotency is operation-scoped and does not grant authority;
+- committed checkpoints remain immutable recovery state distinct from current resume eligibility and semantic results;
+- regressive recovery enters continuity-unverified quarantine before fresh stale-writer exclusion is established;
+- cancellation remains durable intent before terminal operational outcome;
+- admission is current operational eligibility distinct from semantic readiness, authorization, runtime closure, resource capacity/queueing and write authority;
+- resource pressure cannot silently weaken committed semantic/security requirements;
+- Evaluation may establish multiple Evidence findings while retry/replay remains unable to duplicate/conflict one authoritative semantic finding transition;
+- cross-cutting Reproducibility is assembled from preserved owner/integration facts; historical `SYNC-15` is not active.
 
-013-B/C/D/E each found:
+013-B/C/D/E/F each found:
 
 ```text
 AMAT-2 defects       0
@@ -91,9 +99,7 @@ AR-9 contradictions  0
 upstream reopen      NONE
 ```
 
-013-C corrected the active recovery contract to current Phase 009 synchronization semantics. 013-D corrected the active structured-topology contract. 013-E corrected the active Reproducibility and Self-Contained Runtime Distribution Closure contracts so historical `SYNC-15` is no longer described as active synchronization authority.
-
-Historical Phase 007-D/E/F/G current-looking synchronization/status wording remains tracked for 013-I corpus cleanup.
+Historical/current-looking synchronization/status wording in retained operational and scale/admission material remains tracked for 013-I corpus cleanup. Current Phase 009 and completed Phase 013 authority control now.
 
 ## Residual concept-design accounting
 
@@ -115,14 +121,13 @@ Only 013-J may close R1.
 
 ## Architecture / executable prohibition
 
-Do not begin production behavior, public API stabilization, persistence rollout/migrations, distributed-data implementation, Strategy/runtime adapters, dependency acquisition systems, IAM/secret/network integrations, Execution/recovery mechanisms, package refactoring, benchmarks or executable conformance work under Phase 013.
+Do not begin production behavior, public API stabilization, persistence rollout/migrations, distributed-data implementation, Strategy/runtime adapters, dependency acquisition systems, IAM/secret/network integrations, Execution/Attempt scheduling, fencing/idempotency/checkpoint/recovery/admission mechanisms, Evidence/Provenance implementation, package refactoring, benchmarks or executable conformance work under Phase 013.
 
 ## Remaining roadmap
 
 ```text
-013-F     Execution / Attempt / Fencing / Idempotency / Checkpoint /
-          Cancellation / Recovery / Admission Reconciliation — NEXT
-013-G     Evaluation / Evidence / Provenance / History / Disclosure
+013-G     Evaluation / Evidence / Provenance / Historical Query /
+          Reproducibility / Disclosure / External-Governance Boundary — NEXT
 013-H     Deployment / Scale / Observability / Portability / Platform Integration
 013-I     Cross-architecture / ADR / legacy / M6 / residual reconciliation
 013-J     R1 completion decision / Phase 014 handoff
@@ -132,4 +137,4 @@ Do not begin production behavior, public API stabilization, persistence rollout/
 
 ## Current next boundary
 
-**013-F — Execution/Attempt, Fencing, Idempotency, Checkpoint, Cancellation, Recovery & Admission Reconciliation** is next eligible.
+**013-G — Evaluation, Evidence, Provenance, Historical Query, Reproducibility, Disclosure & External-Governance Boundary Reconciliation** is next eligible.
