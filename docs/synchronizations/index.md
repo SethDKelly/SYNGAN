@@ -6,13 +6,15 @@ status: complete-current
 
 # SYNGAN Accepted Synchronizations
 
-This directory contains current cross-concept coordination authority. Concept specifications own semantic state; synchronization coordinates already-owned behavior and owns no independent canonical state.
+This directory contains current cross-concept composition authority for SYNGAN. Concept specifications own semantic state; synchronization coordinates already-owned behavior and owns no independent canonical state.
 
 ## Current canonical synchronization authority
 
-Begin with [Current Cross-Concept Synchronization Contract](current-cross-concept-synchronizations.md).
+Begin with:
 
-`core-synchronizations.md` remains retained historical detail and stable anchor material. Where it uses the pre-Phase-009 fifteen-rule interpretation, the current contract controls.
+- [Current Cross-Concept Synchronization Contract](current-cross-concept-synchronizations.md)
+
+`core-synchronizations.md` remains retained historical specification/detail and stable anchor material. Where it uses the pre-Phase-009 fifteen-rule interpretation, the current contract controls.
 
 ## Current inventory
 
@@ -24,32 +26,78 @@ required-relational                      6
 capability/occurrence conditional        7
 retired concept-local IDs                1  (SYNC-08)
 reclassified contract IDs                1  (SYNC-15)
+new synchronization IDs                  0
 synchronization-owned canonical state    NONE
 ```
 
-Required-relational rules remain `SYNC-01`, `SYNC-02`, `SYNC-05`, `SYNC-09`, `SYNC-10`, and `SYNC-12`.
+Required-relational rules:
 
-Capability/occurrence-conditional rules remain `SYNC-03`, `SYNC-04`, `SYNC-06`, `SYNC-07`, `SYNC-11`, `SYNC-13`, and `SYNC-14`.
+```text
+SYNC-01  Data Meaning revision binding
+SYNC-02  Strategy selection and compatibility
+SYNC-05  Learning produces Learned State
+SYNC-09  Evaluation Criterion binding
+SYNC-10  Evaluation method compatibility
+SYNC-12  Evaluation produces Evidence
+```
 
-`SYNC-08` is retired as a cross-concept synchronization because candidate/finality/completed-output behavior is Generation-local authority.
+Capability/occurrence-conditional rules:
 
-`SYNC-15` is historical/reclassified under the cross-cutting Reproducibility Contract. Reproducibility owns no synchronization state.
+```text
+SYNC-03  Constraint binding / handling
+SYNC-04  Learning operational realization
+SYNC-06  Generation commitment / compatibility
+SYNC-07  Generation operational realization
+SYNC-11  Evaluation operational realization
+SYNC-13  controlled Evidence handoff
+SYNC-14  material Provenance recording
+```
+
+## Retired / reclassified IDs
+
+`SYNC-08` is retired as a cross-concept synchronization. Candidate/finality/completed-output behavior is Generation-local authority.
+
+`SYNC-15` is historical/reclassified under the cross-cutting [Reproducibility Contract](../authority/reproducibility-contract.md). Reproducibility owns no synchronization state.
+
+Historical IDs are never renumbered or reused.
+
+## Canonical ownership
+
+```text
+consumer exact bindings / contextual assessments  -> owning activity
+producing Learning identity                       -> Learned State
+producing Evaluation identity                     -> Evidence
+Execution parent binding + Attempts/recovery       -> Execution
+Generation candidate/output/completion             -> Generation
+Provenance typed relationships                     -> Provenance
+synchronization-owned canonical state              -> NONE
+```
 
 ## Phase 013 result
 
-```text
-M6 synchronization drift        CLOSED
-historical IDs                  15
-active synchronizations         13
-SYNC-08                         RETIRED
-SYNC-15                         RECLASSIFIED
-current-authority ambiguity     0
-synchronization reopen          NONE
-Phase 013                       COMPLETE
-R1                              CURRENTLY CLOSED
-```
+Phase 013 closed architecture reconciliation while preserving singular ownership and application-family optionality. M6 synchronization drift is closed; no synchronization reopen occurred.
 
-The Phase 013 Consolidated Architecture Contract preserves singular ownership across representation, persistence, data-plane, runtime/security, Execution/recovery, Evidence/history and platform integration.
+## Phase 014 boundary
+
+Phase 014 must retest these rules only as part of whole-design composition. It must detect any downstream mapping/architecture interaction that would force a hidden coordinator, universal workflow, duplicate owner or invalid synchronization assumption.
+
+The whole-design audit may reopen synchronization authority only if current cross-layer evidence actually contradicts this inventory/ownership model.
+
+## Current phase state
+
+```text
+Phase 009 synchronization authority       COMPLETE
+13 / 13 singular ownership                PASS
+M6                                        CLOSED
+synchronization reopen                    NONE
+Jackson concept design                    COMPLETE FOR CURRENT PRODUCT SCOPE
+Phase 013                                 COMPLETE
+R1                                        CURRENTLY CLOSED
+Phase 014                                 ACTIVE
+014-A                                     NEXT ELIGIBLE
+R2                                        OPEN
+R3                                        OPEN
+```
 
 ## Future synchronization rule
 
@@ -59,6 +107,6 @@ If future scope introduces independent purpose + durable state/history + meaning
 
 ## Current next boundary
 
-**Phase 014 pre-phase start gate — whole-design/readiness decomposition** is next eligible.
+**014-A — Whole-Design Audit Authority, Evidence Baseline, Traceability & Reopen Rules** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
