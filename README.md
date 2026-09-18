@@ -19,7 +19,9 @@ Current governing architecture-reconciliation authority includes:
 - [`013-B Representation Reconciliation`](docs/architecture/phase-013-b-representation-layering-public-contract-identity-view-reconciliation.md)
 - [`013-C Persistence Reconciliation`](docs/architecture/phase-013-c-control-persistence-history-concurrency-migration-recovery-reconciliation.md)
 - [`013-D Distributed Data Reconciliation`](docs/architecture/phase-013-d-distributed-data-topology-manifest-candidate-promotion-reconciliation.md)
-- [`Structured-Data Topology Contract`](docs/authority/structured-data-topology-relationship-semantics-contract.md)
+- [`013-E Runtime / Dependency / Security Reconciliation`](docs/architecture/phase-013-e-strategy-runtime-dependency-authorization-secrets-distribution-reconciliation.md)
+- [`Reproducibility Contract`](docs/authority/reproducibility-contract.md)
+- [`Self-Contained Runtime Distribution Closure`](docs/authority/self-contained-execution-runtime-distribution-closure-contract.md)
 - [`Jackson Methodology Completion Matrix`](docs/authority/jackson-methodology-completion-matrix.md)
 - [`Jackson Design Completion & Implementation Hold`](docs/authority/jackson-design-completion-implementation-hold.md)
 
@@ -34,37 +36,42 @@ Phase 013                            ACTIVE
 013-B                                COMPLETE
 013-C                                COMPLETE
 013-D                                COMPLETE
-013-E                                NEXT ELIGIBLE
+013-E                                COMPLETE
+013-F                                NEXT ELIGIBLE
 R1 architecture reconciliation       DOWNSTREAM / IN PROGRESS
 implementation readiness             NOT READY
 implementation start                 NOT STARTED
 implementation next                  NOT YET
 ```
 
-## Phase 013 results through 013-D
+## Phase 013 results through 013-E
 
-Representation, persistence/history/recovery, and distributed-data/topology architecture have been reconciled against the completed concept design.
+Representation, persistence/history/recovery, distributed-data/topology, and Strategy/runtime/dependency/security architecture have been reconciled against the completed concept design.
 
 ```text
 013-B AMAT-2 / AMAT-3 / AR-9   0 / 0 / 0
 013-C AMAT-2 / AMAT-3 / AR-9   0 / 0 / 0
 013-D AMAT-2 / AMAT-3 / AR-9   0 / 0 / 0
+013-E AMAT-2 / AMAT-3 / AR-9   0 / 0 / 0
 upstream reopen                NONE
 ```
 
-The current data-plane baseline preserves:
+The current runtime/dependency/security baseline preserves:
 
-- physical/provider/manifest existence as non-semantic evidence;
-- exact data-state strength across identity, read, integrity, retention and cross-scope coordination dimensions;
-- Data Meaning structural interpretation separate from Constraint validity and Generation topology fulfillment;
-- logical scope as bounded representation rather than a standalone concept;
-- manifest/provider-equivalent immutable subject boundaries;
-- candidate/open/partial/sealed state as subordinate and non-final;
-- Generation-owned completed-output establishment;
-- exact completion-critical Evaluation subject binding;
-- Spark-scale bounded/reference-first control state.
+- Strategy/method semantics separate from implementation binding/package/model/runtime identity;
+- implementation bindings may narrow realization but cannot silently broaden Strategy dependency/network/egress semantics;
+- exact executable closure may comprise multiple material components;
+- dependency availability, identity, integrity, trust, semantic/runtime compatibility, authorization and egress compatibility as separate facts;
+- explicit provisioning with no hidden runtime installation/download/model-hub/remote fallback;
+- current authorization blocking present actions without rewriting historical commitment;
+- no-egress semantics independent of host connectivity or broad credentials;
+- scoped live runtime capabilities and non-persisted bearer secrets;
+- distributed closure across every material runtime role, including dynamically admitted workers;
+- large Learned State/artifacts without universal driver-memory broadcast;
+- runtime/provider success as non-final operational evidence;
+- cross-cutting Reproducibility over preserved owner/integration facts rather than active `SYNC-15` state.
 
-013-D also reconciled the active structured-topology contract with current Phase 009 synchronization authority:
+Current synchronization authority remains:
 
 ```text
 historical sync IDs   15
@@ -73,14 +80,13 @@ SYNC-08               retired — Generation-local output lifecycle
 SYNC-15               reclassified — Reproducibility contract
 ```
 
-Historical Phase 007-D/E/F synchronization wording remains a bounded 013-I corpus-cleanup obligation.
+013-E corrected the active Reproducibility and Self-Contained Runtime Distribution Closure contracts accordingly. Historical Phase 007-D/E/F/G current-looking wording remains a bounded 013-I corpus-cleanup obligation.
 
 ## Remaining Phase 013 sequence
 
 ```text
-013-E  Strategy / Method Realization / Dependency Closure / Authorization /
-       Secrets / Offline-No-Egress / Runtime Distribution — NEXT
-013-F  Execution / Attempt / Recovery / Fencing / Admission
+013-F  Execution / Attempt / Fencing / Idempotency / Checkpoint /
+       Cancellation / Recovery / Admission — NEXT
 013-G  Evaluation / Evidence / Provenance / History / Disclosure
 013-H  Deployment / Scale / Observability / Portability / Platform Integration
 013-I  Cross-Architecture / ADR / Legacy / M6 / Residual Register
@@ -101,6 +107,6 @@ Only a positive Phase 014 may change implementation to **READY / NOT STARTED / N
 
 ## Current next boundary
 
-**013-E — Strategy/Method Realization, Dependency Closure, Authorization, Secrets, Offline/No-Egress & Runtime Distribution** is next eligible.
+**013-F — Execution/Attempt, Fencing, Idempotency, Checkpoint, Cancellation, Recovery & Admission Reconciliation** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
