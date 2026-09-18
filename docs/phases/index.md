@@ -37,8 +37,8 @@ Current authority:
 
 - [Phase 013 Index](013/index.md)
 - [Phase 013 Architecture Reconciliation Authority](../authority/phase-013-architecture-reconciliation-authority.md)
-- [013-G Evidence / History Phase Record](013/013-G-evaluation-evidence-provenance-historical-query-reproducibility-disclosure-external-governance-reconciliation.md)
-- [013-G Evidence / History Architecture Authority](../architecture/phase-013-g-evaluation-evidence-provenance-history-reproducibility-disclosure-governance-reconciliation.md)
+- [013-H Deployment / Scale Phase Record](013/013-H-deployment-scalability-observability-portability-compatibility-platform-integration-reconciliation.md)
+- [013-H Deployment / Scale Architecture Authority](../architecture/phase-013-h-deployment-scalability-observability-portability-compatibility-platform-integration-reconciliation.md)
 
 Current sequence:
 
@@ -52,14 +52,17 @@ Current sequence:
                   cancellation / recovery / admission
 013-G  COMPLETE — Evaluation / Evidence / Provenance / historical query /
                   Reproducibility / disclosure / external governance
-013-H  NEXT     — deployment / scale / observability / portability / integration
-013-I           — cross-architecture / ADR / legacy / M6 / residual register
+013-H  COMPLETE — deployment / scale / observability / portability /
+                  compatibility / platform integration
+013-I  NEXT     — cross-architecture / ADR / legacy / M6 / residual register
 013-J           — consolidation / R1 decision / Phase 014 handoff
 ```
 
-013-B through 013-G each close with zero AMAT-2 defects, zero AMAT-3 blockers, zero AR-9 contradictions and no upstream reopen.
+013-B through 013-H each close with zero AMAT-2 defects, zero AMAT-3 blockers, zero AR-9 contradictions and no upstream reopen.
 
-013-G retains Evaluation/Evidence/Provenance/history architecture while clarifying Evidence multiplicity/completion, typed Provenance ownership, epistemically qualified history, multi-axis Reproducibility, disclosure, privacy-guarantee boundaries and external-governance handoff. Historical/current-looking pre-Phase-009 synchronization references remain bounded 013-I cleanup obligations.
+013-H retains the portable-core/capability-negotiated platform model while clarifying guarantee-first provider support, support-level distinctions, multi-axis/directional compatibility, HA/recovery authority, multidimensional scale claims, observability boundaries, external lineage/catalog authority, degraded-operation typing and offline/private deployment guarantees. The active Enterprise Scale contract is now aligned with current Phase 009 synchronization semantics.
+
+013-I is the final architecture-reconciliation closure pass before the R1 decision. It owns cross-domain composition, ADR disposition, legacy authority cleanup, M6 synchronization drift, M8 placeholder audit and the residual architecture-misfit register.
 
 ## Later design phase
 
@@ -73,6 +76,6 @@ Future only. Explicit authorization remains required before implementation begin
 
 ## Current next boundary
 
-**013-H — Deployment, Scalability, Observability, Portability, Compatibility & Platform-Integration Reconciliation** is next eligible.
+**013-I — Cross-Architecture Composition, ADR/Legacy Contract Reconciliation, M6 Cleanup & Residual Architecture Misfit Register** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
