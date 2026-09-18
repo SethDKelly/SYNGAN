@@ -85,7 +85,7 @@ OPEN
 | G7 | Explicit residual conceptual misfit register | 0 unresolved MAT-2, 0 MAT-3, 0 M2-M5 defects; M6/M8 routed | **CURRENTLY CLOSED** | 011-I/J; 012 |
 | H1 | One current-state consolidated Jackson concept-design audit | 012-A audits current A-G as one system across eight cross-layer consistency dimensions | **CURRENTLY CLOSED** | 012-A |
 | H2 | Explicit Jackson concept-design completion decision | 012-B explicitly declares Jackson concept design complete for current product scope | **CURRENTLY CLOSED** | 012-B |
-| R1 | Architecture reconciled downstream to completed concept design | 013-A established reconciliation authority; 013-B reconciled representation/layering/public-contract/identity/view architecture with 0 AMAT-2, 0 AMAT-3 and no upstream reopen; persistence and later architecture domains remain | **DOWNSTREAM / IN PROGRESS** | 013 |
+| R1 | Architecture reconciled downstream to completed concept design | 013-A method complete; 013-B representation reconciled; 013-C persistence/history/concurrency/migration/recovery reconciled. Both domain passes have 0 AMAT-2, 0 AMAT-3, 0 AR-9 and no upstream reopen. 013-D..J remain. | **DOWNSTREAM / IN PROGRESS** | 013 |
 | R2 | Whole design audited problem → concepts → dependence/sync → mapping → architecture | Requires completed Phase 013 architecture reconciliation | **OPEN** | 014 |
 | R3 | Implementation-readiness decision based on complete design | Historical readiness remains non-authoritative | **OPEN** | 014 |
 
@@ -109,7 +109,8 @@ JACKSON CONCEPT DESIGN               COMPLETE FOR CURRENT PRODUCT SCOPE
 Phase 013                            ACTIVE
 013-A                                COMPLETE
 013-B                                COMPLETE
-013-C                                NEXT ELIGIBLE
+013-C                                COMPLETE
+013-D                                NEXT ELIGIBLE
 R1                                   DOWNSTREAM / IN PROGRESS
 REPRESENTATION/ARCHITECTURE FINAL    NO — PHASE 013 ACTIVE
 WHOLE-DESIGN COMPLETION              NOT YET — PHASE 014
@@ -124,13 +125,12 @@ IMPLEMENTATION NEXT                  NOT YET
 retained substantive architecture docs       19
 retained ADRs                                 10
 known 013-A entry candidates                   6
-013-B AMAT-2 defects                           0
-013-B AMAT-3 blockers                          0
-013-B AR-9 contradictions                      0
+013-B AMAT-2 / AMAT-3 / AR-9                  0 / 0 / 0
+013-C AMAT-2 / AMAT-3 / AR-9                  0 / 0 / 0
 upstream reopen                               NONE
 ```
 
-013-B retains the representation spine with bounded clarification. Historical `007-D` synchronization-count wording and pre-Phase-013 representation precedence wording remain explicit 013-I cleanup items.
+013-C also corrected the active regressive-recovery contract so historical `SYNC-15` is no longer described as active. Historical 007-D/007-E synchronization-count wording remains a 013-I cleanup item, not current semantic authority.
 
 ## Final concept-design residual accounting
 
@@ -146,8 +146,6 @@ M6 Phase-013 deferrals                            1
 M8 future-rediscovery finding groups              4
 ```
 
-The M6 item remains active downstream architecture/documentation reconciliation. Current Phase 009 synchronization semantics remain authoritative throughout Phase 013.
-
 M8 findings remain conditional future rediscovery gates and do not authorize architecture placeholders or implementation.
 
 ## Current dependency order
@@ -155,11 +153,13 @@ M8 findings remain conditional future rediscovery gates and do not authorize arc
 ```text
 013-A  Reconciliation Authority / Corpus Inventory / Precedence / Taxonomy — COMPLETE
   ↓
-013-B  Representation / Layering / Public Contract / Identity / Revision / Handles / Views — COMPLETE
+013-B  Representation / Layering / Public Contract / Identity / Views — COMPLETE
   ↓
-013-C  Control Persistence / Historical Reference / Transactions / Concurrency / Migration / Recovery State — NEXT
+013-C  Persistence / History / Transactions / Concurrency / Migration / Recovery — COMPLETE
   ↓
-013-D..013-H  Remaining domain-by-domain architecture reconciliation
+013-D  Distributed Data / Topology / Manifest / Candidate-Seal-Promotion / Large State — NEXT
+  ↓
+013-E..013-H  Remaining domain architecture reconciliation
   ↓
 013-I  Cross-Architecture / ADR / Legacy / M6 / Residual Reconciliation
   ↓
@@ -172,10 +172,8 @@ M8 findings remain conditional future rediscovery gates and do not authorize arc
 
 ## Guardrail
 
-Jackson concept-design completion is scope-relative, not permanent freeze. A future genuine misfit or new independent product purpose may reopen the smallest affected design authority.
-
-Phase 013 must not manufacture an upstream reopen merely to preserve retained architecture, and a positive architecture reconciliation still does **not** make implementation ready.
+A positive architecture subgroup does not imply implementation readiness. Phase 013 must not manufacture an upstream reopen merely to preserve retained architecture, and only 013-J may close R1.
 
 ## Current next boundary
 
-**013-C — Control Persistence, Historical Reference, Transaction/Concurrency, Migration & Recovery-State Reconciliation** is next eligible.
+**013-D — Distributed Data Boundary, Structured Topology, Manifest, Candidate/Seal/Promotion & Large-State Reconciliation** is next eligible.
