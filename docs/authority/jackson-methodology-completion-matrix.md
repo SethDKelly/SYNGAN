@@ -94,6 +94,8 @@ Phase 013 has completed:
 013-B  representation / public contract / identity / revision / handles / views
 013-C  persistence / history / transaction-concurrency / migration / recovery state
 013-D  distributed data / structured topology / manifest / candidate / seal / promotion / large state
+013-E  Strategy/method realization / dependency closure / authorization / secrets /
+       offline-no-egress / distributed runtime closure
 ```
 
 Current material results:
@@ -102,14 +104,17 @@ Current material results:
 013-B AMAT-2 / AMAT-3 / AR-9   0 / 0 / 0
 013-C AMAT-2 / AMAT-3 / AR-9   0 / 0 / 0
 013-D AMAT-2 / AMAT-3 / AR-9   0 / 0 / 0
+013-E AMAT-2 / AMAT-3 / AR-9   0 / 0 / 0
 upstream reopen                NONE
 new concepts                   0
 new synchronizations           0
 ```
 
-013-D also corrected the active structured-topology contract to current Phase 009 synchronization semantics. Historical Phase 007-D/E/F `15`-synchronization wording remains traceable for 013-I corpus cleanup rather than current semantic authority.
+013-C corrected active recovery authority to current `SYNC-15` semantics. 013-D corrected active structured-topology synchronization wording. 013-E corrected the active Reproducibility and Self-Contained Runtime Distribution Closure contracts so historical `SYNC-15` is no longer presented as active synchronization authority.
 
-## Current synchronization / topology state
+Historical Phase 007-D/E/F/G current-looking synchronization/status wording remains traceable for 013-I corpus cleanup rather than current semantic authority.
+
+## Current synchronization / architecture state
 
 ```text
 accepted concepts                       11
@@ -119,18 +124,20 @@ SYNC-08                                  retired — Generation-local output beh
 SYNC-15                                  reclassified — Reproducibility contract
 ```
 
-The current distributed-data interpretation preserves:
+Architecture reconciled through 013-E preserves:
 
-- physical/provider/manifest existence != semantic authority;
-- Data Meaning descriptive structure != Constraint prescriptive validity;
-- logical scope as representation, not concept;
-- exact identity/read/integrity/retention/coordination strengths kept distinct;
-- manifest/provider-equivalent seal as physical closure, not Generation completion;
-- candidate state as subordinate/non-final;
-- Generation-owned completed-output establishment;
-- whole-scope completion and exact Evaluation-subject binding;
-- bounded/reference-first Spark-scale control state;
-- recovery adoption only under current non-regressing authority.
+- representation/persistence/data-plane/runtime machinery downstream of semantic ownership;
+- physical/provider/storage/runtime facts only at actual evidentiary strength;
+- exact versus mutable identity/history separation;
+- non-regressing recovery authority;
+- Generation-owned candidate/finality/output establishment;
+- Strategy semantics separate from executable binding/runtime identity;
+- dependency availability distinct from integrity/trust/compatibility/authorization;
+- explicit provisioning and no hidden runtime acquisition/fallback;
+- no-egress semantics independent of host connectivity/broad permission;
+- live runtime capabilities/secrets outside durable semantic authority;
+- distributed worker closure rather than driver-only readiness;
+- cross-cutting Reproducibility with no active synchronization-owned state.
 
 ## Phase completion state
 
@@ -151,7 +158,8 @@ Phase 013                            ACTIVE
 013-B                                COMPLETE
 013-C                                COMPLETE
 013-D                                COMPLETE
-013-E                                NEXT ELIGIBLE
+013-E                                COMPLETE
+013-F                                NEXT ELIGIBLE
 R1                                   DOWNSTREAM / IN PROGRESS
 REPRESENTATION/ARCHITECTURE FINAL    NO — PHASE 013 ACTIVE
 WHOLE-DESIGN COMPLETION              NOT YET — PHASE 014
@@ -170,7 +178,7 @@ M6 Phase-013 deferral                        1
 M8 future-rediscovery finding groups         4
 ```
 
-M6 is current-document/corpus synchronization drift only; current Phase 009 semantics control. M8 findings remain future rediscovery gates and do not authorize architecture placeholders or implementation.
+M6 is current-document/corpus synchronization drift only; current Phase 009 and completed Phase 013 subgroup authority control. M8 findings remain future rediscovery gates and do not authorize architecture placeholders or implementation.
 
 ## Current dependency order
 
@@ -183,10 +191,12 @@ M6 is current-document/corpus synchronization drift only; current Phase 009 sema
   ↓
 013-D  COMPLETE
   ↓
-013-E  Strategy / Method Realization / Dependency Closure / Authorization /
-       Secrets / Offline-No-Egress / Runtime Distribution — NEXT
+013-E  COMPLETE
   ↓
-013-F..013-H  remaining architecture domains
+013-F  Execution / Attempt / Fencing / Idempotency / Checkpoint /
+       Cancellation / Recovery / Admission Reconciliation — NEXT
+  ↓
+013-G..013-H  remaining architecture domains
   ↓
 013-I  cross-architecture / ADR / legacy / M6 / residual reconciliation
   ↓
@@ -203,4 +213,4 @@ A positive architecture subgroup does not imply implementation readiness. Only 0
 
 ## Current next boundary
 
-**013-E — Strategy/Method Realization, Dependency Closure, Authorization, Secrets, Offline/No-Egress & Runtime Distribution** is next eligible.
+**013-F — Execution/Attempt, Fencing, Idempotency, Checkpoint, Cancellation, Recovery & Admission Reconciliation** is next eligible.
