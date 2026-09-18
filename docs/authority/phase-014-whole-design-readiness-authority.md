@@ -264,6 +264,23 @@ Phase 014 may inspect historical source/tests/plans as downstream feasibility ev
 
 Even after a positive R3, Phase 015 explicit implementation authority is required before production work begins.
 
+## 014-A completion state
+
+014-A established the operative evidence baseline in [Phase 014-A Whole-Design Evidence Baseline, Traceability Frame & Reopen Protocol](phase-014-whole-design-audit-evidence-baseline.md).
+
+```text
+014-A                            COMPLETE
+evidence classes E1-E4          ESTABLISHED
+WDA-01..WDA-12                  ESTABLISHED
+finding ledger / reopen rules   ESTABLISHED
+unresolved WMAT-2               0
+unresolved WMAT-3               0
+R2                               OPEN
+R3                               OPEN
+```
+
+Substantive whole-design auditing begins with 014-B.
+
 ## Current next boundary
 
-**014-A — Whole-Design Audit Authority, Evidence Baseline, Traceability & Reopen Rules** is next eligible.
+**014-B — Problem, Actors, Outcomes, Scope & Concept-Purpose Coverage Audit** is next eligible.
