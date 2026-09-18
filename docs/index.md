@@ -38,6 +38,7 @@ methodology / design authority
 - [013-D Distributed Data Reconciliation](architecture/phase-013-d-distributed-data-topology-manifest-candidate-promotion-reconciliation.md)
 - [013-E Runtime / Dependency / Security Reconciliation](architecture/phase-013-e-strategy-runtime-dependency-authorization-secrets-distribution-reconciliation.md)
 - [013-F Execution / Recovery / Admission Reconciliation](architecture/phase-013-f-execution-attempt-fencing-idempotency-checkpoint-cancellation-recovery-admission-reconciliation.md)
+- [013-G Evidence / Provenance / History / Disclosure Reconciliation](architecture/phase-013-g-evaluation-evidence-provenance-history-reproducibility-disclosure-governance-reconciliation.md)
 - [Representation & Architecture](architecture/index.md)
 
 ## Current state
@@ -53,7 +54,8 @@ Phase 013                            ACTIVE
 013-D                                COMPLETE
 013-E                                COMPLETE
 013-F                                COMPLETE
-013-G                                NEXT ELIGIBLE
+013-G                                COMPLETE
+013-H                                NEXT ELIGIBLE
 R1 architecture reconciliation       DOWNSTREAM / IN PROGRESS
 whole-design completion              NOT YET — PHASE 014
 implementation readiness             NOT READY
@@ -61,32 +63,34 @@ implementation start                 NOT STARTED
 implementation next                  NOT YET
 ```
 
-## Reconciled Phase 013 baseline through 013-F
+## Reconciled Phase 013 baseline through 013-G
 
 Current downstream architecture preserves:
 
-- semantic ownership above representation/persistence/data-plane/runtime/operational machinery;
-- stable logical identity and exact historical binding independent of provider/location/runtime identifiers;
+- semantic ownership above representation/persistence/data-plane/runtime/operational/history machinery;
+- stable logical identity and exact historical binding independent of provider/runtime identifiers;
 - persistence as durability rather than semantic ownership;
-- non-regressing recovery authority after potentially regressive restore;
-- exact physical/data/runtime facts only at their established strength;
+- non-regressing recovery authority;
+- physical/provider/runtime facts only at their established evidentiary strength;
 - Generation candidate/finality/output ownership separate from physical seal/provider status;
-- Strategy semantics distinct from implementation binding/runtime closure;
-- dependency identity/integrity/trust/compatibility/authorization distinctions;
+- Strategy semantics distinct from executable binding/runtime closure;
 - no hidden runtime acquisition, substitution or egress expansion;
-- live capabilities/secrets outside durable semantic history;
 - distributed worker closure rather than driver-only readiness;
-- one stable Execution distinct from subordinate Attempts/provider jobs;
-- Attempt observed outcome distinct from current mutation authority;
-- operation-scoped idempotency plus fencing rather than exactly-once computation;
-- immutable checkpoints distinct from current resume eligibility/semantic result;
-- cancellation intent distinct from terminal outcome;
-- admission as current operational eligibility distinct from semantic readiness, authorization, runtime closure, queue/capacity and write authority;
-- resource pressure unable to weaken committed semantics;
-- bounded operational history at Spark scale;
-- cross-cutting Reproducibility assembled from owner/integration facts rather than a standalone state owner.
+- one stable Execution distinct from Attempts/provider jobs;
+- current mutation authority distinct from observed provider state;
+- operation-scoped idempotency/fencing/checkpoint/cancellation/recovery/admission boundaries;
+- Evaluation semantic validity distinct from runtime completion;
+- independently interpretable retry-safe Evidence findings;
+- immutable Evidence semantics distinct from current applicability;
+- typed Provenance with low authority fan-out;
+- direct/reconstructed/partial/unknown historical knowledge separate from current resolution/disclosure;
+- derived history/query projections remaining non-authoritative;
+- Reproducibility historical supportability separate from current feasibility and actor-visible assessability;
+- disclosure/redaction unable to mutate canonical history;
+- empirical privacy Evidence separate from formal privacy guarantees and external release/use approval;
+- external governance/lineage integration unable to create hidden canonical authority.
 
-013-B/C/D/E/F each found **0 AMAT-2 defects, 0 AMAT-3 blockers, 0 AR-9 contradictions and no upstream reopen**.
+013-B through 013-G each found **0 AMAT-2 defects, 0 AMAT-3 blockers, 0 AR-9 contradictions and no upstream reopen**.
 
 ## Synchronization state
 
@@ -97,7 +101,7 @@ SYNC-08                      retired — Generation-local output lifecycle
 SYNC-15                      reclassified — Reproducibility contract
 ```
 
-Remaining current-looking historical references in retained Execution/operational/scale documents are semantically superseded and tracked for 013-I corpus cleanup.
+Remaining current-looking pre-Phase-009 references are semantically superseded and tracked for 013-I corpus/status/link cleanup.
 
 ## Phase 013 sequence
 
@@ -108,8 +112,8 @@ Remaining current-looking historical references in retained Execution/operationa
 013-D  COMPLETE
 013-E  COMPLETE
 013-F  COMPLETE
-013-G  Evaluation / Evidence / Provenance / history / disclosure        NEXT
-013-H  deployment / scale / observability / portability / integration
+013-G  COMPLETE
+013-H  deployment / scale / observability / portability / integration  NEXT
 013-I  cross-architecture / ADR / legacy / M6 / residual register
 013-J  R1 completion / Phase 014 handoff
 ```
@@ -128,4 +132,4 @@ M8 future rediscovery triggers remain outside default architecture scope. No pla
 
 ## Current next boundary
 
-**013-G — Evaluation, Evidence, Provenance, Historical Query, Reproducibility, Disclosure & External-Governance Boundary Reconciliation** is next eligible.
+**013-H — Deployment, Scalability, Observability, Portability, Compatibility & Platform-Integration Reconciliation** is next eligible.
