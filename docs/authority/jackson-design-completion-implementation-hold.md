@@ -42,7 +42,8 @@ Phase 013                  ACTIVE
 013-A                      COMPLETE
 013-B                      COMPLETE
 013-C                      COMPLETE
-013-D                      NEXT ELIGIBLE
+013-D                      COMPLETE
+013-E                      NEXT ELIGIBLE
 R1 architecture            DOWNSTREAM / IN PROGRESS
 ```
 
@@ -52,28 +53,34 @@ Current Phase 013 authority:
 - [Phase 013 Index](../phases/013/index.md)
 - [013-B Representation Reconciliation](../architecture/phase-013-b-representation-layering-public-contract-identity-view-reconciliation.md)
 - [013-C Persistence Reconciliation](../architecture/phase-013-c-control-persistence-history-concurrency-migration-recovery-reconciliation.md)
+- [013-D Distributed Data Reconciliation](../architecture/phase-013-d-distributed-data-topology-manifest-candidate-promotion-reconciliation.md)
+- [Structured-Data Topology Contract](structured-data-topology-relationship-semantics-contract.md)
 - [Operational Authority Continuity & Regressive Recovery Contract](operational-authority-continuity-regressive-recovery-contract.md)
 
-## Reconciled architecture boundaries through 013-C
+## Reconciled architecture boundaries through 013-D
 
 Phase 013 currently preserves:
 
-- semantic ownership upstream of representation/persistence;
+- semantic ownership upstream of representation/persistence/data-plane mechanisms;
 - package-first Python/Spark product form and optional surfaces;
 - stable logical identity distinct from provider/location identity;
-- separate identity, semantic revision/commitment, current-state version/freshness and schema-version axes;
-- exact historical binding alongside mutable current views;
-- handles/views as resolvers/projections rather than detached canonical entities;
-- owner-specific result establishment and Execution-owned operational actions;
-- persistence as durability of owner-established truth rather than generic CRUD authority;
-- cross-owner atomicity without ownership merger;
-- durable coordination intent without synchronization-owned state;
-- CAS/state versions as stale-write protection rather than semantic/recovery authority;
-- migration as representation change by default;
+- exact historical bindings and owner-specific current state;
+- handles/views as projections/resolvers rather than detached canonical entities;
+- persistence as durability rather than generic semantic CRUD;
+- cross-owner technical atomicity without ownership merger;
+- CAS/outbox/migration/recovery mechanisms without new semantic owners;
 - non-regressing recovery authority after potentially regressive restore;
-- bounded/reference-first Spark-scale control interaction/persistence.
+- DataFrame/table/path/provider/manifest existence as physical evidence rather than semantic finality;
+- exact data-state strength separated across identity/read/integrity/retention/coordination dimensions;
+- Data Meaning structural interpretation distinct from Constraint validity and Generation topology fulfillment;
+- logical scope as bounded representation rather than a concept or row/entity-scale control model;
+- seal as immutable physical-subject closure to a declared strength, with provider-equivalent snapshots permitted;
+- candidate/open/partial/sealed state as subordinate non-final representation state;
+- Generation ownership of completed-output establishment/promotion;
+- exact completion-critical Evaluation subject binding;
+- bounded/reference-first Spark-scale control interaction and persistence.
 
-013-B and 013-C each found:
+013-B/C/D each found:
 
 ```text
 AMAT-2 defects       0
@@ -82,15 +89,15 @@ AR-9 contradictions  0
 upstream reopen      NONE
 ```
 
-013-C corrected the active recovery contract to current Phase 009 semantics: historical `SYNC-15` is reserved/reclassified, not an active synchronization.
+013-C corrected the active recovery contract to current Phase 009 `SYNC-15` semantics. 013-D corrected the active structured-topology contract so `SYNC-08` remains retired and `SYNC-15` reclassified under Reproducibility.
 
-Historical 007-D/007-E synchronization-count wording remains tracked for 013-I corpus cleanup.
+Historical 007-D/E/F synchronization-count wording remains tracked for 013-I corpus cleanup.
 
 ## Residual concept-design accounting
 
 ```text
 current conceptual blockers             0
-M6 Phase-013 deferrals                  1
+M6 Phase-013 deferral                   1
 M8 future-rediscovery finding groups    4
 ```
 
@@ -106,13 +113,14 @@ Only 013-J may close R1.
 
 ## Architecture / executable prohibition
 
-Do not begin production behavior, public API stabilization, persistence rollout/migrations, distributed-data implementation, provider adapters, package refactoring, runtime integration, recovery mechanisms, benchmarks or executable conformance work under Phase 013.
+Do not begin production behavior, public API stabilization, persistence rollout/migrations, distributed-data implementation, Strategy/runtime adapters, dependency acquisition systems, secrets/security integration, package refactoring, recovery mechanisms, benchmarks or executable conformance work under Phase 013.
 
 ## Remaining roadmap
 
 ```text
-013-D     Distributed Data / Topology / Manifest / Candidate-Seal-Promotion — NEXT
-013-E..H  Remaining architecture domains
+013-E     Strategy / Method Realization / Dependency Closure / Authorization /
+          Secrets / Offline-No-Egress / Runtime Distribution — NEXT
+013-F..H  Remaining architecture domains
 013-I     Cross-architecture / ADR / legacy / M6 / residual reconciliation
 013-J     R1 completion decision / Phase 014 handoff
 014       Whole-design completion / readiness
@@ -121,4 +129,4 @@ Do not begin production behavior, public API stabilization, persistence rollout/
 
 ## Current next boundary
 
-**013-D — Distributed Data Boundary, Structured Topology, Manifest, Candidate/Seal/Promotion & Large-State Reconciliation** is next eligible.
+**013-E — Strategy/Method Realization, Dependency Closure, Authorization, Secrets, Offline/No-Egress & Runtime Distribution** is next eligible.
