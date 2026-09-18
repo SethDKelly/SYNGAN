@@ -29,7 +29,8 @@ Phase 013                            COMPLETE
 R1 architecture reconciliation       CURRENTLY CLOSED
 Phase 014 start gate                 COMPLETE
 Phase 014                            ACTIVE
-014-A                                NEXT ELIGIBLE
+014-A                                COMPLETE
+014-B                                NEXT ELIGIBLE
 R2                                   OPEN
 R3                                   OPEN
 implementation readiness             NOT READY
@@ -122,4 +123,4 @@ Even after a positive R3, implementation must remain **NOT STARTED** until Phase
 
 ## Current next boundary
 
-**014-A — Whole-Design Audit Authority, Evidence Baseline, Traceability & Reopen Rules** is next eligible.
+**014-B — Problem, Actors, Outcomes, Scope & Concept-Purpose Coverage Audit** is next eligible.
