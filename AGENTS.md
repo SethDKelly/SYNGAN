@@ -4,7 +4,7 @@ These instructions apply repository-wide to automated coding/documentation agent
 
 ## Current posture
 
-**Jackson concept design is complete for the current product scope. Phase 013 architecture reconciliation is ACTIVE; 013-A through 013-C are complete, and 013-D is next. Implementation remains held.**
+**Jackson concept design is complete for the current product scope. Phase 013 architecture reconciliation is ACTIVE; 013-A through 013-D are complete, and 013-E is next. Implementation remains held.**
 
 Start with:
 
@@ -14,13 +14,13 @@ Start with:
 - `docs/authority/jackson-design-completion-implementation-hold.md`
 - `docs/authority/jackson-methodology-completion-matrix.md`
 - `docs/authority/phase-013-architecture-reconciliation-authority.md`
+- `docs/authority/structured-data-topology-relationship-semantics-contract.md`
 - `docs/authority/operational-authority-continuity-regressive-recovery-contract.md`
 - `docs/phases/013/index.md`
-- `docs/phases/013/013-A-reconciliation-authority-retained-corpus-inventory-precedence-reset-discrepancy-taxonomy.md`
-- `docs/phases/013/013-B-representation-layering-public-contract-identity-revision-handle-view-reconciliation.md`
-- `docs/phases/013/013-C-control-persistence-historical-reference-transaction-concurrency-migration-recovery-state-reconciliation.md`
+- `docs/phases/013/013-D-distributed-data-boundary-structured-topology-manifest-candidate-seal-promotion-large-state-reconciliation.md`
 - `docs/architecture/phase-013-b-representation-layering-public-contract-identity-view-reconciliation.md`
 - `docs/architecture/phase-013-c-control-persistence-history-concurrency-migration-recovery-reconciliation.md`
+- `docs/architecture/phase-013-d-distributed-data-topology-manifest-candidate-promotion-reconciliation.md`
 - `docs/architecture/index.md`
 
 ## Current state
@@ -35,7 +35,8 @@ Phase 013                            ACTIVE
 013-A                                COMPLETE
 013-B                                COMPLETE
 013-C                                COMPLETE
-013-D                                NEXT ELIGIBLE
+013-D                                COMPLETE
+013-E                                NEXT ELIGIBLE
 R1 architecture reconciliation       DOWNSTREAM / IN PROGRESS
 implementation readiness             NOT READY
 implementation start                 NOT STARTED
@@ -63,61 +64,52 @@ UPSTREAM-REOPEN
 
 These are documentation/design classifications, not runtime enums/resources/issues.
 
-## Reconciled representation invariants — 013-B
+## Reconciled representation / persistence / data-plane invariants
 
 Preserve:
 
-- architecture as representation of semantic authority, not a second semantic owner;
-- logical layering without mandatory package/service/process/API-tier mapping;
-- package/SDK, notebook and embedded automation as primary interaction roles;
-- optional/integration surfaces remaining optional;
-- stable logical identity distinct from locator/provider identity;
-- separate logical identity, semantic revision/commitment, current state version/freshness and representation schema version;
-- exact historical bindings alongside refreshable current views;
-- handles/views as resolvers/projections rather than detached canonical entities;
-- Execution ownership of retry/resume/reconcile/cancel operational state;
-- owner-specific result establishment rather than a universal Result lifecycle;
-- D0-D4 as semantic disclosure depth rather than architecture tiers;
-- bounded/reference-first interaction for Spark-scale payloads.
+- architecture as representation of semantic authority, not a second owner;
+- stable logical identity distinct from provider/location identity;
+- exact semantic revision/commitment distinct from current-state version/freshness and schema version;
+- handles/views as bounded projections/resolvers;
+- persistence as durability rather than generic semantic CRUD authority;
+- cross-owner technical atomicity without ownership merger;
+- outbox/CAS/migration/recovery mechanics as architecture mechanisms rather than concepts;
+- non-regressing recovery authority after potentially regressive restore;
+- DataFrame/table/path/provider/manifest existence as physical evidence rather than semantic finality;
+- exact data-state strength kept explicit across identity, read binding, integrity, retention/resolvability and cross-scope coordination;
+- Data Meaning descriptive structure distinct from Constraint prescriptive validity;
+- Generation ownership of requested scope/topology and completed-output establishment;
+- Strategy ownership of reusable topology/runtime capability declarations;
+- logical scope as bounded addressing/representation rather than a concept or row/entity-scale control model;
+- seal as immutable closed physical-subject identity to a declared strength, with provider-equivalent snapshots allowed;
+- candidate/open/partial/sealed/quarantined states as subordinate non-final representation state;
+- completion-critical Evaluation binding the exact immutable subject examined;
+- physical extent/estimates never silently satisfying stronger quantity/horizon/scope requirements;
+- bounded/reference-first Spark-scale interaction and control state.
 
-## Reconciled persistence invariants — 013-C
+013-C corrected active recovery authority so historical `SYNC-15` is not active. 013-D corrected active structured-topology authority so `SYNC-08` remains retired and `SYNC-15` reclassified under Reproducibility.
 
-Preserve:
+Historical Phase 007-D/E/F `15`-synchronization wording remains a 013-I corpus-cleanup obligation.
 
-- persistence makes owner-established authority durable but does not create semantic authority by storing physical state;
-- shared store/transaction technology does not merge owner boundaries;
-- cross-owner facts may co-commit atomically without transferring ownership;
-- durable outbox/transition-intent state is technical coordination state, not `Synchronization.status` or target success;
-- synchronization-owned canonical state remains **NONE**;
-- CAS/state-version success means the protected observation was current at that boundary, not that the semantic action was legal/authorized/completed;
-- restored state versions do not establish non-regressing write authority after rollback;
-- exact historical references do not silently resolve to `latest`;
-- reconstruction/projection rebuild claims only what retained owner evidence establishes;
-- migration changes representation by default and does not rewrite semantic history;
-- schema rollback does not reverse domain history;
-- regressive restore requires a fresh recovery-authority frontier before ordinary writes resume;
-- clone/fork copies do not inherit original authority scope automatically;
-- control persistence stays bounded and does not absorb row-scale source/output data by default.
+## 013-E next scope
 
-The active recovery contract now uses current Phase 009 semantics: historical `SYNC-15` is reserved/reclassified and is not active.
-
-Historical `007-D/007-E` `15`-synchronization count wording remains a 013-I cleanup obligation.
-
-## 013-D next scope
-
-013-D reconciles distributed data boundary, structured topology, manifests, candidate/seal/promotion, and large Learned-State/diagnostic representation.
+013-E reconciles Strategy/method realization, dependency closure, authorization, secrets, offline/no-egress behavior and distributed runtime closure.
 
 It must verify at least:
 
-- Data Meaning owns structural/temporal interpretation while physical layout only represents it;
-- no independent Dataset/Output/Relationship/Topology/Manifest/Artifact concept is smuggled into architecture;
-- logical source/output identity remains distinct from DataFrame/table/path/provider identity;
-- single-table, time-series and shared-key multi-table baseline remains representable without mandatory flattening;
-- candidate physical material, sealed exact subject and Generation semantic completion remain distinct;
-- manifest/seal integrity never proves Constraint satisfaction, Evidence strength, privacy, approval or semantic completion;
-- whole-result completion works over all mandatory scopes/components;
-- large Learned State and diagnostics remain distributable/referenceable without universal driver collection;
-- persistence facts and durable bytes do not become result authority merely by survival.
+- Strategy semantic capability/configuration remains distinct from runtime/provider/plugin objects;
+- method/runtime bindings cannot redefine Data Meaning, Generation, Evaluation or Learned State identity;
+- exact dependency/base-artifact identity and integrity remain explicit where material;
+- missing dependencies do not trigger hidden download/substitution/network fallback;
+- `offline` / `no-egress` is an actual runtime/dependency/security contract, not a UI flag;
+- driver-local dependency availability does not establish executor/distributed runtime closure;
+- secrets/capabilities remain scoped and are not serialized into ordinary handles/manifests/history;
+- provider runtime/container/model registry state is consumed only to the guarantee it actually establishes;
+- distributed runtime closure preserves the exact committed Strategy/data/dependency basis;
+- optional remote integrations remain optional and cannot become universal prerequisites;
+- platform/runtime limitation is surfaced as compatibility/readiness rather than semantic weakening;
+- M8 future-scope areas receive no placeholder runtime/security subsystems.
 
 ## Durable quality rules
 
@@ -135,7 +127,7 @@ Future rediscovery:
 
 ## M6 / M8 carry-forward
 
-Current synchronization authority is `15 historical IDs / 13 active synchronizations`; `SYNC-08` is retired and historical `SYNC-15` is reclassified into the cross-cutting Reproducibility contract. Old current-looking architecture wording must be cleaned by 013-I.
+Current synchronization authority is `15 historical IDs / 13 active synchronizations`; `SYNC-08` is retired and historical `SYNC-15` is reclassified into the cross-cutting Reproducibility contract. Historical current-looking architecture wording is cleaned in 013-I after owning domains are reconciled.
 
 M8 areas such as formal composable privacy/accounting, product-owned governance/release, publication lifecycle, durable session/feed lifecycle, independent graph lifecycle, resource economics and reusable knowledge/memory receive no placeholder architecture absent renewed concept discovery.
 
@@ -143,7 +135,7 @@ M8 areas such as formal composable privacy/accounting, product-owned governance/
 
 Phase 013 is design/reconciliation only.
 
-Do not begin production behavior, migrations, persistence schemas, distributed-data implementation, provider adapters, public API stabilization, package refactoring, recovery mechanisms, runtime integration, benchmarks or executable conformance work.
+Do not begin production behavior, migrations, persistence schemas, distributed-data implementation, Strategy/runtime adapters, dependency resolvers, secrets/security integration, provider adapters, public API stabilization, package refactoring, recovery mechanisms, benchmarks or executable conformance work.
 
 ```text
 Phase 013  architecture reconciliation — ACTIVE
@@ -161,4 +153,4 @@ IMPLEMENTATION NEXT        NOT YET
 
 ## Current next boundary
 
-**013-D — Distributed Data Boundary, Structured Topology, Manifest, Candidate/Seal/Promotion & Large-State Reconciliation** is next eligible.
+**013-E — Strategy/Method Realization, Dependency Closure, Authorization, Secrets, Offline/No-Egress & Runtime Distribution** is next eligible.
