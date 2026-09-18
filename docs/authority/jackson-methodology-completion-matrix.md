@@ -98,6 +98,8 @@ Phase 013 has completed:
        offline-no-egress / distributed runtime closure
 013-F  Execution / Attempt / fencing / idempotency / checkpoint / cancellation /
        recovery / admission
+013-G  Evaluation / Evidence / Provenance / historical query / Reproducibility /
+       disclosure / external-governance boundary
 ```
 
 Current material results:
@@ -108,24 +110,13 @@ Current material results:
 013-D AMAT-2 / AMAT-3 / AR-9   0 / 0 / 0
 013-E AMAT-2 / AMAT-3 / AR-9   0 / 0 / 0
 013-F AMAT-2 / AMAT-3 / AR-9   0 / 0 / 0
+013-G AMAT-2 / AMAT-3 / AR-9   0 / 0 / 0
 upstream reopen                NONE
 new concepts                   0
 new synchronizations           0
 ```
 
-013-C corrected active recovery authority to current synchronization semantics. 013-D corrected active structured-topology wording. 013-E corrected active Reproducibility and Runtime Distribution Closure contracts. 013-F reconciles Execution/Attempt/recovery/admission and explicitly routes remaining current-looking `SYNC-15` and historical `SYNC-08` references in retained operational/scale documents to 013-I corpus cleanup.
-
-## Current synchronization / architecture state
-
-```text
-accepted concepts                       11
-historical synchronization IDs          15
-active cross-concept synchronizations   13
-SYNC-08                                  retired — Generation-local output behavior
-SYNC-15                                  reclassified — Reproducibility contract
-```
-
-Architecture reconciled through 013-F preserves:
+Completed architecture through 013-G now preserves:
 
 - representation/persistence/data-plane/runtime/operational machinery downstream of semantic ownership;
 - physical/provider/storage/runtime facts only at actual evidentiary strength;
@@ -143,8 +134,28 @@ Architecture reconciled through 013-F preserves:
 - immutable checkpoints separate from resume eligibility and semantic results;
 - cancellation intent distinct from terminal outcome;
 - admission as current operational eligibility, not semantic readiness/write authority;
-- resource pressure unable to silently weaken committed semantics;
-- cross-cutting Reproducibility with no active synchronization-owned state.
+- runtime Evaluation result separate from Evidence establishment;
+- retry-safe independently interpretable Evidence findings;
+- immutable Evidence semantics separate from current applicability;
+- typed Provenance relationships with low authority fan-out;
+- direct/reconstructed/partial/unknown historical knowledge separate from resolution/disclosure state;
+- derived/non-authoritative history/search projections;
+- Reproducibility historical supportability separate from current feasibility and actor-visible disclosure;
+- current disclosure/redaction separate from canonical history;
+- empirical privacy Evidence separate from formal mechanism guarantees and external release/use governance;
+- external governance/lineage integrations unable to create hidden canonical approval/history authority.
+
+013-C corrected active recovery authority to current synchronization semantics. 013-D corrected active structured-topology wording. 013-E corrected active Reproducibility and Runtime Distribution Closure contracts. 013-F and 013-G semantically reconcile remaining operational/Evidence/history `SYNC-15` and historical `SYNC-08` references and carry their corpus/status cleanup explicitly to 013-I.
+
+## Current synchronization state
+
+```text
+accepted concepts                       11
+historical synchronization IDs          15
+active cross-concept synchronizations   13
+SYNC-08                                  retired — Generation-local output behavior
+SYNC-15                                  reclassified — Reproducibility contract
+```
 
 ## Phase completion state
 
@@ -167,7 +178,8 @@ Phase 013                            ACTIVE
 013-D                                COMPLETE
 013-E                                COMPLETE
 013-F                                COMPLETE
-013-G                                NEXT ELIGIBLE
+013-G                                COMPLETE
+013-H                                NEXT ELIGIBLE
 R1                                   DOWNSTREAM / IN PROGRESS
 REPRESENTATION/ARCHITECTURE FINAL    NO — PHASE 013 ACTIVE
 WHOLE-DESIGN COMPLETION              NOT YET — PHASE 014
@@ -191,12 +203,10 @@ M6 is current-document/corpus synchronization drift only; current Phase 009 and 
 ## Current dependency order
 
 ```text
-013-A..013-F  COMPLETE
+013-A..013-G  COMPLETE
   ↓
-013-G  Evaluation / Evidence / Provenance / Historical Query /
-       Reproducibility / Disclosure / External-Governance Boundary — NEXT
-  ↓
-013-H  deployment / scale / observability / portability / platform integration
+013-H  Deployment / Scalability / Observability / Portability /
+       Compatibility / Platform Integration — NEXT
   ↓
 013-I  cross-architecture / ADR / legacy / M6 / residual reconciliation
   ↓
@@ -213,4 +223,4 @@ A positive architecture subgroup does not imply implementation readiness. Only 0
 
 ## Current next boundary
 
-**013-G — Evaluation, Evidence, Provenance, Historical Query, Reproducibility, Disclosure & External-Governance Boundary Reconciliation** is next eligible.
+**013-H — Deployment, Scalability, Observability, Portability, Compatibility & Platform-Integration Reconciliation** is next eligible.
