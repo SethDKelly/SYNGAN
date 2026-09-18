@@ -16,9 +16,9 @@ Current governing architecture-reconciliation authority includes:
 
 - [`Phase 013 Architecture Reconciliation Authority`](docs/authority/phase-013-architecture-reconciliation-authority.md)
 - [`Phase 013`](docs/phases/013/index.md)
-- [`013-D Distributed Data Reconciliation`](docs/architecture/phase-013-d-distributed-data-topology-manifest-candidate-promotion-reconciliation.md)
 - [`013-E Runtime / Dependency / Security Reconciliation`](docs/architecture/phase-013-e-strategy-runtime-dependency-authorization-secrets-distribution-reconciliation.md)
 - [`013-F Execution / Recovery / Admission Reconciliation`](docs/architecture/phase-013-f-execution-attempt-fencing-idempotency-checkpoint-cancellation-recovery-admission-reconciliation.md)
+- [`013-G Evidence / Provenance / History / Disclosure Reconciliation`](docs/architecture/phase-013-g-evaluation-evidence-provenance-history-reproducibility-disclosure-governance-reconciliation.md)
 - [`Jackson Methodology Completion Matrix`](docs/authority/jackson-methodology-completion-matrix.md)
 - [`Jackson Design Completion & Implementation Hold`](docs/authority/jackson-design-completion-implementation-hold.md)
 
@@ -35,16 +35,17 @@ Phase 013                            ACTIVE
 013-D                                COMPLETE
 013-E                                COMPLETE
 013-F                                COMPLETE
-013-G                                NEXT ELIGIBLE
+013-G                                COMPLETE
+013-H                                NEXT ELIGIBLE
 R1 architecture reconciliation       DOWNSTREAM / IN PROGRESS
 implementation readiness             NOT READY
 implementation start                 NOT STARTED
 implementation next                  NOT YET
 ```
 
-## Phase 013 results through 013-F
+## Phase 013 results through 013-G
 
-Representation, persistence/history/recovery, distributed-data/topology, runtime/dependency/security, and Execution/recovery/admission architecture have been reconciled against the completed concept design.
+Representation, persistence/history/recovery, distributed-data/topology, runtime/dependency/security, Execution/recovery/admission, and Evaluation/Evidence/Provenance/history/disclosure architecture have been reconciled against the completed concept design.
 
 ```text
 013-B AMAT-2 / AMAT-3 / AR-9   0 / 0 / 0
@@ -52,22 +53,27 @@ Representation, persistence/history/recovery, distributed-data/topology, runtime
 013-D AMAT-2 / AMAT-3 / AR-9   0 / 0 / 0
 013-E AMAT-2 / AMAT-3 / AR-9   0 / 0 / 0
 013-F AMAT-2 / AMAT-3 / AR-9   0 / 0 / 0
+013-G AMAT-2 / AMAT-3 / AR-9   0 / 0 / 0
 upstream reopen                NONE
 ```
 
-The current operational baseline preserves:
+The current Evidence/history baseline preserves:
 
-- one stable logical Execution distinct from subordinate Attempts/provider jobs;
-- Attempt observed state separate from current framework mutation authority;
-- non-regressing recovery-frontier authority above ordinary Attempt fencing after rollback;
-- lease/heartbeat as liveness coordination rather than stale-writer proof;
-- scoped idempotency plus fencing rather than exactly-once physical computation;
-- immutable checkpoints distinct from current resume eligibility and semantic results;
-- cancellation intent distinct from terminal operational outcome;
-- late provider success unable to restore owner/result authority;
-- admission as current operational eligibility distinct from semantic readiness, authorization, runtime closure, queue/capacity and mutation authority;
-- resource pressure unable to silently weaken committed scope, validation, approximation, dependency or security semantics;
-- bounded operational history at Spark scale.
+- Evaluation semantic validity separately from runtime/platform success;
+- independently interpretable retry-safe Evidence findings;
+- immutable Evidence finding semantics separately from current applicability;
+- claim strength bounded by actual method/scope/coverage/uncertainty;
+- Generation-owned Evidence completion basis and result transition;
+- Provenance as typed relationship authority rather than duplicated canonical state;
+- directly retained, reconstructed, partial and unknown historical knowledge distinctions;
+- object-resolution/disclosure state separately from historical knowledge quality;
+- derived/non-authoritative query, graph and report projections;
+- difference-versus-causality separation in historical comparison;
+- Reproducibility historical supportability separately from current feasibility and actor-visible assessability;
+- disclosure/redaction as current view authority rather than history mutation;
+- empirical privacy Evidence separately from formal privacy guarantees;
+- external release/use governance as external authority rather than hidden `approved` state;
+- external lineage/metadata as integration evidence rather than canonical Provenance by observation alone.
 
 Current synchronization authority remains:
 
@@ -78,14 +84,13 @@ SYNC-08               retired — Generation-local output lifecycle
 SYNC-15               reclassified — Reproducibility contract
 ```
 
-Remaining current-looking historical references in retained operational/scale documents are explicit 013-I corpus-cleanup obligations and do not control current semantics.
+Remaining current-looking pre-Phase-009 references are explicit 013-I corpus/status/link cleanup obligations and do not control current semantics.
 
 ## Remaining Phase 013 sequence
 
 ```text
-013-G  Evaluation / Evidence / Provenance / Historical Query /
-       Reproducibility / Disclosure / External-Governance Boundary — NEXT
-013-H  Deployment / Scale / Observability / Portability / Platform Integration
+013-H  Deployment / Scalability / Observability / Portability /
+       Compatibility / Platform Integration — NEXT
 013-I  Cross-Architecture / ADR / Legacy / M6 / Residual Register
 013-J  R1 Completion Decision / Phase 014 Handoff
 ```
@@ -104,6 +109,6 @@ Only a positive Phase 014 may change implementation to **READY / NOT STARTED / N
 
 ## Current next boundary
 
-**013-G — Evaluation, Evidence, Provenance, Historical Query, Reproducibility, Disclosure & External-Governance Boundary Reconciliation** is next eligible.
+**013-H — Deployment, Scalability, Observability, Portability, Compatibility & Platform-Integration Reconciliation** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
