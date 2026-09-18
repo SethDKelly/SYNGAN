@@ -37,8 +37,8 @@ Current authority:
 
 - [Phase 013 Index](013/index.md)
 - [Phase 013 Architecture Reconciliation Authority](../authority/phase-013-architecture-reconciliation-authority.md)
-- [013-F Execution / Recovery Phase Record](013/013-F-execution-attempt-fencing-idempotency-checkpoint-cancellation-recovery-admission-reconciliation.md)
-- [013-F Execution / Recovery Architecture Authority](../architecture/phase-013-f-execution-attempt-fencing-idempotency-checkpoint-cancellation-recovery-admission-reconciliation.md)
+- [013-G Evidence / History Phase Record](013/013-G-evaluation-evidence-provenance-historical-query-reproducibility-disclosure-external-governance-reconciliation.md)
+- [013-G Evidence / History Architecture Authority](../architecture/phase-013-g-evaluation-evidence-provenance-history-reproducibility-disclosure-governance-reconciliation.md)
 
 Current sequence:
 
@@ -50,15 +50,16 @@ Current sequence:
 013-E  COMPLETE — Strategy/runtime / dependency / security / offline-no-egress
 013-F  COMPLETE — Execution / Attempt / fencing / idempotency / checkpoint /
                   cancellation / recovery / admission
-013-G  NEXT     — Evaluation / Evidence / Provenance / history / disclosure
-013-H           — deployment / scale / observability / portability / integration
+013-G  COMPLETE — Evaluation / Evidence / Provenance / historical query /
+                  Reproducibility / disclosure / external governance
+013-H  NEXT     — deployment / scale / observability / portability / integration
 013-I           — cross-architecture / ADR / legacy / M6 / residual register
 013-J           — consolidation / R1 decision / Phase 014 handoff
 ```
 
-013-B through 013-F each close with zero AMAT-2 defects, zero AMAT-3 blockers, zero AR-9 contradictions and no upstream reopen.
+013-B through 013-G each close with zero AMAT-2 defects, zero AMAT-3 blockers, zero AR-9 contradictions and no upstream reopen.
 
-013-F retains stable Execution/Attempt and non-regressing recovery architecture while clarifying admission, prepared Attempt state and retry-safe multi-Evidence behavior. Historical/current-looking `SYNC-15` and old `SYNC-08` references in retained operational/scale material remain bounded 013-I cleanup obligations.
+013-G retains Evaluation/Evidence/Provenance/history architecture while clarifying Evidence multiplicity/completion, typed Provenance ownership, epistemically qualified history, multi-axis Reproducibility, disclosure, privacy-guarantee boundaries and external-governance handoff. Historical/current-looking pre-Phase-009 synchronization references remain bounded 013-I cleanup obligations.
 
 ## Later design phase
 
@@ -72,6 +73,6 @@ Future only. Explicit authorization remains required before implementation begin
 
 ## Current next boundary
 
-**013-G — Evaluation, Evidence, Provenance, Historical Query, Reproducibility, Disclosure & External-Governance Boundary Reconciliation** is next eligible.
+**013-H — Deployment, Scalability, Observability, Portability, Compatibility & Platform-Integration Reconciliation** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
