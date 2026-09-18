@@ -21,7 +21,7 @@ Jackson concept design       COMPLETE FOR CURRENT PRODUCT SCOPE
 Phase 013                    COMPLETE
 R1 architecture              CURRENTLY CLOSED
 Phase 014                    ACTIVE
-014-A                        NEXT ELIGIBLE
+Phase 014 sequencing authority  docs/phases/014/index.md
 R2                           OPEN
 R3                           OPEN
 implementation readiness     NOT READY
@@ -80,6 +80,6 @@ The whole-design audit must preserve decision-material qualifiers, current-versu
 
 ## Current next boundary
 
-**014-A — Whole-Design Audit Authority, Evidence Baseline, Traceability & Reopen Rules** is next eligible.
+Current Phase 014 subgroup sequencing is governed by [`docs/phases/014/index.md`](../phases/014/index.md).
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
