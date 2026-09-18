@@ -8,7 +8,7 @@ status: active
 
 ## Historical work through Phase 007
 
-Phases 001-007 remain historical discovery/specification/experience/architecture/planning evidence. Phase 007-K implementation re-entry remains superseded.
+Phases 001-007 remain historical discovery/specification/experience/architecture/planning evidence. Phase 007-A..C executable scaffold is feasibility evidence only, and Phase 007-K implementation re-entry is superseded as current authorization.
 
 ## Current implementation posture
 
@@ -18,7 +18,7 @@ IMPLEMENTATION START       NOT STARTED
 IMPLEMENTATION NEXT        NOT YET
 ```
 
-Only Phase 014 may change that posture after a positive whole-design audit.
+Only Phase 014 may change readiness after a positive whole-design audit. Explicit Phase 015 authority remains required before implementation begins.
 
 ## Completed Jackson concept-design phases
 
@@ -37,8 +37,9 @@ Current authority:
 
 - [Phase 013 Index](013/index.md)
 - [Phase 013 Architecture Reconciliation Authority](../authority/phase-013-architecture-reconciliation-authority.md)
-- [013-H Deployment / Scale Phase Record](013/013-H-deployment-scalability-observability-portability-compatibility-platform-integration-reconciliation.md)
-- [013-H Deployment / Scale Architecture Authority](../architecture/phase-013-h-deployment-scalability-observability-portability-compatibility-platform-integration-reconciliation.md)
+- [Phase 013 Residual Architecture Misfit Register](../authority/phase-013-residual-architecture-misfit-register.md)
+- [013-I Phase Record](013/013-I-cross-architecture-composition-adr-legacy-m6-residual-reconciliation.md)
+- [013-I Cross-Architecture Reconciliation](../architecture/phase-013-i-cross-architecture-composition-legacy-m6-residual-reconciliation.md)
 
 Current sequence:
 
@@ -54,15 +55,28 @@ Current sequence:
                   Reproducibility / disclosure / external governance
 013-H  COMPLETE — deployment / scale / observability / portability /
                   compatibility / platform integration
-013-I  NEXT     — cross-architecture / ADR / legacy / M6 / residual register
-013-J           — consolidation / R1 decision / Phase 014 handoff
+013-I  COMPLETE — cross-architecture / ADR / legacy / M6 / residual register
+013-J  NEXT     — Phase 013 consolidation / R1 decision / Phase 014 handoff
 ```
 
-013-B through 013-H each close with zero AMAT-2 defects, zero AMAT-3 blockers, zero AR-9 contradictions and no upstream reopen.
+Every substantive domain reconciliation 013-B through 013-H closed with zero AMAT-2 defects, zero AMAT-3 blockers, zero AR-9 contradictions and no upstream reopen.
 
-013-H retains the portable-core/capability-negotiated platform model while clarifying guarantee-first provider support, support-level distinctions, multi-axis/directional compatibility, HA/recovery authority, multidimensional scale claims, observability boundaries, external lineage/catalog authority, degraded-operation typing and offline/private deployment guarantees. The active Enterprise Scale contract is now aligned with current Phase 009 synchronization semantics.
+013-I completes the whole-corpus closure pass:
 
-013-I is the final architecture-reconciliation closure pass before the R1 decision. It owns cross-domain composition, ADR disposition, legacy authority cleanup, M6 synchronization drift, M8 placeholder audit and the residual architecture-misfit register.
+```text
+cross-architecture composition              PASS
+M6 synchronization drift                    CLOSED
+ADR final disposition                       COMPLETE — 10 / 10 RETAINED
+legacy current-authority ambiguity          CLOSED
+historical implementation re-entry          SUPERSEDED AS CURRENT AUTHORIZATION
+M8 placeholder leakage                      NOT FOUND
+unresolved AMAT-2                           0
+unresolved AMAT-3                           0
+unresolved AR-3..AR-9                       0
+upstream reopen                              NONE
+```
+
+013-J now owns the explicit R1 completion decision. A clean residual register does not close R1 automatically.
 
 ## Later design phase
 
@@ -76,6 +90,6 @@ Future only. Explicit authorization remains required before implementation begin
 
 ## Current next boundary
 
-**013-I — Cross-Architecture Composition, ADR/Legacy Contract Reconciliation, M6 Cleanup & Residual Architecture Misfit Register** is next eligible.
+**013-J — Phase 013 Consolidation, R1 Completion Decision & Phase 014 Handoff** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
