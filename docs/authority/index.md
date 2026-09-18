@@ -22,7 +22,10 @@ These documents define how SYNGAN design knowledge is created, interpreted, reco
 - [013-B Representation Reconciliation](../architecture/phase-013-b-representation-layering-public-contract-identity-view-reconciliation.md)
 - [013-C Persistence Reconciliation](../architecture/phase-013-c-control-persistence-history-concurrency-migration-recovery-reconciliation.md)
 - [013-D Distributed Data Reconciliation](../architecture/phase-013-d-distributed-data-topology-manifest-candidate-promotion-reconciliation.md)
-- [Structured-Data Topology Contract](structured-data-topology-relationship-semantics-contract.md)
+- [013-E Runtime / Dependency / Security Reconciliation](../architecture/phase-013-e-strategy-runtime-dependency-authorization-secrets-distribution-reconciliation.md)
+- [Network & External Dependency Policy](network-external-dependency-policy.md)
+- [Self-Contained Runtime Distribution Closure](self-contained-execution-runtime-distribution-closure-contract.md)
+- [Reproducibility Contract](reproducibility-contract.md)
 - [Operational Authority Continuity & Regressive Recovery Contract](operational-authority-continuity-regressive-recovery-contract.md)
 - [Representation & Architecture Index](../architecture/index.md)
 
@@ -39,7 +42,8 @@ Phase 013                            ACTIVE
 013-B                                COMPLETE
 013-C                                COMPLETE
 013-D                                COMPLETE
-013-E                                NEXT ELIGIBLE
+013-E                                COMPLETE
+013-F                                NEXT ELIGIBLE
 R1 architecture reconciliation       DOWNSTREAM / IN PROGRESS
 whole-design completion              NOT YET — PHASE 014
 implementation readiness             NOT READY
@@ -47,18 +51,19 @@ implementation start                 NOT STARTED
 implementation next                  NOT YET
 ```
 
-## Phase 013 results through 013-D
+## Phase 013 results through 013-E
 
 ```text
 013-B representation defects AMAT-2 / AMAT-3 / AR-9   0 / 0 / 0
 013-C persistence defects    AMAT-2 / AMAT-3 / AR-9   0 / 0 / 0
 013-D data-plane defects     AMAT-2 / AMAT-3 / AR-9   0 / 0 / 0
+013-E runtime/security       AMAT-2 / AMAT-3 / AR-9   0 / 0 / 0
 upstream reopen                                      NONE
 new concepts                                         0
 new synchronizations                                 0
 ```
 
-Current distributed-data authority preserves physical-state/semantic-authority separation, strength-qualified exactness, composed structured topology, provider-equivalent seal boundaries, candidate non-finality, Generation-owned completed-output establishment, exact Evaluation-subject binding, and Spark-scale bounded/reference-first control state.
+Current runtime/dependency/security authority preserves semantic Strategy/method ownership, exact multi-component executable closure, explicit provisioning, separate dependency identity/integrity/trust/compatibility/authorization dimensions, current action authorization, bounded live capabilities/secrets, no-egress invariants, distributed worker closure and non-final runtime/provider result semantics.
 
 ## Synchronization state
 
@@ -69,7 +74,7 @@ SYNC-08                        retired — Generation-local output lifecycle
 SYNC-15                        reclassified — Reproducibility contract
 ```
 
-013-C corrected the active recovery contract and 013-D corrected the active structured-topology contract to current Phase 009 semantics. Historical Phase 007-D/E/F current-looking `15`-sync wording remains a 013-I cleanup obligation.
+013-C corrected active recovery authority, 013-D corrected active structured-topology authority, and 013-E corrected the active Reproducibility and Self-Contained Runtime Distribution Closure contracts to current Phase 009 semantics. Historical Phase 007-D/E/F/G current-looking wording remains a 013-I cleanup obligation.
 
 ## Durable guardrails
 
@@ -77,6 +82,8 @@ SYNC-15                        reclassified — Reproducibility contract
 - decision-material qualifiers cannot be hidden by progressive disclosure;
 - provider facts are consumed only at their actual evidentiary strength;
 - architecture roles do not become concepts by addressability/durability;
+- runtime/dependency/security convenience cannot broaden Strategy or committed network/egress semantics;
+- current authorization can block action without rewriting historical semantic commitment;
 - new independent product purpose/lifecycle returns to concept discovery before architecture/implementation;
 - only demonstrated AR-9 evidence may justify upstream reopen.
 
@@ -87,8 +94,9 @@ SYNC-15                        reclassified — Reproducibility contract
 013-B  COMPLETE
 013-C  COMPLETE
 013-D  COMPLETE
-013-E  Strategy/runtime / dependency / security / offline-no-egress       NEXT
-013-F  Execution / Attempt / recovery / fencing / admission
+013-E  COMPLETE
+013-F  Execution / Attempt / fencing / idempotency / checkpoint /
+       cancellation / recovery / admission                                  NEXT
 013-G  Evaluation / Evidence / Provenance / history / disclosure
 013-H  deployment / scale / observability / portability / integration
 013-I  cross-architecture / ADR / legacy / M6 / residual register
@@ -101,4 +109,4 @@ Only 013-J may close R1. Only Phase 014 may set implementation **READY / NOT STA
 
 ## Current next boundary
 
-**013-E — Strategy/Method Realization, Dependency Closure, Authorization, Secrets, Offline/No-Egress & Runtime Distribution** is next eligible.
+**013-F — Execution/Attempt, Fencing, Idempotency, Checkpoint, Cancellation, Recovery & Admission Reconciliation** is next eligible.
