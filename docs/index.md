@@ -32,6 +32,7 @@ methodology / completion / cross-cutting authority
 - [Jackson Design Completion & Implementation Hold](authority/jackson-design-completion-implementation-hold.md)
 - [Jackson Methodology Completion Matrix](authority/jackson-methodology-completion-matrix.md)
 - [Phase 014 Whole-Design Consolidation & Readiness Authority](authority/phase-014-whole-design-readiness-authority.md)
+- [Phase 014-A Whole-Design Evidence Baseline](authority/phase-014-whole-design-audit-evidence-baseline.md)
 - [Phase 014](phases/014/index.md)
 - [Phase 014 Start Gate / Decomposition](phases/014/014-start-gate-whole-design-readiness-decomposition.md)
 - [Phase 013 Consolidated Architecture Contract](architecture/phase-013-consolidated-architecture-contract.md)
@@ -47,7 +48,8 @@ Phase 013                            COMPLETE
 R1 architecture reconciliation       CURRENTLY CLOSED
 Phase 014 start gate                 COMPLETE
 Phase 014                            ACTIVE
-014-A                                NEXT ELIGIBLE
+014-A                                COMPLETE
+014-B                                NEXT ELIGIBLE
 R2                                   OPEN
 R3                                   OPEN
 implementation readiness             NOT READY
@@ -100,4 +102,4 @@ Even a later positive R3 requires explicit Phase 015 authority before implementa
 
 ## Current next boundary
 
-**014-A — Whole-Design Audit Authority, Evidence Baseline, Traceability & Reopen Rules** is next eligible.
+**014-B — Problem, Actors, Outcomes, Scope & Concept-Purpose Coverage Audit** is next eligible.
