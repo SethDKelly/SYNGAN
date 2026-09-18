@@ -6,7 +6,7 @@ status: active-supporting-evidence
 
 # SYNGAN Experience & Workflow Design
 
-This directory contains retained actor-visible/programmatic workflow evidence from earlier design phases. Current semantic authority lives in concepts, composition, mapping, and the completed Phase 012 Jackson consolidation.
+This directory contains retained actor-visible/programmatic workflow evidence from earlier design phases. Current semantic authority lives in concepts, composition, mapping, and the completed Phase 012 Jackson consolidation; current architecture authority is the completed Phase 013 consolidated contract.
 
 ## Current state
 
@@ -18,6 +18,12 @@ G1-G7                        CURRENTLY CLOSED
 Phase 012                    COMPLETE
 H1/H2                        CURRENTLY CLOSED
 Jackson concept design       COMPLETE FOR CURRENT PRODUCT SCOPE
+Phase 013                    COMPLETE
+R1 architecture              CURRENTLY CLOSED
+Phase 014                    ACTIVE
+014-A                        NEXT ELIGIBLE
+R2                           OPEN
+R3                           OPEN
 ```
 
 ## Retained experience obligations
@@ -38,24 +44,23 @@ D4  distributed / host operational drill-down
 
 Provider-visible state remains provider-qualified evidence rather than canonical SYNGAN state.
 
-## Phase 013 boundary
+## Phase 014 boundary
 
-Phase 013 may reconcile UI/report/notebook/host representation choices, but must preserve completed mapping semantics and may not create a new canonical owner through a combined view/read model.
+Phase 014 uses this corpus as supporting evidence for whole-design mapping/parity and scenario audits. Retained workflow examples may expose a cross-layer contradiction, but they cannot override current concept, synchronization, mapping or architecture authority merely because an older interaction was designed differently.
 
 M8 future triggers do not justify placeholder Privacy, Governance, Publication, Session, Graph, Resource or Knowledge workflows.
-
-The M6 historical synchronization-label item remains downstream architecture/documentation reconciliation only.
 
 ## Authority boundary
 
 For conflicts:
 
-1. completed Phase 012 concept-design authority;
-2. current concept/dependence/synchronization authority;
-3. current mapping authority;
-4. retained experience evidence;
-5. retained architecture pending Phase 013 reconciliation.
+1. current methodology / Phase 014 whole-design authority;
+2. completed Phase 012 concept-design authority;
+3. current concept/dependence/synchronization authority;
+4. current mapping authority;
+5. Phase 013 Consolidated Architecture Contract;
+6. retained experience evidence.
 
 ## Current next boundary
 
-**Phase 013 — Post-Concept Representation & Architecture Reconciliation** is next eligible.
+**014-A — Whole-Design Audit Authority, Evidence Baseline, Traceability & Reopen Rules** is next eligible.
