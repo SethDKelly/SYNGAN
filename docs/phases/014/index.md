@@ -1,7 +1,7 @@
 ---
 type: Phase Index
 title: Phase 014 — Whole-Design Consolidation & Implementation-Readiness Decision
-status: next-eligible
+status: active
 ---
 
 # Phase 014 — Whole-Design Consolidation & Implementation-Readiness Decision
@@ -17,7 +17,7 @@ R2  whole design audited end-to-end
 R3  implementation-readiness decision based on the complete design
 ```
 
-## Entry state
+## Current state
 
 ```text
 Phases 008-012                  COMPLETE
@@ -25,7 +25,9 @@ Jackson concept design          COMPLETE FOR CURRENT PRODUCT SCOPE
 Phase 013                       COMPLETE
 R1 architecture reconciliation CURRENTLY CLOSED
 representation / architecture  RECONCILED / CURRENT
-Phase 014                       NEXT ELIGIBLE
+Phase 014 start gate            COMPLETE
+Phase 014                       ACTIVE
+014-A                           NEXT ELIGIBLE
 R2                              OPEN
 R3                              OPEN
 implementation readiness        NOT READY
@@ -33,72 +35,87 @@ implementation start            NOT STARTED
 implementation next             NOT YET
 ```
 
-## Governing input
+## Governing authority
 
 Start with:
 
+- [Phase 014 Whole-Design Consolidation & Readiness Authority](../../authority/phase-014-whole-design-readiness-authority.md)
+- [Phase 014 Start Gate / Decomposition Record](014-start-gate-whole-design-readiness-decomposition.md)
 - [013-J Phase Record](../013/013-J-phase-013-consolidation-r1-completion-decision-phase-014-handoff.md)
 - [Phase 013 Consolidated Architecture Contract](../../architecture/phase-013-consolidated-architecture-contract.md)
 - [Jackson Methodology Completion Matrix](../../authority/jackson-methodology-completion-matrix.md)
 - [Jackson Design Completion & Implementation Hold](../../authority/jackson-design-completion-implementation-hold.md)
-- [Phase 013 Residual Architecture Misfit Register](../../authority/phase-013-residual-architecture-misfit-register.md)
 
-Phase 014 must also follow the current problem, concepts, dependence/application-family, synchronization, mapping, experience and quality authorities rather than treating architecture alone as the design.
+Phase 014 must audit current problem, concept, dependence/application-family, synchronization, mapping, quality and architecture authority together. Architecture alone is not the whole design.
 
-## Required whole-design audit
-
-R2 must examine the complete chain together:
+## Approved dependency-safe sequence
 
 ```text
-problem / purpose / actors / desired outcomes
-        ↓
-accepted concepts / purposes / state / actions / invariants
-        ↓
-dependence / valid application-family subsets
-        ↓
-cross-concept synchronizations / singular ownership
-        ↓
-human + programmatic mapping / semantic parity
-        ↓
-quality / residual conceptual findings
-        ↓
-reconciled Phase 013 architecture
+014-A  Whole-Design Audit Authority, Evidence Baseline,
+       Traceability & Reopen Rules — NEXT
+
+014-B  Problem, Actors, Outcomes, Scope &
+       Concept-Purpose Coverage Audit
+
+014-C  Concept Specification, Dependence, Application-Family &
+       Synchronization Integrity Audit
+
+014-D  Mapping, Interaction, Linguistic, Disclosure &
+       Semantic-Parity Whole-Design Audit
+
+014-E  Architecture Realization Coverage, Responsibility/Authority &
+       Design-to-Architecture Traceability Audit
+
+014-F  End-to-End Scenario, Exception, Failure, Recovery, Scale,
+       Security, Portability & Adversarial Whole-Design Audit
+
+014-G  Implementation-Neutral Completeness, Decision-Ambiguity,
+       Handoff Sufficiency & Residual Whole-Design Register
+
+014-H  Phase 014 Consolidation, R2 Completion Decision,
+       R3 Implementation-Readiness Decision & Phase 015 Handoff
 ```
 
-The audit must detect contradictions that local phase completion could have missed, including orphaned outcomes, missing architecture support, architecture without upstream purpose, forced application-family paths, inconsistent terminology, hidden authority transfers, historical/current ambiguity, future-scope leakage and implementation assumptions masquerading as design requirements.
+The sequence is dependency-ordered: purpose → semantic composition → mapping → architecture → whole-system stress → implementation-neutral handoff sufficiency → explicit R2/R3 decisions.
 
-## Readiness decision boundary
+## Finding discipline
 
-R3 may be decided only after R2 is complete.
+```text
+WMAT-0  aligned / explanatory observation
+WMAT-1  bounded clarification / navigation-status correction
+WMAT-2  material whole-design contradiction or missing design authority
+WMAT-3  blocker / insufficient evidence preventing R2 or R3 closure
+```
 
-A positive readiness decision requires, at minimum:
+Implementation/readiness concerns that do not change design semantics must be classified separately as `READINESS-NOTE`, `READINESS-RISK`, or `READINESS-BLOCK`.
 
-- no unresolved material whole-design contradiction;
-- no missing upstream authority required to implement the current product scope;
-- no unresolved architecture blocker;
-- no current-authority ambiguity that would force implementers to choose semantics;
-- no implementation plan that must invent product semantics to proceed;
-- preserved implementation hold until explicit Phase 015 authority.
+A `READINESS-BLOCK` prevents positive R3. A normal implementation risk does not automatically reopen concept or architecture design.
 
-Phase 014 may identify implementation risks, sequencing needs or evidence requirements, but those must not be confused with missing design semantics unless the evidence actually demonstrates a design defect.
+## Reopen discipline
 
-## Mandatory pre-phase start gate
+Reopen the smallest owning authority only when current evidence actually contradicts it.
 
-Before executing any Phase 014 subgroup:
+Historical code/tests/plans, provider convenience, implementation cost or prior package topology remain downstream evidence and cannot silently redefine product semantics.
 
-1. review this phase intention against the current repository state;
-2. inventory the full R2/R3 evidence surface;
-3. divide Phase 014 into the smallest dependency-safe logical subphases needed;
-4. define each subphase's entry/exit evidence and reopen rules;
-5. reserve the final subgroup for explicit R2/R3 consolidation and decision.
+## R3 decision boundary
 
-No `014-A` subgroup is pre-authorized by this index. The decomposition itself is the next action.
+R3 may be decided only after the R2 evidence chain has been consolidated.
+
+014-H must decide in this order:
+
+```text
+R2 first
+  ↓
+R3 only if R2 is CURRENTLY CLOSED
+  ↓
+Phase 015 handoff only if R3 is positive
+```
+
+Even a positive R3 does not begin implementation.
 
 ## Implementation boundary
 
-Phase 014 is still design/readiness work.
-
-Until R3 is explicitly decided:
+Until 014-H explicitly decides R3:
 
 ```text
 IMPLEMENTATION READINESS   NOT READY
@@ -106,8 +123,10 @@ IMPLEMENTATION START       NOT STARTED
 IMPLEMENTATION NEXT        NOT YET
 ```
 
-Even if Phase 014 later sets implementation readiness positively, production implementation must not begin until Phase 015 explicitly establishes implementation authority and controlled delivery rules.
+Phase 014 must not implement, refactor production code, stabilize APIs/schemas, create migrations/provider adapters, or use executable work to manufacture readiness.
+
+Explicit Phase 015 authority remains required before implementation begins.
 
 ## Current next boundary
 
-**Phase 014 pre-phase start gate — review phase intention and create the dependency-safe R2/R3 subphase plan** is next eligible.
+**014-A — Whole-Design Audit Authority, Evidence Baseline, Traceability & Reopen Rules** is next eligible.
