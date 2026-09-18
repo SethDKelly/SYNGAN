@@ -8,13 +8,13 @@ status: active
 
 ## Purpose
 
-Record the current Phase 008-B trace from SYNGAN's problem, actors, desired outcomes, and scale conditions to the distinct purpose of each accepted concept.
+Preserve the Phase 008-B problem/actor/outcome-to-concept purpose trace as current justification authority, updated with the completion state of the later Jackson, architecture and whole-design programs.
 
 This document answers a narrow Jackson-design question:
 
 > **Why does the full SYNGAN application currently need each accepted concept, and what problem-facing capability or safeguard would be lost if that concept were absent?**
 
-It does **not** decide Jackson application inclusion dependence. A concept can be justified in the complete SYNGAN design without being required in every valid reduced application. Phase 009 will determine which concept subsets are meaningful and which concepts depend on which others for inclusion.
+It does **not** itself decide Jackson application inclusion dependence. A concept can be justified in the complete SYNGAN design without being required in every valid reduced application. Current Phase 009 dependence/application-family authority determines which concept subsets are meaningful and which inclusion dependencies hold.
 
 This traceability is governed by:
 
@@ -83,18 +83,28 @@ O15 and O16 were made explicit in 008-B because later accepted design had alread
 | **Execution** | Give operationally significant domain work a durable logical identity/lifecycle independent of platform jobs and physical retries. | Data Practitioner; Platform Operator; Maintainer; Extension Author | O1, O5, O8, O9, O10, O11, O13, O14 | Platform/job state becomes confused with Learning/Generation/Evaluation semantics; retries, recovery, cancellation, uncertain state, resource context, and multi-job realization cannot be explained without contaminating domain concepts. | **JUSTIFIED** |
 | **Provenance** | Record and traverse typed historical relationships explaining how material states/results came to exist without becoming their current-state owner. | Consumer; Steward; Reviewer; Data Practitioner; Maintainer | O7, O8, O12, O14, O15, O16 | Historical derivation and exact binding relationships must be reconstructed from ad hoc metadata/logs or copied into domain objects; attribution, comparison, audit, and reproducibility context become unreliable. | **JUSTIFIED** |
 
+## Current downstream completion state
+
+Since 008-B, the downstream obligations named in this document have completed:
+
+```text
+concept state/action/invariant normalization    COMPLETE — Phase 008
+inclusion dependence / application family      COMPLETE — Phase 009
+synchronization composition                    COMPLETE — Phase 009
+mapping / interaction / semantic parity        COMPLETE — Phase 010
+quality / misfit validation                    COMPLETE — Phase 011
+Jackson completion                             COMPLETE — Phase 012
+architecture reconciliation                    COMPLETE — Phase 013 / R1 CLOSED
+whole-design audit                             ACTIVE — Phase 014
+```
+
+These later closures do not change the distinct purpose justification recorded here unless Phase 014 or future evidence demonstrates a real contradiction.
+
 ## Important interpretation of the verdicts
 
 `JUSTIFIED` means only that a distinct problem-facing purpose exists for the concept in the **complete current SYNGAN design**.
 
-It does not mean:
-
-- the concept's state/action specification is complete — 008-C/008-D own that;
-- its operational principle is sufficient — 008-E owns that;
-- its independence, genericity, or familiarity is finally proven — 008-F owns that;
-- no rejected/deferred concept should return — 008-G owns that;
-- the concept must appear in every valid SYNGAN subset — Phase 009 owns inclusion dependence;
-- its existing architecture representation is final — Phase 013 owns that reconciliation.
+It does not mean that every justified concept appears in every valid reduced application, nor that this problem-level trace owns concept state/action behavior, inclusion dependence, synchronization, mapping or architecture. Those responsibilities are governed by their current downstream authorities.
 
 ## Outcome-to-concept coverage
 
@@ -194,15 +204,20 @@ The problem authority had two material stale statements relative to later accept
 
 These are problem/scope corrections, not selections of algorithms, APIs, storage, package layout, or runtime mechanisms.
 
-## Purpose gaps deliberately handed forward
+## Subsequent validation results
 
-008-B finds no immediate concept removal/addition required by problem-purpose traceability, but several boundaries must still be challenged later rather than treated as settled:
+The boundaries handed forward by 008-B were subsequently tested.
 
-- **008-F** — whether all eleven names/forms are independently understandable and appropriately familiar/generic;
-- **008-G** — whether Relationship, Generation Request, Condition, Attempt, Dataset/Artifact identity, Reproducibility, privacy-mechanism state, release/use decision, Source Characterization, Resource/Admission/Approximation/Recovery-like candidates remain correctly subordinate/deferred/external;
-- **009** — which concepts are actually required together in reduced applications and what inclusion-dependence graph follows;
-- **010** — whether actor-facing mappings can expose the distinctions cleanly without forcing conceptual change;
-- **011** — whether whole-system specificity, integrity, synergy, or adversarial scenarios reveal purpose defects missed here.
+```text
+008-F / 008-G  concept independence/candidate dispositions   CLOSED
+009            dependence/application family/synchronization CLOSED
+010            actor/programmatic mapping                     CLOSED
+011            composed quality/adversarial misfit            CLOSED
+012            Jackson whole-current-state completion         CLOSED
+013            representation/architecture reconciliation     CLOSED
+```
+
+No downstream phase required a change to the eleven-concept purpose-justification set.
 
 ## 008-B conclusion
 
@@ -210,19 +225,22 @@ At the problem/purpose level, the current eleven-concept catalog has complete po
 
 The problem authority itself required scope reconciliation, which 008-B performs. The current outcome set is now O1-O16, with O15/O16 making later topology/text commitments explicit at the problem layer.
 
-The resulting state is:
+Current state:
 
 ```text
-APPLICATION PROBLEM / PURPOSE          CURRENTLY CLOSED FOR PHASE 008
-ACTOR NEED BASIS                       CURRENTLY CLOSED FOR PHASE 008
-OUTCOME SET                            CURRENTLY CLOSED FOR PHASE 008
-PROBLEM/OUTCOME → CONCEPT TRACEABILITY CURRENTLY CLOSED
-11-CONCEPT PURPOSE JUSTIFICATION       PASS — NO CATALOG CHANGE IN 008-B
-INDIVIDUAL CONCEPT BEHAVIOR            NOT YET REVALIDATED
-JACKSON CONCEPT DESIGN                 NOT COMPLETE
+APPLICATION PROBLEM / PURPOSE          CURRENT
+ACTOR NEED BASIS                       CURRENT
+OUTCOME SET                            CURRENT — O1-O16
+PROBLEM/OUTCOME -> CONCEPT TRACEABILITY CURRENT
+11-CONCEPT PURPOSE JUSTIFICATION       PASS
+JACKSON CONCEPT DESIGN                 COMPLETE FOR CURRENT PRODUCT SCOPE
+R1 ARCHITECTURE RECONCILIATION         CURRENTLY CLOSED
+PHASE 014                              ACTIVE
+R2                                     OPEN
+R3                                     OPEN
 IMPLEMENTATION READINESS               NOT READY
 IMPLEMENTATION START                   NOT STARTED
 IMPLEMENTATION NEXT                    NOT YET
 ```
 
-Any later misfit may reopen this traceability under the J0-J7 discipline.
+Any genuine later contradiction may reopen the smallest affected problem/traceability authority under the current design methodology. Existing code, provider convenience or implementation cost cannot silently narrow this problem scope.
