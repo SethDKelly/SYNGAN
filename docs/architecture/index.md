@@ -24,8 +24,9 @@ Phase 013                       ACTIVE
 013-E                           COMPLETE
 013-F                           COMPLETE
 013-G                           COMPLETE
-013-H                           NEXT ELIGIBLE
-architecture corpus             UNDER RECONCILIATION
+013-H                           COMPLETE
+013-I                           NEXT ELIGIBLE
+architecture corpus             UNDER FINAL RECONCILIATION
 R1 architecture reconciliation  DOWNSTREAM / IN PROGRESS
 whole-design completion         NOT YET — PHASE 014
 implementation readiness        NOT READY
@@ -35,124 +36,117 @@ implementation next             NOT YET
 
 Completed concept design and completed Phase 013 decisions are upstream authority for unreconciled retained architecture.
 
-## Current Phase 013 authority
+## Current Phase 013 architecture authority
 
-- [Phase 013 Architecture Reconciliation Authority](../authority/phase-013-architecture-reconciliation-authority.md)
-- [Phase 013 Index](../phases/013/index.md)
 - [013-B Representation Reconciliation](phase-013-b-representation-layering-public-contract-identity-view-reconciliation.md)
 - [013-C Persistence Reconciliation](phase-013-c-control-persistence-history-concurrency-migration-recovery-reconciliation.md)
 - [013-D Distributed Data Reconciliation](phase-013-d-distributed-data-topology-manifest-candidate-promotion-reconciliation.md)
 - [013-E Runtime / Dependency / Security Reconciliation](phase-013-e-strategy-runtime-dependency-authorization-secrets-distribution-reconciliation.md)
 - [013-F Execution / Recovery / Admission Reconciliation](phase-013-f-execution-attempt-fencing-idempotency-checkpoint-cancellation-recovery-admission-reconciliation.md)
 - [013-G Evidence / Provenance / History / Disclosure Reconciliation](phase-013-g-evaluation-evidence-provenance-history-reproducibility-disclosure-governance-reconciliation.md)
-- [Reproducibility Contract](../authority/reproducibility-contract.md)
-- [Operational Authority Continuity Contract](../authority/operational-authority-continuity-regressive-recovery-contract.md)
+- [013-H Deployment / Scale / Platform Reconciliation](phase-013-h-deployment-scalability-observability-portability-compatibility-platform-integration-reconciliation.md)
 
-## Reconciled baselines
+## Current reconciled architecture baseline
 
-### 013-B — representation
+### Representation / identity
 
-Architecture represents upstream authority rather than becoming another semantic owner. Stable identity/version axes remain distinct; handles/views remain bounded projections/resolvers; optional surfaces remain optional.
+Architecture represents semantic authority rather than becoming another owner. Stable logical identity remains distinct from provider/location identity; semantic revision, mutable current-state version and representation schema version remain independent; handles/views are bounded resolvers/projections.
 
-### 013-C — persistence / history / recovery
+### Persistence / history / recovery
 
-Persistence makes owner-established authority durable. Shared transactions do not merge ownership; CAS/outbox/migration are technical mechanisms; exact history does not silently resolve to latest; regressive restore requires fresh non-regressing current authority.
+Persistence makes owner authority durable. Shared transactions do not merge ownership; outbox/CAS/migration are technical mechanisms; exact historical bindings never silently resolve to latest; regressive restore requires fresh non-regressing current authority.
 
-### 013-D — distributed data / topology
+### Distributed data / topology
 
-Physical/provider state remains evidence rather than semantic authority. Topology remains composed from existing owners. Seal means immutable physical-subject closure to a declared strength; promotion remains Generation-owned result establishment; candidate physical state remains non-final.
+Physical/provider state is evidence rather than semantic authority. Structured topology composes existing owners. Seal means immutable physical-subject closure to a declared strength, not a mandatory manifest class. Completed-output establishment remains Generation-owned.
 
-### 013-E — Strategy / runtime / dependency / security
+### Strategy / runtime / dependency / security
 
-Strategy/method semantic authority remains distinct from executable realization. Dependencies remain exact/trust/compatibility/authorization qualified; hidden runtime acquisition/fallback is prohibited; current capabilities/secrets remain operational rather than semantic; all material runtime roles require compatible distributed closure.
+Strategy semantics remain distinct from executable binding/runtime identity. Dependency availability, exact identity, integrity, trust, compatibility, authorization and egress compatibility remain separate. Hidden runtime acquisition/fallback is prohibited. Every material runtime role must satisfy compatible exact closure.
 
-### 013-F — Execution / recovery / admission
+### Execution / Attempt / recovery / admission
 
-Stable Execution remains separate from subordinate Attempts and platform jobs. Observed state remains separate from mutation authority. Effective write authority composes current recovery frontier, current Execution/Attempt authority, resource-local preconditions where required and current authorization/capability. Checkpoint, cancellation, reconciliation and admission remain operational mechanisms rather than semantic completion authority.
+One stable Execution remains distinct from subordinate Attempts/provider jobs. Observed platform state remains distinct from current framework mutation authority. Fencing, idempotency, checkpoint, cancellation, recovery and admission remain operational mechanisms; none establish domain semantic completion.
 
-### 013-G — Evaluation / Evidence / Provenance / history / disclosure
+### Evaluation / Evidence / Provenance / history / disclosure
 
-The current Evidence/history/disclosure baseline is:
+Evaluation owns semantic validity; Evidence owns durable findings; Provenance owns typed relationships; historical query composes owner truth; Reproducibility is derived; disclosure is current actor-view authority; external governance owns release/use decisions.
 
-- runtime/platform Evaluation success is non-final until Evaluation semantic validation succeeds;
-- one Evaluation may establish zero or more independently interpretable Evidence findings over its lifecycle, while successful Evidence-producing completion cannot outrun required durable findings;
-- retry-safe logical finding identity prevents physical replay from duplicating/conflicting one semantic finding;
-- immutable Evidence finding semantics remain separate from mutable current applicability;
-- claim strength remains bounded by actual method/scope/coverage/uncertainty;
-- Generation owns its Evidence-based completion transition and immutable completion basis;
-- Provenance owns typed stable-reference relationships, not copies of referenced owner state;
-- required Provenance can constrain completion without acquiring ownership of the transition;
-- direct/reconstructed/partial/unknown historical knowledge remains separate from current object-resolution/availability/disclosure state;
-- historical query/search/graph projections remain read composition and non-authoritative;
-- query composition does not imply a global atomic snapshot when current annotations have different freshness boundaries;
-- historical comparison reports differences without inventing causality/superiority;
-- Reproducibility separates historical supportability, current feasibility and actor-visible assessability;
-- disclosure/redaction is current view authority and may protect existence/graph shape/counts without mutating canonical history;
-- empirical privacy Evidence remains distinct from formal mechanism guarantees;
-- external release/use governance remains external authority and does not create hidden SYNGAN approval state;
-- external lineage/metadata remains projection/evidence input unless validated through canonical SYNGAN authority;
-- Evidence/Provenance/history control state remains bounded/reference-first at enterprise scale.
+### Deployment / scale / observability / portability / platform integration
 
-013-G result:
+The current platform baseline is:
 
-```text
-AMAT-2 Evaluation/Evidence/history defects   0
-AMAT-3 blockers                              0
-AR-9 contradictions                          0
-upstream reopen                              NONE
-new concepts                                 0
-new synchronizations                         0
-mandatory graph/SQL/history engine           0
-mandatory governance product                 0
-formal privacy placeholder authority         0
-```
+- portable core + capability-negotiated platform adapters;
+- provider identity/product brand is never a capability guarantee;
+- capability assertions are scoped to provider/runtime/configuration/evidence and may become stale;
+- architecture-compatible, implemented, conformance-verified and performance/scale-qualified are distinct support levels;
+- compatibility remains multi-axis and directional by operation;
+- provider-native identity/status/catalog/lineage/telemetry stays external/integration state unless validated through SYNGAN owner rules;
+- provider backup/restore/HA does not by itself re-establish current non-regressing mutation authority;
+- enterprise scale is workload/profile-specific and multidimensional; Spark presence or a row-count demo is not scale qualification;
+- canonical history, runtime observability and security audit remain distinct information lanes;
+- optional telemetry may degrade without rewriting canonical truth; mandatory monitoring/audit policy is an explicit security/admission condition;
+- degraded operation remains capability-specific rather than one global health owner;
+- provider retention/cleanup cannot silently fabricate historical absence or invalidate required recovery/Evidence/reproducibility obligations;
+- private/offline/no-egress workflows cannot depend secretly on public package/model/telemetry services;
+- platform specialization stays behind portable contracts and may optimize realization without forking semantics.
 
-Historical/current-looking pre-Phase-009 `SYNC-15`/15-rule references in accepted Evaluation/Evidence/Provenance documents, retained 004-G/007-I architecture, privacy/release authority and synchronization corpus remain explicit 013-I cleanup obligations. Current Phase 009 and completed Phase 013 authority control now.
+013-H corrected the active Enterprise Scale / Resource Admission / Approximation / Degraded Operation contract to current Phase 009 synchronization semantics.
 
-## Retained subject disposition through 013-G
+## Materiality through 013-H
+
+Every substantive domain reconciliation 013-B through 013-H currently reports:
 
 ```text
-Phase 004-A representation/layering              ALIGNED-WITH-CLARIFICATION
-Phase 004-B public handle/resource model         ALIGNED-WITH-CLARIFICATION
-Phase 004-C identity/persistence/history          ALIGNED-WITH-CLARIFICATION
-Phase 004-D distributed data / manifest           ALIGNED-WITH-CLARIFICATION
-Phase 004-E runtime / adapter                     ALIGNED-WITH-CLARIFICATION
-Phase 004-F Execution / recovery                  ALIGNED-WITH-CLARIFICATION
-Phase 004-G Evaluation / Evidence / history       ALIGNED-WITH-CLARIFICATION
-Phase 004-H dependency / enterprise security      ALIGNED-WITH-CLARIFICATION
-Phase 007-D representation refinement            ALIGNED-WITH-CLARIFICATION
-Phase 007-E persistence refinement               ALIGNED-WITH-CLARIFICATION
-Phase 007-F distributed data refinement          ALIGNED-WITH-CLARIFICATION
-Phase 007-G executable-realization refinement    ALIGNED-WITH-CLARIFICATION
-Phase 007-H Execution refinement                 ALIGNED-WITH-CLARIFICATION
-Phase 007-I Evidence/history refinement          ALIGNED-WITH-CLARIFICATION
-Operational Continuity Contract                  RETAIN
-Network & External Dependency Policy             RETAIN
-Self-Contained Runtime Closure Contract           RETAIN AFTER CORRECTION
-Reproducibility Contract                          RETAIN AFTER CORRECTION
-ADR-0001..0010                                   PROVISIONAL RETAIN pending 013-I final sweep
+AMAT-2 defects       0
+AMAT-3 blockers      0
+AR-9 contradictions  0
+upstream reopen      NONE
+new concepts         0
+new synchronizations 0
 ```
 
-## Reconciliation taxonomy
+## Retained subject disposition before 013-I
 
-Phase 013 continues to use AR-0..AR-9, AMAT-0..AMAT-3 and `RETAIN / CLARIFY / SUPERSEDE / CORRECT / DEFER / UPSTREAM-REOPEN`. Only a demonstrated AR-9 finding may justify upstream reopen.
+```text
+Phase 004-A..I substantive architecture      ALIGNED-WITH-CLARIFICATION
+Phase 007-D..J architecture/refinement       ALIGNED-WITH-CLARIFICATION
+Enterprise Scale Envelope                    RETAIN
+Enterprise Scale / Admission contract        RETAIN AFTER 013-H CORRECTION
+Operational Continuity Contract              RETAIN
+Network & External Dependency Policy         RETAIN
+Self-Contained Runtime Closure Contract      RETAIN AFTER CORRECTION
+Reproducibility Contract                     RETAIN AFTER CORRECTION
+ADR-0001..0010                               PROVISIONAL — FINAL 013-I SWEEP
+```
+
+Final document/ADR lifecycle status and legacy authority cleanup remain 013-I work.
+
+## Current synchronization state
+
+```text
+historical synchronization IDs          15
+active cross-concept synchronizations   13
+SYNC-08                                  retired — Generation-local output behavior
+SYNC-15                                  historical/reclassified — Reproducibility contract
+```
+
+Remaining pre-Phase-009 `15`-rule / `SYNC-08` / `SYNC-15` wording is corpus/status/link cleanup for 013-I and does not control current semantics.
 
 ## Phase 013 sequence
 
 ```text
-013-A  authority / corpus inventory / precedence / discrepancy taxonomy       COMPLETE
-013-B  representation / layering / public contract / identity / views        COMPLETE
-013-C  persistence / history / transaction-concurrency / migration/recovery  COMPLETE
-013-D  distributed data / topology / manifest / candidate-seal-promotion     COMPLETE
-013-E  Strategy/runtime / dependency / security / offline-no-egress          COMPLETE
-013-F  Execution / Attempt / recovery / fencing / admission                  COMPLETE
-013-G  Evaluation / Evidence / Provenance / history / disclosure             COMPLETE
-013-H  deployment / scale / observability / portability / integration        NEXT
-013-I  cross-architecture / ADR / legacy / M6 / residual register
-013-J  consolidation / R1 decision / Phase 014 handoff
+013-A  COMPLETE — method / precedence / taxonomy
+013-B  COMPLETE — representation / identity / views
+013-C  COMPLETE — persistence / history / recovery
+013-D  COMPLETE — distributed data / topology / candidate / promotion
+013-E  COMPLETE — Strategy / runtime / dependency / security
+013-F  COMPLETE — Execution / Attempt / recovery / admission
+013-G  COMPLETE — Evaluation / Evidence / Provenance / history / disclosure
+013-H  COMPLETE — deployment / scale / observability / portability / platform integration
+013-I  NEXT     — cross-architecture / ADR / legacy / M6 / residual register
+013-J           — consolidation / R1 decision / Phase 014 handoff
 ```
-
-Historical current-looking synchronization/status wording remains explicit 013-I cleanup. M8 future rediscovery triggers remain excluded absent renewed concept discovery.
 
 ## Implementation boundary
 
@@ -162,8 +156,8 @@ IMPLEMENTATION START       NOT STARTED
 IMPLEMENTATION NEXT        NOT YET
 ```
 
-No production Evidence/history/governance or platform/deployment implementation is authorized by Phase 013.
+No production platform/deployment or other implementation work is authorized by Phase 013.
 
 ## Current next boundary
 
-**013-H — Deployment, Scalability, Observability, Portability, Compatibility & Platform-Integration Reconciliation** is next eligible.
+**013-I — Cross-Architecture Composition, ADR/Legacy Contract Reconciliation, M6 Cleanup & Residual Architecture Misfit Register** is next eligible.
