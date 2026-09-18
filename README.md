@@ -32,7 +32,8 @@ Phase 013                            COMPLETE
 R1 architecture reconciliation       CURRENTLY CLOSED
 Phase 014 start gate                 COMPLETE
 Phase 014                            ACTIVE
-014-A                                NEXT ELIGIBLE
+014-A                                COMPLETE
+014-B                                NEXT ELIGIBLE
 R2                                   OPEN
 R3                                   OPEN
 implementation readiness             NOT READY
@@ -57,8 +58,8 @@ problem / actors / O1-O16 outcomes
 Approved sequence:
 
 ```text
-014-A  evidence baseline / traceability / reopen rules — NEXT
-014-B  problem / actors / outcomes / scope / concept-purpose coverage
+014-A  evidence baseline / traceability / reopen rules — COMPLETE
+014-B  problem / actors / outcomes / scope / concept-purpose coverage — NEXT
 014-C  concept / dependence / application-family / synchronization integrity
 014-D  mapping / interaction / disclosure / semantic parity
 014-E  architecture realization / design-to-architecture traceability
@@ -89,4 +90,4 @@ Even a later positive R3 does not start implementation; explicit Phase 015 autho
 
 ## Current next boundary
 
-**014-A — Whole-Design Audit Authority, Evidence Baseline, Traceability & Reopen Rules** is next eligible.
+**014-B — Problem, Actors, Outcomes, Scope & Concept-Purpose Coverage Audit** is next eligible.
