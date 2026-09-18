@@ -27,7 +27,8 @@ R1 architecture reconciliation CURRENTLY CLOSED
 representation / architecture  RECONCILED / CURRENT
 Phase 014 start gate            COMPLETE
 Phase 014                       ACTIVE
-014-A                           NEXT ELIGIBLE
+014-A                           COMPLETE
+014-B                           NEXT ELIGIBLE
 R2                              OPEN
 R3                              OPEN
 implementation readiness        NOT READY
@@ -52,10 +53,10 @@ Phase 014 must audit current problem, concept, dependence/application-family, sy
 
 ```text
 014-A  Whole-Design Audit Authority, Evidence Baseline,
-       Traceability & Reopen Rules — NEXT
+       Traceability & Reopen Rules — COMPLETE
 
 014-B  Problem, Actors, Outcomes, Scope &
-       Concept-Purpose Coverage Audit
+       Concept-Purpose Coverage Audit — NEXT
 
 014-C  Concept Specification, Dependence, Application-Family &
        Synchronization Integrity Audit
@@ -77,6 +78,19 @@ Phase 014 must audit current problem, concept, dependence/application-family, sy
 ```
 
 The sequence is dependency-ordered: purpose → semantic composition → mapping → architecture → whole-system stress → implementation-neutral handoff sufficiency → explicit R2/R3 decisions.
+
+## 014-A audit baseline
+
+Current audit machinery is [Phase 014-A Whole-Design Evidence Baseline, Traceability Frame & Reopen Protocol](../../authority/phase-014-whole-design-audit-evidence-baseline.md), with the completed [014-A Phase Record](014-A-whole-design-audit-authority-evidence-baseline-traceability-reopen-rules.md).
+
+```text
+evidence classes E1-E4                  ESTABLISHED
+whole-design dimensions WDA-01..WDA-12  ESTABLISHED
+finding ledger contract                 ESTABLISHED
+smallest-authority reopen protocol      ESTABLISHED
+unresolved WMAT-2                       0
+unresolved WMAT-3                       0
+```
 
 ## Finding discipline
 
@@ -129,4 +143,4 @@ Explicit Phase 015 authority remains required before implementation begins.
 
 ## Current next boundary
 
-**014-A — Whole-Design Audit Authority, Evidence Baseline, Traceability & Reopen Rules** is next eligible.
+**014-B — Problem, Actors, Outcomes, Scope & Concept-Purpose Coverage Audit** is next eligible.
