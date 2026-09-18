@@ -8,23 +8,25 @@ status: complete-current
 
 ## Purpose
 
-Preserve the final Phase 011 residual conceptual-misfit ledger established by 011-I and accepted by 011-J.
+Preserve the final Phase 011 residual conceptual-misfit ledger established by 011-I/011-J while recording later closure of its downstream M6 deferral.
 
-Current result:
+This remains the canonical **conceptual-quality** residual register. Phase 013 architecture residuals are tracked separately in [Phase 013 Residual Architecture Misfit Register](phase-013-residual-architecture-misfit-register.md).
+
+## Current result
 
 ```text
 NO CURRENT MAT-2 OR MAT-3 CONCEPTUAL DEFECT REMAINS.
 NO M2-M5 CURRENT-DESIGN MISFIT REMAINS.
 NO EARLIER AUTHORITY REOPEN IS REQUIRED.
-ONE BOUNDED M6 ITEM IS DEFERRED TO PHASE 013.
+M6 DOWNSTREAM ARCHITECTURE/SYNCHRONIZATION DRIFT IS CLOSED BY PHASE 013-I.
 M8 ITEMS REMAIN CONDITIONAL FUTURE REDISCOVERY TRIGGERS.
 G7 IS CURRENTLY CLOSED.
 PHASE 011 IS COMPLETE.
+PHASE 012 JACKSON COMPLETION IS COMPLETE.
+PHASE 013-I ARCHITECTURE RESIDUAL CLEANUP IS COMPLETE; 013-J IS NEXT.
 ```
 
 This register is not an issue tracker, implementation backlog, database schema, API resource or runtime status model.
-
----
 
 ## Register interpretation
 
@@ -33,10 +35,10 @@ CLOSED OBSERVATION
   MAT-0/M0 or bounded MAT-1/M0 pressure whose semantics are valid
 
 RESOLVED LOCAL CLARIFICATION
-  MAT-1/M1 quality rule established in Phase 011 without upstream reopen
+  MAT-1/M1 quality rule established without upstream reopen
 
 DOWNSTREAM DEFERRAL
-  M6 representation/architecture concern whose concept semantics remain coherent
+  representation/architecture concern whose concept semantics remain coherent
 
 FUTURE REDISCOVERY TRIGGER
   M8 boundary requiring fresh discovery only if future scope becomes current
@@ -48,141 +50,62 @@ CONCEPTUAL BLOCKER
   unresolved MAT-3 or material insufficient evidence
 ```
 
-A watch point is not automatically residual debt. Successful dedicated probes may retain it as a guardrail while closing it as a defect.
-
----
-
 ## Final Phase 010 residual-risk dispositions
 
 ```text
-R010-01  composed specificity drift
-         NO DEFECT — 011-B
-
-R010-02  familiarity versus semantic precision
-         NO DEFECT — COMPATIBILITY GUIDANCE STRENGTHENED — 011-C
-
-R010-03  synchronization integrity under adversarial composition
-         NO DEFECT — 011-D + 011-G
-
-R010-04  synergy versus conceptual burden
-         NO DEFECT — 011-E
-
-R010-05  progressive-disclosure misfit
-         NO DEFECT — 011-E + 011-F
-
-R010-06  provider / host semantic leakage
-         NO DEFECT — 011-G
-
-R010-07  future-capability / extensibility pressure
-         NO DEFECT — REDISCOVERY TRIGGERS RETAINED/STRENGTHENED — 011-H
-
-R010-08  scale / approximation pressure
-         NO DEFECT — 011-G
+R010-01  composed specificity drift                  NO DEFECT — 011-B
+R010-02  familiarity versus semantic precision      NO DEFECT — guidance strengthened — 011-C
+R010-03  adversarial synchronization integrity      NO DEFECT — 011-D + 011-G
+R010-04  synergy versus conceptual burden           NO DEFECT — 011-E
+R010-05  progressive-disclosure misfit              NO DEFECT — 011-E + 011-F
+R010-06  provider / host semantic leakage           NO DEFECT — 011-G
+R010-07  future-capability / extensibility pressure NO DEFECT — rediscovery triggers retained — 011-H
+R010-08  scale / approximation pressure             NO DEFECT — 011-G
 ```
 
 No Phase 010 residual risk remains open.
 
----
+## Phase 011 quality findings
 
-## 011-B specificity findings
+### Specificity / familiarity
 
-```text
-Q-SPEC-001  catalog-wide purpose distinction             MAT-0 / M0 / NO DEFECT
-Q-SPEC-002  Learning ↔ Learned State mutual inclusion    MAT-0 / M0 / NO DEFECT
-Q-SPEC-003  Evaluation ↔ Evidence mutual inclusion       MAT-0 / M0 / NO DEFECT
-Q-SPEC-004  rejected aggregate necessity                 MAT-0 / M0 / NO DEFECT
-Q-SPEC-005  high-fan-in Provenance pressure              MAT-1 / M0 / NO DEFECT
-```
+The accepted eleven-concept catalog remained purpose-distinct. Learning/Learned State and Evaluation/Evidence mutual inclusion remained justified; Provenance high fan-in did not create high authority fan-out; Strategy breadth did not absorb provider/runtime authority.
 
-Additional bounded pressure:
+Familiar vocabulary such as Model, Run/Job, validation/metric/expectation and Lineage remained useful compatibility language without replacing the canonical concept boundaries.
 
-```text
-Synthesis Strategy broad declaration surface             MAT-1 / M0 / NO DEFECT
-```
+Final disposition: **NO DEFECT; compatibility guidance retained.**
 
-Later Phase 011 probes confirm Strategy does not absorb provider/plugin/runtime authority and Provenance retains low authority fan-out.
+### Integrity
 
-Final disposition: **NO DEFECT; retain guardrails.**
-
----
-
-## 011-C familiarity findings
+Phase 011 confirmed:
 
 ```text
-Q-FAM-001  canonical name set                    MAT-1 / M0 / NO DEFECT
-Q-FAM-002  Model pressure on Learned State       MAT-1 / M0 / NO DEFECT
-Q-FAM-003  Run/Job pressure on Execution         MAT-0 / M0 / NO DEFECT
-Q-FAM-004  validation/metric/expectation cluster MAT-1 / M0 / NO DEFECT
-Q-FAM-005  Lineage pressure on Provenance        MAT-0 / M0 / NO DEFECT
+synchronization-wide singular ownership                 PASS
+producer/result separation                              PASS
+occurrence-scoped exact binding                         PASS
+later Evidence invalidation after historical use        PASS
+semantic versus Execution completion                    PASS
+Provenance high-fan-in / low-authority-fan-out          PASS
+recovery / reconstructed-history ownership              PASS
+optional-capability integrity                           PASS
+shadow-state / hidden-coordinator pressure              PASS
 ```
-
-First-use explanation cost remains bounded for Data Meaning, Learned State and Evaluation Criterion.
-
-Final disposition: **NO DEFECT — GUIDANCE STRENGTHENED.**
-
----
-
-## 011-D integrity findings
-
-The `Q-INT-*` series closes:
-
-```text
-synchronization-wide singular ownership                 NO DEFECT
-producer/result separation                              NO DEFECT
-occurrence-scoped exact binding                         NO DEFECT
-later Evidence invalidation after historical use        NO DEFECT
-semantic versus Execution completion                    NO DEFECT
-Provenance high-fan-in / low-authority-fan-out           NO DEFECT
-recovery / reconstructed-history ownership              NO DEFECT
-optional-capability integrity                           NO DEFECT
-shadow-state / hidden-coordinator pressure              NO DEFECT
-```
-
-011-G supplied the deliberate hostile/recovery/provider stress revalidation.
 
 Final disposition: **NO DEFECT.**
 
----
+### Synergy / simplicity
 
-## 011-E synergy / simplicity findings
-
-```text
-Q-SYN-001  all-concept value versus catalog burden       NO DEFECT
-Q-SYN-002  synchronization economy                       NO DEFECT
-Q-SYN-003  repeated-pattern / missing-concept pressure   NO DEFECT
-Q-SYN-004  generic-fitness boundary                      NO DEFECT
-Q-SYN-005  progressive-disclosure structural simplicity  NO DEFECT
-```
-
-Bounded burden classes:
-
-```text
-B-1  Evaluation Criterion / Evaluation / Evidence first-use learning cost
-B-2  Provenance high-fan-in / global-hub appearance pressure
-B-3  full-catalog discoverability cost
-```
-
-Later probes show these remain bounded without semantic compromise.
+The catalog retained composition economy without requiring a new aggregate/coordinator concept. First-use complexity around Evaluation Criterion/Evaluation/Evidence, Provenance hub appearance and full-catalog discoverability remained bounded presentation burden rather than conceptual defect.
 
 Final disposition: **NO DEFECT; no accepted conceptual tradeoff required.**
 
----
+### Archetypal / exceptional scenarios
 
-## 011-F archetypal / exceptional findings
-
-```text
-Q-SCN-001  required scenario-family coverage
-           MAT-0 / M0 / NO DEFECT
-
-Q-SCN-002  decision-material progressive disclosure
-           MAT-1 / M1 / RESOLVED IN PHASE 011
-```
-
-Durable M1 rule:
+Phase 011 established the durable decision-material disclosure rule:
 
 > **Progressive disclosure may defer explanatory depth, but it must not defer a qualifier whose omission could change the actor's immediate semantic decision or make current state appear stronger than the owning concept supports.**
 
-Standing watch points remain:
+Standing non-blocking watch points remain:
 
 ```text
 W-1  Evaluation summaries preserve question / finding-strength semantics
@@ -191,91 +114,77 @@ W-3  compact Execution summaries do not turn host success into semantic success
 W-4  recovery/continuity warnings move to D0/D1 when they change actionability
 ```
 
-Final disposition: **M1 resolved; W-1..W-4 retained as non-blocking guardrails.**
+### Adversarial / degraded / recovery / provider scenarios
 
----
+Phase 011 found no defect in hostile synchronization composition, regressive recovery, scale/approximation, distributed runtime closure or combined adversarial scenarios.
 
-## 011-G adversarial / degraded / recovery / provider findings
-
-```text
-Q-ADV-001  synchronization integrity under hostile composition  NO DEFECT
-Q-ADV-002  regressive recovery / stale authority                NO DEFECT
-Q-ADV-003  scale / approximation pressure                       NO DEFECT
-Q-ADV-004  distributed runtime closure                          NO DEFECT
-Q-ADV-005  provider job/run completion leakage                  MAT-1 / M1
-Q-ADV-006  provider lineage/catalog/model leakage               MAT-1 / M1
-Q-ADV-007  combined hostile composition                         NO DEFECT
-```
-
-Durable M1 rule:
+It established the durable provider-evidence rule:
 
 > **A host/provider fact may be consumed only at the evidentiary strength that fact actually establishes. Provider vocabulary must not be promoted into a stronger SYNGAN semantic claim merely because the provider owns that status/object in its own domain.**
 
-Final M1 disposition: **RESOLVED IN PHASE 011 — provider-evidence qualification retained.**
+Final disposition: **M1 resolved; provider-evidence qualification retained.**
 
-### M6 Phase 013 handoff
+## M6 downstream architecture finding — CLOSED BY PHASE 013-I
+
+Phase 011 originally recorded:
 
 ```text
-subject      retained Phase 006 representation/architecture documents
+subject      retained Phase 006/007 representation/architecture documents
              containing historical synchronization IDs
-examples     older SYNC-08 / SYNC-15 wording
+examples     older SYNC-08 / SYNC-15 / fifteen-rule wording
 materiality  MAT-1
 misfit       M6
-semantic consequence  NONE — current Phase 009 authority supersedes labels
+semantic consequence  NONE — Phase 009 current semantics controlled
 ```
 
-Disposition:
+Phase 013-I has now closed this deferral.
+
+Current authority is [Current Cross-Concept Synchronization Contract](../synchronizations/current-cross-concept-synchronizations.md):
 
 ```text
-DEFERRED TO PHASE 013 — REPRESENTATION / ARCHITECTURE DOCUMENTATION RECONCILIATION ONLY
+historical synchronization IDs          15
+active cross-concept synchronizations   13
+SYNC-08                                  retired — Generation-local output behavior
+SYNC-15                                  historical/reclassified — Reproducibility contract
+synchronization-owned canonical state    NONE
 ```
 
-This must not reopen Phase 009 synchronization semantics.
-
----
-
-## 011-H future-scope findings
+Pre-Phase-009 fifteen-rule wording remains historical terminology where preserved. It is no longer an unresolved current-authority ambiguity.
 
 ```text
-Q-FUT-001  new Strategy-family extension
-           M0 / NO DEFECT
+M6 STATUS   CLOSED — PHASE 013-I
+upstream Phase 009 reopen   NONE
+```
 
-Q-FUT-002  topology / text / runtime breadth
-           M0 / NO DEFECT
+## M8 future-scope findings
 
+Phase 011 retained four future-rediscovery groups:
+
+```text
 Q-FUT-003  formal composable privacy
-           MAT-1 / M8 / FUTURE REDISCOVERY TRIGGER
-
 Q-FUT-004  governance / publication / output lifecycle
-           MAT-1 / M8 / FUTURE REDISCOVERY TRIGGER
-
 Q-FUT-005  reusable state / request / continuous-session pressure
-           MAT-1 / M8 / FUTURE REDISCOVERY TRIGGER
-
 Q-FUT-006  product-owned resource/economic lifecycle
-           MAT-1 / M8 / FUTURE REDISCOVERY TRIGGER
 ```
 
-Concrete trigger forms include:
+Concrete rediscovery triggers include:
 
-```text
-formal composable privacy/accounting
-product-owned governance/release decisions
-independent output publication/versioning/retirement
-independently reusable request/cohort definitions
-durable streaming/session/feed lifecycle when not reducible to bounded activities
-product-owned economic/resource allocation/accounting
-independent graph/relationship lifecycle beyond Data Meaning
-product-owned reusable knowledge/memory beyond Strategy/Learned State purpose
-```
+- formal composable privacy/accounting;
+- product-owned governance/release decisions;
+- independent output publication/versioning/retirement;
+- independently reusable request/cohort definitions;
+- durable streaming/session/feed lifecycle when not reducible to bounded activities;
+- product-owned economic/resource allocation/accounting;
+- independent graph/relationship lifecycle beyond Data Meaning;
+- product-owned reusable knowledge/memory beyond Strategy/Learned State purpose.
 
-These are not accepted concepts, current missing concepts, backlog implementation items or architecture placeholders.
+These are not accepted concepts, current missing concepts, implementation backlog items or architecture placeholders.
+
+Phase 013-I re-audited the architecture and found **no M8 placeholder leakage**.
 
 Final disposition: **FUTURE REDISCOVERY TRIGGER; no current reopen.**
 
----
-
-## Final disposition summary
+## Current residual summary
 
 ```text
 CURRENT M2-M5 CONCEPTUAL DEFECTS                      0
@@ -289,16 +198,14 @@ RESOLVED M1 QUALITY-RULE FAMILIES                     2
   decision-material progressive disclosure
   provider-evidence qualification
 
-M6 PHASE-013 DEFERRALS                                1
-  retained historical synchronization-label reconciliation
+M6 DOWNSTREAM DEFERRALS                               0
+  Phase 013-I closed synchronization/corpus drift
 
 M8 FUTURE REDISCOVERY FINDING GROUPS                  4
   Q-FUT-003 through Q-FUT-006
 ```
 
-MAT-1/M0 watch points remain documented as quality guardrails but are not residual current defects.
-
----
+MAT-1/M0 watch points remain documented quality guardrails but are not residual current defects.
 
 ## Reopen decision
 
@@ -311,39 +218,26 @@ Phase 010 mapping reopen                       NO
 Phase 011 subgroup rerun required              NO
 ```
 
-No upstream correction occurred, so no material blast-radius revalidation remains missing.
-
----
-
-## Final canonical design state after 011-J
+## Subsequent completion state
 
 ```text
-accepted concepts                    11
-active synchronizations              13
-concept add/remove/merge/split        NONE
-synchronization add/remove/merge      NONE
-application-family reopen             NONE
-mapping reopen                        NONE
-upstream authority reopen             NONE
-current conceptual blocker            NONE
-
-G1 specificity                        CURRENTLY CLOSED
-G2 familiarity                        CURRENTLY CLOSED
-G3 integrity                          CURRENTLY CLOSED
-G4 synergy / simplicity               CURRENTLY CLOSED
-G5 scenario / adversarial             CURRENTLY CLOSED
-G6 future-scope                       CURRENTLY CLOSED
-G7 residual misfit register           CURRENTLY CLOSED
-
-PHASE 011                             COMPLETE
+Phase 011                         COMPLETE
+G1-G7                             CURRENTLY CLOSED
+Phase 012                         COMPLETE
+H1/H2                             CURRENTLY CLOSED
+JACKSON CONCEPT DESIGN            COMPLETE FOR CURRENT PRODUCT SCOPE
+Phase 013                         ACTIVE
+013-A..013-I                      COMPLETE
+M6                                CLOSED
+Phase 013 architecture residuals  ZERO BLOCKERS
+013-J                             NEXT ELIGIBLE
+R1                                DOWNSTREAM / IN PROGRESS
 ```
 
-## Phase 012 handoff
-
-Phase 012 receives this register as evidence for H1/H2. It must still perform the whole-current-state Jackson concept-design consolidation and explicit completion decision.
-
-A positive Phase 011 result does not make implementation ready.
+A positive conceptual-quality result does not make implementation ready.
 
 ## Current next boundary
 
-**Phase 012 — Jackson Concept-Design Consolidation & Completion Decision** is next eligible.
+**013-J — Phase 013 Consolidation, R1 Completion Decision & Phase 014 Handoff** is next eligible.
+
+Implementation remains **NOT READY / NOT STARTED / NOT YET**.
