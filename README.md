@@ -16,12 +16,9 @@ Current governing architecture-reconciliation authority includes:
 
 - [`Phase 013 Architecture Reconciliation Authority`](docs/authority/phase-013-architecture-reconciliation-authority.md)
 - [`Phase 013`](docs/phases/013/index.md)
-- [`013-B Representation Reconciliation`](docs/architecture/phase-013-b-representation-layering-public-contract-identity-view-reconciliation.md)
-- [`013-C Persistence Reconciliation`](docs/architecture/phase-013-c-control-persistence-history-concurrency-migration-recovery-reconciliation.md)
 - [`013-D Distributed Data Reconciliation`](docs/architecture/phase-013-d-distributed-data-topology-manifest-candidate-promotion-reconciliation.md)
 - [`013-E Runtime / Dependency / Security Reconciliation`](docs/architecture/phase-013-e-strategy-runtime-dependency-authorization-secrets-distribution-reconciliation.md)
-- [`Reproducibility Contract`](docs/authority/reproducibility-contract.md)
-- [`Self-Contained Runtime Distribution Closure`](docs/authority/self-contained-execution-runtime-distribution-closure-contract.md)
+- [`013-F Execution / Recovery / Admission Reconciliation`](docs/architecture/phase-013-f-execution-attempt-fencing-idempotency-checkpoint-cancellation-recovery-admission-reconciliation.md)
 - [`Jackson Methodology Completion Matrix`](docs/authority/jackson-methodology-completion-matrix.md)
 - [`Jackson Design Completion & Implementation Hold`](docs/authority/jackson-design-completion-implementation-hold.md)
 
@@ -37,39 +34,40 @@ Phase 013                            ACTIVE
 013-C                                COMPLETE
 013-D                                COMPLETE
 013-E                                COMPLETE
-013-F                                NEXT ELIGIBLE
+013-F                                COMPLETE
+013-G                                NEXT ELIGIBLE
 R1 architecture reconciliation       DOWNSTREAM / IN PROGRESS
 implementation readiness             NOT READY
 implementation start                 NOT STARTED
 implementation next                  NOT YET
 ```
 
-## Phase 013 results through 013-E
+## Phase 013 results through 013-F
 
-Representation, persistence/history/recovery, distributed-data/topology, and Strategy/runtime/dependency/security architecture have been reconciled against the completed concept design.
+Representation, persistence/history/recovery, distributed-data/topology, runtime/dependency/security, and Execution/recovery/admission architecture have been reconciled against the completed concept design.
 
 ```text
 013-B AMAT-2 / AMAT-3 / AR-9   0 / 0 / 0
 013-C AMAT-2 / AMAT-3 / AR-9   0 / 0 / 0
 013-D AMAT-2 / AMAT-3 / AR-9   0 / 0 / 0
 013-E AMAT-2 / AMAT-3 / AR-9   0 / 0 / 0
+013-F AMAT-2 / AMAT-3 / AR-9   0 / 0 / 0
 upstream reopen                NONE
 ```
 
-The current runtime/dependency/security baseline preserves:
+The current operational baseline preserves:
 
-- Strategy/method semantics separate from implementation binding/package/model/runtime identity;
-- implementation bindings may narrow realization but cannot silently broaden Strategy dependency/network/egress semantics;
-- exact executable closure may comprise multiple material components;
-- dependency availability, identity, integrity, trust, semantic/runtime compatibility, authorization and egress compatibility as separate facts;
-- explicit provisioning with no hidden runtime installation/download/model-hub/remote fallback;
-- current authorization blocking present actions without rewriting historical commitment;
-- no-egress semantics independent of host connectivity or broad credentials;
-- scoped live runtime capabilities and non-persisted bearer secrets;
-- distributed closure across every material runtime role, including dynamically admitted workers;
-- large Learned State/artifacts without universal driver-memory broadcast;
-- runtime/provider success as non-final operational evidence;
-- cross-cutting Reproducibility over preserved owner/integration facts rather than active `SYNC-15` state.
+- one stable logical Execution distinct from subordinate Attempts/provider jobs;
+- Attempt observed state separate from current framework mutation authority;
+- non-regressing recovery-frontier authority above ordinary Attempt fencing after rollback;
+- lease/heartbeat as liveness coordination rather than stale-writer proof;
+- scoped idempotency plus fencing rather than exactly-once physical computation;
+- immutable checkpoints distinct from current resume eligibility and semantic results;
+- cancellation intent distinct from terminal operational outcome;
+- late provider success unable to restore owner/result authority;
+- admission as current operational eligibility distinct from semantic readiness, authorization, runtime closure, queue/capacity and mutation authority;
+- resource pressure unable to silently weaken committed scope, validation, approximation, dependency or security semantics;
+- bounded operational history at Spark scale.
 
 Current synchronization authority remains:
 
@@ -80,14 +78,13 @@ SYNC-08               retired — Generation-local output lifecycle
 SYNC-15               reclassified — Reproducibility contract
 ```
 
-013-E corrected the active Reproducibility and Self-Contained Runtime Distribution Closure contracts accordingly. Historical Phase 007-D/E/F/G current-looking wording remains a bounded 013-I corpus-cleanup obligation.
+Remaining current-looking historical references in retained operational/scale documents are explicit 013-I corpus-cleanup obligations and do not control current semantics.
 
 ## Remaining Phase 013 sequence
 
 ```text
-013-F  Execution / Attempt / Fencing / Idempotency / Checkpoint /
-       Cancellation / Recovery / Admission — NEXT
-013-G  Evaluation / Evidence / Provenance / History / Disclosure
+013-G  Evaluation / Evidence / Provenance / Historical Query /
+       Reproducibility / Disclosure / External-Governance Boundary — NEXT
 013-H  Deployment / Scale / Observability / Portability / Platform Integration
 013-I  Cross-Architecture / ADR / Legacy / M6 / Residual Register
 013-J  R1 Completion Decision / Phase 014 Handoff
@@ -107,6 +104,6 @@ Only a positive Phase 014 may change implementation to **READY / NOT STARTED / N
 
 ## Current next boundary
 
-**013-F — Execution/Attempt, Fencing, Idempotency, Checkpoint, Cancellation, Recovery & Admission Reconciliation** is next eligible.
+**013-G — Evaluation, Evidence, Provenance, Historical Query, Reproducibility, Disclosure & External-Governance Boundary Reconciliation** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
