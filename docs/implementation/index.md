@@ -26,7 +26,8 @@ Phase 013                  ACTIVE
 013-C                      COMPLETE
 013-D                      COMPLETE
 013-E                      COMPLETE
-013-F                      NEXT ELIGIBLE
+013-F                      COMPLETE
+013-G                      NEXT ELIGIBLE
 R1 architecture            DOWNSTREAM / IN PROGRESS
 whole-design readiness     PHASE 014
 ```
@@ -37,26 +38,25 @@ Architecture progress does not authorize implementation.
 
 Any future implementation must preserve the reconciled Phase 013 baseline, including:
 
-- stable logical identity separate from provider/location/runtime identity;
-- exact historical bindings and owner-specific current state;
-- persistence as durability rather than generic semantic CRUD;
-- technical coordination state without synchronization-owned semantic state;
-- non-regressing recovery authority;
-- physical/provider/manifest/runtime existence as evidence rather than semantic finality;
-- Data Meaning structural interpretation distinct from Constraint validity and Generation scope fulfillment;
-- Generation ownership of candidate/finality/completed-output establishment;
-- Strategy/method semantics separate from implementation binding/package/model/runtime identity;
-- implementation bindings may narrow support but cannot silently broaden Strategy dependency/network/egress semantics;
-- exact executable closure may contain multiple components;
-- dependency availability, identity, integrity, trust, semantic/runtime compatibility, authorization and egress compatibility remain distinct;
-- missing runtime dependencies do not trigger hidden install/download/model-hub/remote fallback;
-- current authorization may block present action without rewriting historical commitment;
-- no-egress semantics remain independent of host connectivity or broad permission;
-- runtime capability and bearer secrets remain current operational material rather than durable semantic state;
-- all material runtime roles, including dynamic workers, satisfy compatible exact distributed closure;
-- large Learned State/artifacts do not universally require driver-memory materialization/broadcast;
-- cross-cutting Reproducibility does not create active synchronization-owned state;
-- runtime/provider success does not establish domain semantic completion.
+- stable logical identity separate from provider/location identity;
+- exact historical binding and non-regressing recovery authority;
+- persistence as durability rather than semantic ownership;
+- physical/provider/runtime facts only at their actual evidentiary strength;
+- candidate/seal/result-establishment separation with Generation-owned finality;
+- Strategy semantics distinct from implementation/runtime identity;
+- dependency identity/integrity/trust/compatibility/authorization separation;
+- no hidden acquisition, dependency substitution, remote fallback or undeclared egress;
+- role-specific distributed runtime closure rather than driver-only readiness;
+- one stable Execution distinct from subordinate Attempts and platform jobs;
+- Attempt observation distinct from current mutation authority;
+- write authority composed from current recovery frontier, Execution/Attempt authority, resource-local preconditions where needed and current authorization/capability;
+- lease/heartbeat as liveness coordination, not stale-writer proof;
+- operation-scoped idempotency plus fencing rather than exactly-once physical execution;
+- committed checkpoint identity separate from current resume eligibility/semantic results;
+- cancellation intent separate from terminal operational outcome;
+- admission as current operational eligibility separate from semantic readiness, authorization, runtime closure, queue/capacity and mutation authority;
+- resource pressure unable to silently weaken semantic/security contracts;
+- bounded operational history rather than duplication of provider telemetry.
 
 Do not convert these architecture roles into production classes/services/tables merely because their semantics are now reconciled.
 
@@ -75,8 +75,9 @@ Until Phase 014 passes, do not add or stabilize production:
 - public APIs or package topology;
 - Strategy/runtime/plugin adapters;
 - dependency resolvers/downloaders;
-- authorization/IAM/secrets/network/provider integrations;
-- Execution/fencing/recovery/checkpoint mechanisms;
+- authorization/secrets/provider integrations;
+- Execution/Attempt schedulers or provider launchers;
+- fencing/idempotency/checkpoint/recovery/admission machinery;
 - Evidence/Provenance implementations;
 - deployment/platform integrations;
 - benchmarks or executable conformance gates intended to manufacture readiness.
@@ -84,9 +85,7 @@ Until Phase 014 passes, do not add or stabilize production:
 ## Remaining design before readiness
 
 ```text
-013-F  Execution / Attempt / fencing / idempotency / checkpoint /
-       cancellation / recovery / admission                                  NEXT
-013-G  Evaluation / Evidence / Provenance / history / disclosure
+013-G  Evaluation / Evidence / Provenance / history / disclosure        NEXT
 013-H  deployment / scale / observability / portability / integration
 013-I  cross-architecture / ADR / legacy / M6 / residual register
 013-J  R1 completion / Phase 014 handoff
@@ -97,4 +96,4 @@ Until Phase 014 passes, do not add or stabilize production:
 
 Design-only work:
 
-**013-F — Execution/Attempt, Fencing, Idempotency, Checkpoint, Cancellation, Recovery & Admission Reconciliation**.
+**013-G — Evaluation, Evidence, Provenance, Historical Query, Reproducibility, Disclosure & External-Governance Boundary Reconciliation**.
