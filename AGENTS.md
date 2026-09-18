@@ -4,7 +4,7 @@ These instructions apply repository-wide to automated coding/documentation agent
 
 ## Current posture
 
-**Jackson concept design is complete. Phase 013 architecture reconciliation is complete and R1 is currently closed. Phase 014 whole-design/readiness work is ACTIVE; the pre-phase start gate is complete and 014-A is next. Implementation remains held.**
+**Jackson concept design is complete. Phase 013 architecture reconciliation is complete and R1 is currently closed. Phase 014 whole-design/readiness work is ACTIVE; the pre-phase start gate and 014-A are complete, and 014-B is next. Implementation remains held.**
 
 Start with:
 
@@ -14,6 +14,7 @@ Start with:
 - `docs/authority/jackson-design-completion-implementation-hold.md`
 - `docs/authority/jackson-methodology-completion-matrix.md`
 - `docs/authority/phase-014-whole-design-readiness-authority.md`
+- `docs/authority/phase-014-whole-design-audit-evidence-baseline.md`
 - `docs/phases/014/index.md`
 - `docs/phases/014/014-start-gate-whole-design-readiness-decomposition.md`
 - `docs/architecture/phase-013-consolidated-architecture-contract.md`
