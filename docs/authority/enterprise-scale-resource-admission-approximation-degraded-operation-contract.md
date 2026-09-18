@@ -364,7 +364,7 @@ Most relevant active rules include:
 
 - SYNC-02 — Strategy compatibility;
 - SYNC-04 / SYNC-07 / SYNC-11 — current operational continuation qualification;
-- SYNC-06 — Generation commitment/compatibility;
+- SYNC-06 — Generation / Learned State reuse compatibility when reusable Learned State participates;
 - SYNC-10 / SYNC-12 — Evaluation method compatibility and Evidence claim strength;
 - SYNC-14 — material Provenance recording.
 
