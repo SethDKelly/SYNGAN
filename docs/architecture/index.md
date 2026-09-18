@@ -20,7 +20,7 @@ architecture corpus             RECONCILED / CURRENT
 R1 architecture reconciliation  CURRENTLY CLOSED
 Phase 014 start gate            COMPLETE
 Phase 014                       ACTIVE
-014-A                           NEXT ELIGIBLE
+Phase 014 sequencing authority  docs/phases/014/index.md
 R2 whole-design audit           OPEN
 R3 implementation readiness     OPEN
 implementation readiness        NOT READY
@@ -114,4 +114,4 @@ Phase 014 owns R2/R3. Phase 015 remains required for explicit implementation aut
 
 ## Current next boundary
 
-**014-A — Whole-Design Audit Authority, Evidence Baseline, Traceability & Reopen Rules** is next eligible.
+Current Phase 014 subgroup sequencing is governed by [`docs/phases/014/index.md`](../phases/014/index.md).
