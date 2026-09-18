@@ -230,15 +230,18 @@ The gap does not rewrite what is known historically; it constrains the strongest
 
 ## Synchronization consequence
 
-This contract constrains existing synchronizations rather than creating a new concept-to-concept synchronization by itself.
+This contract constrains existing active synchronizations and current cross-cutting contracts rather than creating a new concept-to-concept synchronization by itself.
 
-In particular:
+Current Phase 009 authority controls:
 
-- SYNC-04 / SYNC-07 / SYNC-11 remain the domain activity ↔ Execution operational-realization boundaries;
-- SYNC-14 remains responsible for required material Provenance relationships;
-- SYNC-15 remains responsible for reproducibility-relevant historical facts.
+- SYNC-04 / SYNC-07 / SYNC-11 remain the active domain activity ↔ Execution operational-realization boundaries;
+- SYNC-14 remains the active material-Provenance relationship synchronization;
+- reproducibility is a cross-cutting contract/derived assessment over preserved owner facts;
+- historical identifier `SYNC-15` remains reserved but is **not** an active synchronization.
 
-Phase 006-C must adversarially validate whether the wording of those existing synchronizations needs refinement. No `SYNC-16` is introduced by this contract.
+Recovery therefore preserves reproducibility-relevant owner facts and continuity qualifications without creating synchronization-owned state or reactivating historical `SYNC-15` semantics.
+
+No new synchronization is introduced by this contract.
 
 ## Operator/programmatic truthfulness
 
