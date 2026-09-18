@@ -25,7 +25,7 @@ PHASE 011                                        COMPLETE
 PHASE 012                                        COMPLETE
 PHASE 013                                        COMPLETE
 R1                                               CURRENTLY CLOSED
-PHASE 014                                        NEXT ELIGIBLE
+PHASE 014                                        ACTIVE
 ```
 
 This register is not an issue tracker, implementation backlog, database schema, API resource or runtime status model.
@@ -174,7 +174,7 @@ H1/H2                             CURRENTLY CLOSED
 JACKSON CONCEPT DESIGN            COMPLETE FOR CURRENT PRODUCT SCOPE
 Phase 013                         COMPLETE
 R1                                CURRENTLY CLOSED
-Phase 014                         NEXT ELIGIBLE
+Phase 014                         ACTIVE
 R2                                OPEN
 R3                                OPEN
 ```
@@ -183,6 +183,6 @@ A positive conceptual-quality or architecture result does not make implementatio
 
 ## Current next boundary
 
-**Phase 014 pre-phase start gate — whole-design/readiness decomposition** is next eligible.
+Current Phase 014 subgroup sequencing is governed by [`docs/phases/014/index.md`](../phases/014/index.md).
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
