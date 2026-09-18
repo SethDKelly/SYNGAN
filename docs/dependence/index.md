@@ -12,18 +12,19 @@ This directory contains current Jackson-style inclusion-dependence and applicati
 
 ```text
 Phase 009                         COMPLETE
-D1-D4                             CURRENTLY CLOSED
-E1-E5                             CURRENTLY CLOSED
-Phase 010                         COMPLETE
-F1-F5                             CURRENTLY CLOSED
-Phase 011                         COMPLETE
-G1-G7                             CURRENTLY CLOSED
-Phase 012                         COMPLETE
-H1/H2                             CURRENTLY CLOSED
+D1-D4 / E1-E5                   CURRENTLY CLOSED
+Phase 010-012                    COMPLETE
+F1-H2                            CURRENTLY CLOSED
 Jackson concept design            COMPLETE FOR CURRENT PRODUCT SCOPE
+Phase 013                         COMPLETE
+R1 architecture reconciliation    CURRENTLY CLOSED
+Phase 014                         ACTIVE
+014-A                             NEXT ELIGIBLE
+R2                                OPEN
+R3                                OPEN
 ```
 
-Phase 012's whole-current-state audit confirms no dependence/application-family reopen.
+Phase 012 confirmed no dependence/application-family reopen, and Phase 013 preserved the resulting optionality in architecture.
 
 ## Canonical graph
 
@@ -67,12 +68,14 @@ Future M8 triggers do not establish family membership. Future independent-purpos
 
 Application-family validity remains distinct from SKUs, feature flags, package bundles, modules or deployment profiles.
 
-## Phase 013 boundary
+## Phase 014 boundary
 
-Phase 013 must not translate inclusion edges mechanically into module dependencies, services, transactions or deployment units. Architecture must preserve semantic optionality without treating the full eleven-concept family as one mandatory runtime workflow.
+Phase 014 must test the dependence/application-family model as part of whole-design composition. In particular it must verify that current mapping and architecture do not force the full eleven-concept family into one universal workflow and that reduced valid applications remain semantically and architecturally supportable.
+
+Inclusion edges must not be reinterpreted as module dependencies, services, transactions or deployment units.
 
 ## Current next boundary
 
-**Phase 013 — Post-Concept Representation & Architecture Reconciliation** is next eligible.
+**014-A — Whole-Design Audit Authority, Evidence Baseline, Traceability & Reopen Rules** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
