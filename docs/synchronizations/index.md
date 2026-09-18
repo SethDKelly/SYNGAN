@@ -49,20 +49,26 @@ Historical IDs are not renumbered or reused.
 
 Phase 013 must not translate synchronization mechanically into event buses, transactions, services, packages, queues, schemas, architecture layers or runtime call direction.
 
-Completed architecture reconciliation through 013-E preserves singular ownership:
+Completed reconciliation through 013-F preserves singular ownership:
 
 - 013-B: representation/handles/views do not create synchronization-owned state;
-- 013-C: transactions/outboxes/CAS may preserve synchronization effects without becoming semantic owners;
+- 013-C: transactions/outboxes/CAS preserve coordinated effects without becoming semantic owners;
 - 013-D: manifest/candidate/seal/promotion preserves Generation-local output ownership and exact Evaluation-subject binding;
-- 013-E: implementation/dependency/runtime/security machinery does not create synchronization-owned state, and Reproducibility remains cross-cutting over preserved owner/integration facts.
+- 013-E: executable/dependency/runtime/security realization does not create synchronization-owned readiness or reproducibility state;
+- 013-F: Execution/Attempt/fencing/idempotency/checkpoint/cancellation/admission remains operational realization beneath `SYNC-04`, `SYNC-07`, `SYNC-11`, with material Provenance relationships under `SYNC-14`.
 
-013-C corrected the active regressive-recovery contract so historical `SYNC-15` is no longer described as active.
+Current operational-realization synchronization interpretation is:
 
-013-D corrected the active structured-topology contract so historical `SYNC-08` and `SYNC-15` meanings no longer appear as current synchronization authority.
+```text
+SYNC-04  Learning ↔ Execution operational realization
+SYNC-07  Generation ↔ Execution operational realization
+SYNC-11  Evaluation ↔ Execution operational realization
+SYNC-14  material Provenance relationship recording where required
+SYNC-08  retired — Generation-local candidate/completed-output behavior
+SYNC-15  historical/reclassified — Reproducibility contract
+```
 
-013-E corrected the active Reproducibility and Self-Contained Runtime Distribution Closure contracts so historical `SYNC-15` is no longer presented as active synchronization authority.
-
-Some retained Phase 007-D/E/F/G architecture documents still contain historical/current-looking pre-Phase009 wording. Current Phase 009 and completed Phase 013 authority controls; final legacy/corpus cleanup remains a bounded 013-I obligation, not a synchronization-design reopen.
+013-F identifies remaining current-looking historical `SYNC-15` references in the accepted Execution document and retained operational architecture, plus old `SYNC-08`/`SYNC-15` references in the Enterprise Scale / Resource Admission contract. Phase 009/current Phase 013 authority controls their meaning now; final document/status cleanup remains a bounded 013-I obligation rather than a synchronization-design reopen.
 
 ## Completion state
 
@@ -78,8 +84,8 @@ hidden coordinator required               NO
 synchronization reopen                    NONE
 Jackson concept design                    COMPLETE FOR CURRENT PRODUCT SCOPE
 Phase 013                                 ACTIVE
-013-E                                     COMPLETE
-013-F                                     NEXT ELIGIBLE
+013-F                                     COMPLETE
+013-G                                     NEXT ELIGIBLE
 ```
 
 ## Future synchronization rule
@@ -90,6 +96,6 @@ If future scope introduces independent purpose + durable state/history + meaning
 
 ## Current next boundary
 
-**013-F — Execution/Attempt, Fencing, Idempotency, Checkpoint, Cancellation, Recovery & Admission Reconciliation** is next eligible.
+**013-G — Evaluation, Evidence, Provenance, Historical Query, Reproducibility, Disclosure & External-Governance Boundary Reconciliation** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
