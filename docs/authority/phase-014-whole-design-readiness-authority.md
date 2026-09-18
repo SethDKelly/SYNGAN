@@ -281,6 +281,25 @@ R3                               OPEN
 
 Substantive whole-design auditing begins with 014-B.
 
+## 014-B completion state
+
+014-B audited product scope, actors, O1-O16 outcomes, concept-purpose justification and reverse architecture-to-purpose traceability.
+
+```text
+014-B                            COMPLETE
+O1-O16 coverage                  PASS — 16/16
+actor-purpose coverage           PASS
+11-concept purpose coverage      PASS — 11/11
+orphan architecture families    0
+unresolved WMAT-2               0
+unresolved WMAT-3               0
+upstream reopen                  NONE
+R2                               OPEN
+R3                               OPEN
+```
+
+Detailed authority: [Phase 014-B Problem/Actor/Outcome/Concept-Purpose Audit](phase-014-b-problem-actor-outcome-concept-purpose-audit.md).
+
 ## Current next boundary
 
-**014-B — Problem, Actors, Outcomes, Scope & Concept-Purpose Coverage Audit** is next eligible.
+**014-C — Concept Specification, Dependence, Application-Family & Synchronization Integrity Audit** is next eligible.
