@@ -49,17 +49,20 @@ Historical IDs are not renumbered or reused.
 
 Phase 013 must not translate synchronization mechanically into event buses, transactions, services, packages, queues, schemas, architecture layers or runtime call direction.
 
-Completed architecture reconciliation through 013-D preserves singular ownership:
+Completed architecture reconciliation through 013-E preserves singular ownership:
 
 - 013-B: representation/handles/views do not create synchronization-owned state;
 - 013-C: transactions/outboxes/CAS may preserve synchronization effects without becoming semantic owners;
-- 013-D: manifest/candidate/seal/promotion architecture preserves Generation-local output ownership and exact Evaluation-subject binding.
+- 013-D: manifest/candidate/seal/promotion preserves Generation-local output ownership and exact Evaluation-subject binding;
+- 013-E: implementation/dependency/runtime/security machinery does not create synchronization-owned state, and Reproducibility remains cross-cutting over preserved owner/integration facts.
 
 013-C corrected the active regressive-recovery contract so historical `SYNC-15` is no longer described as active.
 
 013-D corrected the active structured-topology contract so historical `SYNC-08` and `SYNC-15` meanings no longer appear as current synchronization authority.
 
-Some retained Phase 007-D/E/F architecture documents still contain historical `15`-rule wording. Current Phase 009 authority controls; final legacy/corpus status cleanup remains a bounded 013-I obligation, not a synchronization-design reopen.
+013-E corrected the active Reproducibility and Self-Contained Runtime Distribution Closure contracts so historical `SYNC-15` is no longer presented as active synchronization authority.
+
+Some retained Phase 007-D/E/F/G architecture documents still contain historical/current-looking pre-Phase009 wording. Current Phase 009 and completed Phase 013 authority controls; final legacy/corpus cleanup remains a bounded 013-I obligation, not a synchronization-design reopen.
 
 ## Completion state
 
@@ -75,8 +78,8 @@ hidden coordinator required               NO
 synchronization reopen                    NONE
 Jackson concept design                    COMPLETE FOR CURRENT PRODUCT SCOPE
 Phase 013                                 ACTIVE
-013-D                                     COMPLETE
-013-E                                     NEXT ELIGIBLE
+013-E                                     COMPLETE
+013-F                                     NEXT ELIGIBLE
 ```
 
 ## Future synchronization rule
@@ -87,6 +90,6 @@ If future scope introduces independent purpose + durable state/history + meaning
 
 ## Current next boundary
 
-**013-E — Strategy/Method Realization, Dependency Closure, Authorization, Secrets, Offline/No-Egress & Runtime Distribution** is next eligible.
+**013-F — Execution/Attempt, Fencing, Idempotency, Checkpoint, Cancellation, Recovery & Admission Reconciliation** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
