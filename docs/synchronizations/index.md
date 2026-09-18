@@ -41,22 +41,25 @@ synchronization-owned canonical state              -> NONE
 
 `SYNC-08` remains retired as a cross-concept synchronization because candidate/completed-output establishment is Generation-local behavior.
 
-`SYNC-15` remains reclassified under the cross-cutting Reproducibility contract. It is a reserved historical identifier, not active synchronization-owned state.
+`SYNC-15` remains historical/reclassified under the cross-cutting Reproducibility contract. It is not active synchronization-owned state.
 
 Historical IDs are not renumbered or reused.
 
 ## Phase 013 reconciliation status
 
-Completed reconciliation through 013-G preserves singular ownership:
+Completed reconciliation through 013-H preserves singular ownership:
 
 - 013-B: representation/handles/views do not create synchronization-owned state;
 - 013-C: transactions/outboxes/CAS preserve coordinated effects without becoming semantic owners;
-- 013-D: manifest/candidate/seal/promotion preserves Generation-local output ownership and exact Evaluation-subject binding;
+- 013-D: candidate/seal/result-establishment preserves Generation-local output ownership and exact Evaluation-subject binding;
 - 013-E: executable/dependency/runtime/security realization does not create synchronization-owned readiness or reproducibility state;
-- 013-F: Execution/Attempt/fencing/idempotency/checkpoint/cancellation/admission remains operational realization beneath `SYNC-04`, `SYNC-07`, `SYNC-11`, with material Provenance relationships under `SYNC-14`;
-- 013-G: Evaluation validates exact examination semantics, `SYNC-12` establishes independently interpretable Evidence, `SYNC-13` remains a controlled handoff rather than approval authority, and `SYNC-14` records material typed Provenance without becoming owner state.
+- 013-F: Execution/Attempt/fencing/idempotency/checkpoint/cancellation/admission remains operational realization beneath `SYNC-04`, `SYNC-07`, `SYNC-11`, with material Provenance under `SYNC-14`;
+- 013-G: `SYNC-12` establishes Evidence, `SYNC-13` remains controlled handoff rather than approval authority, and `SYNC-14` remains typed Provenance recording without transition ownership;
+- 013-H: deployment/platform capability negotiation, provider integration, observability, scale qualification and compatibility remain architecture/deployment concerns and introduce no synchronization-owned state.
 
-Current Evidence/history synchronization interpretation is:
+Platform/provider observations can support an active synchronization only to the strength they actually establish. Provider status, identity, telemetry, lineage, catalog state or IAM state does not itself create a cross-concept synchronization transition.
+
+## Current synchronization interpretation
 
 ```text
 SYNC-09  Evaluation Criterion binding
@@ -69,9 +72,9 @@ SYNC-08  retired — Generation-local candidate/completed-output behavior
 SYNC-15  historical/reclassified — Reproducibility contract
 ```
 
-013-G confirms that Reproducibility owns no synchronization state, Evidence handoff creates no external-approval state, and required Provenance does not acquire ownership of the transition it explains.
+The active Enterprise Scale / Resource Admission / Approximation / Degraded Operation contract has been corrected by 013-H to this current model.
 
-Remaining current-looking pre-Phase-009 `SYNC-08`/`SYNC-15` and 15-rule references in accepted concepts, retained architecture and cross-cutting contracts are semantically superseded. Phase 009/current Phase 013 authority controls their meaning now; final document/status/link cleanup remains a bounded 013-I obligation rather than a synchronization-design reopen.
+Remaining current-looking pre-Phase-009 `SYNC-08`/`SYNC-15` and 15-rule references in accepted concepts, retained architecture and other historical/current-looking documents are semantically superseded. 013-I owns final document/status/link cleanup and M6 closure; no synchronization-design reopen is pending.
 
 ## Completion state
 
@@ -84,12 +87,13 @@ Evidence/Generation separation            PASS
 semantic/Execution separation             PASS
 Provenance low-authority fan-out          PASS
 external-governance ownership separation  PASS
+provider/platform ownership leakage       NONE
 hidden coordinator required               NO
 synchronization reopen                    NONE
 Jackson concept design                    COMPLETE FOR CURRENT PRODUCT SCOPE
 Phase 013                                 ACTIVE
-013-G                                     COMPLETE
-013-H                                     NEXT ELIGIBLE
+013-H                                     COMPLETE
+013-I                                     NEXT ELIGIBLE
 ```
 
 ## Future synchronization rule
@@ -100,6 +104,6 @@ If future scope introduces independent purpose + durable state/history + meaning
 
 ## Current next boundary
 
-**013-H — Deployment, Scalability, Observability, Portability, Compatibility & Platform-Integration Reconciliation** is next eligible.
+**013-I — Cross-Architecture Composition, ADR/Legacy Contract Reconciliation, M6 Cleanup & Residual Architecture Misfit Register** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
