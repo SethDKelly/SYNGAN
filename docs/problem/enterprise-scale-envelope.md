@@ -208,4 +208,4 @@ Current concept design must be capable of expressing, without prematurely select
 - long-running operational Execution, failure, retry/recovery, cancellation, and uncertainty;
 - resource/dependency/network limitations that remain visible without becoming hidden semantic defaults.
 
-Whether those responsibilities remain correctly divided among the current eleven concepts is evaluated by Phase 008 rather than assumed by this scale envelope.
+Those responsibilities were subsequently validated across the completed concept-design program and Phase 013 architecture reconciliation. Phase 014-B rechecked the scale envelope against current problem/outcome and concept-purpose authority and found no scale-driven concept-purpose gap. Detailed cross-layer scale/adversarial behavior remains subject to the later Phase 014-F whole-design replay.
