@@ -23,22 +23,38 @@ Jackson concept design          COMPLETE FOR CURRENT PRODUCT SCOPE
 Phase 013                       COMPLETE
 R1 architecture reconciliation CURRENTLY CLOSED
 representation / architecture  RECONCILED / CURRENT
-Phase 014                       NEXT ELIGIBLE
+Phase 014 start gate            COMPLETE
+Phase 014                       ACTIVE
+014-A                           NEXT ELIGIBLE
 R2                              OPEN
 R3                              OPEN
 ```
 
-Architecture completion does not authorize implementation.
+Architecture completion and Phase 014 activation do not authorize implementation.
 
-## Current architecture constraint
+## Phase 014 implementation-evidence boundary
 
-Any future implementation must preserve [Phase 013 Consolidated Architecture Contract](../architecture/phase-013-consolidated-architecture-contract.md), including semantic ownership, exact history, non-regressing recovery, Generation-owned finality, Strategy/runtime separation, distributed dependency closure, Execution/Attempt separation, Evaluation/Evidence/Provenance boundaries, provider-evidence qualification, application-family optionality and M8 rediscovery gates.
+Phase 014 may inspect historical implementation plans, source, tests, scaffolds, provider evidence and feasibility artifacts only to answer a design-readiness question:
 
-Historical Phase 007-A..C scaffold remains feasibility evidence only. Phase 007-K implementation re-entry remains superseded as current authorization.
+> **Would implementation have to invent unresolved product semantics, or are the remaining choices genuinely implementation-level?**
+
+Those artifacts remain downstream evidence. They may expose a contradiction but may not redefine concepts, mapping or architecture merely because existing code already chose something different.
+
+## Readiness classifications
+
+Phase 014 must distinguish:
+
+```text
+READINESS-NOTE  sequencing/evidence consideration; no readiness block by itself
+READINESS-RISK  material implementation risk Phase 015 must control if R3 is positive
+READINESS-BLOCK unresolved semantics or unsupported mandatory assumption; blocks positive R3
+```
+
+Normal engineering alternatives, provider-specific work, benchmark qualification and implementation sequencing do not automatically indicate missing design semantics.
 
 ## Current prohibition
 
-Until Phase 014 explicitly decides R3, do not add or stabilize production:
+Until 014-H explicitly decides R3, do not add or stabilize production:
 
 - persistence/query schemas or migrations;
 - data-state/manifest/candidate stores;
@@ -53,17 +69,20 @@ Until Phase 014 explicitly decides R3, do not add or stabilize production:
 - benchmarks/performance qualification;
 - executable conformance gates intended to manufacture readiness.
 
-## Remaining design before implementation authority
+## If R3 later passes
+
+A positive R3 may establish only:
 
 ```text
-014  whole-design consolidation / R2-R3 decision — NEXT
-015  implementation authority / controlled delivery — FUTURE ONLY
+IMPLEMENTATION READINESS   READY
+IMPLEMENTATION START       NOT STARTED
+IMPLEMENTATION NEXT        PHASE 015 AUTHORITY GATE
 ```
 
-Even if Phase 014 positively decides readiness, Phase 015 explicit authority remains required before implementation begins.
+Phase 015 explicit authority remains required before implementation begins.
 
 ## Current next boundary
 
 Design-only work:
 
-**Phase 014 pre-phase start gate — define the dependency-safe whole-design/readiness subphase plan**.
+**014-A — Whole-Design Audit Authority, Evidence Baseline, Traceability & Reopen Rules**.
