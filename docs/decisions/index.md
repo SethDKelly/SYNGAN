@@ -66,7 +66,7 @@ If whole-design evidence demonstrates that an ADR-backed architecture decision c
 Phase 013   COMPLETE
 R1          CURRENTLY CLOSED
 Phase 014   ACTIVE
-014-A       NEXT ELIGIBLE
+Phase 014 sequencing authority  docs/phases/014/index.md
 R2          OPEN
 R3          OPEN
 ```
