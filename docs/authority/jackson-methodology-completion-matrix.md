@@ -125,7 +125,8 @@ R1                                   CURRENTLY CLOSED
 REPRESENTATION / ARCHITECTURE        RECONCILED / CURRENT
 Phase 014 start gate                 COMPLETE
 Phase 014                            ACTIVE
-014-A                                NEXT ELIGIBLE
+014-A                                COMPLETE
+014-B                                NEXT ELIGIBLE
 R2                                   OPEN
 R3                                   OPEN
 IMPLEMENTATION READINESS             NOT READY
@@ -153,4 +154,4 @@ Phase 014 is not implementation. A positive future R3 may set readiness to `READ
 
 ## Current next boundary
 
-**014-A — Whole-Design Audit Authority, Evidence Baseline, Traceability & Reopen Rules** is next eligible.
+**014-B — Problem, Actors, Outcomes, Scope & Concept-Purpose Coverage Audit** is next eligible.
