@@ -8,356 +8,267 @@ status: active
 
 ## Purpose
 
-Define canonical ownership and extensibility rules for single-table, time-series, multi-table shared-key and composite structured-data topologies without introducing a standalone `Relationship`, `Table`, `Series`, `Dataset`, or `DataTopology` concept.
+Define current ownership and extensibility rules for single-table, time-series, multi-table shared-key and composite structured-data topology without introducing standalone `Relationship`, `Table`, `Series`, `Dataset`, `DataTopology`, `LogicalScope`, `Manifest` or `Output` concepts.
+
+This contract is current cross-cutting authority and is interpreted beneath completed Phase 012 concept design and completed Phase 013 reconciliation decisions.
 
 ## Governing rule
 
-> **Topology selection may be convenient API syntax, but committed semantics come from exact logical scope, Data Meaning structural relationship assertions, Generation intent, applicable Constraints and Evaluation requirements. A topology label never substitutes for those authorities.**
+> **Topology selection may be convenient syntax, but committed semantics come from exact logical scope, Data Meaning structural interpretation, Generation intent, applicable Constraints, Strategy capability and Evaluation requirements. A topology label or physical layout never substitutes for those authorities.**
 
 ## Concept disposition
 
-`Relationship` is **not accepted as a standalone concept**.
+`Relationship` remains subordinate to existing concept authority rather than a standalone concept.
 
-Its current purpose—describing reusable structural linkage/order among synthesis-relevant logical data subjects—substantially overlaps the descriptive interpretation lifecycle already owned by Data Meaning.
+Its current descriptive purpose—reusable structural linkage/order among synthesis-relevant logical data subjects—is owned by Data Meaning.
 
-Structural relationship semantics are therefore **subordinate Data Meaning state**.
+Architecture may provide stable references to structural assertions, logical scopes and coordinated subjects. Addressability does not create another semantic owner.
 
-This disposition preserves the semantic distinction while avoiding a second concept with nearly identical declaration, revision, authority and historical-binding behavior.
+## Ownership boundaries
 
-## Data Meaning ownership
+### Data Meaning
 
 Data Meaning owns descriptive structural interpretation where material, including semantics equivalent to:
 
 - identifier/key roles;
 - corresponding key roles across logical scopes;
-- parent/child or association role meaning;
+- parent/child or association-role meaning;
 - series/entity membership roles;
 - temporal/order roles;
 - descriptive relationship direction;
-- descriptive cardinality/participation interpretation when it states what the data structure means rather than what valid output must obey;
+- descriptive cardinality/participation interpretation;
 - uncertainty/conflict/authority around those interpretations.
 
-A structural relationship assertion is bound historically through the exact Data Meaning revision that contains it.
+A structural relationship assertion is historically bound through the exact Data Meaning revision that contains it. Material correction creates a new Data Meaning revision rather than rewriting historical commitments.
 
-Changing a material relationship interpretation creates a new Data Meaning revision rather than mutating historical work.
+### Constraint
 
-## Constraint boundary
-
-Constraint remains prescriptive authority.
+Constraint owns prescriptive validity.
 
 Examples:
 
 ```text
-orders.customer_id refers to customers.customer_id
-```
+orders.customer_id corresponds to customers.customer_id
+    -> descriptive Data Meaning
 
-is descriptive Data Meaning.
-
-```text
 every orders.customer_id must resolve to customers.customer_id
+    -> Constraint
+
+event_time defines order within entity_id
+    -> descriptive Data Meaning
+
+timestamps must be nondecreasing within each entity
+    -> Constraint
 ```
 
-is a Constraint.
+Cardinality/participation must be classified by purpose: descriptive domain fact -> Data Meaning; required validity rule -> Constraint; request-specific desired population characteristic -> Generation-owned Condition.
 
-Likewise:
+### Generation
 
-```text
-event_time establishes ordering within entity_id
-```
+Generation owns requested logical output scope/topology fulfillment.
 
-is descriptive Data Meaning.
-
-```text
-timestamps must be nondecreasing and unique within each entity
-```
-
-is a Constraint.
-
-Cardinality/participation information must be classified by purpose. A descriptive domain fact may be Data Meaning; a required validity rule is Constraint; a request-specific desired distribution is Generation-owned Condition.
-
-## Generation boundary
-
-Generation owns the requested logical output scope and topology fulfillment semantics.
-
-Where material, a Generation may bind/request:
+Where material, a committed Generation may bind:
 
 - participating logical scopes;
 - requested quantity/cardinality semantics per scope;
-- requested entity/series scope;
-- requested temporal horizon or continuation scope;
+- entity/series scope;
+- temporal horizon or continuation scope;
 - topology-specific Conditions;
-- exact Data Meaning revision containing required structural relationship assertions;
+- exact Data Meaning revision/assertions;
 - applicable topology-dependent Constraints;
-- whole-result completion requirements.
+- whole-result completion requirements;
+- exact direct-source or Learned-State basis where applicable;
+- material approximation/tolerance semantics.
 
-Generation does not own reusable relationship meaning merely because it requests an output that uses it.
+Generation does not own reusable relationship meaning merely because its output uses that meaning.
 
-## Strategy boundary
+### Synthesis Strategy
 
-Synthesis Strategy owns reusable capability/limitations for topology shapes.
+Strategy owns reusable topology capability and limitations. A Strategy may support one or more of:
 
-A Strategy may support:
+- single-table;
+- time-series;
+- multi-table shared-key;
+- composite multi-scope/sequence structures;
+- narrower key/cardinality/sequence shapes.
 
-- single-table only;
-- time-series only;
-- multi-table shared-key only;
-- several of these;
-- composed multi-table/time-series structures;
-- narrower cardinality/key/sequence shapes.
+Compatibility is contextual. An incompatible Strategy cannot silently simplify a committed topology.
 
-Compatibility is contextual. A Strategy that cannot support the committed topology/relationship shape is incompatible or limited; SYNGAN must not silently simplify the topology.
+### Evaluation / Evidence
 
-## Evaluation/Evidence boundary
+Evaluation may bind a subject spanning one or more logical scopes or sequences when the Criterion requires it.
 
-Evaluation may bind a subject spanning one or more logical scopes or longitudinal sequences when the Criterion requires it.
-
-Examples include:
-
-- referential integrity;
-- parent/child cardinality distributions;
-- join-level fidelity;
-- temporal ordering/cadence validity;
-- sequence/trajectory utility;
-- multi-table linkage disclosure risk;
-- longitudinal uniqueness/memorization risk.
-
-Evidence remains bounded to the exact subject, relationship semantics, method, scope and claim strength.
-
-Per-table or per-row Evidence does not automatically establish whole-topology claims.
+Evidence remains bounded to the exact subject, method, scope, coverage, assumptions and claim strength. Per-table/per-row findings do not automatically establish whole-topology claims.
 
 ## Single-table profile
 
-Single-table generation is a valid topology requiring no fabricated relationship state.
+Single-table Generation is valid and requires no fabricated relationship state.
 
-It may still use:
-
-- field/group/record-level Data Meaning;
-- cross-field Constraints;
-- direct or Learned-State Strategies;
-- Conditions and Evaluation.
-
-The absence of structural relationship assertions is valid when no such semantics are required.
+It may still use field/group/record-level Data Meaning, cross-field Constraints, direct or Learned-State Strategies, Conditions and Evaluation.
 
 ## Time-series profile
 
-Time-series generation must not be reduced to `single_table + timestamp`.
+Time-series semantics must not be reduced to `single table + timestamp`.
 
-Where material, Data Meaning identifies semantics such as:
+Where material:
 
-- entity/series membership role;
-- temporal/order field role;
-- sequence grouping/order relationship;
-- static/context versus event-varying roles where relevant.
+- Data Meaning identifies entity/series membership and temporal/order roles;
+- Constraint owns temporal validity requirements;
+- Generation owns entity/scope/horizon/quantity intent;
+- Strategy owns sequence-generation capability/limitations;
+- Evaluation/Evidence owns temporal fidelity/validity/privacy findings.
 
-Constraint owns prescriptive temporal rules such as:
-
-- monotonicity/order validity;
-- uniqueness;
-- cadence/gap bounds;
-- allowed temporal domain;
-- cross-field temporal consistency.
-
-Generation owns requested entity count/scope, horizon/continuation and quantity intent.
-
-Strategy owns sequence-generation capability and limitations.
-
-Evaluation/Evidence owns temporal fidelity/validity/privacy findings.
-
-No standalone `TimeSeries`, `Series`, `Sequence`, or temporal Relationship concept is accepted.
+Physical sort metadata or timestamp type alone does not establish semantic sequence meaning.
 
 ## Multi-table shared-key profile
 
-Multi-table generation may include several logical scopes connected by explicit shared-key structural relationship assertions.
+Multi-table Generation may contain several logical scopes connected by explicit Data Meaning structural assertions.
 
-The initial baseline may represent common structures including:
+The baseline may include common one-to-one, one-to-many/many-to-one, composite-key and association-table structures where supported by Strategy capability.
 
-- one-to-one;
-- one-to-many / many-to-one;
-- composite shared keys;
-- junction/association tables where the Strategy supports them;
-- multiple related scopes.
+Whole-result completion applies to the exact committed coordinated scope. Completion of one constituent does not complete the Generation while another mandatory constituent or required cross-scope obligation remains incomplete, violated or indeterminate.
 
-Arbitrary recursive/cyclic graph synthesis is not a universal baseline guarantee. Strategy capability may explicitly support, limit or reject such shapes.
-
-Whole-result completion remains governed by the committed logical Generation scope. A mandatory constituent or cross-scope requirement cannot disappear because another constituent completed.
+Arbitrary recursive/cyclic graph lifecycle is not a universal baseline promise.
 
 ## Composite topology
 
-Topology families are not permanently mutually exclusive.
+Topology families are composable rather than permanently mutually exclusive.
 
-A legitimate future subject can be equivalent to:
+For example:
 
 ```text
 customers
   └── observations
-        └── ordered time-series per customer
+        ordered time series per customer
 ```
 
-or several related time-series scopes.
+may be one legitimate coordinated subject.
 
-Therefore a high-level topology selector may exist for common cases, but the durable model must permit composition.
-
-A global exclusive enum such as:
+A convenience selector such as:
 
 ```text
 single_table | time_series | multi_table
 ```
 
-MUST NOT be the sole semantic representation if it prevents valid composite structures.
+may exist, but it must not be the sole durable semantic representation if it prevents valid composition.
 
-## Convenience API boundary
+## Logical scope and relationship references
 
-A future public API may expose a convenience parameter or typed preset equivalent to:
+Architecture may provide bounded logical-scope identity and stable relationship-assertion references scoped to an exact Data Meaning revision.
 
-```text
-mode="single_table"
-mode="time_series"
-mode="multi_table"
-```
+These mechanisms exist for exact addressing, topology composition, historical binding, Evaluation targeting and distributed representation. They do not create independently owned concepts/resources by implication.
 
-This is an experience/representation mechanism.
+Millions of rows/entities/series do not imply millions of control-plane logical scopes.
 
-Before commitment it must resolve into enough exact semantic state to preserve:
+## Structured-data capability baseline
 
-- logical scope;
-- required Data Meaning revision;
-- structural relationship assertions where applicable;
-- temporal/entity roles where applicable;
-- topology-dependent Conditions;
-- applicable Constraints;
-- Strategy compatibility;
-- completion/Evaluation requirements.
+The current complete structured-data capability baseline continues to include:
 
-Two requests using the same `mode` may therefore have materially different semantics.
+1. single-table generation;
+2. time-series generation;
+3. multi-table shared-key generation.
 
-## Relationship assertion addressing
+Composite structures must remain representable even when not every combination is supported by the first Strategy catalog.
 
-Downstream rules and Evaluations may need to identify one structural relationship assertion precisely.
+Individual Strategies may support subsets. A complete product capability claim requires supported paths for the required baseline families; it does not imply equal algorithm breadth or maturity.
 
-Later architecture may provide a stable assertion identifier/reference scoped to the exact Data Meaning revision.
+The baseline does not automatically include arbitrary recursive graph synthesis, streaming/session/feed lifecycle or future product-owned graph relationship authority.
 
-That mechanism exists for historical resolution and precise binding. It does not create a globally independent Relationship resource or concept.
+## Scale and approximation consequence
 
-## Historical correction
+Topology support remains Spark-scale and bounded/reference-first.
 
-A relationship correction follows Data Meaning revision semantics.
+Resource pressure cannot silently:
 
-Example:
+- truncate committed horizons;
+- drop required scopes/children;
+- weaken relationship Constraints;
+- convert exact requirements into sampled/estimated proof;
+- convert whole-result completion into partial success.
 
-```text
-DM-R3:
-orders.customer_id -> customers.customer_id
-
-later correction:
-orders.account_id -> accounts.account_id
-```
-
-The correction creates a new Data Meaning revision for future work.
-
-Historical Learning/Generation/Evaluation remain bound to the exact prior revision they used.
-
-Later Evaluation may assess historical output under the corrected/new structure, but it must be a new question rather than retroactive reinterpretation.
-
-## Initial complete structured-data capability baseline
-
-The first **complete SYNGAN structured-data capability baseline** includes three required capability families:
-
-1. **single-table generation**;
-2. **time-series generation**;
-3. **multi-table shared-key generation**.
-
-Implementation may be delivered in dependency-safe stages and individual Strategies may support only subsets.
-
-However, a release must not claim the complete structured-data baseline until at least one supported self-contained Strategy path exists for each family.
-
-This requirement does not imply equal algorithm breadth or maturity across all three families.
-
-## Initial scope boundaries
-
-### Single-table
-
-Required baseline capability.
-
-### Time-series
-
-Required baseline capability with explicit entity/series and ordering/time semantics. The baseline does not promise every sequence-model family, regular cadence, streaming/online generation, or arbitrary temporal hierarchy.
-
-### Multi-table shared-key
-
-Required baseline capability for explicit shared-key relationships and common relational structures. The baseline does not promise arbitrary recursive graph synthesis or every cyclic/self-referential relationship shape.
-
-### Composite topologies
-
-Must remain representable by architecture and future Strategy capability even when not every composite combination is supported by the first Strategy catalog.
-
-## Scale consequence
-
-Topology support is subject to the Enterprise Scale, Resource Admission, Approximation & Degraded Operation Contract.
-
-Time-series readiness includes entity count, sequence-length distribution, horizon/cadence/context-window and partition/locality pressure.
-
-Multi-table readiness includes table count, key cardinality, fan-out/skew, per-scope/total volume and cross-scope validation cost.
-
-Resource pressure cannot silently truncate horizons, drop child scopes, weaken relationship Constraints or convert whole-result completion into partial success.
+Approximation is valid only when the owning semantic contract permits it and the resulting limitation remains explicit.
 
 ## Privacy/disclosure consequence
 
-Topology relationships may materially affect disclosure risk.
+Topology relationships may materially affect disclosure risk, so privacy/disclosure Criteria may require a coordinated subject including joins or trajectories.
 
-Privacy/disclosure Criteria may need the coordinated subject, including joins and trajectories.
+Structural relationship semantics do not own privacy guarantees, anonymization claims or release/use authority.
 
-Structural Relationship semantics themselves do not own privacy meaning or release authority.
+## Current synchronization consequence
 
-## Synchronization consequence
+Current Phase 009 authority controls all synchronization numbering and ownership.
 
-No new synchronization ID is introduced.
+Relevant current rules include:
 
-Existing rules remain sufficient:
+```text
+SYNC-01  exact Data Meaning revision binding
+SYNC-02  Strategy compatibility including requested topology/scope
+SYNC-03  Constraint binding and handling
+SYNC-06  Generation commitment/compatibility including quantity/scope,
+         exact synthesis basis and material approximation semantics
+SYNC-07  Generation operational realization; candidate state remains non-final
+SYNC-09  Evaluation Criterion binding
+SYNC-10  Evaluation method/scope/coverage compatibility
+SYNC-11  Evaluation operational realization
+SYNC-12  Evaluation produces Evidence bound to the exact subject
+SYNC-13  controlled Evidence consumption / Generation handoff
+SYNC-14  material Provenance relationship recording
+```
 
-- SYNC-01 binds the exact Data Meaning revision, including material structural relationship assertions;
-- SYNC-02 validates Strategy compatibility with the topology/relationship semantics;
-- SYNC-03 binds applicable topology-dependent Constraints;
-- SYNC-06 binds Generation scope/topology intent;
-- SYNC-08 governs whole logical-output completion;
-- SYNC-09/10/12 preserve exact Evaluation subject/method/Evidence claim strength;
-- SYNC-14/15 preserve exact historical/reproducibility context.
+Current Phase 009 disposition also controls:
 
-If a future capability reveals structural state with a genuinely independent purpose/lifecycle not captured by Data Meaning, concept discovery may reopen. Current evidence does not justify that separation.
+```text
+SYNC-08  RETIRED as cross-concept synchronization;
+         candidate/completed-output establishment is Generation-local behavior.
 
-## 006-I architecture/planning consequence
+SYNC-15  RECLASSIFIED under the cross-cutting Reproducibility contract;
+         not active synchronization-owned state.
+```
 
-006-I must back-propagate this contract into architecture/planning without rewriting phase history, including:
+No new synchronization is introduced by topology representation.
+
+A future independent topology/relationship purpose with its own durable state/history/actions/lifecycle would return to concept discovery before architecture or implementation.
+
+## Phase 013 architecture consequence
+
+Current architecture must preserve:
 
 - logical multi-scope/source/output references;
-- Data Meaning relationship-assertion representation/reference;
+- exact Data Meaning relationship-assertion references;
 - Strategy topology capability declarations;
-- Generation topology specifications and completion;
-- time-series/multi-table materialization/manifests;
-- Evaluation subjects spanning related scopes/sequences;
-- scale and privacy implications;
-- package/API design that treats topology presets as convenience rather than semantic authority;
-- verification/conformance for all three baseline capability families.
+- Generation topology specifications and whole-scope completion;
+- time-series/multi-table materialization without driver-local enumeration;
+- Evaluation subjects spanning exact related scopes/sequences;
+- multi-scope snapshot/coordination strength when required;
+- manifest/provider-equivalent immutable subject boundaries;
+- candidate non-finality and Generation-owned completed-output establishment;
+- scale and disclosure limitations without semantic weakening;
+- topology presets as convenience rather than semantic authority.
+
+[Phase 013-D Distributed Data Reconciliation](../architecture/phase-013-d-distributed-data-topology-manifest-candidate-promotion-reconciliation.md) is the current downstream architecture interpretation of this contract.
 
 ## Invariants
 
-1. `Relationship` is not a standalone accepted concept under the current design.
-2. Material structural relationship semantics MUST remain explicit, inspectable and historically bound through Data Meaning.
-3. Descriptive relationship meaning MUST remain distinct from prescriptive Constraint semantics.
-4. Generation owns requested topology/scope, not reusable relationship authority.
-5. Strategy owns topology capability/limitations, not relationship meaning.
-6. Single-table work MUST NOT fabricate relationship state when none is needed.
-7. Time-series MUST NOT be reduced to a physical timestamp type or topology label.
-8. Multi-table shared-key semantics MUST NOT be reduced to physical foreign-key metadata alone.
-9. Whole-result completion MUST cover the committed coordinated scope.
-10. Per-constituent Evaluation/Evidence MUST NOT automatically establish whole-topology claims.
-11. A topology convenience parameter MUST NOT be the sole durable semantic representation.
-12. The semantic model MUST permit composition such as multi-table subjects containing time-series scopes.
-13. A relationship correction MUST create new semantic authority for future work rather than rewriting historical bindings.
-14. The complete baseline capability claim requires at least one supported self-contained Strategy path for single-table, time-series and multi-table shared-key generation.
-15. No rule in this contract makes a particular table/schema/foreign-key/time-series library/Spark representation canonical SYNGAN semantics.
+1. `Relationship` and `DataTopology` are not standalone accepted concepts under current scope.
+2. Material structural relationship semantics remain explicit and historically bound through Data Meaning.
+3. Descriptive structural meaning remains distinct from prescriptive Constraint semantics.
+4. Generation owns requested topology/scope fulfillment, not reusable relationship authority.
+5. Strategy owns reusable topology capability/limitations, not relationship meaning.
+6. Single-table work does not fabricate relationship state when none is needed.
+7. Time-series meaning is not reducible to physical timestamp type or sort order.
+8. Multi-table shared-key meaning is not reducible to provider foreign-key metadata.
+9. Whole-result completion covers the exact committed coordinated scope.
+10. Per-constituent Evaluation/Evidence does not automatically establish whole-topology claims.
+11. Topology convenience syntax is not sole durable authority.
+12. Composite relational/time-series structures remain representable.
+13. Relationship correction creates new Data Meaning authority for future work rather than rewriting historical bindings.
+14. Physical/provider exactness is consumed only at the guarantee actually established.
+15. Resource pressure cannot silently weaken committed topology/scope/validation semantics.
+16. No topology rule makes a specific table format, provider product, manifest format, Spark class or storage layout canonical SYNGAN semantics.
+17. Current Phase 009 synchronization authority supersedes historical Phase 006/007 synchronization numbering/meaning where they conflict.
 
 ## Operational principle
 
-A steward declares a Data Meaning revision in which `customers.customer_id` is the parent identifier and `orders.customer_id` is the corresponding child key. A Constraint separately requires every generated order key to resolve to a generated customer. A practitioner requests a multi-table Generation covering both scopes. Strategy compatibility confirms support for the relationship shape, and the Generation remains incomplete until both scopes and required cross-scope validation are completion-sufficient.
+A steward declares a Data Meaning revision in which `customers.customer_id` is the parent identifier and `orders.customer_id` is the corresponding child key. A Constraint separately requires every generated order key to resolve to a generated customer. A Generation commits both scopes and the exact relevant authority. Strategy compatibility confirms support for the relationship shape. Distributed materialization may close each scope separately, but the Generation remains incomplete until the whole required subject and completion basis are sufficient.
 
-In another dataset, `sensor_id` identifies a series and `event_time` establishes order within each series. A Generation requests twelve future months. Resource pressure may delay execution but cannot shorten the committed horizon. A future composite dataset may contain customer metadata plus a time-series observations table; the design represents this through logical scope and Data Meaning structural assertions rather than forcing the work into one mutually exclusive topology enum.
+In a time-series subject, `sensor_id` may identify series membership and `event_time` semantic ordering. A Generation requesting twelve future months cannot silently shorten the committed horizon under resource pressure. A composite dataset may contain customer metadata plus time-series observations; architecture represents it through logical scope plus exact Data Meaning/Generation bindings rather than a mutually exclusive topology enum.
