@@ -26,7 +26,8 @@ representation / architecture  RECONCILED / CURRENT
 Phase 014 start gate            COMPLETE
 Phase 014                       ACTIVE
 014-A                           COMPLETE
-014-B                           NEXT ELIGIBLE
+014-B                           COMPLETE
+014-C                           NEXT ELIGIBLE
 R2                              OPEN
 R3                              OPEN
 ```
@@ -86,4 +87,4 @@ Phase 015 explicit authority remains required before implementation begins.
 
 Design-only work:
 
-**014-B — Problem, Actors, Outcomes, Scope & Concept-Purpose Coverage Audit**.
+**014-C — Concept Specification, Dependence, Application-Family & Synchronization Integrity Audit**.
