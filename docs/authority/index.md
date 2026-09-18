@@ -18,17 +18,16 @@ These documents define how SYNGAN design knowledge is created, interpreted, reco
 ## Active Phase 013 authority
 
 - [Phase 013 Architecture Reconciliation Authority](phase-013-architecture-reconciliation-authority.md)
+- [Phase 013 Residual Architecture Misfit Register](phase-013-residual-architecture-misfit-register.md)
 - [Phase 013 Index](../phases/013/index.md)
 - [Representation & Architecture Index](../architecture/index.md)
-- [013-B Representation Reconciliation](../architecture/phase-013-b-representation-layering-public-contract-identity-view-reconciliation.md)
-- [013-C Persistence Reconciliation](../architecture/phase-013-c-control-persistence-history-concurrency-migration-recovery-reconciliation.md)
-- [013-D Distributed Data Reconciliation](../architecture/phase-013-d-distributed-data-topology-manifest-candidate-promotion-reconciliation.md)
-- [013-E Runtime / Dependency / Security Reconciliation](../architecture/phase-013-e-strategy-runtime-dependency-authorization-secrets-distribution-reconciliation.md)
-- [013-F Execution / Recovery / Admission Reconciliation](../architecture/phase-013-f-execution-attempt-fencing-idempotency-checkpoint-cancellation-recovery-admission-reconciliation.md)
-- [013-G Evidence / Provenance / History / Disclosure Reconciliation](../architecture/phase-013-g-evaluation-evidence-provenance-history-reproducibility-disclosure-governance-reconciliation.md)
-- [013-H Deployment / Scale / Platform Reconciliation](../architecture/phase-013-h-deployment-scalability-observability-portability-compatibility-platform-integration-reconciliation.md)
+- [013-I Cross-Architecture / Legacy / M6 Reconciliation](../architecture/phase-013-i-cross-architecture-composition-legacy-m6-residual-reconciliation.md)
+- [Current Cross-Concept Synchronization Contract](../synchronizations/current-cross-concept-synchronizations.md)
+- [ADR Index / Final Phase 013 Dispositions](../decisions/index.md)
 
-Retained Phase 004/006/007 architecture and ADR rationale remain downstream reconciliation material except where completed Phase 013 decisions explicitly retain, clarify, correct or supersede current meaning.
+The detailed 013-B through 013-H authorities remain current architecture components beneath the 013-I composition authority.
+
+Retained Phase 004/006/007 architecture remains historical rationale/evidence. Historical `active/current/canonical` language in those records does not outrank current Phase 013 authority.
 
 ## Current posture
 
@@ -45,7 +44,8 @@ Phase 013                            ACTIVE
 013-F                                COMPLETE
 013-G                                COMPLETE
 013-H                                COMPLETE
-013-I                                NEXT ELIGIBLE
+013-I                                COMPLETE
+013-J                                NEXT ELIGIBLE
 R1 architecture reconciliation       DOWNSTREAM / IN PROGRESS
 whole-design completion              NOT YET — PHASE 014
 implementation readiness             NOT READY
@@ -53,73 +53,69 @@ implementation start                 NOT STARTED
 implementation next                  NOT YET
 ```
 
-## Phase 013 materiality through 013-H
+## Phase 013 reconciliation result through 013-I
+
+Every substantive domain pass 013-B through 013-H closed with:
 
 ```text
-013-B representation     AMAT-2 / AMAT-3 / AR-9   0 / 0 / 0
-013-C persistence        AMAT-2 / AMAT-3 / AR-9   0 / 0 / 0
-013-D data-plane         AMAT-2 / AMAT-3 / AR-9   0 / 0 / 0
-013-E runtime/security   AMAT-2 / AMAT-3 / AR-9   0 / 0 / 0
-013-F operational        AMAT-2 / AMAT-3 / AR-9   0 / 0 / 0
-013-G evidence/history   AMAT-2 / AMAT-3 / AR-9   0 / 0 / 0
-013-H platform/scale     AMAT-2 / AMAT-3 / AR-9   0 / 0 / 0
-upstream reopen                                   NONE
-new concepts                                      0
-new synchronizations                              0
+AMAT-2 defects       0
+AMAT-3 blockers      0
+AR-9 contradictions  0
+upstream reopen      NONE
 ```
 
-013-H adds these current platform guardrails:
+013-I closed the remaining whole-corpus obligations:
 
-- provider/product identity is not a capability guarantee;
-- architecture compatibility is distinct from an implemented adapter, conformance verification and performance/scale qualification;
-- capability assertions are scoped/version/configuration sensitive and can become stale;
-- compatibility is multi-axis and directional by operation;
-- provider HA/backup/restore remains beneath SYNGAN's non-regressing recovery authority;
-- Spark/provider presence is not enterprise-scale proof;
-- canonical history, runtime observability and security audit remain separate lanes;
-- native lineage/catalog/registry/status remains integration evidence, not canonical owner state;
-- degraded operation is capability-specific rather than a global platform-health lifecycle;
-- platform specialization remains behind portable contracts;
-- private/offline/no-egress supported profiles cannot secretly depend on public runtime services.
+```text
+cross-architecture composition              PASS
+M6 synchronization drift                    CLOSED
+ADR final disposition                       COMPLETE — 10 / 10 RETAINED
+legacy current-authority ambiguity          CLOSED
+historical implementation re-entry          SUPERSEDED AS CURRENT AUTHORIZATION
+M8 placeholder leakage                      NOT FOUND
+unresolved AMAT-2                           0
+unresolved AMAT-3                           0
+unresolved AR-3..AR-9                       0
+upstream reopen                              NONE
+```
 
-The active Enterprise Scale / Resource Admission / Approximation / Degraded Operation contract has been corrected to current Phase 009 synchronization semantics.
-
-## Synchronization state
+## Current synchronization state
 
 ```text
 historical IDs                 15
 active cross-concept rules     13
-SYNC-08                        retired — Generation-local output lifecycle
+SYNC-08                        retired — Generation-local output behavior
 SYNC-15                        historical/reclassified — Reproducibility contract
+M6                              CLOSED
 ```
-
-Remaining stale current-looking references are 013-I corpus/status/link cleanup, not semantic authority.
 
 ## Durable guardrails
 
 - later/current state does not rewrite exact historical/as-bound truth;
 - decision-material qualifiers cannot be hidden by progressive disclosure;
 - provider facts are consumed only at their actual evidentiary strength;
-- architecture roles do not become concepts by addressability/durability;
+- architecture mechanisms do not become concepts by addressability/durability;
 - provider/platform status does not become framework mutation or semantic authority;
 - Evidence does not become approval or formal privacy authority;
 - Provenance does not become a metadata source of copied canonical truth;
 - disclosure/redaction does not mutate canonical history;
+- application-family optionality must not become a universal workflow;
 - future independent purpose/lifecycle returns to concept discovery before architecture/implementation;
 - only demonstrated AR-9 evidence may justify upstream reopen.
 
 ## Current dependency-safe sequence
 
 ```text
-013-A..013-H  COMPLETE
-013-I  cross-architecture / ADR / legacy / M6 / residual register — NEXT
-013-J  R1 completion / Phase 014 handoff
+013-A..013-I  COMPLETE
+013-J  Phase 013 consolidation / R1 completion decision / Phase 014 handoff — NEXT
 014    whole-design completion / implementation-readiness decision
 015    implementation authority — FUTURE ONLY
 ```
 
-Only 013-J may close R1. Only Phase 014 may set implementation **READY / NOT STARTED / NEXT**; explicit Phase 015 authority remains required to begin implementation.
+The clean residual register is evidence for 013-J; it does not close R1 by implication.
+
+Only Phase 014 may set implementation **READY / NOT STARTED / NEXT**; explicit Phase 015 authority remains required to begin implementation.
 
 ## Current next boundary
 
-**013-I — Cross-Architecture Composition, ADR/Legacy Contract Reconciliation, M6 Cleanup & Residual Architecture Misfit Register** is next eligible.
+**013-J — Phase 013 Consolidation, R1 Completion Decision & Phase 014 Handoff** is next eligible.
