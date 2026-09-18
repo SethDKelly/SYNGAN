@@ -45,18 +45,18 @@ H1/H2 are currently closed and Jackson concept design is **COMPLETE FOR CURRENT 
 Current authority:
 
 - [Phase 013 Index](013/index.md)
-- [013-A Reconciliation Authority / Corpus Inventory / Taxonomy](013/013-A-reconciliation-authority-retained-corpus-inventory-precedence-reset-discrepancy-taxonomy.md)
-- [013-B Representation Phase Record](013/013-B-representation-layering-public-contract-identity-revision-handle-view-reconciliation.md)
 - [Phase 013 Architecture Reconciliation Authority](../authority/phase-013-architecture-reconciliation-authority.md)
-- [013-B Representation Reconciliation Authority](../architecture/phase-013-b-representation-layering-public-contract-identity-view-reconciliation.md)
+- [013-B Representation Reconciliation](../architecture/phase-013-b-representation-layering-public-contract-identity-view-reconciliation.md)
+- [013-C Persistence Reconciliation](../architecture/phase-013-c-control-persistence-history-concurrency-migration-recovery-reconciliation.md)
+- [Operational Authority Continuity & Regressive Recovery Contract](../authority/operational-authority-continuity-regressive-recovery-contract.md)
 
 Current sequence:
 
 ```text
 013-A  COMPLETE — authority / corpus inventory / precedence / discrepancy taxonomy
 013-B  COMPLETE — representation / layering / public contract / identity / views
-013-C  NEXT     — persistence / history / transaction-concurrency / migration / recovery state
-013-D           — distributed data / topology / manifest / candidate-seal-promotion
+013-C  COMPLETE — persistence / history / transaction-concurrency / migration / recovery state
+013-D  NEXT     — distributed data / topology / manifest / candidate-seal-promotion / large state
 013-E           — Strategy/runtime / dependency / security / offline-no-egress
 013-F           — Execution / Attempt / recovery / fencing / admission
 013-G           — Evaluation / Evidence / Provenance / history / disclosure
@@ -65,9 +65,11 @@ Current sequence:
 013-J           — consolidation / R1 decision / Phase 014 handoff
 ```
 
-013-B retains the representation spine with bounded clarification and records zero AMAT-2 defects, zero AMAT-3 blockers and no upstream reopen.
+013-B and 013-C both retain their architecture domains with bounded clarification and record zero AMAT-2 defects, zero AMAT-3 blockers, zero AR-9 contradictions and no upstream reopen.
 
-The bounded M6 historical synchronization-label/documentation item remains an explicit 013-I cleanup obligation. M8 future triggers remain non-architecture absent renewed concept discovery.
+013-C also reconciled the active recovery contract to current Phase 009 synchronization semantics. Historical 007-D/007-E synchronization-count wording remains an explicit 013-I cleanup obligation.
+
+M8 future triggers remain non-architecture absent renewed concept discovery.
 
 ## Later design phase
 
@@ -81,6 +83,6 @@ Future only. Explicit authorization remains required before implementation begin
 
 ## Current next boundary
 
-**013-C — Control Persistence, Historical Reference, Transaction/Concurrency, Migration & Recovery-State Reconciliation** is next eligible.
+**013-D — Distributed Data Boundary, Structured Topology, Manifest, Candidate/Seal/Promotion & Large-State Reconciliation** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
