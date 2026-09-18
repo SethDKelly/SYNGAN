@@ -12,16 +12,15 @@ It is not defined as a standalone UI application. Package, notebook and automate
 
 Start with [`docs/index.md`](docs/index.md).
 
-Current governing architecture-reconciliation authority includes:
+Current governing design authority includes:
 
-- [`Phase 013 Architecture Reconciliation Authority`](docs/authority/phase-013-architecture-reconciliation-authority.md)
-- [`Phase 013 Residual Architecture Misfit Register`](docs/authority/phase-013-residual-architecture-misfit-register.md)
-- [`Current Cross-Concept Synchronization Contract`](docs/synchronizations/current-cross-concept-synchronizations.md)
-- [`Phase 013`](docs/phases/013/index.md)
-- [`Representation & Architecture`](docs/architecture/index.md)
-- [`013-I Cross-Architecture / Legacy / M6 Reconciliation`](docs/architecture/phase-013-i-cross-architecture-composition-legacy-m6-residual-reconciliation.md)
 - [`Jackson Methodology Completion Matrix`](docs/authority/jackson-methodology-completion-matrix.md)
 - [`Jackson Design Completion & Implementation Hold`](docs/authority/jackson-design-completion-implementation-hold.md)
+- [`013-J Phase Record`](docs/phases/013/013-J-phase-013-consolidation-r1-completion-decision-phase-014-handoff.md)
+- [`Phase 013 Consolidated Architecture Contract`](docs/architecture/phase-013-consolidated-architecture-contract.md)
+- [`Phase 013 Residual Architecture Misfit Register`](docs/authority/phase-013-residual-architecture-misfit-register.md)
+- [`Current Cross-Concept Synchronization Contract`](docs/synchronizations/current-cross-concept-synchronizations.md)
+- [`Phase 014 Entry Gate`](docs/phases/014/index.md)
 
 ## Status
 
@@ -29,35 +28,19 @@ Current governing architecture-reconciliation authority includes:
 accepted concepts                    11
 active synchronizations              13
 Jackson concept design               COMPLETE FOR CURRENT PRODUCT SCOPE
-Phase 013                            ACTIVE
-013-A                                COMPLETE
-013-B                                COMPLETE
-013-C                                COMPLETE
-013-D                                COMPLETE
-013-E                                COMPLETE
-013-F                                COMPLETE
-013-G                                COMPLETE
-013-H                                COMPLETE
-013-I                                COMPLETE
-013-J                                NEXT ELIGIBLE
-R1 architecture reconciliation       DOWNSTREAM / IN PROGRESS
+Phase 013                            COMPLETE
+013-A..013-J                         COMPLETE
+R1 architecture reconciliation       CURRENTLY CLOSED
+representation / architecture       RECONCILED / CURRENT
+Phase 014                            NEXT ELIGIBLE
+R2                                   OPEN
+R3                                   OPEN
 implementation readiness             NOT READY
 implementation start                 NOT STARTED
 implementation next                  NOT YET
 ```
 
-## Phase 013 result through 013-I
-
-Every substantive architecture domain 013-B through 013-H closed with:
-
-```text
-AMAT-2 defects       0
-AMAT-3 blockers      0
-AR-9 contradictions  0
-upstream reopen      NONE
-```
-
-013-I then completed the whole-corpus closure pass:
+## Phase 013 completion result
 
 ```text
 cross-architecture composition              PASS
@@ -70,6 +53,7 @@ unresolved AMAT-2                           0
 unresolved AMAT-3                           0
 unresolved AR-3..AR-9                       0
 upstream reopen                              NONE
+R1                                           CURRENTLY CLOSED
 ```
 
 The current architecture preserves semantic ownership above representation/storage/runtime/provider mechanisms; exact identity/history and non-regressing recovery; Generation-owned finality; Strategy/runtime separation; Execution/Attempt separation; Evaluation/Evidence/Provenance boundaries; derived history/Reproducibility; actor-safe disclosure; guarantee-qualified provider integration; multidimensional scale; private/offline/no-egress operation; and application-family optionality without a universal pipeline.
@@ -85,41 +69,29 @@ synchronization state NONE
 M6                     CLOSED
 ```
 
-Pre-Phase-009 fifteen-rule wording is retained only as historical terminology where it remains in old records. It does not control current semantics.
+## Phase 014
 
-## Legacy authority disposition
-
-```text
-Phase 004 architecture                  RETAINED HISTORICAL INPUT
-Phase 006 architecture overlay          RETAINED HISTORICAL REFINEMENT
-Phase 007-D..J architecture             RETAINED HISTORICAL REFINEMENT
-Phase 007 consolidated contract         RETAINED HISTORICAL SYNTHESIS
-Phase 007-A..C scaffold                 FEASIBILITY EVIDENCE ONLY
-Phase 007-K implementation re-entry     SUPERSEDED AS CURRENT AUTHORIZATION
-```
-
-## Remaining Phase 013 sequence
+Phase 014 — Whole-Design Consolidation & Implementation-Readiness Decision — owns:
 
 ```text
-013-J  Phase 013 Consolidation, R1 Completion Decision & Phase 014 Handoff — NEXT
+R2  whole-design end-to-end audit
+R3  explicit implementation-readiness decision
 ```
 
-013-J must explicitly decide whether R1 closes. The clean residual architecture register does not close it by implication.
+Its first action is a phase-intention/dependency-safe decomposition gate. No `014-A` subgroup has been pre-authorized by Phase 013.
 
 ## Implementation boundary
 
-Phase 013 remains design-only.
-
 ```text
-013    Post-Concept Representation & Architecture Reconciliation — ACTIVE
-014    Whole-Design Consolidation & Implementation-Readiness Decision
+013    Post-Concept Representation & Architecture Reconciliation — COMPLETE
+014    Whole-Design Consolidation & Implementation-Readiness Decision — NEXT
 015    Implementation Authority & Controlled Delivery — FUTURE ONLY
 ```
 
-Only a positive Phase 014 may change implementation to **READY / NOT STARTED / NEXT**. A later explicit Phase 015 is still required to begin implementation.
+Only Phase 014 may decide implementation readiness. A later explicit Phase 015 is still required before production implementation begins.
 
 ## Current next boundary
 
-**013-J — Phase 013 Consolidation, R1 Completion Decision & Phase 014 Handoff** is next eligible.
+**Phase 014 pre-phase start gate — define the dependency-safe R2/R3 subphase plan** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
