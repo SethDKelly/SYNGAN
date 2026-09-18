@@ -8,18 +8,13 @@ status: active
 
 ## Purpose
 
-Define the cross-cutting design rules that make a supported SYNGAN installation actually executable without hidden runtime acquisition and make a distributed Spark/runtime Attempt executable with the same exact material code/artifacts across all participating workers.
+Define the cross-cutting rules that make a supported SYNGAN installation executable without hidden runtime acquisition and make a distributed Spark/runtime Attempt executable with a compatible exact material closure across every runtime role that may perform material work.
 
-This contract exists because two superficially different failures share the same underlying risk:
-
-1. the driver/package appears ready but first use silently calls a model hub/API or downloads an artifact; and
-2. the driver can import/resolve a Strategy implementation while one or more executors cannot execute the same implementation because code, dependencies, codecs or model artifacts are absent or different.
-
-The contract is **not** a new domain concept. It constrains Synthesis Strategy capability declarations, implementation binding, dependency resolution, Execution admission/continuation, security/network policy, platform deployment and reproducibility.
+This contract is not a new domain concept. It constrains Synthesis Strategy capability declarations, executable binding, dependency resolution, Execution admission/continuation, network/security policy, deployment/platform capability and reproducibility.
 
 ## Governing rule
 
-> **A supported execution profile is closed only when its declared material executable and artifact dependencies are resolvable without undeclared acquisition and are available compatibly to every runtime role that may execute the committed work. Driver-local availability alone is never proof of distributed readiness.**
+> **A supported execution profile is closed only when every material executable/artifact dependency is declared and resolvable without undeclared acquisition, and every runtime role that may execute the committed work can satisfy its compatible exact role-specific closure. Driver-local availability is never proof of distributed readiness.**
 
 ## Two closure dimensions
 
@@ -29,170 +24,133 @@ A runtime profile has acquisition closure when every material executable/model/d
 
 For a self-contained baseline profile:
 
-- the package/runtime capability required for baseline synthesis is installed already;
+- required baseline package/runtime capability is already provisioned;
 - first-use model/package download is not required;
-- a missing optional artifact fails readiness rather than triggering hidden acquisition;
-- no remote inference/API call is required;
+- a missing optional artifact produces explicit incompatibility/blocking rather than hidden acquisition;
+- hosted inference/API service is not required;
 - external telemetry is not required;
-- a runtime library's default network behavior must be disabled/contained where necessary.
+- default library network behavior is disabled/contained where necessary.
 
 ### Distribution closure
 
-A distributed runtime profile has distribution closure when every process/worker/executor that may execute material code can resolve a compatible exact closure of:
+A distributed runtime profile has distribution closure when every material role that may execute the work can resolve a compatible exact closure of its required code, libraries, codecs, artifacts/state and runtime contract.
 
-- SYNGAN package/build identity where material;
-- selected Strategy/Evaluation implementation binding and implementation components;
-- Python/library dependencies;
-- native dependencies and accelerator/runtime libraries where material;
-- state codecs;
-- tokenizer/vocabulary/configuration artifacts where material;
-- locally provisioned pretrained/base artifacts where required;
-- exact Learned-State representation components required by the runtime;
-- runtime/SPI compatibility;
-- security/network capability context required by the Attempt.
+Material roles may legitimately require different components. Closure therefore means **role-specific exact compatibility**, not identical bytes on every process.
 
-A driver import, entry-point discovery result, package registry record, or platform UI library listing is insufficient by itself.
+A driver import, entry-point result, package registry record, provider UI library listing or currently healthy executor set is insufficient by itself.
 
 ## Supported baseline installation requirement
 
-SYNGAN's supported baseline must include at least one **self-contained structured-data synthesis path** that can execute without externally acquired model artifacts or runtime network services once the appropriate supported execution profile is installed.
+The supported baseline retains at least one self-contained structured-data synthesis path that can execute without externally acquired model artifacts or runtime network services after the supported execution profile is installed/provisioned.
 
-The baseline must include support for **text-bearing structured tables** where a field's Data Meaning is free-form/source-language text.
+The baseline includes source-derived/local handling for free-form text-bearing structured tables.
 
-This requirement means:
+This means:
 
-- an installed baseline cannot defer all free-form text handling to Hugging Face Hub, an LLM API, or another hosted service;
-- at least one source-derived/local text-capable Strategy path must exist in the supported baseline;
-- that path may learn text behavior from the supplied source data and may have explicit quality/length/vocabulary/semantic limitations;
-- package completeness is an operability guarantee, not a promise of foundation-model-level world knowledge or linguistic quality.
+- normal baseline free-form text synthesis does not require a public model hub or hosted LLM/API;
+- at least one local/source-derived Strategy path exists;
+- its limitations may be explicit and material;
+- this operability guarantee is not a promise of foundation-model-level world knowledge or text quality.
 
-No particular text algorithm is selected by this contract.
+No particular text algorithm/runtime is selected by this contract.
 
 ## Text capability classes
 
-A Strategy supporting text-bearing fields should remain able to distinguish at least the following capability/dependency shapes where material:
+Where material, Strategy authority may distinguish profiles equivalent to:
 
-### Source-derived/self-contained text
+```text
+source-derived / self-contained text
+local-artifact-enhanced text
+runtime-network text
+```
 
-The Strategy learns or derives the required textual behavior from source data/configuration using executable capability already included in the supported installed profile.
+A runtime-network text Strategy remains optional, explicit and incompatible with a self-contained/no-egress profile.
 
-No externally acquired pretrained model is required for normal execution.
+It must never become an automatic fallback when the baseline/local path is missing or limited.
 
-### Local-artifact-enhanced text
+## Semantic boundary
 
-The Strategy uses one or more explicitly provisioned local pretrained artifacts such as model weights, tokenizers or vocabularies.
-
-The artifact may have originated externally, but committed execution performs no hidden acquisition.
-
-This is optional capability and does not satisfy the package-only baseline by itself.
-
-### Runtime-network text
-
-The Strategy requires a hosted inference/API service during material execution.
-
-This remains optional, explicit, and incompatible with a self-contained/offline/no-egress profile.
-
-A runtime-network text Strategy MUST NOT become an automatic fallback when a baseline/local implementation is missing or limited.
-
-## Semantic boundary for text
-
-Free-form text does not introduce a standalone `Text`, `Language Model`, or `Tokenizer` concept.
+Free-form text does not create a standalone `Text`, `Language Model` or `Tokenizer` concept.
 
 Ownership remains:
 
-- field/text semantic role → Data Meaning;
-- synthesis support, knowledge-source dependency and limitations → Synthesis Strategy;
-- reusable source-derived text parameters/vocabulary/model state → Learning/Learned State where applicable;
-- requested output/Conditions → Generation;
-- validity, fidelity, privacy/memorization or semantic-quality questions → Constraint and/or Criterion/Evaluation/Evidence according to their existing boundaries.
+```text
+field/text meaning                    -> Data Meaning
+synthesis/dependency capability       -> Synthesis Strategy
+source-derived reusable state         -> Learning / Learned State when applicable
+requested output/Conditions           -> Generation
+validity/fidelity/privacy questions   -> Constraint / Criterion / Evaluation / Evidence
+```
 
-A string physical type MUST NOT by itself decide whether the field is categorical, identifier-like, free-form text or another semantic role.
+Physical string type alone does not determine semantic role.
 
 ## Composite implementation closure
 
-One semantic Strategy may be realized by several implementation components—for example one component for numeric/categorical behavior and another for free-form text.
+One Strategy/method realization may require multiple implementation components, codecs and artifacts.
 
-The design therefore MUST NOT assume:
+Architecture therefore rejects:
 
 ```text
-one Strategy ImplementationBindingRef
-        =
-exactly one Python distribution or one model artifact
+one implementation binding = exactly one package/model artifact
 ```
 
-A top-level implementation binding may resolve an exact **implementation closure** containing multiple subordinate components, codecs and artifact identities.
+The top-level semantic Strategy remains authoritative while material subordinate implementation identities remain attributable for compatibility/security/reproducibility.
 
-Requirements:
+A component cannot silently substitute another algorithm/service during one Attempt.
 
-- the top-level Strategy retains semantic authority for the combined behavior;
-- component identities remain attributable where they affect compatibility/reproducibility/security;
-- a component cannot silently substitute a different algorithm/service at runtime;
-- materially different component selection must be committed/attributable;
-- closure resolution remains integration/architecture state rather than a new domain concept.
+## Strategy profile cannot be broadened by runtime packaging
+
+An implementation binding may narrow a Strategy or add compatible operational requirements, but it cannot silently change the Strategy's semantic dependency/network profile.
+
+A self-contained or no-runtime-network Strategy cannot become hosted inference merely because an installed implementation supports that mode.
+
+If the executable realization requires a materially different dependency/network/egress behavior, the semantic Strategy/configuration authority must reflect that distinction before commitment.
 
 ## Distributed runtime closure
 
-### Every material executor must be compatible
+Every material worker/runtime role must satisfy its required exact compatible closure before receiving material work.
 
-For distributed execution, every runtime role that can execute Strategy/Evaluation code must satisfy the material runtime closure before it performs that work.
+This includes workers allocated after an Attempt begins when dynamic allocation/autoscaling is supported.
 
-This includes workers allocated after the Attempt begins when dynamic allocation/autoscaling is supported.
-
-A deployment may satisfy this through a guarantee attached to an immutable worker image/template/bootstrap profile rather than enumerating every current worker individually.
+A deployment may establish this through an immutable worker image/template/environment/profile guarantee rather than one canonical control record per worker.
 
 ### Spark-specific implication
 
-Spark distribution mechanisms are downstream implementation choices.
+Spark distribution mechanisms are implementation/deployment choices.
 
-A conforming Spark profile may use mechanisms such as:
+A conforming profile may use preinstalled environments, archives, packed environments, provider-managed libraries, isolated executables, shared immutable caches or another semantics-preserving mechanism.
 
-- preinstalled cluster/container environments;
-- Python files/archives when sufficient;
-- packed Python environments;
-- provider-managed library installation;
-- PEX or equivalent isolated environments;
-- shared/provider-local artifact caches with exact identities;
-- another semantics-preserving distribution mechanism.
+No one mechanism is mandated.
 
-No one mechanism is mandated by this contract.
-
-A pure-Python code shipping mechanism is insufficient when the selected closure also requires Wheels/native libraries/model artifacts that it cannot distribute correctly.
+A pure-Python shipping mechanism is insufficient when the closure also requires native libraries, Wheels, model/tokenizer artifacts or other material components it cannot provide correctly.
 
 ### No first-task acquisition
 
-A worker encountering a missing package/model/tokenizer/native library MUST NOT repair its environment through undeclared public-network acquisition during the Attempt.
+A worker encountering a missing package/model/tokenizer/native library must not repair itself through undeclared public-network acquisition.
 
-The correct result is explicit incompatibility/blocked admission/failure according to the owning runtime contract.
+The result is explicit incompatible/blocked/failure state according to the owning runtime/Execution context.
 
-### Dynamic executors
+### Dynamic workers
 
-Executor replacement or autoscaling MUST NOT weaken closure.
+Executor replacement/autoscaling must preserve closure.
 
-A newly admitted worker either:
+A newly eligible worker either inherits/proves the required closure or is ineligible for the Attempt's material work.
 
-- inherits/proves the required environment/artifact closure; or
-- is ineligible for the Attempt's material work.
-
-Worker count changes may remain operational tuning only when this closure and the committed semantics remain preserved.
+Worker-count changes remain operational tuning only when the closure and committed semantics remain preserved.
 
 ## Large model/state distribution
 
-Large Learned State, pretrained text artifacts or other runtime state MUST NOT require a universal driver-memory broadcast step.
+Large Learned State, pretrained artifacts or runtime state do not require a universal driver-memory broadcast.
 
-A conforming architecture may use:
+Architecture may use shared immutable storage, worker-local exact-identity caches, provider-native loading, sharded manifests/state references, bounded broadcast for genuinely small immutable objects, or another compatible mechanism.
 
-- shared immutable distributed/object storage;
-- executor/node-local content-addressed caches;
-- provider-native distributed model/state loading;
-- sharded state manifests;
-- bounded broadcast for genuinely small immutable objects;
-- another compatible mechanism.
+The governing requirement is scalable exact-enough distribution for the selected Strategy/runtime contract.
 
-The governing requirement is that state distribution remain scalable and exact enough for the Strategy/runtime contract.
+Cache presence alone does not prove identity, integrity, trust or authorization.
 
 ## Implementation-binding consequence
 
-An implementation binding must eventually preserve or resolve enough facts to establish its executable closure, including where material:
+An implementation binding must preserve or resolve enough facts to establish its executable closure where material, including:
 
 - top-level implementation identity/build;
 - subordinate implementation components;
@@ -205,95 +163,88 @@ An implementation binding must eventually preserve or resolve enough facts to es
 - material security/trust characteristics;
 - reproducibility-relevant identities.
 
-The exact representation is architecture/implementation planning and remains for 006-I back-propagation.
+The physical representation and package topology remain downstream choices.
 
 ## Execution admission and continuation consequence
 
 Execution admission/Attempt continuation is not qualified merely because semantic bindings remain unchanged.
 
-The current execution environment must also satisfy runtime distribution closure.
+The current environment must also satisfy runtime distribution closure, current authorization/security constraints and recovery/fencing authority where applicable.
 
-If a required dependency/artifact is missing on workers or the deployment can no longer guarantee compatible distribution:
+If a dependency/artifact becomes unavailable or worker closure can no longer be guaranteed:
 
 ```text
-historical commitment unchanged
+historical semantic commitment unchanged
         +
-current execution readiness blocked/limited
+current execution readiness blocked / limited / indeterminate
 ```
 
-The system MUST NOT silently:
-
-- install/download a replacement;
-- use a different component/model;
-- move computation to an undeclared remote service;
-- enable network/egress;
-- reinterpret the Strategy as a simpler fallback.
+SYNGAN must not silently install/download a replacement, use a different component/model, move computation to an undeclared service, enable network/egress, or simplify the Strategy.
 
 ## Security and trust consequence
 
 Executable/model distribution is a supply-chain/security boundary.
 
-Runtime closure must remain compatible with current trust/authorization policy, including where material:
+Presence is not sufficient. Runtime closure remains compatible with current identity/integrity/trust/authorization rules, unsafe-code/deserialization characteristics, security-domain isolation and current revocation state.
 
-- exact package/artifact identity/integrity;
-- permission to use the artifact;
-- unsafe/custom code execution characteristics;
-- tenant/security-domain isolation;
-- secret/network requirements;
-- current revocation status.
-
-An installed component can therefore be present but still unauthorized or untrusted.
+An installed component may therefore be physically available while remaining ineligible.
 
 ## Reproducibility consequence
 
-Where material behavior depends on exact executable/artifact closure, history must retain enough identity to explain what ran.
+Material executable/artifact identities contribute to the current cross-cutting [Reproducibility Contract](reproducibility-contract.md).
 
 A later executor image/package/model update does not rewrite historical work.
 
-If the exact closure cannot be reconstructed later, the strongest defensible reproducibility claim may weaken according to SYNC-15.
+If the exact closure cannot later be reconstructed strongly enough, the strongest defensible reproduction claim weakens rather than guessing.
+
+Current Phase 009 authority controls: historical identifier `SYNC-15` is reserved/reclassified and is **not** an active synchronization. Reproducibility is assembled from preserved owner/integration facts; this contract creates no synchronization-owned state.
 
 ## Platform support consequence
 
-A platform is not `supported` merely because it can launch Spark/Python tasks.
+A platform is not `supported` for a workload merely because it can launch Spark/Python tasks.
 
-The exact workload/profile must provide a semantics-preserving distribution mechanism for the selected runtime closure.
+The selected profile must provide a semantics-preserving distribution mechanism for the required runtime closure.
 
-If a platform can distribute pure Python but cannot provide the native/model/runtime closure required by a Strategy, the result for that Strategy/profile is limited/incompatible rather than silently degraded.
+If a platform can distribute pure Python but cannot establish the native/model/runtime closure required by a Strategy, the affected profile is limited/incompatible rather than silently degraded.
 
-## Failure semantics
+## Failure/readiness semantics
 
-Execution/runtime readiness must preserve distinguishable conditions equivalent to:
+Architecture preserves distinguishable conditions equivalent to:
 
-- closure satisfied;
-- closure satisfied with explicit limitations;
-- closure incomplete/missing dependency;
-- incompatible executable/runtime version;
-- artifact unavailable;
-- artifact present but untrusted/unauthorized;
-- distribution guarantee unavailable;
-- indeterminate closure.
+```text
+closure satisfied
+closure satisfied with explicit limitations
+closure incomplete / missing dependency
+incompatible executable/runtime version
+artifact unavailable
+artifact present but untrusted/unauthorized
+distribution guarantee unavailable
+closure indeterminate
+```
 
-`indeterminate` MUST NOT become success merely because the driver imported the package.
+`indeterminate` does not become success merely because the driver imported the package.
 
 ## Invariants
 
-1. A supported baseline execution path MUST NOT require hidden first-use network/package/model acquisition.
-2. The supported baseline MUST include at least one self-contained source-derived path for text-bearing structured tables.
-3. Optional pretrained/world-knowledge text capability MUST remain distinguishable from the self-contained baseline.
-4. Driver-local package/model availability MUST NOT establish distributed executor readiness.
-5. Every worker executing material Strategy/Evaluation code MUST satisfy the exact compatible runtime closure or be ineligible for that work.
-6. Dynamic executor allocation MUST preserve runtime closure.
-7. Missing worker dependencies MUST NOT trigger undeclared public-network repair/fallback.
-8. One top-level implementation binding MAY resolve multiple exact components/artifacts; one-package assumptions are not universal.
-9. Large state/model distribution MUST NOT require universal full driver-memory materialization/broadcast.
-10. Runtime distribution mechanisms MUST remain downstream of semantic Strategy authority.
-11. Executable/artifact presence does not override current trust/authorization policy.
-12. Material executable/artifact identities MUST remain attributable for history/reproducibility where required.
-13. A platform capability gap must be reported as limited/incompatible/indeterminate rather than weakening the committed behavior.
-14. No rule in this contract makes Hugging Face, Transformers, CTGAN, PyTorch, Spark package shipping, PEX, Conda, uv, Databricks or another ecosystem universal SYNGAN semantics.
+1. Supported baseline execution does not require hidden first-use network/package/model acquisition.
+2. The baseline includes at least one self-contained source-derived path for text-bearing structured tables.
+3. Optional pretrained/world-knowledge text remains distinguishable from the self-contained baseline.
+4. Driver-local package/model availability does not establish distributed readiness.
+5. Every material runtime role satisfies the exact compatible role-specific closure or remains ineligible.
+6. Dynamic worker admission preserves closure.
+7. Missing worker dependencies do not trigger undeclared public-network repair/fallback.
+8. One top-level binding may resolve multiple exact components/artifacts.
+9. Large state/model distribution does not universally require full driver-memory materialization/broadcast.
+10. Runtime distribution remains downstream of semantic Strategy authority.
+11. Implementation binding cannot silently broaden Strategy dependency/network semantics.
+12. Executable/artifact presence does not override current trust/authorization policy.
+13. Material executable/artifact identities remain attributable where required for history/reproducibility.
+14. Platform capability gaps are reported as limited/incompatible/indeterminate rather than weakening committed behavior.
+15. Historical `SYNC-15` is not active synchronization authority.
+16. No ecosystem/package/provider mechanism is universal SYNGAN semantics.
 
 ## Operational principle
 
-A practitioner installs a supported SYNGAN Spark profile and selects a baseline Strategy for a table containing numeric, categorical and free-form text fields. The Strategy uses source-derived local text synthesis and therefore requires no model-hub/API artifact. Before the Attempt begins, deployment admission verifies that every executor provisioned for the job has a compatible SYNGAN/runtime closure and can resolve the exact learned text/state components from approved local/distributed storage.
+A practitioner selects a supported self-contained Strategy for a Spark-scale table containing numeric, categorical and free-form text fields. Before an Attempt begins, deployment admission verifies that every material runtime role can resolve the exact compatible implementation closure and the required source-derived state from approved local/distributed storage. No model-hub/API call is needed.
 
-Later the practitioner selects an optional pretrained-language-model Strategy. The model/tokenizer are explicitly provisioned locally and identified by the implementation closure. If one executor pool lacks the required runtime/native/model closure, the workload is blocked or routed only to a compatible pool according to the declared platform contract. SYNGAN does not let the missing worker download the model from the public Internet and does not silently fall back to hosted inference.
+If a later optional pretrained Strategy is selected, its exact local artifact/runtime closure is explicit. If one executor profile cannot satisfy that closure, the workload is blocked or routed only to a compatible profile. SYNGAN does not let the missing worker download the model from the public Internet and does not silently fall back to hosted inference.
