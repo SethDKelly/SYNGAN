@@ -22,7 +22,8 @@ Phase 013                       ACTIVE
 013-C                           COMPLETE
 013-D                           COMPLETE
 013-E                           COMPLETE
-013-F                           NEXT ELIGIBLE
+013-F                           COMPLETE
+013-G                           NEXT ELIGIBLE
 architecture corpus             UNDER RECONCILIATION
 R1 architecture reconciliation  DOWNSTREAM / IN PROGRESS
 whole-design completion         NOT YET — PHASE 014
@@ -41,8 +42,9 @@ Completed concept design and completed Phase 013 decisions are upstream authorit
 - [013-C Persistence Reconciliation](phase-013-c-control-persistence-history-concurrency-migration-recovery-reconciliation.md)
 - [013-D Distributed Data Reconciliation](phase-013-d-distributed-data-topology-manifest-candidate-promotion-reconciliation.md)
 - [013-E Runtime / Dependency / Security Reconciliation](phase-013-e-strategy-runtime-dependency-authorization-secrets-distribution-reconciliation.md)
+- [013-F Execution / Recovery / Admission Reconciliation](phase-013-f-execution-attempt-fencing-idempotency-checkpoint-cancellation-recovery-admission-reconciliation.md)
+- [Operational Authority Continuity Contract](../authority/operational-authority-continuity-regressive-recovery-contract.md)
 - [Reproducibility Contract](../authority/reproducibility-contract.md)
-- [Self-Contained Runtime Distribution Closure](../authority/self-contained-execution-runtime-distribution-closure-contract.md)
 
 ## Reconciled baselines
 
@@ -60,39 +62,47 @@ Physical/provider state remains evidence rather than semantic authority. Topolog
 
 ### 013-E — Strategy/runtime/dependency/security
 
-The current runtime/dependency/security baseline is:
+Strategy/method semantic authority remains distinct from executable realization. Dependencies remain exact/trust/compatibility/authorization qualified; hidden runtime acquisition/fallback is prohibited; current capabilities/secrets remain operational rather than semantic; all material runtime roles require compatible distributed closure.
 
-- Strategy/method semantic authority remains distinct from implementation binding/runtime realization;
-- implementation binding may narrow supported realization but cannot silently broaden Strategy dependency/network/egress semantics;
-- exact executable/dependency closure may contain multiple components and is distinct from package/model/provider aliases;
-- dependency availability, identity, integrity, trust, semantic compatibility, runtime compatibility, current authorization and egress compatibility remain distinct;
-- missing dependencies cannot trigger hidden runtime install/download/model-hub lookup/remote fallback;
-- current authorization may block present actions without rewriting historical semantic commitment;
-- broad permission or host connectivity cannot broaden committed no-egress semantics;
-- runtime capability is scoped current operational authority, not durable semantic state;
-- bearer secret values remain outside durable semantic/history representations;
-- every material runtime role, including dynamically admitted workers, must satisfy compatible exact distributed closure;
-- large Learned State/artifacts need not be fully materialized or broadcast from the driver;
-- runtime/provider success remains non-final evidence rather than semantic completion;
-- reproducibility is cross-cutting over preserved owner/integration facts; historical `SYNC-15` is not active synchronization authority.
+### 013-F — Execution / recovery / admission
 
-013-E result:
+The current operational baseline is:
+
+- one operationalized committed activity has one stable primary Execution under the current model;
+- Attempt remains subordinate distinguishable operational history rather than platform job identity;
+- Attempt physical observation and current framework mutation authority remain separate;
+- provider-native retry does not define SYNGAN Attempt identity;
+- a prepared Attempt record that never gains authority/launches material work remains visibly `prepared/not started`;
+- current mutation authority composes a non-regressing recovery frontier, current Execution/Attempt authority, resource-local preconditions where needed and current action authorization/capability;
+- lease/heartbeat is liveness coordination rather than stale-writer proof;
+- operation-scoped idempotency prevents duplicate effects but never grants stale authority;
+- checkpoint staging, committed immutable checkpoint and current resume eligibility remain distinct;
+- checkpoint producer authority does not travel with the checkpoint;
+- potentially regressive restore enters continuity-unverified quarantine and establishes fresh stale-writer exclusion before ordinary writes resume;
+- weakly identifiable external effects may block automatic retry rather than being guessed away;
+- cancellation is durable intent before terminal operational outcome, and late provider success cannot restore semantic authority;
+- admission is current operational eligibility distinct from semantic readiness, authorization, runtime closure, capacity/queueing and mutation authority;
+- resource/admission pressure may delay/block work but cannot weaken committed scope, validation, approximation, dependency or security semantics;
+- provider status is consumed only at its actual evidentiary strength;
+- operational replay cannot create duplicate/conflicting owner-result transitions; Evaluation may still legitimately establish multiple independently interpretable Evidence findings.
+
+013-F result:
 
 ```text
-AMAT-2 runtime/dependency/security defects   0
-AMAT-3 blockers                              0
-AR-9 contradictions                          0
-upstream reopen                              NONE
-new concepts                                 0
-new synchronizations                         0
-mandatory plugin framework                   0
-mandatory package distribution               0
-mandatory IAM/secret/network product         0
+AMAT-2 operational defects       0
+AMAT-3 blockers                  0
+AR-9 contradictions              0
+upstream reopen                  NONE
+new concepts                     0
+new synchronizations             0
+mandatory scheduler/queue/lock   0
+mandatory fence encoding         0
+mandatory checkpoint backend     0
 ```
 
-013-E corrected the active Reproducibility and Self-Contained Runtime Distribution Closure contracts to current Phase 009 synchronization semantics.
+Historical/current-looking `SYNC-15` references in Execution/operational documents and old `SYNC-08`/`SYNC-15` references in the Enterprise Scale / Resource Admission contract are semantically superseded and remain explicit 013-I corpus-cleanup obligations.
 
-## Retained subject disposition through 013-E
+## Retained subject disposition through 013-F
 
 ```text
 Phase 004-A representation/layering              ALIGNED-WITH-CLARIFICATION
@@ -100,15 +110,18 @@ Phase 004-B public handle/resource model         ALIGNED-WITH-CLARIFICATION
 Phase 004-C identity/persistence/history          ALIGNED-WITH-CLARIFICATION
 Phase 004-D distributed data / manifest           ALIGNED-WITH-CLARIFICATION
 Phase 004-E runtime / adapter                     ALIGNED-WITH-CLARIFICATION
+Phase 004-F Execution / recovery                  ALIGNED-WITH-CLARIFICATION
 Phase 004-H dependency / enterprise security      ALIGNED-WITH-CLARIFICATION
 Phase 007-D representation refinement            ALIGNED-WITH-CLARIFICATION
 Phase 007-E persistence refinement               ALIGNED-WITH-CLARIFICATION
 Phase 007-F distributed data refinement          ALIGNED-WITH-CLARIFICATION
 Phase 007-G executable-realization refinement    ALIGNED-WITH-CLARIFICATION
+Phase 007-H Execution/refinement                 ALIGNED-WITH-CLARIFICATION
+Operational Continuity Contract                  RETAIN
 Network & External Dependency Policy             RETAIN
 Self-Contained Runtime Closure Contract           RETAIN AFTER CORRECTION
 Reproducibility Contract                          RETAIN AFTER CORRECTION
-ADR-0001/2/3/4/7/9/10                            PROVISIONAL RETAIN
+ADR-0001/2/3/4/5/7/9/10                         PROVISIONAL RETAIN
 ```
 
 Final ADR lifecycle/status and legacy corpus cleanup remain 013-I work.
@@ -125,8 +138,8 @@ Phase 013 continues to use AR-0..AR-9, AMAT-0..AMAT-3 and `RETAIN / CLARIFY / SU
 013-C  persistence / history / transaction-concurrency / migration/recovery  COMPLETE
 013-D  distributed data / topology / manifest / candidate-seal-promotion     COMPLETE
 013-E  Strategy/runtime / dependency / security / offline-no-egress          COMPLETE
-013-F  Execution / Attempt / recovery / fencing / admission                  NEXT
-013-G  Evaluation / Evidence / Provenance / history / disclosure
+013-F  Execution / Attempt / recovery / fencing / admission                  COMPLETE
+013-G  Evaluation / Evidence / Provenance / history / disclosure             NEXT
 013-H  deployment / scale / observability / portability / platform integration
 013-I  cross-architecture / ADR / legacy / M6 / residual register
 013-J  consolidation / R1 decision / Phase 014 handoff
@@ -146,4 +159,4 @@ No production runtime/security/Execution architecture work is authorized by Phas
 
 ## Current next boundary
 
-**013-F — Execution/Attempt, Fencing, Idempotency, Checkpoint, Cancellation, Recovery & Admission Reconciliation** is next eligible.
+**013-G — Evaluation, Evidence, Provenance, Historical Query, Reproducibility, Disclosure & External-Governance Boundary Reconciliation** is next eligible.
