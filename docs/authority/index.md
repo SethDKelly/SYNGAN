@@ -14,6 +14,7 @@ These documents define how SYNGAN design knowledge is created, reconciled, audit
 - [Jackson Design Completion & Implementation Hold](jackson-design-completion-implementation-hold.md)
 - [Jackson Methodology Completion Matrix](jackson-methodology-completion-matrix.md)
 - [Phase 014 Whole-Design Consolidation & Readiness Authority](phase-014-whole-design-readiness-authority.md)
+- [Phase 014-A Whole-Design Evidence Baseline](phase-014-whole-design-audit-evidence-baseline.md)
 
 ## Completed upstream authority
 
@@ -36,7 +37,8 @@ Phase 013                            COMPLETE
 R1 architecture reconciliation       CURRENTLY CLOSED
 Phase 014 start gate                 COMPLETE
 Phase 014                            ACTIVE
-014-A                                NEXT ELIGIBLE
+014-A                                COMPLETE
+014-B                                NEXT ELIGIBLE
 R2                                   OPEN
 R3                                   OPEN
 implementation readiness             NOT READY
@@ -53,8 +55,8 @@ A whole-design defect reopens only the smallest owning authority. Implementation
 ## Approved sequence
 
 ```text
-014-A  evidence baseline / traceability / reopen rules — NEXT
-014-B  problem / actor / outcome / scope / concept-purpose coverage
+014-A  evidence baseline / traceability / reopen rules — COMPLETE
+014-B  problem / actor / outcome / scope / concept-purpose coverage — NEXT
 014-C  concept / dependence / application-family / synchronization integrity
 014-D  mapping / interaction / disclosure / semantic parity
 014-E  architecture realization / authority / traceability
@@ -92,4 +94,4 @@ Even a positive R3 requires explicit Phase 015 implementation authority.
 
 ## Current next boundary
 
-**014-A — Whole-Design Audit Authority, Evidence Baseline, Traceability & Reopen Rules** is next eligible.
+**014-B — Problem, Actors, Outcomes, Scope & Concept-Purpose Coverage Audit** is next eligible.
