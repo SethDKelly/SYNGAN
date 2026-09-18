@@ -24,6 +24,7 @@ These documents define how SYNGAN design knowledge is created, interpreted, reco
 - [013-D Distributed Data Reconciliation](../architecture/phase-013-d-distributed-data-topology-manifest-candidate-promotion-reconciliation.md)
 - [013-E Runtime / Dependency / Security Reconciliation](../architecture/phase-013-e-strategy-runtime-dependency-authorization-secrets-distribution-reconciliation.md)
 - [013-F Execution / Recovery / Admission Reconciliation](../architecture/phase-013-f-execution-attempt-fencing-idempotency-checkpoint-cancellation-recovery-admission-reconciliation.md)
+- [013-G Evidence / Provenance / History / Disclosure Reconciliation](../architecture/phase-013-g-evaluation-evidence-provenance-history-reproducibility-disclosure-governance-reconciliation.md)
 - [Operational Authority Continuity Contract](operational-authority-continuity-regressive-recovery-contract.md)
 - [Reproducibility Contract](reproducibility-contract.md)
 - [Representation & Architecture Index](../architecture/index.md)
@@ -43,7 +44,8 @@ Phase 013                            ACTIVE
 013-D                                COMPLETE
 013-E                                COMPLETE
 013-F                                COMPLETE
-013-G                                NEXT ELIGIBLE
+013-G                                COMPLETE
+013-H                                NEXT ELIGIBLE
 R1 architecture reconciliation       DOWNSTREAM / IN PROGRESS
 whole-design completion              NOT YET — PHASE 014
 implementation readiness             NOT READY
@@ -51,20 +53,21 @@ implementation start                 NOT STARTED
 implementation next                  NOT YET
 ```
 
-## Phase 013 results through 013-F
+## Phase 013 results through 013-G
 
 ```text
-013-B representation defects AMAT-2 / AMAT-3 / AR-9   0 / 0 / 0
-013-C persistence defects    AMAT-2 / AMAT-3 / AR-9   0 / 0 / 0
-013-D data-plane defects     AMAT-2 / AMAT-3 / AR-9   0 / 0 / 0
-013-E runtime/security       AMAT-2 / AMAT-3 / AR-9   0 / 0 / 0
-013-F operational defects   AMAT-2 / AMAT-3 / AR-9   0 / 0 / 0
-upstream reopen                                      NONE
-new concepts                                         0
-new synchronizations                                 0
+013-B representation     AMAT-2 / AMAT-3 / AR-9   0 / 0 / 0
+013-C persistence        AMAT-2 / AMAT-3 / AR-9   0 / 0 / 0
+013-D data-plane         AMAT-2 / AMAT-3 / AR-9   0 / 0 / 0
+013-E runtime/security   AMAT-2 / AMAT-3 / AR-9   0 / 0 / 0
+013-F operational        AMAT-2 / AMAT-3 / AR-9   0 / 0 / 0
+013-G evidence/history   AMAT-2 / AMAT-3 / AR-9   0 / 0 / 0
+upstream reopen                                   NONE
+new concepts                                      0
+new synchronizations                              0
 ```
 
-Current operational authority preserves stable Execution identity, subordinate Attempts, observed-state versus mutation-authority separation, non-regressing recovery, scoped idempotency/fencing, immutable checkpoint qualification, cancellation truthfulness, and admission as current operational eligibility rather than semantic readiness or write authority.
+Current Evidence/history authority preserves Evaluation semantic validation before Evidence, retry-safe independent Evidence findings, immutable finding versus current applicability, bounded claim strength, Generation-owned completion basis, typed Provenance with low authority fan-out, epistemically qualified historical knowledge, derived/non-authoritative query projections, multi-axis Reproducibility, actor-safe disclosure and external-governance separation.
 
 ## Synchronization state
 
@@ -75,7 +78,7 @@ SYNC-08                        retired — Generation-local output lifecycle
 SYNC-15                        reclassified — Reproducibility contract
 ```
 
-Remaining current-looking historical cross-references in retained Execution/operational/scale documents are semantically superseded and tracked for 013-I cleanup.
+Remaining current-looking pre-Phase-009 cross-references are semantically superseded and tracked for 013-I corpus/status/link cleanup.
 
 ## Durable guardrails
 
@@ -83,16 +86,18 @@ Remaining current-looking historical cross-references in retained Execution/oper
 - decision-material qualifiers cannot be hidden by progressive disclosure;
 - provider facts are consumed only at their actual evidentiary strength;
 - architecture roles do not become concepts by addressability/durability;
-- operational provider status does not become framework mutation or semantic authority;
+- operational/provider status does not become framework mutation or semantic authority;
+- Evidence does not become approval or formal privacy authority;
+- Provenance does not become a metadata source of copied canonical truth;
+- disclosure/redaction does not mutate canonical history;
 - new independent product purpose/lifecycle returns to concept discovery before architecture/implementation;
 - only demonstrated AR-9 evidence may justify upstream reopen.
 
 ## Current dependency-safe sequence
 
 ```text
-013-A..013-F  COMPLETE
-013-G  Evaluation / Evidence / Provenance / history / disclosure        NEXT
-013-H  deployment / scale / observability / portability / integration
+013-A..013-G  COMPLETE
+013-H  deployment / scale / observability / portability / integration  NEXT
 013-I  cross-architecture / ADR / legacy / M6 / residual register
 013-J  R1 completion / Phase 014 handoff
 014    whole-design completion / implementation-readiness decision
@@ -103,4 +108,4 @@ Only 013-J may close R1. Only Phase 014 may set implementation **READY / NOT STA
 
 ## Current next boundary
 
-**013-G — Evaluation, Evidence, Provenance, Historical Query, Reproducibility, Disclosure & External-Governance Boundary Reconciliation** is next eligible.
+**013-H — Deployment, Scalability, Observability, Portability, Compatibility & Platform-Integration Reconciliation** is next eligible.
