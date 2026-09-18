@@ -1,43 +1,36 @@
 ---
 type: Architecture Index
 title: SYNGAN Representation & Architecture Design
-status: active-reconciliation
+status: complete-current
 ---
 
 # SYNGAN Representation & Architecture Design
 
 ## Purpose
 
-Expose the current downstream architecture baseline reconciled against completed Jackson concept design.
-
-Phase 013 remains active only because 013-J must still make the explicit R1 completion decision.
+Expose the current architecture baseline reconciled against completed Jackson concept design.
 
 ## Current posture
 
 ```text
 Jackson concept design          COMPLETE FOR CURRENT PRODUCT SCOPE
-Phase 013                       ACTIVE
-013-A                           COMPLETE
-013-B                           COMPLETE
-013-C                           COMPLETE
-013-D                           COMPLETE
-013-E                           COMPLETE
-013-F                           COMPLETE
-013-G                           COMPLETE
-013-H                           COMPLETE
-013-I                           COMPLETE
-013-J                           NEXT ELIGIBLE
-architecture corpus             RECONCILED PENDING R1 DECISION
-R1 architecture reconciliation  DOWNSTREAM / IN PROGRESS
-whole-design completion         NOT YET — PHASE 014
+Phase 013                       COMPLETE
+013-A..013-J                    COMPLETE
+architecture corpus             RECONCILED / CURRENT
+R1 architecture reconciliation  CURRENTLY CLOSED
+Phase 014                       NEXT ELIGIBLE
+R2 whole-design audit           OPEN
+R3 implementation readiness     OPEN
 implementation readiness        NOT READY
 implementation start            NOT STARTED
 implementation next             NOT YET
 ```
 
-## Current architecture authority
+## Canonical current architecture
 
-The current architecture baseline is the composition of:
+Start with [Phase 013 Consolidated Architecture Contract](phase-013-consolidated-architecture-contract.md).
+
+Detailed supporting authorities remain:
 
 - [013-B Representation Reconciliation](phase-013-b-representation-layering-public-contract-identity-view-reconciliation.md)
 - [013-C Persistence Reconciliation](phase-013-c-control-persistence-history-concurrency-migration-recovery-reconciliation.md)
@@ -48,9 +41,7 @@ The current architecture baseline is the composition of:
 - [013-H Deployment / Scale / Platform Reconciliation](phase-013-h-deployment-scalability-observability-portability-compatibility-platform-integration-reconciliation.md)
 - [013-I Cross-Architecture / Legacy / M6 Reconciliation](phase-013-i-cross-architecture-composition-legacy-m6-residual-reconciliation.md)
 
-Cross-cutting current synchronization authority is [Current Cross-Concept Synchronization Contract](../synchronizations/current-cross-concept-synchronizations.md).
-
-Residual accounting is [Phase 013 Residual Architecture Misfit Register](../authority/phase-013-residual-architecture-misfit-register.md).
+Cross-cutting synchronization authority is [Current Cross-Concept Synchronization Contract](../synchronizations/current-cross-concept-synchronizations.md). Residual accounting is [Phase 013 Residual Architecture Misfit Register](../authority/phase-013-residual-architecture-misfit-register.md).
 
 ## Current architecture composition
 
@@ -74,65 +65,9 @@ Evaluation / Evidence / Provenance / historical read composition / disclosure
 deployment / provider / observability / compatibility realization
 ```
 
-This is dependency/explanation ordering, not a mandatory universal workflow.
+This is dependency/explanation ordering, not a mandatory workflow. Direct Generation remains valid without Learning/Learned State where Strategy semantics permit it; Execution and Evaluation/Evidence remain occurrence/capability dependent.
 
-Direct Generation without Learning/Learned State remains valid when Strategy semantics permit it. Execution and Evaluation/Evidence remain occurrence/capability dependent.
-
-## Architecture invariants
-
-Current architecture preserves:
-
-- semantic ownership above representation, storage, runtime and provider mechanisms;
-- stable logical identity distinct from provider/location identity;
-- semantic revision, mutable state version, representation schema and recovery frontier as distinct axes;
-- persistence as durability rather than semantic CRUD;
-- physical/provider facts only at their actual evidentiary strength;
-- Generation ownership of candidate/finality/completed-output semantics;
-- Strategy semantics distinct from implementation/runtime binding;
-- exact dependency identity/integrity/trust/compatibility/authorization distinctions;
-- no hidden runtime acquisition, substitution, fallback or egress expansion;
-- distributed runtime closure across every material runtime role;
-- stable Execution distinct from Attempts and provider jobs;
-- current mutation authority distinct from provider observation;
-- non-regressing recovery after potentially regressive restore;
-- Evaluation semantic validity distinct from runtime success;
-- Evidence as bounded durable finding authority, not approval;
-- Provenance as typed relationship authority with low authority fan-out;
-- historical query/projections as derived read composition;
-- Reproducibility as derived cross-cutting assessment;
-- disclosure/redaction as current view authority, not history mutation;
-- external governance as external decision authority;
-- provider capability/status/lineage/telemetry as integration evidence rather than semantic ownership;
-- multidimensional enterprise-scale qualification rather than Spark/row-count claims;
-- private/offline/no-egress profiles without hidden public runtime services.
-
-## Phase 013-I corpus reconciliation
-
-013-I finalizes the authority relationship of retained material:
-
-```text
-Phase 004 architecture                  RETAINED HISTORICAL INPUT
-Phase 006 architecture overlay          RETAINED HISTORICAL REFINEMENT
-Phase 007-D..J architecture             RETAINED HISTORICAL REFINEMENT
-Phase 007 consolidated contract         RETAINED HISTORICAL SYNTHESIS
-Phase 007-A..C scaffold                 FEASIBILITY EVIDENCE ONLY
-Phase 007-K implementation re-entry     SUPERSEDED AS CURRENT AUTHORIZATION
-ADR-0001..0010                          RETAINED — FINAL DISPOSITION COMPLETE
-```
-
-Historical `active/current/canonical` wording in pre-013 records is historical lifecycle language and does not outrank the current authority above.
-
-## Current synchronization state
-
-```text
-historical synchronization IDs          15
-active cross-concept synchronizations   13
-SYNC-08                                  retired — Generation-local output behavior
-SYNC-15                                  historical/reclassified — Reproducibility contract
-M6                                        CLOSED
-```
-
-## Residual architecture state
+## Residual state
 
 ```text
 unresolved AMAT-2 defects                     0
@@ -145,7 +80,19 @@ ADRs lacking final disposition                0
 upstream reopens awaiting validation          0
 ```
 
-013-J must still make the explicit R1 completion decision.
+## Historical architecture disposition
+
+```text
+Phase 004 architecture                  RETAINED HISTORICAL INPUT
+Phase 006 architecture overlay          RETAINED HISTORICAL REFINEMENT
+Phase 007-D..J architecture             RETAINED HISTORICAL REFINEMENT
+Phase 007 consolidated contract         RETAINED HISTORICAL SYNTHESIS
+Phase 007-A..C scaffold                 FEASIBILITY EVIDENCE ONLY
+Phase 007-K implementation re-entry     SUPERSEDED AS CURRENT AUTHORIZATION
+ADR-0001..0010                          RETAINED RATIONALE
+```
+
+Historical `active/current/canonical` wording in pre-013 records does not outrank the current Phase 013 contract.
 
 ## Implementation boundary
 
@@ -155,8 +102,8 @@ IMPLEMENTATION START       NOT STARTED
 IMPLEMENTATION NEXT        NOT YET
 ```
 
-No production implementation, conformance proof, provider integration or benchmark work is authorized by Phase 013.
+Phase 014 owns R2/R3. Phase 015 remains required for explicit implementation authority.
 
 ## Current next boundary
 
-**013-J — Phase 013 Consolidation, R1 Completion Decision & Phase 014 Handoff** is next eligible.
+**Phase 014 pre-phase start gate — review the whole-design/readiness intention and create the dependency-safe R2/R3 subphase plan** is next eligible.
