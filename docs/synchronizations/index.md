@@ -8,7 +8,15 @@ status: complete-current
 
 This directory contains current cross-concept composition authority for SYNGAN. Concept specifications own semantic state; synchronization coordinates already-owned behavior and owns no independent canonical state.
 
-## Current synchronization inventory
+## Current canonical synchronization authority
+
+Begin with:
+
+- [Current Cross-Concept Synchronization Contract](current-cross-concept-synchronizations.md)
+
+`core-synchronizations.md` remains retained historical specification/detail and stable anchor material. Where it uses the pre-Phase-009 fifteen-rule interpretation, the current contract above controls.
+
+## Current inventory
 
 ```text
 accepted concepts                       11
@@ -19,64 +27,73 @@ capability/occurrence conditional        7
 retired concept-local IDs                1  (SYNC-08)
 reclassified contract IDs                1  (SYNC-15)
 new synchronization IDs                  0
+synchronization-owned canonical state    NONE
 ```
 
-Required-relational rules remain `SYNC-01`, `SYNC-02`, `SYNC-05`, `SYNC-09`, `SYNC-10`, and `SYNC-12`.
-
-Capability/occurrence-conditional rules remain `SYNC-03`, `SYNC-04`, `SYNC-06`, `SYNC-07`, `SYNC-11`, `SYNC-13`, and `SYNC-14`.
-
-## Canonical ownership
+Required-relational rules:
 
 ```text
-consumer exact bindings + contextual assessments  -> Learning / Generation / Evaluation
-producing Learning identity                       -> Learned State
-producing Evaluation identity                     -> Evidence
-Execution parent binding + Attempts/recovery       -> Execution
-Generation candidate/output/completion             -> Generation
-Provenance typed relationship assertions           -> Provenance
-synchronization-owned canonical state              -> NONE
+SYNC-01  Data Meaning revision binding
+SYNC-02  Strategy selection and compatibility
+SYNC-05  Learning produces Learned State
+SYNC-09  Evaluation Criterion binding
+SYNC-10  Evaluation method compatibility
+SYNC-12  Evaluation produces Evidence
+```
+
+Capability/occurrence-conditional rules:
+
+```text
+SYNC-03  Constraint binding / handling
+SYNC-04  Learning operational realization
+SYNC-06  Generation commitment / compatibility
+SYNC-07  Generation operational realization
+SYNC-11  Evaluation operational realization
+SYNC-13  controlled Evidence handoff
+SYNC-14  material Provenance recording
 ```
 
 ## Retired / reclassified IDs
 
-`SYNC-08` remains retired as a cross-concept synchronization because candidate/completed-output establishment is Generation-local behavior.
+`SYNC-08` is retired as a cross-concept synchronization. Candidate/finality/completed-output behavior is Generation-local authority.
 
-`SYNC-15` remains historical/reclassified under the cross-cutting Reproducibility contract. It is not active synchronization-owned state.
+`SYNC-15` is historical/reclassified under the cross-cutting [Reproducibility Contract](../authority/reproducibility-contract.md). Reproducibility owns no synchronization state.
 
-Historical IDs are not renumbered or reused.
+Historical IDs are never renumbered or reused.
 
-## Phase 013 reconciliation status
-
-Completed reconciliation through 013-H preserves singular ownership:
-
-- 013-B: representation/handles/views do not create synchronization-owned state;
-- 013-C: transactions/outboxes/CAS preserve coordinated effects without becoming semantic owners;
-- 013-D: candidate/seal/result-establishment preserves Generation-local output ownership and exact Evaluation-subject binding;
-- 013-E: executable/dependency/runtime/security realization does not create synchronization-owned readiness or reproducibility state;
-- 013-F: Execution/Attempt/fencing/idempotency/checkpoint/cancellation/admission remains operational realization beneath `SYNC-04`, `SYNC-07`, `SYNC-11`, with material Provenance under `SYNC-14`;
-- 013-G: `SYNC-12` establishes Evidence, `SYNC-13` remains controlled handoff rather than approval authority, and `SYNC-14` remains typed Provenance recording without transition ownership;
-- 013-H: deployment/platform capability negotiation, provider integration, observability, scale qualification and compatibility remain architecture/deployment concerns and introduce no synchronization-owned state.
-
-Platform/provider observations can support an active synchronization only to the strength they actually establish. Provider status, identity, telemetry, lineage, catalog state or IAM state does not itself create a cross-concept synchronization transition.
-
-## Current synchronization interpretation
+## Canonical ownership
 
 ```text
-SYNC-09  Evaluation Criterion binding
-SYNC-10  Evaluation method compatibility
-SYNC-11  Evaluation operational realization
-SYNC-12  Evaluation produces Evidence
-SYNC-13  controlled Evidence external / Generation handoff
-SYNC-14  material Provenance recording
-SYNC-08  retired — Generation-local candidate/completed-output behavior
-SYNC-15  historical/reclassified — Reproducibility contract
+consumer exact bindings / contextual assessments  -> owning activity
+producing Learning identity                       -> Learned State
+producing Evaluation identity                     -> Evidence
+Execution parent binding + Attempts/recovery       -> Execution
+Generation candidate/output/completion             -> Generation
+Provenance typed relationships                     -> Provenance
+synchronization-owned canonical state              -> NONE
 ```
 
-The active Enterprise Scale / Resource Admission / Approximation / Degraded Operation contract has been corrected by 013-H to this current model.
+## Phase 013 reconciliation result
 
-Remaining current-looking pre-Phase-009 `SYNC-08`/`SYNC-15` and 15-rule references in accepted concepts, retained architecture and other historical/current-looking documents are semantically superseded. 013-I owns final document/status/link cleanup and M6 closure; no synchronization-design reopen is pending.
+013-B through 013-H preserve singular ownership across representation, persistence, data-plane, runtime/security, Execution/recovery, Evidence/history and platform integration.
 
-## Completion state
+013-I completes the synchronization-corpus reconciliation:
+
+```text
+M6 synchronization drift        CLOSED
+historical IDs                  15
+active synchronizations         13
+SYNC-08                         RETIRED
+SYNC-15                         RECLASSIFIED
+current-authority ambiguity     0
+synchronization reopen          NONE
+```
+
+Pre-Phase-009 `15 accepted synchronizations`, active `SYNC-08`, and active `SYNC-15` wording is historical terminology where it remains in preserved phase/architecture/concept cross-reference text. It does not override the current synchronization contract.
+
+This is authoritative supersession, not deletion of useful design history.
+
+## Phase 013 completion state
 
 ```text
 Phase 009 synchronization authority       COMPLETE
@@ -86,24 +103,25 @@ current-versus-historical truth           PASS
 Evidence/Generation separation            PASS
 semantic/Execution separation             PASS
 Provenance low-authority fan-out          PASS
-external-governance ownership separation  PASS
+external-governance separation            PASS
 provider/platform ownership leakage       NONE
 hidden coordinator required               NO
+M6                                        CLOSED
 synchronization reopen                    NONE
 Jackson concept design                    COMPLETE FOR CURRENT PRODUCT SCOPE
 Phase 013                                 ACTIVE
-013-H                                     COMPLETE
-013-I                                     NEXT ELIGIBLE
+013-I                                     COMPLETE
+013-J                                     NEXT ELIGIBLE
 ```
 
 ## Future synchronization rule
 
-A future synchronization may be added only when existing concepts already own the substantive state, a genuinely new relation is required, that relation owns no independent state, and the current inventory cannot express it.
+Add a future synchronization only when existing concepts already own the substantive state, a genuinely new relation is required, that relation owns no independent state, and the current inventory cannot express it.
 
-If future scope introduces independent purpose + durable state/history + meaningful actions/lifecycle, concept rediscovery happens first. M8 triggers do not justify placeholder synchronization IDs.
+If future scope introduces independent purpose + durable state/history + meaningful actions/lifecycle, concept rediscovery occurs first. M8 triggers do not justify placeholder synchronization IDs.
 
 ## Current next boundary
 
-**013-I — Cross-Architecture Composition, ADR/Legacy Contract Reconciliation, M6 Cleanup & Residual Architecture Misfit Register** is next eligible.
+**013-J — Phase 013 Consolidation, R1 Completion Decision & Phase 014 Handoff** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
