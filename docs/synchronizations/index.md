@@ -47,28 +47,31 @@ Historical IDs are not renumbered or reused.
 
 ## Phase 013 reconciliation status
 
-Phase 013 must not translate synchronization mechanically into event buses, transactions, services, packages, queues, schemas, architecture layers or runtime call direction.
-
-Completed reconciliation through 013-F preserves singular ownership:
+Completed reconciliation through 013-G preserves singular ownership:
 
 - 013-B: representation/handles/views do not create synchronization-owned state;
 - 013-C: transactions/outboxes/CAS preserve coordinated effects without becoming semantic owners;
 - 013-D: manifest/candidate/seal/promotion preserves Generation-local output ownership and exact Evaluation-subject binding;
 - 013-E: executable/dependency/runtime/security realization does not create synchronization-owned readiness or reproducibility state;
-- 013-F: Execution/Attempt/fencing/idempotency/checkpoint/cancellation/admission remains operational realization beneath `SYNC-04`, `SYNC-07`, `SYNC-11`, with material Provenance relationships under `SYNC-14`.
+- 013-F: Execution/Attempt/fencing/idempotency/checkpoint/cancellation/admission remains operational realization beneath `SYNC-04`, `SYNC-07`, `SYNC-11`, with material Provenance relationships under `SYNC-14`;
+- 013-G: Evaluation validates exact examination semantics, `SYNC-12` establishes independently interpretable Evidence, `SYNC-13` remains a controlled handoff rather than approval authority, and `SYNC-14` records material typed Provenance without becoming owner state.
 
-Current operational-realization synchronization interpretation is:
+Current Evidence/history synchronization interpretation is:
 
 ```text
-SYNC-04  Learning ↔ Execution operational realization
-SYNC-07  Generation ↔ Execution operational realization
-SYNC-11  Evaluation ↔ Execution operational realization
-SYNC-14  material Provenance relationship recording where required
+SYNC-09  Evaluation Criterion binding
+SYNC-10  Evaluation method compatibility
+SYNC-11  Evaluation operational realization
+SYNC-12  Evaluation produces Evidence
+SYNC-13  controlled Evidence external / Generation handoff
+SYNC-14  material Provenance recording
 SYNC-08  retired — Generation-local candidate/completed-output behavior
 SYNC-15  historical/reclassified — Reproducibility contract
 ```
 
-013-F identifies remaining current-looking historical `SYNC-15` references in the accepted Execution document and retained operational architecture, plus old `SYNC-08`/`SYNC-15` references in the Enterprise Scale / Resource Admission contract. Phase 009/current Phase 013 authority controls their meaning now; final document/status cleanup remains a bounded 013-I obligation rather than a synchronization-design reopen.
+013-G confirms that Reproducibility owns no synchronization state, Evidence handoff creates no external-approval state, and required Provenance does not acquire ownership of the transition it explains.
+
+Remaining current-looking pre-Phase-009 `SYNC-08`/`SYNC-15` and 15-rule references in accepted concepts, retained architecture and cross-cutting contracts are semantically superseded. Phase 009/current Phase 013 authority controls their meaning now; final document/status/link cleanup remains a bounded 013-I obligation rather than a synchronization-design reopen.
 
 ## Completion state
 
@@ -79,13 +82,14 @@ occurrence-scoped/non-reactive binding    PASS
 current-versus-historical truth           PASS
 Evidence/Generation separation            PASS
 semantic/Execution separation             PASS
-Provenance low-authority fan-out           PASS
+Provenance low-authority fan-out          PASS
+external-governance ownership separation  PASS
 hidden coordinator required               NO
 synchronization reopen                    NONE
 Jackson concept design                    COMPLETE FOR CURRENT PRODUCT SCOPE
 Phase 013                                 ACTIVE
-013-F                                     COMPLETE
-013-G                                     NEXT ELIGIBLE
+013-G                                     COMPLETE
+013-H                                     NEXT ELIGIBLE
 ```
 
 ## Future synchronization rule
@@ -96,6 +100,6 @@ If future scope introduces independent purpose + durable state/history + meaning
 
 ## Current next boundary
 
-**013-G — Evaluation, Evidence, Provenance, Historical Query, Reproducibility, Disclosure & External-Governance Boundary Reconciliation** is next eligible.
+**013-H — Deployment, Scalability, Observability, Portability, Compatibility & Platform-Integration Reconciliation** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
