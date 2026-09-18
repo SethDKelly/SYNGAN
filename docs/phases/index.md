@@ -46,8 +46,8 @@ Current sequence:
 ```text
 start gate  COMPLETE — intention review / evidence surface / decomposition
 014-A       COMPLETE — audit authority / evidence baseline / traceability / reopen rules
-014-B       NEXT — problem / actors / outcomes / scope / concept-purpose coverage
-014-C            — concept / dependence / application-family / synchronization integrity
+014-B       COMPLETE — problem / actors / outcomes / scope / concept-purpose coverage
+014-C       NEXT — concept / dependence / application-family / synchronization integrity
 014-D            — mapping / interaction / linguistic / disclosure / semantic parity
 014-E            — architecture realization / responsibility / design-to-architecture traceability
 014-F            — end-to-end scenarios / failure / recovery / scale / security / portability
@@ -63,6 +63,6 @@ Future only. Even a positive Phase 014 readiness decision must leave implementat
 
 ## Current next boundary
 
-**014-B — Problem, Actors, Outcomes, Scope & Concept-Purpose Coverage Audit** is next eligible.
+**014-C — Concept Specification, Dependence, Application-Family & Synchronization Integrity Audit** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
