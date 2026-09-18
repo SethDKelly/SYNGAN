@@ -20,7 +20,7 @@ architecture corpus             RECONCILED / CURRENT
 R1 architecture reconciliation  CURRENTLY CLOSED
 Phase 014 start gate            COMPLETE
 Phase 014                       ACTIVE
-Phase 014 sequencing authority  docs/phases/014/index.md
+Phase 014 subgroup sequencing       SEE docs/phases/014/index.md
 R2 whole-design audit           OPEN
 R3 implementation readiness     OPEN
 implementation readiness        NOT READY
