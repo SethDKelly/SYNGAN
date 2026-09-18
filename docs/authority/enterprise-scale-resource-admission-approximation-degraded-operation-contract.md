@@ -171,7 +171,7 @@ Time-series workload readiness must be able to consider material dimensions incl
 
 A long or anomalous sequence MUST NOT be silently truncated because of memory pressure unless truncation/windowing is explicit Strategy/Learning/Generation semantics.
 
-This contract does not decide whether reusable sequence structure becomes a `Relationship` concept; 006-G owns that question.
+This contract does not decide whether reusable sequence structure becomes a `Relationship` concept; later/current concept authority controls that boundary.
 
 ## Multi-table scale consequences
 
@@ -184,7 +184,7 @@ Multi-table readiness must be able to consider material dimensions including:
 - cross-scope Constraint/Evaluation cost;
 - coordinated output/materialization pressure.
 
-A constituent table may be produced or retried independently operationally, but whole-result completion remains governed by SYNC-08.
+A constituent table may be produced or retried independently operationally, but whole-result completion remains **Generation-owned behavior under the current Phase 009/013-D model**. Historical `SYNC-08` is retired as a cross-concept synchronization and does not own whole-result completion.
 
 Storage/capacity pressure MUST NOT make a mandatory child table optional after commitment.
 
@@ -334,7 +334,7 @@ A quota/capacity decision can block execution without rewriting the committed ac
 
 ## Reproducibility consequences
 
-Material scale/runtime facts that can change behavior must remain attributable according to SYNC-15, such as where relevant:
+Material scale/runtime facts that can change behavior must remain attributable according to the current [Reproducibility Contract](reproducibility-contract.md), such as where relevant:
 
 - worker/accelerator topology;
 - partitioning;
@@ -343,26 +343,36 @@ Material scale/runtime facts that can change behavior must remain attributable a
 - runtime/resource substitution;
 - artifact/cache resolution basis when behaviorally material.
 
+Historical `SYNC-15` is reclassified under that cross-cutting contract and is not active synchronization-owned state.
+
 Operational changes may still support semantic/statistical/bounded reproducibility even when physical topology differs. Exact deterministic claims require stronger evidence.
 
 ## Synchronization consequence
 
-This contract constrains existing synchronizations rather than introducing a new synchronization ID.
+This contract constrains existing owner/synchronization behavior rather than introducing a new synchronization ID.
 
-Most relevant:
+Current Phase 009 authority controls:
+
+```text
+historical synchronization IDs          15
+active cross-concept synchronizations   13
+SYNC-08                                  retired — Generation-local output behavior
+SYNC-15                                  historical/reclassified — Reproducibility contract
+```
+
+Most relevant active rules include:
 
 - SYNC-02 — Strategy compatibility;
-- SYNC-04 / 07 / 11 — current operational continuation qualification;
+- SYNC-04 / SYNC-07 / SYNC-11 — current operational continuation qualification;
 - SYNC-06 — Generation commitment/compatibility;
-- SYNC-08 — whole logical-output completion;
-- SYNC-10 / 12 — Evaluation method compatibility and Evidence claim strength;
-- SYNC-14 / 15 — material historical/reproducibility attribution.
+- SYNC-10 / SYNC-12 — Evaluation method compatibility and Evidence claim strength;
+- SYNC-14 — material Provenance recording.
 
-006-E does not create `SYNC-16` or another synchronization.
+No `SYNC-16` or additional synchronization is introduced.
 
 ## Architecture/planning consequence
 
-006-I must reconcile this contract into relevant architecture and Phase 005 planning, especially:
+Phase 013-H reconciles this contract into the current deployment/platform architecture, including:
 
 - runtime/Strategy binding resource envelopes;
 - distributed data/state/materialization paths;
@@ -370,7 +380,7 @@ Most relevant:
 - Evaluation method/coverage planning;
 - dependency/runtime distribution closure;
 - platform capability assessment;
-- scale/benchmark verification;
+- future scale/benchmark verification;
 - retention/degraded-read behavior.
 
 This authority does not itself select schedulers, autoscalers, caches, spill mechanisms, quota systems, benchmark thresholds or hardware profiles.
@@ -383,7 +393,7 @@ This authority does not itself select schedulers, autoscalers, caches, spill mec
 4. Material approximation MUST be explicit and owned by the concept whose semantics it changes.
 5. Backpressure/admission may delay or block work but MUST NOT silently drop mandatory logical work/scope.
 6. A sampled/sketched Evaluation MUST NOT become universal Evidence merely because exhaustive evaluation is expensive.
-7. Whole-result completion remains authoritative under time-series/multi-table partial pressure.
+7. Whole-result completion remains Generation-owned under time-series/multi-table partial pressure.
 8. Cache presence/absence MUST NOT redefine exact artifact/runtime identity.
 9. Dynamic workers MUST preserve runtime distribution closure before executing material work.
 10. Degraded operation MUST be capability-specific; a global degraded flag MUST NOT erase important distinctions.
