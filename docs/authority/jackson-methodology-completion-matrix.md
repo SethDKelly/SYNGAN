@@ -20,7 +20,7 @@ IMPLEMENTATION START       NOT STARTED
 IMPLEMENTATION NEXT        NOT YET
 ```
 
-Jackson concept design is complete for the current product scope. Phase 013 architecture reconciliation is active; Phase 014 owns whole-design implementation readiness.
+Jackson concept design and downstream architecture reconciliation are complete for the current product scope. Phase 014 now owns whole-design completion/readiness.
 
 ## Completion vocabulary
 
@@ -30,9 +30,6 @@ CURRENTLY CLOSED
 
 COMPLETE FOR CURRENT PRODUCT SCOPE
   All Jackson concept-design obligations A-H are satisfied under current documented scope/evidence.
-
-DOWNSTREAM / IN PROGRESS
-  Upstream semantics are sufficient and downstream representation/architecture reconciliation is actively underway.
 
 OPEN
   Required downstream decision has not yet been performed.
@@ -81,38 +78,17 @@ OPEN
 | G7 | Explicit residual conceptual misfit register | **CURRENTLY CLOSED** | 011 / 012 |
 | H1 | One current-state consolidated Jackson concept-design audit | **CURRENTLY CLOSED** | 012-A |
 | H2 | Explicit Jackson concept-design completion decision | **CURRENTLY CLOSED** | 012-B |
-| R1 | Architecture reconciled downstream to completed concept design | **DOWNSTREAM / IN PROGRESS** | 013 — explicit decision pending 013-J |
+| R1 | Architecture reconciled downstream to completed concept design | **CURRENTLY CLOSED** | 013-J |
 | R2 | Whole design audited problem → concepts → dependence/sync → mapping → architecture | **OPEN** | 014 |
 | R3 | Implementation-readiness decision based on complete design | **OPEN** | 014 |
 
-## R1 evidence through 013-I
+## R1 completion evidence
 
-Phase 013 has completed:
+Phase 013 completed 013-A through 013-J.
 
-```text
-013-A  reconciliation method / retained corpus / precedence / taxonomy
-013-B  representation / public contract / identity / revision / handles / views
-013-C  persistence / history / concurrency / migration / recovery
-013-D  distributed data / topology / candidate / seal / promotion
-013-E  Strategy realization / dependency / authorization / no-egress / runtime closure
-013-F  Execution / Attempt / fencing / idempotency / checkpoint / cancellation / recovery / admission
-013-G  Evaluation / Evidence / Provenance / history / Reproducibility / disclosure / governance
-013-H  deployment / scale / observability / portability / compatibility / platform integration
-013-I  cross-architecture composition / ADR / legacy / M6 / residual register
-```
+Every substantive domain reconciliation 013-B through 013-H closed with zero AMAT-2 defects, zero AMAT-3 blockers, zero AR-9 contradictions, no upstream reopen, no new concept and no new synchronization.
 
-Every substantive architecture domain 013-B through 013-H closed with:
-
-```text
-AMAT-2 defects       0
-AMAT-3 blockers      0
-AR-9 contradictions  0
-upstream reopen      NONE
-new concepts         0
-new synchronizations 0
-```
-
-013-I then established:
+013-I established:
 
 ```text
 cross-architecture composition              PASS
@@ -128,9 +104,7 @@ unresolved current-authority ambiguity      0
 upstream reopens awaiting validation        0
 ```
 
-The [Phase 013 Residual Architecture Misfit Register](phase-013-residual-architecture-misfit-register.md) therefore satisfies the prerequisites for an R1 decision.
-
-013-J must still make that decision explicitly; 013-I cannot close R1 by implication.
+013-J rechecked that evidence, found no new contradiction, established the [Phase 013 Consolidated Architecture Contract](../architecture/phase-013-consolidated-architecture-contract.md), and closed R1.
 
 ## Current synchronization state
 
@@ -142,35 +116,6 @@ SYNC-08                                  retired — Generation-local output beh
 SYNC-15                                  historical/reclassified — Reproducibility contract
 M6                                        CLOSED
 ```
-
-Current authority is [Current Cross-Concept Synchronization Contract](../synchronizations/current-cross-concept-synchronizations.md).
-
-## Current architecture state
-
-Architecture reconciled through 013-I preserves:
-
-- semantic ownership above representation/persistence/data-plane/runtime/operational/history/platform mechanisms;
-- exact versus mutable identity/history distinctions;
-- non-regressing recovery authority;
-- Generation-owned candidate/finality/completed-output establishment;
-- Strategy semantics distinct from executable/runtime realization;
-- explicit dependency/security/no-egress behavior with no hidden acquisition/fallback;
-- distributed worker closure rather than driver-only readiness;
-- Execution separate from Attempts/provider jobs and semantic completion;
-- scoped idempotency/fencing/checkpoint/cancellation/recovery/admission;
-- Evaluation semantic validity separate from runtime success;
-- retry-safe independently interpretable Evidence findings;
-- typed Provenance with low authority fan-out;
-- epistemically qualified historical query with non-authoritative projections;
-- Reproducibility as derived cross-cutting assessment;
-- current disclosure separate from canonical history;
-- empirical privacy Evidence separate from formal guarantees/external governance;
-- provider identity separate from capability evidence and semantic authority;
-- architecture compatibility separate from implementation/conformance/scale qualification;
-- multidimensional scale qualification;
-- capability-specific degraded operation;
-- application-family optionality without a universal eleven-stage pipeline;
-- no M8 future-scope placeholder authority.
 
 ## Phase completion state
 
@@ -186,20 +131,13 @@ G1-G7                                CURRENTLY CLOSED
 Phase 012                            COMPLETE
 H1 / H2                              CURRENTLY CLOSED
 JACKSON CONCEPT DESIGN               COMPLETE FOR CURRENT PRODUCT SCOPE
-Phase 013                            ACTIVE
-013-A                                COMPLETE
-013-B                                COMPLETE
-013-C                                COMPLETE
-013-D                                COMPLETE
-013-E                                COMPLETE
-013-F                                COMPLETE
-013-G                                COMPLETE
-013-H                                COMPLETE
-013-I                                COMPLETE
-013-J                                NEXT ELIGIBLE
-R1                                   DOWNSTREAM / IN PROGRESS
-REPRESENTATION/ARCHITECTURE FINAL    NO — 013-J DECISION PENDING
-WHOLE-DESIGN COMPLETION              NOT YET — PHASE 014
+Phase 013                            COMPLETE
+013-A..013-J                         COMPLETE
+R1                                   CURRENTLY CLOSED
+REPRESENTATION/ARCHITECTURE          RECONCILED / CURRENT
+Phase 014                            NEXT ELIGIBLE
+R2                                   OPEN
+R3                                   OPEN
 IMPLEMENTATION READINESS             NOT READY
 IMPLEMENTATION START                 NOT STARTED
 IMPLEMENTATION NEXT                  NOT YET
@@ -220,19 +158,17 @@ unresolved architecture AMAT-3               0
 ## Current dependency order
 
 ```text
-013-A..013-I  COMPLETE
+013 COMPLETE / R1 CURRENTLY CLOSED
   ↓
-013-J  Phase 013 consolidation / R1 decision / Phase 014 handoff — NEXT
-  ↓
-014  whole-design consolidation / implementation-readiness decision
+014  whole-design consolidation / R2-R3 decision — NEXT
   ↓
 015  implementation authority — FUTURE ONLY
 ```
 
 ## Guardrail
 
-The clean residual register does not itself authorize implementation. Only 013-J may close R1; only Phase 014 may make implementation ready; explicit Phase 015 authority remains required to begin implementation.
+R1 closure does not imply implementation readiness. Phase 014 must first pass R2 and explicitly decide R3. Even a positive R3 decision does not begin implementation; Phase 015 explicit authority remains required.
 
 ## Current next boundary
 
-**013-J — Phase 013 Consolidation, R1 Completion Decision & Phase 014 Handoff** is next eligible.
+**Phase 014 pre-phase start gate — review the whole-design/readiness intention and define the dependency-safe R2/R3 subphase structure** is next eligible.
