@@ -28,7 +28,8 @@ Phase 013                    ACTIVE
 013-A                        COMPLETE
 013-B                        COMPLETE
 013-C                        COMPLETE
-013-D                        NEXT ELIGIBLE
+013-D                        COMPLETE
+013-E                        NEXT ELIGIBLE
 R1 architecture reconciliation DOWNSTREAM / IN PROGRESS
 implementation readiness     NOT READY
 implementation start         NOT STARTED
@@ -39,93 +40,76 @@ implementation next          NOT YET
 
 - [Phase 013 Entry & Decomposition](013-entry-decomposition.md)
 - [013-A Reconciliation Authority / Corpus Inventory / Taxonomy](013-A-reconciliation-authority-retained-corpus-inventory-precedence-reset-discrepancy-taxonomy.md)
-- [013-B Representation / Identity / Handle / View Reconciliation](013-B-representation-layering-public-contract-identity-revision-handle-view-reconciliation.md)
-- [013-C Persistence / History / Concurrency / Migration / Recovery Reconciliation](013-C-control-persistence-historical-reference-transaction-concurrency-migration-recovery-state-reconciliation.md)
+- [013-B Representation Reconciliation](013-B-representation-layering-public-contract-identity-revision-handle-view-reconciliation.md)
+- [013-C Persistence Reconciliation](013-C-control-persistence-historical-reference-transaction-concurrency-migration-recovery-state-reconciliation.md)
+- [013-D Distributed Data Reconciliation](013-D-distributed-data-boundary-structured-topology-manifest-candidate-seal-promotion-large-state-reconciliation.md)
 - [Phase 013 Architecture Reconciliation Authority](../../authority/phase-013-architecture-reconciliation-authority.md)
-- [Phase 013-B Representation Reconciliation](../../architecture/phase-013-b-representation-layering-public-contract-identity-view-reconciliation.md)
-- [Phase 013-C Persistence Reconciliation](../../architecture/phase-013-c-control-persistence-history-concurrency-migration-recovery-reconciliation.md)
+- [013-B Architecture Authority](../../architecture/phase-013-b-representation-layering-public-contract-identity-view-reconciliation.md)
+- [013-C Architecture Authority](../../architecture/phase-013-c-control-persistence-history-concurrency-migration-recovery-reconciliation.md)
+- [013-D Architecture Authority](../../architecture/phase-013-d-distributed-data-topology-manifest-candidate-promotion-reconciliation.md)
+- [Structured-Data Topology Contract](../../authority/structured-data-topology-relationship-semantics-contract.md)
 - [Operational Authority Continuity & Regressive Recovery Contract](../../authority/operational-authority-continuity-regressive-recovery-contract.md)
-- [Phase 012 Jackson Concept-Design Consolidation](../../authority/phase-012-jackson-concept-design-consolidation.md)
 - [Jackson Methodology Completion Matrix](../../authority/jackson-methodology-completion-matrix.md)
 - [Jackson Design Completion & Implementation Hold](../../authority/jackson-design-completion-implementation-hold.md)
 - [Representation & Architecture Index](../../architecture/index.md)
 
-## 013-A result
+## Completed reconciliation results
 
-013-A established Phase 013 precedence, discrepancy taxonomy, materiality, dispositions and the residual-register contract.
+### 013-A — method / precedence
 
-## 013-B result
+Established the retained corpus inventory, precedence reset, AR-0..AR-9 discrepancy taxonomy, AMAT-0..AMAT-3 materiality, canonical dispositions and residual-register contract.
 
-013-B retained the representation spine with bounded clarification: architecture represents rather than owns semantic authority; identities/version axes remain distinct; handles/views remain projections/resolvers; optional surfaces stay optional; Execution retains operational action ownership; and D0-D4 is presentation depth rather than technical layering.
+### 013-B — representation / identity / views
 
-## 013-C result
+Retained the representation spine with bounded clarification. No AMAT-2 defect, AMAT-3 blocker or upstream contradiction was found.
 
-013-C reconciled control persistence, exact historical references, transaction/CAS/coordination state, migration and regressive recovery.
+### 013-C — persistence / history / concurrency / recovery
+
+Retained the control-persistence spine with bounded clarification. Persistence remains subordinate to owner authority; transaction/CAS/outbox/migration/recovery machinery does not become a semantic owner. No AMAT-2 defect, AMAT-3 blocker or upstream contradiction was found.
+
+### 013-D — distributed data / topology / candidate / promotion
+
+013-D retained the distributed data-state spine with bounded clarification.
 
 ```text
-control-persistence spine              RETAINED WITH BOUNDED CLARIFICATION
-AMAT-2 persistence defects              0
-AMAT-3 blockers                         0
-AR-9 contradictions                     0
-upstream reopen                         NONE
-new concepts                            0
-new synchronizations                    0
-mandatory database/event architecture   0
+AMAT-2 distributed-data defects    0
+AMAT-3 blockers                    0
+AR-9 contradictions                0
+upstream reopen                    NONE
+new concepts                       0
+new synchronizations               0
+mandatory storage/table format     0
+mandatory literal manifest type    0
 ```
 
-Durable 013-C rules include:
+Current 013-D rules include:
 
-- persistence makes owner-established authority durable; storage existence does not establish semantic truth;
-- one physical transaction may co-commit facts owned by several concepts without merging their ownership;
-- durable outbox/transition-intent state is technical coordination state, not `Synchronization.status` or target semantic success;
-- CAS/state versions protect stale writes only inside the valid authority frontier and do not replace semantic validation or non-regressing recovery authority;
-- exact historical references never silently resolve to `latest`;
-- projection rebuild/reconstruction may claim only what retained owner evidence actually establishes;
-- migration changes representation by default and cannot silently mutate semantic history;
-- a regressive restore requires fresh non-regressing authority before ordinary writes resume;
-- clone/fork copies do not automatically inherit the original authority scope;
-- control persistence stays bounded/reference-first at Spark scale.
+- DataFrame/table/path/provider/manifest existence is not semantic authority;
+- exact data-state strength remains multidimensional: identity, read binding, integrity coverage, retention/resolvability and cross-scope coordination;
+- topology remains composed from Data Meaning, Constraint, Generation, Strategy and Evaluation/Evidence ownership rather than a new topology/relationship concept;
+- logical scope is bounded representation, not row/entity-scale canonical state;
+- `seal` means an immutable closed physical subject to a declared strength and may be realized by a provider-equivalent snapshot rather than a literal manifest object;
+- candidate/open/partial/sealed states remain subordinate physical representation state rather than Generation lifecycle replacements;
+- `promotion` is architecture shorthand for Generation's completed-output establishment, not a separate owner or publication lifecycle;
+- physical extent/estimates cannot silently satisfy stronger Generation quantity/scope/horizon requirements;
+- required Evaluation binds the exact immutable subject it examined;
+- surviving bytes after recovery remain evidence only until current authority can reconcile/adopt them.
 
-013-C also corrected the active recovery contract so historical `SYNC-15` is no longer described as an active synchronization. Reproducibility remains a cross-cutting contract over preserved owner facts under current Phase 009 authority.
-
-Historical `007-E` synchronization-count wording remains semantically superseded and is carried to 013-I corpus cleanup.
-
-## Retained architecture baseline
-
-Phase 004/006/007 retained architecture and ADR-0001 through ADR-0010 remain reconciliation inputs beneath completed concept design and completed Phase 013 decisions.
+013-D corrected the active structured-topology contract to current Phase 009 synchronization semantics. Historical Phase 007-F `15`-synchronization wording remains explicit 013-I corpus-cleanup work.
 
 ## Phase structure
 
 ```text
-013-A  Reconciliation Authority, Retained Corpus Inventory,
-       Precedence Reset & Discrepancy Taxonomy                         COMPLETE
-
-013-B  Representation Layering, Public Contract, Identity,
-       Revision, Handle & View Reconciliation                         COMPLETE
-
-013-C  Control Persistence, Historical Reference,
-       Transaction/Concurrency, Migration & Recovery-State Reconciliation    COMPLETE
-
-013-D  Distributed Data Boundary, Structured Topology, Manifest,
-       Candidate/Seal/Promotion & Large-State Reconciliation                NEXT
-
-013-E  Strategy/Method Realization, Dependency Closure,
-       Authorization, Secrets, Offline/No-Egress & Runtime Distribution
-
-013-F  Execution/Attempt, Fencing, Idempotency, Checkpoint,
-       Cancellation, Recovery & Admission Reconciliation
-
-013-G  Evaluation, Evidence, Provenance, Historical Query,
-       Reproducibility, Disclosure & External-Governance Boundary
-
-013-H  Deployment, Scalability, Observability, Portability,
-       Compatibility & Platform-Integration Reconciliation
-
-013-I  Cross-Architecture Composition, ADR/Legacy Contract Reconciliation,
-       M6 Cleanup & Residual Architecture Misfit Register
-
-013-J  Phase 013 Consolidation, R1 Completion Decision
-       & Phase 014 Handoff
+013-A  authority / corpus inventory / precedence / discrepancy taxonomy  COMPLETE
+013-B  representation / layering / public contract / identity / views   COMPLETE
+013-C  persistence / history / transaction-concurrency / migration      COMPLETE
+013-D  distributed data / topology / manifest / candidate / promotion   COMPLETE
+013-E  Strategy/runtime / dependency / security / offline-no-egress     NEXT
+013-F  Execution / Attempt / recovery / fencing / admission
+013-G  Evaluation / Evidence / Provenance / history / disclosure
+013-H  deployment / scale / observability / portability / platform integration
+013-I  cross-architecture / ADR / legacy / M6 / residual register
+013-J  consolidation / R1 decision / Phase 014 handoff
 ```
 
 ## Required carry-forward
@@ -153,4 +137,4 @@ Only 013-J may close R1. Phase 014 still owns the whole-design implementation-re
 
 ## Current next boundary
 
-**013-D — Distributed Data Boundary, Structured Topology, Manifest, Candidate/Seal/Promotion & Large-State Reconciliation** is next eligible.
+**013-E — Strategy/Method Realization, Dependency Closure, Authorization, Secrets, Offline/No-Egress & Runtime Distribution** is next eligible.
