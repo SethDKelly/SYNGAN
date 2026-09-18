@@ -18,11 +18,11 @@ methodology / completion / cross-cutting authority
   > dependence / application family
   > Current Cross-Concept Synchronization Contract
   > concept mapping / experience
-  > design-quality / misfit validation
+  > design-quality / residual conceptual authority
   > completed Phase 012 Jackson concept-design authority
   > Phase 013 Consolidated Architecture Contract
-  > detailed Phase 013 architecture authorities
-  > retained pre-013 architecture / ADR rationale as historical evidence
+  > active Phase 014 whole-design/readiness authority
+  > retained historical architecture / ADR rationale
   > implementation planning history
   > code / tests / provider/deployment evidence
 ```
@@ -31,11 +31,11 @@ methodology / completion / cross-cutting authority
 
 - [Jackson Design Completion & Implementation Hold](authority/jackson-design-completion-implementation-hold.md)
 - [Jackson Methodology Completion Matrix](authority/jackson-methodology-completion-matrix.md)
-- [013-J Phase Record](phases/013/013-J-phase-013-consolidation-r1-completion-decision-phase-014-handoff.md)
+- [Phase 014 Whole-Design Consolidation & Readiness Authority](authority/phase-014-whole-design-readiness-authority.md)
+- [Phase 014](phases/014/index.md)
+- [Phase 014 Start Gate / Decomposition](phases/014/014-start-gate-whole-design-readiness-decomposition.md)
 - [Phase 013 Consolidated Architecture Contract](architecture/phase-013-consolidated-architecture-contract.md)
-- [Phase 013 Residual Architecture Misfit Register](authority/phase-013-residual-architecture-misfit-register.md)
 - [Current Cross-Concept Synchronization Contract](synchronizations/current-cross-concept-synchronizations.md)
-- [Phase 014 Entry Gate](phases/014/index.md)
 
 ## Current state
 
@@ -44,10 +44,10 @@ accepted concepts                    11
 active synchronizations              13
 Jackson concept design               COMPLETE FOR CURRENT PRODUCT SCOPE
 Phase 013                            COMPLETE
-013-A..013-J                         COMPLETE
 R1 architecture reconciliation       CURRENTLY CLOSED
-representation / architecture       RECONCILED / CURRENT
-Phase 014                            NEXT ELIGIBLE
+Phase 014 start gate                 COMPLETE
+Phase 014                            ACTIVE
+014-A                                NEXT ELIGIBLE
 R2                                   OPEN
 R3                                   OPEN
 implementation readiness             NOT READY
@@ -55,51 +55,38 @@ implementation start                 NOT STARTED
 implementation next                  NOT YET
 ```
 
-## Phase 013 completion result
+## Current whole-design baseline
+
+Phase 014 audits the complete current chain:
 
 ```text
-cross-architecture composition              PASS
-M6 synchronization drift                    CLOSED
-ADR final disposition                       COMPLETE — 10 / 10 RETAINED
-legacy current-authority ambiguity          CLOSED
-historical implementation re-entry          SUPERSEDED AS CURRENT AUTHORIZATION
-M8 placeholder leakage                      NOT FOUND
-unresolved AMAT-2                           0
-unresolved AMAT-3                           0
-unresolved AR-3..AR-9                       0
-upstream reopen                              NONE
-R1                                           CURRENTLY CLOSED
+problem / actors / O1-O16 outcomes
+  -> eleven accepted concepts
+  -> dependence / application family
+  -> thirteen active synchronizations
+  -> mapping / interaction / semantic parity
+  -> conceptual quality / residual findings
+  -> Phase 013 reconciled architecture
 ```
 
-## Current synchronization state
+No prior local `COMPLETE` label substitutes for this whole-design audit.
+
+## Approved Phase 014 sequence
 
 ```text
-historical IDs               15
-active synchronizations      13
-SYNC-08                      retired — Generation-local output behavior
-SYNC-15                      historical/reclassified — Reproducibility contract
-synchronization-owned state  NONE
-M6                            CLOSED
+014-A  evidence baseline / traceability / reopen rules — NEXT
+014-B  problem / actors / outcomes / scope / concept-purpose coverage
+014-C  concept / dependence / application-family / synchronization integrity
+014-D  mapping / interaction / linguistic / disclosure / parity
+014-E  architecture realization / design-to-architecture traceability
+014-F  cross-layer scenarios / failure / recovery / scale / security / portability
+014-G  implementation-neutral completeness / handoff sufficiency / residual register
+014-H  R2 decision / R3 decision / Phase 015 handoff
 ```
-
-## Historical authority disposition
-
-```text
-Phase 004 architecture                  RETAINED HISTORICAL INPUT
-Phase 006 architecture overlay          RETAINED HISTORICAL REFINEMENT
-Phase 007-D..J architecture             RETAINED HISTORICAL REFINEMENT
-Phase 007 consolidated contract         RETAINED HISTORICAL SYNTHESIS
-Phase 007-A..C scaffold                 FEASIBILITY EVIDENCE ONLY
-Phase 007-K implementation re-entry     SUPERSEDED AS CURRENT AUTHORIZATION
-```
-
-## Phase 014 boundary
-
-Phase 014 owns `R2` whole-design audit and `R3` implementation-readiness decision.
-
-Its next action is the phase-intention/dependency-safe decomposition gate. No `014-A` subgroup has been pre-authorized.
 
 ## Implementation boundary
+
+Phase 014 remains design/readiness work.
 
 ```text
 IMPLEMENTATION READINESS   NOT READY
@@ -107,8 +94,10 @@ IMPLEMENTATION START       NOT STARTED
 IMPLEMENTATION NEXT        NOT YET
 ```
 
-Even after a positive Phase 014 readiness decision, explicit Phase 015 authority remains required before implementation begins.
+Historical source/tests/plans may be inspected as downstream evidence, but cannot redefine semantics or be modified to manufacture readiness.
+
+Even a later positive R3 requires explicit Phase 015 authority before implementation begins.
 
 ## Current next boundary
 
-**Phase 014 pre-phase start gate — define the dependency-safe whole-design/readiness subphase plan** is next eligible.
+**014-A — Whole-Design Audit Authority, Evidence Baseline, Traceability & Reopen Rules** is next eligible.
