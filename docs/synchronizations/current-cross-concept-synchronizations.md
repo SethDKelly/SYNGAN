@@ -33,7 +33,7 @@ Historical IDs are never renumbered or reused.
 
 ### SYNC-01 — Data Meaning revision binding
 
-Learning, Generation and Evaluation bind exact relevant Data Meaning revisions. Later meaning changes do not reinterpret historical work.
+When Data Meaning participates in a Learning, Generation or Evaluation commitment, the consuming activity binds the exact relevant Data Meaning revision. Learning and Generation universally include Data Meaning under the current family; an Evaluation-only variant may omit Data Meaning when its supported subject/question does not require SYNGAN Data Meaning authority. Later meaning changes do not reinterpret historical work.
 
 ### SYNC-02 — Strategy selection and compatibility
 
@@ -65,9 +65,9 @@ Activities bind applicable Constraint revisions and own contextual applicability
 
 When Learning requires operational work, Execution realizes it. Learning owns semantic completion; Execution owns operational realization and Attempt history.
 
-### SYNC-06 — Generation commitment and compatibility
+### SYNC-06 — Generation / Learned State reuse compatibility and exact basis binding
 
-Generation binds its exact committed request/synthesis basis, including scope, Conditions, applicable Constraints, Strategy, Learned State/direct basis and material deployment/dependency semantics.
+When Generation selects reusable Learned State, Generation owns contextual reuse compatibility and the exact Learned State binding. Learned State owns its intrinsic state and producing-Learning identity. Direct Generation does not activate SYNC-06; its request, Strategy, Data Meaning, Conditions and other commitments remain Generation-owned or are covered by their own applicable synchronization rules.
 
 ### SYNC-07 — Generation operational realization
 
@@ -77,9 +77,9 @@ When Generation requires operational work, Execution realizes it. Generation own
 
 When Evaluation requires operational work, Execution realizes it. Evaluation owns methodological validity and semantic completion; Execution owns operational realization.
 
-### SYNC-13 — Controlled Evidence handoff
+### SYNC-13 — Generation / Evidence completion handoff
 
-Evidence may be consumed by Generation completion logic or external decision authorities. The handoff transfers no Evidence ownership and creates no release/use approval, formal privacy guarantee or automatic Generation completion.
+When a committed Generation is evidence-gated, Generation may consume exact Evidence to evaluate its own completion basis. Evidence retains finding/claim-strength authority; Generation owns applicability/sufficiency assessment, exact Evidence binding and its completion transition. External release/use/governance handoff remains an interaction/external-authority boundary, not an active accepted-concept synchronization.
 
 ### SYNC-14 — Provenance recording at material transitions
 
@@ -148,6 +148,18 @@ A transaction, event, queue, outbox, workflow engine, service call or provider c
 
 Accepted concept documents may retain historical synchronization-link appendices for traceability. Those appendices do not override this inventory or assign active status to retired/reclassified IDs.
 
+## Phase 014-C whole-design clarification
+
+Phase 014-C replayed the synchronization contract against the current application family and corrected three scope regressions without changing the active-rule inventory:
+
+```text
+SYNC-01  explicit "when Data Meaning participates" scope for Evaluation
+SYNC-06  Generation / Learned State reuse only; direct Generation does not activate it
+SYNC-13  Generation / Evidence evidence-gated completion only; external governance handoff is not accepted-concept synchronization
+```
+
+The corrections restore the Phase 009-F normalized semantics and require no concept, family, count, identifier or architecture change.
+
 ## Phase 013-I disposition
 
 ```text
@@ -160,4 +172,4 @@ new synchronization                         NONE
 upstream reopen                             NONE
 ```
 
-Final Phase 013 R1 closure remains owned by 013-J.
+Phase 013 is complete and R1 is CURRENTLY CLOSED. Phase 014 whole-design consolidation is active.
