@@ -18,10 +18,16 @@ G1-G7                        CURRENTLY CLOSED
 Phase 012                    COMPLETE
 H1/H2                        CURRENTLY CLOSED
 Jackson concept design       COMPLETE FOR CURRENT PRODUCT SCOPE
+Phase 013                    COMPLETE
+R1 architecture              CURRENTLY CLOSED
+Phase 014                    ACTIVE
+014-A                        NEXT ELIGIBLE
+R2                           OPEN
+R3                           OPEN
 implementation readiness     NOT READY
 ```
 
-Phase 012's whole-current-state audit confirms no mapping reopen.
+Phase 012 confirmed no mapping reopen. Phase 013 preserved mapping semantics while reconciling representation and architecture.
 
 ## Final mapping coverage
 
@@ -66,16 +72,14 @@ D4  distributed / host operational drill-down
 
 These are presentation obligations, not UI pages, API tiers or persistence layers.
 
-## Phase 013 boundary
+## Phase 014 boundary
 
-Phase 013 must preserve mapping semantics while selecting/reconciling representation. Combined views/read models may summarize owner facts but cannot become shadow canonical state.
+Phase 014 must verify that mapping remains valid when the complete design is composed with current architecture. Combined views/read models may summarize owner facts but cannot become shadow canonical state.
 
-Provider objects, global status models or historical architecture conventions may not override completed mapping semantics.
-
-The bounded M6 synchronization-label issue is representation/architecture reconciliation only. M8 future concepts receive no placeholder mappings.
+The whole-design audit must preserve decision-material qualifiers, current-versus-historical truth, direct/reconstructed/unknown distinctions, actor disclosure semantics and optional-surface/product-form boundaries.
 
 ## Current next boundary
 
-**Phase 013 — Post-Concept Representation & Architecture Reconciliation** is next eligible.
+**014-A — Whole-Design Audit Authority, Evidence Baseline, Traceability & Reopen Rules** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
