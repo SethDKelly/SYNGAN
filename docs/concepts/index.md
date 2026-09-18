@@ -34,7 +34,7 @@ Phase 013                            COMPLETE
 R1 architecture reconciliation       CURRENTLY CLOSED
 representation / architecture       RECONCILED / CURRENT
 Phase 014                            ACTIVE
-Phase 014 sequencing authority  docs/phases/014/index.md
+Phase 014 subgroup sequencing       SEE docs/phases/014/index.md
 R2                                   OPEN
 R3                                   OPEN
 implementation readiness             NOT READY
