@@ -27,7 +27,8 @@ Phase 013                  ACTIVE
 013-D                      COMPLETE
 013-E                      COMPLETE
 013-F                      COMPLETE
-013-G                      NEXT ELIGIBLE
+013-G                      COMPLETE
+013-H                      NEXT ELIGIBLE
 R1 architecture            DOWNSTREAM / IN PROGRESS
 whole-design readiness     PHASE 014
 ```
@@ -44,19 +45,23 @@ Any future implementation must preserve the reconciled Phase 013 baseline, inclu
 - physical/provider/runtime facts only at their actual evidentiary strength;
 - candidate/seal/result-establishment separation with Generation-owned finality;
 - Strategy semantics distinct from implementation/runtime identity;
-- dependency identity/integrity/trust/compatibility/authorization separation;
-- no hidden acquisition, dependency substitution, remote fallback or undeclared egress;
+- no hidden acquisition, substitution, remote fallback or undeclared egress;
 - role-specific distributed runtime closure rather than driver-only readiness;
-- one stable Execution distinct from subordinate Attempts and platform jobs;
-- Attempt observation distinct from current mutation authority;
-- write authority composed from current recovery frontier, Execution/Attempt authority, resource-local preconditions where needed and current authorization/capability;
-- lease/heartbeat as liveness coordination, not stale-writer proof;
-- operation-scoped idempotency plus fencing rather than exactly-once physical execution;
-- committed checkpoint identity separate from current resume eligibility/semantic results;
-- cancellation intent separate from terminal operational outcome;
-- admission as current operational eligibility separate from semantic readiness, authorization, runtime closure, queue/capacity and mutation authority;
-- resource pressure unable to silently weaken semantic/security contracts;
-- bounded operational history rather than duplication of provider telemetry.
+- one stable Execution distinct from subordinate Attempts/provider jobs;
+- current mutation authority distinct from provider observation;
+- scoped idempotency/fencing/checkpoint/cancellation/recovery/admission boundaries;
+- Evaluation semantic validity distinct from runtime success;
+- retry-safe independently interpretable Evidence findings;
+- immutable Evidence findings distinct from current applicability;
+- Evidence claim strength bounded by actual examination support;
+- Generation-owned Evidence completion basis;
+- typed Provenance with low authority fan-out;
+- direct/reconstructed/partial/unknown historical knowledge distinct from current resolution/disclosure;
+- derived/non-authoritative history/search projections;
+- Reproducibility historical supportability distinct from current feasibility and actor-visible assessability;
+- disclosure/redaction unable to mutate canonical history;
+- empirical privacy Evidence distinct from formal mechanism guarantees and external release/use approval;
+- external governance/lineage integrations unable to create hidden canonical approval/history authority.
 
 Do not convert these architecture roles into production classes/services/tables merely because their semantics are now reconciled.
 
@@ -76,17 +81,16 @@ Until Phase 014 passes, do not add or stabilize production:
 - Strategy/runtime/plugin adapters;
 - dependency resolvers/downloaders;
 - authorization/secrets/provider integrations;
-- Execution/Attempt schedulers or provider launchers;
-- fencing/idempotency/checkpoint/recovery/admission machinery;
-- Evidence/Provenance implementations;
-- deployment/platform integrations;
+- Execution/Attempt schedulers, launchers, fencing/idempotency/checkpoint/recovery/admission machinery;
+- Evidence stores, Provenance graphs, history/query/reproducibility services;
+- privacy accounting/guarantee or governance/release workflow state;
+- platform/deployment adapters or IaC;
 - benchmarks or executable conformance gates intended to manufacture readiness.
 
 ## Remaining design before readiness
 
 ```text
-013-G  Evaluation / Evidence / Provenance / history / disclosure        NEXT
-013-H  deployment / scale / observability / portability / integration
+013-H  deployment / scale / observability / portability / integration  NEXT
 013-I  cross-architecture / ADR / legacy / M6 / residual register
 013-J  R1 completion / Phase 014 handoff
 014    whole-design implementation-readiness decision
@@ -96,4 +100,4 @@ Until Phase 014 passes, do not add or stabilize production:
 
 Design-only work:
 
-**013-G — Evaluation, Evidence, Provenance, Historical Query, Reproducibility, Disclosure & External-Governance Boundary Reconciliation**.
+**013-H — Deployment, Scalability, Observability, Portability, Compatibility & Platform-Integration Reconciliation**.
