@@ -20,6 +20,10 @@ This authority advances F4 without selecting concrete Python classes, method nam
 
 ---
 
+## Current Phase 014 completion note
+
+This document preserves its Phase 010 derivation and original subgroup handoff as historical provenance. Phase 010 F1-F5 are complete; Phase 012 confirmed mapping completion; Phase 013 preserved mapping semantics in architecture; Phase 014-D re-audits the current mapping layer. Current subgroup sequencing is governed by [Phase 014](../phases/014/index.md).
+
 ## Governing authority
 
 010-E consumes:
