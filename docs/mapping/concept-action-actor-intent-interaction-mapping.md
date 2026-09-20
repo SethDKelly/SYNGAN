@@ -90,6 +90,10 @@ Surface labels follow 010-A: `S1` SDK/API, `S2` notebook, `S3` CLI, `S4` report/
 
 # 4. Data Meaning action mappings
 
+## Current Phase 014 completion note
+
+This document preserves its Phase 010 derivation and original subgroup handoff as historical provenance. Phase 010 F1-F5 are complete; Phase 012 confirmed mapping completion; Phase 013 preserved mapping semantics in architecture; Phase 014-D re-audits the current mapping layer. Current subgroup sequencing is governed by [Phase 014](../phases/014/index.md).
+
 ## DM-A01 — Create / Declare draft meaning
 
 - **Actors + intent/obligation:** A3 Data Owner/Steward and A1 Data Practitioner primarily; A7 Extension Author where extension semantics are declared. Actors must be able to state semantic assertions for an identifiable subject/scope and distinguish their declared origin from inference.
