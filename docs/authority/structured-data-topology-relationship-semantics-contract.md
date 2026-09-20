@@ -204,8 +204,8 @@ Relevant current rules include:
 SYNC-01  exact Data Meaning revision binding
 SYNC-02  Strategy compatibility including requested topology/scope
 SYNC-03  Constraint binding and handling
-SYNC-06  Generation commitment/compatibility including quantity/scope,
-         exact synthesis basis and material approximation semantics
+SYNC-06  Generation / Learned State reuse compatibility when reusable
+         Learned State participates; direct Generation does not activate it
 SYNC-07  Generation operational realization; candidate state remains non-final
 SYNC-09  Evaluation Criterion binding
 SYNC-10  Evaluation method/scope/coverage compatibility
