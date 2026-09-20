@@ -45,7 +45,8 @@ Phase 014 start gate            COMPLETE
 Phase 014                       ACTIVE
 014-A                           COMPLETE
 014-B                           COMPLETE
-014-C                           NEXT ELIGIBLE
+014-C                           COMPLETE
+014-D                           NEXT ELIGIBLE
 R2                              OPEN
 R3                              OPEN
 ```
@@ -94,11 +95,12 @@ Phase 014 findings must distinguish missing design semantics from normal impleme
 ```text
 014-A         COMPLETE — audit evidence baseline / traceability / reopen rules
 014-B         COMPLETE — problem / actor / outcome / concept-purpose coverage
-014-C..014-G  whole-design evidence / residual-readiness preflight
+014-C         COMPLETE — concept / dependence / family / synchronization integrity
+014-D..014-G  whole-design evidence / residual-readiness preflight
 014-H         R2 decision / R3 decision / Phase 015 handoff
 015           Implementation Authority & Controlled Delivery — FUTURE ONLY
 ```
 
 ## Current next boundary
 
-**014-C — Concept Specification, Dependence, Application-Family & Synchronization Integrity Audit** is next eligible.
+**014-D — Mapping, Interaction, Linguistic, Disclosure & Semantic-Parity Whole-Design Audit** is next eligible.
