@@ -302,4 +302,4 @@ Detailed authority: [Phase 014-B Problem/Actor/Outcome/Concept-Purpose Audit](ph
 
 ## Current next boundary
 
-**014-D — Mapping, Interaction, Linguistic, Disclosure & Semantic-Parity Whole-Design Audit** is next eligible.
+**014-E — Architecture Realization Coverage, Responsibility/Authority & Design-to-Architecture Traceability Audit** is next eligible.
