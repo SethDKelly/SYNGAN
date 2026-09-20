@@ -87,6 +87,10 @@ A physical interaction may span several gestures, and one view may compose sever
 
 Every current Phase 010 mapping record must be expressible using the following fields. Later subgroups may add detail but must not remove these semantic dimensions when material.
 
+## Current Phase 014 completion note
+
+This document preserves its Phase 010 derivation and original subgroup handoff as historical provenance. Phase 010 F1-F5 are complete; Phase 012 confirmed mapping completion; Phase 013 preserved mapping semantics in architecture; Phase 014-D re-audits the current mapping layer. Current subgroup sequencing is governed by [Phase 014](../phases/014/index.md).
+
 ## M1 — Mapping identifier
 
 A stable documentation identifier for the mapping record.
