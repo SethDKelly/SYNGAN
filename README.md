@@ -34,7 +34,8 @@ Phase 014 start gate                 COMPLETE
 Phase 014                            ACTIVE
 014-A                                COMPLETE
 014-B                                COMPLETE
-014-C                                NEXT ELIGIBLE
+014-C                                COMPLETE
+014-D                                NEXT ELIGIBLE
 R2                                   OPEN
 R3                                   OPEN
 implementation readiness             NOT READY
@@ -61,7 +62,7 @@ Approved sequence:
 ```text
 014-A  evidence baseline / traceability / reopen rules — COMPLETE
 014-B  problem / actors / outcomes / scope / concept-purpose coverage — COMPLETE
-014-C  concept / dependence / application-family / synchronization integrity — NEXT
+014-C  concept / dependence / application-family / synchronization integrity — COMPLETE
 014-D  mapping / interaction / disclosure / semantic parity
 014-E  architecture realization / design-to-architecture traceability
 014-F  end-to-end scenarios / failure / recovery / scale / security / portability
@@ -91,4 +92,4 @@ Even a later positive R3 does not start implementation; explicit Phase 015 autho
 
 ## Current next boundary
 
-**014-C — Concept Specification, Dependence, Application-Family & Synchronization Integrity Audit** is next eligible.
+**014-D — Mapping, Interaction, Linguistic, Disclosure & Semantic-Parity Whole-Design Audit** is next eligible.
