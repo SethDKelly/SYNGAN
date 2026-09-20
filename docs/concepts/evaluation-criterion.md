@@ -61,7 +61,7 @@ Scope may include:
 - aggregate/distribution properties;
 - a Learned State where the question legitimately concerns reusable state;
 - a source/synthetic comparison;
-- future relational/cross-dataset scope.
+- relational/cross-dataset scope within the current structured-topology target.
 
 Criterion scope is logical rather than physical. Spark partitions, files, workers, or sample batches do not define the conceptual population unless the Criterion intentionally concerns them.
 
