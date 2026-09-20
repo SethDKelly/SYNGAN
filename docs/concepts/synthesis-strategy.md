@@ -103,7 +103,7 @@ Examples may include:
 - datetime-like meaning;
 - missingness semantics;
 - interdependent field groups;
-- future relational/cross-scope semantics.
+- relational/cross-scope semantics within the current structured-topology scope.
 
 A physical Spark type does not satisfy a semantic requirement by itself.
 
