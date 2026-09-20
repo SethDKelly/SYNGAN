@@ -39,7 +39,7 @@ A Data Meaning scope identifies the structured-data subject whose semantics are 
 - a set of fields whose meaning is interdependent;
 - a record-level semantic property;
 - a logical dataset scope;
-- a future relational scope when relational synthesis becomes supported.
+- a relational/cross-scope subject when current structured topology semantics require it.
 
 The concept MUST NOT assume that all meaning is field-local or that all datasets are permanently single-table.
 
