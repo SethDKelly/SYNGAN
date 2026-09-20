@@ -302,4 +302,4 @@ Detailed authority: [Phase 014-B Problem/Actor/Outcome/Concept-Purpose Audit](ph
 
 ## Current next boundary
 
-**014-C — Concept Specification, Dependence, Application-Family & Synchronization Integrity Audit** is next eligible.
+**014-D — Mapping, Interaction, Linguistic, Disclosure & Semantic-Parity Whole-Design Audit** is next eligible.
