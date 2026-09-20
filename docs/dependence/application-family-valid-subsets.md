@@ -18,6 +18,10 @@ It closes the current Jackson methodology obligation to derive meaningful valid 
 
 It does not yet perform the systematic contraction/extension consequence audit owned by 009-D, replay the synchronization inventory owned by 009-E, or decide product packaging/editions.
 
+## Current completion note
+
+This document preserves the Phase 009-C derivation and examples. The downstream work it originally handed to 009-D/009-E is now complete. Current interpretation is governed by the [Dependence/Application-Family Index](index.md) and the [Current Cross-Concept Synchronization Contract](../synchronizations/current-cross-concept-synchronizations.md). Phase 014-C re-audited these family rules and found no family change required.
+
 ## Governing authority
 
 - [Concept Design Methodology](../authority/design-methodology.md)
