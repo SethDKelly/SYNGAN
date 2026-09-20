@@ -16,6 +16,7 @@ These documents define how SYNGAN design knowledge is created, reconciled, audit
 - [Phase 014 Whole-Design Consolidation & Readiness Authority](phase-014-whole-design-readiness-authority.md)
 - [Phase 014-A Whole-Design Evidence Baseline](phase-014-whole-design-audit-evidence-baseline.md)
 - [Phase 014-B Problem/Actor/Outcome/Concept-Purpose Audit](phase-014-b-problem-actor-outcome-concept-purpose-audit.md)
+- [Phase 014-C Concept/Dependence/Application-Family/Synchronization Integrity Audit](phase-014-c-concept-dependence-family-synchronization-integrity-audit.md)
 
 ## Completed upstream authority
 
@@ -40,7 +41,8 @@ Phase 014 start gate                 COMPLETE
 Phase 014                            ACTIVE
 014-A                                COMPLETE
 014-B                                COMPLETE
-014-C                                NEXT ELIGIBLE
+014-C                                COMPLETE
+014-D                                NEXT ELIGIBLE
 R2                                   OPEN
 R3                                   OPEN
 implementation readiness             NOT READY
@@ -59,7 +61,7 @@ A whole-design defect reopens only the smallest owning authority. Implementation
 ```text
 014-A  evidence baseline / traceability / reopen rules — COMPLETE
 014-B  problem / actor / outcome / scope / concept-purpose coverage — COMPLETE
-014-C  concept / dependence / application-family / synchronization integrity — NEXT
+014-C  concept / dependence / application-family / synchronization integrity — COMPLETE
 014-D  mapping / interaction / disclosure / semantic parity
 014-E  architecture realization / authority / traceability
 014-F  cross-layer scenario / failure / recovery / scale / security / portability
@@ -96,4 +98,4 @@ Even a positive R3 requires explicit Phase 015 implementation authority.
 
 ## Current next boundary
 
-**014-C — Concept Specification, Dependence, Application-Family & Synchronization Integrity Audit** is next eligible.
+**014-D — Mapping, Interaction, Linguistic, Disclosure & Semantic-Parity Whole-Design Audit** is next eligible.
