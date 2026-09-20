@@ -55,7 +55,7 @@ A Constraint may apply at different logical scales, including:
 - multiple fields within a record;
 - record-to-record or dataset-level properties;
 - aggregate/distribution-level rules when truly prescriptive;
-- future relational or cross-dataset scope.
+- relational or cross-dataset scope within the current structured-topology target.
 
 The concept MUST NOT assume that all Constraints are row-local or single-table.
 
