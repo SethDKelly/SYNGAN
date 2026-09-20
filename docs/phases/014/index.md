@@ -29,7 +29,8 @@ Phase 014 start gate            COMPLETE
 Phase 014                       ACTIVE
 014-A                           COMPLETE
 014-B                           COMPLETE
-014-C                           NEXT ELIGIBLE
+014-C                           COMPLETE
+014-D                           NEXT ELIGIBLE
 R2                              OPEN
 R3                              OPEN
 implementation readiness        NOT READY
@@ -60,10 +61,10 @@ Phase 014 must audit current problem, concept, dependence/application-family, sy
        Concept-Purpose Coverage Audit — COMPLETE
 
 014-C  Concept Specification, Dependence, Application-Family &
-       Synchronization Integrity Audit — NEXT
+       Synchronization Integrity Audit — COMPLETE
 
 014-D  Mapping, Interaction, Linguistic, Disclosure &
-       Semantic-Parity Whole-Design Audit
+       Semantic-Parity Whole-Design Audit — NEXT
 
 014-E  Architecture Realization Coverage, Responsibility/Authority &
        Design-to-Architecture Traceability Audit
@@ -158,4 +159,4 @@ Explicit Phase 015 authority remains required before implementation begins.
 
 ## Current next boundary
 
-**014-C — Concept Specification, Dependence, Application-Family & Synchronization Integrity Audit** is next eligible.
+**014-D — Mapping, Interaction, Linguistic, Disclosure & Semantic-Parity Whole-Design Audit** is next eligible.
