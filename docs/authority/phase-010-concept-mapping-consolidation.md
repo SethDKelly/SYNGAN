@@ -32,9 +32,11 @@ Phase 010 exits positively with:
 
 ```text
 PHASE 010                    COMPLETE
-CONCEPT MAPPING              COMPLETE ENOUGH FOR PHASE 011
+CONCEPT MAPPING              COMPLETE / CURRENT
 F1-F5                        CURRENTLY CLOSED
-JACKSON CONCEPT DESIGN       NOT COMPLETE
+JACKSON CONCEPT DESIGN       COMPLETE FOR CURRENT PRODUCT SCOPE
+PHASE 013                    COMPLETE / R1 CLOSED
+PHASE 014                    ACTIVE / R2-R3 OPEN
 IMPLEMENTATION READINESS     NOT READY
 IMPLEMENTATION START         NOT STARTED
 IMPLEMENTATION NEXT          NOT YET
@@ -382,6 +384,21 @@ None of R010-01 through R010-08 blocks Phase 011 entry.
 
 ---
 
+## Current Phase 014 interpretation
+
+The original Phase 011 handoff below is retained as historical phase provenance. Since then:
+
+```text
+Phase 011 quality / misfit         COMPLETE
+Phase 012 Jackson completion       COMPLETE
+Phase 013 architecture             COMPLETE / R1 CLOSED
+Phase 014 whole-design audit       ACTIVE
+```
+
+Phase 014-D re-audited the mapping layer against current synchronization and architecture authority and found no mapping semantic reopen. Current subgroup sequencing is governed by `docs/phases/014/index.md`.
+
+---
+
 # 13. Phase 011 handoff
 
 Phase 011 receives a completed concept-mapping layer and should evaluate the final mapped design against methodology area G:
@@ -448,7 +465,9 @@ F2                                        CURRENTLY CLOSED
 F3                                        CURRENTLY CLOSED
 F4                                        CURRENTLY CLOSED
 F5                                        CURRENTLY CLOSED
-JACKSON CONCEPT DESIGN                    NOT COMPLETE
+JACKSON CONCEPT DESIGN                    COMPLETE FOR CURRENT PRODUCT SCOPE
+PHASE 013                                 COMPLETE / R1 CLOSED
+PHASE 014                                 ACTIVE
 IMPLEMENTATION READINESS                  NOT READY
 IMPLEMENTATION START                      NOT STARTED
 IMPLEMENTATION NEXT                       NOT YET
