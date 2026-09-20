@@ -94,7 +94,7 @@ The Phase 014 pre-phase start gate is complete and has activated the dependency-
 014-A  Whole-Design Audit Authority / Evidence Baseline / Traceability — COMPLETE
 014-B  Problem / Actors / Outcomes / Scope / Concept-Purpose Coverage — COMPLETE
 014-C  Concept / Dependence / Application-Family / Synchronization Integrity — COMPLETE
-014-D  Mapping / Interaction / Linguistic / Disclosure / Semantic Parity — NEXT
+014-D  Mapping / Interaction / Linguistic / Disclosure / Semantic Parity — COMPLETE
 014-E  Architecture Realization / Responsibility / Design-to-Architecture Traceability
 014-F  End-to-End Scenario / Failure / Recovery / Scale / Security / Portability
 014-G  Implementation-Neutral Completeness / Handoff Sufficiency / Residual Register
@@ -142,7 +142,8 @@ Phase 014                            ACTIVE
 014-A                                COMPLETE
 014-B                                COMPLETE
 014-C                                COMPLETE
-014-D                                NEXT ELIGIBLE
+014-D                                COMPLETE
+014-E                                NEXT ELIGIBLE
 R2                                   OPEN
 R3                                   OPEN
 IMPLEMENTATION READINESS             NOT READY
@@ -170,4 +171,4 @@ Phase 014 is not implementation. A positive future R3 may set readiness to `READ
 
 ## Current next boundary
 
-**014-D — Mapping, Interaction, Linguistic, Disclosure & Semantic-Parity Whole-Design Audit** is next eligible.
+**014-E — Architecture Realization Coverage, Responsibility/Authority & Design-to-Architecture Traceability Audit** is next eligible.
