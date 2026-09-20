@@ -20,6 +20,10 @@ This authority resolves:
 
 It does **not** yet enumerate or approve all valid concept subsets. Phase 009-C owns systematic application-family derivation.
 
+## Current completion note
+
+This document preserves the Phase 009-B graph/order derivation. Application-family derivation and synchronization replay are now complete. The graph remains current under the [Dependence/Application-Family Index](index.md); Phase 014-C found no edge, SCC, root/order or non-binary-prerequisite change required.
+
 ## Governing authority
 
 - [Concept Design Methodology](../authority/design-methodology.md)
