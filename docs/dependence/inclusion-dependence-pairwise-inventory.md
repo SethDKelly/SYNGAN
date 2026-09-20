@@ -19,6 +19,10 @@ This document classifies every directed non-self concept pair as:
 
 009-A determines the pairwise relation inventory only. Direct versus transitive edges, cycle treatment, roots/leaves, and explanation ordering remain 009-B work.
 
+## Current completion note
+
+This document preserves the Phase 009-A pairwise inventory. Direct/transitive edge decisions, SCC treatment, application-family rules and synchronization replay are now complete. Phase 014-C found no pairwise inclusion-dependence change required.
+
 ## Governing question
 
 For concepts `C1` and `C2` in an application variant `A`:
