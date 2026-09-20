@@ -333,8 +333,11 @@ Most relevant:
 - SYNC-10 — method compatibility/claim strength;
 - SYNC-11 — Evaluation operational realization;
 - SYNC-12 — Evidence establishment;
-- SYNC-13 — controlled external/Generation handoff;
-- SYNC-14 / SYNC-15 — historical/reproducibility attribution.
+- SYNC-13 — Generation / Evidence evidence-gated completion handoff;
+- SYNC-14 — material Provenance relationship recording;
+- Reproducibility — cross-cutting derived contract; historical SYNC-15 is not active synchronization state.
+
+External organizational release/use handoff remains an external-authority/mapping boundary, not an active accepted-concept synchronization.
 
 No new synchronization is justified until a new mechanism-specific concept is accepted.
 
