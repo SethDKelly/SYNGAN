@@ -318,3 +318,22 @@ IMPLEMENTATION START          STARTED
 Current authority: [015-C Identity / References / Control Persistence](phase-015-c-identity-reference-control-persistence-authority.md).
 
 The repository next boundary is **015-D — Distributed Data-State, Structured Topology, Candidate/Seal & Generation Promotion**, still gated pending explicit proceed.
+
+
+## Post-015-D consumption
+
+015-D has completed the provider-neutral distributed-data, structured-topology, sealed-subject, Generation candidate and promotion foundation.
+
+~~~text
+015-A                         COMPLETE
+015-B                         COMPLETE
+015-C                         COMPLETE
+015-D                         COMPLETE
+015-E                         NEXT ELIGIBLE / NOT AUTHORIZED
+015-F..015-J                  NOT AUTHORIZED
+IMPLEMENTATION START          STARTED
+~~~
+
+Current authority: [015-D Distributed Data / Topology / Generation Promotion](phase-015-d-distributed-data-topology-generation-promotion-authority.md).
+
+The repository next boundary is **015-E — Strategy/Method Binding, Dependency Closure, Learning/Learned-State & Generation Runtime**, still gated pending explicit proceed.
