@@ -1,7 +1,7 @@
 ---
 type: Implementation Index
 title: SYNGAN Implementation Planning & Delivery Authority
-status: suspended
+status: ready-gated
 ---
 
 # SYNGAN Implementation Planning & Delivery Authority
@@ -9,12 +9,12 @@ status: suspended
 ## Current posture
 
 ```text
-IMPLEMENTATION READINESS   NOT READY
+IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       NOT STARTED
-IMPLEMENTATION NEXT        NOT YET
+IMPLEMENTATION NEXT        PHASE 015 AUTHORITY GATE
 ```
 
-No implementation tranche is eligible.
+No implementation tranche is yet authorized. Only the Phase 015 authority/start gate is eligible.
 
 ## Current design progress
 
@@ -24,7 +24,7 @@ Phase 013                       COMPLETE
 R1 architecture reconciliation CURRENTLY CLOSED
 representation / architecture  RECONCILED / CURRENT
 Phase 014 start gate            COMPLETE
-Phase 014                       ACTIVE
+Phase 014                       COMPLETE
 014-A                           COMPLETE
 014-B                           COMPLETE
 014-C                           COMPLETE
@@ -32,12 +32,12 @@ Phase 014                       ACTIVE
 014-E                                COMPLETE
 014-F                                COMPLETE
 014-G                                COMPLETE
-014-H                                NEXT ELIGIBLE
-R2                              OPEN
-R3                              OPEN
+014-H                                COMPLETE
+R2                              CURRENTLY CLOSED
+R3                              READY
 ```
 
-Architecture completion and Phase 014 activation do not authorize implementation.
+Phase 014 completion and R3 readiness do not authorize implementation.
 
 ## Phase 014 implementation-evidence boundary
 
@@ -76,13 +76,13 @@ Earlier implementation documents may still contain stage-local frontmatter or pr
 
 Those are historical planning statements and **do not outrank completed Phase 012/013/014 authority**.
 
-If 014-H later makes R3 positive, Phase 015 must first re-baseline historical plans, source topology and tests before treating them as current implementation authority or CI acceptance gates.
+Phase 014-H made R3 positive. Phase 015 must first re-baseline historical plans, source topology and tests before treating them as current implementation authority or CI acceptance gates.
 
 Current residual/readiness evidence is [Phase 014-G Implementation-Neutral Completeness / Residual Readiness Register](../authority/phase-014-g-implementation-neutral-completeness-handoff-sufficiency-residual-readiness-register.md).
 
 ## Current prohibition
 
-Until 014-H explicitly decides R3, do not add or stabilize production:
+Until the Phase 015 start gate is complete and an explicit delivery slice is authorized, do not add or stabilize production:
 
 - persistence/query schemas or migrations;
 - data-state/manifest/candidate stores;
@@ -97,9 +97,9 @@ Until 014-H explicitly decides R3, do not add or stabilize production:
 - benchmarks/performance qualification;
 - executable conformance gates intended to manufacture readiness.
 
-## If R3 later passes
+## Post-R3 posture
 
-A positive R3 may establish only:
+Phase 014-H established:
 
 ```text
 IMPLEMENTATION READINESS   READY
@@ -111,6 +111,4 @@ Phase 015 explicit authority remains required before implementation begins.
 
 ## Current next boundary
 
-Design-only work:
-
-**014-H — Phase 014 Consolidation, R2 Completion Decision, R3 Implementation-Readiness Decision & Phase 015 Handoff**.
+**Phase 015 Start Gate — Implementation Authority, Current-Baseline Reconciliation & Controlled-Delivery Decomposition**.
