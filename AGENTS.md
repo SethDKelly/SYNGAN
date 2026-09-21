@@ -4,7 +4,7 @@ These instructions apply repository-wide to automated coding/documentation agent
 
 ## Current posture
 
-**Jackson concept design and Phase 013/014 are complete; R2 is currently closed and R3 is READY. Phase 015 implementation has STARTED. The start gate and 015-A through 015-I are complete. 015-J is next eligible but NOT AUTHORIZED pending explicit proceed.**
+**Jackson concept design and Phase 013/014 are complete; R2 is currently closed and R3 is READY. Phase 015 implementation has STARTED. The start gate and 015-A through 015-I are complete. 015-J is AUTHORIZED / ACTIVE as the Phase 015 cross-slice integration and closure slice.**
 
 Start with:
 
@@ -29,6 +29,7 @@ Start with:
 - `docs/implementation/phase-015-g-evaluation-evidence-provenance-history-reproducibility-authority.md`
 - `docs/implementation/phase-015-h-authorization-disclosure-protected-existence-secrets-dependency-trust-no-egress-authority.md`
 - `docs/implementation/phase-015-i-platform-capability-portability-observability-scale-performance-support-qualification-authority.md`
+- `docs/implementation/phase-015-j-cross-slice-integration-residual-risk-closure-implementation-consolidation-authority.md`
 - `docs/architecture/phase-013-consolidated-architecture-contract.md`
 - `docs/synchronizations/current-cross-concept-synchronizations.md`
 
@@ -63,10 +64,10 @@ Phase 015 start gate                  COMPLETE
 015-G                                 COMPLETE
 015-H                                 COMPLETE
 015-I                                 COMPLETE
-015-J                                 NEXT ELIGIBLE / NOT AUTHORIZED
+015-J                                 AUTHORIZED / ACTIVE
 implementation readiness             READY
 implementation start                 STARTED
-implementation next                  015-H — NEXT ELIGIBLE / NOT AUTHORIZED
+implementation next                  015-J — AUTHORIZED / ACTIVE
 ```
 
 ## Primary authority rule
@@ -147,11 +148,11 @@ Phase 014-H has established:
 ```text
 IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       STARTED
-IMPLEMENTATION NEXT        015-J — NEXT ELIGIBLE / NOT AUTHORIZED
+IMPLEMENTATION NEXT        015-J — AUTHORIZED / ACTIVE
 ```
 
-015-A through 015-I are complete. The provider-neutral capability/portability/observability/support-qualification framework is implemented and C8 is active. Real Spark/Databricks and enterprise-scale support remain unclaimed without provider/benchmark evidence; cross-slice integration and residual closure remain locked to 015-J.
+015-A through 015-I are complete. 015-J is actively replaying cross-slice/adversarial scenarios, closing the Phase 014 residual-risk register, and consolidating Phase 015. Real Spark/Databricks and enterprise-scale support remain unclaimed without provider/benchmark evidence.
 
 ## Current next boundary
 
-**015-J — Cross-Slice Integration, Residual Risk Closure & Implementation Consolidation** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
+**015-J — Cross-Slice Integration, Residual Risk Closure & Implementation Consolidation** is **AUTHORIZED / ACTIVE**.
