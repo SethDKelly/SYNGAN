@@ -70,5 +70,8 @@ def test_phase_015_current_summary_replaces_completed_slice_authority_as_current
     assert not (
         DOCS
         / "implementation"
-        / "phase-015-j-cross-slice-integration-residual-risk-closure-implementation-consolidation-authority.md"
+        / (
+            "phase-015-j-cross-slice-integration-residual-risk-closure-"
+            "implementation-consolidation-authority.md"
+        )
     ).exists()
