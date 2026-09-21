@@ -4,7 +4,7 @@ These instructions apply repository-wide to automated coding/documentation agent
 
 ## Current posture
 
-**Jackson concept design is complete. Phase 013 architecture reconciliation is complete and R1 is currently closed. Phase 014 whole-design/readiness work is ACTIVE; 014-A through 014-G are complete and 014-H is next. Implementation remains held pending the explicit R2/R3 decision. Implementation remains held.**
+**Jackson concept design is complete. Phase 013 architecture reconciliation is complete and R1 is currently closed. Phase 014 whole-design/readiness work is ACTIVE; 014-A through 014-G are complete and 014-H is next. Implementation remains held pending the explicit R2/R3 decision.**
 
 Start with:
 
