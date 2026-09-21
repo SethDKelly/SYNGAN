@@ -2,7 +2,7 @@
 ---
 type: Implementation Authority
 title: 015-G — Evaluation, Evidence, Provenance, Historical Read Composition & Reproducibility
-status: active-current
+status: complete-current
 ---
 
 # 015-G — Evaluation, Evidence, Provenance, Historical Read Composition & Reproducibility
@@ -174,3 +174,81 @@ The assessment never creates a canonical Reproducibility resource or active sync
 015-H..015-J NOT AUTHORIZED
 IMPLEMENTATION START STARTED
 ~~~
+
+
+## Completion evidence
+
+015-G is complete.
+
+~~~text
+Evaluation semantic lifecycle                 IMPLEMENTED
+multiple durable Evidence findings            IMPLEMENTED
+claim-strength non-broadening                 IMPLEMENTED
+negative / indeterminate Evidence             VERIFIED
+immutable finding / mutable applicability     IMPLEMENTED
+exact Generation Evidence-use provenance      IMPLEMENTED
+typed Provenance assertions                   IMPLEMENTED
+Provenance supersede / invalidate state       IMPLEMENTED
+direct / reconstructed / partial history      IMPLEMENTED
+historical knowledge vs resolution axes       IMPLEMENTED
+derived Evidence comparison                   IMPLEMENTED
+derived Reproducibility assessment            IMPLEMENTED
+canonical Reproducibility resource            NONE
+C6                                            ACTIVE / PASS
+
+commit                                        7270d1e09022f2962de221d60c939e7420aa8e59
+workflow run                                  35599424927
+~~~
+
+The successful workflow included:
+
+~~~text
+portable authority / fitness        PASS — 13
+portable unit                       PASS — 44
+portable fitness                    PASS — 14
+control persistence                 PASS — 9
+distributed data-state              PASS — 4
+Strategy runtime / Learned-State    PASS — 1
+Execution / recovery                PASS — 2
+Evaluation / Evidence / history     PASS — 7
+Import Linter                       PASS — 2 / 2
+~~~
+
+## Readiness-risk / downstream disposition
+
+015-G does not close authorization/disclosure or provider/scale risks.
+
+~~~text
+RR-08 authorization / disclosure / protected existence
+  Evidence/history semantic foundation     COMPLETE
+  actor-safe disclosure enforcement        015-H
+
+RR-04 provider/history qualification
+  exact historical reference composition  IMPLEMENTED
+  provider/storage guarantee qualification 015-I
+
+C7                                         DEFINED
+C8                                         DEFINED
+C9                                         DEFINED
+~~~
+
+No ICLASS-3 or ICLASS-4 finding was produced and no upstream reopen is required.
+
+## Current authorization state
+
+~~~text
+015-A        COMPLETE
+015-B        COMPLETE
+015-C        COMPLETE
+015-D        COMPLETE
+015-E        COMPLETE
+015-F        COMPLETE
+015-G        COMPLETE
+015-H        NEXT ELIGIBLE / NOT AUTHORIZED
+015-I..015-J NOT AUTHORIZED
+IMPLEMENTATION START STARTED
+~~~
+
+## Current next boundary
+
+**015-H — Authorization, Disclosure, Protected Existence, Secrets, Dependency Trust & No-Egress** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
