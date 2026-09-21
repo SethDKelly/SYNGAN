@@ -56,3 +56,6 @@ jobs:
 
       - name: Run required authorization disclosure and no-egress gate
         run: uv run --no-sync python tools/verify.py security
+
+      - name: Run required platform portability and qualification gate
+        run: uv run --no-sync python tools/verify.py platform
