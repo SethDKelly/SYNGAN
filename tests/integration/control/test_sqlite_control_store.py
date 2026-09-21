@@ -62,10 +62,12 @@ def test_exact_revision_resolution_never_substitutes_latest(tmp_path: Path) -> N
         store.put_immutable_revision(r1, SCHEMA, payload(name="one"), FRONTIER_0)
         store.put_immutable_revision(r2, SCHEMA, payload(name="two"), FRONTIER_0)
 
-        assert store.resolve_immutable_revision(r1).record is not None
-        assert store.resolve_immutable_revision(r1).record.payload == payload(name="one")
-        assert store.resolve_immutable_revision(r2).record is not None
-        assert store.resolve_immutable_revision(r2).record.payload == payload(name="two")
+        resolved_r1 = store.resolve_immutable_revision(r1)
+        resolved_r2 = store.resolve_immutable_revision(r2)
+        assert resolved_r1.record is not None
+        assert resolved_r2.record is not None
+        assert resolved_r1.record.payload == payload(name="one")
+        assert resolved_r2.record.payload == payload(name="two")
 
         missing = exact_reference("r3")
         assert store.resolve_immutable_revision(missing).status is ResolutionStatus.ABSENT
