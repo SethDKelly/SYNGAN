@@ -38,3 +38,6 @@ jobs:
 
       - name: Run required portable verification gate
         run: uv run --no-sync python tools/verify.py portable
+
+      - name: Run required control persistence gate
+        run: uv run --no-sync python tools/verify.py control
