@@ -79,6 +79,7 @@ from syngan.foundation.runtime import (
     GenerationBasisKind,
     ImplementationBinding,
     LearningRequirement,
+    RuntimeClosureAssessment,
     RuntimeRoleResolution,
     StrategyRuntimeRequirements,
     assess_runtime_closure,
@@ -152,7 +153,7 @@ def topology() -> TopologyDescriptor:
 def runtime_closure(
     strategy: StrategyRuntimeRequirements,
     binding: ImplementationBinding,
-):
+) -> RuntimeClosureAssessment:
     return assess_runtime_closure(
         strategy,
         binding,
