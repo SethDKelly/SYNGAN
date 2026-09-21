@@ -2,7 +2,7 @@
 ---
 type: Implementation Authority
 title: 015-B — Current Verification Harness, Architecture-Fitness & Evidence-Gate Foundation
-status: active-current
+status: complete-current
 ---
 
 # 015-B — Current Verification Harness, Architecture-Fitness & Evidence-Gate Foundation
@@ -331,11 +331,36 @@ repository Verify workflow                 green on current head
 domain implementation                      NONE
 ~~~
 
+## Completion evidence
+
+~~~text
+C0                         ACTIVE / EXECUTABLE
+C1-C9                      DEFINED / SLICE-ACTIVATED
+authority profile          EXECUTABLE
+static profile             EXECUTABLE
+portable profile           EXECUTABLE / REQUIRED CI GATE
+S01-S14                    REGISTERED
+historical Phase 005       DEMOTED
+domain implementation      NONE
+ICLASS-3                   0
+ICLASS-4                   0
+upstream reopen            NONE
+~~~
+
+Repository verification passed with the explicit portable profile at commit
+`40d3c75d363696ac6c4000b426c1ba4718876290`.
+
 ## Current authorization state
 
 ~~~text
 015-A        COMPLETE
-015-B        AUTHORIZED / ACTIVE
-015-C..015-J NOT AUTHORIZED
+015-B        COMPLETE
+015-C        NEXT ELIGIBLE / NOT AUTHORIZED
+015-D..015-J NOT AUTHORIZED
 IMPLEMENTATION START  NOT STARTED
 ~~~
+
+
+## Current next boundary
+
+**015-C — Identity, References, Representation, Durable Owner-State & Control Persistence** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
