@@ -4,7 +4,7 @@ These instructions apply repository-wide to automated coding/documentation agent
 
 ## Current posture
 
-**Jackson concept design and Phase 013/014 are complete; R2 is currently closed and R3 is READY. Phase 015 implementation has STARTED. The start gate and 015-A through 015-G are complete. 015-H is next eligible but NOT AUTHORIZED pending explicit proceed; later slices remain locked.**
+**Jackson concept design and Phase 013/014 are complete; R2 is currently closed and R3 is READY. Phase 015 implementation has STARTED. The start gate and 015-A through 015-H are complete. 015-I is next eligible but NOT AUTHORIZED pending explicit proceed; 015-J remains locked.**
 
 Start with:
 
@@ -27,6 +27,7 @@ Start with:
 - `docs/implementation/phase-015-e-strategy-runtime-learning-generation-authority.md`
 - `docs/implementation/phase-015-f-execution-attempt-admission-fencing-idempotency-checkpoint-cancellation-recovery-authority.md`
 - `docs/implementation/phase-015-g-evaluation-evidence-provenance-history-reproducibility-authority.md`
+- `docs/implementation/phase-015-h-authorization-disclosure-protected-existence-secrets-dependency-trust-no-egress-authority.md`
 - `docs/architecture/phase-013-consolidated-architecture-contract.md`
 - `docs/synchronizations/current-cross-concept-synchronizations.md`
 
@@ -59,8 +60,9 @@ Phase 015 start gate                  COMPLETE
 015-E                                 COMPLETE
 015-F                                 COMPLETE
 015-G                                 COMPLETE
-015-H                                 NEXT ELIGIBLE / NOT AUTHORIZED
-015-I..015-J                          NOT AUTHORIZED
+015-H                                 COMPLETE
+015-I                                 NEXT ELIGIBLE / NOT AUTHORIZED
+015-J                                 NOT AUTHORIZED
 implementation readiness             READY
 implementation start                 STARTED
 implementation next                  015-H — NEXT ELIGIBLE / NOT AUTHORIZED
@@ -144,11 +146,11 @@ Phase 014-H has established:
 ```text
 IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       STARTED
-IMPLEMENTATION NEXT        015-H — NEXT ELIGIBLE / NOT AUTHORIZED
+IMPLEMENTATION NEXT        015-I — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
-015-A through 015-G are complete. Evaluation/Evidence/Provenance/history/reproducibility are implemented. Authorization/disclosure/dependency-trust/no-egress enforcement, provider qualification and scale qualification remain locked.
+015-A through 015-H are complete. Evaluation/Evidence/Provenance/history/reproducibility and the provider-neutral authorization/disclosure/dependency-trust/no-egress framework are implemented. Provider capability/portability/observability/scale qualification remains locked to 015-I.
 
 ## Current next boundary
 
-**015-H — Authorization, Disclosure, Protected Existence, Secrets, Dependency Trust & No-Egress** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
+**015-I — Platform Capability, Portability, Observability, Scale/Performance & Support Qualification** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
