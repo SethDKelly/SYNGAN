@@ -104,10 +104,14 @@ class EvaluationAggregate:
             raise ValueError("Evaluation Criterion references must be unique")
         if len(set(self.evidence_references)) != len(self.evidence_references):
             raise ValueError("Evaluation Evidence references must be unique")
-        if self.status in {
-            EvaluationStatus.COMPLETED,
-            EvaluationStatus.COMPLETED_WITH_LIMITATIONS,
-        } and not self.evidence_references:
+        if (
+            self.status
+            in {
+                EvaluationStatus.COMPLETED,
+                EvaluationStatus.COMPLETED_WITH_LIMITATIONS,
+            }
+            and not self.evidence_references
+        ):
             raise ValueError("completed Evidence-producing Evaluation requires Evidence")
 
     @property
@@ -424,9 +428,7 @@ def evidence_from_payload(payload: EncodedPayload) -> EvidenceFinding:
         producing_evaluation=_reference_from_value(
             value.get("producing_evaluation"), "producing Evaluation"
         ),
-        criterion_reference=_reference_from_value(
-            value.get("criterion_reference"), "Criterion"
-        ),
+        criterion_reference=_reference_from_value(value.get("criterion_reference"), "Criterion"),
         subject_reference=_reference_from_value(value.get("subject_reference"), "subject"),
         method_reference=_reference_from_value(value.get("method_reference"), "method"),
         slot=str(slot),
@@ -434,9 +436,7 @@ def evidence_from_payload(payload: EncodedPayload) -> EvidenceFinding:
         result=EncodedPayload.from_object(result),
         logical_scope=str(scope),
         claim_strength=ClaimStrength(str(strength)),
-        uncertainty=(
-            EncodedPayload.from_object(uncertainty) if uncertainty is not None else None
-        ),
+        uncertainty=(EncodedPayload.from_object(uncertainty) if uncertainty is not None else None),
         limitations=tuple(str(item) for item in limitations),
         baseline_references=tuple(
             _reference_from_value(item, "baseline reference") for item in baselines
