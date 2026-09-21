@@ -15,7 +15,7 @@ Phases 001-007 remain historical discovery/specification/experience/architecture
 ```text
 IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       NOT STARTED
-IMPLEMENTATION NEXT        015-B — NEXT ELIGIBLE / NOT AUTHORIZED
+IMPLEMENTATION NEXT        015-C — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
 Phase 014-H established readiness. Explicit Phase 015 authority remains required before implementation begins.
@@ -60,19 +60,20 @@ R2 and R3 remain open. R3 may be decided only after the whole R2 evidence chain 
 
 ## Phase 015 — Implementation Authority & Controlled Delivery
 
-Phase 014-H established R3 = READY. The Phase 015 start gate is complete and authorizes only 015-A; domain implementation remains `NOT STARTED`.
+Phase 014-H established R3 = READY. The Phase 015 start gate, 015-A, and 015-B are complete. 015-C is next eligible but not authorized; domain implementation remains `NOT STARTED`.
 
 ## Phase 015 controlled delivery
 
 ~~~text
 Phase 015 Start Gate  COMPLETE
 015-A                 COMPLETE
-015-B                 NEXT ELIGIBLE / NOT AUTHORIZED
-015-C..015-J          NOT AUTHORIZED
+015-B                                 COMPLETE
+015-C                                 NEXT ELIGIBLE / NOT AUTHORIZED
+015-D..015-J                          NOT AUTHORIZED
 ~~~
 
 ## Current next boundary
 
-**015-B — Current Verification Harness, Architecture-Fitness & Evidence-Gate Foundation** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
+**015-C — Identity, References, Representation, Durable Owner-State & Control Persistence** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
