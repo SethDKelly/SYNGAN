@@ -184,6 +184,19 @@ def verify_execution() -> None:
     )
 
 
+def verify_evidence() -> None:
+    _run(
+        [
+            sys.executable,
+            "-m",
+            "pytest",
+            "tests/integration/evidence",
+            "-m",
+            "integration",
+        ]
+    )
+
+
 def verify_package() -> None:
     package = importlib.import_module("syngan")
     if package.__name__ != "syngan":
@@ -258,6 +271,7 @@ def verify_all() -> None:
     verify_data()
     verify_runtime()
     verify_execution()
+    verify_evidence()
 
 
 def main(argv: Sequence[str] | None = None) -> int:
@@ -273,6 +287,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             "data",
             "runtime",
             "execution",
+            "evidence",
             "lint",
             "format",
             "type",
@@ -297,6 +312,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         "data": verify_data,
         "runtime": verify_runtime,
         "execution": verify_execution,
+        "evidence": verify_evidence,
         "lint": verify_lint,
         "format": verify_format,
         "type": verify_type,
