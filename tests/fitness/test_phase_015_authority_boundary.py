@@ -15,21 +15,22 @@ AGENTS = ROOT / "AGENTS.md"
 def test_phase_015_current_authority_is_discoverable() -> None:
     authority_text = CURRENT.read_text(encoding="utf-8")
 
-    assert "status: active-current" in authority_text
+    assert "status: complete-current" in authority_text
     assert "015-A        COMPLETE" in authority_text
-    assert "015-B        AUTHORIZED / ACTIVE" in authority_text
-    assert "015-C..015-J NOT AUTHORIZED" in authority_text
+    assert "015-B        COMPLETE" in authority_text
+    assert "015-C        NEXT ELIGIBLE / NOT AUTHORIZED" in authority_text
+    assert "015-D..015-J NOT AUTHORIZED" in authority_text
 
 
-def test_phase_015_index_exposes_015_b_as_next_but_not_authorized() -> None:
+def test_phase_015_index_exposes_015_c_as_next_but_not_authorized() -> None:
     phase_text = PHASE.read_text(encoding="utf-8")
 
     assert "status: active" in phase_text
     assert "015-A" in phase_text and "COMPLETE" in phase_text
-    assert "015-B" in phase_text and "AUTHORIZED / ACTIVE" in phase_text
+    assert "015-B" in phase_text and "COMPLETE" in phase_text
+    assert "015-C" in phase_text and "NEXT ELIGIBLE / NOT AUTHORIZED" in phase_text
 
     locked_phases = (
-        "015-C",
         "015-D",
         "015-E",
         "015-F",
@@ -42,11 +43,12 @@ def test_phase_015_index_exposes_015_b_as_next_but_not_authorized() -> None:
         assert f"{phase_id}  NOT AUTHORIZED" in phase_text
 
 
-def test_agent_instructions_preserve_post_015_a_authority_boundary() -> None:
+def test_agent_instructions_preserve_post_015_b_authority_boundary() -> None:
     agent_text = AGENTS.read_text(encoding="utf-8")
 
     assert "015-A                                 COMPLETE" in agent_text
-    assert "015-B                                 AUTHORIZED / ACTIVE" in agent_text
+    assert "015-B                                 COMPLETE" in agent_text
+    assert "015-C                                 NEXT ELIGIBLE / NOT AUTHORIZED" in agent_text
     assert "domain implementation remains NOT STARTED" in agent_text
 
 
