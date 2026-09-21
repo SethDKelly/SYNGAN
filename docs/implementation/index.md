@@ -26,10 +26,10 @@ Current governing implementation authority:
 ```text
 IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       STARTED
-IMPLEMENTATION NEXT        POST-PHASE-015 START GATE — NOT AUTHORIZED
+IMPLEMENTATION NEXT        PRODUCT/PROVIDER DELIVERY NOT AUTHORIZED
 ```
 
-Phase 015 is complete. 015-A through 015-J are complete, C0-C9 are active/passing, and no post-Phase-015 delivery program is authorized.
+Phase 015 is complete. 015-A through 015-J are complete and C0-C9 are active/passing. Phase 016 is active only for pre-implementation documentation/OKF/agentic/readiness hardening; product/provider/runtime delivery remains unauthorized.
 
 ## Current design progress
 
@@ -97,11 +97,11 @@ Current residual/readiness evidence is [Phase 014-G Implementation-Neutral Compl
 
 ## Current authorization boundary
 
-The Phase 015 start gate and 015-A through 015-J are complete. No post-Phase-015 delivery program is currently authorized.
+The Phase 015 start gate and 015-A through 015-J are complete. Phase 016 does not authorize product behavior; no new product/provider/runtime delivery program is currently authorized.
 
 015-A reconciled implementation authority, repository/toolchain configuration, scaffold/test dispositions and architecture-fitness rules without implementing concept/domain behavior.
 
-Phase 015 is complete. Until a new explicit start gate is authorized, do not add or stabilize a new delivery program:
+Phase 015 is complete. During Phase 016 hardening, do not add or stabilize a new product/provider/runtime delivery program:
 
 - persistence/query schemas or migrations;
 - data-state/manifest/candidate stores;
@@ -130,4 +130,4 @@ Implementation now includes the integrated 015-C through 015-I foundations plus 
 
 ## Current next boundary
 
-**Phase 015 is COMPLETE.** A new post-Phase-015 delivery program requires a separate explicit start gate and authorization.
+**Phase 016 is ACTIVE for pre-implementation hardening only. 016-A is COMPLETE; 016-B is next eligible but NOT AUTHORIZED.** Product/provider/runtime delivery requires a separate future start gate.
