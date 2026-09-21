@@ -9,7 +9,7 @@ C4 = "active"
 C5 = "active"
 C6 = "active"
 C7 = "active"
-C8 = "defined"
+C8 = "active"
 C9 = "defined"
 
 [profiles.authority]
@@ -32,6 +32,9 @@ description = "Required C5 Execution/Attempt, idempotency, checkpoint, cancellat
 
 [profiles.evidence]
 description = "Required C6 Evaluation, Evidence, Provenance, history, and reproducibility gate."
+
+[profiles.platform]
+description = "Required C8 platform capability, portability, observability, scale, and support-qualification gate."
 
 [profiles.portable]
 description = "Required default merge gate with network/external/heavy lanes excluded."
