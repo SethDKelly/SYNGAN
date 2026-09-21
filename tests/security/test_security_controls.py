@@ -129,9 +129,7 @@ def test_action_authorization_is_distinct_and_indeterminate_fails_closed() -> No
     )
     resource = target("learned-state", "ls1")
 
-    service.authorize(
-        AuthorizationRequest(principal(), SecurityAction.LEARNED_STATE_USE, resource)
-    )
+    service.authorize(AuthorizationRequest(principal(), SecurityAction.LEARNED_STATE_USE, resource))
     with pytest.raises(AuthorizationDenied):
         service.authorize(
             AuthorizationRequest(
@@ -478,6 +476,4 @@ def test_resource_handle_possession_is_not_authorization() -> None:
     )
 
     with pytest.raises(AuthorizationDenied):
-        service.authorize(
-            AuthorizationRequest(principal(), SecurityAction.OUTPUT_READ, resource)
-        )
+        service.authorize(AuthorizationRequest(principal(), SecurityAction.OUTPUT_READ, resource))
