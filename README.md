@@ -24,6 +24,7 @@ Current governing design authority includes:
 - [`015-B Current Verification Harness / Architecture Fitness / Evidence Gates`](docs/implementation/phase-015-b-current-verification-harness-architecture-fitness-evidence-gates.md)
 - [`015-C Identity / References / Control Persistence`](docs/implementation/phase-015-c-identity-reference-control-persistence-authority.md)
 - [`015-D Distributed Data / Topology / Generation Promotion`](docs/implementation/phase-015-d-distributed-data-topology-generation-promotion-authority.md)
+- [`015-E Strategy Runtime / Learning / Generation`](docs/implementation/phase-015-e-strategy-runtime-learning-generation-authority.md)
 - [`Phase 014`](docs/phases/014/index.md)
 - [`Phase 014 Start Gate / Decomposition`](docs/phases/014/014-start-gate-whole-design-readiness-decomposition.md)
 - [`Phase 013 Consolidated Architecture Contract`](docs/architecture/phase-013-consolidated-architecture-contract.md)
@@ -55,10 +56,11 @@ Phase 015 start gate                  COMPLETE
 015-B                                 COMPLETE
 015-C                                 COMPLETE
 015-D                                 COMPLETE
-015-E                                 NEXT ELIGIBLE / NOT AUTHORIZED
+015-E                                 COMPLETE
+015-F                                 NEXT ELIGIBLE / NOT AUTHORIZED
 implementation readiness             READY
 implementation start                 STARTED
-implementation next                  015-E — NEXT ELIGIBLE / NOT AUTHORIZED
+implementation next                  015-F — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
 ## Phase 014
@@ -103,11 +105,11 @@ Phase 014-H established:
 ```text
 IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       STARTED
-IMPLEMENTATION NEXT        015-E — NEXT ELIGIBLE / NOT AUTHORIZED
+IMPLEMENTATION NEXT        015-F — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
-015-A through 015-D are complete. Identity/control persistence plus provider-neutral distributed-data topology, sealed-subject, candidate, and Generation-promotion foundations are implemented. 015-E is next eligible but requires explicit authorization.
+015-A through 015-E are complete. Identity/control persistence, distributed-data topology/promotion, Strategy/runtime binding, Learning/Learned-State, and direct/reuse Generation planning are implemented. 015-F is next eligible but requires explicit authorization.
 
 ## Current next boundary
 
-**015-E — Strategy/Method Binding, Dependency Closure, Learning/Learned-State & Generation Runtime** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
+**015-F — Execution/Attempt, Admission, Fencing, Idempotency, Checkpoint, Cancellation & Recovery** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
