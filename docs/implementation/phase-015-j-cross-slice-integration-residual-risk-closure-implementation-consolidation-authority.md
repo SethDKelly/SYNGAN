@@ -1,7 +1,7 @@
 ---
 type: Implementation Authority
 title: 015-J — Cross-Slice Integration, Residual Risk Closure & Implementation Consolidation
-status: active-current
+status: complete-current
 ---
 
 # 015-J — Cross-Slice Integration, Residual Risk Closure & Implementation Consolidation
@@ -205,10 +205,10 @@ Do not reopen upstream design for:
 ## Current authorization state
 
 ~~~text
-015-A..015-I  COMPLETE
-015-J         AUTHORIZED / ACTIVE
-Phase 015     ACTIVE
-C9            TO ACTIVATE
+015-A..015-J  COMPLETE
+Phase 015     COMPLETE
+C9            ACTIVE / PASS
+NEXT STAGE    NONE AUTHORIZED
 ~~~
 
 ## Acceptance evidence required for closure
@@ -223,3 +223,74 @@ C9            TO ACTIVATE
 - Phase 015 authority/documentation is internally consistent;
 - provider/scale/release claims are no stronger than evidence permits;
 - the next-stage boundary is stated but not automatically authorized.
+
+
+## Completion evidence
+
+015-J is complete.
+
+~~~text
+Phase 014-F scenario registry             S01-S14 ACCOUNTED
+C9 cross-slice integration tests          8 PASS
+C0-C9                                     ACTIVE / PASS
+RR-01..RR-08                              DISPOSED / NO CURRENT BLOCKS
+unresolved READINESS-RISK                 0
+READINESS-BLOCK                           0
+ICLASS-3                                  0
+ICLASS-4                                  0
+upstream reopen                           NONE
+
+implementation evidence commit            c125109bbf0c86c9a2559168fefe87cf5c50770a
+Verify workflow                           PASS — run 35635644784 / #1408
+residual closure register                 phase-015-residual-risk-closure-support-scope-register.md
+~~~
+
+The C9 replay exercised the implemented contracts across slice boundaries rather than treating isolated lower-lane passes as sufficient. No cross-slice ownership transfer, semantic reinterpretation, recovery/history/security contradiction or mandatory provider assumption was found.
+
+## Residual-risk decision
+
+See [Phase 015 Residual Risk Closure & Support-Scope Register](phase-015-residual-risk-closure-support-scope-register.md).
+
+The eight Phase 014-G readiness risks are closed for the current Phase 015 framework/reference scope. Where proof depends on a real provider, distributed deployment, future external surface or representative enterprise benchmark, the corresponding stronger support claim remains explicitly **not claimed** rather than being treated as unresolved semantic debt.
+
+## Phase 015 completion decision
+
+~~~text
+Phase 015 start gate              COMPLETE
+015-A                             COMPLETE
+015-B                             COMPLETE
+015-C                             COMPLETE
+015-D                             COMPLETE
+015-E                             COMPLETE
+015-F                             COMPLETE
+015-G                             COMPLETE
+015-H                             COMPLETE
+015-I                             COMPLETE
+015-J                             COMPLETE
+
+Phase 015                        COMPLETE
+C0-C9                            ACTIVE / PASS
+current framework/reference scope INTEGRATED / VERIFIED
+post-Phase-015 stage              NOT AUTHORIZED
+~~~
+
+Phase 015 has delivered and integrated the current explicitly authorized implementation foundation without requiring a Phase 012/013/014 reopen.
+
+## Support-scope boundary at closure
+
+Phase 015 completion does not assert:
+
+- production generic-Spark adapter support;
+- production Databricks adapter support;
+- provider-specific HA/DR/no-egress certification;
+- enterprise-scale qualification;
+- a complete Strategy/algorithm catalog;
+- release certification, SLOs or SLAs.
+
+Those remain future delivery/qualification targets only if separately authorized.
+
+## Current next boundary
+
+There is **no automatically authorized next implementation phase**.
+
+Any post-Phase-015 work must begin with a separate explicit start gate that identifies the intended delivery target (for example provider integration, scale qualification, product-surface expansion, release hardening, or another bounded program), reuses the completed C0-C9 baseline, and states its own evidence/support claims before implementation proceeds.
