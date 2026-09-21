@@ -173,6 +173,7 @@ class RuntimeClosureAssessment:
     status: RuntimeClosureStatus
     closure_identity: str | None
     exact_dependency_identities: tuple[tuple[str, str], ...]
+    exact_role_environment_identities: tuple[tuple[str, str], ...] = ()
     missing_components: tuple[str, ...] = ()
     incompatible_components: tuple[str, ...] = ()
     indeterminate_components: tuple[str, ...] = ()
@@ -198,6 +199,7 @@ class RuntimeRealizationPlan:
     dependency_profile: DependencyProfile
     closure_identity: str
     exact_dependency_identities: tuple[tuple[str, str], ...]
+    exact_role_environment_identities: tuple[tuple[str, str], ...]
     runtime_roles: tuple[str, ...]
     learned_state_reference: TypedReference | None = None
     direct_input_references: tuple[TypedReference, ...] = ()
@@ -345,6 +347,7 @@ def assess_runtime_closure(
 
     closure_identity: str | None = None
     exact_identities = tuple(sorted(identities))
+    exact_role_identities = tuple(sorted(environment_identities))
     if status in {
         RuntimeClosureStatus.SATISFIED,
         RuntimeClosureStatus.SATISFIED_WITH_LIMITATIONS,
@@ -357,7 +360,7 @@ def assess_runtime_closure(
         ]
         material.extend(f"{component}={identity}" for component, identity in exact_identities)
         material.extend(
-            f"role:{role}={identity}" for role, identity in sorted(environment_identities)
+            f"role:{role}={identity}" for role, identity in exact_role_identities
         )
         closure_identity = hashlib.sha256("\n".join(material).encode("utf-8")).hexdigest()
 
@@ -365,6 +368,7 @@ def assess_runtime_closure(
         status=status,
         closure_identity=closure_identity,
         exact_dependency_identities=exact_identities,
+        exact_role_environment_identities=exact_role_identities,
         missing_components=tuple(sorted(missing)),
         incompatible_components=tuple(sorted(incompatible)),
         indeterminate_components=tuple(sorted(indeterminate)),
@@ -396,6 +400,7 @@ def build_runtime_plan(
         dependency_profile=binding.dependency_profile,
         closure_identity=closure.closure_identity,
         exact_dependency_identities=closure.exact_dependency_identities,
+        exact_role_environment_identities=closure.exact_role_environment_identities,
         runtime_roles=binding.required_roles,
         learned_state_reference=learned_state_reference,
         direct_input_references=direct_input_references,
