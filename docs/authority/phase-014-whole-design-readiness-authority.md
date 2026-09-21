@@ -355,6 +355,27 @@ The resolved WMAT-2 was current detailed-architecture propagation drift in `SYNC
 
 Detailed authority: [Phase 014-E Architecture Realization/Traceability Audit](phase-014-e-architecture-realization-responsibility-traceability-audit.md).
 
+## 014-F completion state
+
+014-F replayed the current whole design through normal, exceptional, degraded, recovery, scale, security, portability and adversarial cross-layer scenarios.
+
+~~~text
+014-F                            COMPLETE
+required scenario families       PASS
+combined adversarial replay      PASS
+resolved WMAT-2                  1
+unresolved WMAT-2                0
+unresolved WMAT-3                0
+upstream reopen                  NONE
+R1 reopen                        NONE REQUIRED
+R2                               OPEN
+R3                               OPEN
+~~~
+
+The resolved WMAT-2 was stale detailed 013-G wording that attributed external Evidence handoff to active SYNC-13. Current authority keeps SYNC-13 limited to evidence-gated Generation completion; external governance remains a mapping/integration boundary.
+
+Detailed authority: [Phase 014-F End-to-End Scenario/Adversarial Audit](phase-014-f-end-to-end-scenario-exception-failure-recovery-scale-security-portability-adversarial-audit.md).
+
 ## Current next boundary
 
-**014-F — End-to-End Scenario, Exception, Failure, Recovery, Scale, Security, Portability & Adversarial Whole-Design Audit** is next eligible.
+**014-G — Implementation-Neutral Completeness, Decision-Ambiguity, Handoff Sufficiency & Residual Whole-Design Register** is next eligible.
