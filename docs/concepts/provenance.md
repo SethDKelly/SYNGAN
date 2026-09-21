@@ -421,8 +421,8 @@ None of those concept payloads or rows are duplicated inside Provenance; stable 
 
 Primary accepted synchronization rules:
 
-- [SYNC-14 — Provenance recording at material transitions](../synchronizations/core-synchronizations.md#sync-14--provenance-recording-at-material-transitions)
-- [SYNC-15 — Reproducibility-relevant commitment snapshot](../synchronizations/core-synchronizations.md#sync-15--reproducibility-relevant-commitment-snapshot)
+- [SYNC-14 — Provenance recording at material transitions](../history/synchronizations/core-synchronizations.md#sync-14--provenance-recording-at-material-transitions)
+- [SYNC-15 — Reproducibility-relevant commitment snapshot](../history/synchronizations/core-synchronizations.md#sync-15--reproducibility-relevant-commitment-snapshot)
 
 All earlier SYNC binding/production rules feed these relationships without transferring authority to Provenance.
 

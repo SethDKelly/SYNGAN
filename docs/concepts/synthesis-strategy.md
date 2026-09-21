@@ -449,12 +449,12 @@ The same concept also permits a locally provisioned pretrained artifact Strategy
 
 Primary accepted synchronization rules:
 
-- [SYNC-02 — Strategy selection and compatibility](../synchronizations/core-synchronizations.md#sync-02--strategy-selection-and-compatibility)
-- [SYNC-03 — Constraint binding and handling disposition](../synchronizations/core-synchronizations.md#sync-03--constraint-binding-and-handling-disposition)
-- [SYNC-05 — Learning produces Learned State](../synchronizations/core-synchronizations.md#sync-05--learning-produces-learned-state)
-- [SYNC-06 — Generation commitment and compatibility](../synchronizations/core-synchronizations.md#sync-06--generation-commitment-and-compatibility)
-- [SYNC-14 — Provenance recording](../synchronizations/core-synchronizations.md#sync-14--provenance-recording-at-material-transitions)
-- [SYNC-15 — Reproducibility-relevant commitment snapshot](../synchronizations/core-synchronizations.md#sync-15--reproducibility-relevant-commitment-snapshot)
+- [SYNC-02 — Strategy selection and compatibility](../history/synchronizations/core-synchronizations.md#sync-02--strategy-selection-and-compatibility)
+- [SYNC-03 — Constraint binding and handling disposition](../history/synchronizations/core-synchronizations.md#sync-03--constraint-binding-and-handling-disposition)
+- [SYNC-05 — Learning produces Learned State](../history/synchronizations/core-synchronizations.md#sync-05--learning-produces-learned-state)
+- [SYNC-06 — Generation commitment and compatibility](../history/synchronizations/core-synchronizations.md#sync-06--generation-commitment-and-compatibility)
+- [SYNC-14 — Provenance recording](../history/synchronizations/core-synchronizations.md#sync-14--provenance-recording-at-material-transitions)
+- [SYNC-15 — Reproducibility-relevant commitment snapshot](../history/synchronizations/core-synchronizations.md#sync-15--reproducibility-relevant-commitment-snapshot)
 
 ## Representation questions intentionally deferred
 

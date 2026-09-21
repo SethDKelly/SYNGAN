@@ -354,13 +354,13 @@ Its first Execution Attempt fails after several hours but leaves a checkpoint. A
 
 Primary accepted synchronization rules:
 
-- [SYNC-01 — Data Meaning revision binding](../synchronizations/core-synchronizations.md#sync-01--data-meaning-revision-binding)
-- [SYNC-02 — Strategy selection and compatibility](../synchronizations/core-synchronizations.md#sync-02--strategy-selection-and-compatibility)
-- [SYNC-03 — Constraint binding and handling disposition](../synchronizations/core-synchronizations.md#sync-03--constraint-binding-and-handling-disposition)
-- [SYNC-04 — Learning operational realization](../synchronizations/core-synchronizations.md#sync-04--learning-operational-realization)
-- [SYNC-05 — Learning produces Learned State](../synchronizations/core-synchronizations.md#sync-05--learning-produces-learned-state)
-- [SYNC-14 — Provenance recording](../synchronizations/core-synchronizations.md#sync-14--provenance-recording-at-material-transitions)
-- [SYNC-15 — Reproducibility-relevant commitment snapshot](../synchronizations/core-synchronizations.md#sync-15--reproducibility-relevant-commitment-snapshot)
+- [SYNC-01 — Data Meaning revision binding](../history/synchronizations/core-synchronizations.md#sync-01--data-meaning-revision-binding)
+- [SYNC-02 — Strategy selection and compatibility](../history/synchronizations/core-synchronizations.md#sync-02--strategy-selection-and-compatibility)
+- [SYNC-03 — Constraint binding and handling disposition](../history/synchronizations/core-synchronizations.md#sync-03--constraint-binding-and-handling-disposition)
+- [SYNC-04 — Learning operational realization](../history/synchronizations/core-synchronizations.md#sync-04--learning-operational-realization)
+- [SYNC-05 — Learning produces Learned State](../history/synchronizations/core-synchronizations.md#sync-05--learning-produces-learned-state)
+- [SYNC-14 — Provenance recording](../history/synchronizations/core-synchronizations.md#sync-14--provenance-recording-at-material-transitions)
+- [SYNC-15 — Reproducibility-relevant commitment snapshot](../history/synchronizations/core-synchronizations.md#sync-15--reproducibility-relevant-commitment-snapshot)
 
 ## Representation questions intentionally deferred
 

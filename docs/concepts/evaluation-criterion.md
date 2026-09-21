@@ -264,11 +264,11 @@ Separately, a data scientist defines a fidelity Criterion asking whether a popul
 
 Primary accepted synchronization rules:
 
-- [SYNC-09 — Evaluation Criterion binding](../synchronizations/core-synchronizations.md#sync-09--evaluation-criterion-binding)
-- [SYNC-10 — Evaluation method compatibility](../synchronizations/core-synchronizations.md#sync-10--evaluation-method-compatibility)
-- [SYNC-12 — Evaluation produces Evidence](../synchronizations/core-synchronizations.md#sync-12--evaluation-produces-evidence)
-- [SYNC-13 — Evidence external handoff](../synchronizations/core-synchronizations.md#sync-13--evidence-external-handoff)
-- [SYNC-14 — Provenance recording](../synchronizations/core-synchronizations.md#sync-14--provenance-recording-at-material-transitions)
+- [SYNC-09 — Evaluation Criterion binding](../history/synchronizations/core-synchronizations.md#sync-09--evaluation-criterion-binding)
+- [SYNC-10 — Evaluation method compatibility](../history/synchronizations/core-synchronizations.md#sync-10--evaluation-method-compatibility)
+- [SYNC-12 — Evaluation produces Evidence](../history/synchronizations/core-synchronizations.md#sync-12--evaluation-produces-evidence)
+- [SYNC-13 — Evidence external handoff](../history/synchronizations/core-synchronizations.md#sync-13--evidence-external-handoff)
+- [SYNC-14 — Provenance recording](../history/synchronizations/core-synchronizations.md#sync-14--provenance-recording-at-material-transitions)
 
 ## Representation questions intentionally deferred
 

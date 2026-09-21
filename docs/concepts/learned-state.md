@@ -40,7 +40,7 @@ Learned State does not own:
 
 ## Establishment rule
 
-A Learned State identity MAY be established only by successful semantic completion of Learning under [SYNC-05](../synchronizations/core-synchronizations.md#sync-05--learning-produces-learned-state).
+A Learned State identity MAY be established only by successful semantic completion of Learning under [SYNC-05](../history/synchronizations/core-synchronizations.md#sync-05--learning-produces-learned-state).
 
 Physical material created during Learning—checkpoints, temporary tensors, partial statistics, caches, files, optimizer state, intermediate tables—does not become Learned State merely because it is durable or reusable by the training process.
 
@@ -361,10 +361,10 @@ A newer Learning later produces a second Learned State. The first is retired fro
 
 Primary accepted synchronization rules:
 
-- [SYNC-05 — Learning produces Learned State](../synchronizations/core-synchronizations.md#sync-05--learning-produces-learned-state)
-- [SYNC-06 — Generation commitment and compatibility](../synchronizations/core-synchronizations.md#sync-06--generation-commitment-and-compatibility)
-- [SYNC-14 — Provenance recording](../synchronizations/core-synchronizations.md#sync-14--provenance-recording-at-material-transitions)
-- [SYNC-15 — Reproducibility-relevant commitment snapshot](../synchronizations/core-synchronizations.md#sync-15--reproducibility-relevant-commitment-snapshot)
+- [SYNC-05 — Learning produces Learned State](../history/synchronizations/core-synchronizations.md#sync-05--learning-produces-learned-state)
+- [SYNC-06 — Generation commitment and compatibility](../history/synchronizations/core-synchronizations.md#sync-06--generation-commitment-and-compatibility)
+- [SYNC-14 — Provenance recording](../history/synchronizations/core-synchronizations.md#sync-14--provenance-recording-at-material-transitions)
+- [SYNC-15 — Reproducibility-relevant commitment snapshot](../history/synchronizations/core-synchronizations.md#sync-15--reproducibility-relevant-commitment-snapshot)
 
 ## Representation questions intentionally deferred
 

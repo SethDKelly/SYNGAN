@@ -437,11 +437,11 @@ The platform reports Attempt B complete. Execution becomes operationally complet
 
 Primary accepted synchronization rules:
 
-- [SYNC-04 — Learning operational realization](../synchronizations/core-synchronizations.md#sync-04--learning-operational-realization)
-- [SYNC-07 — Generation operational realization](../synchronizations/core-synchronizations.md#sync-07--generation-operational-realization)
-- [SYNC-11 — Evaluation operational realization](../synchronizations/core-synchronizations.md#sync-11--evaluation-operational-realization)
-- [SYNC-14 — Provenance recording](../synchronizations/core-synchronizations.md#sync-14--provenance-recording-at-material-transitions)
-- [SYNC-15 — Reproducibility-relevant commitment snapshot](../synchronizations/core-synchronizations.md#sync-15--reproducibility-relevant-commitment-snapshot)
+- [SYNC-04 — Learning operational realization](../history/synchronizations/core-synchronizations.md#sync-04--learning-operational-realization)
+- [SYNC-07 — Generation operational realization](../history/synchronizations/core-synchronizations.md#sync-07--generation-operational-realization)
+- [SYNC-11 — Evaluation operational realization](../history/synchronizations/core-synchronizations.md#sync-11--evaluation-operational-realization)
+- [SYNC-14 — Provenance recording](../history/synchronizations/core-synchronizations.md#sync-14--provenance-recording-at-material-transitions)
+- [SYNC-15 — Reproducibility-relevant commitment snapshot](../history/synchronizations/core-synchronizations.md#sync-15--reproducibility-relevant-commitment-snapshot)
 
 ## Representation questions intentionally deferred
 

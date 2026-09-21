@@ -180,7 +180,7 @@ After commitment:
 - Learned State and Evidence retain the interpretation under which they were produced;
 - a later correction MAY cause new use of historical Learned State/output to be rejected or qualified, but MUST NOT retroactively pretend the earlier activity used the corrected meaning.
 
-See [SYNC-01](../synchronizations/core-synchronizations.md#sync-01--data-meaning-revision-binding).
+See [SYNC-01](../history/synchronizations/core-synchronizations.md#sync-01--data-meaning-revision-binding).
 
 ## Structural observations and source characterization
 
@@ -272,11 +272,11 @@ Later, the steward discovers that one inferred field was actually an ordinal cod
 
 Primary accepted synchronization rules:
 
-- [SYNC-01 — Data Meaning revision binding](../synchronizations/core-synchronizations.md#sync-01--data-meaning-revision-binding)
-- [SYNC-02 — Strategy selection and compatibility](../synchronizations/core-synchronizations.md#sync-02--strategy-selection-and-compatibility)
-- [SYNC-03 — Constraint binding and handling disposition](../synchronizations/core-synchronizations.md#sync-03--constraint-binding-and-handling-disposition)
-- [SYNC-14 — Provenance recording](../synchronizations/core-synchronizations.md#sync-14--provenance-recording-at-material-transitions)
-- [SYNC-15 — Reproducibility-relevant commitment snapshot](../synchronizations/core-synchronizations.md#sync-15--reproducibility-relevant-commitment-snapshot)
+- [SYNC-01 — Data Meaning revision binding](../history/synchronizations/core-synchronizations.md#sync-01--data-meaning-revision-binding)
+- [SYNC-02 — Strategy selection and compatibility](../history/synchronizations/core-synchronizations.md#sync-02--strategy-selection-and-compatibility)
+- [SYNC-03 — Constraint binding and handling disposition](../history/synchronizations/core-synchronizations.md#sync-03--constraint-binding-and-handling-disposition)
+- [SYNC-14 — Provenance recording](../history/synchronizations/core-synchronizations.md#sync-14--provenance-recording-at-material-transitions)
+- [SYNC-15 — Reproducibility-relevant commitment snapshot](../history/synchronizations/core-synchronizations.md#sync-15--reproducibility-relevant-commitment-snapshot)
 
 ## Representation questions intentionally deferred
 

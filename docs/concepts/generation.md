@@ -486,15 +486,15 @@ If the required Constraint had been violated or indeterminate where determinatio
 
 Primary accepted synchronization rules:
 
-- [SYNC-01 — Data Meaning revision binding](../synchronizations/core-synchronizations.md#sync-01--data-meaning-revision-binding)
-- [SYNC-02 — Strategy selection and compatibility](../synchronizations/core-synchronizations.md#sync-02--strategy-selection-and-compatibility)
-- [SYNC-03 — Constraint binding and handling disposition](../synchronizations/core-synchronizations.md#sync-03--constraint-binding-and-handling-disposition)
-- [SYNC-06 — Generation commitment and compatibility](../synchronizations/core-synchronizations.md#sync-06--generation-commitment-and-compatibility)
-- [SYNC-07 — Generation operational realization](../synchronizations/core-synchronizations.md#sync-07--generation-operational-realization)
-- [SYNC-08 — Generation produces synthetic output reference](../synchronizations/core-synchronizations.md#sync-08--generation-produces-synthetic-output-reference)
-- [SYNC-12 — Evaluation produces Evidence](../synchronizations/core-synchronizations.md#sync-12--evaluation-produces-evidence)
-- [SYNC-14 — Provenance recording](../synchronizations/core-synchronizations.md#sync-14--provenance-recording-at-material-transitions)
-- [SYNC-15 — Reproducibility-relevant commitment snapshot](../synchronizations/core-synchronizations.md#sync-15--reproducibility-relevant-commitment-snapshot)
+- [SYNC-01 — Data Meaning revision binding](../history/synchronizations/core-synchronizations.md#sync-01--data-meaning-revision-binding)
+- [SYNC-02 — Strategy selection and compatibility](../history/synchronizations/core-synchronizations.md#sync-02--strategy-selection-and-compatibility)
+- [SYNC-03 — Constraint binding and handling disposition](../history/synchronizations/core-synchronizations.md#sync-03--constraint-binding-and-handling-disposition)
+- [SYNC-06 — Generation commitment and compatibility](../history/synchronizations/core-synchronizations.md#sync-06--generation-commitment-and-compatibility)
+- [SYNC-07 — Generation operational realization](../history/synchronizations/core-synchronizations.md#sync-07--generation-operational-realization)
+- [SYNC-08 — Generation produces synthetic output reference](../history/synchronizations/core-synchronizations.md#sync-08--generation-produces-synthetic-output-reference)
+- [SYNC-12 — Evaluation produces Evidence](../history/synchronizations/core-synchronizations.md#sync-12--evaluation-produces-evidence)
+- [SYNC-14 — Provenance recording](../history/synchronizations/core-synchronizations.md#sync-14--provenance-recording-at-material-transitions)
+- [SYNC-15 — Reproducibility-relevant commitment snapshot](../history/synchronizations/core-synchronizations.md#sync-15--reproducibility-relevant-commitment-snapshot)
 
 ## Representation questions intentionally deferred
 
