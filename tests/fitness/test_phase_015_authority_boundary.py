@@ -4,9 +4,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 IMPLEMENTATION = ROOT / "docs" / "implementation"
-CURRENT = (
-    IMPLEMENTATION
-    / "phase-015-h-authorization-disclosure-protected-existence-secrets-dependency-trust-no-egress-authority.md"
+CURRENT = IMPLEMENTATION / (
+    "phase-015-h-authorization-disclosure-protected-existence-secrets-"
+    "dependency-trust-no-egress-authority.md"
 )
 PHASE = ROOT / "docs" / "phases" / "015" / "index.md"
 AGENTS = ROOT / "AGENTS.md"
