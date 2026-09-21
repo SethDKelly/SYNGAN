@@ -10,6 +10,7 @@ from typing import cast
 
 from syngan.foundation.identity import (
     AuthorityScope,
+    CommitmentSnapshotId,
     LogicalId,
     MigrationRevision,
     RecoveryFrontier,
@@ -23,17 +24,17 @@ from syngan.foundation.identity import (
 from syngan.foundation.representation import EncodedPayload
 from syngan.ports.control_store import (
     AuthorityScopeMismatch,
+    BindingResolution,
     CoordinationIntentConflict,
     CoordinationIntentRecord,
     CoordinationIntentState,
     CurrentStateConflict,
     CurrentStateRecord,
-    ImmutableRecordConflict,
-    ImmutableRevisionRecord,
+    ImmutableBindingConflict,
+    ImmutableBindingRecord,
     RecordNotFound,
     RecoveryFrontierConflict,
     ResolutionStatus,
-    RevisionResolution,
     TransitionRecord,
     UnsupportedMigrationRevision,
 )
@@ -53,6 +54,29 @@ def _intent_kind(value: str) -> str:
     if not normalized:
         raise ValueError("intent kind must be non-empty")
     return normalized
+
+
+def _binding(reference: TypedReference) -> tuple[str, str]:
+    return reference.require_exact_binding()
+
+
+def _reference_from_binding(
+    key: ResourceKey,
+    binding_kind: str | None,
+    binding_id: str | None,
+) -> TypedReference:
+    if binding_kind is None and binding_id is None:
+        return TypedReference(key=key)
+    if binding_kind is None or binding_id is None:
+        raise ImmutableBindingConflict("partial immutable binding metadata is invalid")
+    if binding_kind == "semantic-revision":
+        return TypedReference(key=key, revision_id=SemanticRevisionId(binding_id))
+    if binding_kind == "commitment-snapshot":
+        return TypedReference(
+            key=key,
+            commitment_snapshot_id=CommitmentSnapshotId(binding_id),
+        )
+    raise ImmutableBindingConflict(f"unknown immutable binding kind: {binding_kind!r}")
 
 
 class SQLiteControlStore:
@@ -124,15 +148,22 @@ class SQLiteControlStore:
 
             self._connection.executescript(
                 """
-                CREATE TABLE IF NOT EXISTS immutable_revisions (
+                CREATE TABLE IF NOT EXISTS immutable_bindings (
                     scope TEXT NOT NULL,
                     resource_kind TEXT NOT NULL,
                     resource_id TEXT NOT NULL,
-                    revision_id TEXT NOT NULL,
+                    binding_kind TEXT NOT NULL,
+                    binding_id TEXT NOT NULL,
                     schema_version INTEGER NOT NULL,
                     payload_json TEXT,
                     availability TEXT NOT NULL,
-                    PRIMARY KEY (scope, resource_kind, resource_id, revision_id)
+                    PRIMARY KEY (
+                        scope,
+                        resource_kind,
+                        resource_id,
+                        binding_kind,
+                        binding_id
+                    )
                 );
 
                 CREATE TABLE IF NOT EXISTS current_states (
@@ -172,7 +203,8 @@ class SQLiteControlStore:
                     source_scope TEXT NOT NULL,
                     source_kind TEXT NOT NULL,
                     source_resource_id TEXT NOT NULL,
-                    source_revision_id TEXT,
+                    source_binding_kind TEXT,
+                    source_binding_id TEXT,
                     intent_kind TEXT NOT NULL,
                     payload_json TEXT NOT NULL,
                     recovery_frontier INTEGER NOT NULL,
@@ -233,21 +265,19 @@ class SQLiteControlStore:
     ) -> RecoveryFrontier:
         if new.value <= expected.value:
             raise RecoveryFrontierConflict("new recovery frontier must advance")
-
         with self._transaction():
             self._assert_frontier(expected)
             self._set_metadata("recovery_frontier", str(new.value))
-
         return new
 
-    def put_immutable_revision(
+    def put_immutable_binding(
         self,
         reference: TypedReference,
         schema_version: RepresentationSchemaVersion,
         payload: EncodedPayload,
         authority_frontier: RecoveryFrontier,
-    ) -> ImmutableRevisionRecord:
-        revision = reference.require_exact_revision()
+    ) -> ImmutableBindingRecord:
+        binding_kind, binding_id = _binding(reference)
         self._assert_scope(reference.key)
 
         with self._transaction():
@@ -255,17 +285,19 @@ class SQLiteControlStore:
             row = self._connection.execute(
                 """
                 SELECT schema_version, payload_json, availability
-                FROM immutable_revisions
+                FROM immutable_bindings
                 WHERE scope = ?
                   AND resource_kind = ?
                   AND resource_id = ?
-                  AND revision_id = ?
+                  AND binding_kind = ?
+                  AND binding_id = ?
                 """,
                 (
                     reference.key.scope.value,
                     reference.key.kind.value,
                     reference.key.resource_id.value,
-                    revision.value,
+                    binding_kind,
+                    binding_id,
                 ),
             ).fetchone()
 
@@ -278,78 +310,82 @@ class SQLiteControlStore:
                     and existing_schema == schema_version.value
                     and existing_payload == payload.json_text
                 ):
-                    return ImmutableRevisionRecord(reference, schema_version, payload)
-                raise ImmutableRecordConflict(
-                    "immutable revision identity already exists with different content"
+                    return ImmutableBindingRecord(reference, schema_version, payload)
+                raise ImmutableBindingConflict(
+                    "immutable binding identity already exists with different content"
                 )
 
             self._connection.execute(
                 """
-                INSERT INTO immutable_revisions(
+                INSERT INTO immutable_bindings(
                     scope,
                     resource_kind,
                     resource_id,
-                    revision_id,
+                    binding_kind,
+                    binding_id,
                     schema_version,
                     payload_json,
                     availability
                 )
-                VALUES (?, ?, ?, ?, ?, ?, 'available')
+                VALUES (?, ?, ?, ?, ?, ?, ?, 'available')
                 """,
                 (
                     reference.key.scope.value,
                     reference.key.kind.value,
                     reference.key.resource_id.value,
-                    revision.value,
+                    binding_kind,
+                    binding_id,
                     schema_version.value,
                     payload.json_text,
                 ),
             )
 
-        return ImmutableRevisionRecord(reference, schema_version, payload)
+        return ImmutableBindingRecord(reference, schema_version, payload)
 
-    def resolve_immutable_revision(self, reference: TypedReference) -> RevisionResolution:
-        revision = reference.require_exact_revision()
+    def resolve_immutable_binding(self, reference: TypedReference) -> BindingResolution:
+        binding_kind, binding_id = _binding(reference)
         self._assert_scope(reference.key)
         row = self._connection.execute(
             """
             SELECT schema_version, payload_json, availability
-            FROM immutable_revisions
+            FROM immutable_bindings
             WHERE scope = ?
               AND resource_kind = ?
               AND resource_id = ?
-              AND revision_id = ?
+              AND binding_kind = ?
+              AND binding_id = ?
             """,
             (
                 reference.key.scope.value,
                 reference.key.kind.value,
                 reference.key.resource_id.value,
-                revision.value,
+                binding_kind,
+                binding_id,
             ),
         ).fetchone()
 
         if row is None:
-            return RevisionResolution(ResolutionStatus.ABSENT)
+            return BindingResolution(ResolutionStatus.ABSENT)
 
         availability = cast(str, row["availability"])
         if availability == "unavailable":
-            return RevisionResolution(ResolutionStatus.UNAVAILABLE)
+            return BindingResolution(ResolutionStatus.UNAVAILABLE)
 
         payload_text = cast(str | None, row["payload_json"])
         if payload_text is None:
-            raise ImmutableRecordConflict("available immutable revision has no payload")
+            raise ImmutableBindingConflict("available immutable binding has no payload")
 
-        record = ImmutableRevisionRecord(
+        record = ImmutableBindingRecord(
             reference=reference,
             schema_version=RepresentationSchemaVersion(int(cast(int, row["schema_version"]))),
             payload=EncodedPayload(payload_text),
         )
-        return RevisionResolution(ResolutionStatus.RESOLVED, record)
+        return BindingResolution(ResolutionStatus.RESOLVED, record)
 
-    def mark_immutable_revision_unavailable(
+    def mark_immutable_binding_unavailable(
         self, reference: TypedReference, authority_frontier: RecoveryFrontier
     ) -> None:
-        revision = reference.require_exact_revision()
+        binding_kind, binding_id = _binding(reference)
         self._assert_scope(reference.key)
 
         with self._transaction():
@@ -357,38 +393,43 @@ class SQLiteControlStore:
             row = self._connection.execute(
                 """
                 SELECT availability
-                FROM immutable_revisions
+                FROM immutable_bindings
                 WHERE scope = ?
                   AND resource_kind = ?
                   AND resource_id = ?
-                  AND revision_id = ?
+                  AND binding_kind = ?
+                  AND binding_id = ?
                 """,
                 (
                     reference.key.scope.value,
                     reference.key.kind.value,
                     reference.key.resource_id.value,
-                    revision.value,
+                    binding_kind,
+                    binding_id,
                 ),
             ).fetchone()
             if row is None:
-                raise RecordNotFound("immutable revision does not exist")
+                raise RecordNotFound("immutable binding does not exist")
             if cast(str, row["availability"]) == "unavailable":
                 return
+
             self._connection.execute(
                 """
-                UPDATE immutable_revisions
+                UPDATE immutable_bindings
                 SET payload_json = NULL,
                     availability = 'unavailable'
                 WHERE scope = ?
                   AND resource_kind = ?
                   AND resource_id = ?
-                  AND revision_id = ?
+                  AND binding_kind = ?
+                  AND binding_id = ?
                 """,
                 (
                     reference.key.scope.value,
                     reference.key.kind.value,
                     reference.key.resource_id.value,
-                    revision.value,
+                    binding_kind,
+                    binding_id,
                 ),
             )
 
@@ -472,7 +513,9 @@ class SQLiteControlStore:
             key=key,
             state_version=StateVersion(int(cast(int, row["state_version"]))),
             schema_version=RepresentationSchemaVersion(int(cast(int, row["schema_version"]))),
-            last_recovery_frontier=RecoveryFrontier(int(cast(int, row["last_recovery_frontier"]))),
+            last_recovery_frontier=RecoveryFrontier(
+                int(cast(int, row["last_recovery_frontier"]))
+            ),
             payload=EncodedPayload(cast(str, row["payload_json"])),
         )
 
@@ -626,7 +669,9 @@ class SQLiteControlStore:
                     key=key,
                     from_state_version=StateVersion(from_value) if from_value is not None else None,
                     to_state_version=StateVersion(int(cast(int, row["to_state_version"]))),
-                    recovery_frontier=RecoveryFrontier(int(cast(int, row["recovery_frontier"]))),
+                    recovery_frontier=RecoveryFrontier(
+                        int(cast(int, row["recovery_frontier"]))
+                    ),
                     transition_kind=cast(str, row["transition_kind"]),
                     detail=EncodedPayload(cast(str, row["detail_json"])),
                 )
@@ -643,6 +688,9 @@ class SQLiteControlStore:
     ) -> CoordinationIntentRecord:
         self._assert_scope(source.key)
         kind = _intent_kind(intent_kind)
+        binding_kind, binding_id = (
+            source.require_exact_binding() if source.is_exact_binding else (None, None)
+        )
 
         with self._transaction():
             self._assert_frontier(authority_frontier)
@@ -652,7 +700,8 @@ class SQLiteControlStore:
                     source_scope,
                     source_kind,
                     source_resource_id,
-                    source_revision_id,
+                    source_binding_kind,
+                    source_binding_id,
                     intent_kind,
                     payload_json,
                     recovery_frontier,
@@ -683,20 +732,22 @@ class SQLiteControlStore:
                     source_scope,
                     source_kind,
                     source_resource_id,
-                    source_revision_id,
+                    source_binding_kind,
+                    source_binding_id,
                     intent_kind,
                     payload_json,
                     recovery_frontier,
                     state
                 )
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                 """,
                 (
                     intent_id.value,
                     source.key.scope.value,
                     source.key.kind.value,
                     source.key.resource_id.value,
-                    source.revision_id.value if source.revision_id is not None else None,
+                    binding_kind,
+                    binding_id,
                     kind,
                     payload.json_text,
                     authority_frontier.value,
@@ -720,7 +771,8 @@ class SQLiteControlStore:
                 source_scope,
                 source_kind,
                 source_resource_id,
-                source_revision_id,
+                source_binding_kind,
+                source_binding_id,
                 intent_kind,
                 payload_json,
                 recovery_frontier,
@@ -745,7 +797,8 @@ class SQLiteControlStore:
                     source_scope,
                     source_kind,
                     source_resource_id,
-                    source_revision_id,
+                    source_binding_kind,
+                    source_binding_id,
                     intent_kind,
                     payload_json,
                     recovery_frontier,
@@ -757,9 +810,11 @@ class SQLiteControlStore:
             ).fetchone()
             if row is None:
                 raise RecordNotFound("coordination intent does not exist")
+
             existing = self._coordination_intent_from_row(intent_id, row)
             if existing.state is CoordinationIntentState.ACKNOWLEDGED:
                 return existing
+
             self._connection.execute(
                 """
                 UPDATE coordination_intents
@@ -781,18 +836,14 @@ class SQLiteControlStore:
     def _coordination_intent_from_row(
         self, intent_id: LogicalId, row: sqlite3.Row
     ) -> CoordinationIntentRecord:
-        source = TypedReference(
-            key=ResourceKey(
-                scope=AuthorityScope(cast(str, row["source_scope"])),
-                kind=ResourceKind(cast(str, row["source_kind"])),
-                resource_id=LogicalId(cast(str, row["source_resource_id"])),
-            ),
-            revision_id=(
-                SemanticRevisionId(cast(str, row["source_revision_id"]))
-                if row["source_revision_id"] is not None
-                else None
-            ),
+        key = ResourceKey(
+            scope=AuthorityScope(cast(str, row["source_scope"])),
+            kind=ResourceKind(cast(str, row["source_kind"])),
+            resource_id=LogicalId(cast(str, row["source_resource_id"])),
         )
+        binding_kind = cast(str | None, row["source_binding_kind"])
+        binding_id = cast(str | None, row["source_binding_id"])
+        source = _reference_from_binding(key, binding_kind, binding_id)
         self._assert_scope(source.key)
         return CoordinationIntentRecord(
             intent_id=intent_id,
