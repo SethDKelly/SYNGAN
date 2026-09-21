@@ -111,6 +111,7 @@ def test_jackson_completion_remains_closed_during_phase_016() -> None:
     )
     assert expected_phase_016 in residual_text
 
+
 def test_post_phase_015_record_is_preserved_as_superseded_boundary_history() -> None:
     reconciliation_text = POST_015.read_text(encoding="utf-8")
 
@@ -118,7 +119,6 @@ def test_post_phase_015_record_is_preserved_as_superseded_boundary_history() -> 
     assert "Subsequent Phase 016 state" in reconciliation_text
     assert "016-A       COMPLETE" in reconciliation_text
     assert "016-B       AUTHORIZED / ACTIVE" in reconciliation_text
-
 
 
 def test_016_b_current_history_topology_is_established() -> None:
