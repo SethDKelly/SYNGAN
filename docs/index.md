@@ -86,11 +86,11 @@ Phase 015 start gate                  COMPLETE
 015-F                                 COMPLETE
 015-G                                 COMPLETE
 015-H                                 COMPLETE
-015-I                                 AUTHORIZED / ACTIVE
-015-J                                 NOT AUTHORIZED
+015-I                                 COMPLETE
+015-J                                 NEXT ELIGIBLE / NOT AUTHORIZED
 implementation readiness             READY
 implementation start                 STARTED
-implementation next                  015-I — AUTHORIZED / ACTIVE
+implementation next                  015-J — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
 ## Current whole-design baseline
@@ -129,7 +129,7 @@ Phase 014 is complete design/readiness work. Phase 015 controlled implementation
 ```text
 IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       STARTED
-IMPLEMENTATION NEXT        015-I — AUTHORIZED / ACTIVE
+IMPLEMENTATION NEXT        015-J — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
 Historical source/tests/plans may be inspected as downstream evidence, but cannot redefine semantics or be modified to manufacture readiness.
@@ -138,4 +138,4 @@ R3 is READY and implementation has begun only through explicitly authorized Phas
 
 ## Current next boundary
 
-**015-I — Platform Capability, Portability, Observability, Scale/Performance & Support Qualification** is **AUTHORIZED / ACTIVE**. 015-J remains **NOT AUTHORIZED**.
+**015-J — Cross-Slice Integration, Residual Risk Closure & Implementation Consolidation** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
