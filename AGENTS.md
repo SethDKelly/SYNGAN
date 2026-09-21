@@ -4,7 +4,7 @@ These instructions apply repository-wide to automated coding/documentation agent
 
 ## Current posture
 
-**Jackson concept design is complete. Phase 013 architecture reconciliation is complete and R1 is currently closed. Phase 014 whole-design/readiness work is ACTIVE; 014-A through 014-E are complete and 014-F is next. Implementation remains held.**
+**Jackson concept design is complete. Phase 013 architecture reconciliation is complete and R1 is currently closed. Phase 014 whole-design/readiness work is ACTIVE; 014-A through 014-F are complete and 014-G is next. Implementation remains held.**
 
 Start with:
 
@@ -35,7 +35,8 @@ Phase 014                            ACTIVE
 014-C                                COMPLETE
 014-D                                COMPLETE
 014-E                                COMPLETE
-014-F                                NEXT ELIGIBLE
+014-F                                COMPLETE
+014-G                                NEXT ELIGIBLE
 R2                                   OPEN
 R3                                   OPEN
 implementation readiness             NOT READY
@@ -128,4 +129,4 @@ Even after a positive R3, implementation must remain **NOT STARTED** until Phase
 
 ## Current next boundary
 
-**014-F — End-to-End Scenario, Exception, Failure, Recovery, Scale, Security, Portability & Adversarial Whole-Design Audit** is next eligible.
+**014-G — Implementation-Neutral Completeness, Decision-Ambiguity, Handoff Sufficiency & Residual Whole-Design Register** is next eligible.
