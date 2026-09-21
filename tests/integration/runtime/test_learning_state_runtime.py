@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from pathlib import Path
+
 import pytest
 
 from syngan.adapters.sqlite_control_store import SQLiteControlStore
@@ -58,7 +60,7 @@ def _commitment(
     )
 
 
-def test_learning_completion_establishes_one_durable_primary_learned_state(tmp_path) -> None:
+def test_learning_completion_establishes_one_durable_primary_learned_state(tmp_path: Path) -> None:
     scope = AuthorityScope("runtime-test")
     path = tmp_path / "control.db"
     learning = _commitment(scope, "learning", "learning-1", "l1")
