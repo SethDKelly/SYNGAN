@@ -53,3 +53,6 @@ jobs:
 
       - name: Run required Evaluation Evidence and history gate
         run: uv run --no-sync python tools/verify.py evidence
+
+      - name: Run required authorization disclosure and no-egress gate
+        run: uv run --no-sync python tools/verify.py security
