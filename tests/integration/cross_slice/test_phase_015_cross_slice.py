@@ -493,7 +493,7 @@ def test_s07_s08_provider_observation_and_recovery_remain_below_semantic_authori
     assert recovered.current_attempt_id is None
     assert recovered.attempt(attempt_id).status is AttemptStatus.FENCED
 
-    with pytest.raises(ValueError, match="recovery frontier"):
+    with pytest.raises(ValueError, match="does not match current authority"):
         recovered.prepare_attempt(
             LogicalId("attempt-stale"),
             commitment("runtime-plan", "plan-stale"),
