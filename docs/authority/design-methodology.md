@@ -217,20 +217,26 @@ Completing Jackson concept design means the relevant concepts have stable purpos
 
 That still does **not** automatically make implementation ready. SYNGAN must then reconcile downstream representation/architecture against the completed concept design and perform a whole-design exit audit.
 
-Under the current roadmap:
+The current roadmap has completed this sequence:
 
 ```text
-Phase 012  may declare JACKSON CONCEPT DESIGN COMPLETE
-Phase 013  reconciles representation / architecture
-Phase 014  may declare WHOLE DESIGN COMPLETE and implementation READY
+Phase 012  JACKSON CONCEPT DESIGN COMPLETE FOR CURRENT PRODUCT SCOPE
+Phase 013  representation / architecture reconciliation COMPLETE
+Phase 014  WHOLE DESIGN / R2 COMPLETE; R3 READY
+Phase 015  explicit implementation authority / controlled delivery COMPLETE
 ```
 
-Until Phase 014 positively passes:
+Current post-Phase-015 posture:
 
 ```text
-IMPLEMENTATION READINESS   NOT READY
-IMPLEMENTATION START       NOT STARTED
-IMPLEMENTATION NEXT        NOT YET
+JACKSON CONCEPT DESIGN              COMPLETE FOR CURRENT PRODUCT SCOPE
+CURRENT CONCEPTUAL BLOCKERS         0
+CURRENT UPSTREAM REOPENS            0
+M8 FUTURE REDISCOVERY GROUPS        4 / DORMANT
+POST-PHASE-015 DELIVERY AUTHORITY   NONE
+PHASE 016                           NOT DEFINED
 ```
 
-A positive Phase 014 result may make implementation **READY / NOT STARTED / NEXT**, but implementation begins only under a later explicit implementation-authority phase.
+A future delivery program still requires explicit authority. If future product intent crosses a documented rediscovery trigger, the relevant Jackson concept-design authority must reopen before downstream architecture or implementation proceeds.
+
+See [Post-Phase-015 Methodology & Documentation Reconciliation](post-phase-015-methodology-documentation-reconciliation.md).
