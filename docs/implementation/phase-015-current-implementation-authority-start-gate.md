@@ -378,3 +378,25 @@ IMPLEMENTATION START          STARTED
 Current authority: [015-F Execution / Attempt / Recovery](phase-015-f-execution-attempt-admission-fencing-idempotency-checkpoint-cancellation-recovery-authority.md).
 
 The repository next boundary is **015-G — Evaluation, Evidence, Provenance, Historical Read Composition & Reproducibility**, still gated pending explicit proceed.
+
+
+## Post-015-G consumption
+
+015-G has completed Evaluation/Evidence, typed Provenance, historical-read composition and derived Reproducibility foundations.
+
+~~~text
+015-A                         COMPLETE
+015-B                         COMPLETE
+015-C                         COMPLETE
+015-D                         COMPLETE
+015-E                         COMPLETE
+015-F                         COMPLETE
+015-G                         COMPLETE
+015-H                         NEXT ELIGIBLE / NOT AUTHORIZED
+015-I..015-J                  NOT AUTHORIZED
+IMPLEMENTATION START          STARTED
+~~~
+
+Current authority: [015-G Evaluation / Evidence / Provenance / History / Reproducibility](phase-015-g-evaluation-evidence-provenance-history-reproducibility-authority.md).
+
+The repository next boundary is **015-H — Authorization, Disclosure, Protected Existence, Secrets, Dependency Trust & No-Egress**, still gated pending explicit proceed.
