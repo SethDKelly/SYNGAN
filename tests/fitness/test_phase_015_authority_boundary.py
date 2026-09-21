@@ -9,17 +9,21 @@ PHASE_015_CURRENT = IMPLEMENTATION / (
     "implementation-consolidation-authority.md"
 )
 PHASE_015 = ROOT / "docs" / "phases" / "015" / "index.md"
-PHASE_016_AUTHORITY = ROOT / "docs" / "authority" / (
-    "phase-016-documentation-okf-agentic-implementation-readiness-"
-    "hardening-authority.md"
+PHASE_016_AUTHORITY = (
+    ROOT
+    / "docs"
+    / "authority"
+    / ("phase-016-documentation-okf-agentic-implementation-readiness-hardening-authority.md")
 )
 PHASE_016 = ROOT / "docs" / "phases" / "016" / "index.md"
-PHASE_016_A = ROOT / "docs" / "phases" / "016" / (
-    "016-A-documentation-corpus-current-owner-duplication-supersession-audit.md"
+PHASE_016_A = (
+    ROOT
+    / "docs"
+    / "phases"
+    / "016"
+    / ("016-A-documentation-corpus-current-owner-duplication-supersession-audit.md")
 )
-PHASE_016_INVENTORY = (
-    ROOT / "docs" / "phases" / "016" / "016-A-documentation-corpus-inventory.json"
-)
+PHASE_016_INVENTORY = ROOT / "docs" / "phases" / "016" / "016-A-documentation-corpus-inventory.json"
 AGENTS = ROOT / "AGENTS.md"
 RESIDUAL = IMPLEMENTATION / "phase-015-residual-risk-closure-support-scope-register.md"
 METHODOLOGY = ROOT / "docs" / "authority" / "jackson-methodology-completion-matrix.md"
@@ -96,12 +100,9 @@ def test_jackson_completion_remains_closed_during_phase_016() -> None:
     assert "PHASE 016                           ACTIVE — PRE-IMPLEMENTATION HARDENING" in (
         methodology_text
     )
-    assert "M8 FUTURE REDISCOVERY GROUPS                    4 / DORMANT" in (
-        residual_text
-    )
+    assert "M8 FUTURE REDISCOVERY GROUPS                    4 / DORMANT" in (residual_text)
     expected_phase_016 = (
-        "PHASE 016                                        "
-        "ACTIVE — PRE-IMPLEMENTATION HARDENING"
+        "PHASE 016                                        ACTIVE — PRE-IMPLEMENTATION HARDENING"
     )
     assert expected_phase_016 in residual_text
 
