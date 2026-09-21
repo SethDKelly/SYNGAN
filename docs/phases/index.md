@@ -49,7 +49,7 @@ start gate  COMPLETE — intention review / evidence surface / decomposition
 014-B       COMPLETE — problem / actors / outcomes / scope / concept-purpose coverage
 014-C       COMPLETE — concept / dependence / application-family / synchronization integrity
 014-D       COMPLETE — mapping / interaction / linguistic / disclosure / semantic parity
-014-E            — architecture realization / responsibility / design-to-architecture traceability
+014-E       COMPLETE — architecture realization / responsibility / design-to-architecture traceability
 014-F            — end-to-end scenarios / failure / recovery / scale / security / portability
 014-G            — implementation-neutral completeness / handoff sufficiency / residual register
 014-H            — R2 decision / R3 readiness decision / Phase 015 handoff
@@ -63,6 +63,6 @@ Future only. Even a positive Phase 014 readiness decision must leave implementat
 
 ## Current next boundary
 
-**014-E — Architecture Realization Coverage, Responsibility/Authority & Design-to-Architecture Traceability Audit** is next eligible.
+**014-F — End-to-End Scenario, Exception, Failure, Recovery, Scale, Security, Portability & Adversarial Whole-Design Audit** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
