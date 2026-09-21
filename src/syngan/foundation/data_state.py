@@ -361,9 +361,7 @@ def sealed_subject_from_payload(payload: EncodedPayload) -> SealedPhysicalSubjec
 
     return SealedPhysicalSubject(
         reference=_reference_from_value(value.get("reference"), "sealed subject reference"),
-        topology=topology_from_payload(
-            EncodedPayload.from_object(topology_value)
-        ),
+        topology=topology_from_payload(EncodedPayload.from_object(topology_value)),
         scopes=tuple(physical_scopes),
         strength=PhysicalSubjectStrength(
             identity=IdentityStrength(strength_token("identity")),
