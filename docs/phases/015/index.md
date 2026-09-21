@@ -21,7 +21,7 @@ R3                              READY
 
 IMPLEMENTATION READINESS        READY
 IMPLEMENTATION START            NOT STARTED
-IMPLEMENTATION NEXT             015-A — AUTHORIZED
+IMPLEMENTATION NEXT             015-B — NEXT ELIGIBLE / NOT AUTHORIZED
 ~~~
 
 Readiness is not permission to implement.
@@ -61,8 +61,8 @@ P15-06  explicit first-slice authorization
 ## Controlled-delivery sequence
 
 ~~~text
-015-A  AUTHORIZED / NEXT — Current Implementation Baseline, Repository/Toolchain & Scaffold Reconciliation
-015-B  NOT AUTHORIZED — Current Verification Harness, Architecture-Fitness & Evidence-Gate Foundation
+015-A  COMPLETE — Current Implementation Baseline, Repository/Toolchain & Scaffold Reconciliation
+015-B  NEXT ELIGIBLE / NOT AUTHORIZED — Current Verification Harness, Architecture-Fitness & Evidence-Gate Foundation
 015-C  NOT AUTHORIZED — Identity, References, Representation, Durable Owner-State & Control Persistence
 015-D  NOT AUTHORIZED — Distributed Data-State, Topology, Candidate/Seal & Generation Promotion
 015-E  NOT AUTHORIZED — Strategy/Method Binding, Dependency Closure, Learning/Learned-State & Generation Runtime
@@ -74,6 +74,21 @@ P15-06  explicit first-slice authorization
 ~~~
 
 No later slice inherits authorization from the start gate.
+
+## 015-A completion state
+
+Current completion authority: [015-A Current Implementation Baseline / Scaffold Reconciliation](../../implementation/phase-015-a-current-implementation-baseline-scaffold-reconciliation.md).
+
+~~~text
+015-A                              COMPLETE
+repository/toolchain baseline      RECONCILED
+obsolete Phase 007 executable gate REMOVED
+exact-package permanence           REMOVED
+architecture-fitness baseline      NORMALIZED
+domain implementation              NONE
+Verify workflow                     PASS
+015-B                              NEXT ELIGIBLE / NOT AUTHORIZED
+~~~
 
 ## Residual readiness risks inherited from 014-G
 
@@ -105,7 +120,7 @@ Earlier language such as active, canonical, current planning overlay, or concret
 
 ## Current prohibition
 
-Until 015-A is explicitly entered, and for all responsibilities outside 015-A authority:
+015-A is complete. Until 015-B is explicitly authorized, and for all responsibilities outside completed 015-A authority:
 
 - do not add domain behavior;
 - do not stabilize public APIs/schemas;
@@ -117,4 +132,4 @@ Until 015-A is explicitly entered, and for all responsibilities outside 015-A au
 
 ## Current next boundary
 
-**015-A — Current Implementation Baseline, Repository/Toolchain & Scaffold Reconciliation** is next eligible and authorized.
+**015-B — Current Verification Harness, Architecture-Fitness & Evidence-Gate Foundation** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
