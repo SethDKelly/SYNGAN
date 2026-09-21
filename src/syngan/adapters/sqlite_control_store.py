@@ -115,8 +115,7 @@ class SQLiteControlStore:
             revision = int(revision_text)
             if revision > _SCHEMA_REVISION.value:
                 raise UnsupportedMigrationRevision(
-                    f"store revision {revision} is newer than supported "
-                    f"{_SCHEMA_REVISION.value}"
+                    f"store revision {revision} is newer than supported {_SCHEMA_REVISION.value}"
                 )
             if revision < _SCHEMA_REVISION.value:
                 raise UnsupportedMigrationRevision(
@@ -473,9 +472,7 @@ class SQLiteControlStore:
             key=key,
             state_version=StateVersion(int(cast(int, row["state_version"]))),
             schema_version=RepresentationSchemaVersion(int(cast(int, row["schema_version"]))),
-            last_recovery_frontier=RecoveryFrontier(
-                int(cast(int, row["last_recovery_frontier"]))
-            ),
+            last_recovery_frontier=RecoveryFrontier(int(cast(int, row["last_recovery_frontier"]))),
             payload=EncodedPayload(cast(str, row["payload_json"])),
         )
 
@@ -629,9 +626,7 @@ class SQLiteControlStore:
                     key=key,
                     from_state_version=StateVersion(from_value) if from_value is not None else None,
                     to_state_version=StateVersion(int(cast(int, row["to_state_version"]))),
-                    recovery_frontier=RecoveryFrontier(
-                        int(cast(int, row["recovery_frontier"]))
-                    ),
+                    recovery_frontier=RecoveryFrontier(int(cast(int, row["recovery_frontier"]))),
                     transition_kind=cast(str, row["transition_kind"]),
                     detail=EncodedPayload(cast(str, row["detail_json"])),
                 )
