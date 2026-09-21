@@ -49,7 +49,8 @@ Phase 014                       ACTIVE
 014-D                           COMPLETE
 014-E                           COMPLETE
 014-F                           COMPLETE
-014-G                           NEXT ELIGIBLE
+014-G                           COMPLETE
+014-H                           NEXT ELIGIBLE
 R2                              OPEN
 R3                              OPEN
 ```
@@ -105,6 +106,25 @@ Phase 014 findings must distinguish missing design semantics from normal impleme
 015           Implementation Authority & Controlled Delivery — FUTURE ONLY
 ```
 
+## 014-G completion state
+
+014-G completed the implementation-neutral completeness and handoff-sufficiency preflight.
+
+~~~text
+014-G                            COMPLETE
+unresolved WMAT-2                0
+unresolved WMAT-3                0
+READINESS-BLOCK                  0
+READINESS-RISK                   8
+upstream reopen                  NONE
+R2                               OPEN
+R3                               OPEN
+~~~
+
+No current issue requires implementers to invent product semantics. The remaining risks concern implementation/conformance proof and historical-plan re-baselining.
+
+Implementation remains held until 014-H explicitly decides R2 and R3.
+
 ## Current next boundary
 
-**014-G — Implementation-Neutral Completeness, Decision-Ambiguity, Handoff Sufficiency & Residual Whole-Design Register** is next eligible.
+**014-H — Phase 014 Consolidation, R2 Completion Decision, R3 Implementation-Readiness Decision & Phase 015 Handoff** is next eligible.
