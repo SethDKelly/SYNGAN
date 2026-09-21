@@ -91,10 +91,17 @@ class EvidenceHistoryService:
         authority_frontier: RecoveryFrontier,
         transition_id: LogicalId,
     ) -> EvaluationSnapshot:
+        committed_payload = evaluation_to_payload(state)
+        self._store.put_immutable_binding(
+            state.evaluation_commitment,
+            _SCHEMA,
+            committed_payload,
+            authority_frontier,
+        )
         record = self._store.create_current_state(
             key=evaluation_state_key(state.evaluation_commitment),
             schema_version=_SCHEMA,
-            payload=evaluation_to_payload(state),
+            payload=committed_payload,
             authority_frontier=authority_frontier,
             transition_id=transition_id,
             transition_kind="evaluation-committed",
