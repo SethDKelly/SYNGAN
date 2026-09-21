@@ -26,7 +26,7 @@ Phase 013                       COMPLETE
 R1 architecture reconciliation CURRENTLY CLOSED
 representation / architecture  RECONCILED / CURRENT
 Phase 014 start gate            COMPLETE
-Phase 014                       ACTIVE
+Phase 014                       COMPLETE
 014-A                           COMPLETE
 014-B                           COMPLETE
 014-C                           COMPLETE
@@ -35,11 +35,11 @@ Phase 014                       ACTIVE
 014-F                           COMPLETE
 014-G                           COMPLETE
 014-H                           COMPLETE
-R2                              OPEN
-R3                              OPEN
-implementation readiness        NOT READY
+R2                              CURRENTLY CLOSED
+R3                              READY
+implementation readiness        READY
 implementation start            NOT STARTED
-implementation next             NOT YET
+implementation next             PHASE 015 AUTHORITY GATE
 ```
 
 ## Governing authority
