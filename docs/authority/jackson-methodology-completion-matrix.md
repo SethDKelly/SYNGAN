@@ -17,7 +17,7 @@ Historical architecture, implementation plans, source, tests and prior engineeri
 ```text
 IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       NOT STARTED
-IMPLEMENTATION NEXT        015-A — AUTHORIZED
+IMPLEMENTATION NEXT        015-B — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
 Jackson concept design, downstream architecture reconciliation, and Phase 014 whole-design/readiness work are complete for the current product scope.
@@ -185,7 +185,7 @@ READINESS-BLOCK                   0
 READINESS-RISK                    8 — HANDED OFF
 IMPLEMENTATION READINESS          READY
 IMPLEMENTATION START              NOT STARTED
-IMPLEMENTATION NEXT        015-A — AUTHORIZED
+IMPLEMENTATION NEXT        015-B — NEXT ELIGIBLE / NOT AUTHORIZED
 ~~~
 
 Detailed authority: [Phase 014-H R2/R3 Decision & Phase 015 Handoff](phase-014-h-consolidation-r2-r3-decision-phase-015-handoff.md).
@@ -224,7 +224,7 @@ R2                                   CURRENTLY CLOSED
 R3                                   READY
 IMPLEMENTATION READINESS             READY
 IMPLEMENTATION START                 NOT STARTED
-IMPLEMENTATION NEXT        015-A — AUTHORIZED
+IMPLEMENTATION NEXT        015-B — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
 ## Residual accounting entering Phase 014
@@ -249,8 +249,9 @@ Phase 014 is complete. R3 is READY, but implementation remains NOT STARTED until
 
 ~~~text
 Phase 015 Start Gate   COMPLETE
-015-A                  AUTHORIZED / NEXT ELIGIBLE
-015-B..015-J           NOT AUTHORIZED
+015-A                  COMPLETE
+015-B                  NEXT ELIGIBLE / NOT AUTHORIZED
+015-C..015-J           NOT AUTHORIZED
 IMPLEMENTATION START   NOT STARTED
 ~~~
 
@@ -258,4 +259,4 @@ Current implementation authority: [Phase 015 Current Implementation Authority / 
 
 ## Current next boundary
 
-**015-A — Current Implementation Baseline, Repository/Toolchain & Scaffold Reconciliation** is next eligible and explicitly authorized.
+**015-B — Current Verification Harness, Architecture-Fitness & Evidence-Gate Foundation** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
