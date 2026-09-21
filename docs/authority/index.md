@@ -62,10 +62,11 @@ Phase 015 start gate                  COMPLETE
 015-D                                 COMPLETE
 015-E                                 COMPLETE
 015-F                                 COMPLETE
-015-G                                 NEXT ELIGIBLE / NOT AUTHORIZED
+015-G                                 COMPLETE
+015-H                                 NEXT ELIGIBLE / NOT AUTHORIZED
 implementation readiness             READY
 implementation start                 STARTED
-implementation next                  015-G — NEXT ELIGIBLE / NOT AUTHORIZED
+implementation next                  015-H — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
 ## Phase 014 authority discipline
@@ -109,11 +110,11 @@ Until R3 is explicitly decided:
 ```text
 IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       STARTED
-IMPLEMENTATION NEXT        015-G — NEXT ELIGIBLE / NOT AUTHORIZED
+IMPLEMENTATION NEXT        015-H — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
 Even a positive R3 requires explicit Phase 015 implementation authority.
 
 ## Current next boundary
 
-**015-G — Evaluation, Evidence, Provenance, Historical Read Composition & Reproducibility** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
+**015-H — Authorization, Disclosure, Protected Existence, Secrets, Dependency Trust & No-Egress** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
