@@ -359,9 +359,7 @@ def assess_runtime_closure(
             *binding.required_roles,
         ]
         material.extend(f"{component}={identity}" for component, identity in exact_identities)
-        material.extend(
-            f"role:{role}={identity}" for role, identity in exact_role_identities
-        )
+        material.extend(f"role:{role}={identity}" for role, identity in exact_role_identities)
         closure_identity = hashlib.sha256("\n".join(material).encode("utf-8")).hexdigest()
 
     return RuntimeClosureAssessment(
