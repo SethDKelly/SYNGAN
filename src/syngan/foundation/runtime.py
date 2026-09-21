@@ -328,9 +328,7 @@ def assess_runtime_closure(
         if unavailable_roles:
             incomplete_roles.update(unavailable_roles)
             continue
-        identities.append(
-            (requirement.component_id, dependency_resolution.exact_identity)
-        )
+        identities.append((requirement.component_id, dependency_resolution.exact_identity))
 
     if incompatible or incompatible_roles:
         status = RuntimeClosureStatus.INCOMPATIBLE
