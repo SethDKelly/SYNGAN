@@ -50,7 +50,10 @@ def test_root_package_does_not_eagerly_import_outer_integrations() -> None:
             continue
 
         for name in imported:
-            if any(name == candidate or name.startswith(f"{candidate}.") for candidate in prohibited_imports):
+            if any(
+                name == candidate or name.startswith(f"{candidate}.")
+                for candidate in prohibited_imports
+            ):
                 violations.append(name)
 
     assert violations == []
