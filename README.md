@@ -35,7 +35,8 @@ Phase 014                            ACTIVE
 014-A                                COMPLETE
 014-B                                COMPLETE
 014-C                                COMPLETE
-014-D                                NEXT ELIGIBLE
+014-D                                COMPLETE
+014-E                                NEXT ELIGIBLE
 R2                                   OPEN
 R3                                   OPEN
 implementation readiness             NOT READY
@@ -92,4 +93,4 @@ Even a later positive R3 does not start implementation; explicit Phase 015 autho
 
 ## Current next boundary
 
-**014-D — Mapping, Interaction, Linguistic, Disclosure & Semantic-Parity Whole-Design Audit** is next eligible.
+**014-E — Architecture Realization Coverage, Responsibility/Authority & Design-to-Architecture Traceability Audit** is next eligible.
