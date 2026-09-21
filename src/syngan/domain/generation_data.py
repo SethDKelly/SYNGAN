@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, replace
 from enum import StrEnum
+
 from syngan.foundation.data_state import (
     TopologyDescriptor,
     topology_from_payload,
@@ -18,6 +19,7 @@ from syngan.foundation.identity import (
 )
 from syngan.foundation.representation import (
     EncodedPayload,
+    JsonObject,
     JsonValue,
     decode_reference,
     encode_reference,
