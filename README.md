@@ -21,6 +21,7 @@ Current governing design authority includes:
 - [`Phase 015`](docs/phases/015/index.md)
 - [`Phase 015 Current Implementation Authority / Start Gate`](docs/implementation/phase-015-current-implementation-authority-start-gate.md)
 - [`015-A Current Implementation Baseline / Scaffold Reconciliation`](docs/implementation/phase-015-a-current-implementation-baseline-scaffold-reconciliation.md)
+- [`015-B Current Verification Harness / Architecture Fitness / Evidence Gates`](docs/implementation/phase-015-b-current-verification-harness-architecture-fitness-evidence-gates.md)
 - [`Phase 014`](docs/phases/014/index.md)
 - [`Phase 014 Start Gate / Decomposition`](docs/phases/014/014-start-gate-whole-design-readiness-decomposition.md)
 - [`Phase 013 Consolidated Architecture Contract`](docs/architecture/phase-013-consolidated-architecture-contract.md)
@@ -100,7 +101,7 @@ IMPLEMENTATION START       NOT STARTED
 IMPLEMENTATION NEXT        015-B — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
-015-A is complete and the repository/toolchain/scaffold baseline is reconciled. Domain implementation remains unstarted. 015-B is next eligible but requires explicit authorization.
+015-A and 015-B are complete; the repository baseline and current verification harness are reconciled. Domain implementation remains unstarted. 015-C is next eligible but requires explicit authorization.
 
 ## Current next boundary
 
