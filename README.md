@@ -38,7 +38,8 @@ Phase 014                            ACTIVE
 014-D                                COMPLETE
 014-E                                COMPLETE
 014-F                                COMPLETE
-014-G                                NEXT ELIGIBLE
+014-G                                COMPLETE
+014-H                                NEXT ELIGIBLE
 R2                                   OPEN
 R3                                   OPEN
 implementation readiness             NOT READY
@@ -69,7 +70,7 @@ Approved sequence:
 014-D  mapping / interaction / disclosure / semantic parity — COMPLETE
 014-E  architecture realization / design-to-architecture traceability — COMPLETE
 014-F  end-to-end scenarios / failure / recovery / scale / security / portability — COMPLETE
-014-G  implementation-neutral completeness / handoff sufficiency / residual register
+014-G  implementation-neutral completeness / handoff sufficiency / residual register — COMPLETE
 014-H  R2 decision / R3 readiness decision / Phase 015 handoff
 ```
 
@@ -95,4 +96,4 @@ Even a later positive R3 does not start implementation; explicit Phase 015 autho
 
 ## Current next boundary
 
-**014-G — Implementation-Neutral Completeness, Decision-Ambiguity, Handoff Sufficiency & Residual Whole-Design Register** is next eligible.
+**014-H — Phase 014 Consolidation, R2 Completion Decision, R3 Implementation-Readiness Decision & Phase 015 Handoff** is next eligible.
