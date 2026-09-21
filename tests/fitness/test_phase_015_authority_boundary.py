@@ -4,10 +4,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 IMPLEMENTATION = ROOT / "docs" / "implementation"
-CURRENT = (
-    IMPLEMENTATION
-    / "phase-015-b-current-verification-harness-architecture-fitness-evidence-gates.md"
-)
+CURRENT = IMPLEMENTATION / "phase-015-c-identity-reference-control-persistence-authority.md"
 PHASE = ROOT / "docs" / "phases" / "015" / "index.md"
 AGENTS = ROOT / "AGENTS.md"
 
@@ -49,8 +46,11 @@ def test_agent_instructions_preserve_active_015_c_authority_boundary() -> None:
     assert "015-A                                 COMPLETE" in agent_text
     assert "015-B                                 COMPLETE" in agent_text
     assert "015-C                                 AUTHORIZED / ACTIVE" in agent_text
-    assert "domain implementation remains NOT STARTED" in agent_text
+    assert "015-D..015-J                          NOT AUTHORIZED" in agent_text
 
 
-def test_production_source_tree_remains_scaffold_only() -> None:
-    assert (ROOT / "src" / "syngan").is_dir()
+def test_015_c_foundation_is_present_without_later_slice_implementation() -> None:
+    assert (ROOT / "src" / "syngan" / "foundation" / "identity.py").is_file()
+    assert (ROOT / "src" / "syngan" / "foundation" / "representation.py").is_file()
+    assert (ROOT / "src" / "syngan" / "ports" / "control_store.py").is_file()
+    assert (ROOT / "src" / "syngan" / "adapters" / "sqlite_control_store.py").is_file()
