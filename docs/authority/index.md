@@ -56,10 +56,11 @@ R2                                   CURRENTLY CLOSED
 R3                                   READY
 Phase 015                             ACTIVE
 Phase 015 start gate                  COMPLETE
-015-A                                 AUTHORIZED / NEXT ELIGIBLE
+015-A                                 COMPLETE
+015-B                                 NEXT ELIGIBLE / NOT AUTHORIZED
 implementation readiness             READY
 implementation start                 NOT STARTED
-implementation next                  015-A — AUTHORIZED
+implementation next                  015-B — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
 ## Phase 014 authority discipline
@@ -103,11 +104,11 @@ Until R3 is explicitly decided:
 ```text
 IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       NOT STARTED
-IMPLEMENTATION NEXT        015-A — AUTHORIZED
+IMPLEMENTATION NEXT        015-B — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
 Even a positive R3 requires explicit Phase 015 implementation authority.
 
 ## Current next boundary
 
-**015-A — Current Implementation Baseline, Repository/Toolchain & Scaffold Reconciliation** is next eligible and explicitly authorized.
+**015-B — Current Verification Harness, Architecture-Fitness & Evidence-Gate Foundation** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
