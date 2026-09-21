@@ -21,7 +21,7 @@ R3                              READY
 
 IMPLEMENTATION READINESS        READY
 IMPLEMENTATION START            STARTED
-IMPLEMENTATION NEXT             015-G — NEXT ELIGIBLE / NOT AUTHORIZED
+IMPLEMENTATION NEXT             015-G — AUTHORIZED / ACTIVE
 ~~~
 
 Readiness is not permission to implement.
@@ -67,7 +67,7 @@ P15-06  explicit first-slice authorization
 015-D  COMPLETE — Distributed Data-State, Topology, Candidate/Seal & Generation Promotion
 015-E  COMPLETE — Strategy/Method Binding, Dependency Closure, Learning/Learned-State & Generation Runtime
 015-F  COMPLETE — Execution/Attempt, Admission, Fencing, Idempotency, Checkpoint, Cancellation & Recovery
-015-G  NEXT ELIGIBLE / NOT AUTHORIZED — Evaluation, Evidence, Provenance, Historical Read Composition & Reproducibility
+015-G  AUTHORIZED / ACTIVE — Evaluation, Evidence, Provenance, Historical Read Composition & Reproducibility
 015-H  NOT AUTHORIZED — Authorization, Disclosure, Protected Existence, Secrets, Dependency Trust & No-Egress
 015-I  NOT AUTHORIZED — Platform Capability, Portability, Observability, Scale/Performance & Support Qualification
 015-J  NOT AUTHORIZED — Cross-Slice Integration, Residual Risk Closure & Implementation Consolidation
@@ -206,7 +206,7 @@ Earlier language such as active, canonical, current planning overlay, or concret
 
 ## Current prohibition
 
-015-A through 015-F are complete. Until 015-G is explicitly authorized, and for responsibilities outside completed 015-F authority:
+015-A through 015-F are complete and 015-G is explicitly authorized/active. For responsibilities outside 015-G authority:
 
 - do not add domain behavior;
 - do not stabilize public APIs/schemas;
@@ -218,4 +218,4 @@ Earlier language such as active, canonical, current planning overlay, or concret
 
 ## Current next boundary
 
-**015-G — Evaluation, Evidence, Provenance, Historical Read Composition & Reproducibility** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
+**015-G — Evaluation, Evidence, Provenance, Historical Read Composition & Reproducibility** is active and authorized.
