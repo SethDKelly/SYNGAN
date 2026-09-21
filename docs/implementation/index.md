@@ -13,16 +13,17 @@ Current governing implementation authority:
 - [015-B Current Verification Harness / Architecture Fitness / Evidence Gates](phase-015-b-current-verification-harness-architecture-fitness-evidence-gates.md)
 - [015-C Identity / References / Control Persistence](phase-015-c-identity-reference-control-persistence-authority.md)
 - [015-D Distributed Data / Topology / Generation Promotion](phase-015-d-distributed-data-topology-generation-promotion-authority.md)
+- [015-E Strategy Runtime / Learning / Generation](phase-015-e-strategy-runtime-learning-generation-authority.md)
 
 ## Current posture
 
 ```text
 IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       STARTED
-IMPLEMENTATION NEXT        015-E — NEXT ELIGIBLE / NOT AUTHORIZED
+IMPLEMENTATION NEXT        015-F — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
-Phase 015 authority is active. 015-A through 015-D are complete. 015-E is next eligible but not authorized; 015-F through 015-J remain locked.
+Phase 015 authority is active. 015-A through 015-E are complete. 015-F is next eligible but not authorized; 015-G through 015-J remain locked.
 
 ## Current design progress
 
@@ -90,11 +91,11 @@ Current residual/readiness evidence is [Phase 014-G Implementation-Neutral Compl
 
 ## Current authorization boundary
 
-The Phase 015 start gate and 015-A through 015-D are complete. No later slice is currently authorized.
+The Phase 015 start gate and 015-A through 015-E are complete. No later slice is currently authorized.
 
 015-A reconciled implementation authority, repository/toolchain configuration, scaffold/test dispositions and architecture-fitness rules without implementing concept/domain behavior.
 
-Until 015-E or a later owning slice is explicitly authorized, do not add or stabilize production outside completed 015-D authority:
+Until 015-F or a later owning slice is explicitly authorized, do not add or stabilize production outside completed 015-E authority:
 
 - persistence/query schemas or migrations;
 - data-state/manifest/candidate stores;
@@ -116,11 +117,11 @@ Phase 014-H established:
 ```text
 IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       STARTED
-IMPLEMENTATION NEXT        015-E — NEXT ELIGIBLE / NOT AUTHORIZED
+IMPLEMENTATION NEXT        015-F — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
-Implementation now includes the 015-C control foundation and 015-D Generation data-state/topology/promotion foundation. Strategy/runtime, Learning/Learned-State runtime, Execution/recovery, Evidence, security/provider, and scale qualification remain gated. 015-E is next eligible but still requires explicit authorization.
+Implementation now includes the 015-C control foundation, 015-D Generation data-state/topology/promotion foundation, and 015-E Strategy/runtime plus Learning/Learned-State foundation. Execution/recovery, Evidence, security/provider, and scale qualification remain gated. 015-F is next eligible but still requires explicit authorization.
 
 ## Current next boundary
 
-**015-E — Strategy/Method Binding, Dependency Closure, Learning/Learned-State & Generation Runtime** — next eligible, not authorized.
+**015-F — Execution/Attempt, Admission, Fencing, Idempotency, Checkpoint, Cancellation & Recovery** — next eligible, not authorized.
