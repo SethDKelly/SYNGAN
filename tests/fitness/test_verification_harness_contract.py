@@ -22,7 +22,7 @@ def test_verification_manifest_has_current_lane_state() -> None:
         "C0": "active",
         "C1": "defined",
         "C2": "active",
-        "C3": "defined",
+        "C3": "active",
         "C4": "defined",
         "C5": "defined",
         "C6": "defined",
