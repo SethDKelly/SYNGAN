@@ -19,13 +19,19 @@ CURRENT MAT-2 / MAT-3 CONCEPTUAL DEFECTS       0
 CURRENT M2-M5 DESIGN MISFITS                    0
 UPSTREAM CONCEPTUAL REOPENS                     0
 M6 DOWNSTREAM DEFERRALS                         0 — CLOSED BY PHASE 013-I
-M8 FUTURE REDISCOVERY GROUPS                    4
+M8 FUTURE REDISCOVERY GROUPS                    4 / DORMANT
 G7                                               CURRENTLY CLOSED
 PHASE 011                                        COMPLETE
 PHASE 012                                        COMPLETE
+JACKSON CONCEPT DESIGN                           COMPLETE FOR CURRENT PRODUCT SCOPE
 PHASE 013                                        COMPLETE
 R1                                               CURRENTLY CLOSED
-PHASE 014                                        ACTIVE
+PHASE 014                                        COMPLETE
+R2                                               CURRENTLY CLOSED
+R3                                               READY / CONSUMED BY PHASE 015
+PHASE 015                                        COMPLETE
+C0-C9                                            ACTIVE / PASS
+PHASE 016                                        NOT DEFINED
 ```
 
 This register is not an issue tracker, implementation backlog, database schema, API resource or runtime status model.
@@ -174,15 +180,19 @@ H1/H2                             CURRENTLY CLOSED
 JACKSON CONCEPT DESIGN            COMPLETE FOR CURRENT PRODUCT SCOPE
 Phase 013                         COMPLETE
 R1                                CURRENTLY CLOSED
-Phase 014                         ACTIVE
-R2                                OPEN
-R3                                OPEN
+Phase 014                         COMPLETE
+R2                                CURRENTLY CLOSED
+R3                                READY / CONSUMED BY PHASE 015
+Phase 015                         COMPLETE
+C0-C9                             ACTIVE / PASS
+current conceptual blockers       0
+Phase 016                         NOT DEFINED
 ```
 
-A positive conceptual-quality or architecture result does not make implementation ready.
+A positive conceptual-quality or architecture result did not itself authorize implementation; Phase 015 subsequently supplied and completed that authority.
 
 ## Current next boundary
 
-Current Phase 014 subgroup sequencing is governed by [`docs/phases/014/index.md`](../phases/014/index.md).
+No conceptual reopen or numbered next design phase is currently required. The four M8 groups remain dormant rediscovery triggers. Any future product-scope expansion that crosses one of those triggers must return to the smallest appropriate Jackson discovery/design authority before implementation.
 
-Implementation remains **NOT READY / NOT STARTED / NOT YET**.
+See [Post-Phase-015 Methodology & Documentation Reconciliation](post-phase-015-methodology-documentation-reconciliation.md).
