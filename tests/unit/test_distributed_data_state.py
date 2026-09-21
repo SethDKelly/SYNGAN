@@ -233,6 +233,44 @@ def test_generation_requires_data_meaning_binding() -> None:
         )
 
 
+
+def test_generation_requires_data_meaning_revision_for_every_scope() -> None:
+    commitment_binding = TypedReference(
+        key=semantic_reference().key,
+        commitment_snapshot_id=CommitmentSnapshotId("meaning-snapshot"),
+    )
+    wrong_axis = TopologyDescriptor(
+        scopes=(LogicalScope("records"),),
+        semantic_bindings=(
+            SemanticBinding(
+                role="data-meaning",
+                reference=commitment_binding,
+                scope_ids=("records",),
+            ),
+        ),
+    )
+    with pytest.raises(ValueError, match="semantic revision"):
+        GenerationDataState(
+            generation_commitment=generation_commitment(),
+            topology=wrong_axis,
+        )
+
+    incomplete = TopologyDescriptor(
+        scopes=(LogicalScope("customers"), LogicalScope("orders")),
+        semantic_bindings=(
+            SemanticBinding(
+                role="data-meaning",
+                reference=semantic_reference(),
+                scope_ids=("customers",),
+            ),
+        ),
+    )
+    with pytest.raises(ValueError, match="cover every logical scope"):
+        GenerationDataState(
+            generation_commitment=generation_commitment(),
+            topology=incomplete,
+        )
+
 def test_generation_multiple_candidates_still_allow_only_one_completed_output() -> None:
     descriptor = topology("records")
     candidate_1 = LogicalId("candidate-1")
