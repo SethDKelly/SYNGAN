@@ -8,6 +8,7 @@ import pytest
 from syngan.adapters.sqlite_control_store import SQLiteControlStore
 from syngan.foundation.identity import (
     AuthorityScope,
+    CommitmentSnapshotId,
     LogicalId,
     RecoveryFrontier,
     RepresentationSchemaVersion,
@@ -23,7 +24,7 @@ from syngan.ports.control_store import (
     CoordinationIntentConflict,
     CoordinationIntentState,
     CurrentStateConflict,
-    ImmutableRecordConflict,
+    ImmutableBindingConflict,
     RecoveryFrontierConflict,
     ResolutionStatus,
     UnsupportedMigrationRevision,
@@ -54,15 +55,24 @@ def exact_reference(revision: str, resource_id: str = "resource-1") -> TypedRefe
     )
 
 
+def commitment_reference(
+    commitment: str, resource_id: str = "resource-1"
+) -> TypedReference:
+    return TypedReference(
+        key=key(resource_id=resource_id),
+        commitment_snapshot_id=CommitmentSnapshotId(commitment),
+    )
+
+
 def test_exact_revision_resolution_never_substitutes_latest(tmp_path: Path) -> None:
     database = tmp_path / "control.sqlite"
     with SQLiteControlStore(database, AuthorityScope("test")) as store:
         r1 = exact_reference("r1")
         r2 = exact_reference("r2")
-        store.put_immutable_revision(r1, SCHEMA, payload(name="one"), FRONTIER_0)
+        store.put_immutable_binding(r1, SCHEMA, payload(name="one"), FRONTIER_0)
         store.put_immutable_revision(r2, SCHEMA, payload(name="two"), FRONTIER_0)
 
-        resolved_r1 = store.resolve_immutable_revision(r1)
+        resolved_r1 = store.resolve_immutable_binding(r1)
         resolved_r2 = store.resolve_immutable_revision(r2)
         assert resolved_r1.record is not None
         assert resolved_r2.record is not None
@@ -76,7 +86,7 @@ def test_exact_revision_resolution_never_substitutes_latest(tmp_path: Path) -> N
             store.resolve_immutable_revision(TypedReference(key=key()))
 
 
-def test_immutable_revision_idempotency_conflict_and_tombstone(tmp_path: Path) -> None:
+def test_immutable_binding_idempotency_conflict_and_tombstone(tmp_path: Path) -> None:
     with SQLiteControlStore(tmp_path / "control.sqlite", AuthorityScope("test")) as store:
         reference = exact_reference("r1")
         record = store.put_immutable_revision(reference, SCHEMA, payload(value=1), FRONTIER_0)
@@ -86,13 +96,31 @@ def test_immutable_revision_idempotency_conflict_and_tombstone(tmp_path: Path) -
         with pytest.raises(ImmutableRecordConflict):
             store.put_immutable_revision(reference, SCHEMA, payload(value=2), FRONTIER_0)
 
-        store.mark_immutable_revision_unavailable(reference, FRONTIER_0)
+        store.mark_immutable_binding_unavailable(reference, FRONTIER_0)
         resolution = store.resolve_immutable_revision(reference)
         assert resolution.status is ResolutionStatus.UNAVAILABLE
         assert resolution.record is None
 
         with pytest.raises(ImmutableRecordConflict):
             store.put_immutable_revision(reference, SCHEMA, payload(value=1), FRONTIER_0)
+
+
+def test_semantic_revision_and_commitment_snapshot_are_distinct_bindings(
+    tmp_path: Path,
+) -> None:
+    with SQLiteControlStore(tmp_path / "control.sqlite", AuthorityScope("test")) as store:
+        revision = exact_reference("same-token")
+        commitment = commitment_reference("same-token")
+
+        store.put_immutable_binding(revision, SCHEMA, payload(kind="revision"), FRONTIER_0)
+        store.put_immutable_binding(commitment, SCHEMA, payload(kind="commitment"), FRONTIER_0)
+
+        resolved_revision = store.resolve_immutable_binding(revision)
+        resolved_commitment = store.resolve_immutable_binding(commitment)
+        assert resolved_revision.record is not None
+        assert resolved_commitment.record is not None
+        assert resolved_revision.record.payload == payload(kind="revision")
+        assert resolved_commitment.record.payload == payload(kind="commitment")
 
 
 def test_current_state_uses_cas_and_append_preserving_history(tmp_path: Path) -> None:
