@@ -111,6 +111,7 @@ def verify_authority() -> None:
             "-m",
             "pytest",
             "tests/fitness/test_phase_015_authority_boundary.py",
+            "tests/fitness/test_documentation_topology.py",
             "tests/fitness/test_verification_harness_contract.py",
             "tests/unit/test_bootstrap_metadata.py",
         ]
