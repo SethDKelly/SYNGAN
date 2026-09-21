@@ -6,7 +6,7 @@ C1 = "active"
 C2 = "active"
 C3 = "active"
 C4 = "active"
-C5 = "defined"
+C5 = "active"
 C6 = "defined"
 C7 = "defined"
 C8 = "defined"
@@ -26,6 +26,9 @@ description = "Required C3 topology, sealed-subject, candidate, and Generation p
 
 [profiles.runtime]
 description = "Required C1/C4 Strategy binding, Learning/Learned-State, and runtime-closure gate."
+
+[profiles.execution]
+description = "Required C5 Execution/Attempt, idempotency, checkpoint, cancellation, and recovery gate."
 
 [profiles.portable]
 description = "Required default merge gate with network/external/heavy lanes excluded."
