@@ -21,7 +21,7 @@ R3                              READY
 
 IMPLEMENTATION READINESS        READY
 IMPLEMENTATION START            STARTED
-IMPLEMENTATION NEXT             015-E — NEXT ELIGIBLE / NOT AUTHORIZED
+IMPLEMENTATION NEXT             015-E — AUTHORIZED / ACTIVE
 ~~~
 
 Readiness is not permission to implement.
@@ -65,7 +65,7 @@ P15-06  explicit first-slice authorization
 015-B  COMPLETE — Current Verification Harness, Architecture-Fitness & Evidence-Gate Foundation
 015-C  COMPLETE — Identity, References, Representation, Durable Owner-State & Control Persistence
 015-D  COMPLETE — Distributed Data-State, Topology, Candidate/Seal & Generation Promotion
-015-E  NEXT ELIGIBLE / NOT AUTHORIZED — Strategy/Method Binding, Dependency Closure, Learning/Learned-State & Generation Runtime
+015-E  AUTHORIZED / ACTIVE — Strategy/Method Binding, Dependency Closure, Learning/Learned-State & Generation Runtime
 015-F  NOT AUTHORIZED — Execution/Attempt, Admission, Fencing, Idempotency, Checkpoint, Cancellation & Recovery
 015-G  NOT AUTHORIZED — Evaluation, Evidence, Provenance, Historical Read Composition & Reproducibility
 015-H  NOT AUTHORIZED — Authorization, Disclosure, Protected Existence, Secrets, Dependency Trust & No-Egress
@@ -129,6 +129,8 @@ IMPLEMENTATION START               STARTED
 
 Current completion authority: [015-D Distributed Data / Topology / Generation Promotion](../../implementation/phase-015-d-distributed-data-topology-generation-promotion-authority.md).
 
+Current active authority: [015-E Strategy Runtime / Learning / Generation](../../implementation/phase-015-e-strategy-runtime-learning-generation-authority.md).
+
 ~~~text
 015-D                              COMPLETE
 structured topology                IMPLEMENTED
@@ -170,7 +172,7 @@ Earlier language such as active, canonical, current planning overlay, or concret
 
 ## Current prohibition
 
-015-A through 015-D are complete. Until 015-E is explicitly authorized, and for responsibilities outside completed 015-D authority:
+015-A through 015-D are complete and 015-E is explicitly authorized/active. For responsibilities outside 015-E authority:
 
 - do not add domain behavior;
 - do not stabilize public APIs/schemas;
@@ -182,4 +184,4 @@ Earlier language such as active, canonical, current planning overlay, or concret
 
 ## Current next boundary
 
-**015-E — Strategy/Method Binding, Dependency Closure, Learning/Learned-State & Generation Runtime** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
+**015-E — Strategy/Method Binding, Dependency Closure, Learning/Learned-State & Generation Runtime** is active and authorized.
