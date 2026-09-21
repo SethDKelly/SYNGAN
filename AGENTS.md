@@ -4,7 +4,7 @@ These instructions apply repository-wide to automated coding/documentation agent
 
 ## Current posture
 
-**Jackson concept design and Phase 013/014 are complete; R2 is currently closed and R3 is READY. Phase 015 implementation has STARTED. The start gate and 015-A through 015-H are complete. 015-I is AUTHORIZED / ACTIVE; 015-J remains locked.**
+**Jackson concept design and Phase 013/014 are complete; R2 is currently closed and R3 is READY. Phase 015 implementation has STARTED. The start gate and 015-A through 015-I are complete. 015-J is next eligible but NOT AUTHORIZED pending explicit proceed.**
 
 Start with:
 
@@ -62,8 +62,8 @@ Phase 015 start gate                  COMPLETE
 015-F                                 COMPLETE
 015-G                                 COMPLETE
 015-H                                 COMPLETE
-015-I                                 AUTHORIZED / ACTIVE
-015-J                                 NOT AUTHORIZED
+015-I                                 COMPLETE
+015-J                                 NEXT ELIGIBLE / NOT AUTHORIZED
 implementation readiness             READY
 implementation start                 STARTED
 implementation next                  015-H — NEXT ELIGIBLE / NOT AUTHORIZED
@@ -154,4 +154,4 @@ IMPLEMENTATION NEXT        015-I — NEXT ELIGIBLE / NOT AUTHORIZED
 
 ## Current next boundary
 
-**015-I — Platform Capability, Portability, Observability, Scale/Performance & Support Qualification** is **AUTHORIZED / ACTIVE**. 015-J remains **NOT AUTHORIZED**.
+**015-J — Cross-Slice Integration, Residual Risk Closure & Implementation Consolidation** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
