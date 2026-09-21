@@ -97,8 +97,8 @@ The Phase 014 pre-phase start gate is complete and has activated the dependency-
 014-D  Mapping / Interaction / Linguistic / Disclosure / Semantic Parity — COMPLETE
 014-E  Architecture Realization / Responsibility / Design-to-Architecture Traceability — COMPLETE
 014-F  End-to-End Scenario / Failure / Recovery / Scale / Security / Portability — COMPLETE
-014-G  Implementation-Neutral Completeness / Handoff Sufficiency / Residual Register — NEXT
-014-H  R2 Decision / R3 Decision / Phase 015 Handoff
+014-G  Implementation-Neutral Completeness / Handoff Sufficiency / Residual Register — COMPLETE
+014-H  R2 Decision / R3 Decision / Phase 015 Handoff — NEXT
 ```
 
 R3 remains blocked from decision until the R2 evidence chain has been completed and consolidated.
@@ -154,6 +154,24 @@ upstream reopen                             NONE
 
 014-F corrected one stale current 013-G attribution of external governance handoff to SYNC-13. R2 remains OPEN pending 014-G and 014-H.
 
+## 014-G readiness-preflight evidence
+
+~~~text
+implementation-neutral completeness       PASS
+handoff sufficiency                        PASS
+unresolved WMAT-2                          0
+unresolved WMAT-3                          0
+READINESS-BLOCK                            0
+READINESS-RISK                             8
+READINESS-NOTE                             4
+historical implementation authority drift  BOUNDED BY CURRENT PRECEDENCE / PHASE 015 REBASE
+upstream reopen                            NONE
+~~~
+
+014-G finds no remaining product-semantic decision that an implementation team would have to invent. Historical Phase 005/006 implementation plans and Phase 007 scaffold/tests remain feasibility/history evidence until re-baselined by explicit Phase 015 authority.
+
+R2 and R3 remain OPEN because 014-H owns both decisions.
+
 ## Current synchronization state
 
 ```text
@@ -182,7 +200,8 @@ Phase 014                            ACTIVE
 014-D                                COMPLETE
 014-E                                COMPLETE
 014-F                                COMPLETE
-014-G                                NEXT ELIGIBLE
+014-G                                COMPLETE
+014-H                                NEXT ELIGIBLE
 R2                                   OPEN
 R3                                   OPEN
 IMPLEMENTATION READINESS             NOT READY
@@ -210,4 +229,4 @@ Phase 014 is not implementation. A positive future R3 may set readiness to `READ
 
 ## Current next boundary
 
-**014-G — Implementation-Neutral Completeness, Decision-Ambiguity, Handoff Sufficiency & Residual Whole-Design Register** is next eligible.
+**014-H — Phase 014 Consolidation, R2 Completion Decision, R3 Implementation-Readiness Decision & Phase 015 Handoff** is next eligible.
