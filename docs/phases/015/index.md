@@ -21,7 +21,7 @@ R3                              READY
 
 IMPLEMENTATION READINESS        READY
 IMPLEMENTATION START            STARTED
-IMPLEMENTATION NEXT             015-E — AUTHORIZED / ACTIVE
+IMPLEMENTATION NEXT             015-F — NEXT ELIGIBLE / NOT AUTHORIZED
 ~~~
 
 Readiness is not permission to implement.
@@ -65,8 +65,8 @@ P15-06  explicit first-slice authorization
 015-B  COMPLETE — Current Verification Harness, Architecture-Fitness & Evidence-Gate Foundation
 015-C  COMPLETE — Identity, References, Representation, Durable Owner-State & Control Persistence
 015-D  COMPLETE — Distributed Data-State, Topology, Candidate/Seal & Generation Promotion
-015-E  AUTHORIZED / ACTIVE — Strategy/Method Binding, Dependency Closure, Learning/Learned-State & Generation Runtime
-015-F  NOT AUTHORIZED — Execution/Attempt, Admission, Fencing, Idempotency, Checkpoint, Cancellation & Recovery
+015-E  COMPLETE — Strategy/Method Binding, Dependency Closure, Learning/Learned-State & Generation Runtime
+015-F  NEXT ELIGIBLE / NOT AUTHORIZED — Execution/Attempt, Admission, Fencing, Idempotency, Checkpoint, Cancellation & Recovery
 015-G  NOT AUTHORIZED — Evaluation, Evidence, Provenance, Historical Read Composition & Reproducibility
 015-H  NOT AUTHORIZED — Authorization, Disclosure, Protected Existence, Secrets, Dependency Trust & No-Egress
 015-I  NOT AUTHORIZED — Platform Capability, Portability, Observability, Scale/Performance & Support Qualification
@@ -142,6 +142,22 @@ enterprise scale qualification     NOT CLAIMED
 015-E                              NEXT ELIGIBLE / NOT AUTHORIZED
 ~~~
 
+## 015-E completion state
+
+Current completion authority: [015-E Strategy Runtime / Learning / Generation](../../implementation/phase-015-e-strategy-runtime-learning-generation-authority.md).
+
+~~~text
+015-E                              COMPLETE
+Strategy runtime binding           IMPLEMENTED
+dependency / role closure          IMPLEMENTED
+Learning / Learned State           IMPLEMENTED
+direct + reuse Generation planning IMPLEMENTED
+self-contained text reference      IMPLEMENTED
+C1 / C4 verification               ACTIVE / PASS
+Execution / recovery               NOT IMPLEMENTED
+015-F                              NEXT ELIGIBLE / NOT AUTHORIZED
+~~~
+
 ## Residual readiness risks inherited from 014-G
 
 ~~~text
@@ -172,7 +188,7 @@ Earlier language such as active, canonical, current planning overlay, or concret
 
 ## Current prohibition
 
-015-A through 015-D are complete and 015-E is explicitly authorized/active. For responsibilities outside 015-E authority:
+015-A through 015-E are complete. Until 015-F is explicitly authorized, and for responsibilities outside completed 015-E authority:
 
 - do not add domain behavior;
 - do not stabilize public APIs/schemas;
@@ -184,4 +200,4 @@ Earlier language such as active, canonical, current planning overlay, or concret
 
 ## Current next boundary
 
-**015-E — Strategy/Method Binding, Dependency Closure, Learning/Learned-State & Generation Runtime** is active and authorized.
+**015-F — Execution/Attempt, Admission, Fencing, Idempotency, Checkpoint, Cancellation & Recovery** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
