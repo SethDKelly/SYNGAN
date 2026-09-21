@@ -40,11 +40,15 @@ def verify_bootstrap() -> None:
         ROOT / "uv.lock",
         ROOT / "src" / "syngan" / "__init__.py",
         ROOT / "src" / "syngan" / "py.typed",
-        ROOT / "docs" / "implementation" / "phase-007-implementation-authority-lock.md",
         ROOT
         / "docs"
         / "implementation"
-        / "phase-007-c-source-package-topology-execution-authority.md",
+        / "phase-015-current-implementation-authority-start-gate.md",
+        ROOT
+        / "docs"
+        / "phases"
+        / "015"
+        / "015-start-gate-implementation-authority-current-baseline-controlled-delivery-decomposition.md",
     )
     missing = [str(path.relative_to(ROOT)) for path in required_paths if not path.exists()]
     if missing:
@@ -82,16 +86,14 @@ def verify_package() -> None:
     if package.__name__ != "syngan":
         raise SystemExit("Installed package root did not resolve as 'syngan'")
 
-    for module_name in (
-        "syngan.foundation",
-        "syngan.domain",
-        "syngan.ports",
-        "syngan.application",
-        "syngan.api",
-        "syngan.adapters",
-        "syngan.bootstrap",
-    ):
-        importlib.import_module(module_name)
+    package_root = ROOT / "src" / "syngan"
+    current_subpackages = sorted(
+        path.name
+        for path in package_root.iterdir()
+        if path.is_dir() and (path / "__init__.py").is_file()
+    )
+    for package_name in current_subpackages:
+        importlib.import_module(f"syngan.{package_name}")
 
     marker = importlib.resources.files("syngan").joinpath("py.typed")
     if not marker.is_file():
@@ -112,13 +114,7 @@ def verify_package() -> None:
         expected_wheel_paths = {
             "syngan/__init__.py",
             "syngan/py.typed",
-            "syngan/foundation/__init__.py",
-            "syngan/domain/__init__.py",
-            "syngan/ports/__init__.py",
-            "syngan/application/__init__.py",
-            "syngan/api/__init__.py",
-            "syngan/adapters/__init__.py",
-            "syngan/bootstrap/__init__.py",
+            *(f"syngan/{package_name}/__init__.py" for package_name in current_subpackages),
         }
         with zipfile.ZipFile(wheels[0]) as wheel:
             members = set(wheel.namelist())
