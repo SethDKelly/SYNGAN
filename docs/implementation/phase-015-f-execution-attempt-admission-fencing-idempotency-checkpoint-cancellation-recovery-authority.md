@@ -93,8 +93,12 @@ Late provider success remains historical provider observation only.
 ## Current authorization
 
 ~~~text
-015-A..015-E COMPLETE
-015-F         AUTHORIZED / ACTIVE
-015-G..015-J  NOT AUTHORIZED
+015-A        COMPLETE
+015-B        COMPLETE
+015-C        COMPLETE
+015-D        COMPLETE
+015-E        COMPLETE
+015-F        AUTHORIZED / ACTIVE
+015-G..015-J NOT AUTHORIZED
 IMPLEMENTATION START STARTED
 ~~~
