@@ -15,17 +15,17 @@ AGENTS = ROOT / "AGENTS.md"
 def test_phase_015_current_authority_is_discoverable() -> None:
     authority_text = CURRENT.read_text(encoding="utf-8")
 
-    assert "status: active-current" in authority_text
+    assert "status: complete-current" in authority_text
     assert "015-A        COMPLETE" in authority_text
     assert "015-B        COMPLETE" in authority_text
     assert "015-C        COMPLETE" in authority_text
     assert "015-D        COMPLETE" in authority_text
     assert "015-E        COMPLETE" in authority_text
-    assert "015-F        AUTHORIZED / ACTIVE" in authority_text
-    assert "015-G..015-J NOT AUTHORIZED" in authority_text
+    assert "015-F        COMPLETE" in authority_text
+    assert "015-G        NEXT ELIGIBLE / NOT AUTHORIZED" in authority_text\n    assert "015-H..015-J NOT AUTHORIZED" in authority_text
 
 
-def test_phase_015_index_exposes_015_f_as_active_authorized() -> None:
+def test_phase_015_index_exposes_015_g_as_next_but_not_authorized() -> None:
     phase_text = PHASE.read_text(encoding="utf-8")
 
     assert "status: active" in phase_text
@@ -34,10 +34,9 @@ def test_phase_015_index_exposes_015_f_as_active_authorized() -> None:
     assert "015-C" in phase_text and "COMPLETE" in phase_text
     assert "015-D" in phase_text and "COMPLETE" in phase_text
     assert "015-E" in phase_text and "COMPLETE" in phase_text
-    assert "015-F" in phase_text and "AUTHORIZED / ACTIVE" in phase_text
+    assert "015-F" in phase_text and "COMPLETE" in phase_text\n    assert "015-G" in phase_text and "NEXT ELIGIBLE / NOT AUTHORIZED" in phase_text
 
     locked_phases = (
-        "015-G",
         "015-H",
         "015-I",
         "015-J",
@@ -46,7 +45,7 @@ def test_phase_015_index_exposes_015_f_as_active_authorized() -> None:
         assert f"{phase_id}  NOT AUTHORIZED" in phase_text
 
 
-def test_agent_instructions_preserve_active_015_f_authority_boundary() -> None:
+def test_agent_instructions_preserve_post_015_f_authority_boundary() -> None:
     agent_text = AGENTS.read_text(encoding="utf-8")
 
     assert "015-A                                 COMPLETE" in agent_text
@@ -54,8 +53,8 @@ def test_agent_instructions_preserve_active_015_f_authority_boundary() -> None:
     assert "015-C                                 COMPLETE" in agent_text
     assert "015-D                                 COMPLETE" in agent_text
     assert "015-E                                 COMPLETE" in agent_text
-    assert "015-F                                 AUTHORIZED / ACTIVE" in agent_text
-    assert "015-G..015-J                          NOT AUTHORIZED" in agent_text
+    assert "015-F                                 COMPLETE" in agent_text\n    assert "015-G                                 NEXT ELIGIBLE / NOT AUTHORIZED" in agent_text
+    assert "015-H..015-J                          NOT AUTHORIZED" in agent_text
 
 
 def test_015_c_foundation_is_present_without_later_slice_implementation() -> None:
