@@ -300,6 +300,61 @@ R3                               OPEN
 
 Detailed authority: [Phase 014-B Problem/Actor/Outcome/Concept-Purpose Audit](phase-014-b-problem-actor-outcome-concept-purpose-audit.md).
 
+## 014-C completion state
+
+014-C audited concept specifications, application-family validity and synchronization ownership, correcting one current synchronization-scope regression.
+
+```text
+014-C                            COMPLETE
+concept specifications           PASS — 11/11
+active synchronizations          13
+unresolved WMAT-2                0
+unresolved WMAT-3                0
+upstream reopen                  NONE
+R2                               OPEN
+R3                               OPEN
+```
+
+Detailed authority: [Phase 014-C Semantic Composition Audit](phase-014-c-concept-dependence-family-synchronization-integrity-audit.md).
+
+## 014-D completion state
+
+014-D audited human/programmatic mapping, disclosure, historical truth and semantic parity.
+
+```text
+014-D                            COMPLETE
+command/query mapping            PASS
+semantic parity                  PASS
+unresolved WMAT-2                0
+unresolved WMAT-3                0
+upstream reopen                  NONE
+R2                               OPEN
+R3                               OPEN
+```
+
+Detailed authority: [Phase 014-D Mapping/Semantic-Parity Audit](phase-014-d-mapping-interaction-linguistic-disclosure-semantic-parity-audit.md).
+
+## 014-E completion state
+
+014-E audited semantic-owner realization coverage, reverse architecture-to-purpose traceability and authority boundaries across Phase 013.
+
+```text
+014-E                            COMPLETE
+architecture realization         PASS
+reverse purpose trace            PASS
+resolved WMAT-2                  1
+unresolved WMAT-2                0
+unresolved WMAT-3                0
+upstream reopen                  NONE
+R1 reopen                        NONE REQUIRED
+R2                               OPEN
+R3                               OPEN
+```
+
+The resolved WMAT-2 was current detailed-architecture propagation drift in `SYNC-06`/`SYNC-13` wording after 014-C. The architecture structure itself remained valid.
+
+Detailed authority: [Phase 014-E Architecture Realization/Traceability Audit](phase-014-e-architecture-realization-responsibility-traceability-audit.md).
+
 ## Current next boundary
 
-**014-E — Architecture Realization Coverage, Responsibility/Authority & Design-to-Architecture Traceability Audit** is next eligible.
+**014-F — End-to-End Scenario, Exception, Failure, Recovery, Scale, Security, Portability & Adversarial Whole-Design Audit** is next eligible.
