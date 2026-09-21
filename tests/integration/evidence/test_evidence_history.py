@@ -8,17 +8,13 @@ from syngan.adapters.sqlite_control_store import SQLiteControlStore
 from syngan.application.evidence_history import EvidenceHistoryService
 from syngan.domain.evaluation_evidence import (
     ClaimStrength,
-    EvidenceApplicability,
     EvaluationAggregate,
     EvaluationResult,
+    EvidenceApplicability,
     FindingDisposition,
     FindingDraft,
-    evidence_reference,
 )
-from syngan.domain.generation_data import (
-    CandidateStatus,
-    GenerationDataState,
-)
+from syngan.domain.generation_data import GenerationDataState
 from syngan.domain.provenance import (
     Assessability,
     CurrentFeasibility,
