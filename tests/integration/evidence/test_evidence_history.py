@@ -162,9 +162,11 @@ def test_evaluation_establishes_multiple_evidence_with_required_provenance(
         assertions = {}
         for suffix, relationship in expected_relationships.items():
             assertion_id = LogicalId(f"{evidence.key.resource_id.value}-{suffix}")
-            snapshot = service.load_provenance(provenance_reference(evidence, assertion_id))
-            assert snapshot.assertion.relationship is relationship
-            assertions[suffix] = snapshot
+            provenance_snapshot = service.load_provenance(
+                provenance_reference(evidence, assertion_id)
+            )
+            assert provenance_snapshot.assertion.relationship is relationship
+            assertions[suffix] = provenance_snapshot
 
         view = service.compose_assertion(assertions["producer"].assertion.reference)
         assert view.assertion.basis is HistoricalKnowledgeBasis.DIRECT
