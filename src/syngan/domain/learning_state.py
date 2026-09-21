@@ -8,6 +8,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, replace
 from enum import StrEnum
+from typing import cast
 
 from syngan.foundation.identity import (
     LogicalId,
@@ -282,7 +283,7 @@ def learned_state_from_payload(payload: EncodedPayload) -> LearnedStateRecord:
             _reference_from_value(item, "Learned-State dependency") for item in dependencies
         ),
         status=LearnedStateStatus(status),
-        limitations=tuple(limitations),
+        limitations=tuple(cast(list[str], limitations)),
     )
 
 
