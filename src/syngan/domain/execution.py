@@ -6,6 +6,7 @@ from dataclasses import dataclass, replace
 from enum import StrEnum
 
 from syngan.foundation.identity import (
+    CommitmentSnapshotId,
     LogicalId,
     RecoveryFrontier,
     ResourceKey,
@@ -426,6 +427,54 @@ class CheckpointDescriptor:
             )
         for reference in self.basis_references:
             reference.require_exact_binding()
+
+
+def execution_reference(
+    activity_reference: TypedReference,
+    execution_id: LogicalId,
+    commitment_snapshot_id: CommitmentSnapshotId,
+) -> TypedReference:
+    activity_reference.require_exact_binding()
+    return TypedReference(
+        key=ResourceKey(
+            scope=activity_reference.key.scope,
+            kind=ResourceKind("execution"),
+            resource_id=execution_id,
+        ),
+        commitment_snapshot_id=commitment_snapshot_id,
+    )
+
+
+def runtime_plan_reference(
+    execution: TypedReference,
+    attempt_id: LogicalId,
+    commitment_snapshot_id: CommitmentSnapshotId,
+) -> TypedReference:
+    execution.require_exact_binding()
+    return TypedReference(
+        key=ResourceKey(
+            scope=execution.key.scope,
+            kind=ResourceKind("execution-runtime-plan"),
+            resource_id=attempt_id,
+        ),
+        commitment_snapshot_id=commitment_snapshot_id,
+    )
+
+
+def checkpoint_reference(
+    execution: TypedReference,
+    checkpoint_id: LogicalId,
+    commitment_snapshot_id: CommitmentSnapshotId,
+) -> TypedReference:
+    execution.require_exact_binding()
+    return TypedReference(
+        key=ResourceKey(
+            scope=execution.key.scope,
+            kind=ResourceKind("execution-checkpoint"),
+            resource_id=checkpoint_id,
+        ),
+        commitment_snapshot_id=commitment_snapshot_id,
+    )
 
 
 def execution_state_key(reference: TypedReference) -> ResourceKey:
