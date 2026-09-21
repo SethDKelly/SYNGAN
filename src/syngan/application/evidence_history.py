@@ -5,11 +5,11 @@ from __future__ import annotations
 from dataclasses import dataclass
 
 from syngan.domain.evaluation_evidence import (
+    EvaluationAggregate,
+    EvaluationResult,
     EvidenceApplicability,
     EvidenceApplicabilityState,
     EvidenceFinding,
-    EvaluationAggregate,
-    EvaluationResult,
     FindingDraft,
     applicability_from_payload,
     applicability_to_payload,
