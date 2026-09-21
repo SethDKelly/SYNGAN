@@ -21,6 +21,7 @@ These documents define how SYNGAN design knowledge is created, reconciled, audit
 - [Phase 014-E Architecture Realization/Responsibility/Traceability Audit](phase-014-e-architecture-realization-responsibility-traceability-audit.md)
 - [Phase 014-F End-to-End Scenario/Failure/Recovery/Scale/Security/Portability Audit](phase-014-f-end-to-end-scenario-exception-failure-recovery-scale-security-portability-adversarial-audit.md)
 - [Phase 014-G Implementation-Neutral Completeness / Residual Readiness Register](phase-014-g-implementation-neutral-completeness-handoff-sufficiency-residual-readiness-register.md)
+- [Phase 014-H R2/R3 Decision & Phase 015 Handoff](phase-014-h-consolidation-r2-r3-decision-phase-015-handoff.md)
 
 ## Completed upstream authority
 
@@ -50,7 +51,7 @@ Phase 014                            ACTIVE
 014-E                                COMPLETE
 014-F                                COMPLETE
 014-G                                COMPLETE
-014-H                                NEXT ELIGIBLE
+014-H                                COMPLETE
 R2                                   OPEN
 R3                                   OPEN
 implementation readiness             NOT READY
@@ -74,7 +75,7 @@ A whole-design defect reopens only the smallest owning authority. Implementation
 014-E  architecture realization / authority / traceability — COMPLETE
 014-F  cross-layer scenario / failure / recovery / scale / security / portability — COMPLETE
 014-G  implementation-neutral completeness / handoff sufficiency / residual register — COMPLETE
-014-H  R2 decision / R3 readiness decision / Phase 015 handoff
+014-H  R2 decision / R3 readiness decision / Phase 015 handoff — COMPLETE
 ```
 
 R3 may be decided only after the R2 evidence chain is complete.
@@ -97,13 +98,13 @@ Phase 014 is design/readiness work only.
 Until R3 is explicitly decided:
 
 ```text
-IMPLEMENTATION READINESS   NOT READY
+IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       NOT STARTED
-IMPLEMENTATION NEXT        NOT YET
+IMPLEMENTATION NEXT        PHASE 015 AUTHORITY GATE
 ```
 
 Even a positive R3 requires explicit Phase 015 implementation authority.
 
 ## Current next boundary
 
-**014-H — Phase 014 Consolidation, R2 Completion Decision, R3 Implementation-Readiness Decision & Phase 015 Handoff** is next eligible.
+**Phase 015 Start Gate — Implementation Authority, Current-Baseline Reconciliation & Controlled-Delivery Decomposition** is next eligible.
