@@ -4,7 +4,7 @@ These instructions apply repository-wide to automated coding/documentation agent
 
 ## Current posture
 
-**Jackson concept design and Phase 013/014 are complete; R2 is currently closed and R3 is READY. Phase 015 is active. The start gate, 015-A, and 015-B are complete. 015-C is next eligible but NOT AUTHORIZED pending explicit proceed; domain implementation remains NOT STARTED.**
+**Jackson concept design and Phase 013/014 are complete; R2 is currently closed and R3 is READY. Phase 015 is active. The start gate, 015-A, and 015-B are complete. 015-C is AUTHORIZED / ACTIVE for identity, references, representation, durable owner-state and control persistence only; later domain/runtime slices remain locked.**
 
 Start with:
 
@@ -22,6 +22,7 @@ Start with:
 - `docs/implementation/phase-015-current-implementation-authority-start-gate.md`
 - `docs/implementation/phase-015-a-current-implementation-baseline-scaffold-reconciliation.md`
 - `docs/implementation/phase-015-b-current-verification-harness-architecture-fitness-evidence-gates.md`
+- `docs/implementation/phase-015-c-identity-reference-control-persistence-authority.md`
 - `docs/architecture/phase-013-consolidated-architecture-contract.md`
 - `docs/synchronizations/current-cross-concept-synchronizations.md`
 
@@ -49,11 +50,11 @@ Phase 015                             ACTIVE
 Phase 015 start gate                  COMPLETE
 015-A                                 COMPLETE
 015-B                                 COMPLETE
-015-C                                 NEXT ELIGIBLE / NOT AUTHORIZED
+015-C                                 AUTHORIZED / ACTIVE
 015-D..015-J                          NOT AUTHORIZED
 implementation readiness             READY
 implementation start                 NOT STARTED
-implementation next                  015-C — NEXT ELIGIBLE / NOT AUTHORIZED
+implementation next                  015-C — AUTHORIZED / ACTIVE
 ```
 
 ## Primary authority rule
@@ -134,11 +135,11 @@ Phase 014-H has established:
 ```text
 IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       NOT STARTED
-IMPLEMENTATION NEXT        015-C — NEXT ELIGIBLE / NOT AUTHORIZED
+IMPLEMENTATION NEXT        015-C — AUTHORIZED / ACTIVE
 ```
 
-015-A and 015-B are complete. 015-C is next eligible but not authorized. Do not implement identity/persistence or later domain behavior until the owning slice is explicitly authorized.
+015-A and 015-B are complete. 015-C is authorized for identity/reference/control-persistence foundations only. Do not implement distributed data, runtime, Execution/recovery, Evidence, security/provider behavior, or scale claims until their later slices are separately authorized.
 
 ## Current next boundary
 
-**015-C — Identity, References, Representation, Durable Owner-State & Control Persistence** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
+**015-C — Identity, References, Representation, Durable Owner-State & Control Persistence** is active and authorized.
