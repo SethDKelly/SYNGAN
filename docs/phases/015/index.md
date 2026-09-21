@@ -21,7 +21,7 @@ R3                              READY
 
 IMPLEMENTATION READINESS        READY
 IMPLEMENTATION START            STARTED
-IMPLEMENTATION NEXT             015-I — NEXT ELIGIBLE / NOT AUTHORIZED
+IMPLEMENTATION NEXT             015-I — AUTHORIZED / ACTIVE
 ~~~
 
 Readiness is not permission to implement.
@@ -69,7 +69,7 @@ P15-06  explicit first-slice authorization
 015-F  COMPLETE — Execution/Attempt, Admission, Fencing, Idempotency, Checkpoint, Cancellation & Recovery
 015-G  COMPLETE — Evaluation, Evidence, Provenance, Historical Read Composition & Reproducibility
 015-H  COMPLETE — Authorization, Disclosure, Protected Existence, Secrets, Dependency Trust & No-Egress
-015-I  NEXT ELIGIBLE / NOT AUTHORIZED — Platform Capability, Portability, Observability, Scale/Performance & Support Qualification
+015-I  AUTHORIZED / ACTIVE — Platform Capability, Portability, Observability, Scale/Performance & Support Qualification
 015-J  NOT AUTHORIZED — Cross-Slice Integration, Residual Risk Closure & Implementation Consolidation
 ~~~
 
@@ -233,7 +233,7 @@ Earlier language such as active, canonical, current planning overlay, or concret
 
 ## Current next boundary
 
-**015-I — Platform Capability, Portability, Observability, Scale/Performance & Support Qualification** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
+**015-I — Platform Capability, Portability, Observability, Scale/Performance & Support Qualification** is **AUTHORIZED / ACTIVE**. 015-J remains **NOT AUTHORIZED**.
 
 ## 015-H completion state
 
@@ -249,7 +249,7 @@ offline/no-egress non-widening     IMPLEMENTED / VERIFIED
 SecretRef / bearer separation      IMPLEMENTED / VERIFIED
 C7                                 ACTIVE / PASS
 provider containment proof         NOT CLAIMED
-015-I                              NEXT ELIGIBLE / NOT AUTHORIZED
+015-I                              AUTHORIZED / ACTIVE
 ~~~
 
 Verify run 35632267389 passed all required gates through C7. 015-I remains separately gated.
