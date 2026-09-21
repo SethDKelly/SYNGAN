@@ -233,10 +233,14 @@ JACKSON CONCEPT DESIGN              COMPLETE FOR CURRENT PRODUCT SCOPE
 CURRENT CONCEPTUAL BLOCKERS         0
 CURRENT UPSTREAM REOPENS            0
 M8 FUTURE REDISCOVERY GROUPS        4 / DORMANT
-POST-PHASE-015 DELIVERY AUTHORITY   NONE
-PHASE 016                           NOT DEFINED
+PRODUCT/PROVIDER DELIVERY AUTHORITY NONE
+PHASE 016                           ACTIVE — PRE-IMPLEMENTATION HARDENING
+016-A                               COMPLETE
+016-B                               NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
 A future delivery program still requires explicit authority. If future product intent crosses a documented rediscovery trigger, the relevant Jackson concept-design authority must reopen before downstream architecture or implementation proceeds.
 
-See [Post-Phase-015 Methodology & Documentation Reconciliation](post-phase-015-methodology-documentation-reconciliation.md).
+Current hardening authority: [Phase 016 Documentation / OKF / Agentic / Readiness Hardening](phase-016-documentation-okf-agentic-implementation-readiness-hardening-authority.md).
+
+The post-Phase-015 reconciliation remains preserved as the superseded boundary record.
