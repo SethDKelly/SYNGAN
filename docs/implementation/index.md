@@ -11,16 +11,17 @@ Current governing implementation authority:
 - [Phase 015 Current Implementation Authority / Start Gate](phase-015-current-implementation-authority-start-gate.md)
 - [015-A Current Implementation Baseline / Scaffold Reconciliation](phase-015-a-current-implementation-baseline-scaffold-reconciliation.md)
 - [015-B Current Verification Harness / Architecture Fitness / Evidence Gates](phase-015-b-current-verification-harness-architecture-fitness-evidence-gates.md)
+- [015-C Identity / References / Control Persistence](phase-015-c-identity-reference-control-persistence-authority.md)
 
 ## Current posture
 
 ```text
 IMPLEMENTATION READINESS   READY
-IMPLEMENTATION START       NOT STARTED
-IMPLEMENTATION NEXT        015-C — NEXT ELIGIBLE / NOT AUTHORIZED
+IMPLEMENTATION START       STARTED
+IMPLEMENTATION NEXT        015-D — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
-Phase 015 authority is active. 015-A and 015-B are complete. 015-C is next eligible but not authorized; 015-D through 015-J remain locked.
+Phase 015 authority is active. 015-A through 015-C are complete. 015-D is next eligible but not authorized; 015-E through 015-J remain locked.
 
 ## Current design progress
 
@@ -88,7 +89,7 @@ Current residual/readiness evidence is [Phase 014-G Implementation-Neutral Compl
 
 ## Current authorization boundary
 
-The Phase 015 start gate, 015-A, and 015-B are complete. No later slice is currently authorized.
+The Phase 015 start gate and 015-A through 015-C are complete. No later slice is currently authorized.
 
 015-A reconciled implementation authority, repository/toolchain configuration, scaffold/test dispositions and architecture-fitness rules without implementing concept/domain behavior.
 
@@ -117,8 +118,8 @@ IMPLEMENTATION START       NOT STARTED
 IMPLEMENTATION NEXT        015-A — AUTHORIZED
 ```
 
-Production/domain implementation remains unstarted. 015-C is next eligible but still requires explicit authorization.
+Implementation has started with the 015-C control foundation. Concept-specific behavior remains unimplemented. 015-D is next eligible but still requires explicit authorization.
 
 ## Current next boundary
 
-**015-C — Identity, References, Representation, Durable Owner-State & Control Persistence** — next eligible, not authorized.
+**015-D — Distributed Data-State, Structured Topology, Candidate/Seal & Generation Promotion** — next eligible, not authorized.
