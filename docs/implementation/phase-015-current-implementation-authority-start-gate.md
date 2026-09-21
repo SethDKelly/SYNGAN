@@ -400,3 +400,27 @@ IMPLEMENTATION START          STARTED
 Current authority: [015-G Evaluation / Evidence / Provenance / History / Reproducibility](phase-015-g-evaluation-evidence-provenance-history-reproducibility-authority.md).
 
 The repository next boundary is **015-H — Authorization, Disclosure, Protected Existence, Secrets, Dependency Trust & No-Egress**, still gated pending explicit proceed.
+
+
+## Post-015-H consumption
+
+015-H has completed the provider-neutral authorization, disclosure, protected-existence, secrets, dependency-trust and no-egress framework.
+
+~~~text
+015-A                         COMPLETE
+015-B                         COMPLETE
+015-C                         COMPLETE
+015-D                         COMPLETE
+015-E                         COMPLETE
+015-F                         COMPLETE
+015-G                         COMPLETE
+015-H                         COMPLETE
+015-I                         NEXT ELIGIBLE / NOT AUTHORIZED
+015-J                         NOT AUTHORIZED
+IMPLEMENTATION START          STARTED
+C7                            ACTIVE / PASS
+~~~
+
+Current authority: [015-H Authorization / Disclosure / Protected Existence / Secrets / Dependency Trust / No-Egress](phase-015-h-authorization-disclosure-protected-existence-secrets-dependency-trust-no-egress-authority.md).
+
+The repository next boundary is **015-I — Platform Capability, Portability, Observability, Scale/Performance & Support Qualification**, still gated pending explicit proceed.
