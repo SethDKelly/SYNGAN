@@ -25,9 +25,7 @@ def assess_platform_compatibility(
     fallbacks: tuple[CapabilityFallback, ...] = (),
 ) -> PlatformCompatibilityAssessment:
     by_capability = {
-        assertion.capability: assertion
-        for assertion in assertions
-        if assertion.context == context
+        assertion.capability: assertion for assertion in assertions if assertion.context == context
     }
     fallback_by_capability = {fallback.capability: fallback for fallback in fallbacks}
     if len(by_capability) != len(
