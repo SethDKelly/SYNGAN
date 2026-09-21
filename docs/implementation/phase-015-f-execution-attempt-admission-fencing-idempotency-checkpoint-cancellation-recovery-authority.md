@@ -90,7 +90,7 @@ Late provider success remains historical provider observation only.
 - restored Attempt fencing;
 - old writer rejection after recovery.
 
-## Current authorization
+## Entry authorization at 015-F start
 
 ~~~text
 015-A        COMPLETE
@@ -102,6 +102,8 @@ Late provider success remains historical provider observation only.
 015-G..015-J NOT AUTHORIZED
 IMPLEMENTATION START STARTED
 ~~~
+
+This block records the slice-entry authorization. The current post-completion authorization state is recorded below.
 
 
 ## Completion evidence
