@@ -4,7 +4,7 @@ These instructions apply repository-wide to automated coding/documentation agent
 
 ## Current posture
 
-**Jackson concept design and Phase 013/014 are complete; R2 is currently closed and R3 is READY. Phase 015 is active. The start gate, 015-A, and 015-B are complete. 015-C is AUTHORIZED / ACTIVE for identity, references, representation, durable owner-state and control persistence only; later domain/runtime slices remain locked.**
+**Jackson concept design and Phase 013/014 are complete; R2 is currently closed and R3 is READY. Phase 015 implementation has STARTED. The start gate and 015-A through 015-C are complete. 015-D is next eligible but NOT AUTHORIZED pending explicit proceed; later runtime/domain slices remain locked.**
 
 Start with:
 
@@ -50,11 +50,12 @@ Phase 015                             ACTIVE
 Phase 015 start gate                  COMPLETE
 015-A                                 COMPLETE
 015-B                                 COMPLETE
-015-C                                 AUTHORIZED / ACTIVE
-015-D..015-J                          NOT AUTHORIZED
+015-C                                 COMPLETE
+015-D                                 NEXT ELIGIBLE / NOT AUTHORIZED
+015-E..015-J                          NOT AUTHORIZED
 implementation readiness             READY
-implementation start                 NOT STARTED
-implementation next                  015-C — AUTHORIZED / ACTIVE
+implementation start                 STARTED
+implementation next                  015-D — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
 ## Primary authority rule
@@ -134,12 +135,12 @@ Phase 014-H has established:
 
 ```text
 IMPLEMENTATION READINESS   READY
-IMPLEMENTATION START       NOT STARTED
-IMPLEMENTATION NEXT        015-C — AUTHORIZED / ACTIVE
+IMPLEMENTATION START       STARTED
+IMPLEMENTATION NEXT        015-D — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
-015-A and 015-B are complete. 015-C is authorized for identity/reference/control-persistence foundations only. Do not implement distributed data, runtime, Execution/recovery, Evidence, security/provider behavior, or scale claims until their later slices are separately authorized.
+015-A through 015-C are complete. Identity/reference/control-persistence foundations are implemented. 015-D is next eligible but not authorized. Do not implement distributed-data Generation promotion, runtime, Execution/recovery, Evidence, security/provider behavior, or scale claims until their owning slices are separately authorized.
 
 ## Current next boundary
 
-**015-C — Identity, References, Representation, Durable Owner-State & Control Persistence** is active and authorized.
+**015-D — Distributed Data-State, Structured Topology, Candidate/Seal & Generation Promotion** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
