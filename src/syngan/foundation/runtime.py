@@ -285,44 +285,52 @@ def assess_runtime_closure(
     environment_identities: list[tuple[str, str]] = []
 
     for role_id in binding.required_roles:
-        resolution = by_role.get(role_id)
+        role_resolution = by_role.get(role_id)
         if (
-            resolution is None
-            or not resolution.available
-            or resolution.environment_identity is None
+            role_resolution is None
+            or not role_resolution.available
+            or role_resolution.environment_identity is None
         ):
             incomplete_roles.add(role_id)
             continue
-        if resolution.runtime_compatible is None:
+        if role_resolution.runtime_compatible is None:
             indeterminate_roles.add(role_id)
             continue
-        if not resolution.runtime_compatible:
+        if not role_resolution.runtime_compatible:
             incompatible_roles.add(role_id)
             continue
-        environment_identities.append((role_id, resolution.environment_identity))
+        environment_identities.append((role_id, role_resolution.environment_identity))
 
     for requirement in binding.dependency_requirements:
-        resolution = by_component.get(requirement.component_id)
-        if resolution is None or not resolution.available or resolution.exact_identity is None:
+        dependency_resolution = by_component.get(requirement.component_id)
+        if (
+            dependency_resolution is None
+            or not dependency_resolution.available
+            or dependency_resolution.exact_identity is None
+        ):
             missing.append(requirement.component_id)
             continue
-        if resolution.acquired_during_material_execution:
+        if dependency_resolution.acquired_during_material_execution:
             incompatible.append(requirement.component_id)
             continue
-        if resolution.exact_identity not in requirement.allowed_identities:
+        if dependency_resolution.exact_identity not in requirement.allowed_identities:
             incompatible.append(requirement.component_id)
             continue
-        if resolution.runtime_compatible is None:
+        if dependency_resolution.runtime_compatible is None:
             indeterminate.append(requirement.component_id)
             continue
-        if not resolution.runtime_compatible:
+        if not dependency_resolution.runtime_compatible:
             incompatible.append(requirement.component_id)
             continue
-        unavailable_roles = set(requirement.required_roles) - set(resolution.eligible_roles)
+        unavailable_roles = set(requirement.required_roles) - set(
+            dependency_resolution.eligible_roles
+        )
         if unavailable_roles:
             incomplete_roles.update(unavailable_roles)
             continue
-        identities.append((requirement.component_id, resolution.exact_identity))
+        identities.append(
+            (requirement.component_id, dependency_resolution.exact_identity)
+        )
 
     if incompatible or incompatible_roles:
         status = RuntimeClosureStatus.INCOMPATIBLE
