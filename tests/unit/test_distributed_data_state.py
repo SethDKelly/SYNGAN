@@ -233,7 +233,6 @@ def test_generation_requires_data_meaning_binding() -> None:
         )
 
 
-
 def test_generation_requires_data_meaning_revision_for_every_scope() -> None:
     commitment_binding = TypedReference(
         key=semantic_reference().key,
@@ -270,6 +269,7 @@ def test_generation_requires_data_meaning_revision_for_every_scope() -> None:
             generation_commitment=generation_commitment(),
             topology=incomplete,
         )
+
 
 def test_generation_multiple_candidates_still_allow_only_one_completed_output() -> None:
     descriptor = topology("records")
