@@ -2,7 +2,7 @@
 ---
 type: Implementation Authority
 title: 015-E — Strategy/Method Binding, Dependency Closure, Learning/Learned-State & Generation Runtime
-status: active-current
+status: complete-current
 ---
 
 # 015-E — Strategy/Method Binding, Dependency Closure, Learning/Learned-State & Generation Runtime
@@ -237,6 +237,54 @@ RR-06 baseline capability
   enterprise scale qualification  DEFERRED TO 015-I
 ~~~
 
+## Completion evidence
+
+015-E implemented:
+
+- exact Strategy runtime-requirement projections and exact implementation bindings;
+- dependency-profile compatibility that rejects silent broadening;
+- exact dependency resolution and role-specific environment closure;
+- retained exact dependency and runtime-environment identities in immutable realization plans;
+- direct Generation planning without fabricated Learning/Learned State;
+- Learning owner lifecycle and exactly-one primary Learned-State establishment;
+- separate Learned-State lifecycle and contextual Generation reuse qualification;
+- durable Learning/Learned-State state over the existing ControlStore;
+- semantic establishment checks that prevent stored material/state from becoming Learned State by existence alone;
+- a bounded standard-library self-contained source-derived text reference path;
+- C1/C4 runtime verification.
+
+~~~text
+commit        4bcd68fcee195dc294f6e1ee740a5f746a0cda64
+workflow      Verify
+run           35562192983
+portable      PASS
+control       PASS — 9 / 9
+data          PASS — 4 / 4
+runtime       PASS — 1 / 1
+portable unit PASS — 33 / 33
+runtime unit  PASS — 10 / 10
+mypy          PASS — 32 source files
+Import Linter PASS — 2 / 2 contracts kept
+~~~
+
+### Residual-risk disposition
+
+~~~text
+RR-05 no-egress distributed runtime closure
+  exact dependency closure model       IMPLEMENTED
+  exact role/environment closure        IMPLEMENTED
+  no runtime-acquisition repair         ENFORCED
+  self-contained source-derived path   IMPLEMENTED
+  authorization/trust enforcement      DEFERRED TO 015-H
+  provider/distributed qualification   DEFERRED TO 015-I
+
+RR-06 baseline capability
+  self-contained text baseline         IMPLEMENTED AS PORTABLE REFERENCE
+  enterprise scale/performance         DEFERRED TO 015-I
+~~~
+
+015-E makes no Spark/provider, enterprise-scale, privacy/fidelity, Execution/recovery, or Evidence claim.
+
 ## Current authorization
 
 ~~~text
@@ -244,7 +292,12 @@ RR-06 baseline capability
 015-B        COMPLETE
 015-C        COMPLETE
 015-D        COMPLETE
-015-E        AUTHORIZED / ACTIVE
-015-F..015-J NOT AUTHORIZED
+015-E        COMPLETE
+015-F        NEXT ELIGIBLE / NOT AUTHORIZED
+015-G..015-J NOT AUTHORIZED
 IMPLEMENTATION START STARTED
 ~~~
+
+## Current next boundary
+
+**015-F — Execution/Attempt, Admission, Fencing, Idempotency, Checkpoint, Cancellation & Recovery** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
