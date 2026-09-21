@@ -9,16 +9,17 @@ status: active-controlled
 Current governing implementation authority:
 
 - [Phase 015 Current Implementation Authority / Start Gate](phase-015-current-implementation-authority-start-gate.md)
+- [015-A Current Implementation Baseline / Scaffold Reconciliation](phase-015-a-current-implementation-baseline-scaffold-reconciliation.md)
 
 ## Current posture
 
 ```text
 IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       NOT STARTED
-IMPLEMENTATION NEXT        015-A — AUTHORIZED
+IMPLEMENTATION NEXT        015-B — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
-Phase 015 authority is active. Only 015-A is currently authorized; 015-B through 015-J remain locked.
+Phase 015 authority is active. 015-A is complete. 015-B is next eligible but not authorized; 015-C through 015-J remain locked.
 
 ## Current design progress
 
@@ -86,11 +87,11 @@ Current residual/readiness evidence is [Phase 014-G Implementation-Neutral Compl
 
 ## Current authorization boundary
 
-The Phase 015 start gate is complete and 015-A alone is authorized.
+The Phase 015 start gate and 015-A are complete. No later slice is currently authorized.
 
-015-A may reconcile implementation authority, repository/toolchain configuration, scaffold/test dispositions and architecture-fitness rules. It may not implement concept/domain behavior.
+015-A reconciled implementation authority, repository/toolchain configuration, scaffold/test dispositions and architecture-fitness rules without implementing concept/domain behavior.
 
-For responsibilities outside 015-A authority, do not add or stabilize production:
+Until 015-B or a later owning slice is explicitly authorized, do not add or stabilize production:
 
 - persistence/query schemas or migrations;
 - data-state/manifest/candidate stores;
@@ -115,8 +116,8 @@ IMPLEMENTATION START       NOT STARTED
 IMPLEMENTATION NEXT        015-A — AUTHORIZED
 ```
 
-The Phase 015 start gate supplies current authority, but production/domain implementation remains unstarted; 015-A is the only authorized next slice.
+Production/domain implementation remains unstarted. 015-B is next eligible but still requires explicit authorization.
 
 ## Current next boundary
 
-**015-A — Current Implementation Baseline, Repository/Toolchain & Scaffold Reconciliation**.
+**015-B — Current Verification Harness, Architecture-Fitness & Evidence-Gate Foundation** — next eligible, not authorized.
