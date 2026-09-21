@@ -145,6 +145,19 @@ def verify_control() -> None:
     )
 
 
+def verify_data() -> None:
+    _run(
+        [
+            sys.executable,
+            "-m",
+            "pytest",
+            "tests/integration/data",
+            "-m",
+            "integration",
+        ]
+    )
+
+
 def verify_package() -> None:
     package = importlib.import_module("syngan")
     if package.__name__ != "syngan":
@@ -216,6 +229,7 @@ def verify_portable() -> None:
 def verify_all() -> None:
     verify_portable()
     verify_control()
+    verify_data()
 
 
 def main(argv: Sequence[str] | None = None) -> int:
@@ -228,6 +242,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             "static",
             "portable",
             "control",
+            "data",
             "lint",
             "format",
             "type",
@@ -249,6 +264,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         "static": verify_static,
         "portable": verify_portable,
         "control": verify_control,
+        "data": verify_data,
         "lint": verify_lint,
         "format": verify_format,
         "type": verify_type,
