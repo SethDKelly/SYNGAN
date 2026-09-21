@@ -15,7 +15,7 @@ Maintain the boundary between completed concept design, completed architecture r
 ```text
 IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       STARTED
-IMPLEMENTATION NEXT        015-G — NEXT ELIGIBLE / NOT AUTHORIZED
+IMPLEMENTATION NEXT        015-H — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
 R3 readiness changes readiness only; it does not start implementation.
@@ -31,7 +31,7 @@ whole-design completion / readiness              ← Phase 014 COMPLETE / R2 CLO
         ↓
 implementation readiness                         ← READY / NOT STARTED
         ↓
-explicit implementation authority               ← Phase 015 START GATE + 015-A..F COMPLETE / 015-G GATED
+explicit implementation authority               ← Phase 015 START GATE + 015-A..G COMPLETE / 015-H GATED
 ```
 
 ## Current design state
@@ -83,14 +83,14 @@ Phase 014-H established:
 ```text
 IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       STARTED
-IMPLEMENTATION NEXT        015-G — NEXT ELIGIBLE / NOT AUTHORIZED
+IMPLEMENTATION NEXT        015-H — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
 That state still does not authorize production changes. Phase 015 must explicitly establish implementation authority and controlled-delivery rules.
 
 ## Architecture / executable prohibition
 
-015-A through 015-E are complete. Identity/control, distributed-data/promotion, Strategy/runtime, Learning/Learned-State, and Generation runtime-planning foundations are implemented. 015-F and later responsibilities remain held until explicit slice authorization.
+015-A through 015-G are complete. Identity/control, distributed-data/promotion, Strategy/runtime, Learning/Learned-State, Generation runtime-planning, Execution/recovery, and Evidence/history foundations are implemented. 015-H and later responsibilities remain held until explicit slice authorization.
 
 Phase 014 findings must distinguish missing design semantics from normal implementation alternatives, sequencing concerns, evidence needs or provider-specific qualification work.
 
@@ -135,10 +135,10 @@ READINESS-BLOCK                   0
 READINESS-RISK                    8 — HANDED OFF
 IMPLEMENTATION READINESS          READY
 IMPLEMENTATION START       STARTED
-IMPLEMENTATION NEXT        015-G — NEXT ELIGIBLE / NOT AUTHORIZED
+IMPLEMENTATION NEXT        015-H — NEXT ELIGIBLE / NOT AUTHORIZED
 ~~~
 
-At 014-H closure implementation remained held pending the Phase 015 start gate. The gate and 015-A through 015-F are now complete; implementation includes control, distributed-data, semantic-runtime, and Execution/recovery foundations, while 015-G remains gated.
+At 014-H closure implementation remained held pending the Phase 015 start gate. The gate and 015-A through 015-G are now complete; implementation includes control, distributed-data, semantic-runtime, Execution/recovery, and Evidence/history foundations, while 015-H remains gated.
 
 ## Phase 015 start-gate completion state
 
@@ -151,13 +151,14 @@ Phase 015 Start Gate              COMPLETE
 015-D                  COMPLETE
 015-E                  COMPLETE
 015-F                  COMPLETE
-015-G                  NEXT ELIGIBLE / NOT AUTHORIZED
-015-H..015-J           NOT AUTHORIZED
+015-G                  COMPLETE
+015-H                  NEXT ELIGIBLE / NOT AUTHORIZED
+015-I..015-J           NOT AUTHORIZED
 IMPLEMENTATION START       STARTED
 ~~~
 
-The hold remains slice-specific: 015-A through 015-F are complete; 015-G requires explicit authorization; Evaluation/Evidence/Provenance and later responsibilities remain held.
+The hold remains slice-specific: 015-A through 015-G are complete; 015-H requires explicit authorization; authorization/disclosure/dependency-trust/no-egress and later responsibilities remain held.
 
 ## Current next boundary
 
-**015-G — Evaluation, Evidence, Provenance, Historical Read Composition & Reproducibility** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
+**015-H — Authorization, Disclosure, Protected Existence, Secrets, Dependency Trust & No-Egress** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
