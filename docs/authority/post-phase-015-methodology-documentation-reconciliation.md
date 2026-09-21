@@ -1,14 +1,16 @@
 ---
 type: Methodology Reconciliation
 title: Post-Phase-015 Methodology & Documentation Reconciliation
-status: complete-current
+status: superseded
 ---
 
 # Post-Phase-015 Methodology & Documentation Reconciliation
 
 ## Purpose
 
-Reconcile current methodology/completion documentation after successful completion of Phase 015 without inventing a new design or implementation phase.
+Reconcile methodology/completion documentation after successful completion of Phase 015 without inventing a new design or implementation phase.
+
+> **Subsequent-state notice:** this record correctly captured the repository boundary immediately after Phase 015. The user subsequently authorized Phase 016 as a no-product-behavior pre-implementation hardening program. Current routing is [Phase 016](../phases/016/index.md).
 
 This record updates **current posture/navigation only**. It does not change historical phase decisions, concept semantics, architecture, implementation behavior, support claims, or future-rediscovery triggers.
 
@@ -115,3 +117,15 @@ M8 FUTURE REDISCOVERY GROUPS        4 / DORMANT
 PHASE 016                           NOT DEFINED
 POST-PHASE-015 DELIVERY AUTHORITY   NONE
 ~~~
+
+
+## Subsequent Phase 016 state
+
+~~~text
+Phase 016   ACTIVE — PRE-IMPLEMENTATION HARDENING
+016-A       COMPLETE
+016-B       NEXT ELIGIBLE / NOT AUTHORIZED
+product/provider/runtime delivery  NOT AUTHORIZED
+~~~
+
+This later authorization does not invalidate the post-Phase-015 finding that no Phase 016 existed at the time of this reconciliation. It supersedes only this document's former role as the current next-boundary record.
