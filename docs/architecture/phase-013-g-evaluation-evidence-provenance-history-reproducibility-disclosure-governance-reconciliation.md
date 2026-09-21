@@ -403,6 +403,10 @@ The same Evidence may legitimately lead to different release/use outcomes under 
 
 Historical approval does not create permanent future export permission.
 
+### Phase 014-F scenario-replay note
+
+Phase 014-F re-exercised this boundary through evidence-gated Generation plus external release/use governance and found one stale attribution in the prior wording: external Evidence handoff had been described as part of active `SYNC-13`. The text above is corrected to the current model. No concept, synchronization inventory, application-family rule or architecture structure changed.
+
 ---
 
 ## 14. External lineage/metadata integrations remain evidence/projections
