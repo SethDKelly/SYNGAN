@@ -50,3 +50,6 @@ jobs:
 
       - name: Run required Execution and recovery gate
         run: uv run --no-sync python tools/verify.py execution
+
+      - name: Run required Evaluation Evidence and history gate
+        run: uv run --no-sync python tools/verify.py evidence
