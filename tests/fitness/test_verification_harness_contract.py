@@ -28,7 +28,7 @@ def test_verification_manifest_has_current_lane_state() -> None:
         "C6": "active",
         "C7": "active",
         "C8": "active",
-        "C9": "defined",
+        "C9": "active",
     }
 
 
@@ -81,6 +81,7 @@ def test_repository_verifier_exposes_current_required_profiles() -> None:
         "evidence",
         "security",
         "platform",
+        "cross-slice",
     ):
         assert f'"{profile}"' in verifier
 
