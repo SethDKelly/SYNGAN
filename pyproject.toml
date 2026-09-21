@@ -55,9 +55,15 @@ addopts = [
 ]
 testpaths = ["tests"]
 markers = [
-  "network: explicitly permits network access; never part of portable-core verification",
-  "spark: requires a Spark/local-distributed runtime profile; introduced only by later authority",
-  "integration: exercises an explicitly provisioned integration profile",
+  "network: intentionally requires socket/network access",
+  "external: intentionally requires an external service",
+  "integration: crosses a component, process, storage, or runtime boundary",
+  "spark: requires a Spark or local-distributed runtime",
+  "failure: exercises explicit fault, retry, cancellation, or recovery injection",
+  "security: exercises authorization, disclosure, protected-existence, or secret boundaries",
+  "provider: exercises provider capability or adapter conformance",
+  "scale: executes declared workload, performance, or scale evidence",
+  "stochastic: uses statistical or stochastic acceptance rules",
 ]
 
 [tool.ruff]
