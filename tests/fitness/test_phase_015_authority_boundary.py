@@ -76,11 +76,10 @@ def test_016_a_documentation_audit_evidence_is_present() -> None:
 def test_agent_instructions_preserve_phase_016_scope_boundary() -> None:
     agent_text = AGENTS.read_text(encoding="utf-8")
 
-    assert "Phase 015                             COMPLETE" in agent_text
-    assert "pre-implementation hardening          PHASE 016 ACTIVE" in agent_text
-    assert "016-A                                 COMPLETE" in agent_text
-    assert "016-B                                 AUTHORIZED / ACTIVE" in agent_text
-    assert "product/provider/runtime next          NOT AUTHORIZED" in agent_text
+    assert "Phases 013-015 are complete" in agent_text
+    assert "Phase 016 pre-implementation hardening is ACTIVE" in agent_text
+    assert "016-B is AUTHORIZED / ACTIVE" in agent_text
+    assert "No product/provider/runtime delivery program is authorized" in agent_text
 
 
 def test_phase_015_residual_closure_evidence_remains_present() -> None:
@@ -118,7 +117,7 @@ def test_post_phase_015_record_is_preserved_as_superseded_boundary_history() -> 
     assert "status: superseded" in reconciliation_text
     assert "Subsequent Phase 016 state" in reconciliation_text
     assert "016-A       COMPLETE" in reconciliation_text
-    assert "016-B       AUTHORIZED / ACTIVE" in reconciliation_text
+    assert "016-B       NEXT ELIGIBLE / NOT AUTHORIZED" in reconciliation_text
 
 
 def test_016_b_current_history_topology_is_established() -> None:
