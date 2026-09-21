@@ -221,15 +221,14 @@ Earlier language such as active, canonical, current planning overlay, or concret
 
 ## Current prohibition
 
-015-A through 015-G are complete. Until 015-H is explicitly authorized, and for responsibilities outside completed 015-G authority:
+015-A through 015-I are complete. Until 015-J is explicitly authorized, and for responsibilities outside completed 015-I authority:
 
-- do not add domain behavior;
-- do not stabilize public APIs/schemas;
-- do not create production migrations;
-- do not implement provider/runtime adapters;
-- do not implement Execution/recovery machinery;
-- do not turn historical fitness tests into current mandatory CI authority;
-- do not refactor the scaffold merely to make it look implementation-ready.
+- do not begin cross-slice consolidation or end-to-end C9 closure work;
+- do not create new semantic/domain authority to resolve integration inconvenience;
+- do not claim Spark/Databricks/provider support without profile-specific evidence;
+- do not claim enterprise-scale/performance support without qualified benchmark evidence;
+- do not turn provider success, telemetry, or support metadata into semantic completion;
+- do not bypass completed slice boundaries merely to make Phase 015 appear consolidated.
 
 ## Current next boundary
 
