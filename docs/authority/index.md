@@ -19,6 +19,7 @@ These documents define how SYNGAN design knowledge is created, reconciled, audit
 - [Phase 014-C Concept/Dependence/Application-Family/Synchronization Integrity Audit](phase-014-c-concept-dependence-family-synchronization-integrity-audit.md)
 - [Phase 014-D Mapping/Interaction/Linguistic/Disclosure/Semantic-Parity Audit](phase-014-d-mapping-interaction-linguistic-disclosure-semantic-parity-audit.md)
 - [Phase 014-E Architecture Realization/Responsibility/Traceability Audit](phase-014-e-architecture-realization-responsibility-traceability-audit.md)
+- [Phase 014-F End-to-End Scenario/Failure/Recovery/Scale/Security/Portability Audit](phase-014-f-end-to-end-scenario-exception-failure-recovery-scale-security-portability-adversarial-audit.md)
 
 ## Completed upstream authority
 
@@ -46,7 +47,8 @@ Phase 014                            ACTIVE
 014-C                                COMPLETE
 014-D                                COMPLETE
 014-E                                COMPLETE
-014-F                                NEXT ELIGIBLE
+014-F                                COMPLETE
+014-G                                NEXT ELIGIBLE
 R2                                   OPEN
 R3                                   OPEN
 implementation readiness             NOT READY
@@ -68,7 +70,7 @@ A whole-design defect reopens only the smallest owning authority. Implementation
 014-C  concept / dependence / application-family / synchronization integrity — COMPLETE
 014-D  mapping / interaction / disclosure / semantic parity — COMPLETE
 014-E  architecture realization / authority / traceability — COMPLETE
-014-F  cross-layer scenario / failure / recovery / scale / security / portability
+014-F  cross-layer scenario / failure / recovery / scale / security / portability — COMPLETE
 014-G  implementation-neutral completeness / handoff sufficiency / residual register
 014-H  R2 decision / R3 readiness decision / Phase 015 handoff
 ```
@@ -102,4 +104,4 @@ Even a positive R3 requires explicit Phase 015 implementation authority.
 
 ## Current next boundary
 
-**014-F — End-to-End Scenario, Exception, Failure, Recovery, Scale, Security, Portability & Adversarial Whole-Design Audit** is next eligible.
+**014-G — Implementation-Neutral Completeness, Decision-Ambiguity, Handoff Sufficiency & Residual Whole-Design Register** is next eligible.
