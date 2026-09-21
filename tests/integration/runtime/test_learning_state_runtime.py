@@ -23,11 +23,15 @@ from syngan.foundation.identity import (
 )
 from syngan.ports.control_store import ResolutionStatus
 
-
 pytestmark = pytest.mark.integration
 
 
-def _revision(scope: AuthorityScope, kind: str, resource_id: str, revision: str) -> TypedReference:
+def _revision(
+    scope: AuthorityScope,
+    kind: str,
+    resource_id: str,
+    revision: str,
+) -> TypedReference:
     return TypedReference(
         key=ResourceKey(
             scope=scope,
