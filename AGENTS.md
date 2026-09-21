@@ -4,7 +4,7 @@ These instructions apply repository-wide to automated coding/documentation agent
 
 ## Current posture
 
-**Jackson concept design and Phase 013/014 are complete; R2 is currently closed and R3 is READY. Phase 015 implementation has STARTED. The start gate and 015-A through 015-E are complete. 015-F is next eligible but NOT AUTHORIZED pending explicit proceed; later slices remain locked.**
+**Jackson concept design and Phase 013/014 are complete; R2 is currently closed and R3 is READY. Phase 015 implementation has STARTED. The start gate and 015-A through 015-E are complete. 015-F is AUTHORIZED / ACTIVE for Execution/Attempt/admission/fencing/idempotency/checkpoint/cancellation/recovery work only; later slices remain locked.**
 
 Start with:
 
@@ -25,6 +25,7 @@ Start with:
 - `docs/implementation/phase-015-c-identity-reference-control-persistence-authority.md`
 - `docs/implementation/phase-015-d-distributed-data-topology-generation-promotion-authority.md`
 - `docs/implementation/phase-015-e-strategy-runtime-learning-generation-authority.md`
+- `docs/implementation/phase-015-f-execution-attempt-admission-fencing-idempotency-checkpoint-cancellation-recovery-authority.md`
 - `docs/architecture/phase-013-consolidated-architecture-contract.md`
 - `docs/synchronizations/current-cross-concept-synchronizations.md`
 
@@ -55,11 +56,11 @@ Phase 015 start gate                  COMPLETE
 015-C                                 COMPLETE
 015-D                                 COMPLETE
 015-E                                 COMPLETE
-015-F                                 NEXT ELIGIBLE / NOT AUTHORIZED
+015-F                                 AUTHORIZED / ACTIVE
 015-G..015-J                          NOT AUTHORIZED
 implementation readiness             READY
 implementation start                 STARTED
-implementation next                  015-F — NEXT ELIGIBLE / NOT AUTHORIZED
+implementation next                  015-F — AUTHORIZED / ACTIVE
 ```
 
 ## Primary authority rule
@@ -140,11 +141,11 @@ Phase 014-H has established:
 ```text
 IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       STARTED
-IMPLEMENTATION NEXT        015-F — NEXT ELIGIBLE / NOT AUTHORIZED
+IMPLEMENTATION NEXT        015-F — AUTHORIZED / ACTIVE
 ```
 
-015-A through 015-E are complete. Strategy/runtime binding, explicit dependency/role closure, Learning/Learned-State semantics, direct/reuse Generation planning, and the bounded self-contained reference text path are implemented. Execution/recovery, Evidence, security/provider policy, and scale qualification remain locked.
+015-A through 015-E are complete. 015-F is authorized only for Execution/Attempt, admission, fencing, idempotency, checkpoint, cancellation and recovery. Evidence, security/provider policy, and scale qualification remain locked.
 
 ## Current next boundary
 
-**015-F — Execution/Attempt, Admission, Fencing, Idempotency, Checkpoint, Cancellation & Recovery** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
+**015-F — Execution/Attempt, Admission, Fencing, Idempotency, Checkpoint, Cancellation & Recovery** is active and authorized.
