@@ -70,7 +70,17 @@ def test_portable_profile_excludes_explicit_nonportable_markers() -> None:
 def test_repository_verifier_exposes_current_required_profiles() -> None:
     verifier = VERIFY.read_text(encoding="utf-8")
 
-    for profile in ("authority", "static", "portable", "control", "data", "runtime", "execution", "evidence", "security"):
+    for profile in (
+        "authority",
+        "static",
+        "portable",
+        "control",
+        "data",
+        "runtime",
+        "execution",
+        "evidence",
+        "security",
+    ):
         assert f'"{profile}"' in verifier
 
     assert "verify_all() -> None" in verifier
