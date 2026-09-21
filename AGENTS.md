@@ -49,7 +49,7 @@ Phase 015 start gate                  COMPLETE
 015-B..015-J                          NOT AUTHORIZED
 implementation readiness             READY
 implementation start                 NOT STARTED
-implementation next                  PHASE 015 AUTHORITY GATE
+implementation next                  015-A — AUTHORIZED
 ```
 
 ## Primary authority rule
