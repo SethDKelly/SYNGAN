@@ -112,7 +112,7 @@ domain implementation              NONE
 
 Current completion authority: [015-C Identity / References / Control Persistence](../../implementation/phase-015-c-identity-reference-control-persistence-authority.md).
 
-Current active authority: [015-D Distributed Data / Topology / Generation Promotion](../../implementation/phase-015-d-distributed-data-topology-generation-promotion-authority.md).
+At 015-C exit, the next gated authority was [015-D Distributed Data / Topology / Generation Promotion](../../implementation/phase-015-d-distributed-data-topology-generation-promotion-authority.md).
 
 ~~~text
 015-C                              COMPLETE
@@ -122,7 +122,7 @@ SQLite reference adapter           IMPLEMENTED
 C2 control verification            ACTIVE / PASS
 concept-specific behavior          NONE YET
 IMPLEMENTATION START               STARTED
-015-D                              NEXT ELIGIBLE / NOT AUTHORIZED
+015-D                              NEXT ELIGIBLE / NOT AUTHORIZED AT 015-C EXIT
 ~~~
 
 ## 015-D completion state
