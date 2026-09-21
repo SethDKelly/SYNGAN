@@ -4,7 +4,7 @@ These instructions apply repository-wide to automated coding/documentation agent
 
 ## Current posture
 
-**Jackson concept design and Phase 013/014 are complete; R2 is currently closed and R3 is READY. Phase 015 implementation has STARTED. The start gate and 015-A through 015-C are complete. 015-D is next eligible but NOT AUTHORIZED pending explicit proceed; later runtime/domain slices remain locked.**
+**Jackson concept design and Phase 013/014 are complete; R2 is currently closed and R3 is READY. Phase 015 implementation has STARTED. The start gate and 015-A through 015-C are complete. 015-D is AUTHORIZED / ACTIVE for distributed-data, topology, candidate/seal, and Generation-promotion foundation work only; later slices remain locked.**
 
 Start with:
 
@@ -23,6 +23,7 @@ Start with:
 - `docs/implementation/phase-015-a-current-implementation-baseline-scaffold-reconciliation.md`
 - `docs/implementation/phase-015-b-current-verification-harness-architecture-fitness-evidence-gates.md`
 - `docs/implementation/phase-015-c-identity-reference-control-persistence-authority.md`
+- `docs/implementation/phase-015-d-distributed-data-topology-generation-promotion-authority.md`
 - `docs/architecture/phase-013-consolidated-architecture-contract.md`
 - `docs/synchronizations/current-cross-concept-synchronizations.md`
 
@@ -51,11 +52,11 @@ Phase 015 start gate                  COMPLETE
 015-A                                 COMPLETE
 015-B                                 COMPLETE
 015-C                                 COMPLETE
-015-D                                 NEXT ELIGIBLE / NOT AUTHORIZED
+015-D                                 AUTHORIZED / ACTIVE
 015-E..015-J                          NOT AUTHORIZED
 implementation readiness             READY
 implementation start                 STARTED
-implementation next                  015-D — NEXT ELIGIBLE / NOT AUTHORIZED
+implementation next                  015-D — AUTHORIZED / ACTIVE
 ```
 
 ## Primary authority rule
@@ -136,11 +137,11 @@ Phase 014-H has established:
 ```text
 IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       STARTED
-IMPLEMENTATION NEXT        015-D — NEXT ELIGIBLE / NOT AUTHORIZED
+IMPLEMENTATION NEXT        015-D — AUTHORIZED / ACTIVE
 ```
 
-015-A through 015-C are complete. Identity/reference/control-persistence foundations are implemented. 015-D is next eligible but not authorized. Do not implement distributed-data Generation promotion, runtime, Execution/recovery, Evidence, security/provider behavior, or scale claims until their owning slices are separately authorized.
+015-A through 015-C are complete. 015-D is authorized only for provider-neutral distributed-data descriptors, topology composition, candidate/seal state, Generation-owned promotion, and C3 verification. Do not implement Strategy/runtime execution, Execution/recovery, Evidence, security/provider behavior, or scale claims until their owning slices are separately authorized.
 
 ## Current next boundary
 
-**015-D — Distributed Data-State, Structured Topology, Candidate/Seal & Generation Promotion** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
+**015-D — Distributed Data-State, Structured Topology, Candidate/Seal & Generation Promotion** is active and authorized.
