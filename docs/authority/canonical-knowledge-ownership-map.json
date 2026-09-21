@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0",
+  "phase": "016-B",
+  "status": "active",
+  "rules": {
+    "current_proposition": "exactly_one_preferred_current_owner",
+    "history": "provenance_not_current_authority",
+    "indexes": "routing_not_semantic_ownership",
+    "adr": "accepted_rationale_downstream_of_current_authority",
+    "code_tests": "implementation_and_evidence_not_semantic_authority"
+  },
+  "owners": [
+    {
+      "family": "repository_status",
+      "path": "docs/authority/current-repository-status.md"
+    },
+    {
+      "family": "documentation_governance",
+      "path": "docs/authority/documentation-governance.md"
+    },
+    {
+      "family": "terminology_policy",
+      "path": "docs/authority/terminology-policy.md"
+    },
+    {
+      "family": "methodology",
+      "path": "docs/authority/design-methodology.md"
+    },
+    {
+      "family": "jackson_completion",
+      "path": "docs/authority/jackson-methodology-completion-matrix.md"
+    },
+    {
+      "family": "conceptual_residuals",
+      "path": "docs/authority/residual-conceptual-misfit-register.md"
+    },
+    {
+      "family": "problem",
+      "path": "docs/problem/index.md"
+    },
+    {
+      "family": "concepts",
+      "path": "docs/concepts/index.md"
+    },
+    {
+      "family": "dependence",
+      "path": "docs/dependence/index.md"
+    },
+    {
+      "family": "synchronizations",
+      "path": "docs/synchronizations/current-cross-concept-synchronizations.md"
+    },
+    {
+      "family": "experience",
+      "path": "docs/experience/index.md"
+    },
+    {
+      "family": "mapping",
+      "path": "docs/mapping/index.md"
+    },
+    {
+      "family": "architecture",
+      "path": "docs/architecture/index.md"
+    },
+    {
+      "family": "implementation_governance",
+      "path": "docs/implementation/implementation-authority-delivery-governance-toolchain-repository-enforcement.md"
+    },
+    {
+      "family": "support_scope",
+      "path": "docs/implementation/current-support-scope.md"
+    },
+    {
+      "family": "backlog",
+      "path": "docs/backlog/index.md"
+    },
+    {
+      "family": "active_phase",
+      "path": "docs/phases/016/index.md"
+    },
+    {
+      "family": "history",
+      "path": "docs/history/index.md"
+    }
+  ],
+  "history_roots": [
+    "docs/history/phases/",
+    "docs/history/discovery/",
+    "docs/history/architecture/",
+    "docs/history/authority/",
+    "docs/history/experience/",
+    "docs/history/concepts/",
+    "docs/history/synchronizations/",
+    "docs/history/implementation/"
+  ],
+  "explicit_non_owners": [
+    "docs/history/",
+    "docs/backlog/",
+    "source_code",
+    "tests",
+    "generated_artifacts"
+  ]
+}
