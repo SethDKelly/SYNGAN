@@ -18,7 +18,7 @@ IMPLEMENTATION START                 COMPLETED CURRENT AUTHORIZED PROGRAM
 PHASE 015                            COMPLETE
 C0-C9                                ACTIVE / PASS
 POST-PHASE-015 DELIVERY AUTHORITY    NONE
-PHASE 016                            NOT DEFINED
+PHASE 016                            ACTIVE — PRE-IMPLEMENTATION HARDENING
 ```
 
 R3 readiness was consumed by the explicitly authorized Phase 015 program. It does not authorize any subsequent delivery program.
@@ -108,7 +108,7 @@ No numbered post-Phase-015 phase is currently defined.
 ```text
 014           COMPLETE — whole-design / R2 / R3
 015           COMPLETE — implementation authority / controlled delivery / C0-C9
-016           NOT DEFINED
+016           ACTIVE — PRE-IMPLEMENTATION HARDENING
 NEXT PROGRAM  REQUIRES EXPLICIT START GATE
 ```
 
@@ -175,4 +175,19 @@ The four M8 future-rediscovery groups remain dormant triggers rather than pendin
 
 ## Current next boundary
 
-**No post-Phase-015 delivery program is authorized. Phase 016 is not defined.** Any future program requires a separate explicit start gate and user authorization.
+**No post-Phase-015 delivery program is authorized. Phase 016 is active as pre-implementation hardening.** Any future program requires a separate explicit start gate and user authorization.
+
+
+## Phase 016 hardening posture
+
+Phase 016 does not reopen Jackson concept design, architecture, or Phase 015 implementation semantics.
+
+~~~text
+Phase 016   ACTIVE
+016-A       COMPLETE
+016-B       NEXT ELIGIBLE / NOT AUTHORIZED
+P16-3       0
+P16-4       0
+~~~
+
+The completed Jackson design remains held against silent redefinition during documentation/agentic normalization.
