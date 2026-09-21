@@ -1,10 +1,23 @@
 ---
 type: Implementation Authority
 title: Verification Strategy, Test Harness, Architecture Fitness Functions, Evidence Fixtures & Quality Gates
-status: active
+status: historical
 ---
 
 # Verification Strategy, Test Harness, Architecture Fitness Functions, Evidence Fixtures & Quality Gates
+
+## Current authority status
+
+This document is retained as **historical Phase 005 verification-planning evidence**.
+
+It is **not current implementation authority**. Current verification authority is:
+
+- [015-B — Current Verification Harness, Architecture-Fitness & Evidence-Gate Foundation](phase-015-b-current-verification-harness-architecture-fitness-evidence-gates.md).
+
+Its V0-V11, AF-01..AF-20 and Q0..Q4 structures remain useful source material where they agree with completed Phase 013/014 authority, but Phase 015 uses the current C0-C9 lanes and G0-G4 gates defined by 015-B.
+
+Historical `MUST`, `SHALL`, `canonical` and `active` language below is stage-local historical wording and does not outrank the current Phase 015 authority.
+
 
 ## Purpose
 
