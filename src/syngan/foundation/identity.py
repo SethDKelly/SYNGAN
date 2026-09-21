@@ -59,6 +59,18 @@ class SemanticRevisionId:
 
 
 @dataclass(frozen=True, slots=True, order=True)
+class CommitmentSnapshotId:
+    value: str
+
+    def __post_init__(self) -> None:
+        object.__setattr__(self, "value", _require_token(self.value, "commitment snapshot id"))
+
+    @classmethod
+    def new(cls) -> CommitmentSnapshotId:
+        return cls(str(uuid4()))
+
+
+@dataclass(frozen=True, slots=True, order=True)
 class StateVersion:
     value: int
 
@@ -108,12 +120,28 @@ class ResourceKey:
 class TypedReference:
     key: ResourceKey
     revision_id: SemanticRevisionId | None = None
+    commitment_snapshot_id: CommitmentSnapshotId | None = None
+
+    def __post_init__(self) -> None:
+        if self.revision_id is not None and self.commitment_snapshot_id is not None:
+            raise ValueError("a typed reference may bind only one immutable identity axis")
 
     @property
     def is_exact_revision(self) -> bool:
         return self.revision_id is not None
 
+    @property
+    def is_exact_binding(self) -> bool:
+        return self.revision_id is not None or self.commitment_snapshot_id is not None
+
     def require_exact_revision(self) -> SemanticRevisionId:
         if self.revision_id is None:
             raise ValueError("an exact semantic revision is required")
         return self.revision_id
+
+    def require_exact_binding(self) -> tuple[str, str]:
+        if self.revision_id is not None:
+            return ("semantic-revision", self.revision_id.value)
+        if self.commitment_snapshot_id is not None:
+            return ("commitment-snapshot", self.commitment_snapshot_id.value)
+        raise ValueError("an exact semantic revision or commitment snapshot is required")
