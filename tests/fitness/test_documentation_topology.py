@@ -49,7 +49,9 @@ def test_progressive_disclosure_root_routes_to_current_owners_first() -> None:
         "## Durable authority rules", maxsplit=1
     )[0]
     numbered_routes = [
-        line for line in start_section.splitlines() if line.lstrip().startswith(("1.", "2.", "3.", "4."))
+        line
+        for line in start_section.splitlines()
+        if line.lstrip().startswith(("1.", "2.", "3.", "4."))
     ]
     assert len(numbered_routes) == 4
 
@@ -60,7 +62,10 @@ def test_phase_015_current_summary_replaces_completed_slice_authority_as_current
         DOCS
         / "history"
         / "implementation"
-        / "phase-015-j-cross-slice-integration-residual-risk-closure-implementation-consolidation-authority.md"
+        / (
+            "phase-015-j-cross-slice-integration-residual-risk-closure-"
+            "implementation-consolidation-authority.md"
+        )
     ).is_file()
     assert not (
         DOCS
