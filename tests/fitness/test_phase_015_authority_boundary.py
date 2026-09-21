@@ -105,9 +105,11 @@ def test_jackson_completion_remains_closed_during_phase_016() -> None:
     assert "M8 FUTURE REDISCOVERY GROUPS                    4 / DORMANT" in (
         residual_text
     )
-    assert "PHASE 016                                        ACTIVE — PRE-IMPLEMENTATION HARDENING" in (
-        residual_text
+    expected_phase_016 = (
+        "PHASE 016                                        "
+        "ACTIVE — PRE-IMPLEMENTATION HARDENING"
     )
+    assert expected_phase_016 in residual_text
 
 
 def test_post_phase_015_record_is_preserved_as_superseded_boundary_history() -> None:
