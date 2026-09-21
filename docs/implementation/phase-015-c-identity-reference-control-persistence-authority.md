@@ -333,6 +333,21 @@ ICLASS-4                                     0
 upstream reopen                              NONE
 ~~~
 
+## Verification evidence
+
+~~~text
+commit       a2d8adab4ca60b855550ae09e3e3713de2ccf5c1
+workflow     Verify
+run          35558772291
+portable     PASS
+control      PASS
+C2 tests     9 / 9 PASS
+mypy         PASS
+Import Linter 2 / 2 contracts kept
+~~~
+
+This evidence includes distinct semantic-revision and commitment-snapshot immutable bindings, canonical JSON enforcement, exact historical resolution, CAS/history rollback behavior, authority scope and recovery-frontier qualification.
+
 ## Current authorization
 
 ~~~text
