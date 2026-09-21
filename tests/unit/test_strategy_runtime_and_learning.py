@@ -299,9 +299,9 @@ def test_source_derived_text_reference_is_bounded_round_trippable_and_determinis
     assert state.observed_count == 5
     assert state.truncated
     assert len(state.weighted_values) == 3
-    assert source_derived_text_state_from_payload(
-        source_derived_text_state_to_payload(state)
-    ) == state
+    assert (
+        source_derived_text_state_from_payload(source_derived_text_state_to_payload(state)) == state
+    )
 
     first = generate_source_derived_text(state, count=12, seed=17)
     second = generate_source_derived_text(state, count=12, seed=17)
