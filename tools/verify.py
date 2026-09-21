@@ -223,6 +223,19 @@ def verify_platform() -> None:
     )
 
 
+def verify_cross_slice() -> None:
+    _run(
+        [
+            sys.executable,
+            "-m",
+            "pytest",
+            "tests/integration/cross_slice",
+            "-m",
+            "integration",
+        ]
+    )
+
+
 def verify_package() -> None:
     package = importlib.import_module("syngan")
     if package.__name__ != "syngan":
@@ -300,6 +313,7 @@ def verify_all() -> None:
     verify_evidence()
     verify_security()
     verify_platform()
+    verify_cross_slice()
 
 
 def main(argv: Sequence[str] | None = None) -> int:
@@ -318,6 +332,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             "evidence",
             "security",
             "platform",
+            "cross-slice",
             "lint",
             "format",
             "type",
@@ -345,6 +360,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         "evidence": verify_evidence,
         "security": verify_security,
         "platform": verify_platform,
+        "cross-slice": verify_cross_slice,
         "lint": verify_lint,
         "format": verify_format,
         "type": verify_type,
