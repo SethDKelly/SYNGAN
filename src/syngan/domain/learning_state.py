@@ -329,7 +329,7 @@ def learned_state_material_from_payload(
             for item in dependencies
         ),
         codec_identity=codec,
-        limitations=tuple(limitations),
+        limitations=tuple(cast(list[str], limitations)),
     )
 
 
