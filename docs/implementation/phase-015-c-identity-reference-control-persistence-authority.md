@@ -17,7 +17,7 @@ Implement the minimum durable control substrate required by later Phase 015 slic
 - exact typed references;
 - distinct semantic-revision, current-state, representation-schema and recovery-frontier axes;
 - strict reference representation/serialization;
-- immutable revision persistence and exact historical resolution;
+- immutable semantic-revision/commitment binding persistence and exact historical resolution;
 - owner-specific current-state persistence with compare-and-set conflict detection;
 - append-preserving material transition history;
 - bounded durable coordination intent;
@@ -62,7 +62,7 @@ Later owning slices must validate semantic transitions before requesting durable
 AuthorityScope
 ResourceKind
 LogicalId
-SemanticRevisionId / exact revision binding
+SemanticRevisionId / CommitmentSnapshotId exact binding
 StateVersion
 RepresentationSchemaVersion
 RecoveryFrontier
@@ -85,7 +85,7 @@ It is independent of provider ID, storage locator, Python object identity or pro
 
 ### TypedReference
 
-A typed reference contains a ResourceKey and may additionally bind an exact SemanticRevisionId.
+A typed reference contains a ResourceKey and may additionally bind exactly one immutable identity: either a SemanticRevisionId or a CommitmentSnapshotId.
 
 A reference with an exact revision is non-reactive. Resolution never substitutes a newer revision.
 
@@ -143,7 +143,7 @@ scale qualification                NOT IMPLIED
 
 ## Durable records
 
-### Immutable revision record
+### Immutable binding record
 
 Stores:
 
@@ -243,7 +243,7 @@ ABSENT
 
 The wider architecture also reserves withheld/redacted, unknown/indeterminate, invalid and unsupported outcomes. Those are layered by later authorization/disclosure/representation responsibilities where applicable.
 
-Marking an immutable revision unavailable preserves its identity/tombstone and removes the retained payload; it does not retarget the reference.
+Marking an immutable binding unavailable preserves its identity/tombstone and removes the retained payload; it does not retarget the reference.
 
 ## Migration contract
 
@@ -285,7 +285,7 @@ C2 acceptance scenarios include:
 
 1. identity/version-axis validation;
 2. strict reference round-trip;
-3. immutable revision idempotency/conflict;
+3. semantic-revision and commitment-snapshot binding idempotency/conflict;
 4. exact R1/R2 resolution without latest substitution;
 5. tombstone/unavailable distinction;
 6. state creation and CAS advancement;
