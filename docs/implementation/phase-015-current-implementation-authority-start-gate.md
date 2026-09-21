@@ -448,3 +448,32 @@ C8                            ACTIVE / PASS
 Current authority: [015-I Platform Capability / Portability / Observability / Scale / Support Qualification](phase-015-i-platform-capability-portability-observability-scale-performance-support-qualification-authority.md).
 
 The repository next boundary is **015-J — Cross-Slice Integration, Residual Risk Closure & Implementation Consolidation**, still gated pending explicit proceed.
+
+
+## Post-015-J consumption — Phase 015 closure
+
+015-J has completed cross-slice integration, C9 adversarial replay, residual-risk closure and implementation consolidation.
+
+~~~text
+015-A                         COMPLETE
+015-B                         COMPLETE
+015-C                         COMPLETE
+015-D                         COMPLETE
+015-E                         COMPLETE
+015-F                         COMPLETE
+015-G                         COMPLETE
+015-H                         COMPLETE
+015-I                         COMPLETE
+015-J                         COMPLETE
+Phase 015                     COMPLETE
+C0-C9                         ACTIVE / PASS
+READINESS-RISK current scope  0 unresolved
+READINESS-BLOCK               0
+POST-PHASE-015 PROGRAM        NOT AUTHORIZED
+~~~
+
+Current completion authority: [015-J Cross-Slice Integration / Residual Risk Closure / Implementation Consolidation](phase-015-j-cross-slice-integration-residual-risk-closure-implementation-consolidation-authority.md).
+
+Residual-risk/support-scope authority: [Phase 015 Residual Risk Closure & Support-Scope Register](phase-015-residual-risk-closure-support-scope-register.md).
+
+The Phase 015 start gate has now been fully consumed. No Phase 016 or other post-Phase-015 delivery program is created or authorized by this document. Any subsequent provider integration, scale qualification, product-surface expansion, release hardening, or other implementation program requires a new explicit start gate and user authorization.
