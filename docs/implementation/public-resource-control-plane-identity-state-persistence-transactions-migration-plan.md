@@ -1,10 +1,26 @@
 ---
 type: Implementation Authority
 title: Public Resource API, Control-Plane Identity, State, Persistence, Transactions & Migration Implementation Plan
-status: active
+status: historical
 ---
 
 # Public Resource API, Control-Plane Identity, State, Persistence, Transactions & Migration Implementation Plan
+
+## Current authority status
+
+This document is retained as **historical Phase 005-D implementation-planning evidence**.
+
+It is not current implementation authority.
+
+Current authority is:
+
+- [Phase 015 Start Gate](phase-015-current-implementation-authority-start-gate.md);
+- [015-C Identity / References / Control Persistence Authority](phase-015-c-identity-reference-control-persistence-authority.md).
+
+Historical PostgreSQL, SQLAlchemy, Alembic, Psycopg, UUID, repository-class and schema choices below are planning evidence only unless explicitly reselected by current Phase 015 authority.
+
+015-C has selected standard-library SQLite only as the portable reference/conformance control-store adapter; this does not establish an enterprise production database support claim.
+
 
 ## Purpose
 
