@@ -5,8 +5,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 IMPLEMENTATION = ROOT / "docs" / "implementation"
 CURRENT = (
-    IMPLEMENTATION
-    / "phase-015-f-execution-attempt-admission-fencing-idempotency-"
+    IMPLEMENTATION / "phase-015-f-execution-attempt-admission-fencing-idempotency-"
     "checkpoint-cancellation-recovery-authority.md"
 )
 PHASE = ROOT / "docs" / "phases" / "015" / "index.md"
