@@ -55,9 +55,7 @@ def exact_reference(revision: str, resource_id: str = "resource-1") -> TypedRefe
     )
 
 
-def commitment_reference(
-    commitment: str, resource_id: str = "resource-1"
-) -> TypedReference:
+def commitment_reference(commitment: str, resource_id: str = "resource-1") -> TypedReference:
     return TypedReference(
         key=key(resource_id=resource_id),
         commitment_snapshot_id=CommitmentSnapshotId(commitment),
