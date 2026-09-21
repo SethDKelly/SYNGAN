@@ -30,7 +30,8 @@ Phase 014                       ACTIVE
 014-C                           COMPLETE
 014-D                           COMPLETE
 014-E                                COMPLETE
-014-F                                NEXT ELIGIBLE
+014-F                                COMPLETE
+014-G                                NEXT ELIGIBLE
 R2                              OPEN
 R3                              OPEN
 ```
@@ -90,4 +91,4 @@ Phase 015 explicit authority remains required before implementation begins.
 
 Design-only work:
 
-**014-F — End-to-End Scenario, Exception, Failure, Recovery, Scale, Security, Portability & Adversarial Whole-Design Audit**.
+**014-G — Implementation-Neutral Completeness, Decision-Ambiguity, Handoff Sufficiency & Residual Whole-Design Register**.
