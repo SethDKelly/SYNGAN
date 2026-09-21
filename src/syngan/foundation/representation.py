@@ -8,6 +8,7 @@ from typing import TypeAlias, cast
 
 from syngan.foundation.identity import (
     AuthorityScope,
+    CommitmentSnapshotId,
     LogicalId,
     ResourceKey,
     ResourceKind,
@@ -63,6 +64,11 @@ def encode_reference(reference: TypedReference) -> str:
         "semantic_revision_id": (
             reference.revision_id.value if reference.revision_id is not None else None
         ),
+        "commitment_snapshot_id": (
+            reference.commitment_snapshot_id.value
+            if reference.commitment_snapshot_id is not None
+            else None
+        ),
     }
     return EncodedPayload.from_object(payload).json_text
 
@@ -90,6 +96,7 @@ def decode_reference(encoded: str) -> TypedReference:
         "resource_kind",
         "resource_id",
         "semantic_revision_id",
+        "commitment_snapshot_id",
     }
     unknown = set(payload) - allowed
     if unknown:
@@ -98,6 +105,11 @@ def decode_reference(encoded: str) -> TypedReference:
     revision_value = payload.get("semantic_revision_id")
     if revision_value is not None and not isinstance(revision_value, str):
         raise ReferenceDecodingError("semantic_revision_id must be a string or null")
+    commitment_value = payload.get("commitment_snapshot_id")
+    if commitment_value is not None and not isinstance(commitment_value, str):
+        raise ReferenceDecodingError("commitment_snapshot_id must be a string or null")
+    if revision_value is not None and commitment_value is not None:
+        raise ReferenceDecodingError("reference cannot bind revision and commitment together")
 
     key = ResourceKey(
         scope=AuthorityScope(_required_string(payload, "authority_scope")),
@@ -105,4 +117,11 @@ def decode_reference(encoded: str) -> TypedReference:
         resource_id=LogicalId(_required_string(payload, "resource_id")),
     )
     revision = SemanticRevisionId(revision_value) if revision_value is not None else None
-    return TypedReference(key=key, revision_id=revision)
+    commitment = (
+        CommitmentSnapshotId(commitment_value) if commitment_value is not None else None
+    )
+    return TypedReference(
+        key=key,
+        revision_id=revision,
+        commitment_snapshot_id=commitment,
+    )
