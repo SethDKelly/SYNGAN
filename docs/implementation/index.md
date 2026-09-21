@@ -1,20 +1,24 @@
 ---
 type: Implementation Index
 title: SYNGAN Implementation Planning & Delivery Authority
-status: ready-gated
+status: active-controlled
 ---
 
 # SYNGAN Implementation Planning & Delivery Authority
+
+Current governing implementation authority:
+
+- [Phase 015 Current Implementation Authority / Start Gate](phase-015-current-implementation-authority-start-gate.md)
 
 ## Current posture
 
 ```text
 IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       NOT STARTED
-IMPLEMENTATION NEXT        PHASE 015 AUTHORITY GATE
+IMPLEMENTATION NEXT        015-A — AUTHORIZED
 ```
 
-No implementation tranche is yet authorized. Only the Phase 015 authority/start gate is eligible.
+Phase 015 authority is active. Only 015-A is currently authorized; 015-B through 015-J remain locked.
 
 ## Current design progress
 
@@ -80,9 +84,13 @@ Phase 014-H made R3 positive. Phase 015 must first re-baseline historical plans,
 
 Current residual/readiness evidence is [Phase 014-G Implementation-Neutral Completeness / Residual Readiness Register](../authority/phase-014-g-implementation-neutral-completeness-handoff-sufficiency-residual-readiness-register.md).
 
-## Current prohibition
+## Current authorization boundary
 
-Until the Phase 015 start gate is complete and an explicit delivery slice is authorized, do not add or stabilize production:
+The Phase 015 start gate is complete and 015-A alone is authorized.
+
+015-A may reconcile implementation authority, repository/toolchain configuration, scaffold/test dispositions and architecture-fitness rules. It may not implement concept/domain behavior.
+
+For responsibilities outside 015-A authority, do not add or stabilize production:
 
 - persistence/query schemas or migrations;
 - data-state/manifest/candidate stores;
@@ -104,11 +112,11 @@ Phase 014-H established:
 ```text
 IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       NOT STARTED
-IMPLEMENTATION NEXT        PHASE 015 AUTHORITY GATE
+IMPLEMENTATION NEXT        015-A — AUTHORIZED
 ```
 
-Phase 015 explicit authority remains required before implementation begins.
+The Phase 015 start gate supplies current authority, but production/domain implementation remains unstarted; 015-A is the only authorized next slice.
 
 ## Current next boundary
 
-**Phase 015 Start Gate — Implementation Authority, Current-Baseline Reconciliation & Controlled-Delivery Decomposition**.
+**015-A — Current Implementation Baseline, Repository/Toolchain & Scaffold Reconciliation**.
