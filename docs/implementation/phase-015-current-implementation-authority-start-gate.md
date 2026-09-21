@@ -265,8 +265,23 @@ IMPLEMENTATION NEXT                 015-A — AUTHORIZED
 015-B..015-J                         NOT AUTHORIZED
 ~~~
 
+## Post-015-A consumption
+
+015-A has consumed the start-gate authorization and completed its repository/toolchain/scaffold reconciliation.
+
+~~~text
+015-A                         COMPLETE
+015-B                         NEXT ELIGIBLE / NOT AUTHORIZED
+015-C..015-J                  NOT AUTHORIZED
+IMPLEMENTATION START          NOT STARTED
+~~~
+
+Current completion authority: [015-A Current Implementation Baseline / Scaffold Reconciliation](phase-015-a-current-implementation-baseline-scaffold-reconciliation.md).
+
+The original P15-06 block above remains the historical start-gate authorization decision.
+
 ## Current next boundary
 
-**015-A — Current Implementation Baseline, Repository/Toolchain & Scaffold Reconciliation** is next eligible and explicitly authorized.
+**015-B — Current Verification Harness, Architecture-Fitness & Evidence-Gate Foundation** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
 
-No domain implementation is authorized by this start gate.
+No later slice is authorized by completion of 015-A.
