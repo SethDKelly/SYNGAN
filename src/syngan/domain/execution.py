@@ -261,20 +261,29 @@ class ExecutionAggregate:
             raise ValueError("only an active Attempt can record an operational outcome")
 
         next_attempt = replace(attempt, status=outcome)
-        updated = self._replace_attempt(next_attempt)
+        attempts = tuple(
+            next_attempt if item.attempt_id == attempt_id else item
+            for item in self.attempts
+        )
         if outcome is AttemptStatus.SUCCEEDED:
             return replace(
-                updated,
+                self,
+                attempts=attempts,
                 current_attempt_id=None,
                 status=ExecutionStatus.SUCCEEDED,
             )
         if outcome is AttemptStatus.FAILED:
             return replace(
-                updated,
+                self,
+                attempts=attempts,
                 current_attempt_id=None,
                 status=ExecutionStatus.READY,
             )
-        return replace(updated, status=ExecutionStatus.INDETERMINATE)
+        return replace(
+            self,
+            attempts=attempts,
+            status=ExecutionStatus.INDETERMINATE,
+        )
 
     def fence_indeterminate_attempt(
         self,
@@ -284,8 +293,17 @@ class ExecutionAggregate:
         attempt = self._require_current_attempt(attempt_id, authority_frontier)
         if attempt.status is not AttemptStatus.INDETERMINATE:
             raise ValueError("only an indeterminate Attempt may be fenced for retry")
-        updated = self._replace_attempt(replace(attempt, status=AttemptStatus.FENCED))
-        return replace(updated, current_attempt_id=None, status=ExecutionStatus.READY)
+        fenced = replace(attempt, status=AttemptStatus.FENCED)
+        attempts = tuple(
+            fenced if item.attempt_id == attempt_id else item
+            for item in self.attempts
+        )
+        return replace(
+            self,
+            attempts=attempts,
+            current_attempt_id=None,
+            status=ExecutionStatus.READY,
+        )
 
     def request_cancellation(
         self,
