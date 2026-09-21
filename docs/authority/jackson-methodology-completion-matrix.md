@@ -15,12 +15,12 @@ Historical architecture, implementation plans, source, tests and prior engineeri
 ## Controlling implementation posture
 
 ```text
-IMPLEMENTATION READINESS   NOT READY
+IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       NOT STARTED
-IMPLEMENTATION NEXT        NOT YET
+IMPLEMENTATION NEXT        PHASE 015 AUTHORITY GATE
 ```
 
-Jackson concept design and downstream architecture reconciliation are complete for the current product scope. Phase 014 is now active and owns whole-design completion/readiness.
+Jackson concept design, downstream architecture reconciliation, and Phase 014 whole-design/readiness work are complete for the current product scope.
 
 ## Completion vocabulary
 
@@ -79,8 +79,8 @@ OPEN
 | H1 | One current-state consolidated Jackson concept-design audit | **CURRENTLY CLOSED** | 012-A |
 | H2 | Explicit Jackson concept-design completion decision | **CURRENTLY CLOSED** | 012-B |
 | R1 | Architecture reconciled downstream to completed concept design | **CURRENTLY CLOSED** | 013-J |
-| R2 | Whole design audited problem → concepts → dependence/sync → mapping → architecture | **OPEN** | 014 |
-| R3 | Implementation-readiness decision based on complete design | **OPEN** | 014 |
+| R2 | Whole design audited problem → concepts → dependence/sync → mapping → architecture | **CURRENTLY CLOSED** | 014-H |
+| R3 | Implementation-readiness decision based on complete design | **READY** | 014-H |
 
 ## R1 completion evidence
 
@@ -98,10 +98,10 @@ The Phase 014 pre-phase start gate is complete and has activated the dependency-
 014-E  Architecture Realization / Responsibility / Design-to-Architecture Traceability — COMPLETE
 014-F  End-to-End Scenario / Failure / Recovery / Scale / Security / Portability — COMPLETE
 014-G  Implementation-Neutral Completeness / Handoff Sufficiency / Residual Register — COMPLETE
-014-H  R2 Decision / R3 Decision / Phase 015 Handoff — NEXT
+014-H  R2 Decision / R3 Decision / Phase 015 Handoff — COMPLETE
 ```
 
-R3 remains blocked from decision until the R2 evidence chain has been completed and consolidated.
+014-H rechecked the completed evidence chain, closed R2 first, and then established R3 = READY.
 
 ## 014-B whole-design evidence
 
@@ -170,7 +170,25 @@ upstream reopen                            NONE
 
 014-G finds no remaining product-semantic decision that an implementation team would have to invent. Historical Phase 005/006 implementation plans and Phase 007 scaffold/tests remain feasibility/history evidence until re-baselined by explicit Phase 015 authority.
 
-R2 and R3 remain OPEN because 014-H owns both decisions.
+014-H now owns and has completed both decisions: R2 CURRENTLY CLOSED; R3 READY.
+
+## 014-H final decision evidence
+
+~~~text
+Phase 014                         COMPLETE
+R1                                CURRENTLY CLOSED
+R2                                CURRENTLY CLOSED
+R3                                READY
+unresolved WMAT-2                 0
+unresolved WMAT-3                 0
+READINESS-BLOCK                   0
+READINESS-RISK                    8 — HANDED OFF
+IMPLEMENTATION READINESS          READY
+IMPLEMENTATION START              NOT STARTED
+IMPLEMENTATION NEXT               PHASE 015 AUTHORITY GATE
+~~~
+
+Detailed authority: [Phase 014-H R2/R3 Decision & Phase 015 Handoff](phase-014-h-consolidation-r2-r3-decision-phase-015-handoff.md).
 
 ## Current synchronization state
 
@@ -193,7 +211,7 @@ Phase 013                            COMPLETE
 R1                                   CURRENTLY CLOSED
 REPRESENTATION / ARCHITECTURE        RECONCILED / CURRENT
 Phase 014 start gate                 COMPLETE
-Phase 014                            ACTIVE
+Phase 014                            COMPLETE
 014-A                                COMPLETE
 014-B                                COMPLETE
 014-C                                COMPLETE
@@ -201,12 +219,12 @@ Phase 014                            ACTIVE
 014-E                                COMPLETE
 014-F                                COMPLETE
 014-G                                COMPLETE
-014-H                                NEXT ELIGIBLE
-R2                                   OPEN
-R3                                   OPEN
-IMPLEMENTATION READINESS             NOT READY
+014-H                                COMPLETE
+R2                                   CURRENTLY CLOSED
+R3                                   READY
+IMPLEMENTATION READINESS             READY
 IMPLEMENTATION START                 NOT STARTED
-IMPLEMENTATION NEXT                  NOT YET
+IMPLEMENTATION NEXT                  PHASE 015 AUTHORITY GATE
 ```
 
 ## Residual accounting entering Phase 014
@@ -225,8 +243,8 @@ Phase 014 may still discover a whole-design contradiction missed by prior local 
 
 ## Guardrail
 
-Phase 014 is not implementation. A positive future R3 may set readiness to `READY`, but implementation must remain `NOT STARTED` until explicit Phase 015 authority.
+Phase 014 is complete. R3 is READY, but implementation remains NOT STARTED until explicit Phase 015 authority.
 
 ## Current next boundary
 
-**014-H — Phase 014 Consolidation, R2 Completion Decision, R3 Implementation-Readiness Decision & Phase 015 Handoff** is next eligible.
+**Phase 015 Start Gate — Implementation Authority, Current-Baseline Reconciliation & Controlled-Delivery Decomposition** is next eligible.
