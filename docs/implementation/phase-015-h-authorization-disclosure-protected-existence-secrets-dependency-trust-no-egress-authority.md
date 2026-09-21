@@ -1,7 +1,7 @@
 ---
 type: Implementation Authority
 title: 015-H — Authorization, Disclosure, Protected Existence, Secrets, Dependency Trust & No-Egress
-status: active-current
+status: complete-current
 ---
 
 # 015-H — Authorization, Disclosure, Protected Existence, Secrets, Dependency Trust & No-Egress
@@ -290,8 +290,9 @@ Stop and reopen the smallest owning authority if implementation evidence require
 015-E        COMPLETE
 015-F        COMPLETE
 015-G        COMPLETE
-015-H        AUTHORIZED / ACTIVE
-015-I..015-J NOT AUTHORIZED
+015-H        COMPLETE
+015-I        NEXT ELIGIBLE / NOT AUTHORIZED
+015-J        NOT AUTHORIZED
 IMPLEMENTATION START STARTED
 ~~~
 
@@ -309,3 +310,49 @@ IMPLEMENTATION START STARTED
 - the required Verify workflow passes;
 - no ICLASS-3 or ICLASS-4 finding remains unresolved;
 - 015-I is left gated rather than implicitly authorized.
+
+## Completion evidence
+
+015-H is complete.
+
+~~~text
+action-oriented authorization                 IMPLEMENTED
+conditional / indeterminate fail-closed       VERIFIED
+protected-existence disclosure                IMPLEMENTED / VERIFIED
+actor-specific historical WITHHELD projection IMPLEMENTED
+dependency identity / integrity / trust       SEPARATED / VERIFIED
+current dependency-use authorization          IMPLEMENTED
+hidden runtime acquisition rejection          VERIFIED
+Attempt-scoped capability composition         IMPLEMENTED
+offline/no-egress capability non-widening     VERIFIED
+SecretRef / bearer separation                 IMPLEMENTED / VERIFIED
+fresh secret-use authorization                VERIFIED
+bounded security audit                        IMPLEMENTED
+C7                                            ACTIVE / PASS
+
+implementation evidence commit                3b5db3fdd2a0114122b9a7f3e19f6324cb5ef03e
+Verify workflow                               PASS — run 35632267389
+~~~
+
+The successful workflow passed the required portable/static gate and every active slice gate through C7: control persistence, distributed data-state, Strategy runtime/Learned-State, Execution/recovery, Evaluation/Evidence/history, and authorization/disclosure/no-egress security.
+
+## Exit / downstream disposition
+
+015-H closes the framework portion of RR-05 and RR-08 without claiming provider enforcement or cross-slice adversarial closure.
+
+~~~text
+RR-05 framework no-egress enforcement      COMPLETE
+RR-05 provider/deployment proof             015-I
+RR-08 framework authorization/disclosure    COMPLETE
+RR-08 cross-slice adversarial replay        015-J
+
+ICLASS-3                                    0
+ICLASS-4                                    0
+upstream reopen                             NONE
+~~~
+
+No IAM, policy-engine, secret-manager, registry, firewall, sandbox or cloud technology became canonical product semantics.
+
+## Current next boundary
+
+**015-I — Platform Capability, Portability, Observability, Scale/Performance & Support Qualification** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
