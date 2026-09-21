@@ -173,10 +173,9 @@ def test_execution_submission_checkpoint_retry_and_operation_idempotency(
             RecoveryFrontier(0),
             LogicalId("provider-observation-unknown"),
         )
-        assert (
-            store.get_coordination_intent(LogicalId("provider-submit-1")).state
-            is CoordinationIntentState.PENDING
-        )
+        pending_intent = store.get_coordination_intent(LogicalId("provider-submit-1"))
+        assert pending_intent is not None
+        assert pending_intent.state is CoordinationIntentState.PENDING
 
         running = service.record_provider_observation(
             execution,
@@ -187,10 +186,9 @@ def test_execution_submission_checkpoint_retry_and_operation_idempotency(
             LogicalId("provider-observation-running"),
             correlation="provider-job-1",
         )
-        assert (
-            store.get_coordination_intent(LogicalId("provider-submit-1")).state
-            is CoordinationIntentState.ACKNOWLEDGED
-        )
+        acknowledged_intent = store.get_coordination_intent(LogicalId("provider-submit-1"))
+        assert acknowledged_intent is not None
+        assert acknowledged_intent.state is CoordinationIntentState.ACKNOWLEDGED
 
         attempt = running.state.attempt(LogicalId("attempt-1"))
         checkpoint = CheckpointDescriptor(
