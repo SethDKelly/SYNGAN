@@ -4,11 +4,13 @@ These instructions apply repository-wide to automated coding/documentation agent
 
 ## Current posture
 
-**Jackson concept design and Phase 013/014 are complete; R2 is currently closed and R3 is READY. Phase 015 implementation is COMPLETE. The start gate and 015-A through 015-J are complete, C0-C9 are active/passing, and no post-Phase-015 delivery program is authorized.**
+**Jackson concept design and Phases 013-015 are complete; C0-C9 are active/passing. Phase 016 pre-implementation hardening is ACTIVE. 016-A is complete; 016-B is next eligible but NOT AUTHORIZED. No new product/provider/runtime delivery program is authorized.**
 
 Start with:
 
 - `docs/index.md`
+- `docs/authority/phase-016-documentation-okf-agentic-implementation-readiness-hardening-authority.md`
+- `docs/phases/016/index.md`
 - `docs/problem/problem-purpose.md`
 - `docs/authority/design-methodology.md`
 - `docs/authority/jackson-design-completion-implementation-hold.md`
@@ -68,8 +70,11 @@ Phase 015 start gate                  COMPLETE
 015-J                                 COMPLETE
 implementation readiness             READY / CONSUMED
 implementation program               PHASE 015 COMPLETE
-implementation next                  POST-PHASE-015 START GATE — NOT AUTHORIZED
-Phase 016                             NOT DEFINED
+implementation program               PHASE 015 COMPLETE
+pre-implementation hardening          PHASE 016 ACTIVE
+016-A                                 COMPLETE
+016-B                                 NEXT ELIGIBLE / NOT AUTHORIZED
+product/provider/runtime next          NOT AUTHORIZED
 ```
 
 ## Primary authority rule
@@ -150,11 +155,11 @@ Phase 014-H has established:
 ```text
 IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       STARTED
-IMPLEMENTATION NEXT        POST-PHASE-015 START GATE — NOT AUTHORIZED
+IMPLEMENTATION NEXT        PRODUCT DELIVERY NOT AUTHORIZED; PHASE 016 HARDENING ACTIVE
 ```
 
 015-A through 015-J are complete. C9 has replayed the S01-S14 cross-slice/adversarial registry and the Phase 014 residual-risk register is closed for the current framework/reference scope. Real Spark/Databricks, provider-specific deployment certification, enterprise-scale qualification, and release/SLO/SLA claims remain unclaimed without their own evidence.
 
 ## Current next boundary
 
-**Phase 015 is COMPLETE. Phase 016 is NOT DEFINED. No post-Phase-015 delivery program is authorized.** Any new provider, scale, product-surface, release-hardening, or other implementation program requires a separate explicit start gate and user authorization.
+**Phase 016 is ACTIVE as a no-product-behavior pre-implementation hardening program. 016-A is COMPLETE. 016-B is next eligible but remains NOT AUTHORIZED pending explicit proceed.** Product/provider/runtime delivery remains separately unauthorized.
