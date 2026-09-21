@@ -147,3 +147,9 @@ def test_encoded_payload_is_canonical_json_object() -> None:
 
     with pytest.raises(ValueError):
         EncodedPayload.from_object({"bad": float("nan")})
+    with pytest.raises(ValueError):
+        EncodedPayload("[]")
+    with pytest.raises(ValueError):
+        EncodedPayload("not-json")
+
+    assert EncodedPayload('{"b": 2, "a": 1}') == first
