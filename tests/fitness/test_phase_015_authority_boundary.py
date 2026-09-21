@@ -4,11 +4,12 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 IMPLEMENTATION = ROOT / "docs" / "implementation"
-PHASE_015_CURRENT = IMPLEMENTATION / (
+HISTORY = ROOT / "docs" / "history"
+PHASE_015_CURRENT = HISTORY / "implementation" / (
     "phase-015-j-cross-slice-integration-residual-risk-closure-"
     "implementation-consolidation-authority.md"
 )
-PHASE_015 = ROOT / "docs" / "phases" / "015" / "index.md"
+PHASE_015 = HISTORY / "phases" / "015" / "index.md"
 PHASE_016_AUTHORITY = (
     ROOT
     / "docs"
@@ -25,7 +26,7 @@ PHASE_016_A = (
 )
 PHASE_016_INVENTORY = ROOT / "docs" / "phases" / "016" / "016-A-documentation-corpus-inventory.json"
 AGENTS = ROOT / "AGENTS.md"
-RESIDUAL = IMPLEMENTATION / "phase-015-residual-risk-closure-support-scope-register.md"
+RESIDUAL = HISTORY / "implementation" / "phase-015-residual-risk-closure-support-scope-register.md"
 METHODOLOGY = ROOT / "docs" / "authority" / "jackson-methodology-completion-matrix.md"
 CONCEPTUAL_RESIDUAL = ROOT / "docs" / "authority" / "residual-conceptual-misfit-register.md"
 POST_015 = (
@@ -51,11 +52,11 @@ def test_phase_016_hardening_authority_is_current() -> None:
     assert "status: active" in authority_text
     assert "Phase 016   AUTHORIZED / ACTIVE" in authority_text
     assert "016-A       COMPLETE" in authority_text
-    assert "016-B       NEXT ELIGIBLE / NOT AUTHORIZED" in authority_text
+    assert "016-B       AUTHORIZED / ACTIVE" in authority_text
 
     assert "status: active" in phase_text
     assert "016-A       COMPLETE" in phase_text
-    assert "016-B       NEXT ELIGIBLE / NOT AUTHORIZED" in phase_text
+    assert "016-B       AUTHORIZED / ACTIVE" in phase_text
 
 
 def test_016_a_documentation_audit_evidence_is_present() -> None:
@@ -74,7 +75,7 @@ def test_agent_instructions_preserve_phase_016_scope_boundary() -> None:
     assert "Phase 015                             COMPLETE" in agent_text
     assert "pre-implementation hardening          PHASE 016 ACTIVE" in agent_text
     assert "016-A                                 COMPLETE" in agent_text
-    assert "016-B                                 NEXT ELIGIBLE / NOT AUTHORIZED" in agent_text
+    assert "016-B                                 AUTHORIZED / ACTIVE" in agent_text
     assert "product/provider/runtime next          NOT AUTHORIZED" in agent_text
 
 
@@ -113,4 +114,30 @@ def test_post_phase_015_record_is_preserved_as_superseded_boundary_history() -> 
     assert "status: superseded" in reconciliation_text
     assert "Subsequent Phase 016 state" in reconciliation_text
     assert "016-A       COMPLETE" in reconciliation_text
-    assert "016-B       NEXT ELIGIBLE / NOT AUTHORIZED" in reconciliation_text
+    assert "016-B       AUTHORIZED / ACTIVE" in reconciliation_text
+
+
+
+def test_016_b_current_history_topology_is_established() -> None:
+    assert (ROOT / "docs" / "history" / "index.md").is_file()
+    assert (ROOT / "docs" / "authority" / "current-repository-status.md").is_file()
+    assert (ROOT / "docs" / "authority" / "canonical-knowledge-ownership-map.md").is_file()
+    assert (ROOT / "docs" / "implementation" / "current-support-scope.md").is_file()
+
+    for phase in range(1, 16):
+        assert (ROOT / "docs" / "history" / "phases" / f"{phase:03d}").is_dir()
+        assert not (ROOT / "docs" / "phases" / f"{phase:03d}").exists()
+
+    assert (ROOT / "docs" / "phases" / "016").is_dir()
+
+
+def test_completed_phase_015_evidence_is_history_not_current_owner() -> None:
+    assert PHASE_015_CURRENT.is_file()
+    assert PHASE_015.is_file()
+    assert RESIDUAL.is_file()
+    assert not (
+        ROOT
+        / "docs"
+        / "implementation"
+        / "phase-015-current-implementation-authority-start-gate.md"
+    ).exists()
