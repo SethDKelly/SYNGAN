@@ -5,8 +5,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 IMPLEMENTATION = ROOT / "docs" / "implementation"
 CURRENT = (
-    IMPLEMENTATION / "phase-015-f-execution-attempt-admission-fencing-idempotency-"
-    "checkpoint-cancellation-recovery-authority.md"
+    IMPLEMENTATION
+    / "phase-015-g-evaluation-evidence-provenance-history-reproducibility-authority.md"
 )
 PHASE = ROOT / "docs" / "phases" / "015" / "index.md"
 AGENTS = ROOT / "AGENTS.md"
@@ -15,18 +15,18 @@ AGENTS = ROOT / "AGENTS.md"
 def test_phase_015_current_authority_is_discoverable() -> None:
     authority_text = CURRENT.read_text(encoding="utf-8")
 
-    assert "status: complete-current" in authority_text
+    assert "status: active-current" in authority_text
     assert "015-A        COMPLETE" in authority_text
     assert "015-B        COMPLETE" in authority_text
     assert "015-C        COMPLETE" in authority_text
     assert "015-D        COMPLETE" in authority_text
     assert "015-E        COMPLETE" in authority_text
     assert "015-F        COMPLETE" in authority_text
-    assert "015-G        NEXT ELIGIBLE / NOT AUTHORIZED" in authority_text
+    assert "015-G        AUTHORIZED / ACTIVE" in authority_text
     assert "015-H..015-J NOT AUTHORIZED" in authority_text
 
 
-def test_phase_015_index_exposes_015_g_as_next_but_not_authorized() -> None:
+def test_phase_015_index_exposes_015_g_as_authorized_active() -> None:
     phase_text = PHASE.read_text(encoding="utf-8")
 
     assert "status: active" in phase_text
@@ -36,7 +36,7 @@ def test_phase_015_index_exposes_015_g_as_next_but_not_authorized() -> None:
     assert "015-D" in phase_text and "COMPLETE" in phase_text
     assert "015-E" in phase_text and "COMPLETE" in phase_text
     assert "015-F" in phase_text and "COMPLETE" in phase_text
-    assert "015-G" in phase_text and "NEXT ELIGIBLE / NOT AUTHORIZED" in phase_text
+    assert "015-G" in phase_text and "AUTHORIZED / ACTIVE" in phase_text
 
     locked_phases = (
         "015-H",
@@ -47,7 +47,7 @@ def test_phase_015_index_exposes_015_g_as_next_but_not_authorized() -> None:
         assert f"{phase_id}  NOT AUTHORIZED" in phase_text
 
 
-def test_agent_instructions_preserve_post_015_f_authority_boundary() -> None:
+def test_agent_instructions_preserve_active_015_g_authority_boundary() -> None:
     agent_text = AGENTS.read_text(encoding="utf-8")
 
     assert "015-A                                 COMPLETE" in agent_text
@@ -56,7 +56,7 @@ def test_agent_instructions_preserve_post_015_f_authority_boundary() -> None:
     assert "015-D                                 COMPLETE" in agent_text
     assert "015-E                                 COMPLETE" in agent_text
     assert "015-F                                 COMPLETE" in agent_text
-    assert "015-G                                 NEXT ELIGIBLE / NOT AUTHORIZED" in agent_text
+    assert "015-G                                 AUTHORIZED / ACTIVE" in agent_text
     assert "015-H..015-J                          NOT AUTHORIZED" in agent_text
 
 
