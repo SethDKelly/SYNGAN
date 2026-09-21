@@ -73,7 +73,9 @@ R3                                   READY
 Phase 015                             ACTIVE
 Phase 015 start gate                  COMPLETE
 015-A                                 COMPLETE
-015-B                                 NEXT ELIGIBLE / NOT AUTHORIZED
+015-B                                 COMPLETE
+015-C                                 COMPLETE
+015-D                                 NEXT ELIGIBLE / NOT AUTHORIZED
 implementation readiness             READY
 implementation start                 STARTED
 implementation next                  015-D — NEXT ELIGIBLE / NOT AUTHORIZED
@@ -110,7 +112,7 @@ No prior local `COMPLETE` label substitutes for this whole-design audit.
 
 ## Implementation boundary
 
-Phase 014 remains design/readiness work.
+Phase 014 is complete design/readiness work. Phase 015 controlled implementation is active.
 
 ```text
 IMPLEMENTATION READINESS   READY
@@ -120,8 +122,8 @@ IMPLEMENTATION NEXT        015-D — NEXT ELIGIBLE / NOT AUTHORIZED
 
 Historical source/tests/plans may be inspected as downstream evidence, but cannot redefine semantics or be modified to manufacture readiness.
 
-Even a later positive R3 requires explicit Phase 015 authority before implementation begins.
+R3 is READY and implementation has begun only through explicitly authorized Phase 015 slices.
 
 ## Current next boundary
 
-**015-B — Current Verification Harness, Architecture-Fitness & Evidence-Gate Foundation** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
+**015-D — Distributed Data-State, Structured Topology, Candidate/Seal & Generation Promotion** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
