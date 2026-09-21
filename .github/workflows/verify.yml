@@ -44,3 +44,6 @@ jobs:
 
       - name: Run required distributed data-state gate
         run: uv run --no-sync python tools/verify.py data
+
+      - name: Run required Strategy runtime and Learned-State gate
+        run: uv run --no-sync python tools/verify.py runtime
