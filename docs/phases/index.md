@@ -58,9 +58,9 @@ start gate  COMPLETE — intention review / evidence surface / decomposition
 
 R2 and R3 remain open. R3 may be decided only after the whole R2 evidence chain is complete.
 
-## Future Phase 015 — Implementation Authority & Controlled Delivery
+## Phase 015 — Implementation Authority & Controlled Delivery
 
-Future only. Even a positive Phase 014 readiness decision must leave implementation `NOT STARTED` until Phase 015 explicitly authorizes delivery.
+Phase 014-H established R3 = READY, but implementation remains `NOT STARTED`. The Phase 015 start gate is next eligible and must explicitly authorize delivery before implementation begins.
 
 ## Current next boundary
 
