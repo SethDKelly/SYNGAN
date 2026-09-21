@@ -85,20 +85,24 @@ root_package = "syngan"
 exclude_type_checking_imports = true
 
 [[tool.importlinter.contracts]]
-id = "core-layers"
-name = "Core package dependencies point inward"
-type = "layers"
-layers = [
-  "syngan.api",
-  "syngan.application",
-  "syngan.ports",
-  "syngan.domain",
+id = "semantic-core-stays-inward"
+name = "Semantic core does not depend on coordination or outer integration"
+type = "forbidden"
+source_modules = [
   "syngan.foundation",
+  "syngan.domain",
+]
+forbidden_modules = [
+  "syngan.ports",
+  "syngan.application",
+  "syngan.api",
+  "syngan.adapters",
+  "syngan.bootstrap",
 ]
 
 [[tool.importlinter.contracts]]
-id = "core-no-outer-dependencies"
-name = "Core packages do not depend on adapters or bootstrap"
+id = "portable-core-no-outer-integration"
+name = "Portable core does not depend on concrete adapters or bootstrap"
 type = "forbidden"
 source_modules = [
   "syngan.foundation",
@@ -109,17 +113,6 @@ source_modules = [
 ]
 forbidden_modules = [
   "syngan.adapters",
-  "syngan.bootstrap",
-]
-
-[[tool.importlinter.contracts]]
-id = "adapters-stay-outside-coordination"
-name = "Adapters do not depend on coordination or composition"
-type = "forbidden"
-source_modules = ["syngan.adapters"]
-forbidden_modules = [
-  "syngan.application",
-  "syngan.api",
   "syngan.bootstrap",
 ]
 
