@@ -4,7 +4,7 @@ These instructions apply repository-wide to automated coding/documentation agent
 
 ## Current posture
 
-**Jackson concept design and Phase 013/014 are complete; R2 is currently closed and R3 is READY. Phase 015 implementation has STARTED. The start gate and 015-A through 015-I are complete. 015-J is AUTHORIZED / ACTIVE as the Phase 015 cross-slice integration and closure slice.**
+**Jackson concept design and Phase 013/014 are complete; R2 is currently closed and R3 is READY. Phase 015 implementation is COMPLETE. The start gate and 015-A through 015-J are complete, C0-C9 are active/passing, and no post-Phase-015 delivery program is authorized.**
 
 Start with:
 
@@ -53,7 +53,7 @@ Phase 014                            COMPLETE
 014-H                                COMPLETE
 R2                                   CURRENTLY CLOSED
 R3                                   READY
-Phase 015                             ACTIVE
+Phase 015                             COMPLETE
 Phase 015 start gate                  COMPLETE
 015-A                                 COMPLETE
 015-B                                 COMPLETE
@@ -64,10 +64,10 @@ Phase 015 start gate                  COMPLETE
 015-G                                 COMPLETE
 015-H                                 COMPLETE
 015-I                                 COMPLETE
-015-J                                 AUTHORIZED / ACTIVE
+015-J                                 COMPLETE
 implementation readiness             READY
 implementation start                 STARTED
-implementation next                  015-J — AUTHORIZED / ACTIVE
+implementation next                  POST-PHASE-015 START GATE — NOT AUTHORIZED
 ```
 
 ## Primary authority rule
@@ -148,11 +148,11 @@ Phase 014-H has established:
 ```text
 IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       STARTED
-IMPLEMENTATION NEXT        015-J — AUTHORIZED / ACTIVE
+IMPLEMENTATION NEXT        POST-PHASE-015 START GATE — NOT AUTHORIZED
 ```
 
-015-A through 015-I are complete. 015-J is actively replaying cross-slice/adversarial scenarios, closing the Phase 014 residual-risk register, and consolidating Phase 015. Real Spark/Databricks and enterprise-scale support remain unclaimed without provider/benchmark evidence.
+015-A through 015-J are complete. C9 has replayed the S01-S14 cross-slice/adversarial registry and the Phase 014 residual-risk register is closed for the current framework/reference scope. Real Spark/Databricks, provider-specific deployment certification, enterprise-scale qualification, and release/SLO/SLA claims remain unclaimed without their own evidence.
 
 ## Current next boundary
 
-**015-J — Cross-Slice Integration, Residual Risk Closure & Implementation Consolidation** is **AUTHORIZED / ACTIVE**.
+**Phase 015 is COMPLETE. No post-Phase-015 delivery program is authorized.** Any new provider, scale, product-surface, release-hardening, or other implementation program requires a separate explicit start gate and user authorization.
