@@ -24,6 +24,7 @@ from syngan.foundation.identity import (
     LogicalId,
     RecoveryFrontier,
     RepresentationSchemaVersion,
+    ResourceKey,
     StateVersion,
     TypedReference,
 )
@@ -692,12 +693,10 @@ class ExecutionService:
 
     def _transition_exists(
         self,
-        key: object,
+        key: ResourceKey,
         transition_id: LogicalId,
         transition_kind: str,
     ) -> bool:
-        if not hasattr(key, "scope"):
-            raise TypeError("transition key must be a ResourceKey")
         for record in self._store.list_transition_history(key):
             if record.transition_id == transition_id:
                 if record.transition_kind != transition_kind:
