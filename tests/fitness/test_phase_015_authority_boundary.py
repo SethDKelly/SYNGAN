@@ -19,7 +19,7 @@ def test_phase_015_current_authority_is_discoverable() -> None:
     assert "015-D        COMPLETE" in authority_text
     assert "015-E        NEXT ELIGIBLE / NOT AUTHORIZED" in authority_text
     assert "015-F..015-J NOT AUTHORIZED" in authority_text
-    
+
 
 
 def test_phase_015_index_exposes_015_e_as_next_but_not_authorized() -> None:
