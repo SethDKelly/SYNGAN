@@ -21,7 +21,7 @@ R3                              READY
 
 IMPLEMENTATION READINESS        READY
 IMPLEMENTATION START            NOT STARTED
-IMPLEMENTATION NEXT             015-B — AUTHORIZED / ACTIVE
+IMPLEMENTATION NEXT             015-C — NEXT ELIGIBLE / NOT AUTHORIZED
 ~~~
 
 Readiness is not permission to implement.
@@ -62,8 +62,8 @@ P15-06  explicit first-slice authorization
 
 ~~~text
 015-A  COMPLETE — Current Implementation Baseline, Repository/Toolchain & Scaffold Reconciliation
-015-B  AUTHORIZED / ACTIVE — Current Verification Harness, Architecture-Fitness & Evidence-Gate Foundation
-015-C  NOT AUTHORIZED — Identity, References, Representation, Durable Owner-State & Control Persistence
+015-B  COMPLETE — Current Verification Harness, Architecture-Fitness & Evidence-Gate Foundation
+015-C  NEXT ELIGIBLE / NOT AUTHORIZED — Identity, References, Representation, Durable Owner-State & Control Persistence
 015-D  NOT AUTHORIZED — Distributed Data-State, Topology, Candidate/Seal & Generation Promotion
 015-E  NOT AUTHORIZED — Strategy/Method Binding, Dependency Closure, Learning/Learned-State & Generation Runtime
 015-F  NOT AUTHORIZED — Execution/Attempt, Admission, Fencing, Idempotency, Checkpoint, Cancellation & Recovery
@@ -90,6 +90,20 @@ architecture-fitness baseline      NORMALIZED
 domain implementation              NONE
 Verify workflow                     PASS
 015-B                              NEXT ELIGIBLE / NOT AUTHORIZED
+~~~
+
+## 015-B completion state
+
+Current completion authority: [015-B Current Verification Harness / Architecture Fitness / Evidence Gates](../../implementation/phase-015-b-current-verification-harness-architecture-fitness-evidence-gates.md).
+
+~~~text
+015-B                              COMPLETE
+C0                                 ACTIVE / EXECUTABLE
+C1-C9                              DEFINED / SLICE-ACTIVATED
+portable profile                   REQUIRED CI GATE
+historical Phase 005 verification HISTORICAL
+domain implementation              NONE
+015-C                              NEXT ELIGIBLE / NOT AUTHORIZED
 ~~~
 
 ## Residual readiness risks inherited from 014-G
@@ -122,7 +136,7 @@ Earlier language such as active, canonical, current planning overlay, or concret
 
 ## Current prohibition
 
-015-A is complete and 015-B is explicitly authorized/active. For all responsibilities outside 015-B authority:
+015-A and 015-B are complete. Until 015-C is explicitly authorized, and for all responsibilities outside completed 015-B authority:
 
 - do not add domain behavior;
 - do not stabilize public APIs/schemas;
@@ -134,4 +148,4 @@ Earlier language such as active, canonical, current planning overlay, or concret
 
 ## Current next boundary
 
-**015-B — Current Verification Harness, Architecture-Fitness & Evidence-Gate Foundation** is active and authorized.
+**015-C — Identity, References, Representation, Durable Owner-State & Control Persistence** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
