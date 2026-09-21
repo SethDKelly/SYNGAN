@@ -21,7 +21,7 @@ def test_current_python_floor_build_backend_and_package_selection_are_retained()
     assert project["tool"]["hatch"]["build"]["targets"]["wheel"]["packages"] == ["src/syngan"]
 
 
-def test_base_runtime_dependency_closure_remains_empty_in_015_a() -> None:
+def test_base_runtime_dependency_closure_remains_empty_before_runtime_slices() -> None:
     project = _pyproject()
 
     assert project["project"]["dependencies"] == []
