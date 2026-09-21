@@ -1,0 +1,60 @@
+schema_version = 1
+
+[lanes]
+C0 = "active"
+C1 = "defined"
+C2 = "defined"
+C3 = "defined"
+C4 = "defined"
+C5 = "defined"
+C6 = "defined"
+C7 = "defined"
+C8 = "defined"
+C9 = "defined"
+
+[profiles.authority]
+description = "Current authority, bootstrap metadata, and verification-manifest fitness."
+
+[profiles.static]
+description = "Bootstrap, lint, format, type, architecture, and authority fitness."
+
+[profiles.portable]
+description = "Required default merge gate with network/external/heavy lanes excluded."
+exclude_markers = [
+  "network",
+  "external",
+  "integration",
+  "spark",
+  "failure",
+  "security",
+  "provider",
+  "scale",
+  "stochastic",
+]
+
+[markers]
+network = "intentionally requires socket/network access"
+external = "intentionally requires an external service"
+integration = "crosses a component, process, storage, or runtime boundary"
+spark = "requires a Spark or local-distributed runtime"
+failure = "exercises explicit fault, retry, cancellation, or recovery injection"
+security = "exercises authorization, disclosure, protected-existence, or secret boundaries"
+provider = "exercises provider capability or adapter conformance"
+scale = "executes declared workload, performance, or scale evidence"
+stochastic = "uses statistical or stochastic acceptance rules"
+
+[scenarios]
+S01 = "direct Generation without Learning/Learned State"
+S02 = "Learned-State-assisted Generation"
+S03 = "structured-topology family"
+S04 = "text-bearing structured data under no-egress"
+S05 = "Evaluation favorable/unfavorable/indeterminate/no-finding"
+S06 = "evidence-gated Generation plus later Evidence invalidation"
+S07 = "retry/cancellation/checkpoint/provider-unknown race"
+S08 = "regressive restore plus stale-writer exclusion"
+S09 = "partial availability/disclosure/historical reconstruction"
+S10 = "scale/resource pressure plus approximation attack"
+S11 = "provider capability change plus portability fallback"
+S12 = "authorization/protected-existence conflict"
+S13 = "external governance handoff"
+S14 = "combined adversarial composition"
