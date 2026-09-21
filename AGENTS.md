@@ -4,7 +4,7 @@ These instructions apply repository-wide to automated coding/documentation agent
 
 ## Current posture
 
-**Jackson concept design and Phase 013/014 are complete; R2 is currently closed and R3 is READY. Phase 015 implementation has STARTED. The start gate and 015-A through 015-D are complete. 015-E is AUTHORIZED / ACTIVE for Strategy/runtime, dependency-closure, Learning/Learned-State and Generation-runtime foundation work only; later slices remain locked.**
+**Jackson concept design and Phase 013/014 are complete; R2 is currently closed and R3 is READY. Phase 015 implementation has STARTED. The start gate and 015-A through 015-E are complete. 015-F is next eligible but NOT AUTHORIZED pending explicit proceed; later slices remain locked.**
 
 Start with:
 
@@ -54,11 +54,12 @@ Phase 015 start gate                  COMPLETE
 015-B                                 COMPLETE
 015-C                                 COMPLETE
 015-D                                 COMPLETE
-015-E                                 AUTHORIZED / ACTIVE
-015-F..015-J                          NOT AUTHORIZED
+015-E                                 COMPLETE
+015-F                                 NEXT ELIGIBLE / NOT AUTHORIZED
+015-G..015-J                          NOT AUTHORIZED
 implementation readiness             READY
 implementation start                 STARTED
-implementation next                  015-E — AUTHORIZED / ACTIVE
+implementation next                  015-F — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
 ## Primary authority rule
@@ -139,11 +140,11 @@ Phase 014-H has established:
 ```text
 IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       STARTED
-IMPLEMENTATION NEXT        015-E — AUTHORIZED / ACTIVE
+IMPLEMENTATION NEXT        015-F — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
-015-A through 015-D are complete. 015-E is authorized only for Strategy/runtime binding, dependency closure, Learning/Learned-State semantics, Generation runtime planning, and the bounded self-contained reference component. Execution/recovery, Evidence, security/provider policy, and scale claims remain locked.
+015-A through 015-E are complete. Strategy/runtime binding, explicit dependency/role closure, Learning/Learned-State semantics, direct/reuse Generation planning, and the bounded self-contained reference text path are implemented. Execution/recovery, Evidence, security/provider policy, and scale qualification remain locked.
 
 ## Current next boundary
 
-**015-E — Strategy/Method Binding, Dependency Closure, Learning/Learned-State & Generation Runtime** is active and authorized.
+**015-F — Execution/Attempt, Admission, Fencing, Idempotency, Checkpoint, Cancellation & Recovery** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
