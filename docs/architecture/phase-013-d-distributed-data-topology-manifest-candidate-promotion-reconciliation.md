@@ -375,30 +375,36 @@ This does not pre-authorize arbitrary recursive graph lifecycle or streaming/ses
 
 ## 17. Current synchronization reconciliation
 
-Current Phase 009 synchronization authority controls all numbering and ownership.
+The [Current Cross-Concept Synchronization Contract](../synchronizations/current-cross-concept-synchronizations.md) controls current numbering, scope and ownership.
 
 For distributed-data architecture the relevant current semantics are:
 
 ```text
-SYNC-01  exact Data Meaning revision binding
-SYNC-02  Strategy compatibility including requested topology/scope
-SYNC-03  Constraint binding / handling
-SYNC-06  Generation commitment and compatibility, including quantity/scope,
-         source/Learned-State basis and material approximation semantics
+SYNC-01  exact Data Meaning revision binding when Data Meaning participates
+SYNC-02  Strategy selection / contextual compatibility, including requested topology/scope
+SYNC-03  Constraint binding / contextual handling when Constraint participates
+SYNC-06  Generation / Learned State reuse compatibility and exact Learned State
+         basis binding when reusable Learned State is selected
 SYNC-07  Generation operational realization; physical candidate/retry state remains non-final
 SYNC-09  exact Evaluation Criterion binding
 SYNC-10  Evaluation method/scope/coverage compatibility
 SYNC-11  Evaluation operational realization
-SYNC-12  Evaluation produces Evidence bound to the exact subject
-SYNC-13  controlled Evidence -> Generation/external consumption handoff
+SYNC-12  completed Evidence-producing Evaluation establishes Evidence bound to the exact subject
+SYNC-13  Generation / Evidence completion handoff only when Generation is evidence-gated
 SYNC-14  material Provenance relationship recording
 ```
+
+Direct Generation does not activate `SYNC-06`. Generation quantity/scope/approximation commitments remain Generation-owned, with Strategy/Constraint relations governed by their applicable rules rather than being folded into `SYNC-06`.
+
+External consumption, release/use approval and governance handoff are not `SYNC-13`; they remain external interaction/authority boundaries.
 
 `SYNC-08` is retired as a cross-concept synchronization because candidate/completed-output establishment is Generation-local behavior.
 
 Historical `SYNC-15` is reclassified under the cross-cutting Reproducibility contract; it is not active synchronization-owned state.
 
-The retained Phase 007-F `15`-synchronization inventory and older per-ID descriptions are historical semantics and remain an explicit 013-I corpus-cleanup item.
+### Phase 014-E propagation note
+
+Phase 014-E detected that this detailed architecture section retained pre-014-C synchronization scope wording after the current synchronization contract had been narrowed. The architecture responsibilities themselves were already compatible; this section is corrected to the current `SYNC-06` and `SYNC-13` scopes without changing architecture structure, concept ownership, synchronization count or application-family validity.
 
 ---
 
