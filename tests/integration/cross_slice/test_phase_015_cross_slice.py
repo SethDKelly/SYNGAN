@@ -42,6 +42,8 @@ from syngan.domain.provenance import (
     HistoricalReferenceView,
     HistoricalResolution,
 )
+from syngan.foundation import platform as platform_contracts
+from syngan.foundation import security as security_contracts
 from syngan.foundation.data_state import (
     LogicalScope,
     SemanticBinding,
@@ -65,7 +67,6 @@ from syngan.foundation.platform import (
     CapabilityEvidenceStrength,
     CapabilityFallback,
     CapabilityMode,
-    CapabilityRequirement as PlatformCapabilityRequirement,
     CompatibilityOutcome,
     PlatformCapability,
     PlatformQualificationContext,
@@ -86,7 +87,6 @@ from syngan.foundation.security import (
     AuthorizationDecision,
     AuthorizationOutcome,
     AuthorizationRequest,
-    CapabilityRequirement as SecurityCapabilityRequirement,
     DisclosureState,
     NetworkPosture,
     PrincipalKind,
@@ -407,7 +407,7 @@ def test_s04_s10_s11_no_egress_portability_and_scale_cannot_weaken_commitment() 
     compatibility = assess_platform_compatibility(
         platform_context(),
         (
-            PlatformCapabilityRequirement(
+            platform_contracts.CapabilityRequirement(
                 capability,
                 CapabilityEvidenceStrength.VERIFIED,
             ),
@@ -420,7 +420,7 @@ def test_s04_s10_s11_no_egress_portability_and_scale_cannot_weaken_commitment() 
     stale = assess_platform_compatibility(
         platform_context(),
         (
-            PlatformCapabilityRequirement(
+            platform_contracts.CapabilityRequirement(
                 PlatformCapability.OUTBOUND_NETWORK_ENFORCEMENT,
                 CapabilityEvidenceStrength.VERIFIED,
             ),
@@ -637,7 +637,7 @@ def test_s14_combined_adversarial_composition_keeps_independent_axes() -> None:
         principal(),
         attempt_ref,
         (
-            SecurityCapabilityRequirement(
+            security_contracts.CapabilityRequirement(
                 SecurityAction.LEARNED_STATE_USE,
                 ProtectedTarget(commitment("learned-state", "state-1"), "tenant-a"),
             ),
@@ -648,7 +648,7 @@ def test_s14_combined_adversarial_composition_keeps_independent_axes() -> None:
     platform = assess_platform_compatibility(
         platform_context(),
         (
-            PlatformCapabilityRequirement(
+            platform_contracts.CapabilityRequirement(
                 PlatformCapability.WRITER_FENCING,
                 CapabilityEvidenceStrength.VERIFIED,
             ),
