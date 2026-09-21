@@ -20,7 +20,9 @@ from syngan.domain.provenance import (
     CurrentFeasibility,
     HistoricalKnowledgeBasis,
     HistoricalResolution,
+    ProvenanceAssertion,
     ProvenanceRelationship,
+    ProvenanceStatus,
     ReproductionClass,
     provenance_reference,
 )
@@ -152,11 +154,19 @@ def test_evaluation_establishes_multiple_evidence_with_required_provenance(
         assert findings[0].applicability.status is EvidenceApplicability.APPLICABLE
 
         evidence = findings[0].finding.reference
-        assertion_id = LogicalId(f"{evidence.key.resource_id.value}-producer")
-        producer = service.load_provenance(provenance_reference(evidence, assertion_id))
+        expected_relationships = {
+            "producer": ProvenanceRelationship.PRODUCED_BY,
+            "criterion": ProvenanceRelationship.ANSWERS_CRITERION,
+            "subject": ProvenanceRelationship.EVALUATED_SUBJECT,
+        }
+        assertions = {}
+        for suffix, relationship in expected_relationships.items():
+            assertion_id = LogicalId(f"{evidence.key.resource_id.value}-{suffix}")
+            snapshot = service.load_provenance(provenance_reference(evidence, assertion_id))
+            assert snapshot.assertion.relationship is relationship
+            assertions[suffix] = snapshot
 
-        assert producer.assertion.relationship is ProvenanceRelationship.PRODUCED_BY
-        view = service.compose_assertion(producer.assertion.reference)
+        view = service.compose_assertion(assertions["producer"].assertion.reference)
         assert view.assertion.basis is HistoricalKnowledgeBasis.DIRECT
         assert view.subjects[0].resolution is HistoricalResolution.RESOLVED
         assert view.objects[0].resolution is HistoricalResolution.RESOLVED
@@ -274,6 +284,15 @@ def test_generation_completion_basis_remains_exact_after_evidence_invalidation(
             (evidence,),
         )
 
+        use = service.record_generation_evidence_use(
+            generation.generation_commitment,
+            (evidence,),
+            LogicalId("generation-evidence-use"),
+            FRONTIER,
+        )
+        assert use.assertion.relationship is ProvenanceRelationship.USED_FOR_COMPLETION
+        assert use.assertion.object_references == (evidence,)
+
         service.change_evidence_applicability(
             evidence,
             findings[0].applicability_state_version,
@@ -287,6 +306,13 @@ def test_generation_completion_basis_remains_exact_after_evidence_invalidation(
         assert generation.completed_output.completion_basis_references == (evidence,)
         with pytest.raises(ValueError, match="not currently applicable"):
             service.resolve_applicable_evidence((evidence,))
+        with pytest.raises(ValueError, match="not currently applicable"):
+            service.record_generation_evidence_use(
+                generation.generation_commitment,
+                (evidence,),
+                LogicalId("late-generation-evidence-use"),
+                FRONTIER,
+            )
 
 
 def test_historical_resolution_and_reproducibility_keep_independent_axes(
@@ -348,3 +374,50 @@ def test_missing_payload_is_unknown_not_historical_absence(tmp_path: Path) -> No
 
         assert view.knowledge_basis is HistoricalKnowledgeBasis.RECONSTRUCTED
         assert view.resolution is HistoricalResolution.UNKNOWN
+
+
+
+def test_reconstructed_provenance_can_be_superseded_without_history_rewrite(
+    tmp_path: Path,
+) -> None:
+    with SQLiteControlStore(tmp_path / "control.sqlite", SCOPE) as store:
+        service = EvidenceHistoryService(store)
+        source = commitment("historical-source", "source-1")
+        target = commitment("historical-target", "target-1")
+
+        first_ref = provenance_reference(source, LogicalId("reconstructed-1"))
+        replacement_ref = provenance_reference(source, LogicalId("reconstructed-2"))
+        first = ProvenanceAssertion(
+            reference=first_ref,
+            relationship=ProvenanceRelationship.DERIVED_FROM,
+            subject_references=(target,),
+            object_references=(source,),
+            basis=HistoricalKnowledgeBasis.RECONSTRUCTED,
+            qualifiers=EncodedPayload.from_object({"basis": "recovery-evidence"}),
+        )
+        replacement = ProvenanceAssertion(
+            reference=replacement_ref,
+            relationship=ProvenanceRelationship.DERIVED_FROM,
+            subject_references=(target,),
+            object_references=(source,),
+            basis=HistoricalKnowledgeBasis.DIRECT,
+            qualifiers=EncodedPayload.from_object({"basis": "canonical-record"}),
+        )
+        first_snapshot = service.record_provenance(first, FRONTIER)
+        service.record_provenance(replacement, FRONTIER)
+
+        changed = service.change_provenance_status(
+            first_ref,
+            first_snapshot.state_version,
+            ProvenanceStatus.SUPERSEDED,
+            FRONTIER,
+            LogicalId("supersede-provenance"),
+            reasons=("canonical-record-recovered",),
+            replacement_reference=replacement_ref,
+        )
+
+        assert changed.state.status is ProvenanceStatus.SUPERSEDED
+        assert changed.state.replacement_reference == replacement_ref
+        retained = service.load_provenance(first_ref)
+        assert retained.assertion == first
+        assert retained.assertion.basis is HistoricalKnowledgeBasis.RECONSTRUCTED
