@@ -33,7 +33,10 @@ methodology / completion / cross-cutting authority
 
 - [Jackson Design Completion & Implementation Hold](authority/jackson-design-completion-implementation-hold.md)
 - [Jackson Methodology Completion Matrix](authority/jackson-methodology-completion-matrix.md)
-- [Post-Phase-015 Methodology & Documentation Reconciliation](authority/post-phase-015-methodology-documentation-reconciliation.md)
+- [Phase 016 Pre-Implementation Hardening Authority](authority/phase-016-documentation-okf-agentic-implementation-readiness-hardening-authority.md)
+- [Phase 016](phases/016/index.md)
+- [016-A Documentation Corpus Audit](phases/016/016-A-documentation-corpus-current-owner-duplication-supersession-audit.md)
+- [Post-Phase-015 Methodology & Documentation Reconciliation — superseded current-boundary record](authority/post-phase-015-methodology-documentation-reconciliation.md)
 - [Phase 014 Whole-Design Consolidation & Readiness Authority](authority/phase-014-whole-design-readiness-authority.md)
 - [Phase 014-A Whole-Design Evidence Baseline](authority/phase-014-whole-design-audit-evidence-baseline.md)
 - [Phase 014-B Problem/Actor/Outcome/Concept-Purpose Audit](authority/phase-014-b-problem-actor-outcome-concept-purpose-audit.md)
@@ -95,8 +98,10 @@ Phase 015 start gate                  COMPLETE
 015-J                                 COMPLETE
 implementation readiness             READY / CONSUMED
 implementation program               PHASE 015 COMPLETE
-implementation next                  POST-PHASE-015 START GATE — NOT AUTHORIZED
-Phase 016                             NOT DEFINED
+Phase 016                             ACTIVE — PRE-IMPLEMENTATION HARDENING
+016-A                                 COMPLETE
+016-B                                 NEXT ELIGIBLE / NOT AUTHORIZED
+product/provider/runtime delivery     NOT AUTHORIZED
 ```
 
 ## Current whole-design baseline
@@ -135,7 +140,7 @@ Phase 014 design/readiness work and Phase 015 controlled implementation are comp
 ```text
 IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       STARTED
-IMPLEMENTATION NEXT        POST-PHASE-015 START GATE — NOT AUTHORIZED
+IMPLEMENTATION NEXT        PRODUCT DELIVERY NOT AUTHORIZED; PHASE 016 HARDENING ACTIVE
 ```
 
 Historical source/tests/plans may be inspected as downstream evidence, but cannot redefine semantics or be modified to manufacture readiness.
@@ -144,4 +149,4 @@ R3 was consumed by the completed Phase 015 program. C0-C9 are active/passing for
 
 ## Current next boundary
 
-**Phase 015 is COMPLETE. No post-Phase-015 delivery program is authorized.** A new program requires a separate explicit start gate and user authorization.
+**Phase 016 is ACTIVE as a pre-implementation hardening program. 016-A is COMPLETE. 016-B is next eligible but remains NOT AUTHORIZED pending explicit proceed.** Product/provider/runtime delivery remains separately unauthorized.
