@@ -14,7 +14,7 @@ At the other extreme, requiring full event sourcing for every authority and ever
 
 ## Governing authority
 
-- [Phase 003 Consolidated Experience Contract](../experience/phase-003-consolidated-experience-contract.md)
+- [Phase 003 Consolidated Experience Contract](../history/experience/phase-003-consolidated-experience-contract.md)
 - [Architecture Authority, Representation Principles, Layering & Dependency Direction](../architecture/architecture-authority-representation-layering.md)
 - [Public API, Resource/Handle Model, Workflow Composition & Semantic Mapping](../architecture/public-api-resource-handle-workflow-semantic-mapping.md)
 - [Control-Plane Identity, Revision, State, Persistence & Historical Reference Architecture](../architecture/control-plane-identity-revision-state-persistence-historical-reference.md)

@@ -22,7 +22,7 @@ The architecture must also survive client/process/cluster turnover, expose histo
 
 ## Governing authority
 
-- [Phase 003 Consolidated Experience Contract](../experience/phase-003-consolidated-experience-contract.md)
+- [Phase 003 Consolidated Experience Contract](../history/experience/phase-003-consolidated-experience-contract.md)
 - [Architecture Authority, Representation Principles, Layering & Dependency Direction](../architecture/architecture-authority-representation-layering.md)
 - [Public API, Resource/Handle Model, Workflow Composition & Semantic Mapping](../architecture/public-api-resource-handle-workflow-semantic-mapping.md)
 

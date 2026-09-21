@@ -27,9 +27,9 @@ The architecture therefore needs a recovery authority boundary that does not der
 ## Governing authority
 
 - [Operational Authority Continuity & Regressive Recovery Contract](../authority/operational-authority-continuity-regressive-recovery-contract.md)
-- [Phase 006 Recovery, Security, Degraded, Historical & Topology Experience Contract](../experience/phase-006-recovery-security-degraded-history-topology-experience-contract.md)
+- [Phase 006 Recovery, Security, Degraded, Historical & Topology Experience Contract](../history/experience/phase-006-recovery-security-degraded-history-topology-experience-contract.md)
 - [Execution](../concepts/execution.md)
-- [Core Synchronizations](../synchronizations/core-synchronizations.md)
+- [Core Synchronizations](../history/synchronizations/core-synchronizations.md)
 - [ADR-0005 — Attempt-Epoch Fencing & Recoverable At-Least-Once Execution](ADR-0005-attempt-epoch-fencing-recoverable-at-least-once-execution.md)
 
 ## Decision
@@ -121,7 +121,7 @@ Any platform profile unable to enforce a non-regressing boundary in the presence
 
 ## Canonical architecture affected
 
-- [Phase 006 Architecture Reconciliation Contract](../architecture/phase-006-architecture-reconciliation-contract.md)
+- [Phase 006 Architecture Reconciliation Contract](../history/architecture/phase-006-architecture-reconciliation-contract.md)
 - [Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Architecture](../architecture/execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation.md)
 - [Control-Plane Identity, Revision, State, Persistence & Historical Reference Architecture](../architecture/control-plane-identity-revision-state-persistence-historical-reference.md)
 - [Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Architecture](../architecture/dependency-resolution-offline-no-egress-authorization-redaction-enterprise-security.md)

@@ -119,7 +119,7 @@ A deployment profile that cannot establish closure for dynamic workers or requir
 
 ## Canonical architecture affected
 
-- [Phase 006 Architecture Reconciliation Contract](../architecture/phase-006-architecture-reconciliation-contract.md)
+- [Phase 006 Architecture Reconciliation Contract](../history/architecture/phase-006-architecture-reconciliation-contract.md)
 - [Strategy Extension, Learning/Generation/Evaluation Runtime & Adapter Architecture](../architecture/strategy-extension-learning-generation-evaluation-runtime-adapter.md)
 - [Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Architecture](../architecture/dependency-resolution-offline-no-egress-authorization-redaction-enterprise-security.md)
 - [Deployment, Scalability, Observability, Portability, Compatibility & Platform Integration Architecture](../architecture/deployment-scalability-observability-portability-compatibility-platform-integration.md)
