@@ -2,7 +2,7 @@
 ---
 type: Implementation Authority
 title: 015-C — Identity, References, Representation, Durable Owner-State & Control Persistence
-status: active-current
+status: complete-current
 ---
 
 # 015-C — Identity, References, Representation, Durable Owner-State & Control Persistence
@@ -315,13 +315,36 @@ universal event sourcing            REJECT
 global transaction                  REJECT
 ~~~
 
+## Completion evidence
+
+~~~text
+stable identity / reference primitives       IMPLEMENTED
+four version/authority axes                  IMPLEMENTED
+exact historical resolution                  IMPLEMENTED
+owner-state CAS + transition history         IMPLEMENTED
+durable coordination intent                  IMPLEMENTED
+SQLite reference adapter                     IMPLEMENTED
+C2 control integration profile               PASS
+concept-specific state machines              NOT IMPLEMENTED
+enterprise persistence support               NOT CLAIMED
+RR-03 full non-regressing recovery proof     DEFERRED TO 015-F
+ICLASS-3                                     0
+ICLASS-4                                     0
+upstream reopen                              NONE
+~~~
+
 ## Current authorization
 
 ~~~text
 015-A        COMPLETE
 015-B        COMPLETE
-015-C        AUTHORIZED / ACTIVE
-015-D..015-J NOT AUTHORIZED
+015-C        COMPLETE
+015-D        NEXT ELIGIBLE / NOT AUTHORIZED
+015-E..015-J NOT AUTHORIZED
+IMPLEMENTATION START  STARTED
 ~~~
 
-Only 015-C identity/reference/control-persistence implementation is authorized.
+
+## Current next boundary
+
+**015-D — Distributed Data-State, Structured Topology, Candidate/Seal & Generation Promotion** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
