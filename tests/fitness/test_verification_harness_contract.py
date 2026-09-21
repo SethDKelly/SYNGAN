@@ -26,7 +26,7 @@ def test_verification_manifest_has_current_lane_state() -> None:
         "C4": "active",
         "C5": "active",
         "C6": "active",
-        "C7": "defined",
+        "C7": "active",
         "C8": "defined",
         "C9": "defined",
     }
@@ -70,7 +70,7 @@ def test_portable_profile_excludes_explicit_nonportable_markers() -> None:
 def test_repository_verifier_exposes_current_required_profiles() -> None:
     verifier = VERIFY.read_text(encoding="utf-8")
 
-    for profile in ("authority", "static", "portable", "control", "data", "runtime", "execution"):
+    for profile in ("authority", "static", "portable", "control", "data", "runtime", "execution", "evidence", "security"):
         assert f'"{profile}"' in verifier
 
     assert "verify_all() -> None" in verifier
