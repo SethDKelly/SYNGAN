@@ -12,7 +12,7 @@ def _pyproject() -> dict[str, Any]:
         return tomllib.load(handle)
 
 
-def test_python_floor_build_backend_and_package_selection_are_locked() -> None:
+def test_current_python_floor_build_backend_and_package_selection_are_retained() -> None:
     project = _pyproject()
 
     assert project["project"]["requires-python"] == ">=3.11"
@@ -21,13 +21,13 @@ def test_python_floor_build_backend_and_package_selection_are_locked() -> None:
     assert project["tool"]["hatch"]["build"]["targets"]["wheel"]["packages"] == ["src/syngan"]
 
 
-def test_base_runtime_dependency_closure_remains_empty_in_007_c() -> None:
+def test_base_runtime_dependency_closure_remains_empty_in_015_a() -> None:
     project = _pyproject()
 
     assert project["project"]["dependencies"] == []
 
 
-def test_locked_development_groups_contain_only_authorized_tool_families() -> None:
+def test_retained_development_groups_contain_only_authorized_tool_families() -> None:
     project = _pyproject()
     groups = project["dependency-groups"]
     flattened = "\n".join(
@@ -49,7 +49,7 @@ def test_locked_development_groups_contain_only_authorized_tool_families() -> No
     ):
         assert required in flattened
 
-    for prohibited in (
+    for deferred in (
         "pyspark",
         "torch",
         "transformers",
@@ -58,20 +58,26 @@ def test_locked_development_groups_contain_only_authorized_tool_families() -> No
         "sqlalchemy",
         "opentelemetry",
     ):
-        assert prohibited not in flattened
+        assert deferred not in flattened
 
 
-def test_import_linter_contracts_cover_required_topology_boundaries() -> None:
+def test_import_linter_contracts_preserve_current_inner_outer_boundaries() -> None:
     project = _pyproject()
     contracts = {
         contract["id"]: contract for contract in project["tool"]["importlinter"]["contracts"]
     }
 
     assert set(contracts) == {
-        "core-layers",
-        "core-no-outer-dependencies",
-        "adapters-stay-outside-coordination",
+        "semantic-core-stays-inward",
+        "portable-core-no-outer-integration",
     }
-    assert contracts["core-layers"]["type"] == "layers"
-    assert contracts["core-no-outer-dependencies"]["type"] == "forbidden"
-    assert contracts["adapters-stay-outside-coordination"]["type"] == "forbidden"
+    assert contracts["semantic-core-stays-inward"]["type"] == "forbidden"
+    assert contracts["portable-core-no-outer-integration"]["type"] == "forbidden"
+
+    assert set(contracts["semantic-core-stays-inward"]["source_modules"]) == {
+        "syngan.foundation",
+        "syngan.domain",
+    }
+    assert {"syngan.adapters", "syngan.bootstrap"}.issubset(
+        contracts["portable-core-no-outer-integration"]["forbidden_modules"]
+    )
