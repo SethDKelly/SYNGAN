@@ -108,7 +108,9 @@ class GenerationDataStateService:
     ) -> GenerationDataStateSnapshot:
         snapshot = self._load_expected(generation_commitment, expected_state_version)
         if subject.topology != snapshot.state.topology:
-            raise ValueError("sealed physical subject topology does not match Generation commitment")
+            raise ValueError(
+                "sealed physical subject topology does not match Generation commitment"
+            )
         seal_id = subject.reference.commitment_snapshot_id
         if seal_id is None:
             raise AssertionError("sealed physical subject lost commitment snapshot identity")
@@ -162,7 +164,9 @@ class GenerationDataStateService:
         if subject.reference != candidate.sealed_subject_reference:
             raise ValueError("resolved physical subject identity does not match candidate binding")
         if subject.topology != snapshot.state.topology:
-            raise ValueError("resolved physical subject topology does not match Generation commitment")
+            raise ValueError(
+                "resolved physical subject topology does not match Generation commitment"
+            )
 
         next_state = snapshot.state.promote_owner_validated_candidate(
             candidate_id=candidate_id,
