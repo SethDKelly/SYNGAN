@@ -259,9 +259,21 @@ class SecretRef:
     security_domain: str
 
     def __post_init__(self) -> None:
-        object.__setattr__(self, "provider_kind", _token(self.provider_kind, "secret provider kind"))
-        object.__setattr__(self, "logical_name", _token(self.logical_name, "secret logical name"))
-        object.__setattr__(self, "service_role", _token(self.service_role, "secret service role"))
+        object.__setattr__(
+            self,
+            "provider_kind",
+            _token(self.provider_kind, "secret provider kind"),
+        )
+        object.__setattr__(
+            self,
+            "logical_name",
+            _token(self.logical_name, "secret logical name"),
+        )
+        object.__setattr__(
+            self,
+            "service_role",
+            _token(self.service_role, "secret service role"),
+        )
         object.__setattr__(
             self, "security_domain", _token(self.security_domain, "secret security domain")
         )
