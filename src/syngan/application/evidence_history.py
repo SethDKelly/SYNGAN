@@ -48,7 +48,7 @@ from syngan.foundation.identity import (
     StateVersion,
     TypedReference,
 )
-from syngan.foundation.representation import EncodedPayload
+from syngan.foundation.representation import EncodedPayload, JsonObject
 from syngan.ports.control_store import (
     ControlStore,
     CurrentStateConflict,
@@ -434,7 +434,7 @@ class EvidenceHistoryService:
     ) -> EncodedPayload:
         left = self.load_evidence(left_reference)
         right = self.load_evidence(right_reference)
-        fields = {
+        fields: JsonObject = {
             "criterion": left.finding.criterion_reference != right.finding.criterion_reference,
             "subject": left.finding.subject_reference != right.finding.subject_reference,
             "method": left.finding.method_reference != right.finding.method_reference,
