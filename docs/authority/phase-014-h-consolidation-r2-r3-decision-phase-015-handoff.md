@@ -381,3 +381,24 @@ IMPLEMENTATION START   STARTED
 Current authority: [015-E Strategy Runtime / Learning / Generation](../implementation/phase-015-e-strategy-runtime-learning-generation-authority.md).
 
 The current repository next boundary is **015-F — Execution/Attempt, Admission, Fencing, Idempotency, Checkpoint, Cancellation & Recovery**, which remains **NOT AUTHORIZED** pending explicit proceed.
+
+
+## Post-015-F consumption
+
+015-F has completed the provider-neutral Execution/Attempt, admission, operation-idempotency, checkpoint, cancellation, fencing and non-regressing recovery foundation.
+
+~~~text
+015-A                  COMPLETE
+015-B                  COMPLETE
+015-C                  COMPLETE
+015-D                  COMPLETE
+015-E                  COMPLETE
+015-F                  COMPLETE
+015-G                  NEXT ELIGIBLE / NOT AUTHORIZED
+015-H..015-J           NOT AUTHORIZED
+IMPLEMENTATION START   STARTED
+~~~
+
+Current authority: [015-F Execution / Attempt / Recovery](../implementation/phase-015-f-execution-attempt-admission-fencing-idempotency-checkpoint-cancellation-recovery-authority.md).
+
+The current repository next boundary is **015-G — Evaluation, Evidence, Provenance, Historical Read Composition & Reproducibility**, which remains **NOT AUTHORIZED** pending explicit proceed.
