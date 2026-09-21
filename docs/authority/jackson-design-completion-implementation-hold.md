@@ -47,7 +47,8 @@ Phase 014                       ACTIVE
 014-B                           COMPLETE
 014-C                           COMPLETE
 014-D                           COMPLETE
-014-E                           NEXT ELIGIBLE
+014-E                           COMPLETE
+014-F                           NEXT ELIGIBLE
 R2                              OPEN
 R3                              OPEN
 ```
@@ -105,4 +106,4 @@ Phase 014 findings must distinguish missing design semantics from normal impleme
 
 ## Current next boundary
 
-**014-E — Architecture Realization Coverage, Responsibility/Authority & Design-to-Architecture Traceability Audit** is next eligible.
+**014-F — End-to-End Scenario, Exception, Failure, Recovery, Scale, Security, Portability & Adversarial Whole-Design Audit** is next eligible.
