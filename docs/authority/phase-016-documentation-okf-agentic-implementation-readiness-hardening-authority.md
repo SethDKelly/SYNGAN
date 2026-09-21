@@ -180,8 +180,9 @@ The user explicitly authorized Phase 016 and requested execution of the first su
 
 ~~~text
 Phase 016   AUTHORIZED / ACTIVE
-016-A       AUTHORIZED / ACTIVE
-016-B..J    NOT AUTHORIZED
+016-A       COMPLETE
+016-B       NEXT ELIGIBLE / NOT AUTHORIZED
+016-C..J    NOT AUTHORIZED
 product delivery beyond hardening  NOT AUTHORIZED
 ~~~
 
@@ -202,3 +203,27 @@ Phase 016 exits only when:
 - no unresolved P16-3/P16-4 issue remains.
 
 Phase 016 completion does not automatically authorize the next implementation program.
+
+
+## 016-A completion evidence
+
+[016-A — Full Documentation Corpus Inventory, Duplication / Supersession / Current-Owner Audit](../phases/016/016-A-documentation-corpus-current-owner-duplication-supersession-audit.md) completed the first hardening slice.
+
+Machine-readable evidence: [016-A Documentation Corpus Inventory](../phases/016/016-A-documentation-corpus-inventory.json).
+
+~~~text
+documentation Markdown files at audit baseline  349
+phase work records                               154
+initial history candidates                       245
+current-owner candidates                          67
+root AGENTS startup links                         25
+P16-3 semantic findings                            0
+P16-4 product-scope findings                       0
+upstream reopen                                 NONE
+016-A                                           COMPLETE
+016-B                                           NEXT ELIGIBLE / NOT AUTHORIZED
+~~~
+
+The audit confirmed that the main pre-implementation weakness is current/history/authority topology and agent retrieval discipline, not unresolved product semantics.
+
+No document relocation is authorized merely by the 016-A classifier. 016-B must establish explicit ownership/conservation evidence before normalization.
