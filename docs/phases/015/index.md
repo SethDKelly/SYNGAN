@@ -21,7 +21,7 @@ R3                              READY
 
 IMPLEMENTATION READINESS        READY
 IMPLEMENTATION START            STARTED
-IMPLEMENTATION NEXT             015-J — NEXT ELIGIBLE / NOT AUTHORIZED
+IMPLEMENTATION NEXT             015-J — AUTHORIZED / ACTIVE
 ~~~
 
 Readiness is not permission to implement.
@@ -70,7 +70,7 @@ P15-06  explicit first-slice authorization
 015-G  COMPLETE — Evaluation, Evidence, Provenance, Historical Read Composition & Reproducibility
 015-H  COMPLETE — Authorization, Disclosure, Protected Existence, Secrets, Dependency Trust & No-Egress
 015-I  COMPLETE — Platform Capability, Portability, Observability, Scale/Performance & Support Qualification
-015-J  NEXT ELIGIBLE / NOT AUTHORIZED — Cross-Slice Integration, Residual Risk Closure & Implementation Consolidation
+015-J  AUTHORIZED / ACTIVE — Cross-Slice Integration, Residual Risk Closure & Implementation Consolidation
 ~~~
 
 No later slice inherits authorization from the start gate.
@@ -221,7 +221,7 @@ Earlier language such as active, canonical, current planning overlay, or concret
 
 ## Current prohibition
 
-015-A through 015-I are complete. Until 015-J is explicitly authorized, and for responsibilities outside completed 015-I authority:
+015-A through 015-I are complete. 015-J is authorized only for cross-slice integration, residual-risk closure, C9 verification, consolidation, and the Phase 015 completion decision. Outside that scope:
 
 - do not begin cross-slice consolidation or end-to-end C9 closure work;
 - do not create new semantic/domain authority to resolve integration inconvenience;
@@ -232,7 +232,7 @@ Earlier language such as active, canonical, current planning overlay, or concret
 
 ## Current next boundary
 
-**015-J — Cross-Slice Integration, Residual Risk Closure & Implementation Consolidation** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
+**015-J — Cross-Slice Integration, Residual Risk Closure & Implementation Consolidation** is **AUTHORIZED / ACTIVE**.
 
 ## 015-H completion state
 
