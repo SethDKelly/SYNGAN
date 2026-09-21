@@ -424,3 +424,27 @@ C7                            ACTIVE / PASS
 Current authority: [015-H Authorization / Disclosure / Protected Existence / Secrets / Dependency Trust / No-Egress](phase-015-h-authorization-disclosure-protected-existence-secrets-dependency-trust-no-egress-authority.md).
 
 The repository next boundary is **015-I — Platform Capability, Portability, Observability, Scale/Performance & Support Qualification**, still gated pending explicit proceed.
+
+
+## Post-015-I consumption
+
+015-I has completed the provider-neutral platform capability, portability, observability, scale/performance and support-qualification framework.
+
+~~~text
+015-A                         COMPLETE
+015-B                         COMPLETE
+015-C                         COMPLETE
+015-D                         COMPLETE
+015-E                         COMPLETE
+015-F                         COMPLETE
+015-G                         COMPLETE
+015-H                         COMPLETE
+015-I                         COMPLETE
+015-J                         NEXT ELIGIBLE / NOT AUTHORIZED
+IMPLEMENTATION START          STARTED
+C8                            ACTIVE / PASS
+~~~
+
+Current authority: [015-I Platform Capability / Portability / Observability / Scale / Support Qualification](phase-015-i-platform-capability-portability-observability-scale-performance-support-qualification-authority.md).
+
+The repository next boundary is **015-J — Cross-Slice Integration, Residual Risk Closure & Implementation Consolidation**, still gated pending explicit proceed.
