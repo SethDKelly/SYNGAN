@@ -61,9 +61,7 @@ def runtime_plan_to_payload(plan: RuntimeRealizationPlan) -> EncodedPayload:
         "dependency_profile": plan.dependency_profile.value,
         "closure_identity": plan.closure_identity,
         "exact_dependency_identities": _pair_list(plan.exact_dependency_identities),
-        "exact_role_environment_identities": _pair_list(
-            plan.exact_role_environment_identities
-        ),
+        "exact_role_environment_identities": _pair_list(plan.exact_role_environment_identities),
         "runtime_roles": list(plan.runtime_roles),
         "learned_state_reference": (
             encode_reference(plan.learned_state_reference)
@@ -342,12 +340,8 @@ class ExecutionService:
         )
 
         attempt = result.state.attempt(attempt_id)
-        if (
-            attempt.submission_intent_id is not None
-            and (
-                correlation is not None
-                or observation is not ProviderObservation.UNKNOWN
-            )
+        if attempt.submission_intent_id is not None and (
+            correlation is not None or observation is not ProviderObservation.UNKNOWN
         ):
             self._store.acknowledge_coordination_intent(
                 attempt.submission_intent_id,
@@ -444,9 +438,7 @@ class ExecutionService:
             authority_frontier,
             transition_id,
             "attempt-outcome-recorded",
-            EncodedPayload.from_object(
-                {"attempt_id": attempt_id.value, "outcome": outcome.value}
-            ),
+            EncodedPayload.from_object({"attempt_id": attempt_id.value, "outcome": outcome.value}),
         )
 
     def fence_indeterminate_attempt(
@@ -614,10 +606,7 @@ class ExecutionService:
     ) -> AdmissionDecision:
         store_frontier = self._store.current_recovery_frontier()
         authority_frontier = self._recovery_authority.current_frontier()
-        if (
-            store_frontier != authority_frontier
-            or state.authority_frontier != store_frontier
-        ):
+        if store_frontier != authority_frontier or state.authority_frontier != store_frontier:
             return AdmissionDecision(
                 AdmissionStatus.RECONCILIATION_REQUIRED,
                 ("recovery continuity is not current",),
@@ -669,9 +658,7 @@ class ExecutionService:
         store_frontier = self._store.current_recovery_frontier()
         authority_frontier = self._recovery_authority.current_frontier()
         if frontier != store_frontier or frontier != authority_frontier:
-            raise ValueError(
-                "control-store and recovery-authority frontiers are not aligned"
-            )
+            raise ValueError("control-store and recovery-authority frontiers are not aligned")
 
     def _load_expected_or_replayed(
         self,
