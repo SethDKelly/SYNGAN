@@ -226,7 +226,7 @@ def test_generation_requires_data_meaning_binding() -> None:
         semantic_bindings=(),
     )
 
-    with pytest.raises(ValueError, match="data-meaning"):
+    with pytest.raises(ValueError, match="Data Meaning"):
         GenerationDataState(
             generation_commitment=generation_commitment(),
             topology=descriptor,
