@@ -34,7 +34,6 @@ def _portable_marker_expression() -> str:
     return " and ".join(f"not {marker}" for marker in excluded)
 
 
-
 def _run(command: Sequence[str]) -> None:
     printable = " ".join(command)
     print(f"+ {printable}", flush=True)
