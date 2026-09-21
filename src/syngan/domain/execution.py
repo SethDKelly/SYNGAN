@@ -559,9 +559,14 @@ def _required_bool(payload: JsonObject, key: str) -> bool:
 
 
 def _reference_tuple(value: JsonValue, label: str) -> tuple[TypedReference, ...]:
-    if not isinstance(value, list) or not all(isinstance(item, str) for item in value):
+    if not isinstance(value, list):
         raise ValueError(f"{label} must be a list of encoded references")
-    return tuple(decode_reference(item) for item in value)
+    encoded: list[str] = []
+    for item in value:
+        if not isinstance(item, str):
+            raise ValueError(f"{label} must be a list of encoded references")
+        encoded.append(item)
+    return tuple(decode_reference(item) for item in encoded)
 
 
 def _attempt_from_object(payload: JsonObject) -> AttemptRecord:
