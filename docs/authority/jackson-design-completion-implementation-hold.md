@@ -8,17 +8,17 @@ status: active
 
 ## Purpose
 
-Maintain the boundary between completed concept design, completed architecture reconciliation, active Phase 014 whole-design/readiness work, and later implementation authority.
+Maintain the boundary between completed concept design, completed architecture reconciliation, completed Phase 014 whole-design/readiness work, and Phase 015 implementation authority.
 
 ## Current implementation status
 
 ```text
-IMPLEMENTATION READINESS   NOT READY
+IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       NOT STARTED
-IMPLEMENTATION NEXT        NOT YET
+IMPLEMENTATION NEXT        PHASE 015 AUTHORITY GATE
 ```
 
-R1 closure and the Phase 014 start gate do not change this posture by implication.
+R3 readiness changes readiness only; it does not start implementation.
 
 ## Methodology boundary
 
@@ -27,11 +27,11 @@ concept design / mapping / quality / completion  ← Phases 008-012 COMPLETE
         ↓
 representation / architecture reconciliation    ← Phase 013 COMPLETE / R1 CLOSED
         ↓
-whole-design completion / readiness              ← Phase 014 ACTIVE
+whole-design completion / readiness              ← Phase 014 COMPLETE / R2 CLOSED / R3 READY
         ↓
-implementation MAY become READY / NOT STARTED / NEXT
+implementation readiness                         ← READY / NOT STARTED
         ↓
-explicit implementation authority               ← Phase 015 FUTURE ONLY
+explicit implementation authority               ← Phase 015 START GATE NEXT
 ```
 
 ## Current design state
@@ -42,7 +42,7 @@ Phase 013                       COMPLETE
 R1 architecture reconciliation CURRENTLY CLOSED
 representation / architecture  RECONCILED / CURRENT
 Phase 014 start gate            COMPLETE
-Phase 014                       ACTIVE
+Phase 014                       COMPLETE
 014-A                           COMPLETE
 014-B                           COMPLETE
 014-C                           COMPLETE
@@ -50,9 +50,9 @@ Phase 014                       ACTIVE
 014-E                           COMPLETE
 014-F                           COMPLETE
 014-G                           COMPLETE
-014-H                           NEXT ELIGIBLE
-R2                              OPEN
-R3                              OPEN
+014-H                           COMPLETE
+R2                              CURRENTLY CLOSED
+R3                              READY
 ```
 
 Current supporting authority:
@@ -78,7 +78,7 @@ Phase 014 may inspect historical implementation plans, source, tests, provider e
 
 ## Readiness does not equal start
 
-A future positive R3 may establish:
+Phase 014-H established:
 
 ```text
 IMPLEMENTATION READINESS   READY
@@ -90,7 +90,7 @@ That state still does not authorize production changes. Phase 015 must explicitl
 
 ## Architecture / executable prohibition
 
-Until R3 is explicitly decided, do not begin or stabilize production behavior, public APIs, persistence migrations, distributed-data implementation, Strategy/runtime adapters, dependency/security integrations, Execution/recovery machinery, Evidence/Provenance/history services, privacy/governance state, provider/platform adapters, deployment automation, package refactoring, benchmarks or executable conformance work intended to manufacture readiness.
+Until the Phase 015 start gate explicitly authorizes a delivery slice, do not begin or stabilize production behavior, public APIs, persistence migrations, distributed-data implementation, Strategy/runtime adapters, dependency/security integrations, Execution/recovery machinery, Evidence/Provenance/history services, privacy/governance state, provider/platform adapters, deployment automation, package refactoring, benchmarks or executable conformance work intended to manufacture readiness.
 
 Phase 014 findings must distinguish missing design semantics from normal implementation alternatives, sequencing concerns, evidence needs or provider-specific qualification work.
 
@@ -101,9 +101,9 @@ Phase 014 findings must distinguish missing design semantics from normal impleme
 014-B         COMPLETE — problem / actor / outcome / concept-purpose coverage
 014-C         COMPLETE — concept / dependence / family / synchronization integrity
 014-D         COMPLETE — mapping / linguistic / disclosure / semantic parity
-014-E..014-G  whole-design evidence / residual-readiness preflight
-014-H         R2 decision / R3 decision / Phase 015 handoff
-015           Implementation Authority & Controlled Delivery — FUTURE ONLY
+014-E..014-G  COMPLETE — whole-design evidence / residual-readiness preflight
+014-H         COMPLETE — R2 decision / R3 decision / Phase 015 handoff
+015           Implementation Authority & Controlled Delivery — START GATE NEXT
 ```
 
 ## 014-G completion state
@@ -125,6 +125,21 @@ No current issue requires implementers to invent product semantics. The remainin
 
 Implementation remains held until 014-H explicitly decides R2 and R3.
 
+## 014-H completion state
+
+~~~text
+Phase 014                         COMPLETE
+R2                                CURRENTLY CLOSED
+R3                                READY
+READINESS-BLOCK                   0
+READINESS-RISK                    8 — HANDED OFF
+IMPLEMENTATION READINESS          READY
+IMPLEMENTATION START              NOT STARTED
+IMPLEMENTATION NEXT               PHASE 015 AUTHORITY GATE
+~~~
+
+Implementation remains held until the Phase 015 start gate establishes current implementation authority and explicitly authorizes a first delivery slice.
+
 ## Current next boundary
 
-**014-H — Phase 014 Consolidation, R2 Completion Decision, R3 Implementation-Readiness Decision & Phase 015 Handoff** is next eligible.
+**Phase 015 Start Gate — Implementation Authority, Current-Baseline Reconciliation & Controlled-Delivery Decomposition** is next eligible.
