@@ -158,9 +158,7 @@ def test_provider_brand_without_capability_evidence_is_indeterminate() -> None:
     )
 
     assert result.outcome is CompatibilityOutcome.INDETERMINATE
-    assert result.unresolved_capabilities == (
-        PlatformCapability.EXACT_SOURCE_SNAPSHOT_READ,
-    )
+    assert result.unresolved_capabilities == (PlatformCapability.EXACT_SOURCE_SNAPSHOT_READ,)
 
 
 def test_absent_required_capability_without_fallback_is_incompatible() -> None:
