@@ -121,10 +121,10 @@ Phase 014-H established:
 ```text
 IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       STARTED
-IMPLEMENTATION NEXT        015-H — NEXT ELIGIBLE / NOT AUTHORIZED
+IMPLEMENTATION NEXT        015-J — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
-Implementation now includes the 015-C control foundation, 015-D Generation data-state/topology/promotion foundation, 015-E Strategy/runtime plus Learning/Learned-State foundation, 015-F Execution/recovery foundation, 015-G Evaluation/Evidence/Provenance/history/reproducibility foundation, and 015-H provider-neutral authorization/disclosure/dependency-trust/no-egress foundation. Provider capability, portability, observability, scale/performance and support qualification remain gated to 015-I.
+Implementation now includes the 015-C control foundation, 015-D Generation data-state/topology/promotion foundation, 015-E Strategy/runtime plus Learning/Learned-State foundation, 015-F Execution/recovery foundation, 015-G Evaluation/Evidence/Provenance/history/reproducibility foundation, 015-H authorization/disclosure/dependency-trust/no-egress foundation, and 015-I provider-neutral platform capability/portability/observability/support qualification. Provider-specific and enterprise-scale claims remain evidence-qualified rather than assumed. 015-J is the remaining gated Phase 015 slice.
 
 ## Current next boundary
 
