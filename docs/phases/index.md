@@ -13,9 +13,9 @@ Phases 001-007 remain historical discovery/specification/experience/architecture
 ## Current implementation posture
 
 ```text
-IMPLEMENTATION READINESS   NOT READY
+IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       NOT STARTED
-IMPLEMENTATION NEXT        NOT YET
+IMPLEMENTATION NEXT        PHASE 015 AUTHORITY GATE
 ```
 
 Only Phase 014 may change readiness after a positive whole-design audit. Explicit Phase 015 authority remains required before implementation begins.
@@ -52,7 +52,8 @@ start gate  COMPLETE — intention review / evidence surface / decomposition
 014-E       COMPLETE — architecture realization / responsibility / design-to-architecture traceability
 014-F       COMPLETE — end-to-end scenarios / failure / recovery / scale / security / portability
 014-G       COMPLETE — implementation-neutral completeness / handoff sufficiency / residual register
-014-H            — R2 decision / R3 readiness decision / Phase 015 handoff
+014-H       COMPLETE — R2 decision / R3 readiness decision / Phase 015 handoff
+015            — Implementation Authority & Controlled Delivery — START GATE NEXT
 ```
 
 R2 and R3 remain open. R3 may be decided only after the whole R2 evidence chain is complete.
@@ -63,6 +64,6 @@ Future only. Even a positive Phase 014 readiness decision must leave implementat
 
 ## Current next boundary
 
-**014-H — Phase 014 Consolidation, R2 Completion Decision, R3 Implementation-Readiness Decision & Phase 015 Handoff** is next eligible.
+**Phase 015 Start Gate — Implementation Authority, Current-Baseline Reconciliation & Controlled-Delivery Decomposition** is next eligible.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
