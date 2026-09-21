@@ -329,13 +329,14 @@ def test_regressive_restore_requires_fresh_frontier_and_fences_restored_attempt(
             )
             assert service.assess_admission(execution, _facts()).status is AdmissionStatus.ADMITTED
 
+            current_record = restored.get_current_state(execution_state_key(execution))
+            assert current_record is not None
             with pytest.raises(RecoveryFrontierConflict):
                 restored.compare_and_swap_current_state(
                     key=execution_state_key(execution),
                     expected_state_version=reconciled.state_version,
                     authority_frontier=RecoveryFrontier(0),
-                    schema_version=reconciled.state_version.next()
-                    and restored.get_current_state(execution_state_key(execution)).schema_version,
+                    schema_version=current_record.schema_version,
                     payload=execution_to_payload(reconciled.state),
                     transition_id=LogicalId("stale-writer"),
                     transition_kind="stale-writer-attempt",
