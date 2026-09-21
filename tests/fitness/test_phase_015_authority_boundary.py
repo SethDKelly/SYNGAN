@@ -4,27 +4,28 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 IMPLEMENTATION = ROOT / "docs" / "implementation"
-AUTHORITY = IMPLEMENTATION / "phase-015-current-implementation-authority-start-gate.md"
+CURRENT = IMPLEMENTATION / "phase-015-a-current-implementation-baseline-scaffold-reconciliation.md"
 PHASE = ROOT / "docs" / "phases" / "015" / "index.md"
 AGENTS = ROOT / "AGENTS.md"
 
 
 def test_phase_015_current_authority_is_discoverable() -> None:
-    authority_text = AUTHORITY.read_text(encoding="utf-8")
+    authority_text = CURRENT.read_text(encoding="utf-8")
 
     assert "status: complete-current" in authority_text
-    assert "015-A  AUTHORIZED" in authority_text
-    assert "015-B..015-J  NOT AUTHORIZED" in authority_text
-    assert "No domain implementation is authorized by this start gate." in authority_text
+    assert "015-A                                  COMPLETE" in authority_text
+    assert "015-B                                  NEXT ELIGIBLE / NOT AUTHORIZED" in authority_text
+    assert "015-C..015-J                           NOT AUTHORIZED" in authority_text
 
 
-def test_phase_015_index_exposes_only_015_a_as_authorized_next_slice() -> None:
+def test_phase_015_index_exposes_015_b_as_next_but_not_authorized() -> None:
     phase_text = PHASE.read_text(encoding="utf-8")
 
     assert "status: active" in phase_text
-    assert "015-A  AUTHORIZED / NEXT" in phase_text
+    assert "015-A" in phase_text and "COMPLETE" in phase_text
+    assert "015-B" in phase_text and "NEXT ELIGIBLE / NOT AUTHORIZED" in phase_text
+
     locked_phases = (
-        "015-B",
         "015-C",
         "015-D",
         "015-E",
@@ -38,13 +39,13 @@ def test_phase_015_index_exposes_only_015_a_as_authorized_next_slice() -> None:
         assert f"{phase_id}  NOT AUTHORIZED" in phase_text
 
 
-def test_agent_instructions_preserve_slice_bounded_authority() -> None:
+def test_agent_instructions_preserve_post_015_a_authority_boundary() -> None:
     agent_text = AGENTS.read_text(encoding="utf-8")
 
-    assert "015-A                                 AUTHORIZED / NEXT ELIGIBLE" in agent_text
-    assert "015-B..015-J                          NOT AUTHORIZED" in agent_text
+    assert "015-A                                 COMPLETE" in agent_text
+    assert "015-B                                 NEXT ELIGIBLE / NOT AUTHORIZED" in agent_text
     assert "domain implementation remains NOT STARTED" in agent_text
 
 
-def test_production_source_tree_exists_for_scaffold_reconciliation() -> None:
+def test_production_source_tree_remains_scaffold_only() -> None:
     assert (ROOT / "src" / "syngan").is_dir()
