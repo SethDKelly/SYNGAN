@@ -17,7 +17,7 @@ Historical architecture, implementation plans, source, tests and prior engineeri
 ```text
 IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       NOT STARTED
-IMPLEMENTATION NEXT        PHASE 015 AUTHORITY GATE
+IMPLEMENTATION NEXT        015-A — AUTHORIZED
 ```
 
 Jackson concept design, downstream architecture reconciliation, and Phase 014 whole-design/readiness work are complete for the current product scope.
@@ -185,7 +185,7 @@ READINESS-BLOCK                   0
 READINESS-RISK                    8 — HANDED OFF
 IMPLEMENTATION READINESS          READY
 IMPLEMENTATION START              NOT STARTED
-IMPLEMENTATION NEXT               PHASE 015 AUTHORITY GATE
+IMPLEMENTATION NEXT        015-A — AUTHORIZED
 ~~~
 
 Detailed authority: [Phase 014-H R2/R3 Decision & Phase 015 Handoff](phase-014-h-consolidation-r2-r3-decision-phase-015-handoff.md).
@@ -224,7 +224,7 @@ R2                                   CURRENTLY CLOSED
 R3                                   READY
 IMPLEMENTATION READINESS             READY
 IMPLEMENTATION START                 NOT STARTED
-IMPLEMENTATION NEXT                  PHASE 015 AUTHORITY GATE
+IMPLEMENTATION NEXT        015-A — AUTHORIZED
 ```
 
 ## Residual accounting entering Phase 014
@@ -245,6 +245,17 @@ Phase 014 may still discover a whole-design contradiction missed by prior local 
 
 Phase 014 is complete. R3 is READY, but implementation remains NOT STARTED until explicit Phase 015 authority.
 
+## Phase 015 start-gate state
+
+~~~text
+Phase 015 Start Gate   COMPLETE
+015-A                  AUTHORIZED / NEXT ELIGIBLE
+015-B..015-J           NOT AUTHORIZED
+IMPLEMENTATION START   NOT STARTED
+~~~
+
+Current implementation authority: [Phase 015 Current Implementation Authority / Start Gate](../implementation/phase-015-current-implementation-authority-start-gate.md).
+
 ## Current next boundary
 
-**Phase 015 Start Gate — Implementation Authority, Current-Baseline Reconciliation & Controlled-Delivery Decomposition** is next eligible.
+**015-A — Current Implementation Baseline, Repository/Toolchain & Scaffold Reconciliation** is next eligible and explicitly authorized.
