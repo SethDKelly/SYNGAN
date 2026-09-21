@@ -152,6 +152,23 @@ class DependencyResolution:
 
 
 @dataclass(frozen=True, slots=True)
+class RuntimeRoleResolution:
+    role_id: str
+    environment_identity: str | None
+    available: bool
+    runtime_compatible: bool | None
+
+    def __post_init__(self) -> None:
+        object.__setattr__(self, "role_id", _token(self.role_id, "runtime role"))
+        if self.environment_identity is not None:
+            object.__setattr__(
+                self,
+                "environment_identity",
+                _token(self.environment_identity, "runtime environment identity"),
+            )
+
+
+@dataclass(frozen=True, slots=True)
 class RuntimeClosureAssessment:
     status: RuntimeClosureStatus
     closure_identity: str | None
@@ -160,6 +177,8 @@ class RuntimeClosureAssessment:
     incompatible_components: tuple[str, ...] = ()
     indeterminate_components: tuple[str, ...] = ()
     incomplete_roles: tuple[str, ...] = ()
+    incompatible_roles: tuple[str, ...] = ()
+    indeterminate_roles: tuple[str, ...] = ()
     limitations: tuple[str, ...] = ()
 
     @property
@@ -224,6 +243,7 @@ def assess_runtime_closure(
     strategy: StrategyRuntimeRequirements,
     binding: ImplementationBinding,
     resolutions: tuple[DependencyResolution, ...],
+    role_resolutions: tuple[RuntimeRoleResolution, ...],
 ) -> RuntimeClosureAssessment:
     if binding.strategy_reference != strategy.strategy_reference:
         raise ValueError("implementation binding targets a different Strategy revision")
@@ -251,11 +271,31 @@ def assess_runtime_closure(
         )
 
     by_component = {item.component_id: item for item in resolutions}
+    by_role = {item.role_id: item for item in role_resolutions}
+    if len(by_role) != len(role_resolutions):
+        raise ValueError("runtime role resolutions must be unique")
+
     missing: list[str] = []
     incompatible: list[str] = []
     indeterminate: list[str] = []
     incomplete_roles: set[str] = set()
+    incompatible_roles: set[str] = set()
+    indeterminate_roles: set[str] = set()
     identities: list[tuple[str, str]] = []
+    environment_identities: list[tuple[str, str]] = []
+
+    for role_id in binding.required_roles:
+        resolution = by_role.get(role_id)
+        if resolution is None or not resolution.available or resolution.environment_identity is None:
+            incomplete_roles.add(role_id)
+            continue
+        if resolution.runtime_compatible is None:
+            indeterminate_roles.add(role_id)
+            continue
+        if not resolution.runtime_compatible:
+            incompatible_roles.add(role_id)
+            continue
+        environment_identities.append((role_id, resolution.environment_identity))
 
     for requirement in binding.dependency_requirements:
         resolution = by_component.get(requirement.component_id)
@@ -280,11 +320,11 @@ def assess_runtime_closure(
             continue
         identities.append((requirement.component_id, resolution.exact_identity))
 
-    if incompatible:
+    if incompatible or incompatible_roles:
         status = RuntimeClosureStatus.INCOMPATIBLE
     elif missing or incomplete_roles:
         status = RuntimeClosureStatus.INCOMPLETE
-    elif indeterminate:
+    elif indeterminate or indeterminate_roles:
         status = RuntimeClosureStatus.INDETERMINATE
     else:
         status = (
@@ -306,6 +346,9 @@ def assess_runtime_closure(
             *binding.required_roles,
         ]
         material.extend(f"{component}={identity}" for component, identity in exact_identities)
+        material.extend(
+            f"role:{role}={identity}" for role, identity in sorted(environment_identities)
+        )
         closure_identity = hashlib.sha256("\n".join(material).encode("utf-8")).hexdigest()
 
     return RuntimeClosureAssessment(
@@ -316,6 +359,8 @@ def assess_runtime_closure(
         incompatible_components=tuple(sorted(incompatible)),
         indeterminate_components=tuple(sorted(indeterminate)),
         incomplete_roles=tuple(sorted(incomplete_roles)),
+        incompatible_roles=tuple(sorted(incompatible_roles)),
+        indeterminate_roles=tuple(sorted(indeterminate_roles)),
         limitations=binding.limitations,
     )
 
