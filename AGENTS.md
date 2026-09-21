@@ -4,7 +4,7 @@ These instructions apply repository-wide to automated coding/documentation agent
 
 ## Current posture
 
-**Jackson concept design and Phase 013/014 are complete; R2 is currently closed and R3 is READY. Phase 015 implementation has STARTED. The start gate and 015-A through 015-F are complete. 015-G is next eligible but NOT AUTHORIZED pending explicit proceed; later slices remain locked.**
+**Jackson concept design and Phase 013/014 are complete; R2 is currently closed and R3 is READY. Phase 015 implementation has STARTED. The start gate and 015-A through 015-F are complete. 015-G is AUTHORIZED / ACTIVE for Evaluation, Evidence, Provenance, historical-read and reproducibility work only; later slices remain locked.**
 
 Start with:
 
@@ -26,6 +26,7 @@ Start with:
 - `docs/implementation/phase-015-d-distributed-data-topology-generation-promotion-authority.md`
 - `docs/implementation/phase-015-e-strategy-runtime-learning-generation-authority.md`
 - `docs/implementation/phase-015-f-execution-attempt-admission-fencing-idempotency-checkpoint-cancellation-recovery-authority.md`
+- `docs/implementation/phase-015-g-evaluation-evidence-provenance-history-reproducibility-authority.md`
 - `docs/architecture/phase-013-consolidated-architecture-contract.md`
 - `docs/synchronizations/current-cross-concept-synchronizations.md`
 
@@ -57,11 +58,11 @@ Phase 015 start gate                  COMPLETE
 015-D                                 COMPLETE
 015-E                                 COMPLETE
 015-F                                 COMPLETE
-015-G                                 NEXT ELIGIBLE / NOT AUTHORIZED
+015-G                                 AUTHORIZED / ACTIVE
 015-H..015-J                          NOT AUTHORIZED
 implementation readiness             READY
 implementation start                 STARTED
-implementation next                  015-G — NEXT ELIGIBLE / NOT AUTHORIZED
+implementation next                  015-G — AUTHORIZED / ACTIVE
 ```
 
 ## Primary authority rule
@@ -142,11 +143,11 @@ Phase 014-H has established:
 ```text
 IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       STARTED
-IMPLEMENTATION NEXT        015-G — NEXT ELIGIBLE / NOT AUTHORIZED
+IMPLEMENTATION NEXT        015-G — AUTHORIZED / ACTIVE
 ```
 
-015-A through 015-F are complete. Execution/Attempt, admission, fencing, idempotency, checkpoint, cancellation and non-regressing recovery are implemented. Evaluation/Evidence/Provenance, security/provider policy, and scale qualification remain locked.
+015-A through 015-F are complete. 015-G is authorized for Evaluation/Evidence/Provenance/history/reproducibility only. Security/disclosure/provider policy and scale qualification remain locked.
 
 ## Current next boundary
 
-**015-G — Evaluation, Evidence, Provenance, Historical Read Composition & Reproducibility** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
+**015-G — Evaluation, Evidence, Provenance, Historical Read Composition & Reproducibility** is active and authorized.
