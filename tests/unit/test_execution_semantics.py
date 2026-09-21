@@ -89,7 +89,7 @@ def test_old_attempt_cannot_mutate_after_new_attempt_becomes_current() -> None:
         )
 
 
-def test_cancellation_fences_current_attempt_and_late_provider_success_is_observation_only() -> None:
+def test_cancellation_fences_attempt_and_late_success_is_observation_only() -> None:
     state = _execution()
     state = state.prepare_attempt(
         LogicalId("attempt-1"),
