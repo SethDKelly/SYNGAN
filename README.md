@@ -26,6 +26,7 @@ Current governing design authority includes:
 - [`015-D Distributed Data / Topology / Generation Promotion`](docs/implementation/phase-015-d-distributed-data-topology-generation-promotion-authority.md)
 - [`015-E Strategy Runtime / Learning / Generation`](docs/implementation/phase-015-e-strategy-runtime-learning-generation-authority.md)
 - [`015-F Execution / Attempt / Recovery`](docs/implementation/phase-015-f-execution-attempt-admission-fencing-idempotency-checkpoint-cancellation-recovery-authority.md)
+- [`015-G Evaluation / Evidence / Provenance / History / Reproducibility`](docs/implementation/phase-015-g-evaluation-evidence-provenance-history-reproducibility-authority.md)
 - [`Phase 014`](docs/phases/014/index.md)
 - [`Phase 014 Start Gate / Decomposition`](docs/phases/014/014-start-gate-whole-design-readiness-decomposition.md)
 - [`Phase 013 Consolidated Architecture Contract`](docs/architecture/phase-013-consolidated-architecture-contract.md)
@@ -59,10 +60,11 @@ Phase 015 start gate                  COMPLETE
 015-D                                 COMPLETE
 015-E                                 COMPLETE
 015-F                                 COMPLETE
-015-G                                 NEXT ELIGIBLE / NOT AUTHORIZED
+015-G                                 COMPLETE
+015-H                                 NEXT ELIGIBLE / NOT AUTHORIZED
 implementation readiness             READY
 implementation start                 STARTED
-implementation next                  015-G — NEXT ELIGIBLE / NOT AUTHORIZED
+implementation next                  015-H — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
 ## Phase 014
@@ -107,11 +109,11 @@ Phase 014-H established:
 ```text
 IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       STARTED
-IMPLEMENTATION NEXT        015-G — NEXT ELIGIBLE / NOT AUTHORIZED
+IMPLEMENTATION NEXT        015-H — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
-015-A through 015-F are complete. Identity/control persistence, distributed-data topology/promotion, Strategy/runtime binding, Learning/Learned-State, direct/reuse Generation planning, and Execution/recovery are implemented. 015-G is next eligible but requires explicit authorization.
+015-A through 015-G are complete. Identity/control persistence, distributed-data topology/promotion, Strategy/runtime binding, Learning/Learned-State, direct/reuse Generation planning, Execution/recovery, and Evaluation/Evidence/Provenance/history/reproducibility are implemented. 015-H is next eligible but requires explicit authorization.
 
 ## Current next boundary
 
-**015-G — Evaluation, Evidence, Provenance, Historical Read Composition & Reproducibility** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
+**015-H — Authorization, Disclosure, Protected Existence, Secrets, Dependency Trust & No-Egress** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
