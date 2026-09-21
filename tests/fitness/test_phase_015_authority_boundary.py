@@ -15,13 +15,12 @@ AGENTS = ROOT / "AGENTS.md"
 def test_phase_015_current_authority_is_discoverable() -> None:
     authority_text = CURRENT.read_text(encoding="utf-8")
 
-    assert "status: active-current" in authority_text
-    assert "015-A..015-H  COMPLETE" in authority_text
-    assert "015-I         AUTHORIZED / ACTIVE" in authority_text
-    assert "015-J         NOT AUTHORIZED" in authority_text
+    assert "status: complete-current" in authority_text
+    assert "015-A..015-I  COMPLETE" in authority_text
+    assert "015-J         NEXT ELIGIBLE / NOT AUTHORIZED" in authority_text
 
 
-def test_phase_015_index_exposes_015_i_as_active() -> None:
+def test_phase_015_index_exposes_015_j_as_next_but_not_authorized() -> None:
     phase_text = PHASE.read_text(encoding="utf-8")
 
     assert "status: active" in phase_text
@@ -34,14 +33,14 @@ def test_phase_015_index_exposes_015_i_as_active() -> None:
         "015-F",
         "015-G",
         "015-H",
+        "015-I",
     ):
         assert phase_id in phase_text and "COMPLETE" in phase_text
 
-    assert "015-I" in phase_text and "AUTHORIZED / ACTIVE" in phase_text
-    assert "015-J  NOT AUTHORIZED" in phase_text
+    assert "015-J" in phase_text and "NEXT ELIGIBLE / NOT AUTHORIZED" in phase_text
 
 
-def test_agent_instructions_preserve_active_015_i_authority_boundary() -> None:
+def test_agent_instructions_preserve_post_015_i_authority_boundary() -> None:
     agent_text = AGENTS.read_text(encoding="utf-8")
 
     assert "015-A                                 COMPLETE" in agent_text
@@ -52,8 +51,8 @@ def test_agent_instructions_preserve_active_015_i_authority_boundary() -> None:
     assert "015-F                                 COMPLETE" in agent_text
     assert "015-G                                 COMPLETE" in agent_text
     assert "015-H                                 COMPLETE" in agent_text
-    assert "015-I                                 AUTHORIZED / ACTIVE" in agent_text
-    assert "015-J                                 NOT AUTHORIZED" in agent_text
+    assert "015-I                                 COMPLETE" in agent_text
+    assert "015-J                                 NEXT ELIGIBLE / NOT AUTHORIZED" in agent_text
 
 
 def test_015_i_platform_qualification_foundation_is_present_without_provider_claims() -> None:
