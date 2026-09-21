@@ -17,7 +17,7 @@ Historical architecture, implementation plans, source, tests and prior engineeri
 ```text
 IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       STARTED
-IMPLEMENTATION NEXT        015-D — NEXT ELIGIBLE / NOT AUTHORIZED
+IMPLEMENTATION NEXT        015-E — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
 Jackson concept design, downstream architecture reconciliation, and Phase 014 whole-design/readiness work are complete for the current product scope.
@@ -185,7 +185,7 @@ READINESS-BLOCK                   0
 READINESS-RISK                    8 — HANDED OFF
 IMPLEMENTATION READINESS          READY
 IMPLEMENTATION START       STARTED
-IMPLEMENTATION NEXT        015-D — NEXT ELIGIBLE / NOT AUTHORIZED
+IMPLEMENTATION NEXT        015-E — NEXT ELIGIBLE / NOT AUTHORIZED
 ~~~
 
 Detailed authority: [Phase 014-H R2/R3 Decision & Phase 015 Handoff](phase-014-h-consolidation-r2-r3-decision-phase-015-handoff.md).
@@ -201,7 +201,8 @@ SQLite reference adapter           IMPLEMENTED
 enterprise persistence support     NOT CLAIMED
 RR-03 full recovery proof          DEFERRED TO 015-F
 IMPLEMENTATION START               STARTED
-015-D                              NEXT ELIGIBLE / NOT AUTHORIZED
+015-D                              COMPLETE
+015-E                              NEXT ELIGIBLE / NOT AUTHORIZED
 ~~~
 
 Current authority: [015-C Identity / References / Control Persistence](../implementation/phase-015-c-identity-reference-control-persistence-authority.md).
@@ -240,7 +241,7 @@ R2                                   CURRENTLY CLOSED
 R3                                   READY
 IMPLEMENTATION READINESS             READY
 IMPLEMENTATION START       STARTED
-IMPLEMENTATION NEXT        015-D — NEXT ELIGIBLE / NOT AUTHORIZED
+IMPLEMENTATION NEXT        015-E — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
 ## Residual accounting entering Phase 014
@@ -268,13 +269,30 @@ Phase 015 Start Gate   COMPLETE
 015-A                  COMPLETE
 015-B                                 COMPLETE
 015-C                  COMPLETE
-015-D                  NEXT ELIGIBLE / NOT AUTHORIZED
-015-E..015-J           NOT AUTHORIZED
+015-D                  COMPLETE
+015-E                  NEXT ELIGIBLE / NOT AUTHORIZED
+015-F..015-J           NOT AUTHORIZED
 IMPLEMENTATION START       STARTED
 ~~~
 
 Current implementation authority: [Phase 015 Current Implementation Authority / Start Gate](../implementation/phase-015-current-implementation-authority-start-gate.md).
 
+## 015-D implementation evidence
+
+~~~text
+015-D                              COMPLETE
+structured topology                IMPLEMENTED
+sealed physical subject            IMPLEMENTED
+Generation candidate/promotion     IMPLEMENTED
+C3 data verification               PASS
+provider/Spark runtime             NOT IMPLEMENTED
+enterprise scale qualification     NOT CLAIMED
+upstream reopen                    NONE
+015-E                              NEXT ELIGIBLE / NOT AUTHORIZED
+~~~
+
+Current authority: [015-D Distributed Data / Topology / Generation Promotion](../implementation/phase-015-d-distributed-data-topology-generation-promotion-authority.md).
+
 ## Current next boundary
 
-**015-D — Distributed Data-State, Structured Topology, Candidate/Seal & Generation Promotion** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
+**015-E — Strategy/Method Binding, Dependency Closure, Learning/Learned-State & Generation Runtime** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
