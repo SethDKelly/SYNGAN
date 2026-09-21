@@ -43,7 +43,7 @@ def _reference_object(reference: TypedReference) -> JsonObject:
 def _reference_from_value(value: JsonValue, label: str) -> TypedReference:
     if not isinstance(value, dict):
         raise ValueError(f"{label} must be a reference object")
-    payload = EncodedPayload.from_object(cast(JsonObject, value))
+    payload = EncodedPayload.from_object(value)
     return decode_reference(payload.json_text)
 
 
@@ -362,7 +362,7 @@ def sealed_subject_from_payload(payload: EncodedPayload) -> SealedPhysicalSubjec
     return SealedPhysicalSubject(
         reference=_reference_from_value(value.get("reference"), "sealed subject reference"),
         topology=topology_from_payload(
-            EncodedPayload.from_object(cast(JsonObject, topology_value))
+            EncodedPayload.from_object(topology_value)
         ),
         scopes=tuple(physical_scopes),
         strength=PhysicalSubjectStrength(
