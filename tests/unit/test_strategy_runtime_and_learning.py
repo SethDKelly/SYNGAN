@@ -98,10 +98,7 @@ def test_reference_binding_satisfies_self_contained_source_derived_strategy() ->
     assert closure.ready
     assert closure.closure_identity is not None
     assert closure.exact_dependency_identities == ()
-    assert closure.exact_role_environment_identities == (
-        ("local-worker", "python-3.11-portable"),
-    )
-
+    assert closure.exact_role_environment_identities == (("local-worker", "python-3.11-portable"),)
 
 
 def test_runtime_role_closure_is_required_even_without_external_dependencies() -> None:
