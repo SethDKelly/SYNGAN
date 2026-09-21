@@ -443,7 +443,9 @@ class SQLiteControlStore:
                     detail=transition_detail,
                 )
         except sqlite3.IntegrityError as exc:
-            raise CurrentStateConflict("current state or transition identity already exists") from exc
+            raise CurrentStateConflict(
+                "current state or transition identity already exists"
+            ) from exc
 
         return CurrentStateRecord(
             key=key,
