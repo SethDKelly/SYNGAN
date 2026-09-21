@@ -121,11 +121,14 @@ class ControlStore(Protocol):
         reference: TypedReference,
         schema_version: RepresentationSchemaVersion,
         payload: EncodedPayload,
+        authority_frontier: RecoveryFrontier,
     ) -> ImmutableRevisionRecord: ...
 
     def resolve_immutable_revision(self, reference: TypedReference) -> RevisionResolution: ...
 
-    def mark_immutable_revision_unavailable(self, reference: TypedReference) -> None: ...
+    def mark_immutable_revision_unavailable(
+        self, reference: TypedReference, authority_frontier: RecoveryFrontier
+    ) -> None: ...
 
     def create_current_state(
         self,
