@@ -41,6 +41,7 @@ methodology / completion / cross-cutting authority
 - [Phase 014-G Implementation-Neutral Completeness / Residual Readiness Register](authority/phase-014-g-implementation-neutral-completeness-handoff-sufficiency-residual-readiness-register.md)
 - [Phase 014-H R2/R3 Decision & Phase 015 Handoff](authority/phase-014-h-consolidation-r2-r3-decision-phase-015-handoff.md)
 - [Phase 015](phases/015/index.md)
+- [Phase 015 Current Implementation Authority / Start Gate](implementation/phase-015-current-implementation-authority-start-gate.md)
 - [Phase 014](phases/014/index.md)
 - [Phase 014 Start Gate / Decomposition](phases/014/014-start-gate-whole-design-readiness-decomposition.md)
 - [Phase 013 Consolidated Architecture Contract](architecture/phase-013-consolidated-architecture-contract.md)
@@ -66,9 +67,12 @@ Phase 014                            COMPLETE
 014-H                                COMPLETE
 R2                                   CURRENTLY CLOSED
 R3                                   READY
+Phase 015                             ACTIVE
+Phase 015 start gate                  COMPLETE
+015-A                                 AUTHORIZED / NEXT ELIGIBLE
 implementation readiness             READY
 implementation start                 NOT STARTED
-implementation next                  PHASE 015 AUTHORITY GATE
+implementation next                  015-A — AUTHORIZED
 ```
 
 ## Current whole-design baseline
@@ -107,7 +111,7 @@ Phase 014 remains design/readiness work.
 ```text
 IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       NOT STARTED
-IMPLEMENTATION NEXT        PHASE 015 AUTHORITY GATE
+IMPLEMENTATION NEXT        015-A — AUTHORIZED
 ```
 
 Historical source/tests/plans may be inspected as downstream evidence, but cannot redefine semantics or be modified to manufacture readiness.
@@ -116,4 +120,4 @@ Even a later positive R3 requires explicit Phase 015 authority before implementa
 
 ## Current next boundary
 
-**Phase 015 Start Gate — Implementation Authority, Current-Baseline Reconciliation & Controlled-Delivery Decomposition** is next eligible.
+**015-A — Current Implementation Baseline, Repository/Toolchain & Scaffold Reconciliation** is next eligible and explicitly authorized.
