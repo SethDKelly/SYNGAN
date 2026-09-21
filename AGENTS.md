@@ -147,10 +147,10 @@ Phase 014-H has established:
 ```text
 IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       STARTED
-IMPLEMENTATION NEXT        015-I — NEXT ELIGIBLE / NOT AUTHORIZED
+IMPLEMENTATION NEXT        015-J — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
-015-A through 015-H are complete. Evaluation/Evidence/Provenance/history/reproducibility and the provider-neutral authorization/disclosure/dependency-trust/no-egress framework are implemented. Provider capability/portability/observability/scale qualification remains locked to 015-I.
+015-A through 015-I are complete. The provider-neutral capability/portability/observability/support-qualification framework is implemented and C8 is active. Real Spark/Databricks and enterprise-scale support remain unclaimed without provider/benchmark evidence; cross-slice integration and residual closure remain locked to 015-J.
 
 ## Current next boundary
 
