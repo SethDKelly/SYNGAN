@@ -457,22 +457,26 @@ Row-level lineage or exhaustive diagnostics may exist as explicitly scoped distr
 
 ## 17. Current synchronization interpretation
 
-Current Phase 009 authority controls:
+The [Current Cross-Concept Synchronization Contract](../synchronizations/current-cross-concept-synchronizations.md) controls current scope and ownership:
 
 ```text
 SYNC-09  Evaluation Criterion binding
 SYNC-10  Evaluation method compatibility
 SYNC-11  Evaluation operational realization
-SYNC-12  Evaluation produces Evidence
-SYNC-13  controlled Evidence handoff
+SYNC-12  completed Evidence-producing Evaluation establishes Evidence
+SYNC-13  Generation / Evidence completion handoff when Generation is evidence-gated
 SYNC-14  Provenance recording at material transitions
 SYNC-08  retired as cross-concept synchronization
 SYNC-15  historical/reclassified under cross-cutting Reproducibility
 ```
 
-Historical/current-looking references in accepted Evaluation/Evidence/Provenance documents, retained 004-G/007-I architecture, the privacy/release boundary, `core-synchronizations.md` and other pre-Phase-009 material remain semantically superseded by current Phase 009 and completed Phase 013 authority.
+`SYNC-13` does not include external release/use/governance decisions. Evidence remains finding authority; Generation owns applicability/sufficiency and its own completion transition; external governance remains an external-authority handoff.
 
-Final corpus/status/link cleanup belongs to 013-I so historical rationale can be preserved deliberately rather than rewritten opportunistically.
+Historical/current-looking references in accepted Evaluation/Evidence/Provenance documents, retained 004-G/007-I architecture, the privacy/release boundary, `core-synchronizations.md` and other pre-Phase-009 material are interpreted through the current synchronization contract and completed Phase 013 authority.
+
+### Phase 014-E propagation note
+
+Phase 014-E made the `SYNC-12`/`SYNC-13` scope explicit here so this detailed current architecture authority cannot be read as restoring the broader pre-014-C external-handoff interpretation.
 
 No synchronization-design reopen is required.
 
