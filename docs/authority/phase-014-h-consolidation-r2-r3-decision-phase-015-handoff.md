@@ -319,11 +319,28 @@ The Phase 015 start gate has now consumed this handoff.
 Phase 015 Start Gate   COMPLETE
 015-A                  COMPLETE
 015-B                  COMPLETE
-015-C                  NEXT ELIGIBLE / NOT AUTHORIZED
-015-D..015-J           NOT AUTHORIZED
-IMPLEMENTATION START   NOT STARTED
+015-C                  COMPLETE
+015-D                  NEXT ELIGIBLE / NOT AUTHORIZED
+015-E..015-J           NOT AUTHORIZED
+IMPLEMENTATION START   STARTED
 ~~~
 
 Current implementation authority: [Phase 015 Current Implementation Authority / Start Gate](../implementation/phase-015-current-implementation-authority-start-gate.md).
 
-The current repository next boundary is **015-C — Identity, References, Representation, Durable Owner-State & Control Persistence**, which remains **NOT AUTHORIZED** pending explicit proceed.
+The current repository next boundary is **015-D — Distributed Data-State, Structured Topology, Candidate/Seal & Generation Promotion**, which remains **NOT AUTHORIZED** pending explicit proceed.
+
+
+## Post-015-C consumption
+
+The Phase 015 handoff has progressed into implementation.
+
+~~~text
+015-A                  COMPLETE
+015-B                  COMPLETE
+015-C                  COMPLETE
+015-D                  NEXT ELIGIBLE / NOT AUTHORIZED
+015-E..015-J           NOT AUTHORIZED
+IMPLEMENTATION START   STARTED
+~~~
+
+015-C established identity/reference/control-persistence foundations. The current repository next boundary is **015-D — Distributed Data-State, Structured Topology, Candidate/Seal & Generation Promotion**, still gated pending explicit proceed.
