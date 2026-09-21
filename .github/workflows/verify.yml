@@ -47,3 +47,6 @@ jobs:
 
       - name: Run required Strategy runtime and Learned-State gate
         run: uv run --no-sync python tools/verify.py runtime
+
+      - name: Run required Execution and recovery gate
+        run: uv run --no-sync python tools/verify.py execution
