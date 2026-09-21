@@ -91,18 +91,14 @@ class GenerationDataState:
         if not self.generation_commitment.is_exact_binding:
             raise ValueError("Generation data state requires an exact Generation commitment")
         data_meaning_bindings = tuple(
-            binding
-            for binding in self.topology.semantic_bindings
-            if binding.role == "data-meaning"
+            binding for binding in self.topology.semantic_bindings if binding.role == "data-meaning"
         )
         if not data_meaning_bindings:
             raise ValueError("Generation topology requires exact Data Meaning revision binding")
         if any(binding.reference.revision_id is None for binding in data_meaning_bindings):
             raise ValueError("Generation Data Meaning binding must use a semantic revision")
         covered_scopes = {
-            scope_id
-            for binding in data_meaning_bindings
-            for scope_id in binding.scope_ids
+            scope_id for binding in data_meaning_bindings for scope_id in binding.scope_ids
         }
         if covered_scopes != set(self.topology.scope_ids):
             raise ValueError("Generation Data Meaning bindings must cover every logical scope")
