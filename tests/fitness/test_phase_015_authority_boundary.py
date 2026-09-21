@@ -22,7 +22,6 @@ def test_phase_015_current_authority_is_discoverable() -> None:
     assert "015-G..015-J NOT AUTHORIZED" in authority_text
 
 
-
 def test_phase_015_index_exposes_015_f_as_next_but_not_authorized() -> None:
     phase_text = PHASE.read_text(encoding="utf-8")
 
