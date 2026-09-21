@@ -13,6 +13,7 @@ Start with:
 - `docs/authority/design-methodology.md`
 - `docs/authority/jackson-design-completion-implementation-hold.md`
 - `docs/authority/jackson-methodology-completion-matrix.md`
+- `docs/authority/post-phase-015-methodology-documentation-reconciliation.md`
 - `docs/authority/phase-014-whole-design-readiness-authority.md`
 - `docs/authority/phase-014-whole-design-audit-evidence-baseline.md`
 - `docs/phases/014/index.md`
@@ -52,7 +53,7 @@ Phase 014                            COMPLETE
 014-G                                COMPLETE
 014-H                                COMPLETE
 R2                                   CURRENTLY CLOSED
-R3                                   READY
+R3                                   READY / CONSUMED BY PHASE 015
 Phase 015                             COMPLETE
 Phase 015 start gate                  COMPLETE
 015-A                                 COMPLETE
@@ -65,9 +66,10 @@ Phase 015 start gate                  COMPLETE
 015-H                                 COMPLETE
 015-I                                 COMPLETE
 015-J                                 COMPLETE
-implementation readiness             READY
-implementation start                 STARTED
+implementation readiness             READY / CONSUMED
+implementation program               PHASE 015 COMPLETE
 implementation next                  POST-PHASE-015 START GATE — NOT AUTHORIZED
+Phase 016                             NOT DEFINED
 ```
 
 ## Primary authority rule
@@ -155,4 +157,4 @@ IMPLEMENTATION NEXT        POST-PHASE-015 START GATE — NOT AUTHORIZED
 
 ## Current next boundary
 
-**Phase 015 is COMPLETE. No post-Phase-015 delivery program is authorized.** Any new provider, scale, product-surface, release-hardening, or other implementation program requires a separate explicit start gate and user authorization.
+**Phase 015 is COMPLETE. Phase 016 is NOT DEFINED. No post-Phase-015 delivery program is authorized.** Any new provider, scale, product-surface, release-hardening, or other implementation program requires a separate explicit start gate and user authorization.
