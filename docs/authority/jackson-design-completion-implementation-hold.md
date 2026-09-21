@@ -14,8 +14,8 @@ Maintain the boundary between completed concept design, completed architecture r
 
 ```text
 IMPLEMENTATION READINESS   READY
-IMPLEMENTATION START       NOT STARTED
-IMPLEMENTATION NEXT        015-C — NEXT ELIGIBLE / NOT AUTHORIZED
+IMPLEMENTATION START       STARTED
+IMPLEMENTATION NEXT        015-D — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
 R3 readiness changes readiness only; it does not start implementation.
@@ -31,7 +31,7 @@ whole-design completion / readiness              ← Phase 014 COMPLETE / R2 CLO
         ↓
 implementation readiness                         ← READY / NOT STARTED
         ↓
-explicit implementation authority               ← Phase 015 START GATE + 015-A/B COMPLETE / 015-C GATED
+explicit implementation authority               ← Phase 015 START GATE + 015-A/B/C COMPLETE / 015-D GATED
 ```
 
 ## Current design state
@@ -82,15 +82,15 @@ Phase 014-H established:
 
 ```text
 IMPLEMENTATION READINESS   READY
-IMPLEMENTATION START       NOT STARTED
-IMPLEMENTATION NEXT        015-C — NEXT ELIGIBLE / NOT AUTHORIZED
+IMPLEMENTATION START       STARTED
+IMPLEMENTATION NEXT        015-D — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
 That state still does not authorize production changes. Phase 015 must explicitly establish implementation authority and controlled-delivery rules.
 
 ## Architecture / executable prohibition
 
-015-A and 015-B are complete without domain implementation. 015-C is next eligible but not authorized. Identity/persistence and all later domain behavior remain held until explicit slice authorization.
+015-A through 015-C are complete. Identity/reference/control-persistence implementation has started. 015-D and all later responsibilities remain held until explicit slice authorization.
 
 Phase 014 findings must distinguish missing design semantics from normal implementation alternatives, sequencing concerns, evidence needs or provider-specific qualification work.
 
@@ -134,11 +134,11 @@ R3                                READY
 READINESS-BLOCK                   0
 READINESS-RISK                    8 — HANDED OFF
 IMPLEMENTATION READINESS          READY
-IMPLEMENTATION START              NOT STARTED
-IMPLEMENTATION NEXT        015-C — NEXT ELIGIBLE / NOT AUTHORIZED
+IMPLEMENTATION START       STARTED
+IMPLEMENTATION NEXT        015-D — NEXT ELIGIBLE / NOT AUTHORIZED
 ~~~
 
-At 014-H closure implementation remained held pending the Phase 015 start gate. The gate, 015-A, and 015-B are now complete; 015-C is next eligible but not authorized, and domain implementation remains held.
+At 014-H closure implementation remained held pending the Phase 015 start gate. The gate and 015-A through 015-C are now complete; implementation has started at the control foundation, while 015-D remains gated.
 
 ## Phase 015 start-gate completion state
 
@@ -147,13 +147,14 @@ Phase 015                         ACTIVE
 Phase 015 Start Gate              COMPLETE
 015-A                  COMPLETE
 015-B                                 COMPLETE
-015-C                                 NEXT ELIGIBLE / NOT AUTHORIZED
-015-D..015-J                          NOT AUTHORIZED
-IMPLEMENTATION START              NOT STARTED
+015-C                  COMPLETE
+015-D                  NEXT ELIGIBLE / NOT AUTHORIZED
+015-E..015-J           NOT AUTHORIZED
+IMPLEMENTATION START       STARTED
 ~~~
 
-The hold remains slice-specific: 015-A and 015-B are complete; 015-C requires explicit authorization; domain implementation and later responsibilities remain held.
+The hold remains slice-specific: 015-A through 015-C are complete; 015-D requires explicit authorization; distributed-data and later responsibilities remain held.
 
 ## Current next boundary
 
-**015-C — Identity, References, Representation, Durable Owner-State & Control Persistence** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
+**015-D — Distributed Data-State, Structured Topology, Candidate/Seal & Generation Promotion** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
