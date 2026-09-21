@@ -21,7 +21,7 @@ def test_verification_manifest_has_current_lane_state() -> None:
     assert manifest["lanes"] == {
         "C0": "active",
         "C1": "defined",
-        "C2": "defined",
+        "C2": "active",
         "C3": "defined",
         "C4": "defined",
         "C5": "defined",
@@ -70,7 +70,7 @@ def test_portable_profile_excludes_explicit_nonportable_markers() -> None:
 def test_repository_verifier_exposes_current_required_profiles() -> None:
     verifier = VERIFY.read_text(encoding="utf-8")
 
-    for profile in ("authority", "static", "portable"):
+    for profile in ("authority", "static", "portable", "control"):
         assert f'"{profile}"' in verifier
 
     assert "verify_all() -> None" in verifier
