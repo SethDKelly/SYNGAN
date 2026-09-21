@@ -14,10 +14,7 @@ RESIDUAL = IMPLEMENTATION / "phase-015-residual-risk-closure-support-scope-regis
 METHODOLOGY = ROOT / "docs" / "authority" / "jackson-methodology-completion-matrix.md"
 CONCEPTUAL_RESIDUAL = ROOT / "docs" / "authority" / "residual-conceptual-misfit-register.md"
 POST_015 = (
-    ROOT
-    / "docs"
-    / "authority"
-    / "post-phase-015-methodology-documentation-reconciliation.md"
+    ROOT / "docs" / "authority" / "post-phase-015-methodology-documentation-reconciliation.md"
 )
 
 
@@ -100,9 +97,7 @@ def test_post_phase_015_methodology_reconciliation_is_current() -> None:
     assert "PHASE 015                           COMPLETE" in methodology_text
     assert "PHASE 016                           NOT DEFINED" in methodology_text
 
-    assert "M8 FUTURE REDISCOVERY GROUPS                    4 / DORMANT" in (
-        residual_text
-    )
+    assert "M8 FUTURE REDISCOVERY GROUPS                    4 / DORMANT" in (residual_text)
     assert "PHASE 015                                        COMPLETE" in residual_text
     assert "PHASE 016                                        NOT DEFINED" in residual_text
 
