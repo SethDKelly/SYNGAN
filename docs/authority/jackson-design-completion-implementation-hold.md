@@ -123,7 +123,7 @@ R3                               OPEN
 
 No current issue requires implementers to invent product semantics. The remaining risks concern implementation/conformance proof and historical-plan re-baselining.
 
-Implementation remains held until 014-H explicitly decides R2 and R3.
+At the 014-G exit, implementation remained held pending 014-H. 014-H subsequently closed R2 and set R3 to READY; the hold now continues at the Phase 015 authority/start gate.
 
 ## 014-H completion state
 
