@@ -98,7 +98,29 @@ def test_reference_binding_satisfies_self_contained_source_derived_strategy() ->
     assert closure.ready
     assert closure.closure_identity is not None
     assert closure.exact_dependency_identities == ()
+    assert closure.exact_role_environment_identities == (
+        ("local-worker", "python-3.11-portable"),
+    )
 
+
+
+def test_runtime_role_closure_is_required_even_without_external_dependencies() -> None:
+    strategy = _strategy()
+    binding = reference_source_derived_binding(strategy.strategy_reference)
+
+    closure = assess_runtime_closure(strategy, binding, (), ())
+
+    assert closure.status is RuntimeClosureStatus.INCOMPLETE
+    assert closure.incomplete_roles == ("local-worker",)
+
+
+def test_binding_must_target_the_exact_strategy_revision() -> None:
+    strategy = _strategy()
+    other_strategy = _revision("synthesis-strategy", "strategy-1", "r2")
+    binding = reference_source_derived_binding(other_strategy)
+
+    with pytest.raises(ValueError, match="different Strategy revision"):
+        assess_runtime_closure(strategy, binding, (), _role())
 
 def test_binding_cannot_broaden_self_contained_strategy_to_runtime_network() -> None:
     strategy = _strategy()
