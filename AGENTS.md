@@ -4,7 +4,7 @@ These instructions apply repository-wide to automated coding/documentation agent
 
 ## Current posture
 
-**Jackson concept design and Phase 013/014 are complete; R2 is currently closed and R3 is READY. Phase 015 implementation has STARTED. The start gate and 015-A through 015-H are complete. 015-I is next eligible but NOT AUTHORIZED pending explicit proceed; 015-J remains locked.**
+**Jackson concept design and Phase 013/014 are complete; R2 is currently closed and R3 is READY. Phase 015 implementation has STARTED. The start gate and 015-A through 015-H are complete. 015-I is AUTHORIZED / ACTIVE; 015-J remains locked.**
 
 Start with:
 
@@ -28,6 +28,7 @@ Start with:
 - `docs/implementation/phase-015-f-execution-attempt-admission-fencing-idempotency-checkpoint-cancellation-recovery-authority.md`
 - `docs/implementation/phase-015-g-evaluation-evidence-provenance-history-reproducibility-authority.md`
 - `docs/implementation/phase-015-h-authorization-disclosure-protected-existence-secrets-dependency-trust-no-egress-authority.md`
+- `docs/implementation/phase-015-i-platform-capability-portability-observability-scale-performance-support-qualification-authority.md`
 - `docs/architecture/phase-013-consolidated-architecture-contract.md`
 - `docs/synchronizations/current-cross-concept-synchronizations.md`
 
@@ -61,7 +62,7 @@ Phase 015 start gate                  COMPLETE
 015-F                                 COMPLETE
 015-G                                 COMPLETE
 015-H                                 COMPLETE
-015-I                                 NEXT ELIGIBLE / NOT AUTHORIZED
+015-I                                 AUTHORIZED / ACTIVE
 015-J                                 NOT AUTHORIZED
 implementation readiness             READY
 implementation start                 STARTED
@@ -153,4 +154,4 @@ IMPLEMENTATION NEXT        015-I — NEXT ELIGIBLE / NOT AUTHORIZED
 
 ## Current next boundary
 
-**015-I — Platform Capability, Portability, Observability, Scale/Performance & Support Qualification** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
+**015-I — Platform Capability, Portability, Observability, Scale/Performance & Support Qualification** is **AUTHORIZED / ACTIVE**. 015-J remains **NOT AUTHORIZED**.
