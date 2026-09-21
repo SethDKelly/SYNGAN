@@ -48,7 +48,8 @@ def verify_bootstrap() -> None:
         / "docs"
         / "phases"
         / "015"
-        / "015-start-gate-implementation-authority-current-baseline-controlled-delivery-decomposition.md",
+        / "015-start-gate-implementation-authority-current-baseline-"
+        "controlled-delivery-decomposition.md",
     )
     missing = [str(path.relative_to(ROOT)) for path in required_paths if not path.exists()]
     if missing:
