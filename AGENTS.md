@@ -4,7 +4,7 @@ These instructions apply repository-wide to automated coding/documentation agent
 
 ## Current posture
 
-**Jackson concept design and Phase 013/014 are complete; R2 is currently closed and R3 is READY. Phase 015 implementation has STARTED. The start gate and 015-A through 015-C are complete. 015-D is AUTHORIZED / ACTIVE for distributed-data, topology, candidate/seal, and Generation-promotion foundation work only; later slices remain locked.**
+**Jackson concept design and Phase 013/014 are complete; R2 is currently closed and R3 is READY. Phase 015 implementation has STARTED. The start gate and 015-A through 015-D are complete. 015-E is next eligible but NOT AUTHORIZED pending explicit proceed; later slices remain locked.**
 
 Start with:
 
@@ -52,11 +52,12 @@ Phase 015 start gate                  COMPLETE
 015-A                                 COMPLETE
 015-B                                 COMPLETE
 015-C                                 COMPLETE
-015-D                                 AUTHORIZED / ACTIVE
-015-E..015-J                          NOT AUTHORIZED
+015-D                                 COMPLETE
+015-E                                 NEXT ELIGIBLE / NOT AUTHORIZED
+015-F..015-J                          NOT AUTHORIZED
 implementation readiness             READY
 implementation start                 STARTED
-implementation next                  015-D — AUTHORIZED / ACTIVE
+implementation next                  015-E — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
 ## Primary authority rule
@@ -137,11 +138,11 @@ Phase 014-H has established:
 ```text
 IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       STARTED
-IMPLEMENTATION NEXT        015-D — AUTHORIZED / ACTIVE
+IMPLEMENTATION NEXT        015-E — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
-015-A through 015-C are complete. 015-D is authorized only for provider-neutral distributed-data descriptors, topology composition, candidate/seal state, Generation-owned promotion, and C3 verification. Do not implement Strategy/runtime execution, Execution/recovery, Evidence, security/provider behavior, or scale claims until their owning slices are separately authorized.
+015-A through 015-D are complete. Provider-neutral distributed-data descriptors, topology composition, candidate/seal state, Generation-owned promotion, and C3 verification are implemented. Do not implement Strategy/runtime execution, Execution/recovery, Evidence, security/provider behavior, or scale claims until their owning slices are separately authorized.
 
 ## Current next boundary
 
-**015-D — Distributed Data-State, Structured Topology, Candidate/Seal & Generation Promotion** is active and authorized.
+**015-E — Strategy/Method Binding, Dependency Closure, Learning/Learned-State & Generation Runtime** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
