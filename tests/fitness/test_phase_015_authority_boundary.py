@@ -4,7 +4,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 IMPLEMENTATION = ROOT / "docs" / "implementation"
-CURRENT = IMPLEMENTATION / "phase-015-a-current-implementation-baseline-scaffold-reconciliation.md"
+CURRENT = IMPLEMENTATION / "phase-015-b-current-verification-harness-architecture-fitness-evidence-gates.md"
 PHASE = ROOT / "docs" / "phases" / "015" / "index.md"
 AGENTS = ROOT / "AGENTS.md"
 
@@ -12,10 +12,10 @@ AGENTS = ROOT / "AGENTS.md"
 def test_phase_015_current_authority_is_discoverable() -> None:
     authority_text = CURRENT.read_text(encoding="utf-8")
 
-    assert "status: complete-current" in authority_text
-    assert "015-A                                  COMPLETE" in authority_text
-    assert "015-B                                  NEXT ELIGIBLE / NOT AUTHORIZED" in authority_text
-    assert "015-C..015-J                           NOT AUTHORIZED" in authority_text
+    assert "status: active-current" in authority_text
+    assert "015-A        COMPLETE" in authority_text
+    assert "015-B        AUTHORIZED / ACTIVE" in authority_text
+    assert "015-C..015-J NOT AUTHORIZED" in authority_text
 
 
 def test_phase_015_index_exposes_015_b_as_next_but_not_authorized() -> None:
@@ -23,7 +23,7 @@ def test_phase_015_index_exposes_015_b_as_next_but_not_authorized() -> None:
 
     assert "status: active" in phase_text
     assert "015-A" in phase_text and "COMPLETE" in phase_text
-    assert "015-B" in phase_text and "NEXT ELIGIBLE / NOT AUTHORIZED" in phase_text
+    assert "015-B" in phase_text and "AUTHORIZED / ACTIVE" in phase_text
 
     locked_phases = (
         "015-C",
@@ -43,7 +43,7 @@ def test_agent_instructions_preserve_post_015_a_authority_boundary() -> None:
     agent_text = AGENTS.read_text(encoding="utf-8")
 
     assert "015-A                                 COMPLETE" in agent_text
-    assert "015-B                                 NEXT ELIGIBLE / NOT AUTHORIZED" in agent_text
+    assert "015-B                                 AUTHORIZED / ACTIVE" in agent_text
     assert "domain implementation remains NOT STARTED" in agent_text
 
 
