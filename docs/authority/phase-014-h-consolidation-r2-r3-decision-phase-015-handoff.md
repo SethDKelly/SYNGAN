@@ -361,3 +361,23 @@ IMPLEMENTATION START   STARTED
 ~~~
 
 015-D preserves provider-neutral physical-state semantics and Generation-owned finality. The current repository next boundary is **015-E — Strategy/Method Binding, Dependency Closure, Learning/Learned-State & Generation Runtime**, still gated pending explicit proceed.
+
+
+## Post-015-E consumption
+
+015-E has completed Strategy/method binding, dependency and role-specific runtime closure, Learning/Learned-State owner-state, direct/reuse Generation planning, and the bounded self-contained text reference path.
+
+~~~text
+015-A                  COMPLETE
+015-B                  COMPLETE
+015-C                  COMPLETE
+015-D                  COMPLETE
+015-E                  COMPLETE
+015-F                  NEXT ELIGIBLE / NOT AUTHORIZED
+015-G..015-J           NOT AUTHORIZED
+IMPLEMENTATION START   STARTED
+~~~
+
+Current authority: [015-E Strategy Runtime / Learning / Generation](../implementation/phase-015-e-strategy-runtime-learning-generation-authority.md).
+
+The current repository next boundary is **015-F — Execution/Attempt, Admission, Fencing, Idempotency, Checkpoint, Cancellation & Recovery**, which remains **NOT AUTHORIZED** pending explicit proceed.
