@@ -93,7 +93,7 @@ The Phase 015 start gate and 015-A through 015-C are complete. No later slice is
 
 015-A reconciled implementation authority, repository/toolchain configuration, scaffold/test dispositions and architecture-fitness rules without implementing concept/domain behavior.
 
-Until 015-B or a later owning slice is explicitly authorized, do not add or stabilize production:
+Until 015-D or a later owning slice is explicitly authorized, do not add or stabilize production outside completed 015-C authority:
 
 - persistence/query schemas or migrations;
 - data-state/manifest/candidate stores;
@@ -114,8 +114,8 @@ Phase 014-H established:
 
 ```text
 IMPLEMENTATION READINESS   READY
-IMPLEMENTATION START       NOT STARTED
-IMPLEMENTATION NEXT        015-A — AUTHORIZED
+IMPLEMENTATION START       STARTED
+IMPLEMENTATION NEXT        015-D — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
 Implementation has started with the 015-C control foundation. Concept-specific behavior remains unimplemented. 015-D is next eligible but still requires explicit authorization.
