@@ -2,7 +2,7 @@
 ---
 type: Phase Index
 title: Phase 015 — Implementation Authority & Controlled Delivery
-status: next-eligible
+status: active
 ---
 
 # Phase 015 — Implementation Authority & Controlled Delivery
@@ -21,7 +21,7 @@ R3                              READY
 
 IMPLEMENTATION READINESS        READY
 IMPLEMENTATION START            NOT STARTED
-IMPLEMENTATION NEXT             PHASE 015 AUTHORITY GATE
+IMPLEMENTATION NEXT             015-A — AUTHORIZED
 ~~~
 
 Readiness is not permission to implement.
@@ -32,11 +32,20 @@ Establish current implementation authority and then deliver the accepted design 
 
 Phase 015 must preserve completed Phase 012/013/014 semantic and architecture authority unless implementation evidence demonstrates a genuine contradiction requiring the smallest appropriate reopen.
 
-## Start gate — next eligible
+## Start gate — complete
 
-**Phase 015 Start Gate — Implementation Authority, Current-Baseline Reconciliation & Controlled-Delivery Decomposition** is next eligible.
+The [Phase 015 Start Gate](015-start-gate-implementation-authority-current-baseline-controlled-delivery-decomposition.md) is complete.
 
-The start gate must define the Phase 015 subphases before any domain implementation slice is authorized.
+Current implementation authority: [Phase 015 Current Implementation Authority / Start Gate](../../implementation/phase-015-current-implementation-authority-start-gate.md).
+
+~~~text
+P15-01 authority lock               COMPLETE
+P15-02 historical disposition       COMPLETE
+P15-03 slice decomposition          COMPLETE
+P15-04 verification map             COMPLETE
+P15-05 change/reopen rules          COMPLETE
+P15-06 first-slice authorization    COMPLETE
+~~~
 
 ## Mandatory start-gate controls
 
@@ -48,6 +57,23 @@ P15-04  current verification/conformance map tied to current invariants
 P15-05  implementation change/reopen classification rules
 P15-06  explicit first-slice authorization
 ~~~
+
+## Controlled-delivery sequence
+
+~~~text
+015-A  AUTHORIZED / NEXT — Current Implementation Baseline, Repository/Toolchain & Scaffold Reconciliation
+015-B  NOT AUTHORIZED — Current Verification Harness, Architecture-Fitness & Evidence-Gate Foundation
+015-C  NOT AUTHORIZED — Identity, References, Representation, Durable Owner-State & Control Persistence
+015-D  NOT AUTHORIZED — Distributed Data-State, Topology, Candidate/Seal & Generation Promotion
+015-E  NOT AUTHORIZED — Strategy/Method Binding, Dependency Closure, Learning/Learned-State & Generation Runtime
+015-F  NOT AUTHORIZED — Execution/Attempt, Admission, Fencing, Idempotency, Checkpoint, Cancellation & Recovery
+015-G  NOT AUTHORIZED — Evaluation, Evidence, Provenance, Historical Read Composition & Reproducibility
+015-H  NOT AUTHORIZED — Authorization, Disclosure, Protected Existence, Secrets, Dependency Trust & No-Egress
+015-I  NOT AUTHORIZED — Platform Capability, Portability, Observability, Scale/Performance & Support Qualification
+015-J  NOT AUTHORIZED — Cross-Slice Integration, Residual Risk Closure & Implementation Consolidation
+~~~
+
+No later slice inherits authorization from the start gate.
 
 ## Residual readiness risks inherited from 014-G
 
@@ -79,7 +105,7 @@ Earlier language such as active, canonical, current planning overlay, or concret
 
 ## Current prohibition
 
-Before completion of the Phase 015 start gate:
+Until 015-A is explicitly entered, and for all responsibilities outside 015-A authority:
 
 - do not add domain behavior;
 - do not stabilize public APIs/schemas;
@@ -91,4 +117,4 @@ Before completion of the Phase 015 start gate:
 
 ## Current next boundary
 
-**Phase 015 Start Gate — Implementation Authority, Current-Baseline Reconciliation & Controlled-Delivery Decomposition** is next eligible.
+**015-A — Current Implementation Baseline, Repository/Toolchain & Scaffold Reconciliation** is next eligible and authorized.
