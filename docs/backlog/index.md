@@ -134,3 +134,37 @@ A later explicit implementation-authority phase must still define what implement
 ## Backlog discipline
 
 Closing or changing a backlog item does not itself change design authority. Canonical owner documents govern current truth.
+
+
+## Post-Phase-015 backlog reconciliation
+
+Phase 015 is complete. The implementation/release debt above now has the following current interpretation:
+
+~~~text
+IRD-001 provider/runtime support matrix       OPEN — future provider qualification
+IRD-002 IAM/secret/network/KMS/DLP products   OPEN — deployment-specific future program
+IRD-003 benchmark thresholds/support claims   PARTIAL — qualification mechanism exists; real evidence pending
+IRD-004 SLO/SLA/capacity policy               OPEN — future operational/release evidence
+IRD-005 public package/ecosystem review       OPEN — before public release
+IRD-006 distributed runtime mechanism         PARTIAL — framework/reference proof; provider-specific mechanism pending
+IRD-007 privacy/disclosure Evaluation catalog OPEN — non-blocking bounded catalog work
+IRD-008 baseline topology Strategy catalog    OPEN — complete Strategy catalog not claimed
+IRD-009 action/result/error representation    PARTIAL — typed core exists; public/wire surface remains future
+IRD-010 non-regressing recovery realization   PARTIAL — SQLite reference proof; production/provider qualification pending
+IRD-011 source-derived text algorithm         RESOLVED FOR REFERENCE BASELINE — bounded local source-derived path exists
+GOV-001 strict external OKF normalization      OPEN / NON-BLOCKING
+~~~
+
+These items are candidate inputs to a future delivery start gate. They do **not** define or authorize Phase 016.
+
+If a future program proposes work that crosses an M8 rediscovery trigger—formal composable privacy, product-owned governance/publication, reusable request/session state, or product-owned resource/economic lifecycle—the work must return to Jackson concept discovery before implementation authorization.
+
+Current boundary:
+
+~~~text
+Phase 015                         COMPLETE
+Phase 016                         NOT DEFINED
+post-Phase-015 delivery authority NONE
+~~~
+
+See [Post-Phase-015 Methodology & Documentation Reconciliation](../authority/post-phase-015-methodology-documentation-reconciliation.md).
