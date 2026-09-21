@@ -2,7 +2,7 @@
 ---
 type: Phase Index
 title: Phase 015 — Implementation Authority & Controlled Delivery
-status: active
+status: complete
 ---
 
 # Phase 015 — Implementation Authority & Controlled Delivery
@@ -21,7 +21,7 @@ R3                              READY
 
 IMPLEMENTATION READINESS        READY
 IMPLEMENTATION START            STARTED
-IMPLEMENTATION NEXT             015-J — AUTHORIZED / ACTIVE
+IMPLEMENTATION NEXT             POST-PHASE-015 START GATE — NOT AUTHORIZED
 ~~~
 
 Readiness is not permission to implement.
@@ -70,7 +70,7 @@ P15-06  explicit first-slice authorization
 015-G  COMPLETE — Evaluation, Evidence, Provenance, Historical Read Composition & Reproducibility
 015-H  COMPLETE — Authorization, Disclosure, Protected Existence, Secrets, Dependency Trust & No-Egress
 015-I  COMPLETE — Platform Capability, Portability, Observability, Scale/Performance & Support Qualification
-015-J  AUTHORIZED / ACTIVE — Cross-Slice Integration, Residual Risk Closure & Implementation Consolidation
+015-J  COMPLETE — Cross-Slice Integration, Residual Risk Closure & Implementation Consolidation
 ~~~
 
 No later slice inherits authorization from the start gate.
@@ -221,18 +221,18 @@ Earlier language such as active, canonical, current planning overlay, or concret
 
 ## Current prohibition
 
-015-A through 015-I are complete. 015-J is authorized only for cross-slice integration, residual-risk closure, C9 verification, consolidation, and the Phase 015 completion decision. Outside that scope:
+015-A through 015-J are complete. No post-Phase-015 delivery program is authorized.
 
-- do not begin cross-slice consolidation or end-to-end C9 closure work;
-- do not create new semantic/domain authority to resolve integration inconvenience;
+- do not add a provider adapter merely because architecture permits one;
 - do not claim Spark/Databricks/provider support without profile-specific evidence;
 - do not claim enterprise-scale/performance support without qualified benchmark evidence;
-- do not turn provider success, telemetry, or support metadata into semantic completion;
-- do not bypass completed slice boundaries merely to make Phase 015 appear consolidated.
+- do not claim release/SLO/SLA certification without a separately authorized evidence program;
+- do not create new semantic/domain authority to bypass completed design or implementation boundaries;
+- any new delivery program must begin with its own explicit start gate and user authorization.
 
 ## Current next boundary
 
-**015-J — Cross-Slice Integration, Residual Risk Closure & Implementation Consolidation** is **AUTHORIZED / ACTIVE**.
+**Phase 015 is COMPLETE. No post-Phase-015 delivery program is authorized.**
 
 ## 015-H completion state
 
@@ -272,3 +272,26 @@ enterprise-scale support           NOT CLAIMED
 ~~~
 
 Verify run 35633711222 passed all required gates through C8. 015-J remains separately gated.
+
+
+## 015-J completion state
+
+Current completion authority: [015-J Cross-Slice Integration / Residual Risk Closure / Implementation Consolidation](../../implementation/phase-015-j-cross-slice-integration-residual-risk-closure-implementation-consolidation-authority.md).
+
+Residual-risk/support scope: [Phase 015 Residual Risk Closure & Support-Scope Register](../../implementation/phase-015-residual-risk-closure-support-scope-register.md).
+
+~~~text
+015-J                              COMPLETE
+S01-S14 scenario accounting        COMPLETE
+C9 cross-slice replay              ACTIVE / PASS
+cross-slice tests                  8 PASS
+RR-01..RR-08                       DISPOSED
+READINESS-BLOCK                    0
+ICLASS-3 / ICLASS-4                0 / 0
+Phase 015                          COMPLETE
+post-Phase-015 delivery program    NOT AUTHORIZED
+~~~
+
+Verify run 35635644784 passed all required gates through C9 on the implementation evidence head.
+
+The completed current scope does not claim production Spark/Databricks adapters, provider-specific HA/DR/no-egress certification, enterprise-scale qualification, a complete Strategy catalog, or release/SLO/SLA certification.
