@@ -51,7 +51,9 @@ R3                                   READY
 Phase 015                             ACTIVE
 Phase 015 start gate                  COMPLETE
 015-A                                 COMPLETE
-015-B                                 NEXT ELIGIBLE / NOT AUTHORIZED
+015-B                                 COMPLETE
+015-C                                 COMPLETE
+015-D                                 NEXT ELIGIBLE / NOT AUTHORIZED
 implementation readiness             READY
 implementation start                 STARTED
 implementation next                  015-D — NEXT ELIGIBLE / NOT AUTHORIZED
@@ -91,7 +93,7 @@ R3 may be decided only after the R2 evidence chain is complete.
 ```text
 013    Post-Concept Representation & Architecture Reconciliation — COMPLETE
 014    Whole-Design Consolidation & Implementation-Readiness Decision — COMPLETE
-015    Implementation Authority & Controlled Delivery — START GATE NEXT
+015    Implementation Authority & Controlled Delivery — ACTIVE
 ```
 
 Phase 014-H established:
@@ -106,4 +108,4 @@ IMPLEMENTATION NEXT        015-D — NEXT ELIGIBLE / NOT AUTHORIZED
 
 ## Current next boundary
 
-**015-B — Current Verification Harness, Architecture-Fitness & Evidence-Gate Foundation** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
+**015-D — Distributed Data-State, Structured Topology, Candidate/Seal & Generation Promotion** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
