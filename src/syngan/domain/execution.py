@@ -262,8 +262,7 @@ class ExecutionAggregate:
 
         next_attempt = replace(attempt, status=outcome)
         attempts = tuple(
-            next_attempt if item.attempt_id == attempt_id else item
-            for item in self.attempts
+            next_attempt if item.attempt_id == attempt_id else item for item in self.attempts
         )
         if outcome is AttemptStatus.SUCCEEDED:
             return replace(
@@ -295,8 +294,7 @@ class ExecutionAggregate:
             raise ValueError("only an indeterminate Attempt may be fenced for retry")
         fenced = replace(attempt, status=AttemptStatus.FENCED)
         attempts = tuple(
-            fenced if item.attempt_id == attempt_id else item
-            for item in self.attempts
+            fenced if item.attempt_id == attempt_id else item for item in self.attempts
         )
         return replace(
             self,
