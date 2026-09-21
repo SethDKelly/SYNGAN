@@ -76,9 +76,7 @@ class SecurityService:
         if decision.outcome is AuthorizationOutcome.DENY:
             raise AuthorizationDenied(decision.reason_code or "authorization denied")
         if decision.outcome is AuthorizationOutcome.INDETERMINATE:
-            raise AuthorizationIndeterminate(
-                decision.reason_code or "authorization indeterminate"
-            )
+            raise AuthorizationIndeterminate(decision.reason_code or "authorization indeterminate")
         if decision.outcome is AuthorizationOutcome.PERMIT_WITH_CONDITIONS:
             missing = set(decision.conditions) - set(satisfied_conditions)
             if missing:
