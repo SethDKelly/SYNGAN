@@ -290,8 +290,13 @@ class DisclosureView:
             self.reference.require_exact_binding()
         if self.state is DisclosureState.RESOLVED and self.detail is None:
             raise ValueError("resolved disclosure requires detail")
-        if self.state in {DisclosureState.ABSENT, DisclosureState.WITHHELD} and self.detail is not None:
-            raise ValueError("absent/withheld disclosure cannot carry protected detail")
+        if (
+            self.state in {DisclosureState.ABSENT, DisclosureState.WITHHELD}
+            and self.detail is not None
+        ):
+            raise ValueError(
+                "absent/withheld disclosure cannot carry protected detail"
+            )
 
 
 @dataclass(frozen=True, slots=True)
