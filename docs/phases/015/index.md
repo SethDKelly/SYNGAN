@@ -79,7 +79,7 @@ No later slice inherits authorization from the start gate.
 
 Current completion authority: [015-A Current Implementation Baseline / Scaffold Reconciliation](../../implementation/phase-015-a-current-implementation-baseline-scaffold-reconciliation.md).
 
-Current active authority: [015-B Current Verification Harness / Architecture Fitness / Evidence Gates](../../implementation/phase-015-b-current-verification-harness-architecture-fitness-evidence-gates.md).
+Handoff at 015-A completion: [015-B Current Verification Harness / Architecture Fitness / Evidence Gates](../../implementation/phase-015-b-current-verification-harness-architecture-fitness-evidence-gates.md).
 
 ~~~text
 015-A                              COMPLETE
@@ -89,14 +89,14 @@ exact-package permanence           REMOVED
 architecture-fitness baseline      NORMALIZED
 domain implementation              NONE
 Verify workflow                     PASS
-015-B                              NEXT ELIGIBLE / NOT AUTHORIZED
+015-B                              COMPLETE
 ~~~
 
 ## 015-B completion state
 
 Current completion authority: [015-B Current Verification Harness / Architecture Fitness / Evidence Gates](../../implementation/phase-015-b-current-verification-harness-architecture-fitness-evidence-gates.md).
 
-Current active authority: [015-C Identity / References / Control Persistence](../../implementation/phase-015-c-identity-reference-control-persistence-authority.md).
+Handoff at 015-B completion: [015-C Identity / References / Control Persistence](../../implementation/phase-015-c-identity-reference-control-persistence-authority.md).
 
 ~~~text
 015-B                              COMPLETE
@@ -105,7 +105,7 @@ C1-C9                              DEFINED / SLICE-ACTIVATED
 portable profile                   REQUIRED CI GATE
 historical Phase 005 verification HISTORICAL
 domain implementation              NONE
-015-C                              NEXT ELIGIBLE / NOT AUTHORIZED
+015-C                              COMPLETE
 ~~~
 
 ## 015-C completion state
