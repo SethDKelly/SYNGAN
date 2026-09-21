@@ -4,7 +4,7 @@ schema_version = 1
 C0 = "active"
 C1 = "defined"
 C2 = "active"
-C3 = "defined"
+C3 = "active"
 C4 = "defined"
 C5 = "defined"
 C6 = "defined"
@@ -20,6 +20,9 @@ description = "Bootstrap, lint, format, type, architecture, and authority fitnes
 
 [profiles.control]
 description = "Required C2 durable control-store integration and concurrency gate."
+
+[profiles.data]
+description = "Required C3 topology, sealed-subject, candidate, and Generation promotion gate."
 
 [profiles.portable]
 description = "Required default merge gate with network/external/heavy lanes excluded."
