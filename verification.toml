@@ -10,7 +10,7 @@ C5 = "active"
 C6 = "active"
 C7 = "active"
 C8 = "active"
-C9 = "defined"
+C9 = "active"
 
 [profiles.authority]
 description = "Current authority, bootstrap metadata, and verification-manifest fitness."
@@ -35,6 +35,9 @@ description = "Required C6 Evaluation, Evidence, Provenance, history, and reprod
 
 [profiles.platform]
 description = "Required C8 platform capability, portability, observability, scale, and support-qualification gate."
+
+[profiles.cross_slice]
+description = "Required C9 cross-slice, residual-risk, adversarial, and Phase-015 integration gate."
 
 [profiles.portable]
 description = "Required default merge gate with network/external/heavy lanes excluded."
