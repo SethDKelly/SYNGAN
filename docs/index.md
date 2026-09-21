@@ -38,6 +38,7 @@ methodology / completion / cross-cutting authority
 - [Phase 014-D Mapping/Semantic-Parity Audit](authority/phase-014-d-mapping-interaction-linguistic-disclosure-semantic-parity-audit.md)
 - [Phase 014-E Architecture Realization/Traceability Audit](authority/phase-014-e-architecture-realization-responsibility-traceability-audit.md)
 - [Phase 014-F End-to-End Scenario/Adversarial Audit](authority/phase-014-f-end-to-end-scenario-exception-failure-recovery-scale-security-portability-adversarial-audit.md)
+- [Phase 014-G Implementation-Neutral Completeness / Residual Readiness Register](authority/phase-014-g-implementation-neutral-completeness-handoff-sufficiency-residual-readiness-register.md)
 - [Phase 014](phases/014/index.md)
 - [Phase 014 Start Gate / Decomposition](phases/014/014-start-gate-whole-design-readiness-decomposition.md)
 - [Phase 013 Consolidated Architecture Contract](architecture/phase-013-consolidated-architecture-contract.md)
@@ -59,7 +60,8 @@ Phase 014                            ACTIVE
 014-D                                COMPLETE
 014-E                                COMPLETE
 014-F                                COMPLETE
-014-G                                NEXT ELIGIBLE
+014-G                                COMPLETE
+014-H                                NEXT ELIGIBLE
 R2                                   OPEN
 R3                                   OPEN
 implementation readiness             NOT READY
@@ -92,7 +94,7 @@ No prior local `COMPLETE` label substitutes for this whole-design audit.
 014-D  mapping / interaction / linguistic / disclosure / parity — COMPLETE
 014-E  architecture realization / design-to-architecture traceability — COMPLETE
 014-F  cross-layer scenarios / failure / recovery / scale / security / portability — COMPLETE
-014-G  implementation-neutral completeness / handoff sufficiency / residual register
+014-G  implementation-neutral completeness / handoff sufficiency / residual register — COMPLETE
 014-H  R2 decision / R3 decision / Phase 015 handoff
 ```
 
@@ -112,4 +114,4 @@ Even a later positive R3 requires explicit Phase 015 authority before implementa
 
 ## Current next boundary
 
-**014-G — Implementation-Neutral Completeness, Decision-Ambiguity, Handoff Sufficiency & Residual Whole-Design Register** is next eligible.
+**014-H — Phase 014 Consolidation, R2 Completion Decision, R3 Implementation-Readiness Decision & Phase 015 Handoff** is next eligible.
