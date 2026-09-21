@@ -31,7 +31,8 @@ Phase 014                       ACTIVE
 014-D                           COMPLETE
 014-E                                COMPLETE
 014-F                                COMPLETE
-014-G                                NEXT ELIGIBLE
+014-G                                COMPLETE
+014-H                                NEXT ELIGIBLE
 R2                              OPEN
 R3                              OPEN
 ```
@@ -57,6 +58,27 @@ READINESS-BLOCK unresolved semantics or unsupported mandatory assumption; blocks
 ```
 
 Normal engineering alternatives, provider-specific work, benchmark qualification and implementation sequencing do not automatically indicate missing design semantics.
+
+## Historical implementation-plan and scaffold disposition
+
+Phase 014-G has completed the current disposition of pre-014 implementation material.
+
+~~~text
+Phase 005 plans        HISTORICAL IMPLEMENTATION-PLANNING EVIDENCE
+Phase 006 overlay      HISTORICAL IMPLEMENTATION-PLANNING REFINEMENT
+Phase 007-A..C source  FEASIBILITY / BOOTSTRAP EVIDENCE
+Phase 007 locks/tests  HISTORICAL EXECUTION-GATE EVIDENCE
+current executable implementation authority
+                       NONE
+~~~
+
+Earlier implementation documents may still contain stage-local frontmatter or prose such as `status: active`, `canonical Phase 005 implementation authority`, `current planning overlay`, exact package topology, PostgreSQL-oriented choices, or fifteen-synchronization-era statements.
+
+Those are historical planning statements and **do not outrank completed Phase 012/013/014 authority**.
+
+If 014-H later makes R3 positive, Phase 015 must first re-baseline historical plans, source topology and tests before treating them as current implementation authority or CI acceptance gates.
+
+Current residual/readiness evidence is [Phase 014-G Implementation-Neutral Completeness / Residual Readiness Register](../authority/phase-014-g-implementation-neutral-completeness-handoff-sufficiency-residual-readiness-register.md).
 
 ## Current prohibition
 
@@ -91,4 +113,4 @@ Phase 015 explicit authority remains required before implementation begins.
 
 Design-only work:
 
-**014-G — Implementation-Neutral Completeness, Decision-Ambiguity, Handoff Sufficiency & Residual Whole-Design Register**.
+**014-H — Phase 014 Consolidation, R2 Completion Decision, R3 Implementation-Readiness Decision & Phase 015 Handoff**.
