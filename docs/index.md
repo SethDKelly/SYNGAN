@@ -48,6 +48,7 @@ methodology / completion / cross-cutting authority
 - [015-D Distributed Data / Topology / Generation Promotion](implementation/phase-015-d-distributed-data-topology-generation-promotion-authority.md)
 - [015-E Strategy Runtime / Learning / Generation](implementation/phase-015-e-strategy-runtime-learning-generation-authority.md)
 - [015-F Execution / Attempt / Recovery](implementation/phase-015-f-execution-attempt-admission-fencing-idempotency-checkpoint-cancellation-recovery-authority.md)
+- [015-G Evaluation / Evidence / Provenance / History / Reproducibility](implementation/phase-015-g-evaluation-evidence-provenance-history-reproducibility-authority.md)
 - [Phase 014](phases/014/index.md)
 - [Phase 014 Start Gate / Decomposition](phases/014/014-start-gate-whole-design-readiness-decomposition.md)
 - [Phase 013 Consolidated Architecture Contract](architecture/phase-013-consolidated-architecture-contract.md)
@@ -81,10 +82,11 @@ Phase 015 start gate                  COMPLETE
 015-D                                 COMPLETE
 015-E                                 COMPLETE
 015-F                                 COMPLETE
-015-G                                 NEXT ELIGIBLE / NOT AUTHORIZED
+015-G                                 COMPLETE
+015-H                                 NEXT ELIGIBLE / NOT AUTHORIZED
 implementation readiness             READY
 implementation start                 STARTED
-implementation next                  015-G — NEXT ELIGIBLE / NOT AUTHORIZED
+implementation next                  015-H — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
 ## Current whole-design baseline
@@ -123,7 +125,7 @@ Phase 014 is complete design/readiness work. Phase 015 controlled implementation
 ```text
 IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       STARTED
-IMPLEMENTATION NEXT        015-G — NEXT ELIGIBLE / NOT AUTHORIZED
+IMPLEMENTATION NEXT        015-H — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
 Historical source/tests/plans may be inspected as downstream evidence, but cannot redefine semantics or be modified to manufacture readiness.
@@ -132,4 +134,4 @@ R3 is READY and implementation has begun only through explicitly authorized Phas
 
 ## Current next boundary
 
-**015-G — Evaluation, Evidence, Provenance, Historical Read Composition & Reproducibility** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
+**015-H — Authorization, Disclosure, Protected Existence, Secrets, Dependency Trust & No-Egress** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
