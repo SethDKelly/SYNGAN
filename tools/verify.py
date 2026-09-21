@@ -62,16 +62,10 @@ def verify_bootstrap() -> None:
         VERIFICATION_MANIFEST,
         ROOT / "src" / "syngan" / "__init__.py",
         ROOT / "src" / "syngan" / "py.typed",
-        ROOT
-        / "docs"
-        / "implementation"
-        / "phase-015-current-implementation-authority-start-gate.md",
-        ROOT
-        / "docs"
-        / "phases"
-        / "015"
-        / "015-start-gate-implementation-authority-current-baseline-"
-        "controlled-delivery-decomposition.md",
+        ROOT / "docs" / "authority" / "current-repository-status.md",
+        ROOT / "docs" / "authority" / "canonical-knowledge-ownership-map.md",
+        ROOT / "docs" / "implementation" / "current-support-scope.md",
+        ROOT / "docs" / "phases" / "016" / "index.md",
     )
     missing = [str(path.relative_to(ROOT)) for path in required_paths if not path.exists()]
     if missing:
