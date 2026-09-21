@@ -22,7 +22,7 @@ R3 READINESS                        READY / CONSUMED BY COMPLETED PHASE 015
 PHASE 015                           COMPLETE
 C0-C9                               ACTIVE / PASS
 POST-PHASE-015 DELIVERY AUTHORITY   NONE
-PHASE 016                           NOT DEFINED
+PHASE 016                           ACTIVE — PRE-IMPLEMENTATION HARDENING
 ```
 
 Jackson concept design, downstream architecture reconciliation, Phase 014 whole-design/readiness work, and the currently authorized Phase 015 implementation program are complete for the current product scope.
@@ -374,8 +374,20 @@ current conceptual blockers          0
 current upstream reopens             0
 M8 future rediscovery groups         4 / DORMANT
 Phase 015                            COMPLETE
-Phase 016                            NOT DEFINED
+Phase 016                            ACTIVE — PRE-IMPLEMENTATION HARDENING
 next delivery authority              NONE
 ```
 
 The M8 groups remain future rediscovery triggers. They are not incomplete Jackson obligations and are not automatically assigned to a future numbered phase.
+
+
+## Phase 016 non-reopen note
+
+Phase 016 is a documentation/OKF/agentic/readiness hardening program downstream of the completed Jackson methodology.
+
+~~~text
+016-A documentation audit      COMPLETE
+016-B topology normalization   NEXT ELIGIBLE / NOT AUTHORIZED
+Jackson A-H                    CURRENTLY CLOSED
+conceptual reopen              NONE
+~~~
