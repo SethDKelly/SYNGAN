@@ -29,7 +29,8 @@ Phase 014                       ACTIVE
 014-B                           COMPLETE
 014-C                           COMPLETE
 014-D                           COMPLETE
-014-E                           NEXT ELIGIBLE
+014-E                                COMPLETE
+014-F                                NEXT ELIGIBLE
 R2                              OPEN
 R3                              OPEN
 ```
@@ -89,4 +90,4 @@ Phase 015 explicit authority remains required before implementation begins.
 
 Design-only work:
 
-**014-E — Architecture Realization Coverage, Responsibility/Authority & Design-to-Architecture Traceability Audit**.
+**014-F — End-to-End Scenario, Exception, Failure, Recovery, Scale, Security, Portability & Adversarial Whole-Design Audit**.
