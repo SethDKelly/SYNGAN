@@ -41,3 +41,6 @@ jobs:
 
       - name: Run required control persistence gate
         run: uv run --no-sync python tools/verify.py control
+
+      - name: Run required distributed data-state gate
+        run: uv run --no-sync python tools/verify.py data
