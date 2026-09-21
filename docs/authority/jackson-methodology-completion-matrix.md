@@ -96,8 +96,8 @@ The Phase 014 pre-phase start gate is complete and has activated the dependency-
 014-C  Concept / Dependence / Application-Family / Synchronization Integrity — COMPLETE
 014-D  Mapping / Interaction / Linguistic / Disclosure / Semantic Parity — COMPLETE
 014-E  Architecture Realization / Responsibility / Design-to-Architecture Traceability — COMPLETE
-014-F  End-to-End Scenario / Failure / Recovery / Scale / Security / Portability — NEXT
-014-G  Implementation-Neutral Completeness / Handoff Sufficiency / Residual Register
+014-F  End-to-End Scenario / Failure / Recovery / Scale / Security / Portability — COMPLETE
+014-G  Implementation-Neutral Completeness / Handoff Sufficiency / Residual Register — NEXT
 014-H  R2 Decision / R3 Decision / Phase 015 Handoff
 ```
 
@@ -134,6 +134,26 @@ upstream reopen                                    NONE
 
 014-E corrected bounded synchronization-scope propagation drift in detailed Phase 013 architecture. R2 remains OPEN pending 014-F and 014-G.
 
+## 014-F whole-design evidence
+
+~~~text
+required scenario families                  PASS
+direct / learned Generation                 PASS
+topology / text-bearing no-egress           PASS
+Evaluation outcome matrix                   PASS
+retry / cancellation / recovery             PASS
+partial history / disclosure                PASS
+scale / portability / provider loss         PASS
+external governance                         PASS after bounded repair
+combined adversarial composition            PASS
+resolved WMAT-2                             1
+unresolved WMAT-2                           0
+unresolved WMAT-3                           0
+upstream reopen                             NONE
+~~~
+
+014-F corrected one stale current 013-G attribution of external governance handoff to SYNC-13. R2 remains OPEN pending 014-G and 014-H.
+
 ## Current synchronization state
 
 ```text
@@ -161,7 +181,8 @@ Phase 014                            ACTIVE
 014-C                                COMPLETE
 014-D                                COMPLETE
 014-E                                COMPLETE
-014-F                                NEXT ELIGIBLE
+014-F                                COMPLETE
+014-G                                NEXT ELIGIBLE
 R2                                   OPEN
 R3                                   OPEN
 IMPLEMENTATION READINESS             NOT READY
@@ -189,4 +210,4 @@ Phase 014 is not implementation. A positive future R3 may set readiness to `READ
 
 ## Current next boundary
 
-**014-F — End-to-End Scenario, Exception, Failure, Recovery, Scale, Security, Portability & Adversarial Whole-Design Audit** is next eligible.
+**014-G — Implementation-Neutral Completeness, Decision-Ambiguity, Handoff Sufficiency & Residual Whole-Design Register** is next eligible.
