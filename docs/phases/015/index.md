@@ -21,7 +21,7 @@ R3                              READY
 
 IMPLEMENTATION READINESS        READY
 IMPLEMENTATION START            STARTED
-IMPLEMENTATION NEXT             015-D — NEXT ELIGIBLE / NOT AUTHORIZED
+IMPLEMENTATION NEXT             015-D — AUTHORIZED / ACTIVE
 ~~~
 
 Readiness is not permission to implement.
@@ -64,7 +64,7 @@ P15-06  explicit first-slice authorization
 015-A  COMPLETE — Current Implementation Baseline, Repository/Toolchain & Scaffold Reconciliation
 015-B  COMPLETE — Current Verification Harness, Architecture-Fitness & Evidence-Gate Foundation
 015-C  COMPLETE — Identity, References, Representation, Durable Owner-State & Control Persistence
-015-D  NEXT ELIGIBLE / NOT AUTHORIZED — Distributed Data-State, Topology, Candidate/Seal & Generation Promotion
+015-D  AUTHORIZED / ACTIVE — Distributed Data-State, Topology, Candidate/Seal & Generation Promotion
 015-E  NOT AUTHORIZED — Strategy/Method Binding, Dependency Closure, Learning/Learned-State & Generation Runtime
 015-F  NOT AUTHORIZED — Execution/Attempt, Admission, Fencing, Idempotency, Checkpoint, Cancellation & Recovery
 015-G  NOT AUTHORIZED — Evaluation, Evidence, Provenance, Historical Read Composition & Reproducibility
@@ -112,6 +112,8 @@ domain implementation              NONE
 
 Current completion authority: [015-C Identity / References / Control Persistence](../../implementation/phase-015-c-identity-reference-control-persistence-authority.md).
 
+Current active authority: [015-D Distributed Data / Topology / Generation Promotion](../../implementation/phase-015-d-distributed-data-topology-generation-promotion-authority.md).
+
 ~~~text
 015-C                              COMPLETE
 identity/reference foundation      IMPLEMENTED
@@ -153,7 +155,7 @@ Earlier language such as active, canonical, current planning overlay, or concret
 
 ## Current prohibition
 
-015-A through 015-C are complete. Until 015-D is explicitly authorized, and for all responsibilities outside completed 015-C authority:
+015-A through 015-C are complete and 015-D is explicitly authorized/active. For responsibilities outside 015-D authority:
 
 - do not add domain behavior;
 - do not stabilize public APIs/schemas;
@@ -165,4 +167,4 @@ Earlier language such as active, canonical, current planning overlay, or concret
 
 ## Current next boundary
 
-**015-D — Distributed Data-State, Structured Topology, Candidate/Seal & Generation Promotion** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
+**015-D — Distributed Data-State, Structured Topology, Candidate/Seal & Generation Promotion** is active and authorized.
