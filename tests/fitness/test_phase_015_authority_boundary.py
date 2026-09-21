@@ -4,7 +4,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 IMPLEMENTATION = ROOT / "docs" / "implementation"
-CURRENT = IMPLEMENTATION / "phase-015-b-current-verification-harness-architecture-fitness-evidence-gates.md"
+CURRENT = (
+    IMPLEMENTATION
+    / "phase-015-b-current-verification-harness-architecture-fitness-evidence-gates.md"
+)
 PHASE = ROOT / "docs" / "phases" / "015" / "index.md"
 AGENTS = ROOT / "AGENTS.md"
 
