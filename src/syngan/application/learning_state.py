@@ -144,7 +144,7 @@ class LearningStateService:
                     "material_reference": material.reference.require_exact_binding()[1],
                 }
             ),
-            recovery_frontier=authority_frontier,
+            authority_frontier=authority_frontier,
         )
         self._store.put_immutable_binding(
             reference=material.reference,
