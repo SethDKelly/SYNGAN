@@ -2,10 +2,10 @@ schema_version = 1
 
 [lanes]
 C0 = "active"
-C1 = "defined"
+C1 = "active"
 C2 = "active"
 C3 = "active"
-C4 = "defined"
+C4 = "active"
 C5 = "defined"
 C6 = "defined"
 C7 = "defined"
@@ -23,6 +23,9 @@ description = "Required C2 durable control-store integration and concurrency gat
 
 [profiles.data]
 description = "Required C3 topology, sealed-subject, candidate, and Generation promotion gate."
+
+[profiles.runtime]
+description = "Required C1/C4 Strategy binding, Learning/Learned-State, and runtime-closure gate."
 
 [profiles.portable]
 description = "Required default merge gate with network/external/heavy lanes excluded."
