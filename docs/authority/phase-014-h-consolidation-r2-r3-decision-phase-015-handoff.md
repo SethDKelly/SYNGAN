@@ -317,11 +317,12 @@ The Phase 015 start gate has now consumed this handoff.
 
 ~~~text
 Phase 015 Start Gate   COMPLETE
-015-A                  AUTHORIZED / NEXT ELIGIBLE
-015-B..015-J           NOT AUTHORIZED
+015-A                  COMPLETE
+015-B                  NEXT ELIGIBLE / NOT AUTHORIZED
+015-C..015-J           NOT AUTHORIZED
 IMPLEMENTATION START   NOT STARTED
 ~~~
 
 Current implementation authority: [Phase 015 Current Implementation Authority / Start Gate](../implementation/phase-015-current-implementation-authority-start-gate.md).
 
-The current repository next boundary is **015-A — Current Implementation Baseline, Repository/Toolchain & Scaffold Reconciliation**.
+The current repository next boundary is **015-B — Current Verification Harness, Architecture-Fitness & Evidence-Gate Foundation**, which remains **NOT AUTHORIZED** pending explicit proceed.
