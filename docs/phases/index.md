@@ -15,7 +15,7 @@ Phases 001-007 remain historical discovery/specification/experience/architecture
 ```text
 IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       STARTED
-IMPLEMENTATION NEXT        015-G — NEXT ELIGIBLE / NOT AUTHORIZED
+IMPLEMENTATION NEXT        015-H — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
 Phase 014-H established readiness. Explicit Phase 015 authority remains required before implementation begins.
@@ -60,7 +60,7 @@ R2 and R3 remain open. R3 may be decided only after the whole R2 evidence chain 
 
 ## Phase 015 — Implementation Authority & Controlled Delivery
 
-Phase 014-H established R3 = READY. The Phase 015 start gate and 015-A through 015-F are complete. Implementation is `STARTED`; 015-G is next eligible but not authorized.
+Phase 014-H established R3 = READY. The Phase 015 start gate and 015-A through 015-G are complete. Implementation is `STARTED`; 015-H is next eligible but not authorized.
 
 ## Phase 015 controlled delivery
 
@@ -72,12 +72,13 @@ Phase 015 Start Gate  COMPLETE
 015-D                                 COMPLETE
 015-E                                 COMPLETE
 015-F                                 COMPLETE
-015-G                                 NEXT ELIGIBLE / NOT AUTHORIZED
-015-H..015-J                          NOT AUTHORIZED
+015-G                                 COMPLETE
+015-H                                 NEXT ELIGIBLE / NOT AUTHORIZED
+015-I..015-J                          NOT AUTHORIZED
 ~~~
 
 ## Current next boundary
 
-**015-G — Evaluation, Evidence, Provenance, Historical Read Composition & Reproducibility** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
+**015-H — Authorization, Disclosure, Protected Existence, Secrets, Dependency Trust & No-Egress** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
