@@ -2,7 +2,7 @@
 ---
 type: Implementation Authority
 title: 015-D — Distributed Data-State, Structured Topology, Candidate/Seal & Generation Promotion
-status: active-current
+status: complete-current
 ---
 
 # 015-D — Distributed Data-State, Structured Topology, Candidate/Seal & Generation Promotion
@@ -207,17 +207,60 @@ Spark/provider dependency               DEFER TO 015-E/015-I
 portable Parquet profile                DEFER
 ~~~
 
+## Completion evidence
+
+~~~text
+bounded logical topology                         IMPLEMENTED
+exact Data Meaning revision coverage             IMPLEMENTED
+provider-neutral physical scope binding          IMPLEMENTED
+multidimensional physical-subject strength       IMPLEMENTED
+coordinated-cut qualification                    IMPLEMENTED
+immutable sealed physical-subject binding        IMPLEMENTED
+Generation multiple-candidate state              IMPLEMENTED
+sealed/unpromoted != completed output             ENFORCED
+zero-or-one Generation completed output           ENFORCED
+metadata-only promotion                           IMPLEMENTED
+durable reopen / exact completed-output binding   PASS
+C3 data verification                              PASS
+provider/Spark runtime                            NOT IMPLEMENTED
+enterprise scale qualification                    NOT CLAIMED
+RR-03 non-regressing recovery                     DEFERRED TO 015-F
+RR-04 provider qualification                      DEFERRED TO 015-I
+RR-05 no-egress runtime closure                   DEFERRED TO 015-E / 015-H
+RR-06 scale qualification                         PARTIAL FOUNDATION ONLY
+ICLASS-3                                          0
+ICLASS-4                                          0
+upstream reopen                                   NONE
+~~~
+
+Verification evidence:
+
+~~~text
+commit        aed1cea3da28d9cea76b35196010e186d34e76b1
+workflow      Verify
+run           35559547390
+portable      PASS
+control       PASS — 9 / 9 integration tests
+data          PASS — 4 / 4 integration tests
+portable unit PASS — 23 / 23
+C3 unit       PASS — 11 / 11
+Import Linter PASS — 2 / 2 contracts kept
+~~~
+
+The C3 data gate proves the provider-neutral control-plane foundation only. It does not establish Spark/provider support, no-egress closure, non-regressing recovery, or enterprise-scale qualification.
+
 ## Current authorization
 
 ~~~text
 015-A        COMPLETE
 015-B        COMPLETE
 015-C        COMPLETE
-015-D        AUTHORIZED / ACTIVE
-015-E..015-J NOT AUTHORIZED
+015-D        COMPLETE
+015-E        NEXT ELIGIBLE / NOT AUTHORIZED
+015-F..015-J NOT AUTHORIZED
 IMPLEMENTATION START  STARTED
 ~~~
 
 ## Current next boundary
 
-015-D remains active until C3 implementation and verification are complete.
+**015-E — Strategy/Method Binding, Dependency Closure, Learning/Learned-State & Generation Runtime** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
