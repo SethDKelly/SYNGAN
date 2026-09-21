@@ -4,10 +4,10 @@ import pytest
 
 from syngan.domain.evaluation_evidence import (
     ClaimStrength,
-    EvidenceApplicability,
-    EvidenceApplicabilityState,
     EvaluationAggregate,
     EvaluationStatus,
+    EvidenceApplicability,
+    EvidenceApplicabilityState,
     FindingDisposition,
     FindingDraft,
     evidence_reference,
