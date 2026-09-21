@@ -4,8 +4,6 @@ from __future__ import annotations
 
 from dataclasses import dataclass, replace
 from enum import StrEnum
-from typing import cast
-
 from syngan.foundation.data_state import (
     TopologyDescriptor,
     topology_from_payload,
@@ -20,7 +18,6 @@ from syngan.foundation.identity import (
 )
 from syngan.foundation.representation import (
     EncodedPayload,
-    JsonObject,
     JsonValue,
     decode_reference,
     encode_reference,
@@ -37,7 +34,7 @@ def _reference_object(reference: TypedReference) -> JsonObject:
 def _reference_from_value(value: JsonValue, label: str) -> TypedReference:
     if not isinstance(value, dict):
         raise ValueError(f"{label} must be a reference object")
-    return decode_reference(EncodedPayload.from_object(cast(JsonObject, value)).json_text)
+    return decode_reference(EncodedPayload.from_object(value).json_text)
 
 
 class CandidateStatus(StrEnum):
@@ -309,7 +306,7 @@ def generation_data_state_from_payload(payload: EncodedPayload) -> GenerationDat
             value.get("generation_commitment"), "Generation commitment"
         ),
         topology=topology_from_payload(
-            EncodedPayload.from_object(cast(JsonObject, topology_value))
+            EncodedPayload.from_object(topology_value)
         ),
         candidates=tuple(candidates),
         completed_output=completed,
