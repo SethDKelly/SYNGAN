@@ -19,16 +19,17 @@ Current governing implementation authority:
 - [015-H Authorization / Disclosure / Protected Existence / Secrets / Dependency Trust / No-Egress](phase-015-h-authorization-disclosure-protected-existence-secrets-dependency-trust-no-egress-authority.md)
 - [015-I Platform Capability / Portability / Observability / Scale / Support Qualification](phase-015-i-platform-capability-portability-observability-scale-performance-support-qualification-authority.md)
 - [015-J Cross-Slice Integration / Residual Risk Closure / Implementation Consolidation](phase-015-j-cross-slice-integration-residual-risk-closure-implementation-consolidation-authority.md)
+- [Phase 015 Residual Risk Closure / Support Scope](phase-015-residual-risk-closure-support-scope-register.md)
 
 ## Current posture
 
 ```text
 IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       STARTED
-IMPLEMENTATION NEXT        015-J — AUTHORIZED / ACTIVE
+IMPLEMENTATION NEXT        POST-PHASE-015 START GATE — NOT AUTHORIZED
 ```
 
-Phase 015 authority is active. 015-A through 015-I are complete. 015-J is authorized and active.
+Phase 015 is complete. 015-A through 015-J are complete, C0-C9 are active/passing, and no post-Phase-015 delivery program is authorized.
 
 ## Current design progress
 
@@ -96,11 +97,11 @@ Current residual/readiness evidence is [Phase 014-G Implementation-Neutral Compl
 
 ## Current authorization boundary
 
-The Phase 015 start gate and 015-A through 015-I are complete. 015-J is explicitly authorized as the integration/consolidation slice.
+The Phase 015 start gate and 015-A through 015-J are complete. No post-Phase-015 delivery program is currently authorized.
 
 015-A reconciled implementation authority, repository/toolchain configuration, scaffold/test dispositions and architecture-fitness rules without implementing concept/domain behavior.
 
-015-J is authorized for integration/conformance closure only. Do not add unrelated production behavior outside completed 015-I authority:
+Phase 015 is complete. Until a new explicit start gate is authorized, do not add or stabilize a new delivery program:
 
 - persistence/query schemas or migrations;
 - data-state/manifest/candidate stores;
@@ -122,11 +123,11 @@ Phase 014-H established:
 ```text
 IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       STARTED
-IMPLEMENTATION NEXT        015-J — NEXT ELIGIBLE / NOT AUTHORIZED
+IMPLEMENTATION NEXT        POST-PHASE-015 START GATE — NOT AUTHORIZED
 ```
 
-Implementation now includes the 015-C control foundation, 015-D Generation data-state/topology/promotion foundation, 015-E Strategy/runtime plus Learning/Learned-State foundation, 015-F Execution/recovery foundation, 015-G Evaluation/Evidence/Provenance/history/reproducibility foundation, 015-H authorization/disclosure/dependency-trust/no-egress foundation, and 015-I provider-neutral platform capability/portability/observability/support qualification. Provider-specific and enterprise-scale claims remain evidence-qualified rather than assumed. 015-J is the remaining gated Phase 015 slice.
+Implementation now includes the integrated 015-C through 015-I foundations plus 015-J C9 cross-slice/adversarial closure. Provider-specific, enterprise-scale and release claims remain evidence-qualified rather than assumed.
 
 ## Current next boundary
 
-**015-J — Cross-Slice Integration, Residual Risk Closure & Implementation Consolidation** — authorized / active.
+**Phase 015 is COMPLETE.** A new post-Phase-015 delivery program requires a separate explicit start gate and authorization.
