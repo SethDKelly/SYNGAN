@@ -9,19 +9,13 @@ PHASE_015_CURRENT = IMPLEMENTATION / (
     "implementation-consolidation-authority.md"
 )
 PHASE_015 = ROOT / "docs" / "phases" / "015" / "index.md"
-PHASE_016_AUTHORITY = (
-    ROOT
-    / "docs"
-    / "authority"
-    / "phase-016-documentation-okf-agentic-implementation-readiness-hardening-authority.md"
+PHASE_016_AUTHORITY = ROOT / "docs" / "authority" / (
+    "phase-016-documentation-okf-agentic-implementation-readiness-"
+    "hardening-authority.md"
 )
 PHASE_016 = ROOT / "docs" / "phases" / "016" / "index.md"
-PHASE_016_A = (
-    ROOT
-    / "docs"
-    / "phases"
-    / "016"
-    / "016-A-documentation-corpus-current-owner-duplication-supersession-audit.md"
+PHASE_016_A = ROOT / "docs" / "phases" / "016" / (
+    "016-A-documentation-corpus-current-owner-duplication-supersession-audit.md"
 )
 PHASE_016_INVENTORY = (
     ROOT / "docs" / "phases" / "016" / "016-A-documentation-corpus-inventory.json"
