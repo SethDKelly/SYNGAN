@@ -286,7 +286,11 @@ def assess_runtime_closure(
 
     for role_id in binding.required_roles:
         resolution = by_role.get(role_id)
-        if resolution is None or not resolution.available or resolution.environment_identity is None:
+        if (
+            resolution is None
+            or not resolution.available
+            or resolution.environment_identity is None
+        ):
             incomplete_roles.add(role_id)
             continue
         if resolution.runtime_compatible is None:
