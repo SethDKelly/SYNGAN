@@ -93,7 +93,7 @@ Phase 013 completed 013-A through 013-J with zero unresolved AMAT-2/AMAT-3/AR-3.
 
 ## Phase 014 start-gate result
 
-The Phase 014 pre-phase start gate is complete and has activated the dependency-safe R2/R3 sequence under [Phase 014 Whole-Design Consolidation & Readiness Authority](phase-014-whole-design-readiness-authority.md).
+The Phase 014 pre-phase start gate is complete and has activated the dependency-safe R2/R3 sequence under [Phase 014 Whole-Design Consolidation & Readiness Authority](../history/authority/phase-014-whole-design-readiness-authority.md).
 
 ```text
 014-A  Whole-Design Audit Authority / Evidence Baseline / Traceability — COMPLETE
@@ -193,7 +193,7 @@ IMPLEMENTATION START       COMPLETED CURRENT AUTHORIZED PROGRAM
 IMPLEMENTATION NEXT        POST-PHASE-015 START GATE — NOT AUTHORIZED
 ~~~
 
-Detailed authority: [Phase 014-H R2/R3 Decision & Phase 015 Handoff](phase-014-h-consolidation-r2-r3-decision-phase-015-handoff.md).
+Detailed authority: [Phase 014-H R2/R3 Decision & Phase 015 Handoff](../history/authority/phase-014-h-consolidation-r2-r3-decision-phase-015-handoff.md).
 
 ## 015-C implementation-start evidence
 
@@ -213,7 +213,7 @@ IMPLEMENTATION START               STARTED
 015-H                              NEXT ELIGIBLE / NOT AUTHORIZED
 ~~~
 
-Current authority: [015-C Identity / References / Control Persistence](../implementation/phase-015-c-identity-reference-control-persistence-authority.md).
+Current authority: [015-C Identity / References / Control Persistence](../history/implementation/phase-015-c-identity-reference-control-persistence-authority.md).
 
 ## Current synchronization state
 
@@ -284,7 +284,7 @@ Phase 015 Start Gate   COMPLETE
 IMPLEMENTATION START       STARTED
 ~~~
 
-Current implementation authority: [Phase 015 Current Implementation Authority / Start Gate](../implementation/phase-015-current-implementation-authority-start-gate.md).
+Current implementation authority: [Phase 015 Current Implementation Authority / Start Gate](../history/implementation/phase-015-current-implementation-authority-start-gate.md).
 
 ## 015-D implementation evidence
 
@@ -303,7 +303,7 @@ upstream reopen                    NONE
 015-H                              NEXT ELIGIBLE / NOT AUTHORIZED
 ~~~
 
-Current authority: [015-D Distributed Data / Topology / Generation Promotion](../implementation/phase-015-d-distributed-data-topology-generation-promotion-authority.md).
+Current authority: [015-D Distributed Data / Topology / Generation Promotion](../history/implementation/phase-015-d-distributed-data-topology-generation-promotion-authority.md).
 
 ## 015-E implementation evidence
 
@@ -322,7 +322,7 @@ RR-06                              PARTIAL — scale qualification remains
 015-H                              NEXT ELIGIBLE / NOT AUTHORIZED
 ~~~
 
-Current authority: [015-E Strategy Runtime / Learning / Generation](../implementation/phase-015-e-strategy-runtime-learning-generation-authority.md).
+Current authority: [015-E Strategy Runtime / Learning / Generation](../history/implementation/phase-015-e-strategy-runtime-learning-generation-authority.md).
 
 ## 015-F implementation evidence
 
@@ -340,7 +340,7 @@ provider-specific qualification    remains 015-I / 015-J
 015-H                              NEXT ELIGIBLE / NOT AUTHORIZED
 ~~~
 
-Current authority: [015-F Execution / Attempt / Recovery](../implementation/phase-015-f-execution-attempt-admission-fencing-idempotency-checkpoint-cancellation-recovery-authority.md).
+Current authority: [015-F Execution / Attempt / Recovery](../history/implementation/phase-015-f-execution-attempt-admission-fencing-idempotency-checkpoint-cancellation-recovery-authority.md).
 
 ## 015-G implementation evidence
 
@@ -357,7 +357,7 @@ upstream reopen                    NONE
 015-H                              NEXT ELIGIBLE / NOT AUTHORIZED
 ~~~
 
-Current authority: [015-G Evaluation / Evidence / Provenance / History / Reproducibility](../implementation/phase-015-g-evaluation-evidence-provenance-history-reproducibility-authority.md).
+Current authority: [015-G Evaluation / Evidence / Provenance / History / Reproducibility](../history/implementation/phase-015-g-evaluation-evidence-provenance-history-reproducibility-authority.md).
 
 ## Historical 015-G handoff boundary
 

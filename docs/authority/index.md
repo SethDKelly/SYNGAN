@@ -13,21 +13,21 @@ These documents define how SYNGAN design knowledge is created, reconciled, audit
 - [Concept Design Methodology](design-methodology.md)
 - [Jackson Design Completion & Implementation Hold](jackson-design-completion-implementation-hold.md)
 - [Jackson Methodology Completion Matrix](jackson-methodology-completion-matrix.md)
-- [Phase 014 Whole-Design Consolidation & Readiness Authority](phase-014-whole-design-readiness-authority.md)
-- [Phase 014-A Whole-Design Evidence Baseline](phase-014-whole-design-audit-evidence-baseline.md)
-- [Phase 014-B Problem/Actor/Outcome/Concept-Purpose Audit](phase-014-b-problem-actor-outcome-concept-purpose-audit.md)
-- [Phase 014-C Concept/Dependence/Application-Family/Synchronization Integrity Audit](phase-014-c-concept-dependence-family-synchronization-integrity-audit.md)
-- [Phase 014-D Mapping/Interaction/Linguistic/Disclosure/Semantic-Parity Audit](phase-014-d-mapping-interaction-linguistic-disclosure-semantic-parity-audit.md)
-- [Phase 014-E Architecture Realization/Responsibility/Traceability Audit](phase-014-e-architecture-realization-responsibility-traceability-audit.md)
-- [Phase 014-F End-to-End Scenario/Failure/Recovery/Scale/Security/Portability Audit](phase-014-f-end-to-end-scenario-exception-failure-recovery-scale-security-portability-adversarial-audit.md)
-- [Phase 014-G Implementation-Neutral Completeness / Residual Readiness Register](phase-014-g-implementation-neutral-completeness-handoff-sufficiency-residual-readiness-register.md)
-- [Phase 014-H R2/R3 Decision & Phase 015 Handoff](phase-014-h-consolidation-r2-r3-decision-phase-015-handoff.md)
+- [Phase 014 Whole-Design Consolidation & Readiness Authority](../history/authority/phase-014-whole-design-readiness-authority.md)
+- [Phase 014-A Whole-Design Evidence Baseline](../history/authority/phase-014-whole-design-audit-evidence-baseline.md)
+- [Phase 014-B Problem/Actor/Outcome/Concept-Purpose Audit](../history/authority/phase-014-b-problem-actor-outcome-concept-purpose-audit.md)
+- [Phase 014-C Concept/Dependence/Application-Family/Synchronization Integrity Audit](../history/authority/phase-014-c-concept-dependence-family-synchronization-integrity-audit.md)
+- [Phase 014-D Mapping/Interaction/Linguistic/Disclosure/Semantic-Parity Audit](../history/authority/phase-014-d-mapping-interaction-linguistic-disclosure-semantic-parity-audit.md)
+- [Phase 014-E Architecture Realization/Responsibility/Traceability Audit](../history/authority/phase-014-e-architecture-realization-responsibility-traceability-audit.md)
+- [Phase 014-F End-to-End Scenario/Failure/Recovery/Scale/Security/Portability Audit](../history/authority/phase-014-f-end-to-end-scenario-exception-failure-recovery-scale-security-portability-adversarial-audit.md)
+- [Phase 014-G Implementation-Neutral Completeness / Residual Readiness Register](../history/authority/phase-014-g-implementation-neutral-completeness-handoff-sufficiency-residual-readiness-register.md)
+- [Phase 014-H R2/R3 Decision & Phase 015 Handoff](../history/authority/phase-014-h-consolidation-r2-r3-decision-phase-015-handoff.md)
 
 ## Completed upstream authority
 
-- [Phase 012 Jackson Concept-Design Consolidation](phase-012-jackson-concept-design-consolidation.md)
+- [Phase 012 Jackson Concept-Design Consolidation](../history/authority/phase-012-jackson-concept-design-consolidation.md)
 - [Phase 013 Consolidated Architecture Contract](../architecture/phase-013-consolidated-architecture-contract.md)
-- [Phase 013 Residual Architecture Misfit Register](phase-013-residual-architecture-misfit-register.md)
+- [Phase 013 Residual Architecture Misfit Register](../history/authority/phase-013-residual-architecture-misfit-register.md)
 - [Current Cross-Concept Synchronization Contract](../synchronizations/current-cross-concept-synchronizations.md)
 
 Detailed Phase 013-B through 013-I architecture authorities remain current supporting detail beneath the consolidated Phase 013 contract.

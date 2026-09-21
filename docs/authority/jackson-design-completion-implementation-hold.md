@@ -62,10 +62,10 @@ R3                              READY
 
 Current supporting authority:
 
-- [Phase 014 Whole-Design Consolidation & Readiness Authority](phase-014-whole-design-readiness-authority.md)
-- [Phase 014 Index](../phases/014/index.md)
-- [Phase 014 Start Gate / Decomposition Record](../phases/014/014-start-gate-whole-design-readiness-decomposition.md)
-- [013-J Phase Record](../phases/013/013-J-phase-013-consolidation-r1-completion-decision-phase-014-handoff.md)
+- [Phase 014 Whole-Design Consolidation & Readiness Authority](../history/authority/phase-014-whole-design-readiness-authority.md)
+- [Phase 014 Index](../history/phases/014/index.md)
+- [Phase 014 Start Gate / Decomposition Record](../history/phases/014/014-start-gate-whole-design-readiness-decomposition.md)
+- [013-J Phase Record](../history/phases/013/013-J-phase-013-consolidation-r1-completion-decision-phase-014-handoff.md)
 - [Phase 013 Consolidated Architecture Contract](../architecture/phase-013-consolidated-architecture-contract.md)
 
 ## Phase 014 boundary

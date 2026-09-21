@@ -46,8 +46,8 @@ This is not a claim that the catalog is permanently frozen. It is a claim that c
 011-H applies:
 
 - [Design Quality Validation Authority](design-quality-validation-authority.md), especially `SC-9` and `SC-10`;
-- [Catalog Perimeter Candidate Rediscovery, Missing-Concept & Boundary Audit](../concepts/catalog-perimeter-candidate-rediscovery-boundary-audit.md);
-- [Phase 008-G Deferred/Rejected Candidate Rediscovery](../phases/008/008-G-deferred-rejected-candidate-rediscovery-missing-concept-boundary-audit.md);
+- [Catalog Perimeter Candidate Rediscovery, Missing-Concept & Boundary Audit](../history/concepts/catalog-perimeter-candidate-rediscovery-boundary-audit.md);
+- [Phase 008-G Deferred/Rejected Candidate Rediscovery](../history/phases/008/008-G-deferred-rejected-candidate-rediscovery-missing-concept-boundary-audit.md);
 - [Contraction, Extension & Product-Scope Consequences](../dependence/contraction-extension-consequences.md);
 - current accepted concept specifications;
 - current application-family and synchronization authority;
