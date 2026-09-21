@@ -21,7 +21,7 @@ R3                              READY
 
 IMPLEMENTATION READINESS        READY
 IMPLEMENTATION START            STARTED
-IMPLEMENTATION NEXT             015-H — NEXT ELIGIBLE / NOT AUTHORIZED
+IMPLEMENTATION NEXT             015-I — NEXT ELIGIBLE / NOT AUTHORIZED
 ~~~
 
 Readiness is not permission to implement.
@@ -68,8 +68,8 @@ P15-06  explicit first-slice authorization
 015-E  COMPLETE — Strategy/Method Binding, Dependency Closure, Learning/Learned-State & Generation Runtime
 015-F  COMPLETE — Execution/Attempt, Admission, Fencing, Idempotency, Checkpoint, Cancellation & Recovery
 015-G  COMPLETE — Evaluation, Evidence, Provenance, Historical Read Composition & Reproducibility
-015-H  NEXT ELIGIBLE / NOT AUTHORIZED — Authorization, Disclosure, Protected Existence, Secrets, Dependency Trust & No-Egress
-015-I  NOT AUTHORIZED — Platform Capability, Portability, Observability, Scale/Performance & Support Qualification
+015-H  COMPLETE — Authorization, Disclosure, Protected Existence, Secrets, Dependency Trust & No-Egress
+015-I  NEXT ELIGIBLE / NOT AUTHORIZED — Platform Capability, Portability, Observability, Scale/Performance & Support Qualification
 015-J  NOT AUTHORIZED — Cross-Slice Integration, Residual Risk Closure & Implementation Consolidation
 ~~~
 
@@ -187,8 +187,8 @@ typed Provenance                   IMPLEMENTED
 historical read composition        IMPLEMENTED
 Reproducibility assessment         DERIVED / NON-CANONICAL
 C6                                 ACTIVE / PASS
-authorization / disclosure         NOT IMPLEMENTED
-015-H                              NEXT ELIGIBLE / NOT AUTHORIZED
+authorization / disclosure         IMPLEMENTED IN 015-H
+015-H                              COMPLETE
 ~~~
 
 ## Residual readiness risks inherited from 014-G
@@ -233,4 +233,23 @@ Earlier language such as active, canonical, current planning overlay, or concret
 
 ## Current next boundary
 
-**015-H — Authorization, Disclosure, Protected Existence, Secrets, Dependency Trust & No-Egress** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
+**015-I — Platform Capability, Portability, Observability, Scale/Performance & Support Qualification** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
+
+## 015-H completion state
+
+Current completion authority: [015-H Authorization / Disclosure / Protected Existence / Secrets / Dependency Trust / No-Egress](../../implementation/phase-015-h-authorization-disclosure-protected-existence-secrets-dependency-trust-no-egress-authority.md).
+
+~~~text
+015-H                              COMPLETE
+action-oriented authorization      IMPLEMENTED / VERIFIED
+protected existence / disclosure   IMPLEMENTED / VERIFIED
+dependency trust qualification     IMPLEMENTED / VERIFIED
+scoped runtime capabilities        IMPLEMENTED / VERIFIED
+offline/no-egress non-widening     IMPLEMENTED / VERIFIED
+SecretRef / bearer separation      IMPLEMENTED / VERIFIED
+C7                                 ACTIVE / PASS
+provider containment proof         NOT CLAIMED
+015-I                              NEXT ELIGIBLE / NOT AUTHORIZED
+~~~
+
+Verify run 35632267389 passed all required gates through C7. 015-I remains separately gated.
