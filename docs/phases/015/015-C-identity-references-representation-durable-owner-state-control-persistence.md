@@ -64,15 +64,19 @@ Required gates on the active implementation passed:
 
 ~~~text
 Verify workflow
-commit    31705b6df6bd4fc5630960307b2b5ccc33175872
+commit    a2d8adab4ca60b855550ae09e3e3713de2ccf5c1
+workflow  Verify
+run       35558772291
 portable  PASS
 control   PASS
-C2 tests  8 / 8 PASS
+C2 tests  9 / 9 PASS
+mypy      PASS
+Import Linter  2 / 2 contracts kept
 mypy      PASS
 Import Linter  2 / 2 contracts kept
 ~~~
 
-The final post-closure repository head must remain green.
+The generalized immutable-binding implementation head is green. Final closure/navigation-only edits must also preserve a green repository.
 
 ## Implementation posture
 
