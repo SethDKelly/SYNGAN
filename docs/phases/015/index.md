@@ -21,7 +21,7 @@ R3                              READY
 
 IMPLEMENTATION READINESS        READY
 IMPLEMENTATION START            NOT STARTED
-IMPLEMENTATION NEXT             015-C — NEXT ELIGIBLE / NOT AUTHORIZED
+IMPLEMENTATION NEXT             015-C — AUTHORIZED / ACTIVE
 ~~~
 
 Readiness is not permission to implement.
@@ -63,7 +63,7 @@ P15-06  explicit first-slice authorization
 ~~~text
 015-A  COMPLETE — Current Implementation Baseline, Repository/Toolchain & Scaffold Reconciliation
 015-B  COMPLETE — Current Verification Harness, Architecture-Fitness & Evidence-Gate Foundation
-015-C  NEXT ELIGIBLE / NOT AUTHORIZED — Identity, References, Representation, Durable Owner-State & Control Persistence
+015-C  AUTHORIZED / ACTIVE — Identity, References, Representation, Durable Owner-State & Control Persistence
 015-D  NOT AUTHORIZED — Distributed Data-State, Topology, Candidate/Seal & Generation Promotion
 015-E  NOT AUTHORIZED — Strategy/Method Binding, Dependency Closure, Learning/Learned-State & Generation Runtime
 015-F  NOT AUTHORIZED — Execution/Attempt, Admission, Fencing, Idempotency, Checkpoint, Cancellation & Recovery
@@ -95,6 +95,8 @@ Verify workflow                     PASS
 ## 015-B completion state
 
 Current completion authority: [015-B Current Verification Harness / Architecture Fitness / Evidence Gates](../../implementation/phase-015-b-current-verification-harness-architecture-fitness-evidence-gates.md).
+
+Current active authority: [015-C Identity / References / Control Persistence](../../implementation/phase-015-c-identity-reference-control-persistence-authority.md).
 
 ~~~text
 015-B                              COMPLETE
@@ -136,7 +138,7 @@ Earlier language such as active, canonical, current planning overlay, or concret
 
 ## Current prohibition
 
-015-A and 015-B are complete. Until 015-C is explicitly authorized, and for all responsibilities outside completed 015-B authority:
+015-A and 015-B are complete and 015-C is explicitly authorized/active. For all responsibilities outside 015-C authority:
 
 - do not add domain behavior;
 - do not stabilize public APIs/schemas;
@@ -148,4 +150,4 @@ Earlier language such as active, canonical, current planning overlay, or concret
 
 ## Current next boundary
 
-**015-C — Identity, References, Representation, Durable Owner-State & Control Persistence** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
+**015-C — Identity, References, Representation, Durable Owner-State & Control Persistence** is active and authorized.
