@@ -15,7 +15,7 @@ Maintain the boundary between completed concept design, completed architecture r
 ```text
 IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       NOT STARTED
-IMPLEMENTATION NEXT        PHASE 015 AUTHORITY GATE
+IMPLEMENTATION NEXT        015-A — AUTHORIZED
 ```
 
 R3 readiness changes readiness only; it does not start implementation.
@@ -31,7 +31,7 @@ whole-design completion / readiness              ← Phase 014 COMPLETE / R2 CLO
         ↓
 implementation readiness                         ← READY / NOT STARTED
         ↓
-explicit implementation authority               ← Phase 015 START GATE NEXT
+explicit implementation authority               ← Phase 015 START GATE COMPLETE / 015-A AUTHORIZED
 ```
 
 ## Current design state
@@ -83,7 +83,7 @@ Phase 014-H established:
 ```text
 IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       NOT STARTED
-IMPLEMENTATION NEXT        PHASE 015 AUTHORITY GATE
+IMPLEMENTATION NEXT        015-A — AUTHORIZED
 ```
 
 That state still does not authorize production changes. Phase 015 must explicitly establish implementation authority and controlled-delivery rules.
@@ -135,11 +135,23 @@ READINESS-BLOCK                   0
 READINESS-RISK                    8 — HANDED OFF
 IMPLEMENTATION READINESS          READY
 IMPLEMENTATION START              NOT STARTED
-IMPLEMENTATION NEXT               PHASE 015 AUTHORITY GATE
+IMPLEMENTATION NEXT        015-A — AUTHORIZED
 ~~~
 
 Implementation remains held until the Phase 015 start gate establishes current implementation authority and explicitly authorizes a first delivery slice.
 
+## Phase 015 start-gate completion state
+
+~~~text
+Phase 015                         ACTIVE
+Phase 015 Start Gate              COMPLETE
+015-A                             AUTHORIZED / NEXT ELIGIBLE
+015-B..015-J                      NOT AUTHORIZED
+IMPLEMENTATION START              NOT STARTED
+~~~
+
+The hold is now slice-specific: 015-A may reconcile the repository/toolchain/scaffold baseline, while domain implementation and all later responsibilities remain held.
+
 ## Current next boundary
 
-**Phase 015 Start Gate — Implementation Authority, Current-Baseline Reconciliation & Controlled-Delivery Decomposition** is next eligible.
+**015-A — Current Implementation Baseline, Repository/Toolchain & Scaffold Reconciliation** is next eligible and explicitly authorized.
