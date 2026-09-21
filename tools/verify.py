@@ -6,11 +6,33 @@ import importlib.resources
 import shutil
 import subprocess
 import sys
+import tomllib
 import zipfile
 from collections.abc import Sequence
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+VERIFICATION_MANIFEST = ROOT / "verification.toml"
+
+
+def _verification_manifest() -> dict[str, object]:
+    with VERIFICATION_MANIFEST.open("rb") as handle:
+        return tomllib.load(handle)
+
+
+def _portable_marker_expression() -> str:
+    manifest = _verification_manifest()
+    profiles = manifest["profiles"]
+    if not isinstance(profiles, dict):
+        raise SystemExit("verification.toml profiles must be a table")
+    portable = profiles["portable"]
+    if not isinstance(portable, dict):
+        raise SystemExit("verification.toml profiles.portable must be a table")
+    excluded = portable["exclude_markers"]
+    if not isinstance(excluded, list) or not all(isinstance(item, str) for item in excluded):
+        raise SystemExit("verification.toml portable exclusions must be a list of marker names")
+    return " and ".join(f"not {marker}" for marker in excluded)
+
 
 
 def _run(command: Sequence[str]) -> None:
@@ -38,6 +60,7 @@ def verify_bootstrap() -> None:
     required_paths = (
         ROOT / "pyproject.toml",
         ROOT / "uv.lock",
+        VERIFICATION_MANIFEST,
         ROOT / "src" / "syngan" / "__init__.py",
         ROOT / "src" / "syngan" / "py.typed",
         ROOT
@@ -70,16 +93,44 @@ def verify_type() -> None:
     _run([sys.executable, "-m", "mypy", "src", "tools", "tests"])
 
 
-def verify_unit() -> None:
-    _run([sys.executable, "-m", "pytest", "tests/unit"])
+def verify_unit(marker_expression: str | None = None) -> None:
+    command = [sys.executable, "-m", "pytest", "tests/unit"]
+    if marker_expression is not None:
+        command.extend(["-m", marker_expression])
+    _run(command)
 
 
 def verify_architecture() -> None:
     _run([_tool("lint-imports"), "--no-cache"])
 
 
-def verify_fitness() -> None:
-    _run([sys.executable, "-m", "pytest", "tests/fitness"])
+def verify_fitness(marker_expression: str | None = None) -> None:
+    command = [sys.executable, "-m", "pytest", "tests/fitness"]
+    if marker_expression is not None:
+        command.extend(["-m", marker_expression])
+    _run(command)
+
+
+def verify_authority() -> None:
+    _run(
+        [
+            sys.executable,
+            "-m",
+            "pytest",
+            "tests/fitness/test_phase_015_authority_boundary.py",
+            "tests/fitness/test_verification_harness_contract.py",
+            "tests/unit/test_bootstrap_metadata.py",
+        ]
+    )
+
+
+def verify_static() -> None:
+    verify_bootstrap()
+    verify_lint()
+    verify_format()
+    verify_type()
+    verify_architecture()
+    verify_authority()
 
 
 def verify_package() -> None:
@@ -142,15 +193,16 @@ def verify_coverage() -> None:
     )
 
 
-def verify_all() -> None:
-    verify_bootstrap()
-    verify_lint()
-    verify_format()
-    verify_type()
-    verify_unit()
-    verify_architecture()
-    verify_fitness()
+def verify_portable() -> None:
+    marker_expression = _portable_marker_expression()
+    verify_static()
+    verify_unit(marker_expression)
+    verify_fitness(marker_expression)
     verify_package()
+
+
+def verify_all() -> None:
+    verify_portable()
 
 
 def main(argv: Sequence[str] | None = None) -> int:
@@ -159,6 +211,9 @@ def main(argv: Sequence[str] | None = None) -> int:
         "profile",
         choices=(
             "bootstrap",
+            "authority",
+            "static",
+            "portable",
             "lint",
             "format",
             "type",
@@ -176,6 +231,9 @@ def main(argv: Sequence[str] | None = None) -> int:
 
     profiles = {
         "bootstrap": verify_bootstrap,
+        "authority": verify_authority,
+        "static": verify_static,
+        "portable": verify_portable,
         "lint": verify_lint,
         "format": verify_format,
         "type": verify_type,
