@@ -27,7 +27,18 @@ def test_phase_015_index_exposes_only_015_a_as_authorized_next_slice() -> None:
 
     assert "status: active" in phase_text
     assert "015-A  AUTHORIZED / NEXT" in phase_text
-    for phase_id in ("015-B", "015-C", "015-D", "015-E", "015-F", "015-G", "015-H", "015-I", "015-J"):
+    locked_phases = (
+        "015-B",
+        "015-C",
+        "015-D",
+        "015-E",
+        "015-F",
+        "015-G",
+        "015-H",
+        "015-I",
+        "015-J",
+    )
+    for phase_id in locked_phases:
         assert f"{phase_id}  NOT AUTHORIZED" in phase_text
 
 
