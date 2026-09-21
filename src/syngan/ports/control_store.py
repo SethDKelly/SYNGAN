@@ -29,8 +29,8 @@ class AuthorityScopeMismatch(ControlStoreError):
     """A reference/store authority scope does not match."""
 
 
-class ImmutableRecordConflict(ControlStoreError):
-    """An immutable identity was reused with conflicting content."""
+class ImmutableBindingConflict(ControlStoreError):
+    """An immutable binding identity was reused with conflicting content."""
 
 
 class CurrentStateConflict(ControlStoreError):
@@ -65,16 +65,16 @@ class CoordinationIntentState(StrEnum):
 
 
 @dataclass(frozen=True, slots=True)
-class ImmutableRevisionRecord:
+class ImmutableBindingRecord:
     reference: TypedReference
     schema_version: RepresentationSchemaVersion
     payload: EncodedPayload
 
 
 @dataclass(frozen=True, slots=True)
-class RevisionResolution:
+class BindingResolution:
     status: ResolutionStatus
-    record: ImmutableRevisionRecord | None = None
+    record: ImmutableBindingRecord | None = None
 
 
 @dataclass(frozen=True, slots=True)
@@ -116,17 +116,17 @@ class ControlStore(Protocol):
         self, expected: RecoveryFrontier, new: RecoveryFrontier
     ) -> RecoveryFrontier: ...
 
-    def put_immutable_revision(
+    def put_immutable_binding(
         self,
         reference: TypedReference,
         schema_version: RepresentationSchemaVersion,
         payload: EncodedPayload,
         authority_frontier: RecoveryFrontier,
-    ) -> ImmutableRevisionRecord: ...
+    ) -> ImmutableBindingRecord: ...
 
-    def resolve_immutable_revision(self, reference: TypedReference) -> RevisionResolution: ...
+    def resolve_immutable_binding(self, reference: TypedReference) -> BindingResolution: ...
 
-    def mark_immutable_revision_unavailable(
+    def mark_immutable_binding_unavailable(
         self, reference: TypedReference, authority_frontier: RecoveryFrontier
     ) -> None: ...
 
