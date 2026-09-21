@@ -558,9 +558,15 @@ SYNC-15                                  historical/reclassified — Reproducibi
 
 Platform/deployment architecture constrains existing owner/synchronization behavior but owns no synchronization state.
 
-Most relevant active rules are contextual use of `SYNC-02`, `SYNC-04`, `SYNC-06`, `SYNC-07`, `SYNC-10`, `SYNC-11`, `SYNC-12`, `SYNC-13` and `SYNC-14`.
+Most relevant active rules are contextual use of `SYNC-02`, `SYNC-04`, `SYNC-06`, `SYNC-07`, `SYNC-10`, `SYNC-11`, `SYNC-12`, `SYNC-13` and `SYNC-14`, only when their named relation/capability occurs.
+
+In particular, direct Generation does not activate `SYNC-06`, and external release/use/governance handoff is not `SYNC-13`. Platform capability or provider integration cannot broaden either synchronization.
 
 Historical `SYNC-08` whole-output and `SYNC-15` reproducibility references in pre-Phase-009 deployment/scale documents are semantically superseded. Their remaining corpus/link cleanup belongs to 013-I.
+
+### Phase 014-E propagation note
+
+Phase 014-E added the current conditional-scope qualification so provider/platform architecture cannot accidentally universalize `SYNC-06` or broaden `SYNC-13`.
 
 No synchronization-design reopen is required.
 
