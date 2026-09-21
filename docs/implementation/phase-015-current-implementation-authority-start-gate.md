@@ -337,3 +337,23 @@ IMPLEMENTATION START          STARTED
 Current authority: [015-D Distributed Data / Topology / Generation Promotion](phase-015-d-distributed-data-topology-generation-promotion-authority.md).
 
 The repository next boundary is **015-E — Strategy/Method Binding, Dependency Closure, Learning/Learned-State & Generation Runtime**, still gated pending explicit proceed.
+
+
+## Post-015-E consumption
+
+015-E has completed the provider-neutral Strategy/runtime, dependency-closure, Learning/Learned-State, and Generation runtime-planning foundation.
+
+~~~text
+015-A                         COMPLETE
+015-B                         COMPLETE
+015-C                         COMPLETE
+015-D                         COMPLETE
+015-E                         COMPLETE
+015-F                         NEXT ELIGIBLE / NOT AUTHORIZED
+015-G..015-J                  NOT AUTHORIZED
+IMPLEMENTATION START          STARTED
+~~~
+
+Current authority: [015-E Strategy Runtime / Learning / Generation](phase-015-e-strategy-runtime-learning-generation-authority.md).
+
+The repository next boundary is **015-F — Execution/Attempt, Admission, Fencing, Idempotency, Checkpoint, Cancellation & Recovery**, still gated pending explicit proceed.
