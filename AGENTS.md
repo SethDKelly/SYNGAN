@@ -4,7 +4,7 @@ These instructions apply repository-wide to automated coding/documentation agent
 
 ## Current posture
 
-**Jackson concept design and Phase 013/014 are complete; R2 is currently closed and R3 is READY. Phase 015 implementation has STARTED. The start gate and 015-A through 015-F are complete. 015-G is AUTHORIZED / ACTIVE for Evaluation, Evidence, Provenance, historical-read and reproducibility work only; later slices remain locked.**
+**Jackson concept design and Phase 013/014 are complete; R2 is currently closed and R3 is READY. Phase 015 implementation has STARTED. The start gate and 015-A through 015-G are complete. 015-H is next eligible but NOT AUTHORIZED pending explicit proceed; later slices remain locked.**
 
 Start with:
 
@@ -58,11 +58,12 @@ Phase 015 start gate                  COMPLETE
 015-D                                 COMPLETE
 015-E                                 COMPLETE
 015-F                                 COMPLETE
-015-G                                 AUTHORIZED / ACTIVE
-015-H..015-J                          NOT AUTHORIZED
+015-G                                 COMPLETE
+015-H                                 NEXT ELIGIBLE / NOT AUTHORIZED
+015-I..015-J                          NOT AUTHORIZED
 implementation readiness             READY
 implementation start                 STARTED
-implementation next                  015-G — AUTHORIZED / ACTIVE
+implementation next                  015-H — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
 ## Primary authority rule
@@ -143,11 +144,11 @@ Phase 014-H has established:
 ```text
 IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       STARTED
-IMPLEMENTATION NEXT        015-G — AUTHORIZED / ACTIVE
+IMPLEMENTATION NEXT        015-H — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
-015-A through 015-F are complete. 015-G is authorized for Evaluation/Evidence/Provenance/history/reproducibility only. Security/disclosure/provider policy and scale qualification remain locked.
+015-A through 015-G are complete. Evaluation/Evidence/Provenance/history/reproducibility are implemented. Authorization/disclosure/dependency-trust/no-egress enforcement, provider qualification and scale qualification remain locked.
 
 ## Current next boundary
 
-**015-G — Evaluation, Evidence, Provenance, Historical Read Composition & Reproducibility** is active and authorized.
+**015-H — Authorization, Disclosure, Protected Existence, Secrets, Dependency Trust & No-Egress** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
