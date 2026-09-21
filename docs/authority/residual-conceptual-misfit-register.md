@@ -10,7 +10,7 @@ status: complete-current
 
 Preserve the final Phase 011 conceptual-quality residual ledger while recording later closure of its downstream M6 deferral and the completed Phase 012/013 sequence.
 
-Phase 013 architecture residuals are tracked separately in [Phase 013 Residual Architecture Misfit Register](phase-013-residual-architecture-misfit-register.md).
+Phase 013 architecture residuals are tracked separately in [Phase 013 Residual Architecture Misfit Register](../history/authority/phase-013-residual-architecture-misfit-register.md).
 
 ## Current result
 

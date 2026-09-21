@@ -245,7 +245,7 @@ Current architecture must preserve:
 - scale and disclosure limitations without semantic weakening;
 - topology presets as convenience rather than semantic authority.
 
-[Phase 013-D Distributed Data Reconciliation](../architecture/phase-013-d-distributed-data-topology-manifest-candidate-promotion-reconciliation.md) is the current downstream architecture interpretation of this contract.
+[Phase 013-D Distributed Data Reconciliation](../history/architecture/phase-013-d-distributed-data-topology-manifest-candidate-promotion-reconciliation.md) is the current downstream architecture interpretation of this contract.
 
 ## Invariants
 
