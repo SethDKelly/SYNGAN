@@ -307,9 +307,7 @@ def generation_data_state_from_payload(payload: EncodedPayload) -> GenerationDat
         generation_commitment=_reference_from_value(
             value.get("generation_commitment"), "Generation commitment"
         ),
-        topology=topology_from_payload(
-            EncodedPayload.from_object(topology_value)
-        ),
+        topology=topology_from_payload(EncodedPayload.from_object(topology_value)),
         candidates=tuple(candidates),
         completed_output=completed,
     )
