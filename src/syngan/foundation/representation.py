@@ -137,9 +137,7 @@ def decode_reference(encoded: str) -> TypedReference:
         resource_id=LogicalId(_required_string(payload, "resource_id")),
     )
     revision = SemanticRevisionId(revision_value) if revision_value is not None else None
-    commitment = (
-        CommitmentSnapshotId(commitment_value) if commitment_value is not None else None
-    )
+    commitment = CommitmentSnapshotId(commitment_value) if commitment_value is not None else None
     return TypedReference(
         key=key,
         revision_id=revision,
