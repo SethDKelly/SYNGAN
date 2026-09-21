@@ -317,9 +317,7 @@ def learned_state_material_from_payload(
         raise ValueError("Learned-State material references must be lists")
     if not isinstance(codec, str):
         raise ValueError("Learned-State material codec_identity must be a string")
-    if not isinstance(limitations, list) or not all(
-        isinstance(item, str) for item in limitations
-    ):
+    if not isinstance(limitations, list) or not all(isinstance(item, str) for item in limitations):
         raise ValueError("Learned-State material limitations must be strings")
     return LearnedStateMaterialDescriptor(
         reference=_reference_from_value(value.get("reference"), "Learned-State material"),
