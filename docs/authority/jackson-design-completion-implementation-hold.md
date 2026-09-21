@@ -48,7 +48,8 @@ Phase 014                       ACTIVE
 014-C                           COMPLETE
 014-D                           COMPLETE
 014-E                           COMPLETE
-014-F                           NEXT ELIGIBLE
+014-F                           COMPLETE
+014-G                           NEXT ELIGIBLE
 R2                              OPEN
 R3                              OPEN
 ```
@@ -106,4 +107,4 @@ Phase 014 findings must distinguish missing design semantics from normal impleme
 
 ## Current next boundary
 
-**014-F — End-to-End Scenario, Exception, Failure, Recovery, Scale, Security, Portability & Adversarial Whole-Design Audit** is next eligible.
+**014-G — Implementation-Neutral Completeness, Decision-Ambiguity, Handoff Sufficiency & Residual Whole-Design Register** is next eligible.
