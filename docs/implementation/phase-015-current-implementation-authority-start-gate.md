@@ -300,3 +300,21 @@ IMPLEMENTATION START          NOT STARTED
 Current verification authority: [015-B Current Verification Harness / Architecture Fitness / Evidence Gates](phase-015-b-current-verification-harness-architecture-fitness-evidence-gates.md).
 
 The repository next boundary is **015-C — Identity, References, Representation, Durable Owner-State & Control Persistence**, still gated pending explicit proceed.
+
+
+## Post-015-C consumption
+
+015-C has completed the first production-source implementation foundation.
+
+~~~text
+015-A                         COMPLETE
+015-B                         COMPLETE
+015-C                         COMPLETE
+015-D                         NEXT ELIGIBLE / NOT AUTHORIZED
+015-E..015-J                  NOT AUTHORIZED
+IMPLEMENTATION START          STARTED
+~~~
+
+Current authority: [015-C Identity / References / Control Persistence](phase-015-c-identity-reference-control-persistence-authority.md).
+
+The repository next boundary is **015-D — Distributed Data-State, Structured Topology, Candidate/Seal & Generation Promotion**, still gated pending explicit proceed.
