@@ -176,9 +176,16 @@ class EvidenceHistoryService:
             for assertion in self._required_finding_provenance(finding):
                 self._ensure_provenance(assertion, authority_frontier)
 
+        finding_limitations = tuple(
+            limitation
+            for finding in result.findings
+            for limitation in finding.limitations
+            if limitation not in result.limitations
+        )
+        completion_limitations = (*result.limitations, *finding_limitations)
         next_state = snapshot.state.complete(
             tuple(item.reference for item in evidence),
-            limitations=result.limitations,
+            limitations=completion_limitations,
         )
         completed = self._persist_evaluation(
             snapshot,
@@ -540,6 +547,11 @@ class EvidenceHistoryService:
         for finding in result.findings:
             if finding.criterion_reference not in state.criterion_references:
                 raise ValueError("finding answers an unbound Criterion")
+            if any(
+                reference not in state.baseline_references
+                for reference in finding.baseline_references
+            ):
+                raise ValueError("finding uses an unbound baseline reference")
 
     def _finding_from_draft(
         self,
