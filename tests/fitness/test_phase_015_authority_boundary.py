@@ -11,6 +11,14 @@ CURRENT = IMPLEMENTATION / (
 PHASE = ROOT / "docs" / "phases" / "015" / "index.md"
 AGENTS = ROOT / "AGENTS.md"
 RESIDUAL = IMPLEMENTATION / "phase-015-residual-risk-closure-support-scope-register.md"
+METHODOLOGY = ROOT / "docs" / "authority" / "jackson-methodology-completion-matrix.md"
+CONCEPTUAL_RESIDUAL = ROOT / "docs" / "authority" / "residual-conceptual-misfit-register.md"
+POST_015 = (
+    ROOT
+    / "docs"
+    / "authority"
+    / "post-phase-015-methodology-documentation-reconciliation.md"
+)
 
 
 def test_phase_015_completion_authority_is_discoverable() -> None:
@@ -78,3 +86,31 @@ def test_015_j_c9_and_residual_closure_evidence_are_present() -> None:
     assert "POST-PHASE-015" not in residual_text or "No post-Phase-015 stage is authorized" in (
         residual_text
     )
+
+
+
+def test_post_phase_015_methodology_reconciliation_is_current() -> None:
+    methodology_text = METHODOLOGY.read_text(encoding="utf-8")
+    residual_text = CONCEPTUAL_RESIDUAL.read_text(encoding="utf-8")
+    reconciliation_text = POST_015.read_text(encoding="utf-8")
+
+    assert "JACKSON CONCEPT DESIGN              COMPLETE FOR CURRENT PRODUCT SCOPE" in (
+        methodology_text
+    )
+    assert "PHASE 015                           COMPLETE" in methodology_text
+    assert "PHASE 016                           NOT DEFINED" in methodology_text
+
+    assert "M8 FUTURE REDISCOVERY GROUPS                    4 / DORMANT" in (
+        residual_text
+    )
+    assert "PHASE 015                                        COMPLETE" in residual_text
+    assert "PHASE 016                                        NOT DEFINED" in residual_text
+
+    assert "PHASE 016                       NOT DEFINED" in reconciliation_text
+    assert "POST-PHASE-015 DELIVERY AUTHORITY   NONE" in reconciliation_text
+
+
+def test_no_phase_016_authority_is_created_by_reconciliation() -> None:
+    assert not (ROOT / "docs" / "phases" / "016").exists()
+    assert not list((ROOT / "docs" / "authority").glob("*phase-016*"))
+    assert not list((ROOT / "docs" / "implementation").glob("*phase-016*"))
