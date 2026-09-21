@@ -57,7 +57,9 @@ class GenerationCandidate:
     def __post_init__(self) -> None:
         if self.status in {CandidateStatus.SEALED, CandidateStatus.PROMOTED}:
             if self.sealed_subject_reference is None:
-                raise ValueError(f"{self.status.value} candidate requires a sealed subject reference")
+                raise ValueError(
+                    f"{self.status.value} candidate requires a sealed subject reference"
+                )
         if self.sealed_subject_reference is not None:
             if self.sealed_subject_reference.commitment_snapshot_id is None:
                 raise ValueError("candidate sealed subject must use an exact commitment snapshot")
