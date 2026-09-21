@@ -181,7 +181,7 @@ The user explicitly authorized Phase 016 and requested execution of the first su
 ~~~text
 Phase 016   AUTHORIZED / ACTIVE
 016-A       COMPLETE
-016-B       NEXT ELIGIBLE / NOT AUTHORIZED
+016-B       AUTHORIZED / ACTIVE
 016-C..J    NOT AUTHORIZED
 product delivery beyond hardening  NOT AUTHORIZED
 ~~~
@@ -227,3 +227,18 @@ upstream reopen                                 NONE
 The audit confirmed that the main pre-implementation weakness is current/history/authority topology and agent retrieval discipline, not unresolved product semantics.
 
 No document relocation is authorized merely by the 016-A classifier. 016-B must establish explicit ownership/conservation evidence before normalization.
+
+
+## 016-B authorization
+
+The user explicitly authorized 016-B after 016-A completion.
+
+Current 016-B owners:
+
+- [Current Repository Status](current-repository-status.md)
+- [Canonical Knowledge Ownership Map](canonical-knowledge-ownership-map.md)
+- [Current Implementation & Support Scope](../implementation/current-support-scope.md)
+- [Documentation History](../history/index.md)
+- [016-B work record](../phases/016/016-B-current-knowledge-history-topology-canonical-ownership-progressive-disclosure.md)
+
+016-B may perform P16-1 authority-preserving relocation/consolidation and documented P16-2 routing/ownership choices. Product/runtime/provider work remains prohibited.
