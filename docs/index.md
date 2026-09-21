@@ -43,6 +43,7 @@ methodology / completion / cross-cutting authority
 - [Phase 015](phases/015/index.md)
 - [Phase 015 Current Implementation Authority / Start Gate](implementation/phase-015-current-implementation-authority-start-gate.md)
 - [015-A Current Implementation Baseline / Scaffold Reconciliation](implementation/phase-015-a-current-implementation-baseline-scaffold-reconciliation.md)
+- [015-B Current Verification Harness / Architecture Fitness / Evidence Gates](implementation/phase-015-b-current-verification-harness-architecture-fitness-evidence-gates.md)
 - [Phase 014](phases/014/index.md)
 - [Phase 014 Start Gate / Decomposition](phases/014/014-start-gate-whole-design-readiness-decomposition.md)
 - [Phase 013 Consolidated Architecture Contract](architecture/phase-013-consolidated-architecture-contract.md)
