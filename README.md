@@ -17,6 +17,8 @@ Current governing design authority includes:
 - [`Jackson Methodology Completion Matrix`](docs/authority/jackson-methodology-completion-matrix.md)
 - [`Jackson Design Completion & Implementation Hold`](docs/authority/jackson-design-completion-implementation-hold.md)
 - [`Phase 014 Whole-Design Consolidation & Readiness Authority`](docs/authority/phase-014-whole-design-readiness-authority.md)
+- [`Phase 014-H R2/R3 Decision & Phase 015 Handoff`](docs/authority/phase-014-h-consolidation-r2-r3-decision-phase-015-handoff.md)
+- [`Phase 015`](docs/phases/015/index.md)
 - [`Phase 014`](docs/phases/014/index.md)
 - [`Phase 014 Start Gate / Decomposition`](docs/phases/014/014-start-gate-whole-design-readiness-decomposition.md)
 - [`Phase 013 Consolidated Architecture Contract`](docs/architecture/phase-013-consolidated-architecture-contract.md)
@@ -31,7 +33,7 @@ Jackson concept design               COMPLETE FOR CURRENT PRODUCT SCOPE
 Phase 013                            COMPLETE
 R1 architecture reconciliation       CURRENTLY CLOSED
 Phase 014 start gate                 COMPLETE
-Phase 014                            ACTIVE
+Phase 014                            COMPLETE
 014-A                                COMPLETE
 014-B                                COMPLETE
 014-C                                COMPLETE
@@ -39,12 +41,12 @@ Phase 014                            ACTIVE
 014-E                                COMPLETE
 014-F                                COMPLETE
 014-G                                COMPLETE
-014-H                                NEXT ELIGIBLE
-R2                                   OPEN
-R3                                   OPEN
-implementation readiness             NOT READY
+014-H                                COMPLETE
+R2                                   CURRENTLY CLOSED
+R3                                   READY
+implementation readiness             READY
 implementation start                 NOT STARTED
-implementation next                  NOT YET
+implementation next                  PHASE 015 AUTHORITY GATE
 ```
 
 ## Phase 014
@@ -71,7 +73,7 @@ Approved sequence:
 014-E  architecture realization / design-to-architecture traceability — COMPLETE
 014-F  end-to-end scenarios / failure / recovery / scale / security / portability — COMPLETE
 014-G  implementation-neutral completeness / handoff sufficiency / residual register — COMPLETE
-014-H  R2 decision / R3 readiness decision / Phase 015 handoff
+014-H  R2 decision / R3 readiness decision / Phase 015 handoff — COMPLETE
 ```
 
 R3 may be decided only after the R2 evidence chain is complete.
@@ -80,20 +82,20 @@ R3 may be decided only after the R2 evidence chain is complete.
 
 ```text
 013    Post-Concept Representation & Architecture Reconciliation — COMPLETE
-014    Whole-Design Consolidation & Implementation-Readiness Decision — ACTIVE
-015    Implementation Authority & Controlled Delivery — FUTURE ONLY
+014    Whole-Design Consolidation & Implementation-Readiness Decision — COMPLETE
+015    Implementation Authority & Controlled Delivery — START GATE NEXT
 ```
 
-Until R3 is explicitly decided:
+Phase 014-H established:
 
 ```text
-IMPLEMENTATION READINESS   NOT READY
+IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       NOT STARTED
-IMPLEMENTATION NEXT        NOT YET
+IMPLEMENTATION NEXT        PHASE 015 AUTHORITY GATE
 ```
 
-Even a later positive R3 does not start implementation; explicit Phase 015 authority remains required.
+Readiness does not start implementation. Phase 015 must complete its authority/start gate and explicitly authorize a delivery slice before production work begins.
 
 ## Current next boundary
 
-**014-H — Phase 014 Consolidation, R2 Completion Decision, R3 Implementation-Readiness Decision & Phase 015 Handoff** is next eligible.
+**Phase 015 Start Gate — Implementation Authority, Current-Baseline Reconciliation & Controlled-Delivery Decomposition** is next eligible.
