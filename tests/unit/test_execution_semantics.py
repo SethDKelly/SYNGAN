@@ -110,8 +110,7 @@ def test_cancellation_fences_attempt_and_late_success_is_observation_only() -> N
     assert late.current_attempt_id is None
     assert late.attempt(LogicalId("attempt-1")).status is AttemptStatus.FENCED
     assert (
-        late.attempt(LogicalId("attempt-1")).provider_observation
-        is ProviderObservation.SUCCEEDED
+        late.attempt(LogicalId("attempt-1")).provider_observation is ProviderObservation.SUCCEEDED
     )
 
 
