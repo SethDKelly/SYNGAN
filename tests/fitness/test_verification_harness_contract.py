@@ -27,7 +27,7 @@ def test_verification_manifest_has_current_lane_state() -> None:
         "C5": "active",
         "C6": "active",
         "C7": "active",
-        "C8": "defined",
+        "C8": "active",
         "C9": "defined",
     }
 
@@ -80,6 +80,7 @@ def test_repository_verifier_exposes_current_required_profiles() -> None:
         "execution",
         "evidence",
         "security",
+        "platform",
     ):
         assert f'"{profile}"' in verifier
 
