@@ -263,10 +263,7 @@ class SecurityService:
                 target=target,
             )
         )
-        if decision.outcome in {
-            AuthorizationOutcome.DENY,
-            AuthorizationOutcome.INDETERMINATE,
-        }:
+        if decision.outcome is not AuthorizationOutcome.PERMIT:
             return HistoricalReferenceView(
                 reference=view.reference,
                 knowledge_basis=view.knowledge_basis,
