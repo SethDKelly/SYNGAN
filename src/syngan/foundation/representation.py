@@ -15,9 +15,7 @@ from syngan.foundation.identity import (
     TypedReference,
 )
 
-JsonValue: TypeAlias = (
-    None | bool | int | float | str | list["JsonValue"] | dict[str, "JsonValue"]
-)
+JsonValue: TypeAlias = None | bool | int | float | str | list["JsonValue"] | dict[str, "JsonValue"]
 JsonObject: TypeAlias = dict[str, JsonValue]
 
 REFERENCE_SCHEMA_VERSION = 1
