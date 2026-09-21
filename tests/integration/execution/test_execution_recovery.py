@@ -28,7 +28,6 @@ from syngan.foundation.identity import (
     ResourceKey,
     ResourceKind,
     SemanticRevisionId,
-    StateVersion,
     TypedReference,
 )
 from syngan.foundation.representation import EncodedPayload
