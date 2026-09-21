@@ -21,7 +21,9 @@ methodology / completion / cross-cutting authority
   > design-quality / residual conceptual authority
   > completed Phase 012 Jackson concept-design authority
   > Phase 013 Consolidated Architecture Contract
-  > active Phase 014 whole-design/readiness authority
+  > completed Phase 014 whole-design/readiness authority
+  > completed Phase 015 implementation authority / support-scope closure
+  > Post-Phase-015 Methodology & Documentation Reconciliation
   > retained historical architecture / ADR rationale
   > implementation planning history
   > code / tests / provider/deployment evidence
@@ -31,6 +33,7 @@ methodology / completion / cross-cutting authority
 
 - [Jackson Design Completion & Implementation Hold](authority/jackson-design-completion-implementation-hold.md)
 - [Jackson Methodology Completion Matrix](authority/jackson-methodology-completion-matrix.md)
+- [Post-Phase-015 Methodology & Documentation Reconciliation](authority/post-phase-015-methodology-documentation-reconciliation.md)
 - [Phase 014 Whole-Design Consolidation & Readiness Authority](authority/phase-014-whole-design-readiness-authority.md)
 - [Phase 014-A Whole-Design Evidence Baseline](authority/phase-014-whole-design-audit-evidence-baseline.md)
 - [Phase 014-B Problem/Actor/Outcome/Concept-Purpose Audit](authority/phase-014-b-problem-actor-outcome-concept-purpose-audit.md)
@@ -77,7 +80,7 @@ Phase 014                            COMPLETE
 014-G                                COMPLETE
 014-H                                COMPLETE
 R2                                   CURRENTLY CLOSED
-R3                                   READY
+R3                                   READY / CONSUMED BY PHASE 015
 Phase 015                             COMPLETE
 Phase 015 start gate                  COMPLETE
 015-A                                 COMPLETE
@@ -90,9 +93,10 @@ Phase 015 start gate                  COMPLETE
 015-H                                 COMPLETE
 015-I                                 COMPLETE
 015-J                                 COMPLETE
-implementation readiness             READY
-implementation start                 STARTED
+implementation readiness             READY / CONSUMED
+implementation program               PHASE 015 COMPLETE
 implementation next                  POST-PHASE-015 START GATE — NOT AUTHORIZED
+Phase 016                             NOT DEFINED
 ```
 
 ## Current whole-design baseline
