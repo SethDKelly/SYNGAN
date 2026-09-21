@@ -4,7 +4,7 @@ These instructions apply repository-wide to automated coding/documentation agent
 
 ## Current posture
 
-**Jackson concept design is complete. Phase 013 architecture reconciliation is complete, Phase 014 is complete, R2 is currently closed, and R3 is READY. Implementation remains NOT STARTED; only the Phase 015 authority/start gate is next eligible.**
+**Jackson concept design and Phase 013/014 are complete; R2 is currently closed and R3 is READY. The Phase 015 start gate is complete. Only 015-A is authorized next, limited to current-baseline, repository/toolchain, scaffold/test, and architecture-fitness reconciliation; domain implementation remains NOT STARTED.**
 
 Start with:
 
@@ -19,6 +19,7 @@ Start with:
 - `docs/phases/014/014-start-gate-whole-design-readiness-decomposition.md`
 - `docs/authority/phase-014-h-consolidation-r2-r3-decision-phase-015-handoff.md`
 - `docs/phases/015/index.md`
+- `docs/implementation/phase-015-current-implementation-authority-start-gate.md`
 - `docs/architecture/phase-013-consolidated-architecture-contract.md`
 - `docs/synchronizations/current-cross-concept-synchronizations.md`
 
@@ -42,6 +43,10 @@ Phase 014                            COMPLETE
 014-H                                COMPLETE
 R2                                   CURRENTLY CLOSED
 R3                                   READY
+Phase 015                             ACTIVE
+Phase 015 start gate                  COMPLETE
+015-A                                 AUTHORIZED / NEXT ELIGIBLE
+015-B..015-J                          NOT AUTHORIZED
 implementation readiness             READY
 implementation start                 NOT STARTED
 implementation next                  PHASE 015 AUTHORITY GATE
@@ -125,11 +130,11 @@ Phase 014-H has established:
 ```text
 IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       NOT STARTED
-IMPLEMENTATION NEXT        PHASE 015 AUTHORITY GATE
+IMPLEMENTATION NEXT        015-A — AUTHORIZED
 ```
 
-Do not implement domain behavior merely because readiness is READY. Phase 015 must first complete its start gate, re-baseline historical implementation material, define controlled delivery slices, and explicitly authorize the first slice.
+The Phase 015 start gate is complete and 015-A alone is authorized. Do not implement domain behavior, persistence, runtime, Execution, Evidence, security/provider behavior, or scale claims until the owning later slice is separately authorized.
 
 ## Current next boundary
 
-**Phase 015 Start Gate — Implementation Authority, Current-Baseline Reconciliation & Controlled-Delivery Decomposition** is next eligible.
+**015-A — Current Implementation Baseline, Repository/Toolchain & Scaffold Reconciliation** is next eligible and explicitly authorized.
