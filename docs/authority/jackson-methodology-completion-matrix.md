@@ -15,12 +15,17 @@ Historical architecture, implementation plans, source, tests and prior engineeri
 ## Controlling implementation posture
 
 ```text
-IMPLEMENTATION READINESS   READY
-IMPLEMENTATION START       STARTED
-IMPLEMENTATION NEXT        015-H — NEXT ELIGIBLE / NOT AUTHORIZED
+JACKSON CONCEPT DESIGN              COMPLETE FOR CURRENT PRODUCT SCOPE
+R1 ARCHITECTURE                     CURRENTLY CLOSED
+R2 WHOLE DESIGN                     CURRENTLY CLOSED
+R3 READINESS                        READY / CONSUMED BY COMPLETED PHASE 015
+PHASE 015                           COMPLETE
+C0-C9                               ACTIVE / PASS
+POST-PHASE-015 DELIVERY AUTHORITY   NONE
+PHASE 016                           NOT DEFINED
 ```
 
-Jackson concept design, downstream architecture reconciliation, and Phase 014 whole-design/readiness work are complete for the current product scope.
+Jackson concept design, downstream architecture reconciliation, Phase 014 whole-design/readiness work, and the currently authorized Phase 015 implementation program are complete for the current product scope.
 
 ## Completion vocabulary
 
@@ -80,7 +85,7 @@ OPEN
 | H2 | Explicit Jackson concept-design completion decision | **CURRENTLY CLOSED** | 012-B |
 | R1 | Architecture reconciled downstream to completed concept design | **CURRENTLY CLOSED** | 013-J |
 | R2 | Whole design audited problem → concepts → dependence/sync → mapping → architecture | **CURRENTLY CLOSED** | 014-H |
-| R3 | Implementation-readiness decision based on complete design | **READY** | 014-H |
+| R3 | Implementation-readiness decision based on complete design | **READY — CONSUMED BY COMPLETED PHASE 015** | 014-H / 015 |
 
 ## R1 completion evidence
 
@@ -184,8 +189,8 @@ unresolved WMAT-3                 0
 READINESS-BLOCK                   0
 READINESS-RISK                    8 — HANDED OFF
 IMPLEMENTATION READINESS          READY
-IMPLEMENTATION START       STARTED
-IMPLEMENTATION NEXT        015-H — NEXT ELIGIBLE / NOT AUTHORIZED
+IMPLEMENTATION START       COMPLETED CURRENT AUTHORIZED PROGRAM
+IMPLEMENTATION NEXT        POST-PHASE-015 START GATE — NOT AUTHORIZED
 ~~~
 
 Detailed authority: [Phase 014-H R2/R3 Decision & Phase 015 Handoff](phase-014-h-consolidation-r2-r3-decision-phase-015-handoff.md).
@@ -243,8 +248,8 @@ Phase 014                            COMPLETE
 R2                                   CURRENTLY CLOSED
 R3                                   READY
 IMPLEMENTATION READINESS             READY
-IMPLEMENTATION START       STARTED
-IMPLEMENTATION NEXT        015-H — NEXT ELIGIBLE / NOT AUTHORIZED
+IMPLEMENTATION START       COMPLETED CURRENT AUTHORIZED PROGRAM
+IMPLEMENTATION NEXT        POST-PHASE-015 START GATE — NOT AUTHORIZED
 ```
 
 ## Residual accounting entering Phase 014
@@ -357,3 +362,20 @@ Current authority: [015-G Evaluation / Evidence / Provenance / History / Reprodu
 ## Current next boundary
 
 **015-H — Authorization, Disclosure, Protected Existence, Secrets, Dependency Trust & No-Egress** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
+
+
+## Post-Phase-015 reconciliation
+
+[Post-Phase-015 Methodology & Documentation Reconciliation](post-phase-015-methodology-documentation-reconciliation.md) confirms:
+
+```text
+Jackson obligations A-H              CURRENTLY CLOSED
+current conceptual blockers          0
+current upstream reopens             0
+M8 future rediscovery groups         4 / DORMANT
+Phase 015                            COMPLETE
+Phase 016                            NOT DEFINED
+next delivery authority              NONE
+```
+
+The M8 groups remain future rediscovery triggers. They are not incomplete Jackson obligations and are not automatically assigned to a future numbered phase.
