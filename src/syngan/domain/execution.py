@@ -92,6 +92,7 @@ class AttemptRecord:
     provider_correlation: str | None = None
     provider_observation: ProviderObservation | None = None
     checkpoint_references: tuple[TypedReference, ...] = ()
+    resume_checkpoint_reference: TypedReference | None = None
 
     def __post_init__(self) -> None:
         if self.epoch < 1:
@@ -105,6 +106,8 @@ class AttemptRecord:
             )
         for reference in self.checkpoint_references:
             reference.require_exact_binding()
+        if self.resume_checkpoint_reference is not None:
+            self.resume_checkpoint_reference.require_exact_binding()
 
 
 @dataclass(frozen=True, slots=True)
@@ -150,6 +153,8 @@ class ExecutionAggregate:
         attempt_id: LogicalId,
         runtime_plan_reference: TypedReference,
         authority_frontier: RecoveryFrontier,
+        *,
+        resume_checkpoint_reference: TypedReference | None = None,
     ) -> ExecutionAggregate:
         self._require_mutable_frontier(authority_frontier)
         if self.terminal or self.cancellation_requested:
@@ -166,6 +171,7 @@ class ExecutionAggregate:
             attempt_id=attempt_id,
             epoch=next_epoch,
             runtime_plan_reference=runtime_plan_reference,
+            resume_checkpoint_reference=resume_checkpoint_reference,
         )
         return replace(self, attempts=(*self.attempts, record), status=ExecutionStatus.READY)
 
@@ -449,6 +455,11 @@ def _attempt_to_object(attempt: AttemptRecord) -> JsonObject:
             attempt.provider_observation.value if attempt.provider_observation else None
         ),
         "checkpoint_references": _reference_list(attempt.checkpoint_references),
+        "resume_checkpoint_reference": (
+            encode_reference(attempt.resume_checkpoint_reference)
+            if attempt.resume_checkpoint_reference is not None
+            else None
+        ),
     }
 
 
@@ -518,6 +529,11 @@ def _attempt_from_object(payload: JsonObject) -> AttemptRecord:
         checkpoint_references=_reference_tuple(
             payload.get("checkpoint_references"),
             "checkpoint references",
+        ),
+        resume_checkpoint_reference=(
+            decode_reference(_required_str(payload, "resume_checkpoint_reference"))
+            if payload.get("resume_checkpoint_reference") is not None
+            else None
         ),
     )
 
