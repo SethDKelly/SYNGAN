@@ -243,9 +243,7 @@ def learned_state_to_payload(state: LearnedStateRecord) -> EncodedPayload:
     return EncodedPayload.from_object(
         {
             "reference": _reference_object(state.reference),
-            "producing_learning_reference": _reference_object(
-                state.producing_learning_reference
-            ),
+            "producing_learning_reference": _reference_object(state.producing_learning_reference),
             "strategy_reference": _reference_object(state.strategy_reference),
             "material_reference": _reference_object(state.material_reference),
             "dependency_references": [
@@ -266,9 +264,7 @@ def learned_state_from_payload(payload: EncodedPayload) -> LearnedStateRecord:
         raise ValueError("Learned-State dependency_references must be a list")
     if not isinstance(status, str):
         raise ValueError("Learned-State status must be a string")
-    if not isinstance(limitations, list) or not all(
-        isinstance(item, str) for item in limitations
-    ):
+    if not isinstance(limitations, list) or not all(isinstance(item, str) for item in limitations):
         raise ValueError("Learned-State limitations must be strings")
     return LearnedStateRecord(
         reference=_reference_from_value(value.get("reference"), "Learned-State reference"),
@@ -327,8 +323,7 @@ def learned_state_material_from_payload(
     return LearnedStateMaterialDescriptor(
         reference=_reference_from_value(value.get("reference"), "Learned-State material"),
         component_references=tuple(
-            _reference_from_value(item, "Learned-State material component")
-            for item in components
+            _reference_from_value(item, "Learned-State material component") for item in components
         ),
         dependency_references=tuple(
             _reference_from_value(item, "Learned-State material dependency")
