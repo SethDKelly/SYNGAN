@@ -280,8 +280,23 @@ Current completion authority: [015-A Current Implementation Baseline / Scaffold 
 
 The original P15-06 block above remains the historical start-gate authorization decision.
 
-## Current next boundary
+## Start-gate post-015-A boundary
 
-**015-B — Current Verification Harness, Architecture-Fitness & Evidence-Gate Foundation** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
+At 015-A completion, 015-B was next eligible but not authorized. That boundary has since been consumed by completed 015-B; see the post-015-B state below.
 
-No later slice is authorized by completion of 015-A.
+
+## Post-015-B consumption
+
+015-B has completed the current verification-harness, architecture-fitness and evidence-gate foundation.
+
+~~~text
+015-A                         COMPLETE
+015-B                         COMPLETE
+015-C                         NEXT ELIGIBLE / NOT AUTHORIZED
+015-D..015-J                  NOT AUTHORIZED
+IMPLEMENTATION START          NOT STARTED
+~~~
+
+Current verification authority: [015-B Current Verification Harness / Architecture Fitness / Evidence Gates](phase-015-b-current-verification-harness-architecture-fitness-evidence-gates.md).
+
+The repository next boundary is **015-C — Identity, References, Representation, Durable Owner-State & Control Persistence**, still gated pending explicit proceed.
