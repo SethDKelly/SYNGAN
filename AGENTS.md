@@ -4,7 +4,7 @@ These instructions apply repository-wide to automated coding/documentation agent
 
 ## Current posture
 
-**Jackson concept design is complete. Phase 013 architecture reconciliation is complete and R1 is currently closed. Phase 014 whole-design/readiness work is ACTIVE; 014-A through 014-G are complete and 014-H is next. Implementation remains held pending the explicit R2/R3 decision.**
+**Jackson concept design is complete. Phase 013 architecture reconciliation is complete, Phase 014 is complete, R2 is currently closed, and R3 is READY. Implementation remains NOT STARTED; only the Phase 015 authority/start gate is next eligible.**
 
 Start with:
 
@@ -17,6 +17,8 @@ Start with:
 - `docs/authority/phase-014-whole-design-audit-evidence-baseline.md`
 - `docs/phases/014/index.md`
 - `docs/phases/014/014-start-gate-whole-design-readiness-decomposition.md`
+- `docs/authority/phase-014-h-consolidation-r2-r3-decision-phase-015-handoff.md`
+- `docs/phases/015/index.md`
 - `docs/architecture/phase-013-consolidated-architecture-contract.md`
 - `docs/synchronizations/current-cross-concept-synchronizations.md`
 
@@ -29,7 +31,7 @@ Jackson concept design               COMPLETE FOR CURRENT PRODUCT SCOPE
 Phase 013                            COMPLETE
 R1 architecture reconciliation       CURRENTLY CLOSED
 Phase 014 start gate                 COMPLETE
-Phase 014                            ACTIVE
+Phase 014                            COMPLETE
 014-A                                COMPLETE
 014-B                                COMPLETE
 014-C                                COMPLETE
@@ -37,12 +39,12 @@ Phase 014                            ACTIVE
 014-E                                COMPLETE
 014-F                                COMPLETE
 014-G                                COMPLETE
-014-H                                NEXT ELIGIBLE
-R2                                   OPEN
-R3                                   OPEN
-implementation readiness             NOT READY
+014-H                                COMPLETE
+R2                                   CURRENTLY CLOSED
+R3                                   READY
+implementation readiness             READY
 implementation start                 NOT STARTED
-implementation next                  NOT YET
+implementation next                  PHASE 015 AUTHORITY GATE
 ```
 
 ## Primary authority rule
@@ -118,16 +120,16 @@ Phase 014 is design/readiness work, not implementation.
 
 Do not add or stabilize production behavior, schemas, migrations, provider/runtime adapters, Execution/recovery machinery, Evidence/history services, package topology, public APIs, deployment automation, benchmarks or executable conformance work to manufacture readiness.
 
-Until 014-H explicitly decides R3:
+Phase 014-H has established:
 
 ```text
-IMPLEMENTATION READINESS   NOT READY
+IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       NOT STARTED
-IMPLEMENTATION NEXT        NOT YET
+IMPLEMENTATION NEXT        PHASE 015 AUTHORITY GATE
 ```
 
-Even after a positive R3, implementation must remain **NOT STARTED** until Phase 015 explicitly authorizes controlled delivery.
+Do not implement domain behavior merely because readiness is READY. Phase 015 must first complete its start gate, re-baseline historical implementation material, define controlled delivery slices, and explicitly authorize the first slice.
 
 ## Current next boundary
 
-**014-H — Phase 014 Consolidation, R2 Completion Decision, R3 Implementation-Readiness Decision & Phase 015 Handoff** is next eligible.
+**Phase 015 Start Gate — Implementation Authority, Current-Baseline Reconciliation & Controlled-Delivery Decomposition** is next eligible.
