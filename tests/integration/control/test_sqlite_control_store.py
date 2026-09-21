@@ -70,39 +70,39 @@ def test_exact_revision_resolution_never_substitutes_latest(tmp_path: Path) -> N
         r1 = exact_reference("r1")
         r2 = exact_reference("r2")
         store.put_immutable_binding(r1, SCHEMA, payload(name="one"), FRONTIER_0)
-        store.put_immutable_revision(r2, SCHEMA, payload(name="two"), FRONTIER_0)
+        store.put_immutable_binding(r2, SCHEMA, payload(name="two"), FRONTIER_0)
 
         resolved_r1 = store.resolve_immutable_binding(r1)
-        resolved_r2 = store.resolve_immutable_revision(r2)
+        resolved_r2 = store.resolve_immutable_binding(r2)
         assert resolved_r1.record is not None
         assert resolved_r2.record is not None
         assert resolved_r1.record.payload == payload(name="one")
         assert resolved_r2.record.payload == payload(name="two")
 
         missing = exact_reference("r3")
-        assert store.resolve_immutable_revision(missing).status is ResolutionStatus.ABSENT
+        assert store.resolve_immutable_binding(missing).status is ResolutionStatus.ABSENT
 
         with pytest.raises(ValueError):
-            store.resolve_immutable_revision(TypedReference(key=key()))
+            store.resolve_immutable_binding(TypedReference(key=key()))
 
 
 def test_immutable_binding_idempotency_conflict_and_tombstone(tmp_path: Path) -> None:
     with SQLiteControlStore(tmp_path / "control.sqlite", AuthorityScope("test")) as store:
         reference = exact_reference("r1")
-        record = store.put_immutable_revision(reference, SCHEMA, payload(value=1), FRONTIER_0)
-        repeated = store.put_immutable_revision(reference, SCHEMA, payload(value=1), FRONTIER_0)
+        record = store.put_immutable_binding(reference, SCHEMA, payload(value=1), FRONTIER_0)
+        repeated = store.put_immutable_binding(reference, SCHEMA, payload(value=1), FRONTIER_0)
 
         assert repeated == record
-        with pytest.raises(ImmutableRecordConflict):
-            store.put_immutable_revision(reference, SCHEMA, payload(value=2), FRONTIER_0)
+        with pytest.raises(ImmutableBindingConflict):
+            store.put_immutable_binding(reference, SCHEMA, payload(value=2), FRONTIER_0)
 
         store.mark_immutable_binding_unavailable(reference, FRONTIER_0)
-        resolution = store.resolve_immutable_revision(reference)
+        resolution = store.resolve_immutable_binding(reference)
         assert resolution.status is ResolutionStatus.UNAVAILABLE
         assert resolution.record is None
 
-        with pytest.raises(ImmutableRecordConflict):
-            store.put_immutable_revision(reference, SCHEMA, payload(value=1), FRONTIER_0)
+        with pytest.raises(ImmutableBindingConflict):
+            store.put_immutable_binding(reference, SCHEMA, payload(value=1), FRONTIER_0)
 
 
 def test_semantic_revision_and_commitment_snapshot_are_distinct_bindings(
@@ -245,7 +245,7 @@ def test_recovery_frontier_qualifies_all_canonical_mutations(tmp_path: Path) -> 
         assert updated.last_recovery_frontier == frontier_1
 
         with pytest.raises(RecoveryFrontierConflict):
-            store.put_immutable_revision(
+            store.put_immutable_binding(
                 exact_reference("late-r1", resource_id="other"),
                 SCHEMA,
                 payload(value=1),
