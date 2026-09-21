@@ -210,7 +210,7 @@ def test_runtime_acquisition_is_not_automatic_repair() -> None:
 def test_direct_generation_does_not_fabricate_learning_or_learned_state() -> None:
     strategy = _strategy(learning=LearningRequirement.NONE)
     binding = reference_source_derived_binding(strategy.strategy_reference)
-    closure = assess_runtime_closure(strategy, binding, ())
+    closure = assess_runtime_closure(strategy, binding, (), _role())
     source = _commitment("source-state", "source-1", "s1")
 
     plan = prepare_generation_plan(
@@ -240,7 +240,7 @@ def test_direct_generation_does_not_fabricate_learning_or_learned_state() -> Non
 def test_required_learning_strategy_rejects_direct_generation() -> None:
     strategy = _strategy(learning=LearningRequirement.REQUIRED)
     binding = reference_source_derived_binding(strategy.strategy_reference)
-    closure = assess_runtime_closure(strategy, binding, ())
+    closure = assess_runtime_closure(strategy, binding, (), _role())
 
     with pytest.raises(ValueError, match="requires Learned State"):
         prepare_generation_plan(
@@ -255,7 +255,7 @@ def test_required_learning_strategy_rejects_direct_generation() -> None:
 def test_learned_state_reuse_rejects_invalidated_and_requires_restriction_acceptance() -> None:
     strategy = _strategy(learning=LearningRequirement.OPTIONAL)
     binding = reference_source_derived_binding(strategy.strategy_reference)
-    closure = assess_runtime_closure(strategy, binding, ())
+    closure = assess_runtime_closure(strategy, binding, (), _role())
     state = LearnedStateRecord(
         reference=_revision("learned-state", "state-1", "ls1"),
         producing_learning_reference=_commitment("learning", "learning-1", "l1"),
