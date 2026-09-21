@@ -21,7 +21,7 @@ This architecture remains downstream of:
 - [Control-Plane Identity, Revision, State, Persistence & Historical Reference Architecture](control-plane-identity-revision-state-persistence-historical-reference.md);
 - [Generation](../concepts/generation.md);
 - [Provenance](../concepts/provenance.md);
-- [Phase 003 Consolidated Experience Contract](../experience/phase-003-consolidated-experience-contract.md);
+- [Phase 003 Consolidated Experience Contract](../history/experience/phase-003-consolidated-experience-contract.md);
 - [Generation Request, Condition, Validation & Output Promotion Experience](../experience/generation-request-condition-validation-output-promotion.md).
 
 ## Primary decision

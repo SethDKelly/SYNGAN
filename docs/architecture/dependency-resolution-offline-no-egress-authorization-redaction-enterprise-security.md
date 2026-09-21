@@ -45,7 +45,7 @@ This architecture remains downstream of:
 - [Network and External Dependency Policy](../authority/network-external-dependency-policy.md);
 - [Enterprise Dependency, Offline/No-Egress & Safety Experience](../experience/enterprise-dependency-offline-no-egress-safety.md);
 - [Reproducibility Contract](../authority/reproducibility-contract.md);
-- accepted concept ownership and [Core Synchronizations](../synchronizations/core-synchronizations.md).
+- accepted concept ownership and [Core Synchronizations](../history/synchronizations/core-synchronizations.md).
 
 ## Primary decision
 

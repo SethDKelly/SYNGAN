@@ -30,7 +30,7 @@ This architecture remains downstream of:
 - [Reproducibility Contract](../authority/reproducibility-contract.md);
 - [Evaluation, Evidence & Review Experience](../experience/evaluation-evidence-review.md);
 - [Provenance, Reproducibility & Historical Inspection Experience](../experience/provenance-reproducibility-historical-inspection.md);
-- [Core Synchronizations](../synchronizations/core-synchronizations.md), especially SYNC-09 through SYNC-15.
+- [Core Synchronizations](../history/synchronizations/core-synchronizations.md), especially SYNC-09 through SYNC-15.
 
 ## Primary decision
 

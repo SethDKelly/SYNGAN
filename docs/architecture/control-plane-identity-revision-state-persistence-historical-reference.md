@@ -18,7 +18,7 @@ This architecture remains downstream of:
 
 - [Architecture Authority, Representation Principles, Layering & Dependency Direction](architecture-authority-representation-layering.md);
 - [Public API, Resource/Handle Model, Workflow Composition & Semantic Mapping](public-api-resource-handle-workflow-semantic-mapping.md);
-- [Phase 003 Consolidated Experience Contract](../experience/phase-003-consolidated-experience-contract.md);
+- [Phase 003 Consolidated Experience Contract](../history/experience/phase-003-consolidated-experience-contract.md);
 - [Accepted Concepts](../concepts/index.md);
 - [Provenance](../concepts/provenance.md);
 - [Reproducibility Contract](../authority/reproducibility-contract.md).

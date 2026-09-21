@@ -24,7 +24,7 @@ This architecture remains downstream of:
 - [Strategy Extension, Learning/Generation/Evaluation Runtime & Adapter Architecture](strategy-extension-learning-generation-evaluation-runtime-adapter.md);
 - [Execution](../concepts/execution.md);
 - [Execution Monitoring, Failure, Recovery & Cancellation Experience](../experience/execution-monitoring-failure-recovery-cancellation.md);
-- [Core Synchronizations](../synchronizations/core-synchronizations.md), especially SYNC-04, SYNC-07, SYNC-11, SYNC-14 and SYNC-15.
+- [Core Synchronizations](../history/synchronizations/core-synchronizations.md), especially SYNC-04, SYNC-07, SYNC-11, SYNC-14 and SYNC-15.
 
 ## Primary decision
 

@@ -17,7 +17,7 @@ This document establishes architectural **roles and contracts**, not final Pytho
 This architecture remains downstream of:
 
 - [Architecture Authority, Representation Principles, Layering & Dependency Direction](architecture-authority-representation-layering.md);
-- [Phase 003 Consolidated Experience Contract](../experience/phase-003-consolidated-experience-contract.md);
+- [Phase 003 Consolidated Experience Contract](../history/experience/phase-003-consolidated-experience-contract.md);
 - [Accepted Concepts](../concepts/index.md);
 - [Accepted Synchronizations](../synchronizations/index.md).
 

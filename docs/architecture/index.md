@@ -34,16 +34,16 @@ Start with [Phase 013 Consolidated Architecture Contract](phase-013-consolidated
 
 Detailed supporting authorities remain:
 
-- [013-B Representation Reconciliation](phase-013-b-representation-layering-public-contract-identity-view-reconciliation.md)
-- [013-C Persistence Reconciliation](phase-013-c-control-persistence-history-concurrency-migration-recovery-reconciliation.md)
-- [013-D Distributed Data Reconciliation](phase-013-d-distributed-data-topology-manifest-candidate-promotion-reconciliation.md)
-- [013-E Runtime / Dependency / Security Reconciliation](phase-013-e-strategy-runtime-dependency-authorization-secrets-distribution-reconciliation.md)
-- [013-F Execution / Recovery / Admission Reconciliation](phase-013-f-execution-attempt-fencing-idempotency-checkpoint-cancellation-recovery-admission-reconciliation.md)
-- [013-G Evidence / Provenance / History / Disclosure Reconciliation](phase-013-g-evaluation-evidence-provenance-history-reproducibility-disclosure-governance-reconciliation.md)
-- [013-H Deployment / Scale / Platform Reconciliation](phase-013-h-deployment-scalability-observability-portability-compatibility-platform-integration-reconciliation.md)
-- [013-I Cross-Architecture / Legacy / M6 Reconciliation](phase-013-i-cross-architecture-composition-legacy-m6-residual-reconciliation.md)
+- [013-B Representation Reconciliation](../history/architecture/phase-013-b-representation-layering-public-contract-identity-view-reconciliation.md)
+- [013-C Persistence Reconciliation](../history/architecture/phase-013-c-control-persistence-history-concurrency-migration-recovery-reconciliation.md)
+- [013-D Distributed Data Reconciliation](../history/architecture/phase-013-d-distributed-data-topology-manifest-candidate-promotion-reconciliation.md)
+- [013-E Runtime / Dependency / Security Reconciliation](../history/architecture/phase-013-e-strategy-runtime-dependency-authorization-secrets-distribution-reconciliation.md)
+- [013-F Execution / Recovery / Admission Reconciliation](../history/architecture/phase-013-f-execution-attempt-fencing-idempotency-checkpoint-cancellation-recovery-admission-reconciliation.md)
+- [013-G Evidence / Provenance / History / Disclosure Reconciliation](../history/architecture/phase-013-g-evaluation-evidence-provenance-history-reproducibility-disclosure-governance-reconciliation.md)
+- [013-H Deployment / Scale / Platform Reconciliation](../history/architecture/phase-013-h-deployment-scalability-observability-portability-compatibility-platform-integration-reconciliation.md)
+- [013-I Cross-Architecture / Legacy / M6 Reconciliation](../history/architecture/phase-013-i-cross-architecture-composition-legacy-m6-residual-reconciliation.md)
 
-Cross-cutting synchronization authority is [Current Cross-Concept Synchronization Contract](../synchronizations/current-cross-concept-synchronizations.md). Residual accounting is [Phase 013 Residual Architecture Misfit Register](../authority/phase-013-residual-architecture-misfit-register.md).
+Cross-cutting synchronization authority is [Current Cross-Concept Synchronization Contract](../synchronizations/current-cross-concept-synchronizations.md). Residual accounting is [Phase 013 Residual Architecture Misfit Register](../history/authority/phase-013-residual-architecture-misfit-register.md).
 
 ## Current architecture composition
 
@@ -114,4 +114,4 @@ Phase 014 owns R2/R3. Phase 015 remains required for explicit implementation aut
 
 ## Current next boundary
 
-Current Phase 014 subgroup sequencing is governed by [`docs/phases/014/index.md`](../phases/014/index.md).
+Current Phase 014 subgroup sequencing is governed by [`docs/phases/014/index.md`](../history/phases/014/index.md).

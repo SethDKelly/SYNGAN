@@ -20,7 +20,7 @@ Architecture is downstream of:
 2. [Accepted Concepts](../concepts/index.md);
 3. [Accepted Synchronizations](../synchronizations/index.md);
 4. [Experience & Workflow Design](../experience/index.md);
-5. [Phase 003 Consolidated Experience Contract](../experience/phase-003-consolidated-experience-contract.md).
+5. [Phase 003 Consolidated Experience Contract](../history/experience/phase-003-consolidated-experience-contract.md).
 
 When architecture discovers that an upstream contract is infeasible or contradictory, it MUST surface that conflict explicitly and request an upstream design revision. It MUST NOT silently redefine the contract inside architecture.
 
