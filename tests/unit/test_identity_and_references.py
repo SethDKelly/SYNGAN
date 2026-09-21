@@ -6,6 +6,7 @@ import pytest
 
 from syngan.foundation.identity import (
     AuthorityScope,
+    CommitmentSnapshotId,
     LogicalId,
     MigrationRevision,
     RecoveryFrontier,
@@ -26,7 +27,13 @@ from syngan.foundation.representation import (
 
 
 def test_identity_tokens_reject_empty_or_whitespace_values() -> None:
-    for constructor in (AuthorityScope, ResourceKind, LogicalId, SemanticRevisionId):
+    for constructor in (
+        AuthorityScope,
+        ResourceKind,
+        LogicalId,
+        SemanticRevisionId,
+        CommitmentSnapshotId,
+    ):
         with pytest.raises(ValueError):
             constructor("")
         with pytest.raises(ValueError):
@@ -75,6 +82,37 @@ def test_typed_reference_round_trip_preserves_exact_revision_binding() -> None:
     assert decoded == reference
     assert decoded.is_exact_revision
     assert decoded.require_exact_revision() == SemanticRevisionId("r-3")
+
+
+def test_commitment_snapshot_reference_round_trip_is_distinct_from_revision() -> None:
+    reference = TypedReference(
+        key=ResourceKey(
+            scope=AuthorityScope("local"),
+            kind=ResourceKind("generation"),
+            resource_id=LogicalId("g-17"),
+        ),
+        commitment_snapshot_id=CommitmentSnapshotId("cs-17"),
+    )
+
+    decoded = decode_reference(encode_reference(reference))
+
+    assert decoded == reference
+    assert decoded.is_exact_binding
+    assert not decoded.is_exact_revision
+    assert decoded.require_exact_binding() == ("commitment-snapshot", "cs-17")
+
+
+def test_reference_rejects_multiple_immutable_binding_axes() -> None:
+    with pytest.raises(ValueError):
+        TypedReference(
+            key=ResourceKey(
+                scope=AuthorityScope("local"),
+                kind=ResourceKind("generation"),
+                resource_id=LogicalId("g-17"),
+            ),
+            revision_id=SemanticRevisionId("r-1"),
+            commitment_snapshot_id=CommitmentSnapshotId("cs-17"),
+        )
 
 
 def test_reference_codec_rejects_unknown_or_unsupported_representation() -> None:
