@@ -119,6 +119,7 @@ def test_binding_must_target_the_exact_strategy_revision() -> None:
     with pytest.raises(ValueError, match="different Strategy revision"):
         assess_runtime_closure(strategy, binding, (), _role())
 
+
 def test_binding_cannot_broaden_self_contained_strategy_to_runtime_network() -> None:
     strategy = _strategy()
     binding = ImplementationBinding(
