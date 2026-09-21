@@ -51,6 +51,7 @@ methodology / completion / cross-cutting authority
 - [015-G Evaluation / Evidence / Provenance / History / Reproducibility](implementation/phase-015-g-evaluation-evidence-provenance-history-reproducibility-authority.md)
 - [015-H Authorization / Disclosure / Protected Existence / Secrets / Dependency Trust / No-Egress](implementation/phase-015-h-authorization-disclosure-protected-existence-secrets-dependency-trust-no-egress-authority.md)
 - [015-I Platform Capability / Portability / Observability / Scale / Support Qualification](implementation/phase-015-i-platform-capability-portability-observability-scale-performance-support-qualification-authority.md)
+- [015-J Cross-Slice Integration / Residual Risk Closure / Implementation Consolidation](implementation/phase-015-j-cross-slice-integration-residual-risk-closure-implementation-consolidation-authority.md)
 - [Phase 014](phases/014/index.md)
 - [Phase 014 Start Gate / Decomposition](phases/014/014-start-gate-whole-design-readiness-decomposition.md)
 - [Phase 013 Consolidated Architecture Contract](architecture/phase-013-consolidated-architecture-contract.md)
@@ -87,10 +88,10 @@ Phase 015 start gate                  COMPLETE
 015-G                                 COMPLETE
 015-H                                 COMPLETE
 015-I                                 COMPLETE
-015-J                                 NEXT ELIGIBLE / NOT AUTHORIZED
+015-J                                 AUTHORIZED / ACTIVE
 implementation readiness             READY
 implementation start                 STARTED
-implementation next                  015-J — NEXT ELIGIBLE / NOT AUTHORIZED
+implementation next                  015-J — AUTHORIZED / ACTIVE
 ```
 
 ## Current whole-design baseline
@@ -129,7 +130,7 @@ Phase 014 is complete design/readiness work. Phase 015 controlled implementation
 ```text
 IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       STARTED
-IMPLEMENTATION NEXT        015-J — NEXT ELIGIBLE / NOT AUTHORIZED
+IMPLEMENTATION NEXT        015-J — AUTHORIZED / ACTIVE
 ```
 
 Historical source/tests/plans may be inspected as downstream evidence, but cannot redefine semantics or be modified to manufacture readiness.
@@ -138,4 +139,4 @@ R3 is READY and implementation has begun only through explicitly authorized Phas
 
 ## Current next boundary
 
-**015-J — Cross-Slice Integration, Residual Risk Closure & Implementation Consolidation** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
+**015-J — Cross-Slice Integration, Residual Risk Closure & Implementation Consolidation** is **AUTHORIZED / ACTIVE**.
