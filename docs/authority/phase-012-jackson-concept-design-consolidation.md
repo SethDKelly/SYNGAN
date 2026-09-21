@@ -26,7 +26,9 @@ H2  PASS — JACKSON CONCEPT DESIGN IS COMPLETE FOR THE CURRENT PRODUCT SCOPE.
 
 This is a design-completion decision, not an architecture-completion or implementation-readiness decision.
 
-Current implementation posture remains:
+> **Subsequent-state notice:** Phase 013, Phase 014, and Phase 015 have since completed. Historical Phase 012 handoff/posture blocks below preserve the state at Phase 012 exit and are not current navigation. Current posture is governed by [Post-Phase-015 Methodology & Documentation Reconciliation](post-phase-015-methodology-documentation-reconciliation.md).
+
+Historical Phase 012 exit posture was:
 
 ```text
 IMPLEMENTATION READINESS   NOT READY
@@ -639,3 +641,26 @@ IMPLEMENTATION NEXT                            NOT YET
 ## Current next boundary
 
 **Phase 013 — Post-Concept Representation & Architecture Reconciliation** is next eligible.
+
+
+## Subsequent post-Phase-015 state
+
+The Phase 012 H1/H2 decision remains current and has not been reopened.
+
+~~~text
+JACKSON CONCEPT DESIGN              COMPLETE FOR CURRENT PRODUCT SCOPE
+Phase 013                           COMPLETE
+R1                                  CURRENTLY CLOSED
+Phase 014                           COMPLETE
+R2                                  CURRENTLY CLOSED
+R3                                  READY / CONSUMED BY PHASE 015
+Phase 015                           COMPLETE
+C0-C9                               ACTIVE / PASS
+current conceptual blockers         0
+current upstream reopens            0
+M8 future rediscovery groups        4 / DORMANT
+Phase 016                           NOT DEFINED
+post-Phase-015 delivery authority   NONE
+~~~
+
+This later state does not rewrite the historical Phase 012 handoff; it prevents that handoff from being mistaken for the repository's current next boundary.
