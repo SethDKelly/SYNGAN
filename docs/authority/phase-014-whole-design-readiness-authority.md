@@ -376,6 +376,29 @@ The resolved WMAT-2 was stale detailed 013-G wording that attributed external Ev
 
 Detailed authority: [Phase 014-F End-to-End Scenario/Adversarial Audit](phase-014-f-end-to-end-scenario-exception-failure-recovery-scale-security-portability-adversarial-audit.md).
 
+## 014-G completion state
+
+014-G audited implementation-neutral completeness, decision ambiguity, historical implementation/scaffold authority and handoff sufficiency.
+
+~~~text
+014-G                            COMPLETE
+implementation-neutral          PASS
+handoff sufficiency             PASS
+unresolved WMAT-2               0
+unresolved WMAT-3               0
+READINESS-BLOCK                 0
+READINESS-RISK                  8
+READINESS-NOTE                  4
+upstream reopen                 NONE
+R1 reopen                       NONE
+R2                              OPEN
+R3                              OPEN
+~~~
+
+The residual risks are Phase 015 implementation/conformance controls, not unresolved semantic design.
+
+Detailed authority: [Phase 014-G Implementation-Neutral Completeness / Residual Readiness Register](phase-014-g-implementation-neutral-completeness-handoff-sufficiency-residual-readiness-register.md).
+
 ## Current next boundary
 
-**014-G — Implementation-Neutral Completeness, Decision-Ambiguity, Handoff Sufficiency & Residual Whole-Design Register** is next eligible.
+**014-H — Phase 014 Consolidation, R2 Completion Decision, R3 Implementation-Readiness Decision & Phase 015 Handoff** is next eligible.
