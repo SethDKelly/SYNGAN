@@ -44,6 +44,7 @@ methodology / completion / cross-cutting authority
 - [Phase 015 Current Implementation Authority / Start Gate](implementation/phase-015-current-implementation-authority-start-gate.md)
 - [015-A Current Implementation Baseline / Scaffold Reconciliation](implementation/phase-015-a-current-implementation-baseline-scaffold-reconciliation.md)
 - [015-B Current Verification Harness / Architecture Fitness / Evidence Gates](implementation/phase-015-b-current-verification-harness-architecture-fitness-evidence-gates.md)
+- [015-C Identity / References / Control Persistence](implementation/phase-015-c-identity-reference-control-persistence-authority.md)
 - [Phase 014](phases/014/index.md)
 - [Phase 014 Start Gate / Decomposition](phases/014/014-start-gate-whole-design-readiness-decomposition.md)
 - [Phase 013 Consolidated Architecture Contract](architecture/phase-013-consolidated-architecture-contract.md)
@@ -74,8 +75,8 @@ Phase 015 start gate                  COMPLETE
 015-A                                 COMPLETE
 015-B                                 NEXT ELIGIBLE / NOT AUTHORIZED
 implementation readiness             READY
-implementation start                 NOT STARTED
-implementation next                  015-B — NEXT ELIGIBLE / NOT AUTHORIZED
+implementation start                 STARTED
+implementation next                  015-D — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
 ## Current whole-design baseline
@@ -113,8 +114,8 @@ Phase 014 remains design/readiness work.
 
 ```text
 IMPLEMENTATION READINESS   READY
-IMPLEMENTATION START       NOT STARTED
-IMPLEMENTATION NEXT        015-B — NEXT ELIGIBLE / NOT AUTHORIZED
+IMPLEMENTATION START       STARTED
+IMPLEMENTATION NEXT        015-D — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
 Historical source/tests/plans may be inspected as downstream evidence, but cannot redefine semantics or be modified to manufacture readiness.
