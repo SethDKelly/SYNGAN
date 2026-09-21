@@ -381,7 +381,9 @@ Formal composable privacy mechanisms remain an M8 rediscovery trigger. No generi
 
 ### External governance handoff
 
-Current active `SYNC-13` permits controlled Evidence handoff to Generation completion logic or external decision authorities.
+External governance handoff is a mapping/integration boundary, **not** an active accepted-concept synchronization.
+
+Current `SYNC-13` is limited to the Generation / Evidence completion handoff when a committed Generation is evidence-gated. Evidence may also be exposed to external decision authorities through authorized interaction/integration surfaces, but that external handoff does not extend `SYNC-13` or create synchronization-owned state.
 
 The external system/actor owns its release/use/policy decision. SYNGAN may:
 
