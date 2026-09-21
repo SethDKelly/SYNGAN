@@ -359,9 +359,13 @@ upstream reopen                    NONE
 
 Current authority: [015-G Evaluation / Evidence / Provenance / History / Reproducibility](../implementation/phase-015-g-evaluation-evidence-provenance-history-reproducibility-authority.md).
 
+## Historical 015-G handoff boundary
+
+At 015-G exit, 015-H was the next eligible slice. That handoff is retained as historical Phase 015 progression evidence.
+
 ## Current next boundary
 
-**015-H — Authorization, Disclosure, Protected Existence, Secrets, Dependency Trust & No-Egress** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
+**Phase 016 is ACTIVE as a downstream pre-implementation hardening program. 016-A is COMPLETE; 016-B is next eligible but NOT AUTHORIZED.** Jackson concept design remains closed.
 
 
 ## Post-Phase-015 reconciliation
