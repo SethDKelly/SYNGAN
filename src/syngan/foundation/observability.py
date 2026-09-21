@@ -7,7 +7,6 @@ from enum import StrEnum
 
 from syngan.foundation.identity import TypedReference
 
-
 _SENSITIVE_FIELD_FRAGMENTS = (
     "secret",
     "token",
