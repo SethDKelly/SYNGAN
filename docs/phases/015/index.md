@@ -21,7 +21,7 @@ R3                              READY
 
 IMPLEMENTATION READINESS        READY
 IMPLEMENTATION START            STARTED
-IMPLEMENTATION NEXT             015-I — AUTHORIZED / ACTIVE
+IMPLEMENTATION NEXT             015-J — NEXT ELIGIBLE / NOT AUTHORIZED
 ~~~
 
 Readiness is not permission to implement.
@@ -69,8 +69,8 @@ P15-06  explicit first-slice authorization
 015-F  COMPLETE — Execution/Attempt, Admission, Fencing, Idempotency, Checkpoint, Cancellation & Recovery
 015-G  COMPLETE — Evaluation, Evidence, Provenance, Historical Read Composition & Reproducibility
 015-H  COMPLETE — Authorization, Disclosure, Protected Existence, Secrets, Dependency Trust & No-Egress
-015-I  AUTHORIZED / ACTIVE — Platform Capability, Portability, Observability, Scale/Performance & Support Qualification
-015-J  NOT AUTHORIZED — Cross-Slice Integration, Residual Risk Closure & Implementation Consolidation
+015-I  COMPLETE — Platform Capability, Portability, Observability, Scale/Performance & Support Qualification
+015-J  NEXT ELIGIBLE / NOT AUTHORIZED — Cross-Slice Integration, Residual Risk Closure & Implementation Consolidation
 ~~~
 
 No later slice inherits authorization from the start gate.
@@ -233,7 +233,7 @@ Earlier language such as active, canonical, current planning overlay, or concret
 
 ## Current next boundary
 
-**015-I — Platform Capability, Portability, Observability, Scale/Performance & Support Qualification** is **AUTHORIZED / ACTIVE**. 015-J remains **NOT AUTHORIZED**.
+**015-J — Cross-Slice Integration, Residual Risk Closure & Implementation Consolidation** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
 
 ## 015-H completion state
 
@@ -249,7 +249,27 @@ offline/no-egress non-widening     IMPLEMENTED / VERIFIED
 SecretRef / bearer separation      IMPLEMENTED / VERIFIED
 C7                                 ACTIVE / PASS
 provider containment proof         NOT CLAIMED
-015-I                              AUTHORIZED / ACTIVE
+015-I                              COMPLETE
 ~~~
 
 Verify run 35632267389 passed all required gates through C7. 015-I remains separately gated.
+
+
+## 015-I completion state
+
+Current completion authority: [015-I Platform Capability / Portability / Observability / Scale / Support Qualification](../../implementation/phase-015-i-platform-capability-portability-observability-scale-performance-support-qualification-authority.md).
+
+~~~text
+015-I                              COMPLETE
+platform capability evidence       IMPLEMENTED / VERIFIED
+semantics-preserving portability   IMPLEMENTED / VERIFIED
+telemetry correlation              IMPLEMENTED / VERIFIED
+support qualification levels       IMPLEMENTED / VERIFIED
+reference adapter contract         VERIFIED
+C8                                 ACTIVE / PASS
+Spark/Databricks support           NOT CLAIMED
+enterprise-scale support           NOT CLAIMED
+015-J                              NEXT ELIGIBLE / NOT AUTHORIZED
+~~~
+
+Verify run 35633711222 passed all required gates through C8. 015-J remains separately gated.
