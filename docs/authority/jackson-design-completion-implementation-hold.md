@@ -90,7 +90,7 @@ That state still does not authorize production changes. Phase 015 must explicitl
 
 ## Architecture / executable prohibition
 
-Until the Phase 015 start gate explicitly authorizes a delivery slice, do not begin or stabilize production behavior, public APIs, persistence migrations, distributed-data implementation, Strategy/runtime adapters, dependency/security integrations, Execution/recovery machinery, Evidence/Provenance/history services, privacy/governance state, provider/platform adapters, deployment automation, package refactoring, benchmarks or executable conformance work intended to manufacture readiness.
+The Phase 015 start gate now authorizes 015-A only. 015-A may reconcile repository/toolchain configuration, scaffold structure, historical fitness tests and architecture-fitness rules. It may not begin or stabilize domain behavior, public APIs, persistence migrations, distributed-data implementation, Strategy/runtime behavior, dependency/security integrations, Execution/recovery behavior, Evidence/Provenance/history services, privacy/governance state, provider/platform adapters, deployment automation, benchmarks or later-slice conformance work.
 
 Phase 014 findings must distinguish missing design semantics from normal implementation alternatives, sequencing concerns, evidence needs or provider-specific qualification work.
 
@@ -138,7 +138,7 @@ IMPLEMENTATION START              NOT STARTED
 IMPLEMENTATION NEXT        015-A — AUTHORIZED
 ~~~
 
-Implementation remains held until the Phase 015 start gate establishes current implementation authority and explicitly authorizes a first delivery slice.
+At 014-H closure implementation remained held pending the Phase 015 start gate. That gate is now complete and authorizes 015-A only; domain implementation remains held.
 
 ## Phase 015 start-gate completion state
 
