@@ -36,6 +36,7 @@ from syngan.foundation.runtime import (
     ImplementationBinding,
     LearningRequirement,
     RuntimeClosureStatus,
+    RuntimeRoleResolution,
     StrategyRuntimeRequirements,
     assess_runtime_closure,
 )
@@ -63,6 +64,17 @@ def _commitment(kind: str, resource_id: str, snapshot: str) -> TypedReference:
     )
 
 
+def _role() -> tuple[RuntimeRoleResolution, ...]:
+    return (
+        RuntimeRoleResolution(
+            role_id="local-worker",
+            environment_identity="python-3.11-portable",
+            available=True,
+            runtime_compatible=True,
+        ),
+    )
+
+
 def _strategy(
     learning: LearningRequirement = LearningRequirement.OPTIONAL,
     profile: DependencyProfile = DependencyProfile.SELF_CONTAINED,
@@ -80,7 +92,7 @@ def test_reference_binding_satisfies_self_contained_source_derived_strategy() ->
     strategy = _strategy()
     binding = reference_source_derived_binding(strategy.strategy_reference)
 
-    closure = assess_runtime_closure(strategy, binding, ())
+    closure = assess_runtime_closure(strategy, binding, (), _role())
 
     assert closure.status is RuntimeClosureStatus.SATISFIED_WITH_LIMITATIONS
     assert closure.ready
@@ -122,7 +134,7 @@ def test_dependency_closure_distinguishes_missing_indeterminate_and_role_incompl
         source_derived_text_capable=True,
     )
 
-    missing = assess_runtime_closure(strategy, binding, ())
+    missing = assess_runtime_closure(strategy, binding, (), _role())
     assert missing.status is RuntimeClosureStatus.INCOMPLETE
     assert missing.missing_components == ("codec",)
 
@@ -138,6 +150,7 @@ def test_dependency_closure_distinguishes_missing_indeterminate_and_role_incompl
                 eligible_roles=("local-worker",),
             ),
         ),
+        _role(),
     )
     assert indeterminate.status is RuntimeClosureStatus.INDETERMINATE
 
@@ -153,6 +166,7 @@ def test_dependency_closure_distinguishes_missing_indeterminate_and_role_incompl
                 eligible_roles=("coordinator",),
             ),
         ),
+        _role(),
     )
     assert wrong_role.status is RuntimeClosureStatus.INCOMPLETE
     assert wrong_role.incomplete_roles == ("local-worker",)
@@ -187,6 +201,7 @@ def test_runtime_acquisition_is_not_automatic_repair() -> None:
                 acquired_during_material_execution=True,
             ),
         ),
+        _role(),
     )
 
     assert closure.status is RuntimeClosureStatus.INCOMPATIBLE
