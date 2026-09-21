@@ -85,7 +85,6 @@ def test_015_j_c9_and_residual_closure_evidence_are_present() -> None:
     )
 
 
-
 def test_post_phase_015_methodology_reconciliation_is_current() -> None:
     methodology_text = METHODOLOGY.read_text(encoding="utf-8")
     residual_text = CONCEPTUAL_RESIDUAL.read_text(encoding="utf-8")
