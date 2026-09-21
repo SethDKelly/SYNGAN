@@ -473,9 +473,7 @@ class EvidenceHistoryService:
         if environment_eligible is False:
             feasibility = CurrentFeasibility.INFEASIBLE
             reasons.append("current environment is ineligible")
-        elif any(
-            view.resolution is HistoricalResolution.KNOWN_UNAVAILABLE for view in views
-        ):
+        elif any(view.resolution is HistoricalResolution.KNOWN_UNAVAILABLE for view in views):
             feasibility = CurrentFeasibility.INFEASIBLE
             reasons.append("required material is currently unavailable")
         elif environment_eligible is None or any(
