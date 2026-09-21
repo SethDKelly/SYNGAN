@@ -19,6 +19,7 @@ Current governing design authority includes:
 - [`Phase 014 Whole-Design Consolidation & Readiness Authority`](docs/authority/phase-014-whole-design-readiness-authority.md)
 - [`Phase 014-H R2/R3 Decision & Phase 015 Handoff`](docs/authority/phase-014-h-consolidation-r2-r3-decision-phase-015-handoff.md)
 - [`Phase 015`](docs/phases/015/index.md)
+- [`Phase 015 Current Implementation Authority / Start Gate`](docs/implementation/phase-015-current-implementation-authority-start-gate.md)
 - [`Phase 014`](docs/phases/014/index.md)
 - [`Phase 014 Start Gate / Decomposition`](docs/phases/014/014-start-gate-whole-design-readiness-decomposition.md)
 - [`Phase 013 Consolidated Architecture Contract`](docs/architecture/phase-013-consolidated-architecture-contract.md)
@@ -44,9 +45,12 @@ Phase 014                            COMPLETE
 014-H                                COMPLETE
 R2                                   CURRENTLY CLOSED
 R3                                   READY
+Phase 015                             ACTIVE
+Phase 015 start gate                  COMPLETE
+015-A                                 AUTHORIZED / NEXT ELIGIBLE
 implementation readiness             READY
 implementation start                 NOT STARTED
-implementation next                  PHASE 015 AUTHORITY GATE
+implementation next                  015-A — AUTHORIZED
 ```
 
 ## Phase 014
@@ -91,11 +95,11 @@ Phase 014-H established:
 ```text
 IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       NOT STARTED
-IMPLEMENTATION NEXT        PHASE 015 AUTHORITY GATE
+IMPLEMENTATION NEXT        015-A — AUTHORIZED
 ```
 
-Readiness does not start implementation. Phase 015 must complete its authority/start gate and explicitly authorize a delivery slice before production work begins.
+The Phase 015 start gate is complete. Only 015-A is authorized, and it is intentionally limited to current-baseline, repository/toolchain, scaffold/test, and architecture-fitness reconciliation; domain implementation remains unstarted.
 
 ## Current next boundary
 
-**Phase 015 Start Gate — Implementation Authority, Current-Baseline Reconciliation & Controlled-Delivery Decomposition** is next eligible.
+**015-A — Current Implementation Baseline, Repository/Toolchain & Scaffold Reconciliation** is next eligible and explicitly authorized.
