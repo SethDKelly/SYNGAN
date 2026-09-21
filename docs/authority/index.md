@@ -60,10 +60,11 @@ Phase 015 start gate                  COMPLETE
 015-B                                 COMPLETE
 015-C                                 COMPLETE
 015-D                                 COMPLETE
-015-E                                 NEXT ELIGIBLE / NOT AUTHORIZED
+015-E                                 COMPLETE
+015-F                                 NEXT ELIGIBLE / NOT AUTHORIZED
 implementation readiness             READY
 implementation start                 STARTED
-implementation next                  015-E — NEXT ELIGIBLE / NOT AUTHORIZED
+implementation next                  015-F — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
 ## Phase 014 authority discipline
@@ -107,11 +108,11 @@ Until R3 is explicitly decided:
 ```text
 IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       STARTED
-IMPLEMENTATION NEXT        015-E — NEXT ELIGIBLE / NOT AUTHORIZED
+IMPLEMENTATION NEXT        015-F — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
 Even a positive R3 requires explicit Phase 015 implementation authority.
 
 ## Current next boundary
 
-**015-E — Strategy/Method Binding, Dependency Closure, Learning/Learned-State & Generation Runtime** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
+**015-F — Execution/Attempt, Admission, Fencing, Idempotency, Checkpoint, Cancellation & Recovery** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
