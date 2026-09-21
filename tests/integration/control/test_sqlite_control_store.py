@@ -253,18 +253,14 @@ def test_file_backed_store_reopens_durably_and_rejects_wrong_scope(tmp_path: Pat
 def test_future_migration_revision_is_rejected(tmp_path: Path) -> None:
     database = tmp_path / "future.sqlite"
     connection = sqlite3.connect(database)
-    connection.execute(
-        "CREATE TABLE control_metadata (key TEXT PRIMARY KEY, value TEXT NOT NULL)"
-    )
+    connection.execute("CREATE TABLE control_metadata (key TEXT PRIMARY KEY, value TEXT NOT NULL)")
     connection.execute(
         "INSERT INTO control_metadata(key, value) VALUES ('authority_scope', 'test')"
     )
     connection.execute(
         "INSERT INTO control_metadata(key, value) VALUES ('migration_revision', '99')"
     )
-    connection.execute(
-        "INSERT INTO control_metadata(key, value) VALUES ('recovery_frontier', '0')"
-    )
+    connection.execute("INSERT INTO control_metadata(key, value) VALUES ('recovery_frontier', '0')")
     connection.commit()
     connection.close()
 
