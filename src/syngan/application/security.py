@@ -19,7 +19,6 @@ from syngan.foundation.security import (
     DependencyTrustState,
     DisclosureState,
     DisclosureView,
-    EgressCategory,
     IntegrityState,
     NetworkPosture,
     PrincipalRef,
@@ -217,10 +216,7 @@ class SecurityService:
         existence_decision = self._authority.authorize(existence_request)
         self._audit_decision(existence_request, existence_decision)
 
-        if existence_decision.outcome not in {
-            AuthorizationOutcome.PERMIT,
-            AuthorizationOutcome.PERMIT_WITH_CONDITIONS,
-        }:
+        if existence_decision.outcome is not AuthorizationOutcome.PERMIT:
             return DisclosureView(DisclosureState.WITHHELD)
         if not exists:
             return DisclosureView(DisclosureState.ABSENT, reference=target.reference)
@@ -256,13 +252,13 @@ class SecurityService:
         target: ProtectedTarget,
         view: HistoricalReferenceView,
     ) -> HistoricalReferenceView:
-        decision = self._authority.authorize(
-            AuthorizationRequest(
-                principal=principal,
-                action=SecurityAction.HISTORY_TRAVERSE,
-                target=target,
-            )
+        request = AuthorizationRequest(
+            principal=principal,
+            action=SecurityAction.HISTORY_TRAVERSE,
+            target=target,
         )
+        decision = self._authority.authorize(request)
+        self._audit_decision(request, decision)
         if decision.outcome is not AuthorizationOutcome.PERMIT:
             return HistoricalReferenceView(
                 reference=view.reference,
