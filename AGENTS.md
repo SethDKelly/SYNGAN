@@ -4,7 +4,7 @@ These instructions apply repository-wide to automated coding/documentation agent
 
 ## Current posture
 
-**Jackson concept design and Phase 013/014 are complete; R2 is currently closed and R3 is READY. Phase 015 implementation has STARTED. The start gate and 015-A through 015-D are complete. 015-E is next eligible but NOT AUTHORIZED pending explicit proceed; later slices remain locked.**
+**Jackson concept design and Phase 013/014 are complete; R2 is currently closed and R3 is READY. Phase 015 implementation has STARTED. The start gate and 015-A through 015-D are complete. 015-E is AUTHORIZED / ACTIVE for Strategy/runtime, dependency-closure, Learning/Learned-State and Generation-runtime foundation work only; later slices remain locked.**
 
 Start with:
 
@@ -24,6 +24,7 @@ Start with:
 - `docs/implementation/phase-015-b-current-verification-harness-architecture-fitness-evidence-gates.md`
 - `docs/implementation/phase-015-c-identity-reference-control-persistence-authority.md`
 - `docs/implementation/phase-015-d-distributed-data-topology-generation-promotion-authority.md`
+- `docs/implementation/phase-015-e-strategy-runtime-learning-generation-authority.md`
 - `docs/architecture/phase-013-consolidated-architecture-contract.md`
 - `docs/synchronizations/current-cross-concept-synchronizations.md`
 
@@ -53,11 +54,11 @@ Phase 015 start gate                  COMPLETE
 015-B                                 COMPLETE
 015-C                                 COMPLETE
 015-D                                 COMPLETE
-015-E                                 NEXT ELIGIBLE / NOT AUTHORIZED
+015-E                                 AUTHORIZED / ACTIVE
 015-F..015-J                          NOT AUTHORIZED
 implementation readiness             READY
 implementation start                 STARTED
-implementation next                  015-E — NEXT ELIGIBLE / NOT AUTHORIZED
+implementation next                  015-E — AUTHORIZED / ACTIVE
 ```
 
 ## Primary authority rule
@@ -138,11 +139,11 @@ Phase 014-H has established:
 ```text
 IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       STARTED
-IMPLEMENTATION NEXT        015-E — NEXT ELIGIBLE / NOT AUTHORIZED
+IMPLEMENTATION NEXT        015-E — AUTHORIZED / ACTIVE
 ```
 
-015-A through 015-D are complete. Provider-neutral distributed-data descriptors, topology composition, candidate/seal state, Generation-owned promotion, and C3 verification are implemented. Do not implement Strategy/runtime execution, Execution/recovery, Evidence, security/provider behavior, or scale claims until their owning slices are separately authorized.
+015-A through 015-D are complete. 015-E is authorized only for Strategy/runtime binding, dependency closure, Learning/Learned-State semantics, Generation runtime planning, and the bounded self-contained reference component. Execution/recovery, Evidence, security/provider policy, and scale claims remain locked.
 
 ## Current next boundary
 
-**015-E — Strategy/Method Binding, Dependency Closure, Learning/Learned-State & Generation Runtime** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
+**015-E — Strategy/Method Binding, Dependency Closure, Learning/Learned-State & Generation Runtime** is active and authorized.
