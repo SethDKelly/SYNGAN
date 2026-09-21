@@ -1,7 +1,7 @@
 ---
 type: Implementation Authority
 title: 015-I — Platform Capability, Portability, Observability, Scale/Performance & Support Qualification
-status: active-current
+status: complete-current
 ---
 
 # 015-I — Platform Capability, Portability, Observability, Scale/Performance & Support Qualification
@@ -240,9 +240,8 @@ Stop and reopen the smallest owning authority if implementation evidence require
 ## Current authorization state
 
 ~~~text
-015-A..015-H  COMPLETE
-015-I         AUTHORIZED / ACTIVE
-015-J         NOT AUTHORIZED
+015-A..015-I  COMPLETE
+015-J         NEXT ELIGIBLE / NOT AUTHORIZED
 IMPLEMENTATION START STARTED
 ~~~
 
@@ -260,3 +259,61 @@ IMPLEMENTATION START STARTED
 - provider-specific and enterprise-scale support claims remain limited to evidence actually established;
 - no unresolved ICLASS-3/4 finding remains;
 - 015-J is left gated.
+
+
+## Completion evidence
+
+015-I is complete.
+
+~~~text
+platform capability contracts            IMPLEMENTED
+scoped capability evidence               IMPLEMENTED / VERIFIED
+freshness / stale-evidence handling       IMPLEMENTED / VERIFIED
+semantics-preserving fallback             IMPLEMENTED / VERIFIED
+non-preserving fallback rejection         VERIFIED
+portability outcome distinctions          IMPLEMENTED / VERIFIED
+telemetry correlation                     IMPLEMENTED / VERIFIED
+optional telemetry failure isolation      IMPLEMENTED / VERIFIED
+secret-bearing telemetry field rejection  VERIFIED
+workload / benchmark evidence contracts   IMPLEMENTED
+layered support qualification             IMPLEMENTED / VERIFIED
+reference platform adapter                IMPLEMENTED / CONTRACT-VERIFIED
+C8                                        ACTIVE / PASS
+
+implementation evidence commit            a4a9b97151ac6ab00f5dac8c821d3e06f74a1302
+Verify workflow                           PASS — run 35633711222
+~~~
+
+## Qualification result
+
+The completed slice establishes the qualification mechanism and verifies the provider-neutral reference adapter contract.
+
+It does **not** establish:
+
+~~~text
+generic Spark production support          NOT CLAIMED
+Databricks production support             NOT CLAIMED
+enterprise-scale workload support         NOT CLAIMED
+provider HA/DR certification              NOT CLAIMED
+public performance/SLO/SLA guarantees     NOT CLAIMED
+~~~
+
+Those claims require profile-specific provider/conformance/benchmark evidence. The implementation now has a typed mechanism that prevents unsupported promotion of architecture compatibility into stronger support levels.
+
+## Exit / downstream disposition
+
+~~~text
+RR-04 capability/support evidence boundary COMPLETE
+RR-05 deployment no-egress qualification   FRAMEWORK COMPLETE / REAL PROVIDER NOT CLAIMED
+RR-06 scale/support qualification mechanism COMPLETE / REAL SCALE CLAIM NOT ESTABLISHED
+
+ICLASS-3                                   0
+ICLASS-4                                   0
+upstream reopen                            NONE
+~~~
+
+No provider SDK, platform brand, telemetry system, or benchmark headline became semantic authority.
+
+## Current next boundary
+
+**015-J — Cross-Slice Integration, Residual Risk Closure & Implementation Consolidation** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
