@@ -22,6 +22,7 @@ Current governing design authority includes:
 - [`Phase 015 Current Implementation Authority / Start Gate`](docs/implementation/phase-015-current-implementation-authority-start-gate.md)
 - [`015-A Current Implementation Baseline / Scaffold Reconciliation`](docs/implementation/phase-015-a-current-implementation-baseline-scaffold-reconciliation.md)
 - [`015-B Current Verification Harness / Architecture Fitness / Evidence Gates`](docs/implementation/phase-015-b-current-verification-harness-architecture-fitness-evidence-gates.md)
+- [`015-C Identity / References / Control Persistence`](docs/implementation/phase-015-c-identity-reference-control-persistence-authority.md)
 - [`Phase 014`](docs/phases/014/index.md)
 - [`Phase 014 Start Gate / Decomposition`](docs/phases/014/014-start-gate-whole-design-readiness-decomposition.md)
 - [`Phase 013 Consolidated Architecture Contract`](docs/architecture/phase-013-consolidated-architecture-contract.md)
@@ -52,8 +53,8 @@ Phase 015 start gate                  COMPLETE
 015-A                                 COMPLETE
 015-B                                 NEXT ELIGIBLE / NOT AUTHORIZED
 implementation readiness             READY
-implementation start                 NOT STARTED
-implementation next                  015-B — NEXT ELIGIBLE / NOT AUTHORIZED
+implementation start                 STARTED
+implementation next                  015-D — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
 ## Phase 014
@@ -97,11 +98,11 @@ Phase 014-H established:
 
 ```text
 IMPLEMENTATION READINESS   READY
-IMPLEMENTATION START       NOT STARTED
-IMPLEMENTATION NEXT        015-B — NEXT ELIGIBLE / NOT AUTHORIZED
+IMPLEMENTATION START       STARTED
+IMPLEMENTATION NEXT        015-D — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
-015-A and 015-B are complete; the repository baseline and current verification harness are reconciled. Domain implementation remains unstarted. 015-C is next eligible but requires explicit authorization.
+015-A through 015-C are complete. Identity/reference/control-persistence implementation is now established and implementation has STARTED. 015-D is next eligible but requires explicit authorization.
 
 ## Current next boundary
 
