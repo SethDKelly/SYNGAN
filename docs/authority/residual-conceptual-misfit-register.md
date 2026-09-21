@@ -31,7 +31,7 @@ R2                                               CURRENTLY CLOSED
 R3                                               READY / CONSUMED BY PHASE 015
 PHASE 015                                        COMPLETE
 C0-C9                                            ACTIVE / PASS
-PHASE 016                                        NOT DEFINED
+PHASE 016                                        ACTIVE — PRE-IMPLEMENTATION HARDENING
 ```
 
 This register is not an issue tracker, implementation backlog, database schema, API resource or runtime status model.
@@ -186,13 +186,13 @@ R3                                READY / CONSUMED BY PHASE 015
 Phase 015                         COMPLETE
 C0-C9                             ACTIVE / PASS
 current conceptual blockers       0
-Phase 016                         NOT DEFINED
+Phase 016                         ACTIVE — PRE-IMPLEMENTATION HARDENING
 ```
 
 A positive conceptual-quality or architecture result did not itself authorize implementation; Phase 015 subsequently supplied and completed that authority.
 
 ## Current next boundary
 
-No conceptual reopen or numbered next design phase is currently required. The four M8 groups remain dormant rediscovery triggers. Any future product-scope expansion that crosses one of those triggers must return to the smallest appropriate Jackson discovery/design authority before implementation.
+No conceptual reopen is required. Phase 016 is a downstream documentation/OKF/agentic/readiness hardening program and is not a new Jackson design phase. The four M8 groups remain dormant rediscovery triggers. Any future product-scope expansion that crosses one of those triggers must return to the smallest appropriate Jackson discovery/design authority before implementation.
 
 See [Post-Phase-015 Methodology & Documentation Reconciliation](post-phase-015-methodology-documentation-reconciliation.md).
