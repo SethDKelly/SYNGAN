@@ -18,16 +18,17 @@ Current governing implementation authority:
 - [015-G Evaluation / Evidence / Provenance / History / Reproducibility](phase-015-g-evaluation-evidence-provenance-history-reproducibility-authority.md)
 - [015-H Authorization / Disclosure / Protected Existence / Secrets / Dependency Trust / No-Egress](phase-015-h-authorization-disclosure-protected-existence-secrets-dependency-trust-no-egress-authority.md)
 - [015-I Platform Capability / Portability / Observability / Scale / Support Qualification](phase-015-i-platform-capability-portability-observability-scale-performance-support-qualification-authority.md)
+- [015-J Cross-Slice Integration / Residual Risk Closure / Implementation Consolidation](phase-015-j-cross-slice-integration-residual-risk-closure-implementation-consolidation-authority.md)
 
 ## Current posture
 
 ```text
 IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       STARTED
-IMPLEMENTATION NEXT        015-J — NEXT ELIGIBLE / NOT AUTHORIZED
+IMPLEMENTATION NEXT        015-J — AUTHORIZED / ACTIVE
 ```
 
-Phase 015 authority is active. 015-A through 015-I are complete. 015-J is next eligible but not authorized.
+Phase 015 authority is active. 015-A through 015-I are complete. 015-J is authorized and active.
 
 ## Current design progress
 
@@ -95,11 +96,11 @@ Current residual/readiness evidence is [Phase 014-G Implementation-Neutral Compl
 
 ## Current authorization boundary
 
-The Phase 015 start gate and 015-A through 015-I are complete. No later slice is currently authorized.
+The Phase 015 start gate and 015-A through 015-I are complete. 015-J is explicitly authorized as the integration/consolidation slice.
 
 015-A reconciled implementation authority, repository/toolchain configuration, scaffold/test dispositions and architecture-fitness rules without implementing concept/domain behavior.
 
-Until 015-J is explicitly authorized, do not add or stabilize production outside completed 015-I authority:
+015-J is authorized for integration/conformance closure only. Do not add unrelated production behavior outside completed 015-I authority:
 
 - persistence/query schemas or migrations;
 - data-state/manifest/candidate stores;
@@ -128,4 +129,4 @@ Implementation now includes the 015-C control foundation, 015-D Generation data-
 
 ## Current next boundary
 
-**015-J — Cross-Slice Integration, Residual Risk Closure & Implementation Consolidation** — next eligible, not authorized.
+**015-J — Cross-Slice Integration, Residual Risk Closure & Implementation Consolidation** — authorized / active.
