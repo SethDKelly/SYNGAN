@@ -4,7 +4,7 @@ These instructions apply repository-wide to automated coding/documentation agent
 
 ## Current posture
 
-**Jackson concept design and Phase 013/014 are complete; R2 is currently closed and R3 is READY. The Phase 015 start gate is complete. Only 015-A is authorized next, limited to current-baseline, repository/toolchain, scaffold/test, and architecture-fitness reconciliation; domain implementation remains NOT STARTED.**
+**Jackson concept design and Phase 013/014 are complete; R2 is currently closed and R3 is READY. Phase 015 is active. The start gate and 015-A are complete. 015-B is next eligible but NOT AUTHORIZED pending explicit proceed; domain implementation remains NOT STARTED.**
 
 Start with:
 
@@ -20,6 +20,7 @@ Start with:
 - `docs/authority/phase-014-h-consolidation-r2-r3-decision-phase-015-handoff.md`
 - `docs/phases/015/index.md`
 - `docs/implementation/phase-015-current-implementation-authority-start-gate.md`
+- `docs/implementation/phase-015-a-current-implementation-baseline-scaffold-reconciliation.md`
 - `docs/architecture/phase-013-consolidated-architecture-contract.md`
 - `docs/synchronizations/current-cross-concept-synchronizations.md`
 
@@ -45,11 +46,12 @@ R2                                   CURRENTLY CLOSED
 R3                                   READY
 Phase 015                             ACTIVE
 Phase 015 start gate                  COMPLETE
-015-A                                 AUTHORIZED / NEXT ELIGIBLE
-015-B..015-J                          NOT AUTHORIZED
+015-A                                 COMPLETE
+015-B                                 NEXT ELIGIBLE / NOT AUTHORIZED
+015-C..015-J                          NOT AUTHORIZED
 implementation readiness             READY
 implementation start                 NOT STARTED
-implementation next                  015-A — AUTHORIZED
+implementation next                  015-B — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
 ## Primary authority rule
@@ -130,11 +132,11 @@ Phase 014-H has established:
 ```text
 IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       NOT STARTED
-IMPLEMENTATION NEXT        015-A — AUTHORIZED
+IMPLEMENTATION NEXT        015-B — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
-The Phase 015 start gate is complete and 015-A alone is authorized. Do not implement domain behavior, persistence, runtime, Execution, Evidence, security/provider behavior, or scale claims until the owning later slice is separately authorized.
+015-A is complete. 015-B is next eligible but not authorized. Do not implement domain behavior, persistence, runtime, Execution, Evidence, security/provider behavior, or scale claims until the owning later slice is separately authorized.
 
 ## Current next boundary
 
-**015-A — Current Implementation Baseline, Repository/Toolchain & Scaffold Reconciliation** is next eligible and explicitly authorized.
+**015-B — Current Verification Harness, Architecture-Fitness & Evidence-Gate Foundation** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
