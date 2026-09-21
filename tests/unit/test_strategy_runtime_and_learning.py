@@ -111,7 +111,7 @@ def test_binding_cannot_broaden_self_contained_strategy_to_runtime_network() -> 
         source_derived_text_capable=True,
     )
 
-    closure = assess_runtime_closure(strategy, binding, ())
+    closure = assess_runtime_closure(strategy, binding, (), _role())
 
     assert closure.status is RuntimeClosureStatus.INCOMPATIBLE
     assert not closure.ready
