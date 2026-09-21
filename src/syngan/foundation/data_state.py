@@ -56,7 +56,7 @@ def _payload_from_value(value: JsonValue, label: str) -> EncodedPayload | None:
         return None
     if not isinstance(value, dict):
         raise ValueError(f"{label} must be an object or null")
-    return EncodedPayload.from_object(cast(JsonObject, value))
+    return EncodedPayload.from_object(value)
 
 
 class TopologyHint(StrEnum):
