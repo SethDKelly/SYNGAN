@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+from collections.abc import Mapping
 from dataclasses import dataclass
 from typing import TypeAlias, cast
 
@@ -36,11 +37,30 @@ class EncodedPayload:
 
     json_text: str
 
+    def __post_init__(self) -> None:
+        try:
+            decoded = cast(JsonValue, json.loads(self.json_text))
+        except json.JSONDecodeError as exc:
+            raise ValueError("encoded payload must contain valid JSON") from exc
+        if not isinstance(decoded, dict):
+            raise ValueError("encoded payload must contain a JSON object")
+        try:
+            canonical = json.dumps(
+                decoded,
+                sort_keys=True,
+                separators=(",", ":"),
+                ensure_ascii=False,
+                allow_nan=False,
+            )
+        except ValueError as exc:
+            raise ValueError("encoded payload must contain canonical JSON values") from exc
+        object.__setattr__(self, "json_text", canonical)
+
     @classmethod
-    def from_object(cls, value: JsonObject) -> EncodedPayload:
+    def from_object(cls, value: Mapping[str, JsonValue]) -> EncodedPayload:
         return cls(
             json.dumps(
-                value,
+                dict(value),
                 sort_keys=True,
                 separators=(",", ":"),
                 ensure_ascii=False,
@@ -51,7 +71,7 @@ class EncodedPayload:
     def as_object(self) -> JsonObject:
         decoded = cast(JsonValue, json.loads(self.json_text))
         if not isinstance(decoded, dict):
-            raise ValueError("encoded payload must contain a JSON object")
+            raise AssertionError("validated encoded payload lost object shape")
         return decoded
 
 
