@@ -129,7 +129,7 @@ IMPLEMENTATION START               STARTED
 
 Current completion authority: [015-D Distributed Data / Topology / Generation Promotion](../../implementation/phase-015-d-distributed-data-topology-generation-promotion-authority.md).
 
-Current active authority: [015-E Strategy Runtime / Learning / Generation](../../implementation/phase-015-e-strategy-runtime-learning-generation-authority.md).
+Handoff at 015-D completion: [015-E Strategy Runtime / Learning / Generation](../../implementation/phase-015-e-strategy-runtime-learning-generation-authority.md).
 
 ~~~text
 015-D                              COMPLETE
@@ -146,7 +146,7 @@ enterprise scale qualification     NOT CLAIMED
 
 Current completion authority: [015-E Strategy Runtime / Learning / Generation](../../implementation/phase-015-e-strategy-runtime-learning-generation-authority.md).
 
-Current active authority: [015-F Execution / Attempt / Recovery](../../implementation/phase-015-f-execution-attempt-admission-fencing-idempotency-checkpoint-cancellation-recovery-authority.md).
+Handoff at 015-E completion: [015-F Execution / Attempt / Recovery](../../implementation/phase-015-f-execution-attempt-admission-fencing-idempotency-checkpoint-cancellation-recovery-authority.md).
 
 ~~~text
 015-E                              COMPLETE
