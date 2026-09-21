@@ -376,7 +376,6 @@ def test_missing_payload_is_unknown_not_historical_absence(tmp_path: Path) -> No
         assert view.resolution is HistoricalResolution.UNKNOWN
 
 
-
 def test_reconstructed_provenance_can_be_superseded_without_history_rewrite(
     tmp_path: Path,
 ) -> None:
