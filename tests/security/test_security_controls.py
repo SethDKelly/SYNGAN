@@ -376,7 +376,7 @@ def test_protected_existence_can_hide_existing_and_absent_targets_identically() 
         detail_supplier=lambda: {"secret": 1},
     )
 
-    assert existing == DisclosureState.WITHHELD or existing.state is DisclosureState.WITHHELD
+    assert existing.state is DisclosureState.WITHHELD
     assert absent.state is DisclosureState.WITHHELD
     assert existing.reference is None
     assert absent.reference is None
