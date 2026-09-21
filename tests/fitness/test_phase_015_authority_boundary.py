@@ -3,7 +3,8 @@ from __future__ import annotations
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-AUTHORITY = ROOT / "docs" / "implementation" / "phase-015-current-implementation-authority-start-gate.md"
+IMPLEMENTATION = ROOT / "docs" / "implementation"
+AUTHORITY = IMPLEMENTATION / "phase-015-current-implementation-authority-start-gate.md"
 PHASE = ROOT / "docs" / "phases" / "015" / "index.md"
 AGENTS = ROOT / "AGENTS.md"
 
