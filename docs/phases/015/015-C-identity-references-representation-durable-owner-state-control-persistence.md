@@ -19,7 +19,7 @@ representation schema version axis      IMPLEMENTED
 recovery frontier representation        IMPLEMENTED
 migration revision                      IMPLEMENTED
 canonical JSON owner payload            IMPLEMENTED
-immutable revision persistence          IMPLEMENTED
+immutable binding persistence           IMPLEMENTED
 exact historical resolution             IMPLEMENTED
 known-unavailable tombstone              IMPLEMENTED
 current owner-state CAS                  IMPLEMENTED
