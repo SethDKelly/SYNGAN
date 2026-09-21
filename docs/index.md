@@ -52,6 +52,7 @@ methodology / completion / cross-cutting authority
 - [015-H Authorization / Disclosure / Protected Existence / Secrets / Dependency Trust / No-Egress](implementation/phase-015-h-authorization-disclosure-protected-existence-secrets-dependency-trust-no-egress-authority.md)
 - [015-I Platform Capability / Portability / Observability / Scale / Support Qualification](implementation/phase-015-i-platform-capability-portability-observability-scale-performance-support-qualification-authority.md)
 - [015-J Cross-Slice Integration / Residual Risk Closure / Implementation Consolidation](implementation/phase-015-j-cross-slice-integration-residual-risk-closure-implementation-consolidation-authority.md)
+- [Phase 015 Residual Risk Closure / Support Scope](implementation/phase-015-residual-risk-closure-support-scope-register.md)
 - [Phase 014](phases/014/index.md)
 - [Phase 014 Start Gate / Decomposition](phases/014/014-start-gate-whole-design-readiness-decomposition.md)
 - [Phase 013 Consolidated Architecture Contract](architecture/phase-013-consolidated-architecture-contract.md)
@@ -77,7 +78,7 @@ Phase 014                            COMPLETE
 014-H                                COMPLETE
 R2                                   CURRENTLY CLOSED
 R3                                   READY
-Phase 015                             ACTIVE
+Phase 015                             COMPLETE
 Phase 015 start gate                  COMPLETE
 015-A                                 COMPLETE
 015-B                                 COMPLETE
@@ -88,10 +89,10 @@ Phase 015 start gate                  COMPLETE
 015-G                                 COMPLETE
 015-H                                 COMPLETE
 015-I                                 COMPLETE
-015-J                                 AUTHORIZED / ACTIVE
+015-J                                 COMPLETE
 implementation readiness             READY
 implementation start                 STARTED
-implementation next                  015-J — AUTHORIZED / ACTIVE
+implementation next                  POST-PHASE-015 START GATE — NOT AUTHORIZED
 ```
 
 ## Current whole-design baseline
@@ -125,18 +126,18 @@ No prior local `COMPLETE` label substitutes for this whole-design audit.
 
 ## Implementation boundary
 
-Phase 014 is complete design/readiness work. Phase 015 controlled implementation is active.
+Phase 014 design/readiness work and Phase 015 controlled implementation are complete for the current authorized scope.
 
 ```text
 IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       STARTED
-IMPLEMENTATION NEXT        015-J — AUTHORIZED / ACTIVE
+IMPLEMENTATION NEXT        POST-PHASE-015 START GATE — NOT AUTHORIZED
 ```
 
 Historical source/tests/plans may be inspected as downstream evidence, but cannot redefine semantics or be modified to manufacture readiness.
 
-R3 is READY and implementation has begun only through explicitly authorized Phase 015 slices.
+R3 was consumed by the completed Phase 015 program. C0-C9 are active/passing for the current framework/reference scope; stronger provider, scale and release claims remain evidence-gated.
 
 ## Current next boundary
 
-**015-J — Cross-Slice Integration, Residual Risk Closure & Implementation Consolidation** is **AUTHORIZED / ACTIVE**.
+**Phase 015 is COMPLETE. No post-Phase-015 delivery program is authorized.** A new program requires a separate explicit start gate and user authorization.
