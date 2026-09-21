@@ -118,7 +118,7 @@ Phase 014-H established:
 ```text
 IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       STARTED
-IMPLEMENTATION NEXT        015-F — NEXT ELIGIBLE / NOT AUTHORIZED
+IMPLEMENTATION NEXT        015-G — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
 Implementation now includes the 015-C control foundation, 015-D Generation data-state/topology/promotion foundation, 015-E Strategy/runtime plus Learning/Learned-State foundation, and 015-F Execution/recovery foundation. Evaluation/Evidence/Provenance, security/provider, and scale qualification remain gated. 015-G is next eligible but still requires explicit authorization.
