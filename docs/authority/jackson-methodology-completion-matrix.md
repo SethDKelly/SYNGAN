@@ -16,8 +16,8 @@ Historical architecture, implementation plans, source, tests and prior engineeri
 
 ```text
 IMPLEMENTATION READINESS   READY
-IMPLEMENTATION START       NOT STARTED
-IMPLEMENTATION NEXT        015-C — NEXT ELIGIBLE / NOT AUTHORIZED
+IMPLEMENTATION START       STARTED
+IMPLEMENTATION NEXT        015-D — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
 Jackson concept design, downstream architecture reconciliation, and Phase 014 whole-design/readiness work are complete for the current product scope.
@@ -184,11 +184,27 @@ unresolved WMAT-3                 0
 READINESS-BLOCK                   0
 READINESS-RISK                    8 — HANDED OFF
 IMPLEMENTATION READINESS          READY
-IMPLEMENTATION START              NOT STARTED
-IMPLEMENTATION NEXT        015-C — NEXT ELIGIBLE / NOT AUTHORIZED
+IMPLEMENTATION START       STARTED
+IMPLEMENTATION NEXT        015-D — NEXT ELIGIBLE / NOT AUTHORIZED
 ~~~
 
 Detailed authority: [Phase 014-H R2/R3 Decision & Phase 015 Handoff](phase-014-h-consolidation-r2-r3-decision-phase-015-handoff.md).
+
+## 015-C implementation-start evidence
+
+~~~text
+015-C                              COMPLETE
+identity/reference foundation      IMPLEMENTED
+durable control persistence        IMPLEMENTED
+C2                                 ACTIVE / PASS
+SQLite reference adapter           IMPLEMENTED
+enterprise persistence support     NOT CLAIMED
+RR-03 full recovery proof          DEFERRED TO 015-F
+IMPLEMENTATION START               STARTED
+015-D                              NEXT ELIGIBLE / NOT AUTHORIZED
+~~~
+
+Current authority: [015-C Identity / References / Control Persistence](../implementation/phase-015-c-identity-reference-control-persistence-authority.md).
 
 ## Current synchronization state
 
@@ -223,8 +239,8 @@ Phase 014                            COMPLETE
 R2                                   CURRENTLY CLOSED
 R3                                   READY
 IMPLEMENTATION READINESS             READY
-IMPLEMENTATION START                 NOT STARTED
-IMPLEMENTATION NEXT        015-C — NEXT ELIGIBLE / NOT AUTHORIZED
+IMPLEMENTATION START       STARTED
+IMPLEMENTATION NEXT        015-D — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
 ## Residual accounting entering Phase 014
@@ -251,13 +267,14 @@ Phase 014 is complete. R3 is READY, but implementation remains NOT STARTED until
 Phase 015 Start Gate   COMPLETE
 015-A                  COMPLETE
 015-B                                 COMPLETE
-015-C                                 NEXT ELIGIBLE / NOT AUTHORIZED
-015-D..015-J                          NOT AUTHORIZED
-IMPLEMENTATION START   NOT STARTED
+015-C                  COMPLETE
+015-D                  NEXT ELIGIBLE / NOT AUTHORIZED
+015-E..015-J           NOT AUTHORIZED
+IMPLEMENTATION START       STARTED
 ~~~
 
 Current implementation authority: [Phase 015 Current Implementation Authority / Start Gate](../implementation/phase-015-current-implementation-authority-start-gate.md).
 
 ## Current next boundary
 
-**015-C — Identity, References, Representation, Durable Owner-State & Control Persistence** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
+**015-D — Distributed Data-State, Structured Topology, Candidate/Seal & Generation Promotion** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
