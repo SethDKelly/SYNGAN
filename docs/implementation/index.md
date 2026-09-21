@@ -24,10 +24,10 @@ Current governing implementation authority:
 ```text
 IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       STARTED
-IMPLEMENTATION NEXT        015-I — AUTHORIZED / ACTIVE
+IMPLEMENTATION NEXT        015-J — NEXT ELIGIBLE / NOT AUTHORIZED
 ```
 
-Phase 015 authority is active. 015-A through 015-H are complete. 015-I is authorized and active; 015-J remains locked.
+Phase 015 authority is active. 015-A through 015-I are complete. 015-J is next eligible but not authorized.
 
 ## Current design progress
 
@@ -95,11 +95,11 @@ Current residual/readiness evidence is [Phase 014-G Implementation-Neutral Compl
 
 ## Current authorization boundary
 
-The Phase 015 start gate and 015-A through 015-H are complete. 015-I is explicitly authorized; 015-J is not authorized.
+The Phase 015 start gate and 015-A through 015-I are complete. No later slice is currently authorized.
 
 015-A reconciled implementation authority, repository/toolchain configuration, scaffold/test dispositions and architecture-fitness rules without implementing concept/domain behavior.
 
-015-I is now authorized only for platform capability, portability, observability, scale/performance and support-qualification responsibilities. Outside that scope:
+Until 015-J is explicitly authorized, do not add or stabilize production outside completed 015-I authority:
 
 - persistence/query schemas or migrations;
 - data-state/manifest/candidate stores;
@@ -128,4 +128,4 @@ Implementation now includes the 015-C control foundation, 015-D Generation data-
 
 ## Current next boundary
 
-**015-I — Platform Capability, Portability, Observability, Scale/Performance & Support Qualification** — authorized / active.
+**015-J — Cross-Slice Integration, Residual Risk Closure & Implementation Consolidation** — next eligible, not authorized.
