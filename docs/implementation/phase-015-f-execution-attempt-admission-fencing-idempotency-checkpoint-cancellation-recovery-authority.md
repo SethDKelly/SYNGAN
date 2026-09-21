@@ -1,7 +1,7 @@
 ---
 type: Implementation Authority
 title: 015-F — Execution/Attempt, Admission, Fencing, Idempotency, Checkpoint, Cancellation & Recovery
-status: active-current
+status: complete-current
 ---
 
 # 015-F — Execution/Attempt, Admission, Fencing, Idempotency, Checkpoint, Cancellation & Recovery
@@ -102,3 +102,44 @@ Late provider success remains historical provider observation only.
 015-G..015-J NOT AUTHORIZED
 IMPLEMENTATION START STARTED
 ~~~
+
+
+## Completion evidence
+
+015-F now implements the provider-neutral framework operational spine with a separate recovery-authority reference mechanism.
+
+~~~text
+stable Execution / subordinate Attempts       IMPLEMENTED
+admission cause preservation                  IMPLEMENTED
+Attempt + recovery-frontier fencing           IMPLEMENTED
+operation-scoped idempotency                  IMPLEMENTED
+provider submission ambiguity                 IMPLEMENTED
+immutable checkpoints / exact retry basis     IMPLEMENTED
+cancellation fencing                          IMPLEMENTED
+non-regressing recovery authority             IMPLEMENTED
+regressive restore / stale-writer proof       VERIFIED
+C5                                             ACTIVE / PASS
+
+commit                                         dfa22c6202054c05058108316449c6e9ac5b294f
+workflow run                                   35574929848
+~~~
+
+RR-03 and RR-07 framework-level controls are complete. Provider/storage-specific qualification remains assigned to 015-I and final adversarial consolidation to 015-J.
+
+## Current authorization state
+
+~~~text
+015-A        COMPLETE
+015-B        COMPLETE
+015-C        COMPLETE
+015-D        COMPLETE
+015-E        COMPLETE
+015-F        COMPLETE
+015-G        NEXT ELIGIBLE / NOT AUTHORIZED
+015-H..015-J NOT AUTHORIZED
+IMPLEMENTATION START STARTED
+~~~
+
+## Current next boundary
+
+**015-G — Evaluation, Evidence, Provenance, Historical Read Composition & Reproducibility** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
