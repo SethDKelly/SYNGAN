@@ -500,23 +500,30 @@ No model hub, hosted LLM, pretrained artifact family, PyTorch runtime or provide
 
 ## 19. Current synchronization interpretation
 
-Current Phase 009 synchronization authority controls all numbering and ownership.
+The [Current Cross-Concept Synchronization Contract](../synchronizations/current-cross-concept-synchronizations.md) controls current numbering, scope and ownership.
 
 Relevant current rules include:
 
 ```text
 SYNC-02  Strategy selection / contextual compatibility
 SYNC-04  Learning operational realization when Execution is included
-SYNC-06  Generation commitment / compatibility, including dependency/network profile
+SYNC-06  Generation / Learned State reuse compatibility and exact Learned State
+         basis binding when reusable Learned State is selected
 SYNC-07  Generation operational realization when Execution is included
 SYNC-10  Evaluation method compatibility
 SYNC-11  Evaluation operational realization when Execution is included
 SYNC-14  material Provenance relationship recording
 ```
 
+Direct Generation does not activate `SYNC-06`. Dependency/network/egress semantics are governed by Strategy declarations, the activity's exact commitment and applicable contextual compatibility/admission rules; they are not generic `SYNC-06` state.
+
 Runtime/dependency/security machinery does not create a new synchronization or synchronization-owned canonical state.
 
 Historical `SYNC-15` is not active; executable/dependency facts contribute to the Reproducibility contract directly through preserved owner/integration facts.
+
+### Phase 014-E propagation note
+
+Phase 014-E corrected stale pre-014-C `SYNC-06` wording in this detailed architecture authority. The Strategy/runtime/dependency architecture already preserved the correct separation; only the synchronization label/scope description required normalization.
 
 No new synchronization is introduced by 013-E.
 
