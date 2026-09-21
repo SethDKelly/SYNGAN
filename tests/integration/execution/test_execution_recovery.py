@@ -322,10 +322,7 @@ def test_regressive_restore_requires_fresh_frontier_and_fences_restored_attempt(
 
             assert reconciled.state.authority_frontier == RecoveryFrontier(2)
             assert reconciled.state.current_attempt_id is None
-            assert (
-                reconciled.state.attempt(LogicalId("attempt-1")).status
-                is AttemptStatus.FENCED
-            )
+            assert reconciled.state.attempt(LogicalId("attempt-1")).status is AttemptStatus.FENCED
             assert service.assess_admission(execution, _facts()).status is AdmissionStatus.ADMITTED
 
             current_record = restored.get_current_state(execution_state_key(execution))
