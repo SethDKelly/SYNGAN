@@ -21,7 +21,7 @@ R3                              READY
 
 IMPLEMENTATION READINESS        READY
 IMPLEMENTATION START            STARTED
-IMPLEMENTATION NEXT             015-D — AUTHORIZED / ACTIVE
+IMPLEMENTATION NEXT             015-E — NEXT ELIGIBLE / NOT AUTHORIZED
 ~~~
 
 Readiness is not permission to implement.
@@ -64,8 +64,8 @@ P15-06  explicit first-slice authorization
 015-A  COMPLETE — Current Implementation Baseline, Repository/Toolchain & Scaffold Reconciliation
 015-B  COMPLETE — Current Verification Harness, Architecture-Fitness & Evidence-Gate Foundation
 015-C  COMPLETE — Identity, References, Representation, Durable Owner-State & Control Persistence
-015-D  AUTHORIZED / ACTIVE — Distributed Data-State, Topology, Candidate/Seal & Generation Promotion
-015-E  NOT AUTHORIZED — Strategy/Method Binding, Dependency Closure, Learning/Learned-State & Generation Runtime
+015-D  COMPLETE — Distributed Data-State, Topology, Candidate/Seal & Generation Promotion
+015-E  NEXT ELIGIBLE / NOT AUTHORIZED — Strategy/Method Binding, Dependency Closure, Learning/Learned-State & Generation Runtime
 015-F  NOT AUTHORIZED — Execution/Attempt, Admission, Fencing, Idempotency, Checkpoint, Cancellation & Recovery
 015-G  NOT AUTHORIZED — Evaluation, Evidence, Provenance, Historical Read Composition & Reproducibility
 015-H  NOT AUTHORIZED — Authorization, Disclosure, Protected Existence, Secrets, Dependency Trust & No-Egress
@@ -125,6 +125,21 @@ IMPLEMENTATION START               STARTED
 015-D                              NEXT ELIGIBLE / NOT AUTHORIZED
 ~~~
 
+## 015-D completion state
+
+Current completion authority: [015-D Distributed Data / Topology / Generation Promotion](../../implementation/phase-015-d-distributed-data-topology-generation-promotion-authority.md).
+
+~~~text
+015-D                              COMPLETE
+structured topology                IMPLEMENTED
+sealed physical subject            IMPLEMENTED
+Generation candidate/promotion     IMPLEMENTED
+C3 data verification               ACTIVE / PASS
+provider/Spark runtime             NOT IMPLEMENTED
+enterprise scale qualification     NOT CLAIMED
+015-E                              NEXT ELIGIBLE / NOT AUTHORIZED
+~~~
+
 ## Residual readiness risks inherited from 014-G
 
 ~~~text
@@ -155,7 +170,7 @@ Earlier language such as active, canonical, current planning overlay, or concret
 
 ## Current prohibition
 
-015-A through 015-C are complete and 015-D is explicitly authorized/active. For responsibilities outside 015-D authority:
+015-A through 015-D are complete. Until 015-E is explicitly authorized, and for responsibilities outside completed 015-D authority:
 
 - do not add domain behavior;
 - do not stabilize public APIs/schemas;
@@ -167,4 +182,4 @@ Earlier language such as active, canonical, current planning overlay, or concret
 
 ## Current next boundary
 
-**015-D — Distributed Data-State, Structured Topology, Candidate/Seal & Generation Promotion** is active and authorized.
+**015-E — Strategy/Method Binding, Dependency Closure, Learning/Learned-State & Generation Runtime** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
