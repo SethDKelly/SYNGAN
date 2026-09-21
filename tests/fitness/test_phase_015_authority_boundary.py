@@ -5,9 +5,13 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 IMPLEMENTATION = ROOT / "docs" / "implementation"
 HISTORY = ROOT / "docs" / "history"
-PHASE_015_CURRENT = HISTORY / "implementation" / (
-    "phase-015-j-cross-slice-integration-residual-risk-closure-"
-    "implementation-consolidation-authority.md"
+PHASE_015_CURRENT = (
+    HISTORY
+    / "implementation"
+    / (
+        "phase-015-j-cross-slice-integration-residual-risk-closure-"
+        "implementation-consolidation-authority.md"
+    )
 )
 PHASE_015 = HISTORY / "phases" / "015" / "index.md"
 PHASE_016_AUTHORITY = (
@@ -106,7 +110,6 @@ def test_jackson_completion_remains_closed_during_phase_016() -> None:
         "PHASE 016                                        ACTIVE — PRE-IMPLEMENTATION HARDENING"
     )
     assert expected_phase_016 in residual_text
-
 
 def test_post_phase_015_record_is_preserved_as_superseded_boundary_history() -> None:
     reconciliation_text = POST_015.read_text(encoding="utf-8")
