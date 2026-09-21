@@ -32,7 +32,8 @@ Phase 014                       ACTIVE
 014-C                           COMPLETE
 014-D                           COMPLETE
 014-E                           COMPLETE
-014-F                           NEXT ELIGIBLE
+014-F                           COMPLETE
+014-G                           NEXT ELIGIBLE
 R2                              OPEN
 R3                              OPEN
 implementation readiness        NOT READY
@@ -72,10 +73,10 @@ Phase 014 must audit current problem, concept, dependence/application-family, sy
        Design-to-Architecture Traceability Audit — COMPLETE
 
 014-F  End-to-End Scenario, Exception, Failure, Recovery, Scale,
-       Security, Portability & Adversarial Whole-Design Audit — NEXT
+       Security, Portability & Adversarial Whole-Design Audit — COMPLETE
 
 014-G  Implementation-Neutral Completeness, Decision-Ambiguity,
-       Handoff Sufficiency & Residual Whole-Design Register
+       Handoff Sufficiency & Residual Whole-Design Register — NEXT
 
 014-H  Phase 014 Consolidation, R2 Completion Decision,
        R3 Implementation-Readiness Decision & Phase 015 Handoff
@@ -132,6 +133,22 @@ upstream reopen                             NONE
 
 The resolved WMAT-2 was bounded propagation drift in detailed Phase 013 synchronization wording after 014-C. No architecture structural change or upstream concept/application-family reopen was required.
 
+## 014-F audit result
+
+Current evidence: [Phase 014-F Audit](../../authority/phase-014-f-end-to-end-scenario-exception-failure-recovery-scale-security-portability-adversarial-audit.md) and [014-F Phase Record](014-F-end-to-end-scenario-exception-failure-recovery-scale-security-portability-adversarial-whole-design-audit.md).
+
+~~~text
+required scenario families             PASS
+combined adversarial composition       PASS
+resolved WMAT-2                        1
+unresolved WMAT-2                      0
+unresolved WMAT-3                      0
+upstream reopen                        NONE
+R1 reopen                              NONE REQUIRED
+~~~
+
+The resolved WMAT-2 corrected stale 013-G wording that attributed external governance Evidence handoff to active SYNC-13. No architecture structural change or synchronization change was required.
+
 ## Finding discipline
 
 ```text
@@ -183,4 +200,4 @@ Explicit Phase 015 authority remains required before implementation begins.
 
 ## Current next boundary
 
-**014-F — End-to-End Scenario, Exception, Failure, Recovery, Scale, Security, Portability & Adversarial Whole-Design Audit** is next eligible.
+**014-G — Implementation-Neutral Completeness, Decision-Ambiguity, Handoff Sufficiency & Residual Whole-Design Register** is next eligible.
