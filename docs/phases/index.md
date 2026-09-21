@@ -18,7 +18,7 @@ IMPLEMENTATION START       NOT STARTED
 IMPLEMENTATION NEXT        PHASE 015 AUTHORITY GATE
 ```
 
-Only Phase 014 may change readiness after a positive whole-design audit. Explicit Phase 015 authority remains required before implementation begins.
+Phase 014-H established readiness. Explicit Phase 015 authority remains required before implementation begins.
 
 ## Completed design phases
 
