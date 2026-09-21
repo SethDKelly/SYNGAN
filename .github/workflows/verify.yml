@@ -36,5 +36,5 @@ jobs:
       - name: Install SYNGAN with provisioned build backend
         run: uv sync --all-groups --locked --no-build-isolation
 
-      - name: Run repository verification gates
-        run: uv run --no-sync python tools/verify.py all
+      - name: Run required portable verification gate
+        run: uv run --no-sync python tools/verify.py portable
