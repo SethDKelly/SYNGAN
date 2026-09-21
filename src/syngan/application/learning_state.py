@@ -112,7 +112,8 @@ class LearningStateService:
         learned_state: LearnedStateRecord,
         material: LearnedStateMaterialDescriptor,
         authority_frontier: RecoveryFrontier,
-        transition_id: LogicalId,
+        learned_state_transition_id: LogicalId,
+        learning_transition_id: LogicalId,
         intent_id: LogicalId,
     ) -> tuple[LearningSnapshot, LearnedStateSnapshot]:
         learning = self._load_expected_learning(
@@ -155,14 +156,14 @@ class LearningStateService:
         state_snapshot = self._ensure_learned_state_record(
             learned_state,
             authority_frontier,
-            transition_id,
+            learned_state_transition_id,
         )
         next_learning = learning.state.complete(learned_state.reference)
         learning_snapshot = self._persist_learning(
             learning,
             next_learning,
             authority_frontier,
-            transition_id,
+            learning_transition_id,
             "learning-completed",
             EncodedPayload.from_object(
                 {"learned_state_reference": learned_state.reference.require_exact_binding()[1]}
