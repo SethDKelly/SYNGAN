@@ -1,117 +1,39 @@
 ---
 type: Architecture Index
-title: SYNGAN Representation & Architecture Design
-status: complete-current
+title: SYNGAN Current Architecture
+status: active
 ---
 
-# SYNGAN Representation & Architecture Design
+# SYNGAN Current Architecture
 
 ## Purpose
 
-Expose the current architecture baseline reconciled against completed Jackson concept design.
+Route to the current representation/realization owners. Prior architecture generations and reconciliation work are preserved under [Architecture History](../history/architecture/).
 
-## Current posture
+## Current architecture owners
 
-```text
-Jackson concept design          COMPLETE FOR CURRENT PRODUCT SCOPE
-Phase 013                       COMPLETE
-013-A..013-J                    COMPLETE
-architecture corpus             RECONCILED / CURRENT
-R1 architecture reconciliation  CURRENTLY CLOSED
-Phase 014 start gate            COMPLETE
-Phase 014                       ACTIVE
-Phase 014 subgroup sequencing       SEE docs/phases/014/index.md
-R2 whole-design audit           OPEN
-R3 implementation readiness     OPEN
-implementation readiness        NOT READY
-implementation start            NOT STARTED
-implementation next             NOT YET
-```
+- [Architecture Authority / Representation Layering](architecture-authority-representation-layering.md)
+- [Public Resource / Workflow Representation](public-api-resource-handle-workflow-semantic-mapping.md)
+- [Identity / Control / Historical Persistence](control-plane-identity-revision-state-persistence-historical-reference.md)
+- [Distributed Data / Materialization / Promotion](spark-data-boundary-source-output-reference-distributed-materialization-manifest-promotion.md)
+- [Strategy / Runtime / Learning / Generation](strategy-extension-learning-generation-evaluation-runtime-adapter.md)
+- [Execution / Attempt / Recovery](execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation.md)
+- [Evaluation / Evidence / Provenance / Historical Query](evaluation-evidence-provenance-reproducibility-historical-query.md)
+- [Dependency / Security / Offline-No-Egress](dependency-resolution-offline-no-egress-authorization-redaction-enterprise-security.md)
+- [Deployment / Portability / Scale / Observability](deployment-scalability-observability-portability-compatibility-platform-integration.md)
+- [Phase 013 Consolidated Architecture Contract](phase-013-consolidated-architecture-contract.md) — summary/routing contract downstream of topic owners
 
-## Canonical current architecture
+Accepted rationale is retained under [ADRs](../decisions/).
 
-Start with [Phase 013 Consolidated Architecture Contract](phase-013-consolidated-architecture-contract.md).
+## Current state
 
-Detailed supporting authorities remain:
+See [Current Repository Status](../authority/current-repository-status.md).
 
-- [013-B Representation Reconciliation](../history/architecture/phase-013-b-representation-layering-public-contract-identity-view-reconciliation.md)
-- [013-C Persistence Reconciliation](../history/architecture/phase-013-c-control-persistence-history-concurrency-migration-recovery-reconciliation.md)
-- [013-D Distributed Data Reconciliation](../history/architecture/phase-013-d-distributed-data-topology-manifest-candidate-promotion-reconciliation.md)
-- [013-E Runtime / Dependency / Security Reconciliation](../history/architecture/phase-013-e-strategy-runtime-dependency-authorization-secrets-distribution-reconciliation.md)
-- [013-F Execution / Recovery / Admission Reconciliation](../history/architecture/phase-013-f-execution-attempt-fencing-idempotency-checkpoint-cancellation-recovery-admission-reconciliation.md)
-- [013-G Evidence / Provenance / History / Disclosure Reconciliation](../history/architecture/phase-013-g-evaluation-evidence-provenance-history-reproducibility-disclosure-governance-reconciliation.md)
-- [013-H Deployment / Scale / Platform Reconciliation](../history/architecture/phase-013-h-deployment-scalability-observability-portability-compatibility-platform-integration-reconciliation.md)
-- [013-I Cross-Architecture / Legacy / M6 Reconciliation](../history/architecture/phase-013-i-cross-architecture-composition-legacy-m6-residual-reconciliation.md)
+~~~text
+architecture reconciliation  COMPLETE
+R1                           CURRENTLY CLOSED
+C0-C9                        ACTIVE / PASS
+upstream architecture reopen NONE
+~~~
 
-Cross-cutting synchronization authority is [Current Cross-Concept Synchronization Contract](../synchronizations/current-cross-concept-synchronizations.md). Residual accounting is [Phase 013 Residual Architecture Misfit Register](../history/authority/phase-013-residual-architecture-misfit-register.md).
-
-## Current architecture composition
-
-```text
-semantic / application-family authority
-    ↓
-representation / identity / views
-    ↓
-persistence / exact history / recovery-state
-    ↓
-distributed data / topology / candidate / physical closure
-    ↓
-Strategy realization / dependency / security / distributed closure
-    ↓
-Execution / Attempts / fencing / recovery / admission
-    ↓
-owner semantic establishment
-    ↓
-Evaluation / Evidence / Provenance / historical read composition / disclosure
-    ↓
-deployment / provider / observability / compatibility realization
-```
-
-This is dependency/explanation ordering, not a mandatory workflow. Direct Generation remains valid without Learning/Learned State where Strategy semantics permit it; Execution and Evaluation/Evidence remain occurrence/capability dependent.
-
-## Residual state
-
-```text
-unresolved AMAT-2 defects                     0
-unresolved AMAT-3 blockers                    0
-unresolved AR-3..AR-9 findings                0
-unresolved current-authority ambiguity        0
-unresolved M6 ambiguity                       0
-unjustified M8 placeholders                   0
-ADRs lacking final disposition                0
-upstream reopens awaiting validation          0
-```
-
-## Historical architecture disposition
-
-```text
-Phase 004 architecture                  RETAINED HISTORICAL INPUT
-Phase 006 architecture overlay          RETAINED HISTORICAL REFINEMENT
-Phase 007-D..J architecture             RETAINED HISTORICAL REFINEMENT
-Phase 007 consolidated contract         RETAINED HISTORICAL SYNTHESIS
-Phase 007-A..C scaffold                 FEASIBILITY EVIDENCE ONLY
-Phase 007-K implementation re-entry     SUPERSEDED AS CURRENT AUTHORIZATION
-ADR-0001..0010                          RETAINED RATIONALE
-```
-
-Historical `active/current/canonical` wording in pre-013 records does not outrank the current Phase 013 contract.
-
-## Phase 014 boundary
-
-Architecture is an audited downstream layer in R2, not a substitute for the whole design. Phase 014 must verify that every material architecture obligation traces to upstream purpose/semantics and that every material upstream semantic obligation has an architecture realization boundary.
-
-Architecture may be reopened only if the whole-design audit demonstrates a genuine representation/realization contradiction.
-
-## Implementation boundary
-
-```text
-IMPLEMENTATION READINESS   NOT READY
-IMPLEMENTATION START       NOT STARTED
-IMPLEMENTATION NEXT        NOT YET
-```
-
-Phase 014 owns R2/R3. Phase 015 remains required for explicit implementation authority.
-
-## Current next boundary
-
-Current Phase 014 subgroup sequencing is governed by [`docs/phases/014/index.md`](../history/phases/014/index.md).
+Historical Phase 004/006/007/013 architecture records are provenance only and do not outrank the current topic owners above.
