@@ -155,7 +155,7 @@ IRD-011 source-derived text algorithm         RESOLVED FOR REFERENCE BASELINE �
 GOV-001 strict external OKF normalization      OPEN / NON-BLOCKING
 ~~~
 
-These items are candidate inputs to a future delivery start gate. They do **not** define or authorize Phase 016.
+These items remain candidate inputs to a future **product/provider/runtime delivery** start gate. Phase 016 has now been separately authorized for documentation/OKF/agentic/readiness hardening and does not consume these delivery items unless a later 016 subgroup explicitly owns a non-semantic preflight policy for them.
 
 If a future program proposes work that crosses an M8 rediscovery trigger—formal composable privacy, product-owned governance/publication, reusable request/session state, or product-owned resource/economic lifecycle—the work must return to Jackson concept discovery before implementation authorization.
 
@@ -163,8 +163,10 @@ Current boundary:
 
 ~~~text
 Phase 015                         COMPLETE
-Phase 016                         NOT DEFINED
-post-Phase-015 delivery authority NONE
+Phase 016                         ACTIVE — PRE-IMPLEMENTATION HARDENING
+016-A                             COMPLETE
+016-B                             NEXT ELIGIBLE / NOT AUTHORIZED
+product/provider delivery         NOT AUTHORIZED
 ~~~
 
-See [Post-Phase-015 Methodology & Documentation Reconciliation](../authority/post-phase-015-methodology-documentation-reconciliation.md).
+See [Phase 016](../phases/016/index.md) for the active hardening program.
