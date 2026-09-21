@@ -17,16 +17,17 @@ Current governing implementation authority:
 - [015-F Execution / Attempt / Recovery](phase-015-f-execution-attempt-admission-fencing-idempotency-checkpoint-cancellation-recovery-authority.md)
 - [015-G Evaluation / Evidence / Provenance / History / Reproducibility](phase-015-g-evaluation-evidence-provenance-history-reproducibility-authority.md)
 - [015-H Authorization / Disclosure / Protected Existence / Secrets / Dependency Trust / No-Egress](phase-015-h-authorization-disclosure-protected-existence-secrets-dependency-trust-no-egress-authority.md)
+- [015-I Platform Capability / Portability / Observability / Scale / Support Qualification](phase-015-i-platform-capability-portability-observability-scale-performance-support-qualification-authority.md)
 
 ## Current posture
 
 ```text
 IMPLEMENTATION READINESS   READY
 IMPLEMENTATION START       STARTED
-IMPLEMENTATION NEXT        015-I — NEXT ELIGIBLE / NOT AUTHORIZED
+IMPLEMENTATION NEXT        015-I — AUTHORIZED / ACTIVE
 ```
 
-Phase 015 authority is active. 015-A through 015-H are complete. 015-I is next eligible but not authorized; 015-J remains locked.
+Phase 015 authority is active. 015-A through 015-H are complete. 015-I is authorized and active; 015-J remains locked.
 
 ## Current design progress
 
@@ -94,11 +95,11 @@ Current residual/readiness evidence is [Phase 014-G Implementation-Neutral Compl
 
 ## Current authorization boundary
 
-The Phase 015 start gate and 015-A through 015-H are complete. No later slice is currently authorized.
+The Phase 015 start gate and 015-A through 015-H are complete. 015-I is explicitly authorized; 015-J is not authorized.
 
 015-A reconciled implementation authority, repository/toolchain configuration, scaffold/test dispositions and architecture-fitness rules without implementing concept/domain behavior.
 
-Until 015-I or a later owning slice is explicitly authorized, do not add or stabilize production outside completed 015-H authority:
+015-I is now authorized only for platform capability, portability, observability, scale/performance and support-qualification responsibilities. Outside that scope:
 
 - persistence/query schemas or migrations;
 - data-state/manifest/candidate stores;
@@ -127,4 +128,4 @@ Implementation now includes the 015-C control foundation, 015-D Generation data-
 
 ## Current next boundary
 
-**015-I — Platform Capability, Portability, Observability, Scale/Performance & Support Qualification** — next eligible, not authorized.
+**015-I — Platform Capability, Portability, Observability, Scale/Performance & Support Qualification** — authorized / active.
