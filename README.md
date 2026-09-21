@@ -36,7 +36,8 @@ Phase 014                            ACTIVE
 014-B                                COMPLETE
 014-C                                COMPLETE
 014-D                                COMPLETE
-014-E                                NEXT ELIGIBLE
+014-E                                COMPLETE
+014-F                                NEXT ELIGIBLE
 R2                                   OPEN
 R3                                   OPEN
 implementation readiness             NOT READY
@@ -64,8 +65,8 @@ Approved sequence:
 014-A  evidence baseline / traceability / reopen rules — COMPLETE
 014-B  problem / actors / outcomes / scope / concept-purpose coverage — COMPLETE
 014-C  concept / dependence / application-family / synchronization integrity — COMPLETE
-014-D  mapping / interaction / disclosure / semantic parity
-014-E  architecture realization / design-to-architecture traceability
+014-D  mapping / interaction / disclosure / semantic parity — COMPLETE
+014-E  architecture realization / design-to-architecture traceability — COMPLETE
 014-F  end-to-end scenarios / failure / recovery / scale / security / portability
 014-G  implementation-neutral completeness / handoff sufficiency / residual register
 014-H  R2 decision / R3 readiness decision / Phase 015 handoff
@@ -93,4 +94,4 @@ Even a later positive R3 does not start implementation; explicit Phase 015 autho
 
 ## Current next boundary
 
-**014-E — Architecture Realization Coverage, Responsibility/Authority & Design-to-Architecture Traceability Audit** is next eligible.
+**014-F — End-to-End Scenario, Exception, Failure, Recovery, Scale, Security, Portability & Adversarial Whole-Design Audit** is next eligible.
