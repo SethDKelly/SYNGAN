@@ -25,8 +25,8 @@ This is not a new product-feature phase.
 Phase 015   COMPLETE
 Phase 016   ACTIVE
 Start Gate  COMPLETE
-016-A       AUTHORIZED / ACTIVE
-016-B       NOT AUTHORIZED
+016-A       COMPLETE
+016-B       NEXT ELIGIBLE / NOT AUTHORIZED
 016-C       NOT AUTHORIZED
 016-D       NOT AUTHORIZED
 016-E       NOT AUTHORIZED
@@ -63,6 +63,21 @@ Until a later group is explicitly authorized:
 - do not add product/runtime/provider behavior;
 - do not claim implementation readiness improvements that have not been evidenced.
 
+## 016-A completion
+
+- [016-A Documentation Corpus / Current-Owner / Duplication Audit](016-A-documentation-corpus-current-owner-duplication-supersession-audit.md)
+- [016-A Machine-Readable Documentation Inventory](016-A-documentation-corpus-inventory.json)
+
+~~~text
+corpus inventory                     COMPLETE
+current-owner hypothesis             COMPLETE
+duplication / overlap register       COMPLETE
+progressive-disclosure audit         COMPLETE
+initial OKF/profile audit            COMPLETE
+P16-3 / P16-4 findings               0 / 0
+016-A                                COMPLETE
+~~~
+
 ## Current next boundary
 
-016-A is the only active Phase 016 subphase.
+**016-B — Current Knowledge vs History Topology Normalization, Canonical Ownership Map & Progressive Disclosure** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
