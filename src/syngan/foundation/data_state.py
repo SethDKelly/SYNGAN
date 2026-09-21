@@ -108,7 +108,9 @@ class SemanticBinding:
 
     def __post_init__(self) -> None:
         object.__setattr__(self, "role", _token(self.role, "semantic binding role"))
-        normalized = tuple(_token(scope_id, "semantic binding scope id") for scope_id in self.scope_ids)
+        normalized = tuple(
+            _token(scope_id, "semantic binding scope id") for scope_id in self.scope_ids
+        )
         if not normalized:
             raise ValueError("semantic binding must apply to at least one logical scope")
         if len(set(normalized)) != len(normalized):
@@ -186,7 +188,9 @@ class SealedPhysicalSubject:
 
     def __post_init__(self) -> None:
         if self.reference.commitment_snapshot_id is None or self.reference.revision_id is not None:
-            raise ValueError("sealed physical subject requires an exact commitment snapshot reference")
+            raise ValueError(
+                "sealed physical subject requires an exact commitment snapshot reference"
+            )
         physical_scope_ids = tuple(scope.scope_id for scope in self.scopes)
         if len(set(physical_scope_ids)) != len(physical_scope_ids):
             raise ValueError("physical scope bindings must be unique")
