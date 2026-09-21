@@ -111,9 +111,7 @@ class PrincipalRef:
 
     def __post_init__(self) -> None:
         object.__setattr__(self, "principal_id", _token(self.principal_id, "principal id"))
-        object.__setattr__(
-            self, "security_domain", _token(self.security_domain, "security domain")
-        )
+        object.__setattr__(self, "security_domain", _token(self.security_domain, "security domain"))
         if self.kind is PrincipalKind.DELEGATED and self.delegated_from is None:
             raise ValueError("delegated principal requires parent activity/Attempt reference")
         if self.delegated_from is not None:
@@ -306,9 +304,7 @@ class DisclosureView:
             self.state in {DisclosureState.ABSENT, DisclosureState.WITHHELD}
             and self.detail is not None
         ):
-            raise ValueError(
-                "absent/withheld disclosure cannot carry protected detail"
-            )
+            raise ValueError("absent/withheld disclosure cannot carry protected detail")
 
 
 @dataclass(frozen=True, slots=True)
