@@ -8,17 +8,20 @@ status: active
 
 ## Purpose
 
-Maintain the boundary between completed concept design, completed architecture reconciliation, completed Phase 014 whole-design/readiness work, and Phase 015 implementation authority.
+Maintain the boundary between completed concept design, completed architecture reconciliation, completed Phase 014 whole-design/readiness work, completed Phase 015 implementation, and any future delivery program.
 
 ## Current implementation status
 
 ```text
-IMPLEMENTATION READINESS   READY
-IMPLEMENTATION START       STARTED
-IMPLEMENTATION NEXT        015-H — NEXT ELIGIBLE / NOT AUTHORIZED
+IMPLEMENTATION READINESS             READY / CONSUMED BY PHASE 015
+IMPLEMENTATION START                 COMPLETED CURRENT AUTHORIZED PROGRAM
+PHASE 015                            COMPLETE
+C0-C9                                ACTIVE / PASS
+POST-PHASE-015 DELIVERY AUTHORITY    NONE
+PHASE 016                            NOT DEFINED
 ```
 
-R3 readiness changes readiness only; it does not start implementation.
+R3 readiness was consumed by the explicitly authorized Phase 015 program. It does not authorize any subsequent delivery program.
 
 ## Methodology boundary
 
@@ -29,9 +32,11 @@ representation / architecture reconciliation    ← Phase 013 COMPLETE / R1 CLOS
         ↓
 whole-design completion / readiness              ← Phase 014 COMPLETE / R2 CLOSED / R3 READY
         ↓
-implementation readiness                         ← READY / NOT STARTED
+implementation readiness                         ← R3 READY / CONSUMED
         ↓
-explicit implementation authority               ← Phase 015 START GATE + 015-A..G COMPLETE / 015-H GATED
+explicit implementation authority               ← Phase 015 COMPLETE / 015-A..J COMPLETE
+        ↓
+future delivery authority                        ← NONE / NEW START GATE REQUIRED
 ```
 
 ## Current design state
@@ -76,35 +81,38 @@ The approved sequence is 014-A through 014-H. R3 may be decided only after the R
 
 Phase 014 may inspect historical implementation plans, source, tests, provider evidence and feasibility artifacts only to ask whether implementation would have to invent unresolved semantics. Those artifacts remain downstream evidence, not semantic authority.
 
-## Readiness does not equal start
+## Readiness does not equal continuing authority
 
-Phase 014-H established:
+Phase 014-H established R3 = READY. Phase 015 subsequently established explicit implementation authority, executed 015-A through 015-J, and completed the currently authorized implementation foundation.
 
 ```text
-IMPLEMENTATION READINESS   READY
-IMPLEMENTATION START       STARTED
-IMPLEMENTATION NEXT        015-H — NEXT ELIGIBLE / NOT AUTHORIZED
+PHASE 015                         COMPLETE
+C0-C9                             ACTIVE / PASS
+POST-PHASE-015 PROGRAM            NOT AUTHORIZED
 ```
 
-That state still does not authorize production changes. Phase 015 must explicitly establish implementation authority and controlled-delivery rules.
+Completion of Phase 015 does not authorize additional provider, scale, product-surface, release-hardening or other delivery work.
 
-## Architecture / executable prohibition
+## Architecture / executable boundary
 
-015-A through 015-G are complete. Identity/control, distributed-data/promotion, Strategy/runtime, Learning/Learned-State, Generation runtime-planning, Execution/recovery, and Evidence/history foundations are implemented. 015-H and later responsibilities remain held until explicit slice authorization.
+015-A through 015-J are complete. The current framework/reference implementation has passed C0-C9.
 
-Phase 014 findings must distinguish missing design semantics from normal implementation alternatives, sequencing concerns, evidence needs or provider-specific qualification work.
+Real Spark/Databricks adapters, provider-specific deployment certification, enterprise-scale qualification, a complete Strategy catalog, and release/SLO/SLA certification remain unclaimed unless a future explicitly authorized program establishes the required evidence.
+
+Phase 014/015 findings must continue to distinguish missing design semantics from normal implementation alternatives, sequencing concerns, evidence needs or provider-specific qualification work.
 
 ## Remaining roadmap
 
+No numbered post-Phase-015 phase is currently defined.
+
 ```text
-014-A         COMPLETE — audit evidence baseline / traceability / reopen rules
-014-B         COMPLETE — problem / actor / outcome / concept-purpose coverage
-014-C         COMPLETE — concept / dependence / family / synchronization integrity
-014-D         COMPLETE — mapping / linguistic / disclosure / semantic parity
-014-E..014-G  COMPLETE — whole-design evidence / residual-readiness preflight
-014-H         COMPLETE — R2 decision / R3 decision / Phase 015 handoff
-015           Implementation Authority & Controlled Delivery — START GATE NEXT
+014           COMPLETE — whole-design / R2 / R3
+015           COMPLETE — implementation authority / controlled delivery / C0-C9
+016           NOT DEFINED
+NEXT PROGRAM  REQUIRES EXPLICIT START GATE
 ```
+
+Candidate future work remains in the backlog, but backlog items do not create phase authority.
 
 ## 014-G completion state
 
@@ -159,6 +167,12 @@ IMPLEMENTATION START       STARTED
 
 The hold remains slice-specific: 015-A through 015-G are complete; 015-H requires explicit authorization; authorization/disclosure/dependency-trust/no-egress and later responsibilities remain held.
 
+## Post-Phase-015 reconciliation
+
+Current posture is additionally recorded in [Post-Phase-015 Methodology & Documentation Reconciliation](post-phase-015-methodology-documentation-reconciliation.md).
+
+The four M8 future-rediscovery groups remain dormant triggers rather than pending design work.
+
 ## Current next boundary
 
-**015-H — Authorization, Disclosure, Protected Existence, Secrets, Dependency Trust & No-Egress** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
+**No post-Phase-015 delivery program is authorized. Phase 016 is not defined.** Any future program requires a separate explicit start gate and user authorization.
