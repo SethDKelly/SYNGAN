@@ -44,27 +44,21 @@ Architecture that discovers an upstream infeasibility or contradiction MUST surf
 
 Implementation that discovers an architecture infeasibility or contradiction MUST surface the conflict explicitly and request an architecture revision rather than redefining the contract inside `docs/implementation/` or code.
 
-## OKF 0.2 profile
+## OKF v0.2 producer / projection profile
 
-`docs/` is an OKF 0.2 knowledge bundle under the current project-specific profile.
+The authored `docs/` tree is the repository's current knowledge and authority surface. It is **not** itself the external OKF v0.2 compatibility bundle.
 
-The bundle root MUST be `docs/index.md` and MUST declare `okf_version: "0.2"`.
+External OKF v0.2 compatibility is provided through the generated `knowledge/` projection governed by [OKF v0.2 Producer Profile](okf-v0.2-producer-profile.md).
 
-All durable knowledge documents MUST contain YAML frontmatter with at least:
+The separation is intentional:
 
-```yaml
----
-type: <project-specific type>
-title: <human-readable title>
-status: <status>
----
-```
+- `docs/` optimizes for SYNGAN authority, lifecycle, design layering, and human/agent progressive disclosure;
+- `knowledge/` optimizes for deterministic OKF v0.2 interchange and routing;
+- generated projection metadata or wording MUST NOT establish, strengthen, weaken, or supersede a proposition owned by `docs/`;
+- changes to canonical meaning MUST be made in the owning `docs/` authority, never by hand-editing `knowledge/`;
+- projection generation and conformance MUST be reproducible and drift-detectable.
 
-Additional metadata MAY be added when useful for provenance, lifecycle, verification, relationships, or automation.
-
-Project-specific `type` values are allowed and SHOULD describe the semantic role of the document rather than its file format.
-
-The separate question of strict conformance to external OKF 0.2 reserved-file/frontmatter conventions remains subject to an explicit external-authority audit; repository text MUST NOT imply that separate normalization question has been completed merely because the project uses this profile.
+Durable authored documents continue to use repository YAML frontmatter with at least `type`, `title`, and `status` unless a reserved/index form has an explicit repository exception. This repository metadata convention is distinct from the external OKF compatibility contract.
 
 ## Progressive disclosure
 

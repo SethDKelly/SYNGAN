@@ -182,7 +182,7 @@ The user explicitly authorized Phase 016 and requested execution of the first su
 Phase 016   AUTHORIZED / ACTIVE
 016-A       COMPLETE
 016-B       COMPLETE
-016-C       NEXT ELIGIBLE / NOT AUTHORIZED
+016-C       AUTHORIZED / ACTIVE
 016-D..J    NOT AUTHORIZED
 product delivery beyond hardening  NOT AUTHORIZED
 ~~~
@@ -268,4 +268,24 @@ upstream reopen                       NONE
 
 016-B changed documentation discovery/authority topology only. It did not change product semantics, architecture contracts, Phase 015 support scope, provider claims, or executable product behavior.
 
-016-C remains gated pending explicit proceed.
+## 016-C authorization
+
+The user explicitly authorized 016-C after the audited 016-B closure.
+
+016-C is a documented **P16-2 compatibility/process choice**. It may:
+
+- define SYNGAN's external OKF v0.2 producer profile;
+- distinguish authored current authority from generated compatibility projection;
+- add a deterministic generated `knowledge/` bundle;
+- add repository-owned projection drift and conformance checks;
+- integrate those checks into the existing authority/portable verification path.
+
+016-C must not:
+
+- create a second semantic/current-authority plane;
+- add stable IDs or a resolver reserved for 016-D;
+- define agent action/change/context/tool-adapter policy reserved for 016-E–016-F;
+- establish the separate agentic negative-control/CI program reserved for 016-G;
+- change product semantics, architecture contracts, runtime/provider behavior, or Phase 015 support claims.
+
+016-D through 016-J remain gated until 016-C exit evidence exists.

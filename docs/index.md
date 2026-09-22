@@ -1,5 +1,4 @@
 ---
-okf_version: "0.2"
 type: Knowledge Bundle
 title: SYNGAN Current Knowledge
 status: active
@@ -59,7 +58,7 @@ C0-C9                               ACTIVE / PASS
 Phase 016                           ACTIVE — PRE-IMPLEMENTATION HARDENING
 016-A                               COMPLETE
 016-B                               COMPLETE
-016-C                               NEXT ELIGIBLE / NOT AUTHORIZED
+016-C                               AUTHORIZED / ACTIVE
 016-D..016-J                        NOT AUTHORIZED
 
 product/provider/runtime delivery   NOT AUTHORIZED
@@ -75,4 +74,4 @@ Historical wording such as active, current, canonical, next, MUST, or SHALL is s
 
 ## OKF note
 
-docs/ currently follows the repository's project-specific OKF-oriented profile. Phase 016-C owns the external OKF v0.2 producer/projection/conformance decision. 016-B has completed the ownership/topology prerequisite; 016-C remains gated pending explicit authorization.
+The authored `docs/` tree is SYNGAN's current knowledge/authority surface; it is not the externally conformant OKF transport bundle. Phase 016-C is establishing a deterministic generated `../knowledge/` compatibility projection under the canonical [OKF v0.2 Producer Profile](authority/okf-v0.2-producer-profile.md). Generated OKF routes never become semantic authority.

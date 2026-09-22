@@ -27,7 +27,7 @@ Phase 016   ACTIVE
 Start Gate  COMPLETE
 016-A       COMPLETE
 016-B       COMPLETE
-016-C       NEXT ELIGIBLE / NOT AUTHORIZED
+016-C       AUTHORIZED / ACTIVE
 016-D       NOT AUTHORIZED
 016-E       NOT AUTHORIZED
 016-F       NOT AUTHORIZED
@@ -91,6 +91,18 @@ P16-3 / P16-4 findings                0 / 0
 016-B                                 COMPLETE
 ~~~
 
+## 016-C active execution
+
+[016-C — OKF v0.2 Producer Profile, Generated Knowledge Projection & Conformance](016-C-okf-v0.2-producer-profile-generated-knowledge-projection-conformance.md)
+
+~~~text
+016-C                                 AUTHORIZED / ACTIVE
+change class                          P16-2
+product/runtime/provider behavior     NOT AUTHORIZED
+stable-reference/resolver work        RESERVED FOR 016-D
+agent authority/context/CI work       RESERVED FOR 016-E..016-G
+~~~
+
 ## Current next boundary
 
-**016-C — OKF v0.2 Producer Profile, Generated Knowledge Projection & Conformance** is **NEXT ELIGIBLE / NOT AUTHORIZED** pending explicit proceed.
+**016-C — OKF v0.2 Producer Profile, Generated Knowledge Projection & Conformance** is **AUTHORIZED / ACTIVE**. 016-D remains **NOT AUTHORIZED** until 016-C exit evidence exists.

@@ -25,7 +25,7 @@ Phase 016                           ACTIVE — PRE-IMPLEMENTATION HARDENING
 Start Gate                          COMPLETE
 016-A                               COMPLETE
 016-B                               COMPLETE
-016-C                               NEXT ELIGIBLE / NOT AUTHORIZED
+016-C                               AUTHORIZED / ACTIVE
 016-D..016-J                        NOT AUTHORIZED
 
 current conceptual blockers         0
@@ -52,7 +52,9 @@ Phase 016 does **not** authorize:
 
 016-B is complete.
 
-016-C — OKF v0.2 Producer Profile, Generated Knowledge Projection & Conformance — is next eligible but remains NOT AUTHORIZED pending explicit proceed.
+016-C — OKF v0.2 Producer Profile, Generated Knowledge Projection & Conformance — is AUTHORIZED / ACTIVE by explicit user proceed.
+
+016-C may establish the external OKF v0.2 producer contract, a deterministic generated `knowledge/` compatibility projection, and repository-owned conformance checks. It may not add stable-reference mechanics reserved for 016-D, agent authority/context rules reserved for 016-E–016-G, or product/runtime/provider behavior.
 
 016-B closure established:
 
