@@ -26,6 +26,6 @@ The current reference/framework implementation is verified through C0-C9. Produc
 
 ## Current authorization boundary
 
-Phase 016 is complete. Repository implementation-program readiness is 100/100, but readiness does not authorize implementation.
+Phase 016 is complete. Repository implementation-program readiness is 100/100.
 
-Any next implementation or delivery program requires its own explicit start gate and human authorization. Current contribution and branch workflow is documented in [CONTRIBUTING.md](../../CONTRIBUTING.md).
+Phase 017 is explicitly authorized for implementation-program planning only. Product implementation execution remains unauthorized; the first executable phase requires its own explicit start gate after Phase 017 closure. Current contribution and branch workflow is documented in [CONTRIBUTING.md](../../CONTRIBUTING.md).
