@@ -26,8 +26,8 @@ Phase 015   COMPLETE
 Phase 016   ACTIVE
 Start Gate  COMPLETE
 016-A       COMPLETE
-016-B       AUTHORIZED / ACTIVE
-016-C       NOT AUTHORIZED
+016-B       COMPLETE
+016-C       NEXT ELIGIBLE / NOT AUTHORIZED
 016-D       NOT AUTHORIZED
 016-E       NOT AUTHORIZED
 016-F       NOT AUTHORIZED
@@ -78,13 +78,19 @@ P16-3 / P16-4 findings               0 / 0
 016-A                                COMPLETE
 ~~~
 
-## Current next boundary
-
-**016-B — Current Knowledge vs History Topology Normalization, Canonical Ownership Map & Progressive Disclosure** is **AUTHORIZED / ACTIVE**.
-
-
-## 016-B active authority
+## 016-B completion
 
 [016-B Current Knowledge / History Topology / Canonical Ownership / Progressive Disclosure](016-B-current-knowledge-history-topology-canonical-ownership-progressive-disclosure.md)
 
-016-B may relocate documentation only when current ownership and conservation are explicit. 016-C remains gated.
+~~~text
+current/history physical separation   COMPLETE
+canonical ownership map               COMPLETE
+progressive-disclosure routing        COMPLETE
+history/link conservation             PASS
+P16-3 / P16-4 findings                0 / 0
+016-B                                 COMPLETE
+~~~
+
+## Current next boundary
+
+**016-C — OKF v0.2 Producer Profile, Generated Knowledge Projection & Conformance** is **NEXT ELIGIBLE / NOT AUTHORIZED** pending explicit proceed.
