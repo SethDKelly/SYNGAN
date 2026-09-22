@@ -189,7 +189,7 @@ Phase 016   AUTHORIZED / ACTIVE
 016-G       COMPLETE
 016-H       COMPLETE
 016-I       COMPLETE
-016-J       NEXT ELIGIBLE / NOT AUTHORIZED
+016-J       AUTHORIZED / ACTIVE
 product delivery beyond hardening  NOT AUTHORIZED
 ~~~
 
@@ -436,7 +436,31 @@ The user explicitly authorized 016-I after the verified 016-H closure.
 - add production provider/runtime integrations;
 - authorize 016-J or a post-Phase-016 product program.
 
-016-J remains NOT AUTHORIZED until 016-I exit evidence exists.
+## 016-J authorization
+
+The user explicitly authorized 016-J after the verified 016-I closure.
+
+016-J is the formal Phase 016 exit gate. It must use the scorecard weights fixed at the start gate, consume actual A-I closure evidence, and distinguish repository implementation-program readiness from release/provider/scale qualification.
+
+016-J may:
+
+- score each fixed readiness dimension against current repository evidence;
+- record why full credit, partial credit, or a deduction is justified;
+- classify residual risks by the exact future decision or claim they block;
+- decide whether any residual blocks entry to a new, separately authorized implementation program;
+- close Phase 016 when all exit conditions are satisfied;
+- define the post-Phase-016 start-gate requirement.
+
+016-J must not:
+
+- retroactively alter score weights;
+- award points for unsupported provider, scale, release, or runtime claims;
+- deduct readiness merely because a well-designed preflight truthfully preserves future release/support residuals outside the scorecard's intended scope;
+- mark a residual resolved without the required external/human/executed evidence;
+- define, number, or authorize the next implementation program unless separately selected by the user;
+- add product/runtime/provider behavior.
+
+No work beyond 016-J is authorized by this subphase.
 
 
 ## 016-I completion evidence
