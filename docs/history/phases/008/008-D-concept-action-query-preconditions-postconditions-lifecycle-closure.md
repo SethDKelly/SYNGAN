@@ -16,12 +16,12 @@ This phase remains entirely within concept design.
 
 ## Governing authority
 
-- [Concept Design Methodology](../../authority/design-methodology.md)
-- [Jackson Design Completion & Implementation Hold](../../authority/jackson-design-completion-implementation-hold.md)
-- [Jackson Methodology Completion Matrix](../../authority/jackson-methodology-completion-matrix.md)
-- [Concept-Justification Traceability](../../problem/concept-justification-traceability.md)
+- [Concept Design Methodology](../../../authority/design-methodology.md)
+- [Jackson Design Completion & Implementation Hold](../../../authority/jackson-design-completion-implementation-hold.md)
+- [Jackson Methodology Completion Matrix](../../../authority/jackson-methodology-completion-matrix.md)
+- [Concept-Justification Traceability](../../../problem/concept-justification-traceability.md)
 - [Concept State, Identity, History & Invariant Normalization](../../concepts/state-identity-history-invariant-normalization.md)
-- [Accepted Concept Catalog](../../concepts/index.md)
+- [Accepted Concept Catalog](../../../concepts/index.md)
 - [Core Synchronizations](../../synchronizations/core-synchronizations.md)
 
 008-D creates the current cross-concept behavioral authority:
