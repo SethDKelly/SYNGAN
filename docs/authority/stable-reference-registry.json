@@ -19,6 +19,13 @@
       "owner_family": "repository_status"
     },
     {
+      "ref": "syngan://authority/canonical-ownership-map",
+      "path": "docs/authority/canonical-knowledge-ownership-map.md",
+      "status": "active",
+      "authority_class": "current",
+      "owner_family": "canonical_knowledge_ownership_map"
+    },
+    {
       "ref": "syngan://authority/documentation-governance",
       "path": "docs/authority/documentation-governance.md",
       "status": "active",
