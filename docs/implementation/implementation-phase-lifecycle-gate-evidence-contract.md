@@ -185,6 +185,9 @@ It may contain:
 The challenge layer may vary how known obligations are tested. It MUST NOT invent a new semantic
 requirement after implementation.
 
+Detailed split-visibility, holdout generation, evaluator-independence, contamination, replay, and
+anti-gaming mechanics are governed by `syngan://implementation/evaluation-method`.
+
 For a public repository, "holdout" means evaluator independence or fresh generation, not pretending
 a checked-in file is secret. Valid mechanisms include fresh evaluator generation from current
 authority, randomized seeds captured for replay, or genuinely private CI where separately

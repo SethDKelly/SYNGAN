@@ -118,7 +118,7 @@ After candidate freeze, the evaluator receives the frozen success contract, exac
 package dispositions, current authority, and required evidence.
 
 The evaluator uses independently generated challenge material under the implementation-phase
-lifecycle. Exact challenge mechanics are further defined by Phase 017-D.
+lifecycle. Exact challenge mechanics are governed by `syngan://implementation/evaluation-method`.
 
 The evaluator must not silently repair the candidate while certifying it. A product change creates a
 new candidate and invalidates affected evaluation.

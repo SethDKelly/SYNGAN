@@ -13,7 +13,7 @@ syngan_authority: "projection-only"
 
 **GENERATED OKF PROJECTION — DO NOT HAND-EDIT.**
 
-Stable reference: syngan://implementation/evaluation-method.
+Stable reference: `syngan://implementation/evaluation-method`.
 
 Canonical source: [Success Visibility, Holdout Evaluation & Anti-Gaming](../../docs/implementation/success-visibility-holdout-evaluation-anti-gaming.md).
 
