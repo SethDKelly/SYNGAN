@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import fnmatch
 import re
+from collections.abc import Iterator
 from pathlib import Path
 
 TEXT_SUFFIXES = {
@@ -68,7 +69,7 @@ SECRET_PATTERNS = (
 )
 
 
-def _iter_files(repo: Path):
+def _iter_files(repo: Path) -> Iterator[Path]:
     for path in sorted(repo.rglob("*")):
         if not path.is_file():
             continue
