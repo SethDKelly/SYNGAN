@@ -52,6 +52,7 @@ def main() -> int:
         print("ERROR", exc)
         return 1
 
+    required: dict[str, tuple[str, ...]]
     if mode == ACTIVE:
         required = {
             "phase_authority": ("016-H       AUTHORIZED / ACTIVE", "016-I..J    NOT AUTHORIZED"),
