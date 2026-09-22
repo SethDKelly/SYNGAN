@@ -61,10 +61,7 @@ def test_ci_actions_are_immutably_pinned_and_checkout_credentials_do_not_persist
     for item in expected:
         assert item in verify_text
         assert item in agentic_text
-    assert (
-        "astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1"
-        in verify_text
-    )
+    assert "astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1" in verify_text
     assert "persist-credentials: false" in verify_text
     assert "persist-credentials: false" in agentic_text
 
