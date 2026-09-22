@@ -14,15 +14,15 @@ Convert the complete 009-A pairwise inclusion-dependence inventory into the cano
 
 ## Governing authority
 
-- [Concept Design Methodology](../../authority/design-methodology.md)
-- [Jackson Methodology Completion Matrix](../../authority/jackson-methodology-completion-matrix.md)
+- [Concept Design Methodology](../../../authority/design-methodology.md)
+- [Jackson Methodology Completion Matrix](../../../authority/jackson-methodology-completion-matrix.md)
 - [Phase 008 Individual-Concept Design Consolidation](../../concepts/phase-008-individual-concept-consolidation.md)
-- [009-A Pairwise Inclusion-Dependence Inventory](../../dependence/inclusion-dependence-pairwise-inventory.md)
+- [009-A Pairwise Inclusion-Dependence Inventory](../../../dependence/inclusion-dependence-pairwise-inventory.md)
 - [Phase 009 Entry / Decomposition](009-entry-decomposition.md)
 
 009-B establishes current graph authority:
 
-- [Inclusion-Dependence Graph, Strong Components & Explanation Ordering](../../dependence/inclusion-dependence-graph-ordering.md)
+- [Inclusion-Dependence Graph, Strong Components & Explanation Ordering](../../../dependence/inclusion-dependence-graph-ordering.md)
 
 ## Entry baseline
 
