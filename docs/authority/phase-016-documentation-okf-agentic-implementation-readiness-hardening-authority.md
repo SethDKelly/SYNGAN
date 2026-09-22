@@ -186,8 +186,9 @@ Phase 016   AUTHORIZED / ACTIVE
 016-D       COMPLETE
 016-E       COMPLETE
 016-F       COMPLETE
-016-G       AUTHORIZED / ACTIVE
-016-H..J    NOT AUTHORIZED
+016-G       COMPLETE
+016-H       NEXT ELIGIBLE / NOT AUTHORIZED
+016-I..J    NOT AUTHORIZED
 product delivery beyond hardening  NOT AUTHORIZED
 ~~~
 
@@ -383,4 +384,6 @@ The user explicitly authorized 016-G after the verified 016-F closure.
 - define dependency/supply-chain/secrets/benchmark/API-version preflight reserved for 016-I;
 - change accepted product semantics, architecture contracts, provider/runtime behavior, or Phase 015 support claims.
 
-016-H through 016-J remain gated until 016-G exit evidence exists.
+016-G closure evidence is recorded in the phase work record. Agentic conformance workflow `35690366584` / `#6` and Verify workflow `35690366586` / `#1614` both passed on the substantive candidate. The repository-owned conformance lane includes eight positive deterministic checks and eight seeded temporary-copy negative controls; provider runtimes remain unverified and P16-3/P16-4 findings remain `0 / 0`.
+
+016-H — Implementation Package Contract, Design-to-Code Traceability & ADR Change Control — is NEXT ELIGIBLE / NOT AUTHORIZED. 016-I through 016-J remain NOT AUTHORIZED.
