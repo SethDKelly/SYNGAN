@@ -4,7 +4,12 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-CONTRACT = ROOT / "docs" / "implementation" / "implementation-phase-lifecycle-gate-evidence-contract.md"
+CONTRACT = (
+    ROOT
+    / "docs"
+    / "implementation"
+    / "implementation-phase-lifecycle-gate-evidence-contract.md"
+)
 REGISTRY = ROOT / "docs" / "authority" / "stable-reference-registry.json"
 
 
