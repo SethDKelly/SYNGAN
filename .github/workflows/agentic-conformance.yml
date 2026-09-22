@@ -4,6 +4,9 @@ on:
   pull_request:
     paths:
       - "AGENTS.md"
+      - "README.md"
+      - "CONTRIBUTING.md"
+      - ".github/pull_request_template.md"
       - ".agents/**"
       - ".claude/**"
       - ".cursor/**"
@@ -35,6 +38,9 @@ on:
       - main
     paths:
       - "AGENTS.md"
+      - "README.md"
+      - "CONTRIBUTING.md"
+      - ".github/pull_request_template.md"
       - ".agents/**"
       - ".claude/**"
       - ".cursor/**"
