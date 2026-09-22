@@ -4,7 +4,7 @@ These instructions apply repository-wide to automated coding/documentation agent
 
 ## Current posture
 
-**Jackson concept design and Phases 013-015 are complete; C0-C9 are active/passing. Phase 016 pre-implementation hardening is ACTIVE. 016-A through 016-C are complete; 016-D is NEXT ELIGIBLE / NOT AUTHORIZED. No product/provider/runtime delivery program is authorized.**
+**Jackson concept design and Phases 013-015 are complete; C0-C9 are active/passing. Phase 016 pre-implementation hardening is ACTIVE. 016-A through 016-C are complete; 016-D is AUTHORIZED / ACTIVE. No product/provider/runtime delivery program is authorized.**
 
 ## Start with
 
@@ -16,6 +16,8 @@ For most tasks, read only:
 4. docs/phases/016/index.md only when the task concerns active Phase 016 work
 
 Use docs/history/ only for rationale, provenance, supersession analysis, or reconstruction. Do not treat search rank or historical detail as current authority.
+
+When a `syngan://...` knowledge reference is supplied, resolve it exactly through the repository stable-reference registry/resolver. Do not guess a path from the reference text or substitute search results for failed resolution.
 
 ## Durable authority rules
 
@@ -45,4 +47,4 @@ Current status and subphase authorization are owned by docs/authority/current-re
 
 ## Current next boundary
 
-**016-D — Stable References, Deterministic Resolution & Drift Control is NEXT ELIGIBLE / NOT AUTHORIZED. 016-E and later groups remain NOT AUTHORIZED.**
+**016-D — Stable References, Deterministic Resolution & Drift Control is AUTHORIZED / ACTIVE. 016-E and later groups remain NOT AUTHORIZED.**
