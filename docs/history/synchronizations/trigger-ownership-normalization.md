@@ -23,14 +23,14 @@ This is the Phase 009-F authority for:
 
 ## Governing authority
 
-- [Concept Design Methodology](../authority/design-methodology.md)
+- [Concept Design Methodology](../../authority/design-methodology.md)
 - [Concept Action, Query, Preconditions/Postconditions & Lifecycle Normalization](../concepts/action-query-lifecycle-normalization.md)
 - [Synchronization Inventory Revalidation Across the Application Family](application-family-revalidation.md)
-- [Application Family, Valid Concept Subsets & Minimal Coherent Variants](../dependence/application-family-valid-subsets.md)
-- [Contraction, Extension, Concept Addition/Removal & Product-Scope Consequences](../dependence/contraction-extension-consequences.md)
+- [Application Family, Valid Concept Subsets & Minimal Coherent Variants](../../dependence/application-family-valid-subsets.md)
+- [Contraction, Extension, Concept Addition/Removal & Product-Scope Consequences](../../dependence/contraction-extension-consequences.md)
 - [Core Synchronizations](core-synchronizations.md) as historical detailed evidence where not superseded here
-- [Operational Authority Continuity & Regressive Recovery Contract](../authority/operational-authority-continuity-regressive-recovery-contract.md)
-- [Reproducibility Contract](../authority/reproducibility-contract.md)
+- [Operational Authority Continuity & Regressive Recovery Contract](../../authority/operational-authority-continuity-regressive-recovery-contract.md)
+- [Reproducibility Contract](../../authority/reproducibility-contract.md)
 
 ---
 
