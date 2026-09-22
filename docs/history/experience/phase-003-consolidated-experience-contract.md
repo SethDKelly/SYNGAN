@@ -16,22 +16,22 @@ This document consolidates the invariant experience obligations established by t
 
 This contract remains downstream of:
 
-- [Design Authority](../authority/index.md)
-- [Accepted Concepts](../concepts/index.md)
-- [Accepted Synchronizations](../synchronizations/index.md)
-- [Network and External Dependency Policy](../authority/network-external-dependency-policy.md)
-- [Reproducibility Contract](../authority/reproducibility-contract.md)
+- [Design Authority](../../authority/index.md)
+- [Accepted Concepts](../../concepts/index.md)
+- [Accepted Synchronizations](../../synchronizations/index.md)
+- [Network and External Dependency Policy](../../authority/network-external-dependency-policy.md)
+- [Reproducibility Contract](../../authority/reproducibility-contract.md)
 
 Detailed experience authority remains in:
 
-1. [Workflow Entry, Source Context & Lifecycle Orientation](workflow-entry-source-context-lifecycle-orientation.md)
-2. [Data Meaning, Constraint & Strategy Preparation](data-meaning-constraint-strategy-preparation.md)
-3. [Learning & Learned State Lifecycle](learning-learned-state-lifecycle.md)
-4. [Generation Request, Condition, Validation & Output Promotion](generation-request-condition-validation-output-promotion.md)
-5. [Evaluation, Evidence & Review](evaluation-evidence-review.md)
-6. [Execution Monitoring, Failure, Recovery & Cancellation](execution-monitoring-failure-recovery-cancellation.md)
-7. [Provenance, Reproducibility & Historical Inspection](provenance-reproducibility-historical-inspection.md)
-8. [Enterprise Dependency, Offline/No-Egress & Safety](enterprise-dependency-offline-no-egress-safety.md)
+1. [Workflow Entry, Source Context & Lifecycle Orientation](../../experience/workflow-entry-source-context-lifecycle-orientation.md)
+2. [Data Meaning, Constraint & Strategy Preparation](../../experience/data-meaning-constraint-strategy-preparation.md)
+3. [Learning & Learned State Lifecycle](../../experience/learning-learned-state-lifecycle.md)
+4. [Generation Request, Condition, Validation & Output Promotion](../../experience/generation-request-condition-validation-output-promotion.md)
+5. [Evaluation, Evidence & Review](../../experience/evaluation-evidence-review.md)
+6. [Execution Monitoring, Failure, Recovery & Cancellation](../../experience/execution-monitoring-failure-recovery-cancellation.md)
+7. [Provenance, Reproducibility & Historical Inspection](../../experience/provenance-reproducibility-historical-inspection.md)
+8. [Enterprise Dependency, Offline/No-Egress & Safety](../../experience/enterprise-dependency-offline-no-egress-safety.md)
 
 ## Cross-workflow model
 

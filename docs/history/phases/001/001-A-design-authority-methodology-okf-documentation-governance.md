@@ -47,10 +47,10 @@ These belong to later phases after problem and concept discovery.
 
 This phase creates the following canonical authorities:
 
-1. [Concept Design Methodology](../../authority/design-methodology.md)
-2. [Documentation Governance and Anti-Drift Rules](../../authority/documentation-governance.md)
-3. [Terminology Policy](../../authority/terminology-policy.md)
-4. [Source and Provenance Policy](../../authority/source-provenance-policy.md)
+1. [Concept Design Methodology](../../../authority/design-methodology.md)
+2. [Documentation Governance and Anti-Drift Rules](../../../authority/documentation-governance.md)
+3. [Terminology Policy](../../../authority/terminology-policy.md)
+4. [Source and Provenance Policy](../../../authority/source-provenance-policy.md)
 
 The bundle navigation authority is [docs/index.md](../../index.md).
 

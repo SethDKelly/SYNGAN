@@ -19,7 +19,7 @@ This document is the canonical Phase 005-H implementation-planning authority.
 005-H is downstream of:
 
 - [Phase 004 Consolidated Architecture Contract](../architecture/phase-004-consolidated-architecture-contract.md);
-- [Evaluation/Evidence, Provenance, Reproducibility & Historical Query Architecture](../architecture/evaluation-evidence-provenance-reproducibility-historical-query.md);
+- [Evaluation/Evidence, Provenance, Reproducibility & Historical Query Architecture](../../architecture/evaluation-evidence-provenance-reproducibility-historical-query.md);
 - [005-B Verification Strategy](verification-strategy-test-harness-architecture-fitness-evidence-quality-gates.md);
 - [005-C Source Topology](source-topology-module-package-boundaries-shared-foundation-dependency-enforcement.md);
 - [005-D Public Resource/Control-Plane Plan](public-resource-control-plane-identity-state-persistence-transactions-migration-plan.md);

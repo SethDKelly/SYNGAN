@@ -19,8 +19,8 @@ This document translates the accepted Phase 004-H security architecture into imp
 005-I is downstream of:
 
 - [Phase 004 Consolidated Architecture Contract](../architecture/phase-004-consolidated-architecture-contract.md);
-- [Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Architecture](../architecture/dependency-resolution-offline-no-egress-authorization-redaction-enterprise-security.md);
-- [Network and External Dependency Policy](../authority/network-external-dependency-policy.md);
+- [Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Architecture](../../architecture/dependency-resolution-offline-no-egress-authorization-redaction-enterprise-security.md);
+- [Network and External Dependency Policy](../../authority/network-external-dependency-policy.md);
 - [005-B Verification Strategy](verification-strategy-test-harness-architecture-fitness-evidence-quality-gates.md);
 - [005-C Source Topology](source-topology-module-package-boundaries-shared-foundation-dependency-enforcement.md);
 - [005-D Public Resource/Control-Plane Plan](public-resource-control-plane-identity-state-persistence-transactions-migration-plan.md);

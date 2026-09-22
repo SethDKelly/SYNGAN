@@ -19,7 +19,7 @@ This document is the canonical Phase 005-J implementation-planning authority.
 005-J is downstream of:
 
 - [Phase 004 Consolidated Architecture Contract](../architecture/phase-004-consolidated-architecture-contract.md);
-- [Deployment, Scalability, Observability, Portability, Compatibility & Platform Integration Architecture](../architecture/deployment-scalability-observability-portability-compatibility-platform-integration.md);
+- [Deployment, Scalability, Observability, Portability, Compatibility & Platform Integration Architecture](../../architecture/deployment-scalability-observability-portability-compatibility-platform-integration.md);
 - [005-B Verification Strategy](verification-strategy-test-harness-architecture-fitness-evidence-quality-gates.md);
 - [005-C Source Topology](source-topology-module-package-boundaries-shared-foundation-dependency-enforcement.md);
 - [005-D Public Resource/Control-Plane Plan](public-resource-control-plane-identity-state-persistence-transactions-migration-plan.md);

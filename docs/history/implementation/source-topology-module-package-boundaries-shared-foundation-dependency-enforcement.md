@@ -10,7 +10,7 @@ status: active
 
 Define the concrete repository/package topology and foundational Python/build/test/static-analysis toolchain that later SYNGAN implementation slices MUST use unless explicitly superseded through implementation governance.
 
-This document is the canonical Phase 005-C implementation authority. It translates the [Phase 004 Consolidated Architecture Contract](../architecture/phase-004-consolidated-architecture-contract.md), [005-A implementation governance](implementation-authority-delivery-governance-toolchain-repository-enforcement.md), and [005-B verification authority](verification-strategy-test-harness-architecture-fitness-evidence-quality-gates.md) into enforceable source boundaries without implementing the control-plane, Spark/runtime, recovery, Evidence/history, security, or platform behavior owned by 005-D through 005-J.
+This document is the canonical Phase 005-C implementation authority. It translates the [Phase 004 Consolidated Architecture Contract](../architecture/phase-004-consolidated-architecture-contract.md), [005-A implementation governance](../../implementation/implementation-authority-delivery-governance-toolchain-repository-enforcement.md), and [005-B verification authority](verification-strategy-test-harness-architecture-fitness-evidence-quality-gates.md) into enforceable source boundaries without implementing the control-plane, Spark/runtime, recovery, Evidence/history, security, or platform behavior owned by 005-D through 005-J.
 
 ## Governing rule
 

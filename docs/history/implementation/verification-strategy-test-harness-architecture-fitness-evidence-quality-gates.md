@@ -41,7 +41,7 @@ It intentionally does **not** yet select the final Python version, test runner, 
 
 Verification is downstream of:
 
-- [Implementation Authority, Delivery Governance, Toolchain & Repository Enforcement](implementation-authority-delivery-governance-toolchain-repository-enforcement.md);
+- [Implementation Authority, Delivery Governance, Toolchain & Repository Enforcement](../../implementation/implementation-authority-delivery-governance-toolchain-repository-enforcement.md);
 - [Phase 004 Consolidated Architecture Contract](../architecture/phase-004-consolidated-architecture-contract.md);
 - [Phase 003 Consolidated Experience Contract](../experience/phase-003-consolidated-experience-contract.md);
 - the accepted concepts and synchronizations relevant to the tested behavior.
