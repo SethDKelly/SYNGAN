@@ -28,7 +28,7 @@ This is a concept-mapping audit. It does not define concrete Python result class
 
 ## Current Phase 014 completion note
 
-This document preserves its Phase 010 derivation and original subgroup handoff as historical provenance. Phase 010 F1-F5 are complete; Phase 012 confirmed mapping completion; Phase 013 preserved mapping semantics in architecture; Phase 014-D re-audits the current mapping layer. Current subgroup sequencing is governed by [Phase 014](../phases/014/index.md).
+This document preserves its Phase 010 derivation and original subgroup handoff as historical provenance. Phase 010 F1-F5 are complete; Phase 012 confirmed mapping completion; Phase 013 preserved mapping semantics in architecture; Phase 014-D re-audits the current mapping layer. Current subgroup sequencing is governed by [Phase 014](../history/phases/014/index.md).
 
 ## Governing authority
 
@@ -37,7 +37,7 @@ This document preserves its Phase 010 derivation and original subgroup handoff a
 - [Problem & Purpose](../problem/problem-purpose.md);
 - [Actors & Needs](../problem/actors.md);
 - [Enterprise Scale Envelope](../problem/enterprise-scale-envelope.md);
-- [Phase 009 Dependence, Application Family & Composition Consolidation](../authority/phase-009-dependence-composition-consolidation.md);
+- [Phase 009 Dependence, Application Family & Composition Consolidation](../history/authority/phase-009-dependence-composition-consolidation.md);
 - [010-B Action Mapping](concept-action-actor-intent-interaction-mapping.md);
 - [010-C Inspection Mapping](concept-state-query-history-explanation-inspection-mapping.md);
 - [010-D Linguistic Mapping](linguistic-mapping-vocabulary-typed-status-disclosure-semantics.md);
