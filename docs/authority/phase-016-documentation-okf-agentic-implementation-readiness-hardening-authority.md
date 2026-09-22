@@ -181,8 +181,9 @@ The user explicitly authorized Phase 016 and requested execution of the first su
 ~~~text
 Phase 016   AUTHORIZED / ACTIVE
 016-A       COMPLETE
-016-B       AUTHORIZED / ACTIVE
-016-C..J    NOT AUTHORIZED
+016-B       COMPLETE
+016-C       NEXT ELIGIBLE / NOT AUTHORIZED
+016-D..J    NOT AUTHORIZED
 product delivery beyond hardening  NOT AUTHORIZED
 ~~~
 
@@ -242,3 +243,29 @@ Current 016-B owners:
 - [016-B work record](../phases/016/016-B-current-knowledge-history-topology-canonical-ownership-progressive-disclosure.md)
 
 016-B may perform P16-1 authority-preserving relocation/consolidation and documented P16-2 routing/ownership choices. Product/runtime/provider work remains prohibited.
+
+
+## 016-B completion evidence
+
+[016-B — Current Knowledge vs History Topology Normalization, Canonical Ownership Map & Progressive Disclosure](../phases/016/016-B-current-knowledge-history-topology-canonical-ownership-progressive-disclosure.md) completed the second hardening slice.
+
+~~~text
+current Markdown documents            100
+history Markdown documents            256
+completed Phase 001-015 records       HISTORY
+active phase space                    PHASE 016 ONLY
+current discovery corpus              0
+canonical ownership map               COMPLETE
+machine-readable ownership map        COMPLETE
+progressive-disclosure routing        COMPLETE
+repository-local Markdown links       PASS
+C0-C9                                 PASS
+P16-3 / P16-4 findings                0 / 0
+upstream reopen                       NONE
+016-B                                 COMPLETE
+016-C                                 NEXT ELIGIBLE / NOT AUTHORIZED
+~~~
+
+016-B changed documentation discovery/authority topology only. It did not change product semantics, architecture contracts, Phase 015 support scope, provider claims, or executable product behavior.
+
+016-C remains gated pending explicit proceed.
