@@ -66,7 +66,7 @@ def _relative_link(output: str, target: str) -> str:
 
 def _resource_path(reference: str) -> str:
     entry = resolve_reference(reference, load_registry())
-    return cast(str, entry["path"])
+    return entry["path"]
 
 
 def _route_frontmatter(
