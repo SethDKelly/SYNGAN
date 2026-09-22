@@ -41,6 +41,12 @@ Bounded context and tool portability are governed by [Agent Context, Portable Wo
 Use exact `syngan://...` resolution when a stable reference is known; otherwise route through `docs/index.md` to the smallest current owner. Loading another file requires a concrete task question it answers.
 
 Canonical reusable workflows live under `.agents/skills/`: `resolve-context`, `resolve-reference`, `execute-selected-work`, `review-change`, `run-verification`, and `update-traceability`. Skills are procedures only; invoking one does not expand the human-selected task or change A1-A4 authority.
+## Autonomous delivery and runtime qualification
+
+Cursor/Codex bounded implementation roles and runtime qualification are governed by [Cursor/Codex Autonomous Delivery Operating Model & Runtime Qualification](docs/implementation/cursor-codex-autonomous-delivery-runtime-qualification.md).
+
+Documented provider compatibility is not runtime qualification. Cursor and Codex remain `pending_tool_in_loop` until real provider evidence satisfies the runtime-qualification profile. Agent/tool switching never changes package scope, authority, or success criteria.
+
 ## Agentic conformance
 
 Repository agentic/documentation conformance is governed by [Agentic Conformance, Negative Controls, Drift Detection & CI](docs/authority/agentic-conformance-policy.md).
@@ -84,4 +90,4 @@ Current status and subphase authorization are owned by docs/authority/current-re
 
 ## Current next boundary
 
-**Phase 017 planning is active by explicit human authorization. 017-A and 017-B are COMPLETE; 017-C is NEXT ELIGIBLE / NOT AUTHORIZED. Product implementation execution and Phase 018+ remain NOT AUTHORIZED.**
+**Phase 017 planning is active by explicit human authorization. 017-A through 017-C are COMPLETE; 017-D is NEXT ELIGIBLE / NOT AUTHORIZED. Product implementation execution and Phase 018+ remain NOT AUTHORIZED.**

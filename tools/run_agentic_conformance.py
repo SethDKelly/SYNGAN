@@ -8,7 +8,7 @@ from pathlib import Path
 
 CHECKS: tuple[tuple[str, tuple[str, ...]], ...] = (
     (
-        "Phase 016 agentic status drift",
+        "program agentic status drift",
         ("tools/validate_agent_status.py", "--repo", "{repo}"),
     ),
     (
@@ -174,7 +174,8 @@ def main() -> int:
             "- Provider runtime state remains evidence-controlled and is not inferred "
             "from documentation.",
             "- Negative controls operate only on an isolated temporary copy.",
-            "- Product/provider/runtime delivery remains outside the current Phase 016 authority.",
+            "- Product/provider/runtime delivery remains outside the current Phase 017 "
+            "planning authority.",
             "- Engineering-preflight PASS is not release, legal, vulnerability, provider, "
             "or scale approval.",
             "",

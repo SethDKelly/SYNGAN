@@ -85,11 +85,21 @@ def test_agent_authority_is_canonical_stable_and_okf_routed() -> None:
     assert route["ref"] == stable["ref"]
 
 
-def test_016_e_does_not_claim_later_agentic_mechanics() -> None:
+def test_agent_authority_preserves_current_process_ownership_without_expanding_a1_a4() -> None:
     text = POLICY.read_text(encoding="utf-8")
 
     assert (
         "context budgets, skills, adapters, compatibility states, and fallback mechanics "
         "are reserved for Phase 016-F"
     ) in text
-    assert "016-E does not authorize 016-F or later groups." in text
+    assert (
+        "This policy continues to govern agent action/consequence authority after Phase 016."
+        in text
+    )
+    assert "Phase 017 planning may define implementation-process mechanics" in text
+    assert "it does not expand A1-A4 authority" in text
+    assert "cursor-codex-autonomous-delivery-runtime-qualification.md" in text
+    assert (
+        "Product implementation, provider/runtime delivery, A3 actions, and A4 "
+        "semantic/architecture changes remain separately authorized."
+    ) in text

@@ -39,8 +39,9 @@ repository implementation readiness READY FOR EXPLICIT START GATE / 100 OF 100
 Phase 017                           AUTHORIZED / ACTIVE — PLANNING ONLY
 017-A                               COMPLETE
 017-B                               COMPLETE
-017-C                               NEXT ELIGIBLE / NOT AUTHORIZED
-017-D..017-I                        PLANNED / NOT AUTHORIZED
+017-C                               COMPLETE
+017-D                               NEXT ELIGIBLE / NOT AUTHORIZED
+017-E..017-I                        PLANNED / NOT AUTHORIZED
 
 product implementation execution   NOT AUTHORIZED
 active implementation packages     0
@@ -77,6 +78,21 @@ Phase 017 — Implementation Program Design, Autonomous Delivery Methodology & v
 
 The durable current owner is `syngan://implementation/phase-lifecycle`. The active program route is now `syngan://program/phase-017`; the prior Phase 016 program route is retired without altering Phase 016 history.
 
-017-C — Cursor/Codex Autonomous Delivery Operating Model & Runtime Qualification — is **NEXT ELIGIBLE / NOT AUTHORIZED**.
+017-C — Cursor/Codex Autonomous Delivery Operating Model & Runtime Qualification — is **COMPLETE**.
+
+017-C established the durable `syngan://implementation/agent-delivery` operating model: role-separated bounded autonomy, Cursor/Codex implementer-reviewer rotation, fresh-context review, one-package/one-branch default mechanics, cross-provider tool switching through repository-owned state, no-self-progression, and ten mandatory runtime-qualification probes.
+
+Current provider posture remains evidence-bounded:
+
+~~~text
+Cursor documented compatibility   COMPATIBLE
+Cursor runtime qualification      PENDING TOOL-IN-LOOP
+Codex documented compatibility    COMPATIBLE
+Codex runtime qualification       PENDING TOOL-IN-LOOP
+~~~
+
+Actual runtime qualification is a Phase 018 start-gate prerequisite and cannot be inferred from vendor documentation. Per explicit human direction, main protection remains deferred until the implementation plan is fully built, while remaining mandatory before executable implementation begins.
+
+017-D — Success Visibility, Holdout Evaluation & Anti-Gaming Methodology — is **NEXT ELIGIBLE / NOT AUTHORIZED**.
 
 Product implementation execution remains **NOT AUTHORIZED**. No implementation package is active. Phase 018 or later execution requires explicit human selection after Phase 017 completes its planning work.

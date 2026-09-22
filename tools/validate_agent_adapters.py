@@ -14,6 +14,15 @@ EXPECTED_SKILLS = {
     "update-traceability",
 }
 ALWAYS_TRUE = re.compile(r"^\s*alwaysApply\s*:\s*true\s*$", re.M | re.I)
+RUNTIME_STATES = {
+    "unverified",
+    "pending_tool_in_loop",
+    "qualified",
+    "qualified_with_limitations",
+    "stale",
+    "failed",
+}
+EXPECTED_RQ = {f"RQ-{number:02d}" for number in range(1, 11)}
 
 
 def main() -> int:
@@ -57,31 +66,35 @@ def main() -> int:
             f"expected {sorted(EXPECTED_SKILLS)}, found {sorted(actual_commands)}"
         )
     for name in EXPECTED_SKILLS:
-        path = commands / f"{name}.md"
-        if not path.is_file():
+        command_path = commands / f"{name}.md"
+        if not command_path.is_file():
             continue
-        text = path.read_text(encoding="utf-8")
+        text = command_path.read_text(encoding="utf-8")
         expected = f"../../.agents/skills/{name}/SKILL.md"
         if expected not in text:
-            errors.append(f"{path.relative_to(repo)} must route to {expected}")
+            errors.append(f"{command_path.relative_to(repo)} must route to {expected}")
         if "adds no permission, scope, semantics" not in text:
-            errors.append(f"{path.relative_to(repo)} must preserve the no-authority bridge rule")
-        if path.stat().st_size > int(limits["claude_command_each"]):
-            errors.append(f"{path.relative_to(repo)} exceeds the configured bridge budget")
+            errors.append(
+                f"{command_path.relative_to(repo)} must preserve the no-authority bridge rule"
+            )
+        if command_path.stat().st_size > int(limits["claude_command_each"]):
+            errors.append(f"{command_path.relative_to(repo)} exceeds the configured bridge budget")
 
     cursor_rules = repo / ".cursor" / "rules"
     if cursor_rules.exists():
         total = 0
-        for path in sorted(cursor_rules.glob("*.mdc")):
-            text = path.read_text(encoding="utf-8")
-            total += path.stat().st_size
+        for rule_path in sorted(cursor_rules.glob("*.mdc")):
+            text = rule_path.read_text(encoding="utf-8")
+            total += rule_path.stat().st_size
             if ALWAYS_TRUE.search(text):
                 errors.append(
-                    f"{path.relative_to(repo)}: alwaysApply true is not authorized "
+                    f"{rule_path.relative_to(repo)}: alwaysApply true is not authorized "
                     "by current policy"
                 )
-            if path.stat().st_size > int(limits["cursor_rule_each"]):
-                errors.append(f"{path.relative_to(repo)} exceeds the configured Cursor rule budget")
+            if rule_path.stat().st_size > int(limits["cursor_rule_each"]):
+                errors.append(
+                    f"{rule_path.relative_to(repo)} exceeds the configured Cursor rule budget"
+                )
         if total > int(limits["cursor_rules_aggregate"]):
             errors.append("Cursor project rules exceed the configured aggregate budget")
 
@@ -95,20 +108,41 @@ def main() -> int:
     if manifest.get("semantics") != "documented_compatibility_is_not_runtime_certification":
         errors.append("tool compatibility manifest must separate documentation from runtime proof")
 
+    expected_profile = "docs/implementation/agent-runtime-qualification-profile.json"
+    if manifest.get("qualification_profile") != expected_profile:
+        errors.append("tool compatibility manifest must route to the runtime qualification profile")
+
     tools = manifest.get("tools", {})
-    for name in ("cursor", "codex", "claude_code"):
+    for name in ("cursor", "codex"):
         entry = tools.get(name)
         if not isinstance(entry, dict):
             errors.append(f"tool compatibility manifest missing {name}")
             continue
         if entry.get("documented_state") != "compatible":
             errors.append(f"{name}: documented_state must remain compatible")
-        if entry.get("runtime_state") != "unverified":
-            errors.append(
-                f"{name}: runtime_state must remain unverified without separate runtime evidence"
-            )
+        if entry.get("runtime_state") not in {
+            "pending_tool_in_loop",
+            "qualified",
+            "qualified_with_limitations",
+            "stale",
+            "failed",
+        }:
+            errors.append(f"{name}: invalid runtime_state for the Phase 017-C qualification model")
         if entry.get("workflow_source") != ".agents/skills/":
             errors.append(f"{name}: workflow_source must remain .agents/skills/")
+
+    claude_entry = tools.get("claude_code")
+    if not isinstance(claude_entry, dict):
+        errors.append("tool compatibility manifest missing claude_code")
+    else:
+        if claude_entry.get("documented_state") != "compatible":
+            errors.append("claude_code: documented_state must remain compatible")
+        if claude_entry.get("runtime_state") != "unverified":
+            errors.append(
+                "claude_code: runtime_state remains unverified outside the Cursor/Codex program"
+            )
+        if claude_entry.get("workflow_source") != ".agents/skills/":
+            errors.append("claude_code: workflow_source must remain .agents/skills/")
 
     if tools.get("cursor", {}).get("adapter") != "none_required":
         errors.append("Cursor must not acquire a duplicate semantic adapter")
@@ -121,9 +155,58 @@ def main() -> int:
     if ordinary.get("runtime_state") != "available_without_agent_provider":
         errors.append("ordinary IDE/CLI fallback must remain available without an agent provider")
 
+    profile_path = repo / expected_profile
+    try:
+        profile = json.loads(profile_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        errors.append(f"invalid runtime qualification profile: {exc}")
+        profile = {}
+
+    if profile.get("semantics") != "documented_compatibility_does_not_equal_runtime_qualification":
+        errors.append(
+            "runtime qualification profile must separate documentation from runtime proof"
+        )
+
+    mandatory = profile.get("mandatory_probes")
+    if not isinstance(mandatory, list) or set(mandatory) != EXPECTED_RQ:
+        errors.append("runtime qualification profile must require RQ-01 through RQ-10 exactly")
+
+    providers = profile.get("providers", {})
+    for name in ("cursor", "codex"):
+        provider = providers.get(name)
+        if not isinstance(provider, dict):
+            errors.append(f"runtime qualification profile missing {name}")
+            continue
+        if provider.get("documented_state") != "compatible":
+            errors.append(f"{name}: runtime profile documented_state must be compatible")
+        runtime_state = provider.get("runtime_state")
+        if runtime_state not in RUNTIME_STATES:
+            errors.append(f"{name}: unsupported qualification state {runtime_state!r}")
+            continue
+        evidence = provider.get("runtime_evidence")
+        if not isinstance(evidence, list):
+            errors.append(f"{name}: runtime_evidence must be a list")
+            continue
+        if runtime_state in {"qualified", "qualified_with_limitations"} and not evidence:
+            errors.append(f"{name}: qualified runtime state requires real runtime evidence")
+        manifest_state = tools.get(name, {}).get("runtime_state")
+        if manifest_state != runtime_state:
+            errors.append(
+                f"{name}: compatibility/runtime profile state drift: "
+                f"{manifest_state!r} != {runtime_state!r}"
+            )
+
+    qualification_entry = profile.get("qualification_entry", {})
+    if qualification_entry.get("phase") != "018":
+        errors.append("runtime qualification must remain a Phase 018 entry requirement")
+    if qualification_entry.get("requires_real_provider_runtime") is not True:
+        errors.append("runtime qualification must require a real provider runtime")
+    if qualification_entry.get("same_context_self_certification") is not False:
+        errors.append("same-context self-certification must remain prohibited")
+
     for error in errors:
         print("ERROR", error)
-    print(f"Agent adapter validation: {len(errors)} error(s)")
+    print(f"Agent adapter/runtime qualification validation: {len(errors)} error(s)")
     return 1 if errors else 0
 
 
