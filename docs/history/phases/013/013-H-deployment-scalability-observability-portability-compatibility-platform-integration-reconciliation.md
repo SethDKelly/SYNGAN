@@ -19,8 +19,8 @@ Reconcile retained deployment, enterprise-scale, observability, portability, com
 - [013-E Runtime / Dependency / Security Reconciliation](../../architecture/phase-013-e-strategy-runtime-dependency-authorization-secrets-distribution-reconciliation.md)
 - [013-F Execution / Recovery / Admission Reconciliation](../../architecture/phase-013-f-execution-attempt-fencing-idempotency-checkpoint-cancellation-recovery-admission-reconciliation.md)
 - [013-G Evidence / Provenance / History / Disclosure Reconciliation](../../architecture/phase-013-g-evaluation-evidence-provenance-history-reproducibility-disclosure-governance-reconciliation.md)
-- [Enterprise Scale Envelope](../../problem/enterprise-scale-envelope.md)
-- [Enterprise Scale / Resource Admission / Approximation / Degraded Operation Contract](../../authority/enterprise-scale-resource-admission-approximation-degraded-operation-contract.md)
+- [Enterprise Scale Envelope](../../../problem/enterprise-scale-envelope.md)
+- [Enterprise Scale / Resource Admission / Approximation / Degraded Operation Contract](../../../authority/enterprise-scale-resource-admission-approximation-degraded-operation-contract.md)
 - retained Phase 004-I deployment/platform architecture
 - retained Phase 007-J proof/platform boundary
 - ADR-0008 as primary rationale input
