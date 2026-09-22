@@ -6,6 +6,12 @@ from urllib.parse import unquote
 
 ROOT = Path(__file__).resolve().parents[2]
 DOCS = ROOT / "docs"
+ROOT_MARKDOWN = (
+    ROOT / "README.md",
+    ROOT / "CONTRIBUTING.md",
+    ROOT / "AGENTS.md",
+)
+GITHUB_MARKDOWN = ROOT / ".github"
 
 _LINK = re.compile(r"!?(?:\[[^\]]*\])\(([^)]+)\)")
 _FENCE = re.compile(r"~~~.*?~~~|\x60\x60\x60.*?\x60\x60\x60", re.DOTALL)
@@ -37,7 +43,12 @@ def _target_path(source: Path, raw_target: str) -> Path | None:
 def test_repository_markdown_relative_links_resolve() -> None:
     broken: list[str] = []
 
-    for source in sorted(DOCS.rglob("*.md")):
+    sources = set(DOCS.rglob("*.md"))
+    sources.update(path for path in ROOT_MARKDOWN if path.is_file())
+    if GITHUB_MARKDOWN.is_dir():
+        sources.update(GITHUB_MARKDOWN.rglob("*.md"))
+
+    for source in sorted(sources):
         content = source.read_text(encoding="utf-8")
         content = _FENCE.sub("", content)
 
