@@ -28,6 +28,7 @@ agentic conformance   -> deterministic repository checks; never product/runtime 
 implementation phase lifecycle -> phase/gate/evidence/exit control; never product or execution authority
 autonomous agent delivery -> bounded Cursor/Codex roles and runtime qualification; never roadmap authority
 success/holdout evaluation -> visible requirements, independent challenge realization, replay, contamination rotation, anti-gaming
+v0.x MVP boundary -> qualified package capability, milestones, version/release separation, support non-claims, residual mapping
 implementation packages -> traceability/evidence containers; never authorization or semantic owners
 engineering preflight -> deterministic release hygiene; never release/support/legal authority
 repository readiness -> evidence-backed start-gate readiness; never program/release authority
@@ -71,6 +72,7 @@ If a current proposition cannot be assigned deterministically, stop the affected
 | implementation phase lifecycle/gates/evidence/exit control | `docs/implementation/implementation-phase-lifecycle-gate-evidence-contract.md` |
 | Cursor/Codex autonomous delivery/runtime qualification | `docs/implementation/cursor-codex-autonomous-delivery-runtime-qualification.md` |
 | success visibility/holdout evaluation/anti-gaming | `docs/implementation/success-visibility-holdout-evaluation-anti-gaming.md` |
+| v0.x package-MVP scope/version/release boundary | `docs/implementation/v0x-package-mvp-scope-version-release-boundaries.md` |
 | implementation package/traceability/ADR change control | `docs/implementation/implementation-package-traceability-adr-change-control.md` |
 | dependency/supply-chain/secrets/compatibility/benchmark/version preflight | `docs/implementation/engineering-preflight-dependency-supply-chain-secrets-compatibility-benchmark-versioning.md` |
 | repository implementation readiness/residual risk | `docs/implementation/repository-implementation-readiness-residual-risk.md` |

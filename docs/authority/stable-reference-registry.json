@@ -180,6 +180,13 @@
       "owner_family": "success_visibility_holdout_evaluation"
     },
     {
+      "ref": "syngan://implementation/v0x-mvp-boundary",
+      "path": "docs/implementation/v0x-package-mvp-scope-version-release-boundaries.md",
+      "status": "active",
+      "authority_class": "current",
+      "owner_family": "v0x_mvp_scope_version_release_boundary"
+    },
+    {
       "ref": "syngan://implementation/package-contract",
       "path": "docs/implementation/implementation-package-traceability-adr-change-control.md",
       "status": "active",

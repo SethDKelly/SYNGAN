@@ -200,6 +200,20 @@ def main() -> int:
 
         _mutate(
             repo,
+            "docs/implementation/v0x-mvp-boundary-profile.json",
+            lambda text: text.replace(
+                '"production_provider_support_required": false',
+                '"production_provider_support_required": true',
+                1,
+            ),
+            "tools/validate_v0x_mvp_boundary.py",
+            ("--repo", str(repo)),
+            "production provider support conflated with package MVP",
+            errors,
+        )
+
+        _mutate(
+            repo,
             "AGENTS.md",
             lambda text: (
                 text + "\n[Broken agentic route](docs/authority/not-a-real-agentic-owner.md)\n"
@@ -212,7 +226,7 @@ def main() -> int:
 
     for error in errors:
         print("ERROR", error)
-    print(f"Agentic conformance negative controls: {len(errors)} error(s), 10 control(s)")
+    print(f"Agentic conformance negative controls: {len(errors)} error(s), 11 control(s)")
     return 1 if errors else 0
 
 

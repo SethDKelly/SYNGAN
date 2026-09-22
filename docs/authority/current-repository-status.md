@@ -41,8 +41,9 @@ Phase 017                           AUTHORIZED / ACTIVE — PLANNING ONLY
 017-B                               COMPLETE
 017-C                               COMPLETE
 017-D                               COMPLETE
-017-E                               NEXT ELIGIBLE / NOT AUTHORIZED
-017-F..017-I                        PLANNED / NOT AUTHORIZED
+017-E                               COMPLETE
+017-F                               NEXT ELIGIBLE / NOT AUTHORIZED
+017-G..017-I                        PLANNED / NOT AUTHORIZED
 
 product implementation execution   NOT AUTHORIZED
 active implementation packages     0
@@ -98,6 +99,10 @@ Actual runtime qualification is a Phase 018 start-gate prerequisite and cannot b
 
 017-D established syngan://implementation/evaluation-method: visible V0 normative obligations, visible V1 representative evidence, post-freeze H1 holdout realization, optional claim-driven H2 external/private evidence, EI0-EI3 evaluator-independence levels, CH-01..CH-08 challenge families, AG-01..AG-12 anti-gaming controls, contamination/rotation discipline, replay evidence, and candidate-vs-evaluator failure attribution. Hidden blocking requirements and aggregate-score compensation are explicitly forbidden.
 
-017-E — v0.x MVP Scope, Capability/Version Milestones & Release Boundaries — is **NEXT ELIGIBLE / NOT AUTHORIZED**.
+017-E — v0.x MVP Scope, Capability/Version Milestones & Release Boundaries — is **COMPLETE**.
+
+017-E established `syngan://implementation/v0x-mvp-boundary`: MVP-C01..MVP-C08 define the bounded package-MVP capability; MVP-M0..MVP-M7 define capability milestones without equating phases to versions; `0.0.0` remains the Phase 017 placeholder; the exact non-placeholder v0.x candidate version is evidence-driven and selected by Phase 024; and package-MVP candidate, qualified MVP, public release candidate, published release, production-provider support, and enterprise-scale support are separate states/claims. RR-016-01..RR-016-06 remain truthful claim-specific residuals rather than being artificially closed by MVP scope.
+
+017-F — Phase 018-025 Definitions, Dependency Graph & Package Strategy — is **NEXT ELIGIBLE / NOT AUTHORIZED**.
 
 Product implementation execution remains **NOT AUTHORIZED**. No implementation package is active. Phase 018 or later execution requires explicit human selection after Phase 017 completes its planning work.

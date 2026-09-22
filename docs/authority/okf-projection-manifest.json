@@ -154,6 +154,12 @@
           "ref": "syngan://implementation/evaluation-method"
         },
         {
+          "id": "v0x-mvp-boundary",
+          "title": "v0.x Package MVP Scope, Capability/Version Milestones & Release Boundaries",
+          "description": "Canonical v0.x package-MVP capability, milestone, version-selection, release-state, support non-claim, and residual-risk boundary.",
+          "ref": "syngan://implementation/v0x-mvp-boundary"
+        },
+        {
           "id": "implementation-package-contract",
           "title": "Implementation Package, Traceability & ADR Change Control",
           "description": "Canonical prospective implementation-package, traceability, evidence, and ADR change-control contract.",

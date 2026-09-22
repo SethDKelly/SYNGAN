@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.0",
+  "status": "active",
+  "authority": "docs/implementation/v0x-package-mvp-scope-version-release-boundaries.md",
+  "stable_ref": "syngan://implementation/v0x-mvp-boundary",
+  "definition": "qualified_package_capability_not_public_release",
+  "current_project_version": "0.0.0",
+  "current_version_state": "development_placeholder",
+  "required_capabilities": [
+    "MVP-C01",
+    "MVP-C02",
+    "MVP-C03",
+    "MVP-C04",
+    "MVP-C05",
+    "MVP-C06",
+    "MVP-C07",
+    "MVP-C08"
+  ],
+  "baseline_support": {
+    "verified_python": [
+      "3.11"
+    ],
+    "portable_reference_path_required": true,
+    "required_topologies": [
+      "single_table",
+      "time_series",
+      "multi_table_shared_key"
+    ],
+    "direct_reuse_distinction_required": true,
+    "learning_learned_state_path_required": true,
+    "bounded_spark_capable_path_required": true,
+    "production_provider_support_required": false,
+    "enterprise_scale_support_required": false,
+    "public_distribution_required": false
+  },
+  "capability_milestones": [
+    {
+      "id": "MVP-M0",
+      "phase": "current",
+      "state": "verified_reference_framework_baseline"
+    },
+    {
+      "id": "MVP-M1",
+      "phase": "019",
+      "state": "installable_public_composition_surface"
+    },
+    {
+      "id": "MVP-M2",
+      "phase": "020",
+      "state": "complete_minimal_vertical_workflow"
+    },
+    {
+      "id": "MVP-M3",
+      "phase": "021",
+      "state": "baseline_topology_strategy_coverage"
+    },
+    {
+      "id": "MVP-M4",
+      "phase": "022",
+      "state": "bounded_spark_capable_distributed_realization"
+    },
+    {
+      "id": "MVP-M5",
+      "phase": "023",
+      "state": "integrated_hardening"
+    },
+    {
+      "id": "MVP-M6",
+      "phase": "024",
+      "state": "package_mvp_candidate_frozen"
+    },
+    {
+      "id": "MVP-M7",
+      "phase": "025",
+      "state": "independent_mvp_qualification_decision"
+    }
+  ],
+  "version_policy": {
+    "phase_number_is_package_version": false,
+    "placeholder_version": "0.0.0",
+    "change_placeholder_during_phase_017": false,
+    "non_placeholder_allowed_after": "MVP-M1",
+    "non_placeholder_required_by": "MVP-M6",
+    "exact_v0x_number_fixed_in_phase_017": false,
+    "exact_candidate_version_selected_by_phase": "024",
+    "non_placeholder_version_implies_release_candidate": false,
+    "pre_1_0_waives_class_2_compatibility_assessment": false
+  },
+  "states": [
+    "development_baseline",
+    "capability_milestone",
+    "package_mvp_candidate",
+    "qualified_package_mvp",
+    "public_release_candidate",
+    "published_release"
+  ],
+  "automatic_promotions": {
+    "package_mvp_candidate_to_qualified_package_mvp": false,
+    "qualified_package_mvp_to_public_release_candidate": false,
+    "public_release_candidate_to_published_release": false
+  },
+  "excluded_from_package_mvp": [
+    "public_distribution",
+    "distribution_license_selection",
+    "public_release_candidate_status",
+    "release_candidate_vulnerability_clearance",
+    "long_term_public_compatibility_window",
+    "python_gt_3_11_support",
+    "production_databricks_provider_support",
+    "general_production_spark_support_certification",
+    "enterprise_scale_qualification",
+    "deployment_iac",
+    "slo_sla_production_operations",
+    "complete_strategy_algorithm_evaluation_catalog",
+    "dormant_m8_future_capabilities"
+  ],
+  "residual_mapping": {
+    "RR-016-01": {
+      "blocks_package_mvp": false,
+      "blocks": "public_release_distribution"
+    },
+    "RR-016-02": {
+      "blocks_package_mvp": false,
+      "blocks": "public_release_candidate"
+    },
+    "RR-016-03": {
+      "blocks_package_mvp": false,
+      "blocks": "public_release_or_public_compatibility_promise"
+    },
+    "RR-016-04": {
+      "blocks_package_mvp": false,
+      "blocks": "python_gt_3_11_support_claim"
+    },
+    "RR-016-05": {
+      "blocks_package_mvp": false,
+      "blocks": "enterprise_scale_support_claim"
+    },
+    "RR-016-06": {
+      "blocks_package_mvp": false,
+      "blocks": "production_provider_support_claim"
+    }
+  }
+}

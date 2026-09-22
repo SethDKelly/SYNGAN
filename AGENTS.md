@@ -53,6 +53,12 @@ Success visibility, holdout generation, evaluator independence, replay, contamin
 
 Normative requirements remain visible. Exact holdout realization may be selected/generated after candidate freeze; it may never introduce a hidden requirement. Once an exact holdout is exposed for repair, treat it as regression evidence and use a fresh holdout for renewed independent evaluation.
 
+## v0.x package-MVP and release boundary
+
+The bounded v0.x target, capability milestones, version-selection policy, release-state separation, and support non-claims are governed by [v0.x Package MVP Scope, Capability/Version Milestones & Release Boundaries](docs/implementation/v0x-package-mvp-scope-version-release-boundaries.md).
+
+A qualified package MVP is not automatically a release candidate. Do not map phase numbers mechanically to package versions, close release/provider/scale residuals by scope exclusion, or imply production Spark/Databricks/provider support from the bounded Spark-capable MVP path.
+
 ## Agentic conformance
 
 Repository agentic/documentation conformance is governed by [Agentic Conformance, Negative Controls, Drift Detection & CI](docs/authority/agentic-conformance-policy.md).
@@ -96,4 +102,4 @@ Current status and subphase authorization are owned by docs/authority/current-re
 
 ## Current next boundary
 
-**Phase 017 planning is active by explicit human authorization. 017-A through 017-D are COMPLETE; 017-E is NEXT ELIGIBLE / NOT AUTHORIZED. Product implementation execution and Phase 018+ remain NOT AUTHORIZED.**
+**Phase 017 planning is active by explicit human authorization. 017-A through 017-E are COMPLETE; 017-F is NEXT ELIGIBLE / NOT AUTHORIZED. Product implementation execution and Phase 018+ remain NOT AUTHORIZED.**

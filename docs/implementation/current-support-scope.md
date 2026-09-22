@@ -51,4 +51,6 @@ Historical implementation and closure evidence is available under:
 
 Current implementation governance remains in `docs/implementation/implementation-authority-delivery-governance-toolchain-repository-enforcement.md`.
 
-Future capability/support work remains non-authoritative in `docs/backlog/index.md`.
+The future v0.x package-MVP target is governed by `syngan://implementation/v0x-mvp-boundary`. That target is planning authority only; this document remains the owner of what the current repository head actually implements and supports.
+
+Future capability/support work not promoted into the v0.x target remains non-authoritative in `docs/backlog/index.md`.

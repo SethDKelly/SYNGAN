@@ -34,6 +34,10 @@ CHECKS: tuple[tuple[str, tuple[str, ...]], ...] = (
         ("tools/validate_evaluation_method.py", "--repo", "{repo}"),
     ),
     (
+        "v0.x package-MVP scope and release boundary",
+        ("tools/validate_v0x_mvp_boundary.py", "--repo", "{repo}"),
+    ),
+    (
         "repository readiness scorecard",
         ("tools/validate_repository_readiness.py", "--repo", "{repo}"),
     ),

@@ -159,6 +159,8 @@ release candidate      NO
 
 No automatic SemVer stability promise is inferred from `0.0.0`.
 
+The v0.x package-MVP state model is governed by `syngan://implementation/v0x-mvp-boundary`. A package-MVP candidate or qualified package MVP is not a public release candidate merely because it has a non-placeholder version. The release-candidate term remains reserved for an artifact actually being considered for public distribution and therefore subject to the release-candidate preflight below.
+
 A future release task must explicitly select a non-placeholder version and determine the compatibility/release policy appropriate to that release. Public/persisted contract changes remain Class 2 under 016-H; architecture/semantic impacts remain Class 3/4 stop/reopen conditions.
 
 ## Release-candidate preflight
