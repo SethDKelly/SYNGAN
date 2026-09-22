@@ -65,6 +65,5 @@
   "compatibility_required_fields": [
     "assessment",
     "migration_strategy"
-  ],
-  "no_active_package_expected_during_phase_016_h": true
+  ]
 }
