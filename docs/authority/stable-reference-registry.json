@@ -159,6 +159,13 @@
       "owner_family": "implementation_governance"
     },
     {
+      "ref": "syngan://implementation/phase-lifecycle",
+      "path": "docs/implementation/implementation-phase-lifecycle-gate-evidence-contract.md",
+      "status": "active",
+      "authority_class": "current",
+      "owner_family": "implementation_phase_lifecycle"
+    },
+    {
       "ref": "syngan://implementation/package-contract",
       "path": "docs/implementation/implementation-package-traceability-adr-change-control.md",
       "status": "active",
@@ -187,6 +194,13 @@
       "owner_family": "support_scope"
     },
     {
+      "ref": "syngan://program/phase-017",
+      "path": "docs/phases/017/index.md",
+      "status": "active",
+      "authority_class": "current-program",
+      "owner_family": "active_phase"
+    },
+    {
       "ref": "syngan://program/backlog",
       "path": "docs/backlog/index.md",
       "status": "active",
@@ -195,10 +209,10 @@
     },
     {
       "ref": "syngan://program/phase-016",
-      "path": "docs/phases/016/index.md",
-      "status": "active",
+      "status": "retired",
       "authority_class": "current-program",
-      "owner_family": "active_phase"
+      "owner_family": "active_phase",
+      "replacement_ref": "syngan://program/phase-017"
     },
     {
       "ref": "syngan://history/documentation",
