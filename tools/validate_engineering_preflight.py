@@ -146,11 +146,15 @@ def _validate_workflows(
     for path in workflows:
         text = path.read_text(encoding="utf-8")
         if "permissions:\n  contents: read" not in text:
-            errors.append(f"{path.relative_to(repo)}: workflow must retain contents: read permissions")
+            errors.append(
+                f"{path.relative_to(repo)}: workflow must retain contents: read permissions"
+            )
         if "persist-credentials: false" not in text:
             errors.append(f"{path.relative_to(repo)}: checkout credentials must not persist")
         if "${{ secrets." in text:
-            errors.append(f"{path.relative_to(repo)}: repository verification workflow uses secrets")
+            errors.append(
+                f"{path.relative_to(repo)}: repository verification workflow uses secrets"
+            )
 
         for line in text.splitlines():
             broad = ANY_USES_RE.match(line)
@@ -164,7 +168,8 @@ def _validate_workflows(
             exact = ACTION_RE.match(line)
             if exact is None:
                 errors.append(
-                    f"{path.relative_to(repo)}: external action must use immutable SHA plus release comment: "
+                    f"{path.relative_to(repo)}: external action must use immutable SHA "
+                    "plus release comment: "
                     f"{action}@{ref}"
                 )
                 continue
@@ -226,7 +231,10 @@ def _validate_project_profile(
         errors.append(".python-version is not represented in verified Python evidence")
 
     uv = pyproject.get("tool", {}).get("uv", {})
-    if not isinstance(uv, dict) or uv.get("required-version") != profile["toolchain"]["uv_required"]:
+    if (
+        not isinstance(uv, dict)
+        or uv.get("required-version") != profile["toolchain"]["uv_required"]
+    ):
         errors.append("pyproject uv required-version drifts from engineering preflight profile")
 
     license_declared = "license" in project or "license-files" in project
