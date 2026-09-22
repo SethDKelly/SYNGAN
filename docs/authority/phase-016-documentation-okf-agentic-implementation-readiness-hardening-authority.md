@@ -186,7 +186,7 @@ Phase 016   AUTHORIZED / ACTIVE
 016-D       COMPLETE
 016-E       COMPLETE
 016-F       COMPLETE
-016-G       NEXT ELIGIBLE / NOT AUTHORIZED
+016-G       AUTHORIZED / ACTIVE
 016-H..J    NOT AUTHORIZED
 product delivery beyond hardening  NOT AUTHORIZED
 ~~~
@@ -363,4 +363,24 @@ The user explicitly authorized 016-F after the verified 016-E closure.
 
 016-F closure evidence is recorded in the phase work record. Candidate Verify workflow `35688409580` / `#1603` passed portable and C2–C9. Five canonical portable skills, deterministic byte budgets, thin provider adapters, stable-reference routing, and OKF projection are established without provider-runtime certification; P16-3/P16-4 findings remain `0 / 0`.
 
-016-G — Agentic Conformance, Negative Controls, Drift Detection & CI — is NEXT ELIGIBLE / NOT AUTHORIZED. 016-H through 016-J remain NOT AUTHORIZED.
+## 016-G authorization
+
+The user explicitly authorized 016-G after the verified 016-F closure.
+
+016-G is a documented **P16-2 executable agentic-conformance contract**. It may:
+
+- define one dependency-free repository-owned agentic conformance command;
+- validate shared agent authority, adapters, portable skills, stable references, OKF projection, context budgets, compatibility-state integrity, and Phase 016 status drift;
+- add seeded negative controls in an isolated temporary copy proving that representative forbidden/drifted configurations are rejected;
+- produce a human-readable repository-configuration conformance report;
+- add a dedicated GitHub Actions job requiring repository checkout and Python only.
+
+016-G must not:
+
+- treat PASS as proof of product behavior, provider-runtime compatibility, production readiness, security certification, or deployment readiness;
+- install or invoke Cursor, Codex, Claude Code, external MCP servers, cloud services, production credentials, or external mutation for repository conformance;
+- define implementation-package/ADR governance reserved for 016-H;
+- define dependency/supply-chain/secrets/benchmark/API-version preflight reserved for 016-I;
+- change accepted product semantics, architecture contracts, provider/runtime behavior, or Phase 015 support claims.
+
+016-H through 016-J remain gated until 016-G exit evidence exists.
