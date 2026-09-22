@@ -463,7 +463,7 @@ Row-level lineage or exhaustive diagnostics may exist as explicitly scoped distr
 
 ## 17. Current synchronization interpretation
 
-The [Current Cross-Concept Synchronization Contract](../synchronizations/current-cross-concept-synchronizations.md) controls current scope and ownership:
+The [Current Cross-Concept Synchronization Contract](../../synchronizations/current-cross-concept-synchronizations.md) controls current scope and ownership:
 
 ```text
 SYNC-09  Evaluation Criterion binding

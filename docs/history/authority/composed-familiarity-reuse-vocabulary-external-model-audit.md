@@ -29,7 +29,7 @@ No concept rename, merge, split, purpose change, dependence change, synchronizat
 
 ## Governing method and evidence
 
-011-C applies the [Design Quality Validation Authority](design-quality-validation-authority.md), especially the familiarity record:
+011-C applies the [Design Quality Validation Authority](../../authority/design-quality-validation-authority.md), especially the familiarity record:
 
 ```text
 FA-1  analogue / ecosystem
@@ -47,8 +47,8 @@ Primary SYNGAN authority:
 - [Composed Specificity, Purpose Alignment & Boundary Sharpness Audit](composed-specificity-purpose-boundary-audit.md);
 - current accepted concept specifications;
 - [Concept Independence, Genericity, Familiarity & Reuse Normalization](../concepts/independence-genericity-familiarity-reuse-normalization.md);
-- [Linguistic Mapping, Vocabulary, Typed Status & Disclosure Semantics](../mapping/linguistic-mapping-vocabulary-typed-status-disclosure-semantics.md);
-- [SYNGAN Ecosystem Compatibility Vocabulary](../terminology/ecosystem-compatibility.md);
+- [Linguistic Mapping, Vocabulary, Typed Status & Disclosure Semantics](../../mapping/linguistic-mapping-vocabulary-typed-status-disclosure-semantics.md);
+- [SYNGAN Ecosystem Compatibility Vocabulary](../../terminology/ecosystem-compatibility.md);
 - current application-family and mapping authority.
 
 External evidence is `E8 / ER-A` familiarity/counterexample evidence only. Current official documentation reviewed on 2026-09-16 includes SDV, Apache Spark ML, MLflow, Great Expectations and OpenLineage; PyTorch compatibility remains covered by the canonical compatibility vocabulary.

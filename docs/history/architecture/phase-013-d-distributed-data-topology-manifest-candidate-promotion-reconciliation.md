@@ -375,7 +375,7 @@ This does not pre-authorize arbitrary recursive graph lifecycle or streaming/ses
 
 ## 17. Current synchronization reconciliation
 
-The [Current Cross-Concept Synchronization Contract](../synchronizations/current-cross-concept-synchronizations.md) controls current numbering, scope and ownership.
+The [Current Cross-Concept Synchronization Contract](../../synchronizations/current-cross-concept-synchronizations.md) controls current numbering, scope and ownership.
 
 For distributed-data architecture the relevant current semantics are:
 

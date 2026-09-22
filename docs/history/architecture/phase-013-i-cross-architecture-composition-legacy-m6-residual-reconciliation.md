@@ -31,7 +31,7 @@ NO AMAT-2 DEFECT, AMAT-3 BLOCKER OR AR-9 CONTRADICTION REMAINS.
 
 - completed Phase 012 Jackson concept design;
 - current concepts, dependence/application-family and mapping authority;
-- [Current Cross-Concept Synchronization Contract](../synchronizations/current-cross-concept-synchronizations.md);
+- [Current Cross-Concept Synchronization Contract](../../synchronizations/current-cross-concept-synchronizations.md);
 - 013-A reconciliation method;
 - 013-B representation authority;
 - 013-C persistence/history/recovery authority;
@@ -166,7 +166,7 @@ SYNC-15                                  historical/reclassified — Reproducibi
 synchronization-owned canonical state    NONE
 ```
 
-The new [Current Cross-Concept Synchronization Contract](../synchronizations/current-cross-concept-synchronizations.md) is the canonical synchronization inventory.
+The new [Current Cross-Concept Synchronization Contract](../../synchronizations/current-cross-concept-synchronizations.md) is the canonical synchronization inventory.
 
 Pre-Phase-009 references to active `SYNC-08`, active `SYNC-15`, or `15 accepted synchronizations` are treated as historical terminology unless a current document explicitly states the modern retirement/reclassification.
 

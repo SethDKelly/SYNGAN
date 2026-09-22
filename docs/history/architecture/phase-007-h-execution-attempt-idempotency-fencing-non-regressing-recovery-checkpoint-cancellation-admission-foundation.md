@@ -16,21 +16,21 @@ Refine SYNGAN's operational-realization architecture for stable Execution identi
 
 007-H is downstream of:
 
-- [Concept Design Methodology](../authority/design-methodology.md);
+- [Concept Design Methodology](../../authority/design-methodology.md);
 - [Phase 007 Design Continuation & Implementation Freeze](../authority/phase-007-design-continuation-implementation-freeze.md);
-- [Execution](../concepts/execution.md);
-- [Execution Monitoring, Failure, Recovery & Cancellation Experience](../experience/execution-monitoring-failure-recovery-cancellation.md);
-- [Operational Authority Continuity & Regressive Recovery Contract](../authority/operational-authority-continuity-regressive-recovery-contract.md);
-- [Enterprise Scale, Resource Admission, Approximation & Degraded Operation Contract](../authority/enterprise-scale-resource-admission-approximation-degraded-operation-contract.md);
+- [Execution](../../concepts/execution.md);
+- [Execution Monitoring, Failure, Recovery & Cancellation Experience](../../experience/execution-monitoring-failure-recovery-cancellation.md);
+- [Operational Authority Continuity & Regressive Recovery Contract](../../authority/operational-authority-continuity-regressive-recovery-contract.md);
+- [Enterprise Scale, Resource Admission, Approximation & Degraded Operation Contract](../../authority/enterprise-scale-resource-admission-approximation-degraded-operation-contract.md);
 - [007-D Identity, Revision, Serialization, Resource/Handle & Programmatic-View Foundation](phase-007-d-identity-revision-serialization-resource-handle-programmatic-view-foundation.md);
 - [007-E Control Persistence, Transactions, CAS, Outbox, Historical References & Migration Baseline](phase-007-e-control-persistence-transactions-cas-outbox-historical-reference-migration-baseline.md);
 - [007-F Distributed Data-State, Structured Topology, Manifest, Candidate/Seal & Promotion Foundation](phase-007-f-distributed-data-state-structured-topology-manifest-candidate-seal-promotion-foundation.md);
 - [007-G Strategy/Method Binding, Dependency Trust, Authorization, Secrets & Distributed Runtime Closure Foundation](phase-007-g-strategy-method-binding-dependency-trust-authorization-secrets-distributed-runtime-closure-foundation.md);
-- [Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Architecture](execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation.md);
-- [Deployment, Scalability, Observability, Portability, Compatibility & Platform Integration Architecture](deployment-scalability-observability-portability-compatibility-platform-integration.md);
-- [ADR-0002 — Immutable Semantic Snapshots & Versioned Lifecycle State](../decisions/ADR-0002-immutable-semantic-snapshots-versioned-lifecycle-state.md);
-- [ADR-0007 — Explicit Dependency Resolution & Scoped Capability Security](../decisions/ADR-0007-explicit-dependency-resolution-scoped-capability-security.md);
-- [ADR-0009 — Non-Regressing Authority After Regressive Control-State Recovery](../decisions/ADR-0009-non-regressing-authority-after-regressive-control-state-recovery.md);
+- [Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Architecture](../../architecture/execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation.md);
+- [Deployment, Scalability, Observability, Portability, Compatibility & Platform Integration Architecture](../../architecture/deployment-scalability-observability-portability-compatibility-platform-integration.md);
+- [ADR-0002 — Immutable Semantic Snapshots & Versioned Lifecycle State](../../decisions/ADR-0002-immutable-semantic-snapshots-versioned-lifecycle-state.md);
+- [ADR-0007 — Explicit Dependency Resolution & Scoped Capability Security](../../decisions/ADR-0007-explicit-dependency-resolution-scoped-capability-security.md);
+- [ADR-0009 — Non-Regressing Authority After Regressive Control-State Recovery](../../decisions/ADR-0009-non-regressing-authority-after-regressive-control-state-recovery.md);
 - accepted synchronizations, especially SYNC-04, SYNC-07, SYNC-11, SYNC-14 and SYNC-15.
 
 The Phase 005-G execution/recovery implementation plan remains downstream feasibility/planning evidence. Its concrete type names, package layout, enum spelling and persistence/API assumptions are not architecture premises during the current design freeze.

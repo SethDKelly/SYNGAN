@@ -29,7 +29,7 @@ This authority is downstream of:
 - current Phase 010 mapping authority;
 - [Phase 013 Architecture Reconciliation Authority](../authority/phase-013-architecture-reconciliation-authority.md);
 - [Phase 013-B Representation Reconciliation](phase-013-b-representation-layering-public-contract-identity-view-reconciliation.md);
-- [Operational Authority Continuity & Regressive Recovery Contract](../authority/operational-authority-continuity-regressive-recovery-contract.md).
+- [Operational Authority Continuity & Regressive Recovery Contract](../../authority/operational-authority-continuity-regressive-recovery-contract.md).
 
 ---
 

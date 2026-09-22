@@ -30,7 +30,7 @@ This result is current-state design authority, not a claim that later 011-C thro
 
 ## Governing method and evidence
 
-011-B applies the [Design Quality Validation Authority](design-quality-validation-authority.md), especially specificity criteria:
+011-B applies the [Design Quality Validation Authority](../../authority/design-quality-validation-authority.md), especially specificity criteria:
 
 ```text
 SP-1  distinct motivating purpose
@@ -44,9 +44,9 @@ SP-7  non-responsibilities remain credible under mapped use
 
 Primary normative evidence:
 
-- current [Concept-Justification Traceability](../problem/concept-justification-traceability.md);
+- current [Concept-Justification Traceability](../../problem/concept-justification-traceability.md);
 - all eleven current accepted concept specifications under `docs/concepts/`;
-- current [Application Family, Valid Concept Subsets & Minimal Coherent Variants](../dependence/application-family-valid-subsets.md);
+- current [Application Family, Valid Concept Subsets & Minimal Coherent Variants](../../dependence/application-family-valid-subsets.md);
 - current Phase 009 dependence/synchronization authority;
 - [Phase 010 Concept Mapping Consolidation](phase-010-concept-mapping-consolidation.md);
 - [Catalog Perimeter Candidate Rediscovery, Missing-Concept & Boundary Audit](../concepts/catalog-perimeter-candidate-rediscovery-boundary-audit.md);

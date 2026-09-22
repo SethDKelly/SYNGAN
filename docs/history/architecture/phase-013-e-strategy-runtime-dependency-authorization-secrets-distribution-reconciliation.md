@@ -500,7 +500,7 @@ No model hub, hosted LLM, pretrained artifact family, PyTorch runtime or provide
 
 ## 19. Current synchronization interpretation
 
-The [Current Cross-Concept Synchronization Contract](../synchronizations/current-cross-concept-synchronizations.md) controls current numbering, scope and ownership.
+The [Current Cross-Concept Synchronization Contract](../../synchronizations/current-cross-concept-synchronizations.md) controls current numbering, scope and ownership.
 
 Relevant current rules include:
 

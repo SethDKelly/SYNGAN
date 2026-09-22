@@ -22,7 +22,7 @@ The governing conclusion is:
 
 007-J is downstream of:
 
-- [Concept Design Methodology](../authority/design-methodology.md);
+- [Concept Design Methodology](../../authority/design-methodology.md);
 - [Phase 007 Design Continuation & Implementation Freeze](../authority/phase-007-design-continuation-implementation-freeze.md);
 - accepted concepts and the fifteen accepted synchronizations;
 - Phase 003 and Phase 006 experience authority;

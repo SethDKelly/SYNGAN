@@ -16,27 +16,27 @@ Refine SYNGAN's architecture for semantically valid Evaluation completion, durab
 
 007-I is downstream of:
 
-- [Concept Design Methodology](../authority/design-methodology.md);
+- [Concept Design Methodology](../../authority/design-methodology.md);
 - [Phase 007 Design Continuation & Implementation Freeze](../authority/phase-007-design-continuation-implementation-freeze.md);
-- [Evaluation](../concepts/evaluation.md);
-- [Evidence](../concepts/evidence.md);
-- [Provenance](../concepts/provenance.md);
-- [Reproducibility Contract](../authority/reproducibility-contract.md);
-- [Privacy, Disclosure Risk, Formal Guarantee & External Release Boundary Contract](../authority/privacy-disclosure-formal-guarantee-release-boundary-contract.md);
+- [Evaluation](../../concepts/evaluation.md);
+- [Evidence](../../concepts/evidence.md);
+- [Provenance](../../concepts/provenance.md);
+- [Reproducibility Contract](../../authority/reproducibility-contract.md);
+- [Privacy, Disclosure Risk, Formal Guarantee & External Release Boundary Contract](../../authority/privacy-disclosure-formal-guarantee-release-boundary-contract.md);
 - [Phase 006 Recovery, Security, Degraded, Historical & Topology Experience Contract](../experience/phase-006-recovery-security-degraded-history-topology-experience-contract.md);
-- [Evaluation, Evidence & Review Experience](../experience/evaluation-evidence-review.md);
-- [Provenance, Reproducibility & Historical Inspection Experience](../experience/provenance-reproducibility-historical-inspection.md);
+- [Evaluation, Evidence & Review Experience](../../experience/evaluation-evidence-review.md);
+- [Provenance, Reproducibility & Historical Inspection Experience](../../experience/provenance-reproducibility-historical-inspection.md);
 - [007-D Identity, Revision, Serialization, Resource/Handle & Programmatic-View Foundation](phase-007-d-identity-revision-serialization-resource-handle-programmatic-view-foundation.md);
 - [007-E Control Persistence, Transactions, CAS, Outbox, Historical References & Migration Baseline](phase-007-e-control-persistence-transactions-cas-outbox-historical-reference-migration-baseline.md);
 - [007-F Distributed Data-State, Structured Topology, Manifest, Candidate/Seal & Promotion Foundation](phase-007-f-distributed-data-state-structured-topology-manifest-candidate-seal-promotion-foundation.md);
 - [007-G Strategy/Method Binding, Dependency Trust, Authorization, Secrets & Distributed Runtime Closure Foundation](phase-007-g-strategy-method-binding-dependency-trust-authorization-secrets-distributed-runtime-closure-foundation.md);
 - [007-H Execution/Attempt, Idempotency, Fencing, Non-Regressing Recovery, Checkpoint, Cancellation & Admission Foundation](phase-007-h-execution-attempt-idempotency-fencing-non-regressing-recovery-checkpoint-cancellation-admission-foundation.md);
-- [Evaluation/Evidence, Provenance, Reproducibility & Historical Query Architecture](evaluation-evidence-provenance-reproducibility-historical-query.md);
+- [Evaluation/Evidence, Provenance, Reproducibility & Historical Query Architecture](../../architecture/evaluation-evidence-provenance-reproducibility-historical-query.md);
 - [Phase 006 Architecture Reconciliation Contract](phase-006-architecture-reconciliation-contract.md);
-- [ADR-0002 — Immutable Semantic Snapshots & Versioned Lifecycle State](../decisions/ADR-0002-immutable-semantic-snapshots-versioned-lifecycle-state.md);
-- [ADR-0006 — Typed Canonical Provenance & Derived Historical Projections](../decisions/ADR-0006-typed-provenance-canonical-derived-history-projections.md);
-- [ADR-0007 — Explicit Dependency Resolution & Scoped Capability Security](../decisions/ADR-0007-explicit-dependency-resolution-scoped-capability-security.md);
-- [ADR-0009 — Non-Regressing Authority After Regressive Control-State Recovery](../decisions/ADR-0009-non-regressing-authority-after-regressive-control-state-recovery.md);
+- [ADR-0002 — Immutable Semantic Snapshots & Versioned Lifecycle State](../../decisions/ADR-0002-immutable-semantic-snapshots-versioned-lifecycle-state.md);
+- [ADR-0006 — Typed Canonical Provenance & Derived Historical Projections](../../decisions/ADR-0006-typed-provenance-canonical-derived-history-projections.md);
+- [ADR-0007 — Explicit Dependency Resolution & Scoped Capability Security](../../decisions/ADR-0007-explicit-dependency-resolution-scoped-capability-security.md);
+- [ADR-0009 — Non-Regressing Authority After Regressive Control-State Recovery](../../decisions/ADR-0009-non-regressing-authority-after-regressive-control-state-recovery.md);
 - accepted synchronizations, especially SYNC-09 through SYNC-15.
 
 The historical Phase 005-H implementation plan remains downstream feasibility/planning evidence. Its concrete `EvidenceHandle`, finding schema, relational assertion table, `HistoricalRef`, query API, SQL transaction, index, enum, package-layout and cache choices are not architecture premises during the current design freeze.

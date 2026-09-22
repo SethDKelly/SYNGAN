@@ -37,7 +37,7 @@ NO DEFECT IN 011-D COMPOSED/HISTORICAL INTEGRITY AUDIT
 
 ## Governing method and authority
 
-011-D applies the [Design Quality Validation Authority](design-quality-validation-authority.md), especially:
+011-D applies the [Design Quality Validation Authority](../../authority/design-quality-validation-authority.md), especially:
 
 ```text
 IN-1  singular canonical ownership of every material fact
@@ -59,7 +59,7 @@ Primary authority used:
 - current accepted concept specifications;
 - [Synchronization Trigger, Preconditions/Postconditions, State Ownership & Hidden-Coordinator Audit](../synchronizations/trigger-ownership-normalization.md);
 - current synchronization/application-family authority;
-- [Operational Authority Continuity & Regressive Recovery Contract](operational-authority-continuity-regressive-recovery-contract.md);
+- [Operational Authority Continuity & Regressive Recovery Contract](../../authority/operational-authority-continuity-regressive-recovery-contract.md);
 - Phase 010 historical/current-state and difficult-condition mapping authority;
 - G1/G2 authorities established by 011-B/011-C.
 
