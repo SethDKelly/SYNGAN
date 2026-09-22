@@ -24,14 +24,14 @@ This is the Phase 009-G authority for the remaining Phase 009 portions of:
 
 ## Governing authority
 
-- [Concept Design Methodology](../authority/design-methodology.md)
-- [Concept-Justification Traceability](../problem/concept-justification-traceability.md)
-- [Application Family, Valid Concept Subsets & Minimal Coherent Variants](../dependence/application-family-valid-subsets.md)
-- [Contraction / Extension Consequences](../dependence/contraction-extension-consequences.md)
+- [Concept Design Methodology](../../authority/design-methodology.md)
+- [Concept-Justification Traceability](../../problem/concept-justification-traceability.md)
+- [Application Family, Valid Concept Subsets & Minimal Coherent Variants](../../dependence/application-family-valid-subsets.md)
+- [Contraction / Extension Consequences](../../dependence/contraction-extension-consequences.md)
 - [Synchronization Inventory Revalidation](application-family-revalidation.md)
 - [Synchronization Trigger / Ownership Normalization](trigger-ownership-normalization.md)
-- [Operational Authority Continuity & Regressive Recovery Contract](../authority/operational-authority-continuity-regressive-recovery-contract.md)
-- [Reproducibility Contract](../authority/reproducibility-contract.md)
+- [Operational Authority Continuity & Regressive Recovery Contract](../../authority/operational-authority-continuity-regressive-recovery-contract.md)
+- [Reproducibility Contract](../../authority/reproducibility-contract.md)
 
 Methodological interpretation is consistent with Daniel Jackson's concept-composition account:
 
