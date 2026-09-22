@@ -18,7 +18,7 @@ Reconcile retained control-persistence/history/concurrency/migration/recovery-st
 - [013-A Reconciliation Authority / Corpus Inventory / Taxonomy](013-A-reconciliation-authority-retained-corpus-inventory-precedence-reset-discrepancy-taxonomy.md)
 - [013-B Representation Reconciliation](../../architecture/phase-013-b-representation-layering-public-contract-identity-view-reconciliation.md)
 - [Phase 009 Dependence / Composition Consolidation](../../authority/phase-009-dependence-composition-consolidation.md)
-- [Operational Authority Continuity & Regressive Recovery Contract](../../authority/operational-authority-continuity-regressive-recovery-contract.md)
+- [Operational Authority Continuity & Regressive Recovery Contract](../../../authority/operational-authority-continuity-regressive-recovery-contract.md)
 - retained Phase 004-C and Phase 007-E architecture
 - ADR-0002 and ADR-0009 as rationale inputs
 
