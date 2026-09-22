@@ -133,7 +133,8 @@ def main() -> int:
             "## Scope notes",
             "",
             "- Passing this report does not authorize 016-H or any later work.",
-            "- Provider runtime state remains evidence-controlled and is not inferred from documentation.",
+            "- Provider runtime state remains evidence-controlled and is not inferred "
+            "from documentation.",
             "- Negative controls operate only on an isolated temporary copy.",
             "- Product/provider/runtime delivery remains outside Phase 016-G authority.",
             "",
