@@ -15,7 +15,7 @@ Perform the final whole-corpus reconciliation pass after 013-B through 013-H, en
 Canonical results:
 
 - [013-I Cross-Architecture Reconciliation Authority](../../architecture/phase-013-i-cross-architecture-composition-legacy-m6-residual-reconciliation.md)
-- [Current Cross-Concept Synchronization Contract](../../synchronizations/current-cross-concept-synchronizations.md)
+- [Current Cross-Concept Synchronization Contract](../../../synchronizations/current-cross-concept-synchronizations.md)
 - [Phase 013 Residual Architecture Misfit Register](../../authority/phase-013-residual-architecture-misfit-register.md)
 
 ## Questions resolved
