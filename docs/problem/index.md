@@ -61,4 +61,4 @@ unresolved WMAT-3                          0
 upstream reopen                            NONE
 ```
 
-Current Phase 014 subgroup sequencing is governed by [Phase 014](../phases/014/index.md).
+Current Phase 014 subgroup sequencing is governed by [Phase 014](../history/phases/014/index.md).
