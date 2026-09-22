@@ -49,6 +49,7 @@ def _mutate(
 def _unauthorized_progression(text: str) -> str:
     return text + "\nnext implementation program  AUTHORIZED / ACTIVE\n"
 
+
 def _budget_overflow(text: str) -> str:
     data = json.loads(text)
     data["limits"]["agents_md"] = 1
