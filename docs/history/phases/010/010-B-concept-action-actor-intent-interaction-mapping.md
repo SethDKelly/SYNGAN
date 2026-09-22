@@ -54,7 +54,7 @@ implementation next          NOT YET
 
 010-B creates:
 
-- [Concept Action → Actor Intent & Interaction Mapping](../../mapping/concept-action-actor-intent-interaction-mapping.md)
+- [Concept Action → Actor Intent & Interaction Mapping](../../../mapping/concept-action-actor-intent-interaction-mapping.md)
 
 This becomes the current semantic action-mapping authority used by later Phase 010 subgroups.
 
