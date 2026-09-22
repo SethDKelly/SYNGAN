@@ -17,6 +17,10 @@
       "path": "docs/authority/current-repository-status.md"
     },
     {
+      "family": "canonical_knowledge_ownership_map",
+      "path": "docs/authority/canonical-knowledge-ownership-map.md"
+    },
+    {
       "family": "documentation_governance",
       "path": "docs/authority/documentation-governance.md"
     },
