@@ -12,7 +12,12 @@ def main() -> int:
     errors: list[str] = []
 
     profile_path = repo / "docs" / "implementation" / "evaluation-method-profile.json"
-    authority_path = repo / "docs" / "implementation" / "success-visibility-holdout-evaluation-anti-gaming.md"
+    authority_path = (
+        repo
+        / "docs"
+        / "implementation"
+        / "success-visibility-holdout-evaluation-anti-gaming.md"
+    )
     registry_path = repo / "docs" / "authority" / "stable-reference-registry.json"
     manifest_path = repo / "docs" / "authority" / "okf-projection-manifest.json"
     status_path = repo / "docs" / "authority" / "current-repository-status.md"
@@ -82,12 +87,18 @@ def main() -> int:
                    if x.get("ref") == "syngan://implementation/evaluation-method"), None)
     if not stable or stable.get("status") != "active":
         errors.append("stable reference: missing/ inactive evaluation-method ref")
-    elif stable.get("path") != "docs/implementation/success-visibility-holdout-evaluation-anti-gaming.md":
+    elif stable.get("path") != (
+        "docs/implementation/success-visibility-holdout-evaluation-anti-gaming.md"
+    ):
         errors.append("stable reference: evaluation-method path drift")
 
     group = next((x for x in manifest.get("groups", []) if x.get("id") == "implementation"), None)
     route = None if not group else next(
-        (x for x in group.get("routes", []) if x.get("id") == "success-visibility-holdout-evaluation"),
+        (
+            x
+            for x in group.get("routes", [])
+            if x.get("id") == "success-visibility-holdout-evaluation"
+        ),
         None,
     )
     if not route or route.get("ref") != "syngan://implementation/evaluation-method":
