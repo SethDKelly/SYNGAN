@@ -27,8 +27,8 @@ Phase 016   ACTIVE
 Start Gate  COMPLETE
 016-A       COMPLETE
 016-B       COMPLETE
-016-C       AUTHORIZED / ACTIVE
-016-D       NOT AUTHORIZED
+016-C       COMPLETE
+016-D       NEXT ELIGIBLE / NOT AUTHORIZED
 016-E       NOT AUTHORIZED
 016-F       NOT AUTHORIZED
 016-G       NOT AUTHORIZED
@@ -57,7 +57,7 @@ Start Gate  COMPLETE
 Until a later group is explicitly authorized:
 
 - do not relocate current documents based only on 016-A's classification hypothesis;
-- do not generate a new knowledge plane;
+- do not hand-edit or promote the generated `knowledge/` projection into semantic authority;
 - do not add stable IDs merely for symmetry;
 - do not install agent/tool-specific framework dependencies;
 - do not add product/runtime/provider behavior;
