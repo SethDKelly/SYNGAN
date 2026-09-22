@@ -74,7 +74,10 @@ def test_preflight_policy_keeps_deterministic_external_and_human_evidence_separa
 
     for phrase in (
         "A deterministic repository PASS is necessary evidence for engineering hygiene",
-        "lock integrity proves reproducible selection/integrity metadata, not current vulnerability",
+        (
+            "lock integrity proves reproducible selection/integrity metadata, "
+            "not current vulnerability"
+        ),
         "Python 3.11 is the repository-verified Python line",
         "synthetic test fixture        != real benchmark evidence",
         "EP-R01 distribution license selection",
