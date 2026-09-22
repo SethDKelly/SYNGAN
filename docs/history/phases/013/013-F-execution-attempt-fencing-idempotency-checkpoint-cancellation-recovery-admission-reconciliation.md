@@ -18,9 +18,9 @@ Reconcile retained Execution/Attempt, fencing, idempotency, checkpoint, cancella
 - [013-C Persistence Reconciliation](../../architecture/phase-013-c-control-persistence-history-concurrency-migration-recovery-reconciliation.md)
 - [013-D Distributed Data Reconciliation](../../architecture/phase-013-d-distributed-data-topology-manifest-candidate-promotion-reconciliation.md)
 - [013-E Runtime / Dependency / Security Reconciliation](../../architecture/phase-013-e-strategy-runtime-dependency-authorization-secrets-distribution-reconciliation.md)
-- [Execution](../../concepts/execution.md)
-- [Operational Authority Continuity & Regressive Recovery Contract](../../authority/operational-authority-continuity-regressive-recovery-contract.md)
-- [Enterprise Scale / Resource Admission Contract](../../authority/enterprise-scale-resource-admission-approximation-degraded-operation-contract.md)
+- [Execution](../../../concepts/execution.md)
+- [Operational Authority Continuity & Regressive Recovery Contract](../../../authority/operational-authority-continuity-regressive-recovery-contract.md)
+- [Enterprise Scale / Resource Admission Contract](../../../authority/enterprise-scale-resource-admission-approximation-degraded-operation-contract.md)
 - retained Phase 004-F and Phase 007-H operational architecture
 - ADR-0005 and ADR-0009 as rationale inputs
 
