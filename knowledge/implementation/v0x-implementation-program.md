@@ -1,6 +1,6 @@
 ---
 type: "SYNGAN Knowledge Route"
-title: "v0.x Implementation Program — Phase 018-025 Dependency & Package Strategy"
+title: "v0.x Implementation Program \\u2014 Phase 018-025 Dependency & Package Strategy"
 description: "Canonical Phase 018-025 dependency order, phase boundaries, package decomposition, candidate-freeze, and qualification-repair routing."
 syngan_ref: "syngan://implementation/v0x-program"
 resource: "../../docs/implementation/v0x-implementation-program-phase-018-025-dependency-package-strategy.md"
