@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "phase": "016-C",
+  "phase": "016-D",
   "status": "active",
   "rules": {
     "current_proposition": "exactly_one_preferred_current_owner",
@@ -8,7 +8,8 @@
     "indexes": "routing_not_semantic_ownership",
     "adr": "accepted_rationale_downstream_of_current_authority",
     "code_tests": "implementation_and_evidence_not_semantic_authority",
-    "generated_knowledge": "compatibility_routing_only_not_semantic_authority"
+    "generated_knowledge": "compatibility_routing_only_not_semantic_authority",
+    "stable_references": "exact_registry_resolution_not_path_or_search"
   },
   "owners": [
     {
@@ -22,6 +23,10 @@
     {
       "family": "okf_producer_projection_conformance",
       "path": "docs/authority/okf-v0.2-producer-profile.md"
+    },
+    {
+      "family": "stable_reference_resolution_drift_control",
+      "path": "docs/authority/stable-reference-resolution-drift-control.md"
     },
     {
       "family": "terminology_policy",
@@ -78,6 +83,10 @@
     {
       "family": "backlog",
       "path": "docs/backlog/index.md"
+    },
+    {
+      "family": "phase_016_authority",
+      "path": "docs/authority/phase-016-documentation-okf-agentic-implementation-readiness-hardening-authority.md"
     },
     {
       "family": "active_phase",
