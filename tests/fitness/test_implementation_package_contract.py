@@ -7,10 +7,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 CONTRACT = (
-    ROOT
-    / "docs"
-    / "implementation"
-    / "implementation-package-traceability-adr-change-control.md"
+    ROOT / "docs" / "implementation" / "implementation-package-traceability-adr-change-control.md"
 )
 PROFILE = ROOT / "docs" / "implementation" / "implementation-package-profile.json"
 PACKAGES = ROOT / "docs" / "implementation" / "packages"
@@ -63,8 +60,7 @@ def test_package_profile_preserves_authority_and_stop_rules() -> None:
     assert profile["rules"]["class_2_requires_compatibility_migration_assessment"] is True
     assert profile["rules"]["class_3_4_may_not_be_in_progress_or_complete"] is True
     assert (
-        profile["rules"]["architecture_adrs_are_reference_only_for_implementation_packages"]
-        is True
+        profile["rules"]["architecture_adrs_are_reference_only_for_implementation_packages"] is True
     )
 
 
@@ -140,12 +136,8 @@ def test_package_contract_is_canonical_stable_and_okf_routed() -> None:
     assert stable["status"] == "active"
     assert stable["path"] == expected
 
-    implementation = next(
-        group for group in manifest["groups"] if group["id"] == "implementation"
-    )
+    implementation = next(group for group in manifest["groups"] if group["id"] == "implementation")
     route = next(
-        item
-        for item in implementation["routes"]
-        if item["id"] == "implementation-package-contract"
+        item for item in implementation["routes"] if item["id"] == "implementation-package-contract"
     )
     assert route["ref"] == stable["ref"]
