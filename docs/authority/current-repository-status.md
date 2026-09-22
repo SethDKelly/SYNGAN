@@ -38,8 +38,9 @@ repository implementation readiness READY FOR EXPLICIT START GATE / 100 OF 100
 
 Phase 017                           AUTHORIZED / ACTIVE — PLANNING ONLY
 017-A                               COMPLETE
-017-B                               NEXT ELIGIBLE / NOT AUTHORIZED
-017-C..017-I                        PLANNED / NOT AUTHORIZED
+017-B                               COMPLETE
+017-C                               NEXT ELIGIBLE / NOT AUTHORIZED
+017-D..017-I                        PLANNED / NOT AUTHORIZED
 
 product implementation execution   NOT AUTHORIZED
 active implementation packages     0
@@ -68,15 +69,14 @@ Phase 017 does **not** authorize:
 
 Phase 017 — Implementation Program Design, Autonomous Delivery Methodology & v0.x/v1 Roadmap — is **AUTHORIZED / ACTIVE — PLANNING ONLY**.
 
-017-A is **COMPLETE**. It established:
+017-A is **COMPLETE**.
 
-- Phase 017 planning scope and exclusions;
-- role-separated bounded autonomy for Cursor/Codex;
-- visible normative requirements plus independently generated/holdout challenge evaluation;
-- a candidate v0.x implementation sequence through independent MVP qualification;
-- deliberately lower-granularity v1 planning;
-- protected `main` and old-branch cleanup as hard prerequisites before executable implementation.
+017-B — Implementation-Phase Lifecycle & Gate/Evidence Contract — is **COMPLETE**.
 
-017-B — Implementation-Phase Lifecycle & Gate/Evidence Contract — is **NEXT ELIGIBLE / NOT AUTHORIZED**.
+017-B established the reusable implementation-phase control model: stable phase definitions, mandatory start gates, dynamic package/subphase derivation, visible normative success obligations, E0-E5 evidence dimensions, independent holdout/challenge evaluation, candidate freeze, explicit PASS/PASS WITH CARRY-FORWARD/NOT READY outcomes, and no-self-progression handoff rules.
+
+The durable current owner is `syngan://implementation/phase-lifecycle`. The active program route is now `syngan://program/phase-017`; the prior Phase 016 program route is retired without altering Phase 016 history.
+
+017-C — Cursor/Codex Autonomous Delivery Operating Model & Runtime Qualification — is **NEXT ELIGIBLE / NOT AUTHORIZED**.
 
 Product implementation execution remains **NOT AUTHORIZED**. No implementation package is active. Phase 018 or later execution requires explicit human selection after Phase 017 completes its planning work.
