@@ -4,7 +4,6 @@ import argparse
 import json
 from pathlib import Path
 
-
 EXPECTED_THEMES = [f"V1-T{number:02d}" for number in range(1, 6)]
 EXPECTED_M8 = [f"M8-R{number:02d}" for number in range(1, 5)]
 
