@@ -1,0 +1,33 @@
+---
+type: Phase Index
+title: Phase 017 — Implementation Program Design & Autonomous Delivery Planning
+status: active
+---
+
+# Phase 017 — Implementation Program Design & Autonomous Delivery Planning
+
+## Current state
+
+~~~text
+Phase 016                           COMPLETE
+Phase 017                           AUTHORIZED / ACTIVE — PLANNING ONLY
+017-A                               COMPLETE
+017-B                               NEXT ELIGIBLE / NOT AUTHORIZED
+017-C..017-I                        PLANNED / NOT AUTHORIZED
+product implementation execution   NOT AUTHORIZED
+active implementation packages     0
+~~~
+
+## Documents
+
+- [Phase 017 definition](phase-definition.md)
+- [017-A start gate](017-A-start-gate.md)
+- [Phase 017 exit review template](exit-review-template.md)
+
+## Boundary
+
+Phase 017 designs the implementation program. It may create planning/process authority and future
+phase definitions, but it may not implement product capability.
+
+Branch cleanup and protected `main` are mandatory before the first executable implementation phase
+may pass its start gate.
