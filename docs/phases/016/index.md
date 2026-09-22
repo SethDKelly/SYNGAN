@@ -32,7 +32,7 @@ Start Gate  COMPLETE
 016-E       COMPLETE
 016-F       COMPLETE
 016-G       COMPLETE
-016-H       NEXT ELIGIBLE / NOT AUTHORIZED
+016-H       AUTHORIZED / ACTIVE
 016-I       NOT AUTHORIZED
 016-J       NOT AUTHORIZED
 ~~~
@@ -190,4 +190,23 @@ product/runtime/provider behavior     UNCHANGED / NOT AUTHORIZED
 
 ## Current next boundary
 
-**016-H — Implementation Package Contract, Design-to-Code Traceability & ADR Change Control** is **NEXT ELIGIBLE / NOT AUTHORIZED** pending explicit proceed.
+## 016-H active execution
+
+[016-H — Implementation Package Contract, Design-to-Code Traceability & ADR Change Control](016-H-implementation-package-contract-design-code-traceability-adr-change-control.md)
+
+~~~text
+016-H                                 AUTHORIZED / ACTIVE
+change class                          P16-2
+implementation-package contract       IN SCOPE
+design-to-code traceability           IN SCOPE
+ADR change control                    IN SCOPE
+package validation                    IN SCOPE
+review/agent workflow alignment       IN SCOPE
+retroactive package fabrication       OUT OF SCOPE
+dependency/supply-chain/secrets       RESERVED FOR 016-I
+product/runtime/provider delivery     NOT AUTHORIZED
+~~~
+
+## Current next boundary
+
+**016-H — Implementation Package Contract, Design-to-Code Traceability & ADR Change Control** is **AUTHORIZED / ACTIVE**. 016-I remains **NOT AUTHORIZED** until 016-H exit evidence exists.
