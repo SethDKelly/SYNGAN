@@ -81,7 +81,10 @@ def verify_bootstrap() -> None:
         ROOT
         / "docs"
         / "implementation"
-        / "engineering-preflight-dependency-supply-chain-secrets-compatibility-benchmark-versioning.md",
+        / (
+            "engineering-preflight-dependency-supply-chain-secrets-"
+            "compatibility-benchmark-versioning.md"
+        ),
         ROOT / "docs" / "implementation" / "engineering-preflight-profile.json",
         ROOT / "docs" / "implementation" / "packages" / "index.md",
         ROOT / ".agents" / "skills" / "update-traceability" / "SKILL.md",
