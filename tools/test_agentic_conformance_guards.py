@@ -87,7 +87,7 @@ def main() -> int:
             _unauthorized_progression,
             "tools/validate_agent_status.py",
             ("--repo", str(repo)),
-            "unauthorized Phase 016 self-progression",
+            "unauthorized implementation self-progression",
             errors,
         )
 
@@ -172,6 +172,20 @@ def main() -> int:
 
         _mutate(
             repo,
+            "docs/implementation/agent-runtime-qualification-profile.json",
+            lambda text: text.replace(
+                '"runtime_state": "pending_tool_in_loop"',
+                '"runtime_state": "qualified"',
+                1,
+            ),
+            "tools/validate_agent_adapters.py",
+            ("--repo", str(repo)),
+            "fabricated runtime qualification without evidence",
+            errors,
+        )
+
+        _mutate(
+            repo,
             "AGENTS.md",
             lambda text: (
                 text + "\n[Broken agentic route](docs/authority/not-a-real-agentic-owner.md)\n"
@@ -184,7 +198,7 @@ def main() -> int:
 
     for error in errors:
         print("ERROR", error)
-    print(f"Agentic conformance negative controls: {len(errors)} error(s), 8 control(s)")
+    print(f"Agentic conformance negative controls: {len(errors)} error(s), 9 control(s)")
     return 1 if errors else 0
 
 
