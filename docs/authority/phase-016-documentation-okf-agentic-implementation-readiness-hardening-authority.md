@@ -74,8 +74,8 @@ Any audit finding that genuinely requires a semantic or architecture change must
 016-C  OKF v0.2 Producer Profile,
        Generated Knowledge Projection & Conformance
 
-016-D  Stable References, Deterministic Routing,
-       Context Discovery & Retrieval Failure Discipline
+016-D  Stable References, Deterministic Resolution,
+       Drift Control & Retrieval Failure Discipline
 
 016-E  Agent Authority, Human-Directed Scope,
        Change Classes, Security & Trust Boundaries
@@ -183,7 +183,7 @@ Phase 016   AUTHORIZED / ACTIVE
 016-A       COMPLETE
 016-B       COMPLETE
 016-C       COMPLETE
-016-D       NEXT ELIGIBLE / NOT AUTHORIZED
+016-D       AUTHORIZED / ACTIVE
 016-E..J    NOT AUTHORIZED
 product delivery beyond hardening  NOT AUTHORIZED
 ~~~
@@ -291,4 +291,24 @@ The user explicitly authorized 016-C after the audited 016-B closure.
 
 016-C closure evidence is recorded in the phase work record. Candidate Verify workflow `35684468631` / `#1581` passed portable and C2–C9 with no P16-3/P16-4 reopen.
 
-016-D — Stable References, Deterministic Resolution & Drift Control — is NEXT ELIGIBLE / NOT AUTHORIZED. 016-E through 016-J remain NOT AUTHORIZED.
+## 016-D authorization
+
+The user explicitly authorized 016-D after the verified 016-C closure.
+
+016-D is a documented **P16-2 routing/process contract**. It may:
+
+- define durable logical knowledge references independent of repository paths;
+- define exact deterministic forward and reverse resolution;
+- define non-guessing failure behavior for malformed, unknown, retired, ambiguous, or drifted references;
+- establish a machine-readable stable-reference registry;
+- bind generated OKF routes to stable references and validate path/reference agreement;
+- add repository-owned drift checks to the existing authority/portable verification path.
+
+016-D must not:
+
+- define agent autonomy, change authority, security/trust policy, or human-approval policy reserved for 016-E;
+- define context budgets, portable skills, or tool-specific adapters reserved for 016-F;
+- establish the separate agentic negative-control CI program reserved for 016-G;
+- change accepted product semantics, architecture contracts, runtime/provider behavior, or Phase 015 support claims.
+
+016-E through 016-J remain gated until 016-D exit evidence exists.
