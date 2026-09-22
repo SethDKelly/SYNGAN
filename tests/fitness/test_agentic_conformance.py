@@ -38,8 +38,8 @@ def test_agentic_ci_runs_the_canonical_dependency_free_command() -> None:
     text = WORKFLOW.read_text(encoding="utf-8")
 
     assert "python tools/run_agentic_conformance.py --report agentic-conformance-report.md" in text
-    assert "actions/checkout@v7.0.1" in text
-    assert "actions/setup-python@v7.0.0" in text
+    assert "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1" in text
+    assert "actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0" in text
     assert "uv " not in text
     assert "secrets:" not in text
 
