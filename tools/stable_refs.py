@@ -75,9 +75,7 @@ def resolve_reference(
         raise StableReferenceError(f"active stable reference has no path: {reference}")
     resolved = (root / path).resolve()
     if not resolved.exists():
-        raise StableReferenceError(
-            f"stable reference target does not exist: {reference} -> {path}"
-        )
+        raise StableReferenceError(f"stable reference target does not exist: {reference} -> {path}")
     return entry
 
 
