@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "phase": "017-B",
+  "phase": "017-C",
   "status": "active",
   "rules": {
     "current_proposition": "exactly_one_preferred_current_owner",
@@ -16,7 +16,8 @@
     "implementation_packages": "traceability_evidence_not_authorization_or_semantic_authority",
     "engineering_preflight": "deterministic_release_hygiene_not_release_or_support_authority",
     "repository_readiness": "scorecard_evidence_not_program_or_release_authority",
-    "implementation_phase_lifecycle": "phase_intent_start_gate_success_evidence_candidate_freeze_exit_review_no_self_progression"
+    "implementation_phase_lifecycle": "phase_intent_start_gate_success_evidence_candidate_freeze_exit_review_no_self_progression",
+    "autonomous_agent_delivery": "bounded_cursor_codex_roles_context_isolation_runtime_qualification_no_self_progression"
   },
   "owners": [
     {
@@ -102,6 +103,10 @@
     {
       "family": "implementation_phase_lifecycle",
       "path": "docs/implementation/implementation-phase-lifecycle-gate-evidence-contract.md"
+    },
+    {
+      "family": "autonomous_agent_delivery",
+      "path": "docs/implementation/cursor-codex-autonomous-delivery-runtime-qualification.md"
     },
     {
       "family": "implementation_package_traceability_change_control",
