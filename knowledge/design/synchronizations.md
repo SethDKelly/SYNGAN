@@ -2,6 +2,7 @@
 type: "SYNGAN Knowledge Route"
 title: "Current Cross-Concept Synchronizations"
 description: "Current cross-concept coordination contract."
+syngan_ref: "syngan://design/synchronizations"
 resource: "../../docs/synchronizations/current-cross-concept-synchronizations.md"
 tags: ["syngan", "design", "generated", "routing"]
 status: "stable"
@@ -11,6 +12,8 @@ syngan_authority: "projection-only"
 # Route
 
 **GENERATED OKF PROJECTION — DO NOT HAND-EDIT.**
+
+Stable reference: `syngan://design/synchronizations`.
 
 Canonical source: [Current Cross-Concept Synchronizations](../../docs/synchronizations/current-cross-concept-synchronizations.md).
 

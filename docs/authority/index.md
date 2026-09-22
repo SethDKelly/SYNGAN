@@ -12,6 +12,7 @@ status: active
 - [Canonical Knowledge Ownership Map](canonical-knowledge-ownership-map.md)
 - [Documentation Governance](documentation-governance.md)
 - [OKF v0.2 Producer Profile](okf-v0.2-producer-profile.md)
+- [Stable References, Deterministic Resolution & Drift Control](stable-reference-resolution-drift-control.md)
 - [Terminology Policy](terminology-policy.md)
 - [Concept Design Methodology](design-methodology.md)
 - [Jackson Methodology Completion Matrix](jackson-methodology-completion-matrix.md)

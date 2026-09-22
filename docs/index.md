@@ -42,7 +42,7 @@ methodology / cross-cutting authority
 history is provenance, not a competing current authority plane
 ~~~
 
-Canonical ownership is defined by [Canonical Knowledge Ownership Map](authority/canonical-knowledge-ownership-map.md).
+Canonical ownership is defined by [Canonical Knowledge Ownership Map](authority/canonical-knowledge-ownership-map.md). Stable logical routing is governed by [Stable Reference, Deterministic Resolution & Drift Control](authority/stable-reference-resolution-drift-control.md).
 
 ## Current state
 
@@ -59,8 +59,9 @@ Phase 016                           ACTIVE — PRE-IMPLEMENTATION HARDENING
 016-A                               COMPLETE
 016-B                               COMPLETE
 016-C                               COMPLETE
-016-D                               NEXT ELIGIBLE / NOT AUTHORIZED
-016-E..016-J                        NOT AUTHORIZED
+016-D                               COMPLETE
+016-E                               NEXT ELIGIBLE / NOT AUTHORIZED
+016-F..016-J                        NOT AUTHORIZED
 
 product/provider/runtime delivery   NOT AUTHORIZED
 ~~~
@@ -75,4 +76,4 @@ Historical wording such as active, current, canonical, next, MUST, or SHALL is s
 
 ## OKF note
 
-The authored `docs/` tree is SYNGAN's current knowledge/authority surface; it is not the externally conformant OKF transport bundle. Phase 016-C is establishing a deterministic generated `../knowledge/` compatibility projection under the canonical [OKF v0.2 Producer Profile](authority/okf-v0.2-producer-profile.md). Generated OKF routes never become semantic authority.
+The authored `docs/` tree is SYNGAN's current knowledge/authority surface; it is not the externally conformant OKF transport bundle. Phase 016-C established a deterministic generated `../knowledge/` compatibility projection under the canonical [OKF v0.2 Producer Profile](authority/okf-v0.2-producer-profile.md). Phase 016-D binds durable `syngan://...` references to current owners without making generated OKF routes semantic authority.

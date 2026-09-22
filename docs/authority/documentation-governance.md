@@ -60,6 +60,14 @@ The separation is intentional:
 
 Durable authored documents continue to use repository YAML frontmatter with at least `type`, `title`, and `status` unless a reserved/index form has an explicit repository exception. This repository metadata convention is distinct from the external OKF compatibility contract.
 
+## Stable reference routing
+
+Durable logical knowledge references are governed by [Stable References, Deterministic Resolution & Drift Control](stable-reference-resolution-drift-control.md).
+
+A `syngan://...` reference MUST be resolved through the stable-reference registry rather than reconstructed from the current file path or satisfied by repository search.
+
+Path moves preserve the logical reference when the logical owner is unchanged. Unknown, retired, malformed, or drifted references fail explicitly rather than falling back to similarly named current or historical documents.
+
 ## Progressive disclosure
 
 Every durable documentation area SHOULD have an `index.md` when the area contains multiple documents or when an agent would otherwise need to scan the directory to understand it.

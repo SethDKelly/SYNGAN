@@ -7,6 +7,8 @@ import shutil
 from pathlib import Path
 from typing import TypedDict, cast
 
+from stable_refs import StableReferenceError, load_registry, resolve_reference
+
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST_PATH = ROOT / "docs" / "authority" / "okf-projection-manifest.json"
 GENERATED_ROOT = ROOT / "knowledge"
@@ -16,7 +18,7 @@ class Route(TypedDict):
     id: str
     title: str
     description: str
-    resource: str
+    ref: str
 
 
 class Group(TypedDict):
@@ -62,7 +64,18 @@ def _relative_link(output: str, target: str) -> str:
     return os.path.relpath(target, start=start).replace(os.sep, "/")
 
 
-def _route_frontmatter(manifest: Manifest, group: Group, route: Route, output: str) -> str:
+def _resource_path(reference: str) -> str:
+    entry = resolve_reference(reference, load_registry())
+    return entry["path"]
+
+
+def _route_frontmatter(
+    manifest: Manifest,
+    group: Group,
+    route: Route,
+    output: str,
+    resource_path: str,
+) -> str:
     tags = ["syngan", group["id"], "generated", "routing"]
     tags_text = ", ".join(json.dumps(tag) for tag in tags)
     return (
@@ -70,7 +83,8 @@ def _route_frontmatter(manifest: Manifest, group: Group, route: Route, output: s
         f"type: {json.dumps(manifest['concept_type'])}\n"
         f"title: {json.dumps(route['title'])}\n"
         f"description: {json.dumps(route['description'])}\n"
-        f"resource: {json.dumps(_relative_link(output, route['resource']))}\n"
+        f"syngan_ref: {json.dumps(route['ref'])}\n"
+        f"resource: {json.dumps(_relative_link(output, resource_path))}\n"
         f"tags: [{tags_text}]\n"
         'status: "stable"\n'
         'syngan_authority: "projection-only"\n'
@@ -79,11 +93,13 @@ def _route_frontmatter(manifest: Manifest, group: Group, route: Route, output: s
 
 
 def _render_route(manifest: Manifest, group: Group, route: Route, output: str) -> str:
-    resource = _relative_link(output, route["resource"])
+    resource_path = _resource_path(route["ref"])
+    resource = _relative_link(output, resource_path)
     return (
-        _route_frontmatter(manifest, group, route, output)
+        _route_frontmatter(manifest, group, route, output, resource_path)
         + "\n# Route\n\n"
         + "**GENERATED OKF PROJECTION — DO NOT HAND-EDIT.**\n\n"
+        + f"Stable reference: `{route['ref']}`.\n\n"
         + f"Canonical source: [{route['title']}]({resource}).\n\n"
         + "This file is a compatibility route only. It cannot establish or override "
         + "SYNGAN semantic, architecture, implementation, or program authority.\n"
@@ -140,6 +156,7 @@ def render_all() -> dict[str, str]:
     manifest = _manifest()
     files: dict[str, str] = {"index.md": _root_index(manifest)}
     group_ids: set[str] = set()
+    route_refs: set[str] = set()
 
     for group in manifest["groups"]:
         group_id = group["id"]
@@ -154,9 +171,16 @@ def render_all() -> dict[str, str]:
             if route_id in route_ids:
                 raise ValueError(f"duplicate route id in {group_id}: {route_id}")
             route_ids.add(route_id)
-            source = ROOT / route["resource"]
+            if route["ref"] in route_refs:
+                raise ValueError(f"duplicate OKF stable reference: {route['ref']}")
+            route_refs.add(route["ref"])
+
+            resource_path = _resource_path(route["ref"])
+            source = ROOT / resource_path
             if not source.exists():
-                raise ValueError(f"projection resource does not exist: {route['resource']}")
+                raise ValueError(
+                    f"projection resource does not exist: {route['ref']} -> {resource_path}"
+                )
             rel = f"{group_id}/{route_id}.md"
             files[rel] = _render_route(manifest, group, route, f"knowledge/{rel}")
 
@@ -209,7 +233,7 @@ def main() -> int:
 
     try:
         files = render_all()
-    except (OSError, ValueError, json.JSONDecodeError) as exc:
+    except (OSError, ValueError, json.JSONDecodeError, StableReferenceError) as exc:
         print(f"ERROR {exc}")
         return 1
 

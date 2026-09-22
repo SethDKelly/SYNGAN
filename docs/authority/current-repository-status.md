@@ -26,8 +26,9 @@ Start Gate                          COMPLETE
 016-A                               COMPLETE
 016-B                               COMPLETE
 016-C                               COMPLETE
-016-D                               NEXT ELIGIBLE / NOT AUTHORIZED
-016-E..016-J                        NOT AUTHORIZED
+016-D                               COMPLETE
+016-E                               NEXT ELIGIBLE / NOT AUTHORIZED
+016-F..016-J                        NOT AUTHORIZED
 
 current conceptual blockers         0
 current upstream reopens            0
@@ -57,7 +58,11 @@ Phase 016 does **not** authorize:
 
 Closure established an externally grounded producer profile, deterministic generated `knowledge/` compatibility projection, repository-owned generation/conformance checks, and explicit non-authority semantics for generated knowledge. Candidate Verify workflow `35684468631` / `#1581` passed portable and all C2–C9 gates with P16-3/P16-4 findings remaining `0 / 0`.
 
-016-D — Stable References, Deterministic Resolution & Drift Control — is NEXT ELIGIBLE / NOT AUTHORIZED pending explicit proceed.
+016-D — Stable References, Deterministic Resolution & Drift Control — is COMPLETE.
+
+Closure established 22 active `syngan://...` stable references covering every canonical ownership-map family, exact fail-closed forward/reverse resolution, OKF route binding through stable references, and mechanical registry/ownership/projection drift detection. Candidate Verify workflow `35686359067` / `#1592` passed portable and all C2–C9 gates with P16-3/P16-4 findings remaining `0 / 0`.
+
+016-E — Agent Authority, Human-Directed Scope, Change Classes, Security & Trust Boundaries — is NEXT ELIGIBLE / NOT AUTHORIZED pending explicit proceed.
 
 016-B closure established:
 

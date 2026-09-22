@@ -2,6 +2,7 @@
 type: "SYNGAN Knowledge Route"
 title: "Mapping"
 description: "Current semantic-to-interaction mapping routes."
+syngan_ref: "syngan://design/mapping"
 resource: "../../docs/mapping/index.md"
 tags: ["syngan", "design", "generated", "routing"]
 status: "stable"
@@ -11,6 +12,8 @@ syngan_authority: "projection-only"
 # Route
 
 **GENERATED OKF PROJECTION — DO NOT HAND-EDIT.**
+
+Stable reference: `syngan://design/mapping`.
 
 Canonical source: [Mapping](../../docs/mapping/index.md).
 
