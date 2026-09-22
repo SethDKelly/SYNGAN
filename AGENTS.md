@@ -4,7 +4,7 @@ These instructions apply repository-wide to automated coding/documentation agent
 
 ## Current posture
 
-**Jackson concept design and Phases 013-015 are complete; C0-C9 are active/passing. Phase 016 pre-implementation hardening is ACTIVE. 016-A through 016-I are complete; 016-J is NEXT ELIGIBLE / NOT AUTHORIZED. No product/provider/runtime delivery program is authorized.**
+**Jackson concept design and Phases 013-015 are complete; C0-C9 are active/passing. Phase 016 pre-implementation hardening is ACTIVE. 016-A through 016-I are complete; 016-J is AUTHORIZED / ACTIVE. No product/provider/runtime delivery program is authorized.**
 
 ## Start with
 
@@ -84,4 +84,4 @@ Current status and subphase authorization are owned by docs/authority/current-re
 
 ## Current next boundary
 
-**016-J — Repository Implementation-Readiness Scorecard, Residual Risk Register & Phase 016 Exit is NEXT ELIGIBLE / NOT AUTHORIZED. No product/provider/runtime delivery program is authorized.**
+**016-J — Repository Implementation-Readiness Scorecard, Residual Risk Register & Phase 016 Exit is AUTHORIZED / ACTIVE. No post-Phase-016 implementation, product/provider/runtime delivery, or release program is authorized.**
