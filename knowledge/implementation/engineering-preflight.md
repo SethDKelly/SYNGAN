@@ -17,4 +17,4 @@ Stable reference: `syngan://implementation/engineering-preflight`.
 
 Canonical source: [Engineering Preflight](../../docs/implementation/engineering-preflight-dependency-supply-chain-secrets-compatibility-benchmark-versioning.md).
 
-This file is a compatibility route only. It cannot establish or override SYNGAN semantic, architecture, implementation, support, release, or legal authority.
+This file is a compatibility route only. It cannot establish or override SYNGAN semantic, architecture, implementation, or program authority.
