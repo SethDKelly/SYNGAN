@@ -9,9 +9,7 @@ import tomllib
 from pathlib import Path
 from typing import Any, cast
 
-ACTION_RE = re.compile(
-    r"^\s*uses:\s*([^@\s]+)@([0-9a-f]{40})\s*#\s*(v[^\s#]+)\s*$"
-)
+ACTION_RE = re.compile(r"^\s*uses:\s*([^@\s]+)@([0-9a-f]{40})\s*#\s*(v[^\s#]+)\s*$")
 ANY_USES_RE = re.compile(r"^\s*uses:\s*([^@\s]+)@([^\s#]+)")
 BOUNDED_LOWER = re.compile(r"(?:>=|>)\s*[^,;\s]+")
 BOUNDED_UPPER = re.compile(r"<\s*[^,;\s]+")
@@ -223,9 +221,9 @@ def _validate_project_profile(
     if version != "0.0.0" and release_state == "unreleased-pre-1.0-development":
         errors.append("non-placeholder project version conflicts with unreleased development state")
 
-    python_file = (repo / profile["toolchain"]["python_version_file"]).read_text(
-        encoding="utf-8"
-    ).strip()
+    python_file = (
+        (repo / profile["toolchain"]["python_version_file"]).read_text(encoding="utf-8").strip()
+    )
     verified = expected.get("verified_python")
     if not isinstance(verified, list) or python_file not in verified:
         errors.append(".python-version is not represented in verified Python evidence")
@@ -247,9 +245,9 @@ def _validate_project_profile(
 
 
 def _validate_support_claims(repo: Path, profile: dict[str, Any], errors: list[str]) -> None:
-    text = (
-        repo / "docs" / "implementation" / "current-support-scope.md"
-    ).read_text(encoding="utf-8")
+    text = (repo / "docs" / "implementation" / "current-support-scope.md").read_text(
+        encoding="utf-8"
+    )
 
     required_nonclaims = (
         "production generic-Spark adapter                      NOT CLAIMED",
@@ -298,9 +296,7 @@ def _validate_residuals(profile: dict[str, Any], errors: list[str]) -> int:
             errors.append(f"{residual_id} must remain explicit with state {state!r}")
 
     return sum(
-        1
-        for item in by_id.values()
-        if item.get("consequence") == "release-candidate-blocker"
+        1 for item in by_id.values() if item.get("consequence") == "release-candidate-blocker"
     )
 
 
