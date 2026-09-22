@@ -1,7 +1,7 @@
 ---
 type: Phase Work Record
 title: 016-F — Context Budgets, Portable Skills, Tool Adapters
-status: active
+status: complete
 ---
 
 # 016-F — Context Budgets, Portable Skills, Tool Adapters
@@ -62,15 +62,39 @@ Tool adapters are compatibility mechanics. They may route/import the shared poli
 - existing portable and C2-C9 verification remain green;
 - P16-3/P16-4 findings remain zero.
 
-## Current state
+## Closure evidence
 
 ~~~text
-016-F                                 AUTHORIZED / ACTIVE
-context budget contract               IN PROGRESS
-portable skills                       IN PROGRESS
-tool adapters                         IN PROGRESS
-degraded fallback                     IN PROGRESS
-bounded fitness evidence              IN PROGRESS
+016-F                                 COMPLETE
+change class                          P16-2
+candidate head                        3e1dca16fadfd382bf9f7c504a462a2c63a58988
+pull request                          #5
+candidate Verify                      35688409580 / #1603
+candidate Verify result               PASS
+context budget unit                   UTF-8 BYTES
+budget measurement                    PASS
+canonical portable skills             5 / PASS
+Claude project bridge                 PASS
+Claude command bridges                5 / PASS
+Cursor documented adapter             AGENTS + .agents/skills
+Codex documented adapter              AGENTS + .agents/skills
+provider runtime evidence             UNVERIFIED / NOT CLAIMED
+manual fallback                       PASS
+stable-reference registry             24 ACTIVE
+canonical owner-family coverage       24 / 24
+OKF projection                        26 FILES / PASS
+portable                              PASS
+C2..C9                                PASS
 P16-3 / P16-4                         0 / 0
-016-G                                  NOT AUTHORIZED
+product/runtime/provider behavior     UNCHANGED
 ~~~
+
+## Exit decision
+
+Every 016-F exit criterion is satisfied.
+
+016-F is **COMPLETE**.
+
+SYNGAN now has bounded progressive context retrieval, provider-neutral canonical workflows, and thin provider adapters whose failure degrades ergonomics rather than repository correctness. Documented provider capability remains separate from runtime certification, and no tool-specific surface may fork task authority or product semantics.
+
+**016-G — Agentic Conformance, Negative Controls, Drift Detection & CI** is **NEXT ELIGIBLE / NOT AUTHORIZED** pending explicit proceed.
