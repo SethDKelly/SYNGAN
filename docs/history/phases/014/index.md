@@ -49,9 +49,9 @@ Start with:
 - [Phase 014 Whole-Design Consolidation & Readiness Authority](../../authority/phase-014-whole-design-readiness-authority.md)
 - [Phase 014 Start Gate / Decomposition Record](014-start-gate-whole-design-readiness-decomposition.md)
 - [013-J Phase Record](../013/013-J-phase-013-consolidation-r1-completion-decision-phase-014-handoff.md)
-- [Phase 013 Consolidated Architecture Contract](../../architecture/phase-013-consolidated-architecture-contract.md)
-- [Jackson Methodology Completion Matrix](../../authority/jackson-methodology-completion-matrix.md)
-- [Jackson Design Completion & Implementation Hold](../../authority/jackson-design-completion-implementation-hold.md)
+- [Phase 013 Consolidated Architecture Contract](../../../architecture/phase-013-consolidated-architecture-contract.md)
+- [Jackson Methodology Completion Matrix](../../../authority/jackson-methodology-completion-matrix.md)
+- [Jackson Design Completion & Implementation Hold](../../../authority/jackson-design-completion-implementation-hold.md)
 
 Phase 014 must audit current problem, concept, dependence/application-family, synchronization, mapping, quality and architecture authority together. Architecture alone is not the whole design.
 
