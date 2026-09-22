@@ -166,6 +166,13 @@
       "owner_family": "implementation_phase_lifecycle"
     },
     {
+      "ref": "syngan://implementation/agent-delivery",
+      "path": "docs/implementation/cursor-codex-autonomous-delivery-runtime-qualification.md",
+      "status": "active",
+      "authority_class": "current",
+      "owner_family": "autonomous_agent_delivery"
+    },
+    {
       "ref": "syngan://implementation/package-contract",
       "path": "docs/implementation/implementation-package-traceability-adr-change-control.md",
       "status": "active",
