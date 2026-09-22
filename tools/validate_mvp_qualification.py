@@ -117,8 +117,7 @@ def main() -> int:
         None,
     )
     expected_path = (
-        "docs/implementation/"
-        "v0x-mvp-completion-testing-qualification-independent-exit.md"
+        "docs/implementation/v0x-mvp-completion-testing-qualification-independent-exit.md"
     )
     if not stable or stable.get("status") != "active":
         errors.append("stable reference: missing/inactive MVP qualification authority")

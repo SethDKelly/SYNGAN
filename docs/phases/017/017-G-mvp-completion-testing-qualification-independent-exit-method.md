@@ -71,6 +71,13 @@ qualification-plan freeze, evidence ledger, mutation/property/failure discipline
 cycle, anchor rerun, decision rules, stable routing, validator, and seeded negative control are
 coherent without executing Phase 025.
 
+## Closure verification discipline
+
+017-G closure requires both the repository Verify workflow and Agentic conformance workflow to pass
+against one exact final head. Mechanical formatter/projection findings may be repaired without
+changing qualification semantics, but the phase is not considered cleanly closed until the repaired
+head passes both workflows.
+
 ## Handoff
 
 017-H should define the deliberately coarse v1 program themes, deferrals, rediscovery/reopen
