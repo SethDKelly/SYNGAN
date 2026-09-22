@@ -46,6 +46,11 @@ Canonical reusable workflows live under `.agents/skills/`: `resolve-context`, `r
 Repository agentic/documentation conformance is governed by [Agentic Conformance, Negative Controls, Drift Detection & CI](docs/authority/agentic-conformance-policy.md).
 
 Use `python tools/run_agentic_conformance.py` for deterministic repository configuration checks. A PASS does not prove product/runtime health or provider runtime compatibility, and a FAIL does not authorize edits outside the human-selected task.
+## Implementation packages and ADR change control
+
+Prospective material implementation packages are governed by [Implementation Package, Traceability & ADR Change Control](docs/implementation/implementation-package-traceability-adr-change-control.md).
+
+A package is scope/evidence metadata, never authorization. Class 1/2 work traces current `syngan://...` authority to code/test evidence; Class 3/4 conflicts stop and reopen the smallest upstream owner. Architecture ADRs under `docs/decisions/` preserve rationale and may not be rewritten by ordinary implementation to make code appear conformant.
 ## Durable authority rules
 
 - One proposition should have one preferred current owner.
