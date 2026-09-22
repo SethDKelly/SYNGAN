@@ -1,7 +1,7 @@
 ---
 type: Phase Work Record
 title: 016-D — Stable References, Deterministic Resolution & Drift Control
-status: active
+status: complete
 ---
 
 # 016-D — Stable References, Deterministic Resolution & Drift Control
@@ -81,15 +81,35 @@ Resolution is exact and fail-closed. The resolver MUST NOT guess from titles, ba
 - P16-3/P16-4 findings remain zero;
 - no 016-E/016-F agent-policy or adapter scope leaks into 016-D.
 
-## Current state
+## Closure evidence
 
 ~~~text
-016-D                                 AUTHORIZED / ACTIVE
-stable-reference contract             IN PROGRESS
-machine-readable registry             IN PROGRESS
-deterministic resolver                IN PROGRESS
-OKF reference binding                 IN PROGRESS
-drift validation                      IN PROGRESS
+016-D                                 COMPLETE
+change class                          P16-2
+candidate head                        9f36fd4751eb382e5d7877df5bf896361d88840f
+pull request                          #3
+candidate Verify                      35686359067 / #1592
+candidate Verify result               PASS
+stable-reference registry             22 ACTIVE
+canonical owner-family coverage       22 / 22
+forward resolution                    EXACT / PASS
+reverse resolution                    EXACT / PASS
+search/title/slug fallback            PROHIBITED / TESTED
+unknown/malformed/unregistered        FAIL CLOSED / PASS
+generated OKF projection              24 FILES / PASS
+OKF stable-reference/resource drift   0
+portable                              PASS
+C2..C9                                PASS
 P16-3 / P16-4                         0 / 0
-016-E                                  NOT AUTHORIZED
+product/runtime/provider behavior     UNCHANGED
 ~~~
+
+## Exit decision
+
+Every 016-D exit criterion is satisfied.
+
+016-D is **COMPLETE**.
+
+Stable logical identity is now independent of repository path, exact resolution is repository-owned and fail-closed, and generated OKF routes derive canonical paths through the stable-reference registry rather than owning competing bindings.
+
+**016-E — Agent Authority, Human-Directed Scope, Change Classes, Security & Trust Boundaries** is **NEXT ELIGIBLE / NOT AUTHORIZED** pending explicit proceed.
