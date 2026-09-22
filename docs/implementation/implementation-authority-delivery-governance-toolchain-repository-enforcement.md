@@ -173,6 +173,8 @@ Requirements:
 
 Implementation should advance in **reviewable vertical slices** that can demonstrate one bounded set of architecture obligations end to end.
 
+Prospective material Class 1/2 slices use the [Implementation Package, Traceability & ADR Change Control](implementation-package-traceability-adr-change-control.md) contract to record bounded authority-to-code/test/evidence mapping. Package metadata is evidence/routing only and never creates implementation authorization.
+
 A delivery slice should identify:
 
 ```text
