@@ -14,15 +14,15 @@ Translate SYNGAN's accepted network/external-dependency policy, source-derived s
 
 ## Governing authority
 
-- [Network and External Dependency Policy](../../authority/network-external-dependency-policy.md)
-- [Reproducibility Contract](../../authority/reproducibility-contract.md)
-- [Provenance](../../concepts/provenance.md)
-- [Synthesis Strategy](../../concepts/synthesis-strategy.md)
-- [Learned State](../../concepts/learned-state.md)
-- [Generation](../../concepts/generation.md)
-- [Evaluation](../../concepts/evaluation.md)
-- [Evidence](../../concepts/evidence.md)
-- [Execution](../../concepts/execution.md)
+- [Network and External Dependency Policy](../../../authority/network-external-dependency-policy.md)
+- [Reproducibility Contract](../../../authority/reproducibility-contract.md)
+- [Provenance](../../../concepts/provenance.md)
+- [Synthesis Strategy](../../../concepts/synthesis-strategy.md)
+- [Learned State](../../../concepts/learned-state.md)
+- [Generation](../../../concepts/generation.md)
+- [Evaluation](../../../concepts/evaluation.md)
+- [Evidence](../../../concepts/evidence.md)
+- [Execution](../../../concepts/execution.md)
 - [003-B — Data Meaning, Constraint & Strategy Preparation Experience](003-B-data-meaning-constraint-strategy-preparation-experience.md)
 - [003-C — Learning & Learned State Lifecycle Experience](003-C-learning-learned-state-lifecycle-experience.md)
 - [003-D — Generation Request, Condition, Validation & Output Promotion Experience](003-D-generation-request-condition-validation-output-promotion-experience.md)
@@ -32,7 +32,7 @@ Translate SYNGAN's accepted network/external-dependency policy, source-derived s
 
 ## Canonical experience authority created
 
-- [Enterprise Dependency, Offline/No-Egress & Safety](../../experience/enterprise-dependency-offline-no-egress-safety.md)
+- [Enterprise Dependency, Offline/No-Egress & Safety](../../../experience/enterprise-dependency-offline-no-egress-safety.md)
 
 ## Main decisions
 

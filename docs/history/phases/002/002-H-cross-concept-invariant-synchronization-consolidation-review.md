@@ -27,13 +27,13 @@ This review tests:
 
 ## Governing authority
 
-- [Design Methodology](../../authority/design-methodology.md)
-- [Documentation Governance](../../authority/documentation-governance.md)
-- [Terminology Policy](../../authority/terminology-policy.md)
-- [Network and External Dependency Policy](../../authority/network-external-dependency-policy.md)
-- [Reproducibility Contract](../../authority/reproducibility-contract.md)
-- [Accepted Concepts](../../concepts/index.md)
-- [Accepted Synchronizations](../../synchronizations/index.md)
+- [Design Methodology](../../../authority/design-methodology.md)
+- [Documentation Governance](../../../authority/documentation-governance.md)
+- [Terminology Policy](../../../authority/terminology-policy.md)
+- [Network and External Dependency Policy](../../../authority/network-external-dependency-policy.md)
+- [Reproducibility Contract](../../../authority/reproducibility-contract.md)
+- [Accepted Concepts](../../../concepts/index.md)
+- [Accepted Synchronizations](../../../synchronizations/index.md)
 - Phase 002 records 002-A through 002-G
 
 Canonical concept/synchronization/authority documents remain the normative homes for durable rules. This exit record is a consolidation and handoff view.

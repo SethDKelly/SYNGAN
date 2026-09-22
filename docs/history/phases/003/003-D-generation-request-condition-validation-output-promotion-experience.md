@@ -17,17 +17,17 @@ Translate the accepted Generation, Condition, Constraint, Learned State/direct-g
 - [003-A — Workflow Entry, Source Context & Lifecycle Orientation](003-A-workflow-entry-source-context-lifecycle-orientation.md)
 - [003-B — Data Meaning, Constraint & Strategy Preparation Experience](003-B-data-meaning-constraint-strategy-preparation-experience.md)
 - [003-C — Learning & Learned State Lifecycle Experience](003-C-learning-learned-state-lifecycle-experience.md)
-- [Generation](../../concepts/generation.md)
-- [Constraint](../../concepts/constraint.md)
-- [Learned State](../../concepts/learned-state.md)
-- [Evidence](../../concepts/evidence.md)
-- [Accepted Synchronizations](../../synchronizations/index.md)
-- [Network and External Dependency Policy](../../authority/network-external-dependency-policy.md)
-- [Reproducibility Contract](../../authority/reproducibility-contract.md)
+- [Generation](../../../concepts/generation.md)
+- [Constraint](../../../concepts/constraint.md)
+- [Learned State](../../../concepts/learned-state.md)
+- [Evidence](../../../concepts/evidence.md)
+- [Accepted Synchronizations](../../../synchronizations/index.md)
+- [Network and External Dependency Policy](../../../authority/network-external-dependency-policy.md)
+- [Reproducibility Contract](../../../authority/reproducibility-contract.md)
 
 ## Canonical experience authority created
 
-- [Generation Request, Condition, Validation & Output Promotion](../../experience/generation-request-condition-validation-output-promotion.md)
+- [Generation Request, Condition, Validation & Output Promotion](../../../experience/generation-request-condition-validation-output-promotion.md)
 
 ## Main decisions
 

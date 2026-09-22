@@ -15,17 +15,17 @@ Translate the accepted Evaluation Criterion, Evaluation, Evidence, Generation-co
 ## Governing authority
 
 - [003-D — Generation Request, Condition, Validation & Output Promotion Experience](003-D-generation-request-condition-validation-output-promotion-experience.md)
-- [Evaluation Criterion](../../concepts/evaluation-criterion.md)
-- [Evaluation](../../concepts/evaluation.md)
-- [Evidence](../../concepts/evidence.md)
-- [Generation](../../concepts/generation.md)
-- [Accepted Synchronizations](../../synchronizations/index.md)
-- [Reproducibility Contract](../../authority/reproducibility-contract.md)
-- [Network and External Dependency Policy](../../authority/network-external-dependency-policy.md)
+- [Evaluation Criterion](../../../concepts/evaluation-criterion.md)
+- [Evaluation](../../../concepts/evaluation.md)
+- [Evidence](../../../concepts/evidence.md)
+- [Generation](../../../concepts/generation.md)
+- [Accepted Synchronizations](../../../synchronizations/index.md)
+- [Reproducibility Contract](../../../authority/reproducibility-contract.md)
+- [Network and External Dependency Policy](../../../authority/network-external-dependency-policy.md)
 
 ## Canonical experience authority created
 
-- [Evaluation, Evidence & Review Experience](../../experience/evaluation-evidence-review.md)
+- [Evaluation, Evidence & Review Experience](../../../experience/evaluation-evidence-review.md)
 
 ## Main decisions
 

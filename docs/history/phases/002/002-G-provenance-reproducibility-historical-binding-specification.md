@@ -8,7 +8,7 @@ status: complete
 
 ## Objective
 
-Deepen the accepted [Provenance](../../concepts/provenance.md) concept, establish a canonical cross-cutting [Reproducibility Contract](../../authority/reproducibility-contract.md), and refine historical-binding semantics across Data Meaning, Strategy, Constraints, Learning, Learned State, Generation, Evaluation, Evidence, Execution/Attempts, dependencies, source/output identities, and runtime context.
+Deepen the accepted [Provenance](../../../concepts/provenance.md) concept, establish a canonical cross-cutting [Reproducibility Contract](../../../authority/reproducibility-contract.md), and refine historical-binding semantics across Data Meaning, Strategy, Constraints, Learning, Learned State, Generation, Evaluation, Evidence, Execution/Attempts, dependencies, source/output identities, and runtime context.
 
 The phase preserves the Phase 001 rule that Provenance is typed historical relationship authority with high fan-in and low authority fan-out, not a shadow database containing copies of all canonical state.
 
@@ -16,14 +16,14 @@ The phase preserves the Phase 001 rule that Provenance is typed historical relat
 
 002-G is governed by:
 
-- [Concept Design Methodology](../../authority/design-methodology.md)
-- [Documentation Governance](../../authority/documentation-governance.md)
-- [Terminology Policy](../../authority/terminology-policy.md)
-- [Source and Provenance Policy](../../authority/source-provenance-policy.md)
-- [Network and External Dependency Policy](../../authority/network-external-dependency-policy.md)
-- [Reproducibility Contract](../../authority/reproducibility-contract.md)
-- [Accepted Concepts](../../concepts/index.md)
-- [Accepted Synchronizations](../../synchronizations/index.md)
+- [Concept Design Methodology](../../../authority/design-methodology.md)
+- [Documentation Governance](../../../authority/documentation-governance.md)
+- [Terminology Policy](../../../authority/terminology-policy.md)
+- [Source and Provenance Policy](../../../authority/source-provenance-policy.md)
+- [Network and External Dependency Policy](../../../authority/network-external-dependency-policy.md)
+- [Reproducibility Contract](../../../authority/reproducibility-contract.md)
+- [Accepted Concepts](../../../concepts/index.md)
+- [Accepted Synchronizations](../../../synchronizations/index.md)
 - [Phase 001 Exit](../001/001-H-phase-001-consolidation-initial-concept-catalog.md)
 - [002-A through 002-F](index.md)
 
@@ -74,13 +74,13 @@ Canonical concept authority remains under `docs/concepts/`; canonical cross-cutt
 
 002-G directly deepens:
 
-1. [Provenance](../../concepts/provenance.md)
+1. [Provenance](../../../concepts/provenance.md)
 2. [Core Synchronizations](../../synchronizations/core-synchronizations.md)
-3. [Source and Provenance Policy](../../authority/source-provenance-policy.md)
+3. [Source and Provenance Policy](../../../authority/source-provenance-policy.md)
 
 002-G also creates:
 
-4. [Reproducibility Contract](../../authority/reproducibility-contract.md)
+4. [Reproducibility Contract](../../../authority/reproducibility-contract.md)
 
 No standalone `Reproducibility`, `Lineage`, `Manifest`, `Snapshot`, or `Artifact` concept is introduced.
 

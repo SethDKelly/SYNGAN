@@ -15,16 +15,16 @@ Translate the accepted Data Meaning, Constraint, Synthesis Strategy, network/dep
 ## Governing authority
 
 - [003-A — Workflow Entry, Source Context & Lifecycle Orientation](003-A-workflow-entry-source-context-lifecycle-orientation.md)
-- [Data Meaning](../../concepts/data-meaning.md)
-- [Constraint](../../concepts/constraint.md)
-- [Synthesis Strategy](../../concepts/synthesis-strategy.md)
-- [Accepted Synchronizations](../../synchronizations/index.md)
-- [Network and External Dependency Policy](../../authority/network-external-dependency-policy.md)
-- [Reproducibility Contract](../../authority/reproducibility-contract.md)
+- [Data Meaning](../../../concepts/data-meaning.md)
+- [Constraint](../../../concepts/constraint.md)
+- [Synthesis Strategy](../../../concepts/synthesis-strategy.md)
+- [Accepted Synchronizations](../../../synchronizations/index.md)
+- [Network and External Dependency Policy](../../../authority/network-external-dependency-policy.md)
+- [Reproducibility Contract](../../../authority/reproducibility-contract.md)
 
 ## Canonical experience authority created
 
-- [Data Meaning, Constraint & Strategy Preparation Experience](../../experience/data-meaning-constraint-strategy-preparation.md)
+- [Data Meaning, Constraint & Strategy Preparation Experience](../../../experience/data-meaning-constraint-strategy-preparation.md)
 
 ## Main decisions
 

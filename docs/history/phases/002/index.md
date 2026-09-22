@@ -59,10 +59,10 @@ Phase 002 did not select a mandatory:
 
 ## Entry authority retained
 
-- [Accepted Concepts](../../concepts/index.md)
-- [Accepted Synchronizations](../../synchronizations/index.md)
-- [Design Authority](../../authority/index.md)
-- [Reproducibility Contract](../../authority/reproducibility-contract.md)
+- [Accepted Concepts](../../../concepts/index.md)
+- [Accepted Synchronizations](../../../synchronizations/index.md)
+- [Design Authority](../../../authority/index.md)
+- [Reproducibility Contract](../../../authority/reproducibility-contract.md)
 - [Phase 001 Exit](../001/001-H-phase-001-consolidation-initial-concept-catalog.md)
 
 ## Exit / next phase

@@ -16,17 +16,17 @@ Translate the accepted Learning, Learned State, Execution, Provenance, dependenc
 
 - [003-A — Workflow Entry, Source Context & Lifecycle Orientation](003-A-workflow-entry-source-context-lifecycle-orientation.md)
 - [003-B — Data Meaning, Constraint & Strategy Preparation Experience](003-B-data-meaning-constraint-strategy-preparation-experience.md)
-- [Learning](../../concepts/learning.md)
-- [Learned State](../../concepts/learned-state.md)
-- [Execution](../../concepts/execution.md)
-- [Provenance](../../concepts/provenance.md)
-- [Accepted Synchronizations](../../synchronizations/index.md)
-- [Network and External Dependency Policy](../../authority/network-external-dependency-policy.md)
-- [Reproducibility Contract](../../authority/reproducibility-contract.md)
+- [Learning](../../../concepts/learning.md)
+- [Learned State](../../../concepts/learned-state.md)
+- [Execution](../../../concepts/execution.md)
+- [Provenance](../../../concepts/provenance.md)
+- [Accepted Synchronizations](../../../synchronizations/index.md)
+- [Network and External Dependency Policy](../../../authority/network-external-dependency-policy.md)
+- [Reproducibility Contract](../../../authority/reproducibility-contract.md)
 
 ## Canonical experience authority created
 
-- [Learning & Learned State Lifecycle Experience](../../experience/learning-learned-state-lifecycle.md)
+- [Learning & Learned State Lifecycle Experience](../../../experience/learning-learned-state-lifecycle.md)
 
 ## Main decisions
 

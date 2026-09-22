@@ -14,18 +14,18 @@ Translate accepted Provenance, historical binding, Execution/Attempt materiality
 
 ## Governing authority
 
-- [Provenance](../../concepts/provenance.md)
-- [Reproducibility Contract](../../authority/reproducibility-contract.md)
+- [Provenance](../../../concepts/provenance.md)
+- [Reproducibility Contract](../../../authority/reproducibility-contract.md)
 - [002-G — Provenance, Reproducibility Contract & Historical Binding Specification](../002/002-G-provenance-reproducibility-historical-binding-specification.md)
 - [003-C — Learning & Learned State Lifecycle Experience](003-C-learning-learned-state-lifecycle-experience.md)
 - [003-D — Generation Request, Condition, Validation & Output Promotion Experience](003-D-generation-request-condition-validation-output-promotion-experience.md)
 - [003-E — Evaluation, Evidence & Review Experience](003-E-evaluation-evidence-review-experience.md)
 - [003-F — Execution Monitoring, Failure, Recovery & Cancellation Experience](003-F-execution-monitoring-failure-recovery-cancellation-experience.md)
-- [Accepted Synchronizations](../../synchronizations/index.md)
+- [Accepted Synchronizations](../../../synchronizations/index.md)
 
 ## Canonical experience authority created
 
-- [Provenance, Reproducibility & Historical Inspection](../../experience/provenance-reproducibility-historical-inspection.md)
+- [Provenance, Reproducibility & Historical Inspection](../../../experience/provenance-reproducibility-historical-inspection.md)
 
 ## Main decisions
 

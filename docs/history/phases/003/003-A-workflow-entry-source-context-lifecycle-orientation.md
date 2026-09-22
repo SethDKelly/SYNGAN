@@ -15,18 +15,18 @@ Establish the first canonical experience layer for SYNGAN by defining how actors
 ## Governing authority
 
 - [Phase 002 Exit](../002/002-H-cross-concept-invariant-synchronization-consolidation-review.md)
-- [Accepted Concepts](../../concepts/index.md)
-- [Accepted Synchronizations](../../synchronizations/index.md)
-- [Design Authority](../../authority/index.md)
-- [Reproducibility Contract](../../authority/reproducibility-contract.md)
-- [Actors & Needs](../../problem/actors.md)
+- [Accepted Concepts](../../../concepts/index.md)
+- [Accepted Synchronizations](../../../synchronizations/index.md)
+- [Design Authority](../../../authority/index.md)
+- [Reproducibility Contract](../../../authority/reproducibility-contract.md)
+- [Actors & Needs](../../../problem/actors.md)
 
 ## Canonical experience authority created
 
 003-A establishes:
 
-- [Experience & Workflow Design Index](../../experience/index.md)
-- [Workflow Entry, Source Context & Lifecycle Orientation](../../experience/workflow-entry-source-context-lifecycle-orientation.md)
+- [Experience & Workflow Design Index](../../../experience/index.md)
+- [Workflow Entry, Source Context & Lifecycle Orientation](../../../experience/workflow-entry-source-context-lifecycle-orientation.md)
 
 ## Main decisions
 

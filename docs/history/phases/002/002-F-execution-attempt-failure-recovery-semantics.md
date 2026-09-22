@@ -8,7 +8,7 @@ status: complete
 
 ## Objective
 
-Deepen the accepted [Execution](../../concepts/execution.md) concept into precise logical-execution, Attempt-history, retry, resume, checkpoint, idempotency, cancellation, failure, unknown-state, platform-mapping, and enterprise-scale semantics shared by Learning, Generation, and Evaluation.
+Deepen the accepted [Execution](../../../concepts/execution.md) concept into precise logical-execution, Attempt-history, retry, resume, checkpoint, idempotency, cancellation, failure, unknown-state, platform-mapping, and enterprise-scale semantics shared by Learning, Generation, and Evaluation.
 
 The phase preserves the Phase 001 rule that Execution is operational realization authority rather than semantic authority for the domain activity it realizes.
 
@@ -16,12 +16,12 @@ The phase preserves the Phase 001 rule that Execution is operational realization
 
 002-F is governed by:
 
-- [Concept Design Methodology](../../authority/design-methodology.md)
-- [Documentation Governance](../../authority/documentation-governance.md)
-- [Terminology Policy](../../authority/terminology-policy.md)
-- [Network and External Dependency Policy](../../authority/network-external-dependency-policy.md)
-- [Accepted Concepts](../../concepts/index.md)
-- [Accepted Synchronizations](../../synchronizations/index.md)
+- [Concept Design Methodology](../../../authority/design-methodology.md)
+- [Documentation Governance](../../../authority/documentation-governance.md)
+- [Terminology Policy](../../../authority/terminology-policy.md)
+- [Network and External Dependency Policy](../../../authority/network-external-dependency-policy.md)
+- [Accepted Concepts](../../../concepts/index.md)
+- [Accepted Synchronizations](../../../synchronizations/index.md)
 - [Phase 001 Exit](../001/001-H-phase-001-consolidation-initial-concept-catalog.md)
 - [002-C — Learning & Learned State Specification](002-C-learning-learned-state-specification.md)
 - [002-D — Generation Specification, Request/Condition Semantics & Output Completion](002-D-generation-request-condition-output-completion.md)
@@ -73,7 +73,7 @@ Canonical concept authority remains under `docs/concepts/`; this phase record pr
 
 002-F directly deepens:
 
-1. [Execution](../../concepts/execution.md)
+1. [Execution](../../../concepts/execution.md)
 2. [Core Synchronizations](../../synchronizations/core-synchronizations.md)
 
 No new standalone `Attempt`, `Checkpoint`, `Retry`, `Run`, or `Workflow` concept is introduced.

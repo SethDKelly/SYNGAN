@@ -14,18 +14,18 @@ Translate the accepted Execution/Attempt/retry/resume/checkpoint/failure/cancell
 
 ## Governing authority
 
-- [Execution](../../concepts/execution.md)
+- [Execution](../../../concepts/execution.md)
 - [002-F — Execution, Attempt History, Failure & Recovery Semantics](../002/002-F-execution-attempt-failure-recovery-semantics.md)
 - [003-C — Learning & Learned State Lifecycle Experience](003-C-learning-learned-state-lifecycle-experience.md)
 - [003-D — Generation Request, Condition, Validation & Output Promotion Experience](003-D-generation-request-condition-validation-output-promotion-experience.md)
 - [003-E — Evaluation, Evidence & Review Experience](003-E-evaluation-evidence-review-experience.md)
-- [Accepted Synchronizations](../../synchronizations/index.md)
-- [Network and External Dependency Policy](../../authority/network-external-dependency-policy.md)
-- [Reproducibility Contract](../../authority/reproducibility-contract.md)
+- [Accepted Synchronizations](../../../synchronizations/index.md)
+- [Network and External Dependency Policy](../../../authority/network-external-dependency-policy.md)
+- [Reproducibility Contract](../../../authority/reproducibility-contract.md)
 
 ## Canonical experience authority created
 
-- [Execution Monitoring, Failure, Recovery & Cancellation](../../experience/execution-monitoring-failure-recovery-cancellation.md)
+- [Execution Monitoring, Failure, Recovery & Cancellation](../../../experience/execution-monitoring-failure-recovery-cancellation.md)
 
 ## Main decisions
 
