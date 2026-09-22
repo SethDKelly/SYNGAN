@@ -16,16 +16,16 @@ Derive SYNGAN's current Jackson-style application family from the 009-B canonica
 
 ## Governing authority
 
-- [Concept Design Methodology](../../authority/design-methodology.md)
-- [Jackson Methodology Completion Matrix](../../authority/jackson-methodology-completion-matrix.md)
+- [Concept Design Methodology](../../../authority/design-methodology.md)
+- [Jackson Methodology Completion Matrix](../../../authority/jackson-methodology-completion-matrix.md)
 - [Phase 008 Individual-Concept Design Consolidation](../../concepts/phase-008-individual-concept-consolidation.md)
-- [009-A Pairwise Inclusion-Dependence Inventory](../../dependence/inclusion-dependence-pairwise-inventory.md)
-- [009-B Canonical Dependence Graph](../../dependence/inclusion-dependence-graph-ordering.md)
+- [009-A Pairwise Inclusion-Dependence Inventory](../../../dependence/inclusion-dependence-pairwise-inventory.md)
+- [009-B Canonical Dependence Graph](../../../dependence/inclusion-dependence-graph-ordering.md)
 - [Phase 009 Entry / Decomposition](009-entry-decomposition.md)
 
 009-C establishes current application-family authority:
 
-- [Application Family, Valid Concept Subsets & Minimal Coherent Variants](../../dependence/application-family-valid-subsets.md)
+- [Application Family, Valid Concept Subsets & Minimal Coherent Variants](../../../dependence/application-family-valid-subsets.md)
 
 ## Entry baseline
 
