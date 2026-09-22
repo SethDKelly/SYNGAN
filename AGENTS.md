@@ -4,7 +4,7 @@ These instructions apply repository-wide to automated coding/documentation agent
 
 ## Current posture
 
-**Jackson concept design and Phases 013-015 are complete; C0-C9 are active/passing. Phase 016 pre-implementation hardening is ACTIVE. 016-A through 016-D are complete; 016-E is AUTHORIZED / ACTIVE. No product/provider/runtime delivery program is authorized.**
+**Jackson concept design and Phases 013-015 are complete; C0-C9 are active/passing. Phase 016 pre-implementation hardening is ACTIVE. 016-A through 016-E are complete; 016-F is NEXT ELIGIBLE / NOT AUTHORIZED. No product/provider/runtime delivery program is authorized.**
 
 ## Start with
 
@@ -33,6 +33,7 @@ Use its A1-A4 model:
 A1-A4 describe action/consequence authority; P16-0..P16-4 describe Phase 016 change impact. Do not launder a higher-impact change through a lower class.
 
 Completing the selected work does not authorize the next phase, subphase, backlog item, or product program.
+
 ## Durable authority rules
 
 - One proposition should have one preferred current owner.
@@ -61,4 +62,4 @@ Current status and subphase authorization are owned by docs/authority/current-re
 
 ## Current next boundary
 
-**016-E — Agent Authority, Human-Directed Scope, Change Classes, Security & Trust Boundaries is AUTHORIZED / ACTIVE. 016-F and later groups remain NOT AUTHORIZED.**
+**016-F — Context Budgets, Portable Skills, Tool Adapters is NEXT ELIGIBLE / NOT AUTHORIZED. 016-G and later groups remain NOT AUTHORIZED.**
