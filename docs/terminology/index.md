@@ -17,7 +17,7 @@ Terminology here describes the problem/domain and compatibility vocabulary. It d
 - [Ecosystem Compatibility Vocabulary](ecosystem-compatibility.md) — current collision/alias guidance for SDV, Spark, PyTorch, MLflow, Great Expectations, OpenLineage and common ML/data vocabulary.
 - [Term Status Register](term-status-register.md) — term maturity, ambiguity and concept-candidate signals without deciding concept boundaries.
 - [010-D Linguistic Mapping Authority](../mapping/linguistic-mapping-vocabulary-typed-status-disclosure-semantics.md) — current actor/programmatic vocabulary, typed-status, disclosure and history-quality mapping authority.
-- [011-C Familiarity / External-Model Audit](../authority/composed-familiarity-reuse-vocabulary-external-model-audit.md) — current composed familiarity/reuse authority.
+- [011-C Familiarity / External-Model Audit](../history/authority/composed-familiarity-reuse-vocabulary-external-model-audit.md) — current composed familiarity/reuse authority.
 
 ## Governing authority
 
