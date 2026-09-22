@@ -28,7 +28,7 @@ Start Gate  COMPLETE
 016-A       COMPLETE
 016-B       COMPLETE
 016-C       COMPLETE
-016-D       NEXT ELIGIBLE / NOT AUTHORIZED
+016-D       AUTHORIZED / ACTIVE
 016-E       NOT AUTHORIZED
 016-F       NOT AUTHORIZED
 016-G       NOT AUTHORIZED
@@ -58,7 +58,7 @@ Until a later group is explicitly authorized:
 
 - do not relocate current documents based only on 016-A's classification hypothesis;
 - do not hand-edit or promote the generated `knowledge/` projection into semantic authority;
-- do not add stable IDs merely for symmetry;
+- do not add stable IDs outside the 016-D registry/contract merely for symmetry;
 - do not install agent/tool-specific framework dependencies;
 - do not add product/runtime/provider behavior;
 - do not claim implementation readiness improvements that have not been evidenced.
@@ -106,4 +106,21 @@ product/runtime/provider behavior     UNCHANGED / NOT AUTHORIZED
 
 ## Current next boundary
 
-**016-D — Stable References, Deterministic Resolution & Drift Control** is **NEXT ELIGIBLE / NOT AUTHORIZED** pending explicit proceed.
+## 016-D active execution
+
+[016-D — Stable References, Deterministic Resolution & Drift Control](016-D-stable-references-deterministic-resolution-drift-control.md)
+
+~~~text
+016-D                                 AUTHORIZED / ACTIVE
+change class                          P16-2
+stable logical references            IN SCOPE
+deterministic exact resolution        IN SCOPE
+routing drift/failure discipline      IN SCOPE
+agent authority/security policy       RESERVED FOR 016-E
+context budgets/tool adapters         RESERVED FOR 016-F
+product/runtime/provider behavior     NOT AUTHORIZED
+~~~
+
+## Current next boundary
+
+**016-D — Stable References, Deterministic Resolution & Drift Control** is **AUTHORIZED / ACTIVE**. 016-E remains **NOT AUTHORIZED** until 016-D exit evidence exists.
