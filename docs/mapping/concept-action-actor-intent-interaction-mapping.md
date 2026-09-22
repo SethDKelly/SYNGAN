@@ -25,8 +25,8 @@ Some conceptual commands are actor-initiated. Others are system-established cons
 This mapping consumes:
 
 - [Mapping Authority, Coverage Model, Actor/Surface Taxonomy & Evidence Baseline](mapping-authority-coverage-actor-surface-evidence-baseline.md)
-- [Concept Action, Query, Preconditions/Postconditions & Lifecycle Normalization](../concepts/action-query-lifecycle-normalization.md)
-- [Phase 009 Dependence, Application Family & Composition Consolidation](../authority/phase-009-dependence-composition-consolidation.md)
+- [Concept Action, Query, Preconditions/Postconditions & Lifecycle Normalization](../history/concepts/action-query-lifecycle-normalization.md)
+- [Phase 009 Dependence, Application Family & Composition Consolidation](../history/authority/phase-009-dependence-composition-consolidation.md)
 - [Current Synchronization Authority](../synchronizations/index.md)
 - [Actors & Needs](../problem/actors.md)
 - [Semantic Distinctions](../terminology/semantic-distinctions.md)
@@ -92,7 +92,7 @@ Surface labels follow 010-A: `S1` SDK/API, `S2` notebook, `S3` CLI, `S4` report/
 
 ## Current Phase 014 completion note
 
-This document preserves its Phase 010 derivation and original subgroup handoff as historical provenance. Phase 010 F1-F5 are complete; Phase 012 confirmed mapping completion; Phase 013 preserved mapping semantics in architecture; Phase 014-D re-audits the current mapping layer. Current subgroup sequencing is governed by [Phase 014](../phases/014/index.md).
+This document preserves its Phase 010 derivation and original subgroup handoff as historical provenance. Phase 010 F1-F5 are complete; Phase 012 confirmed mapping completion; Phase 013 preserved mapping semantics in architecture; Phase 014-D re-audits the current mapping layer. Current subgroup sequencing is governed by [Phase 014](../history/phases/014/index.md).
 
 ## DM-A01 — Create / Declare draft meaning
 
