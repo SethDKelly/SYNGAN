@@ -28,6 +28,7 @@ CHECKS: tuple[tuple[str, tuple[str, ...]], ...] = (
     ("OKF structure and stable-resource binding", ("tools/validate_okf_projection.py",)),
     ("deterministic context budgets", ("tools/measure_agent_context.py",)),
     ("implementation package traceability", ("tools/validate_implementation_packages.py",)),
+    ("engineering preflight", ("tools/validate_engineering_preflight.py", "--repo", "{repo}")),
 )
 
 
@@ -65,6 +66,20 @@ def main() -> int:
             print(output)
 
     if not args.skip_negative_controls:
+        name = "engineering preflight seeded negative controls"
+        code, output = _run(
+            repo,
+            (
+                "tools/test_engineering_preflight_guards.py",
+                "--repo",
+                "{repo}",
+            ),
+        )
+        results.append((name, code, output))
+        print("PASS" if code == 0 else "FAIL", name)
+        if output:
+            print(output)
+
         name = "implementation package seeded negative controls"
         code, output = _run(
             repo,
@@ -142,6 +157,8 @@ def main() -> int:
             "from documentation.",
             "- Negative controls operate only on an isolated temporary copy.",
             "- Product/provider/runtime delivery remains outside the current Phase 016 authority.",
+            "- Engineering-preflight PASS is not release, legal, vulnerability, provider, "
+            "or scale approval.",
             "",
         ]
     )

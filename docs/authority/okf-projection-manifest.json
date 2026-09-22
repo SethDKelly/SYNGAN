@@ -140,6 +140,12 @@
           "title": "Implementation Package, Traceability & ADR Change Control",
           "description": "Canonical prospective implementation-package, traceability, evidence, and ADR change-control contract.",
           "ref": "syngan://implementation/package-contract"
+        },
+        {
+          "id": "engineering-preflight",
+          "title": "Engineering Preflight",
+          "description": "Canonical dependency, supply-chain, secrets, compatibility, benchmark, and version/release preflight authority.",
+          "ref": "syngan://implementation/engineering-preflight"
         }
       ]
     },

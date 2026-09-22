@@ -188,8 +188,8 @@ Phase 016   AUTHORIZED / ACTIVE
 016-F       COMPLETE
 016-G       COMPLETE
 016-H       COMPLETE
-016-I       NEXT ELIGIBLE / NOT AUTHORIZED
-016-J       NOT AUTHORIZED
+016-I       COMPLETE
+016-J       NEXT ELIGIBLE / NOT AUTHORIZED
 product delivery beyond hardening  NOT AUTHORIZED
 ~~~
 
@@ -411,4 +411,57 @@ The user explicitly authorized 016-H after the verified 016-G closure.
 
 016-H closure evidence is recorded in the phase work record. Agentic conformance workflow `35692897700` / `#22` and Verify workflow `35692897709` / `#1629` both passed on the substantive candidate. Package conformance reports 0 active package manifests and 10 retained ADRs; all nine package negative controls and all eight cross-cutting agentic negative controls pass; stable-reference/OKF/context-budget conformance remains green; P16-3/P16-4 findings remain `0 / 0`.
 
-016-I — Dependency / Supply-Chain / Secrets, Compatibility / Benchmark / API-Versioning Preflight — is NEXT ELIGIBLE / NOT AUTHORIZED. 016-J remains NOT AUTHORIZED.
+## 016-I authorization
+
+The user explicitly authorized 016-I after the verified 016-H closure.
+
+016-I is a documented **P16-2 engineering-preflight hardening contract**. It may:
+
+- make dependency and lock provenance deterministic and reviewable;
+- pin repository CI actions to immutable revisions while retaining human-readable release labels;
+- add high-confidence checked-in secret/credential hygiene and negative controls;
+- define current compatibility evidence versus install eligibility and unsupported/unverified dimensions;
+- define benchmark evidence required before scale/performance/support promotion;
+- define pre-1.0 package/API/versioning and release-candidate preflight rules;
+- record unresolved release blockers such as license selection or current external vulnerability evidence without fabricating a choice or result;
+- compose the preflight validator into existing repository verification/conformance.
+
+016-I must not:
+
+- select a license or legal policy for the user;
+- claim that a lockfile proves current vulnerability freedom;
+- treat synthetic/unit benchmark fixtures as production scale evidence;
+- broaden Python/provider/platform support beyond executed evidence;
+- publish a package/release/tag;
+- add production provider/runtime integrations;
+- authorize 016-J or a post-Phase-016 product program.
+
+016-J remains NOT AUTHORIZED until 016-I exit evidence exists.
+
+
+## 016-I completion evidence
+
+[016-I — Dependency / Supply-Chain / Secrets, Compatibility / Benchmark / API-Versioning Preflight](../phases/016/016-I-dependency-supply-chain-secrets-compatibility-benchmark-versioning-preflight.md) completed the non-semantic engineering-preflight hardening slice.
+
+~~~text
+016-I                                  COMPLETE
+change class                           P16-2
+canonical engineering preflight        COMPLETE
+bounded direct constraints             10
+SHA-256 lock artifacts                 530
+immutable external action uses         5
+engineering preflight negatives        11 / 11 PASS
+stable references                      27 ACTIVE
+OKF projection                         29 FILES / PASS
+agentic conformance                    35696035719 / #42 / PASS
+candidate Verify                       35696035664 / #1649 / PASS
+portable + C2..C9                      PASS
+release-candidate blockers             3 / EXPLICIT
+support/provider/scale nonclaims       PRESERVED
+P16-3 / P16-4                          0 / 0
+016-J                                  NEXT ELIGIBLE / NOT AUTHORIZED
+~~~
+
+The three release-candidate blockers are distribution-license selection, a current external vulnerability/advisory review, and explicit public compatibility windows. Additional Python-version, real-scale, and production-provider evidence remains unestablished and therefore unclaimed. These residuals are inputs to 016-J; they are not silently converted into readiness.
+
+016-J remains gated pending explicit user authorization.

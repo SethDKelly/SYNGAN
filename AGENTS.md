@@ -4,7 +4,7 @@ These instructions apply repository-wide to automated coding/documentation agent
 
 ## Current posture
 
-**Jackson concept design and Phases 013-015 are complete; C0-C9 are active/passing. Phase 016 pre-implementation hardening is ACTIVE. 016-A through 016-H are complete; 016-I is NEXT ELIGIBLE / NOT AUTHORIZED. No product/provider/runtime delivery program is authorized.**
+**Jackson concept design and Phases 013-015 are complete; C0-C9 are active/passing. Phase 016 pre-implementation hardening is ACTIVE. 016-A through 016-I are complete; 016-J is NEXT ELIGIBLE / NOT AUTHORIZED. No product/provider/runtime delivery program is authorized.**
 
 ## Start with
 
@@ -51,6 +51,11 @@ Use `python tools/run_agentic_conformance.py` for deterministic repository confi
 Prospective material implementation packages are governed by [Implementation Package, Traceability & ADR Change Control](docs/implementation/implementation-package-traceability-adr-change-control.md).
 
 A package is scope/evidence metadata, never authorization. Class 1/2 work traces current `syngan://...` authority to code/test evidence; Class 3/4 conflicts stop and reopen the smallest upstream owner. Architecture ADRs under `docs/decisions/` preserve rationale and may not be rewritten by ordinary implementation to make code appear conformant.
+## Engineering preflight
+
+Dependency, CI supply-chain, checked-in secret, compatibility/benchmark-claim, and version/release hygiene are governed by [Engineering Preflight](docs/implementation/engineering-preflight-dependency-supply-chain-secrets-compatibility-benchmark-versioning.md).
+
+Use `python tools/verify.py preflight` when those surfaces change. A PASS is repository engineering evidence only; it does not establish release authorization, a license/legal decision, current vulnerability clearance, provider certification, or scale qualification.
 ## Durable authority rules
 
 - One proposition should have one preferred current owner.
@@ -79,4 +84,4 @@ Current status and subphase authorization are owned by docs/authority/current-re
 
 ## Current next boundary
 
-**016-I — Dependency / Supply-Chain / Secrets, Compatibility / Benchmark / API-Versioning Preflight is NEXT ELIGIBLE / NOT AUTHORIZED. 016-J remains NOT AUTHORIZED.**
+**016-J — Repository Implementation-Readiness Scorecard, Residual Risk Register & Phase 016 Exit is NEXT ELIGIBLE / NOT AUTHORIZED. No product/provider/runtime delivery program is authorized.**

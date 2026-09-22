@@ -24,6 +24,9 @@ description = "Stable knowledge-reference registry, exact resolution, and routin
 [profiles.agentic]
 description = "Agentic/documentation configuration conformance, drift detection, and seeded negative controls."
 
+[profiles.preflight]
+description = "Dependency, supply-chain, checked-in secret, compatibility, benchmark-claim, and version/release preflight."
+
 [profiles.static]
 description = "Bootstrap, lint, format, type, architecture, and authority fitness."
 

@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "phase": "016-H",
+  "phase": "016-I",
   "status": "active",
   "rules": {
     "current_proposition": "exactly_one_preferred_current_owner",
@@ -13,7 +13,8 @@
     "agent_authority": "human_directed_scope_tool_neutral_no_self_progression",
     "agent_context": "bounded_progressive_disclosure_provider_neutral",
     "agentic_conformance": "deterministic_negative_controls_separate_from_product_health",
-    "implementation_packages": "traceability_evidence_not_authorization_or_semantic_authority"
+    "implementation_packages": "traceability_evidence_not_authorization_or_semantic_authority",
+    "engineering_preflight": "deterministic_release_hygiene_not_release_or_support_authority"
   },
   "owners": [
     {
@@ -99,6 +100,10 @@
     {
       "family": "implementation_package_traceability_change_control",
       "path": "docs/implementation/implementation-package-traceability-adr-change-control.md"
+    },
+    {
+      "family": "engineering_preflight",
+      "path": "docs/implementation/engineering-preflight-dependency-supply-chain-secrets-compatibility-benchmark-versioning.md"
     },
     {
       "family": "support_scope",

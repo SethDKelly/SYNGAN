@@ -26,6 +26,7 @@ agent authority       -> human-directed scope; tools/memory never self-authorize
 agent context         -> bounded progressive disclosure; adapters never fork semantics
 agentic conformance   -> deterministic repository checks; never product/runtime health
 implementation packages -> traceability/evidence containers; never authorization or semantic owners
+engineering preflight -> deterministic release hygiene; never release/support/legal authority
 ~~~
 
 If a current proposition cannot be assigned deterministically, 016-B must stop relocation for that item until ownership is adjudicated.
@@ -64,6 +65,7 @@ If a current proposition cannot be assigned deterministically, 016-B must stop r
 | accepted architecture rationale | active ADRs under `docs/decisions/` |
 | implementation governance/toolchain/change discipline | `docs/implementation/implementation-authority-delivery-governance-toolchain-repository-enforcement.md` |
 | implementation package/traceability/ADR change control | `docs/implementation/implementation-package-traceability-adr-change-control.md` |
+| dependency/supply-chain/secrets/compatibility/benchmark/version preflight | `docs/implementation/engineering-preflight-dependency-supply-chain-secrets-compatibility-benchmark-versioning.md` |
 | current implemented/support boundary | `docs/implementation/current-support-scope.md` |
 | future non-authoritative work | `docs/backlog/index.md` |
 | Phase 016 hardening authority | `docs/authority/phase-016-documentation-okf-agentic-implementation-readiness-hardening-authority.md` |
