@@ -44,8 +44,8 @@ Phase 017                           AUTHORIZED / ACTIVE — PLANNING ONLY
 017-E                               COMPLETE
 017-F                               COMPLETE
 017-G                               COMPLETE
-017-H                               NEXT ELIGIBLE / NOT AUTHORIZED
-017-I                               PLANNED / NOT AUTHORIZED
+017-H                               COMPLETE
+017-I                               NEXT ELIGIBLE / NOT AUTHORIZED
 
 product implementation execution   NOT AUTHORIZED
 active implementation packages     0
@@ -113,8 +113,12 @@ Actual runtime qualification is a Phase 018 start-gate prerequisite and cannot b
 
 017-G established `syngan://implementation/mvp-qualification`: QL-01..QL-10 form the non-compensatory MVP evidence portfolio; Phase 025 freezes its qualification plan before H1 realization; CH-01/02/03/04/05/07/08 are required where applicable and CH-06 is oracle-conditional; EI1 is the minimum evaluator independence level with EI2 preferred; every candidate repair triggers an anchor rerun plus affected evidence and fresh H1; and PASS/PASS WITH CARRY-FORWARD are successful bounded-MVP outcomes only when every blocking obligation passes.
 
-017-H — v1 Coarse Program Design, Deferrals & Rediscovery Triggers — is **NEXT ELIGIBLE / NOT AUTHORIZED**.
+017-H — v1 Coarse Program Design, Deferrals & Rediscovery Triggers — is **COMPLETE**.
 
-Phase 018 through Phase 025 execution remains **NOT AUTHORIZED**.
+017-H established `syngan://implementation/v1-program`: v1 is an evidence-derived future program label rather than an automatic 1.0.0/release/support claim; V1-T01..V1-T05 are uncommitted candidate themes; only Phase 026 is pre-named as an evidence re-entry/scope-selection start gate; exact Phase 027+ structure and version/provider/threshold/algorithm/deployment/release decisions remain deferred; and the four dormant M8 groups remain hard rediscovery gates under the F-1..F-7 extension model.
+
+017-I — Phase 017 Consolidation, Documentation Audit, Exit Decision & Phase 018 Handoff — is **NEXT ELIGIBLE / NOT AUTHORIZED**.
+
+Phase 018 through Phase 026 execution remains **NOT AUTHORIZED**.
 
 Product implementation execution remains **NOT AUTHORIZED**. No implementation package is active. Phase 018 or later execution requires explicit human selection after Phase 017 completes its planning work.

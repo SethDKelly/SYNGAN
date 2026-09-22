@@ -16,6 +16,7 @@ status: active
 - [v0.x Package MVP Scope, Capability/Version Milestones & Release Boundaries](v0x-package-mvp-scope-version-release-boundaries.md)
 - [v0.x Implementation Program — Phase 018-025 Dependency & Package Strategy](v0x-implementation-program-phase-018-025-dependency-package-strategy.md)
 - [v0.x MVP Completion Testing, Qualification & Independent Exit Method](v0x-mvp-completion-testing-qualification-independent-exit.md)
+- [v1 Coarse Program Design, Deferrals & Rediscovery Triggers](v1-coarse-program-deferrals-rediscovery-triggers.md)
 - [Implementation Package, Traceability & ADR Change Control](implementation-package-traceability-adr-change-control.md)
 - [Engineering Preflight — Dependency, Supply Chain, Secrets, Compatibility, Benchmark & Versioning](engineering-preflight-dependency-supply-chain-secrets-compatibility-benchmark-versioning.md)
 - [Repository Implementation Readiness & Residual Risk](repository-implementation-readiness-residual-risk.md)

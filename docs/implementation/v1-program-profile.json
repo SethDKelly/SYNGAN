@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0",
+  "status": "active",
+  "authority": "docs/implementation/v1-coarse-program-deferrals-rediscovery-triggers.md",
+  "stable_ref": "syngan://implementation/v1-program",
+  "program_label_semantics": {
+    "v1_is_program_label": true,
+    "implies_package_version_1_0_0": false,
+    "implies_public_release": false,
+    "implies_production_provider_support": false,
+    "implies_enterprise_scale_support": false
+  },
+  "activation": {
+    "next_named_phase": "026",
+    "phase_026_title": "v1 Evidence Re-entry, Scope Selection & Program Definition Start Gate",
+    "successful_phase_025_outcomes": [
+      "PASS",
+      "PASS WITH CARRY-FORWARD"
+    ],
+    "phase_025_not_ready_allows_v1_activation": false,
+    "public_v0x_release_required": false,
+    "explicit_human_selection_required": true
+  },
+  "candidate_themes": [
+    {
+      "id": "V1-T01",
+      "name": "production_provider_runtime_qualification",
+      "committed": false
+    },
+    {
+      "id": "V1-T02",
+      "name": "enterprise_scale_performance_capacity_operations",
+      "committed": false
+    },
+    {
+      "id": "V1-T03",
+      "name": "public_release_ecosystem_compatibility_api_maturity",
+      "committed": false
+    },
+    {
+      "id": "V1-T04",
+      "name": "broader_strategy_evaluation_topology_text_capability",
+      "committed": false
+    },
+    {
+      "id": "V1-T05",
+      "name": "deployment_enterprise_integration_security_product_realization",
+      "committed": false
+    }
+  ],
+  "theme_dispositions": [
+    "SELECTED FOR V1 PROGRAM DECOMPOSITION",
+    "DEFERRED — INSUFFICIENT CURRENT PRODUCT/EVIDENCE NEED",
+    "EXTERNAL/NON-GOAL",
+    "REDISCOVERY REQUIRED BEFORE PROGRAM DECOMPOSITION"
+  ],
+  "extension_classification": {
+    "ordinary_extension": [
+      "F-1",
+      "F-2",
+      "F-3",
+      "F-4"
+    ],
+    "rediscovery": [
+      "F-5"
+    ],
+    "external_non_goal": [
+      "F-6"
+    ],
+    "insufficient_evidence": [
+      "F-7"
+    ]
+  },
+  "m8_rediscovery": [
+    {
+      "id": "M8-R01",
+      "name": "formal_composable_privacy",
+      "classification": "F-5"
+    },
+    {
+      "id": "M8-R02",
+      "name": "product_owned_governance_publication_output_lifecycle",
+      "classification": "F-5"
+    },
+    {
+      "id": "M8-R03",
+      "name": "reusable_request_state_continuous_session_lifecycle",
+      "classification": "F-5_or_smallest_concept_revalidation"
+    },
+    {
+      "id": "M8-R04",
+      "name": "product_owned_resource_economic_lifecycle",
+      "classification": "F-5"
+    }
+  ],
+  "deferred_decisions": {
+    "exact_v1_package_version": true,
+    "exact_phase_027_plus_graph": true,
+    "actual_v1_ipkgs": true,
+    "exact_provider_runtime_versions": true,
+    "benchmark_slo_sla_thresholds": true,
+    "exact_strategy_evaluation_algorithms": true,
+    "deployment_iac_topology": true,
+    "concrete_enterprise_security_products": true,
+    "public_release_timing": true,
+    "distribution_license": true,
+    "long_term_compatibility_windows": true,
+    "m8_scope_selection": true
+  },
+  "phase_026": {
+    "product_implementation": false,
+    "derives_future_phase_graph": true,
+    "may_create_v1_implementation_authority_only_after_required_rediscovery": true,
+    "self_authorizes_phase_027": false
+  }
+}

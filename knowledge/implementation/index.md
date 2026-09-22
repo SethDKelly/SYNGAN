@@ -12,6 +12,7 @@ Current implementation governance and supported-boundary routes.
 - [v0.x Package MVP Scope, Capability/Version Milestones & Release Boundaries](v0x-mvp-boundary.md) - Canonical v0.x package-MVP capability, milestone, version-selection, release-state, support non-claim, and residual-risk boundary.
 - [v0.x Implementation Program — Phase 018-025 Dependency & Package Strategy](v0x-implementation-program.md) - Canonical Phase 018-025 dependency order, phase boundaries, package decomposition, candidate-freeze, and qualification-repair routing.
 - [v0.x MVP Qualification & Independent Exit Method](mvp-qualification.md) - Canonical MVP completion-testing portfolio, qualification-plan freeze, evidence ledger, independent holdout, decision, and requalification method.
+- [v1 Coarse Program Design, Deferrals & Rediscovery Triggers](v1-program.md) - Canonical evidence-driven v1 candidate themes, explicit deferrals, Phase 026 re-entry boundary, and M8/F-5 rediscovery gates.
 - [Implementation Package, Traceability & ADR Change Control](implementation-package-contract.md) - Canonical prospective implementation-package, traceability, evidence, and ADR change-control contract.
 - [Engineering Preflight](engineering-preflight.md) - Canonical dependency, supply-chain, secrets, compatibility, benchmark, and version/release preflight authority.
 - [Repository Implementation Readiness & Residual Risk](repository-readiness.md) - Canonical Phase 016 exit scorecard, residual-risk classification, and post-phase handoff boundary.

@@ -242,6 +242,20 @@ def main() -> int:
 
         _mutate(
             repo,
+            "docs/implementation/v1-program-profile.json",
+            lambda text: text.replace(
+                '"phase_025_not_ready_allows_v1_activation": false',
+                '"phase_025_not_ready_allows_v1_activation": true',
+                1,
+            ),
+            "tools/validate_v1_program.py",
+            ("--repo", str(repo)),
+            "v1 allowed to bypass NOT READY MVP qualification",
+            errors,
+        )
+
+        _mutate(
+            repo,
             "AGENTS.md",
             lambda text: (
                 text + "\n[Broken agentic route](docs/authority/not-a-real-agentic-owner.md)\n"
@@ -254,7 +268,7 @@ def main() -> int:
 
     for error in errors:
         print("ERROR", error)
-    print(f"Agentic conformance negative controls: {len(errors)} error(s), 13 control(s)")
+    print(f"Agentic conformance negative controls: {len(errors)} error(s), 14 control(s)")
     return 1 if errors else 0
 
 

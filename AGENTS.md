@@ -71,6 +71,12 @@ Phase 025 completion testing, qualification-plan freeze, evidence ledger, holdou
 
 Qualification is non-compensatory by blocking obligation. Aggregate scores cannot erase a failed requirement. Every candidate change invalidates the frozen identity, requires the anchor suite and affected evidence to rerun, and requires fresh H1 for contaminated affected obligations.
 
+## v1 coarse program and rediscovery
+
+The post-MVP candidate themes, deferrals, Phase 026 re-entry boundary, F-1..F-7 extension classification, and dormant M8 rediscovery gates are governed by [v1 Coarse Program Design, Deferrals & Rediscovery Triggers](docs/implementation/v1-coarse-program-deferrals-rediscovery-triggers.md).
+
+Do not interpret v1 as an automatic 1.0.0 version, release, provider-support, or scale promise. Do not decompose Phase 027+ before Phase 026 consumes qualified v0.x evidence. F-5/M8 capability pressure must return to concept discovery before implementation planning.
+
 ## Agentic conformance
 
 Repository agentic/documentation conformance is governed by [Agentic Conformance, Negative Controls, Drift Detection & CI](docs/authority/agentic-conformance-policy.md).
@@ -114,4 +120,4 @@ Current status and subphase authorization are owned by docs/authority/current-re
 
 ## Current next boundary
 
-**Phase 017 planning is active by explicit human authorization. 017-A through 017-G are COMPLETE; 017-H is NEXT ELIGIBLE / NOT AUTHORIZED. Product implementation execution and Phase 018+ remain NOT AUTHORIZED.**
+**Phase 017 planning is active by explicit human authorization. 017-A through 017-H are COMPLETE; 017-I is NEXT ELIGIBLE / NOT AUTHORIZED. Product implementation execution and Phase 018+ remain NOT AUTHORIZED.**

@@ -31,6 +31,7 @@ success/holdout evaluation -> visible requirements, independent challenge realiz
 v0.x MVP boundary -> qualified package capability, milestones, version/release separation, support non-claims, residual mapping
 v0.x implementation program -> Phase 018-025 dependencies, package decomposition, candidate freeze, qualification repair routing
 MVP qualification -> non-compensatory evidence portfolio, qualification-plan freeze, holdout ledger, decision, repair/requalification
+v1 coarse program -> evidence-driven candidate themes, deferrals, Phase 026 re-entry, F-1..F-7 classification, M8 rediscovery gates
 implementation packages -> traceability/evidence containers; never authorization or semantic owners
 engineering preflight -> deterministic release hygiene; never release/support/legal authority
 repository readiness -> evidence-backed start-gate readiness; never program/release authority
@@ -77,6 +78,7 @@ If a current proposition cannot be assigned deterministically, stop the affected
 | v0.x package-MVP scope/version/release boundary | `docs/implementation/v0x-package-mvp-scope-version-release-boundaries.md` |
 | v0.x implementation program / Phase 018-025 dependency-package strategy | `docs/implementation/v0x-implementation-program-phase-018-025-dependency-package-strategy.md` |
 | v0.x MVP completion testing / qualification / independent exit | `docs/implementation/v0x-mvp-completion-testing-qualification-independent-exit.md` |
+| v1 coarse program / deferrals / rediscovery triggers | `docs/implementation/v1-coarse-program-deferrals-rediscovery-triggers.md` |
 | implementation package/traceability/ADR change control | `docs/implementation/implementation-package-traceability-adr-change-control.md` |
 | dependency/supply-chain/secrets/compatibility/benchmark/version preflight | `docs/implementation/engineering-preflight-dependency-supply-chain-secrets-compatibility-benchmark-versioning.md` |
 | repository implementation readiness/residual risk | `docs/implementation/repository-implementation-readiness-residual-risk.md` |

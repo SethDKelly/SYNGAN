@@ -69,7 +69,8 @@ Phase 017                           AUTHORIZED / ACTIVE — PLANNING ONLY
 017-E                               COMPLETE
 017-F                               COMPLETE
 017-G                               COMPLETE
-017-H                               NEXT ELIGIBLE / NOT AUTHORIZED
+017-H                               COMPLETE
+017-I                               NEXT ELIGIBLE / NOT AUTHORIZED
 
 product implementation execution   NOT AUTHORIZED
 product/provider/runtime delivery   NOT AUTHORIZED

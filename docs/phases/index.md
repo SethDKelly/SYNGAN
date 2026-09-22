@@ -25,6 +25,12 @@ Phase 017 designs the implementation program but does not authorize product impl
 
 These are Phase 017-F planning definitions. None authorizes execution.
 
+## Planned post-MVP program re-entry — NOT AUTHORIZED
+
+- [Phase 026 — v1 Evidence Re-entry, Scope Selection & Program Definition Start Gate](026/phase-definition.md)
+
+Phase 026 is a Phase 017-H coarse planning boundary only. It becomes eligible only after successful Phase 025 qualification and still requires explicit human selection. No Phase 027+ sequence is defined yet.
+
 ## Latest completed phase
 
 - [Phase 016 — Documentation Topology, OKF, Agentic Development & Implementation-Readiness Hardening](016/index.md) — **COMPLETE**

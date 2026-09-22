@@ -201,6 +201,13 @@
       "owner_family": "mvp_completion_qualification"
     },
     {
+      "ref": "syngan://implementation/v1-program",
+      "path": "docs/implementation/v1-coarse-program-deferrals-rediscovery-triggers.md",
+      "status": "active",
+      "authority_class": "current",
+      "owner_family": "v1_coarse_program"
+    },
+    {
       "ref": "syngan://implementation/package-contract",
       "path": "docs/implementation/implementation-package-traceability-adr-change-control.md",
       "status": "active",

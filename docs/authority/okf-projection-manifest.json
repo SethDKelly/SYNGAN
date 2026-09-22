@@ -172,6 +172,12 @@
           "ref": "syngan://implementation/mvp-qualification"
         },
         {
+          "id": "v1-program",
+          "title": "v1 Coarse Program Design, Deferrals & Rediscovery Triggers",
+          "description": "Canonical evidence-driven v1 candidate themes, explicit deferrals, Phase 026 re-entry boundary, and M8/F-5 rediscovery gates.",
+          "ref": "syngan://implementation/v1-program"
+        },
+        {
           "id": "implementation-package-contract",
           "title": "Implementation Package, Traceability & ADR Change Control",
           "description": "Canonical prospective implementation-package, traceability, evidence, and ADR change-control contract.",

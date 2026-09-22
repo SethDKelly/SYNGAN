@@ -46,6 +46,10 @@ CHECKS: tuple[tuple[str, tuple[str, ...]], ...] = (
         ("tools/validate_mvp_qualification.py", "--repo", "{repo}"),
     ),
     (
+        "v1 coarse program and rediscovery boundary",
+        ("tools/validate_v1_program.py", "--repo", "{repo}"),
+    ),
+    (
         "repository readiness scorecard",
         ("tools/validate_repository_readiness.py", "--repo", "{repo}"),
     ),
