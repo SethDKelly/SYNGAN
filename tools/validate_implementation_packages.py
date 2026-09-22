@@ -45,7 +45,9 @@ def _adr_ids(repo: Path, errors: list[str]) -> set[str]:
         if "## Supersession" not in text:
             errors.append(f"{path.relative_to(repo)}: supersession section is missing")
         if adr_id not in index_text:
-            errors.append(f"{path.relative_to(repo)}: ADR is not routed from docs/decisions/index.md")
+            errors.append(
+                f"{path.relative_to(repo)}: ADR is not routed from docs/decisions/index.md"
+            )
 
     return ids
 
@@ -201,7 +203,9 @@ def _validate_manifest(
                 if not isinstance(raw, str) or not _path_exists(repo, raw):
                     errors.append(f"{label}: verified evidence path does not exist: {raw!r}")
                 elif raw.startswith("docs/history/"):
-                    errors.append(f"{label}: history cannot substitute for current implementation evidence")
+                    errors.append(
+                        f"{label}: history cannot substitute for current implementation evidence"
+                    )
 
         if state == "not_applicable":
             note = item.get("note")
@@ -262,7 +266,9 @@ def _validate_manifest(
 
     if change_class in {3, 4}:
         if status != "blocked":
-            errors.append(f"{label}: Class 3/4 package must be blocked, not ordinary implementation")
+            errors.append(
+                f"{label}: Class 3/4 package must be blocked, not ordinary implementation"
+            )
         reopen_ref = data.get("reopen_ref")
         if not isinstance(reopen_ref, str) or reopen_ref not in active_refs:
             errors.append(f"{label}: Class 3/4 package requires an active reopen_ref")
