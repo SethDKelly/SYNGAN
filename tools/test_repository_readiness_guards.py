@@ -13,7 +13,12 @@ from typing import Any
 
 def _run(repo: Path) -> int:
     return subprocess.run(
-        [sys.executable, str(repo / "tools" / "validate_repository_readiness.py"), "--repo", str(repo)],
+        [
+            sys.executable,
+            str(repo / "tools" / "validate_repository_readiness.py"),
+            "--repo",
+            str(repo),
+        ],
         cwd=repo,
         stdout=subprocess.DEVNULL,
         stderr=subprocess.DEVNULL,
@@ -52,7 +57,9 @@ def main() -> int:
         shutil.copytree(
             source,
             repo,
-            ignore=shutil.ignore_patterns(".git", ".venv", "__pycache__", ".pytest_cache", ".ruff_cache"),
+            ignore=shutil.ignore_patterns(
+                ".git", ".venv", "__pycache__", ".pytest_cache", ".ruff_cache"
+            ),
             symlinks=True,
         )
 
