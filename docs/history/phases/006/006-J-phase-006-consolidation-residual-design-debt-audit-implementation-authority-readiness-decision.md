@@ -14,7 +14,7 @@ Perform the final Phase 006 cross-layer replay and residual design-debt audit af
 
 ## Governing authority
 
-- [Concept Design Methodology](../../authority/design-methodology.md)
+- [Concept Design Methodology](../../../authority/design-methodology.md)
 - accepted concepts and synchronizations;
 - Phase 006 cross-cutting authority contracts;
 - [Phase 006 Recovery, Security, Degraded, Historical & Topology Experience Contract](../../experience/phase-006-recovery-security-degraded-history-topology-experience-contract.md);
