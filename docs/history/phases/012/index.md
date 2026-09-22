@@ -28,8 +28,8 @@ No additional subdivision was justified because there is no new discovery/design
 - [012-A Current-State Consolidated Audit](012-A-current-state-jackson-concept-design-consolidated-audit.md)
 - [012-B Completion Decision & Phase 013 Handoff](012-B-jackson-concept-design-completion-decision-phase-013-handoff.md)
 - [Phase 012 Consolidation Authority](../../authority/phase-012-jackson-concept-design-consolidation.md)
-- [Jackson Methodology Completion Matrix](../../authority/jackson-methodology-completion-matrix.md)
-- [Jackson Design Completion & Implementation Hold](../../authority/jackson-design-completion-implementation-hold.md)
+- [Jackson Methodology Completion Matrix](../../../authority/jackson-methodology-completion-matrix.md)
+- [Jackson Design Completion & Implementation Hold](../../../authority/jackson-design-completion-implementation-hold.md)
 
 ## Final Phase 012 state
 
