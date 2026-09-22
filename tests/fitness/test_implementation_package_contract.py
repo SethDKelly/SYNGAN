@@ -62,7 +62,10 @@ def test_package_profile_preserves_authority_and_stop_rules() -> None:
     assert profile["rules"]["package_is_authorization_source"] is False
     assert profile["rules"]["class_2_requires_compatibility_migration_assessment"] is True
     assert profile["rules"]["class_3_4_may_not_be_in_progress_or_complete"] is True
-    assert profile["rules"]["architecture_adrs_are_reference_only_for_implementation_packages"] is True
+    assert (
+        profile["rules"]["architecture_adrs_are_reference_only_for_implementation_packages"]
+        is True
+    )
 
 
 def test_package_contract_preserves_traceability_and_adr_boundary() -> None:
