@@ -136,7 +136,8 @@ def main() -> int:
             "",
             "## Scope notes",
             "",
-            "- Passing this report never authorizes a next phase, package, backlog item, or delivery task.",
+            "- Passing this report never authorizes a next phase, package, backlog item, "
+            "or delivery task.",
             "- Provider runtime state remains evidence-controlled and is not inferred "
             "from documentation.",
             "- Negative controls operate only on an isolated temporary copy.",
