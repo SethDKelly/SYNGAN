@@ -25,8 +25,9 @@ Phase 016                           ACTIVE — PRE-IMPLEMENTATION HARDENING
 Start Gate                          COMPLETE
 016-A                               COMPLETE
 016-B                               COMPLETE
-016-C                               NEXT ELIGIBLE / NOT AUTHORIZED
-016-D..016-J                        NOT AUTHORIZED
+016-C                               COMPLETE
+016-D                               NEXT ELIGIBLE / NOT AUTHORIZED
+016-E..016-J                        NOT AUTHORIZED
 
 current conceptual blockers         0
 current upstream reopens            0
@@ -52,7 +53,11 @@ Phase 016 does **not** authorize:
 
 016-B is complete.
 
-016-C — OKF v0.2 Producer Profile, Generated Knowledge Projection & Conformance — is next eligible but remains NOT AUTHORIZED pending explicit proceed.
+016-C — OKF v0.2 Producer Profile, Generated Knowledge Projection & Conformance — is COMPLETE.
+
+Closure established an externally grounded producer profile, deterministic generated `knowledge/` compatibility projection, repository-owned generation/conformance checks, and explicit non-authority semantics for generated knowledge. Candidate Verify workflow `35684468631` / `#1581` passed portable and all C2–C9 gates with P16-3/P16-4 findings remaining `0 / 0`.
+
+016-D — Stable References, Deterministic Resolution & Drift Control — is NEXT ELIGIBLE / NOT AUTHORIZED pending explicit proceed.
 
 016-B closure established:
 

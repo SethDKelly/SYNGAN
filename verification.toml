@@ -15,6 +15,9 @@ C9 = "active"
 [profiles.authority]
 description = "Current authority, bootstrap metadata, and verification-manifest fitness."
 
+[profiles.okf]
+description = "Generated OKF v0.2 projection determinism and producer-profile conformance."
+
 [profiles.static]
 description = "Bootstrap, lint, format, type, architecture, and authority fitness."
 

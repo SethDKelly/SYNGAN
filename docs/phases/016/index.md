@@ -27,8 +27,8 @@ Phase 016   ACTIVE
 Start Gate  COMPLETE
 016-A       COMPLETE
 016-B       COMPLETE
-016-C       NEXT ELIGIBLE / NOT AUTHORIZED
-016-D       NOT AUTHORIZED
+016-C       COMPLETE
+016-D       NEXT ELIGIBLE / NOT AUTHORIZED
 016-E       NOT AUTHORIZED
 016-F       NOT AUTHORIZED
 016-G       NOT AUTHORIZED
@@ -57,7 +57,7 @@ Start Gate  COMPLETE
 Until a later group is explicitly authorized:
 
 - do not relocate current documents based only on 016-A's classification hypothesis;
-- do not generate a new knowledge plane;
+- do not hand-edit or promote the generated `knowledge/` projection into semantic authority;
 - do not add stable IDs merely for symmetry;
 - do not install agent/tool-specific framework dependencies;
 - do not add product/runtime/provider behavior;
@@ -91,6 +91,19 @@ P16-3 / P16-4 findings                0 / 0
 016-B                                 COMPLETE
 ~~~
 
+## 016-C closure
+
+[016-C — OKF v0.2 Producer Profile, Generated Knowledge Projection & Conformance](016-C-okf-v0.2-producer-profile-generated-knowledge-projection-conformance.md) is **COMPLETE**.
+
+~~~text
+016-C                                 COMPLETE
+change class                          P16-2
+candidate Verify                      35684468631 / #1581 / PASS
+portable + C2..C9                     PASS
+P16-3 / P16-4                         0 / 0
+product/runtime/provider behavior     UNCHANGED / NOT AUTHORIZED
+~~~
+
 ## Current next boundary
 
-**016-C — OKF v0.2 Producer Profile, Generated Knowledge Projection & Conformance** is **NEXT ELIGIBLE / NOT AUTHORIZED** pending explicit proceed.
+**016-D — Stable References, Deterministic Resolution & Drift Control** is **NEXT ELIGIBLE / NOT AUTHORIZED** pending explicit proceed.

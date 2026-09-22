@@ -64,6 +64,9 @@ def verify_bootstrap() -> None:
         ROOT / "src" / "syngan" / "py.typed",
         ROOT / "docs" / "authority" / "current-repository-status.md",
         ROOT / "docs" / "authority" / "canonical-knowledge-ownership-map.md",
+        ROOT / "docs" / "authority" / "okf-v0.2-producer-profile.md",
+        ROOT / "docs" / "authority" / "okf-projection-manifest.json",
+        ROOT / "knowledge" / "index.md",
         ROOT / "docs" / "implementation" / "current-support-scope.md",
         ROOT / "docs" / "phases" / "016" / "index.md",
     )
@@ -104,6 +107,10 @@ def verify_fitness(marker_expression: str | None = None) -> None:
     _run(command)
 
 
+def verify_okf() -> None:
+    _run([sys.executable, "-m", "pytest", "tests/fitness/test_okf_projection.py"])
+
+
 def verify_authority() -> None:
     _run(
         [
@@ -117,6 +124,7 @@ def verify_authority() -> None:
             "tests/unit/test_bootstrap_metadata.py",
         ]
     )
+    verify_okf()
 
 
 def verify_static() -> None:
@@ -319,6 +327,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         choices=(
             "bootstrap",
             "authority",
+            "okf",
             "static",
             "portable",
             "control",
@@ -347,6 +356,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     profiles = {
         "bootstrap": verify_bootstrap,
         "authority": verify_authority,
+        "okf": verify_okf,
         "static": verify_static,
         "portable": verify_portable,
         "control": verify_control,
