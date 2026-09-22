@@ -14,11 +14,11 @@ Consolidate Phase 008-A through 008-G into one current-state individual-concept 
 
 ## Governing authority
 
-- [Concept Design Methodology](../../authority/design-methodology.md)
-- [Jackson Design Completion & Implementation Hold](../../authority/jackson-design-completion-implementation-hold.md)
-- [Jackson Methodology Completion Matrix](../../authority/jackson-methodology-completion-matrix.md)
-- [Current Problem Knowledge](../../problem/index.md)
-- [Accepted Concept Catalog](../../concepts/index.md)
+- [Concept Design Methodology](../../../authority/design-methodology.md)
+- [Jackson Design Completion & Implementation Hold](../../../authority/jackson-design-completion-implementation-hold.md)
+- [Jackson Methodology Completion Matrix](../../../authority/jackson-methodology-completion-matrix.md)
+- [Current Problem Knowledge](../../../problem/index.md)
+- [Accepted Concept Catalog](../../../concepts/index.md)
 - [Concept State, Identity, History & Invariant Normalization](../../concepts/state-identity-history-invariant-normalization.md)
 - [Concept Action, Query, Preconditions/Postconditions & Lifecycle Normalization](../../concepts/action-query-lifecycle-normalization.md)
 - [Operational Principle, Purpose Fulfillment & Counterexample Normalization](../../concepts/operational-principle-purpose-counterexample-normalization.md)
