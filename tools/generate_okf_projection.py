@@ -108,9 +108,7 @@ def _root_index(manifest: Manifest) -> str:
         "",
     ]
     for group in manifest["groups"]:
-        lines.append(
-            f"- [{group['title']}]({group['id']}/index.md) - {group['description']}"
-        )
+        lines.append(f"- [{group['title']}]({group['id']}/index.md) - {group['description']}")
     lines.extend(
         [
             "",
@@ -186,10 +184,7 @@ def check(files: dict[str, str]) -> int:
 
     for error in errors:
         print(f"ERROR {error}")
-    print(
-        f"OKF projection generation check: {len(errors)} error(s), "
-        f"{len(files)} tracked file(s)"
-    )
+    print(f"OKF projection generation check: {len(errors)} error(s), {len(files)} tracked file(s)")
     return 1 if errors else 0
 
 
