@@ -16,11 +16,11 @@ Complete the dedicated Phase 011 familiarity/reuse audit after 011-B closed comp
 
 ## Governing authority
 
-- [Design Quality Validation Authority](../../authority/design-quality-validation-authority.md)
+- [Design Quality Validation Authority](../../../authority/design-quality-validation-authority.md)
 - [Composed Specificity, Purpose Alignment & Boundary Sharpness Audit](../../authority/composed-specificity-purpose-boundary-audit.md)
 - [Concept Independence, Genericity, Familiarity & Reuse Normalization](../../concepts/independence-genericity-familiarity-reuse-normalization.md)
-- [Linguistic Mapping, Vocabulary, Typed Status & Disclosure Semantics](../../mapping/linguistic-mapping-vocabulary-typed-status-disclosure-semantics.md)
-- [Ecosystem Compatibility Vocabulary](../../terminology/ecosystem-compatibility.md)
+- [Linguistic Mapping, Vocabulary, Typed Status & Disclosure Semantics](../../../mapping/linguistic-mapping-vocabulary-typed-status-disclosure-semantics.md)
+- [Ecosystem Compatibility Vocabulary](../../../terminology/ecosystem-compatibility.md)
 - current concept/application-family/mapping authority
 
 External sources are familiarity/counterexample evidence only under the 011-A `E8` rule.
@@ -173,7 +173,7 @@ No `MAT-2` or `MAT-3` finding is produced.
 011-C creates/updates:
 
 - [Familiarity, Reuse, Vocabulary & External-Model Comparison Audit](../../authority/composed-familiarity-reuse-vocabulary-external-model-audit.md) — current G2 authority;
-- [Ecosystem Compatibility Vocabulary](../../terminology/ecosystem-compatibility.md) — stronger current compatibility/alias/collision guidance and refreshed external source paths.
+- [Ecosystem Compatibility Vocabulary](../../../terminology/ecosystem-compatibility.md) — stronger current compatibility/alias/collision guidance and refreshed external source paths.
 
 The compatibility-vocabulary update is additive semantic clarification. It does not reopen F3 linguistic mapping because it preserves the Phase 010-D owner-qualified vocabulary contract.
 
