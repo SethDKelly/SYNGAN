@@ -61,6 +61,13 @@
       "owner_family": "agent_context_workflows_tool_adapters"
     },
     {
+      "ref": "syngan://authority/agentic-conformance",
+      "path": "docs/authority/agentic-conformance-policy.md",
+      "status": "active",
+      "authority_class": "current",
+      "owner_family": "agentic_conformance"
+    },
+    {
       "ref": "syngan://authority/terminology-policy",
       "path": "docs/authority/terminology-policy.md",
       "status": "active",
