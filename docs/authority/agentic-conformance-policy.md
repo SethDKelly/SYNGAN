@@ -116,4 +116,6 @@ A detected P16-0/P16-1/P16-2 configuration drift may be repaired inside an expli
 
 ## Phase boundary
 
+Product/provider/runtime delivery remains outside Phase 016-G authority.
+
 016-G does not authorize 016-H implementation-package/ADR governance or 016-I dependency/supply-chain/secrets/benchmark/API-version preflight.
