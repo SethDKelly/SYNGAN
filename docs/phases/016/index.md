@@ -28,8 +28,8 @@ Start Gate  COMPLETE
 016-A       COMPLETE
 016-B       COMPLETE
 016-C       COMPLETE
-016-D       AUTHORIZED / ACTIVE
-016-E       NOT AUTHORIZED
+016-D       COMPLETE
+016-E       NEXT ELIGIBLE / NOT AUTHORIZED
 016-F       NOT AUTHORIZED
 016-G       NOT AUTHORIZED
 016-H       NOT AUTHORIZED
@@ -44,7 +44,7 @@ Start Gate  COMPLETE
 | 016-A | documentation inventory, duplication/supersession/current-owner audit | start gate |
 | 016-B | normalize current knowledge vs history and canonical ownership | 016-A |
 | 016-C | establish OKF producer profile/generated projection/conformance | 016-B |
-| 016-D | stable references, deterministic routing, context discovery | 016-C |
+| 016-D | stable references, deterministic resolution, drift control | 016-C |
 | 016-E | agent authority/scope/change/security/trust rules | 016-D |
 | 016-F | context budgets, portable skills, tool adapters | 016-E |
 | 016-G | agentic conformance, negative controls, CI | 016-F |
@@ -104,23 +104,24 @@ P16-3 / P16-4                         0 / 0
 product/runtime/provider behavior     UNCHANGED / NOT AUTHORIZED
 ~~~
 
-## Current next boundary
+## 016-D closure
 
-## 016-D active execution
-
-[016-D — Stable References, Deterministic Resolution & Drift Control](016-D-stable-references-deterministic-resolution-drift-control.md)
+[016-D — Stable References, Deterministic Resolution & Drift Control](016-D-stable-references-deterministic-resolution-drift-control.md) is **COMPLETE**.
 
 ~~~text
-016-D                                 AUTHORIZED / ACTIVE
+016-D                                 COMPLETE
 change class                          P16-2
-stable logical references            IN SCOPE
-deterministic exact resolution        IN SCOPE
-routing drift/failure discipline      IN SCOPE
-agent authority/security policy       RESERVED FOR 016-E
-context budgets/tool adapters         RESERVED FOR 016-F
-product/runtime/provider behavior     NOT AUTHORIZED
+stable-reference registry             22 ACTIVE / FULL OWNER COVERAGE
+exact forward/reverse resolution      PASS
+unknown/malformed/unregistered fail   PASS / NO SEARCH FALLBACK
+OKF stable-reference binding          PASS
+projection files                      24 / DETERMINISTIC
+candidate Verify                      35686359067 / #1592 / PASS
+portable + C2..C9                     PASS
+P16-3 / P16-4                         0 / 0
+product/runtime/provider behavior     UNCHANGED / NOT AUTHORIZED
 ~~~
 
 ## Current next boundary
 
-**016-D — Stable References, Deterministic Resolution & Drift Control** is **AUTHORIZED / ACTIVE**. 016-E remains **NOT AUTHORIZED** until 016-D exit evidence exists.
+**016-E — Agent Authority, Human-Directed Scope, Change Classes, Security & Trust Boundaries** is **NEXT ELIGIBLE / NOT AUTHORIZED** pending explicit proceed.
