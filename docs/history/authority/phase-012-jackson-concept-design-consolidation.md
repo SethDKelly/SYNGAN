@@ -26,7 +26,7 @@ H2  PASS — JACKSON CONCEPT DESIGN IS COMPLETE FOR THE CURRENT PRODUCT SCOPE.
 
 This is a design-completion decision, not an architecture-completion or implementation-readiness decision.
 
-> **Subsequent-state notice:** Phase 013, Phase 014, and Phase 015 have since completed. Historical Phase 012 handoff/posture blocks below preserve the state at Phase 012 exit and are not current navigation. Current posture is governed by [Post-Phase-015 Methodology & Documentation Reconciliation](post-phase-015-methodology-documentation-reconciliation.md).
+> **Subsequent-state notice:** Phase 013, Phase 014, and Phase 015 have since completed. Historical Phase 012 handoff/posture blocks below preserve the state at Phase 012 exit and are not current navigation. Current posture is governed by [Post-Phase-015 Methodology & Documentation Reconciliation](../../authority/post-phase-015-methodology-documentation-reconciliation.md).
 
 Historical Phase 012 exit posture was:
 
@@ -42,7 +42,7 @@ Phase 013 must reconcile retained representation/architecture against the comple
 
 ## Governing methodology
 
-Phase 012 applies [Concept Design Methodology](design-methodology.md), especially the completion requirement that:
+Phase 012 applies [Concept Design Methodology](../../authority/design-methodology.md), especially the completion requirement that:
 
 > **The latest canonical concept design—not merely historical phase claims—must be audited as one composed system before Jackson concept design is declared complete.**
 

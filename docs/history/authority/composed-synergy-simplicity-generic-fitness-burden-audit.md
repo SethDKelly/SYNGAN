@@ -33,7 +33,7 @@ The **simplicity portion** of `R010-05 — progressive-disclosure misfit` is als
 
 ## Governing method
 
-011-E applies the [Design Quality Validation Authority](design-quality-validation-authority.md), especially:
+011-E applies the [Design Quality Validation Authority](../../authority/design-quality-validation-authority.md), especially:
 
 ```text
 SY-1  each included concept contributes a distinct useful purpose
@@ -52,9 +52,9 @@ Primary inputs:
 
 - current eleven accepted concept specifications;
 - [Concept Independence, Genericity, Familiarity & Reuse Normalization](../concepts/independence-genericity-familiarity-reuse-normalization.md);
-- [Application Family, Valid Concept Subsets & Minimal Coherent Variants](../dependence/application-family-valid-subsets.md);
+- [Application Family, Valid Concept Subsets & Minimal Coherent Variants](../../dependence/application-family-valid-subsets.md);
 - [Composition Economy, Coupling, Synergy & Integrity Closure](../synchronizations/composition-economy-synergy-integrity.md);
-- [Application-Family Workflow Composition & Progressive Disclosure](../mapping/application-family-workflow-composition-progressive-disclosure.md);
+- [Application-Family Workflow Composition & Progressive Disclosure](../../mapping/application-family-workflow-composition-progressive-disclosure.md);
 - 011-B specificity, 011-C familiarity and 011-D integrity conclusions.
 
 011-E evaluates conceptual burden, not implementation cost, source-code size, number of files, number of classes, schema count, runtime latency or UI click count.

@@ -10,10 +10,10 @@ This directory preserves hypotheses, alternatives, falsification tests, boundary
 
 **Discovery is not the current source of truth for accepted concepts, synchronizations or experience.** Current accepted authority remains under:
 
-- [Design Authority](../authority/index.md)
-- [Accepted Concepts](../concepts/index.md)
-- [Accepted Synchronizations](../synchronizations/index.md)
-- [Experience & Workflow Design](../experience/index.md)
+- [Design Authority](../../authority/index.md)
+- [Accepted Concepts](../../concepts/index.md)
+- [Accepted Synchronizations](../../synchronizations/index.md)
+- [Experience & Workflow Design](../../experience/index.md)
 
 When provisional discovery conflicts with accepted authority, accepted authority wins unless a later explicit design revision promotes the discovery result.
 

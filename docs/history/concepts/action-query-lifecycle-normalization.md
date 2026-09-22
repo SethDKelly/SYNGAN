@@ -21,9 +21,9 @@ This is concept design. It does not define Python methods, HTTP endpoints, UI co
 
 It is governed by:
 
-- [Concept Design Methodology](../authority/design-methodology.md);
-- [Jackson Methodology Completion Matrix](../authority/jackson-methodology-completion-matrix.md);
-- [Concept-Justification Traceability](../problem/concept-justification-traceability.md);
+- [Concept Design Methodology](../../authority/design-methodology.md);
+- [Jackson Methodology Completion Matrix](../../authority/jackson-methodology-completion-matrix.md);
+- [Concept-Justification Traceability](../../problem/concept-justification-traceability.md);
 - [Concept State, Identity, History & Invariant Normalization](state-identity-history-invariant-normalization.md);
 - the individual accepted concept specifications;
 - [Core Synchronizations](../synchronizations/core-synchronizations.md), which coordinate but do not own concept behavior.

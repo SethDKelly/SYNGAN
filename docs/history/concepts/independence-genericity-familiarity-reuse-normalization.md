@@ -12,9 +12,9 @@ Provide the current Phase 008-F authority for judging whether SYNGAN's eleven ac
 
 This authority builds on:
 
-- [Concept Design Methodology](../authority/design-methodology.md);
-- [Jackson Methodology Completion Matrix](../authority/jackson-methodology-completion-matrix.md);
-- [Concept-Justification Traceability](../problem/concept-justification-traceability.md);
+- [Concept Design Methodology](../../authority/design-methodology.md);
+- [Jackson Methodology Completion Matrix](../../authority/jackson-methodology-completion-matrix.md);
+- [Concept-Justification Traceability](../../problem/concept-justification-traceability.md);
 - [Concept State, Identity, History & Invariant Normalization](state-identity-history-invariant-normalization.md);
 - [Concept Action, Query, Preconditions/Postconditions & Lifecycle Normalization](action-query-lifecycle-normalization.md);
 - [Operational Principle, Purpose Fulfillment & Counterexample Normalization](operational-principle-purpose-counterexample-normalization.md);

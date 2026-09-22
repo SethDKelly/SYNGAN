@@ -8,7 +8,7 @@ status: superseded
 
 ## Historical status
 
-This document records the **historical 007-K readiness decision**. Its implementation-reentry conclusion is superseded by the current [Jackson Design Completion & Implementation Hold](jackson-design-completion-implementation-hold.md).
+This document records the **historical 007-K readiness decision**. Its implementation-reentry conclusion is superseded by the current [Jackson Design Completion & Implementation Hold](../../authority/jackson-design-completion-implementation-hold.md).
 
 The detailed execution record remains preserved in [007-K — Phase 007 Consolidation, Architecture-Fitness Audit, Evidence Review & Implementation-Reentry Readiness Decision](../phases/007/007-K-phase-007-consolidation-architecture-fitness-audit-evidence-review-implementation-reentry-readiness-decision.md), and the architecture result remains preserved by the [Phase 007 Consolidated Architecture Contract](../architecture/phase-007-consolidated-architecture-contract.md).
 

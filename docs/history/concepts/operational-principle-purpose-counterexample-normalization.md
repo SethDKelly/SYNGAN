@@ -16,10 +16,10 @@ This is concept design. It does not define UI flows, SDK signatures, HTTP endpoi
 
 Governing authority:
 
-- [Concept Design Methodology](../authority/design-methodology.md)
-- [Jackson Methodology Completion Matrix](../authority/jackson-methodology-completion-matrix.md)
-- [Current Problem Knowledge](../problem/index.md)
-- [Concept-Justification Traceability](../problem/concept-justification-traceability.md)
+- [Concept Design Methodology](../../authority/design-methodology.md)
+- [Jackson Methodology Completion Matrix](../../authority/jackson-methodology-completion-matrix.md)
+- [Current Problem Knowledge](../../problem/index.md)
+- [Concept-Justification Traceability](../../problem/concept-justification-traceability.md)
 - [Concept State, Identity, History & Invariant Normalization](state-identity-history-invariant-normalization.md)
 - [Concept Action, Query, Preconditions/Postconditions & Lifecycle Normalization](action-query-lifecycle-normalization.md)
 - the eleven accepted concept specifications

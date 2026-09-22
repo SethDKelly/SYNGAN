@@ -14,10 +14,10 @@ This authority is conceptual. It does not define classes, tables, schemas, IDs, 
 
 It is governed by:
 
-- [Concept Design Methodology](../authority/design-methodology.md);
-- [Jackson Methodology Completion Matrix](../authority/jackson-methodology-completion-matrix.md);
-- [Problem & Purpose](../problem/problem-purpose.md);
-- [Concept-Justification Traceability](../problem/concept-justification-traceability.md);
+- [Concept Design Methodology](../../authority/design-methodology.md);
+- [Jackson Methodology Completion Matrix](../../authority/jackson-methodology-completion-matrix.md);
+- [Problem & Purpose](../../problem/problem-purpose.md);
+- [Concept-Justification Traceability](../../problem/concept-justification-traceability.md);
 - the individual accepted concept specifications in this directory.
 
 Where older concept wording still describes relational/time-series support as merely future, the current Phase 008-B problem/outcome authority and this normalization supersede that stale scope qualifier. This does not select a physical topology representation.

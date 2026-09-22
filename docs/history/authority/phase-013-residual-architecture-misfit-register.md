@@ -31,7 +31,7 @@ Phase 013                                     COMPLETE
 
 ### M6 synchronization count / identifier drift — CLOSED
 
-Current authority is [Current Cross-Concept Synchronization Contract](../synchronizations/current-cross-concept-synchronizations.md):
+Current authority is [Current Cross-Concept Synchronization Contract](../../synchronizations/current-cross-concept-synchronizations.md):
 
 ```text
 historical IDs               15
@@ -42,7 +42,7 @@ SYNC-15                      historical/reclassified — Reproducibility contrac
 
 ### Legacy architecture precedence — CLOSED
 
-Current architecture authority is [Phase 013 Consolidated Architecture Contract](../architecture/phase-013-consolidated-architecture-contract.md). Phase 004/006/007 architecture remains retained historical rationale/evidence.
+Current architecture authority is [Phase 013 Consolidated Architecture Contract](../../architecture/phase-013-consolidated-architecture-contract.md). Phase 004/006/007 architecture remains retained historical rationale/evidence.
 
 ### ADR disposition — CLOSED
 

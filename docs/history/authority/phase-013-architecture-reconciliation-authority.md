@@ -10,7 +10,7 @@ status: complete-current
 
 Preserve the governing reconciliation method and final completion state for Phase 013.
 
-The current architecture entry point after completion is [Phase 013 Consolidated Architecture Contract](../architecture/phase-013-consolidated-architecture-contract.md).
+The current architecture entry point after completion is [Phase 013 Consolidated Architecture Contract](../../architecture/phase-013-consolidated-architecture-contract.md).
 
 ## Final state
 
@@ -111,7 +111,7 @@ upstream reopens awaiting validation        0
 
 ## Synchronization authority
 
-Current inventory is governed by [Current Cross-Concept Synchronization Contract](../synchronizations/current-cross-concept-synchronizations.md):
+Current inventory is governed by [Current Cross-Concept Synchronization Contract](../../synchronizations/current-cross-concept-synchronizations.md):
 
 ```text
 historical synchronization IDs          15
