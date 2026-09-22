@@ -51,6 +51,11 @@ Use `python tools/run_agentic_conformance.py` for deterministic repository confi
 Prospective material implementation packages are governed by [Implementation Package, Traceability & ADR Change Control](docs/implementation/implementation-package-traceability-adr-change-control.md).
 
 A package is scope/evidence metadata, never authorization. Class 1/2 work traces current `syngan://...` authority to code/test evidence; Class 3/4 conflicts stop and reopen the smallest upstream owner. Architecture ADRs under `docs/decisions/` preserve rationale and may not be rewritten by ordinary implementation to make code appear conformant.
+## Engineering preflight
+
+Dependency, CI supply-chain, checked-in secret, compatibility/benchmark-claim, and version/release hygiene are governed by [Engineering Preflight](docs/implementation/engineering-preflight-dependency-supply-chain-secrets-compatibility-benchmark-versioning.md).
+
+Use `python tools/verify.py preflight` when those surfaces change. A PASS is repository engineering evidence only; it does not establish release authorization, a license/legal decision, current vulnerability clearance, provider certification, or scale qualification.
 ## Durable authority rules
 
 - One proposition should have one preferred current owner.
