@@ -53,8 +53,7 @@ def main() -> int:
         errors.append("readiness evidence must not authorize the next program")
     if scorecard.get("blockers_to_program_entry") != []:
         errors.append(
-            "recorded Phase 016 exit currently expects zero "
-            "implementation-program-entry blockers"
+            "recorded Phase 016 exit currently expects zero implementation-program-entry blockers"
         )
 
     dims = scorecard.get("dimensions")
@@ -134,12 +133,9 @@ def main() -> int:
         "deployment-readiness",
         "legal-license-approval",
     }
-    if not isinstance(not_scoring, list) or not required_non_scoring.issubset(
-        set(not_scoring)
-    ):
+    if not isinstance(not_scoring, list) or not required_non_scoring.issubset(set(not_scoring)):
         errors.append(
-            "scorecard must explicitly exclude downstream "
-            "release/provider/scale/legal readiness"
+            "scorecard must explicitly exclude downstream release/provider/scale/legal readiness"
         )
 
     for error in errors:
