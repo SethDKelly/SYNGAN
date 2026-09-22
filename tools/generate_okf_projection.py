@@ -124,10 +124,7 @@ def _root_index(manifest: Manifest) -> str:
         "",
     ]
     for group in manifest["groups"]:
-        lines.append(
-            f"- [{group['title']}]({group['id']}/index.md) - "
-            f"{group['description']}"
-        )
+        lines.append(f"- [{group['title']}]({group['id']}/index.md) - {group['description']}")
     lines.extend(
         [
             "",
@@ -150,9 +147,7 @@ def _group_index(group: Group) -> str:
         "",
     ]
     for route in group["routes"]:
-        lines.append(
-            f"- [{route['title']}]({route['id']}.md) - {route['description']}"
-        )
+        lines.append(f"- [{route['title']}]({route['id']}.md) - {route['description']}")
     lines.append("")
     return "\n".join(lines)
 
@@ -184,8 +179,7 @@ def render_all() -> dict[str, str]:
             source = ROOT / resource_path
             if not source.exists():
                 raise ValueError(
-                    f"projection resource does not exist: {route['ref']} -> "
-                    f"{resource_path}"
+                    f"projection resource does not exist: {route['ref']} -> {resource_path}"
                 )
             rel = f"{group_id}/{route_id}.md"
             files[rel] = _render_route(manifest, group, route, f"knowledge/{rel}")
@@ -214,10 +208,7 @@ def check(files: dict[str, str]) -> int:
 
     for error in errors:
         print(f"ERROR {error}")
-    print(
-        f"OKF projection generation check: {len(errors)} error(s), "
-        f"{len(files)} tracked file(s)"
-    )
+    print(f"OKF projection generation check: {len(errors)} error(s), {len(files)} tracked file(s)")
     return 1 if errors else 0
 
 
