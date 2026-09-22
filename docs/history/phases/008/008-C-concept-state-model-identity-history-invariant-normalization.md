@@ -14,11 +14,11 @@ Normalize the conceptual state, logical identity, historical immutability, lifec
 
 ## Governing authority
 
-- [Concept Design Methodology](../../authority/design-methodology.md)
-- [Jackson Design Completion & Implementation Hold](../../authority/jackson-design-completion-implementation-hold.md)
-- [Jackson Methodology Completion Matrix](../../authority/jackson-methodology-completion-matrix.md)
-- [Concept-Justification Traceability](../../problem/concept-justification-traceability.md)
-- [Accepted Concept Catalog](../../concepts/index.md)
+- [Concept Design Methodology](../../../authority/design-methodology.md)
+- [Jackson Design Completion & Implementation Hold](../../../authority/jackson-design-completion-implementation-hold.md)
+- [Jackson Methodology Completion Matrix](../../../authority/jackson-methodology-completion-matrix.md)
+- [Concept-Justification Traceability](../../../problem/concept-justification-traceability.md)
+- [Accepted Concept Catalog](../../../concepts/index.md)
 - [Concept State, Identity, History & Invariant Normalization](../../concepts/state-identity-history-invariant-normalization.md)
 
 ## Entry baseline
