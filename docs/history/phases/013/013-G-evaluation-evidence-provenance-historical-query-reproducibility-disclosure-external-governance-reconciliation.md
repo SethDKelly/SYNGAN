@@ -16,11 +16,11 @@ Reconcile retained Evaluation-result, Evidence, Provenance, historical-query, Re
 
 - [Phase 013 Architecture Reconciliation Authority](../../authority/phase-013-architecture-reconciliation-authority.md)
 - [013-F Execution / Recovery / Admission Reconciliation](../../architecture/phase-013-f-execution-attempt-fencing-idempotency-checkpoint-cancellation-recovery-admission-reconciliation.md)
-- [Evaluation](../../concepts/evaluation.md)
-- [Evidence](../../concepts/evidence.md)
-- [Provenance](../../concepts/provenance.md)
-- [Reproducibility Contract](../../authority/reproducibility-contract.md)
-- [Privacy / Disclosure / Formal Guarantee / Release Boundary](../../authority/privacy-disclosure-formal-guarantee-release-boundary-contract.md)
+- [Evaluation](../../../concepts/evaluation.md)
+- [Evidence](../../../concepts/evidence.md)
+- [Provenance](../../../concepts/provenance.md)
+- [Reproducibility Contract](../../../authority/reproducibility-contract.md)
+- [Privacy / Disclosure / Formal Guarantee / Release Boundary](../../../authority/privacy-disclosure-formal-guarantee-release-boundary-contract.md)
 - retained Phase 004-G and Phase 007-I architecture
 - ADR-0006, with ADR-0002/0007/0009 as supporting rationale
 
