@@ -18,6 +18,9 @@ description = "Current authority, bootstrap metadata, and verification-manifest 
 [profiles.okf]
 description = "Generated OKF v0.2 projection determinism and producer-profile conformance."
 
+[profiles.references]
+description = "Stable knowledge-reference registry, exact resolution, and routing-drift conformance."
+
 [profiles.static]
 description = "Bootstrap, lint, format, type, architecture, and authority fitness."
 
