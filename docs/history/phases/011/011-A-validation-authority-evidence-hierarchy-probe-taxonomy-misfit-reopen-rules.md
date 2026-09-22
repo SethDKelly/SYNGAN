@@ -31,7 +31,7 @@ G7                           PARTIAL
 
 011-A creates:
 
-- [`docs/authority/design-quality-validation-authority.md`](../../authority/design-quality-validation-authority.md)
+- [`docs/authority/design-quality-validation-authority.md`](../../../authority/design-quality-validation-authority.md)
 
 This becomes the current Phase 011 audit-method authority for 011-B through 011-J.
 
