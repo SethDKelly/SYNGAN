@@ -8,7 +8,7 @@ status: active
 
 ## Purpose
 
-Define the preferred current owner families for SYNGAN knowledge after 016-A and provide the ownership baseline used by 016-B normalization.
+Define the preferred current owner families for SYNGAN knowledge after completed Phase 016 normalization and hardening.
 
 The map is deliberately family-oriented. A proposition belongs to the smallest applicable current owner inside the named family. History proves how a proposition was reached but does not compete for current ownership.
 
@@ -30,7 +30,7 @@ engineering preflight -> deterministic release hygiene; never release/support/le
 repository readiness -> evidence-backed start-gate readiness; never program/release authority
 ~~~
 
-If a current proposition cannot be assigned deterministically, 016-B must stop relocation for that item until ownership is adjudicated.
+If a current proposition cannot be assigned deterministically, stop the affected change until ownership is adjudicated at the smallest governing authority.
 
 ## Current owner families
 
@@ -70,8 +70,8 @@ If a current proposition cannot be assigned deterministically, 016-B must stop r
 | repository implementation readiness/residual risk | `docs/implementation/repository-implementation-readiness-residual-risk.md` |
 | current implemented/support boundary | `docs/implementation/current-support-scope.md` |
 | future non-authoritative work | `docs/backlog/index.md` |
-| Phase 016 hardening authority | `docs/authority/phase-016-documentation-okf-agentic-implementation-readiness-hardening-authority.md` |
-| active Phase 016 work record | `docs/phases/016/` |
+| completed Phase 016 hardening authority | `docs/authority/phase-016-documentation-okf-agentic-implementation-readiness-hardening-authority.md` |
+| completed Phase 016 work records | `docs/phases/016/` |
 | historical phase/design/implementation evidence | `docs/history/` |
 
 ## Current vs history rule

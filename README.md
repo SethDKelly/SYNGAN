@@ -1,119 +1,97 @@
 # SYNGAN
 
-SYNGAN is a design-first synthetic-data generation framework intended for Spark-scale workloads.
+SYNGAN is a design-first synthetic-data generation framework with a portable Python
+reference foundation and an architecture intended to support Spark-scale execution.
 
-SYNGAN is designed as a **deployable Python/Spark package** whose platform promise is:
+The current repository **does not yet claim production Spark/Databricks/provider support
+or enterprise-scale qualification**. Those claims require future implementation and
+evidence under an explicitly authorized program.
 
-> **Agnostic across compliant Spark-capable hosting and infrastructure platforms.**
-
-Package, notebook and automated job/pipeline use are primary. CLI, reports, graphical presentation and standalone service/API exposure remain optional adapters or integrations.
-
-## Documentation
-
-Start with [`docs/index.md`](docs/index.md).
-
-Current governing design authority includes:
-
-- [`Jackson Methodology Completion Matrix`](docs/authority/jackson-methodology-completion-matrix.md)
-- [`Jackson Design Completion & Implementation Hold`](docs/authority/jackson-design-completion-implementation-hold.md)
-- [`Phase 014 Whole-Design Consolidation & Readiness Authority`](docs/authority/phase-014-whole-design-readiness-authority.md)
-- [`Phase 014-H R2/R3 Decision & Phase 015 Handoff`](docs/authority/phase-014-h-consolidation-r2-r3-decision-phase-015-handoff.md)
-- [`Phase 015`](docs/phases/015/index.md)
-- [`Phase 015 Current Implementation Authority / Start Gate`](docs/implementation/phase-015-current-implementation-authority-start-gate.md)
-- [`015-A Current Implementation Baseline / Scaffold Reconciliation`](docs/implementation/phase-015-a-current-implementation-baseline-scaffold-reconciliation.md)
-- [`015-B Current Verification Harness / Architecture Fitness / Evidence Gates`](docs/implementation/phase-015-b-current-verification-harness-architecture-fitness-evidence-gates.md)
-- [`015-C Identity / References / Control Persistence`](docs/implementation/phase-015-c-identity-reference-control-persistence-authority.md)
-- [`015-D Distributed Data / Topology / Generation Promotion`](docs/implementation/phase-015-d-distributed-data-topology-generation-promotion-authority.md)
-- [`015-E Strategy Runtime / Learning / Generation`](docs/implementation/phase-015-e-strategy-runtime-learning-generation-authority.md)
-- [`015-F Execution / Attempt / Recovery`](docs/implementation/phase-015-f-execution-attempt-admission-fencing-idempotency-checkpoint-cancellation-recovery-authority.md)
-- [`015-G Evaluation / Evidence / Provenance / History / Reproducibility`](docs/implementation/phase-015-g-evaluation-evidence-provenance-history-reproducibility-authority.md)
-- [`Phase 014`](docs/phases/014/index.md)
-- [`Phase 014 Start Gate / Decomposition`](docs/phases/014/014-start-gate-whole-design-readiness-decomposition.md)
-- [`Phase 013 Consolidated Architecture Contract`](docs/architecture/phase-013-consolidated-architecture-contract.md)
-- [`Current Cross-Concept Synchronization Contract`](docs/synchronizations/current-cross-concept-synchronizations.md)
-
-## Status
+## Current status
 
 ```text
-accepted concepts                    11
-active synchronizations              13
-Jackson concept design               COMPLETE FOR CURRENT PRODUCT SCOPE
-Phase 013                            COMPLETE
-R1 architecture reconciliation       CURRENTLY CLOSED
-Phase 014 start gate                 COMPLETE
-Phase 014                            COMPLETE
-014-A                                COMPLETE
-014-B                                COMPLETE
-014-C                                COMPLETE
-014-D                                COMPLETE
-014-E                                COMPLETE
-014-F                                COMPLETE
-014-G                                COMPLETE
-014-H                                COMPLETE
-R2                                   CURRENTLY CLOSED
-R3                                   READY
-Phase 015                             ACTIVE
-Phase 015 start gate                  COMPLETE
-015-A                                 COMPLETE
-015-B                                 COMPLETE
-015-C                                 COMPLETE
-015-D                                 COMPLETE
-015-E                                 COMPLETE
-015-F                                 COMPLETE
-015-G                                 COMPLETE
-015-H                                 NEXT ELIGIBLE / NOT AUTHORIZED
-implementation readiness             READY
-implementation start                 STARTED
-implementation next                  015-H — NEXT ELIGIBLE / NOT AUTHORIZED
+Jackson concept design                COMPLETE FOR CURRENT PRODUCT SCOPE
+Phase 013 architecture                COMPLETE
+Phase 014 whole-design/readiness      COMPLETE
+Phase 015 implementation foundation   COMPLETE
+Phase 016 repository hardening        COMPLETE
+C0-C9                                 ACTIVE / PASS
+repository implementation readiness   100 / 100
+next implementation program           REQUIRES EXPLICIT START GATE / NOT AUTHORIZED
+public release                        NOT READY / NOT AUTHORIZED
 ```
 
-## Phase 014
+The readiness score means the repository has the current authority, verification,
+documentation, agentic-development, implementation-package, supply-chain, and preflight
+controls needed to begin a **future separately authorized implementation program**. It is
+not a release, provider, deployment, legal/license, or scale qualification.
 
-Phase 014 audits the whole current design rather than another local layer:
+## Start here
 
-```text
-problem / actors / O1-O16 outcomes
-  -> concepts
-  -> dependence / application family
-  -> 13 active synchronizations
-  -> mapping / semantic parity
-  -> conceptual quality / residuals
-  -> reconciled Phase 013 architecture
+- [Current knowledge entry](docs/index.md)
+- [Current repository status](docs/authority/current-repository-status.md)
+- [Current implementation governance](docs/implementation/implementation-authority-delivery-governance-toolchain-repository-enforcement.md)
+- [Current implementation and support scope](docs/implementation/current-support-scope.md)
+- [Repository readiness and residual risk](docs/implementation/repository-implementation-readiness-residual-risk.md)
+- [Implementation package / traceability contract](docs/implementation/implementation-package-traceability-adr-change-control.md)
+- [Engineering preflight](docs/implementation/engineering-preflight-dependency-supply-chain-secrets-compatibility-benchmark-versioning.md)
+- [Contributor and branch workflow](CONTRIBUTING.md)
+- [Agent instructions](AGENTS.md)
+
+Completed design, architecture, audit, and implementation-phase evidence is retained under
+[documentation history](docs/history/index.md). Historical phase wording does not override
+the current owners linked above.
+
+## Development setup
+
+The verified repository baseline is Python 3.11 with the locked `uv` environment.
+
+```bash
+uv sync --all-groups --locked --no-build-isolation
+uv run --no-sync python tools/verify.py portable
+python tools/run_agentic_conformance.py
 ```
 
-Approved sequence:
+Run the more specific verification profiles required by the selected implementation
+package or change. Dependency, toolchain, compatibility, support-surface, or release
+hygiene changes must also run:
 
-```text
-014-A  evidence baseline / traceability / reopen rules — COMPLETE
-014-B  problem / actors / outcomes / scope / concept-purpose coverage — COMPLETE
-014-C  concept / dependence / application-family / synchronization integrity — COMPLETE
-014-D  mapping / interaction / disclosure / semantic parity — COMPLETE
-014-E  architecture realization / design-to-architecture traceability — COMPLETE
-014-F  end-to-end scenarios / failure / recovery / scale / security / portability — COMPLETE
-014-G  implementation-neutral completeness / handoff sufficiency / residual register — COMPLETE
-014-H  R2 decision / R3 readiness decision / Phase 015 handoff — COMPLETE
+```bash
+uv run --no-sync python tools/verify.py preflight
 ```
 
-R3 may be decided only after the R2 evidence chain is complete.
+CI runs the repository Verify suite and Agentic conformance on pull requests as applicable.
 
-## Implementation boundary
+## Development workflow
 
-```text
-013    Post-Concept Representation & Architecture Reconciliation — COMPLETE
-014    Whole-Design Consolidation & Implementation-Readiness Decision — COMPLETE
-015    Implementation Authority & Controlled Delivery — ACTIVE
-```
+Development should use short-lived branches from current `main`, one bounded authorized
+work item per branch, reviewable pull requests, and squash merging. Material Class 1/2
+implementation work uses an `IPKG-####` manifest when required by the implementation
+package contract.
 
-Phase 014-H established:
+Do not infer authorization from an available backlog item, an existing branch, a package
+manifest, or this README. The selected task/start gate defines the implementation envelope.
 
-```text
-IMPLEMENTATION READINESS   READY
-IMPLEMENTATION START       STARTED
-IMPLEMENTATION NEXT        015-H — NEXT ELIGIBLE / NOT AUTHORIZED
-```
+See [CONTRIBUTING.md](CONTRIBUTING.md) for branch naming, verification, and pull-request
+expectations.
 
-015-A through 015-G are complete. Identity/control persistence, distributed-data topology/promotion, Strategy/runtime binding, Learning/Learned-State, direct/reuse Generation planning, Execution/recovery, and Evaluation/Evidence/Provenance/history/reproducibility are implemented. 015-H is next eligible but requires explicit authorization.
+## Current non-claims
 
-## Current next boundary
+The repository does not currently claim:
 
-**015-H — Authorization, Disclosure, Protected Existence, Secrets, Dependency Trust & No-Egress** is next eligible but remains **NOT AUTHORIZED** pending explicit proceed.
+- production Spark or Databricks support;
+- enterprise-scale performance qualification;
+- Python support beyond the executed 3.11 baseline;
+- public compatibility guarantees;
+- deployment/IaC or SLO/SLA readiness;
+- current vulnerability clearance for a release candidate;
+- public-release readiness.
+
+The exact residuals and evidence required to make those claims are maintained in the
+[repository readiness authority](docs/implementation/repository-implementation-readiness-residual-risk.md).
+
+## License / distribution
+
+No distribution license has been selected. Distribution/public-release authorization
+remains blocked by **RR-016-01 / EP-R01** until an explicit human/legal/product decision is
+made and repository metadata is updated.

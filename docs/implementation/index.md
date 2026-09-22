@@ -26,6 +26,6 @@ The current reference/framework implementation is verified through C0-C9. Produc
 
 ## Current authorization boundary
 
-Phase 016 is active only for pre-implementation hardening. It does not authorize new product/provider/runtime delivery.
+Phase 016 is complete. Repository implementation-program readiness is 100/100, but readiness does not authorize implementation.
 
-Any later delivery program requires its own explicit start gate and user authorization.
+Any next implementation or delivery program requires its own explicit start gate and human authorization. Current contribution and branch workflow is documented in [CONTRIBUTING.md](../../CONTRIBUTING.md).

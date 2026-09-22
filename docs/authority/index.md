@@ -22,7 +22,7 @@ status: active
 - [Jackson Design Completion / Implementation Hold](jackson-design-completion-implementation-hold.md)
 - [Residual Conceptual Misfit / Future Rediscovery](residual-conceptual-misfit-register.md)
 - [Future-Scope / Rediscovery Audit](future-scope-extensibility-new-capability-rediscovery-audit.md)
-- [Phase 016 Hardening Authority](phase-016-documentation-okf-agentic-implementation-readiness-hardening-authority.md)
+- [Completed Phase 016 Hardening Authority](phase-016-documentation-okf-agentic-implementation-readiness-hardening-authority.md)
 
 Subject-specific authority should be read from its smallest owner in the current subject directories.
 
@@ -34,4 +34,4 @@ Historical stage-local status wording does not outrank current owners.
 
 ## Current boundary
 
-See [Current Repository Status](current-repository-status.md). Phase 016 is a no-product-behavior hardening program; product/provider/runtime delivery remains unauthorized.
+See [Current Repository Status](current-repository-status.md). Phase 016 is complete. The repository is ready for a separately authorized implementation start gate; no next implementation, product/provider/runtime delivery, or release program is authorized.
