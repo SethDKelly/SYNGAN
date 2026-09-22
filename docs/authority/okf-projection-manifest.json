@@ -17,31 +17,37 @@
           "id": "current-repository-status",
           "title": "Current Repository Status",
           "description": "Current repository progression, authorization, and next-boundary status.",
-          "resource": "docs/authority/current-repository-status.md"
+          "ref": "syngan://authority/repository-status"
         },
         {
           "id": "documentation-governance",
           "title": "Documentation Governance",
           "description": "Canonical documentation authority, anti-drift, and progressive-disclosure rules.",
-          "resource": "docs/authority/documentation-governance.md"
+          "ref": "syngan://authority/documentation-governance"
         },
         {
           "id": "canonical-knowledge-ownership-map",
           "title": "Canonical Knowledge Ownership Map",
           "description": "Preferred current-owner families for repository knowledge.",
-          "resource": "docs/authority/canonical-knowledge-ownership-map.md"
+          "ref": "syngan://authority/canonical-ownership-map"
         },
         {
           "id": "phase-016-hardening-authority",
           "title": "Phase 016 Hardening Authority",
           "description": "Authority and boundaries for the active pre-implementation hardening program.",
-          "resource": "docs/authority/phase-016-documentation-okf-agentic-implementation-readiness-hardening-authority.md"
+          "ref": "syngan://authority/phase-016"
         },
         {
           "id": "okf-producer-profile",
           "title": "OKF v0.2 Producer Profile",
           "description": "Canonical producer, generated-projection, and conformance contract for OKF v0.2.",
-          "resource": "docs/authority/okf-v0.2-producer-profile.md"
+          "ref": "syngan://authority/okf-producer-profile"
+        },
+        {
+          "id": "stable-reference-contract",
+          "title": "Stable Reference Contract",
+          "description": "Canonical stable-reference, deterministic-resolution, and drift-control contract.",
+          "ref": "syngan://authority/stable-reference-contract"
         }
       ]
     },
@@ -54,43 +60,43 @@
           "id": "problem",
           "title": "Problem and Purpose",
           "description": "Current problem, actor, outcome, and scale-envelope routing.",
-          "resource": "docs/problem/index.md"
+          "ref": "syngan://design/problem"
         },
         {
           "id": "concepts",
           "title": "Concepts",
           "description": "Accepted concept-owner routing for the current product design.",
-          "resource": "docs/concepts/index.md"
+          "ref": "syngan://design/concepts"
         },
         {
           "id": "dependence",
           "title": "Dependence and Application Family",
           "description": "Current inclusion-dependence and application-family routing.",
-          "resource": "docs/dependence/index.md"
+          "ref": "syngan://design/dependence"
         },
         {
           "id": "synchronizations",
           "title": "Current Cross-Concept Synchronizations",
           "description": "Current cross-concept coordination contract.",
-          "resource": "docs/synchronizations/current-cross-concept-synchronizations.md"
+          "ref": "syngan://design/synchronizations"
         },
         {
           "id": "experience",
           "title": "Experience",
           "description": "Current actor-visible and programmatic experience-contract routing.",
-          "resource": "docs/experience/index.md"
+          "ref": "syngan://design/experience"
         },
         {
           "id": "mapping",
           "title": "Mapping",
           "description": "Current semantic-to-interaction mapping routes.",
-          "resource": "docs/mapping/index.md"
+          "ref": "syngan://design/mapping"
         },
         {
           "id": "architecture",
           "title": "Architecture",
           "description": "Current architecture topic-owner and consolidated-contract routing.",
-          "resource": "docs/architecture/index.md"
+          "ref": "syngan://design/architecture"
         }
       ]
     },
@@ -103,13 +109,13 @@
           "id": "current-support-scope",
           "title": "Current Implementation and Support Scope",
           "description": "Current implemented, tested, supported, and explicitly unclaimed boundary.",
-          "resource": "docs/implementation/current-support-scope.md"
+          "ref": "syngan://implementation/support-scope"
         },
         {
           "id": "implementation-governance",
           "title": "Implementation Governance",
           "description": "Current implementation authority, delivery governance, and repository enforcement.",
-          "resource": "docs/implementation/implementation-authority-delivery-governance-toolchain-repository-enforcement.md"
+          "ref": "syngan://implementation/governance"
         }
       ]
     },
@@ -122,13 +128,13 @@
           "id": "phase-016",
           "title": "Active Phase 016",
           "description": "Current Phase 016 hardening sequence, state, and active work record routing.",
-          "resource": "docs/phases/016/index.md"
+          "ref": "syngan://program/phase-016"
         },
         {
           "id": "backlog",
           "title": "Backlog",
           "description": "Non-authoritative future work and deferred-scope routing.",
-          "resource": "docs/backlog/index.md"
+          "ref": "syngan://program/backlog"
         }
       ]
     },
@@ -141,7 +147,7 @@
           "id": "documentation-history",
           "title": "Documentation History",
           "description": "Historical phase, design, audit, and implementation evidence; provenance only.",
-          "resource": "docs/history/index.md"
+          "ref": "syngan://history/documentation"
         }
       ]
     }
