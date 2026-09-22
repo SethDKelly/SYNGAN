@@ -73,7 +73,8 @@ Every non-reserved generated Markdown document MUST contain:
 type: "SYNGAN Knowledge Route"
 title: "<display title>"
 description: "<one-sentence routing description>"
-resource: "<relative path to canonical docs owner>"
+syngan_ref: "syngan://<class>/<logical-name>"
+resource: "<resolved relative path to canonical docs owner>"
 tags: ["syngan", "<group>", "generated", "routing"]
 status: "stable"
 syngan_authority: "projection-only"
@@ -81,7 +82,8 @@ syngan_authority: "projection-only"
 
 Additional constraints:
 
-- `resource` MUST resolve to an existing path under `docs/`;
+- `syngan_ref` MUST resolve exactly through the canonical stable-reference registry;
+- `resource` MUST equal the current path resolved from `syngan_ref` and resolve to an existing path under `docs/`;
 - local Markdown links MUST resolve even though external OKF v0.2 consumers are required to tolerate broken links;
 - `status` uses the external OKF v0.2 lifecycle vocabulary for the projection, not the richer authored-document lifecycle;
 - `generated` and `verified` trust metadata are intentionally omitted from this routing profile because a generated route does not independently verify the truth of its target;
@@ -91,7 +93,7 @@ Additional constraints:
 
 `docs/authority/okf-projection-manifest.json` is the machine-readable projection source.
 
-It defines the authored discovery root, generated root, producer-profile owner, projection-only authority classification, and route groups with their canonical resources.
+It defines the authored discovery root, generated root, producer-profile owner, projection-only authority classification, and route groups keyed by stable `syngan://...` references. Canonical paths are resolved from the stable-reference registry during generation rather than duplicated in the manifest.
 
 The manifest is not a semantic owner. It is deterministic input governed by this profile.
 
@@ -114,9 +116,9 @@ If an OKF requirement would force a change to accepted semantics or architecture
 
 ## Explicit exclusions
 
-016-C does not authorize stable IDs or deterministic stable-ID resolution, a general context resolver, agent action/change/context/tool-adapter policy, product/runtime/provider behavior, new public product APIs, or external service dependencies merely to validate documentation.
+Phase 016-D owns stable-reference identity and exact deterministic routing for the generated projection. This profile still does not authorize agent action/change/context-budget/tool-adapter policy, product/runtime/provider behavior, new public product APIs, or external service dependencies merely to validate documentation.
 
-Those boundaries remain owned by later Phase 016 groups.
+Those remaining boundaries are owned by later Phase 016 groups.
 
 ## Conformance claim
 
