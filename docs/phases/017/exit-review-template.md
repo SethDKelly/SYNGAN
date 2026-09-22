@@ -1,10 +1,12 @@
 ---
 type: Phase Exit Review Template
 title: Phase 017 Consolidation, Exit Review & Phase 018 Handoff Template
-status: active
+status: superseded
 ---
 
 # Phase 017 Consolidation, Exit Review & Phase 018 Handoff Template
+
+> **Superseded by 017-I.** This was pre-execution planning scaffolding. Later 017-C/017-F authority refined the timing of operational prerequisites: they remain mandatory blockers for Phase 018 start-gate PASS, while Phase 017 exit requires those prerequisites to be explicit and truthfully handed forward.
 
 ## Purpose
 

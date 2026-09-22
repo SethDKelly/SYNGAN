@@ -4,7 +4,7 @@ These instructions apply repository-wide to automated coding/documentation agent
 
 ## Current posture
 
-**Jackson concept design and Phases 013-016 are complete; C0-C9 are active/passing. Phase 017 implementation-program planning is AUTHORIZED / ACTIVE — PLANNING ONLY. Product implementation execution, Phase 018+, product/provider/runtime delivery, and release remain NOT AUTHORIZED.**
+**Jackson concept design and Phases 013-017 are complete; C0-C9 are active/passing. Phase 018 is NEXT ELIGIBLE / NOT AUTHORIZED. Product implementation execution, Phase 018+ execution, product/provider/runtime delivery, and release remain NOT AUTHORIZED.**
 
 ## Start with
 
@@ -107,6 +107,8 @@ Use `python tools/verify.py preflight` when those surfaces change. A PASS is rep
 
 Phase 016 is complete. Its documentation, OKF, agentic-development, implementation-package, engineering-preflight, and readiness authorities remain current until superseded through normal change control.
 
+Phase 017 is also complete. Its implementation-program authorities remain current; the current progression/handoff state is owned by docs/authority/current-repository-status.md.
+
 Phase 016 completion does **not** authorize:
 
 - new product semantics;
@@ -120,4 +122,4 @@ Current status and subphase authorization are owned by docs/authority/current-re
 
 ## Current next boundary
 
-**Phase 017 planning is active by explicit human authorization. 017-A through 017-H are COMPLETE; 017-I is NEXT ELIGIBLE / NOT AUTHORIZED. Product implementation execution and Phase 018+ remain NOT AUTHORIZED.**
+**Phase 017 implementation-program planning is COMPLETE with PASS WITH CARRY-FORWARD. Phase 018 is NEXT ELIGIBLE / NOT AUTHORIZED. Its operational blockers must be revalidated and closed before Phase 018 can PASS. Product implementation execution and Phase 018+ execution remain NOT AUTHORIZED.**

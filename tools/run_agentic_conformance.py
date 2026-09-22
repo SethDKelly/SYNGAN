@@ -50,6 +50,10 @@ CHECKS: tuple[tuple[str, tuple[str, ...]], ...] = (
         ("tools/validate_v1_program.py", "--repo", "{repo}"),
     ),
     (
+        "Phase 017 exit and Phase 018 handoff",
+        ("tools/validate_phase_017_exit.py", "--repo", "{repo}"),
+    ),
+    (
         "repository readiness scorecard",
         ("tools/validate_repository_readiness.py", "--repo", "{repo}"),
     ),
@@ -194,8 +198,8 @@ def main() -> int:
             "- Provider runtime state remains evidence-controlled and is not inferred "
             "from documentation.",
             "- Negative controls operate only on an isolated temporary copy.",
-            "- Product/provider/runtime delivery remains outside the current Phase 017 "
-            "planning authority.",
+            "- Phase 017 planning is complete; Phase 018 remains next-eligible/not-authorized and "
+            "product/provider/runtime delivery remains unauthorized.",
             "- Engineering-preflight PASS is not release, legal, vulnerability, provider, "
             "or scale approval.",
             "",

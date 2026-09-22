@@ -8,7 +8,7 @@ status: active
 
 ## Purpose
 
-Define the preferred current owner families for SYNGAN knowledge after completed Phase 016 normalization and during Phase 017 implementation-program planning.
+Define the preferred current owner families for SYNGAN knowledge after completed Phase 016 normalization and completed Phase 017 implementation-program planning.
 
 The map is deliberately family-oriented. A proposition belongs to the smallest applicable current owner inside the named family. History proves how a proposition was reached but does not compete for current ownership.
 
@@ -32,6 +32,7 @@ v0.x MVP boundary -> qualified package capability, milestones, version/release s
 v0.x implementation program -> Phase 018-025 dependencies, package decomposition, candidate freeze, qualification repair routing
 MVP qualification -> non-compensatory evidence portfolio, qualification-plan freeze, holdout ledger, decision, repair/requalification
 v1 coarse program -> evidence-driven candidate themes, deferrals, Phase 026 re-entry, F-1..F-7 classification, M8 rediscovery gates
+Phase 017 exit/handoff -> completed program evidence, Phase 018 operational blockers, no-self-authorization
 implementation packages -> traceability/evidence containers; never authorization or semantic owners
 engineering preflight -> deterministic release hygiene; never release/support/legal authority
 repository readiness -> evidence-backed start-gate readiness; never program/release authority
@@ -86,7 +87,7 @@ If a current proposition cannot be assigned deterministically, stop the affected
 | future non-authoritative work | `docs/backlog/index.md` |
 | completed Phase 016 hardening authority | `docs/authority/phase-016-documentation-okf-agentic-implementation-readiness-hardening-authority.md` |
 | completed Phase 016 work records | `docs/phases/016/` |
-| active Phase 017 planning records | `docs/phases/017/` |
+| completed Phase 017 program / current Phase 018 handoff | `docs/phases/017/` |
 | planned Phase 018-025 definitions | `docs/phases/018/` through `docs/phases/025/` — scope constraints only; not execution authority |
 | historical phase/design/implementation evidence | `docs/history/` |
 

@@ -6,15 +6,16 @@ status: active
 
 # SYNGAN Phase Routing
 
-## Current planning phase
+## Current program handoff
 
-- [Phase 017 — Implementation Program Design, Autonomous Delivery Methodology & v0.x/v1 Roadmap](017/index.md) — **AUTHORIZED / ACTIVE — PLANNING ONLY**
+- [Phase 017 — Implementation Program Design, Autonomous Delivery Methodology & v0.x/v1 Roadmap](017/index.md) — **COMPLETE / PASS WITH CARRY-FORWARD**
+- [Phase 018 — Implementation Execution Start Gate & Autonomous Delivery Qualification](018/phase-definition.md) — **NEXT ELIGIBLE / NOT AUTHORIZED**
 
-Phase 017 designs the implementation program but does not authorize product implementation. See [Current Repository Status](../authority/current-repository-status.md) for the current subphase and execution boundary.
+Phase 018 implements no product capability. It must close the operational blockers recorded by
+017-I before sustained product implementation can begin.
 
 ## Planned v0.x implementation phases — NOT AUTHORIZED
 
-- [Phase 018 — Implementation Execution Start Gate & Autonomous Delivery Qualification](018/phase-definition.md)
 - [Phase 019 — Public Python Package Surface, Composition & Installable Foundation](019/phase-definition.md)
 - [Phase 020 — Complete Minimal End-to-End Vertical Workflow](020/phase-definition.md)
 - [Phase 021 — Baseline Structured-Data & Strategy Coverage](021/phase-definition.md)
@@ -29,18 +30,17 @@ These are Phase 017-F planning definitions. None authorizes execution.
 
 - [Phase 026 — v1 Evidence Re-entry, Scope Selection & Program Definition Start Gate](026/phase-definition.md)
 
-Phase 026 is a Phase 017-H coarse planning boundary only. It becomes eligible only after successful Phase 025 qualification and still requires explicit human selection. No Phase 027+ sequence is defined yet.
+Phase 026 becomes eligible only after successful Phase 025 qualification and still requires explicit
+human selection. No Phase 027+ sequence is defined.
 
 ## Latest completed phase
 
-- [Phase 016 — Documentation Topology, OKF, Agentic Development & Implementation-Readiness Hardening](016/index.md) — **COMPLETE**
+Phase 017 is the latest completed planning phase. Phase 016 remains in the current phase surface
+because its hardening authorities continue to govern repository operation.
 
-## Completed phase history
-
-Completed Phases 001-015 are preserved under [Phase History](../history/phases/). Phase 016 remains in the current phase surface because its hardening authorities continue to govern repository operation.
-
-They remain auditable progression/provenance records, but ordinary current-truth discovery should route through docs/index.md and the canonical ownership map rather than phase chronology.
+Completed Phases 001-015 are preserved under [Phase History](../history/phases/).
 
 ## Current boundary
 
-Phase 016 is complete at 100/100 repository implementation readiness. Phase 017 planning is active by explicit human authorization. Product implementation execution, provider/runtime delivery, release, and Phase 018+ execution remain unauthorized.
+Phase 017 is complete. Phase 018 is next eligible but not authorized. Product implementation,
+provider/runtime delivery, release, and Phase 019+ execution remain unauthorized.

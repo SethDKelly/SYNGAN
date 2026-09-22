@@ -240,7 +240,7 @@
       "path": "docs/phases/017/index.md",
       "status": "active",
       "authority_class": "current-program",
-      "owner_family": "active_phase"
+      "owner_family": "current_program_handoff"
     },
     {
       "ref": "syngan://program/backlog",

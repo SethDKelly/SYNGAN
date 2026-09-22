@@ -200,12 +200,12 @@
     {
       "id": "program",
       "title": "Current program routing",
-      "description": "Active implementation-program planning and non-authoritative future-work routes.",
+      "description": "Completed Phase 017 handoff and non-authoritative future-work routes.",
       "routes": [
         {
           "id": "phase-017",
-          "title": "Active Phase 017 Planning",
-          "description": "Current planning-only Phase 017 implementation-program design and active subphase routing.",
+          "title": "Completed Phase 017 / Phase 018 Handoff",
+          "description": "Completed Phase 017 implementation-program design, exit decision, and current next-eligible/not-authorized Phase 018 handoff.",
           "ref": "syngan://program/phase-017"
         },
         {

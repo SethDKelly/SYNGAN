@@ -256,6 +256,20 @@ def main() -> int:
 
         _mutate(
             repo,
+            "docs/phases/017/phase-017-exit-profile.json",
+            lambda text: text.replace(
+                '"authorized_at_exit": false',
+                '"authorized_at_exit": true',
+                1,
+            ),
+            "tools/validate_phase_017_exit.py",
+            ("--repo", str(repo)),
+            "Phase 017 exit self-authorizes Phase 018",
+            errors,
+        )
+
+        _mutate(
+            repo,
             "AGENTS.md",
             lambda text: (
                 text + "\n[Broken agentic route](docs/authority/not-a-real-agentic-owner.md)\n"
@@ -268,7 +282,7 @@ def main() -> int:
 
     for error in errors:
         print("ERROR", error)
-    print(f"Agentic conformance negative controls: {len(errors)} error(s), 14 control(s)")
+    print(f"Agentic conformance negative controls: {len(errors)} error(s), 15 control(s)")
     return 1 if errors else 0
 
 

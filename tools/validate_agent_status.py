@@ -7,11 +7,14 @@ from pathlib import Path
 P16_ACTIVE = "phase-016-active"
 P16_CLOSED = "phase-016-closed"
 P17_PLANNING = "phase-017-planning"
+P17_CLOSED = "phase-017-closed"
 
 
 def _mode(current: str) -> str:
     if re.search(r"^016-J\s+AUTHORIZED / ACTIVE$", current, re.M):
         return P16_ACTIVE
+    if re.search(r"^Phase 017\s+COMPLETE$", current, re.M):
+        return P17_CLOSED
     if re.search(
         r"^Phase 017\s+AUTHORIZED / ACTIVE — PLANNING ONLY$",
         current,
@@ -21,7 +24,7 @@ def _mode(current: str) -> str:
     if re.search(r"^016-J\s+COMPLETE$", current, re.M):
         return P16_CLOSED
     raise ValueError(
-        "current status must declare 016-J active/complete or Phase 017 planning-only active"
+        "current status must declare 016-J active/complete, Phase 017 planning-only active, or Phase 017 complete"
     )
 
 
@@ -99,7 +102,7 @@ def main() -> int:
             ),
             "agents": ("Phase 016 pre-implementation hardening is COMPLETE.",),
         }
-    else:
+    elif mode == P17_PLANNING:
         required = {
             "status": (
                 "Phase 017                           AUTHORIZED / ACTIVE — PLANNING ONLY",
@@ -145,6 +148,41 @@ def main() -> int:
                 "Phase 017 implementation-program planning is AUTHORIZED / ACTIVE — PLANNING ONLY.",
                 "Product implementation execution, Phase 018+, product/provider/runtime delivery, "
                 "and release remain NOT AUTHORIZED.",
+            ),
+        }
+    else:
+        required = {
+            "status": (
+                "Phase 017                           COMPLETE",
+                "017-A                               COMPLETE",
+                "017-B                               COMPLETE",
+                "017-C                               COMPLETE",
+                "017-D                               COMPLETE",
+                "017-E                               COMPLETE",
+                "017-F                               COMPLETE",
+                "017-G                               COMPLETE",
+                "017-H                               COMPLETE",
+                "017-I                               COMPLETE",
+                "Phase 018                           NEXT ELIGIBLE / NOT AUTHORIZED",
+                "product implementation execution   NOT AUTHORIZED",
+                "active implementation packages     0",
+            ),
+            "phase_017_index": (
+                "Phase 017                           COMPLETE",
+                "017-I                               COMPLETE",
+                "Phase 018                           NEXT ELIGIBLE / NOT AUTHORIZED",
+                "product implementation execution   NOT AUTHORIZED",
+            ),
+            "docs_index": (
+                "Phase 017                           COMPLETE",
+                "017-I                               COMPLETE",
+                "Phase 018                           NEXT ELIGIBLE / NOT AUTHORIZED",
+                "product implementation execution   NOT AUTHORIZED",
+            ),
+            "agents": (
+                "Phase 017 implementation-program planning is COMPLETE",
+                "Phase 018 is NEXT ELIGIBLE / NOT AUTHORIZED",
+                "Product implementation execution",
             ),
         }
 

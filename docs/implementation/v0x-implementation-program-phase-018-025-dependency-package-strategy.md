@@ -59,7 +59,7 @@ Phase 018 cannot pass its start gate until:
 
 - Phase 017 is complete;
 - Phase 018 is explicitly selected by a human;
-- merged-branch cleanup is confirmed;
+- leftover planning branches are reconciled against current main and obsolete branches are safely removed;
 - main branch protection is confirmed;
 - required Verify and Agentic conformance checks are enforced for merge;
 - the selected branch/PR workflow is operational;

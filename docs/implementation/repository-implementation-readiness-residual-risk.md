@@ -84,20 +84,20 @@ Q-FUT-006  product-owned resource / economic lifecycle
 
 A future product request that crosses one of their activation thresholds reopens the smallest design owner before implementation proceeds.
 
-## Post-Phase-016 handoff
+## Current handoff after Phase 017
 
-Phase 016 completion leaves the repository ready for a **new explicitly authorized start gate**, not an automatically selected Phase 017 or backlog item.
+Phase 017 has now completed the implementation-program planning that Phase 016 left to a separately
+authorized start gate.
 
-A future start gate must identify:
+Phase 018 is NEXT ELIGIBLE / NOT AUTHORIZED. It is an operational qualification/start-gate phase,
+not product implementation.
 
-- the human-selected implementation/program objective;
-- exact current `syngan://...` authorities and bounded product scope;
-- whether any M8 rediscovery trigger is activated;
-- intended Class 0-4 / A1-A4 authority boundaries;
-- prospective implementation-package decomposition for material Class 1/2 work;
-- verification/evidence obligations and required C-lanes;
-- which RR-016 residuals are relevant to that program's intended release/support/provider/scale claims;
-- explicit exclusions and stop/reopen conditions.
+The Phase 018 gate must revalidate and close the current operational carry-forwards recorded by
+017-I: protected main, required merge checks, reconciliation of remaining planning branches, and
+real Cursor/Codex runtime qualification.
+
+The RR-016 residuals below remain claim-specific. Phase 017 did not close them merely by defining
+the v0.x program.
 
 ## Non-claims
 

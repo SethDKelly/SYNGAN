@@ -41,14 +41,14 @@ def test_implementation_phase_lifecycle_contract_is_current_and_routed() -> None
         assert phrase in text
 
 
-def test_active_program_stable_reference_targets_phase_017() -> None:
+def test_current_program_handoff_stable_reference_targets_completed_phase_017() -> None:
     registry = json.loads(REGISTRY.read_text(encoding="utf-8"))
     by_ref = {item["ref"]: item for item in registry["references"]}
 
     current = by_ref["syngan://program/phase-017"]
     assert current["status"] == "active"
     assert current["path"] == "docs/phases/017/index.md"
-    assert current["owner_family"] == "active_phase"
+    assert current["owner_family"] == "current_program_handoff"
 
     prior = by_ref["syngan://program/phase-016"]
     assert prior["status"] == "retired"

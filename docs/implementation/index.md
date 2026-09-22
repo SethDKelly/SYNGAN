@@ -35,4 +35,4 @@ The current reference/framework implementation is verified through C0-C9. Produc
 
 Phase 016 is complete. Repository implementation-program readiness is 100/100.
 
-Phase 017 is explicitly authorized for implementation-program planning only. Product implementation execution remains unauthorized; the first executable phase requires its own explicit start gate after Phase 017 closure. Current contribution and branch workflow is documented in [CONTRIBUTING.md](../../CONTRIBUTING.md).
+Phase 017 implementation-program planning is complete with PASS WITH CARRY-FORWARD. Phase 018 is NEXT ELIGIBLE / NOT AUTHORIZED and is an operational start-gate phase only. Product implementation remains unauthorized; Phase 018 must close the handoff blockers recorded by 017-I before it can PASS. Current contribution and branch workflow is documented in [CONTRIBUTING.md](../../CONTRIBUTING.md).

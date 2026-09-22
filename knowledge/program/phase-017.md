@@ -1,7 +1,7 @@
 ---
 type: "SYNGAN Knowledge Route"
-title: "Active Phase 017 Planning"
-description: "Current planning-only Phase 017 implementation-program design and active subphase routing."
+title: "Completed Phase 017 / Phase 018 Handoff"
+description: "Completed Phase 017 implementation-program design, exit decision, and current next-eligible/not-authorized Phase 018 handoff."
 syngan_ref: "syngan://program/phase-017"
 resource: "../../docs/phases/017/index.md"
 tags: ["syngan", "program", "generated", "routing"]
@@ -15,6 +15,6 @@ syngan_authority: "projection-only"
 
 Stable reference: `syngan://program/phase-017`.
 
-Canonical source: [Active Phase 017 Planning](../../docs/phases/017/index.md).
+Canonical source: [Completed Phase 017 / Phase 018 Handoff](../../docs/phases/017/index.md).
 
 This file is a compatibility route only. It cannot establish or override SYNGAN semantic, architecture, implementation, or program authority.
