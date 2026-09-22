@@ -142,6 +142,12 @@
           "ref": "syngan://implementation/phase-lifecycle"
         },
         {
+          "id": "autonomous-agent-delivery",
+          "title": "Cursor/Codex Autonomous Delivery & Runtime Qualification",
+          "description": "Canonical bounded Cursor/Codex delivery roles, context isolation, tool-switching, and runtime qualification contract.",
+          "ref": "syngan://implementation/agent-delivery"
+        },
+        {
           "id": "implementation-package-contract",
           "title": "Implementation Package, Traceability & ADR Change Control",
           "description": "Canonical prospective implementation-package, traceability, evidence, and ADR change-control contract.",
