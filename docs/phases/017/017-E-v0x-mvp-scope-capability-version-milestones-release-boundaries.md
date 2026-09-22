@@ -111,6 +111,20 @@ Spark capability is separated from production-provider support, exact v0.x numbe
 evidence-driven, release states remain distinct, residual mappings stay truthful, canonical routing
 passes, and no product implementation/version bump occurs.
 
+## Closure verification
+
+The initial 017-E candidate exposed two repository-mechanical defects rather than scope defects:
+
+- one new fitness-test line required repository formatter normalization;
+- the durable 017-D evaluation validator incorrectly pinned the then-current "017-E NEXT" status,
+  so legitimate program progression made the older authority validator fail.
+
+The repair makes durable methodology validators assert their own continuing invariants while
+`tools/validate_agent_status.py` remains the owner of current subphase progression.
+
+Exact repaired head `d820df18c5a8fe8fe243a4dc7aee2fe43180099b` passed the full repository Verify
+workflow before this closure note was recorded.
+
 ## Handoff
 
 017-F should now define durable high-level Phase 018-025 boundaries, dependency/order constraints,
