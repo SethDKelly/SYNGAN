@@ -14,18 +14,18 @@ Systematically determine how the current SYNGAN application family changes when 
 
 ## Governing authority
 
-- [Concept Design Methodology](../../authority/design-methodology.md)
-- [Jackson Methodology Completion Matrix](../../authority/jackson-methodology-completion-matrix.md)
+- [Concept Design Methodology](../../../authority/design-methodology.md)
+- [Jackson Methodology Completion Matrix](../../../authority/jackson-methodology-completion-matrix.md)
 - [Phase 008 Individual-Concept Design Consolidation](../../concepts/phase-008-individual-concept-consolidation.md)
 - [Catalog Perimeter Candidate Rediscovery Audit](../../concepts/catalog-perimeter-candidate-rediscovery-boundary-audit.md)
-- [009-A Pairwise Inclusion-Dependence Inventory](../../dependence/inclusion-dependence-pairwise-inventory.md)
-- [009-B Canonical Dependence Graph](../../dependence/inclusion-dependence-graph-ordering.md)
-- [009-C Application Family](../../dependence/application-family-valid-subsets.md)
+- [009-A Pairwise Inclusion-Dependence Inventory](../../../dependence/inclusion-dependence-pairwise-inventory.md)
+- [009-B Canonical Dependence Graph](../../../dependence/inclusion-dependence-graph-ordering.md)
+- [009-C Application Family](../../../dependence/application-family-valid-subsets.md)
 - [Phase 009 Entry / Decomposition](009-entry-decomposition.md)
 
 009-D establishes current consequence authority:
 
-- [Contraction, Extension, Concept Addition/Removal & Product-Scope Consequences](../../dependence/contraction-extension-consequences.md)
+- [Contraction, Extension, Concept Addition/Removal & Product-Scope Consequences](../../../dependence/contraction-extension-consequences.md)
 
 ## Entry baseline
 
