@@ -92,9 +92,11 @@ def main() -> int:
                 errors.append(f"execute-selected-work: missing completion/scope guard: {phrase}")
 
     review = root / "review-change" / "SKILL.md"
-    if review.is_file() and "Finding a defect does not authorize repository edits" not in review.read_text(
-        encoding="utf-8"
-    ):
+    if review.is_file():
+        review_text = review.read_text(encoding="utf-8")
+    else:
+        review_text = ""
+    if "Finding a defect does not authorize repository edits" not in review_text:
         errors.append("review-change must preserve review-only non-edit authority")
 
     for path in root.glob("*/SKILL.md"):
