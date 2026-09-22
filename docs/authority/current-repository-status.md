@@ -32,7 +32,7 @@ Start Gate                          COMPLETE
 016-G                               COMPLETE
 016-H                               COMPLETE
 016-I                               COMPLETE
-016-J                               NEXT ELIGIBLE / NOT AUTHORIZED
+016-J                               AUTHORIZED / ACTIVE
 
 current conceptual blockers         0
 current upstream reopens            0
@@ -88,7 +88,9 @@ Closure established a canonical engineering-preflight authority/profile, bounded
 
 The preflight intentionally retains external/human evidence residuals rather than fabricating readiness: distribution-license selection, current vulnerability/advisory review, and public compatibility-window definition are release-candidate blockers; Python >3.11 verification, real enterprise-scale benchmark evidence, and production provider qualification remain explicit support/claim non-readiness. None requires a P16-3/P16-4 reopen.
 
-016-J — Repository Implementation-Readiness Scorecard, Residual Risk Register & Phase 016 Exit — is NEXT ELIGIBLE / NOT AUTHORIZED pending explicit proceed.
+016-J — Repository Implementation-Readiness Scorecard, Residual Risk Register & Phase 016 Exit — is AUTHORIZED / ACTIVE by explicit user proceed.
+
+016-J may consolidate Phase 016 evidence, apply the scorecard fixed at the start gate, classify residuals by the exact decision/claim they block, issue the Phase 016 exit decision, and define the post-Phase-016 handoff boundary. It may not create or authorize the next implementation program, convert implementation readiness into release/provider/scale readiness, close release-candidate residuals without their required evidence, or add product/runtime/provider behavior.
 
 016-B closure established:
 
