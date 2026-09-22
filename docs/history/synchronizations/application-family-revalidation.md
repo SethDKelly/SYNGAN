@@ -20,12 +20,12 @@ It does not yet perform the full trigger/precondition/postcondition/state-owner 
 
 ## Governing authority
 
-- [Concept Design Methodology](../authority/design-methodology.md)
+- [Concept Design Methodology](../../authority/design-methodology.md)
 - [Concept Action, Query, Preconditions/Postconditions & Lifecycle Normalization](../concepts/action-query-lifecycle-normalization.md)
-- [Application Family, Valid Concept Subsets & Minimal Coherent Variants](../dependence/application-family-valid-subsets.md)
-- [Contraction, Extension, Concept Addition/Removal & Product-Scope Consequences](../dependence/contraction-extension-consequences.md)
+- [Application Family, Valid Concept Subsets & Minimal Coherent Variants](../../dependence/application-family-valid-subsets.md)
+- [Contraction, Extension, Concept Addition/Removal & Product-Scope Consequences](../../dependence/contraction-extension-consequences.md)
 - [Core Synchronizations](core-synchronizations.md)
-- [Reproducibility Contract](../authority/reproducibility-contract.md)
+- [Reproducibility Contract](../../authority/reproducibility-contract.md)
 
 ## Revalidation rule
 
@@ -379,7 +379,7 @@ The historical `SYNC-15` prose coordinates no unique pair of accepted concept ac
 
 The supported reproduction/comparison class is an assessment over these preserved facts. It must not become unnamed mutable state merely because the product exposes reproducibility information.
 
-Therefore the substantive rules remain authoritative under the [Reproducibility Contract](../authority/reproducibility-contract.md), but `SYNC-15` is no longer counted as one active cross-concept synchronization.
+Therefore the substantive rules remain authoritative under the [Reproducibility Contract](../../authority/reproducibility-contract.md), but `SYNC-15` is no longer counted as one active cross-concept synchronization.
 
 ### Historical ID rule
 
