@@ -120,11 +120,11 @@ The bridges must not copy workflow bodies or create a second authority model.
 
 ## Documented compatibility vs runtime evidence
 
-016-F records repository adapter architecture based on documented tool capabilities reviewed on 2026-09-21.
+The repository adapter architecture is based on documented tool capabilities and is periodically re-reviewed.
 
 Documented capability is not provider-runtime certification. A tool may be documented-compatible while actual native discovery remains unverified in the current environment.
 
-Runtime/tool-in-the-loop evidence, drift controls, and executable negative cases belong to later conformance work. Ordinary Git/editor/Python use remains the manual fallback.
+Current Cursor/Codex autonomous-delivery roles and real-runtime qualification are owned by [Cursor/Codex Autonomous Delivery Operating Model & Runtime Qualification](../implementation/cursor-codex-autonomous-delivery-runtime-qualification.md). Ordinary Git/editor/Python use remains the manual fallback.
 
 ## Degraded/manual fallback
 
@@ -163,6 +163,6 @@ Compatibility architecture was reviewed against current public documentation:
 
 These external documents establish tool mechanics only. They do not become SYNGAN semantic authority.
 
-## Phase boundary
+## Current relationship
 
-016-F does not establish the full executable agentic conformance/negative-control/CI program; that remains reserved for 016-G.
+This document owns bounded context, portable workflows, and provider adapter mechanics. It does not own autonomous delivery role assignment, runtime qualification evidence, implementation-phase progression, or product implementation authority.
