@@ -29,8 +29,9 @@ Start Gate                          COMPLETE
 016-D                               COMPLETE
 016-E                               COMPLETE
 016-F                               COMPLETE
-016-G                               NEXT ELIGIBLE / NOT AUTHORIZED
-016-H..016-J                        NOT AUTHORIZED
+016-G                               COMPLETE
+016-H                               NEXT ELIGIBLE / NOT AUTHORIZED
+016-I..016-J                        NOT AUTHORIZED
 
 current conceptual blockers         0
 current upstream reopens            0
@@ -72,7 +73,11 @@ Closure established a canonical tool-neutral agent-development policy, explicit 
 
 Closure established deterministic UTF-8 context budgets, progressive-disclosure retrieval rules, five canonical provider-neutral workflows under `.agents/skills/`, thin Claude compatibility bridges, shared-source Cursor/Codex adapters, a documented-vs-runtime compatibility manifest, manual fallback, and deterministic budget measurement. The operating-surface policy is a canonical owner with stable reference `syngan://authority/agent-context-workflows`; provider runtimes remain explicitly `unverified`. Candidate Verify workflow `35688409580` / `#1603` passed portable and all C2–C9 gates with P16-3/P16-4 findings remaining `0 / 0`.
 
-016-G — Agentic Conformance, Negative Controls, Drift Detection & CI — is NEXT ELIGIBLE / NOT AUTHORIZED pending explicit proceed.
+016-G — Agentic Conformance, Negative Controls, Drift Detection & CI — is COMPLETE.
+
+Closure established a canonical dependency-free agentic conformance command, focused status/skill/adapter/link drift validators, composition with stable-reference/OKF/context-budget validators, eight isolated seeded negative controls, a human-readable conformance report, and a dedicated Python-only GitHub Actions lane. Agentic conformance workflow `35690366584` / `#6` and Verify workflow `35690366586` / `#1614` both passed on candidate head `39b76e8249b76c85178c1f595f7855ed66c8d3b8`; P16-3/P16-4 findings remain `0 / 0`.
+
+016-H — Implementation Package Contract, Design-to-Code Traceability & ADR Change Control — is NEXT ELIGIBLE / NOT AUTHORIZED pending explicit proceed.
 
 016-B closure established:
 

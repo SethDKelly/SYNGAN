@@ -31,8 +31,8 @@ Start Gate  COMPLETE
 016-D       COMPLETE
 016-E       COMPLETE
 016-F       COMPLETE
-016-G       NEXT ELIGIBLE / NOT AUTHORIZED
-016-H       NOT AUTHORIZED
+016-G       COMPLETE
+016-H       NEXT ELIGIBLE / NOT AUTHORIZED
 016-I       NOT AUTHORIZED
 016-J       NOT AUTHORIZED
 ~~~
@@ -166,6 +166,28 @@ P16-3 / P16-4                         0 / 0
 product/runtime/provider behavior     UNCHANGED / NOT AUTHORIZED
 ~~~
 
+## 016-G closure
+
+[016-G — Agentic Conformance, Negative Controls, Drift Detection & CI](016-G-agentic-conformance-negative-controls-drift-detection-ci.md) is **COMPLETE**.
+
+~~~text
+016-G                                 COMPLETE
+change class                          P16-2
+canonical conformance command         COMPLETE
+positive deterministic validators     8 / PASS
+seeded negative controls              8 / 8 PASS
+dedicated CI                          AGENTIC CONFORMANCE / PASS
+agentic conformance                   35690366584 / #6 / PASS
+candidate Verify                      35690366586 / #1614 / PASS
+stable-reference registry             25 ACTIVE / FULL OWNER COVERAGE
+agentic conformance stable ref        syngan://authority/agentic-conformance
+OKF projection files                  27 / DETERMINISTIC
+provider runtime certification        UNVERIFIED / NOT CLAIMED
+portable + C2..C9                     PASS
+P16-3 / P16-4                         0 / 0
+product/runtime/provider behavior     UNCHANGED / NOT AUTHORIZED
+~~~
+
 ## Current next boundary
 
-**016-G — Agentic Conformance, Negative Controls, Drift Detection & CI** is **NEXT ELIGIBLE / NOT AUTHORIZED** pending explicit proceed.
+**016-H — Implementation Package Contract, Design-to-Code Traceability & ADR Change Control** is **NEXT ELIGIBLE / NOT AUTHORIZED** pending explicit proceed.

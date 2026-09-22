@@ -61,7 +61,8 @@ def test_phase_016_hardening_authority_is_current() -> None:
     assert "016-D       COMPLETE" in authority_text
     assert "016-E       COMPLETE" in authority_text
     assert "016-F       COMPLETE" in authority_text
-    assert "016-G       NEXT ELIGIBLE / NOT AUTHORIZED" in authority_text
+    assert "016-G       COMPLETE" in authority_text
+    assert "016-H       NEXT ELIGIBLE / NOT AUTHORIZED" in authority_text
 
     assert "status: active" in phase_text
     assert "016-A       COMPLETE" in phase_text
@@ -70,7 +71,8 @@ def test_phase_016_hardening_authority_is_current() -> None:
     assert "016-D       COMPLETE" in phase_text
     assert "016-E       COMPLETE" in phase_text
     assert "016-F       COMPLETE" in phase_text
-    assert "016-G       NEXT ELIGIBLE / NOT AUTHORIZED" in phase_text
+    assert "016-G       COMPLETE" in phase_text
+    assert "016-H       NEXT ELIGIBLE / NOT AUTHORIZED" in phase_text
 
 
 def test_016_a_documentation_audit_evidence_is_present() -> None:
@@ -88,8 +90,8 @@ def test_agent_instructions_preserve_phase_016_scope_boundary() -> None:
 
     assert "Phases 013-015 are complete" in agent_text
     assert "Phase 016 pre-implementation hardening is ACTIVE" in agent_text
-    assert "016-A through 016-F are complete" in agent_text
-    assert "016-G is NEXT ELIGIBLE / NOT AUTHORIZED" in agent_text
+    assert "016-A through 016-G are complete" in agent_text
+    assert "016-H is NEXT ELIGIBLE / NOT AUTHORIZED" in agent_text
     assert "No product/provider/runtime delivery program is authorized" in agent_text
 
 
