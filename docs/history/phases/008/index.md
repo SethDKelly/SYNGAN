@@ -23,10 +23,10 @@ IMPLEMENTATION NEXT         NOT YET
 
 ## Current governing authority
 
-- [Concept Design Methodology](../../authority/design-methodology.md)
-- [Jackson Design Completion & Implementation Hold](../../authority/jackson-design-completion-implementation-hold.md)
-- [Jackson Methodology Completion Matrix](../../authority/jackson-methodology-completion-matrix.md)
-- [Accepted Concept Catalog](../../concepts/index.md)
+- [Concept Design Methodology](../../../authority/design-methodology.md)
+- [Jackson Design Completion & Implementation Hold](../../../authority/jackson-design-completion-implementation-hold.md)
+- [Jackson Methodology Completion Matrix](../../../authority/jackson-methodology-completion-matrix.md)
+- [Accepted Concept Catalog](../../../concepts/index.md)
 - [Phase 008 Individual-Concept Design Consolidation](../../concepts/phase-008-individual-concept-consolidation.md)
 
 ## Semantic baseline at exit
