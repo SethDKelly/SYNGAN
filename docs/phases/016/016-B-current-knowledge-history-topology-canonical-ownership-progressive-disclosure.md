@@ -109,11 +109,11 @@ The active repository verifier now treats current owners as bootstrap authority 
 ### Verification evidence
 
 ~~~text
-implementation / normalization head   89c7476965accaf3c7f35c16e7c5718567e1f651
-Verify run                             35661284176 / #1485
-result                                 PASS
-portable / authority / topology        PASS
-C0-C9                                  PASS
+normalization / conservation head      19eaa996c5d5798af7a36a7a53c8048d4d558120
+Verify run                              35682338084 / #1574
+result                                  PASS
+portable / authority / topology / links PASS
+C0-C9                                   PASS
 ~~~
 
 ### Closure decision
