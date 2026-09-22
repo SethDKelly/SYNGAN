@@ -14,6 +14,7 @@ status: active
 - [OKF v0.2 Producer Profile](okf-v0.2-producer-profile.md)
 - [Stable References, Deterministic Resolution & Drift Control](stable-reference-resolution-drift-control.md)
 - [Agent Authority, Human-Directed Scope, Change Classes, Security & Trust Boundaries](agent-authority-human-directed-scope-security-trust.md)
+- [Agent Context, Portable Workflows & Tool Adapter Contract](agent-context-portable-workflows-tool-adapters.md)
 - [Terminology Policy](terminology-policy.md)
 - [Concept Design Methodology](design-methodology.md)
 - [Jackson Methodology Completion Matrix](jackson-methodology-completion-matrix.md)
