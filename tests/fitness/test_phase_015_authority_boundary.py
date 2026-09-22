@@ -62,7 +62,7 @@ def test_phase_016_hardening_authority_is_current() -> None:
     assert "016-E       COMPLETE" in authority_text
     assert "016-F       COMPLETE" in authority_text
     assert "016-G       COMPLETE" in authority_text
-    assert "016-H       NEXT ELIGIBLE / NOT AUTHORIZED" in authority_text
+    assert "016-H       AUTHORIZED / ACTIVE" in authority_text\n    assert "016-I..J    NOT AUTHORIZED" in authority_text
 
     assert "status: active" in phase_text
     assert "016-A       COMPLETE" in phase_text
@@ -72,7 +72,7 @@ def test_phase_016_hardening_authority_is_current() -> None:
     assert "016-E       COMPLETE" in phase_text
     assert "016-F       COMPLETE" in phase_text
     assert "016-G       COMPLETE" in phase_text
-    assert "016-H       NEXT ELIGIBLE / NOT AUTHORIZED" in phase_text
+    assert "016-H       AUTHORIZED / ACTIVE" in phase_text\n    assert "016-I       NOT AUTHORIZED" in phase_text
 
 
 def test_016_a_documentation_audit_evidence_is_present() -> None:
