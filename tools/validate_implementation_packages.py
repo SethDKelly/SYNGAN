@@ -17,11 +17,7 @@ def _load_json(path: Path) -> dict[str, Any]:
 
 def _active_refs(repo: Path) -> set[str]:
     registry = _load_json(repo / "docs" / "authority" / "stable-reference-registry.json")
-    return {
-        str(item["ref"])
-        for item in registry["references"]
-        if item.get("status") == "active"
-    }
+    return {str(item["ref"]) for item in registry["references"] if item.get("status") == "active"}
 
 
 def _adr_ids(repo: Path, errors: list[str]) -> set[str]:
@@ -158,9 +154,7 @@ def _validate_manifest(
             continue
         missing_obligation = sorted(required_obligation - set(item))
         if missing_obligation:
-            errors.append(
-                f"{label}: obligation missing fields: {', '.join(missing_obligation)}"
-            )
+            errors.append(f"{label}: obligation missing fields: {', '.join(missing_obligation)}")
             continue
 
         obligation_id = item.get("id")
