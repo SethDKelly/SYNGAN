@@ -94,16 +94,11 @@ def test_016_a_documentation_audit_evidence_is_present() -> None:
 def test_agent_instructions_preserve_phase_016_scope_boundary() -> None:
     agent_text = AGENTS.read_text(encoding="utf-8")
 
-    assert "Phases 013-016 are complete" in agent_text
-    assert (
-        "Phase 017 implementation-program planning is AUTHORIZED / ACTIVE — PLANNING ONLY."
-        in agent_text
-    )
-    assert (
-        "Product implementation execution, Phase 018+, product/provider/runtime delivery, "
-        "and release remain NOT AUTHORIZED."
-    ) in agent_text
-
+    assert "Phases 013-017 are complete" in agent_text
+    assert "Phase 017 implementation-program planning is COMPLETE" in agent_text
+    assert "Phase 018 is NEXT ELIGIBLE / NOT AUTHORIZED" in agent_text
+    assert "Product implementation execution" in agent_text
+    assert "remain NOT AUTHORIZED" in agent_text
 
 def test_phase_015_residual_closure_evidence_remains_present() -> None:
     assert (

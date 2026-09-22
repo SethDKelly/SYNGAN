@@ -89,7 +89,8 @@ A future product request that crosses one of their activation thresholds reopens
 Phase 017 has now completed the implementation-program planning that Phase 016 left to a separately
 authorized start gate.
 
-Phase 018 is NEXT ELIGIBLE / NOT AUTHORIZED. It is an operational qualification/start-gate phase,
+Phase 018 is NEXT ELIGIBLE / NOT AUTHORIZED. It remains a **new explicitly authorized start gate**:
+eligibility does not constitute authorization. It is an operational qualification/start-gate phase,
 not product implementation.
 
 The Phase 018 gate must revalidate and close the current operational carry-forwards recorded by
