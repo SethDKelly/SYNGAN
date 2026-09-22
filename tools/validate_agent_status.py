@@ -61,10 +61,15 @@ def main() -> int:
             ),
         }
         if not re.search(r"^016-H\.\.016-J\s+NOT AUTHORIZED$", texts["status"], re.M):
-            errors.append("current status must keep 016-H..016-J NOT AUTHORIZED while 016-G is active")
+            errors.append(
+                "current status must keep 016-H..016-J NOT AUTHORIZED while 016-G is active"
+            )
     else:
         required = {
-            "phase_authority": ("016-G       COMPLETE", "016-H       NEXT ELIGIBLE / NOT AUTHORIZED"),
+            "phase_authority": (
+                "016-G       COMPLETE",
+                "016-H       NEXT ELIGIBLE / NOT AUTHORIZED",
+            ),
             "phase_index": ("016-G       COMPLETE", "016-H       NEXT ELIGIBLE / NOT AUTHORIZED"),
             "agents": (
                 "016-A through 016-G are complete; 016-H is NEXT ELIGIBLE / NOT AUTHORIZED.",
