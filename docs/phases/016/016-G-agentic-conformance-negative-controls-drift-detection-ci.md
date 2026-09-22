@@ -1,7 +1,7 @@
 ---
 type: Phase Work Record
 title: 016-G — Agentic Conformance, Negative Controls, Drift Detection & CI
-status: active
+status: complete
 ---
 
 # 016-G — Agentic Conformance, Negative Controls, Drift Detection & CI
@@ -58,15 +58,41 @@ This plane does not replace C0-C9 and does not claim provider runtime, product b
 - P16-3/P16-4 findings remain zero;
 - 016-H/016-I scope does not leak into 016-G.
 
-## Current state
+## Closure evidence
 
 ~~~text
-016-G                                 AUTHORIZED / ACTIVE
-canonical conformance authority       IN PROGRESS
-focused validators                    IN PROGRESS
-negative controls                     IN PROGRESS
-unified runner/report                 IN PROGRESS
-dedicated CI                          IN PROGRESS
+016-G                                 COMPLETE
+change class                          P16-2
+candidate head                        39b76e8249b76c85178c1f595f7855ed66c8d3b8
+pull request                          #6
+agentic conformance                   35690366584 / #6 / PASS
+candidate Verify                      35690366586 / #1614 / PASS
+positive validators                   8 / PASS
+seeded negative controls              8 / 8 PASS
+status self-progression guard         PASS
+stable-reference drift guard          PASS
+generated OKF drift guard             PASS
+context-budget overflow guard         PASS
+portable-skill metadata guard         PASS
+Claude authority-import guard         PASS
+fabricated runtime-support guard      PASS
+broken current-link guard             PASS
+stable-reference registry             25 ACTIVE
+canonical owner-family coverage       25 / 25
+OKF projection                        27 FILES / PASS
+provider runtime evidence             UNVERIFIED / NOT CLAIMED
+portable                              PASS
+C2..C9                                PASS
 P16-3 / P16-4                         0 / 0
-016-H                                  NOT AUTHORIZED
+product/runtime/provider behavior     UNCHANGED
 ~~~
+
+## Exit decision
+
+Every 016-G exit criterion is satisfied.
+
+016-G is **COMPLETE**.
+
+SYNGAN now has a dedicated repository-owned agentic conformance lane whose positive checks and seeded negative controls mechanically enforce status, routing, workflow, adapter, stable-reference, OKF, and context-budget invariants. PASS remains explicitly limited to repository configuration conformance and cannot self-authorize later work or stand in for product/provider/runtime evidence.
+
+**016-H — Implementation Package Contract, Design-to-Code Traceability & ADR Change Control** is **NEXT ELIGIBLE / NOT AUTHORIZED** pending explicit proceed.
