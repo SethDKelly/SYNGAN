@@ -187,8 +187,9 @@ Phase 016   AUTHORIZED / ACTIVE
 016-E       COMPLETE
 016-F       COMPLETE
 016-G       COMPLETE
-016-H       AUTHORIZED / ACTIVE
-016-I..J    NOT AUTHORIZED
+016-H       COMPLETE
+016-I       NEXT ELIGIBLE / NOT AUTHORIZED
+016-J       NOT AUTHORIZED
 product delivery beyond hardening  NOT AUTHORIZED
 ~~~
 
@@ -408,4 +409,6 @@ The user explicitly authorized 016-H after the verified 016-G closure.
 - define dependency/supply-chain/secrets, benchmark, compatibility-support, or API-version preflight owned by 016-I;
 - start provider/runtime/product implementation or a post-Phase-016 delivery program.
 
-016-I through 016-J remain gated until 016-H exit evidence exists.
+016-H closure evidence is recorded in the phase work record. Agentic conformance workflow `35692897700` / `#22` and Verify workflow `35692897709` / `#1629` both passed on the substantive candidate. Package conformance reports 0 active package manifests and 10 retained ADRs; all nine package negative controls and all eight cross-cutting agentic negative controls pass; stable-reference/OKF/context-budget conformance remains green; P16-3/P16-4 findings remain `0 / 0`.
+
+016-I — Dependency / Supply-Chain / Secrets, Compatibility / Benchmark / API-Versioning Preflight — is NEXT ELIGIBLE / NOT AUTHORIZED. 016-J remains NOT AUTHORIZED.
