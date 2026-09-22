@@ -1,7 +1,7 @@
 ---
 type: Phase Work Record
 title: 016-I — Dependency / Supply-Chain / Secrets, Compatibility / Benchmark / API-Versioning Preflight
-status: active
+status: complete
 ---
 
 # 016-I — Dependency / Supply-Chain / Secrets, Compatibility / Benchmark / API-Versioning Preflight
@@ -71,14 +71,53 @@ The absence of runtime dependencies reduces but does not eliminate supply-chain 
 - P16-3/P16-4 findings remain zero;
 - 016-J remains gated.
 
-## Current state
+## Closure evidence
 
 ~~~text
-016-I                                  AUTHORIZED / ACTIVE
-engineering preflight authority        IN PROGRESS
-dependency / action provenance         IN PROGRESS
-secret hygiene                         IN PROGRESS
-compatibility / benchmark discipline   IN PROGRESS
-version / release preflight            IN PROGRESS
-016-J                                  NOT AUTHORIZED
+016-I                                  COMPLETE
+change class                           P16-2
+candidate head                         f42550f0d17dea91afd4f5d168f9af158b883e86
+pull request                           #8
+agentic conformance                    35696035719 / #42 / PASS
+candidate Verify                       35696035664 / #1649 / PASS
+direct repository constraints          10 / BOUNDED
+runtime project dependencies           0
+SHA-256 lock artifacts                 530
+external CI action uses                5 / IMMUTABLE REVISION
+checkout credentials                   NON-PERSISTED
+repository secret scanner              PASS
+engineering preflight negatives        11 / 11 PASS
+implementation package negatives       9 / 9 PASS
+cross-cutting agentic negatives        8 / 8 PASS
+repository verified Python             3.11
+project version                        0.0.0 / UNRELEASED PRE-1.0
+stable-reference registry              27 ACTIVE
+OKF projection                         29 FILES / PASS
+release-candidate blockers             3 / EXPLICIT
+P16-3 / P16-4                          0 / 0
+product/runtime/provider behavior      UNCHANGED
+release publication                    NOT AUTHORIZED
 ~~~
+
+## Residual evidence carried to 016-J
+
+~~~text
+EP-R01  distribution-license selection             UNRESOLVED / RC BLOCKER
+EP-R02  current vulnerability/advisory review      EXTERNAL EVIDENCE REQUIRED / RC BLOCKER
+EP-R03  public compatibility windows               NOT DECLARED / RC BLOCKER
+EP-R04  Python >3.11 executed verification         NOT ESTABLISHED / SUPPORT NON-CLAIM
+EP-R05  real enterprise-scale benchmark            NOT ESTABLISHED / SCALE-CLAIM BLOCKER
+EP-R06  production provider qualification          NOT ESTABLISHED / PROVIDER-CLAIM BLOCKER
+~~~
+
+These residuals do not invalidate the engineering-preflight contract. They prove that the contract distinguishes repository hygiene from external, legal, compatibility, provider, and benchmark evidence rather than manufacturing readiness.
+
+## Exit decision
+
+Every 016-I exit criterion is satisfied.
+
+016-I is **COMPLETE**.
+
+The repository now has deterministic preflight machinery for the dependency, CI supply-chain, checked-in-secret, compatibility-claim, benchmark-claim, and version/release surfaces that Phase 016 intended to harden. No license was selected, no vulnerability/provider/scale evidence was fabricated, no release was published, and no product/runtime/provider behavior changed.
+
+**016-J — Repository Implementation-Readiness Scorecard, Residual Risk Register & Phase 016 Exit** is **NEXT ELIGIBLE / NOT AUTHORIZED** pending explicit proceed.
