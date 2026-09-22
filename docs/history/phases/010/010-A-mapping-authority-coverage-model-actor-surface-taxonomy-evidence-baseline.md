@@ -61,7 +61,7 @@ implementation next          NOT YET
 
 010-A creates:
 
-- [Mapping Authority, Coverage Model, Actor/Surface Taxonomy & Evidence Baseline](../../mapping/mapping-authority-coverage-actor-surface-evidence-baseline.md)
+- [Mapping Authority, Coverage Model, Actor/Surface Taxonomy & Evidence Baseline](../../../mapping/mapping-authority-coverage-actor-surface-evidence-baseline.md)
 
 This becomes the Phase 010 control authority used by 010-B through 010-H.
 
