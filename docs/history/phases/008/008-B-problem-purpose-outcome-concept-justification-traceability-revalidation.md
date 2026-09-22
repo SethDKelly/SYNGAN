@@ -16,11 +16,11 @@ Replay the current SYNGAN problem, actors, needs, scale conditions and desired o
 
 ## Governing authority
 
-- [Concept Design Methodology](../../authority/design-methodology.md)
-- [Jackson Design Completion & Implementation Hold](../../authority/jackson-design-completion-implementation-hold.md)
-- [Jackson Methodology Completion Matrix](../../authority/jackson-methodology-completion-matrix.md)
-- [Problem Knowledge](../../problem/index.md)
-- [Accepted Concept Catalog](../../concepts/index.md)
+- [Concept Design Methodology](../../../authority/design-methodology.md)
+- [Jackson Design Completion & Implementation Hold](../../../authority/jackson-design-completion-implementation-hold.md)
+- [Jackson Methodology Completion Matrix](../../../authority/jackson-methodology-completion-matrix.md)
+- [Problem Knowledge](../../../problem/index.md)
+- [Accepted Concept Catalog](../../../concepts/index.md)
 - current cross-cutting design authority where it supplies later problem/scope evidence
 
 ## Entry baseline
@@ -127,7 +127,7 @@ The external release/use-authority boundary remains intact: actors may review Ev
 
 Created:
 
-[Concept-Justification Traceability](../../problem/concept-justification-traceability.md)
+[Concept-Justification Traceability](../../../problem/concept-justification-traceability.md)
 
 For every accepted concept, it records:
 
