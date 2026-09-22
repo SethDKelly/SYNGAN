@@ -58,8 +58,9 @@ C0-C9                               ACTIVE / PASS
 
 Phase 016                           ACTIVE — PRE-IMPLEMENTATION HARDENING
 016-A                               COMPLETE
-016-B                               AUTHORIZED / ACTIVE
-016-C..016-J                        NOT AUTHORIZED
+016-B                               COMPLETE
+016-C                               NEXT ELIGIBLE / NOT AUTHORIZED
+016-D..016-J                        NOT AUTHORIZED
 
 product/provider/runtime delivery   NOT AUTHORIZED
 ~~~
@@ -74,4 +75,4 @@ Historical wording such as active, current, canonical, next, MUST, or SHALL is s
 
 ## OKF note
 
-docs/ currently follows the repository's project-specific OKF-oriented profile. Phase 016-C owns the external OKF v0.2 producer/projection/conformance decision. 016-B establishes the ownership/topology prerequisite only.
+docs/ currently follows the repository's project-specific OKF-oriented profile. Phase 016-C owns the external OKF v0.2 producer/projection/conformance decision. 016-B has completed the ownership/topology prerequisite; 016-C remains gated pending explicit authorization.
