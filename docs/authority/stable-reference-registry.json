@@ -54,6 +54,13 @@
       "owner_family": "agent_authority_scope_security_trust"
     },
     {
+      "ref": "syngan://authority/agent-context-workflows",
+      "path": "docs/authority/agent-context-portable-workflows-tool-adapters.md",
+      "status": "active",
+      "authority_class": "current",
+      "owner_family": "agent_context_workflows_tool_adapters"
+    },
+    {
       "ref": "syngan://authority/terminology-policy",
       "path": "docs/authority/terminology-policy.md",
       "status": "active",
