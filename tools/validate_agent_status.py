@@ -79,8 +79,8 @@ def main() -> int:
                 "NEXT PROGRAM  REQUIRES EXPLICIT START GATE / NOT AUTHORIZED",
             ),
         }
-        for surface, phrases in closure_required.items():
-            for phrase in phrases:
+        for surface, closure_phrases in closure_required.items():
+            for phrase in closure_phrases:
                 if phrase not in texts[surface]:
                     errors.append(f"{surface}: missing coherent Phase 016 closure: {phrase}")
 
