@@ -17,7 +17,7 @@ on:
       - "tools/generate_okf_projection.py"
       - "tools/validate_okf_projection.py"
       - "tools/validate_stable_references.py"
-      - ".github/workflows/agentic-conformance.yml"
+      - "tools/validate_implementation_packages.py"\n      - "tools/test_implementation_package_guards.py"\n      - ".github/workflows/agentic-conformance.yml"
   push:
     branches:
       - main
@@ -36,7 +36,7 @@ on:
       - "tools/generate_okf_projection.py"
       - "tools/validate_okf_projection.py"
       - "tools/validate_stable_references.py"
-      - ".github/workflows/agentic-conformance.yml"
+      - "tools/validate_implementation_packages.py"\n      - "tools/test_implementation_package_guards.py"\n      - ".github/workflows/agentic-conformance.yml"
 
 permissions:
   contents: read
