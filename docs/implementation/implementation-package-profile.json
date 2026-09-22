@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "status": "active",
+  "authority": "docs/implementation/implementation-package-traceability-adr-change-control.md",
+  "package_root": "docs/implementation/packages",
+  "package_id_pattern": "^IPKG-[0-9]{4}$",
+  "package_file_pattern": "^IPKG-[0-9]{4}\\.json$",
+  "lifecycle": [
+    "planned",
+    "in_progress",
+    "blocked",
+    "complete",
+    "superseded"
+  ],
+  "change_classes": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "evidence_states": [
+    "planned",
+    "implemented",
+    "verified",
+    "blocked",
+    "not_applicable"
+  ],
+  "rules": {
+    "package_is_authorization_source": false,
+    "active_authority_refs_must_use_syngan_scheme": true,
+    "complete_requires_all_obligations_resolved": true,
+    "complete_requires_verification_evidence": true,
+    "class_2_requires_compatibility_migration_assessment": true,
+    "class_3_4_may_not_be_in_progress_or_complete": true,
+    "architecture_adrs_are_reference_only_for_implementation_packages": true,
+    "history_is_not_current_authority": true,
+    "package_creation_does_not_start_work": true
+  },
+  "required_fields": [
+    "schema_version",
+    "package_id",
+    "title",
+    "status",
+    "change_class",
+    "authorization_basis",
+    "authority_refs",
+    "scope",
+    "obligations",
+    "verification",
+    "compatibility",
+    "adr_refs",
+    "unresolved",
+    "non_claims"
+  ],
+  "obligation_required_fields": [
+    "id",
+    "authority_ref",
+    "section",
+    "implementation_paths",
+    "verification_paths",
+    "evidence_state",
+    "note"
+  ],
+  "compatibility_required_fields": [
+    "assessment",
+    "migration_strategy"
+  ]
+}

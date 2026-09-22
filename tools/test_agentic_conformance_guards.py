@@ -49,17 +49,17 @@ def _mutate(
 
 def _unauthorized_progression(text: str) -> str:
     active = re.sub(
-        r"016-H\.\.016-J\s+NOT AUTHORIZED",
-        "016-H                               AUTHORIZED / ACTIVE\n"
-        "016-I..016-J                        NOT AUTHORIZED",
+        r"016-I\.\.016-J\s+NOT AUTHORIZED",
+        "016-I                               AUTHORIZED / ACTIVE\n"
+        "016-J                               NOT AUTHORIZED",
         text,
         count=1,
     )
     if active != text:
         return active
     return re.sub(
-        r"016-H\s+NEXT ELIGIBLE / NOT AUTHORIZED",
-        "016-H                               AUTHORIZED / ACTIVE",
+        r"016-I\s+NEXT ELIGIBLE / NOT AUTHORIZED",
+        "016-I                               AUTHORIZED / ACTIVE",
         text,
         count=1,
     )

@@ -30,8 +30,9 @@ Start Gate                          COMPLETE
 016-E                               COMPLETE
 016-F                               COMPLETE
 016-G                               COMPLETE
-016-H                               NEXT ELIGIBLE / NOT AUTHORIZED
-016-I..016-J                        NOT AUTHORIZED
+016-H                               COMPLETE
+016-I                               NEXT ELIGIBLE / NOT AUTHORIZED
+016-J                               NOT AUTHORIZED
 
 current conceptual blockers         0
 current upstream reopens            0
@@ -77,7 +78,11 @@ Closure established deterministic UTF-8 context budgets, progressive-disclosure 
 
 Closure established a canonical dependency-free agentic conformance command, focused status/skill/adapter/link drift validators, composition with stable-reference/OKF/context-budget validators, eight isolated seeded negative controls, a human-readable conformance report, and a dedicated Python-only GitHub Actions lane. Agentic conformance workflow `35690366584` / `#6` and Verify workflow `35690366586` / `#1614` both passed on candidate head `39b76e8249b76c85178c1f595f7855ed66c8d3b8`; P16-3/P16-4 findings remain `0 / 0`.
 
-016-H — Implementation Package Contract, Design-to-Code Traceability & ADR Change Control — is NEXT ELIGIBLE / NOT AUTHORIZED pending explicit proceed.
+016-H — Implementation Package Contract, Design-to-Code Traceability & ADR Change Control — is COMPLETE.
+
+Closure established a prospective non-authorizing implementation-package contract/profile, stable authority-to-code/test/evidence traceability, Class 0–4 package discipline, architecture ADR change control, a deterministic package validator, nine isolated package negative controls, the bounded `update-traceability` workflow, and current-program-neutral review guidance. Agentic conformance workflow `35692897700` / `#22` and Verify workflow `35692897709` / `#1629` both passed on candidate head `90d325a0d62011a38ccd0c3012e437640233d21d`. The repository has 26 active stable references, 28 generated knowledge files, 0 active implementation-package manifests, 10 retained architecture ADRs, and P16-3/P16-4 findings remain `0 / 0`.
+
+016-I — Dependency / Supply-Chain / Secrets, Compatibility / Benchmark / API-Versioning Preflight — is NEXT ELIGIBLE / NOT AUTHORIZED pending explicit proceed.
 
 016-B closure established:
 

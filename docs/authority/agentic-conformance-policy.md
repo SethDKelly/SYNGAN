@@ -34,7 +34,9 @@ Fixing a failure requires the surrounding human-selected task to authorize A2 wo
 6. deterministic generated OKF projection equality;
 7. OKF v0.2/SYNGAN projection conformance;
 8. deterministic UTF-8 context budgets;
-9. isolated cross-cutting negative controls.
+9. implementation-package/traceability conformance;
+10. isolated implementation-package negative controls;
+11. isolated cross-cutting agentic negative controls.
 
 Each check has one owning validator. The unified runner composes results rather than duplicating validator logic.
 
@@ -118,4 +120,4 @@ A detected P16-0/P16-1/P16-2 configuration drift may be repaired inside an expli
 
 Product/provider/runtime delivery remains outside Phase 016-G authority.
 
-016-G does not authorize 016-H implementation-package/ADR governance or 016-I dependency/supply-chain/secrets/benchmark/API-version preflight.
+Agentic conformance never authorizes phase progression. 016-H package/traceability checks may compose into this conformance lane while remaining governed by their own canonical implementation authority. Dependency/supply-chain/secrets/benchmark/API-version preflight remains reserved for 016-I.

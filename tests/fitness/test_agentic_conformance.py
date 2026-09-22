@@ -51,7 +51,7 @@ def test_agentic_conformance_policy_preserves_scope_separation() -> None:
         "PASS means only that the checked repository agentic/documentation configuration conforms",
         "PASS does not prove:",
         "provider runtime certification",
-        "Product/provider/runtime delivery remains outside Phase 016-G authority.",
-        "016-G does not authorize 016-H",
+        "Agentic conformance never authorizes phase progression.",
+        "implementation-package/traceability conformance",
     ):
         assert phrase in text

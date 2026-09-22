@@ -159,6 +159,13 @@
       "owner_family": "implementation_governance"
     },
     {
+      "ref": "syngan://implementation/package-contract",
+      "path": "docs/implementation/implementation-package-traceability-adr-change-control.md",
+      "status": "active",
+      "authority_class": "current",
+      "owner_family": "implementation_package_traceability_change_control"
+    },
+    {
       "ref": "syngan://implementation/support-scope",
       "path": "docs/implementation/current-support-scope.md",
       "status": "active",

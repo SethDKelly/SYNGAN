@@ -134,6 +134,12 @@
           "title": "Implementation Governance",
           "description": "Current implementation authority, delivery governance, and repository enforcement.",
           "ref": "syngan://implementation/governance"
+        },
+        {
+          "id": "implementation-package-contract",
+          "title": "Implementation Package, Traceability & ADR Change Control",
+          "description": "Canonical prospective implementation-package, traceability, evidence, and ADR change-control contract.",
+          "ref": "syngan://implementation/package-contract"
         }
       ]
     },

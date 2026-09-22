@@ -10,6 +10,8 @@ status: active
 
 - [Implementation Authority / Delivery Governance / Toolchain](implementation-authority-delivery-governance-toolchain-repository-enforcement.md)
 - [Current Implementation & Support Scope](current-support-scope.md)
+- [Implementation Package, Traceability & ADR Change Control](implementation-package-traceability-adr-change-control.md)
+- [Implementation Packages](packages/index.md) — prospective manifests; currently empty by design
 - [Current Repository Status](../authority/current-repository-status.md)
 
 Completed Phase 005/006/007 plans, Phase 015 slice authorities, and Phase 015 residual/closure evidence are preserved under [Implementation History](../history/implementation/) and [Phase 015 History](../history/phases/015/).

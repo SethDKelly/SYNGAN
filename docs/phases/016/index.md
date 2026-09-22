@@ -32,8 +32,8 @@ Start Gate  COMPLETE
 016-E       COMPLETE
 016-F       COMPLETE
 016-G       COMPLETE
-016-H       NEXT ELIGIBLE / NOT AUTHORIZED
-016-I       NOT AUTHORIZED
+016-H       COMPLETE
+016-I       NEXT ELIGIBLE / NOT AUTHORIZED
 016-J       NOT AUTHORIZED
 ~~~
 
@@ -188,6 +188,33 @@ P16-3 / P16-4                         0 / 0
 product/runtime/provider behavior     UNCHANGED / NOT AUTHORIZED
 ~~~
 
+## 016-H closure
+
+[016-H — Implementation Package Contract, Design-to-Code Traceability & ADR Change Control](016-H-implementation-package-contract-design-code-traceability-adr-change-control.md) is **COMPLETE**.
+
+~~~text
+016-H                                 COMPLETE
+change class                          P16-2
+implementation-package contract       COMPLETE / PROSPECTIVE
+package authorization semantics       NEVER SELF-AUTHORIZING
+design-to-code/test traceability      COMPLETE
+architecture ADR change control       COMPLETE
+active package manifests              0
+retained architecture ADRs            10
+package validator                     PASS
+package negative controls             9 / 9 PASS
+portable canonical skills             6
+traceability workflow                 update-traceability / A2 SUPPORTING
+stable-reference registry             26 ACTIVE / FULL OWNER COVERAGE
+package contract stable ref           syngan://implementation/package-contract
+OKF projection files                  28 / DETERMINISTIC
+agentic conformance                   35692897700 / #22 / PASS
+candidate Verify                      35692897709 / #1629 / PASS
+portable + C2..C9                     PASS
+P16-3 / P16-4                         0 / 0
+product/runtime/provider behavior     UNCHANGED / NOT AUTHORIZED
+~~~
+
 ## Current next boundary
 
-**016-H — Implementation Package Contract, Design-to-Code Traceability & ADR Change Control** is **NEXT ELIGIBLE / NOT AUTHORIZED** pending explicit proceed.
+**016-I — Dependency / Supply-Chain / Secrets, Compatibility / Benchmark / API-Versioning Preflight** is **NEXT ELIGIBLE / NOT AUTHORIZED** pending explicit proceed.

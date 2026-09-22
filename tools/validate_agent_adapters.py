@@ -11,6 +11,7 @@ EXPECTED_SKILLS = {
     "execute-selected-work",
     "review-change",
     "run-verification",
+    "update-traceability",
 }
 ALWAYS_TRUE = re.compile(r"^\s*alwaysApply\s*:\s*true\s*$", re.M | re.I)
 

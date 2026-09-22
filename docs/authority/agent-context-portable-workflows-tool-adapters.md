@@ -91,13 +91,14 @@ Skills define how to perform a bounded human-selected task. They do not define p
 
 ## Canonical workflow set
 
-016-F establishes five core workflows:
+The canonical workflow set currently contains six core workflows:
 
 1. `resolve-context` — A1, choose the minimum current authority/context set.
 2. `resolve-reference` — A1, resolve an exact `syngan://...` reference and minimum surrounding context.
 3. `execute-selected-work` — A2, carry one explicitly selected repository task to verified completion and stop.
 4. `review-change` — A1, review a change against current authority, scope, security, and evidence requirements.
 5. `run-verification` — A1 by default, run/report the lowest appropriate repository checks without changing requirements.
+6. `update-traceability` — A2 supporting workflow, update package authority/code/test/evidence mapping only from actual selected-task evidence.
 
 ## Tool-adapter architecture
 

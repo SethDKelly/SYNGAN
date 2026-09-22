@@ -54,21 +54,31 @@ new ADRs                0
 undecided ADRs          0
 ```
 
-## Phase 014 boundary
+## Current implementation change-control boundary
 
-Phase 014 may use ADRs as rationale/evidence while auditing the full design. An ADR does not justify reopening upstream semantics simply because a different implementation choice would be convenient.
+Architecture ADRs remain rationale below current canonical architecture.
 
-If whole-design evidence demonstrates that an ADR-backed architecture decision conflicts with current upstream authority, reopen the smallest architecture authority and update/supersede the ADR only as a downstream consequence.
+During implementation:
+
+- Class 0–2 realization work may reference ADR rationale but may not materially rewrite architecture through an ADR;
+- a material ADR addition, change, supersession, or retirement requires an explicitly authorized Class 3 architecture reopen;
+- the corresponding canonical architecture owner is updated first or in the same change;
+- Class 4 semantic/experience conflicts reopen the owning design layer before architecture/ADR consequences are accepted;
+- existing code, tests, platform limitations, or implementation convenience do not by themselves justify ADR revision.
+
+The prospective package and traceability rules are governed by [Implementation Package, Traceability & ADR Change Control](../implementation/implementation-package-traceability-adr-change-control.md).
 
 ## Current phase state
 
 ```text
-Phase 013   COMPLETE
-R1          CURRENTLY CLOSED
-Phase 014   ACTIVE
-Current subgroup sequencing  SEE docs/phases/014/index.md
-R2          OPEN
-R3          OPEN
+Phase 013 architecture reconciliation   COMPLETE
+Phase 014 whole-design/readiness        COMPLETE
+Phase 015 implementation foundation     COMPLETE
+Phase 016 pre-implementation hardening  ACTIVE
+016-H package/traceability hardening    COMPLETE
+016-I engineering preflight             NEXT ELIGIBLE / NOT AUTHORIZED
+active ADRs                             10
+superseded ADRs                          0
 ```
 
-Implementation remains **NOT READY / NOT STARTED / NOT YET**.
+No post-Phase-016 product/provider/runtime delivery program is authorized by this ADR index or by 016-H.

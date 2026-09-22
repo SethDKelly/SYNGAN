@@ -73,6 +73,13 @@ def verify_bootstrap() -> None:
         ROOT / "docs" / "authority" / "agent-context-budget.json",
         ROOT / "docs" / "authority" / "agent-tool-compatibility.json",
         ROOT / "docs" / "authority" / "agentic-conformance-policy.md",
+        ROOT
+        / "docs"
+        / "implementation"
+        / "implementation-package-traceability-adr-change-control.md",
+        ROOT / "docs" / "implementation" / "implementation-package-profile.json",
+        ROOT / "docs" / "implementation" / "packages" / "index.md",
+        ROOT / ".agents" / "skills" / "update-traceability" / "SKILL.md",
         ROOT / "tools" / "run_agentic_conformance.py",
         ROOT / ".github" / "workflows" / "agentic-conformance.yml",
         ROOT / ".agents" / "skills" / "resolve-context" / "SKILL.md",
@@ -141,6 +148,7 @@ def verify_authority() -> None:
             "tests/fitness/test_verification_harness_contract.py",
             "tests/fitness/test_agent_authority_policy.py",
             "tests/fitness/test_agent_context_workflows.py",
+            "tests/fitness/test_implementation_package_contract.py",
             "tests/unit/test_bootstrap_metadata.py",
         ]
     )

@@ -23,6 +23,7 @@ EXPECTED_SKILLS = {
     "execute-selected-work": "A2",
     "review-change": "A1",
     "run-verification": "A1",
+    "update-traceability": "A2",
 }
 
 

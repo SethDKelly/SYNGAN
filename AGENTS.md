@@ -4,7 +4,7 @@ These instructions apply repository-wide to automated coding/documentation agent
 
 ## Current posture
 
-**Jackson concept design and Phases 013-015 are complete; C0-C9 are active/passing. Phase 016 pre-implementation hardening is ACTIVE. 016-A through 016-G are complete; 016-H is NEXT ELIGIBLE / NOT AUTHORIZED. No product/provider/runtime delivery program is authorized.**
+**Jackson concept design and Phases 013-015 are complete; C0-C9 are active/passing. Phase 016 pre-implementation hardening is ACTIVE. 016-A through 016-H are complete; 016-I is NEXT ELIGIBLE / NOT AUTHORIZED. No product/provider/runtime delivery program is authorized.**
 
 ## Start with
 
@@ -40,12 +40,17 @@ Bounded context and tool portability are governed by [Agent Context, Portable Wo
 
 Use exact `syngan://...` resolution when a stable reference is known; otherwise route through `docs/index.md` to the smallest current owner. Loading another file requires a concrete task question it answers.
 
-Canonical reusable workflows live under `.agents/skills/`: `resolve-context`, `resolve-reference`, `execute-selected-work`, `review-change`, and `run-verification`. Skills are procedures only; invoking one does not expand the human-selected task or change A1-A4 authority.
+Canonical reusable workflows live under `.agents/skills/`: `resolve-context`, `resolve-reference`, `execute-selected-work`, `review-change`, `run-verification`, and `update-traceability`. Skills are procedures only; invoking one does not expand the human-selected task or change A1-A4 authority.
 ## Agentic conformance
 
 Repository agentic/documentation conformance is governed by [Agentic Conformance, Negative Controls, Drift Detection & CI](docs/authority/agentic-conformance-policy.md).
 
 Use `python tools/run_agentic_conformance.py` for deterministic repository configuration checks. A PASS does not prove product/runtime health or provider runtime compatibility, and a FAIL does not authorize edits outside the human-selected task.
+## Implementation packages and ADR change control
+
+Prospective material implementation packages are governed by [Implementation Package, Traceability & ADR Change Control](docs/implementation/implementation-package-traceability-adr-change-control.md).
+
+A package is scope/evidence metadata, never authorization. Class 1/2 work traces current `syngan://...` authority to code/test evidence; Class 3/4 conflicts stop and reopen the smallest upstream owner. Architecture ADRs under `docs/decisions/` preserve rationale and may not be rewritten by ordinary implementation to make code appear conformant.
 ## Durable authority rules
 
 - One proposition should have one preferred current owner.
@@ -74,4 +79,4 @@ Current status and subphase authorization are owned by docs/authority/current-re
 
 ## Current next boundary
 
-**016-H — Implementation Package Contract, Design-to-Code Traceability & ADR Change Control is NEXT ELIGIBLE / NOT AUTHORIZED. 016-I and later groups remain NOT AUTHORIZED.**
+**016-I — Dependency / Supply-Chain / Secrets, Compatibility / Benchmark / API-Versioning Preflight is NEXT ELIGIBLE / NOT AUTHORIZED. 016-J remains NOT AUTHORIZED.**

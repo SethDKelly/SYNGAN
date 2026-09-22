@@ -11,6 +11,7 @@ EXPECTED = {
     "execute-selected-work": "A2",
     "review-change": "A1",
     "run-verification": "A1",
+    "update-traceability": "A2",
 }
 TOP_KEY = re.compile(r"^([A-Za-z_][A-Za-z0-9_-]*):\s*(.*)$")
 NAME = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
