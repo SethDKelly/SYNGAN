@@ -120,8 +120,16 @@ def main() -> int:
             continue
         if entry.get("documented_state") != "compatible":
             errors.append(f"{name}: documented_state must remain compatible")
-        if entry.get("runtime_state") not in {"pending_tool_in_loop", "qualified", "qualified_with_limitations", "stale", "failed"}:
-            errors.append(f"{name}: invalid runtime_state for the Phase 017-C qualification model")
+        if entry.get("runtime_state") not in {
+            "pending_tool_in_loop",
+            "qualified",
+            "qualified_with_limitations",
+            "stale",
+            "failed",
+        }:
+            errors.append(
+                f"{name}: invalid runtime_state for the Phase 017-C qualification model"
+            )
         if entry.get("workflow_source") != ".agents/skills/":
             errors.append(f"{name}: workflow_source must remain .agents/skills/")
 
@@ -157,7 +165,9 @@ def main() -> int:
         profile = {}
 
     if profile.get("semantics") != "documented_compatibility_does_not_equal_runtime_qualification":
-        errors.append("runtime qualification profile must separate documentation from runtime proof")
+        errors.append(
+            "runtime qualification profile must separate documentation from runtime proof"
+        )
 
     mandatory = profile.get("mandatory_probes")
     if not isinstance(mandatory, list) or set(mandatory) != EXPECTED_RQ:
