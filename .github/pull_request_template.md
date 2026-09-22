@@ -48,6 +48,8 @@ Assessment:
 
 ## Dependencies / network / security / scale
 
+- [ ] Dependency/toolchain/version/support-surface changes run `python tools/verify.py preflight`.
+- [ ] A preflight PASS is not being treated as release, legal, vulnerability, provider, or scale approval.
 - [ ] Dependency/toolchain changes are disclosed for later/current governing review.
 - [ ] Network/egress/offline behavior is unchanged or explicitly documented.
 - [ ] No real secrets or sensitive payloads are committed.
