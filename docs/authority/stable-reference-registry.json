@@ -1,0 +1,162 @@
+{
+  "schema_version": "1.0",
+  "status": "active",
+  "authority": "docs/authority/stable-reference-resolution-drift-control.md",
+  "namespace": "syngan://",
+  "rules": {
+    "exact_lookup_only": true,
+    "path_is_not_identity": true,
+    "search_fallback": false,
+    "active_path_unique": true,
+    "retired_reference_reuse": false
+  },
+  "references": [
+    {
+      "ref": "syngan://authority/repository-status",
+      "path": "docs/authority/current-repository-status.md",
+      "status": "active",
+      "authority_class": "current",
+      "owner_family": "repository_status"
+    },
+    {
+      "ref": "syngan://authority/documentation-governance",
+      "path": "docs/authority/documentation-governance.md",
+      "status": "active",
+      "authority_class": "current",
+      "owner_family": "documentation_governance"
+    },
+    {
+      "ref": "syngan://authority/okf-producer-profile",
+      "path": "docs/authority/okf-v0.2-producer-profile.md",
+      "status": "active",
+      "authority_class": "current",
+      "owner_family": "okf_producer_projection_conformance"
+    },
+    {
+      "ref": "syngan://authority/stable-reference-contract",
+      "path": "docs/authority/stable-reference-resolution-drift-control.md",
+      "status": "active",
+      "authority_class": "current",
+      "owner_family": "stable_reference_resolution_drift_control"
+    },
+    {
+      "ref": "syngan://authority/terminology-policy",
+      "path": "docs/authority/terminology-policy.md",
+      "status": "active",
+      "authority_class": "current",
+      "owner_family": "terminology_policy"
+    },
+    {
+      "ref": "syngan://authority/design-methodology",
+      "path": "docs/authority/design-methodology.md",
+      "status": "active",
+      "authority_class": "current",
+      "owner_family": "methodology"
+    },
+    {
+      "ref": "syngan://authority/jackson-completion",
+      "path": "docs/authority/jackson-methodology-completion-matrix.md",
+      "status": "active",
+      "authority_class": "current",
+      "owner_family": "jackson_completion"
+    },
+    {
+      "ref": "syngan://authority/conceptual-residuals",
+      "path": "docs/authority/residual-conceptual-misfit-register.md",
+      "status": "active",
+      "authority_class": "current",
+      "owner_family": "conceptual_residuals"
+    },
+    {
+      "ref": "syngan://authority/phase-016",
+      "path": "docs/authority/phase-016-documentation-okf-agentic-implementation-readiness-hardening-authority.md",
+      "status": "active",
+      "authority_class": "current-program",
+      "owner_family": "phase_016_authority"
+    },
+    {
+      "ref": "syngan://design/problem",
+      "path": "docs/problem/index.md",
+      "status": "active",
+      "authority_class": "current",
+      "owner_family": "problem"
+    },
+    {
+      "ref": "syngan://design/concepts",
+      "path": "docs/concepts/index.md",
+      "status": "active",
+      "authority_class": "current",
+      "owner_family": "concepts"
+    },
+    {
+      "ref": "syngan://design/dependence",
+      "path": "docs/dependence/index.md",
+      "status": "active",
+      "authority_class": "current",
+      "owner_family": "dependence"
+    },
+    {
+      "ref": "syngan://design/synchronizations",
+      "path": "docs/synchronizations/current-cross-concept-synchronizations.md",
+      "status": "active",
+      "authority_class": "current",
+      "owner_family": "synchronizations"
+    },
+    {
+      "ref": "syngan://design/experience",
+      "path": "docs/experience/index.md",
+      "status": "active",
+      "authority_class": "current",
+      "owner_family": "experience"
+    },
+    {
+      "ref": "syngan://design/mapping",
+      "path": "docs/mapping/index.md",
+      "status": "active",
+      "authority_class": "current",
+      "owner_family": "mapping"
+    },
+    {
+      "ref": "syngan://design/architecture",
+      "path": "docs/architecture/index.md",
+      "status": "active",
+      "authority_class": "current",
+      "owner_family": "architecture"
+    },
+    {
+      "ref": "syngan://implementation/governance",
+      "path": "docs/implementation/implementation-authority-delivery-governance-toolchain-repository-enforcement.md",
+      "status": "active",
+      "authority_class": "current",
+      "owner_family": "implementation_governance"
+    },
+    {
+      "ref": "syngan://implementation/support-scope",
+      "path": "docs/implementation/current-support-scope.md",
+      "status": "active",
+      "authority_class": "current",
+      "owner_family": "support_scope"
+    },
+    {
+      "ref": "syngan://program/backlog",
+      "path": "docs/backlog/index.md",
+      "status": "active",
+      "authority_class": "future-non-authoritative",
+      "owner_family": "backlog"
+    },
+    {
+      "ref": "syngan://program/phase-016",
+      "path": "docs/phases/016/index.md",
+      "status": "active",
+      "authority_class": "current-program",
+      "owner_family": "active_phase"
+    },
+    {
+      "ref": "syngan://history/documentation",
+      "path": "docs/history/index.md",
+      "status": "active",
+      "authority_class": "history-provenance",
+      "owner_family": "history"
+    }
+  ]
+}
