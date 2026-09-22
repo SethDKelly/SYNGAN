@@ -18,13 +18,13 @@ The group asks whether any post-planning mechanism has acquired a distinct Jacks
 
 006-A is downstream of:
 
-- [Concept Design Methodology](../../authority/design-methodology.md);
-- [Accepted Concepts](../../concepts/index.md);
-- [Accepted Synchronizations](../../synchronizations/index.md);
+- [Concept Design Methodology](../../../authority/design-methodology.md);
+- [Accepted Concepts](../../../concepts/index.md);
+- [Accepted Synchronizations](../../../synchronizations/index.md);
 - [Phase 003 Consolidated Experience Contract](../../experience/phase-003-consolidated-experience-contract.md);
 - [Phase 004 Consolidated Architecture Contract](../../architecture/phase-004-consolidated-architecture-contract.md);
 - [Phase 005 Consolidated Implementation-Planning Contract](../../implementation/phase-005-consolidated-implementation-planning-contract.md);
-- [SYNGAN Design & Delivery Backlog](../../backlog/index.md).
+- [SYNGAN Design & Delivery Backlog](../../../backlog/index.md).
 
 ## Discovery evidence created
 
