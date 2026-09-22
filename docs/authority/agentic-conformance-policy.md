@@ -38,7 +38,9 @@ Fixing a failure requires the surrounding human-selected task to authorize A2 wo
 10. engineering-preflight dependency/supply-chain/secrets/version conformance;
 11. isolated engineering-preflight negative controls;
 12. isolated implementation-package negative controls;
-13. isolated cross-cutting agentic negative controls.
+13. repository-readiness scorecard/residual-risk conformance;
+14. isolated repository-readiness negative controls;
+15. isolated cross-cutting agentic negative controls.
 
 Each check has one owning validator. The unified runner composes results rather than duplicating validator logic.
 
@@ -122,4 +124,4 @@ A detected P16-0/P16-1/P16-2 configuration drift may be repaired inside an expli
 
 Product/provider/runtime delivery remains outside Phase 016-G authority.
 
-Agentic conformance never authorizes phase progression. 016-H package/traceability and 016-I engineering-preflight checks may compose into this conformance lane while remaining governed by their own canonical implementation authorities. A preflight PASS does not establish release authorization, license/legal approval, current vulnerability clearance, provider certification, or scale qualification.
+Agentic conformance never authorizes phase progression. 016-H package/traceability and 016-I engineering-preflight checks may compose into this conformance lane while remaining governed by their own canonical implementation authorities. A preflight PASS does not establish release authorization, license/legal approval, current vulnerability clearance, provider certification, or scale qualification. A readiness PASS likewise does not authorize the next implementation program.
