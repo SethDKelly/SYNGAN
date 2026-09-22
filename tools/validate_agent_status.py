@@ -139,7 +139,9 @@ def main() -> int:
             r"(AUTHORIZED / ACTIVE|IN PROGRESS|STARTED)",
             text,
         ):
-            errors.append(f"{name}: planning state must not self-authorize implementation execution")
+            errors.append(
+                f"{name}: planning state must not self-authorize implementation execution"
+            )
         if re.search(r"Phase 017[^\n]*AUTHORIZED / ACTIVE(?! — PLANNING ONLY)", text):
             errors.append(f"{name}: Phase 017 may be active only with explicit PLANNING ONLY scope")
 
