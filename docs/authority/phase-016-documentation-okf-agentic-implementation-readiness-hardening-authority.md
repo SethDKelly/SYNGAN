@@ -183,8 +183,9 @@ Phase 016   AUTHORIZED / ACTIVE
 016-A       COMPLETE
 016-B       COMPLETE
 016-C       COMPLETE
-016-D       AUTHORIZED / ACTIVE
-016-E..J    NOT AUTHORIZED
+016-D       COMPLETE
+016-E       NEXT ELIGIBLE / NOT AUTHORIZED
+016-F..J    NOT AUTHORIZED
 product delivery beyond hardening  NOT AUTHORIZED
 ~~~
 
@@ -311,4 +312,6 @@ The user explicitly authorized 016-D after the verified 016-C closure.
 - establish the separate agentic negative-control CI program reserved for 016-G;
 - change accepted product semantics, architecture contracts, runtime/provider behavior, or Phase 015 support claims.
 
-016-E through 016-J remain gated until 016-D exit evidence exists.
+016-D closure evidence is recorded in the phase work record. Candidate Verify workflow `35686359067` / `#1592` passed portable and C2–C9. The stable-reference registry has one active reference per canonical owner family; generated OKF routes resolve through those references; P16-3/P16-4 findings remain `0 / 0`.
+
+016-E — Agent Authority, Human-Directed Scope, Change Classes, Security & Trust Boundaries — is NEXT ELIGIBLE / NOT AUTHORIZED. 016-F through 016-J remain NOT AUTHORIZED.
