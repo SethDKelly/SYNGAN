@@ -112,7 +112,10 @@ def main() -> int:
             repo,
             "knowledge/authority/agent-context-workflows.md",
             lambda text: text.replace(
-                'resource: "../../docs/authority/agent-context-portable-workflows-tool-adapters.md"',
+                (
+                    'resource: "../../docs/authority/'
+                    'agent-context-portable-workflows-tool-adapters.md"'
+                ),
                 'resource: "../../docs/index.md"',
                 1,
             ),
