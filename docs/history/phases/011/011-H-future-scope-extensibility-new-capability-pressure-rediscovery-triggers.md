@@ -20,7 +20,7 @@ The subgroup tests plausible expansion without treating implementation novelty a
 
 Current canonical result:
 
-- [Future-Scope, Extensibility, New-Capability Pressure & Rediscovery Trigger Audit](../../authority/future-scope-extensibility-new-capability-rediscovery-audit.md)
+- [Future-Scope, Extensibility, New-Capability Pressure & Rediscovery Trigger Audit](../../../authority/future-scope-extensibility-new-capability-rediscovery-audit.md)
 
 Supporting authority includes Phase 008 catalog-perimeter rediscovery, Phase 009 extension consequences, current concept specifications, Phase 010 mapping, and 011-B through 011-G quality closure.
 
