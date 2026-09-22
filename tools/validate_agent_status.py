@@ -76,9 +76,7 @@ def main() -> int:
                 "016-I and later groups remain NOT AUTHORIZED.",
             ),
         }
-        if not re.search(
-            r"^016-H\s+NEXT ELIGIBLE / NOT AUTHORIZED$", texts["status"], re.M
-        ):
+        if not re.search(r"^016-H\s+NEXT ELIGIBLE / NOT AUTHORIZED$", texts["status"], re.M):
             errors.append("current status must make only 016-H next eligible after 016-G closes")
         if not re.search(r"^016-I\.\.016-J\s+NOT AUTHORIZED$", texts["status"], re.M):
             errors.append("current status must keep 016-I..016-J NOT AUTHORIZED after 016-G closes")
