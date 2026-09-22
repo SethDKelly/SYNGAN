@@ -73,7 +73,10 @@ def verify_bootstrap() -> None:
         ROOT / "docs" / "authority" / "agent-context-budget.json",
         ROOT / "docs" / "authority" / "agent-tool-compatibility.json",
         ROOT / "docs" / "authority" / "agentic-conformance-policy.md",
-        ROOT / "docs" / "implementation" / "implementation-package-traceability-adr-change-control.md",
+        ROOT
+        / "docs"
+        / "implementation"
+        / "implementation-package-traceability-adr-change-control.md",
         ROOT / "docs" / "implementation" / "implementation-package-profile.json",
         ROOT / "docs" / "implementation" / "packages" / "index.md",
         ROOT / ".agents" / "skills" / "update-traceability" / "SKILL.md",
