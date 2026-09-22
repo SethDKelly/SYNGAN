@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "phase": "016-F",
+  "phase": "016-G",
   "status": "active",
   "rules": {
     "current_proposition": "exactly_one_preferred_current_owner",
@@ -11,7 +11,8 @@
     "generated_knowledge": "compatibility_routing_only_not_semantic_authority",
     "stable_references": "exact_registry_resolution_not_path_or_search",
     "agent_authority": "human_directed_scope_tool_neutral_no_self_progression",
-    "agent_context": "bounded_progressive_disclosure_provider_neutral"
+    "agent_context": "bounded_progressive_disclosure_provider_neutral",
+    "agentic_conformance": "deterministic_negative_controls_separate_from_product_health"
   },
   "owners": [
     {
@@ -41,6 +42,10 @@
     {
       "family": "agent_context_workflows_tool_adapters",
       "path": "docs/authority/agent-context-portable-workflows-tool-adapters.md"
+    },
+    {
+      "family": "agentic_conformance",
+      "path": "docs/authority/agentic-conformance-policy.md"
     },
     {
       "family": "terminology_policy",
