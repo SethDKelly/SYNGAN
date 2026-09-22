@@ -14,10 +14,10 @@ Evaluate the thirteen normalized active synchronization rules as one composed co
 
 ## Governing authority
 
-- [Concept Design Methodology](../../authority/design-methodology.md)
-- [Concept-Justification Traceability](../../problem/concept-justification-traceability.md)
-- [Application Family](../../dependence/application-family-valid-subsets.md)
-- [Contraction / Extension Consequences](../../dependence/contraction-extension-consequences.md)
+- [Concept Design Methodology](../../../authority/design-methodology.md)
+- [Concept-Justification Traceability](../../../problem/concept-justification-traceability.md)
+- [Application Family](../../../dependence/application-family-valid-subsets.md)
+- [Contraction / Extension Consequences](../../../dependence/contraction-extension-consequences.md)
 - [009-E Synchronization Inventory Revalidation](../../synchronizations/application-family-revalidation.md)
 - [009-F Trigger / Ownership Normalization](../../synchronizations/trigger-ownership-normalization.md)
 
