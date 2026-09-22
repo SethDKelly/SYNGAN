@@ -29,7 +29,7 @@ Start Gate                          COMPLETE
 016-D                               COMPLETE
 016-E                               COMPLETE
 016-F                               COMPLETE
-016-G                               NEXT ELIGIBLE / NOT AUTHORIZED
+016-G                               AUTHORIZED / ACTIVE
 016-H..016-J                        NOT AUTHORIZED
 
 current conceptual blockers         0
@@ -72,7 +72,9 @@ Closure established a canonical tool-neutral agent-development policy, explicit 
 
 Closure established deterministic UTF-8 context budgets, progressive-disclosure retrieval rules, five canonical provider-neutral workflows under `.agents/skills/`, thin Claude compatibility bridges, shared-source Cursor/Codex adapters, a documented-vs-runtime compatibility manifest, manual fallback, and deterministic budget measurement. The operating-surface policy is a canonical owner with stable reference `syngan://authority/agent-context-workflows`; provider runtimes remain explicitly `unverified`. Candidate Verify workflow `35688409580` / `#1603` passed portable and all C2–C9 gates with P16-3/P16-4 findings remaining `0 / 0`.
 
-016-G — Agentic Conformance, Negative Controls, Drift Detection & CI — is NEXT ELIGIBLE / NOT AUTHORIZED pending explicit proceed.
+016-G — Agentic Conformance, Negative Controls, Drift Detection & CI — is AUTHORIZED / ACTIVE by explicit user proceed.
+
+016-G may establish repository-owned agentic conformance, seeded negative controls, status/adapter/skill/routing drift detection, human-readable conformance reporting, and a dedicated dependency-free CI workflow. It may not define implementation-package/ADR governance reserved for 016-H, dependency/supply-chain/secrets preflight reserved for 016-I, or product/runtime/provider delivery behavior.
 
 016-B closure established:
 
