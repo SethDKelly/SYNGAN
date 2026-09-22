@@ -354,6 +354,22 @@ Fallback remains:
 5. run repository-owned verification;
 6. record provider limitation rather than fork semantics.
 
+## Vendor documentation basis
+
+Provider mechanics were reviewed on 2026-09-22 against current public documentation:
+
+- Cursor Rules / AGENTS.md: https://cursor.com/docs/rules
+- Cursor Agent Skills: https://cursor.com/docs/skills
+- Cursor Subagents: https://cursor.com/docs/subagents
+- Cursor Agent Review: https://cursor.com/docs/agent/agent-review
+- Cursor Run Modes: https://cursor.com/docs/agent/security/run-modes
+- Codex AGENTS.md: https://developers.openai.com/docs/agent-configuration/agents-md
+- Codex Skills: https://developers.openai.com/docs/build-skills
+- Codex Code Review: https://developers.openai.com/docs/code-review
+- Codex Agent Approvals & Security: https://developers.openai.com/docs/agent-approvals-security
+
+Vendor documentation establishes mechanics only. It is not SYNGAN runtime qualification evidence.
+
 ## Current boundary
 
 This operating model is planning/process authority.
