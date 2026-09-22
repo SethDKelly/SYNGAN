@@ -14,7 +14,7 @@ Phase 007 is complete as architecture/design history.
 
 That **implementation-reentry readiness conclusion is now superseded** by the later review against the fuller Daniel Jackson concept-design methodology.
 
-Current governing authority is [Jackson Design Completion & Implementation Hold](../../authority/jackson-design-completion-implementation-hold.md).
+Current governing authority is [Jackson Design Completion & Implementation Hold](../../../authority/jackson-design-completion-implementation-hold.md).
 
 ## What remains valid from Phase 007
 
