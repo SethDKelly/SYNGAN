@@ -10,6 +10,7 @@ ROOT = Path(__file__).resolve().parents[2]
 POLICY = ROOT / "docs" / "authority" / "agent-context-portable-workflows-tool-adapters.md"
 BUDGET = ROOT / "docs" / "authority" / "agent-context-budget.json"
 COMPAT = ROOT / "docs" / "authority" / "agent-tool-compatibility.json"
+QUALIFICATION = ROOT / "docs" / "implementation" / "agent-runtime-qualification-profile.json"
 SKILLS = ROOT / ".agents" / "skills"
 CLAUDE = ROOT / ".claude" / "CLAUDE.md"
 COMMANDS = ROOT / ".claude" / "commands"
@@ -89,17 +90,30 @@ def test_claude_adapter_is_thin_and_routes_to_shared_sources() -> None:
 
 def test_tool_compatibility_separates_documented_and_runtime_state() -> None:
     data = json.loads(COMPAT.read_text(encoding="utf-8"))
-    providers = ("cursor", "codex", "claude_code")
+    qualification = json.loads(QUALIFICATION.read_text(encoding="utf-8"))
 
     assert data["semantics"] == "documented_compatibility_is_not_runtime_certification"
-    for provider in providers:
-        entry = data["tools"][provider]
-        assert entry["documented_state"] == "compatible"
-        assert entry["runtime_state"] == "unverified"
+    assert (
+        qualification["semantics"]
+        == "documented_compatibility_does_not_equal_runtime_qualification"
+    )
+    assert data["qualification_profile"] == (
+        "docs/implementation/agent-runtime-qualification-profile.json"
+    )
 
-    assert data["tools"]["cursor"]["workflow_source"] == ".agents/skills/"
-    assert data["tools"]["codex"]["workflow_source"] == ".agents/skills/"
-    assert "thin bridges" in data["tools"]["claude_code"]["adapter"]
+    for provider in ("cursor", "codex"):
+        entry = data["tools"][provider]
+        runtime = qualification["providers"][provider]
+        assert entry["documented_state"] == "compatible"
+        assert entry["runtime_state"] == "pending_tool_in_loop"
+        assert runtime["runtime_state"] == entry["runtime_state"]
+        assert runtime["runtime_evidence"] == []
+        assert entry["workflow_source"] == ".agents/skills/"
+
+    claude = data["tools"]["claude_code"]
+    assert claude["documented_state"] == "compatible"
+    assert claude["runtime_state"] == "unverified"
+    assert "thin bridges" in claude["adapter"]
 
 
 def test_context_policy_preserves_progressive_disclosure_and_manual_fallback() -> None:
@@ -111,7 +125,8 @@ def test_context_policy_preserves_progressive_disclosure_and_manual_fallback() -
         "Skills define how to perform a bounded human-selected task.",
         "Documented capability is not provider-runtime certification.",
         "do not fork or duplicate SYNGAN semantics to obtain UX parity",
-        "016-F does not establish the full executable agentic conformance",
+        "Current Cursor/Codex autonomous-delivery roles and real-runtime qualification",
+        "It does not own autonomous delivery role assignment, runtime qualification evidence",
     ):
         assert phrase in text
 
