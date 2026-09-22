@@ -33,8 +33,8 @@ Start Gate  COMPLETE
 016-F       COMPLETE
 016-G       COMPLETE
 016-H       COMPLETE
-016-I       AUTHORIZED / ACTIVE
-016-J       NOT AUTHORIZED
+016-I       COMPLETE
+016-J       NEXT ELIGIBLE / NOT AUTHORIZED
 ~~~
 
 ## Planned sequence
@@ -215,24 +215,40 @@ P16-3 / P16-4                         0 / 0
 product/runtime/provider behavior     UNCHANGED / NOT AUTHORIZED
 ~~~
 
-## Current next boundary
+## 016-I closure
 
-## 016-I active execution
-
-[016-I — Dependency / Supply-Chain / Secrets, Compatibility / Benchmark / API-Versioning Preflight](016-I-dependency-supply-chain-secrets-compatibility-benchmark-versioning-preflight.md)
+[016-I — Dependency / Supply-Chain / Secrets, Compatibility / Benchmark / API-Versioning Preflight](016-I-dependency-supply-chain-secrets-compatibility-benchmark-versioning-preflight.md) is **COMPLETE**.
 
 ~~~text
-016-I                                  AUTHORIZED / ACTIVE
+016-I                                  COMPLETE
 change class                           P16-2
-dependency / lock provenance           IN SCOPE
-CI action provenance                   IN SCOPE
-checked-in secret hygiene              IN SCOPE
-compatibility/support evidence         IN SCOPE
-benchmark claim qualification          IN SCOPE
-package/API/versioning policy          IN SCOPE
-release residual register              IN SCOPE
-provider/runtime implementation        NOT AUTHORIZED
+engineering preflight authority        COMPLETE
+direct constraints                     10 / BOUNDED
+lock artifacts                         530 / SHA-256 INTEGRITY
+external CI action uses                5 / IMMUTABLE REVISION
+checkout credentials                   NON-PERSISTED
+checked-in secret guard                PASS / HIGH-CONFIDENCE
+preflight negative controls            11 / 11 PASS
+package negative controls              9 / 9 PASS
+cross-cutting negative controls        8 / 8 PASS
+project version                        0.0.0 / UNRELEASED PRE-1.0
+repository verified Python             3.11
+license decision                       UNRESOLVED / RELEASE-CANDIDATE BLOCKER
+current vulnerability review           EXTERNAL EVIDENCE REQUIRED / RC BLOCKER
+public compatibility windows           NOT DECLARED / RC BLOCKER
+enterprise-scale qualification         NOT ESTABLISHED / NON-CLAIM
+production provider qualification      NOT ESTABLISHED / NON-CLAIM
+stable-reference registry              27 ACTIVE / FULL OWNER COVERAGE
+engineering preflight stable ref       syngan://implementation/engineering-preflight
+OKF projection files                   29 / DETERMINISTIC
+agentic conformance                    35696035719 / #42 / PASS
+candidate Verify                       35696035664 / #1649 / PASS
+portable + C2..C9                      PASS
+P16-3 / P16-4                          0 / 0
+product/runtime/provider behavior      UNCHANGED / NOT AUTHORIZED
 release publication                    NOT AUTHORIZED
-license selection                      NOT AUTHORIZED
-016-J                                  NOT AUTHORIZED
 ~~~
+
+## Current next boundary
+
+**016-J — Repository Implementation-Readiness Scorecard, Residual Risk Register & Phase 016 Exit** is **NEXT ELIGIBLE / NOT AUTHORIZED** pending explicit proceed.
