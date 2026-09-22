@@ -75,7 +75,8 @@ Phase 013 architecture reconciliation   COMPLETE
 Phase 014 whole-design/readiness        COMPLETE
 Phase 015 implementation foundation     COMPLETE
 Phase 016 pre-implementation hardening  ACTIVE
-016-H package/traceability hardening    AUTHORIZED / ACTIVE
+016-H package/traceability hardening    COMPLETE
+016-I engineering preflight             NEXT ELIGIBLE / NOT AUTHORIZED
 active ADRs                             10
 superseded ADRs                          0
 ```
