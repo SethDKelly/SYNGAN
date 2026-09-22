@@ -85,7 +85,8 @@ def test_current_adr_index_is_reconciled_and_all_adrs_are_routed() -> None:
 
     assert len(adr_files) == 10
     assert "Phase 016 pre-implementation hardening  ACTIVE" in text
-    assert "016-H package/traceability hardening    AUTHORIZED / ACTIVE" in text
+    assert "016-H package/traceability hardening    COMPLETE" in text
+    assert "016-I engineering preflight             NEXT ELIGIBLE / NOT AUTHORIZED" in text
     assert "Implementation remains **NOT READY / NOT STARTED / NOT YET**." not in text
     for path in adr_files:
         assert path.name.split("-", maxsplit=2)[0] == "ADR"
