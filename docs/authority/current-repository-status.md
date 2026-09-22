@@ -30,7 +30,7 @@ Start Gate                          COMPLETE
 016-E                               COMPLETE
 016-F                               COMPLETE
 016-G                               COMPLETE
-016-H                               NEXT ELIGIBLE / NOT AUTHORIZED
+016-H                               AUTHORIZED / ACTIVE
 016-I..016-J                        NOT AUTHORIZED
 
 current conceptual blockers         0
@@ -77,7 +77,9 @@ Closure established deterministic UTF-8 context budgets, progressive-disclosure 
 
 Closure established a canonical dependency-free agentic conformance command, focused status/skill/adapter/link drift validators, composition with stable-reference/OKF/context-budget validators, eight isolated seeded negative controls, a human-readable conformance report, and a dedicated Python-only GitHub Actions lane. Agentic conformance workflow `35690366584` / `#6` and Verify workflow `35690366586` / `#1614` both passed on candidate head `39b76e8249b76c85178c1f595f7855ed66c8d3b8`; P16-3/P16-4 findings remain `0 / 0`.
 
-016-H — Implementation Package Contract, Design-to-Code Traceability & ADR Change Control — is NEXT ELIGIBLE / NOT AUTHORIZED pending explicit proceed.
+016-H — Implementation Package Contract, Design-to-Code Traceability & ADR Change Control — is AUTHORIZED / ACTIVE by explicit user proceed.
+
+016-H may define a prospective implementation-package format, design-to-code/verification traceability contract, architecture ADR change-control boundary, package/traceability validators, supporting agent workflow updates, and repository review-template alignment. It may not start a product implementation package merely because the format exists, define dependency/supply-chain/secrets/benchmark/API-version preflight reserved for 016-I, or authorize product/provider/runtime delivery.
 
 016-B closure established:
 
