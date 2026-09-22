@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "phase": "016-G",
+  "phase": "016-H",
   "status": "active",
   "rules": {
     "current_proposition": "exactly_one_preferred_current_owner",
@@ -12,7 +12,8 @@
     "stable_references": "exact_registry_resolution_not_path_or_search",
     "agent_authority": "human_directed_scope_tool_neutral_no_self_progression",
     "agent_context": "bounded_progressive_disclosure_provider_neutral",
-    "agentic_conformance": "deterministic_negative_controls_separate_from_product_health"
+    "agentic_conformance": "deterministic_negative_controls_separate_from_product_health",
+    "implementation_packages": "traceability_evidence_not_authorization_or_semantic_authority"
   },
   "owners": [
     {
@@ -94,6 +95,10 @@
     {
       "family": "implementation_governance",
       "path": "docs/implementation/implementation-authority-delivery-governance-toolchain-repository-enforcement.md"
+    },
+    {
+      "family": "implementation_package_traceability_change_control",
+      "path": "docs/implementation/implementation-package-traceability-adr-change-control.md"
     },
     {
       "family": "support_scope",
