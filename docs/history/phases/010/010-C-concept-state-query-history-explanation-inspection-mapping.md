@@ -43,7 +43,7 @@ implementation next          NOT YET
 
 010-C creates:
 
-- [Concept State, Query, History & Explanation → Inspection Mapping](../../mapping/concept-state-query-history-explanation-inspection-mapping.md)
+- [Concept State, Query, History & Explanation → Inspection Mapping](../../../mapping/concept-state-query-history-explanation-inspection-mapping.md)
 
 This becomes the current semantic inspection authority used by later Phase 010 subgroups.
 
