@@ -74,6 +74,7 @@ def test_repository_verifier_exposes_current_required_profiles() -> None:
         "authority",
         "references",
         "agentic",
+        "preflight",
         "okf",
         "static",
         "portable",
