@@ -21,7 +21,7 @@ def _load_json(path: Path) -> dict[str, Any]:
 
 
 def _load_toml(path: Path) -> dict[str, Any]:
-    return cast(dict[str, Any], tomllib.loads(path.read_text(encoding="utf-8")))
+    return tomllib.loads(path.read_text(encoding="utf-8"))
 
 
 def _requirement_strings(pyproject: dict[str, Any]) -> list[str]:
