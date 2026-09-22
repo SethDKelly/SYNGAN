@@ -25,19 +25,19 @@ It answers:
 Current upstream authority:
 
 - [Concept Design Methodology](../authority/design-methodology.md)
-- [Phase 009 Dependence, Application Family & Composition Consolidation](../authority/phase-009-dependence-composition-consolidation.md)
-- [Concept Action, Query, Preconditions/Postconditions & Lifecycle Normalization](../concepts/action-query-lifecycle-normalization.md)
-- [Concept State, Identity, History & Invariant Normalization](../concepts/state-identity-history-invariant-normalization.md)
+- [Phase 009 Dependence, Application Family & Composition Consolidation](../history/authority/phase-009-dependence-composition-consolidation.md)
+- [Concept Action, Query, Preconditions/Postconditions & Lifecycle Normalization](../history/concepts/action-query-lifecycle-normalization.md)
+- [Concept State, Identity, History & Invariant Normalization](../history/concepts/state-identity-history-invariant-normalization.md)
 - [Accepted Concept Catalog](../concepts/index.md)
 - [Actors & Needs](../problem/actors.md)
 - [Domain Terminology](../terminology/index.md)
 - [Semantic Distinctions](../terminology/semantic-distinctions.md)
-- [Phase 010 Entry & Decomposition](../phases/010/010-entry-decomposition.md)
+- [Phase 010 Entry & Decomposition](../history/phases/010/010-entry-decomposition.md)
 
 Retained experience evidence:
 
-- [Phase 003 Consolidated Experience Contract](../experience/phase-003-consolidated-experience-contract.md)
-- [Phase 006 Recovery, Security, Degraded, Historical & Topology Experience Contract](../experience/phase-006-recovery-security-degraded-history-topology-experience-contract.md)
+- [Phase 003 Consolidated Experience Contract](../history/experience/phase-003-consolidated-experience-contract.md)
+- [Phase 006 Recovery, Security, Degraded, Historical & Topology Experience Contract](../history/experience/phase-006-recovery-security-degraded-history-topology-experience-contract.md)
 
 Where retained experience evidence conflicts with normalized Phase 008/009 authority, Phase 008/009 governs and the older experience statement must be normalized rather than copied forward.
 
@@ -89,7 +89,7 @@ Every current Phase 010 mapping record must be expressible using the following f
 
 ## Current Phase 014 completion note
 
-This document preserves its Phase 010 derivation and original subgroup handoff as historical provenance. Phase 010 F1-F5 are complete; Phase 012 confirmed mapping completion; Phase 013 preserved mapping semantics in architecture; Phase 014-D re-audits the current mapping layer. Current subgroup sequencing is governed by [Phase 014](../phases/014/index.md).
+This document preserves its Phase 010 derivation and original subgroup handoff as historical provenance. Phase 010 F1-F5 are complete; Phase 012 confirmed mapping completion; Phase 013 preserved mapping semantics in architecture; Phase 014-D re-audits the current mapping layer. Current subgroup sequencing is governed by [Phase 014](../history/phases/014/index.md).
 
 ## M1 — Mapping identifier
 
