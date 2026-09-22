@@ -47,6 +47,24 @@ def _mutate(
         path.write_text(original, encoding="utf-8")
 
 
+def _unauthorized_progression(text: str) -> str:
+    active = re.sub(
+        r"016-H\.\.016-J\s+NOT AUTHORIZED",
+        "016-H                               AUTHORIZED / ACTIVE\n"
+        "016-I..016-J                        NOT AUTHORIZED",
+        text,
+        count=1,
+    )
+    if active != text:
+        return active
+    return re.sub(
+        r"016-H\s+NEXT ELIGIBLE / NOT AUTHORIZED",
+        "016-H                               AUTHORIZED / ACTIVE",
+        text,
+        count=1,
+    )
+
+
 def _budget_overflow(text: str) -> str:
     data = json.loads(text)
     data["limits"]["agents_md"] = 1
@@ -81,13 +99,7 @@ def main() -> int:
         _mutate(
             repo,
             "docs/authority/current-repository-status.md",
-            lambda text: re.sub(
-                r"016-H\.\.016-J\s+NOT AUTHORIZED",
-                "016-H                               AUTHORIZED / ACTIVE\n"
-                "016-I..016-J                        NOT AUTHORIZED",
-                text,
-                count=1,
-            ),
+            _unauthorized_progression,
             "tools/validate_agent_status.py",
             ("--repo", str(repo)),
             "unauthorized Phase 016 self-progression",
