@@ -14,12 +14,12 @@ Perform methodology obligation **H1**: audit the latest canonical SYNGAN concept
 
 ## Governing authority
 
-- [Concept Design Methodology](../../authority/design-methodology.md)
+- [Concept Design Methodology](../../../authority/design-methodology.md)
 - [Phase 008 Individual-Concept Consolidation](../008/008-H-phase-008-consolidation-individual-concept-completeness-decision-phase-009-handoff.md)
 - [Phase 009 Dependence & Composition Consolidation](../../authority/phase-009-dependence-composition-consolidation.md)
 - [Phase 010 Concept Mapping Consolidation](../../authority/phase-010-concept-mapping-consolidation.md)
 - [Phase 011 Design Quality & Misfit Consolidation](../../authority/phase-011-design-quality-misfit-consolidation.md)
-- [Residual Conceptual Misfit Register](../../authority/residual-conceptual-misfit-register.md)
+- [Residual Conceptual Misfit Register](../../../authority/residual-conceptual-misfit-register.md)
 - [Phase 012 Consolidation Authority](../../authority/phase-012-jackson-concept-design-consolidation.md)
 
 ## Audit dimensions
