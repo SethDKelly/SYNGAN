@@ -48,12 +48,12 @@ The fifteen accepted synchronizations are **current composition candidates**, no
 
 Phase 009 is governed by:
 
-- [Concept Design Methodology](../../authority/design-methodology.md);
-- [Jackson Design Completion & Implementation Hold](../../authority/jackson-design-completion-implementation-hold.md);
-- [Jackson Methodology Completion Matrix](../../authority/jackson-methodology-completion-matrix.md);
+- [Concept Design Methodology](../../../authority/design-methodology.md);
+- [Jackson Design Completion & Implementation Hold](../../../authority/jackson-design-completion-implementation-hold.md);
+- [Jackson Methodology Completion Matrix](../../../authority/jackson-methodology-completion-matrix.md);
 - [Phase 008 Individual-Concept Design Consolidation](../../concepts/phase-008-individual-concept-consolidation.md);
-- [Accepted Concept Catalog](../../concepts/index.md);
-- [Accepted Synchronizations](../../synchronizations/index.md);
+- [Accepted Concept Catalog](../../../concepts/index.md);
+- [Accepted Synchronizations](../../../synchronizations/index.md);
 - current Phase 008 normalization authorities.
 
 Historical Phase 001-G composition/dependency analysis, Phase 002 synchronization work, and Phase 006/007 adversarial/architecture evidence remain supporting evidence. They do not pre-decide the current Phase 009 result.
