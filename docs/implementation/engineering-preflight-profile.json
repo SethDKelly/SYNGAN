@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0",
+  "status": "active",
+  "authority": "docs/implementation/engineering-preflight-dependency-supply-chain-secrets-compatibility-benchmark-versioning.md",
+  "project": {
+    "name": "syngan",
+    "version": "0.0.0",
+    "release_state": "unreleased-pre-1.0-development",
+    "requires_python": ">=3.11",
+    "verified_python": [
+      "3.11"
+    ],
+    "runtime_dependencies_expected": []
+  },
+  "toolchain": {
+    "uv_required": ">=0.12,<0.13",
+    "verified_uv": "0.12.11",
+    "lockfile": "uv.lock",
+    "python_version_file": ".python-version"
+  },
+  "ci_actions": {
+    "actions/checkout": {
+      "release": "v7.0.1",
+      "sha": "3d3c42e5aac5ba805825da76410c181273ba90b1"
+    },
+    "actions/setup-python": {
+      "release": "v7.0.0",
+      "sha": "5fda3b95a4ea91299a34e894583c3862153e4b97"
+    },
+    "astral-sh/setup-uv": {
+      "release": "v10.0.1",
+      "sha": "20cfd1bf945f4377ade1205e4dbc17946fc9a30d"
+    }
+  },
+  "dependency_rules": {
+    "direct_constraints_must_be_bounded": true,
+    "vcs_dependencies_allowed": false,
+    "arbitrary_url_dependencies_allowed": false,
+    "external_lock_artifacts_require_hashes": true,
+    "allowed_registry": "https://pypi.org/simple",
+    "project_editable_source_allowed": true,
+    "lock_proves_vulnerability_freedom": false
+  },
+  "compatibility": {
+    "install_eligibility_is_verified_support": false,
+    "verified_python_scope": "3.11 only",
+    "public_release_compatibility_window": "not-declared",
+    "persistence_readability_window": "not-declared-for-public-release",
+    "wire_schema_window": "not-declared-for-public-release",
+    "extension_spi_window": "not-declared-for-public-release",
+    "production_spark_support": "not-claimed",
+    "production_databricks_support": "not-claimed",
+    "enterprise_scale_support": "not-qualified"
+  },
+  "benchmark": {
+    "contract_mechanism": "implemented-and-verified",
+    "synthetic_test_fixture_is_real_scale_evidence": false,
+    "current_real_scale_evidence": false,
+    "scale_claim_requires_exact_context": true
+  },
+  "release_candidate_requirements": [
+    "repository-deterministic-gates-pass",
+    "non-placeholder-release-version",
+    "distribution-license-selected",
+    "public-compatibility-windows-declared",
+    "current-external-vulnerability-review",
+    "package-build-install-verified",
+    "support-claims-evidence-bounded",
+    "human-release-authorization"
+  ],
+  "residuals": [
+    {
+      "id": "EP-R01",
+      "topic": "distribution-license",
+      "state": "unresolved",
+      "consequence": "release-candidate-blocker",
+      "evidence_class": "human-legal-release-decision"
+    },
+    {
+      "id": "EP-R02",
+      "topic": "current-vulnerability-advisory-review",
+      "state": "external-evidence-required",
+      "consequence": "release-candidate-blocker",
+      "evidence_class": "current-external-security-evidence"
+    },
+    {
+      "id": "EP-R03",
+      "topic": "public-compatibility-windows",
+      "state": "not-declared",
+      "consequence": "release-candidate-blocker",
+      "evidence_class": "release-compatibility-decision"
+    },
+    {
+      "id": "EP-R04",
+      "topic": "python-greater-than-3.11-executed-verification",
+      "state": "not-established",
+      "consequence": "support-non-claim",
+      "evidence_class": "executed-compatibility-evidence"
+    },
+    {
+      "id": "EP-R05",
+      "topic": "real-enterprise-scale-benchmark",
+      "state": "not-established",
+      "consequence": "scale-claim-blocker",
+      "evidence_class": "benchmark-support-evidence"
+    },
+    {
+      "id": "EP-R06",
+      "topic": "production-provider-qualification",
+      "state": "not-established",
+      "consequence": "provider-claim-blocker",
+      "evidence_class": "provider-runtime-evidence"
+    }
+  ]
+}
