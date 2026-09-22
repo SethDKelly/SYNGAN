@@ -26,7 +26,7 @@ Start Gate                          COMPLETE
 016-A                               COMPLETE
 016-B                               COMPLETE
 016-C                               COMPLETE
-016-D                               NEXT ELIGIBLE / NOT AUTHORIZED
+016-D                               AUTHORIZED / ACTIVE
 016-E..016-J                        NOT AUTHORIZED
 
 current conceptual blockers         0
@@ -57,7 +57,9 @@ Phase 016 does **not** authorize:
 
 Closure established an externally grounded producer profile, deterministic generated `knowledge/` compatibility projection, repository-owned generation/conformance checks, and explicit non-authority semantics for generated knowledge. Candidate Verify workflow `35684468631` / `#1581` passed portable and all C2–C9 gates with P16-3/P16-4 findings remaining `0 / 0`.
 
-016-D — Stable References, Deterministic Resolution & Drift Control — is NEXT ELIGIBLE / NOT AUTHORIZED pending explicit proceed.
+016-D — Stable References, Deterministic Resolution & Drift Control — is AUTHORIZED / ACTIVE by explicit user proceed.
+
+016-D may establish stable logical knowledge references, exact deterministic resolution/reverse-resolution, explicit retrieval failure behavior, and routing-drift controls. It may not define agent autonomy/scope/security policy reserved for 016-E, tool/context-budget adapters reserved for 016-F, or product/runtime/provider behavior.
 
 016-B closure established:
 
