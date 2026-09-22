@@ -91,18 +91,19 @@ P16-3 / P16-4 findings                0 / 0
 016-B                                 COMPLETE
 ~~~
 
-## 016-C active execution
+## 016-C closure
 
-[016-C — OKF v0.2 Producer Profile, Generated Knowledge Projection & Conformance](016-C-okf-v0.2-producer-profile-generated-knowledge-projection-conformance.md)
+[016-C — OKF v0.2 Producer Profile, Generated Knowledge Projection & Conformance](016-C-okf-v0.2-producer-profile-generated-knowledge-projection-conformance.md) is **COMPLETE**.
 
 ~~~text
-016-C                                 AUTHORIZED / ACTIVE
+016-C                                 COMPLETE
 change class                          P16-2
-product/runtime/provider behavior     NOT AUTHORIZED
-stable-reference/resolver work        RESERVED FOR 016-D
-agent authority/context/CI work       RESERVED FOR 016-E..016-G
+candidate Verify                      35684468631 / #1581 / PASS
+portable + C2..C9                     PASS
+P16-3 / P16-4                         0 / 0
+product/runtime/provider behavior     UNCHANGED / NOT AUTHORIZED
 ~~~
 
 ## Current next boundary
 
-**016-C — OKF v0.2 Producer Profile, Generated Knowledge Projection & Conformance** is **AUTHORIZED / ACTIVE**. 016-D remains **NOT AUTHORIZED** until 016-C exit evidence exists.
+**016-D — Stable References, Deterministic Resolution & Drift Control** is **NEXT ELIGIBLE / NOT AUTHORIZED** pending explicit proceed.
