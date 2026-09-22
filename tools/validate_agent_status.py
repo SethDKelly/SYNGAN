@@ -31,6 +31,7 @@ def main() -> int:
             / "phase-016-documentation-okf-agentic-implementation-readiness-hardening-authority.md"
         ),
         "phase_index": repo / "docs" / "phases" / "016" / "index.md",
+        "docs_index": repo / "docs" / "index.md",
         "agents": repo / "AGENTS.md",
     }
     texts: dict[str, str] = {}
@@ -55,6 +56,10 @@ def main() -> int:
         required = {
             "phase_authority": ("016-H       AUTHORIZED / ACTIVE", "016-I..J    NOT AUTHORIZED"),
             "phase_index": ("016-H       AUTHORIZED / ACTIVE", "016-I       NOT AUTHORIZED"),
+            "docs_index": (
+                "016-H                               AUTHORIZED / ACTIVE",
+                "016-I..016-J                        NOT AUTHORIZED",
+            ),
             "agents": (
                 "016-A through 016-G are complete; 016-H is AUTHORIZED / ACTIVE.",
                 "016-I and later groups remain NOT AUTHORIZED.",
@@ -73,6 +78,11 @@ def main() -> int:
             "phase_index": (
                 "016-H       COMPLETE",
                 "016-I       NEXT ELIGIBLE / NOT AUTHORIZED",
+            ),
+            "docs_index": (
+                "016-H                               COMPLETE",
+                "016-I                               NEXT ELIGIBLE / NOT AUTHORIZED",
+                "016-J                               NOT AUTHORIZED",
             ),
             "agents": (
                 "016-A through 016-H are complete; 016-I is NEXT ELIGIBLE / NOT AUTHORIZED.",
