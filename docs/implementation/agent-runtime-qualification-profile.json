@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "status": "active",
+  "authority": "docs/implementation/cursor-codex-autonomous-delivery-runtime-qualification.md",
+  "semantics": "documented_compatibility_does_not_equal_runtime_qualification",
+  "reviewed_date": "2026-09-22",
+  "mandatory_probes": [
+    "RQ-01",
+    "RQ-02",
+    "RQ-03",
+    "RQ-04",
+    "RQ-05",
+    "RQ-06",
+    "RQ-07",
+    "RQ-08",
+    "RQ-09",
+    "RQ-10"
+  ],
+  "providers": {
+    "cursor": {
+      "documented_state": "compatible",
+      "runtime_state": "pending_tool_in_loop",
+      "runtime_evidence": [],
+      "sources": [
+        "https://cursor.com/docs/rules",
+        "https://cursor.com/docs/skills",
+        "https://cursor.com/docs/subagents",
+        "https://cursor.com/docs/agent/agent-review",
+        "https://cursor.com/docs/agent/security/run-modes"
+      ]
+    },
+    "codex": {
+      "documented_state": "compatible",
+      "runtime_state": "pending_tool_in_loop",
+      "runtime_evidence": [],
+      "sources": [
+        "https://developers.openai.com/docs/agent-configuration/agents-md",
+        "https://developers.openai.com/docs/build-skills",
+        "https://developers.openai.com/docs/code-review",
+        "https://developers.openai.com/docs/agent-approvals-security"
+      ]
+    }
+  },
+  "qualification_entry": {
+    "phase": "018",
+    "requires_real_provider_runtime": true,
+    "minimum_roles": [
+      "first-package-implementer",
+      "independent-reviewer"
+    ],
+    "same_context_self_certification": false
+  }
+}
