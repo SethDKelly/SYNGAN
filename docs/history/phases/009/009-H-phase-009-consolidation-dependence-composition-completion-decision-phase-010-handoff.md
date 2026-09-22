@@ -16,11 +16,11 @@ It does not decompose or execute Phase 010, perform final Jackson concept-design
 
 ## Governing authority
 
-- [Concept Design Methodology](../../authority/design-methodology.md)
-- [Jackson Methodology Completion Matrix](../../authority/jackson-methodology-completion-matrix.md)
+- [Concept Design Methodology](../../../authority/design-methodology.md)
+- [Jackson Methodology Completion Matrix](../../../authority/jackson-methodology-completion-matrix.md)
 - [Phase 008 Individual-Concept Consolidation](../../concepts/phase-008-individual-concept-consolidation.md)
-- [Concept Dependence & Application Family](../../dependence/index.md)
-- [Synchronization Authority](../../synchronizations/index.md)
+- [Concept Dependence & Application Family](../../../dependence/index.md)
+- [Synchronization Authority](../../../synchronizations/index.md)
 - [009-F Trigger / Ownership Normalization](../../synchronizations/trigger-ownership-normalization.md)
 - [009-G Composition Economy / Synergy / Integrity](../../synchronizations/composition-economy-synergy-integrity.md)
 
