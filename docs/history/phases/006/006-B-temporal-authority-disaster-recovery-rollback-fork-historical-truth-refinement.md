@@ -18,10 +18,10 @@ The phase determines the correct Jackson-style ownership, historical-truth seman
 
 006-B is downstream of:
 
-- [Concept Design Methodology](../../authority/design-methodology.md);
-- [Accepted Concepts](../../concepts/index.md);
+- [Concept Design Methodology](../../../authority/design-methodology.md);
+- [Accepted Concepts](../../../concepts/index.md);
 - [Core Synchronizations](../../synchronizations/core-synchronizations.md);
-- [Execution Monitoring, Failure, Recovery & Cancellation Experience](../../experience/execution-monitoring-failure-recovery-cancellation.md);
+- [Execution Monitoring, Failure, Recovery & Cancellation Experience](../../../experience/execution-monitoring-failure-recovery-cancellation.md);
 - [Phase 004 Consolidated Architecture Contract](../../architecture/phase-004-consolidated-architecture-contract.md);
 - [Phase 005 Consolidated Implementation-Planning Contract](../../implementation/phase-005-consolidated-implementation-planning-contract.md);
 - [006-A Concept/Scope Revalidation](006-A-post-planning-concept-completeness-mechanism-vs-concept-scope-boundary-revalidation.md).
@@ -38,7 +38,7 @@ That record is design evidence rather than current authority.
 
 006-B creates the active cross-cutting:
 
-[Operational Authority Continuity & Regressive Recovery Contract](../../authority/operational-authority-continuity-regressive-recovery-contract.md).
+[Operational Authority Continuity & Regressive Recovery Contract](../../../authority/operational-authority-continuity-regressive-recovery-contract.md).
 
 The new contract is upstream of future architecture/implementation realization and constrains Execution, semantic result owners, Provenance/history, current authorization/security behavior and deployment recovery.
 
