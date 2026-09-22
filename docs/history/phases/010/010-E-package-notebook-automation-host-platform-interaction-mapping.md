@@ -32,7 +32,7 @@ No accepted concept, application-family relation or synchronization changes as a
 
 010-E creates:
 
-- [Package, Notebook, Automation, Host-Platform & Optional Presentation Interaction Mapping](../../mapping/package-notebook-automation-host-platform-interaction-mapping.md)
+- [Package, Notebook, Automation, Host-Platform & Optional Presentation Interaction Mapping](../../../mapping/package-notebook-automation-host-platform-interaction-mapping.md)
 
 This becomes the current Phase 010 physical/surface responsibility authority.
 
