@@ -31,8 +31,8 @@ Start Gate                          COMPLETE
 016-F                               COMPLETE
 016-G                               COMPLETE
 016-H                               COMPLETE
-016-I                               AUTHORIZED / ACTIVE
-016-J                               NOT AUTHORIZED
+016-I                               COMPLETE
+016-J                               NEXT ELIGIBLE / NOT AUTHORIZED
 
 current conceptual blockers         0
 current upstream reopens            0
@@ -82,9 +82,13 @@ Closure established a canonical dependency-free agentic conformance command, foc
 
 Closure established a prospective non-authorizing implementation-package contract/profile, stable authority-to-code/test/evidence traceability, Class 0–4 package discipline, architecture ADR change control, a deterministic package validator, nine isolated package negative controls, the bounded `update-traceability` workflow, and current-program-neutral review guidance. Agentic conformance workflow `35692897700` / `#22` and Verify workflow `35692897709` / `#1629` both passed on candidate head `90d325a0d62011a38ccd0c3012e437640233d21d`. The repository has 26 active stable references, 28 generated knowledge files, 0 active implementation-package manifests, 10 retained architecture ADRs, and P16-3/P16-4 findings remain `0 / 0`.
 
-016-I — Dependency / Supply-Chain / Secrets, Compatibility / Benchmark / API-Versioning Preflight — is AUTHORIZED / ACTIVE by explicit user proceed.
+016-I — Dependency / Supply-Chain / Secrets, Compatibility / Benchmark / API-Versioning Preflight — is COMPLETE.
 
-016-I may harden repository dependency provenance, CI action pinning, checked-in secret hygiene, compatibility/support/release evidence discipline, benchmark-claim preflight, package/API versioning policy, and deterministic preflight checks. It may record truthful release blockers or unqualified support dimensions. It may not choose a distribution license on the user's behalf, manufacture vulnerability/benchmark/provider evidence, add provider/runtime delivery, publish a release, or authorize 016-J.
+Closure established a canonical engineering-preflight authority/profile, bounded direct-dependency and lock-integrity checks, immutable CI action provenance with non-persisted checkout credentials, high-confidence checked-in secret hygiene, compatibility/support/benchmark claim discipline, explicit pre-1.0 version/release semantics, and eleven isolated engineering-preflight negative controls. Agentic conformance workflow `35696035719` / `#42` and Verify workflow `35696035664` / `#1649` both passed on candidate head `f42550f0d17dea91afd4f5d168f9af158b883e86`. Deterministic evidence reports 10 bounded direct constraints, 530 SHA-256 lock artifacts, 5 immutable external action uses, 27 active stable references, and 29 generated knowledge files.
+
+The preflight intentionally retains external/human evidence residuals rather than fabricating readiness: distribution-license selection, current vulnerability/advisory review, and public compatibility-window definition are release-candidate blockers; Python >3.11 verification, real enterprise-scale benchmark evidence, and production provider qualification remain explicit support/claim non-readiness. None requires a P16-3/P16-4 reopen.
+
+016-J — Repository Implementation-Readiness Scorecard, Residual Risk Register & Phase 016 Exit — is NEXT ELIGIBLE / NOT AUTHORIZED pending explicit proceed.
 
 016-B closure established:
 
