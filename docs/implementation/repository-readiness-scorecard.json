@@ -1,0 +1,134 @@
+{
+  "schema_version": "1.0",
+  "status": "active",
+  "authority": "docs/implementation/repository-implementation-readiness-residual-risk.md",
+  "scoring_scope": "repository-readiness-for-separately-authorized-implementation-program",
+  "not_scoring": [
+    "public-release-readiness",
+    "provider-certification",
+    "enterprise-scale-qualification",
+    "deployment-readiness",
+    "legal-license-approval"
+  ],
+  "dimensions": [
+    {
+      "id": "design_semantic_completion",
+      "weight": 15,
+      "score": 15
+    },
+    {
+      "id": "architecture_realization_fitness",
+      "weight": 12,
+      "score": 12
+    },
+    {
+      "id": "verification_evidence_discipline",
+      "weight": 12,
+      "score": 12
+    },
+    {
+      "id": "authority_change_control_discipline",
+      "weight": 8,
+      "score": 8
+    },
+    {
+      "id": "documentation_topology_ownership",
+      "weight": 10,
+      "score": 10
+    },
+    {
+      "id": "documentation_concision_indexing",
+      "weight": 8,
+      "score": 8
+    },
+    {
+      "id": "okf_routing_conformance",
+      "weight": 7,
+      "score": 7
+    },
+    {
+      "id": "agentic_development_foundation",
+      "weight": 10,
+      "score": 10
+    },
+    {
+      "id": "implementation_package_traceability",
+      "weight": 7,
+      "score": 7
+    },
+    {
+      "id": "dependency_supply_chain_development_security",
+      "weight": 5,
+      "score": 5
+    },
+    {
+      "id": "compatibility_benchmark_release_preflight",
+      "weight": 6,
+      "score": 6
+    }
+  ],
+  "total_weight": 100,
+  "total_score": 100,
+  "decision": "ready-for-separately-authorized-start-gate",
+  "blockers_to_program_entry": [],
+  "residuals": [
+    {
+      "id": "RR-016-01",
+      "source": "EP-R01",
+      "blocks_program_entry": false,
+      "blocks": [
+        "public-release-candidate",
+        "distribution"
+      ],
+      "state": "unresolved"
+    },
+    {
+      "id": "RR-016-02",
+      "source": "EP-R02",
+      "blocks_program_entry": false,
+      "blocks": [
+        "public-release-candidate"
+      ],
+      "state": "external-evidence-required"
+    },
+    {
+      "id": "RR-016-03",
+      "source": "EP-R03",
+      "blocks_program_entry": false,
+      "blocks": [
+        "public-release-candidate",
+        "public-compatibility-promise"
+      ],
+      "state": "not-declared"
+    },
+    {
+      "id": "RR-016-04",
+      "source": "EP-R04",
+      "blocks_program_entry": false,
+      "blocks": [
+        "python-support-beyond-3.11"
+      ],
+      "state": "not-established"
+    },
+    {
+      "id": "RR-016-05",
+      "source": "EP-R05",
+      "blocks_program_entry": false,
+      "blocks": [
+        "enterprise-scale-support"
+      ],
+      "state": "not-established"
+    },
+    {
+      "id": "RR-016-06",
+      "source": "EP-R06",
+      "blocks_program_entry": false,
+      "blocks": [
+        "production-provider-support"
+      ],
+      "state": "not-established"
+    }
+  ],
+  "phase_016_exit_requires_new_program_authorization": true,
+  "next_program_authorized": false
+}
