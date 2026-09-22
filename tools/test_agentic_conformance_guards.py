@@ -176,8 +176,9 @@ def main() -> int:
         _mutate(
             repo,
             "AGENTS.md",
-            lambda text: text
-            + "\n[Broken agentic route](docs/authority/not-a-real-agentic-owner.md)\n",
+            lambda text: (
+                text + "\n[Broken agentic route](docs/authority/not-a-real-agentic-owner.md)\n"
+            ),
             "tools/validate_agentic_links.py",
             ("--repo", str(repo)),
             "broken current agent-facing link",
