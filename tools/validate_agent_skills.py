@@ -47,8 +47,7 @@ def main() -> int:
 
     if actual != set(EXPECTED):
         errors.append(
-            "canonical skill set drift: "
-            f"expected {sorted(EXPECTED)}, found {sorted(actual)}"
+            f"canonical skill set drift: expected {sorted(EXPECTED)}, found {sorted(actual)}"
         )
 
     for name, action_class in EXPECTED.items():
