@@ -17,14 +17,15 @@ Phase 015 implementation foundation   COMPLETE
 Phase 016 repository hardening        COMPLETE
 C0-C9                                 ACTIVE / PASS
 repository implementation readiness   100 / 100
-next implementation program           REQUIRES EXPLICIT START GATE / NOT AUTHORIZED
-public release                        NOT READY / NOT AUTHORIZED
+Phase 017 planning                     AUTHORIZED / ACTIVE — PLANNING ONLY
+product implementation execution      NOT AUTHORIZED
+public release                         NOT READY / NOT AUTHORIZED
 ```
 
 The readiness score means the repository has the current authority, verification,
 documentation, agentic-development, implementation-package, supply-chain, and preflight
-controls needed to begin a **future separately authorized implementation program**. It is
-not a release, provider, deployment, legal/license, or scale qualification.
+controls needed to begin a separately authorized implementation program. Phase 017 is
+currently authorized to design that program only; coding remains unauthorized.
 
 ## Start here
 
