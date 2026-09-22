@@ -188,8 +188,8 @@ Phase 016   AUTHORIZED / ACTIVE
 016-F       COMPLETE
 016-G       COMPLETE
 016-H       COMPLETE
-016-I       AUTHORIZED / ACTIVE
-016-J       NOT AUTHORIZED
+016-I       COMPLETE
+016-J       NEXT ELIGIBLE / NOT AUTHORIZED
 product delivery beyond hardening  NOT AUTHORIZED
 ~~~
 
@@ -437,3 +437,31 @@ The user explicitly authorized 016-I after the verified 016-H closure.
 - authorize 016-J or a post-Phase-016 product program.
 
 016-J remains NOT AUTHORIZED until 016-I exit evidence exists.
+
+
+## 016-I completion evidence
+
+[016-I — Dependency / Supply-Chain / Secrets, Compatibility / Benchmark / API-Versioning Preflight](../phases/016/016-I-dependency-supply-chain-secrets-compatibility-benchmark-versioning-preflight.md) completed the non-semantic engineering-preflight hardening slice.
+
+~~~text
+016-I                                  COMPLETE
+change class                           P16-2
+canonical engineering preflight        COMPLETE
+bounded direct constraints             10
+SHA-256 lock artifacts                 530
+immutable external action uses         5
+engineering preflight negatives        11 / 11 PASS
+stable references                      27 ACTIVE
+OKF projection                         29 FILES / PASS
+agentic conformance                    35696035719 / #42 / PASS
+candidate Verify                       35696035664 / #1649 / PASS
+portable + C2..C9                      PASS
+release-candidate blockers             3 / EXPLICIT
+support/provider/scale nonclaims       PRESERVED
+P16-3 / P16-4                          0 / 0
+016-J                                  NEXT ELIGIBLE / NOT AUTHORIZED
+~~~
+
+The three release-candidate blockers are distribution-license selection, a current external vulnerability/advisory review, and explicit public compatibility windows. Additional Python-version, real-scale, and production-provider evidence remains unestablished and therefore unclaimed. These residuals are inputs to 016-J; they are not silently converted into readiness.
+
+016-J remains gated pending explicit user authorization.
