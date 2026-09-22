@@ -34,7 +34,7 @@ Start Gate  COMPLETE
 016-G       COMPLETE
 016-H       COMPLETE
 016-I       COMPLETE
-016-J       NEXT ELIGIBLE / NOT AUTHORIZED
+016-J       AUTHORIZED / ACTIVE
 ~~~
 
 ## Planned sequence
@@ -251,4 +251,19 @@ release publication                    NOT AUTHORIZED
 
 ## Current next boundary
 
-**016-J — Repository Implementation-Readiness Scorecard, Residual Risk Register & Phase 016 Exit** is **NEXT ELIGIBLE / NOT AUTHORIZED** pending explicit proceed.
+## 016-J active execution
+
+[016-J — Repository Implementation-Readiness Scorecard, Residual Risk Register & Phase 016 Exit](016-J-repository-implementation-readiness-scorecard-residual-risk-phase-exit.md)
+
+~~~text
+016-J                                  AUTHORIZED / ACTIVE
+change class                           P16-2
+fixed readiness scorecard              IN SCOPE
+A-I evidence consolidation             IN SCOPE
+residual risk classification           IN SCOPE
+Phase 016 exit decision                IN SCOPE
+post-Phase-016 handoff                 IN SCOPE
+next implementation program            NOT AUTHORIZED
+release/provider/scale promotion        NOT AUTHORIZED
+product/runtime/provider behavior      NOT AUTHORIZED
+~~~
