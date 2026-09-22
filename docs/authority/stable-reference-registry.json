@@ -166,6 +166,13 @@
       "owner_family": "implementation_package_traceability_change_control"
     },
     {
+      "ref": "syngan://implementation/engineering-preflight",
+      "path": "docs/implementation/engineering-preflight-dependency-supply-chain-secrets-compatibility-benchmark-versioning.md",
+      "status": "active",
+      "authority_class": "current",
+      "owner_family": "engineering_preflight"
+    },
+    {
       "ref": "syngan://implementation/support-scope",
       "path": "docs/implementation/current-support-scope.md",
       "status": "active",
