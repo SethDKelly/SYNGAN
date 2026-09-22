@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "package_id": "IPKG-9000",
+  "title": "Fixture — package traceability validator",
+  "status": "complete",
+  "change_class": 1,
+  "authorization_basis": "TEST FIXTURE ONLY — not a product delivery authorization",
+  "authority_refs": [
+    "syngan://implementation/governance",
+    "syngan://implementation/package-contract"
+  ],
+  "scope": {
+    "included_paths": [
+      "src/syngan/__init__.py",
+      "tests/unit/test_bootstrap_metadata.py"
+    ],
+    "excluded": [
+      "provider/runtime delivery",
+      "deployment"
+    ]
+  },
+  "obligations": [
+    {
+      "id": "O-001",
+      "authority_ref": "syngan://implementation/governance",
+      "section": "Toolchain is repository-owned",
+      "implementation_paths": [
+        "src/syngan/__init__.py"
+      ],
+      "verification_paths": [
+        "tests/unit/test_bootstrap_metadata.py"
+      ],
+      "evidence_state": "verified",
+      "note": "Fixture maps an existing package/bootstrap artifact to existing deterministic test evidence."
+    }
+  ],
+  "verification": {
+    "commands": [
+      "python tools/verify.py bootstrap"
+    ],
+    "ci_evidence": [
+      "fixture-only; no execution claim"
+    ]
+  },
+  "compatibility": {
+    "assessment": "no public/persisted/compatibility contract change",
+    "migration_strategy": "not required for this Class 1 fixture"
+  },
+  "adr_refs": [
+    "ADR-0001"
+  ],
+  "unresolved": [],
+  "non_claims": [
+    "This fixture is not an active implementation package.",
+    "This fixture does not authorize product/provider/runtime work."
+  ]
+}
