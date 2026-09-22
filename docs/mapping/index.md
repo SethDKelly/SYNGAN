@@ -80,6 +80,6 @@ The whole-design audit must preserve decision-material qualifiers, current-versu
 
 ## Current next boundary
 
-Current Phase 014 subgroup sequencing is governed by [`docs/phases/014/index.md`](../phases/014/index.md).
+Current Phase 014 subgroup sequencing is governed by [`docs/phases/014/index.md`](../history/phases/014/index.md).
 
 Implementation remains **NOT READY / NOT STARTED / NOT YET**.
