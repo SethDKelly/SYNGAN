@@ -21,8 +21,8 @@ Implementation work remains downstream of:
 - [Documentation Governance and Anti-Drift Rules](../authority/documentation-governance.md);
 - [Accepted Concepts](../concepts/index.md);
 - [Accepted Synchronizations](../synchronizations/index.md);
-- [Phase 003 Consolidated Experience Contract](../experience/phase-003-consolidated-experience-contract.md);
-- [Phase 004 Consolidated Architecture Contract](../architecture/phase-004-consolidated-architecture-contract.md);
+- [Phase 003 Consolidated Experience Contract](../history/experience/phase-003-consolidated-experience-contract.md);
+- [Phase 004 Consolidated Architecture Contract](../history/architecture/phase-004-consolidated-architecture-contract.md);
 - the detailed architecture authority relevant to the implementation slice;
 - active ADR rationale when a material architecture choice is being implemented.
 
