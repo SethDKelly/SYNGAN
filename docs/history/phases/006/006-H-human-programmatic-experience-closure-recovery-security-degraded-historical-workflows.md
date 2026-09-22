@@ -17,11 +17,11 @@ Close the actor-facing and programmatic experience gaps created by the Phase 006
 006-H is downstream of:
 
 - [Phase 003 Consolidated Experience Contract](../../experience/phase-003-consolidated-experience-contract.md);
-- [Operational Authority Continuity & Regressive Recovery Contract](../../authority/operational-authority-continuity-regressive-recovery-contract.md);
-- [Self-Contained Execution & Runtime Distribution Closure Contract](../../authority/self-contained-execution-runtime-distribution-closure-contract.md);
-- [Enterprise Scale, Resource Admission, Approximation & Degraded Operation Contract](../../authority/enterprise-scale-resource-admission-approximation-degraded-operation-contract.md);
-- [Privacy, Disclosure Risk, Formal Guarantee & External Release Boundary Contract](../../authority/privacy-disclosure-formal-guarantee-release-boundary-contract.md);
-- [Structured-Data Topology & Relationship Semantics Contract](../../authority/structured-data-topology-relationship-semantics-contract.md);
+- [Operational Authority Continuity & Regressive Recovery Contract](../../../authority/operational-authority-continuity-regressive-recovery-contract.md);
+- [Self-Contained Execution & Runtime Distribution Closure Contract](../../../authority/self-contained-execution-runtime-distribution-closure-contract.md);
+- [Enterprise Scale, Resource Admission, Approximation & Degraded Operation Contract](../../../authority/enterprise-scale-resource-admission-approximation-degraded-operation-contract.md);
+- [Privacy, Disclosure Risk, Formal Guarantee & External Release Boundary Contract](../../../authority/privacy-disclosure-formal-guarantee-release-boundary-contract.md);
+- [Structured-Data Topology & Relationship Semantics Contract](../../../authority/structured-data-topology-relationship-semantics-contract.md);
 - [Core Synchronizations](../../synchronizations/core-synchronizations.md).
 
 ## Discovery evidence
