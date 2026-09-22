@@ -12,3 +12,4 @@ Cross-cutting repository authority and progression routes.
 - [Stable Reference Contract](stable-reference-contract.md) - Canonical stable-reference, deterministic-resolution, and drift-control contract.
 - [Agent Authority, Human-Directed Scope, Change Classes, Security & Trust Boundaries](agent-development-policy.md) - Canonical tool-neutral agent authority, scope, action-class, security, and trust contract.
 - [Agent Context, Portable Workflows & Tool Adapter Contract](agent-context-workflows.md) - Canonical bounded-context, portable-skill, and provider-adapter contract.
+- [Agentic Conformance, Negative Controls, Drift Detection & CI](agentic-conformance.md) - Canonical deterministic agentic conformance, negative-control, drift, and CI contract.
