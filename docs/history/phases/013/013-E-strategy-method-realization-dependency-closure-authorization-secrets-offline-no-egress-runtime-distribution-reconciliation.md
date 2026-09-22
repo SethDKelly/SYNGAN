@@ -18,10 +18,10 @@ Reconcile retained Strategy/method realization, implementation-binding, dependen
 - [013-B Representation Reconciliation](../../architecture/phase-013-b-representation-layering-public-contract-identity-view-reconciliation.md)
 - [013-C Persistence Reconciliation](../../architecture/phase-013-c-control-persistence-history-concurrency-migration-recovery-reconciliation.md)
 - [013-D Distributed Data Reconciliation](../../architecture/phase-013-d-distributed-data-topology-manifest-candidate-promotion-reconciliation.md)
-- [Synthesis Strategy](../../concepts/synthesis-strategy.md)
-- [Network & External Dependency Policy](../../authority/network-external-dependency-policy.md)
-- [Self-Contained Runtime Distribution Closure](../../authority/self-contained-execution-runtime-distribution-closure-contract.md)
-- [Reproducibility Contract](../../authority/reproducibility-contract.md)
+- [Synthesis Strategy](../../../concepts/synthesis-strategy.md)
+- [Network & External Dependency Policy](../../../authority/network-external-dependency-policy.md)
+- [Self-Contained Runtime Distribution Closure](../../../authority/self-contained-execution-runtime-distribution-closure-contract.md)
+- [Reproducibility Contract](../../../authority/reproducibility-contract.md)
 - retained Phase 004-E / 004-H / 007-G architecture
 - ADR-0004, ADR-0007 and ADR-0010 as rationale inputs
 
