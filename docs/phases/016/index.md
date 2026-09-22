@@ -30,7 +30,7 @@ Start Gate  COMPLETE
 016-C       COMPLETE
 016-D       COMPLETE
 016-E       COMPLETE
-016-F       NEXT ELIGIBLE / NOT AUTHORIZED
+016-F       AUTHORIZED / ACTIVE
 016-G       NOT AUTHORIZED
 016-H       NOT AUTHORIZED
 016-I       NOT AUTHORIZED
@@ -145,4 +145,22 @@ product/runtime/provider behavior     UNCHANGED / NOT AUTHORIZED
 
 ## Current next boundary
 
-**016-F — Context Budgets, Portable Skills, Tool Adapters** is **NEXT ELIGIBLE / NOT AUTHORIZED** pending explicit proceed.
+## 016-F active execution
+
+[016-F — Context Budgets, Portable Skills, Tool Adapters](016-F-context-budgets-portable-skills-tool-adapters.md)
+
+~~~text
+016-F                                 AUTHORIZED / ACTIVE
+change class                          P16-2
+context-discovery budget              IN SCOPE
+portable canonical skills             IN SCOPE
+Cursor/Codex/Claude adapter mechanics IN SCOPE
+degraded/manual fallback              IN SCOPE
+agentic negative-control CI           RESERVED FOR 016-G
+implementation package/ADR rules      RESERVED FOR 016-H
+product/runtime/provider behavior     NOT AUTHORIZED
+~~~
+
+## Current next boundary
+
+**016-F — Context Budgets, Portable Skills, Tool Adapters** is **AUTHORIZED / ACTIVE**. 016-G remains **NOT AUTHORIZED** until 016-F exit evidence exists.
