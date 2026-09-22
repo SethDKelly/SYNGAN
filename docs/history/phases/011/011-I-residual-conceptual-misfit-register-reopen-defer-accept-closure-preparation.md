@@ -12,7 +12,7 @@ Consolidate every Phase 011-B through 011-H finding into one explicit current-st
 
 Canonical authority:
 
-- [Residual Conceptual Misfit Register, Dispositions & Closure Preparation](../../authority/residual-conceptual-misfit-register.md)
+- [Residual Conceptual Misfit Register, Dispositions & Closure Preparation](../../../authority/residual-conceptual-misfit-register.md)
 
 011-I remains concept design only.
 
