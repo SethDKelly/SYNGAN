@@ -182,8 +182,9 @@ The user explicitly authorized Phase 016 and requested execution of the first su
 Phase 016   AUTHORIZED / ACTIVE
 016-A       COMPLETE
 016-B       COMPLETE
-016-C       AUTHORIZED / ACTIVE
-016-D..J    NOT AUTHORIZED
+016-C       COMPLETE
+016-D       NEXT ELIGIBLE / NOT AUTHORIZED
+016-E..J    NOT AUTHORIZED
 product delivery beyond hardening  NOT AUTHORIZED
 ~~~
 
@@ -288,4 +289,6 @@ The user explicitly authorized 016-C after the audited 016-B closure.
 - establish the separate agentic negative-control/CI program reserved for 016-G;
 - change product semantics, architecture contracts, runtime/provider behavior, or Phase 015 support claims.
 
-016-D through 016-J remain gated until 016-C exit evidence exists.
+016-C closure evidence is recorded in the phase work record. Candidate Verify workflow `35684468631` / `#1581` passed portable and C2–C9 with no P16-3/P16-4 reopen.
+
+016-D — Stable References, Deterministic Resolution & Drift Control — is NEXT ELIGIBLE / NOT AUTHORIZED. 016-E through 016-J remain NOT AUTHORIZED.
