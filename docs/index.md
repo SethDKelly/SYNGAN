@@ -62,7 +62,8 @@ Phase 014 whole-design/readiness    COMPLETE
 Phase 015 implementation foundation COMPLETE
 Phase 016                           COMPLETE
 Phase 017                           COMPLETE
-017-A..017-I                        COMPLETE
+017-A..017-H                        COMPLETE
+017-I                               COMPLETE
 Phase 017 exit                      PASS WITH CARRY-FORWARD
 
 repository implementation readiness READY FOR EXPLICIT START GATE / 100 OF 100

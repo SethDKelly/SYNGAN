@@ -15,7 +15,7 @@ Generated content cannot establish or override SYNGAN authority.
 - [Current authority routing](authority/index.md) - Cross-cutting repository authority and progression routes.
 - [Current design routing](design/index.md) - Current problem, semantic, experience, mapping, and architecture routes.
 - [Current implementation routing](implementation/index.md) - Current implementation governance and supported-boundary routes.
-- [Current program routing](program/index.md) - Active implementation-program planning and non-authoritative future-work routes.
+- [Current program routing](program/index.md) - Completed Phase 017 handoff and non-authoritative future-work routes.
 - [History and provenance routing](provenance/index.md) - Explicit route to preserved historical evidence.
 
 Producer contract: [OKF v0.2 Producer Profile](../docs/authority/okf-v0.2-producer-profile.md).

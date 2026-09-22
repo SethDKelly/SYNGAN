@@ -24,7 +24,8 @@ def _mode(current: str) -> str:
     if re.search(r"^016-J\s+COMPLETE$", current, re.M):
         return P16_CLOSED
     raise ValueError(
-        "current status must declare 016-J active/complete, Phase 017 planning-only active, or Phase 017 complete"
+        "current status must declare 016-J active/complete, "
+        "Phase 017 planning-only active, or Phase 017 complete"
     )
 
 

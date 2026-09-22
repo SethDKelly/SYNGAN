@@ -4,7 +4,6 @@ import argparse
 import json
 from pathlib import Path
 
-
 EXPECTED_OUTPUTS = [
     "syngan://implementation/phase-lifecycle",
     "syngan://implementation/agent-delivery",
