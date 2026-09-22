@@ -31,7 +31,7 @@ Start Gate  COMPLETE
 016-D       COMPLETE
 016-E       COMPLETE
 016-F       COMPLETE
-016-G       NEXT ELIGIBLE / NOT AUTHORIZED
+016-G       AUTHORIZED / ACTIVE
 016-H       NOT AUTHORIZED
 016-I       NOT AUTHORIZED
 016-J       NOT AUTHORIZED
@@ -168,4 +168,23 @@ product/runtime/provider behavior     UNCHANGED / NOT AUTHORIZED
 
 ## Current next boundary
 
-**016-G — Agentic Conformance, Negative Controls, Drift Detection & CI** is **NEXT ELIGIBLE / NOT AUTHORIZED** pending explicit proceed.
+## 016-G active execution
+
+[016-G — Agentic Conformance, Negative Controls, Drift Detection & CI](016-G-agentic-conformance-negative-controls-drift-detection-ci.md)
+
+~~~text
+016-G                                 AUTHORIZED / ACTIVE
+change class                          P16-2
+unified agentic conformance           IN SCOPE
+negative controls                     IN SCOPE
+drift detection                       IN SCOPE
+dedicated CI                          IN SCOPE
+provider runtime certification        OUT OF SCOPE / UNVERIFIED
+implementation package/ADR rules      RESERVED FOR 016-H
+dependency/supply-chain/secrets       RESERVED FOR 016-I
+product/runtime/provider behavior     NOT AUTHORIZED
+~~~
+
+## Current next boundary
+
+**016-G — Agentic Conformance, Negative Controls, Drift Detection & CI** is **AUTHORIZED / ACTIVE**. 016-H remains **NOT AUTHORIZED** until 016-G exit evidence exists.
