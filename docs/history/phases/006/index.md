@@ -67,11 +67,11 @@ The supported baseline also requires source-derived/local free-form-text synthes
 
 ## Phase 006 promoted authority
 
-- [Operational Authority Continuity & Regressive Recovery](../../authority/operational-authority-continuity-regressive-recovery-contract.md)
-- [Self-Contained Execution & Runtime Distribution Closure](../../authority/self-contained-execution-runtime-distribution-closure-contract.md)
-- [Enterprise Scale, Resource Admission, Approximation & Degraded Operation](../../authority/enterprise-scale-resource-admission-approximation-degraded-operation-contract.md)
-- [Privacy, Disclosure Risk, Formal Guarantee & External Release Boundary](../../authority/privacy-disclosure-formal-guarantee-release-boundary-contract.md)
-- [Structured-Data Topology & Relationship Semantics](../../authority/structured-data-topology-relationship-semantics-contract.md)
+- [Operational Authority Continuity & Regressive Recovery](../../../authority/operational-authority-continuity-regressive-recovery-contract.md)
+- [Self-Contained Execution & Runtime Distribution Closure](../../../authority/self-contained-execution-runtime-distribution-closure-contract.md)
+- [Enterprise Scale, Resource Admission, Approximation & Degraded Operation](../../../authority/enterprise-scale-resource-admission-approximation-degraded-operation-contract.md)
+- [Privacy, Disclosure Risk, Formal Guarantee & External Release Boundary](../../../authority/privacy-disclosure-formal-guarantee-release-boundary-contract.md)
+- [Structured-Data Topology & Relationship Semantics](../../../authority/structured-data-topology-relationship-semantics-contract.md)
 - [Phase 006 Recovery, Security, Degraded, Historical & Topology Experience Contract](../../experience/phase-006-recovery-security-degraded-history-topology-experience-contract.md)
 - [Phase 006 Architecture Reconciliation Contract](../../architecture/phase-006-architecture-reconciliation-contract.md)
 - [Phase 006 Implementation-Planning Reconciliation](../../implementation/phase-006-implementation-planning-reconciliation.md)
