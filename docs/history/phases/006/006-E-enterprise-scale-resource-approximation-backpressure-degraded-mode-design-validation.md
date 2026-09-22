@@ -16,11 +16,11 @@ Stress-test SYNGAN's accepted semantic, operational, runtime-distribution and pl
 
 006-E is downstream of:
 
-- [Enterprise Scale Envelope](../../problem/enterprise-scale-envelope.md);
-- [Accepted Concepts](../../concepts/index.md);
+- [Enterprise Scale Envelope](../../../problem/enterprise-scale-envelope.md);
+- [Accepted Concepts](../../../concepts/index.md);
 - [Core Synchronizations](../../synchronizations/core-synchronizations.md);
-- [Operational Authority Continuity & Regressive Recovery Contract](../../authority/operational-authority-continuity-regressive-recovery-contract.md);
-- [Self-Contained Execution & Runtime Distribution Closure Contract](../../authority/self-contained-execution-runtime-distribution-closure-contract.md);
+- [Operational Authority Continuity & Regressive Recovery Contract](../../../authority/operational-authority-continuity-regressive-recovery-contract.md);
+- [Self-Contained Execution & Runtime Distribution Closure Contract](../../../authority/self-contained-execution-runtime-distribution-closure-contract.md);
 - [Phase 004 Consolidated Architecture Contract](../../architecture/phase-004-consolidated-architecture-contract.md);
 - [Phase 005 Consolidated Implementation-Planning Contract](../../implementation/phase-005-consolidated-implementation-planning-contract.md);
 - [006-D Strategy/Method/Topology Probe Exit](006-D-reference-strategy-method-topology-design-probes-algorithm-neutrality-stress-test.md).
@@ -51,7 +51,7 @@ reopened candidate concepts    Relationship
 
 006-E establishes the canonical:
 
-[Enterprise Scale, Resource Admission, Approximation & Degraded Operation Contract](../../authority/enterprise-scale-resource-admission-approximation-degraded-operation-contract.md).
+[Enterprise Scale, Resource Admission, Approximation & Degraded Operation Contract](../../../authority/enterprise-scale-resource-admission-approximation-degraded-operation-contract.md).
 
 ## Governing design rule
 
