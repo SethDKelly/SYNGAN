@@ -4,7 +4,6 @@ import argparse
 import json
 from pathlib import Path
 
-
 EXPECTED_LAYERS = [f"QL-{number:02d}" for number in range(1, 11)]
 EXPECTED_CAPABILITIES = [f"MVP-C{number:02d}" for number in range(1, 9)]
 REQUIRED_CHALLENGES = ["CH-01", "CH-02", "CH-03", "CH-04", "CH-05", "CH-07", "CH-08"]
