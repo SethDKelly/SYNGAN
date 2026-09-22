@@ -4,7 +4,7 @@ import argparse
 import json
 import re
 from pathlib import Path
-from typing import Any
+from typing import Any, cast
 
 PACKAGE_ID = re.compile(r"^IPKG-[0-9]{4}$")
 OBLIGATION_ID = re.compile(r"^O-[0-9]{3}$")
@@ -12,7 +12,7 @@ ADR_ID = re.compile(r"^ADR-[0-9]{4}$")
 
 
 def _load_json(path: Path) -> dict[str, Any]:
-    return json.loads(path.read_text(encoding="utf-8"))
+    return cast(dict[str, Any], json.loads(path.read_text(encoding="utf-8")))
 
 
 def _active_refs(repo: Path) -> set[str]:
