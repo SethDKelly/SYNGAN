@@ -21,7 +21,7 @@ Route humans and agents to the smallest current owner. Historical design, phase,
 7. [Architecture](architecture/index.md)
 8. [Cross-Cutting Authority](authority/index.md)
 9. [Current Implementation & Support Scope](implementation/current-support-scope.md)
-10. [Active Phase 016 Hardening](phases/016/index.md)
+10. [Completed Phase 016 Hardening](phases/016/index.md)
 
 Use [Backlog](backlog/index.md) only for non-authoritative future work and [History](history/index.md) only for rationale, provenance, supersession analysis, or reconstruction.
 
@@ -35,7 +35,7 @@ methodology / cross-cutting authority
   > experience / mapping
   > current architecture topic owners
   > implementation governance / current support scope
-  > active Phase 016 hardening authority
+  > completed Phase 016 hardening / current readiness authority
   > code / tests / provider evidence
   > backlog
 
@@ -55,7 +55,7 @@ Phase 014 whole-design/readiness    COMPLETE
 Phase 015 implementation foundation COMPLETE
 C0-C9                               ACTIVE / PASS
 
-Phase 016                           ACTIVE — PRE-IMPLEMENTATION HARDENING
+Phase 016                           COMPLETE
 016-A                               COMPLETE
 016-B                               COMPLETE
 016-C                               COMPLETE
@@ -65,8 +65,10 @@ Phase 016                           ACTIVE — PRE-IMPLEMENTATION HARDENING
 016-G                               COMPLETE
 016-H                               COMPLETE
 016-I                               COMPLETE
-016-J                               AUTHORIZED / ACTIVE
+016-J                               COMPLETE
 
+repository implementation readiness READY FOR EXPLICIT START GATE / 100 OF 100
+next implementation program         REQUIRES EXPLICIT START GATE / NOT AUTHORIZED
 product/provider/runtime delivery   NOT AUTHORIZED
 ~~~
 
