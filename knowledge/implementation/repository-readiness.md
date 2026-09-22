@@ -17,4 +17,4 @@ Stable reference: `syngan://implementation/readiness`.
 
 Canonical source: [Repository Implementation Readiness & Residual Risk](../../docs/implementation/repository-implementation-readiness-residual-risk.md).
 
-This route cannot authorize implementation, release, provider support, scale claims, or any next program.
+This file is a compatibility route only. It cannot establish or override SYNGAN semantic, architecture, implementation, or program authority.
