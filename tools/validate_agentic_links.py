@@ -14,9 +14,11 @@ def _target(source: Path, raw: str, repo: Path) -> Path | None:
         return None
     if urlparse(value).scheme:
         return None
-    return (repo / value.lstrip("/")).resolve() if value.startswith("/") else (
-        source.parent / value
-    ).resolve()
+    return (
+        (repo / value.lstrip("/")).resolve()
+        if value.startswith("/")
+        else (source.parent / value).resolve()
+    )
 
 
 def _files(repo: Path) -> list[Path]:
@@ -49,9 +51,7 @@ def main() -> int:
         for raw in LINK.findall(text):
             target = _target(path, raw, repo)
             if target is not None and not target.exists():
-                errors.append(
-                    f"{path.relative_to(repo)}: broken local Markdown link target: {raw}"
-                )
+                errors.append(f"{path.relative_to(repo)}: broken local Markdown link target: {raw}")
 
     for error in errors:
         print("ERROR", error)
