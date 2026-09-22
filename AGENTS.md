@@ -40,7 +40,7 @@ Bounded context and tool portability are governed by [Agent Context, Portable Wo
 
 Use exact `syngan://...` resolution when a stable reference is known; otherwise route through `docs/index.md` to the smallest current owner. Loading another file requires a concrete task question it answers.
 
-Canonical reusable workflows live under `.agents/skills/`: `resolve-context`, `resolve-reference`, `execute-selected-work`, `review-change`, and `run-verification`. Skills are procedures only; invoking one does not expand the human-selected task or change A1-A4 authority.
+Canonical reusable workflows live under `.agents/skills/`: `resolve-context`, `resolve-reference`, `execute-selected-work`, `review-change`, `run-verification`, and `update-traceability`. Skills are procedures only; invoking one does not expand the human-selected task or change A1-A4 authority.
 ## Agentic conformance
 
 Repository agentic/documentation conformance is governed by [Agentic Conformance, Negative Controls, Drift Detection & CI](docs/authority/agentic-conformance-policy.md).
