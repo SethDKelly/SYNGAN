@@ -50,7 +50,5 @@ def test_v0x_mvp_boundary_is_current_routed_authority() -> None:
 
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
     implementation = next(group for group in manifest["groups"] if group["id"] == "implementation")
-    route = next(
-        item for item in implementation["routes"] if item["id"] == "v0x-mvp-boundary"
-    )
+    route = next(item for item in implementation["routes"] if item["id"] == "v0x-mvp-boundary")
     assert route["ref"] == stable["ref"]

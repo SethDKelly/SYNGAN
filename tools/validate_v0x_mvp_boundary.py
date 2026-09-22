@@ -117,7 +117,6 @@ def main() -> int:
 
     for phrase in (
         "017-E                               COMPLETE",
-        "017-F                               NEXT ELIGIBLE / NOT AUTHORIZED",
         "product implementation execution   NOT AUTHORIZED",
         "active implementation packages     0",
     ):

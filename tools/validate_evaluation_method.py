@@ -113,7 +113,6 @@ def main() -> int:
 
     for phrase in (
         "017-D                               COMPLETE",
-        "017-E                               NEXT ELIGIBLE / NOT AUTHORIZED",
         "product implementation execution   NOT AUTHORIZED",
     ):
         if phrase not in status:
