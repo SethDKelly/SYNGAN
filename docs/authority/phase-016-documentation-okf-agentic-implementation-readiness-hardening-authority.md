@@ -188,7 +188,7 @@ Phase 016   AUTHORIZED / ACTIVE
 016-F       COMPLETE
 016-G       COMPLETE
 016-H       COMPLETE
-016-I       NEXT ELIGIBLE / NOT AUTHORIZED
+016-I       AUTHORIZED / ACTIVE
 016-J       NOT AUTHORIZED
 product delivery beyond hardening  NOT AUTHORIZED
 ~~~
@@ -411,4 +411,29 @@ The user explicitly authorized 016-H after the verified 016-G closure.
 
 016-H closure evidence is recorded in the phase work record. Agentic conformance workflow `35692897700` / `#22` and Verify workflow `35692897709` / `#1629` both passed on the substantive candidate. Package conformance reports 0 active package manifests and 10 retained ADRs; all nine package negative controls and all eight cross-cutting agentic negative controls pass; stable-reference/OKF/context-budget conformance remains green; P16-3/P16-4 findings remain `0 / 0`.
 
-016-I — Dependency / Supply-Chain / Secrets, Compatibility / Benchmark / API-Versioning Preflight — is NEXT ELIGIBLE / NOT AUTHORIZED. 016-J remains NOT AUTHORIZED.
+## 016-I authorization
+
+The user explicitly authorized 016-I after the verified 016-H closure.
+
+016-I is a documented **P16-2 engineering-preflight hardening contract**. It may:
+
+- make dependency and lock provenance deterministic and reviewable;
+- pin repository CI actions to immutable revisions while retaining human-readable release labels;
+- add high-confidence checked-in secret/credential hygiene and negative controls;
+- define current compatibility evidence versus install eligibility and unsupported/unverified dimensions;
+- define benchmark evidence required before scale/performance/support promotion;
+- define pre-1.0 package/API/versioning and release-candidate preflight rules;
+- record unresolved release blockers such as license selection or current external vulnerability evidence without fabricating a choice or result;
+- compose the preflight validator into existing repository verification/conformance.
+
+016-I must not:
+
+- select a license or legal policy for the user;
+- claim that a lockfile proves current vulnerability freedom;
+- treat synthetic/unit benchmark fixtures as production scale evidence;
+- broaden Python/provider/platform support beyond executed evidence;
+- publish a package/release/tag;
+- add production provider/runtime integrations;
+- authorize 016-J or a post-Phase-016 product program.
+
+016-J remains NOT AUTHORIZED until 016-I exit evidence exists.
