@@ -14,6 +14,7 @@ def test_completed_phases_are_separated_from_active_phase_space() -> None:
         assert not (DOCS / "phases" / f"{phase:03d}").exists()
 
     assert (DOCS / "phases" / "016").is_dir()
+    assert (DOCS / "phases" / "017").is_dir()
 
 
 def test_current_owner_map_resolves_to_existing_current_paths() -> None:
