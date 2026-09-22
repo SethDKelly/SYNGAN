@@ -160,6 +160,12 @@
           "ref": "syngan://implementation/v0x-mvp-boundary"
         },
         {
+          "id": "v0x-implementation-program",
+          "title": "v0.x Implementation Program — Phase 018-025 Dependency & Package Strategy",
+          "description": "Canonical Phase 018-025 dependency order, phase boundaries, package decomposition, candidate-freeze, and qualification-repair routing.",
+          "ref": "syngan://implementation/v0x-program"
+        },
+        {
           "id": "implementation-package-contract",
           "title": "Implementation Package, Traceability & ADR Change Control",
           "description": "Canonical prospective implementation-package, traceability, evidence, and ADR change-control contract.",

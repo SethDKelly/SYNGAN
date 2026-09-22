@@ -10,6 +10,7 @@ Current implementation governance and supported-boundary routes.
 - [Cursor/Codex Autonomous Delivery & Runtime Qualification](autonomous-agent-delivery.md) - Canonical bounded Cursor/Codex delivery roles, context isolation, tool-switching, and runtime qualification contract.
 - [Success Visibility, Holdout Evaluation & Anti-Gaming](success-visibility-holdout-evaluation.md) - Canonical split-visibility, evaluator-independence, holdout-generation, replay, contamination, and anti-gaming methodology.
 - [v0.x Package MVP Scope, Capability/Version Milestones & Release Boundaries](v0x-mvp-boundary.md) - Canonical v0.x package-MVP capability, milestone, version-selection, release-state, support non-claim, and residual-risk boundary.
+- [v0.x Implementation Program — Phase 018-025 Dependency & Package Strategy](v0x-program.md) - Canonical Phase 018-025 dependency order, phase boundaries, package decomposition, candidate-freeze, and qualification-repair routing.
 - [Implementation Package, Traceability & ADR Change Control](implementation-package-contract.md) - Canonical prospective implementation-package, traceability, evidence, and ADR change-control contract.
 - [Engineering Preflight](engineering-preflight.md) - Canonical dependency, supply-chain, secrets, compatibility, benchmark, and version/release preflight authority.
 - [Repository Implementation Readiness & Residual Risk](repository-readiness.md) - Canonical Phase 016 exit scorecard, residual-risk classification, and post-phase handoff boundary.

@@ -29,6 +29,7 @@ implementation phase lifecycle -> phase/gate/evidence/exit control; never produc
 autonomous agent delivery -> bounded Cursor/Codex roles and runtime qualification; never roadmap authority
 success/holdout evaluation -> visible requirements, independent challenge realization, replay, contamination rotation, anti-gaming
 v0.x MVP boundary -> qualified package capability, milestones, version/release separation, support non-claims, residual mapping
+v0.x implementation program -> Phase 018-025 dependencies, package decomposition, candidate freeze, qualification repair routing
 implementation packages -> traceability/evidence containers; never authorization or semantic owners
 engineering preflight -> deterministic release hygiene; never release/support/legal authority
 repository readiness -> evidence-backed start-gate readiness; never program/release authority
@@ -73,6 +74,7 @@ If a current proposition cannot be assigned deterministically, stop the affected
 | Cursor/Codex autonomous delivery/runtime qualification | `docs/implementation/cursor-codex-autonomous-delivery-runtime-qualification.md` |
 | success visibility/holdout evaluation/anti-gaming | `docs/implementation/success-visibility-holdout-evaluation-anti-gaming.md` |
 | v0.x package-MVP scope/version/release boundary | `docs/implementation/v0x-package-mvp-scope-version-release-boundaries.md` |
+| v0.x implementation program / Phase 018-025 dependency-package strategy | `docs/implementation/v0x-implementation-program-phase-018-025-dependency-package-strategy.md` |
 | implementation package/traceability/ADR change control | `docs/implementation/implementation-package-traceability-adr-change-control.md` |
 | dependency/supply-chain/secrets/compatibility/benchmark/version preflight | `docs/implementation/engineering-preflight-dependency-supply-chain-secrets-compatibility-benchmark-versioning.md` |
 | repository implementation readiness/residual risk | `docs/implementation/repository-implementation-readiness-residual-risk.md` |
@@ -81,6 +83,7 @@ If a current proposition cannot be assigned deterministically, stop the affected
 | completed Phase 016 hardening authority | `docs/authority/phase-016-documentation-okf-agentic-implementation-readiness-hardening-authority.md` |
 | completed Phase 016 work records | `docs/phases/016/` |
 | active Phase 017 planning records | `docs/phases/017/` |
+| planned Phase 018-025 definitions | `docs/phases/018/` through `docs/phases/025/` — scope constraints only; not execution authority |
 | historical phase/design/implementation evidence | `docs/history/` |
 
 ## Current vs history rule

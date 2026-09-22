@@ -42,8 +42,9 @@ Phase 017                           AUTHORIZED / ACTIVE — PLANNING ONLY
 017-C                               COMPLETE
 017-D                               COMPLETE
 017-E                               COMPLETE
-017-F                               NEXT ELIGIBLE / NOT AUTHORIZED
-017-G..017-I                        PLANNED / NOT AUTHORIZED
+017-F                               COMPLETE
+017-G                               NEXT ELIGIBLE / NOT AUTHORIZED
+017-H..017-I                        PLANNED / NOT AUTHORIZED
 
 product implementation execution   NOT AUTHORIZED
 active implementation packages     0
@@ -103,6 +104,12 @@ Actual runtime qualification is a Phase 018 start-gate prerequisite and cannot b
 
 017-E established `syngan://implementation/v0x-mvp-boundary`: MVP-C01..MVP-C08 define the bounded package-MVP capability; MVP-M0..MVP-M7 define capability milestones without equating phases to versions; `0.0.0` remains the Phase 017 placeholder; the exact non-placeholder v0.x candidate version is evidence-driven and selected by Phase 024; and package-MVP candidate, qualified MVP, public release candidate, published release, production-provider support, and enterprise-scale support are separate states/claims. RR-016-01..RR-016-06 remain truthful claim-specific residuals rather than being artificially closed by MVP scope.
 
-017-F — Phase 018-025 Definitions, Dependency Graph & Package Strategy — is **NEXT ELIGIBLE / NOT AUTHORIZED**.
+017-F — Phase 018-025 Definitions, Dependency Graph & Package Strategy — is **COMPLETE**.
+
+017-F established `syngan://implementation/v0x-program`: strict Phase 018-025 dependency order, planned-but-not-authorized phase definitions, start-gate-derived IPKG decomposition, default serialized one-package/one-branch delivery, bounded within-phase concurrency only when explicitly independent, no cross-phase packages, Phase 024 exact candidate freeze, and evaluation-only Phase 025 defect routing back to the smallest owning implementation phase/package under fresh authorization.
+
+017-G — MVP Completion Testing, Qualification & Independent Exit Method — is **NEXT ELIGIBLE / NOT AUTHORIZED**.
+
+Phase 018 through Phase 025 execution remains **NOT AUTHORIZED**.
 
 Product implementation execution remains **NOT AUTHORIZED**. No implementation package is active. Phase 018 or later execution requires explicit human selection after Phase 017 completes its planning work.

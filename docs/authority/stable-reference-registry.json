@@ -187,6 +187,13 @@
       "owner_family": "v0x_mvp_scope_version_release_boundary"
     },
     {
+      "ref": "syngan://implementation/v0x-program",
+      "path": "docs/implementation/v0x-implementation-program-phase-018-025-dependency-package-strategy.md",
+      "status": "active",
+      "authority_class": "current",
+      "owner_family": "v0x_implementation_program"
+    },
+    {
       "ref": "syngan://implementation/package-contract",
       "path": "docs/implementation/implementation-package-traceability-adr-change-control.md",
       "status": "active",

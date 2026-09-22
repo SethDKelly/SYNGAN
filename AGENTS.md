@@ -59,6 +59,12 @@ The bounded v0.x target, capability milestones, version-selection policy, releas
 
 A qualified package MVP is not automatically a release candidate. Do not map phase numbers mechanically to package versions, close release/provider/scale residuals by scope exclusion, or imply production Spark/Databricks/provider support from the bounded Spark-capable MVP path.
 
+## v0.x implementation program
+
+Phase 018-025 dependency order, package decomposition, candidate freeze, and qualification-repair routing are governed by [v0.x Implementation Program — Phase 018-025 Dependency & Package Strategy](docs/implementation/v0x-implementation-program-phase-018-025-dependency-package-strategy.md).
+
+A phase is not a package. Actual IPKG manifests are derived only by an explicitly selected phase start gate. Package/phase completion never self-authorizes later work. Phase 025 is evaluation-only and may not repair its frozen candidate.
+
 ## Agentic conformance
 
 Repository agentic/documentation conformance is governed by [Agentic Conformance, Negative Controls, Drift Detection & CI](docs/authority/agentic-conformance-policy.md).
@@ -102,4 +108,4 @@ Current status and subphase authorization are owned by docs/authority/current-re
 
 ## Current next boundary
 
-**Phase 017 planning is active by explicit human authorization. 017-A through 017-E are COMPLETE; 017-F is NEXT ELIGIBLE / NOT AUTHORIZED. Product implementation execution and Phase 018+ remain NOT AUTHORIZED.**
+**Phase 017 planning is active by explicit human authorization. 017-A through 017-F are COMPLETE; 017-G is NEXT ELIGIBLE / NOT AUTHORIZED. Product implementation execution and Phase 018+ remain NOT AUTHORIZED.**

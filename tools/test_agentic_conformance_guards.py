@@ -214,6 +214,20 @@ def main() -> int:
 
         _mutate(
             repo,
+            "docs/implementation/v0x-program-profile.json",
+            lambda text: text.replace(
+                '"cross_phase_concurrency": false',
+                '"cross_phase_concurrency": true',
+                1,
+            ),
+            "tools/validate_v0x_program.py",
+            ("--repo", str(repo)),
+            "cross-phase implementation concurrency enabled",
+            errors,
+        )
+
+        _mutate(
+            repo,
             "AGENTS.md",
             lambda text: (
                 text + "\n[Broken agentic route](docs/authority/not-a-real-agentic-owner.md)\n"
@@ -226,7 +240,7 @@ def main() -> int:
 
     for error in errors:
         print("ERROR", error)
-    print(f"Agentic conformance negative controls: {len(errors)} error(s), 11 control(s)")
+    print(f"Agentic conformance negative controls: {len(errors)} error(s), 12 control(s)")
     return 1 if errors else 0
 
 

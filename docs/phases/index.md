@@ -12,6 +12,19 @@ status: active
 
 Phase 017 designs the implementation program but does not authorize product implementation. See [Current Repository Status](../authority/current-repository-status.md) for the current subphase and execution boundary.
 
+## Planned v0.x implementation phases — NOT AUTHORIZED
+
+- [Phase 018 — Implementation Execution Start Gate & Autonomous Delivery Qualification](018/phase-definition.md)
+- [Phase 019 — Public Python Package Surface, Composition & Installable Foundation](019/phase-definition.md)
+- [Phase 020 — Complete Minimal End-to-End Vertical Workflow](020/phase-definition.md)
+- [Phase 021 — Baseline Structured-Data & Strategy Coverage](021/phase-definition.md)
+- [Phase 022 — Spark-Capable Distributed Realization](022/phase-definition.md)
+- [Phase 023 — Security, Recovery, Reproducibility & Failure-Mode Hardening](023/phase-definition.md)
+- [Phase 024 — v0.x Package Productization, Compatibility & Candidate Freeze](024/phase-definition.md)
+- [Phase 025 — v0.x MVP Independent Qualification & Completion Decision](025/phase-definition.md)
+
+These are Phase 017-F planning definitions. None authorizes execution.
+
 ## Latest completed phase
 
 - [Phase 016 — Documentation Topology, OKF, Agentic Development & Implementation-Readiness Hardening](016/index.md) — **COMPLETE**

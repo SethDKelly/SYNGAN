@@ -1,0 +1,138 @@
+{
+  "schema_version": "1.0",
+  "status": "active",
+  "authority": "docs/implementation/v0x-implementation-program-phase-018-025-dependency-package-strategy.md",
+  "stable_ref": "syngan://implementation/v0x-program",
+  "phase_order": [
+    "018",
+    "019",
+    "020",
+    "021",
+    "022",
+    "023",
+    "024",
+    "025"
+  ],
+  "phase_level_dependency_mode": "strict_sequential",
+  "dependency_edges": [
+    [
+      "018",
+      "019"
+    ],
+    [
+      "019",
+      "020"
+    ],
+    [
+      "020",
+      "021"
+    ],
+    [
+      "021",
+      "022"
+    ],
+    [
+      "022",
+      "023"
+    ],
+    [
+      "023",
+      "024"
+    ],
+    [
+      "024",
+      "025"
+    ]
+  ],
+  "cross_phase_concurrency": false,
+  "phases": [
+    {
+      "phase": "018",
+      "title": "Implementation Execution Start Gate & Autonomous Delivery Qualification",
+      "milestone": "MVP-M0",
+      "product_implementation": false,
+      "package_mode": "no_product_packages",
+      "planned_by_017f": true
+    },
+    {
+      "phase": "019",
+      "title": "Public Python Package Surface, Composition & Installable Foundation",
+      "milestone": "MVP-M1",
+      "product_implementation": true,
+      "package_mode": "start_gate_derived",
+      "planned_by_017f": true
+    },
+    {
+      "phase": "020",
+      "title": "Complete Minimal End-to-End Vertical Workflow",
+      "milestone": "MVP-M2",
+      "product_implementation": true,
+      "package_mode": "start_gate_derived",
+      "planned_by_017f": true
+    },
+    {
+      "phase": "021",
+      "title": "Baseline Structured-Data & Strategy Coverage",
+      "milestone": "MVP-M3",
+      "product_implementation": true,
+      "package_mode": "start_gate_derived",
+      "planned_by_017f": true
+    },
+    {
+      "phase": "022",
+      "title": "Spark-Capable Distributed Realization",
+      "milestone": "MVP-M4",
+      "product_implementation": true,
+      "package_mode": "start_gate_derived",
+      "planned_by_017f": true
+    },
+    {
+      "phase": "023",
+      "title": "Security, Recovery, Reproducibility & Failure-Mode Hardening",
+      "milestone": "MVP-M5",
+      "product_implementation": true,
+      "package_mode": "start_gate_derived",
+      "planned_by_017f": true
+    },
+    {
+      "phase": "024",
+      "title": "v0.x Package Productization, Compatibility & Candidate Freeze",
+      "milestone": "MVP-M6",
+      "product_implementation": true,
+      "package_mode": "start_gate_derived",
+      "planned_by_017f": true
+    },
+    {
+      "phase": "025",
+      "title": "v0.x MVP Independent Qualification & Completion Decision",
+      "milestone": "MVP-M7",
+      "product_implementation": false,
+      "package_mode": "evaluation_only_no_product_packages",
+      "planned_by_017f": true
+    }
+  ],
+  "package_strategy": {
+    "phase_is_package": false,
+    "package_is_smaller_than_phase": true,
+    "actual_packages_derived_by_selected_phase_start_gate": true,
+    "roadmap_package_families_are_authorization": false,
+    "actual_manifest_contract": "IPKG-####",
+    "package_creation_authorizes_work": false,
+    "one_branch_per_package_default": true,
+    "concurrent_packages_default": false,
+    "concurrent_packages_require_explicit_independence_and_authorization": true,
+    "cross_phase_packages_allowed": false,
+    "package_completion_authorizes_next": false,
+    "phase_completion_authorizes_next": false
+  },
+  "qualification_repair": {
+    "phase_025_evaluator_may_modify_frozen_candidate": false,
+    "phase_025_contains_product_implementation_packages": false,
+    "defect_requires_not_ready_disposition": true,
+    "repair_requires_explicit_human_authorization": true,
+    "repair_routes_to_smallest_owning_phase_or_package": true,
+    "class_3_4_reopen_rules_apply": true,
+    "new_candidate_freeze_required_after_repair": true,
+    "fresh_holdout_required_after_repair": true
+  }
+}
