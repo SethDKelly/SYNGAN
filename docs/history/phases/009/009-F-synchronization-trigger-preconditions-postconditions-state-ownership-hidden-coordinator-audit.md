@@ -14,12 +14,12 @@ Normalize the thirteen active synchronization rules established by 009-E into ex
 
 ## Governing authority
 
-- [Concept Design Methodology](../../authority/design-methodology.md)
-- [Jackson Methodology Completion Matrix](../../authority/jackson-methodology-completion-matrix.md)
+- [Concept Design Methodology](../../../authority/design-methodology.md)
+- [Jackson Methodology Completion Matrix](../../../authority/jackson-methodology-completion-matrix.md)
 - [Concept Action/Query/Lifecycle Normalization](../../concepts/action-query-lifecycle-normalization.md)
 - [009-E Synchronization Inventory Revalidation](../../synchronizations/application-family-revalidation.md)
-- [Application Family](../../dependence/application-family-valid-subsets.md)
-- [Contraction / Extension Consequences](../../dependence/contraction-extension-consequences.md)
+- [Application Family](../../../dependence/application-family-valid-subsets.md)
+- [Contraction / Extension Consequences](../../../dependence/contraction-extension-consequences.md)
 
 009-F establishes current detailed composition authority:
 
