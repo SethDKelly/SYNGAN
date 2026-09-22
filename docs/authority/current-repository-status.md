@@ -27,7 +27,7 @@ Start Gate                          COMPLETE
 016-B                               COMPLETE
 016-C                               COMPLETE
 016-D                               COMPLETE
-016-E                               NEXT ELIGIBLE / NOT AUTHORIZED
+016-E                               AUTHORIZED / ACTIVE
 016-F..016-J                        NOT AUTHORIZED
 
 current conceptual blockers         0
@@ -62,7 +62,9 @@ Closure established an externally grounded producer profile, deterministic gener
 
 Closure established 22 active `syngan://...` stable references covering every canonical ownership-map family, exact fail-closed forward/reverse resolution, OKF route binding through stable references, and mechanical registry/ownership/projection drift detection. Candidate Verify workflow `35686359067` / `#1592` passed portable and all C2–C9 gates with P16-3/P16-4 findings remaining `0 / 0`.
 
-016-E — Agent Authority, Human-Directed Scope, Change Classes, Security & Trust Boundaries — is NEXT ELIGIBLE / NOT AUTHORIZED pending explicit proceed.
+016-E — Agent Authority, Human-Directed Scope, Change Classes, Security & Trust Boundaries — is AUTHORIZED / ACTIVE by explicit user proceed.
+
+016-E may define the shared tool-neutral agent authority model, human-directed scope envelope, A1–A4 action classes, P16 interaction/escalation rules, least-privilege/security boundaries, content/instruction trust rules, and completion/review invariants. It may not define context budgets, skills or provider/tool adapters reserved for 016-F, the executable agentic negative-control/CI program reserved for 016-G, or product/runtime/provider behavior.
 
 016-B closure established:
 
