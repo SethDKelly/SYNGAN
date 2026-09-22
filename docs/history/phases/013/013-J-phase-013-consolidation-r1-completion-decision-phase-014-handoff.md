@@ -71,7 +71,7 @@ It does not mean the design can never be reopened. A future genuine contradictio
 
 ## Current architecture authority
 
-The consolidated current architecture is [Phase 013 Consolidated Architecture Contract](../../architecture/phase-013-consolidated-architecture-contract.md).
+The consolidated current architecture is [Phase 013 Consolidated Architecture Contract](../../../architecture/phase-013-consolidated-architecture-contract.md).
 
 Its current authority chain is:
 
