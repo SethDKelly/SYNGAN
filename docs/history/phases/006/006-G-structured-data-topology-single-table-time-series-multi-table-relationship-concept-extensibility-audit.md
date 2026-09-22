@@ -16,16 +16,16 @@ Resolve the reopened `Relationship` candidate, define the semantic ownership of 
 
 006-G is downstream of:
 
-- [Concept Design Methodology](../../authority/design-methodology.md);
+- [Concept Design Methodology](../../../authority/design-methodology.md);
 - [Concept Review Criteria](../../discovery/concept-review-criteria.md);
-- [Data Meaning](../../concepts/data-meaning.md);
-- [Constraint](../../concepts/constraint.md);
-- [Generation](../../concepts/generation.md);
-- [Evaluation](../../concepts/evaluation.md);
-- [Evidence](../../concepts/evidence.md);
+- [Data Meaning](../../../concepts/data-meaning.md);
+- [Constraint](../../../concepts/constraint.md);
+- [Generation](../../../concepts/generation.md);
+- [Evaluation](../../../concepts/evaluation.md);
+- [Evidence](../../../concepts/evidence.md);
 - [Core Synchronizations](../../synchronizations/core-synchronizations.md);
-- [Enterprise Scale, Resource Admission, Approximation & Degraded Operation Contract](../../authority/enterprise-scale-resource-admission-approximation-degraded-operation-contract.md);
-- [Privacy, Disclosure Risk, Formal Guarantee & External Release Boundary Contract](../../authority/privacy-disclosure-formal-guarantee-release-boundary-contract.md);
+- [Enterprise Scale, Resource Admission, Approximation & Degraded Operation Contract](../../../authority/enterprise-scale-resource-admission-approximation-degraded-operation-contract.md);
+- [Privacy, Disclosure Risk, Formal Guarantee & External Release Boundary Contract](../../../authority/privacy-disclosure-formal-guarantee-release-boundary-contract.md);
 - 006-A through 006-F design evidence.
 
 ## Discovery evidence
@@ -42,7 +42,7 @@ That record is historical design evidence rather than canonical authority.
 
 006-G establishes the canonical:
 
-[Structured-Data Topology & Relationship Semantics Contract](../../authority/structured-data-topology-relationship-semantics-contract.md).
+[Structured-Data Topology & Relationship Semantics Contract](../../../authority/structured-data-topology-relationship-semantics-contract.md).
 
 No new standalone concept or synchronization is accepted.
 
