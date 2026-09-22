@@ -32,9 +32,9 @@ implementation next            NOT YET
 ## Final Phase 013 authority
 
 - [013-J Phase Record](013-J-phase-013-consolidation-r1-completion-decision-phase-014-handoff.md)
-- [Phase 013 Consolidated Architecture Contract](../../architecture/phase-013-consolidated-architecture-contract.md)
+- [Phase 013 Consolidated Architecture Contract](../../../architecture/phase-013-consolidated-architecture-contract.md)
 - [Phase 013 Architecture Reconciliation Authority](../../authority/phase-013-architecture-reconciliation-authority.md)
-- [Current Cross-Concept Synchronization Contract](../../synchronizations/current-cross-concept-synchronizations.md)
+- [Current Cross-Concept Synchronization Contract](../../../synchronizations/current-cross-concept-synchronizations.md)
 - [Phase 013 Residual Architecture Misfit Register](../../authority/phase-013-residual-architecture-misfit-register.md)
 
 The consolidated architecture contract is the current architecture entry point. 013-B through 013-I remain detailed supporting authorities.
