@@ -47,6 +47,13 @@
       "owner_family": "stable_reference_resolution_drift_control"
     },
     {
+      "ref": "syngan://authority/agent-development-policy",
+      "path": "docs/authority/agent-authority-human-directed-scope-security-trust.md",
+      "status": "active",
+      "authority_class": "current",
+      "owner_family": "agent_authority_scope_security_trust"
+    },
+    {
       "ref": "syngan://authority/terminology-policy",
       "path": "docs/authority/terminology-policy.md",
       "status": "active",
