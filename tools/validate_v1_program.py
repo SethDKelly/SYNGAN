@@ -122,11 +122,7 @@ def main() -> int:
         None
         if not implementation
         else next(
-            (
-                item
-                for item in implementation.get("routes", [])
-                if item.get("id") == "v1-program"
-            ),
+            (item for item in implementation.get("routes", []) if item.get("id") == "v1-program"),
             None,
         )
     )

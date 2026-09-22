@@ -71,6 +71,13 @@ public release/provider/scale       NOT CLAIMED
 M8 rediscovery gates, explicit deferrals, Phase 026 re-entry role, stable routing, validator, and
 seeded negative control are coherent without speculatively defining detailed v1 implementation.
 
+## Closure verification discipline
+
+017-H closure requires the full repository Verify workflow and Agentic conformance workflow to pass
+against one exact final head. The v1 coarse-program validator and its seeded negative control must
+remain green; formatter/projection repairs may not change candidate-theme, deferral, or rediscovery
+semantics merely to obtain conformance.
+
 ## Handoff
 
 017-I should perform Phase 017 consolidation, documentation/current-owner reconciliation,
