@@ -32,8 +32,8 @@ IMPLEMENTATION NEXT        NOT YET
 - [010-G — Human/Programmatic Semantic Parity, Degraded/Recovery/Scale & Mapping-Misfit Audit](010-G-human-programmatic-semantic-parity-degraded-recovery-scale-mapping-misfit-audit.md)
 - [010-H — Phase 010 Consolidation, F1-F5 Completion Decision & Phase 011 Handoff](010-H-phase-010-consolidation-f1-f5-completion-decision-phase-011-handoff.md)
 - [Phase 010 Consolidation Authority](../../authority/phase-010-concept-mapping-consolidation.md)
-- [Current Mapping Authority](../../mapping/index.md)
-- [Jackson Methodology Completion Matrix](../../authority/jackson-methodology-completion-matrix.md)
+- [Current Mapping Authority](../../../mapping/index.md)
+- [Jackson Methodology Completion Matrix](../../../authority/jackson-methodology-completion-matrix.md)
 
 ## Final Phase 010 state
 
