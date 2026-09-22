@@ -76,7 +76,8 @@ def main() -> int:
             total += path.stat().st_size
             if ALWAYS_TRUE.search(text):
                 errors.append(
-                    f"{path.relative_to(repo)}: alwaysApply true is not authorized by current policy"
+                    f"{path.relative_to(repo)}: alwaysApply true is not authorized "
+                    "by current policy"
                 )
             if path.stat().st_size > int(limits["cursor_rule_each"]):
                 errors.append(f"{path.relative_to(repo)} exceeds the configured Cursor rule budget")
