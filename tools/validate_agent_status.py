@@ -60,7 +60,8 @@ def main() -> int:
             "docs_index": ("016-J                               AUTHORIZED / ACTIVE",),
             "agents": (
                 "016-A through 016-I are complete; 016-J is AUTHORIZED / ACTIVE.",
-                "No post-Phase-016 implementation, product/provider/runtime delivery, or release program is authorized.",
+                "No post-Phase-016 implementation, product/provider/runtime delivery, "
+                "or release program is authorized.",
             ),
         }
     else:
@@ -82,7 +83,8 @@ def main() -> int:
             ),
             "agents": (
                 "Phase 016 pre-implementation hardening is COMPLETE.",
-                "No next implementation, product/provider/runtime delivery, or release program is authorized.",
+                "No next implementation, product/provider/runtime delivery, or release "
+                "program is authorized.",
             ),
         }
 
@@ -92,7 +94,11 @@ def main() -> int:
                 errors.append(f"{surface}: missing coherent Phase 016 exit state: {phrase}")
 
     for name, text in texts.items():
-        if re.search(r"(Phase 017|next implementation program)[^\n]*(AUTHORIZED / ACTIVE|IN PROGRESS)", text):
+        if re.search(
+            r"(Phase 017|next implementation program)[^\n]*"
+            r"(AUTHORIZED / ACTIVE|IN PROGRESS)",
+            text,
+        ):
             errors.append(f"{name}: Phase 016 exit must not self-authorize a next program")
 
     for error in errors:
