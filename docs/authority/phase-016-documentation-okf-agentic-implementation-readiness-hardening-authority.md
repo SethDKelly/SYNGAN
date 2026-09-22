@@ -185,8 +185,9 @@ Phase 016   AUTHORIZED / ACTIVE
 016-C       COMPLETE
 016-D       COMPLETE
 016-E       COMPLETE
-016-F       AUTHORIZED / ACTIVE
-016-G..J    NOT AUTHORIZED
+016-F       COMPLETE
+016-G       NEXT ELIGIBLE / NOT AUTHORIZED
+016-H..J    NOT AUTHORIZED
 product delivery beyond hardening  NOT AUTHORIZED
 ~~~
 
@@ -360,4 +361,6 @@ The user explicitly authorized 016-F after the verified 016-E closure.
 - treat documented vendor features as runtime certification;
 - change accepted product semantics, architecture contracts, provider/runtime behavior, or Phase 015 support claims.
 
-016-G through 016-J remain gated until 016-F exit evidence exists.
+016-F closure evidence is recorded in the phase work record. Candidate Verify workflow `35688409580` / `#1603` passed portable and C2–C9. Five canonical portable skills, deterministic byte budgets, thin provider adapters, stable-reference routing, and OKF projection are established without provider-runtime certification; P16-3/P16-4 findings remain `0 / 0`.
+
+016-G — Agentic Conformance, Negative Controls, Drift Detection & CI — is NEXT ELIGIBLE / NOT AUTHORIZED. 016-H through 016-J remain NOT AUTHORIZED.
