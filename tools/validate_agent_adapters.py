@@ -127,9 +127,7 @@ def main() -> int:
             "stale",
             "failed",
         }:
-            errors.append(
-                f"{name}: invalid runtime_state for the Phase 017-C qualification model"
-            )
+            errors.append(f"{name}: invalid runtime_state for the Phase 017-C qualification model")
         if entry.get("workflow_source") != ".agents/skills/":
             errors.append(f"{name}: workflow_source must remain .agents/skills/")
 
