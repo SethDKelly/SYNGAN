@@ -27,6 +27,7 @@ CHECKS: tuple[tuple[str, tuple[str, ...]], ...] = (
     ("deterministic OKF projection drift", ("tools/generate_okf_projection.py", "--check")),
     ("OKF structure and stable-resource binding", ("tools/validate_okf_projection.py",)),
     ("deterministic context budgets", ("tools/measure_agent_context.py",)),
+    ("implementation package traceability", ("tools/validate_implementation_packages.py",)),
 )
 
 
@@ -64,6 +65,20 @@ def main() -> int:
             print(output)
 
     if not args.skip_negative_controls:
+        name = "implementation package seeded negative controls"
+        code, output = _run(
+            repo,
+            (
+                "tools/test_implementation_package_guards.py",
+                "--repo",
+                "{repo}",
+            ),
+        )
+        results.append((name, code, output))
+        print("PASS" if code == 0 else "FAIL", name)
+        if output:
+            print(output)
+
         name = "cross-cutting seeded negative controls"
         code, output = _run(
             repo,
@@ -121,11 +136,11 @@ def main() -> int:
             "",
             "## Scope notes",
             "",
-            "- Passing this report does not authorize 016-H or any later work.",
+            "- Passing this report never authorizes a next phase, package, backlog item, or delivery task.",
             "- Provider runtime state remains evidence-controlled and is not inferred "
             "from documentation.",
             "- Negative controls operate only on an isolated temporary copy.",
-            "- Product/provider/runtime delivery remains outside Phase 016-G authority.",
+            "- Product/provider/runtime delivery remains outside the current Phase 016 authority.",
             "",
         ]
     )
