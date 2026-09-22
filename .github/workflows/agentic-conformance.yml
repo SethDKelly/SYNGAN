@@ -1,0 +1,66 @@
+name: Agentic conformance
+
+on:
+  pull_request:
+    paths:
+      - "AGENTS.md"
+      - ".agents/**"
+      - ".claude/**"
+      - ".cursor/**"
+      - "knowledge/**"
+      - "docs/**"
+      - "tools/run_agentic_conformance.py"
+      - "tools/validate_agent_*.py"
+      - "tools/validate_agentic_links.py"
+      - "tools/test_agentic_conformance_guards.py"
+      - "tools/measure_agent_context.py"
+      - "tools/generate_okf_projection.py"
+      - "tools/validate_okf_projection.py"
+      - "tools/validate_stable_references.py"
+      - ".github/workflows/agentic-conformance.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "AGENTS.md"
+      - ".agents/**"
+      - ".claude/**"
+      - ".cursor/**"
+      - "knowledge/**"
+      - "docs/**"
+      - "tools/run_agentic_conformance.py"
+      - "tools/validate_agent_*.py"
+      - "tools/validate_agentic_links.py"
+      - "tools/test_agentic_conformance_guards.py"
+      - "tools/measure_agent_context.py"
+      - "tools/generate_okf_projection.py"
+      - "tools/validate_okf_projection.py"
+      - "tools/validate_stable_references.py"
+      - ".github/workflows/agentic-conformance.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  agentic-conformance:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7.0.1
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v7.0.0
+        with:
+          python-version: "3.11"
+
+      - name: Run deterministic agentic conformance
+        run: python tools/run_agentic_conformance.py --report agentic-conformance-report.md
+
+      - name: Publish agentic conformance summary
+        if: always()
+        run: |
+          if [ -f agentic-conformance-report.md ]; then
+            cat agentic-conformance-report.md >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "Agentic conformance report was not produced." >> "$GITHUB_STEP_SUMMARY"
+          fi
