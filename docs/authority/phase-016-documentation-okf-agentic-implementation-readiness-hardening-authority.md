@@ -187,7 +187,7 @@ Phase 016   AUTHORIZED / ACTIVE
 016-E       COMPLETE
 016-F       COMPLETE
 016-G       COMPLETE
-016-H       NEXT ELIGIBLE / NOT AUTHORIZED
+016-H       AUTHORIZED / ACTIVE
 016-I..J    NOT AUTHORIZED
 product delivery beyond hardening  NOT AUTHORIZED
 ~~~
@@ -387,3 +387,25 @@ The user explicitly authorized 016-G after the verified 016-F closure.
 016-G closure evidence is recorded in the phase work record. Agentic conformance workflow `35690366584` / `#6` and Verify workflow `35690366586` / `#1614` both passed on the substantive candidate. The repository-owned conformance lane includes eight positive deterministic checks and eight seeded temporary-copy negative controls; provider runtimes remain unverified and P16-3/P16-4 findings remain `0 / 0`.
 
 016-H — Implementation Package Contract, Design-to-Code Traceability & ADR Change Control — is NEXT ELIGIBLE / NOT AUTHORIZED. 016-I through 016-J remain NOT AUTHORIZED.
+
+## 016-H authorization
+
+The user explicitly authorized 016-H after the verified 016-G closure.
+
+016-H is a documented **P16-2 implementation-governance hardening contract**. It may:
+
+- define a prospective material implementation-package format without starting a delivery program;
+- define package lifecycle, authorization separation, upstream authority references, obligation-to-code/test/evidence mapping, impact disclosure, completion evidence, and explicit non-claims;
+- define architecture ADR change control so implementation packages may reference retained ADR rationale but cannot silently modify architecture through an implementation decision;
+- add repository-owned validation/negative controls for package structure and traceability;
+- add a bounded traceability-update workflow and align the pull-request template with current governance.
+
+016-H must not:
+
+- fabricate retroactive implementation packages for completed Phase 015 work merely to make the repository look complete;
+- treat package creation, package status, code existence, passing tests, or an ADR as independent authorization to implement;
+- permit Class 3/4 architecture/semantic conflicts to continue as ordinary implementation work;
+- define dependency/supply-chain/secrets, benchmark, compatibility-support, or API-version preflight owned by 016-I;
+- start provider/runtime/product implementation or a post-Phase-016 delivery program.
+
+016-I through 016-J remain gated until 016-H exit evidence exists.
