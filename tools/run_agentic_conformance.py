@@ -42,6 +42,10 @@ CHECKS: tuple[tuple[str, tuple[str, ...]], ...] = (
         ("tools/validate_v0x_program.py", "--repo", "{repo}"),
     ),
     (
+        "v0.x MVP completion qualification",
+        ("tools/validate_mvp_qualification.py", "--repo", "{repo}"),
+    ),
+    (
         "repository readiness scorecard",
         ("tools/validate_repository_readiness.py", "--repo", "{repo}"),
     ),

@@ -301,8 +301,9 @@ external/private system exists.
 This methodology defines reusable mechanics. Each implementation phase start gate chooses the
 smallest sufficient challenge families and independence level for its claims.
 
-Phase 017-G will define the v0.x MVP completion-testing portfolio and qualification decision using
-this authority. Phase 025 will execute that qualification against a frozen v0.x candidate.
+The v0.x MVP completion-testing portfolio and qualification decision are defined by
+syngan://implementation/mvp-qualification using this authority. Phase 025 executes that
+qualification against a frozen v0.x candidate.
 
 ## Current authorization boundary
 

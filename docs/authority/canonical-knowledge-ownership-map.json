@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "phase": "017-F",
+  "phase": "017-G",
   "status": "active",
   "rules": {
     "current_proposition": "exactly_one_preferred_current_owner",
@@ -20,7 +20,8 @@
     "autonomous_agent_delivery": "bounded_cursor_codex_roles_context_isolation_runtime_qualification_no_self_progression",
     "success_visibility_holdout_evaluation": "visible_requirements_holdout_realization_independent_evaluation_contamination_rotation_replay_anti_gaming",
     "v0x_mvp_scope_version_release_boundary": "qualified_package_capability_milestones_version_selection_release_state_support_nonclaim_residual_mapping",
-    "v0x_implementation_program": "phase_018_025_dependencies_package_decomposition_candidate_freeze_qualification_repair"
+    "v0x_implementation_program": "phase_018_025_dependencies_package_decomposition_candidate_freeze_qualification_repair",
+    "mvp_completion_qualification": "noncompensatory_obligation_evidence_portfolio_holdout_ledger_decision_requalification"
   },
   "owners": [
     {
@@ -122,6 +123,10 @@
     {
       "family": "v0x_implementation_program",
       "path": "docs/implementation/v0x-implementation-program-phase-018-025-dependency-package-strategy.md"
+    },
+    {
+      "family": "mvp_completion_qualification",
+      "path": "docs/implementation/v0x-mvp-completion-testing-qualification-independent-exit.md"
     },
     {
       "family": "implementation_package_traceability_change_control",

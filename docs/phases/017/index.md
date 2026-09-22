@@ -17,8 +17,9 @@ Phase 017                           AUTHORIZED / ACTIVE — PLANNING ONLY
 017-D                               COMPLETE
 017-E                               COMPLETE
 017-F                               COMPLETE
-017-G                               NEXT ELIGIBLE / NOT AUTHORIZED
-017-H..017-I                        PLANNED / NOT AUTHORIZED
+017-G                               COMPLETE
+017-H                               NEXT ELIGIBLE / NOT AUTHORIZED
+017-I                               PLANNED / NOT AUTHORIZED
 product implementation execution   NOT AUTHORIZED
 active implementation packages     0
 ~~~
@@ -32,6 +33,7 @@ active implementation packages     0
 - [017-D — Success Visibility, Holdout Evaluation & Anti-Gaming Methodology](017-D-success-visibility-holdout-evaluation-anti-gaming-methodology.md)
 - [017-E — v0.x MVP Scope, Capability/Version Milestones & Release Boundaries](017-E-v0x-mvp-scope-capability-version-milestones-release-boundaries.md)
 - [017-F — Phase 018-025 Definitions, Dependency Graph & Package Strategy](017-F-phase-018-025-definitions-dependency-graph-package-strategy.md)
+- [017-G — MVP Completion Testing, Qualification & Independent Exit Method](017-G-mvp-completion-testing-qualification-independent-exit-method.md)
 - [Phase 017 exit review template](exit-review-template.md)
 
 ## Boundary

@@ -166,6 +166,12 @@
           "ref": "syngan://implementation/v0x-program"
         },
         {
+          "id": "mvp-qualification",
+          "title": "v0.x MVP Qualification & Independent Exit Method",
+          "description": "Canonical MVP completion-testing portfolio, qualification-plan freeze, evidence ledger, independent holdout, decision, and requalification method.",
+          "ref": "syngan://implementation/mvp-qualification"
+        },
+        {
           "id": "implementation-package-contract",
           "title": "Implementation Package, Traceability & ADR Change Control",
           "description": "Canonical prospective implementation-package, traceability, evidence, and ADR change-control contract.",

@@ -1,0 +1,170 @@
+{
+  "schema_version": "1.0",
+  "status": "active",
+  "authority": "docs/implementation/v0x-mvp-completion-testing-qualification-independent-exit.md",
+  "stable_ref": "syngan://implementation/mvp-qualification",
+  "execution_phase": "025",
+  "candidate_source_phase": "024",
+  "mode": "independent_non_compensatory_by_blocking_obligation",
+  "required_mvp_capabilities": [
+    "MVP-C01",
+    "MVP-C02",
+    "MVP-C03",
+    "MVP-C04",
+    "MVP-C05",
+    "MVP-C06",
+    "MVP-C07",
+    "MVP-C08"
+  ],
+  "minimum_independence": "EI1",
+  "preferred_independence": "EI2",
+  "e5_required_for_bounded_mvp": false,
+  "qualification_layers": [
+    {
+      "id": "QL-01",
+      "name": "candidate_identity_authority_freeze",
+      "evidence": [
+        "E0",
+        "E4"
+      ],
+      "blocking": true
+    },
+    {
+      "id": "QL-02",
+      "name": "traceability_obligation_nonclaim_closure",
+      "evidence": [
+        "E0"
+      ],
+      "blocking": true
+    },
+    {
+      "id": "QL-03",
+      "name": "deterministic_build_install_static",
+      "evidence": [
+        "E1",
+        "E4"
+      ],
+      "blocking": true
+    },
+    {
+      "id": "QL-04",
+      "name": "end_to_end_topology_strategy_behavior",
+      "evidence": [
+        "E2"
+      ],
+      "blocking": true
+    },
+    {
+      "id": "QL-05",
+      "name": "property_generative_boundary_metamorphic",
+      "evidence": [
+        "E2",
+        "E3"
+      ],
+      "blocking": true
+    },
+    {
+      "id": "QL-06",
+      "name": "mutation_sensitivity",
+      "evidence": [
+        "E2",
+        "E3"
+      ],
+      "blocking": true
+    },
+    {
+      "id": "QL-07",
+      "name": "failure_recovery_concurrency_distributed",
+      "evidence": [
+        "E3"
+      ],
+      "blocking": true
+    },
+    {
+      "id": "QL-08",
+      "name": "authority_security_disclosure_no_egress",
+      "evidence": [
+        "E3"
+      ],
+      "blocking": true
+    },
+    {
+      "id": "QL-09",
+      "name": "reproducibility_history_compatibility_replay",
+      "evidence": [
+        "E4"
+      ],
+      "blocking": true
+    },
+    {
+      "id": "QL-10",
+      "name": "independent_holdout_and_exit_decision",
+      "evidence": [
+        "E0",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "blocking": true
+    }
+  ],
+  "challenge_policy": {
+    "required_families": [
+      "CH-01",
+      "CH-02",
+      "CH-03",
+      "CH-04",
+      "CH-05",
+      "CH-07",
+      "CH-08"
+    ],
+    "conditional_families": [
+      "CH-06"
+    ],
+    "budgets_frozen_before_holdout": true,
+    "thresholds_may_be_set_post_hoc": false,
+    "failed_generated_cases_preserved": true,
+    "cherry_picked_retries_allowed": false,
+    "aggregate_score_can_override_blocking_failure": false,
+    "universal_mutation_percentage_threshold": null,
+    "family_na_requires_explicit_justification": true
+  },
+  "candidate_rules": {
+    "exact_commit_build_version_required": true,
+    "evaluator_may_modify_frozen_candidate": false,
+    "product_change_invalidates_candidate": true,
+    "anchor_suite_after_any_candidate_change": [
+      "candidate_identity_build_install",
+      "repository_verification_baseline",
+      "minimal_end_to_end_package_workflow"
+    ],
+    "affected_evidence_must_rerun": true,
+    "exposed_h1_becomes_v1_regression": true,
+    "fresh_h1_for_affected_obligations": true,
+    "unaffected_evidence_reuse_requires_impact_justification": true
+  },
+  "decision_rules": {
+    "allowed_outcomes": [
+      "PASS",
+      "PASS WITH CARRY-FORWARD",
+      "NOT READY TO EXIT"
+    ],
+    "pass_requires_all_blocking_obligations": true,
+    "pass_with_carry_forward_requires_all_blocking_obligations": true,
+    "carry_forward_only_nonblocking": true,
+    "pass_with_carry_forward_is_successful_bounded_mvp_exit": true,
+    "blocking_candidate_defect_requires_not_ready": true,
+    "missing_required_evidence_requires_not_ready": true,
+    "evaluator_repair_authorizes_pass": false
+  },
+  "phase_025_artifacts": [
+    "frozen_qualification_plan",
+    "qualification_obligation_evidence_ledger",
+    "independent_run_records",
+    "contamination_replay_record",
+    "defect_evaluator_disposition_record",
+    "evidence_reuse_impact_record_when_applicable",
+    "final_qualification_decision",
+    "handoff_nonclaim_record"
+  ]
+}

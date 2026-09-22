@@ -15,17 +15,23 @@ manifests must be derived from then-current repository evidence after explicit h
 
 ## Role
 
-Independently evaluate the exact frozen package-MVP candidate without modifying it.
+Independently evaluate the exact frozen package-MVP candidate without modifying it under syngan://implementation/mvp-qualification.
 
 ## Entry intent
 
-MVP-M6 candidate frozen; explicit human selection; independent evaluator context and qualification protocol ready.
+MVP-M6 candidate frozen; explicit human selection; independent evaluator context ready; syngan://implementation/mvp-qualification resolved; qualification plan frozen before H1 selection/generation.
 
 ## Required exit intent
 
 MVP-M7: qualification reaches a lifecycle-allowed exit outcome with complete requirement mapping, replay evidence, limitations/non-claims, and defect disposition.
 
 Expected capability milestone: MVP-M7.
+
+## Evaluation-only boundary
+
+Phase 025 is evaluation-only. It creates no product implementation package and the evaluator may not repair the frozen candidate while certifying it.
+
+Required logical evidence follows syngan://implementation/mvp-qualification: frozen qualification plan, obligation/evidence ledger, independent run records, contamination/replay evidence, defect/evaluator dispositions, evidence-reuse impact record when applicable, final decision, and handoff/non-claims.
 
 ## Prospective package families
 

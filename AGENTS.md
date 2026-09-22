@@ -65,6 +65,12 @@ Phase 018-025 dependency order, package decomposition, candidate freeze, and qua
 
 A phase is not a package. Actual IPKG manifests are derived only by an explicitly selected phase start gate. Package/phase completion never self-authorizes later work. Phase 025 is evaluation-only and may not repair its frozen candidate.
 
+## MVP qualification
+
+Phase 025 completion testing, qualification-plan freeze, evidence ledger, holdout portfolio, decision rules, and repair/requalification discipline are governed by [v0.x MVP Completion Testing, Qualification & Independent Exit Method](docs/implementation/v0x-mvp-completion-testing-qualification-independent-exit.md).
+
+Qualification is non-compensatory by blocking obligation. Aggregate scores cannot erase a failed requirement. Every candidate change invalidates the frozen identity, requires the anchor suite and affected evidence to rerun, and requires fresh H1 for contaminated affected obligations.
+
 ## Agentic conformance
 
 Repository agentic/documentation conformance is governed by [Agentic Conformance, Negative Controls, Drift Detection & CI](docs/authority/agentic-conformance-policy.md).
@@ -108,4 +114,4 @@ Current status and subphase authorization are owned by docs/authority/current-re
 
 ## Current next boundary
 
-**Phase 017 planning is active by explicit human authorization. 017-A through 017-F are COMPLETE; 017-G is NEXT ELIGIBLE / NOT AUTHORIZED. Product implementation execution and Phase 018+ remain NOT AUTHORIZED.**
+**Phase 017 planning is active by explicit human authorization. 017-A through 017-G are COMPLETE; 017-H is NEXT ELIGIBLE / NOT AUTHORIZED. Product implementation execution and Phase 018+ remain NOT AUTHORIZED.**

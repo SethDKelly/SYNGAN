@@ -194,6 +194,13 @@
       "owner_family": "v0x_implementation_program"
     },
     {
+      "ref": "syngan://implementation/mvp-qualification",
+      "path": "docs/implementation/v0x-mvp-completion-testing-qualification-independent-exit.md",
+      "status": "active",
+      "authority_class": "current",
+      "owner_family": "mvp_completion_qualification"
+    },
+    {
       "ref": "syngan://implementation/package-contract",
       "path": "docs/implementation/implementation-package-traceability-adr-change-control.md",
       "status": "active",

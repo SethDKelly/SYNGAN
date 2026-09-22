@@ -43,8 +43,9 @@ Phase 017                           AUTHORIZED / ACTIVE — PLANNING ONLY
 017-D                               COMPLETE
 017-E                               COMPLETE
 017-F                               COMPLETE
-017-G                               NEXT ELIGIBLE / NOT AUTHORIZED
-017-H..017-I                        PLANNED / NOT AUTHORIZED
+017-G                               COMPLETE
+017-H                               NEXT ELIGIBLE / NOT AUTHORIZED
+017-I                               PLANNED / NOT AUTHORIZED
 
 product implementation execution   NOT AUTHORIZED
 active implementation packages     0
@@ -108,7 +109,11 @@ Actual runtime qualification is a Phase 018 start-gate prerequisite and cannot b
 
 017-F established `syngan://implementation/v0x-program`: strict Phase 018-025 dependency order, planned-but-not-authorized phase definitions, start-gate-derived IPKG decomposition, default serialized one-package/one-branch delivery, bounded within-phase concurrency only when explicitly independent, no cross-phase packages, Phase 024 exact candidate freeze, and evaluation-only Phase 025 defect routing back to the smallest owning implementation phase/package under fresh authorization.
 
-017-G — MVP Completion Testing, Qualification & Independent Exit Method — is **NEXT ELIGIBLE / NOT AUTHORIZED**.
+017-G — MVP Completion Testing, Qualification & Independent Exit Method — is **COMPLETE**.
+
+017-G established `syngan://implementation/mvp-qualification`: QL-01..QL-10 form the non-compensatory MVP evidence portfolio; Phase 025 freezes its qualification plan before H1 realization; CH-01/02/03/04/05/07/08 are required where applicable and CH-06 is oracle-conditional; EI1 is the minimum evaluator independence level with EI2 preferred; every candidate repair triggers an anchor rerun plus affected evidence and fresh H1; and PASS/PASS WITH CARRY-FORWARD are successful bounded-MVP outcomes only when every blocking obligation passes.
+
+017-H — v1 Coarse Program Design, Deferrals & Rediscovery Triggers — is **NEXT ELIGIBLE / NOT AUTHORIZED**.
 
 Phase 018 through Phase 025 execution remains **NOT AUTHORIZED**.
 
