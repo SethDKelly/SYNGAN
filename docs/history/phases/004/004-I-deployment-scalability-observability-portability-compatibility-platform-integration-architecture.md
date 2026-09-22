@@ -14,20 +14,20 @@ Translate the accepted Phase 004 architecture into deployable logical roles and 
 
 004-I is downstream of 004-A through 004-H, especially:
 
-- [Architecture Authority, Representation Principles, Layering & Dependency Direction](../../architecture/architecture-authority-representation-layering.md)
-- [Spark Data Boundary, Source/Output Reference, Distributed Materialization, Manifest & Promotion Architecture](../../architecture/spark-data-boundary-source-output-reference-distributed-materialization-manifest-promotion.md)
-- [Strategy Extension, Learning/Generation/Evaluation Runtime & Adapter Architecture](../../architecture/strategy-extension-learning-generation-evaluation-runtime-adapter.md)
-- [Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Architecture](../../architecture/execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation.md)
-- [Evaluation/Evidence, Provenance, Reproducibility & Historical Query Architecture](../../architecture/evaluation-evidence-provenance-reproducibility-historical-query.md)
-- [Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Architecture](../../architecture/dependency-resolution-offline-no-egress-authorization-redaction-enterprise-security.md)
-- [Enterprise Scale Envelope](../../problem/enterprise-scale-envelope.md)
+- [Architecture Authority, Representation Principles, Layering & Dependency Direction](../../../architecture/architecture-authority-representation-layering.md)
+- [Spark Data Boundary, Source/Output Reference, Distributed Materialization, Manifest & Promotion Architecture](../../../architecture/spark-data-boundary-source-output-reference-distributed-materialization-manifest-promotion.md)
+- [Strategy Extension, Learning/Generation/Evaluation Runtime & Adapter Architecture](../../../architecture/strategy-extension-learning-generation-evaluation-runtime-adapter.md)
+- [Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Architecture](../../../architecture/execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation.md)
+- [Evaluation/Evidence, Provenance, Reproducibility & Historical Query Architecture](../../../architecture/evaluation-evidence-provenance-reproducibility-historical-query.md)
+- [Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Architecture](../../../architecture/dependency-resolution-offline-no-egress-authorization-redaction-enterprise-security.md)
+- [Enterprise Scale Envelope](../../../problem/enterprise-scale-envelope.md)
 
 ## Canonical output
 
 004-I establishes:
 
-- [Deployment, Scalability, Observability, Portability, Compatibility & Platform Integration Architecture](../../architecture/deployment-scalability-observability-portability-compatibility-platform-integration.md)
-- [ADR-0008 — Portable Core & Capability-Negotiated Platform Adapters](../../decisions/ADR-0008-portable-core-capability-negotiated-platform-adapters.md)
+- [Deployment, Scalability, Observability, Portability, Compatibility & Platform Integration Architecture](../../../architecture/deployment-scalability-observability-portability-compatibility-platform-integration.md)
+- [ADR-0008 — Portable Core & Capability-Negotiated Platform Adapters](../../../decisions/ADR-0008-portable-core-capability-negotiated-platform-adapters.md)
 
 ## Accepted architecture
 
@@ -165,7 +165,7 @@ Payload expiry may leave historical identity known while payload is unavailable 
 
 ## ADR decision
 
-[ADR-0008](../../decisions/ADR-0008-portable-core-capability-negotiated-platform-adapters.md) records the consequential choice to use portable contracts plus capability-negotiated platform adapters rather than:
+[ADR-0008](../../../decisions/ADR-0008-portable-core-capability-negotiated-platform-adapters.md) records the consequential choice to use portable contracts plus capability-negotiated platform adapters rather than:
 
 - Databricks-native semantics;
 - lowest-common-denominator-only abstraction;

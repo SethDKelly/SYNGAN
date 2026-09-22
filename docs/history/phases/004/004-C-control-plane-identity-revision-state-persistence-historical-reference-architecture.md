@@ -12,19 +12,19 @@ Define the durable control-plane architecture that allows 004-B resource/handle 
 
 ## Governing authority
 
-- [Architecture Authority, Representation Principles, Layering & Dependency Direction](../../architecture/architecture-authority-representation-layering.md)
-- [Public API, Resource/Handle Model, Workflow Composition & Semantic Mapping](../../architecture/public-api-resource-handle-workflow-semantic-mapping.md)
+- [Architecture Authority, Representation Principles, Layering & Dependency Direction](../../../architecture/architecture-authority-representation-layering.md)
+- [Public API, Resource/Handle Model, Workflow Composition & Semantic Mapping](../../../architecture/public-api-resource-handle-workflow-semantic-mapping.md)
 - [Phase 003 Consolidated Experience Contract](../../experience/phase-003-consolidated-experience-contract.md)
-- [Provenance](../../concepts/provenance.md)
-- [Reproducibility Contract](../../authority/reproducibility-contract.md)
+- [Provenance](../../../concepts/provenance.md)
+- [Reproducibility Contract](../../../authority/reproducibility-contract.md)
 
 ## Canonical architecture created
 
-- [Control-Plane Identity, Revision, State, Persistence & Historical Reference Architecture](../../architecture/control-plane-identity-revision-state-persistence-historical-reference.md)
+- [Control-Plane Identity, Revision, State, Persistence & Historical Reference Architecture](../../../architecture/control-plane-identity-revision-state-persistence-historical-reference.md)
 
 ## ADR created
 
-- [ADR-0002 — Immutable Semantic Snapshots & Versioned Lifecycle State](../../decisions/ADR-0002-immutable-semantic-snapshots-versioned-lifecycle-state.md)
+- [ADR-0002 — Immutable Semantic Snapshots & Versioned Lifecycle State](../../../decisions/ADR-0002-immutable-semantic-snapshots-versioned-lifecycle-state.md)
 
 ## Main decisions
 

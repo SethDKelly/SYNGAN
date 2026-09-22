@@ -15,11 +15,11 @@ Audit all Phase 003 experience/workflow authority for internal consistency, drif
 ## Governing authority
 
 - [Phase 002 Exit](../002/002-H-cross-concept-invariant-synchronization-consolidation-review.md)
-- [Accepted Concepts](../../concepts/index.md)
-- [Accepted Synchronizations](../../synchronizations/index.md)
-- [Experience & Workflow Design](../../experience/index.md)
-- [Network and External Dependency Policy](../../authority/network-external-dependency-policy.md)
-- [Reproducibility Contract](../../authority/reproducibility-contract.md)
+- [Accepted Concepts](../../../concepts/index.md)
+- [Accepted Synchronizations](../../../synchronizations/index.md)
+- [Experience & Workflow Design](../../../experience/index.md)
+- [Network and External Dependency Policy](../../../authority/network-external-dependency-policy.md)
+- [Reproducibility Contract](../../../authority/reproducibility-contract.md)
 
 Phase 003 detailed experience authorities audited:
 

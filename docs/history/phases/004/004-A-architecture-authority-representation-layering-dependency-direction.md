@@ -14,19 +14,19 @@ Establish the architecture authority, representation principles, control-plane/d
 
 ## Governing authority
 
-- [Concept Design Methodology](../../authority/design-methodology.md)
-- [Documentation Governance](../../authority/documentation-governance.md)
-- [Accepted Concepts](../../concepts/index.md)
-- [Accepted Synchronizations](../../synchronizations/index.md)
-- [Experience & Workflow Design](../../experience/index.md)
+- [Concept Design Methodology](../../../authority/design-methodology.md)
+- [Documentation Governance](../../../authority/documentation-governance.md)
+- [Accepted Concepts](../../../concepts/index.md)
+- [Accepted Synchronizations](../../../synchronizations/index.md)
+- [Experience & Workflow Design](../../../experience/index.md)
 - [Phase 003 Consolidated Experience Contract](../../experience/phase-003-consolidated-experience-contract.md)
 - [Phase 003 Exit](../003/003-I-cross-workflow-consistency-phase-003-consolidation-review.md)
-- [Architecture Index](../../architecture/index.md)
+- [Architecture Index](../../../architecture/index.md)
 
 ## Canonical architecture authority created
 
-- [Architecture Authority, Representation Principles, Layering & Dependency Direction](../../architecture/architecture-authority-representation-layering.md)
-- [Architecture Decision Record Index](../../decisions/index.md)
+- [Architecture Authority, Representation Principles, Layering & Dependency Direction](../../../architecture/architecture-authority-representation-layering.md)
+- [Architecture Decision Record Index](../../../decisions/index.md)
 
 004-A also corrects the documentation-governance authority order so accepted experience contracts explicitly precede architecture. Architecture may report an upstream infeasibility but may not silently override experience merely because the representation is inconvenient.
 

@@ -26,7 +26,7 @@ Phase 003 translated the Phase 002 semantic model into actor-visible and program
 
 - [003-I — Cross-Workflow Consistency & Phase 003 Consolidation Review](003-I-cross-workflow-consistency-phase-003-consolidation-review.md)
 - [Phase 003 Consolidated Experience Contract](../../experience/phase-003-consolidated-experience-contract.md)
-- [Experience & Workflow Design](../../experience/index.md)
+- [Experience & Workflow Design](../../../experience/index.md)
 
 ## Exit assessment
 

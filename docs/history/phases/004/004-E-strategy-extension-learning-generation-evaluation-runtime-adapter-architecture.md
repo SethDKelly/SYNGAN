@@ -14,24 +14,24 @@ Translate accepted Strategy, Learning, Learned State, Generation, Evaluation, Ex
 
 ## Governing authority
 
-- [Architecture Authority, Representation Principles, Layering & Dependency Direction](../../architecture/architecture-authority-representation-layering.md)
-- [Public API, Resource/Handle Model, Workflow Composition & Semantic Mapping](../../architecture/public-api-resource-handle-workflow-semantic-mapping.md)
-- [Control-Plane Identity, Revision, State, Persistence & Historical Reference Architecture](../../architecture/control-plane-identity-revision-state-persistence-historical-reference.md)
-- [Spark Data Boundary, Source/Output Reference, Distributed Materialization, Manifest & Promotion Architecture](../../architecture/spark-data-boundary-source-output-reference-distributed-materialization-manifest-promotion.md)
-- [Synthesis Strategy](../../concepts/synthesis-strategy.md)
-- [Learning](../../concepts/learning.md)
-- [Learned State](../../concepts/learned-state.md)
-- [Generation](../../concepts/generation.md)
-- [Evaluation](../../concepts/evaluation.md)
-- [Network and External Dependency Policy](../../authority/network-external-dependency-policy.md)
+- [Architecture Authority, Representation Principles, Layering & Dependency Direction](../../../architecture/architecture-authority-representation-layering.md)
+- [Public API, Resource/Handle Model, Workflow Composition & Semantic Mapping](../../../architecture/public-api-resource-handle-workflow-semantic-mapping.md)
+- [Control-Plane Identity, Revision, State, Persistence & Historical Reference Architecture](../../../architecture/control-plane-identity-revision-state-persistence-historical-reference.md)
+- [Spark Data Boundary, Source/Output Reference, Distributed Materialization, Manifest & Promotion Architecture](../../../architecture/spark-data-boundary-source-output-reference-distributed-materialization-manifest-promotion.md)
+- [Synthesis Strategy](../../../concepts/synthesis-strategy.md)
+- [Learning](../../../concepts/learning.md)
+- [Learned State](../../../concepts/learned-state.md)
+- [Generation](../../../concepts/generation.md)
+- [Evaluation](../../../concepts/evaluation.md)
+- [Network and External Dependency Policy](../../../authority/network-external-dependency-policy.md)
 
 ## Canonical architecture created
 
-- [Strategy Extension, Learning/Generation/Evaluation Runtime & Adapter Architecture](../../architecture/strategy-extension-learning-generation-evaluation-runtime-adapter.md)
+- [Strategy Extension, Learning/Generation/Evaluation Runtime & Adapter Architecture](../../../architecture/strategy-extension-learning-generation-evaluation-runtime-adapter.md)
 
 ## ADR created
 
-- [ADR-0004 — Semantic Extension & Runtime Binding Separation](../../decisions/ADR-0004-semantic-extension-runtime-binding-separation.md)
+- [ADR-0004 — Semantic Extension & Runtime Binding Separation](../../../decisions/ADR-0004-semantic-extension-runtime-binding-separation.md)
 
 ## Main decisions
 

@@ -14,22 +14,22 @@ Translate the accepted Phase 003 experience contract and 004-A architecture cons
 
 ## Governing authority
 
-- [Architecture Authority, Representation Principles, Layering & Dependency Direction](../../architecture/architecture-authority-representation-layering.md)
+- [Architecture Authority, Representation Principles, Layering & Dependency Direction](../../../architecture/architecture-authority-representation-layering.md)
 - [Phase 003 Consolidated Experience Contract](../../experience/phase-003-consolidated-experience-contract.md)
-- [Learning](../../concepts/learning.md)
-- [Learned State](../../concepts/learned-state.md)
-- [Generation](../../concepts/generation.md)
-- [Evaluation](../../concepts/evaluation.md)
-- [Evidence](../../concepts/evidence.md)
-- [Execution](../../concepts/execution.md)
+- [Learning](../../../concepts/learning.md)
+- [Learned State](../../../concepts/learned-state.md)
+- [Generation](../../../concepts/generation.md)
+- [Evaluation](../../../concepts/evaluation.md)
+- [Evidence](../../../concepts/evidence.md)
+- [Execution](../../../concepts/execution.md)
 
 ## Canonical architecture created
 
-- [Public API, Resource/Handle Model, Workflow Composition & Semantic Mapping](../../architecture/public-api-resource-handle-workflow-semantic-mapping.md)
+- [Public API, Resource/Handle Model, Workflow Composition & Semantic Mapping](../../../architecture/public-api-resource-handle-workflow-semantic-mapping.md)
 
 ## ADR created
 
-- [ADR-0001 — Typed Resource/Handle Public API](../../decisions/ADR-0001-typed-resource-handle-public-api.md)
+- [ADR-0001 — Typed Resource/Handle Public API](../../../decisions/ADR-0001-typed-resource-handle-public-api.md)
 
 ## Main decisions
 

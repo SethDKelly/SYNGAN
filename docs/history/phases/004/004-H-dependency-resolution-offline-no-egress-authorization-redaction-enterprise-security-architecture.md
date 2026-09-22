@@ -14,22 +14,22 @@ Translate the accepted enterprise dependency/offline/no-egress/safety experience
 
 004-H was constrained by:
 
-- [Network and External Dependency Policy](../../authority/network-external-dependency-policy.md);
-- [Enterprise Dependency, Offline/No-Egress & Safety Experience](../../experience/enterprise-dependency-offline-no-egress-safety.md);
-- [Architecture Authority](../../architecture/architecture-authority-representation-layering.md);
-- [Public API/Resource Architecture](../../architecture/public-api-resource-handle-workflow-semantic-mapping.md);
-- [Control-Plane Identity/State Architecture](../../architecture/control-plane-identity-revision-state-persistence-historical-reference.md);
-- [Spark Data Boundary/Manifest/Promotion Architecture](../../architecture/spark-data-boundary-source-output-reference-distributed-materialization-manifest-promotion.md);
-- [Strategy Extension/Runtime Adapter Architecture](../../architecture/strategy-extension-learning-generation-evaluation-runtime-adapter.md);
-- [Execution/Recovery/Fencing Architecture](../../architecture/execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation.md);
-- [Evaluation/Evidence/Provenance/Reproducibility Architecture](../../architecture/evaluation-evidence-provenance-reproducibility-historical-query.md).
+- [Network and External Dependency Policy](../../../authority/network-external-dependency-policy.md);
+- [Enterprise Dependency, Offline/No-Egress & Safety Experience](../../../experience/enterprise-dependency-offline-no-egress-safety.md);
+- [Architecture Authority](../../../architecture/architecture-authority-representation-layering.md);
+- [Public API/Resource Architecture](../../../architecture/public-api-resource-handle-workflow-semantic-mapping.md);
+- [Control-Plane Identity/State Architecture](../../../architecture/control-plane-identity-revision-state-persistence-historical-reference.md);
+- [Spark Data Boundary/Manifest/Promotion Architecture](../../../architecture/spark-data-boundary-source-output-reference-distributed-materialization-manifest-promotion.md);
+- [Strategy Extension/Runtime Adapter Architecture](../../../architecture/strategy-extension-learning-generation-evaluation-runtime-adapter.md);
+- [Execution/Recovery/Fencing Architecture](../../../architecture/execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation.md);
+- [Evaluation/Evidence/Provenance/Reproducibility Architecture](../../../architecture/evaluation-evidence-provenance-reproducibility-historical-query.md).
 
 ## Canonical output
 
 Created:
 
-- [Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Architecture](../../architecture/dependency-resolution-offline-no-egress-authorization-redaction-enterprise-security.md)
-- [ADR-0007 — Explicit Dependency Resolution & Scoped Capability Security](../../decisions/ADR-0007-explicit-dependency-resolution-scoped-capability-security.md)
+- [Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Architecture](../../../architecture/dependency-resolution-offline-no-egress-authorization-redaction-enterprise-security.md)
+- [ADR-0007 — Explicit Dependency Resolution & Scoped Capability Security](../../../decisions/ADR-0007-explicit-dependency-resolution-scoped-capability-security.md)
 
 ## Primary architecture decision
 
@@ -234,7 +234,7 @@ Neither security audit nor Provenance overrides canonical domain state.
 
 ## ADR decision
 
-[ADR-0007](../../decisions/ADR-0007-explicit-dependency-resolution-scoped-capability-security.md) records the consequential choice to prefer explicit dependency resolution plus current authorization and scoped runtime capabilities over:
+[ADR-0007](../../../decisions/ADR-0007-explicit-dependency-resolution-scoped-capability-security.md) records the consequential choice to prefer explicit dependency resolution plus current authorization and scoped runtime capabilities over:
 
 - API-gateway-only authorization;
 - permanently bound commit-time permissions;

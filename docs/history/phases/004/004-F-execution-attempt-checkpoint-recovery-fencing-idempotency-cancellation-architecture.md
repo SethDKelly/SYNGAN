@@ -12,20 +12,20 @@ Translate accepted Execution semantics, the Phase 003 monitoring/recovery experi
 
 ## Governing authority
 
-- [Execution](../../concepts/execution.md)
-- [Execution Monitoring, Failure, Recovery & Cancellation Experience](../../experience/execution-monitoring-failure-recovery-cancellation.md)
-- [Control-Plane Identity, Revision, State, Persistence & Historical Reference Architecture](../../architecture/control-plane-identity-revision-state-persistence-historical-reference.md)
-- [Spark Data Boundary, Source/Output Reference, Distributed Materialization, Manifest & Promotion Architecture](../../architecture/spark-data-boundary-source-output-reference-distributed-materialization-manifest-promotion.md)
-- [Strategy Extension, Learning/Generation/Evaluation Runtime & Adapter Architecture](../../architecture/strategy-extension-learning-generation-evaluation-runtime-adapter.md)
+- [Execution](../../../concepts/execution.md)
+- [Execution Monitoring, Failure, Recovery & Cancellation Experience](../../../experience/execution-monitoring-failure-recovery-cancellation.md)
+- [Control-Plane Identity, Revision, State, Persistence & Historical Reference Architecture](../../../architecture/control-plane-identity-revision-state-persistence-historical-reference.md)
+- [Spark Data Boundary, Source/Output Reference, Distributed Materialization, Manifest & Promotion Architecture](../../../architecture/spark-data-boundary-source-output-reference-distributed-materialization-manifest-promotion.md)
+- [Strategy Extension, Learning/Generation/Evaluation Runtime & Adapter Architecture](../../../architecture/strategy-extension-learning-generation-evaluation-runtime-adapter.md)
 - [Core Synchronizations](../../synchronizations/core-synchronizations.md)
 
 ## Canonical architecture created
 
-- [Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Architecture](../../architecture/execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation.md)
+- [Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Architecture](../../../architecture/execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation.md)
 
 ## ADR created
 
-- [ADR-0005 — Attempt-Epoch Fencing & Recoverable At-Least-Once Execution](../../decisions/ADR-0005-attempt-epoch-fencing-recoverable-at-least-once-execution.md)
+- [ADR-0005 — Attempt-Epoch Fencing & Recoverable At-Least-Once Execution](../../../decisions/ADR-0005-attempt-epoch-fencing-recoverable-at-least-once-execution.md)
 
 ## Main decisions
 

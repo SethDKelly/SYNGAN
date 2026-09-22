@@ -14,20 +14,20 @@ Translate the 004-A control/data-plane boundary, 004-B typed handle model, 004-C
 
 ## Governing authority
 
-- [Architecture Authority, Representation Principles, Layering & Dependency Direction](../../architecture/architecture-authority-representation-layering.md)
-- [Public API, Resource/Handle Model, Workflow Composition & Semantic Mapping](../../architecture/public-api-resource-handle-workflow-semantic-mapping.md)
-- [Control-Plane Identity, Revision, State, Persistence & Historical Reference Architecture](../../architecture/control-plane-identity-revision-state-persistence-historical-reference.md)
-- [Generation](../../concepts/generation.md)
-- [Provenance](../../concepts/provenance.md)
-- [Generation Request, Condition, Validation & Output Promotion Experience](../../experience/generation-request-condition-validation-output-promotion.md)
+- [Architecture Authority, Representation Principles, Layering & Dependency Direction](../../../architecture/architecture-authority-representation-layering.md)
+- [Public API, Resource/Handle Model, Workflow Composition & Semantic Mapping](../../../architecture/public-api-resource-handle-workflow-semantic-mapping.md)
+- [Control-Plane Identity, Revision, State, Persistence & Historical Reference Architecture](../../../architecture/control-plane-identity-revision-state-persistence-historical-reference.md)
+- [Generation](../../../concepts/generation.md)
+- [Provenance](../../../concepts/provenance.md)
+- [Generation Request, Condition, Validation & Output Promotion Experience](../../../experience/generation-request-condition-validation-output-promotion.md)
 
 ## Canonical architecture created
 
-- [Spark Data Boundary, Source/Output Reference, Distributed Materialization, Manifest & Promotion Architecture](../../architecture/spark-data-boundary-source-output-reference-distributed-materialization-manifest-promotion.md)
+- [Spark Data Boundary, Source/Output Reference, Distributed Materialization, Manifest & Promotion Architecture](../../../architecture/spark-data-boundary-source-output-reference-distributed-materialization-manifest-promotion.md)
 
 ## ADR created
 
-- [ADR-0003 — Sealed Manifest-Gated Distributed Output Promotion](../../decisions/ADR-0003-sealed-manifest-gated-output-promotion.md)
+- [ADR-0003 — Sealed Manifest-Gated Distributed Output Promotion](../../../decisions/ADR-0003-sealed-manifest-gated-output-promotion.md)
 
 ## Main decisions
 

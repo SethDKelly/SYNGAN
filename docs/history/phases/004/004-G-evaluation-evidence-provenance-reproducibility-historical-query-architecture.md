@@ -14,23 +14,23 @@ Translate Phase 002 Evaluation/Evidence/Provenance semantics, the Phase 003 revi
 
 ## Governing authority
 
-- [Evaluation](../../concepts/evaluation.md)
-- [Evidence](../../concepts/evidence.md)
-- [Provenance](../../concepts/provenance.md)
-- [Reproducibility Contract](../../authority/reproducibility-contract.md)
-- [Evaluation, Evidence & Review Experience](../../experience/evaluation-evidence-review.md)
-- [Provenance, Reproducibility & Historical Inspection Experience](../../experience/provenance-reproducibility-historical-inspection.md)
-- [Control-Plane Identity, Revision, State, Persistence & Historical Reference Architecture](../../architecture/control-plane-identity-revision-state-persistence-historical-reference.md)
-- [Strategy Extension, Learning/Generation/Evaluation Runtime & Adapter Architecture](../../architecture/strategy-extension-learning-generation-evaluation-runtime-adapter.md)
-- [Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Architecture](../../architecture/execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation.md)
+- [Evaluation](../../../concepts/evaluation.md)
+- [Evidence](../../../concepts/evidence.md)
+- [Provenance](../../../concepts/provenance.md)
+- [Reproducibility Contract](../../../authority/reproducibility-contract.md)
+- [Evaluation, Evidence & Review Experience](../../../experience/evaluation-evidence-review.md)
+- [Provenance, Reproducibility & Historical Inspection Experience](../../../experience/provenance-reproducibility-historical-inspection.md)
+- [Control-Plane Identity, Revision, State, Persistence & Historical Reference Architecture](../../../architecture/control-plane-identity-revision-state-persistence-historical-reference.md)
+- [Strategy Extension, Learning/Generation/Evaluation Runtime & Adapter Architecture](../../../architecture/strategy-extension-learning-generation-evaluation-runtime-adapter.md)
+- [Execution/Attempt, Checkpoint, Recovery, Fencing, Idempotency & Cancellation Architecture](../../../architecture/execution-attempt-checkpoint-recovery-fencing-idempotency-cancellation.md)
 
 ## Canonical architecture created
 
-- [Evaluation/Evidence, Provenance, Reproducibility & Historical Query Architecture](../../architecture/evaluation-evidence-provenance-reproducibility-historical-query.md)
+- [Evaluation/Evidence, Provenance, Reproducibility & Historical Query Architecture](../../../architecture/evaluation-evidence-provenance-reproducibility-historical-query.md)
 
 ## ADR created
 
-- [ADR-0006 — Typed Canonical Provenance & Derived Historical Projections](../../decisions/ADR-0006-typed-provenance-canonical-derived-history-projections.md)
+- [ADR-0006 — Typed Canonical Provenance & Derived Historical Projections](../../../decisions/ADR-0006-typed-provenance-canonical-derived-history-projections.md)
 
 ## Main decisions
 
