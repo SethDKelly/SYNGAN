@@ -24,8 +24,9 @@ C0-C9                               ACTIVE / PASS
 Phase 016                           ACTIVE — PRE-IMPLEMENTATION HARDENING
 Start Gate                          COMPLETE
 016-A                               COMPLETE
-016-B                               AUTHORIZED / ACTIVE
-016-C..016-J                        NOT AUTHORIZED
+016-B                               COMPLETE
+016-C                               NEXT ELIGIBLE / NOT AUTHORIZED
+016-D..016-J                        NOT AUTHORIZED
 
 current conceptual blockers         0
 current upstream reopens            0
@@ -49,9 +50,11 @@ Phase 016 does **not** authorize:
 
 ## Current next boundary
 
-016-B is the active slice.
+016-B is complete.
 
-016-C remains gated until 016-B proves:
+016-C — OKF v0.2 Producer Profile, Generated Knowledge Projection & Conformance — is next eligible but remains NOT AUTHORIZED pending explicit proceed.
+
+016-B closure established:
 
 - one current owner per promoted proposition family;
 - a physical/logical current-vs-history boundary;
