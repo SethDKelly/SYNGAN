@@ -201,6 +201,15 @@ This exit does not authorize Phase 018, product implementation, branch deletion,
 changes, provider/runtime integration, Phase 019, a package version change, release, deployment, or
 any provider/scale claim.
 
+## Closure verification discipline
+
+The initial 017-I closure candidate exposed only repository-conformance drift: stale pre-closure
+fitness assertions, generated OKF/status wording, and formatter normalization. The dedicated Phase
+017 exit validator remained passing throughout those repairs; no exit criterion, carry-forward, or
+authorization boundary was weakened to obtain a green result.
+
+Final closure requires Verify and Agentic conformance to pass against the same exact head.
+
 ## Phase 018 handoff
 
 If a human explicitly selects Phase 018, its start gate must begin from current main and first
