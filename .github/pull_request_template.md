@@ -1,79 +1,64 @@
 ## Scope
 
-- Phase 007 subgroup / implementation slice:
+- Selected task / implementation package (`IPKG-####`, if required):
 - Entry commit / branch:
 - Change classification: `0-local` / `1-realization` / `2-public-or-persisted-contract` / `3-architecture-affecting` / `4-semantic-or-experience`
-- Active implementation authority:
-- Upstream authority implemented:
+- Human authorization basis:
+- Current upstream `syngan://...` authority refs:
 
 ## Authorization check
 
-- [ ] This change is inside the currently authorized Phase 007 subgroup.
-- [ ] It does not rely on a later subgroup merely because that subgroup exists in the Phase 007 plan.
-- [ ] Any Class 3/4 conflict was stopped and escalated rather than coded around.
+- [ ] This change is inside the explicitly selected task.
+- [ ] A package manifest, when present, is being used as scope/evidence metadata rather than as authorization.
+- [ ] This change does not self-start the next package, phase, backlog item, deployment, or provider integration.
+- [ ] Any Class 3/4 conflict was stopped and routed to the smallest upstream reopen rather than coded around.
 
 ## What changed
 
-Describe the bounded change and why it is required by the active slice.
+Describe the bounded implementation/documentation change and why it is required by the selected task.
 
-## Verification / acceptance evidence
+## Traceability / verification
 
-- [ ] Relevant deterministic/unit/contract tests pass.
-- [ ] Required architecture-fitness checks pass or an explicit bounded waiver is documented.
-- [ ] Portable/core verification does not depend on hidden external network/model/package acquisition.
-- [ ] Failure/recovery/distributed scenarios were exercised where material.
-- [ ] The evidence does not rely only on a one-off notebook/manual success.
+- [ ] Material obligations map current authority to implementation and verification evidence.
+- [ ] `python tools/validate_implementation_packages.py` passes when a material package is present.
+- [ ] Relevant deterministic/unit/contract/fitness/integration checks pass.
+- [ ] Package evidence states do not exceed what the executed evidence proves.
+- [ ] Complete-package claims contain no blocking/unresolved material obligation.
 
-Commands / CI evidence:
+Implementation paths:
 
-## Architecture and authority
+Verification paths / commands / CI evidence:
 
-- [ ] Phase 006-reconciled architecture remains preserved.
-- [ ] Durable implementation decisions are reflected in `docs/implementation/` where required.
-- [ ] No platform/runtime/model/persistence convenience became semantic authority.
-- [ ] No universal Session/Context/Metadata/Manager/Registry/Result/Relationship/DataTopology ownership boundary was introduced without authority.
+## Architecture and ADR change control
 
-## Dependencies / toolchain
+- [ ] Current canonical architecture remains controlling.
+- [ ] Architecture ADRs are referenced as rationale only; they are not being used as implementation permission.
+- [ ] Any ADR addition/material change/supersession is downstream of an explicitly authorized Class 3 architecture change and corresponding canonical architecture update.
+- [ ] No platform/runtime/persistence convenience became semantic or architecture authority.
 
-- [ ] New/changed direct dependencies have an explicit owning slice and correct runtime/dev/build/optional classification.
-- [ ] Optional platform/runtime dependencies remain isolated from portable/offline core.
-- [ ] No hidden runtime installation, model-hub lookup, remote inference or fallback was introduced.
-- [ ] Offline/private-provisioning implications are documented.
+ADR references / architecture reopen:
 
-Dependency/toolchain changes:
+## Compatibility / migration
 
-## Public, persisted, migration and compatibility impact
+- [ ] Class 2 changes include explicit compatibility and migration assessment, including explicit no-impact results.
+- [ ] Persisted/public/wire/SPI changes preserve historical identity and accepted migration semantics.
+- [ ] Existing consumers/data are not silently reinterpreted.
 
-- [ ] Public API/SPI impact is documented.
-- [ ] Persisted/wire/schema impact is documented.
-- [ ] Migration/deprecation/backward-compatibility impact is documented where applicable.
-- [ ] Historical committed state is not rewritten as a migration convenience.
+Assessment:
 
-Impact:
+## Dependencies / network / security / scale
 
-## Security / network / egress
+- [ ] Dependency/toolchain changes are disclosed for later/current governing review.
+- [ ] Network/egress/offline behavior is unchanged or explicitly documented.
+- [ ] No real secrets or sensitive payloads are committed.
+- [ ] Scale/distributed implications and unsupported claims are explicit where material.
 
-- [ ] No real secrets or sensitive payloads are committed in code, fixtures, logs or examples.
-- [ ] Authorization/disclosure boundaries remain intact.
-- [ ] Network and data-egress behavior is unchanged or explicitly documented/reviewed.
-- [ ] Existence-protected/query/history paths do not bypass disclosure policy.
+Impact / non-claims:
 
-Impact:
+## Completion / follow-up
 
-## Scale / distributed / platform behavior
+- [ ] Required failures, waivers, limitations, and deferred work remain explicit.
+- [ ] Package completion does not claim broader support/qualification than evidence establishes.
+- [ ] No next work item is treated as authorized merely because this one is complete.
 
-- [ ] Enterprise paths do not introduce mandatory full driver-local materialization.
-- [ ] Driver import/readiness is not treated as distributed worker runtime closure.
-- [ ] Platform specialization remains behind accepted boundaries.
-- [ ] Resource pressure does not silently weaken quantity/horizon/topology/Evaluation/Constraint/security semantics.
-- [ ] Platform success/retry/identity is not substituted for SYNGAN semantic authority.
-
-Impact / explicit non-claims:
-
-## Evidence gate / next authorization
-
-- [ ] Waivers/failures/deferred work are listed explicitly.
-- [ ] Remaining debt is linked to the appropriate phase/backlog owner.
-- [ ] This change does not claim the next subgroup is authorized unless an explicit proceed decision exists.
-
-Deferred / follow-up work:
+Unresolved / deferred / follow-up:
