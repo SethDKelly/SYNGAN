@@ -30,9 +30,9 @@ IMPLEMENTATION NEXT        NOT YET
 - [009-G — Composition Economy, Coupling, Synergy & Integrity Closure](009-G-composition-economy-coupling-synergy-integrity-closure.md)
 - [009-H — Phase 009 Consolidation, Dependence/Composition Completion Decision & Phase 010 Handoff](009-H-phase-009-consolidation-dependence-composition-completion-decision-phase-010-handoff.md)
 - [Phase 009 Consolidated Authority](../../authority/phase-009-dependence-composition-consolidation.md)
-- [Concept Dependence & Application Family](../../dependence/index.md)
-- [Synchronization Authority](../../synchronizations/index.md)
-- [Jackson Methodology Completion Matrix](../../authority/jackson-methodology-completion-matrix.md)
+- [Concept Dependence & Application Family](../../../dependence/index.md)
+- [Synchronization Authority](../../../synchronizations/index.md)
+- [Jackson Methodology Completion Matrix](../../../authority/jackson-methodology-completion-matrix.md)
 
 ## Final baseline
 
