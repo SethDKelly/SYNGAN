@@ -16,11 +16,11 @@ The phase seeks evidence of accidental merger pressure, circular authority, hidd
 
 This phase is governed by:
 
-- [Concept Design Methodology](../../authority/design-methodology.md)
-- [Documentation Governance](../../authority/documentation-governance.md)
-- [Terminology Policy](../../authority/terminology-policy.md)
-- [Problem Knowledge](../../problem/index.md)
-- [Domain Terminology](../../terminology/index.md)
+- [Concept Design Methodology](../../../authority/design-methodology.md)
+- [Documentation Governance](../../../authority/documentation-governance.md)
+- [Terminology Policy](../../../authority/terminology-policy.md)
+- [Problem Knowledge](../../../problem/index.md)
+- [Domain Terminology](../../../terminology/index.md)
 - [Candidate Operational Principles](../../discovery/operational-principles.md)
 - [Operational Principle Falsification Review](../../discovery/operational-principle-review.md)
 

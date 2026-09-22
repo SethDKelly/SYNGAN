@@ -8,7 +8,7 @@ status: complete
 
 ## Objective
 
-Deepen the accepted [Synthesis Strategy](../../concepts/synthesis-strategy.md) concept into precise identity, configuration, capability, requirement, limitation, compatibility, scale, reproducibility, and external-dependency semantics before Learning/Generation implementation architecture is selected.
+Deepen the accepted [Synthesis Strategy](../../../concepts/synthesis-strategy.md) concept into precise identity, configuration, capability, requirement, limitation, compatibility, scale, reproducibility, and external-dependency semantics before Learning/Generation implementation architecture is selected.
 
 002-B also incorporates an enterprise-safety consideration: determine how SYNGAN can remain useful for sophisticated structured/tabular synthesis without requiring LLM services, HuggingFace/model-hub access, or other outside network calls as a package baseline.
 
@@ -16,12 +16,12 @@ Deepen the accepted [Synthesis Strategy](../../concepts/synthesis-strategy.md) c
 
 002-B is governed by:
 
-- [Concept Design Methodology](../../authority/design-methodology.md)
-- [Documentation Governance](../../authority/documentation-governance.md)
-- [Terminology Policy](../../authority/terminology-policy.md)
-- [Network and External Dependency Policy](../../authority/network-external-dependency-policy.md)
-- [Accepted Concepts](../../concepts/index.md)
-- [Accepted Synchronizations](../../synchronizations/index.md)
+- [Concept Design Methodology](../../../authority/design-methodology.md)
+- [Documentation Governance](../../../authority/documentation-governance.md)
+- [Terminology Policy](../../../authority/terminology-policy.md)
+- [Network and External Dependency Policy](../../../authority/network-external-dependency-policy.md)
+- [Accepted Concepts](../../../concepts/index.md)
+- [Accepted Synchronizations](../../../synchronizations/index.md)
 - [002-A — Data Meaning & Constraint Specification](002-A-data-meaning-constraint-specification.md)
 
 ## Scope
@@ -67,9 +67,9 @@ Deepen the accepted [Synthesis Strategy](../../concepts/synthesis-strategy.md) c
 
 002-B directly deepens:
 
-1. [Synthesis Strategy](../../concepts/synthesis-strategy.md)
+1. [Synthesis Strategy](../../../concepts/synthesis-strategy.md)
 2. [Core Synchronizations](../../synchronizations/core-synchronizations.md)
-3. [Network and External Dependency Policy](../../authority/network-external-dependency-policy.md)
+3. [Network and External Dependency Policy](../../../authority/network-external-dependency-policy.md)
 
 No new domain concept is introduced.
 

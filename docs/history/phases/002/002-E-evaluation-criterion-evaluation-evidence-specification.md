@@ -8,7 +8,7 @@ status: complete
 
 ## Objective
 
-Deepen the accepted [Evaluation Criterion](../../concepts/evaluation-criterion.md), [Evaluation](../../concepts/evaluation.md), and [Evidence](../../concepts/evidence.md) concepts into precise question, method, coverage, uncertainty, claim-strength, lifecycle, historical, Generation-completion, and enterprise-scale semantics.
+Deepen the accepted [Evaluation Criterion](../../../concepts/evaluation-criterion.md), [Evaluation](../../../concepts/evaluation.md), and [Evidence](../../../concepts/evidence.md) concepts into precise question, method, coverage, uncertainty, claim-strength, lifecycle, historical, Generation-completion, and enterprise-scale semantics.
 
 The phase preserves the Phase 001 rule that evaluative questions, examinations, durable findings, and downstream decisions are distinct authorities.
 
@@ -16,12 +16,12 @@ The phase preserves the Phase 001 rule that evaluative questions, examinations, 
 
 002-E is governed by:
 
-- [Concept Design Methodology](../../authority/design-methodology.md)
-- [Documentation Governance](../../authority/documentation-governance.md)
-- [Terminology Policy](../../authority/terminology-policy.md)
-- [Network and External Dependency Policy](../../authority/network-external-dependency-policy.md)
-- [Accepted Concepts](../../concepts/index.md)
-- [Accepted Synchronizations](../../synchronizations/index.md)
+- [Concept Design Methodology](../../../authority/design-methodology.md)
+- [Documentation Governance](../../../authority/documentation-governance.md)
+- [Terminology Policy](../../../authority/terminology-policy.md)
+- [Network and External Dependency Policy](../../../authority/network-external-dependency-policy.md)
+- [Accepted Concepts](../../../concepts/index.md)
+- [Accepted Synchronizations](../../../synchronizations/index.md)
 - [Phase 001 Exit](../001/001-H-phase-001-consolidation-initial-concept-catalog.md)
 - [002-A — Data Meaning & Constraint Specification](002-A-data-meaning-constraint-specification.md)
 - [002-B — Synthesis Strategy Specification & Capability Semantics](002-B-synthesis-strategy-capability-semantics.md)
@@ -67,9 +67,9 @@ Canonical concept authority remains under `docs/concepts/`; this phase record pr
 
 002-E directly deepens:
 
-1. [Evaluation Criterion](../../concepts/evaluation-criterion.md)
-2. [Evaluation](../../concepts/evaluation.md)
-3. [Evidence](../../concepts/evidence.md)
+1. [Evaluation Criterion](../../../concepts/evaluation-criterion.md)
+2. [Evaluation](../../../concepts/evaluation.md)
+3. [Evidence](../../../concepts/evidence.md)
 4. [Core Synchronizations](../../synchronizations/core-synchronizations.md)
 
 No new standalone concept is introduced.

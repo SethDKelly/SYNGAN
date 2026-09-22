@@ -16,11 +16,11 @@ The phase also records candidate boundary and synchronization hypotheses so Phas
 
 This phase is governed by:
 
-- [Concept Design Methodology](../../authority/design-methodology.md)
-- [Documentation Governance](../../authority/documentation-governance.md)
-- [Terminology Policy](../../authority/terminology-policy.md)
-- [Problem Knowledge](../../problem/index.md)
-- [Domain Terminology](../../terminology/index.md)
+- [Concept Design Methodology](../../../authority/design-methodology.md)
+- [Documentation Governance](../../../authority/documentation-governance.md)
+- [Terminology Policy](../../../authority/terminology-policy.md)
+- [Problem Knowledge](../../../problem/index.md)
+- [Domain Terminology](../../../terminology/index.md)
 
 Durable discovery hypotheses produced by this phase live under [Concept Discovery](../../discovery/index.md). They remain provisional and are not accepted concept specifications.
 

@@ -16,11 +16,11 @@ This phase is intentionally adversarial toward the candidate catalog. Its goal i
 
 This phase is governed by:
 
-- [Concept Design Methodology](../../authority/design-methodology.md)
-- [Documentation Governance](../../authority/documentation-governance.md)
-- [Terminology Policy](../../authority/terminology-policy.md)
-- [Problem Knowledge](../../problem/index.md)
-- [Domain Terminology](../../terminology/index.md)
+- [Concept Design Methodology](../../../authority/design-methodology.md)
+- [Documentation Governance](../../../authority/documentation-governance.md)
+- [Terminology Policy](../../../authority/terminology-policy.md)
+- [Problem Knowledge](../../../problem/index.md)
+- [Domain Terminology](../../../terminology/index.md)
 - [Phase 001-D Concept Discovery](../../discovery/index.md)
 
 The current 001-E handoff remains provisional discovery knowledge under `docs/discovery/`. Accepted concept specifications are still intentionally absent from `docs/concepts/`.

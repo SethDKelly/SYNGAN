@@ -16,13 +16,13 @@ The phase exists to prevent vocabulary inherited from SDV, Spark, PyTorch, stati
 
 This phase is governed by:
 
-- [Design Methodology](../../authority/design-methodology.md)
-- [Documentation Governance](../../authority/documentation-governance.md)
-- [Terminology Policy](../../authority/terminology-policy.md)
-- [Source & Provenance Policy](../../authority/source-provenance-policy.md)
-- [Problem Knowledge](../../problem/index.md)
+- [Design Methodology](../../../authority/design-methodology.md)
+- [Documentation Governance](../../../authority/documentation-governance.md)
+- [Terminology Policy](../../../authority/terminology-policy.md)
+- [Source & Provenance Policy](../../../authority/source-provenance-policy.md)
+- [Problem Knowledge](../../../problem/index.md)
 
-Durable terminology produced by this phase lives under [Domain Terminology](../../terminology/index.md). This phase record preserves history and conclusions rather than acting as a parallel glossary.
+Durable terminology produced by this phase lives under [Domain Terminology](../../../terminology/index.md). This phase record preserves history and conclusions rather than acting as a parallel glossary.
 
 ## Scope
 
@@ -52,11 +52,11 @@ Durable terminology produced by this phase lives under [Domain Terminology](../.
 
 ## Canonical artifacts created
 
-1. [Domain Terminology Index](../../terminology/index.md)
-2. [Domain Lexicon](../../terminology/domain-lexicon.md)
-3. [Semantic Distinctions](../../terminology/semantic-distinctions.md)
-4. [Ecosystem Compatibility Vocabulary](../../terminology/ecosystem-compatibility.md)
-5. [Term Status Register](../../terminology/term-status-register.md)
+1. [Domain Terminology Index](../../../terminology/index.md)
+2. [Domain Lexicon](../../../terminology/domain-lexicon.md)
+3. [Semantic Distinctions](../../../terminology/semantic-distinctions.md)
+4. [Ecosystem Compatibility Vocabulary](../../../terminology/ecosystem-compatibility.md)
+5. [Term Status Register](../../../terminology/term-status-register.md)
 
 ## Principal conclusions
 

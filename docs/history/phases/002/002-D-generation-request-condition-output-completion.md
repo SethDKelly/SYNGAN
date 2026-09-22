@@ -8,7 +8,7 @@ status: complete
 
 ## Objective
 
-Deepen the accepted [Generation](../../concepts/generation.md) concept into precise request, Condition, commitment, compatibility, output-materialization, completion, failure, cancellation, and enterprise-scale semantics.
+Deepen the accepted [Generation](../../../concepts/generation.md) concept into precise request, Condition, commitment, compatibility, output-materialization, completion, failure, cancellation, and enterprise-scale semantics.
 
 The phase resolves when physical synthetic output is merely candidate materialization versus when one logical output may legitimately be associated as the completed result of a committed Generation.
 
@@ -16,12 +16,12 @@ The phase resolves when physical synthetic output is merely candidate materializ
 
 002-D is governed by:
 
-- [Concept Design Methodology](../../authority/design-methodology.md)
-- [Documentation Governance](../../authority/documentation-governance.md)
-- [Terminology Policy](../../authority/terminology-policy.md)
-- [Network and External Dependency Policy](../../authority/network-external-dependency-policy.md)
-- [Accepted Concepts](../../concepts/index.md)
-- [Accepted Synchronizations](../../synchronizations/index.md)
+- [Concept Design Methodology](../../../authority/design-methodology.md)
+- [Documentation Governance](../../../authority/documentation-governance.md)
+- [Terminology Policy](../../../authority/terminology-policy.md)
+- [Network and External Dependency Policy](../../../authority/network-external-dependency-policy.md)
+- [Accepted Concepts](../../../concepts/index.md)
+- [Accepted Synchronizations](../../../synchronizations/index.md)
 - [Phase 001 Exit](../001/001-H-phase-001-consolidation-initial-concept-catalog.md)
 - [002-A — Data Meaning & Constraint Specification](002-A-data-meaning-constraint-specification.md)
 - [002-B — Synthesis Strategy Specification & Capability Semantics](002-B-synthesis-strategy-capability-semantics.md)
@@ -75,7 +75,7 @@ Those remain later specification or representation work.
 
 002-D directly deepens:
 
-1. [Generation](../../concepts/generation.md)
+1. [Generation](../../../concepts/generation.md)
 2. [Core Synchronizations](../../synchronizations/core-synchronizations.md)
 
 No new standalone concept is introduced.

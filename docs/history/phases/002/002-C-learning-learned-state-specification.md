@@ -8,7 +8,7 @@ status: complete
 
 ## Objective
 
-Deepen the accepted [Learning](../../concepts/learning.md) and [Learned State](../../concepts/learned-state.md) concepts into precise semantic commitment, source-binding, lifecycle, completion, retry, checkpoint, reuse, compatibility, sensitivity, and enterprise-scale semantics.
+Deepen the accepted [Learning](../../../concepts/learning.md) and [Learned State](../../../concepts/learned-state.md) concepts into precise semantic commitment, source-binding, lifecycle, completion, retry, checkpoint, reuse, compatibility, sensitivity, and enterprise-scale semantics.
 
 The phase preserves the Phase 001 separation between the activity that derives reusable state and the reusable result that survives that activity.
 
@@ -16,12 +16,12 @@ The phase preserves the Phase 001 separation between the activity that derives r
 
 002-C is governed by:
 
-- [Concept Design Methodology](../../authority/design-methodology.md)
-- [Documentation Governance](../../authority/documentation-governance.md)
-- [Terminology Policy](../../authority/terminology-policy.md)
-- [Network and External Dependency Policy](../../authority/network-external-dependency-policy.md)
-- [Accepted Concepts](../../concepts/index.md)
-- [Accepted Synchronizations](../../synchronizations/index.md)
+- [Concept Design Methodology](../../../authority/design-methodology.md)
+- [Documentation Governance](../../../authority/documentation-governance.md)
+- [Terminology Policy](../../../authority/terminology-policy.md)
+- [Network and External Dependency Policy](../../../authority/network-external-dependency-policy.md)
+- [Accepted Concepts](../../../concepts/index.md)
+- [Accepted Synchronizations](../../../synchronizations/index.md)
 - [Phase 001 Exit](../001/001-H-phase-001-consolidation-initial-concept-catalog.md)
 - [002-A — Data Meaning & Constraint Specification](002-A-data-meaning-constraint-specification.md)
 - [002-B — Synthesis Strategy Specification & Capability Semantics](002-B-synthesis-strategy-capability-semantics.md)
@@ -73,8 +73,8 @@ Canonical concept authority remains under `docs/concepts/`; this record preserve
 
 002-C directly deepens:
 
-1. [Learning](../../concepts/learning.md)
-2. [Learned State](../../concepts/learned-state.md)
+1. [Learning](../../../concepts/learning.md)
+2. [Learned State](../../../concepts/learned-state.md)
 3. [Core Synchronizations](../../synchronizations/core-synchronizations.md)
 
 No new standalone concept is introduced.

@@ -14,11 +14,11 @@ Consolidate Phase 001 design knowledge, perform a final contradiction/completene
 
 This phase is governed by:
 
-- [Concept Design Methodology](../../authority/design-methodology.md)
-- [Documentation Governance](../../authority/documentation-governance.md)
-- [Terminology Policy](../../authority/terminology-policy.md)
-- [Problem Knowledge](../../problem/index.md)
-- [Domain Terminology](../../terminology/index.md)
+- [Concept Design Methodology](../../../authority/design-methodology.md)
+- [Documentation Governance](../../../authority/documentation-governance.md)
+- [Terminology Policy](../../../authority/terminology-policy.md)
+- [Problem Knowledge](../../../problem/index.md)
+- [Domain Terminology](../../../terminology/index.md)
 - [Concept Discovery](../../discovery/index.md)
 - [001-G Composition Analysis](001-G-concept-composition-synchronization-dependency-analysis.md)
 
@@ -26,21 +26,21 @@ This phase is governed by:
 
 Phase 001 accepts eleven initial SYNGAN concepts:
 
-1. [Data Meaning](../../concepts/data-meaning.md)
-2. [Synthesis Strategy](../../concepts/synthesis-strategy.md)
-3. [Learning](../../concepts/learning.md)
-4. [Learned State](../../concepts/learned-state.md)
-5. [Generation](../../concepts/generation.md)
-6. [Constraint](../../concepts/constraint.md)
-7. [Evaluation Criterion](../../concepts/evaluation-criterion.md)
-8. [Evaluation](../../concepts/evaluation.md)
-9. [Evidence](../../concepts/evidence.md)
-10. [Execution](../../concepts/execution.md)
-11. [Provenance](../../concepts/provenance.md)
+1. [Data Meaning](../../../concepts/data-meaning.md)
+2. [Synthesis Strategy](../../../concepts/synthesis-strategy.md)
+3. [Learning](../../../concepts/learning.md)
+4. [Learned State](../../../concepts/learned-state.md)
+5. [Generation](../../../concepts/generation.md)
+6. [Constraint](../../../concepts/constraint.md)
+7. [Evaluation Criterion](../../../concepts/evaluation-criterion.md)
+8. [Evaluation](../../../concepts/evaluation.md)
+9. [Evidence](../../../concepts/evidence.md)
+10. [Execution](../../../concepts/execution.md)
+11. [Provenance](../../../concepts/provenance.md)
 
-The canonical catalog is [docs/concepts/index.md](../../concepts/index.md).
+The canonical catalog is [docs/concepts/index.md](../../../concepts/index.md).
 
-Phase 001 also accepts fifteen core synchronization rules under [docs/synchronizations](../../synchronizations/index.md).
+Phase 001 also accepts fifteen core synchronization rules under [docs/synchronizations](../../../synchronizations/index.md).
 
 ## Authority transition
 

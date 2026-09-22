@@ -14,12 +14,12 @@ Establish why SYNGAN exists, whose needs matter, what successful outcomes look l
 
 This phase is governed by:
 
-- [Design Methodology](../../authority/design-methodology.md)
-- [Documentation Governance](../../authority/documentation-governance.md)
-- [Terminology Policy](../../authority/terminology-policy.md)
-- [Source & Provenance Policy](../../authority/source-provenance-policy.md)
+- [Design Methodology](../../../authority/design-methodology.md)
+- [Documentation Governance](../../../authority/documentation-governance.md)
+- [Terminology Policy](../../../authority/terminology-policy.md)
+- [Source & Provenance Policy](../../../authority/source-provenance-policy.md)
 
-Durable problem knowledge produced by this phase lives under [Problem Knowledge](../../problem/index.md). This phase record preserves design history and conclusions rather than duplicating those documents as a second authority.
+Durable problem knowledge produced by this phase lives under [Problem Knowledge](../../../problem/index.md). This phase record preserves design history and conclusions rather than duplicating those documents as a second authority.
 
 ## Scope
 
@@ -50,11 +50,11 @@ Durable problem knowledge produced by this phase lives under [Problem Knowledge]
 
 ## Canonical artifacts created
 
-1. [Problem & Purpose](../../problem/problem-purpose.md)
-2. [Actors & Needs](../../problem/actors.md)
-3. [Desired Outcomes](../../problem/outcomes.md)
-4. [Enterprise Scale Envelope](../../problem/enterprise-scale-envelope.md)
-5. [Problem Knowledge Index](../../problem/index.md)
+1. [Problem & Purpose](../../../problem/problem-purpose.md)
+2. [Actors & Needs](../../../problem/actors.md)
+3. [Desired Outcomes](../../../problem/outcomes.md)
+4. [Enterprise Scale Envelope](../../../problem/enterprise-scale-envelope.md)
+5. [Problem Knowledge Index](../../../problem/index.md)
 
 ## Principal conclusions
 

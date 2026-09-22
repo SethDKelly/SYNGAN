@@ -8,7 +8,7 @@ status: complete
 
 ## Objective
 
-Deepen the accepted [Data Meaning](../../concepts/data-meaning.md) and [Constraint](../../concepts/constraint.md) concepts into sufficiently precise state, revision, authority, applicability, uncertainty, and invariant semantics for later experience and representation design.
+Deepen the accepted [Data Meaning](../../../concepts/data-meaning.md) and [Constraint](../../../concepts/constraint.md) concepts into sufficiently precise state, revision, authority, applicability, uncertainty, and invariant semantics for later experience and representation design.
 
 The phase preserves the Phase 001 descriptive-versus-prescriptive boundary while making explicit how inferred meaning, steward declarations, rule revisions, contextual applicability, unsupported rules, conflict, and enterprise-scale control-plane behavior must work.
 
@@ -16,12 +16,12 @@ The phase preserves the Phase 001 descriptive-versus-prescriptive boundary while
 
 002-A is governed by:
 
-- [Concept Design Methodology](../../authority/design-methodology.md)
-- [Documentation Governance](../../authority/documentation-governance.md)
-- [Terminology Policy](../../authority/terminology-policy.md)
-- [Problem Knowledge](../../problem/index.md)
-- [Accepted Concepts](../../concepts/index.md)
-- [Accepted Synchronizations](../../synchronizations/index.md)
+- [Concept Design Methodology](../../../authority/design-methodology.md)
+- [Documentation Governance](../../../authority/documentation-governance.md)
+- [Terminology Policy](../../../authority/terminology-policy.md)
+- [Problem Knowledge](../../../problem/index.md)
+- [Accepted Concepts](../../../concepts/index.md)
+- [Accepted Synchronizations](../../../synchronizations/index.md)
 - [Phase 001 Exit](../001/001-H-phase-001-consolidation-initial-concept-catalog.md)
 
 The canonical concept specifications remain under `docs/concepts/`; this phase record preserves the refinement history and conclusions.
@@ -70,8 +70,8 @@ Those remain later concept specification or representation work.
 
 002-A directly deepens:
 
-1. [Data Meaning](../../concepts/data-meaning.md)
-2. [Constraint](../../concepts/constraint.md)
+1. [Data Meaning](../../../concepts/data-meaning.md)
+2. [Constraint](../../../concepts/constraint.md)
 3. [Core Synchronizations](../../synchronizations/core-synchronizations.md)
 
 No new standalone concept is introduced.

@@ -16,11 +16,11 @@ This phase does not assume that surviving 001-E review is enough. A candidate mu
 
 This phase is governed by:
 
-- [Concept Design Methodology](../../authority/design-methodology.md)
-- [Documentation Governance](../../authority/documentation-governance.md)
-- [Terminology Policy](../../authority/terminology-policy.md)
-- [Problem Knowledge](../../problem/index.md)
-- [Domain Terminology](../../terminology/index.md)
+- [Concept Design Methodology](../../../authority/design-methodology.md)
+- [Documentation Governance](../../../authority/documentation-governance.md)
+- [Terminology Policy](../../../authority/terminology-policy.md)
+- [Problem Knowledge](../../../problem/index.md)
+- [Domain Terminology](../../../terminology/index.md)
 - [Phase 001-E Reduced Candidate Set](../../discovery/reduced-candidate-set.md)
 
 Durable 001-F discovery knowledge remains under [Concept Discovery](../../discovery/index.md). No accepted concept specification is created yet.
