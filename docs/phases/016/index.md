@@ -33,7 +33,7 @@ Start Gate  COMPLETE
 016-F       COMPLETE
 016-G       COMPLETE
 016-H       COMPLETE
-016-I       NEXT ELIGIBLE / NOT AUTHORIZED
+016-I       AUTHORIZED / ACTIVE
 016-J       NOT AUTHORIZED
 ~~~
 
@@ -217,4 +217,22 @@ product/runtime/provider behavior     UNCHANGED / NOT AUTHORIZED
 
 ## Current next boundary
 
-**016-I — Dependency / Supply-Chain / Secrets, Compatibility / Benchmark / API-Versioning Preflight** is **NEXT ELIGIBLE / NOT AUTHORIZED** pending explicit proceed.
+## 016-I active execution
+
+[016-I — Dependency / Supply-Chain / Secrets, Compatibility / Benchmark / API-Versioning Preflight](016-I-dependency-supply-chain-secrets-compatibility-benchmark-versioning-preflight.md)
+
+~~~text
+016-I                                  AUTHORIZED / ACTIVE
+change class                           P16-2
+dependency / lock provenance           IN SCOPE
+CI action provenance                   IN SCOPE
+checked-in secret hygiene              IN SCOPE
+compatibility/support evidence         IN SCOPE
+benchmark claim qualification          IN SCOPE
+package/API/versioning policy          IN SCOPE
+release residual register              IN SCOPE
+provider/runtime implementation        NOT AUTHORIZED
+release publication                    NOT AUTHORIZED
+license selection                      NOT AUTHORIZED
+016-J                                  NOT AUTHORIZED
+~~~
