@@ -21,6 +21,7 @@ history             -> provenance/rationale; never current by search rank
 ADR                 -> accepted decision rationale; downstream of current authority
 code/tests          -> implementation/evidence; never semantic authority
 generated knowledge  -> compatibility/routing only; never semantic authority
+stable reference     -> exact registry identity; path/search never substitutes
 ~~~
 
 If a current proposition cannot be assigned deterministically, 016-B must stop relocation for that item until ownership is adjudicated.
@@ -32,6 +33,7 @@ If a current proposition cannot be assigned deterministically, 016-B must stop r
 | repository progression/status | `docs/authority/current-repository-status.md` |
 | documentation/authority/anti-drift rules | `docs/authority/documentation-governance.md` |
 | OKF v0.2 producer/projection/conformance rules | `docs/authority/okf-v0.2-producer-profile.md` |
+| stable-reference/resolution/drift-control rules | `docs/authority/stable-reference-resolution-drift-control.md` |
 | terminology policy | `docs/authority/terminology-policy.md` |
 | Jackson methodology/completion | `docs/authority/design-methodology.md`, `jackson-methodology-completion-matrix.md`, `jackson-design-completion-implementation-hold.md` |
 | current conceptual residual/future rediscovery | `docs/authority/residual-conceptual-misfit-register.md`, `future-scope-extensibility-new-capability-rediscovery-audit.md` |
