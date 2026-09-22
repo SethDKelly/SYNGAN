@@ -15,11 +15,11 @@ Establish the Phase 013 reconciliation method before any retained architecture i
 ## Governing inputs
 
 - [Phase 012 Jackson Concept-Design Consolidation](../../authority/phase-012-jackson-concept-design-consolidation.md)
-- [Jackson Methodology Completion Matrix](../../authority/jackson-methodology-completion-matrix.md)
-- [Jackson Design Completion & Implementation Hold](../../authority/jackson-design-completion-implementation-hold.md)
-- [Residual Conceptual Misfit Register](../../authority/residual-conceptual-misfit-register.md)
+- [Jackson Methodology Completion Matrix](../../../authority/jackson-methodology-completion-matrix.md)
+- [Jackson Design Completion & Implementation Hold](../../../authority/jackson-design-completion-implementation-hold.md)
+- [Residual Conceptual Misfit Register](../../../authority/residual-conceptual-misfit-register.md)
 - [Phase 013 Entry & Decomposition](013-entry-decomposition.md)
-- [Representation & Architecture Index](../../architecture/index.md)
+- [Representation & Architecture Index](../../../architecture/index.md)
 - retained Phase 004/006/007 architecture and ADR corpus
 
 Canonical Phase 013 method created by this subgroup:
