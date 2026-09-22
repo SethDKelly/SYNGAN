@@ -8,7 +8,7 @@ status: active
 
 ## Purpose
 
-Define the preferred current owner families for SYNGAN knowledge after completed Phase 016 normalization and hardening.
+Define the preferred current owner families for SYNGAN knowledge after completed Phase 016 normalization and during Phase 017 implementation-program planning.
 
 The map is deliberately family-oriented. A proposition belongs to the smallest applicable current owner inside the named family. History proves how a proposition was reached but does not compete for current ownership.
 
@@ -25,6 +25,7 @@ stable reference     -> exact registry identity; path/search never substitutes
 agent authority       -> human-directed scope; tools/memory never self-authorize
 agent context         -> bounded progressive disclosure; adapters never fork semantics
 agentic conformance   -> deterministic repository checks; never product/runtime health
+implementation phase lifecycle -> phase/gate/evidence/exit control; never product or execution authority
 implementation packages -> traceability/evidence containers; never authorization or semantic owners
 engineering preflight -> deterministic release hygiene; never release/support/legal authority
 repository readiness -> evidence-backed start-gate readiness; never program/release authority
@@ -65,6 +66,7 @@ If a current proposition cannot be assigned deterministically, stop the affected
 | architecture summary | `docs/architecture/phase-013-consolidated-architecture-contract.md` — summary only, downstream of topic owners |
 | accepted architecture rationale | active ADRs under `docs/decisions/` |
 | implementation governance/toolchain/change discipline | `docs/implementation/implementation-authority-delivery-governance-toolchain-repository-enforcement.md` |
+| implementation phase lifecycle/gates/evidence/exit control | `docs/implementation/implementation-phase-lifecycle-gate-evidence-contract.md` |
 | implementation package/traceability/ADR change control | `docs/implementation/implementation-package-traceability-adr-change-control.md` |
 | dependency/supply-chain/secrets/compatibility/benchmark/version preflight | `docs/implementation/engineering-preflight-dependency-supply-chain-secrets-compatibility-benchmark-versioning.md` |
 | repository implementation readiness/residual risk | `docs/implementation/repository-implementation-readiness-residual-risk.md` |
@@ -72,6 +74,7 @@ If a current proposition cannot be assigned deterministically, stop the affected
 | future non-authoritative work | `docs/backlog/index.md` |
 | completed Phase 016 hardening authority | `docs/authority/phase-016-documentation-okf-agentic-implementation-readiness-hardening-authority.md` |
 | completed Phase 016 work records | `docs/phases/016/` |
+| active Phase 017 planning records | `docs/phases/017/` |
 | historical phase/design/implementation evidence | `docs/history/` |
 
 ## Current vs history rule

@@ -84,4 +84,4 @@ Current status and subphase authorization are owned by docs/authority/current-re
 
 ## Current next boundary
 
-**Phase 017 planning is active by explicit human authorization. 017-A is COMPLETE; 017-B is NEXT ELIGIBLE / NOT AUTHORIZED. Product implementation execution and Phase 018+ remain NOT AUTHORIZED.**
+**Phase 017 planning is active by explicit human authorization. 017-A and 017-B are COMPLETE; 017-C is NEXT ELIGIBLE / NOT AUTHORIZED. Product implementation execution and Phase 018+ remain NOT AUTHORIZED.**

@@ -12,8 +12,9 @@ status: active
 Phase 016                           COMPLETE
 Phase 017                           AUTHORIZED / ACTIVE — PLANNING ONLY
 017-A                               COMPLETE
-017-B                               NEXT ELIGIBLE / NOT AUTHORIZED
-017-C..017-I                        PLANNED / NOT AUTHORIZED
+017-B                               COMPLETE
+017-C                               NEXT ELIGIBLE / NOT AUTHORIZED
+017-D..017-I                        PLANNED / NOT AUTHORIZED
 product implementation execution   NOT AUTHORIZED
 active implementation packages     0
 ~~~
@@ -22,6 +23,7 @@ active implementation packages     0
 
 - [Phase 017 definition](phase-definition.md)
 - [017-A start gate](017-A-start-gate.md)
+- [017-B — Implementation-Phase Lifecycle & Gate/Evidence Contract](017-B-implementation-phase-lifecycle-gate-evidence-contract.md)
 - [Phase 017 exit review template](exit-review-template.md)
 
 ## Boundary

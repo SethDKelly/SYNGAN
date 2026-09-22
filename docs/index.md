@@ -63,7 +63,8 @@ repository implementation readiness READY FOR EXPLICIT START GATE / 100 OF 100
 
 Phase 017                           AUTHORIZED / ACTIVE — PLANNING ONLY
 017-A                               COMPLETE
-017-B                               NEXT ELIGIBLE / NOT AUTHORIZED
+017-B                               COMPLETE
+017-C                               NEXT ELIGIBLE / NOT AUTHORIZED
 
 product implementation execution   NOT AUTHORIZED
 product/provider/runtime delivery   NOT AUTHORIZED
