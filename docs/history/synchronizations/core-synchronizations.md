@@ -10,13 +10,13 @@ These rules are the canonical cross-concept coordination authority accepted at t
 
 A synchronization coordinates concept-owned state; it does not transfer ownership merely because another concept reads, validates, records, or operationally realizes that state.
 
-Potentially regressive control-state recovery is additionally constrained by the [Operational Authority Continuity & Regressive Recovery Contract](../authority/operational-authority-continuity-regressive-recovery-contract.md). That contract refines how existing synchronizations behave after rollback/restore without introducing another concept or synchronization by itself.
+Potentially regressive control-state recovery is additionally constrained by the [Operational Authority Continuity & Regressive Recovery Contract](../../authority/operational-authority-continuity-regressive-recovery-contract.md). That contract refines how existing synchronizations behave after rollback/restore without introducing another concept or synchronization by itself.
 
 ## SYNC-01 — Data Meaning revision binding
 
 **Type:** reference/bind + provenance.
 
-When Learning, Generation, or Evaluation crosses semantic commitment using [Data Meaning](../concepts/data-meaning.md), it MUST bind the exact relevant effective revision.
+When Learning, Generation, or Evaluation crosses semantic commitment using [Data Meaning](../../concepts/data-meaning.md), it MUST bind the exact relevant effective revision.
 
 Later meaning revisions affect future validation/new work only and MUST NOT retroactively reinterpret historical Learning, Learned State, Generation, Evaluation, or Evidence.
 
@@ -26,7 +26,7 @@ Material inferred meaning relied upon by committed work MUST already be inspecta
 
 **Type:** bind + contextual validation + provenance.
 
-Learning or Generation validates the chosen [Synthesis Strategy](../concepts/synthesis-strategy.md) against bound Data Meaning, applicable [Constraints](../concepts/constraint.md), requested capabilities, Learned State when applicable, and committed deployment/dependency profile.
+Learning or Generation validates the chosen [Synthesis Strategy](../../concepts/synthesis-strategy.md) against bound Data Meaning, applicable [Constraints](../../concepts/constraint.md), requested capabilities, Learned State when applicable, and committed deployment/dependency profile.
 
 Strategy owns reusable capability/requirement/configuration/limitation/dependency declarations. The activity owns the exact contextual compatibility result.
 
@@ -40,7 +40,7 @@ For Generation, compatibility also includes mandatory Condition support, request
 
 **Type:** bind + contextual validation + provenance.
 
-An activity determines applicability of [Constraint](../concepts/constraint.md) revisions using activity scope, bound Data Meaning, and explicit prerequisites. Constraint owns rule/scope/semantic dependencies/authority; the activity owns contextual applicability and handling.
+An activity determines applicability of [Constraint](../../concepts/constraint.md) revisions using activity scope, bound Data Meaning, and explicit prerequisites. Constraint owns rule/scope/semantic dependencies/authority; the activity owns contextual applicability and handling.
 
 Canonical handling dispositions remain:
 
@@ -62,7 +62,7 @@ For Generation:
 
 **Type:** operational realization + provenance.
 
-[Learning](../concepts/learning.md) may use [Execution](../concepts/execution.md) for long-running/distributed work.
+[Learning](../../concepts/learning.md) may use [Execution](../../concepts/execution.md) for long-running/distributed work.
 
 ### Ownership
 
@@ -122,7 +122,7 @@ If operational state is indeterminate, SYNGAN MUST NOT assume Learning success m
 
 **Type:** production + provenance.
 
-Successful semantic Learning establishes a new [Learned State](../concepts/learned-state.md) identity/version.
+Successful semantic Learning establishes a new [Learned State](../../concepts/learned-state.md) identity/version.
 
 Failed, cancelled, or incomplete Learning MUST NOT establish usable Learned State.
 
@@ -136,7 +136,7 @@ Repeated Attempts/recomputation MUST NOT create multiple ambiguous primary Learn
 
 **Type:** bind + validation + provenance.
 
-At semantic commitment, [Generation](../concepts/generation.md) binds the material specification by which success will be judged, including where applicable quantity/scope, Conditions and their requirement strength/tolerance, Data Meaning, Constraints/handling, Strategy/configuration, Learned State or direct-generation input/source identity, deployment/network profile, dependency artifacts, randomness/reproducibility intent, and material approximation/partition semantics.
+At semantic commitment, [Generation](../../concepts/generation.md) binds the material specification by which success will be judged, including where applicable quantity/scope, Conditions and their requirement strength/tolerance, Data Meaning, Constraints/handling, Strategy/configuration, Learned State or direct-generation input/source identity, deployment/network profile, dependency artifacts, randomness/reproducibility intent, and material approximation/partition semantics.
 
 Generation owns contextual Learned State reuse compatibility. Ordinary Generation MUST NOT silently mutate/adapt Learned State.
 
@@ -152,7 +152,7 @@ Material post-commitment request changes require a new Generation.
 
 **Type:** operational realization + provenance.
 
-Generation may use [Execution](../concepts/execution.md) for long-running/distributed work.
+Generation may use [Execution](../../concepts/execution.md) for long-running/distributed work.
 
 ### Ownership
 
@@ -232,7 +232,7 @@ For a logical output spanning multiple constituent tables, partitions, sequences
 
 **Type:** bind + provenance.
 
-[Evaluation](../concepts/evaluation.md) MUST bind the exact [Evaluation Criterion](../concepts/evaluation-criterion.md) revision it answers.
+[Evaluation](../../concepts/evaluation.md) MUST bind the exact [Evaluation Criterion](../../concepts/evaluation-criterion.md) revision it answers.
 
 The binding includes material question, subject/scope, reference context, and answer-sufficiency/claim-strength semantics where those affect interpretation.
 
@@ -258,7 +258,7 @@ For Generation-required validation, method strength must be sufficient for the e
 
 **Type:** operational realization + provenance.
 
-Evaluation may use [Execution](../concepts/execution.md) for long-running/distributed work.
+Evaluation may use [Execution](../../concepts/execution.md) for long-running/distributed work.
 
 ### Ownership
 
@@ -314,7 +314,7 @@ When Evaluation is required by a pending Generation completion barrier, unresolv
 
 **Type:** production + provenance.
 
-A semantically valid Evaluation establishes one or more [Evidence](../concepts/evidence.md) records when independently interpretable findings exist.
+A semantically valid Evaluation establishes one or more [Evidence](../../concepts/evidence.md) records when independently interpretable findings exist.
 
 Evidence MUST preserve/reference exact Criterion revision, producing Evaluation, evaluated subject/reference identity, finding, logical scope, method/configuration, coverage, sampling/approximation, uncertainty/error/confidence, assumptions/limitations, claim-strength/applicability boundary, and relevant provenance.
 
@@ -351,7 +351,7 @@ Evidence remains observation authority only and MUST NOT by itself become releas
 
 **Type:** historical/provenance.
 
-Material committed transitions MUST record typed derivation/context relationships when required by SYNGAN traceability guarantees. [Provenance](../concepts/provenance.md) references canonical state and MUST NOT duplicate full payloads, source/synthetic rows, model state, detailed validation output, or complete platform logs into a shadow source of truth.
+Material committed transitions MUST record typed derivation/context relationships when required by SYNGAN traceability guarantees. [Provenance](../../concepts/provenance.md) references canonical state and MUST NOT duplicate full payloads, source/synthetic rows, model state, detailed validation output, or complete platform logs into a shadow source of truth.
 
 ### Stable-reference rule
 
@@ -436,7 +436,7 @@ If a provenance assertion is later found incorrect or incomplete, correction/sup
 
 002-G extends this synchronization with the reproduction contract while preserving the stable SYNC-15 identifier and heading used by existing documentation links.
 
-At reproducibility-relevant commitment, activities MUST preserve/reference enough stable facts to state a supported reproduction/comparison contract according to the [Reproducibility Contract](../authority/reproducibility-contract.md).
+At reproducibility-relevant commitment, activities MUST preserve/reference enough stable facts to state a supported reproduction/comparison contract according to the [Reproducibility Contract](../../authority/reproducibility-contract.md).
 
 A substantive claim MUST identify:
 
