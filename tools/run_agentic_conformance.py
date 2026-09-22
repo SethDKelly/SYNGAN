@@ -79,21 +79,13 @@ def main() -> int:
             print(output)
 
     registry = json.loads(
-        (repo / "docs" / "authority" / "stable-reference-registry.json").read_text(
-            encoding="utf-8"
-        )
+        (repo / "docs" / "authority" / "stable-reference-registry.json").read_text(encoding="utf-8")
     )
-    active_refs = sum(
-        1 for entry in registry["references"] if entry.get("status") == "active"
-    )
-    knowledge_files = sum(
-        1 for path in (repo / "knowledge").rglob("*") if path.is_file()
-    )
+    active_refs = sum(1 for entry in registry["references"] if entry.get("status") == "active")
+    knowledge_files = sum(1 for path in (repo / "knowledge").rglob("*") if path.is_file())
 
     compatibility = json.loads(
-        (repo / "docs" / "authority" / "agent-tool-compatibility.json").read_text(
-            encoding="utf-8"
-        )
+        (repo / "docs" / "authority" / "agent-tool-compatibility.json").read_text(encoding="utf-8")
     )
 
     overall = "PASS" if all(code == 0 for _, code, _ in results) else "FAIL"
@@ -111,10 +103,7 @@ def main() -> int:
         "| Check | Result |",
         "|---|---|",
     ]
-    lines.extend(
-        f"| {name} | {'PASS' if code == 0 else 'FAIL'} |"
-        for name, code, _ in results
-    )
+    lines.extend(f"| {name} | {'PASS' if code == 0 else 'FAIL'} |" for name, code, _ in results)
     lines.extend(["", "## Tool compatibility state", ""])
     for name, data in compatibility["tools"].items():
         lines.append(
