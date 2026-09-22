@@ -35,7 +35,14 @@ Start Gate                          COMPLETE
 016-J                               COMPLETE
 
 repository implementation readiness READY FOR EXPLICIT START GATE / 100 OF 100
-next implementation program         REQUIRES EXPLICIT START GATE / NOT AUTHORIZED
+
+Phase 017                           AUTHORIZED / ACTIVE — PLANNING ONLY
+017-A                               COMPLETE
+017-B                               NEXT ELIGIBLE / NOT AUTHORIZED
+017-C..017-I                        PLANNED / NOT AUTHORIZED
+
+product implementation execution   NOT AUTHORIZED
+active implementation packages     0
 
 current conceptual blockers         0
 current upstream reopens            0
@@ -46,9 +53,9 @@ product/provider/runtime delivery   NOT AUTHORIZED
 
 ## Current scope boundary
 
-Phase 016 is complete. Its current authorities continue to govern documentation/knowledge topology, OKF routing, human-directed agentic development, implementation-package discipline, engineering preflight, and readiness evidence.
+Phase 016 is complete. Phase 017 is explicitly authorized for implementation-program **planning only**. Its start gate may define lifecycle/process authority, future phase boundaries, evaluation methodology, and v0.x/v1 planning artifacts.
 
-Phase 016 completion does **not** authorize:
+Phase 017 does **not** authorize:
 
 - new product semantics;
 - provider/runtime integration;
@@ -59,50 +66,17 @@ Phase 016 completion does **not** authorize:
 
 ## Current next boundary
 
-016-B is complete.
+Phase 017 — Implementation Program Design, Autonomous Delivery Methodology & v0.x/v1 Roadmap — is **AUTHORIZED / ACTIVE — PLANNING ONLY**.
 
-016-C — OKF v0.2 Producer Profile, Generated Knowledge Projection & Conformance — is COMPLETE.
+017-A is **COMPLETE**. It established:
 
-Closure established an externally grounded producer profile, deterministic generated `knowledge/` compatibility projection, repository-owned generation/conformance checks, and explicit non-authority semantics for generated knowledge. Candidate Verify workflow `35684468631` / `#1581` passed portable and all C2–C9 gates with P16-3/P16-4 findings remaining `0 / 0`.
+- Phase 017 planning scope and exclusions;
+- role-separated bounded autonomy for Cursor/Codex;
+- visible normative requirements plus independently generated/holdout challenge evaluation;
+- a candidate v0.x implementation sequence through independent MVP qualification;
+- deliberately lower-granularity v1 planning;
+- protected `main` and old-branch cleanup as hard prerequisites before executable implementation.
 
-016-D — Stable References, Deterministic Resolution & Drift Control — is COMPLETE.
+017-B — Implementation-Phase Lifecycle & Gate/Evidence Contract — is **NEXT ELIGIBLE / NOT AUTHORIZED**.
 
-Closure established 22 active `syngan://...` stable references covering every canonical ownership-map family, exact fail-closed forward/reverse resolution, OKF route binding through stable references, and mechanical registry/ownership/projection drift detection. Candidate Verify workflow `35686359067` / `#1592` passed portable and all C2–C9 gates with P16-3/P16-4 findings remaining `0 / 0`.
-
-016-E — Agent Authority, Human-Directed Scope, Change Classes, Security & Trust Boundaries — is COMPLETE.
-
-Closure established a canonical tool-neutral agent-development policy, explicit human-directed scope envelopes, orthogonal A1–A4 action/consequence and P16-0–P16-4 change-impact models, review-only and no-self-progression invariants, ordinary A2 repository-completion boundaries, A3 explicit-authorization boundaries, A4 reopen discipline, and least-privilege/content/memory/generated-output trust rules. The new policy is a canonical owner with stable reference `syngan://authority/agent-development-policy` and generated OKF routing. Candidate Verify workflow `35686993647` / `#1597` passed portable and all C2–C9 gates with P16-3/P16-4 findings remaining `0 / 0`.
-
-016-F — Context Budgets, Portable Skills, Tool Adapters — is COMPLETE.
-
-Closure established deterministic UTF-8 context budgets, progressive-disclosure retrieval rules, five canonical provider-neutral workflows under `.agents/skills/`, thin Claude compatibility bridges, shared-source Cursor/Codex adapters, a documented-vs-runtime compatibility manifest, manual fallback, and deterministic budget measurement. The operating-surface policy is a canonical owner with stable reference `syngan://authority/agent-context-workflows`; provider runtimes remain explicitly `unverified`. Candidate Verify workflow `35688409580` / `#1603` passed portable and all C2–C9 gates with P16-3/P16-4 findings remaining `0 / 0`.
-
-016-G — Agentic Conformance, Negative Controls, Drift Detection & CI — is COMPLETE.
-
-Closure established a canonical dependency-free agentic conformance command, focused status/skill/adapter/link drift validators, composition with stable-reference/OKF/context-budget validators, eight isolated seeded negative controls, a human-readable conformance report, and a dedicated Python-only GitHub Actions lane. Agentic conformance workflow `35690366584` / `#6` and Verify workflow `35690366586` / `#1614` both passed on candidate head `39b76e8249b76c85178c1f595f7855ed66c8d3b8`; P16-3/P16-4 findings remain `0 / 0`.
-
-016-H — Implementation Package Contract, Design-to-Code Traceability & ADR Change Control — is COMPLETE.
-
-Closure established a prospective non-authorizing implementation-package contract/profile, stable authority-to-code/test/evidence traceability, Class 0–4 package discipline, architecture ADR change control, a deterministic package validator, nine isolated package negative controls, the bounded `update-traceability` workflow, and current-program-neutral review guidance. Agentic conformance workflow `35692897700` / `#22` and Verify workflow `35692897709` / `#1629` both passed on candidate head `90d325a0d62011a38ccd0c3012e437640233d21d`. The repository has 26 active stable references, 28 generated knowledge files, 0 active implementation-package manifests, 10 retained architecture ADRs, and P16-3/P16-4 findings remain `0 / 0`.
-
-016-I — Dependency / Supply-Chain / Secrets, Compatibility / Benchmark / API-Versioning Preflight — is COMPLETE.
-
-Closure established a canonical engineering-preflight authority/profile, bounded direct-dependency and lock-integrity checks, immutable CI action provenance with non-persisted checkout credentials, high-confidence checked-in secret hygiene, compatibility/support/benchmark claim discipline, explicit pre-1.0 version/release semantics, and eleven isolated engineering-preflight negative controls. Agentic conformance workflow `35696035719` / `#42` and Verify workflow `35696035664` / `#1649` both passed on candidate head `f42550f0d17dea91afd4f5d168f9af158b883e86`. Deterministic evidence reports 10 bounded direct constraints, 530 SHA-256 lock artifacts, 5 immutable external action uses, 27 active stable references, and 29 generated knowledge files.
-
-The preflight intentionally retains external/human evidence residuals rather than fabricating readiness: distribution-license selection, current vulnerability/advisory review, and public compatibility-window definition are release-candidate blockers; Python >3.11 verification, real enterprise-scale benchmark evidence, and production provider qualification remain explicit support/claim non-readiness. None requires a P16-3/P16-4 reopen.
-
-016-J — Repository Implementation-Readiness Scorecard, Residual Risk Register & Phase 016 Exit — is COMPLETE.
-
-Closure applied the scorecard fixed at the Phase 016 start gate and established repository implementation-program readiness at **100 / 100** without awarding unsupported provider, scale, release, deployment, or legal-readiness credit. Six explicit residuals remain current, but none blocks entry to a future separately authorized implementation program; they continue to block only the release/support/provider/scale decisions or claims identified by the readiness authority.
-
-Substantive candidate head `c4ba58cb24f22531c2e133018517a7898f58639e` passed Agentic conformance workflow `35702095874` / `#58` and Verify workflow `35702095888` / `#1665`, including portable and C2–C9. The repository has 28 active stable references and 30 generated OKF files; readiness negative controls pass `5 / 5`, engineering-preflight negatives `11 / 11`, implementation-package negatives `9 / 9`, cross-cutting agentic negatives `8 / 8`, and P16-3/P16-4 findings remain `0 / 0`.
-
-Phase 016 is **COMPLETE**. Any next implementation program requires a new explicit start gate and is **NOT AUTHORIZED**.
-
-016-B closure established:
-
-- one current owner per promoted proposition family;
-- a physical/logical current-vs-history boundary;
-- progressive-disclosure current routing;
-- history conservation;
-- no P16-3/P16-4 reopen.
+Product implementation execution remains **NOT AUTHORIZED**. No implementation package is active. Phase 018 or later execution requires explicit human selection after Phase 017 completes its planning work.

@@ -4,7 +4,7 @@ These instructions apply repository-wide to automated coding/documentation agent
 
 ## Current posture
 
-**Jackson concept design and Phases 013-016 are complete; C0-C9 are active/passing. Phase 016 pre-implementation hardening is COMPLETE. No next implementation, product/provider/runtime delivery, or release program is authorized.**
+**Jackson concept design and Phases 013-016 are complete; C0-C9 are active/passing. Phase 017 implementation-program planning is AUTHORIZED / ACTIVE — PLANNING ONLY. Product implementation execution, Phase 018+, product/provider/runtime delivery, and release remain NOT AUTHORIZED.**
 
 ## Start with
 
@@ -84,4 +84,4 @@ Current status and subphase authorization are owned by docs/authority/current-re
 
 ## Current next boundary
 
-**Phase 016 is COMPLETE at 100/100 repository implementation-program readiness. Any next implementation program requires a new explicit start gate and is NOT AUTHORIZED. No next implementation, product/provider/runtime delivery, or release program is authorized.**
+**Phase 017 planning is active by explicit human authorization. 017-A is COMPLETE; 017-B is NEXT ELIGIBLE / NOT AUTHORIZED. Product implementation execution and Phase 018+ remain NOT AUTHORIZED.**

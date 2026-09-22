@@ -95,10 +95,13 @@ def test_agent_instructions_preserve_phase_016_scope_boundary() -> None:
     agent_text = AGENTS.read_text(encoding="utf-8")
 
     assert "Phases 013-016 are complete" in agent_text
-    assert "Phase 016 pre-implementation hardening is COMPLETE" in agent_text
     assert (
-        "No next implementation, product/provider/runtime delivery, or release program "
-        "is authorized"
+        "Phase 017 implementation-program planning is AUTHORIZED / ACTIVE — PLANNING ONLY."
+        in agent_text
+    )
+    assert (
+        "Product implementation execution, Phase 018+, product/provider/runtime delivery, "
+        "and release remain NOT AUTHORIZED."
     ) in agent_text
 
 
@@ -147,6 +150,7 @@ def test_016_b_current_history_topology_is_established() -> None:
         assert not (ROOT / "docs" / "phases" / f"{phase:03d}").exists()
 
     assert (ROOT / "docs" / "phases" / "016").is_dir()
+    assert (ROOT / "docs" / "phases" / "017").is_dir()
 
 
 def test_completed_phase_015_evidence_is_history_not_current_owner() -> None:
