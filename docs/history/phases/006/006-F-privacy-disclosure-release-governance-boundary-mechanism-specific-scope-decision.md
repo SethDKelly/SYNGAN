@@ -16,16 +16,16 @@ Revalidate SYNGAN's privacy/disclosure/release boundaries after the self-contain
 
 006-F is downstream of:
 
-- [Concept Design Methodology](../../authority/design-methodology.md);
-- [Data Meaning](../../concepts/data-meaning.md);
-- [Synthesis Strategy](../../concepts/synthesis-strategy.md);
-- [Evaluation Criterion](../../concepts/evaluation-criterion.md);
-- [Evaluation](../../concepts/evaluation.md);
-- [Evidence](../../concepts/evidence.md);
+- [Concept Design Methodology](../../../authority/design-methodology.md);
+- [Data Meaning](../../../concepts/data-meaning.md);
+- [Synthesis Strategy](../../../concepts/synthesis-strategy.md);
+- [Evaluation Criterion](../../../concepts/evaluation-criterion.md);
+- [Evaluation](../../../concepts/evaluation.md);
+- [Evidence](../../../concepts/evidence.md);
 - [Core Synchronizations](../../synchronizations/core-synchronizations.md);
-- [Network and External Dependency Policy](../../authority/network-external-dependency-policy.md);
-- [Self-Contained Execution & Runtime Distribution Closure Contract](../../authority/self-contained-execution-runtime-distribution-closure-contract.md);
-- [Enterprise Scale, Resource Admission, Approximation & Degraded Operation Contract](../../authority/enterprise-scale-resource-admission-approximation-degraded-operation-contract.md);
+- [Network and External Dependency Policy](../../../authority/network-external-dependency-policy.md);
+- [Self-Contained Execution & Runtime Distribution Closure Contract](../../../authority/self-contained-execution-runtime-distribution-closure-contract.md);
+- [Enterprise Scale, Resource Admission, Approximation & Degraded Operation Contract](../../../authority/enterprise-scale-resource-admission-approximation-degraded-operation-contract.md);
 - Phase 005 security/Evidence/history planning.
 
 ## Discovery evidence
@@ -42,7 +42,7 @@ That file is historical design evidence rather than canonical authority.
 
 006-F establishes the canonical:
 
-[Privacy, Disclosure Risk, Formal Guarantee & External Release Boundary Contract](../../authority/privacy-disclosure-formal-guarantee-release-boundary-contract.md).
+[Privacy, Disclosure Risk, Formal Guarantee & External Release Boundary Contract](../../../authority/privacy-disclosure-formal-guarantee-release-boundary-contract.md).
 
 No new concept or synchronization is accepted.
 
