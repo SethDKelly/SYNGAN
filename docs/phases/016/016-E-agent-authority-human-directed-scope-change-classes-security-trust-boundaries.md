@@ -1,7 +1,7 @@
 ---
 type: Phase Work Record
 title: 016-E — Agent Authority, Human-Directed Scope, Change Classes, Security & Trust Boundaries
-status: active
+status: complete
 ---
 
 # 016-E — Agent Authority, Human-Directed Scope, Change Classes, Security & Trust Boundaries
@@ -81,14 +81,42 @@ Human-selected work defines the task envelope. Canonical owners define current p
 - P16-3/P16-4 findings remain zero;
 - 016-F/016-G implementation scope does not leak into 016-E.
 
-## Current state
+## Closure evidence
 
 ~~~text
-016-E                                 AUTHORIZED / ACTIVE
-canonical authority contract           IN PROGRESS
-root AGENTS derivation                 IN PROGRESS
-ownership/reference/OKF routing        IN PROGRESS
-bounded fitness evidence               IN PROGRESS
+016-E                                 COMPLETE
+change class                          P16-2
+candidate head                        4d7bda7e9387d852b366059a78647686ccacf64c
+pull request                          #4
+candidate Verify                      35686993647 / #1597
+candidate Verify result               PASS
+canonical agent authority             COMPLETE
+A1 review-only boundary               COMPLETE
+A2 bounded repository work            COMPLETE
+A3 consequential action boundary      COMPLETE
+A4 semantic/architecture reopen       COMPLETE
+A1-A4 / P16 orthogonality             COMPLETE
+review-only invariant                 COMPLETE
+completion/no-self-progression        COMPLETE
+least privilege                       COMPLETE
+secret/sensitive-data boundary        COMPLETE
+untrusted-content trust boundary      COMPLETE
+memory/generated-output trust         COMPLETE
+stable-reference registry             23 ACTIVE
+canonical owner-family coverage       23 / 23
+OKF projection                        25 FILES / PASS
+portable                              PASS
+C2..C9                                PASS
 P16-3 / P16-4                         0 / 0
-016-F                                  NOT AUTHORIZED
+product/runtime/provider behavior     UNCHANGED
 ~~~
+
+## Exit decision
+
+Every 016-E exit criterion is satisfied.
+
+016-E is **COMPLETE**.
+
+Human-selected work now defines the bounded task envelope without silently redefining current SYNGAN meaning. A1–A4 governs action/consequence authority, P16-0–P16-4 governs Phase 016 change impact, technical privilege is not treated as authorization, and passing validation cannot self-authorize subsequent work.
+
+**016-F — Context Budgets, Portable Skills, Tool Adapters** is **NEXT ELIGIBLE / NOT AUTHORIZED** pending explicit proceed.
