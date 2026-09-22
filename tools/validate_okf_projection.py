@@ -5,6 +5,8 @@ import sys
 from pathlib import Path
 from urllib.parse import urlparse
 
+from stable_refs import StableReferenceError, load_registry, resolve_reference
+
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = (ROOT / "docs").resolve()
 KNOWLEDGE = ROOT / "knowledge"
@@ -15,6 +17,7 @@ _REQUIRED = {
     "type",
     "title",
     "description",
+    "syngan_ref",
     "resource",
     "tags",
     "status",
@@ -63,6 +66,8 @@ def _local_target(source: Path, raw_target: str) -> Path | None:
 
 def main() -> int:
     errors: list[str] = []
+    registry = load_registry()
+    seen_refs: set[str] = set()
 
     if not KNOWLEDGE.is_dir():
         print("ERROR knowledge/ directory is missing")
@@ -97,16 +102,19 @@ def main() -> int:
             if not meta:
                 errors.append(f"{rel}: OKF concept requires YAML frontmatter")
                 continue
+
             missing = sorted(key for key in _REQUIRED if not meta.get(key, "").strip())
             if missing:
                 errors.append(f"{rel}: missing SYNGAN producer fields: {', '.join(missing)}")
             if _scalar(meta.get("type", "")) != "SYNGAN Knowledge Route":
                 errors.append(f"{rel}: unexpected route type {meta.get('type')!r}")
+
             status = _scalar(meta.get("status", ""))
             if status and status not in _VALID_STATUS:
                 errors.append(f"{rel}: invalid OKF lifecycle status {status!r}")
             if _scalar(meta.get("syngan_authority", "")) != "projection-only":
                 errors.append(f"{rel}: generated route must remain projection-only")
+
             tags = meta.get("tags", "").strip()
             if tags and not (tags.startswith("[") and tags.endswith("]")):
                 errors.append(f"{rel}: tags must be an inline YAML list")
@@ -114,12 +122,30 @@ def main() -> int:
                 if prohibited in meta:
                     errors.append(f"{rel}: routing projection must not assert {prohibited}")
 
+            stable_ref = _scalar(meta.get("syngan_ref", ""))
+            if stable_ref in seen_refs:
+                errors.append(f"{rel}: duplicate generated stable reference: {stable_ref}")
+            seen_refs.add(stable_ref)
+
+            try:
+                entry = resolve_reference(stable_ref, registry)
+            except StableReferenceError as exc:
+                errors.append(f"{rel}: {exc}")
+                entry = None
+
             resource = _scalar(meta.get("resource", ""))
             target = _local_target(path, resource)
             if target is None or not target.exists():
                 errors.append(f"{rel}: resource target does not exist: {resource}")
             elif not target.is_relative_to(DOCS):
                 errors.append(f"{rel}: resource must resolve under docs/: {resource}")
+            elif entry is not None:
+                expected = (ROOT / entry["path"]).resolve()
+                if target != expected:
+                    errors.append(
+                        f"{rel}: stable-reference/resource drift: "
+                        f"{stable_ref} -> {entry['path']}, resource={resource}"
+                    )
 
         for raw_link in _MARKDOWN_LINK.findall(body):
             target = _local_target(path, raw_link)
