@@ -16,14 +16,14 @@ Refine SYNGAN's control-plane persistence architecture for canonical ownership, 
 
 007-E is downstream of:
 
-- [Concept Design Methodology](../authority/design-methodology.md);
+- [Concept Design Methodology](../../authority/design-methodology.md);
 - [Phase 007 Design Continuation & Implementation Freeze](../authority/phase-007-design-continuation-implementation-freeze.md);
 - [Phase 007-D Identity, Revision, Serialization, Resource/Handle & Programmatic-View Foundation](phase-007-d-identity-revision-serialization-resource-handle-programmatic-view-foundation.md);
-- [Control-Plane Identity, Revision, State, Persistence & Historical Reference Architecture](control-plane-identity-revision-state-persistence-historical-reference.md);
+- [Control-Plane Identity, Revision, State, Persistence & Historical Reference Architecture](../../architecture/control-plane-identity-revision-state-persistence-historical-reference.md);
 - [Phase 006 Architecture Reconciliation Contract](phase-006-architecture-reconciliation-contract.md);
-- [Operational Authority Continuity & Regressive Recovery Contract](../authority/operational-authority-continuity-regressive-recovery-contract.md);
-- [ADR-0002 — Immutable Semantic Snapshots & Versioned Lifecycle State](../decisions/ADR-0002-immutable-semantic-snapshots-versioned-lifecycle-state.md);
-- [ADR-0009 — Non-Regressing Authority After Regressive Control-State Recovery](../decisions/ADR-0009-non-regressing-authority-after-regressive-control-state-recovery.md);
+- [Operational Authority Continuity & Regressive Recovery Contract](../../authority/operational-authority-continuity-regressive-recovery-contract.md);
+- [ADR-0002 — Immutable Semantic Snapshots & Versioned Lifecycle State](../../decisions/ADR-0002-immutable-semantic-snapshots-versioned-lifecycle-state.md);
+- [ADR-0009 — Non-Regressing Authority After Regressive Control-State Recovery](../../decisions/ADR-0009-non-regressing-authority-after-regressive-control-state-recovery.md);
 - accepted concepts, synchronizations and experience authority.
 
 Earlier Phase 005-D concrete technology choices are implementation-planning evidence, not binding architecture under the current design freeze.

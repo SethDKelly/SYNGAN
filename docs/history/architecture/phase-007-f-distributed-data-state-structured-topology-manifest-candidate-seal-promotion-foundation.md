@@ -16,14 +16,14 @@ Refine SYNGAN's distributed data-state architecture for exact source-state bindi
 
 007-F is downstream of:
 
-- [Concept Design Methodology](../authority/design-methodology.md);
+- [Concept Design Methodology](../../authority/design-methodology.md);
 - [Phase 007 Design Continuation & Implementation Freeze](../authority/phase-007-design-continuation-implementation-freeze.md);
 - [Phase 007-D Identity, Revision, Serialization, Resource/Handle & Programmatic-View Foundation](phase-007-d-identity-revision-serialization-resource-handle-programmatic-view-foundation.md);
 - [Phase 007-E Control Persistence, Transactions, CAS, Outbox, Historical References & Migration Baseline](phase-007-e-control-persistence-transactions-cas-outbox-historical-reference-migration-baseline.md);
-- [Structured-Data Topology & Relationship Semantics Contract](../authority/structured-data-topology-relationship-semantics-contract.md);
+- [Structured-Data Topology & Relationship Semantics Contract](../../authority/structured-data-topology-relationship-semantics-contract.md);
 - [Phase 006 Architecture Reconciliation Contract](phase-006-architecture-reconciliation-contract.md);
-- [Spark Data Boundary, Source/Output Reference, Distributed Materialization, Manifest & Promotion Architecture](spark-data-boundary-source-output-reference-distributed-materialization-manifest-promotion.md);
-- [ADR-0003 — Sealed Manifest-Gated Distributed Output Promotion](../decisions/ADR-0003-sealed-manifest-gated-output-promotion.md);
+- [Spark Data Boundary, Source/Output Reference, Distributed Materialization, Manifest & Promotion Architecture](../../architecture/spark-data-boundary-source-output-reference-distributed-materialization-manifest-promotion.md);
+- [ADR-0003 — Sealed Manifest-Gated Distributed Output Promotion](../../decisions/ADR-0003-sealed-manifest-gated-output-promotion.md);
 - accepted concepts, synchronizations and experience authority.
 
 Earlier Phase 005-E choices such as a portable Parquet profile, concrete reference/class names, exact package extras and provider interfaces remain implementation-planning evidence. They are not binding architecture during the current design freeze.

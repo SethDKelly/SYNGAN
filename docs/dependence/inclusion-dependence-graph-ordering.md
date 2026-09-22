@@ -27,9 +27,9 @@ This document preserves the Phase 009-B graph/order derivation. Application-fami
 ## Governing authority
 
 - [Concept Design Methodology](../authority/design-methodology.md)
-- [Phase 008 Individual-Concept Design Consolidation](../concepts/phase-008-individual-concept-consolidation.md)
+- [Phase 008 Individual-Concept Design Consolidation](../history/concepts/phase-008-individual-concept-consolidation.md)
 - [Inclusion-Dependence Semantics, Evidence Rules & Pairwise Relation Inventory](inclusion-dependence-pairwise-inventory.md)
-- [Phase 009 Entry / Decomposition](../phases/009/009-entry-decomposition.md)
+- [Phase 009 Entry / Decomposition](../history/phases/009/009-entry-decomposition.md)
 
 ## Edge semantics
 

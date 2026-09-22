@@ -18,11 +18,11 @@ This document does not authorize implementation. It selects no production schema
 
 This contract is downstream of:
 
-- [Operational Authority Continuity & Regressive Recovery Contract](../authority/operational-authority-continuity-regressive-recovery-contract.md);
-- [Self-Contained Execution & Runtime Distribution Closure Contract](../authority/self-contained-execution-runtime-distribution-closure-contract.md);
-- [Enterprise Scale, Resource Admission, Approximation & Degraded Operation Contract](../authority/enterprise-scale-resource-admission-approximation-degraded-operation-contract.md);
-- [Privacy, Disclosure Risk, Formal Guarantee & External Release Boundary Contract](../authority/privacy-disclosure-formal-guarantee-release-boundary-contract.md);
-- [Structured-Data Topology & Relationship Semantics Contract](../authority/structured-data-topology-relationship-semantics-contract.md);
+- [Operational Authority Continuity & Regressive Recovery Contract](../../authority/operational-authority-continuity-regressive-recovery-contract.md);
+- [Self-Contained Execution & Runtime Distribution Closure Contract](../../authority/self-contained-execution-runtime-distribution-closure-contract.md);
+- [Enterprise Scale, Resource Admission, Approximation & Degraded Operation Contract](../../authority/enterprise-scale-resource-admission-approximation-degraded-operation-contract.md);
+- [Privacy, Disclosure Risk, Formal Guarantee & External Release Boundary Contract](../../authority/privacy-disclosure-formal-guarantee-release-boundary-contract.md);
+- [Structured-Data Topology & Relationship Semantics Contract](../../authority/structured-data-topology-relationship-semantics-contract.md);
 - [Phase 006 Recovery, Security, Degraded, Historical & Topology Experience Contract](../experience/phase-006-recovery-security-degraded-history-topology-experience-contract.md);
 - [Core Synchronizations](../synchronizations/core-synchronizations.md).
 
@@ -65,8 +65,8 @@ Most findings refine those existing decisions without changing their core altern
 
 Two material new architecture decisions receive dedicated ADRs:
 
-- [ADR-0009 — Non-Regressing Authority After Regressive Control-State Recovery](../decisions/ADR-0009-non-regressing-authority-after-regressive-control-state-recovery.md);
-- [ADR-0010 — Self-Contained Distributed Runtime Closure](../decisions/ADR-0010-self-contained-distributed-runtime-closure.md).
+- [ADR-0009 — Non-Regressing Authority After Regressive Control-State Recovery](../../decisions/ADR-0009-non-regressing-authority-after-regressive-control-state-recovery.md);
+- [ADR-0010 — Self-Contained Distributed Runtime Closure](../../decisions/ADR-0010-self-contained-distributed-runtime-closure.md).
 
 These extend rather than supersede ADR-0005/0004/0008.
 

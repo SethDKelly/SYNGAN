@@ -25,12 +25,12 @@ This document preserves the Phase 009-D contraction/extension analysis. Its orig
 ## Governing authority
 
 - [Concept Design Methodology](../authority/design-methodology.md)
-- [Phase 008 Individual-Concept Design Consolidation](../concepts/phase-008-individual-concept-consolidation.md)
-- [Catalog Perimeter Candidate Rediscovery, Missing-Concept & Boundary Audit](../concepts/catalog-perimeter-candidate-rediscovery-boundary-audit.md)
+- [Phase 008 Individual-Concept Design Consolidation](../history/concepts/phase-008-individual-concept-consolidation.md)
+- [Catalog Perimeter Candidate Rediscovery, Missing-Concept & Boundary Audit](../history/concepts/catalog-perimeter-candidate-rediscovery-boundary-audit.md)
 - [009-A Pairwise Inclusion-Dependence Inventory](inclusion-dependence-pairwise-inventory.md)
 - [009-B Canonical Graph & Explanation Ordering](inclusion-dependence-graph-ordering.md)
 - [009-C Application Family, Valid Concept Subsets & Minimal Coherent Variants](application-family-valid-subsets.md)
-- [Phase 009 Entry / Decomposition](../phases/009/009-entry-decomposition.md)
+- [Phase 009 Entry / Decomposition](../history/phases/009/009-entry-decomposition.md)
 
 ---
 

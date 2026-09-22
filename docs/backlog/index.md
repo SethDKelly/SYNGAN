@@ -16,7 +16,7 @@ Canonical facts remain under `docs/authority/`, `docs/concepts/`, `docs/synchron
 
 **No identified design-readiness blocker remains open after Phase 006-J.**
 
-006-J's canonical decision is recorded in the [Phase 006 Consolidated Design Readiness Contract](../authority/phase-006-consolidated-design-readiness-contract.md):
+006-J's canonical decision is recorded in the [Phase 006 Consolidated Design Readiness Contract](../history/authority/phase-006-consolidated-design-readiness-contract.md):
 
 ```text
 DESIGN COMPLETE ENOUGH FOR A LATER

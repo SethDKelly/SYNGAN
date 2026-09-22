@@ -16,12 +16,12 @@ Refine SYNGAN's representation architecture for durable identity, semantic revis
 
 007-D is downstream of:
 
-- [Concept Design Methodology](../authority/design-methodology.md);
+- [Concept Design Methodology](../../authority/design-methodology.md);
 - [Phase 007 Design Continuation & Implementation Freeze](../authority/phase-007-design-continuation-implementation-freeze.md);
 - [Phase 006 Architecture Reconciliation Contract](phase-006-architecture-reconciliation-contract.md);
-- [Architecture Authority, Representation Principles, Layering & Dependency Direction](architecture-authority-representation-layering.md);
-- [Public API, Resource/Handle Model, Workflow Composition & Semantic Mapping](public-api-resource-handle-workflow-semantic-mapping.md);
-- [Control-Plane Identity, Revision, State, Persistence & Historical Reference Architecture](control-plane-identity-revision-state-persistence-historical-reference.md);
+- [Architecture Authority, Representation Principles, Layering & Dependency Direction](../../architecture/architecture-authority-representation-layering.md);
+- [Public API, Resource/Handle Model, Workflow Composition & Semantic Mapping](../../architecture/public-api-resource-handle-workflow-semantic-mapping.md);
+- [Control-Plane Identity, Revision, State, Persistence & Historical Reference Architecture](../../architecture/control-plane-identity-revision-state-persistence-historical-reference.md);
 - accepted concepts, synchronizations and experience authority.
 
 Where an earlier document uses names such as `ResourceRef`, `GenerationHandle`, `StateVersion` or `SchemaVersion`, 007-D treats them as architectural roles unless explicitly stated otherwise.

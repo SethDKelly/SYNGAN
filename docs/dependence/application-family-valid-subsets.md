@@ -25,10 +25,10 @@ This document preserves the Phase 009-C derivation and examples. The downstream 
 ## Governing authority
 
 - [Concept Design Methodology](../authority/design-methodology.md)
-- [Phase 008 Individual-Concept Design Consolidation](../concepts/phase-008-individual-concept-consolidation.md)
+- [Phase 008 Individual-Concept Design Consolidation](../history/concepts/phase-008-individual-concept-consolidation.md)
 - [009-A Pairwise Inclusion-Dependence Inventory](inclusion-dependence-pairwise-inventory.md)
 - [009-B Canonical Graph & Explanation Ordering](inclusion-dependence-graph-ordering.md)
-- [Phase 009 Entry / Decomposition](../phases/009/009-entry-decomposition.md)
+- [Phase 009 Entry / Decomposition](../history/phases/009/009-entry-decomposition.md)
 
 ## Vocabulary
 
