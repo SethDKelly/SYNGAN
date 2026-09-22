@@ -17,8 +17,8 @@ Reconcile retained distributed data-state, topology, manifest, candidate, sealin
 - [Phase 013 Architecture Reconciliation Authority](../../authority/phase-013-architecture-reconciliation-authority.md)
 - [013-B Representation Reconciliation](../../architecture/phase-013-b-representation-layering-public-contract-identity-view-reconciliation.md)
 - [013-C Persistence Reconciliation](../../architecture/phase-013-c-control-persistence-history-concurrency-migration-recovery-reconciliation.md)
-- [Structured-Data Topology & Relationship Semantics Contract](../../authority/structured-data-topology-relationship-semantics-contract.md)
-- [Generation](../../concepts/generation.md)
+- [Structured-Data Topology & Relationship Semantics Contract](../../../authority/structured-data-topology-relationship-semantics-contract.md)
+- [Generation](../../../concepts/generation.md)
 - retained Phase 004-D and Phase 007-F distributed-data authorities
 - ADR-0003 as rationale input
 
