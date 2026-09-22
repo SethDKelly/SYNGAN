@@ -185,7 +185,7 @@ Phase 016   AUTHORIZED / ACTIVE
 016-C       COMPLETE
 016-D       COMPLETE
 016-E       COMPLETE
-016-F       NEXT ELIGIBLE / NOT AUTHORIZED
+016-F       AUTHORIZED / ACTIVE
 016-G..J    NOT AUTHORIZED
 product delivery beyond hardening  NOT AUTHORIZED
 ~~~
@@ -339,4 +339,25 @@ The user explicitly authorized 016-E after the verified 016-D closure.
 
 016-E closure evidence is recorded in the phase work record. Candidate Verify workflow `35686993647` / `#1597` passed portable and C2–C9. The canonical agent policy is owner-mapped, stable-reference routed, and projected through OKF; A1–A4 is explicitly orthogonal to P16-0–P16-4; P16-3/P16-4 findings remain `0 / 0`.
 
-016-F — Context Budgets, Portable Skills, Tool Adapters — is NEXT ELIGIBLE / NOT AUTHORIZED. 016-G through 016-J remain NOT AUTHORIZED.
+## 016-F authorization
+
+The user explicitly authorized 016-F after the verified 016-E closure.
+
+016-F is a documented **P16-2 portability/context operating-surface contract**. It may:
+
+- define deterministic byte-based budgets for persistent and on-demand agent context surfaces;
+- define progressive-disclosure context acquisition using current status, stable references, canonical ownership, and exact task scope;
+- define repository-owned portable workflows under `.agents/skills/`;
+- define thin tool adapters for Cursor, Codex, and Claude Code that inherit 016-E rather than fork it;
+- define documented compatibility state, degraded/manual fallback, and tool-switching expectations;
+- add bounded fitness checks for structure, budget, routing, and duplication prevention.
+
+016-F must not:
+
+- create autonomous task selection, multi-agent orchestration, unattended merge/deploy, or new A3 permissions;
+- establish the full executable agentic negative-control/drift/CI program reserved for 016-G;
+- define implementation-package/ADR governance reserved for 016-H;
+- treat documented vendor features as runtime certification;
+- change accepted product semantics, architecture contracts, provider/runtime behavior, or Phase 015 support claims.
+
+016-G through 016-J remain gated until 016-F exit evidence exists.
