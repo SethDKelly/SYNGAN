@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "phase": "016-J",
+  "phase": "017-B",
   "status": "active",
   "rules": {
     "current_proposition": "exactly_one_preferred_current_owner",
@@ -15,7 +15,8 @@
     "agentic_conformance": "deterministic_negative_controls_separate_from_product_health",
     "implementation_packages": "traceability_evidence_not_authorization_or_semantic_authority",
     "engineering_preflight": "deterministic_release_hygiene_not_release_or_support_authority",
-    "repository_readiness": "scorecard_evidence_not_program_or_release_authority"
+    "repository_readiness": "scorecard_evidence_not_program_or_release_authority",
+    "implementation_phase_lifecycle": "phase_intent_start_gate_success_evidence_candidate_freeze_exit_review_no_self_progression"
   },
   "owners": [
     {
@@ -99,6 +100,10 @@
       "path": "docs/implementation/implementation-authority-delivery-governance-toolchain-repository-enforcement.md"
     },
     {
+      "family": "implementation_phase_lifecycle",
+      "path": "docs/implementation/implementation-phase-lifecycle-gate-evidence-contract.md"
+    },
+    {
       "family": "implementation_package_traceability_change_control",
       "path": "docs/implementation/implementation-package-traceability-adr-change-control.md"
     },
@@ -124,7 +129,7 @@
     },
     {
       "family": "active_phase",
-      "path": "docs/phases/016/index.md"
+      "path": "docs/phases/017/index.md"
     },
     {
       "family": "history",
