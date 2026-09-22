@@ -4,7 +4,6 @@ import argparse
 import json
 from pathlib import Path
 
-
 EXPECTED_PHASES = [f"{number:03d}" for number in range(18, 26)]
 EXPECTED_EDGES = [[EXPECTED_PHASES[i], EXPECTED_PHASES[i + 1]] for i in range(7)]
 
