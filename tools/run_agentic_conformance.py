@@ -157,7 +157,8 @@ def main() -> int:
             "from documentation.",
             "- Negative controls operate only on an isolated temporary copy.",
             "- Product/provider/runtime delivery remains outside the current Phase 016 authority.",
-            "- Engineering-preflight PASS is not release, legal, vulnerability, provider, or scale approval.",
+            "- Engineering-preflight PASS is not release, legal, vulnerability, provider, "
+            "or scale approval.",
             "",
         ]
     )
