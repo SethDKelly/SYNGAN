@@ -92,7 +92,10 @@ def test_agent_authority_preserves_current_process_ownership_without_expanding_a
         "context budgets, skills, adapters, compatibility states, and fallback mechanics "
         "are reserved for Phase 016-F"
     ) in text
-    assert "This policy continues to govern agent action/consequence authority after Phase 016." in text
+    assert (
+        "This policy continues to govern agent action/consequence authority after Phase 016."
+        in text
+    )
     assert "Phase 017 planning may define implementation-process mechanics" in text
     assert "it does not expand A1-A4 authority" in text
     assert "cursor-codex-autonomous-delivery-runtime-qualification.md" in text
