@@ -60,6 +60,12 @@
           "title": "Agent Context, Portable Workflows & Tool Adapter Contract",
           "description": "Canonical bounded-context, portable-skill, and provider-adapter contract.",
           "ref": "syngan://authority/agent-context-workflows"
+        },
+        {
+          "id": "agentic-conformance",
+          "title": "Agentic Conformance, Negative Controls, Drift Detection & CI",
+          "description": "Canonical deterministic agentic conformance, negative-control, drift, and CI contract.",
+          "ref": "syngan://authority/agentic-conformance"
         }
       ]
     },
