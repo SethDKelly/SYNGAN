@@ -84,6 +84,7 @@ def main() -> int:
                 if phrase not in texts[surface]:
                     errors.append(f"{surface}: missing coherent Phase 016 closure: {phrase}")
 
+    required: dict[str, tuple[str, ...]]
     if mode == P16_ACTIVE:
         required = {
             "phase_016_authority": ("016-J       AUTHORIZED / ACTIVE",),
