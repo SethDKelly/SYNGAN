@@ -17,7 +17,7 @@ Translate the accepted 004-H enterprise-security architecture plus the concrete 
 005-I is downstream of:
 
 - [Phase 004 Consolidated Architecture Contract](../../architecture/phase-004-consolidated-architecture-contract.md);
-- [Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Architecture](../../architecture/dependency-resolution-offline-no-egress-authorization-redaction-enterprise-security.md);
+- [Dependency Resolution, Offline/No-Egress, Authorization, Redaction & Enterprise Security Architecture](../../../architecture/dependency-resolution-offline-no-egress-authorization-redaction-enterprise-security.md);
 - [005-B Verification Strategy](../../implementation/verification-strategy-test-harness-architecture-fitness-evidence-quality-gates.md);
 - [005-D Public Resource/Control-Plane Plan](../../implementation/public-resource-control-plane-identity-state-persistence-transactions-migration-plan.md);
 - [005-E Spark Data Boundary Plan](../../implementation/spark-data-boundary-source-output-reference-manifest-materialization-promotion-plan.md);

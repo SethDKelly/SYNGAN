@@ -10,17 +10,17 @@ Phase 004 translated SYNGAN's accepted concept, synchronization, and experience 
 
 ## Entry authority
 
-- [Design Authority](../../authority/index.md)
-- [Accepted Concepts](../../concepts/index.md)
-- [Accepted Synchronizations](../../synchronizations/index.md)
+- [Design Authority](../../../authority/index.md)
+- [Accepted Concepts](../../../concepts/index.md)
+- [Accepted Synchronizations](../../../synchronizations/index.md)
 - [Phase 003 Consolidated Experience Contract](../../experience/phase-003-consolidated-experience-contract.md)
 
 ## Exit authority
 
 - [Phase 004 Consolidated Architecture Contract](../../architecture/phase-004-consolidated-architecture-contract.md)
 - [004-J — Cross-Architecture Invariant Audit, Decision Consolidation & Phase 004 Exit](004-J-cross-architecture-invariant-audit-decision-consolidation-phase-004-exit.md)
-- [Architecture Index](../../architecture/index.md)
-- [Architecture Decision Records](../../decisions/index.md)
+- [Architecture Index](../../../architecture/index.md)
+- [Architecture Decision Records](../../../decisions/index.md)
 
 ## Groups
 
@@ -76,14 +76,14 @@ Implementation planning is now constrained by the [Phase 004 Consolidated Archit
 
 Active Phase 004 ADRs:
 
-1. [ADR-0001 — Typed Resource/Handle Public API](../../decisions/ADR-0001-typed-resource-handle-public-api.md)
-2. [ADR-0002 — Immutable Semantic Snapshots & Versioned Lifecycle State](../../decisions/ADR-0002-immutable-semantic-snapshots-versioned-lifecycle-state.md)
-3. [ADR-0003 — Sealed Manifest-Gated Distributed Output Promotion](../../decisions/ADR-0003-sealed-manifest-gated-output-promotion.md)
-4. [ADR-0004 — Semantic Extension & Runtime Binding Separation](../../decisions/ADR-0004-semantic-extension-runtime-binding-separation.md)
-5. [ADR-0005 — Attempt-Epoch Fencing & Recoverable At-Least-Once Execution](../../decisions/ADR-0005-attempt-epoch-fencing-recoverable-at-least-once-execution.md)
-6. [ADR-0006 — Typed Canonical Provenance & Derived Historical Projections](../../decisions/ADR-0006-typed-provenance-canonical-derived-history-projections.md)
-7. [ADR-0007 — Explicit Dependency Resolution & Scoped Capability Security](../../decisions/ADR-0007-explicit-dependency-resolution-scoped-capability-security.md)
-8. [ADR-0008 — Portable Core & Capability-Negotiated Platform Adapters](../../decisions/ADR-0008-portable-core-capability-negotiated-platform-adapters.md)
+1. [ADR-0001 — Typed Resource/Handle Public API](../../../decisions/ADR-0001-typed-resource-handle-public-api.md)
+2. [ADR-0002 — Immutable Semantic Snapshots & Versioned Lifecycle State](../../../decisions/ADR-0002-immutable-semantic-snapshots-versioned-lifecycle-state.md)
+3. [ADR-0003 — Sealed Manifest-Gated Distributed Output Promotion](../../../decisions/ADR-0003-sealed-manifest-gated-output-promotion.md)
+4. [ADR-0004 — Semantic Extension & Runtime Binding Separation](../../../decisions/ADR-0004-semantic-extension-runtime-binding-separation.md)
+5. [ADR-0005 — Attempt-Epoch Fencing & Recoverable At-Least-Once Execution](../../../decisions/ADR-0005-attempt-epoch-fencing-recoverable-at-least-once-execution.md)
+6. [ADR-0006 — Typed Canonical Provenance & Derived Historical Projections](../../../decisions/ADR-0006-typed-provenance-canonical-derived-history-projections.md)
+7. [ADR-0007 — Explicit Dependency Resolution & Scoped Capability Security](../../../decisions/ADR-0007-explicit-dependency-resolution-scoped-capability-security.md)
+8. [ADR-0008 — Portable Core & Capability-Negotiated Platform Adapters](../../../decisions/ADR-0008-portable-core-capability-negotiated-platform-adapters.md)
 
 No ADR was superseded during the exit audit.
 

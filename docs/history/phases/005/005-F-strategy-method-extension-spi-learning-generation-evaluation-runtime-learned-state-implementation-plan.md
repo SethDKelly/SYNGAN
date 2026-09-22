@@ -17,7 +17,7 @@ Translate the accepted Phase 004-E runtime-extension architecture plus the 005-D
 005-F is downstream of:
 
 - [Phase 004 Consolidated Architecture Contract](../../architecture/phase-004-consolidated-architecture-contract.md);
-- [Strategy Extension, Learning/Generation/Evaluation Runtime & Adapter Architecture](../../architecture/strategy-extension-learning-generation-evaluation-runtime-adapter.md);
+- [Strategy Extension, Learning/Generation/Evaluation Runtime & Adapter Architecture](../../../architecture/strategy-extension-learning-generation-evaluation-runtime-adapter.md);
 - [005-B Verification Strategy](../../implementation/verification-strategy-test-harness-architecture-fitness-evidence-quality-gates.md);
 - [005-C Source Topology](../../implementation/source-topology-module-package-boundaries-shared-foundation-dependency-enforcement.md);
 - [005-D Public Resource/Control-Plane Plan](../../implementation/public-resource-control-plane-identity-state-persistence-transactions-migration-plan.md);

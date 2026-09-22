@@ -15,7 +15,7 @@ Select the concrete Python source/package/test topology and foundational build/e
 005-C is downstream of:
 
 - [Phase 004 Consolidated Architecture Contract](../../architecture/phase-004-consolidated-architecture-contract.md);
-- [005-A Implementation Authority](../../implementation/implementation-authority-delivery-governance-toolchain-repository-enforcement.md);
+- [005-A Implementation Authority](../../../implementation/implementation-authority-delivery-governance-toolchain-repository-enforcement.md);
 - [005-B Verification Strategy](../../implementation/verification-strategy-test-harness-architecture-fitness-evidence-quality-gates.md);
 - [Phase 005 navigator](index.md).
 

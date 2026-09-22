@@ -16,12 +16,12 @@ Audit 005-A through 005-J as one future implementation system, classify unresolv
 
 005-K is downstream of:
 
-- [Concept Design Methodology](../../authority/design-methodology.md);
-- [Accepted Concepts](../../concepts/index.md);
-- [Accepted Synchronizations](../../synchronizations/index.md);
+- [Concept Design Methodology](../../../authority/design-methodology.md);
+- [Accepted Concepts](../../../concepts/index.md);
+- [Accepted Synchronizations](../../../synchronizations/index.md);
 - [Phase 003 Consolidated Experience Contract](../../experience/phase-003-consolidated-experience-contract.md);
 - [Phase 004 Consolidated Architecture Contract](../../architecture/phase-004-consolidated-architecture-contract.md);
-- [Implementation Planning & Delivery Authority](../../implementation/index.md);
+- [Implementation Planning & Delivery Authority](../../../implementation/index.md);
 - 005-A through 005-J phase records and canonical implementation plans.
 
 ## Canonical artifacts created
@@ -29,7 +29,7 @@ Audit 005-A through 005-J as one future implementation system, classify unresolv
 005-K establishes:
 
 - [Phase 005 Consolidated Implementation-Planning Contract](../../implementation/phase-005-consolidated-implementation-planning-contract.md);
-- [SYNGAN Design & Delivery Backlog](../../backlog/index.md);
+- [SYNGAN Design & Delivery Backlog](../../../backlog/index.md);
 - [Phase 006 — Post-Planning Design Validation & Adversarial Refinement](../006/index.md).
 
 ## Methodology interpretation
@@ -265,7 +265,7 @@ Wave 5 is intentionally blocked pending Phase 006 representative-method design p
 
 ## Backlog closure/classification
 
-005-K converts scattered deferred notes into the [Backlog](../../backlog/index.md).
+005-K converts scattered deferred notes into the [Backlog](../../../backlog/index.md).
 
 ### Blocking design refinement
 

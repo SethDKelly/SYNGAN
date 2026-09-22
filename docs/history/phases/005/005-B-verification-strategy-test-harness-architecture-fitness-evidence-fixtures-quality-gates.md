@@ -16,7 +16,7 @@ Define the verification architecture that later source/package topology and impl
 
 005-B is downstream of:
 
-- [Implementation Authority, Delivery Governance, Toolchain & Repository Enforcement](../../implementation/implementation-authority-delivery-governance-toolchain-repository-enforcement.md);
+- [Implementation Authority, Delivery Governance, Toolchain & Repository Enforcement](../../../implementation/implementation-authority-delivery-governance-toolchain-repository-enforcement.md);
 - [Phase 004 Consolidated Architecture Contract](../../architecture/phase-004-consolidated-architecture-contract.md);
 - [Phase 003 Consolidated Experience Contract](../../experience/phase-003-consolidated-experience-contract.md);
 - [Phase 005 navigator](index.md).

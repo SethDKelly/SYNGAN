@@ -16,7 +16,7 @@ The phase prevents implementation/code-generation convenience from becoming a ne
 
 005-A is downstream of:
 
-- [Documentation Governance and Anti-Drift Rules](../../authority/documentation-governance.md);
+- [Documentation Governance and Anti-Drift Rules](../../../authority/documentation-governance.md);
 - [Phase 003 Consolidated Experience Contract](../../experience/phase-003-consolidated-experience-contract.md);
 - [Phase 004 Consolidated Architecture Contract](../../architecture/phase-004-consolidated-architecture-contract.md);
 - [004-J — Phase 004 Exit](../004/004-J-cross-architecture-invariant-audit-decision-consolidation-phase-004-exit.md);
@@ -32,8 +32,8 @@ This was treated as an advantage: 005-A establishes governance before inventing 
 
 005-A establishes:
 
-- [Implementation Planning & Delivery Authority index](../../implementation/index.md);
-- [Implementation Authority, Delivery Governance, Toolchain & Repository Enforcement](../../implementation/implementation-authority-delivery-governance-toolchain-repository-enforcement.md).
+- [Implementation Planning & Delivery Authority index](../../../implementation/index.md);
+- [Implementation Authority, Delivery Governance, Toolchain & Repository Enforcement](../../../implementation/implementation-authority-delivery-governance-toolchain-repository-enforcement.md).
 
 The canonical implementation rule is:
 
@@ -150,7 +150,7 @@ Optional platform/model-runtime integrations must remain isolatable from the por
 
 ### Root agent rules
 
-Created [`AGENTS.md`](../../../AGENTS.md) as the concise repository-wide machine-facing governance entry.
+Created [`AGENTS.md`](../../../../AGENTS.md) as the concise repository-wide machine-facing governance entry.
 
 It requires agents to:
 
@@ -167,7 +167,7 @@ It requires agents to:
 
 ### Pull-request checklist
 
-Created [`.github/pull_request_template.md`](../../../.github/pull_request_template.md) to require explicit disclosure of:
+Created [`.github/pull_request_template.md`](../../../../.github/pull_request_template.md) to require explicit disclosure of:
 
 - implementation slice/change class;
 - authority mapping;

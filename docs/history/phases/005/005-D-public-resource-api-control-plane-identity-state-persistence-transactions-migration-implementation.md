@@ -17,9 +17,9 @@ Translate the accepted public-resource/control-plane architecture into a depende
 005-D is downstream of:
 
 - [Phase 004 Consolidated Architecture Contract](../../architecture/phase-004-consolidated-architecture-contract.md);
-- [Public API, Resource/Handle Model, Workflow Composition & Semantic Mapping](../../architecture/public-api-resource-handle-workflow-semantic-mapping.md);
-- [Control-Plane Identity, Revision, State, Persistence & Historical Reference Architecture](../../architecture/control-plane-identity-revision-state-persistence-historical-reference.md);
-- [005-A Implementation Authority](../../implementation/implementation-authority-delivery-governance-toolchain-repository-enforcement.md);
+- [Public API, Resource/Handle Model, Workflow Composition & Semantic Mapping](../../../architecture/public-api-resource-handle-workflow-semantic-mapping.md);
+- [Control-Plane Identity, Revision, State, Persistence & Historical Reference Architecture](../../../architecture/control-plane-identity-revision-state-persistence-historical-reference.md);
+- [005-A Implementation Authority](../../../implementation/implementation-authority-delivery-governance-toolchain-repository-enforcement.md);
 - [005-B Verification Strategy](../../implementation/verification-strategy-test-harness-architecture-fitness-evidence-quality-gates.md);
 - [005-C Source Topology](../../implementation/source-topology-module-package-boundaries-shared-foundation-dependency-enforcement.md).
 

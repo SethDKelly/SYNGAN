@@ -22,7 +22,7 @@ Consolidated planning authority:
 
 Backlog/classification:
 
-[SYNGAN Design & Delivery Backlog](../../backlog/index.md)
+[SYNGAN Design & Delivery Backlog](../../../backlog/index.md)
 
 ## Groups
 
