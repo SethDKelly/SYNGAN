@@ -6,7 +6,12 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-READINESS = ROOT / "docs" / "implementation" / "repository-implementation-readiness-residual-risk.md"
+READINESS = (
+    ROOT
+    / "docs"
+    / "implementation"
+    / "repository-implementation-readiness-residual-risk.md"
+)
 SCORECARD = ROOT / "docs" / "implementation" / "repository-readiness-scorecard.json"
 REGISTRY = ROOT / "docs" / "authority" / "stable-reference-registry.json"
 OWNERSHIP = ROOT / "docs" / "authority" / "canonical-knowledge-ownership-map.json"
