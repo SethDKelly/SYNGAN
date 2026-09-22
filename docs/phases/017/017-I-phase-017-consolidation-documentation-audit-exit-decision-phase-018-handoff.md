@@ -210,6 +210,14 @@ authorization boundary was weakened to obtain a green result.
 
 Final closure requires Verify and Agentic conformance to pass against the same exact head.
 
+Repair verification evidence before the final documentation-only closure head:
+
+~~~text
+24c255b2e44cb65bc30ad6173395fb0473af306d  Verify  PASS
+~~~
+
+The final exact-head workflow results remain controlling.
+
 ## Phase 018 handoff
 
 If a human explicitly selects Phase 018, its start gate must begin from current main and first
