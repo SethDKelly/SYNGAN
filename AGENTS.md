@@ -34,6 +34,13 @@ A1-A4 describe action/consequence authority; P16-0..P16-4 describe Phase 016 cha
 
 Completing the selected work does not authorize the next phase, subphase, backlog item, or product program.
 
+## Context and portable workflows
+
+Bounded context and tool portability are governed by [Agent Context, Portable Workflows & Tool Adapter Contract](docs/authority/agent-context-portable-workflows-tool-adapters.md).
+
+Use exact `syngan://...` resolution when a stable reference is known; otherwise route through `docs/index.md` to the smallest current owner. Loading another file requires a concrete task question it answers.
+
+Canonical reusable workflows live under `.agents/skills/`: `resolve-context`, `resolve-reference`, `execute-selected-work`, `review-change`, and `run-verification`. Skills are procedures only; invoking one does not expand the human-selected task or change A1-A4 authority.
 ## Durable authority rules
 
 - One proposition should have one preferred current owner.
