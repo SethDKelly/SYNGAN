@@ -31,7 +31,7 @@ Start Gate                          COMPLETE
 016-F                               COMPLETE
 016-G                               COMPLETE
 016-H                               COMPLETE
-016-I                               NEXT ELIGIBLE / NOT AUTHORIZED
+016-I                               AUTHORIZED / ACTIVE
 016-J                               NOT AUTHORIZED
 
 current conceptual blockers         0
@@ -82,7 +82,9 @@ Closure established a canonical dependency-free agentic conformance command, foc
 
 Closure established a prospective non-authorizing implementation-package contract/profile, stable authority-to-code/test/evidence traceability, Class 0–4 package discipline, architecture ADR change control, a deterministic package validator, nine isolated package negative controls, the bounded `update-traceability` workflow, and current-program-neutral review guidance. Agentic conformance workflow `35692897700` / `#22` and Verify workflow `35692897709` / `#1629` both passed on candidate head `90d325a0d62011a38ccd0c3012e437640233d21d`. The repository has 26 active stable references, 28 generated knowledge files, 0 active implementation-package manifests, 10 retained architecture ADRs, and P16-3/P16-4 findings remain `0 / 0`.
 
-016-I — Dependency / Supply-Chain / Secrets, Compatibility / Benchmark / API-Versioning Preflight — is NEXT ELIGIBLE / NOT AUTHORIZED pending explicit proceed.
+016-I — Dependency / Supply-Chain / Secrets, Compatibility / Benchmark / API-Versioning Preflight — is AUTHORIZED / ACTIVE by explicit user proceed.
+
+016-I may harden repository dependency provenance, CI action pinning, checked-in secret hygiene, compatibility/support/release evidence discipline, benchmark-claim preflight, package/API versioning policy, and deterministic preflight checks. It may record truthful release blockers or unqualified support dimensions. It may not choose a distribution license on the user's behalf, manufacture vulnerability/benchmark/provider evidence, add provider/runtime delivery, publish a release, or authorize 016-J.
 
 016-B closure established:
 
