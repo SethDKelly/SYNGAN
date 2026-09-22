@@ -186,6 +186,20 @@ def main() -> int:
 
         _mutate(
             repo,
+            "docs/implementation/evaluation-method-profile.json",
+            lambda text: text.replace(
+                '"hidden_requirements_allowed": false',
+                '"hidden_requirements_allowed": true',
+                1,
+            ),
+            "tools/validate_evaluation_method.py",
+            ("--repo", str(repo)),
+            "hidden blocking requirements permitted",
+            errors,
+        )
+
+        _mutate(
+            repo,
             "AGENTS.md",
             lambda text: (
                 text + "\n[Broken agentic route](docs/authority/not-a-real-agentic-owner.md)\n"
@@ -198,7 +212,7 @@ def main() -> int:
 
     for error in errors:
         print("ERROR", error)
-    print(f"Agentic conformance negative controls: {len(errors)} error(s), 9 control(s)")
+    print(f"Agentic conformance negative controls: {len(errors)} error(s), 10 control(s)")
     return 1 if errors else 0
 
 

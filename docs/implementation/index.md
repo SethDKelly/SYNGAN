@@ -12,6 +12,7 @@ status: active
 - [Current Implementation & Support Scope](current-support-scope.md)
 - [Implementation Phase Lifecycle, Gate & Evidence Contract](implementation-phase-lifecycle-gate-evidence-contract.md)
 - [Cursor/Codex Autonomous Delivery Operating Model & Runtime Qualification](cursor-codex-autonomous-delivery-runtime-qualification.md)
+- [Success Visibility, Holdout Evaluation & Anti-Gaming Methodology](success-visibility-holdout-evaluation-anti-gaming.md)
 - [Implementation Package, Traceability & ADR Change Control](implementation-package-traceability-adr-change-control.md)
 - [Engineering Preflight — Dependency, Supply Chain, Secrets, Compatibility, Benchmark & Versioning](engineering-preflight-dependency-supply-chain-secrets-compatibility-benchmark-versioning.md)
 - [Repository Implementation Readiness & Residual Risk](repository-implementation-readiness-residual-risk.md)

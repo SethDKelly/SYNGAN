@@ -1,0 +1,130 @@
+{
+  "schema_version": "1.0",
+  "status": "active",
+  "authority": "docs/implementation/success-visibility-holdout-evaluation-anti-gaming.md",
+  "stable_ref": "syngan://implementation/evaluation-method",
+  "invariant": "requirements_visible_challenge_realization_holdout",
+  "visibility_classes": {
+    "V0": {
+      "name": "normative_obligations",
+      "implementer_visible": true,
+      "frozen_before_implementation": true
+    },
+    "V1": {
+      "name": "representative_evidence",
+      "implementer_visible": true,
+      "independent_by_default": false
+    },
+    "H1": {
+      "name": "evaluator_holdout_realization",
+      "implementer_visible_pre_evaluation": false,
+      "generated_or_selected_after_candidate_freeze": true
+    },
+    "H2": {
+      "name": "external_private_evidence",
+      "optional": true,
+      "claim_driven": true,
+      "simulated_secrecy_forbidden": true
+    }
+  },
+  "independence_levels": {
+    "EI0": {
+      "name": "first_party_same_context",
+      "independent": false
+    },
+    "EI1": {
+      "name": "fresh_context_independent_role",
+      "independent": true
+    },
+    "EI2": {
+      "name": "cross_provider_or_independently_staffed",
+      "independent": true
+    },
+    "EI3": {
+      "name": "external_private_qualification",
+      "independent": true,
+      "claim_driven": true
+    }
+  },
+  "minimum_agent_assisted_phase_exit_independence": "EI1",
+  "challenge_families": [
+    {
+      "id": "CH-01",
+      "name": "partition_boundary_variation"
+    },
+    {
+      "id": "CH-02",
+      "name": "property_generative_variation"
+    },
+    {
+      "id": "CH-03",
+      "name": "metamorphic_relations"
+    },
+    {
+      "id": "CH-04",
+      "name": "mutation_challenge"
+    },
+    {
+      "id": "CH-05",
+      "name": "failure_interleaving_recovery"
+    },
+    {
+      "id": "CH-06",
+      "name": "differential_independent_oracle"
+    },
+    {
+      "id": "CH-07",
+      "name": "history_replay_reproducibility"
+    },
+    {
+      "id": "CH-08",
+      "name": "adversarial_authority_security_disclosure"
+    }
+  ],
+  "anti_gaming_controls": [
+    "AG-01",
+    "AG-02",
+    "AG-03",
+    "AG-04",
+    "AG-05",
+    "AG-06",
+    "AG-07",
+    "AG-08",
+    "AG-09",
+    "AG-10",
+    "AG-11",
+    "AG-12"
+  ],
+  "decision_rules": {
+    "hidden_requirements_allowed": false,
+    "blocking_obligation_non_compensatory": true,
+    "aggregate_score_may_override_blocking_failure": false,
+    "post_hoc_thresholds_allowed": false,
+    "evaluator_may_silently_repair_candidate": false,
+    "failed_generated_cases_must_be_retained": true
+  },
+  "contamination": {
+    "exposed_holdout_case_becomes": "representative_regression_evidence",
+    "fresh_holdout_required_after_repair": true,
+    "unchanged_evidence_reuse_requires_justification": true
+  },
+  "replay_required_fields": [
+    "evaluation_id",
+    "candidate_commit",
+    "success_contract_identity",
+    "evaluator_role",
+    "independence_level",
+    "environment_identity",
+    "obligation_ids",
+    "challenge_family_ids",
+    "generation_or_selection_method",
+    "seed_operator_fixture_identity",
+    "commands_or_tooling",
+    "result_by_obligation",
+    "failure_and_reproduction_evidence",
+    "evaluator_defect_disposition",
+    "contamination_state",
+    "reused_evidence_justification",
+    "limitations_and_non_claims"
+  ]
+}

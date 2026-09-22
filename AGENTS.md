@@ -47,6 +47,12 @@ Cursor/Codex bounded implementation roles and runtime qualification are governed
 
 Documented provider compatibility is not runtime qualification. Cursor and Codex remain `pending_tool_in_loop` until real provider evidence satisfies the runtime-qualification profile. Agent/tool switching never changes package scope, authority, or success criteria.
 
+## Success visibility and independent evaluation
+
+Success visibility, holdout generation, evaluator independence, replay, contamination rotation, and anti-gaming are governed by [Success Visibility, Holdout Evaluation & Anti-Gaming Methodology](docs/implementation/success-visibility-holdout-evaluation-anti-gaming.md).
+
+Normative requirements remain visible. Exact holdout realization may be selected/generated after candidate freeze; it may never introduce a hidden requirement. Once an exact holdout is exposed for repair, treat it as regression evidence and use a fresh holdout for renewed independent evaluation.
+
 ## Agentic conformance
 
 Repository agentic/documentation conformance is governed by [Agentic Conformance, Negative Controls, Drift Detection & CI](docs/authority/agentic-conformance-policy.md).
@@ -90,4 +96,4 @@ Current status and subphase authorization are owned by docs/authority/current-re
 
 ## Current next boundary
 
-**Phase 017 planning is active by explicit human authorization. 017-A through 017-C are COMPLETE; 017-D is NEXT ELIGIBLE / NOT AUTHORIZED. Product implementation execution and Phase 018+ remain NOT AUTHORIZED.**
+**Phase 017 planning is active by explicit human authorization. 017-A through 017-D are COMPLETE; 017-E is NEXT ELIGIBLE / NOT AUTHORIZED. Product implementation execution and Phase 018+ remain NOT AUTHORIZED.**

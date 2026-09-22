@@ -30,6 +30,10 @@ CHECKS: tuple[tuple[str, tuple[str, ...]], ...] = (
     ("implementation package traceability", ("tools/validate_implementation_packages.py",)),
     ("engineering preflight", ("tools/validate_engineering_preflight.py", "--repo", "{repo}")),
     (
+        "success visibility and holdout evaluation methodology",
+        ("tools/validate_evaluation_method.py", "--repo", "{repo}"),
+    ),
+    (
         "repository readiness scorecard",
         ("tools/validate_repository_readiness.py", "--repo", "{repo}"),
     ),

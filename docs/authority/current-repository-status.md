@@ -40,8 +40,9 @@ Phase 017                           AUTHORIZED / ACTIVE — PLANNING ONLY
 017-A                               COMPLETE
 017-B                               COMPLETE
 017-C                               COMPLETE
-017-D                               NEXT ELIGIBLE / NOT AUTHORIZED
-017-E..017-I                        PLANNED / NOT AUTHORIZED
+017-D                               COMPLETE
+017-E                               NEXT ELIGIBLE / NOT AUTHORIZED
+017-F..017-I                        PLANNED / NOT AUTHORIZED
 
 product implementation execution   NOT AUTHORIZED
 active implementation packages     0
@@ -93,6 +94,10 @@ Codex runtime qualification       PENDING TOOL-IN-LOOP
 
 Actual runtime qualification is a Phase 018 start-gate prerequisite and cannot be inferred from vendor documentation. Per explicit human direction, main protection remains deferred until the implementation plan is fully built, while remaining mandatory before executable implementation begins.
 
-017-D — Success Visibility, Holdout Evaluation & Anti-Gaming Methodology — is **NEXT ELIGIBLE / NOT AUTHORIZED**.
+017-D — Success Visibility, Holdout Evaluation & Anti-Gaming Methodology — is **COMPLETE**.
+
+017-D established syngan://implementation/evaluation-method: visible V0 normative obligations, visible V1 representative evidence, post-freeze H1 holdout realization, optional claim-driven H2 external/private evidence, EI0-EI3 evaluator-independence levels, CH-01..CH-08 challenge families, AG-01..AG-12 anti-gaming controls, contamination/rotation discipline, replay evidence, and candidate-vs-evaluator failure attribution. Hidden blocking requirements and aggregate-score compensation are explicitly forbidden.
+
+017-E — v0.x MVP Scope, Capability/Version Milestones & Release Boundaries — is **NEXT ELIGIBLE / NOT AUTHORIZED**.
 
 Product implementation execution remains **NOT AUTHORIZED**. No implementation package is active. Phase 018 or later execution requires explicit human selection after Phase 017 completes its planning work.

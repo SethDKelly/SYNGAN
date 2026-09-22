@@ -148,6 +148,12 @@
           "ref": "syngan://implementation/agent-delivery"
         },
         {
+          "id": "success-visibility-holdout-evaluation",
+          "title": "Success Visibility, Holdout Evaluation & Anti-Gaming",
+          "description": "Canonical split-visibility, evaluator-independence, holdout-generation, replay, contamination, and anti-gaming methodology.",
+          "ref": "syngan://implementation/evaluation-method"
+        },
+        {
           "id": "implementation-package-contract",
           "title": "Implementation Package, Traceability & ADR Change Control",
           "description": "Canonical prospective implementation-package, traceability, evidence, and ADR change-control contract.",

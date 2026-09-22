@@ -173,6 +173,13 @@
       "owner_family": "autonomous_agent_delivery"
     },
     {
+      "ref": "syngan://implementation/evaluation-method",
+      "path": "docs/implementation/success-visibility-holdout-evaluation-anti-gaming.md",
+      "status": "active",
+      "authority_class": "current",
+      "owner_family": "success_visibility_holdout_evaluation"
+    },
+    {
       "ref": "syngan://implementation/package-contract",
       "path": "docs/implementation/implementation-package-traceability-adr-change-control.md",
       "status": "active",
