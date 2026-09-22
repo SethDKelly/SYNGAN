@@ -53,8 +53,8 @@ def test_phase_016_hardening_authority_is_current() -> None:
     authority_text = PHASE_016_AUTHORITY.read_text(encoding="utf-8")
     phase_text = PHASE_016.read_text(encoding="utf-8")
 
-    assert "status: active" in authority_text
-    assert "Phase 016   AUTHORIZED / ACTIVE" in authority_text
+    assert "status: complete" in authority_text
+    assert "Phase 016   COMPLETE" in authority_text
     assert "016-A       COMPLETE" in authority_text
     assert "016-B       COMPLETE" in authority_text
     assert "016-C       COMPLETE" in authority_text
@@ -64,9 +64,10 @@ def test_phase_016_hardening_authority_is_current() -> None:
     assert "016-G       COMPLETE" in authority_text
     assert "016-H       COMPLETE" in authority_text
     assert "016-I       COMPLETE" in authority_text
-    assert "016-J       NEXT ELIGIBLE / NOT AUTHORIZED" in authority_text
+    assert "016-J       COMPLETE" in authority_text
+    assert "NEXT PROGRAM  REQUIRES EXPLICIT START GATE / NOT AUTHORIZED" in authority_text
 
-    assert "status: active" in phase_text
+    assert "status: complete" in phase_text
     assert "016-A       COMPLETE" in phase_text
     assert "016-B       COMPLETE" in phase_text
     assert "016-C       COMPLETE" in phase_text
@@ -76,7 +77,8 @@ def test_phase_016_hardening_authority_is_current() -> None:
     assert "016-G       COMPLETE" in phase_text
     assert "016-H       COMPLETE" in phase_text
     assert "016-I       COMPLETE" in phase_text
-    assert "016-J       NEXT ELIGIBLE / NOT AUTHORIZED" in phase_text
+    assert "016-J       COMPLETE" in phase_text
+    assert "NEXT PROGRAM  REQUIRES EXPLICIT START GATE / NOT AUTHORIZED" in phase_text
 
 
 def test_016_a_documentation_audit_evidence_is_present() -> None:
@@ -92,11 +94,12 @@ def test_016_a_documentation_audit_evidence_is_present() -> None:
 def test_agent_instructions_preserve_phase_016_scope_boundary() -> None:
     agent_text = AGENTS.read_text(encoding="utf-8")
 
-    assert "Phases 013-015 are complete" in agent_text
-    assert "Phase 016 pre-implementation hardening is ACTIVE" in agent_text
-    assert "016-A through 016-I are complete" in agent_text
-    assert "016-J is NEXT ELIGIBLE / NOT AUTHORIZED" in agent_text
-    assert "No product/provider/runtime delivery program is authorized" in agent_text
+    assert "Phases 013-016 are complete" in agent_text
+    assert "Phase 016 pre-implementation hardening is COMPLETE" in agent_text
+    assert (
+        "No next implementation, product/provider/runtime delivery, or release program "
+        "is authorized"
+    ) in agent_text
 
 
 def test_phase_015_residual_closure_evidence_remains_present() -> None:
@@ -118,13 +121,9 @@ def test_jackson_completion_remains_closed_during_phase_016() -> None:
     assert "JACKSON CONCEPT DESIGN              COMPLETE FOR CURRENT PRODUCT SCOPE" in (
         methodology_text
     )
-    assert "PHASE 016                           ACTIVE — PRE-IMPLEMENTATION HARDENING" in (
-        methodology_text
-    )
+    assert "PHASE 016                           COMPLETE" in methodology_text
     assert "M8 FUTURE REDISCOVERY GROUPS                    4 / DORMANT" in (residual_text)
-    expected_phase_016 = (
-        "PHASE 016                                        ACTIVE — PRE-IMPLEMENTATION HARDENING"
-    )
+    expected_phase_016 = "PHASE 016                                        COMPLETE"
     assert expected_phase_016 in residual_text
 
 

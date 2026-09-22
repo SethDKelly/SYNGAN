@@ -22,7 +22,7 @@ R3 READINESS                        READY / CONSUMED BY COMPLETED PHASE 015
 PHASE 015                           COMPLETE
 C0-C9                               ACTIVE / PASS
 POST-PHASE-015 DELIVERY AUTHORITY   NONE
-PHASE 016                           ACTIVE — PRE-IMPLEMENTATION HARDENING
+PHASE 016                           COMPLETE
 ```
 
 Jackson concept design, downstream architecture reconciliation, Phase 014 whole-design/readiness work, and the currently authorized Phase 015 implementation program are complete for the current product scope.
@@ -365,7 +365,7 @@ At 015-G exit, 015-H was the next eligible slice. That handoff is retained as hi
 
 ## Current next boundary
 
-**Phase 016 is ACTIVE as a downstream pre-implementation hardening program. 016-A is COMPLETE; 016-B is next eligible but NOT AUTHORIZED.** Jackson concept design remains closed.
+**Phase 016 is COMPLETE.** Jackson concept design remains closed. Repository implementation-program readiness is **100 / 100**, and any next implementation program requires a new explicit start gate and remains **NOT AUTHORIZED**.
 
 
 ## Post-Phase-015 reconciliation
@@ -378,7 +378,7 @@ current conceptual blockers          0
 current upstream reopens             0
 M8 future rediscovery groups         4 / DORMANT
 Phase 015                            COMPLETE
-Phase 016                            ACTIVE — PRE-IMPLEMENTATION HARDENING
+Phase 016                            COMPLETE
 next delivery authority              NONE
 ```
 
@@ -387,11 +387,12 @@ The M8 groups remain future rediscovery triggers. They are not incomplete Jackso
 
 ## Phase 016 non-reopen note
 
-Phase 016 is a documentation/OKF/agentic/readiness hardening program downstream of the completed Jackson methodology.
+Phase 016 completed its documentation/OKF/agentic/readiness hardening downstream of the completed Jackson methodology without reopening accepted product semantics.
 
 ~~~text
-016-A documentation audit      COMPLETE
-016-B topology normalization   NEXT ELIGIBLE / NOT AUTHORIZED
+016-A..016-J                   COMPLETE
+readiness scorecard            100 / 100
 Jackson A-H                    CURRENTLY CLOSED
 conceptual reopen              NONE
+next implementation program    REQUIRES EXPLICIT START GATE / NOT AUTHORIZED
 ~~~

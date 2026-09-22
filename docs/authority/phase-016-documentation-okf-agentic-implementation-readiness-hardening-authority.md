@@ -1,7 +1,7 @@
 ---
 type: Phase Authority
 title: Phase 016 — Documentation Topology, OKF, Agentic Development & Implementation-Readiness Hardening
-status: active
+status: complete
 ---
 
 # Phase 016 — Documentation Topology, OKF, Agentic Development & Implementation-Readiness Hardening
@@ -179,7 +179,7 @@ Moving a document to history may remove its current authority role but must not 
 The user explicitly authorized Phase 016 and requested execution of the first subphase.
 
 ~~~text
-Phase 016   AUTHORIZED / ACTIVE
+Phase 016   COMPLETE
 016-A       COMPLETE
 016-B       COMPLETE
 016-C       COMPLETE
@@ -189,7 +189,8 @@ Phase 016   AUTHORIZED / ACTIVE
 016-G       COMPLETE
 016-H       COMPLETE
 016-I       COMPLETE
-016-J       NEXT ELIGIBLE / NOT AUTHORIZED
+016-J       COMPLETE
+NEXT PROGRAM  REQUIRES EXPLICIT START GATE / NOT AUTHORIZED
 product delivery beyond hardening  NOT AUTHORIZED
 ~~~
 
@@ -436,7 +437,60 @@ The user explicitly authorized 016-I after the verified 016-H closure.
 - add production provider/runtime integrations;
 - authorize 016-J or a post-Phase-016 product program.
 
-016-J remains NOT AUTHORIZED until 016-I exit evidence exists.
+## 016-J authorization
+
+The user explicitly authorized 016-J after the verified 016-I closure.
+
+016-J is the formal Phase 016 exit gate. It must use the scorecard weights fixed at the start gate, consume actual A-I closure evidence, and distinguish repository implementation-program readiness from release/provider/scale qualification.
+
+016-J may:
+
+- score each fixed readiness dimension against current repository evidence;
+- record why full credit, partial credit, or a deduction is justified;
+- classify residual risks by the exact future decision or claim they block;
+- decide whether any residual blocks entry to a new, separately authorized implementation program;
+- close Phase 016 when all exit conditions are satisfied;
+- define the post-Phase-016 start-gate requirement.
+
+016-J must not:
+
+- retroactively alter score weights;
+- award points for unsupported provider, scale, release, or runtime claims;
+- deduct readiness merely because a well-designed preflight truthfully preserves future release/support residuals outside the scorecard's intended scope;
+- mark a residual resolved without the required external/human/executed evidence;
+- define, number, or authorize the next implementation program unless separately selected by the user;
+- add product/runtime/provider behavior.
+
+No work beyond 016-J is authorized by this subphase.
+
+## 016-J completion evidence / Phase 016 exit
+
+[016-J — Repository Implementation-Readiness Scorecard, Residual Risk Register & Phase 016 Exit](../phases/016/016-J-repository-implementation-readiness-scorecard-residual-risk-phase-exit.md) completed the formal exit gate.
+
+~~~text
+Phase 016                               COMPLETE
+016-A..016-J                            COMPLETE
+fixed readiness scorecard               100 / 100
+carried residuals                       6
+implementation-program-entry blockers   0
+stable references                       28 ACTIVE
+OKF projection                          30 FILES / PASS
+readiness negatives                     5 / 5 PASS
+engineering-preflight negatives         11 / 11 PASS
+implementation-package negatives        9 / 9 PASS
+cross-cutting agentic negatives         8 / 8 PASS
+agentic conformance                     35702095874 / #58 / PASS
+candidate Verify                        35702095888 / #1665 / PASS
+portable + C2..C9                       PASS
+P16-3 / P16-4                           0 / 0
+NEXT PROGRAM                            REQUIRES EXPLICIT START GATE / NOT AUTHORIZED
+~~~
+
+All Phase 016 exit conditions are satisfied. The score is repository readiness for a future separately authorized implementation program; it is not public-release readiness, legal/license approval, provider certification, deployment readiness, or enterprise-scale qualification.
+
+The six readiness residuals remain binding at their documented release/support/provider/scale boundaries. None currently requires a conceptual or architecture reopen.
+
+**Phase 016 is COMPLETE. No post-Phase-016 implementation program is authorized by this closure.**
 
 
 ## 016-I completion evidence

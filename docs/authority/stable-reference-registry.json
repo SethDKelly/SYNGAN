@@ -173,6 +173,13 @@
       "owner_family": "engineering_preflight"
     },
     {
+      "ref": "syngan://implementation/readiness",
+      "path": "docs/implementation/repository-implementation-readiness-residual-risk.md",
+      "status": "active",
+      "authority_class": "current",
+      "owner_family": "repository_implementation_readiness"
+    },
+    {
       "ref": "syngan://implementation/support-scope",
       "path": "docs/implementation/current-support-scope.md",
       "status": "active",

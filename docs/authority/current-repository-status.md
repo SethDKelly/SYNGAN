@@ -21,7 +21,7 @@ Phase 014 whole-design/readiness    COMPLETE
 Phase 015 implementation foundation COMPLETE
 C0-C9                               ACTIVE / PASS
 
-Phase 016                           ACTIVE — PRE-IMPLEMENTATION HARDENING
+Phase 016                           COMPLETE
 Start Gate                          COMPLETE
 016-A                               COMPLETE
 016-B                               COMPLETE
@@ -32,7 +32,10 @@ Start Gate                          COMPLETE
 016-G                               COMPLETE
 016-H                               COMPLETE
 016-I                               COMPLETE
-016-J                               NEXT ELIGIBLE / NOT AUTHORIZED
+016-J                               COMPLETE
+
+repository implementation readiness READY FOR EXPLICIT START GATE / 100 OF 100
+next implementation program         REQUIRES EXPLICIT START GATE / NOT AUTHORIZED
 
 current conceptual blockers         0
 current upstream reopens            0
@@ -43,9 +46,9 @@ product/provider/runtime delivery   NOT AUTHORIZED
 
 ## Current scope boundary
 
-Phase 016 may normalize documentation/knowledge topology, OKF routing, agentic-development governance, implementation-package discipline, development-security/supply-chain policy, and readiness evidence.
+Phase 016 is complete. Its current authorities continue to govern documentation/knowledge topology, OKF routing, human-directed agentic development, implementation-package discipline, engineering preflight, and readiness evidence.
 
-Phase 016 does **not** authorize:
+Phase 016 completion does **not** authorize:
 
 - new product semantics;
 - provider/runtime integration;
@@ -88,7 +91,13 @@ Closure established a canonical engineering-preflight authority/profile, bounded
 
 The preflight intentionally retains external/human evidence residuals rather than fabricating readiness: distribution-license selection, current vulnerability/advisory review, and public compatibility-window definition are release-candidate blockers; Python >3.11 verification, real enterprise-scale benchmark evidence, and production provider qualification remain explicit support/claim non-readiness. None requires a P16-3/P16-4 reopen.
 
-016-J — Repository Implementation-Readiness Scorecard, Residual Risk Register & Phase 016 Exit — is NEXT ELIGIBLE / NOT AUTHORIZED pending explicit proceed.
+016-J — Repository Implementation-Readiness Scorecard, Residual Risk Register & Phase 016 Exit — is COMPLETE.
+
+Closure applied the scorecard fixed at the Phase 016 start gate and established repository implementation-program readiness at **100 / 100** without awarding unsupported provider, scale, release, deployment, or legal-readiness credit. Six explicit residuals remain current, but none blocks entry to a future separately authorized implementation program; they continue to block only the release/support/provider/scale decisions or claims identified by the readiness authority.
+
+Substantive candidate head `c4ba58cb24f22531c2e133018517a7898f58639e` passed Agentic conformance workflow `35702095874` / `#58` and Verify workflow `35702095888` / `#1665`, including portable and C2–C9. The repository has 28 active stable references and 30 generated OKF files; readiness negative controls pass `5 / 5`, engineering-preflight negatives `11 / 11`, implementation-package negatives `9 / 9`, cross-cutting agentic negatives `8 / 8`, and P16-3/P16-4 findings remain `0 / 0`.
+
+Phase 016 is **COMPLETE**. Any next implementation program requires a new explicit start gate and is **NOT AUTHORIZED**.
 
 016-B closure established:
 

@@ -4,7 +4,7 @@ These instructions apply repository-wide to automated coding/documentation agent
 
 ## Current posture
 
-**Jackson concept design and Phases 013-015 are complete; C0-C9 are active/passing. Phase 016 pre-implementation hardening is ACTIVE. 016-A through 016-I are complete; 016-J is NEXT ELIGIBLE / NOT AUTHORIZED. No product/provider/runtime delivery program is authorized.**
+**Jackson concept design and Phases 013-016 are complete; C0-C9 are active/passing. Phase 016 pre-implementation hardening is COMPLETE. No next implementation, product/provider/runtime delivery, or release program is authorized.**
 
 ## Start with
 
@@ -13,7 +13,7 @@ For most tasks, read only:
 1. docs/authority/current-repository-status.md
 2. docs/index.md
 3. the smallest current owner routed from docs/authority/canonical-knowledge-ownership-map.md
-4. docs/phases/016/index.md only when the task concerns active Phase 016 work
+4. docs/implementation/repository-implementation-readiness-residual-risk.md when the task concerns implementation-program readiness or carried residuals
 
 Use docs/history/ only for rationale, provenance, supersession analysis, or reconstruction. Do not treat search rank or historical detail as current authority.
 
@@ -69,9 +69,9 @@ Use `python tools/verify.py preflight` when those surfaces change. A PASS is rep
 
 ## Phase 016 boundary
 
-Phase 016 may harden documentation topology, OKF routing, agentic-development governance, deterministic context discovery, implementation-package discipline, development security/supply-chain policy, and readiness evidence.
+Phase 016 is complete. Its documentation, OKF, agentic-development, implementation-package, engineering-preflight, and readiness authorities remain current until superseded through normal change control.
 
-Phase 016 does **not** authorize:
+Phase 016 completion does **not** authorize:
 
 - new product semantics;
 - provider/runtime integrations;
@@ -84,4 +84,4 @@ Current status and subphase authorization are owned by docs/authority/current-re
 
 ## Current next boundary
 
-**016-J — Repository Implementation-Readiness Scorecard, Residual Risk Register & Phase 016 Exit is NEXT ELIGIBLE / NOT AUTHORIZED. No product/provider/runtime delivery program is authorized.**
+**Phase 016 is COMPLETE at 100/100 repository implementation-program readiness. Any next implementation program requires a new explicit start gate and is NOT AUTHORIZED. No next implementation, product/provider/runtime delivery, or release program is authorized.**

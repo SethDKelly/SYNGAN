@@ -29,6 +29,10 @@ CHECKS: tuple[tuple[str, tuple[str, ...]], ...] = (
     ("deterministic context budgets", ("tools/measure_agent_context.py",)),
     ("implementation package traceability", ("tools/validate_implementation_packages.py",)),
     ("engineering preflight", ("tools/validate_engineering_preflight.py", "--repo", "{repo}")),
+    (
+        "repository readiness scorecard",
+        ("tools/validate_repository_readiness.py", "--repo", "{repo}"),
+    ),
 )
 
 
@@ -66,6 +70,20 @@ def main() -> int:
             print(output)
 
     if not args.skip_negative_controls:
+        name = "repository readiness seeded negative controls"
+        code, output = _run(
+            repo,
+            (
+                "tools/test_repository_readiness_guards.py",
+                "--repo",
+                "{repo}",
+            ),
+        )
+        results.append((name, code, output))
+        print("PASS" if code == 0 else "FAIL", name)
+        if output:
+            print(output)
+
         name = "engineering preflight seeded negative controls"
         code, output = _run(
             repo,

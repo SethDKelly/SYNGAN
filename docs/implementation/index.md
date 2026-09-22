@@ -12,6 +12,7 @@ status: active
 - [Current Implementation & Support Scope](current-support-scope.md)
 - [Implementation Package, Traceability & ADR Change Control](implementation-package-traceability-adr-change-control.md)
 - [Engineering Preflight — Dependency, Supply Chain, Secrets, Compatibility, Benchmark & Versioning](engineering-preflight-dependency-supply-chain-secrets-compatibility-benchmark-versioning.md)
+- [Repository Implementation Readiness & Residual Risk](repository-implementation-readiness-residual-risk.md)
 - [Implementation Packages](packages/index.md) — prospective manifests; currently empty by design
 - [Current Repository Status](../authority/current-repository-status.md)
 

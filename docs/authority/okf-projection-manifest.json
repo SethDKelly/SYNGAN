@@ -146,6 +146,12 @@
           "title": "Engineering Preflight",
           "description": "Canonical dependency, supply-chain, secrets, compatibility, benchmark, and version/release preflight authority.",
           "ref": "syngan://implementation/engineering-preflight"
+        },
+        {
+          "id": "repository-readiness",
+          "title": "Repository Implementation Readiness & Residual Risk",
+          "description": "Canonical Phase 016 exit scorecard, residual-risk classification, and post-phase handoff boundary.",
+          "ref": "syngan://implementation/readiness"
         }
       ]
     },

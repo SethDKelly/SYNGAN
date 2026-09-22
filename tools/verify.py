@@ -86,6 +86,9 @@ def verify_bootstrap() -> None:
             "compatibility-benchmark-versioning.md"
         ),
         ROOT / "docs" / "implementation" / "engineering-preflight-profile.json",
+        ROOT / "docs" / "implementation" / "repository-implementation-readiness-residual-risk.md",
+        ROOT / "docs" / "implementation" / "repository-readiness-scorecard.json",
+        ROOT / "tools" / "validate_repository_readiness.py",
         ROOT / "docs" / "implementation" / "packages" / "index.md",
         ROOT / ".agents" / "skills" / "update-traceability" / "SKILL.md",
         ROOT / "tools" / "run_agentic_conformance.py",
@@ -164,6 +167,7 @@ def verify_authority() -> None:
             "tests/fitness/test_agent_context_workflows.py",
             "tests/fitness/test_implementation_package_contract.py",
             "tests/fitness/test_engineering_preflight.py",
+            "tests/fitness/test_repository_readiness.py",
             "tests/unit/test_bootstrap_metadata.py",
         ]
     )

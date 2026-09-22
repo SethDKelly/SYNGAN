@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import re
 import shutil
 import subprocess
 import sys
@@ -48,20 +47,7 @@ def _mutate(
 
 
 def _unauthorized_progression(text: str) -> str:
-    active = re.sub(
-        r"016-J\s+NOT AUTHORIZED",
-        "016-J                               AUTHORIZED / ACTIVE",
-        text,
-        count=1,
-    )
-    if active != text:
-        return active
-    return re.sub(
-        r"016-J\s+NEXT ELIGIBLE / NOT AUTHORIZED",
-        "016-J                               AUTHORIZED / ACTIVE",
-        text,
-        count=1,
-    )
+    return text + "\nnext implementation program  AUTHORIZED / ACTIVE\n"
 
 
 def _budget_overflow(text: str) -> str:

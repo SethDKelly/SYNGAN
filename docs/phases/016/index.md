@@ -1,7 +1,7 @@
 ---
 type: Phase Index
 title: Phase 016 — Documentation Topology, OKF, Agentic Development & Implementation-Readiness Hardening
-status: active
+status: complete
 ---
 
 # Phase 016 — Documentation Topology, OKF, Agentic Development & Implementation-Readiness Hardening
@@ -23,7 +23,7 @@ This is not a new product-feature phase.
 
 ~~~text
 Phase 015   COMPLETE
-Phase 016   ACTIVE
+Phase 016   COMPLETE
 Start Gate  COMPLETE
 016-A       COMPLETE
 016-B       COMPLETE
@@ -34,7 +34,8 @@ Start Gate  COMPLETE
 016-G       COMPLETE
 016-H       COMPLETE
 016-I       COMPLETE
-016-J       NEXT ELIGIBLE / NOT AUTHORIZED
+016-J       COMPLETE
+NEXT PROGRAM  REQUIRES EXPLICIT START GATE / NOT AUTHORIZED
 ~~~
 
 ## Planned sequence
@@ -249,6 +250,36 @@ product/runtime/provider behavior      UNCHANGED / NOT AUTHORIZED
 release publication                    NOT AUTHORIZED
 ~~~
 
-## Current next boundary
+## 016-J closure
 
-**016-J — Repository Implementation-Readiness Scorecard, Residual Risk Register & Phase 016 Exit** is **NEXT ELIGIBLE / NOT AUTHORIZED** pending explicit proceed.
+[016-J — Repository Implementation-Readiness Scorecard, Residual Risk Register & Phase 016 Exit](016-J-repository-implementation-readiness-scorecard-residual-risk-phase-exit.md) is **COMPLETE**.
+
+~~~text
+016-J                                  COMPLETE
+change class                           P16-2
+fixed readiness scorecard              100 / 100
+carried residuals                      6
+implementation-program-entry blockers  0
+stable-reference registry              28 ACTIVE / FULL OWNER COVERAGE
+repository readiness stable ref        syngan://implementation/readiness
+OKF projection files                   30 / DETERMINISTIC
+readiness negative controls            5 / 5 PASS
+engineering-preflight negatives        11 / 11 PASS
+implementation-package negatives       9 / 9 PASS
+cross-cutting agentic negatives        8 / 8 PASS
+agentic conformance                    35702095874 / #58 / PASS
+candidate Verify                       35702095888 / #1665 / PASS
+portable + C2..C9                      PASS
+P16-3 / P16-4                          0 / 0
+public release                         NOT READY / NOT AUTHORIZED
+provider / enterprise-scale support    NOT QUALIFIED
+next implementation program            REQUIRES EXPLICIT START GATE / NOT AUTHORIZED
+~~~
+
+## Phase 016 exit
+
+Every Phase 016 exit condition is satisfied.
+
+**Phase 016 is COMPLETE.**
+
+The repository is ready to enter a future implementation program only through a new explicit human-authorized start gate. No next numbered phase, backlog item, product/provider/runtime delivery program, release, deployment, or support promotion is authorized by this exit.

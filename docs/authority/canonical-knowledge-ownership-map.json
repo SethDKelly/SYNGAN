@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "phase": "016-I",
+  "phase": "016-J",
   "status": "active",
   "rules": {
     "current_proposition": "exactly_one_preferred_current_owner",
@@ -14,7 +14,8 @@
     "agent_context": "bounded_progressive_disclosure_provider_neutral",
     "agentic_conformance": "deterministic_negative_controls_separate_from_product_health",
     "implementation_packages": "traceability_evidence_not_authorization_or_semantic_authority",
-    "engineering_preflight": "deterministic_release_hygiene_not_release_or_support_authority"
+    "engineering_preflight": "deterministic_release_hygiene_not_release_or_support_authority",
+    "repository_readiness": "scorecard_evidence_not_program_or_release_authority"
   },
   "owners": [
     {
@@ -104,6 +105,10 @@
     {
       "family": "engineering_preflight",
       "path": "docs/implementation/engineering-preflight-dependency-supply-chain-secrets-compatibility-benchmark-versioning.md"
+    },
+    {
+      "family": "repository_implementation_readiness",
+      "path": "docs/implementation/repository-implementation-readiness-residual-risk.md"
     },
     {
       "family": "support_scope",

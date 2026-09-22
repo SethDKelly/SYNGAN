@@ -9,11 +9,11 @@ CLOSED = "closed"
 
 
 def _mode(current: str) -> str:
-    if re.search(r"^016-I\s+AUTHORIZED / ACTIVE$", current, re.M):
+    if re.search(r"^016-J\s+AUTHORIZED / ACTIVE$", current, re.M):
         return ACTIVE
-    if re.search(r"^016-I\s+COMPLETE$", current, re.M):
+    if re.search(r"^016-J\s+COMPLETE$", current, re.M):
         return CLOSED
-    raise ValueError("current status must declare 016-I AUTHORIZED / ACTIVE or COMPLETE")
+    raise ValueError("current status must declare 016-J AUTHORIZED / ACTIVE or COMPLETE")
 
 
 def main() -> int:
@@ -55,59 +55,51 @@ def main() -> int:
     required: dict[str, tuple[str, ...]]
     if mode == ACTIVE:
         required = {
-            "phase_authority": (
-                "016-I       AUTHORIZED / ACTIVE",
-                "016-J       NOT AUTHORIZED",
-            ),
-            "phase_index": (
-                "016-I       AUTHORIZED / ACTIVE",
-                "016-J       NOT AUTHORIZED",
-            ),
-            "docs_index": (
-                "016-I                               AUTHORIZED / ACTIVE",
-                "016-J                               NOT AUTHORIZED",
-            ),
+            "phase_authority": ("016-J       AUTHORIZED / ACTIVE",),
+            "phase_index": ("016-J       AUTHORIZED / ACTIVE",),
+            "docs_index": ("016-J                               AUTHORIZED / ACTIVE",),
             "agents": (
-                "016-A through 016-H are complete; 016-I is AUTHORIZED / ACTIVE.",
-                "016-J remains NOT AUTHORIZED.",
+                "016-A through 016-I are complete; 016-J is AUTHORIZED / ACTIVE.",
+                "No post-Phase-016 implementation, product/provider/runtime delivery, "
+                "or release program is authorized.",
             ),
         }
-        if not re.search(r"^016-J\s+NOT AUTHORIZED$", texts["status"], re.M):
-            errors.append("current status must keep 016-J NOT AUTHORIZED while 016-I is active")
     else:
         required = {
             "phase_authority": (
-                "016-I       COMPLETE",
-                "016-J       NEXT ELIGIBLE / NOT AUTHORIZED",
+                "Phase 016   COMPLETE",
+                "016-J       COMPLETE",
+                "NEXT PROGRAM  REQUIRES EXPLICIT START GATE / NOT AUTHORIZED",
             ),
             "phase_index": (
-                "016-I       COMPLETE",
-                "016-J       NEXT ELIGIBLE / NOT AUTHORIZED",
+                "Phase 016   COMPLETE",
+                "016-J       COMPLETE",
+                "NEXT PROGRAM  REQUIRES EXPLICIT START GATE / NOT AUTHORIZED",
             ),
             "docs_index": (
-                "016-I                               COMPLETE",
-                "016-J                               NEXT ELIGIBLE / NOT AUTHORIZED",
+                "Phase 016                           COMPLETE",
+                "016-J                               COMPLETE",
+                "next implementation program         REQUIRES EXPLICIT START GATE / NOT AUTHORIZED",
             ),
             "agents": (
-                "016-A through 016-I are complete; 016-J is NEXT ELIGIBLE / NOT AUTHORIZED.",
-                "No product/provider/runtime delivery program is authorized.",
+                "Phase 016 pre-implementation hardening is COMPLETE.",
+                "No next implementation, product/provider/runtime delivery, or release "
+                "program is authorized.",
             ),
         }
-        if not re.search(
-            r"^016-J\s+NEXT ELIGIBLE / NOT AUTHORIZED$",
-            texts["status"],
-            re.M,
-        ):
-            errors.append("current status must make only 016-J next eligible after 016-I closes")
 
     for surface, phrases in required.items():
         for phrase in phrases:
             if phrase not in texts[surface]:
-                errors.append(f"{surface}: missing coherent Phase 016 state: {phrase}")
+                errors.append(f"{surface}: missing coherent Phase 016 exit state: {phrase}")
 
     for name, text in texts.items():
-        if re.search(r"016-J[^\n]*(AUTHORIZED / ACTIVE|IN PROGRESS)", text):
-            errors.append(f"{name}: 016-J must not be active during 016-I engineering preflight")
+        if re.search(
+            r"(Phase 017|next implementation program)[^\n]*"
+            r"(AUTHORIZED / ACTIVE|IN PROGRESS)",
+            text,
+        ):
+            errors.append(f"{name}: Phase 016 exit must not self-authorize a next program")
 
     for error in errors:
         print("ERROR", error)

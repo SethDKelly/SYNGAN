@@ -8,3 +8,4 @@ Current implementation governance and supported-boundary routes.
 - [Implementation Governance](implementation-governance.md) - Current implementation authority, delivery governance, and repository enforcement.
 - [Implementation Package, Traceability & ADR Change Control](implementation-package-contract.md) - Canonical prospective implementation-package, traceability, evidence, and ADR change-control contract.
 - [Engineering Preflight](engineering-preflight.md) - Canonical dependency, supply-chain, secrets, compatibility, benchmark, and version/release preflight authority.
+- [Repository Implementation Readiness & Residual Risk](repository-readiness.md) - Canonical Phase 016 exit scorecard, residual-risk classification, and post-phase handoff boundary.
