@@ -11,4 +11,3 @@ Current problem, semantic, experience, mapping, and architecture routes.
 - [Experience](experience.md) - Current actor-visible and programmatic experience-contract routing.
 - [Mapping](mapping.md) - Current semantic-to-interaction mapping routes.
 - [Architecture](architecture.md) - Current architecture topic-owner and consolidated-contract routing.
-
