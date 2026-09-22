@@ -64,6 +64,7 @@ def _unauthorized_progression(text: str) -> str:
         count=1,
     )
 
+
 def _budget_overflow(text: str) -> str:
     data = json.loads(text)
     data["limits"]["agents_md"] = 1
