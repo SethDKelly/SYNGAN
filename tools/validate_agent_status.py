@@ -104,20 +104,23 @@ def main() -> int:
             "status": (
                 "Phase 017                           AUTHORIZED / ACTIVE — PLANNING ONLY",
                 "017-A                               COMPLETE",
-                "017-B                               NEXT ELIGIBLE / NOT AUTHORIZED",
+                "017-B                               COMPLETE",
+                "017-C                               NEXT ELIGIBLE / NOT AUTHORIZED",
                 "product implementation execution   NOT AUTHORIZED",
                 "active implementation packages     0",
             ),
             "phase_017_index": (
                 "Phase 017                           AUTHORIZED / ACTIVE — PLANNING ONLY",
                 "017-A                               COMPLETE",
-                "017-B                               NEXT ELIGIBLE / NOT AUTHORIZED",
+                "017-B                               COMPLETE",
+                "017-C                               NEXT ELIGIBLE / NOT AUTHORIZED",
                 "product implementation execution   NOT AUTHORIZED",
             ),
             "docs_index": (
                 "Phase 017                           AUTHORIZED / ACTIVE — PLANNING ONLY",
                 "017-A                               COMPLETE",
-                "017-B                               NEXT ELIGIBLE / NOT AUTHORIZED",
+                "017-B                               COMPLETE",
+                "017-C                               NEXT ELIGIBLE / NOT AUTHORIZED",
                 "product implementation execution   NOT AUTHORIZED",
             ),
             "agents": (
