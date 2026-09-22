@@ -210,11 +210,11 @@ When task intent, repository authority, or a lower-precedence instruction confli
 
 Do not weaken a requirement simply to make validation pass.
 
-## Phase 016 boundary
+## Current implementation-program relationship
 
-During Phase 016, P16-0/P16-1 may proceed inside an authorized subphase when verified; P16-2 requires explicit documented rationale/evidence; P16-3/P16-4 stop affected work and reopen the smallest owning upstream authority; product/provider/runtime delivery remains unauthorized unless a later separate program explicitly grants it.
+This policy continues to govern agent action/consequence authority after Phase 016. Phase 017 planning may define implementation-process mechanics, but it does not expand A1-A4 authority.
 
-016-E does not authorize 016-F or later groups.
+Cursor/Codex implementation roles and runtime qualification are defined by [Cursor/Codex Autonomous Delivery Operating Model & Runtime Qualification](../implementation/cursor-codex-autonomous-delivery-runtime-qualification.md). Product implementation, provider/runtime delivery, A3 actions, and A4 semantic/architecture changes remain separately authorized.
 
 ## Human fallback
 
