@@ -64,8 +64,8 @@ Phase 016                           ACTIVE — PRE-IMPLEMENTATION HARDENING
 016-F                               COMPLETE
 016-G                               COMPLETE
 016-H                               COMPLETE
-016-I                               AUTHORIZED / ACTIVE
-016-J                               NOT AUTHORIZED
+016-I                               COMPLETE
+016-J                               NEXT ELIGIBLE / NOT AUTHORIZED
 
 product/provider/runtime delivery   NOT AUTHORIZED
 ~~~
