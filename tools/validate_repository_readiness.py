@@ -52,7 +52,10 @@ def main() -> int:
     if scorecard.get("next_program_authorized") is not False:
         errors.append("readiness evidence must not authorize the next program")
     if scorecard.get("blockers_to_program_entry") != []:
-        errors.append("recorded Phase 016 exit currently expects zero implementation-program-entry blockers")
+        errors.append(
+            "recorded Phase 016 exit currently expects zero "
+            "implementation-program-entry blockers"
+        )
 
     dims = scorecard.get("dimensions")
     if not isinstance(dims, list):
@@ -113,7 +116,9 @@ def main() -> int:
         if not isinstance(source_item, dict) or source_item.get("state") != state:
             errors.append(f"{ident}: 016-I source residual no longer matches readiness register")
         if item.get("blocks_program_entry") is not False:
-            errors.append(f"{ident}: current evidence classifies this as not blocking program entry")
+            errors.append(
+                f"{ident}: current evidence classifies this as not blocking program entry"
+            )
         blocks = item.get("blocks")
         if not isinstance(blocks, list) or not blocks:
             errors.append(f"{ident}: exact blocked claim/action must remain explicit")
@@ -129,8 +134,13 @@ def main() -> int:
         "deployment-readiness",
         "legal-license-approval",
     }
-    if not isinstance(not_scoring, list) or not required_non_scoring.issubset(set(not_scoring)):
-        errors.append("scorecard must explicitly exclude downstream release/provider/scale/legal readiness")
+    if not isinstance(not_scoring, list) or not required_non_scoring.issubset(
+        set(not_scoring)
+    ):
+        errors.append(
+            "scorecard must explicitly exclude downstream "
+            "release/provider/scale/legal readiness"
+        )
 
     for error in errors:
         print("ERROR", error)
