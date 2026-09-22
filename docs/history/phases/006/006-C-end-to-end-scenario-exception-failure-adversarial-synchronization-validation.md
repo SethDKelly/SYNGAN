@@ -18,10 +18,10 @@ The purpose is to falsify hidden coordination assumptions and determine whether 
 
 006-C is downstream of:
 
-- [Concept Design Methodology](../../authority/design-methodology.md);
-- [Accepted Concepts](../../concepts/index.md);
+- [Concept Design Methodology](../../../authority/design-methodology.md);
+- [Accepted Concepts](../../../concepts/index.md);
 - [Core Synchronizations](../../synchronizations/core-synchronizations.md);
-- [Operational Authority Continuity & Regressive Recovery Contract](../../authority/operational-authority-continuity-regressive-recovery-contract.md);
+- [Operational Authority Continuity & Regressive Recovery Contract](../../../authority/operational-authority-continuity-regressive-recovery-contract.md);
 - [Phase 003 Consolidated Experience Contract](../../experience/phase-003-consolidated-experience-contract.md);
 - [Phase 004 Consolidated Architecture Contract](../../architecture/phase-004-consolidated-architecture-contract.md);
 - [Phase 005 Consolidated Implementation-Planning Contract](../../implementation/phase-005-consolidated-implementation-planning-contract.md);
