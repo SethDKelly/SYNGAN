@@ -30,8 +30,8 @@ Start Gate  COMPLETE
 016-C       COMPLETE
 016-D       COMPLETE
 016-E       COMPLETE
-016-F       NEXT ELIGIBLE / NOT AUTHORIZED
-016-G       NOT AUTHORIZED
+016-F       COMPLETE
+016-G       NEXT ELIGIBLE / NOT AUTHORIZED
 016-H       NOT AUTHORIZED
 016-I       NOT AUTHORIZED
 016-J       NOT AUTHORIZED
@@ -143,6 +143,29 @@ P16-3 / P16-4                         0 / 0
 product/runtime/provider behavior     UNCHANGED / NOT AUTHORIZED
 ~~~
 
+## 016-F closure
+
+[016-F — Context Budgets, Portable Skills, Tool Adapters](016-F-context-budgets-portable-skills-tool-adapters.md) is **COMPLETE**.
+
+~~~text
+016-F                                 COMPLETE
+change class                          P16-2
+context budget policy                 COMPLETE / UTF-8 BYTES
+portable canonical skills             5
+Claude compatibility bridge           THIN / SHARED SOURCE
+Cursor adapter                        AGENTS + .agents/skills
+Codex adapter                         AGENTS + .agents/skills
+provider runtime state                UNVERIFIED
+manual fallback                       COMPLETE
+stable-reference registry             24 ACTIVE / FULL OWNER COVERAGE
+context workflow stable ref           syngan://authority/agent-context-workflows
+OKF projection files                  26 / DETERMINISTIC
+candidate Verify                      35688409580 / #1603 / PASS
+portable + C2..C9                     PASS
+P16-3 / P16-4                         0 / 0
+product/runtime/provider behavior     UNCHANGED / NOT AUTHORIZED
+~~~
+
 ## Current next boundary
 
-**016-F — Context Budgets, Portable Skills, Tool Adapters** is **NEXT ELIGIBLE / NOT AUTHORIZED** pending explicit proceed.
+**016-G — Agentic Conformance, Negative Controls, Drift Detection & CI** is **NEXT ELIGIBLE / NOT AUTHORIZED** pending explicit proceed.

@@ -28,8 +28,9 @@ Start Gate                          COMPLETE
 016-C                               COMPLETE
 016-D                               COMPLETE
 016-E                               COMPLETE
-016-F                               NEXT ELIGIBLE / NOT AUTHORIZED
-016-G..016-J                        NOT AUTHORIZED
+016-F                               COMPLETE
+016-G                               NEXT ELIGIBLE / NOT AUTHORIZED
+016-H..016-J                        NOT AUTHORIZED
 
 current conceptual blockers         0
 current upstream reopens            0
@@ -67,7 +68,11 @@ Closure established 22 active `syngan://...` stable references covering every ca
 
 Closure established a canonical tool-neutral agent-development policy, explicit human-directed scope envelopes, orthogonal A1–A4 action/consequence and P16-0–P16-4 change-impact models, review-only and no-self-progression invariants, ordinary A2 repository-completion boundaries, A3 explicit-authorization boundaries, A4 reopen discipline, and least-privilege/content/memory/generated-output trust rules. The new policy is a canonical owner with stable reference `syngan://authority/agent-development-policy` and generated OKF routing. Candidate Verify workflow `35686993647` / `#1597` passed portable and all C2–C9 gates with P16-3/P16-4 findings remaining `0 / 0`.
 
-016-F — Context Budgets, Portable Skills, Tool Adapters — is NEXT ELIGIBLE / NOT AUTHORIZED pending explicit proceed.
+016-F — Context Budgets, Portable Skills, Tool Adapters — is COMPLETE.
+
+Closure established deterministic UTF-8 context budgets, progressive-disclosure retrieval rules, five canonical provider-neutral workflows under `.agents/skills/`, thin Claude compatibility bridges, shared-source Cursor/Codex adapters, a documented-vs-runtime compatibility manifest, manual fallback, and deterministic budget measurement. The operating-surface policy is a canonical owner with stable reference `syngan://authority/agent-context-workflows`; provider runtimes remain explicitly `unverified`. Candidate Verify workflow `35688409580` / `#1603` passed portable and all C2–C9 gates with P16-3/P16-4 findings remaining `0 / 0`.
+
+016-G — Agentic Conformance, Negative Controls, Drift Detection & CI — is NEXT ELIGIBLE / NOT AUTHORIZED pending explicit proceed.
 
 016-B closure established:
 

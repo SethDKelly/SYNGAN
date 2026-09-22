@@ -42,7 +42,7 @@ methodology / cross-cutting authority
 history is provenance, not a competing current authority plane
 ~~~
 
-Canonical ownership is defined by [Canonical Knowledge Ownership Map](authority/canonical-knowledge-ownership-map.md). Stable logical routing is governed by [Stable Reference, Deterministic Resolution & Drift Control](authority/stable-reference-resolution-drift-control.md). Human-directed agent work is governed by [Agent Authority, Human-Directed Scope, Change Classes, Security & Trust Boundaries](authority/agent-authority-human-directed-scope-security-trust.md).
+Canonical ownership is defined by [Canonical Knowledge Ownership Map](authority/canonical-knowledge-ownership-map.md). Stable logical routing is governed by [Stable Reference, Deterministic Resolution & Drift Control](authority/stable-reference-resolution-drift-control.md). Human-directed agent work is governed by [Agent Authority, Human-Directed Scope, Change Classes, Security & Trust Boundaries](authority/agent-authority-human-directed-scope-security-trust.md). Bounded context, portable workflows, and tool adapters are governed by [Agent Context, Portable Workflows & Tool Adapter Contract](authority/agent-context-portable-workflows-tool-adapters.md).
 
 ## Current state
 
@@ -61,8 +61,9 @@ Phase 016                           ACTIVE — PRE-IMPLEMENTATION HARDENING
 016-C                               COMPLETE
 016-D                               COMPLETE
 016-E                               COMPLETE
-016-F                               NEXT ELIGIBLE / NOT AUTHORIZED
-016-G..016-J                        NOT AUTHORIZED
+016-F                               COMPLETE
+016-G                               NEXT ELIGIBLE / NOT AUTHORIZED
+016-H..016-J                        NOT AUTHORIZED
 
 product/provider/runtime delivery   NOT AUTHORIZED
 ~~~

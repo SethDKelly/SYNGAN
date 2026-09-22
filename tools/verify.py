@@ -69,6 +69,10 @@ def verify_bootstrap() -> None:
         ROOT / "docs" / "authority" / "stable-reference-resolution-drift-control.md",
         ROOT / "docs" / "authority" / "stable-reference-registry.json",
         ROOT / "docs" / "authority" / "agent-authority-human-directed-scope-security-trust.md",
+        ROOT / "docs" / "authority" / "agent-context-portable-workflows-tool-adapters.md",
+        ROOT / "docs" / "authority" / "agent-context-budget.json",
+        ROOT / "docs" / "authority" / "agent-tool-compatibility.json",
+        ROOT / ".agents" / "skills" / "resolve-context" / "SKILL.md",
         ROOT / "knowledge" / "index.md",
         ROOT / "docs" / "implementation" / "current-support-scope.md",
         ROOT / "docs" / "phases" / "016" / "index.md",
@@ -128,6 +132,8 @@ def verify_authority() -> None:
             "tests/fitness/test_documentation_topology.py",
             "tests/fitness/test_documentation_links.py",
             "tests/fitness/test_verification_harness_contract.py",
+            "tests/fitness/test_agent_authority_policy.py",
+            "tests/fitness/test_agent_context_workflows.py",
             "tests/unit/test_bootstrap_metadata.py",
         ]
     )

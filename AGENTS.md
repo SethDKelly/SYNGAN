@@ -4,7 +4,7 @@ These instructions apply repository-wide to automated coding/documentation agent
 
 ## Current posture
 
-**Jackson concept design and Phases 013-015 are complete; C0-C9 are active/passing. Phase 016 pre-implementation hardening is ACTIVE. 016-A through 016-E are complete; 016-F is NEXT ELIGIBLE / NOT AUTHORIZED. No product/provider/runtime delivery program is authorized.**
+**Jackson concept design and Phases 013-015 are complete; C0-C9 are active/passing. Phase 016 pre-implementation hardening is ACTIVE. 016-A through 016-F are complete; 016-G is NEXT ELIGIBLE / NOT AUTHORIZED. No product/provider/runtime delivery program is authorized.**
 
 ## Start with
 
@@ -34,6 +34,13 @@ A1-A4 describe action/consequence authority; P16-0..P16-4 describe Phase 016 cha
 
 Completing the selected work does not authorize the next phase, subphase, backlog item, or product program.
 
+## Context and portable workflows
+
+Bounded context and tool portability are governed by [Agent Context, Portable Workflows & Tool Adapter Contract](docs/authority/agent-context-portable-workflows-tool-adapters.md).
+
+Use exact `syngan://...` resolution when a stable reference is known; otherwise route through `docs/index.md` to the smallest current owner. Loading another file requires a concrete task question it answers.
+
+Canonical reusable workflows live under `.agents/skills/`: `resolve-context`, `resolve-reference`, `execute-selected-work`, `review-change`, and `run-verification`. Skills are procedures only; invoking one does not expand the human-selected task or change A1-A4 authority.
 ## Durable authority rules
 
 - One proposition should have one preferred current owner.
@@ -62,4 +69,4 @@ Current status and subphase authorization are owned by docs/authority/current-re
 
 ## Current next boundary
 
-**016-F — Context Budgets, Portable Skills, Tool Adapters is NEXT ELIGIBLE / NOT AUTHORIZED. 016-G and later groups remain NOT AUTHORIZED.**
+**016-G — Agentic Conformance, Negative Controls, Drift Detection & CI is NEXT ELIGIBLE / NOT AUTHORIZED. 016-H and later groups remain NOT AUTHORIZED.**

@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "unit": "utf8_bytes",
+  "status": "active",
+  "authority": "docs/authority/agent-context-portable-workflows-tool-adapters.md",
+  "limits": {
+    "agents_md": 12288,
+    "claude_md": 1536,
+    "cursor_rule_each": 4096,
+    "cursor_rules_aggregate": 16384,
+    "skills_aggregate": 24576,
+    "skill_each": 6144,
+    "claude_commands_aggregate": 6144,
+    "claude_command_each": 1024,
+    "cursor_codex_persistent_baseline": 12288,
+    "claude_persistent_baseline": 13824,
+    "knowledge_root_index": 4096,
+    "knowledge_nested_index_each": 6144,
+    "knowledge_concept_each": 4096
+  },
+  "semantics": {
+    "persistent_context": "cross_task_rules_only",
+    "skills": "on_demand_workflow",
+    "canonical_docs": "on_demand_truth",
+    "unit_is_provider_neutral": true,
+    "token_counts_are_normative": false
+  }
+}

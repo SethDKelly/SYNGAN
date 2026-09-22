@@ -23,6 +23,7 @@ code/tests          -> implementation/evidence; never semantic authority
 generated knowledge  -> compatibility/routing only; never semantic authority
 stable reference     -> exact registry identity; path/search never substitutes
 agent authority       -> human-directed scope; tools/memory never self-authorize
+agent context         -> bounded progressive disclosure; adapters never fork semantics
 ~~~
 
 If a current proposition cannot be assigned deterministically, 016-B must stop relocation for that item until ownership is adjudicated.
@@ -37,6 +38,7 @@ If a current proposition cannot be assigned deterministically, 016-B must stop r
 | OKF v0.2 producer/projection/conformance rules | `docs/authority/okf-v0.2-producer-profile.md` |
 | stable-reference/resolution/drift-control rules | `docs/authority/stable-reference-resolution-drift-control.md` |
 | agent authority/human-directed scope/security/trust rules | `docs/authority/agent-authority-human-directed-scope-security-trust.md` |
+| agent context/portable workflows/tool-adapter rules | `docs/authority/agent-context-portable-workflows-tool-adapters.md` |
 | terminology policy | `docs/authority/terminology-policy.md` |
 | Jackson methodology/completion | `docs/authority/design-methodology.md`, `jackson-methodology-completion-matrix.md`, `jackson-design-completion-implementation-hold.md` |
 | current conceptual residual/future rediscovery | `docs/authority/residual-conceptual-misfit-register.md`, `future-scope-extensibility-new-capability-rediscovery-audit.md` |
