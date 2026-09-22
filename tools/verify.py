@@ -78,9 +78,16 @@ def verify_bootstrap() -> None:
         / "implementation"
         / "implementation-package-traceability-adr-change-control.md",
         ROOT / "docs" / "implementation" / "implementation-package-profile.json",
+        ROOT
+        / "docs"
+        / "implementation"
+        / "engineering-preflight-dependency-supply-chain-secrets-compatibility-benchmark-versioning.md",
+        ROOT / "docs" / "implementation" / "engineering-preflight-profile.json",
         ROOT / "docs" / "implementation" / "packages" / "index.md",
         ROOT / ".agents" / "skills" / "update-traceability" / "SKILL.md",
         ROOT / "tools" / "run_agentic_conformance.py",
+        ROOT / "tools" / "scan_repository_secrets.py",
+        ROOT / "tools" / "validate_engineering_preflight.py",
         ROOT / ".github" / "workflows" / "agentic-conformance.yml",
         ROOT / ".agents" / "skills" / "resolve-context" / "SKILL.md",
         ROOT / "knowledge" / "index.md",
@@ -136,6 +143,10 @@ def verify_agentic() -> None:
     _run([sys.executable, "tools/run_agentic_conformance.py"])
 
 
+def verify_preflight() -> None:
+    _run([sys.executable, "-m", "pytest", "tests/fitness/test_engineering_preflight.py"])
+
+
 def verify_authority() -> None:
     _run(
         [
@@ -149,6 +160,7 @@ def verify_authority() -> None:
             "tests/fitness/test_agent_authority_policy.py",
             "tests/fitness/test_agent_context_workflows.py",
             "tests/fitness/test_implementation_package_contract.py",
+            "tests/fitness/test_engineering_preflight.py",
             "tests/unit/test_bootstrap_metadata.py",
         ]
     )
@@ -359,6 +371,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             "okf",
             "references",
             "agentic",
+            "preflight",
             "static",
             "portable",
             "control",
@@ -390,6 +403,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         "okf": verify_okf,
         "references": verify_references,
         "agentic": verify_agentic,
+        "preflight": verify_preflight,
         "static": verify_static,
         "portable": verify_portable,
         "control": verify_control,
