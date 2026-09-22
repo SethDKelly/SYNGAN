@@ -14,11 +14,11 @@ Replay historical `SYNC-01` through `SYNC-15` against the closed Phase 009 appli
 
 ## Governing authority
 
-- [Concept Design Methodology](../../authority/design-methodology.md)
-- [Jackson Methodology Completion Matrix](../../authority/jackson-methodology-completion-matrix.md)
+- [Concept Design Methodology](../../../authority/design-methodology.md)
+- [Jackson Methodology Completion Matrix](../../../authority/jackson-methodology-completion-matrix.md)
 - [Concept Action / Query / Lifecycle Normalization](../../concepts/action-query-lifecycle-normalization.md)
-- [009-C Application Family](../../dependence/application-family-valid-subsets.md)
-- [009-D Contraction / Extension Consequences](../../dependence/contraction-extension-consequences.md)
+- [009-C Application Family](../../../dependence/application-family-valid-subsets.md)
+- [009-D Contraction / Extension Consequences](../../../dependence/contraction-extension-consequences.md)
 - [Core Synchronizations](../../synchronizations/core-synchronizations.md)
 
 009-E establishes current synchronization inventory authority:
@@ -129,7 +129,7 @@ Evidence exposure to external actors/systems remains an important Evidence/mappi
 
 Reproducibility was already accepted by Phase 008-G as a **cross-cutting contract**, not a standalone concept. Its facts are supplied through exact bindings, concept-local immutable commitments, production relationships, optional Execution history, and optional Provenance relationships.
 
-The substantive [Reproducibility Contract](../../authority/reproducibility-contract.md) remains authoritative. The historical `SYNC-15` identifier remains reserved and must not be reused.
+The substantive [Reproducibility Contract](../../../authority/reproducibility-contract.md) remains authoritative. The historical `SYNC-15` identifier remains reserved and must not be reused.
 
 ## Application-family replay
 
