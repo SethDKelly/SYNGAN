@@ -100,6 +100,7 @@ def test_agent_instructions_preserve_phase_016_scope_boundary() -> None:
     assert "Product implementation execution" in agent_text
     assert "remain NOT AUTHORIZED" in agent_text
 
+
 def test_phase_015_residual_closure_evidence_remains_present() -> None:
     assert (
         ROOT / "tests" / "integration" / "cross_slice" / "test_phase_015_cross_slice.py"
