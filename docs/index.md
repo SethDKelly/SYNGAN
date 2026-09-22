@@ -58,8 +58,9 @@ C0-C9                               ACTIVE / PASS
 Phase 016                           ACTIVE — PRE-IMPLEMENTATION HARDENING
 016-A                               COMPLETE
 016-B                               COMPLETE
-016-C                               AUTHORIZED / ACTIVE
-016-D..016-J                        NOT AUTHORIZED
+016-C                               COMPLETE
+016-D                               NEXT ELIGIBLE / NOT AUTHORIZED
+016-E..016-J                        NOT AUTHORIZED
 
 product/provider/runtime delivery   NOT AUTHORIZED
 ~~~
