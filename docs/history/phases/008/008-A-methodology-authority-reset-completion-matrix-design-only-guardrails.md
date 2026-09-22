@@ -16,8 +16,8 @@ Formally enter Phase 008 by making the fuller Daniel Jackson-style concept-desig
 
 008-A is governed by:
 
-- [Concept Design Methodology](../../authority/design-methodology.md);
-- [Jackson Design Completion & Implementation Hold](../../authority/jackson-design-completion-implementation-hold.md);
+- [Concept Design Methodology](../../../authority/design-methodology.md);
+- [Jackson Design Completion & Implementation Hold](../../../authority/jackson-design-completion-implementation-hold.md);
 - [Phase 008 Index](index.md);
 - current problem, concept, synchronization and experience authority.
 
@@ -62,7 +62,7 @@ Implementation is outside Jackson concept design and remains ineligible while an
 
 Created:
 
-[Jackson Methodology Completion Matrix](../../authority/jackson-methodology-completion-matrix.md)
+[Jackson Methodology Completion Matrix](../../../authority/jackson-methodology-completion-matrix.md)
 
 The matrix classifies each methodology obligation using conservative states:
 
