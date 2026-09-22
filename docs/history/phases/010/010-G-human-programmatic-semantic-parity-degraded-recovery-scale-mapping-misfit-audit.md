@@ -38,7 +38,7 @@ Primary interaction remains package/SDK, notebook and embedded automation. Host-
 
 010-G establishes:
 
-- [`docs/mapping/human-programmatic-semantic-parity-degraded-recovery-scale-misfit-audit.md`](../../mapping/human-programmatic-semantic-parity-degraded-recovery-scale-misfit-audit.md)
+- [`docs/mapping/human-programmatic-semantic-parity-degraded-recovery-scale-misfit-audit.md`](../../../mapping/human-programmatic-semantic-parity-degraded-recovery-scale-misfit-audit.md)
 
 ## Core parity finding
 
