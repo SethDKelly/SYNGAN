@@ -18,11 +18,11 @@ Stress-test SYNGAN's accepted concept/synchronization/runtime architecture again
 
 006-D is downstream of:
 
-- [Concept Design Methodology](../../authority/design-methodology.md);
-- [Accepted Concepts](../../concepts/index.md);
+- [Concept Design Methodology](../../../authority/design-methodology.md);
+- [Accepted Concepts](../../../concepts/index.md);
 - [Core Synchronizations](../../synchronizations/core-synchronizations.md);
-- [Network and External Dependency Policy](../../authority/network-external-dependency-policy.md);
-- [Operational Authority Continuity & Regressive Recovery Contract](../../authority/operational-authority-continuity-regressive-recovery-contract.md);
+- [Network and External Dependency Policy](../../../authority/network-external-dependency-policy.md);
+- [Operational Authority Continuity & Regressive Recovery Contract](../../../authority/operational-authority-continuity-regressive-recovery-contract.md);
 - [Phase 004 Consolidated Architecture Contract](../../architecture/phase-004-consolidated-architecture-contract.md);
 - [Phase 005 Consolidated Implementation-Planning Contract](../../implementation/phase-005-consolidated-implementation-planning-contract.md);
 - [006-A](006-A-post-planning-concept-completeness-mechanism-vs-concept-scope-boundary-revalidation.md);
@@ -78,7 +78,7 @@ The provisional `Relationship` candidate remains open for 006-G.
 
 006-D creates:
 
-[Self-Contained Execution & Runtime Distribution Closure Contract](../../authority/self-contained-execution-runtime-distribution-closure-contract.md).
+[Self-Contained Execution & Runtime Distribution Closure Contract](../../../authority/self-contained-execution-runtime-distribution-closure-contract.md).
 
 The contract is upstream of later runtime/package/platform realization.
 
