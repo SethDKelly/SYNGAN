@@ -2,6 +2,7 @@
 type: "SYNGAN Knowledge Route"
 title: "OKF v0.2 Producer Profile"
 description: "Canonical producer, generated-projection, and conformance contract for OKF v0.2."
+syngan_ref: "syngan://authority/okf-producer-profile"
 resource: "../../docs/authority/okf-v0.2-producer-profile.md"
 tags: ["syngan", "authority", "generated", "routing"]
 status: "stable"
@@ -11,6 +12,8 @@ syngan_authority: "projection-only"
 # Route
 
 **GENERATED OKF PROJECTION — DO NOT HAND-EDIT.**
+
+Stable reference: `syngan://authority/okf-producer-profile`.
 
 Canonical source: [OKF v0.2 Producer Profile](../../docs/authority/okf-v0.2-producer-profile.md).
 
