@@ -41,6 +41,11 @@ Bounded context and tool portability are governed by [Agent Context, Portable Wo
 Use exact `syngan://...` resolution when a stable reference is known; otherwise route through `docs/index.md` to the smallest current owner. Loading another file requires a concrete task question it answers.
 
 Canonical reusable workflows live under `.agents/skills/`: `resolve-context`, `resolve-reference`, `execute-selected-work`, `review-change`, and `run-verification`. Skills are procedures only; invoking one does not expand the human-selected task or change A1-A4 authority.
+## Agentic conformance
+
+Repository agentic/documentation conformance is governed by [Agentic Conformance, Negative Controls, Drift Detection & CI](docs/authority/agentic-conformance-policy.md).
+
+Use `python tools/run_agentic_conformance.py` for deterministic repository configuration checks. A PASS does not prove product/runtime health or provider runtime compatibility, and a FAIL does not authorize edits outside the human-selected task.
 ## Durable authority rules
 
 - One proposition should have one preferred current owner.
