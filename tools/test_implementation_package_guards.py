@@ -8,7 +8,7 @@ import sys
 import tempfile
 from collections.abc import Callable
 from pathlib import Path
-from typing import Any
+from typing import Any, cast
 
 
 def _run(repo: Path) -> int:
@@ -23,7 +23,7 @@ def _run(repo: Path) -> int:
 
 def _base_package(repo: Path) -> dict[str, Any]:
     fixture = repo / "tests" / "fixtures" / "implementation-package-valid.json"
-    data = json.loads(fixture.read_text(encoding="utf-8"))
+    data = cast(dict[str, Any], json.loads(fixture.read_text(encoding="utf-8")))
     data["package_id"] = "IPKG-0001"
     data["title"] = "Temporary negative-control package"
     data["authorization_basis"] = "temporary conformance fixture"
