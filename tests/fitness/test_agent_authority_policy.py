@@ -17,7 +17,10 @@ def test_agent_authority_policy_defines_required_action_classes_and_invariants()
     for heading in (
         "### A1 — Read, review, audit, explain, or plan",
         "### A2 — Bounded repository change",
-        "### A3 — Consequential external, destructive, privilege-expanding, or scope-expanding action",
+        (
+            "### A3 — Consequential external, destructive, privilege-expanding, "
+            "or scope-expanding action"
+        ),
         "### A4 — Accepted semantic, architecture, or product-scope change",
     ):
         assert heading in text
@@ -85,5 +88,8 @@ def test_agent_authority_is_canonical_stable_and_okf_routed() -> None:
 def test_016_e_does_not_claim_later_agentic_mechanics() -> None:
     text = POLICY.read_text(encoding="utf-8")
 
-    assert "context budgets, skills, adapters, compatibility states, and fallback mechanics are reserved for Phase 016-F" in text
+    assert (
+        "context budgets, skills, adapters, compatibility states, and fallback mechanics "
+        "are reserved for Phase 016-F"
+    ) in text
     assert "016-E does not authorize 016-F or later groups." in text
