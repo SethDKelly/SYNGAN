@@ -16,7 +16,7 @@ Close Phase 010's F3 linguistic-mapping obligation by defining actor/programmati
 
 010-D creates:
 
-- [Linguistic Mapping, Vocabulary, Typed Status & Disclosure Semantics](../../mapping/linguistic-mapping-vocabulary-typed-status-disclosure-semantics.md)
+- [Linguistic Mapping, Vocabulary, Typed Status & Disclosure Semantics](../../../mapping/linguistic-mapping-vocabulary-typed-status-disclosure-semantics.md)
 
 This becomes the current Phase 010 linguistic authority for later physical-surface mapping.
 
