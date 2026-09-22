@@ -174,7 +174,8 @@ def main() -> int:
             "- Provider runtime state remains evidence-controlled and is not inferred "
             "from documentation.",
             "- Negative controls operate only on an isolated temporary copy.",
-            "- Product/provider/runtime delivery remains outside the current Phase 017 planning authority.",
+            "- Product/provider/runtime delivery remains outside the current Phase 017 "
+            "planning authority.",
             "- Engineering-preflight PASS is not release, legal, vulnerability, provider, "
             "or scale approval.",
             "",
