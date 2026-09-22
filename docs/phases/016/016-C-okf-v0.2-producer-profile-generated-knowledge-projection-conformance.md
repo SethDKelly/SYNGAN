@@ -1,7 +1,7 @@
 ---
 type: Phase Work Record
 title: 016-C — OKF v0.2 Producer Profile, Generated Knowledge Projection & Conformance
-status: active
+status: complete
 ---
 
 # 016-C — OKF v0.2 Producer Profile, Generated Knowledge Projection & Conformance
@@ -68,15 +68,32 @@ Those remain reserved for 016-D through 016-G or later authorized work.
 - P16-3/P16-4 findings remain zero;
 - no stable-reference or agent-governance scope leaks into 016-C.
 
-## Current state
+## Closure evidence
 
 ~~~text
-016-C                                 AUTHORIZED / ACTIVE
-producer-profile authority             IN PROGRESS
-projection manifest                    IN PROGRESS
-generated knowledge projection         IN PROGRESS
-conformance validation                 IN PROGRESS
-existing verification integration      IN PROGRESS
-P16-3 / P16-4                          0 / 0
-016-D                                  NOT AUTHORIZED
+016-C                                 COMPLETE
+change class                          P16-2
+candidate head                        a3a35aec0de1a6b243d2a4d461e845319a17fd41
+pull request                          #2
+candidate Verify                      35684468631 / #1581
+candidate Verify result               PASS
+portable                              PASS
+control/data/runtime/execution        PASS
+evidence/security/platform            PASS
+cross-slice                           PASS
+generated projection files            23
+generation drift check                PASS
+OKF v0.2 + SYNGAN profile             PASS
+P16-3 / P16-4                         0 / 0
+product/runtime/provider behavior     UNCHANGED
 ~~~
+
+## Exit decision
+
+Every 016-C exit criterion is satisfied.
+
+016-C is **COMPLETE**.
+
+The authored `docs/` tree remains the only semantic/current-authority plane. The generated `knowledge/` tree is deterministic compatibility/routing only.
+
+**016-D — Stable References, Deterministic Resolution & Drift Control** is **NEXT ELIGIBLE / NOT AUTHORIZED** pending explicit proceed.
