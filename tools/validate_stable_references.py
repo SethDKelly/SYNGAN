@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+
 from stable_refs import REF_PATTERN, ROOT, load_registry
 
 OWNERSHIP_PATH = ROOT / "docs" / "authority" / "canonical-knowledge-ownership-map.json"
