@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "status": "active",
   "authority": "docs/authority/agent-context-portable-workflows-tool-adapters.md",
-  "reviewed_date": "2026-09-21",
+  "reviewed_date": "2026-09-22",
   "semantics": "documented_compatibility_is_not_runtime_certification",
   "tools": {
     "cursor": {
@@ -10,7 +10,7 @@
       "workflow_source": ".agents/skills/",
       "adapter": "none_required",
       "documented_state": "compatible",
-      "runtime_state": "unverified",
+      "runtime_state": "pending_tool_in_loop",
       "source": "https://cursor.com/docs/skills"
     },
     "codex": {
@@ -18,7 +18,7 @@
       "workflow_source": ".agents/skills/",
       "adapter": "none_required",
       "documented_state": "compatible",
-      "runtime_state": "unverified",
+      "runtime_state": "pending_tool_in_loop",
       "source": "https://developers.openai.com/docs/build-skills"
     },
     "claude_code": {
@@ -43,5 +43,6 @@
     "resolve current owner via docs/index.md or exact syngan:// reference",
     "run repository-owned verification",
     "do not fork semantics for provider UX parity"
-  ]
+  ],
+  "qualification_profile": "docs/implementation/agent-runtime-qualification-profile.json"
 }
