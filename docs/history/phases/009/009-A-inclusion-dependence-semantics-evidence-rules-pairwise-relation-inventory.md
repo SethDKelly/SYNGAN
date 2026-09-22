@@ -14,16 +14,16 @@ Establish the current Jackson application inclusion-dependence test and classify
 
 ## Governing authority
 
-- [Concept Design Methodology](../../authority/design-methodology.md)
-- [Jackson Methodology Completion Matrix](../../authority/jackson-methodology-completion-matrix.md)
+- [Concept Design Methodology](../../../authority/design-methodology.md)
+- [Jackson Methodology Completion Matrix](../../../authority/jackson-methodology-completion-matrix.md)
 - [Phase 008 Individual-Concept Design Consolidation](../../concepts/phase-008-individual-concept-consolidation.md)
-- [Concept-Justification Traceability](../../problem/concept-justification-traceability.md)
-- [Accepted Concept Catalog](../../concepts/index.md)
+- [Concept-Justification Traceability](../../../problem/concept-justification-traceability.md)
+- [Accepted Concept Catalog](../../../concepts/index.md)
 - [Phase 009 Entry / Decomposition](009-entry-decomposition.md)
 
 009-A establishes the current dependence authority:
 
-- [Inclusion-Dependence Semantics, Evidence Rules & Pairwise Relation Inventory](../../dependence/inclusion-dependence-pairwise-inventory.md)
+- [Inclusion-Dependence Semantics, Evidence Rules & Pairwise Relation Inventory](../../../dependence/inclusion-dependence-pairwise-inventory.md)
 
 ## Entry baseline
 
