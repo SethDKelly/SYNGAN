@@ -4,7 +4,7 @@ These instructions apply repository-wide to automated coding/documentation agent
 
 ## Current posture
 
-**Jackson concept design and Phases 013-015 are complete; C0-C9 are active/passing. Phase 016 pre-implementation hardening is ACTIVE. 016-A through 016-D are complete; 016-E is NEXT ELIGIBLE / NOT AUTHORIZED. No product/provider/runtime delivery program is authorized.**
+**Jackson concept design and Phases 013-015 are complete; C0-C9 are active/passing. Phase 016 pre-implementation hardening is ACTIVE. 016-A through 016-E are complete; 016-F is NEXT ELIGIBLE / NOT AUTHORIZED. No product/provider/runtime delivery program is authorized.**
 
 ## Start with
 
@@ -18,6 +18,21 @@ For most tasks, read only:
 Use docs/history/ only for rationale, provenance, supersession analysis, or reconstruction. Do not treat search rank or historical detail as current authority.
 
 When a `syngan://...` knowledge reference is supplied, resolve it exactly through the repository stable-reference registry/resolver. Do not guess a path from the reference text or substitute search results for failed resolution.
+
+## Agent authority and scope
+
+Canonical agent operating authority is [Agent Authority, Human-Directed Scope, Change Classes, Security & Trust Boundaries](docs/authority/agent-authority-human-directed-scope-security-trust.md).
+
+Use its A1-A4 model:
+
+- A1 review/plan work is read-only unless edits are also requested.
+- A2 may complete the explicitly selected repository task plus directly necessary supporting changes.
+- A3 external/destructive/privilege-expanding/scope-expanding actions require specific human authorization and normal environment/repository gates.
+- A4 semantic/architecture/product-scope changes require the governing reopen/change-control path.
+
+A1-A4 describe action/consequence authority; P16-0..P16-4 describe Phase 016 change impact. Do not launder a higher-impact change through a lower class.
+
+Completing the selected work does not authorize the next phase, subphase, backlog item, or product program.
 
 ## Durable authority rules
 
@@ -47,4 +62,4 @@ Current status and subphase authorization are owned by docs/authority/current-re
 
 ## Current next boundary
 
-**016-E — Agent Authority, Human-Directed Scope, Change Classes, Security & Trust Boundaries is NEXT ELIGIBLE / NOT AUTHORIZED. 016-F and later groups remain NOT AUTHORIZED.**
+**016-F — Context Budgets, Portable Skills, Tool Adapters is NEXT ELIGIBLE / NOT AUTHORIZED. 016-G and later groups remain NOT AUTHORIZED.**

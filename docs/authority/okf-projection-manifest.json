@@ -48,6 +48,12 @@
           "title": "Stable Reference Contract",
           "description": "Canonical stable-reference, deterministic-resolution, and drift-control contract.",
           "ref": "syngan://authority/stable-reference-contract"
+        },
+        {
+          "id": "agent-development-policy",
+          "title": "Agent Authority, Human-Directed Scope, Change Classes, Security & Trust Boundaries",
+          "description": "Canonical tool-neutral agent authority, scope, action-class, security, and trust contract.",
+          "ref": "syngan://authority/agent-development-policy"
         }
       ]
     },

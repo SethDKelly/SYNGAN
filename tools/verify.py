@@ -68,6 +68,7 @@ def verify_bootstrap() -> None:
         ROOT / "docs" / "authority" / "okf-projection-manifest.json",
         ROOT / "docs" / "authority" / "stable-reference-resolution-drift-control.md",
         ROOT / "docs" / "authority" / "stable-reference-registry.json",
+        ROOT / "docs" / "authority" / "agent-authority-human-directed-scope-security-trust.md",
         ROOT / "knowledge" / "index.md",
         ROOT / "docs" / "implementation" / "current-support-scope.md",
         ROOT / "docs" / "phases" / "016" / "index.md",

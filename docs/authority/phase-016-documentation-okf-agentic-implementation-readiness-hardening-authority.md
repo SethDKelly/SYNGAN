@@ -184,8 +184,9 @@ Phase 016   AUTHORIZED / ACTIVE
 016-B       COMPLETE
 016-C       COMPLETE
 016-D       COMPLETE
-016-E       NEXT ELIGIBLE / NOT AUTHORIZED
-016-F..J    NOT AUTHORIZED
+016-E       COMPLETE
+016-F       NEXT ELIGIBLE / NOT AUTHORIZED
+016-G..J    NOT AUTHORIZED
 product delivery beyond hardening  NOT AUTHORIZED
 ~~~
 
@@ -314,4 +315,28 @@ The user explicitly authorized 016-D after the verified 016-C closure.
 
 016-D closure evidence is recorded in the phase work record. Candidate Verify workflow `35686359067` / `#1592` passed portable and C2–C9. The stable-reference registry has one active reference per canonical owner family; generated OKF routes resolve through those references; P16-3/P16-4 findings remain `0 / 0`.
 
-016-E — Agent Authority, Human-Directed Scope, Change Classes, Security & Trust Boundaries — is NEXT ELIGIBLE / NOT AUTHORIZED. 016-F through 016-J remain NOT AUTHORIZED.
+## 016-E authorization
+
+The user explicitly authorized 016-E after the verified 016-D closure.
+
+016-E is a documented **P16-2 agentic-development governance contract**. It may:
+
+- define a tool-neutral authority and instruction model for human-directed repository work;
+- define bounded scope envelopes and necessary-supporting-change rules;
+- define A1–A4 action/consequence classes without replacing P16 change classes;
+- define the interaction between A1–A4 action authority and P16-0–P16-4 change impact;
+- define review-only, completion, no-self-progression, and human-approval invariants;
+- define least-privilege, secrets/sensitive-data, untrusted-content/prompt-injection, memory, and external-action trust boundaries;
+- update root agent guidance and current routing/status required to expose the contract.
+
+016-E must not:
+
+- define context budgets, portable skills, tool-specific adapters, vendor compatibility mechanics, or provider-specific instruction surfaces reserved for 016-F;
+- establish the executable agentic negative-control/drift/CI program reserved for 016-G;
+- define implementation-package/ADR governance reserved for 016-H;
+- select dependencies, secret-management products, external services, provider integrations, or production permissions reserved for later authorized work;
+- change accepted product semantics, architecture contracts, runtime/provider behavior, or Phase 015 support claims.
+
+016-E closure evidence is recorded in the phase work record. Candidate Verify workflow `35686993647` / `#1597` passed portable and C2–C9. The canonical agent policy is owner-mapped, stable-reference routed, and projected through OKF; A1–A4 is explicitly orthogonal to P16-0–P16-4; P16-3/P16-4 findings remain `0 / 0`.
+
+016-F — Context Budgets, Portable Skills, Tool Adapters — is NEXT ELIGIBLE / NOT AUTHORIZED. 016-G through 016-J remain NOT AUTHORIZED.

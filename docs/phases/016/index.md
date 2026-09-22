@@ -29,8 +29,8 @@ Start Gate  COMPLETE
 016-B       COMPLETE
 016-C       COMPLETE
 016-D       COMPLETE
-016-E       NEXT ELIGIBLE / NOT AUTHORIZED
-016-F       NOT AUTHORIZED
+016-E       COMPLETE
+016-F       NEXT ELIGIBLE / NOT AUTHORIZED
 016-G       NOT AUTHORIZED
 016-H       NOT AUTHORIZED
 016-I       NOT AUTHORIZED
@@ -122,6 +122,27 @@ P16-3 / P16-4                         0 / 0
 product/runtime/provider behavior     UNCHANGED / NOT AUTHORIZED
 ~~~
 
+## 016-E closure
+
+[016-E — Agent Authority, Human-Directed Scope, Change Classes, Security & Trust Boundaries](016-E-agent-authority-human-directed-scope-change-classes-security-trust-boundaries.md) is **COMPLETE**.
+
+~~~text
+016-E                                 COMPLETE
+change class                          P16-2
+canonical agent authority             COMPLETE
+A1-A4 action/consequence model        COMPLETE
+P16 orthogonality/escalation          COMPLETE
+review/completion invariants          COMPLETE
+security/trust firewall               COMPLETE
+stable-reference registry             23 ACTIVE / FULL OWNER COVERAGE
+agent policy stable ref               syngan://authority/agent-development-policy
+OKF projection files                  25 / DETERMINISTIC
+candidate Verify                      35686993647 / #1597 / PASS
+portable + C2..C9                     PASS
+P16-3 / P16-4                         0 / 0
+product/runtime/provider behavior     UNCHANGED / NOT AUTHORIZED
+~~~
+
 ## Current next boundary
 
-**016-E — Agent Authority, Human-Directed Scope, Change Classes, Security & Trust Boundaries** is **NEXT ELIGIBLE / NOT AUTHORIZED** pending explicit proceed.
+**016-F — Context Budgets, Portable Skills, Tool Adapters** is **NEXT ELIGIBLE / NOT AUTHORIZED** pending explicit proceed.
