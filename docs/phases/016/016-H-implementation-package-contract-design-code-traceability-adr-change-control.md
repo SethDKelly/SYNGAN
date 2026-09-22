@@ -1,7 +1,7 @@
 ---
 type: Phase Work Record
 title: 016-H — Implementation Package Contract, Design-to-Code Traceability & ADR Change Control
-status: active
+status: complete
 ---
 
 # 016-H — Implementation Package Contract, Design-to-Code Traceability & ADR Change Control
@@ -66,16 +66,41 @@ Package manifests will be prospective. Completed Phase 015 work remains valid hi
 - 016-I scope does not leak into 016-H;
 - P16-3/P16-4 findings remain zero.
 
-## Current state
+## Closure evidence
 
 ~~~text
-016-H                                 AUTHORIZED / ACTIVE
-package contract                      IN PROGRESS
-traceability profile                  IN PROGRESS
-ADR change control                    IN PROGRESS
-package validator                     IN PROGRESS
-traceability workflow                 IN PROGRESS
-review template                       IN PROGRESS
+016-H                                 COMPLETE
+change class                          P16-2
+candidate head                        90d325a0d62011a38ccd0c3012e437640233d21d
+pull request                          #7
+agentic conformance                   35692897700 / #22 / PASS
+candidate Verify                      35692897709 / #1629 / PASS
+package contract/profile              PASS / PROSPECTIVE
+active package manifests              0
+valid package fixture                 PASS
+package negative controls             9 / 9 PASS
+cross-cutting negative controls       8 / 8 PASS
+retained architecture ADRs            10
+ADR semantic changes                  0
+portable canonical skills             6
+update-traceability                   A2 SUPPORTING / PASS
+PR review contract                    CURRENT-PROGRAM NEUTRAL
+stable-reference registry             26 ACTIVE
+canonical owner-family coverage       26 / 26
+OKF projection                        28 FILES / PASS
+provider runtime evidence             UNVERIFIED / NOT CLAIMED
+portable                              PASS
+C2..C9                                PASS
 P16-3 / P16-4                         0 / 0
-016-I                                  NOT AUTHORIZED
+product/runtime/provider behavior     UNCHANGED
 ~~~
+
+## Exit decision
+
+Every 016-H exit criterion is satisfied.
+
+016-H is **COMPLETE**.
+
+SYNGAN now has a prospective implementation-package contract that binds future selected material work to current stable authority, implementation paths, deterministic verification evidence, explicit non-claims, Class 0–4 change discipline, and architecture ADR change control without making package metadata or ADRs into authorization/semantic authority. No real implementation package was fabricated during this hardening phase.
+
+**016-I — Dependency / Supply-Chain / Secrets, Compatibility / Benchmark / API-Versioning Preflight** is **NEXT ELIGIBLE / NOT AUTHORIZED** pending explicit proceed.
