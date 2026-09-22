@@ -31,6 +31,7 @@ If a current proposition cannot be assigned deterministically, 016-B must stop r
 | Knowledge family | Preferred current owner |
 |---|---|
 | repository progression/status | `docs/authority/current-repository-status.md` |
+| canonical knowledge ownership routing | `docs/authority/canonical-knowledge-ownership-map.md` |
 | documentation/authority/anti-drift rules | `docs/authority/documentation-governance.md` |
 | OKF v0.2 producer/projection/conformance rules | `docs/authority/okf-v0.2-producer-profile.md` |
 | stable-reference/resolution/drift-control rules | `docs/authority/stable-reference-resolution-drift-control.md` |
