@@ -19,6 +19,20 @@ Use docs/history/ only for rationale, provenance, supersession analysis, or reco
 
 When a `syngan://...` knowledge reference is supplied, resolve it exactly through the repository stable-reference registry/resolver. Do not guess a path from the reference text or substitute search results for failed resolution.
 
+## Agent authority and scope
+
+Canonical agent operating authority is [Agent Authority, Human-Directed Scope, Change Classes, Security & Trust Boundaries](docs/authority/agent-authority-human-directed-scope-security-trust.md).
+
+Use its A1-A4 model:
+
+- A1 review/plan work is read-only unless edits are also requested.
+- A2 may complete the explicitly selected repository task plus directly necessary supporting changes.
+- A3 external/destructive/privilege-expanding/scope-expanding actions require specific human authorization and normal environment/repository gates.
+- A4 semantic/architecture/product-scope changes require the governing reopen/change-control path.
+
+A1-A4 describe action/consequence authority; P16-0..P16-4 describe Phase 016 change impact. Do not launder a higher-impact change through a lower class.
+
+Completing the selected work does not authorize the next phase, subphase, backlog item, or product program.
 ## Durable authority rules
 
 - One proposition should have one preferred current owner.
