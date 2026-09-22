@@ -31,8 +31,8 @@ Most Phase 006 findings refine those prior decisions without changing their fund
 
 Two findings are materially new architecture decisions and receive dedicated rationale:
 
-- [ADR-0009 — Non-Regressing Authority After Regressive Control-State Recovery](../../decisions/ADR-0009-non-regressing-authority-after-regressive-control-state-recovery.md);
-- [ADR-0010 — Self-Contained Distributed Runtime Closure](../../decisions/ADR-0010-self-contained-distributed-runtime-closure.md).
+- [ADR-0009 — Non-Regressing Authority After Regressive Control-State Recovery](../../../decisions/ADR-0009-non-regressing-authority-after-regressive-control-state-recovery.md);
+- [ADR-0010 — Self-Contained Distributed Runtime Closure](../../../decisions/ADR-0010-self-contained-distributed-runtime-closure.md).
 
 ADR-0009 extends ADR-0005; ADR-0010 extends ADR-0004/ADR-0008. No existing ADR is superseded.
 
