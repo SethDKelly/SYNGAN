@@ -29,7 +29,7 @@ Start Gate  COMPLETE
 016-B       COMPLETE
 016-C       COMPLETE
 016-D       COMPLETE
-016-E       NEXT ELIGIBLE / NOT AUTHORIZED
+016-E       AUTHORIZED / ACTIVE
 016-F       NOT AUTHORIZED
 016-G       NOT AUTHORIZED
 016-H       NOT AUTHORIZED
@@ -124,4 +124,23 @@ product/runtime/provider behavior     UNCHANGED / NOT AUTHORIZED
 
 ## Current next boundary
 
-**016-E — Agent Authority, Human-Directed Scope, Change Classes, Security & Trust Boundaries** is **NEXT ELIGIBLE / NOT AUTHORIZED** pending explicit proceed.
+## 016-E active execution
+
+[016-E — Agent Authority, Human-Directed Scope, Change Classes, Security & Trust Boundaries](016-E-agent-authority-human-directed-scope-change-classes-security-trust-boundaries.md)
+
+~~~text
+016-E                                 AUTHORIZED / ACTIVE
+change class                          P16-2
+shared agent authority               IN SCOPE
+human-directed scope envelope         IN SCOPE
+A1-A4 action classes                 IN SCOPE
+P16 interaction/escalation           IN SCOPE
+security/trust boundaries             IN SCOPE
+context budgets/skills/adapters       RESERVED FOR 016-F
+agentic negative-control CI           RESERVED FOR 016-G
+product/runtime/provider behavior     NOT AUTHORIZED
+~~~
+
+## Current next boundary
+
+**016-E — Agent Authority, Human-Directed Scope, Change Classes, Security & Trust Boundaries** is **AUTHORIZED / ACTIVE**. 016-F remains **NOT AUTHORIZED** until 016-E exit evidence exists.
