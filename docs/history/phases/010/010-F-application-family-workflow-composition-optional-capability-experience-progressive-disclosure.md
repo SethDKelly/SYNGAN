@@ -36,7 +36,7 @@ Primary interaction remains package/SDK, notebook and embedded programmatic auto
 
 010-F establishes:
 
-- [`docs/mapping/application-family-workflow-composition-progressive-disclosure.md`](../../mapping/application-family-workflow-composition-progressive-disclosure.md)
+- [`docs/mapping/application-family-workflow-composition-progressive-disclosure.md`](../../../mapping/application-family-workflow-composition-progressive-disclosure.md)
 
 ## Core finding
 
