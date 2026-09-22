@@ -18,13 +18,10 @@ def test_split_visibility_profile_is_bounded_and_non_gamable() -> None:
     assert profile["visibility_classes"]["V0"]["frozen_before_implementation"] is True
     assert profile["visibility_classes"]["H1"]["implementer_visible_pre_evaluation"] is False
     assert (
-        profile["visibility_classes"]["H1"]["generated_or_selected_after_candidate_freeze"]
-        is True
+        profile["visibility_classes"]["H1"]["generated_or_selected_after_candidate_freeze"] is True
     )
     assert profile["minimum_agent_assisted_phase_exit_independence"] == "EI1"
-    assert [x["id"] for x in profile["challenge_families"]] == [
-        f"CH-{n:02d}" for n in range(1, 9)
-    ]
+    assert [x["id"] for x in profile["challenge_families"]] == [f"CH-{n:02d}" for n in range(1, 9)]
     assert profile["anti_gaming_controls"] == [f"AG-{n:02d}" for n in range(1, 13)]
 
     rules = profile["decision_rules"]
@@ -43,8 +40,7 @@ def test_split_visibility_profile_is_bounded_and_non_gamable() -> None:
 def test_evaluation_method_has_current_stable_and_okf_routes() -> None:
     registry = json.loads(REGISTRY.read_text(encoding="utf-8"))
     stable = next(
-        x for x in registry["references"]
-        if x["ref"] == "syngan://implementation/evaluation-method"
+        x for x in registry["references"] if x["ref"] == "syngan://implementation/evaluation-method"
     )
     assert stable["status"] == "active"
     assert stable["owner_family"] == "success_visibility_holdout_evaluation"
@@ -55,7 +51,6 @@ def test_evaluation_method_has_current_stable_and_okf_routes() -> None:
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
     implementation = next(x for x in manifest["groups"] if x["id"] == "implementation")
     route = next(
-        x for x in implementation["routes"]
-        if x["id"] == "success-visibility-holdout-evaluation"
+        x for x in implementation["routes"] if x["id"] == "success-visibility-holdout-evaluation"
     )
     assert route["ref"] == stable["ref"]

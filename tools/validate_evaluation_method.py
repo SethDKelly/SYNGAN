@@ -13,10 +13,7 @@ def main() -> int:
 
     profile_path = repo / "docs" / "implementation" / "evaluation-method-profile.json"
     authority_path = (
-        repo
-        / "docs"
-        / "implementation"
-        / "success-visibility-holdout-evaluation-anti-gaming.md"
+        repo / "docs" / "implementation" / "success-visibility-holdout-evaluation-anti-gaming.md"
     )
     registry_path = repo / "docs" / "authority" / "stable-reference-registry.json"
     manifest_path = repo / "docs" / "authority" / "okf-projection-manifest.json"
@@ -83,8 +80,14 @@ def main() -> int:
     if contamination.get("fresh_holdout_required_after_repair") is not True:
         errors.append("profile: fresh holdout must follow repair")
 
-    stable = next((x for x in registry.get("references", [])
-                   if x.get("ref") == "syngan://implementation/evaluation-method"), None)
+    stable = next(
+        (
+            x
+            for x in registry.get("references", [])
+            if x.get("ref") == "syngan://implementation/evaluation-method"
+        ),
+        None,
+    )
     if not stable or stable.get("status") != "active":
         errors.append("stable reference: missing/ inactive evaluation-method ref")
     elif stable.get("path") != (
@@ -93,13 +96,17 @@ def main() -> int:
         errors.append("stable reference: evaluation-method path drift")
 
     group = next((x for x in manifest.get("groups", []) if x.get("id") == "implementation"), None)
-    route = None if not group else next(
-        (
-            x
-            for x in group.get("routes", [])
-            if x.get("id") == "success-visibility-holdout-evaluation"
-        ),
-        None,
+    route = (
+        None
+        if not group
+        else next(
+            (
+                x
+                for x in group.get("routes", [])
+                if x.get("id") == "success-visibility-holdout-evaluation"
+            ),
+            None,
+        )
     )
     if not route or route.get("ref") != "syngan://implementation/evaluation-method":
         errors.append("OKF manifest: evaluation-method route drift")
