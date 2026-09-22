@@ -96,9 +96,7 @@ def main() -> int:
                 "Phase 016                           COMPLETE",
                 "product implementation execution   NOT AUTHORIZED",
             ),
-            "agents": (
-                "Phase 016 pre-implementation hardening is COMPLETE.",
-            ),
+            "agents": ("Phase 016 pre-implementation hardening is COMPLETE.",),
         }
     else:
         required = {
