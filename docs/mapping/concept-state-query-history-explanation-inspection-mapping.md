@@ -26,9 +26,9 @@ An inspection obligation may later be realized through several physical surfaces
 
 - [010-A Mapping Authority, Coverage Model, Actor/Surface Taxonomy & Evidence Baseline](mapping-authority-coverage-actor-surface-evidence-baseline.md)
 - [010-B Concept Action → Actor Intent & Interaction Mapping](concept-action-actor-intent-interaction-mapping.md)
-- [Concept State, Identity, History & Invariant Normalization](../concepts/state-identity-history-invariant-normalization.md)
-- [Concept Action, Query, Preconditions/Postconditions & Lifecycle Normalization](../concepts/action-query-lifecycle-normalization.md)
-- [Phase 009 Dependence, Application Family & Composition Consolidation](../authority/phase-009-dependence-composition-consolidation.md)
+- [Concept State, Identity, History & Invariant Normalization](../history/concepts/state-identity-history-invariant-normalization.md)
+- [Concept Action, Query, Preconditions/Postconditions & Lifecycle Normalization](../history/concepts/action-query-lifecycle-normalization.md)
+- [Phase 009 Dependence, Application Family & Composition Consolidation](../history/authority/phase-009-dependence-composition-consolidation.md)
 - [Current Synchronization Authority](../synchronizations/index.md)
 - [Actors & Needs](../problem/actors.md)
 - [Semantic Distinctions](../terminology/semantic-distinctions.md)
@@ -63,7 +63,7 @@ Every 010-C mapping must preserve the material subset of these dimensions.
 
 ## Current Phase 014 completion note
 
-This document preserves its Phase 010 derivation and original subgroup handoff as historical provenance. Phase 010 F1-F5 are complete; Phase 012 confirmed mapping completion; Phase 013 preserved mapping semantics in architecture; Phase 014-D re-audits the current mapping layer. Current subgroup sequencing is governed by [Phase 014](../phases/014/index.md).
+This document preserves its Phase 010 derivation and original subgroup handoff as historical provenance. Phase 010 F1-F5 are complete; Phase 012 confirmed mapping completion; Phase 013 preserved mapping semantics in architecture; Phase 014-D re-audits the current mapping layer. Current subgroup sequencing is governed by [Phase 014](../history/phases/014/index.md).
 
 ## I1 — owner
 
