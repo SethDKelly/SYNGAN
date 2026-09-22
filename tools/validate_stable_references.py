@@ -56,8 +56,7 @@ def main() -> int:
                 continue
             if path in active_paths:
                 errors.append(
-                    f"duplicate active path binding: {path} -> "
-                    f"{active_paths[path]}, {reference}"
+                    f"duplicate active path binding: {path} -> {active_paths[path]}, {reference}"
                 )
             active_paths[path] = reference
 
