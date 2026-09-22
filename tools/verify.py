@@ -72,6 +72,9 @@ def verify_bootstrap() -> None:
         ROOT / "docs" / "authority" / "agent-context-portable-workflows-tool-adapters.md",
         ROOT / "docs" / "authority" / "agent-context-budget.json",
         ROOT / "docs" / "authority" / "agent-tool-compatibility.json",
+        ROOT / "docs" / "authority" / "agentic-conformance-policy.md",
+        ROOT / "tools" / "run_agentic_conformance.py",
+        ROOT / ".github" / "workflows" / "agentic-conformance.yml",
         ROOT / ".agents" / "skills" / "resolve-context" / "SKILL.md",
         ROOT / "knowledge" / "index.md",
         ROOT / "docs" / "implementation" / "current-support-scope.md",
@@ -120,6 +123,10 @@ def verify_references() -> None:
 
 def verify_okf() -> None:
     _run([sys.executable, "-m", "pytest", "tests/fitness/test_okf_projection.py"])
+
+
+def verify_agentic() -> None:
+    _run([sys.executable, "tools/run_agentic_conformance.py"])
 
 
 def verify_authority() -> None:
@@ -343,6 +350,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             "authority",
             "okf",
             "references",
+            "agentic",
             "static",
             "portable",
             "control",
@@ -373,6 +381,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         "authority": verify_authority,
         "okf": verify_okf,
         "references": verify_references,
+        "agentic": verify_agentic,
         "static": verify_static,
         "portable": verify_portable,
         "control": verify_control,
